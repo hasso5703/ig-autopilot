@@ -232,6 +232,24 @@ It exists because EU AI Act art. 50 applies from 2 August 2026 to AI-generated
 text published to inform the public, not because it makes the account look
 careful. Keep it small, keep it last, never build a sentence around it.
 
+**Every digit in the caption needs evidence too.** The caption is where the
+detail that did not fit on a slide goes, so it is where the most specific
+figures end up, and for a while nothing checked them: one published caption
+carried "an extra 3.49 gigawatts" and "another 11 minutes" with no verified
+quote behind either. Both happened to be correct. That is luck, not a system.
+
+Put the supporting sentences in `captionEvidence`, and they are fetched and
+checked exactly like slide evidence:
+
+```jsonc
+"captionEvidence": [
+  { "quote": "At its peak, PJM's grid had an extra 3.49 gigawatts of electricity on it. It took another 11 minutes before it stabilized.",
+    "url": "https://techcrunch.com/…" }
+]
+```
+
+Prose in the caption is free. Digits are not.
+
 **3 to 5 hashtags, at the very end.** More reads as reach-chasing.
 
 **The same restraint applies to the CTA slide.** "One verified story a day"

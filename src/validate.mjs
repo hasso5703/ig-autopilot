@@ -123,6 +123,24 @@ export async function validatePost(post, opts = {}) {
   if (post.caption && SELF_PRAISE.test(post.caption))
     err("caption claims its own rigour. The sources printed on every slide already prove it; delete the sentence rather than assert it");
 
+  // ---- the caption is not a free-text field ------------------------------
+  // It was, and that was the largest hole left in the gate. The manual tells
+  // the writer to put "what did not fit on a slide" in the caption, which is
+  // exactly where the most detailed figures end up, and nothing checked them.
+  // The first clean run duly published "an extra 3.49 gigawatts" and "another
+  // 11 minutes" in its caption. Both plausible, both probably true, neither
+  // traceable to any quote the system had verified.
+  //
+  // Caption-only claims therefore need caption-only evidence, held in
+  // `captionEvidence: [{ quote, url }]`, and checked exactly like slide
+  // evidence. Prose is free; digits are not.
+  const capEv = Array.isArray(post.captionEvidence) ? post.captionEvidence : [];
+  for (const [i, e] of capEv.entries()) {
+    if (!e?.quote || e.quote.trim().length < EVIDENCE_MIN_CHARS)
+      err(`captionEvidence[${i}]: quote missing or shorter than ${EVIDENCE_MIN_CHARS} chars`);
+    if (!e?.url || !/^https:\/\//.test(e.url)) err(`captionEvidence[${i}]: missing https url`);
+  }
+
   // ---- per-slide evidence -------------------------------------------------
   const contentSlides = slides.filter((s) => s.type !== "hook" && s.type !== "cta");
   if (contentSlides.length < 2) err(`only ${contentSlides.length} content slides — a carousel needs at least 2`);
@@ -152,9 +170,18 @@ export async function validatePost(post, opts = {}) {
   // anywhere in the post must be supported by the evidence of SOME slide.
   // Without this, a derived figure like "$0 extra" — true-sounding, never
   // actually stated by the source — walks straight onto slide 1.
-  const allEvidence = new Set(
-    slides.flatMap((s) => [...numbers(s.evidence ?? ""), ...numbers(s.source?.date ?? "")])
-  );
+  const allEvidence = new Set([
+    ...slides.flatMap((s) => [...numbers(s.evidence ?? ""), ...numbers(s.source?.date ?? "")]),
+    ...capEv.flatMap((e) => numbers(e.quote ?? "")),
+  ]);
+
+  // Digits in the caption get the same treatment as digits on a slide.
+  const capUnsupported = [...new Set(numbers(post.caption ?? ""))].filter((n) => !allEvidence.has(n));
+  if (capUnsupported.length)
+    err(
+      `caption: figure(s) ${capUnsupported.join(", ")} appear in the caption but in no evidence quote. ` +
+        `Add the supporting sentence to captionEvidence: [{ quote, url }], or drop the figure`
+    );
   const LOUD_FIELDS = ["headline", "kicker", "title", "figure", "unit", "claim", "caveat", "sub", "attribution"];
   for (const [i, s] of slides.entries()) {
     const fields = [...LOUD_FIELDS.map((f) => s[f]), s.hero?.value, s.hero?.label];
@@ -189,6 +216,20 @@ export async function validatePost(post, opts = {}) {
       evidenceChecks.push({ slide: i + 1, url: s.source.url, status: found ? "VERIFIED" : "NOT_FOUND" });
       if (!found)
         err(`${at}: the evidence quote does not appear on ${s.source.url} — either it was paraphrased or it was invented`);
+    }
+
+    for (const [i, e] of capEv.entries()) {
+      if (!e?.quote || !e?.url) continue;
+      if (!cache.has(e.url)) cache.set(e.url, await fetchPage(e.url));
+      const page = cache.get(e.url);
+      if (!page.ok) {
+        evidenceChecks.push({ caption: i + 1, url: e.url, status: "UNVERIFIABLE", detail: page.error });
+        if (!opts.allowUnverifiable) err(`captionEvidence[${i}]: source unreachable (${page.error})`);
+        continue;
+      }
+      const found = page.text.includes(normQuote(e.quote));
+      evidenceChecks.push({ caption: i + 1, url: e.url, status: found ? "VERIFIED" : "NOT_FOUND" });
+      if (!found) err(`captionEvidence[${i}]: the quote does not appear on ${e.url}`);
     }
   }
 
