@@ -1,20 +1,33 @@
 {
-  "_comment": "Sources the routine may read. Every host here must also be in the cloud environment's Allowed domains list, or fetches fail with HTTP 403 x-deny-reason: host_not_allowed.",
+  "_comment": "Every host here must ALSO be in the cloud environment's Allowed domains list, or fetches fail with HTTP 403 and x-deny-reason: host_not_allowed. The allowlisted flag records whether that has been done.",
+  "_verified": "2026-07-25 — every feed below was fetched live and parsed; item counts recorded in _note.",
+
   "tier1_primary": [
-    { "name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "weight": 1.0 },
-    { "name": "Anthropic News", "url": "https://www.anthropic.com/rss.xml", "weight": 1.0 },
-    { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "weight": 1.0 },
-    { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "weight": 0.9 },
-    { "name": "arXiv cs.AI", "url": "https://export.arxiv.org/rss/cs.AI", "weight": 0.6 }
+    { "name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "weight": 1.0, "allowlisted": true,
+      "_note": "1050 items / 637 KB — full archive every fetch. Fine, but the largest download in the set." },
+    { "name": "Google AI", "url": "https://blog.google/technology/ai/rss/", "weight": 1.0, "allowlisted": true, "_note": "20 items" },
+    { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "weight": 1.0, "allowlisted": true, "_note": "100 items" },
+    { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "weight": 0.9, "allowlisted": true, "_note": "831 items" },
+    { "name": "NVIDIA Blog", "url": "https://blogs.nvidia.com/feed/", "weight": 0.8, "allowlisted": false, "_note": "18 items — needs blogs.nvidia.com allowlisted" },
+    { "name": "Microsoft Research", "url": "https://www.microsoft.com/en-us/research/feed/", "weight": 0.8, "allowlisted": false, "_note": "10 items — needs www.microsoft.com allowlisted" },
+    { "name": "arXiv cs.AI", "url": "https://export.arxiv.org/rss/cs.AI", "weight": 0.6, "allowlisted": true,
+      "_note": "Legitimately EMPTY on weekends — the feed declares <skipDays>Saturday,Sunday</skipDays>. Zero items on a Sat/Sun is correct behaviour, not a failure." }
   ],
+
   "tier2_press": [
-    { "name": "TechCrunch", "url": "https://techcrunch.com/feed/", "weight": 0.8 },
-    { "name": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "weight": 0.7 },
-    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 0.7 },
-    { "name": "VentureBeat", "url": "https://venturebeat.com/feed/", "weight": 0.6 },
-    { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/", "weight": 0.7 },
-    { "name": "Hacker News front page", "url": "https://hnrss.org/frontpage?points=250", "weight": 0.5 }
+    { "name": "TechCrunch", "url": "https://techcrunch.com/feed/", "weight": 0.8, "allowlisted": true, "_note": "20 items" },
+    { "name": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "weight": 0.7, "allowlisted": true, "_note": "10 items" },
+    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 0.7, "allowlisted": true, "_note": "20 items" },
+    { "name": "VentureBeat", "url": "https://venturebeat.com/feed/", "weight": 0.6, "allowlisted": true, "_note": "7 items" },
+    { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/", "weight": 0.7, "allowlisted": true, "_note": "10 items" },
+    { "name": "Hacker News (250+ points)", "url": "https://hnrss.org/frontpage?points=250", "weight": 0.5, "allowlisted": true, "_note": "10 items" },
+    { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "weight": 0.6, "allowlisted": false, "_note": "30 items — needs simonwillison.net allowlisted" }
   ],
+
+  "_removed": [
+    { "name": "Anthropic News", "reason": "No public RSS feed as of 2026-07-25. Checked and 404: /rss.xml, /news/rss.xml, /feed.xml, /news/feed.xml, /news/rss, /index.xml, /engineering/rss.xml; the news page declares no <link rel=alternate>. Anthropic stories still reach the pipeline via the press tier and via WebSearch. Do not re-add without verifying a live feed." }
+  ],
+
   "scoring": {
     "_comment": "Used to pick which story becomes a post. Sendability is weighted highest because DM shares are Instagram's strongest ranking signal in 2026.",
     "weights": {

@@ -41,9 +41,35 @@ sources.json ──► gather ──► score ──► extract (claim + quoted 
 | `src/render.mjs` | Chromium → exact 1080×1350 JPEG, with in-page text auto-fit |
 | `src/publish.mjs` | item containers → carousel container → `media_publish` |
 | `src/refresh-token.mjs` | 60-day long-lived token maintenance |
+| `src/feeds.mjs` | dependency-free RSS/Atom reader over `sources.json` |
+| `src/state.mjs` | run-to-run memory + cross-publisher duplicate detection |
+| `src/validate.mjs` | **the fact gate** — see below |
+| `prompts/routine.md` | the operating manual the scheduled routine follows |
 | `posts/<slug>.json` | one post spec per story |
 | `media/<slug>/NN.jpg` | rendered slides — these URLs are what Instagram reads |
 | `state/` | what has already been posted, for deduplication |
+
+## The fact gate
+
+`src/validate.mjs` is the reason this account can claim zero hallucinations
+without hand-waving. Each content slide carries `evidence`: a verbatim sentence
+from the source it cites. Two mechanical checks then apply:
+
+1. **every digit in a slide body must also appear in its evidence** — a figure
+   cannot be recomputed, rounded or imagined;
+2. **the cited page is fetched and the evidence string must occur in it** — a
+   quotation cannot be fabricated, because the gate goes and looks.
+
+Checks fail closed: an unreachable source is not "probably fine", it is
+unverifiable, and unverifiable is not published.
+
+Proven against a live article on 2026-07-25:
+
+| Case | Result |
+|---|---|
+| honest post, real quote | `ok: true`, both quotes `VERIFIED` |
+| body claims `$450 million`, absent from the quote | rejected — *figure 450 appears in the body but not in the evidence* |
+| plausible but fabricated quote | rejected — `NOT_FOUND` on the live page |
 
 ## Editorial rules (non-negotiable)
 
