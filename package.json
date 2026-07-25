@@ -1,0 +1,13 @@
+{
+  "name": "ig-autopilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Autonomous AI/tech news carousels for Instagram, rendered with Chromium and published via the Instagram Graph API.",
+  "scripts": {
+    "render": "node src/render.mjs",
+    "whoami": "node src/publish.mjs whoami",
+    "quota": "node src/publish.mjs quota"
+  },
+  "engines": { "node": ">=20" }
+}

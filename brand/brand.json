@@ -1,0 +1,29 @@
+{
+  "wordmark": "ORDER OF MAGNITUDE",
+  "wordmarkTracking": "0.2em",
+  "handle": "@order.of.magnitude",
+  "canvas": { "width": 1080, "height": 1350 },
+  "colors": {
+    "bg": "#0B0B0F",
+    "panel": "#0B0B0F",
+    "ink": "#FFFFFF",
+    "muted": "#9A9AA6",
+    "accent": "#4DE1FF",
+    "rule": "#FFFFFF"
+  },
+  "fonts": {
+    "display": { "family": "Anton", "file": "anton-regular.woff2", "weight": 400 },
+    "body": { "family": "Archivo", "file": "archivo-regular.woff2", "weight": 400 },
+    "bodyBold": { "family": "Archivo", "file": "archivo-bold.woff2", "weight": 700 }
+  },
+  "type": {
+    "hookMax": 132,
+    "hookMin": 58,
+    "titleMax": 76,
+    "titleMin": 40,
+    "bodyMax": 44,
+    "bodyMin": 28
+  },
+  "jpegQuality": 90,
+  "aiDisclosure": "AI-assisted research and writing · every claim sourced and verified"
+}

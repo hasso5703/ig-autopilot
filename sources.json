@@ -1,0 +1,29 @@
+{
+  "_comment": "Sources the routine may read. Every host here must also be in the cloud environment's Allowed domains list, or fetches fail with HTTP 403 x-deny-reason: host_not_allowed.",
+  "tier1_primary": [
+    { "name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "weight": 1.0 },
+    { "name": "Anthropic News", "url": "https://www.anthropic.com/rss.xml", "weight": 1.0 },
+    { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "weight": 1.0 },
+    { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "weight": 0.9 },
+    { "name": "arXiv cs.AI", "url": "https://export.arxiv.org/rss/cs.AI", "weight": 0.6 }
+  ],
+  "tier2_press": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com/feed/", "weight": 0.8 },
+    { "name": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "weight": 0.7 },
+    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 0.7 },
+    { "name": "VentureBeat", "url": "https://venturebeat.com/feed/", "weight": 0.6 },
+    { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/", "weight": 0.7 },
+    { "name": "Hacker News front page", "url": "https://hnrss.org/frontpage?points=250", "weight": 0.5 }
+  ],
+  "scoring": {
+    "_comment": "Used to pick which story becomes a post. Sendability is weighted highest because DM shares are Instagram's strongest ranking signal in 2026.",
+    "weights": {
+      "sendability": 0.35,
+      "novelty": 0.25,
+      "magnitude": 0.20,
+      "visualisability": 0.10,
+      "sourceQuality": 0.10
+    },
+    "minScore": 0.62
+  }
+}

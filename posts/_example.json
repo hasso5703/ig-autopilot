@@ -1,0 +1,44 @@
+{
+  "slug": "example-render-test",
+  "accent": "#4DE1FF",
+  "caption": "Example post spec. The caption field is sent verbatim to Instagram.\n\n(test post — not published)",
+  "slides": [
+    {
+      "type": "hook",
+      "headline": "These *GitHub* projects are quietly replacing $30B of software",
+      "kicker": "Swipe for more"
+    },
+    {
+      "type": "content",
+      "title": "What actually happened",
+      "body": "One sentence of context, then the fact.\n\nEvery claim on a content slide must trace back to a quoted sentence in the source listed below — that constraint is what keeps the account factual.",
+      "source": {
+        "name": "Example Source",
+        "url": "https://example.com/article",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Why it *matters*",
+      "body": "Numbers are copied verbatim from the source, never recomputed or rounded by the model.\n\nIf a figure cannot be matched exactly against the source text, the post is killed rather than published.",
+      "source": {
+        "name": "Example Source",
+        "url": "https://example.com/article",
+        "date": "2026-07-25"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Follow for *daily* AI signal",
+      "sub": "One verified story a day. No hype, no recycled threads."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Example Source",
+      "url": "https://example.com/article",
+      "accessed": "2026-07-25"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Never commit credentials. This repo is public.
+*.token
+token.txt
+.env
+.env.*
+secrets/
+
+node_modules/
+npm-debug.log*
+
+# Local scratch renders (published media lives under media/<slug>/ and IS committed,
+# because Instagram fetches those URLs server-side at publish time).
+tmp/
+scratch/
