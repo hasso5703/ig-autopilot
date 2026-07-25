@@ -5,20 +5,31 @@
  * carousel of seven identical layouts is boring to swipe and swipe-through is
  * the metric that buys distribution (70%+ reaches 3-5x more non-followers).
  *
- * Three rules run through all of it:
+ * Rewritten 2026-07-26 after two carousels reached nobody. The old templates
+ * were type on black: correct, sourced, and indistinguishable at thumbnail size
+ * from every other account that posts screenshots of press releases. Three
+ * things changed, and each is a rule here rather than a preference.
  *
- *   1. THREE LEVELS OF HIERARCHY, NEVER MORE. Primary (the point), secondary
+ *   1. EVERY SLIDE CARRIES A PICTURE. A photograph under a scrim, or a
+ *      generated field. What stops a thumb is an image; type is what keeps it
+ *      stopped. `imagery.mjs` acquires them, this file places them, and a slide
+ *      whose picture failed degrades to an abstract field rather than to a lie.
+ *
+ *   2. THE TYPE FILLS THE FRAME. Every archetype's content block is a flex
+ *      child that stretches, and the auto-fitter grows text into whatever
+ *      height it is given instead of sitting at a fixed size in the middle of a
+ *      void. `render.mjs` then measures the text coverage of the finished slide
+ *      and refuses anything under the floor in `brand.json`. The slide that
+ *      caused this rewrite measured 0.38.
+ *
+ *   3. THREE LEVELS OF HIERARCHY, NEVER MORE. Primary (the point), secondary
  *      (the support), tertiary (index, brand, source). Each separated by a
- *      large jump in size or weight, never a small one — timid contrast is
- *      what makes a layout read as a filled-in template.
+ *      large jump, never a small one. Timid contrast is what makes a layout
+ *      read as a filled-in form.
  *
- *   2. SLIDE 2 IS A SECOND COVER. Instagram re-serves a carousel starting at
- *      slide 2 to people who scrolled past slide 1, so slide 2 gets a `stat`
- *      archetype: one enormous figure, no paragraph. It has to stop a thumb on
- *      its own.
- *
- *   3. EVERY SLIDE PULLS FORWARD. A progress rail shows there is more, and the
- *      last content slide carries the turn that makes the CTA earned.
+ * Slide 2 is a second cover: Instagram re-serves a carousel starting at slide 2
+ * to people who scrolled past slide 1, so it gets the `stat` archetype — one
+ * enormous figure, no paragraph, able to stop a thumb on its own.
  *
  * Archetypes: hook · stat · content · quote · contrast · cta
  */
@@ -38,7 +49,7 @@ const esc = (s) =>
  */
 const inline = (text) =>
   esc(text)
-    .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+    .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
     .replace(/\*([^*]+)\*/g, '<em class="a">$1</em>');
 
 const accentize = inline;
@@ -55,7 +66,8 @@ function fontFaces(fonts) {
 /**
  * Film grain as an inline SVG turbulence. Flat #08080C on a phone screen looks
  * like a rendering error; a trace of noise reads as printed matter and costs
- * nothing at render time.
+ * nothing at render time. It also hides the banding a free-tier generated
+ * picture shows when it is upscaled from 686px to fill 1080.
  */
 const GRAIN =
   "data:image/svg+xml;utf8," +
@@ -63,9 +75,13 @@ const GRAIN =
     `<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='220' height='220' filter='url(%23n)' opacity='0.5'/></svg>`
   );
 
+/** Height of the bleeding picture on a `top` layout. 44% of the canvas. */
+const TOP_IMAGE_H = 596;
+
 function baseCss(brand, fonts) {
   const c = brand.colors;
   const g = brand.grid;
+  const t = brand.type;
   return `${fontFaces(fonts)}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:${brand.canvas.width}px;height:${brand.canvas.height}px;overflow:hidden}
@@ -73,83 +89,133 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
      -webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 
 .slide{position:relative;width:${brand.canvas.width}px;height:${brand.canvas.height}px;
-       overflow:hidden;padding:${g.margin}px;display:flex;flex-direction:column}
+       overflow:hidden;display:flex;flex-direction:column}
 .slide::after{content:"";position:absolute;inset:0;background-image:url("${GRAIN}");
-              opacity:.055;pointer-events:none;mix-blend-mode:overlay}
+              opacity:.05;pointer-events:none;mix-blend-mode:overlay;z-index:5}
+
+/* ---------- picture layers ----------
+   Four layers, always in this order: the photograph, a duotone tint that pulls
+   every source picture toward one palette, a scrim that buys legibility, and
+   the grain above everything. Text never sits directly on an unmodified
+   photograph: white on a bright sky is unreadable and no validator can see it. */
+.picwrap{position:absolute;inset:0;z-index:0;overflow:hidden}
+.pic{position:absolute;left:0;right:0;top:0;background-size:cover;background-position:center;
+     filter:grayscale(.32) contrast(1.06) saturate(.92) brightness(.8)}
+.pic.full{height:100%}
+.pic.top{height:${TOP_IMAGE_H}px}
+.pic.field{height:100%;filter:grayscale(.5) contrast(1.04) brightness(.34) blur(3px);transform:scale(1.06)}
+.tint{position:absolute;inset:0;z-index:1;background:${c.accent};opacity:.11;mix-blend-mode:color;pointer-events:none}
+.scrim{position:absolute;left:0;right:0;z-index:2;pointer-events:none}
+.scrim.bottom{bottom:0;height:82%;
+  background:linear-gradient(180deg,rgba(8,8,12,0) 0%,rgba(8,8,12,.42) 34%,rgba(8,8,12,.86) 66%,${c.bg} 96%)}
+.scrim.topfade{top:0;height:30%;background:linear-gradient(180deg,rgba(8,8,12,.78) 0%,rgba(8,8,12,0) 100%)}
+.scrim.veil{inset:0;height:100%;background:rgba(8,8,12,.42)}
+.scrim.seam{top:${TOP_IMAGE_H - 190}px;height:190px;
+  background:linear-gradient(180deg,rgba(8,8,12,0) 0%,${c.bg} 100%)}
+/* No picture: an abstract field rather than flat black, so a failed acquisition
+   still looks deliberate. */
+.field-fallback{position:absolute;inset:0;z-index:0;
+  background:radial-gradient(58% 44% at 22% 18%, rgba(77,225,255,.22) 0%, rgba(77,225,255,.05) 45%, rgba(8,8,12,0) 72%),
+             radial-gradient(48% 38% at 86% 88%, rgba(77,225,255,.14) 0%, rgba(8,8,12,0) 70%),
+             ${c.bg}}
+
+.inner{position:relative;z-index:3;flex:1 1 auto;display:flex;flex-direction:column;
+       padding:${g.margin}px;min-height:0}
+.inner.below{padding-top:${TOP_IMAGE_H - 96}px}
 
 .display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;
-         letter-spacing:-0.012em;line-height:1.02}
+         letter-spacing:-0.014em;line-height:1.0}
 .a{color:${c.accent};font-style:normal}
+.onpic{text-shadow:0 3px 34px rgba(0,0,0,.6),0 1px 4px rgba(0,0,0,.45)}
+
+/* A stretching box the auto-fitter measures against. Without it, text inside a
+   flex child that grows can never be told apart from text that overflows it. */
+/* overflow:hidden here, and on .cells, for one specific reason: scrollHeight
+   still reports the true content height of a clipped box, so the fitter can
+   still see a spill, while the slide's own scrollHeight stops being polluted by
+   descendants that bleed on purpose (the scaled blur behind a field layout
+   made every stat slide look like it overflowed by 41px). */
+.fitbox{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;min-height:0;overflow:hidden}
 
 /* ---------- persistent furniture ---------- */
-.rail{position:absolute;left:0;top:0;height:9px;width:100%;background:rgba(255,255,255,.07);z-index:3}
+.rail{position:absolute;left:0;top:0;height:9px;width:100%;background:rgba(255,255,255,.09);z-index:6}
 .rail i{display:block;height:100%;background:${c.accent}}
 
 .topbar{display:flex;align-items:center;justify-content:space-between;
-        font-weight:700;font-size:21px;letter-spacing:.2em;text-transform:uppercase;
+        font-weight:700;font-size:22px;letter-spacing:.2em;text-transform:uppercase;
         color:${c.muted};flex:0 0 auto}
 .topbar .idx{color:${c.accent}}
 
-.foot{margin-top:auto;flex:0 0 auto;padding-top:30px;
-      border-top:1px solid rgba(255,255,255,.13);
-      font-size:22px;line-height:1.55;color:${c.muted}}
-.foot b{color:${c.body};font-weight:700}
-.foot .u{color:${c.faint};word-break:break-all}
+/* The source line used to print the full URL, which cost two lines and 200px of
+   canvas to render something nobody can read or click. The domain and the date
+   are the claim; the URL belongs in the caption. */
+.foot{margin-top:auto;flex:0 0 auto;padding-top:26px;display:flex;align-items:flex-end;
+      justify-content:space-between;gap:24px;
+      border-top:1px solid rgba(255,255,255,.16);
+      font-size:24px;line-height:1.3;color:${c.muted};font-weight:700;
+      letter-spacing:.1em;text-transform:uppercase}
+.foot .src{color:${c.body}}
+.foot .src i{font-style:normal;color:${c.accent}}
+.credit{font-size:17px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.38);
+        text-align:right;max-width:440px;text-transform:none}
 
 /* ---------- hook ---------- */
-.hook{justify-content:flex-end;padding-top:150px}
-.hook .glow{position:absolute;left:-14%;top:-26%;width:128%;height:96%;
-  background:radial-gradient(46% 42% at 50% 50%, rgba(77,225,255,.28) 0%, rgba(77,225,255,.06) 42%, rgba(8,8,12,0) 72%);}
-.hook .kicker{font-weight:700;font-size:23px;letter-spacing:.26em;text-transform:uppercase;
-              color:${c.accent};margin-bottom:34px}
-.hook h1{margin-bottom:40px}
-.hook .heroWrap{display:flex;align-items:baseline;gap:26px;margin-bottom:44px}
-.hook .hero{font-family:'Anton',sans-serif;font-size:196px;line-height:.82;color:${c.accent};letter-spacing:-0.02em}
-.hook .heroLabel{font-weight:700;font-size:27px;line-height:1.45;letter-spacing:.06em;
-                 text-transform:uppercase;color:${c.body};max-width:540px}
-.hook .mark{display:flex;align-items:center;gap:22px}
-.hook .mark .line{flex:1;height:2px;background:${c.rule};opacity:.5}
+.hook .inner{justify-content:flex-end}
+.hook .kicker{font-weight:700;font-size:24px;letter-spacing:.26em;text-transform:uppercase;
+              color:${c.accent};margin-bottom:26px}
+.hook h1{margin-bottom:30px}
+.hook .heroWrap{display:flex;align-items:center;gap:24px;margin-bottom:30px;
+                border-left:9px solid ${c.accent};padding-left:26px}
+.hook .hero{font-family:'Anton',sans-serif;font-size:132px;line-height:.86;color:${c.accent};
+            letter-spacing:-0.02em;flex:0 0 auto}
+.hook .heroLabel{font-weight:700;font-size:30px;line-height:1.3;letter-spacing:.02em;
+                 text-transform:uppercase;color:${c.ink}}
+.hook .mark{display:flex;align-items:center;gap:20px;margin-bottom:18px}
+.hook .mark .line{flex:1;height:2px;background:${c.rule};opacity:.45}
 .hook .mark .name{font-weight:700;font-size:23px;letter-spacing:${brand.wordmarkTracking};
                   text-transform:uppercase;white-space:nowrap;color:${c.ink}}
-.hook .swipe{margin-top:26px;text-align:center;font-weight:700;font-size:21px;
-             letter-spacing:.3em;text-transform:uppercase;color:${c.muted}}
+.hook .swipe{text-align:center;font-weight:700;font-size:22px;
+             letter-spacing:.3em;text-transform:uppercase;color:${c.body}}
+.hook .credit{position:absolute;right:${g.margin}px;bottom:26px;z-index:4}
 
 /* ---------- stat: slide 2 doubles as a cover ---------- */
-.stat{justify-content:center;text-align:left}
-.stat .figure{font-family:'Anton',sans-serif;color:${c.accent};line-height:.92;text-transform:uppercase;
-              letter-spacing:-0.03em;margin-bottom:16px}
-.stat .unit{font-family:'Anton',sans-serif;font-size:64px;color:${c.ink};
-            text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:40px}
-.stat .say{font-size:44px;line-height:1.5;color:${c.body};max-width:900px}
+.stat .figure{font-family:'Anton',sans-serif;color:${c.accent};line-height:.9;text-transform:uppercase;
+              letter-spacing:-0.03em;margin-bottom:10px}
+.stat .unit{font-family:'Anton',sans-serif;font-size:70px;line-height:1.06;color:${c.ink};
+            text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:38px}
+.stat .say{font-size:${t.bodyMax - 4}px;line-height:1.42;color:${c.body}}
 .stat .say b{color:${c.ink};font-weight:700}
 
 /* ---------- content ---------- */
-.content .mid{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;
-               padding:38px 0 44px}
-.content h2{margin-bottom:34px}
-.content .body{font-size:46px;line-height:1.5;color:${c.body};font-weight:400}
+.content h2{margin-bottom:30px}
+.content .body{font-size:${t.bodyMax}px;line-height:1.4;color:${c.body};font-weight:400}
 .content .body b{color:${c.ink};font-weight:700}
 
 /* ---------- quote ---------- */
-.quote{justify-content:center}
-.quote .qm{font-family:'Anton',sans-serif;font-size:150px;line-height:.6;color:${c.accent};opacity:.85;margin-bottom:18px}
-.quote blockquote{font-weight:700;line-height:1.34;color:${c.ink};margin-bottom:38px}
-.quote .by{font-size:26px;letter-spacing:.05em;color:${c.muted};display:flex;align-items:center;gap:18px}
-.quote .by .tick{display:inline-block;width:46px;height:4px;background:${c.accent};flex:0 0 auto}
+.quote .fitbox{justify-content:flex-end}
+.quote .qm{font-family:'Anton',sans-serif;font-size:170px;line-height:.62;color:${c.accent};margin-bottom:14px}
+.quote blockquote{font-weight:700;line-height:1.26;color:${c.ink};margin-bottom:34px}
+.quote .by{font-size:28px;line-height:1.35;letter-spacing:.04em;color:${c.body};
+           display:flex;align-items:flex-start;gap:18px}
+.quote .by .tick{display:inline-block;width:46px;height:5px;background:${c.accent};flex:0 0 auto;margin-top:14px}
 .quote .by b{color:${c.accent};font-weight:700}
 
-/* ---------- contrast: claim vs caveat ---------- */
-.contrast{justify-content:center;gap:30px}
-.contrast .cell{padding:52px 48px;border-radius:6px}
-.contrast .cell .lab{font-weight:700;font-size:22px;letter-spacing:.24em;
-                     text-transform:uppercase;margin-bottom:20px}
-.contrast .cell .txt{font-size:48px;line-height:1.42}
-.contrast .claim{background:rgba(255,255,255,.055)}
+/* ---------- contrast: claim vs caveat ----------
+   The published version put two fixed-height panels in the middle of the frame
+   and left 55% of it empty. The cells stretch now, and their text is fitted to
+   the height they end up with rather than set at 48px and hoped for. */
+.contrast .cells{flex:1 1 auto;display:flex;flex-direction:column;gap:${brand.grid.gutter}px;min-height:0;overflow:hidden}
+.contrast .cell{flex:1 1 0;min-height:0;padding:44px 46px;border-radius:8px;
+                display:flex;flex-direction:column;justify-content:center}
+.contrast .cell .lab{font-weight:700;font-size:26px;letter-spacing:.24em;
+                     text-transform:uppercase;margin-bottom:22px;flex:0 0 auto}
+.contrast .cell .txt{line-height:1.18;font-weight:700}
+.contrast .claim{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
 .contrast .claim .lab{color:${c.muted}}
 .contrast .claim .txt{color:${c.body}}
 .contrast .caveat{background:${c.accent}}
-.contrast .caveat .lab{color:rgba(4,18,26,.62)}
-.contrast .caveat .txt{color:${c.accentInk};font-weight:700}
+.contrast .caveat .lab{color:rgba(4,18,26,.66)}
+.contrast .caveat .txt{color:${c.accentInk}}
 /* The caveat panel is filled with the accent colour, and *emphasis* paints text
    in that same accent colour. On 2026-07-25 a slide went out reading "What she
    wants back is ." with the point rendered invisibly on its own background. The
@@ -157,16 +223,18 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
    Forbidding the markup here would rely on whoever writes the next slide
    remembering. Underlining instead makes the failure unreachable. */
 .contrast .caveat .a{color:${c.accentInk};text-decoration:underline;
-                     text-decoration-thickness:4px;text-underline-offset:7px}
+                     text-decoration-thickness:5px;text-underline-offset:8px}
+.contrast .arrow{flex:0 0 auto;text-align:center;font-family:'Anton',sans-serif;
+                 font-size:34px;color:${c.accent};letter-spacing:.3em}
 
 /* ---------- cta ---------- */
-.cta{justify-content:center;align-items:center;text-align:center}
-.cta h2{margin-bottom:34px}
-.cta .handle{font-family:'Anton',sans-serif;font-size:74px;color:${c.accent};
-             text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:30px}
-.cta .sub{font-size:38px;line-height:1.5;color:${c.body};max-width:800px}
-.cta .disclosure{position:absolute;left:${g.margin}px;right:${g.margin}px;bottom:52px;
-                 font-size:20px;line-height:1.4;color:${c.faint};text-align:center}`;
+.cta .inner{align-items:center;text-align:center;justify-content:flex-end}
+.cta h2{margin-bottom:30px}
+.cta .handle{font-family:'Anton',sans-serif;font-size:88px;line-height:1;color:${c.accent};
+             text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:24px}
+.cta .sub{font-size:42px;line-height:1.36;color:${c.ink};max-width:840px;font-weight:700}
+.cta .disclosure{margin-top:30px;font-size:20px;line-height:1.4;color:${c.muted};
+                 letter-spacing:.12em;text-transform:uppercase}`;
 }
 
 const doc = (brand, fonts, body) =>
@@ -177,108 +245,185 @@ const rail = (i, n) => `<div class="rail"><i style="width:${Math.round((i / n) *
 const topbar = (brand, i, n) =>
   `<div class="topbar"><span class="idx">${String(i).padStart(2, "0")} / ${String(n).padStart(2, "0")}</span><span>${esc(brand.wordmark)}</span></div>`;
 
-const foot = (s) =>
-  s.source
-    ? `<div class="foot"><b>${esc(s.source.name)}</b> · ${esc(s.source.date)}<br><span class="u">${esc(s.source.url)}</span></div>`
-    : "";
+/** techcrunch.com -> TECHCRUNCH. The domain is the claim; the URL is caption material. */
+export function sourceLabel(source) {
+  if (!source) return "";
+  if (source.name) return source.name;
+  try {
+    return new URL(source.url).hostname.replace(/^www\./, "").split(".")[0];
+  } catch {
+    return "";
+  }
+}
 
-/** Slide 1 — a poster. Headline plus one hero figure, nothing else competing. */
-function hook(brand, fonts, s, i, n) {
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function shortDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || ""));
+  if (!m) return esc(iso || "");
+  return `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}`;
+}
+
+const creditChip = (image) =>
+  image?.credit ? `<div class="credit">${esc(image.credit)}</div>` : "";
+
+const foot = (s, image) => {
+  const left = s.source
+    ? `<span class="src">${esc(sourceLabel(s.source))} <i>·</i> ${shortDate(s.source.date)}</span>`
+    : "<span></span>";
+  return `<div class="foot">${left}${creditChip(image)}</div>`;
+};
+
+/**
+ * The picture layers for a slide.
+ *
+ * `mode` comes from the archetype unless the post overrides it:
+ *   full   the picture is the slide, text sits in the scrim at the bottom
+ *   top    the picture bleeds across the top 44%, text below it
+ *   field  blurred and dropped to a third of its brightness, a texture for type
+ */
+function picture(image, mode) {
+  if (!image?.dataUri) return `<div class="field-fallback"></div>`;
+  const pos = image.focal === "top" ? "center top" : image.focal === "bottom" ? "center bottom" : "center";
+  const layers = [
+    `<div class="pic ${mode}" style="background-image:url('${image.dataUri}');background-position:${pos}"></div>`,
+    `<div class="tint"></div>`,
+  ];
+  if (mode === "full") layers.push(`<div class="scrim topfade"></div>`, `<div class="scrim bottom"></div>`);
+  if (mode === "top") layers.push(`<div class="scrim seam"></div>`);
+  if (mode === "field") layers.push(`<div class="scrim veil"></div>`);
+  return `<div class="picwrap">${layers.join("")}</div>`;
+}
+
+const mode = (image, fallback) => image?.mode || fallback;
+
+/** Slide 1 — a poster. Picture, headline, one hero figure. Nothing else. */
+function hook(brand, fonts, s, i, n, image) {
   const hero = s.hero
-    ? `<div class="heroWrap"><span class="hero">${esc(s.hero.value)}</span><span class="heroLabel">${nl(s.hero.label ?? "")}</span></div>`
+    ? `<div class="heroWrap mass"><span class="hero">${esc(s.hero.value)}</span><span class="heroLabel">${nl(s.hero.label ?? "")}</span></div>`
     : "";
   return doc(
     brand,
     fonts,
-    `<div class="slide hook">${rail(i, n)}<div class="glow"></div>
-      ${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ""}
-      <h1 class="display fit" data-max="${brand.type.hookMax}" data-min="${brand.type.hookMin}" data-maxlines="4">${accentize(s.headline)}</h1>
-      ${hero}
-      <div class="mark"><span class="line"></span><span class="name">${esc(brand.wordmark)}</span><span class="line"></span></div>
-      <div class="swipe">${esc(s.swipe ?? "Swipe for the receipts")}</div>
+    `<div class="slide hook">${picture(image, mode(image, "full"))}${rail(i, n)}
+      <div class="inner">
+        <div class="fitbox" style="justify-content:flex-end">
+          ${s.kicker ? `<div class="kicker mass">${esc(s.kicker)}</div>` : ""}
+          <h1 class="display fit onpic mass" data-max="${brand.type.hookMax}" data-min="${brand.type.hookMin}" data-maxlines="4">${accentize(s.headline)}</h1>
+          ${hero}
+        </div>
+        <div class="mark"><span class="line"></span><span class="name">${esc(brand.wordmark)}</span><span class="line"></span></div>
+        <div class="swipe">${esc(s.swipe ?? "Swipe for the receipts")}</div>
+      </div>
+      ${creditChip(image)}
     </div>`
   );
 }
 
 /** Slide 2 — one number, big enough to work as a cover on its own. */
-function stat(brand, fonts, s, i, n) {
+function stat(brand, fonts, s, i, n, image) {
   return doc(
     brand,
     fonts,
-    `<div class="slide stat">${rail(i, n)}${topbar(brand, i, n)}
-      <div style="flex:1 1 auto;display:flex;flex-direction:column;justify-content:center">
-        <div class="figure fit" data-max="${brand.type.statMax}" data-min="${brand.type.statMin}" data-maxlines="1">${esc(s.figure)}</div>
-        ${s.unit ? `<div class="unit">${accentize(s.unit)}</div>` : ""}
-        <div class="say">${nl(s.body)}</div>
+    `<div class="slide stat">${picture(image, mode(image, "field"))}${rail(i, n)}
+      <div class="inner">
+        ${topbar(brand, i, n)}
+        <div class="fitbox">
+          <div class="figure fit mass" data-max="${brand.type.statMax}" data-min="${brand.type.statMin}" data-maxlines="1">${esc(s.figure)}</div>
+          ${s.unit ? `<div class="unit mass">${accentize(s.unit)}</div>` : ""}
+          <div class="say mass">${nl(s.body)}</div>
+        </div>
+        ${foot(s, image)}
       </div>
-      ${foot(s)}
     </div>`
   );
 }
 
-function content(brand, fonts, s, i, n) {
+/** A picture across the top, an idea underneath it. */
+function content(brand, fonts, s, i, n, image) {
+  const m = mode(image, "top");
   return doc(
     brand,
     fonts,
-    `<div class="slide content">${rail(i, n)}${topbar(brand, i, n)}
-      <div class="mid">
-        <h2 class="display fit" data-max="${brand.type.titleMax}" data-min="${brand.type.titleMin}" data-maxlines="3">${accentize(s.title)}</h2>
-        <div class="body">${nl(s.body)}</div>
+    `<div class="slide content">${picture(image, m)}${rail(i, n)}
+      <div class="inner ${m === "top" ? "below" : ""}">
+        ${m === "top" ? "" : topbar(brand, i, n)}
+        <div class="fitbox">
+          <h2 class="display fit mass" data-max="${brand.type.titleMax}" data-min="${brand.type.titleMin}" data-maxlines="3">${accentize(s.title)}</h2>
+          <div class="body mass">${nl(s.body)}</div>
+        </div>
+        ${foot(s, image)}
       </div>
-      ${foot(s)}
     </div>`
   );
 }
 
-function quote(brand, fonts, s, i, n) {
+function quote(brand, fonts, s, i, n, image) {
   return doc(
     brand,
     fonts,
-    `<div class="slide quote">${rail(i, n)}${topbar(brand, i, n)}
-      <div style="flex:1 1 auto;display:flex;flex-direction:column;justify-content:center">
-        <div class="qm">&ldquo;</div>
-        <blockquote class="fit" data-max="${brand.type.quoteMax}" data-min="${brand.type.quoteMin}" data-maxlines="7">${nl(s.body)}</blockquote>
-        <div class="by"><span class="tick"></span><b>${esc(s.attribution ?? s.source?.name ?? "")}</b></div>
+    `<div class="slide quote">${picture(image, mode(image, "full"))}${rail(i, n)}
+      <div class="inner">
+        ${topbar(brand, i, n)}
+        <div class="fitbox">
+          <div class="qm">&ldquo;</div>
+          <blockquote class="fit onpic mass" data-max="${brand.type.quoteMax}" data-min="${brand.type.quoteMin}" data-maxlines="7">${nl(s.body)}</blockquote>
+          <div class="by mass"><span class="tick"></span><b>${esc(s.attribution ?? sourceLabel(s.source))}</b></div>
+        </div>
+        ${foot(s, image)}
       </div>
-      ${foot(s)}
     </div>`
   );
 }
 
-/** The turn: what they claimed, next to what the footnote actually said. */
-function contrast(brand, fonts, s, i, n) {
+/** The turn: what it looks like, next to what the source actually says. */
+function contrast(brand, fonts, s, i, n, image) {
   return doc(
     brand,
     fonts,
-    `<div class="slide contrast">${rail(i, n)}${topbar(brand, i, n)}
-      <div style="flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:30px">
-        <div class="cell claim"><div class="lab">${esc(s.claimLabel ?? "The headline")}</div><div class="txt">${nl(s.claim)}</div></div>
-        <div class="cell caveat"><div class="lab">${esc(s.caveatLabel ?? "The footnote")}</div><div class="txt">${nl(s.caveat)}</div></div>
+    `<div class="slide contrast">${picture(image, mode(image, "field"))}${rail(i, n)}
+      <div class="inner">
+        ${topbar(brand, i, n)}
+        <div class="cells">
+          <div class="cell claim mass">
+            <div class="lab">${esc(s.claimLabel ?? "The headline")}</div>
+            <div class="txt fit" data-max="${brand.type.cellMax}" data-min="${brand.type.cellMin}" data-maxlines="5">${nl(s.claim)}</div>
+          </div>
+          <div class="arrow">&#9660;</div>
+          <div class="cell caveat mass">
+            <div class="lab">${esc(s.caveatLabel ?? "The footnote")}</div>
+            <div class="txt fit" data-max="${brand.type.cellMax}" data-min="${brand.type.cellMin}" data-maxlines="5">${nl(s.caveat)}</div>
+          </div>
+        </div>
+        ${foot(s, image)}
       </div>
-      ${foot(s)}
     </div>`
   );
 }
 
-function cta(brand, fonts, s, i, n) {
+function cta(brand, fonts, s, i, n, image) {
   return doc(
     brand,
     fonts,
-    `<div class="slide cta">${rail(i, n)}
-      <h2 class="display fit" data-max="${brand.type.titleMax + 10}" data-min="${brand.type.titleMin}" data-maxlines="3">${accentize(s.headline)}</h2>
-      <div class="handle">${esc(brand.handle)}</div>
-      ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ""}
-      <div class="disclosure">${esc(brand.aiDisclosure)}</div>
+    `<div class="slide cta">${picture(image, mode(image, "full"))}${rail(i, n)}
+      <div class="inner">
+        <div class="fitbox" style="justify-content:flex-end">
+          <h2 class="display fit onpic mass" data-max="${brand.type.titleMax + 10}" data-min="${brand.type.titleMin}" data-maxlines="3">${accentize(s.headline)}</h2>
+          <div class="handle mass">${esc(brand.handle)}</div>
+          ${s.sub ? `<div class="sub mass">${esc(s.sub)}</div>` : ""}
+          <div class="disclosure">${esc(brand.aiDisclosure)}</div>
+        </div>
+      </div>
+      ${creditChip(image)}
     </div>`
   );
 }
 
 const ARCHETYPES = { hook, stat, content, quote, contrast, cta };
 
-export function slideHtml(brand, fonts, slide, index, total) {
+export function slideHtml(brand, fonts, slide, index, total, image = null) {
   const fn = ARCHETYPES[slide.type];
   if (!fn) throw new Error(`unknown slide type '${slide.type}' — expected one of ${Object.keys(ARCHETYPES).join(", ")}`);
-  return fn(brand, fonts, slide, index, total);
+  return fn(brand, fonts, slide, index, total, image);
 }
 
 export const SLIDE_TYPES = Object.keys(ARCHETYPES);

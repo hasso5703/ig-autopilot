@@ -12,3 +12,11 @@ npm-debug.log*
 # because Instagram fetches those URLs server-side at publish time).
 tmp/
 scratch/
+
+# Kokoro weights and virtualenv, re-downloaded per run (92 MB + 28 MB).
+.cache/
+
+# Raw acquired pictures. The composed slides are what Instagram fetches and they
+# ARE committed; the sources behind them are cache, and their provenance is
+# recorded in media/<slug>/imagery.json, which is committed.
+media/*/src/
