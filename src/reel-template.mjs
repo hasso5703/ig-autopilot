@@ -230,7 +230,7 @@ const GRAIN =
   );
 
 /** The lines of a beat, in entrance order. Each becomes one staggered element. */
-function beatLines(b) {
+function beatLines(b, handle) {
   switch (b.type) {
     case "cover":
       return [
@@ -258,7 +258,7 @@ function beatLines(b) {
       return [
         b.headline && { cls: "headline sm", html: inline(b.headline) },
         b.sub && { cls: "body", html: inline(b.sub) },
-        { cls: "handle", html: "" },
+        { cls: "handle", html: esc(handle) },
       ].filter(Boolean);
     default:
       return [
@@ -275,7 +275,7 @@ export function html(post, brand, fonts) {
 
   const stage = beats
     .map((b, i) => {
-      const lines = beatLines(b)
+      const lines = beatLines(b, brand.handle)
         .map(
           (l, j) =>
             `<div class="ln ${l.cls}" data-i="${j}"${l.count ? ` data-count="${esc(l.count)}"` : ""}>${l.html}</div>`
@@ -325,7 +325,7 @@ em.a{font-style:normal;color:${c.accent}}
       border-left:10px solid #2a2d34;padding:36px 0 36px 44px;margin:22px 0}
 .cell.alt{border-left-color:${c.accent}}
 .cl{display:block;font-size:34px;letter-spacing:.14em;text-transform:uppercase;color:#8c929c;margin-bottom:16px}
-.handle{font-family:'Anton';font-size:64px;color:${c.accent};margin-top:60px}
+.handle{font-family:'Anton';font-size:76px;color:${c.accent};margin-top:72px;letter-spacing:-.01em}
 
 #bar{position:absolute;top:0;left:0;height:6px;background:${c.accent};z-index:10}
 #mark{position:absolute;top:96px;left:0;right:0;text-align:center;font-family:'Archivo';font-weight:700;
@@ -367,7 +367,7 @@ window.render = function (t) {
     el.style.opacity = o;
 
     if (active) {
-      if (b.source) src.textContent = 'Source: ' + b.source;
+      src.textContent = b.source ? 'Source: ' + b.source : '';
       const lines = el.querySelectorAll('.ln');
       lines.forEach((ln, j) => {
         const lag = 0.09 * j;
