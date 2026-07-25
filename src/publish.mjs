@@ -13,6 +13,8 @@
  * server-side. There is no raw-bytes upload path for images.
  */
 
+import { execSync } from "node:child_process";
+
 const API = "https://graph.instagram.com";
 const VERSION = process.env.IG_API_VERSION || "v25.0";
 // "me" resolves to the token's own account on graph.instagram.com.
@@ -23,6 +25,30 @@ const POLL_INTERVAL_MS = 3000;
 const POLL_TIMEOUT_MS = 5 * 60 * 1000;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const REPO = process.env.IG_MEDIA_REPO || "hasso5703/ig-autopilot";
+
+/**
+ * Builds the public URLs Instagram will fetch, pinned to a commit SHA.
+ *
+ * This is not a stylistic choice. raw.githubusercontent.com caches
+ * branch-path URLs (.../main/...) for several minutes, but treats
+ * commit-path URLs (.../<sha>/...) as immutable. Measured on 2026-07-25:
+ * immediately after a push that changed 01.jpg from 63450 to 109898 bytes,
+ * the /main/ URL still served 63450 while the /<sha>/ URL served 109898.
+ *
+ * Meta copies the image to its own CDN at publish time, so fetching a stale
+ * frame bakes the wrong artwork into the post permanently, with no error
+ * anywhere. Always publish from the SHA.
+ */
+export function mediaUrls(slug, count, sha) {
+  const rev = sha || execSync("git rev-parse HEAD", { encoding: "utf8" }).trim();
+  if (!/^[0-9a-f]{40}$/.test(rev)) throw new Error(`not a full commit sha: ${rev}`);
+  return Array.from(
+    { length: count },
+    (_, i) => `https://raw.githubusercontent.com/${REPO}/${rev}/media/${slug}/${String(i + 1).padStart(2, "0")}.jpg`
+  );
+}
 
 function requireToken() {
   const t = process.env.IG_ACCESS_TOKEN;
@@ -156,8 +182,16 @@ if (process.argv[1] && process.argv[1].endsWith("publish.mjs")) {
   const run = async () => {
     if (cmd === "whoami") return whoami();
     if (cmd === "quota") return publishingQuota();
+    if (cmd === "urls") {
+      const [slug, count] = rest;
+      return mediaUrls(slug, Number(count));
+    }
     if (cmd === "dry-run" || cmd === "publish") {
       const [caption, ...urls] = rest;
+      for (const u of urls) {
+        if (/raw\.githubusercontent\.com\/[^/]+\/[^/]+\/(main|master)\//.test(u))
+          throw new Error(`refusing a branch-path media URL (${u}) — raw.githubusercontent caches those, and Instagram would bake a stale image into the post. Use: node src/publish.mjs urls <slug> <count>`);
+      }
       return publishCarousel(urls, caption, { dryRun: cmd === "dry-run" });
     }
     throw new Error(`unknown command: ${cmd ?? "(none)"}`);

@@ -153,8 +153,9 @@ composition. Reject and rewrite if text is clipped, a headline auto-shrank to
 something tiny, or a slide is visually empty.
 
 ### 8. Publish
-Commit and push the media first — Instagram fetches the URLs from
-`raw.githubusercontent.com`, so they must be live before publishing:
+
+Commit and push the media first — Instagram fetches the URLs server-side, so
+they must be live before publishing:
 
 ```bash
 git add media/<slug> posts/<slug>.json state/
@@ -162,7 +163,18 @@ git commit -m "post: <slug>"
 git push origin main
 ```
 
-Confirm each URL returns HTTP 200 and `content-type: image/jpeg`, then:
+Then build the URLs with the helper. **Never hand-write a `/main/` URL.**
+
+```bash
+node src/publish.mjs urls <slug> <slide-count>
+```
+
+raw.githubusercontent caches branch paths for minutes but treats commit paths as
+immutable. Measured: right after a push that changed a slide from 63450 to
+109898 bytes, the `/main/` URL still served the old 63450 bytes while the
+`/<sha>/` URL served the new one. Instagram copies the image onto its own CDN at
+publish time, so a stale fetch bakes the wrong artwork into the post forever,
+silently. `publish.mjs` refuses branch-path URLs for this reason.
 
 ```bash
 node src/publish.mjs dry-run "<caption>" <url1> <url2> …   # containers only
