@@ -33,9 +33,18 @@ stops being true, so treat the gate below as the product, not as paperwork.
 
 ### 0. Are you even allowed to publish right now
 ```bash
+npm install --no-audit --no-fund   # Chromium comes from here; do not assume it is present
 npm test
 node src/state.mjs guard
 ```
+
+`npm install` is here rather than left to the environment's setup script on
+purpose. A fresh clone has no `node_modules`, `src/render.mjs` needs Playwright,
+and Node's ESM resolver **ignores `NODE_PATH`** — so a globally installed copy is
+invisible to `import` and the failure arrives late, after the story has been
+researched and written. Running it costs a couple of seconds and removes a
+dependency on configuration this manual cannot see. If it fails, say so and
+stop: nothing downstream can render.
 
 Both must pass before anything else. Everything after this step costs time and
 money, and none of it is usable if either one fails.
@@ -59,9 +68,14 @@ should never be silent.
 node src/feeds.mjs 36 > /tmp/items.json
 ```
 Reads every feed in `sources.json` and prints fresh/fetched with the window used
-for each. **A feed reporting 0 fresh is usually not broken.** arXiv is
-legitimately closed at weekends, and the labs do not publish daily — which is
-why primary sources get a four-day window and the press keeps 36 hours.
+for each. It also writes `state/feeds-last.json` as a side effect of really
+fetching, which step 9 commits. That file is the evidence that this step ran:
+the watch compares its timestamp against the clock and raises an alarm if a day
+passes with no gather, whatever any report claimed. Do not write it by hand.
+
+**A feed reporting 0 fresh is usually not broken.** arXiv is legitimately closed
+at weekends, and the labs do not publish daily, which is why primary sources get
+a four-day window and the press keeps 36 hours.
 
 **The Verge and Ars Technica return HTTP 403 from this sandbox and will keep
 doing so.** They resolve fine and answer 200 from a residential address with the

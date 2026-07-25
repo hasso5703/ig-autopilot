@@ -8,7 +8,7 @@
  * which is the correct failure mode for a news pipeline.
  */
 
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -127,6 +127,24 @@ export async function gather(opts = {}) {
     windowHours: r.feed.maxAgeHours,
     ...(r.ok ? {} : { error: r.error }),
   }));
+
+  // Leave a machine-readable trace of what this fetch actually saw.
+  //
+  // A run's own account of its gathering is a claim, not evidence, and the
+  // account is unattended: nobody is going to notice a run that quietly skipped
+  // the feeds and wrote a plausible-looking table. This file is written by the
+  // fetch itself, committed with the rest of the state, and can be compared
+  // against the report afterwards. A stale timestamp means the step did not run.
+  try {
+    await mkdir(path.join(ROOT, "state"), { recursive: true });
+    await writeFile(
+      path.join(ROOT, "state", "feeds-last.json"),
+      JSON.stringify({ at: new Date().toISOString(), fresh: items.length, feeds: report }, null, 2) + "\n",
+      "utf8"
+    );
+  } catch {
+    // Never let bookkeeping break the gather.
+  }
 
   return { items, report };
 }

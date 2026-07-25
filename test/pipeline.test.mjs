@@ -353,6 +353,26 @@ test("the renderer never invents a figure the source does not contain", async ()
 });
 
 // ---------------------------------------------------------------------------
+// A run's account of its own gathering is a claim. Nobody is watching this
+// account day to day, so a run that skipped the feeds and wrote a plausible
+// table would go unnoticed. feeds.mjs writes the evidence; the watch checks it.
+// ---------------------------------------------------------------------------
+test("a gather that has not happened for a day raises an alarm", async () => {
+  const { format } = await import("../src/watch.mjs");
+  const base = {
+    health: { ever: true, ok: true, ageHours: 2, total: 3 },
+    token: { known: true, daysLeft: 40, expiresOn: "2026-09-23", urgent: false, dead: false },
+    posts: [],
+  };
+  const stale = format({ ...base, gather: { known: true, ok: false, ageHours: 51.2, fresh: 0, feeds: 14, dead: [] } });
+  assert.match(stale, /COLLECTE\s+ALERTE/, "a stale gather must be shouted about, not shown as a number");
+
+  const fine = format({ ...base, gather: { known: true, ok: true, ageHours: 1, fresh: 68, feeds: 14, dead: ["arXiv cs.AI"] } });
+  assert.match(fine, /COLLECTE\s+68 sujets frais/);
+  assert.match(fine, /arXiv/, "a silent feed should be named");
+});
+
+// ---------------------------------------------------------------------------
 // Incident: a branch-path media URL would have baked a stale image into a post
 // permanently. raw.githubusercontent caches /main/ paths for minutes and treats
 // commit paths as immutable, and Meta copies whatever it fetches to its own CDN.

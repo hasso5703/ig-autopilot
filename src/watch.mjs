@@ -55,6 +55,34 @@ export async function tokenStatus() {
   };
 }
 
+/**
+ * Did the last run actually gather, or only say it did?
+ *
+ * `src/feeds.mjs` writes state/feeds-last.json as a side effect of really
+ * fetching. If that file is older than a day, the daily run did not reach its
+ * gather step, whatever its report said. This is the one check here that
+ * verifies a run's work rather than its conclusions.
+ */
+export async function gatherHealth() {
+  const file = path.join(ROOT, "state", "feeds-last.json");
+  if (!existsSync(file)) return { known: false, note: "no gather has ever been recorded" };
+  try {
+    const f = JSON.parse(await readFile(file, "utf8"));
+    const ageHours = (Date.now() - Date.parse(f.at)) / 3600000;
+    const dead = (f.feeds ?? []).filter((x) => !x.ok).map((x) => x.name);
+    return {
+      known: true,
+      ok: ageHours <= SILENCE_ALARM_HOURS,
+      ageHours: Math.round(ageHours * 10) / 10,
+      fresh: f.fresh ?? null,
+      feeds: (f.feeds ?? []).length,
+      dead,
+    };
+  } catch {
+    return { known: false, note: "state/feeds-last.json is unreadable" };
+  }
+}
+
 export async function publishHealth() {
   const { posted } = await loadState();
   const last = posted.at(-1);
@@ -132,6 +160,14 @@ export function format(report) {
     L.push(`COMPTE        ${n(f)} abonnés${move} · ${n(a.now.media_count)} posts`);
   }
 
+  const g = report.gather;
+  if (g?.known) {
+    if (!g.ok) L.push(`COLLECTE      ALERTE : aucune récupération de flux depuis ${plural(Math.round(g.ageHours), "heure", "heures")}. Le run n'a pas atteint son étape de collecte.`);
+    else L.push(`COLLECTE      ${n(g.fresh)} sujets frais sur ${n(g.feeds)} flux${g.dead.length ? ` · muets : ${g.dead.join(", ")}` : ""}`);
+  } else if (g) {
+    L.push(`COLLECTE      inconnue : ${g.note}`);
+  }
+
   L.push("");
   L.push("POSTS");
   if (!posts.length) L.push("  aucun");
@@ -150,16 +186,18 @@ export function format(report) {
 
 export async function buildReport({ collect = true } = {}) {
   if (collect) await collectAll();
-  const [health, token, posts, account] = await Promise.all([
+  const [health, token, posts, account, gather] = await Promise.all([
     publishHealth(),
     tokenStatus(),
     performance(),
     accountTrend(),
+    gatherHealth(),
   ]);
   const alerts = [];
   if (!health.ok) alerts.push("publication");
   if (token.dead || token.urgent) alerts.push("token");
-  return { at: new Date().toISOString(), health, token, account, posts, alerts };
+  if (gather.known && !gather.ok) alerts.push("collecte");
+  return { at: new Date().toISOString(), health, token, account, gather, posts, alerts };
 }
 
 if (process.argv[1] && process.argv[1].endsWith("watch.mjs")) {
