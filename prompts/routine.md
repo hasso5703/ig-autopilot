@@ -165,6 +165,14 @@ discrepancy is itself worth a slide.
 
 Write `posts/<slug>.json`, slug `YYYY-MM-DD-short-topic`.
 
+**`test/fixtures/` is not a source of posts.** It holds one complete, gate-clean
+post used to exercise this pipeline without touching the account, and it is
+deliberately a story that has already been published and deleted. Copying it
+into `posts/` would republish something that was removed on purpose. The gate
+refuses any slug beginning `fixture-`, `smoke-` or `test-`, and the `--fixture`
+flag that bypasses that check exists for the smoke test alone. A production run
+has no reason to type it.
+
 **Two top-level fields carry the corroboration, and the gate now refuses a post
 without them:**
 
