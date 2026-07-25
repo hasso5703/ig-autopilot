@@ -636,9 +636,22 @@ node src/reel.mjs posts/<slug>.json media/<slug>
   say. A beat flagged `"long"` in the output means that line takes over 7.5
   seconds to speak: shorten the copy, do not ignore it.
 - **A music bed**, one of the CC0 tracks in `brand/audio/`, ducked under the
-  voice. Choose it with `"mood": "tension" | "wonder" | "drive"` at the top
-  level of the post. Never add music from anywhere else: Instagram's library is
-  unreachable by API and everything else is a licensing problem.
+  voice. Never add music from anywhere else: Instagram's library is unreachable
+  by API and everything else is a licensing problem.
+
+  **You choose it, per story, with `"mood"` at the top level of the post.** This
+  is an editorial decision, not a default, and it is the one place in the post
+  where you are setting how the story feels before a word is read:
+
+  | `mood` | Use it when the story is | Sounds like |
+  |---|---|---|
+  | `tension` | something broke, is at risk, or is being fought over | a low held drone, unresolved |
+  | `wonder` | something became possible that was not | open, airy, slower |
+  | `drive` | something is moving fast, scaling, or being adopted | rhythmic, forward |
+
+  Pick the one that matches what the story *does*, not the subject it is about:
+  a funding round that threatens a market is `tension`, not `drive`. Run
+  `node src/music.mjs list` to see what is actually available.
 - **The pictures from step 5c**, with a slow push in on each.
 
 If narration fails, the Reel is still made, silently, and the failure is printed
