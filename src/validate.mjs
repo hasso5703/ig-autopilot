@@ -19,6 +19,7 @@
 
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { tokens } from "./state.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const UA = "order-of-magnitude/1.0 (+https://github.com/hasso5703/ig-autopilot)";
@@ -28,6 +29,34 @@ const SLIDES_MIN = 4;
 const SLIDES_MAX = 10;         // Meta's carousel ceiling
 const HOOK_MAX_CHARS = 95;     // beyond this the auto-fit shrinks it to unreadable
 const EVIDENCE_MIN_CHARS = 40;
+
+/**
+ * How much of the central claim's vocabulary a corroborating quote must echo.
+ *
+ * Calibrated against the case that exposed the hole. The claim was about
+ * librarians running workshops teaching people to switch AI features off. A
+ * genuine second report of that story repeats librarians, workshops, AI and
+ * usually the town; an article about the AI backlash in general repeats only
+ * "AI". Below MIN is another subject and is rejected. Between MIN and THIN it
+ * is on topic but sparse, which is worth a human glance, not a refusal.
+ *
+ * These are floors, not proofs. Nothing mechanical can confirm that a page
+ * supports a claim; this only rules out that it is about something else.
+ */
+const CLAIM_OVERLAP_MIN = 0.25;
+const CLAIM_OVERLAP_THIN = 0.45;
+
+/**
+ * Distinctive vocabulary shared between a claim and a quote.
+ * Reuses the pipeline's own tokeniser so "workshops" and "workshop" collide.
+ */
+export function claimOverlap(claim, quote) {
+  const a = new Set(tokens(claim));
+  const b = new Set(tokens(quote));
+  if (!a.size) return { shared: [], ratio: 0 };
+  const shared = [...a].filter((t) => b.has(t));
+  return { shared, ratio: shared.length / a.size };
+}
 
 /** Digit runs, normalised: "1,050" -> "1050", "$30.5B" -> "30.5" */
 const numbers = (s) =>
@@ -193,9 +222,59 @@ export async function validatePost(post, opts = {}) {
       );
   }
 
-  // corroboration: a post should not rest on a single publisher
-  if (domains.size < 2)
-    warnings.push(`all claims cite a single domain (${[...domains][0] ?? "none"}) — prefer at least two independent sources`);
+  // ---- corroboration of the central claim ---------------------------------
+  //
+  // This used to be one warning: "fewer than 2 distinct domains". It was the
+  // weakest rule in the file and a live run found the hole. Counting domains
+  // anywhere in the post means a single slide citing an unrelated page
+  // satisfies it — and on 2026-07-25 a run came within one decision of citing
+  // an MIT Technology Review piece about the AI backlash to corroborate a
+  // story about librarians running workshops. Two domains, both quotes real,
+  // gate green, nothing corroborated. The agent stopped on its own judgement,
+  // which is not a control.
+  //
+  // The lesson, in its words: a green gate does not prove corroboration, only
+  // quotation. So the post must now name the one claim it rests on and show
+  // two independent pages that each carry THAT claim.
+  //
+  // Whether a page really supports a claim is not fully mechanisable. What is
+  // mechanisable is whether it is even talking about the same thing: an
+  // unrelated page does not repeat the claim's distinctive words. That is a
+  // floor, not a proof, and it is deliberately set where it separates "about
+  // another subject entirely" from "thin but genuinely on topic".
+  const claim = post.centralClaim;
+  const corr = Array.isArray(post.corroboration) ? post.corroboration : [];
+
+  if (!claim || String(claim).trim().length < 30) {
+    err("centralClaim is missing or too short — state in one sentence the single claim this carousel rests on, so corroboration has something to be checked against");
+  } else if (corr.length < 2) {
+    err(`corroboration has ${corr.length} entr${corr.length === 1 ? "y" : "ies"} — the central claim needs at least 2 independent sources, each with { url, quote }`);
+  } else {
+    const corrDomains = new Set();
+    for (const [i, c] of corr.entries()) {
+      const at = `corroboration[${i}]`;
+      if (!c?.url || !/^https:\/\//.test(c.url)) { err(`${at}: missing https url`); continue; }
+      if (!c?.quote || c.quote.trim().length < EVIDENCE_MIN_CHARS) {
+        err(`${at}: quote missing or shorter than ${EVIDENCE_MIN_CHARS} chars`);
+        continue;
+      }
+      try { corrDomains.add(new URL(c.url).hostname.replace(/^www\./, "")); } catch { err(`${at}: unparseable url`); }
+
+      const { shared, ratio } = claimOverlap(claim, c.quote);
+      if (shared.length < 2 || ratio < CLAIM_OVERLAP_MIN) {
+        err(
+          `${at}: this quote does not appear to be about the central claim — it shares only ` +
+            `${shared.length} distinctive word(s) with it (${shared.join(", ") || "none"}, ${(ratio * 100).toFixed(0)}%). ` +
+            `A real quote on a real page still corroborates nothing if the page is about something else. ` +
+            `Quote the sentence where this source states the claim itself, or drop the source.`
+        );
+      } else if (ratio < CLAIM_OVERLAP_THIN) {
+        warnings.push(`${at}: thin overlap with the central claim (${(ratio * 100).toFixed(0)}%: ${shared.join(", ")}) — check by eye that it really supports it`);
+      }
+    }
+    if (corrDomains.size < 2)
+      err(`corroboration cites ${corrDomains.size} distinct domain(s) (${[...corrDomains].join(", ") || "none"}) — two outlets syndicating one wire story are not two sources`);
+  }
 
   // ---- online: the quote must exist on the cited page ---------------------
   const evidenceChecks = [];
@@ -216,6 +295,22 @@ export async function validatePost(post, opts = {}) {
       evidenceChecks.push({ slide: i + 1, url: s.source.url, status: found ? "VERIFIED" : "NOT_FOUND" });
       if (!found)
         err(`${at}: the evidence quote does not appear on ${s.source.url} — either it was paraphrased or it was invented`);
+    }
+
+    // The corroborating quotes get the same treatment as everything else:
+    // being on topic is worthless if the sentence was never written.
+    for (const [i, c] of corr.entries()) {
+      if (!c?.quote || !c?.url) continue;
+      if (!cache.has(c.url)) cache.set(c.url, await fetchPage(c.url));
+      const page = cache.get(c.url);
+      if (!page.ok) {
+        evidenceChecks.push({ corroboration: i + 1, url: c.url, status: "UNVERIFIABLE", detail: page.error });
+        if (!opts.allowUnverifiable) err(`corroboration[${i}]: source unreachable (${page.error}) — cannot verify the quote, refusing to publish`);
+        continue;
+      }
+      const found = page.text.includes(normQuote(c.quote));
+      evidenceChecks.push({ corroboration: i + 1, url: c.url, status: found ? "VERIFIED" : "NOT_FOUND" });
+      if (!found) err(`corroboration[${i}]: the quote does not appear on ${c.url} — either it was paraphrased or it was invented`);
     }
 
     for (const [i, e] of capEv.entries()) {

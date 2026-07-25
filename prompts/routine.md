@@ -31,6 +31,19 @@ stops being true, so treat the gate below as the product, not as paperwork.
 
 ## Procedure
 
+### 0. Are you even allowed to publish right now
+```bash
+node src/state.mjs guard
+```
+Run this **first**, before gathering anything. If it exits non-zero, stop the
+run immediately and report that as the entire finding. Everything after this
+step costs time and money, and none of it can be used.
+
+It enforces a minimum gap between posts. Two runs fired forty minutes apart on
+2026-07-25 and only a sourcing failure stopped a second carousel going out to an
+account with one post. If the guard reports it was overridden, say so in your
+final report: a same-day second post should never be silent.
+
 ### 1. Gather
 ```bash
 node src/feeds.mjs 36 > /tmp/items.json
@@ -95,10 +108,41 @@ discrepancy is itself worth a slide.
 
 ### 5. Write the post spec
 
-Write `posts/<slug>.json`, slug `YYYY-MM-DD-short-topic`. Slides are not one
-shape with fields swapped — pick the **archetype** that fits what the slide has
-to do. A carousel of seven identical layouts is dull to swipe, and swipe-through
-is what buys distribution.
+Write `posts/<slug>.json`, slug `YYYY-MM-DD-short-topic`.
+
+**Two top-level fields carry the corroboration, and the gate now refuses a post
+without them:**
+
+```json
+"centralClaim": "One sentence: the single thing this whole carousel rests on.",
+"corroboration": [
+  { "url": "https://…", "quote": "the sentence where this source states that claim" },
+  { "url": "https://…", "quote": "the sentence where a DIFFERENT outlet states it" }
+]
+```
+
+Write `centralClaim` first, before any slide. If you cannot state the claim in
+one sentence, you do not yet understand the story well enough to publish it.
+
+Each corroborating quote must be **the sentence where that source states the
+claim itself**, copied verbatim, from a different domain. Not a sentence that
+happens to be on a page about a related subject.
+
+This exists because of a specific near-miss on 2026-07-25. A run about
+librarians running anti-AI workshops could not reach its real second source, and
+an MIT Technology Review piece about the AI backlash was reachable, on-topic
+enough to feel defensible, and would have turned the gate green: two domains,
+both quotes genuinely present on their pages, nothing whatsoever corroborated.
+The run stopped on its own judgement. Judgement is not a control, so the gate
+now measures how much vocabulary each quote shares with `centralClaim` and
+rejects a quote that is plainly about another subject.
+
+The rule the run wrote, worth keeping in mind whenever the gate goes green:
+**a green gate does not prove corroboration, only quotation.**
+
+Slides are not one shape with fields swapped — pick the **archetype** that fits
+what the slide has to do. A carousel of seven identical layouts is dull to
+swipe, and swipe-through is what buys distribution.
 
 | `type` | Use it for | Required fields |
 |---|---|---|

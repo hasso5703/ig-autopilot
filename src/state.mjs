@@ -193,7 +193,66 @@ export async function recordPosted(entry) {
   await appendFile(POSTED, line + "\n", "utf8");
 }
 
+/**
+ * Minimum gap between two published posts.
+ *
+ * On 2026-07-25 two runs fired forty minutes apart. The second found nothing
+ * publishable, so nothing happened — but had a story cleared, a second carousel
+ * would have gone out forty minutes after the first, to an account holding one
+ * post and zero followers. Nothing in the manual forbade it: the manual governs
+ * one post per run, and says nothing about runs.
+ *
+ * Six hours allows up to four posts a day if the schedule ever calls for it,
+ * while making the accidental double-post impossible. A manual re-run to test
+ * the pipeline is exactly the situation that trips this, which is the point.
+ */
+export const MIN_GAP_HOURS = 6;
+
+/**
+ * The deliberate override, for when a human wants a second post the same day.
+ *
+ * The value is awkward on purpose. A flag like `FORCE=1` gets set once during a
+ * test and then lives in the environment forever, quietly disarming the guard
+ * for every future run. Something that has to be typed out in full is something
+ * nobody sets by accident and nobody leaves behind without noticing.
+ */
+const OVERRIDE = "yes-i-want-a-second-post-today";
+
+export async function publishGap() {
+  const { posted } = await loadState();
+  const last = posted.at(-1);
+  if (!last) return { ok: true, hours: null, min: MIN_GAP_HOURS, last: null, overridden: false };
+
+  const hours = (Date.now() - Date.parse(last.at)) / 3600000;
+  const overridden = process.env.OOM_PUBLISH_ANYWAY === OVERRIDE;
+
+  return {
+    ok: hours >= MIN_GAP_HOURS || overridden,
+    overridden: overridden && hours < MIN_GAP_HOURS,
+    hours: Math.round(hours * 10) / 10,
+    min: MIN_GAP_HOURS,
+    last: { at: last.at, slug: last.slug, permalink: last.permalink ?? null },
+  };
+}
+
 if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
-  const { posted, seen } = await loadState();
-  console.log(JSON.stringify({ posted: posted.length, seen: seen.length, lastPosted: posted.at(-1) ?? null }, null, 2));
+  if (process.argv[2] === "guard") {
+    const g = await publishGap();
+    console.log(JSON.stringify(g, null, 2));
+    if (!g.ok) {
+      console.error(
+        `\nBLOCKED — the last post went out ${g.hours}h ago and the minimum gap is ${g.min}h.` +
+          `\nStop this run now. Do not research, render or publish.`
+      );
+      process.exit(1);
+    }
+    console.error(
+      g.overridden
+        ? `\nCLEAR to publish — BUT ONLY BECAUSE THE GUARD WAS OVERRIDDEN. The last post was ${g.hours}h ago, under the ${g.min}h minimum. Say this in your final report.`
+        : "\nCLEAR to publish"
+    );
+  } else {
+    const { posted, seen } = await loadState();
+    console.log(JSON.stringify({ posted: posted.length, seen: seen.length, lastPosted: posted.at(-1) ?? null }, null, 2));
+  }
 }
