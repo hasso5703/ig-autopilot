@@ -65,8 +65,8 @@ ${v.glow ? `.a::before{content:"";position:absolute;inset:-20%;
 .a::after{content:"";position:absolute;inset:0;
   background-image:url("${GRAIN}");opacity:.06;mix-blend-mode:overlay}
 .m{position:relative;font-family:'Anton',sans-serif;font-size:${v.size}px;line-height:.78;
-   color:${v.ink};letter-spacing:-0.045em;transform:translateY(${v.shift}px)}
-.m i{font-style:normal;color:${v.mult};letter-spacing:-0.02em}
+   color:${v.ink};letter-spacing:${v.track};transform:translateY(${v.shift}px)}
+.m i{font-style:normal;color:${v.mult};margin-left:${v.gap}}
 </style></head><body>
 <div class="a"><div class="m">10<i>&times;</i></div></div></body></html>`;
 }
@@ -91,8 +91,14 @@ export async function renderAvatars(outDir) {
   // background becomes an unreadable dot against Instagram's white chrome.
   // 620px is the size where the mark still breathes on the profile page and
   // is still legible in the feed.
+  // Tracking was swept from -0.045em to +0.05em and judged at 32px, not at
+  // 1080. Anton is already condensed, so negative tracking crushed the glyphs
+  // and jammed the multiplication sign against the zero. Past about +0.025em
+  // the opposite failure appears: the sign detaches and reads as a separate
+  // speck once the avatar shrinks. Neutral tracking with a hair of space before
+  // the sign keeps all three glyphs legible AND holds them together as one mark.
   const variants = [
-    { name: "order-of-magnitude", bg: c.accent, ink: c.bg, mult: c.bg, size: 620, shift: 12 },
+    { name: "order-of-magnitude", bg: c.accent, ink: c.bg, mult: c.bg, size: 600, shift: 12, track: "0", gap: ".02em" },
   ];
 
   await mkdir(outDir, { recursive: true });
