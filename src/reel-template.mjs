@@ -115,6 +115,82 @@ function beatDuration(words, type) {
   return Math.min(5.4, Math.max(2.6, base + words / 2.9));
 }
 
+/**
+ * What the voice says over a beat.
+ *
+ * It is the text already on the screen, never a paraphrase of it. Everything
+ * printed on a slide has been through the gate; a sentence invented for the
+ * narration would not have been, and nobody would ever see it to check. A post
+ * may override this per slide with a `narration` field, but the same rule
+ * applies to what it writes there.
+ */
+/**
+ * "3.1 GW" read aloud over a unit that already says "gigawatts" comes out as
+ * "three point one gigawatts gigawatts". The abbreviation is dropped when the
+ * unit plainly spells it out, and never when it carries magnitude: dropping the
+ * M from "2.6M downloads" would not be clumsy, it would be false.
+ */
+const MAGNITUDE = /^[MBKT%x]$/i;
+
+function spokenFigure(figure, unit) {
+  const f = String(figure || "").trim();
+  const m = /^([^A-Za-z]*)([A-Za-z]+)$/.exec(f);
+  if (!m) return f;
+  const [, numeric, suffix] = m;
+  if (MAGNITUDE.test(suffix)) return f;
+  const firstWord = String(unit || "").trim().split(/\s+/)[0] || "";
+  const spellsItOut = firstWord.length > 3 && firstWord[0].toLowerCase() === suffix[0].toLowerCase();
+  return spellsItOut ? numeric.trim() : f;
+}
+
+function defaultNarration(b) {
+  const clean = (s) => String(s || "").replace(/\*+/g, "").replace(/\s+/g, " ").trim();
+  const join = (...parts) =>
+    parts
+      .map(clean)
+      .filter(Boolean)
+      .map((s) => (/[.!?]$/.test(s) ? s : s + "."))
+      .join(" ");
+
+  switch (b.type) {
+    case "cover":
+      return join(b.headline);
+    case "stat":
+      return join(`${spokenFigure(b.figure, b.unit)} ${clean(b.unit)}`, b.body);
+    case "quote":
+      return join(b.body, b.attribution && clean(b.attribution).split(",")[0]);
+    case "contrast":
+      return join(`${clean(b.claimLabel)}, ${clean(b.claim)}`, `${clean(b.caveatLabel)}, ${clean(b.caveat)}`);
+    case "end":
+      return join(b.sub || b.headline);
+    default:
+      return join(b.title, b.body);
+  }
+}
+
+/**
+ * Cuts the beats to the voice.
+ *
+ * Before this, durations came from a words-per-second guess and the narration
+ * was laid over the top, so the voice finished a sentence while the next beat
+ * was already on screen. Now a beat lasts exactly as long as its line takes to
+ * say, plus a held moment, and the pad is handed back so the audio can be
+ * padded by the identical amount and stay in sync to the frame.
+ */
+export function applyNarrationTiming(beats, segments, { pad = 0.55, min = 2.2, long = 7.5 } = {}) {
+  return beats.map((b, i) => {
+    const spoken = segments[i]?.seconds ?? 0;
+    // No upper clamp, deliberately. Capping the picture at 7.5s while the voice
+    // needed 8.0 produced a negative pad, ffmpeg refused it, and the run fell
+    // back to a silent Reel — a whole feature lost to a clamp. A beat that runs
+    // long is an editorial problem with the copy, not an arithmetic one: it is
+    // flagged as `long` for the run to shorten, and the picture waits for the
+    // sentence to finish.
+    const duration = Math.max(min, spoken + pad);
+    return { ...b, duration, spoken, long: spoken > long, silence: +(duration - spoken).toFixed(3) };
+  });
+}
+
 const wordCount = (...parts) =>
   parts.filter(Boolean).join(" ").replace(/\*+/g, "").split(/\s+/).filter(Boolean).length;
 
@@ -162,6 +238,8 @@ export function buildTimeline(post) {
     }
     b.words = wordCount(b.headline, b.kicker, b.body, b.title, b.unit, b.claim, b.caveat, b.sub, b.attribution);
     b.duration = beatDuration(b.words, b.type);
+    b.slideIndex = post.slides.indexOf(s) + 1;
+    b.narration = s.narration || defaultNarration(b);
     beats.push(b);
   }
 
@@ -268,8 +346,9 @@ function beatLines(b, handle) {
   }
 }
 
-export function html(post, brand, fonts) {
-  const beats = buildTimeline(post);
+export function html(post, brand, fonts, opts = {}) {
+  const beats = opts.beats ?? buildTimeline(post);
+  const pictures = opts.pictures ?? {};
   const c = brand.colors;
   const total = totalDuration(beats);
 
@@ -281,7 +360,21 @@ export function html(post, brand, fonts) {
             `<div class="ln ${l.cls}" data-i="${j}"${l.count ? ` data-count="${esc(l.count)}"` : ""}>${l.html}</div>`
         )
         .join("");
-      return `<section class="beat b-${b.type}" data-b="${i}">${lines}</section>`;
+      /*
+       * The picture behind the beat, and a slow push in on it.
+       *
+       * A Reel of type on black is a slideshow, and a slideshow loses a viewer
+       * in the first second. Motion is the cheapest retention there is: every
+       * beat's photograph drifts from 1.02 to 1.10 across its own duration, so
+       * something is always moving even while the text holds still. The veil is
+       * not decoration — white type over an unmodified photograph is a coin
+       * flip, and no check in this repository can see contrast.
+       */
+      const pic = pictures[b.slideIndex];
+      const bg = pic
+        ? `<div class="bgw"><div class="bg" style="background-image:url('${pic.dataUri}')"></div><div class="tint"></div><div class="veil"></div></div>`
+        : `<div class="bgw"><div class="nofield"></div></div>`;
+      return `<section class="beat b-${b.type}" data-b="${i}">${bg}${lines}</section>`;
     })
     .join("");
 
@@ -299,9 +392,19 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:${c.bg}}
    Anything placed outside this box is not "tight", it is invisible. The first
    render put the source line at 104px from the bottom, squarely underneath the
    caption. */
-.beat{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+.beat{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
       padding:210px 200px 470px 96px;opacity:0;will-change:opacity}
-.ln{opacity:0;will-change:opacity,transform}
+.ln{opacity:0;will-change:opacity,transform;position:relative;z-index:2}
+
+/* ---------- the picture behind each beat ---------- */
+.bgw{position:absolute;inset:0;z-index:0;overflow:hidden}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center;
+    filter:grayscale(.3) contrast(1.06) saturate(.9) brightness(.78);will-change:transform}
+.tint{position:absolute;inset:0;background:${c.accent};opacity:.1;mix-blend-mode:color}
+.veil{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(8,8,12,.72) 0%,rgba(8,8,12,.3) 26%,rgba(8,8,12,.55) 55%,rgba(8,8,12,.93) 82%,${c.bg} 100%)}
+.nofield{position:absolute;inset:0;
+  background:radial-gradient(60% 40% at 26% 20%, rgba(77,225,255,.2) 0%, rgba(8,8,12,0) 70%),${c.bg}}
 b{font-weight:700}
 em.a{font-style:normal;color:${c.accent}}
 
@@ -374,6 +477,13 @@ window.render = function (t) {
       o = Math.min(fadeIn, u > d - OUT ? Math.max(0, (d - u) / OUT) : 1);
     }
     el.style.opacity = o;
+
+    // The slow push in. Applied whenever the beat is anywhere near the screen,
+    // including through its fade, so the movement does not visibly start.
+    const kb = el.querySelector('.bg');
+    if (kb && u > -0.5 && u < d + 0.5) {
+      kb.style.transform = 'scale(' + (1.02 + 0.08 * Math.min(1, Math.max(0, u / d))).toFixed(4) + ')';
+    }
 
     if (active) {
       src.textContent = b.source ? 'Source: ' + b.source : '';

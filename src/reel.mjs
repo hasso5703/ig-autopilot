@@ -20,8 +20,11 @@ import { readFile, mkdir, rm } from "node:fs/promises";
 import { execFile, execSync } from "node:child_process";
 import { promisify } from "node:util";
 import path from "node:path";
-import { html, buildTimeline, totalDuration, FPS } from "./reel-template.mjs";
+import { html, buildTimeline, applyNarrationTiming, totalDuration, FPS } from "./reel-template.mjs";
 import { loadPlaywright, chromiumExecutable, assertFontsLoaded } from "./browser.mjs";
+import { loadSlideImages } from "./render.mjs";
+import { speak, DEFAULT_VOICE } from "./voice.mjs";
+import { pickBed } from "./music.mjs";
 
 const run = promisify(execFile);
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -48,8 +51,8 @@ function ffmpegBin() {
  * motion in ffmpeg from a handful of stills would be cheaper and would rule out
  * the two things worth having: per-line entrances and a figure that counts up.
  */
-export async function renderFrames(post, brand, fonts, dir) {
-  const beats = buildTimeline(post);
+export async function renderFrames(post, brand, fonts, dir, opts = {}) {
+  const beats = opts.beats ?? buildTimeline(post);
   const total = totalDuration(beats);
   const frames = Math.round(total * FPS);
 
@@ -60,54 +63,103 @@ export async function renderFrames(post, brand, fonts, dir) {
   const browser = await chromium.launch({ executablePath: await chromiumExecutable(), args: ["--no-sandbox"] });
   const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
 
-  await page.setContent(html(post, brand, fonts), { waitUntil: "load" });
+  await page.setContent(html(post, brand, fonts, { beats, pictures: opts.pictures ?? {} }), { waitUntil: "load" });
 
   await assertFontsLoaded(page, ["400 100px 'Anton'", "400 40px 'Archivo'", "700 40px 'Archivo'"]);
 
   const stage = await page.$("#stage");
   for (let n = 0; n < frames; n++) {
     await page.evaluate((t) => window.render(t), n / FPS);
-    await stage.screenshot({ path: path.join(dir, `${String(n).padStart(5, "0")}.png`), type: "png" });
+    // JPEG, not PNG. These frames are an intermediate the encoder immediately
+    // re-compresses, and PNG encoding of a 2 megapixel frame was costing more
+    // wall clock than everything else in the pipeline put together: 630 frames
+    // took five minutes to paint. Quality 92 is indistinguishable after H.264.
+    await stage.screenshot({ path: path.join(dir, `${String(n).padStart(5, "0")}.jpg`), type: "jpeg", quality: 92 });
   }
   await browser.close();
   return { frames, total, beats };
 }
 
 /**
- * Encodes the painted frames.
+ * Encodes the painted frames, with the sound.
  *
- * The audio is generated, never sampled. Instagram's music library is reachable
- * only from the phone app, and baking someone else's recording into the file to
- * work around that is a licensing problem wearing a technical disguise. A low
- * synthesised bed is legally unambiguous and, at this volume, reads as intent
- * rather than as a soundtrack. `--silent` swaps it for a silent-but-present
- * track: a Reel with no audio stream at all is a different case to Instagram
- * than one that is merely quiet.
+ * The first version synthesised two sine waves, because Instagram's music
+ * library is phone-only and sampling someone else's record is a licensing
+ * problem wearing a technical disguise. That reasoning was right and the
+ * conclusion was too timid: a sub-bass hum is not sound design, it is an
+ * apology. What ships now is a spoken narration over a CC0 bed, both of which
+ * we are unambiguously entitled to use, and the bed ducks under the voice
+ * instead of fighting it.
+ *
+ * `--silent` still exists and still emits a real, silent AAC track: a Reel with
+ * no audio stream at all is a different case to Instagram than one that is
+ * merely quiet.
  */
-export async function encode(dir, out, seconds, { silent = false } = {}) {
+export async function encode(dir, out, seconds, { silent = false, voice = null, bed = null } = {}) {
   const ff = ffmpegBin();
   const d = seconds.toFixed(3);
-  const fade = Math.min(1.0, seconds / 6);
+  const fade = Math.min(1.6, seconds / 6);
 
-  const audioIn = silent
-    ? ["-f", "lavfi", "-i", `anullsrc=r=48000:cl=stereo:d=${d}`]
-    : ["-f", "lavfi", "-i", `sine=frequency=55:sample_rate=48000:duration=${d}`,
-       "-f", "lavfi", "-i", `sine=frequency=82.41:sample_rate=48000:duration=${d}`];
+  const audioIn = [];
+  const filter = [];
+  const parts = [];
 
-  const filter = silent
-    ? []
-    : ["-filter_complex",
-       `[1:a][2:a]amix=inputs=2:duration=first,lowpass=f=180,volume=0.06,` +
-       `afade=t=in:st=0:d=${fade.toFixed(3)},afade=t=out:st=${(seconds - fade).toFixed(3)}:d=${fade.toFixed(3)},` +
-       `aformat=channel_layouts=stereo[a]`];
+  if (silent || (!voice && !bed)) {
+    audioIn.push("-f", "lavfi", "-i", `anullsrc=r=48000:cl=stereo:d=${d}`);
+    parts.push("[1:a]");
+  } else {
+    if (voice) {
+      audioIn.push("-i", voice);
+      const idx = audioIn.filter((a) => a === "-i").length;
+      // asplit, because a filter output may be consumed exactly once. The voice
+      // is needed twice: mixed into the result, and again as the sidechain that
+      // pushes the music out of its way.
+      filter.push(
+        `[${idx}:a]aresample=48000,aformat=channel_layouts=stereo,apad,atrim=0:${d},volume=1.6,` +
+          `alimiter=limit=0.95,asplit=2[vo][vokey]`
+      );
+    }
+    if (bed) {
+      audioIn.push("-i", bed);
+      const idx = audioIn.filter((a) => a === "-i").length;
+      filter.push(
+        `[${idx}:a]aresample=48000,aformat=channel_layouts=stereo,apad,atrim=0:${d},volume=0.34,` +
+          `afade=t=in:st=0:d=${fade.toFixed(2)},afade=t=out:st=${(seconds - fade).toFixed(2)}:d=${fade.toFixed(2)}[bedraw]`
+      );
+      if (voice) {
+        // The bed drops out of the way of the voice rather than being mixed
+        // permanently low: full presence in the gaps between lines, well under
+        // the narration while it speaks. A fixed low level does neither.
+        filter.push(`[bedraw][vokey]sidechaincompress=threshold=0.02:ratio=8:attack=15:release=420[bed]`);
+        parts.push("[bed]", "[vo]");
+      } else {
+        filter.push(`[bedraw]anull[bed]`);
+        parts.push("[bed]");
+      }
+    } else {
+      parts.push("[vo]");
+    }
+    filter.push(
+      parts.length > 1
+        ? `${parts.join("")}amix=inputs=${parts.length}:duration=first:normalize=0[a]`
+        : `${parts[0]}anull[a]`
+    );
+  }
 
-  const map = silent ? ["-map", "0:v", "-map", "1:a"] : ["-map", "0:v", "-map", "[a]"];
+  const filterArgs = filter.length ? ["-filter_complex", filter.join(";")] : [];
+  const map = filter.length ? ["-map", "0:v", "-map", "[a]"] : ["-map", "0:v", "-map", "1:a"];
 
   await run(ff, [
     "-y", "-loglevel", "error",
-    "-framerate", String(FPS), "-i", path.join(dir, "%05d.png"),
-    ...audioIn, ...filter, ...map,
-    "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+    "-framerate", String(FPS), "-i", path.join(dir, "%05d.jpg"),
+    ...audioIn, ...filterArgs, ...map,
+    // crf 23 with a ceiling, not crf 20. Photographic beats plus film grain are
+    // expensive to encode, and the first Reel with pictures came out at 9 MB for
+    // 22 seconds — every one of which lives in this repository's history for
+    // ever, at two Reels a day. Instagram re-encodes the upload regardless, so
+    // the only thing a higher bitrate buys is git weight.
+    "-c:v", "libx264", "-preset", "slow", "-crf", "23",
+    "-maxrate", "4500k", "-bufsize", "9000k",
     "-pix_fmt", "yuv420p", "-r", String(FPS),
     // Closed GOP, one keyframe every two seconds, no scene-cut keyframes:
     // Meta asks for closed GOP explicitly and scene detection breaks it.
@@ -169,14 +221,41 @@ export async function renderReel(postFile, outDir, opts = {}) {
   await mkdir(outDir, { recursive: true });
   const frameDir = path.join(outDir, "_frames");
   const t0 = Date.now();
-  const { frames, total, beats } = await renderFrames(post, brand, fonts, frameDir);
+
+  const pictures = await loadSlideImages(post);
+
+  /*
+   * The voice is built BEFORE the frames, because it decides how long they are.
+   * Each beat lasts exactly as long as its narration takes to say, clamped, and
+   * the audio is padded by the same amount so picture and voice cannot drift.
+   * If synthesis fails the Reel is still made — silent, and loudly reported.
+   * A day without narration is a worse Reel; a day without a Reel is no reach.
+   */
+  let beats = buildTimeline(post);
+  let vo = null;
+  if (!opts.silent) {
+    try {
+      vo = await speak(beats.map((b) => b.narration), {
+        voice: opts.voice || DEFAULT_VOICE,
+        outDir,
+        gap: (seconds) => Math.max(2.2, seconds + 0.55) - seconds,
+      });
+      beats = applyNarrationTiming(beats, vo.segments);
+    } catch (err) {
+      console.error(`warn: narration failed (${err.message}) — the Reel will be made without a voice`);
+    }
+  }
+
+  const bed = opts.silent ? null : await pickBed(post.mood || "tension");
+
+  const { frames, total } = await renderFrames(post, brand, fonts, frameDir, { beats, pictures });
   const painted = Date.now();
 
     // Named reel.mp4, not <slug>.mp4, because that is the path reelUrl() builds
   // and Meta fetches. The first version required the operator to rename it by
   // hand between rendering and publishing, which is a step a tired run skips.
   const out = path.join(outDir, "reel.mp4");
-  await encode(frameDir, out, total, opts);
+  await encode(frameDir, out, total, { ...opts, voice: vo?.file || null, bed: bed?.path || null });
   const encoded = Date.now();
 
   const p = await probe(out);
@@ -185,7 +264,16 @@ export async function renderReel(postFile, outDir, opts = {}) {
 
   return {
     file: out,
-    beats: beats.map((b) => ({ type: b.type, seconds: +b.duration.toFixed(2), words: b.words })),
+    voice: vo ? { voice: vo.voice, seconds: +vo.duration.toFixed(2), lines: vo.segments.map((s) => s.text) } : null,
+    music: bed ? { file: bed.file, title: bed.title, creator: bed.creator, license: bed.license } : null,
+    pictures: Object.fromEntries(Object.entries(pictures).map(([k, v]) => [k, v.generated ? "generated" : "photo"])),
+    beats: beats.map((b) => ({
+      type: b.type,
+      seconds: +b.duration.toFixed(2),
+      words: b.words,
+      narration: b.narration,
+      ...(b.long ? { long: "this line takes over 7.5s to say — shorten it" } : {}),
+    })),
     frames,
     seconds: +total.toFixed(2),
     probe: p,
@@ -197,9 +285,11 @@ export async function renderReel(postFile, outDir, opts = {}) {
 if (process.argv[1] && process.argv[1].endsWith("reel.mjs")) {
   const [file, outDir] = process.argv.slice(2).filter((a) => !a.startsWith("--"));
   if (!file) { console.error("usage: node src/reel.mjs <post.json> [outDir] [--silent] [--keep-frames]"); process.exit(2); }
+  const voiceIdx = process.argv.indexOf("--voice");
   renderReel(file, outDir || "/tmp/reel", {
     silent: process.argv.includes("--silent"),
     keepFrames: process.argv.includes("--keep-frames"),
+    voice: voiceIdx >= 0 ? process.argv[voiceIdx + 1] : undefined,
   }).then(
     (r) => {
       console.log(JSON.stringify(r, null, 2));
