@@ -150,6 +150,14 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 .contrast .caveat{background:${c.accent}}
 .contrast .caveat .lab{color:rgba(4,18,26,.62)}
 .contrast .caveat .txt{color:${c.accentInk};font-weight:700}
+/* The caveat panel is filled with the accent colour, and *emphasis* paints text
+   in that same accent colour. On 2026-07-25 a slide went out reading "What she
+   wants back is ." with the point rendered invisibly on its own background. The
+   gate was green throughout: it verifies quotations, it cannot see contrast.
+   Forbidding the markup here would rely on whoever writes the next slide
+   remembering. Underlining instead makes the failure unreachable. */
+.contrast .caveat .a{color:${c.accentInk};text-decoration:underline;
+                     text-decoration-thickness:4px;text-underline-offset:7px}
 
 /* ---------- cta ---------- */
 .cta{justify-content:center;align-items:center;text-align:center}

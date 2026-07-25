@@ -270,6 +270,49 @@ test("every reel is inside Instagram's 5 to 90 second window for the Reels tab",
 });
 
 // ---------------------------------------------------------------------------
+// Incident 2026-07-25: a published slide read "What she wants back is ." The
+// caveat panel is filled with the accent colour and *emphasis* paints text in
+// that same colour, so the point of the slide was invisible on its own
+// background. Every fact on it was verified and the gate was green: it checks
+// quotations and cannot see contrast.
+// ---------------------------------------------------------------------------
+test("emphasis is never painted in the colour of the panel behind it", async () => {
+  const { slideHtml } = await import("../src/template.mjs");
+  const { readFile } = await import("node:fs/promises");
+  const brand = JSON.parse(await readFile(new URL("../brand/brand.json", import.meta.url), "utf8"));
+  const fonts = [{ family: "Anton", weight: 400, base64: "" }];
+
+  const html = slideHtml(
+    brand,
+    fonts,
+    {
+      type: "contrast",
+      claimLabel: "Claimed",
+      claim: "A few seconds to recover",
+      caveatLabel: "In fact",
+      caveat: "What she wants back is *the choice*",
+      evidence: "x",
+      source: { url: "https://example.com", name: "S", date: "2026-07-25" },
+    },
+    4,
+    7
+  );
+
+  const accent = brand.colors.accent.toLowerCase();
+
+  // The panel really is accent-filled; if that ever changes this test should be
+  // revisited rather than silently passing for the wrong reason.
+  assert.match(html, new RegExp(`\\.contrast \\.caveat\\{background:${accent}`, "i"),
+    "the caveat panel is no longer accent-filled; re-derive what this test is protecting");
+
+  const rule = html.match(/\.contrast \.caveat \.a\{([^}]*)\}/i);
+  assert.ok(rule, "nothing scopes emphasis inside the caveat panel, so it inherits the accent colour and vanishes");
+
+  const colour = rule[1].match(/color:\s*([^;]+)/i)?.[1]?.trim().toLowerCase();
+  assert.notEqual(colour, accent, "emphasis inside the caveat panel is painted in the panel's own colour");
+});
+
+// ---------------------------------------------------------------------------
 // The encoder flags have been wrong before, so the file is checked, not the
 // intent behind it.
 // ---------------------------------------------------------------------------

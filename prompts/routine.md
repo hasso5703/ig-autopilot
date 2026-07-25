@@ -37,19 +37,22 @@ npm test
 node src/state.mjs guard
 ```
 
-`npm test` is twenty-one assertions, each one a bug that shipped or nearly
-shipped. If any fail, **stop and report the failures as the whole run**. The
-code in this repo changes between runs; a red suite means something that used
-to be true is not any more, and publishing on top of that is how a silent
-regression reaches a live account. Do not fix the tests to make them pass.
-Run this **first**, before gathering anything. If it exits non-zero, stop the
-run immediately and report that as the entire finding. Everything after this
-step costs time and money, and none of it can be used.
+Both must pass before anything else. Everything after this step costs time and
+money, and none of it is usable if either one fails.
 
-It enforces a minimum gap between posts. Two runs fired forty minutes apart on
-2026-07-25 and only a sourcing failure stopped a second carousel going out to an
-account with one post. If the guard reports it was overridden, say so in your
-final report: a same-day second post should never be silent.
+**`npm test`** is the regression net: every assertion is a bug that shipped or
+nearly shipped. The code in this repo changes between runs, and a red suite
+means something that used to be true is not any more. Publishing on top of that
+is how a silent regression reaches a live account. If any test fails, stop and
+report the failures as the whole run. **Do not edit the tests to make them
+pass.**
+
+**`node src/state.mjs guard`** enforces the minimum gap between posts. Two runs
+fired forty minutes apart on 2026-07-25 and only a sourcing failure stopped a
+second carousel going out to an account holding one post. A non-zero exit means
+stop now: do not research, render or publish. If it reports that it was
+overridden, say so plainly in your final report, because a same-day second post
+should never be silent.
 
 ### 1. Gather
 ```bash
@@ -128,8 +131,17 @@ without them:**
 ]
 ```
 
-Write `centralClaim` first, before any slide. If you cannot state the claim in
-one sentence, you do not yet understand the story well enough to publish it.
+Write `centralClaim` first, before any slide, and before looking at any
+corroborating quote. If you cannot state the claim in one sentence, you do not
+yet understand the story well enough to publish it.
+
+**Write the claim, then measure it. Never the other way round.** A run reported
+honestly that it had chosen the claim's wording after testing candidate
+sentences against the overlap score. Both its sources were genuine and it
+checked them by eye afterwards, but that sequence tunes the sentence to the
+measurement rather than to the truth, and the measurement stops meaning
+anything. If the overlap comes back low, the answer is a better source, not a
+reworded claim.
 
 Each corroborating quote must be **the sentence where that source states the
 claim itself**, copied verbatim, from a different domain. Not a sentence that
@@ -158,7 +170,7 @@ swipe, and swipe-through is what buys distribution.
 | `content` | an idea in two or three sentences | `title`, `body`, `evidence`, `source` |
 | `quote` | someone else's words, verbatim | `body` (the quote), `attribution`, `evidence`, `source` |
 | `contrast` | the turn: claim vs what the footnote says | `claim`, `caveat`, `claimLabel`, `caveatLabel`, `evidence`, `source` |
-| `cta` | last slide only | `headline`, `sub` (state the offer, never claim rigour) |
+| `cta` | last slide only | `headline`, `sub` (state the offer, never claim rigour, and never write the handle: the template already stamps it) |
 
 **The hero must reinforce the headline, never introduce a second comparison.**
 The first autonomous post put "half the price of the model it nearly matches"

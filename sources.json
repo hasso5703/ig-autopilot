@@ -16,8 +16,8 @@
 
   "tier2_press": [
     { "name": "TechCrunch", "url": "https://techcrunch.com/feed/", "weight": 0.8, "allowlisted": true, "_note": "20 items" },
-    { "name": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "weight": 0.7, "allowlisted": true, "_note": "10 items" },
-    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 0.7, "allowlisted": true, "_note": "20 items" },
+    { "name": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "weight": 0.7, "allowlisted": true, "_note": "HTTP 403 from the cloud sandbox, HTTP 200 from a residential IP with the same user-agent. Was an allowlist block until 2026-07-25; now the domain resolves and the origin refuses. That is outlet-side blocking of datacenter addresses, not something the network policy can fix. Do not re-diagnose it as an allowlist problem." },
+    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 0.7, "allowlisted": true, "_note": "HTTP 403 from the cloud sandbox, HTTP 200 from a residential IP. Same cause as The Verge: datacenter-IP blocking at the origin." },
     { "name": "VentureBeat", "url": "https://venturebeat.com/feed/", "weight": 0.6, "allowlisted": true, "_note": "7 items" },
     { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/", "weight": 0.7, "allowlisted": true, "_note": "10 items" },
     { "name": "Hacker News (250+ points)", "url": "https://hnrss.org/frontpage?points=250", "weight": 0.5, "allowlisted": true, "_note": "10 items" },
