@@ -172,7 +172,10 @@ export async function renderReel(postFile, outDir, opts = {}) {
   const { frames, total, beats } = await renderFrames(post, brand, fonts, frameDir);
   const painted = Date.now();
 
-  const out = path.join(outDir, `${post.slug}.mp4`);
+    // Named reel.mp4, not <slug>.mp4, because that is the path reelUrl() builds
+  // and Meta fetches. The first version required the operator to rename it by
+  // hand between rendering and publishing, which is a step a tired run skips.
+  const out = path.join(outDir, "reel.mp4");
   await encode(frameDir, out, total, opts);
   const encoded = Date.now();
 

@@ -58,10 +58,18 @@ should never be silent.
 ```bash
 node src/feeds.mjs 36 > /tmp/items.json
 ```
-Reads every feed in `sources.json`. A feed reporting `ok 0` is not necessarily
-broken — arXiv is legitimately empty at weekends. A `FAIL` line with
-`host_not_allowed` means the domain is missing from the cloud environment's
-allowlist; report it at the end of the run, do not try to work around it.
+Reads every feed in `sources.json` and prints fresh/fetched with the window used
+for each. **A feed reporting 0 fresh is usually not broken.** arXiv is
+legitimately closed at weekends, and the labs do not publish daily — which is
+why primary sources get a four-day window and the press keeps 36 hours.
+
+**The Verge and Ars Technica return HTTP 403 from this sandbox and will keep
+doing so.** They resolve fine and answer 200 from a residential address with the
+identical user-agent; the origins block datacenter IPs. This was an allowlist
+problem until 2026-07-25 and is not one any more, so do not report it as one and
+do not try to work around it. Everything else being reachable is the normal
+state now: network access is Full, and a corroborating source that cannot be
+fetched is a real failure of that source.
 
 ### 2. Deduplicate
 Filter the items through `filterFresh` from `src/state.mjs`. It removes anything
@@ -397,59 +405,6 @@ Run the dry run first. If it fails, nothing was published and you can fix and
 retry. `IG_ACCESS_TOKEN` comes from the environment; if it is missing, stop and
 report — do not attempt any other publishing route.
 
-### 8b. The Reel
-
-The carousel is what people find. The Reel is how they find it.
-
-Two published carousels reached **zero** people, and that is not a defect: a feed
-post on a new account is shown to followers, and there are none. Reels are the
-surface where non-followers are, so from here every story ships in both forms.
-
-```bash
-node src/reel.mjs posts/<slug>.json media/<slug>
-```
-
-That writes `media/<slug>/<slug>.mp4`. **Rename it to `media/<slug>/reel.mp4`**,
-which is the path `reelUrl()` builds.
-
-It prints the beats it chose, the duration, an ffprobe reading of the file it
-actually produced, and `COMPLIANT` or a list of violations. **If it prints
-anything other than COMPLIANT, do not publish the Reel** — a Reel outside 5 to
-90 seconds at 9:16 still posts but is not eligible for the Reels tab, which is
-the entire reason for making one. Publish the carousel and report the violation.
-
-The Reel is a **trailer, not the carousel in another shape**. The template keeps
-at most five beats and drops the rest; that is deliberate and you should not
-fight it. Look at the frames before publishing:
-
-```bash
-cd media/<slug> && for t in 0.5 6 12 18 24; do ffmpeg -loglevel error -ss $t -i reel.mp4 -frames:v 1 -q:v 2 /tmp/f_$t.jpg -y; done
-```
-
-Open them. At 0.5s the opening beat must be fully readable, not fading in: that
-frame is the profile-grid thumbnail and it was pure black until it was fixed.
-
-**Order matters, because Meta fetches the file itself.** Commit and push the MP4
-*before* asking for its URL, then let the code confirm GitHub is really serving
-it:
-
-```bash
-git add media/<slug>/reel.mp4 && git commit -m "reel: <slug>" && git push origin main
-node src/publish-reel.mjs url <slug>          # SHA-pinned, never a /main/ path
-IG_REEL_URL="<that url>" node src/publish-reel.mjs dry-run media/<slug>/reel.mp4 "<caption>"
-IG_REEL_URL="<that url>" node src/publish-reel.mjs publish media/<slug>/reel.mp4 "<caption>"
-```
-
-`publish-reel.mjs` sends `share_to_feed=false` on purpose. The carousel owns the
-profile grid; the Reel owns the Reels tab. Putting both in the feed makes a grid
-that reads as repetition, and feed reach on an account with no followers is zero
-anyway, so nothing is given up.
-
-Transcoding takes minutes, not seconds. The command polls and tells you.
-
-Record the Reel with `recordPosted` too, so the watch reads its metrics and the
-gap guard counts it.
-
 ### 9. Record, ON MAIN
 
 This step is what makes the account autonomous rather than merely automated, and
@@ -494,6 +449,76 @@ git ls-remote origin refs/heads/main    # must equal your local HEAD
 If the push to `main` is refused, do not shrug and move on. Say so as the
 headline finding of your report, and name the exact error: an unattended account
 that cannot remember what it published is broken, however good the post was.
+
+### 10. The Reel
+
+The carousel is what people find. The Reel is how they find it.
+
+Two published carousels reached **zero** people, and that is not a defect: a feed
+post on a new account is shown to followers, and there are none. Reels are the
+surface where non-followers are, so from here every story ships in both forms.
+
+**Step 9 must be finished and pushed before you start this.** Losing
+the memory of what was published is unrecoverable; failing to ship a Reel costs
+one day of reach. Never risk the first to save the second.
+
+`ffmpeg` is not in the image and has to be installed each run. It takes about
+40 seconds and prints nothing useful when it works:
+
+```bash
+apt-get update && apt-get install -y ffmpeg
+apt-get --fix-broken install -y     # only if the line above reports 404s on transitive deps
+ffmpeg -version | head -1           # must print a version, or stop here
+```
+
+```bash
+node src/reel.mjs posts/<slug>.json media/<slug>
+```
+
+That writes `media/<slug>/reel.mp4`, which is exactly the path `reelUrl()`
+builds. Nothing to rename.
+
+**If anything in this step fails, publish the carousel and stop.** Report the
+failure plainly. A day without a Reel is a bad day; a day that loses state or
+publishes a broken video is a bad account.
+
+It prints the beats it chose, the duration, an ffprobe reading of the file it
+actually produced, and `COMPLIANT` or a list of violations. **If it prints
+anything other than COMPLIANT, do not publish the Reel** — a Reel outside 5 to
+90 seconds at 9:16 still posts but is not eligible for the Reels tab, which is
+the entire reason for making one. Publish the carousel and report the violation.
+
+The Reel is a **trailer, not the carousel in another shape**. The template keeps
+at most five beats and drops the rest; that is deliberate and you should not
+fight it. Look at the frames before publishing:
+
+```bash
+cd media/<slug> && for t in 0.5 6 12 18 24; do ffmpeg -loglevel error -ss $t -i reel.mp4 -frames:v 1 -q:v 2 /tmp/f_$t.jpg -y; done
+```
+
+Open them. At 0.5s the opening beat must be fully readable, not fading in: that
+frame is the profile-grid thumbnail and it was pure black until it was fixed.
+
+**Order matters, because Meta fetches the file itself.** Commit and push the MP4
+*before* asking for its URL, then let the code confirm GitHub is really serving
+it:
+
+```bash
+git add media/<slug>/reel.mp4 && git commit -m "reel: <slug>" && git push origin main
+node src/publish-reel.mjs url <slug>          # SHA-pinned, never a /main/ path
+IG_REEL_URL="<that url>" node src/publish-reel.mjs dry-run media/<slug>/reel.mp4 "<caption>"
+IG_REEL_URL="<that url>" node src/publish-reel.mjs publish media/<slug>/reel.mp4 "<caption>"
+```
+
+`publish-reel.mjs` sends `share_to_feed=false` on purpose. The carousel owns the
+profile grid; the Reel owns the Reels tab. Putting both in the feed makes a grid
+that reads as repetition, and feed reach on an account with no followers is zero
+anyway, so nothing is given up.
+
+Transcoding takes minutes, not seconds. The command polls and tells you.
+
+Record the Reel with `recordPosted` too, so the watch reads its metrics and the
+gap guard counts it.
 
 ## When things go wrong
 
