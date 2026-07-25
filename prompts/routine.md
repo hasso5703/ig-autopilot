@@ -33,8 +33,15 @@ stops being true, so treat the gate below as the product, not as paperwork.
 
 ### 0. Are you even allowed to publish right now
 ```bash
+npm test
 node src/state.mjs guard
 ```
+
+`npm test` is twenty-one assertions, each one a bug that shipped or nearly
+shipped. If any fail, **stop and report the failures as the whole run**. The
+code in this repo changes between runs; a red suite means something that used
+to be true is not any more, and publishing on top of that is how a silent
+regression reaches a live account. Do not fix the tests to make them pass.
 Run this **first**, before gathering anything. If it exits non-zero, stop the
 run immediately and report that as the entire finding. Everything after this
 step costs time and money, and none of it can be used.
