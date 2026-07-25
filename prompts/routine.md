@@ -129,6 +129,64 @@ Rules the validator enforces — save yourself a rejection:
   number like "$0 extra" is rejected: quote a figure, never compute one
 - at least two distinct source domains across the post
 
+### The stakes rule
+
+This is the rule that decides whether the account reaches a hundred thousand
+people or ten thousand. It is not a style preference.
+
+A carousel about a benchmark reaches people who follow benchmarks. A carousel
+about what the benchmark *changes* reaches everyone else. The facts stay
+identical — only the framing moves. `evolving.ai` did not reach five million
+followers posting about model evaluations; it posted about repositories killing
+$30B of revenue. Same information, translated into stakes.
+
+**Three hard requirements.**
+
+1. **No number without a consequence.** A figure may not be the point of a
+   slide. The point is what it changes, and for whom. If you cannot name who is
+   affected, the slide does not belong in the carousel.
+
+2. **Slides 1 and 2 carry no jargon.** They are the two covers, and they must be
+   understood by someone who has never read a technical document. Any term you
+   would have to define is banned there — define it on slide 3 if it matters.
+
+3. **Name the person affected.** Not "users", not "the industry". Someone
+   concrete: whoever pays the bill, whoever writes the code, whoever loses the
+   job, whoever gets the tool they could not afford last year.
+
+**The rewrite table.** Left is what a technically-minded writer produces by
+default. Right is the same fact, earning its place.
+
+| Instead of | Write |
+|---|---|
+| "Scores 3× the next model on ARC-AGI 3" | "Three times better at problems it has never seen before" |
+| "Priced at $5 per million input tokens" | "The bill did not move. What it buys did." |
+| "Mean reward over 5 attempts, internal run" | "They graded their own exam, and let it be run five times" |
+| "Reduced inference latency by 40%" | "The wait that made it useless is gone" |
+| "Raised $2B at a $30B valuation" | "Enough to run the company for a decade without selling anything" |
+
+**Simplifying must not mistranslate.** This is the failure mode the stakes rule
+creates, and no automated check will catch it: the gate verifies that numbers
+and quotes are real, not that a paraphrase still means the same thing.
+
+A token is not a word. A parameter is not a neuron. A benchmark score is not an
+IQ. Latency is not speed. When the plain-language version of a technical term
+would be *wrong*, do not use it — drop the unit instead. "$5 per million input
+tokens" becomes "$5, unchanged from the model it replaces", never "$5 per
+million words", which is simply false and would be quoted back at us.
+
+Ask of every simplification: if the author of the source read this slide, would
+they say "yes, that is what I meant"? If they would wince, rewrite it.
+
+**The test, applied to the finished hook:** would someone who does not work in
+technology send this to a friend? If the honest answer is no, the story may
+still be right and the framing is wrong. Rewrite the framing, never the facts.
+
+**What this does not license.** Stakes are not speculation. "This could replace
+millions of jobs" is not a stake, it is a guess, and the gate will not catch it
+because it contains no digits. Say what the source says happened, and say who it
+lands on — never what you imagine might follow.
+
 **Writing the hook.** It must state the surprise, not tease it. `"OpenAI's new
 model runs on one GPU"` beats `"You won't believe what OpenAI just did"`. Never
 write a question you do not answer on slide 2.
