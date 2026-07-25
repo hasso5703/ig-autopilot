@@ -87,29 +87,51 @@ async function loadFonts(brand) {
   );
 }
 
-/** Runs inside the page: shrink `.fit` text until it no longer overflows. */
+/**
+ * Runs inside the page: pick the largest font-size that still composes.
+ *
+ * The previous version tested `scrollHeight <= clientHeight` on the element
+ * itself, which is vacuously true for an auto-height block — so it always
+ * chose the maximum and headlines silently spilled past their intended shape.
+ * Two real constraints instead:
+ *
+ *   - a line budget (`data-maxlines`), because a hook that wraps to six lines
+ *     is not a hook however well it technically fits;
+ *   - the slide as a whole must not overflow the 1080x1350 canvas.
+ */
 const FIT_FN = () => {
-  const fits = (el) =>
-    el.scrollHeight <= el.clientHeight + 1 && el.scrollWidth <= el.clientWidth + 1;
+  const slide = document.querySelector(".slide");
+  const overflows = () =>
+    slide.scrollHeight > slide.clientHeight + 1 ||
+    document.body.scrollHeight > document.body.clientHeight + 1;
 
-  for (const el of document.querySelectorAll(".fit, .fit-body")) {
+  const lineCount = (el) => {
+    const lh = parseFloat(getComputedStyle(el).lineHeight);
+    if (!lh || Number.isNaN(lh)) return 1;
+    return Math.round(el.scrollHeight / lh);
+  };
+
+  for (const el of document.querySelectorAll(".fit")) {
     const max = Number(el.dataset.max);
     const min = Number(el.dataset.min);
-    // A block-level heading has no intrinsic height to compare against, so we
-    // clamp it to the space its parent actually leaves free.
-    if (el.classList.contains("fit")) {
-      el.style.maxHeight = "none";
-      el.style.overflow = "hidden";
-    }
+    const maxLines = Number(el.dataset.maxlines || 99);
+
     let lo = min, hi = max, best = min;
     while (lo <= hi) {
       const mid = Math.floor((lo + hi) / 2);
       el.style.fontSize = mid + "px";
-      if (fits(el)) { best = mid; lo = mid + 1; } else { hi = mid - 1; }
+      if (lineCount(el) <= maxLines && !overflows()) { best = mid; lo = mid + 1; }
+      else { hi = mid - 1; }
     }
     el.style.fontSize = best + "px";
   }
-  return document.fonts.status;
+
+  // Report anything that ended up at its floor and still does not compose:
+  // better a loud failure than a quietly ugly slide.
+  const bad = [...document.querySelectorAll(".fit")]
+    .filter((el) => Number(el.style.fontSize.replace("px", "")) <= Number(el.dataset.min))
+    .map((el) => el.className);
+  return { overflowing: overflows(), atFloor: bad };
 };
 
 export async function renderPost(post, outDir) {
@@ -128,6 +150,7 @@ export async function renderPost(post, outDir) {
   });
 
   const files = [];
+  const warnings = [];
   const total = post.slides.length;
 
   for (let i = 0; i < total; i++) {
@@ -159,7 +182,10 @@ export async function renderPost(post, outDir) {
       throw new Error(`fonts failed to load (${names}) — refusing to render off-brand slides`);
     }
 
-    await page.evaluate(FIT_FN);
+    const fit = await page.evaluate(FIT_FN);
+    if (fit.overflowing)
+      throw new Error(`slide ${i + 1} (${post.slides[i].type}) overflows the canvas even at minimum type size — the copy is too long for this archetype`);
+    if (fit.atFloor.length) warnings.push(`slide ${i + 1}: text hit its minimum size (${fit.atFloor.join(", ")}) — consider shortening the copy`);
 
     const file = path.join(outDir, `${String(i + 1).padStart(2, "0")}.jpg`);
     await page.screenshot({ path: file, type: "jpeg", quality: brand.jpegQuality });
@@ -167,6 +193,7 @@ export async function renderPost(post, outDir) {
   }
 
   await browser.close();
+  for (const w of warnings) console.error(`warn: ${w}`);
   return files;
 }
 

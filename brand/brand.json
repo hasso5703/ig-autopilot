@@ -2,28 +2,54 @@
   "wordmark": "ORDER OF MAGNITUDE",
   "wordmarkTracking": "0.2em",
   "handle": "@order.of.magnitude",
-  "canvas": { "width": 1080, "height": 1350 },
+  "canvas": {
+    "width": 1080,
+    "height": 1350
+  },
   "colors": {
-    "bg": "#0B0B0F",
-    "panel": "#0B0B0F",
+    "bg": "#08080C",
     "ink": "#FFFFFF",
-    "muted": "#9A9AA6",
+    "body": "#DEDEE6",
+    "muted": "#7C7C8A",
+    "faint": "#4A4A57",
     "accent": "#4DE1FF",
+    "accentInk": "#04121A",
     "rule": "#FFFFFF"
   },
   "fonts": {
-    "display": { "family": "Anton", "file": "anton-regular.woff2", "weight": 400 },
-    "body": { "family": "Archivo", "file": "archivo-regular.woff2", "weight": 400 },
-    "bodyBold": { "family": "Archivo", "file": "archivo-bold.woff2", "weight": 700 }
+    "display": {
+      "family": "Anton",
+      "file": "anton-regular.woff2",
+      "weight": 400
+    },
+    "body": {
+      "family": "Archivo",
+      "file": "archivo-regular.woff2",
+      "weight": 400
+    },
+    "bodyBold": {
+      "family": "Archivo",
+      "file": "archivo-bold.woff2",
+      "weight": 700
+    }
   },
+  "_typeNote": "Scale is deliberately extreme. On a 1080px canvas viewed at ~400px wide in feed, anything under 34px is unreadable and anything under 60px reads as 'document' rather than 'poster'. Contrast between levels is what makes a slide feel designed.",
   "type": {
-    "hookMax": 132,
-    "hookMin": 58,
-    "titleMax": 76,
-    "titleMin": 40,
-    "bodyMax": 44,
-    "bodyMin": 28
+    "hookMax": 168,
+    "hookMin": 76,
+    "statMax": 460,
+    "statMin": 150,
+    "titleMax": 116,
+    "titleMin": 58,
+    "quoteMax": 86,
+    "quoteMin": 40,
+    "bodyMax": 46,
+    "bodyMin": 30
   },
-  "jpegQuality": 90,
+  "grid": {
+    "margin": 78,
+    "gutter": 34
+  },
+  "jpegQuality": 92,
   "aiDisclosure": "AI-assisted research and writing · every claim sourced and verified"
 }

@@ -69,37 +69,64 @@ coverage of it. When coverage and primary disagree, the primary wins and the
 discrepancy is itself worth a slide.
 
 ### 5. Write the post spec
-Write `posts/<slug>.json`, slug `YYYY-MM-DD-short-topic`:
+
+Write `posts/<slug>.json`, slug `YYYY-MM-DD-short-topic`. Slides are not one
+shape with fields swapped — pick the **archetype** that fits what the slide has
+to do. A carousel of seven identical layouts is dull to swipe, and swipe-through
+is what buys distribution.
+
+| `type` | Use it for | Required fields |
+|---|---|---|
+| `hook` | slide 1 only — the poster | `headline` (5–8 words), `kicker`, `hero{value,label}`, `swipe` |
+| `stat` | **slide 2** — one enormous figure | `figure`, `unit`, `body`, `evidence`, `source` |
+| `content` | an idea in two or three sentences | `title`, `body`, `evidence`, `source` |
+| `quote` | someone else's words, verbatim | `body` (the quote), `attribution`, `evidence`, `source` |
+| `contrast` | the turn: claim vs what the footnote says | `claim`, `caveat`, `claimLabel`, `caveatLabel`, `evidence`, `source` |
+| `cta` | last slide only | `headline`, `sub` |
+
+**Slide 2 must be a `stat`.** Instagram re-serves a carousel starting at slide 2
+to anyone who scrolled past slide 1, so slide 2 is a second cover. A paragraph
+there wastes the free second impression.
+
+A good spine: `hook → stat → content → contrast → quote → content → cta`.
+
+Inline markup inside any text field:
+- `*word*` renders in the accent colour — use it on **one** phrase per slide
+- `**word**` renders bold — for the load-bearing words in a body
+
+Do not write raw HTML; it is escaped and will appear literally on the slide.
 
 ```jsonc
 {
   "slug": "2026-07-25-example",
-  "accent": "#4DE1FF",              // optional, defaults to brand.json
-  "caption": "…",                    // ≤2200 chars, must carry the AI disclosure
+  "caption": "…",                       // ≤2200 chars, must carry the AI disclosure
   "slides": [
-    { "type": "hook",
-      "headline": "Six to twelve words, *accent* marks the emphasised word",
-      "kicker": "SWIPE FOR THE RECEIPTS" },
+    { "type": "hook", "kicker": "24 July 2026 · Anthropic",
+      "headline": "Same price. *Three times* the score.",
+      "hero": { "value": "$5", "label": "per million input tokens — unchanged" },
+      "swipe": "Swipe for the receipts" },
 
-    { "type": "content",
-      "title": "Short, punchy, may use *accent*",
-      "body": "Two or three sentences. Plain language. No adjectives you cannot source.",
-      "evidence": "The verbatim sentence from the source that supports the body. Copy it exactly — it is checked against the live page.",
-      "source": { "name": "The Verge", "url": "https://…", "date": "2026-07-25" } },
+    { "type": "stat", "figure": "$5", "unit": "per million input tokens",
+      "body": "And $25 per million output. That is **exactly what it cost before**.",
+      "evidence": "Verbatim sentence from the source, checked against the live page.",
+      "source": { "name": "Anthropic", "url": "https://…", "date": "2026-07-24" } },
 
-    { "type": "cta",
-      "headline": "Follow for *one verified story* a day",
+    { "type": "cta", "headline": "One *verified* story a day",
       "sub": "No hype. No reposts. Sources on every slide." }
   ],
   "sources": [ { "name": "…", "url": "https://…", "accessed": "2026-07-25" } ]
 }
 ```
 
-Rules that the validator enforces, so save yourself a rejection:
-- 4–10 slides, first `hook`, last `cta`, at least 2 `content` slides
-- hook headline ≤ 95 characters — longer and the renderer shrinks it to unreadable
-- every content slide needs `evidence` ≥ 40 characters and an `https` source
+Rules the validator enforces — save yourself a rejection:
+- 4–10 slides, first `hook`, last `cta`, at least 2 evidence-bearing slides
+- hook headline ≤ 95 characters
+- every evidence-bearing slide needs `evidence` ≥ 40 characters and an `https` source
 - every digit in a body must appear in that slide's evidence
+- **every digit anywhere else — headline, hero, figure, unit, claim, caveat —
+  must appear in the evidence of some slide in the post.** A hero figure is the
+  loudest text on the carousel and carries no evidence of its own, so a derived
+  number like "$0 extra" is rejected: quote a figure, never compute one
 - at least two distinct source domains across the post
 
 **Writing the hook.** It must state the surprise, not tease it. `"OpenAI's new

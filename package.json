@@ -9,5 +9,10 @@
     "whoami": "node src/publish.mjs whoami",
     "quota": "node src/publish.mjs quota"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright": "^1.62.0"
+  }
 }

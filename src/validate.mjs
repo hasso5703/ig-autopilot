@@ -123,7 +123,27 @@ export async function validatePost(post, opts = {}) {
       err(`${at}: figure(s) ${unsupported.join(", ")} appear in the body but not in the evidence quote — a number must be copied, never derived`);
   }
 
-  // 2. corroboration: a post should not rest on a single publisher
+  // Numbers outside a content body are the blind spot that matters most: the
+  // hook, the hero figure and the contrast cells are the LOUDEST text on the
+  // whole carousel, and none of them carries its own evidence. So every digit
+  // anywhere in the post must be supported by the evidence of SOME slide.
+  // Without this, a derived figure like "$0 extra" — true-sounding, never
+  // actually stated by the source — walks straight onto slide 1.
+  const allEvidence = new Set(
+    slides.flatMap((s) => [...numbers(s.evidence ?? ""), ...numbers(s.source?.date ?? "")])
+  );
+  const LOUD_FIELDS = ["headline", "kicker", "title", "figure", "unit", "claim", "caveat", "sub", "attribution"];
+  for (const [i, s] of slides.entries()) {
+    const fields = [...LOUD_FIELDS.map((f) => s[f]), s.hero?.value, s.hero?.label];
+    const found = [...new Set(fields.flatMap((v) => numbers(v ?? "")))];
+    const unsupported = found.filter((n) => !allEvidence.has(n));
+    if (unsupported.length)
+      err(
+        `slide ${i + 1} (${s.type}): figure(s) ${unsupported.join(", ")} appear in headline/hero/label text but in no evidence quote anywhere in the post — a headline number must be quoted, not derived`
+      );
+  }
+
+  // corroboration: a post should not rest on a single publisher
   if (domains.size < 2)
     warnings.push(`all claims cite a single domain (${[...domains][0] ?? "none"}) — prefer at least two independent sources`);
 
