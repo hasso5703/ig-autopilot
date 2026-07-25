@@ -45,6 +45,31 @@ Filter the items through `filterFresh` from `src/state.mjs`. It removes anything
 already posted or already considered, including the same story carried by a
 different outlet. Do not second-guess it.
 
+### 2b. Look at what has already worked
+```bash
+node src/insights.mjs latest
+```
+The newest reading for every post this account has published. `oom-watch`
+collects these daily; you only read them.
+
+Read **shares** and **saved** first, then **follows**. Ignore likes: it is the
+metric that flatters most and predicts least, and Instagram ranks on sends.
+
+The discipline that matters here is refusing to see a pattern that is not there:
+
+- **Under 5 posts with readings, there is no signal.** Say so in your summary and
+  change nothing. Two posts do not make a trend, and a rule invented from two
+  posts will steer every future run.
+- **Under about 50 reach, the numbers are noise**, whatever their ratio. A post
+  with 3 shares out of 40 reach tells you nothing.
+- With enough posts, look for what the top few have in common — subject, slide
+  archetype, whether the stakes were concrete — and let it **break ties** in
+  step 3. It adjusts ranking between stories that already cleared the bar. It
+  never promotes a story below `minScore`, and it never touches the gate.
+
+Swipe-through is not measurable: the `navigation` metric is refused for feed
+carousels. Do not claim a swipe rate, and do not infer one from `views`.
+
 ### 3. Score and pick one
 Rank the fresh items against `sources.json → scoring.weights`:
 
