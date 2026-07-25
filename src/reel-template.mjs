@@ -240,7 +240,7 @@ function beatLines(b, handle) {
       ].filter(Boolean);
     case "stat":
       return [
-        { cls: "figure", html: "", count: b.figure },
+        { cls: "figure", html: esc(b.figure), count: b.figure },
         b.unit && { cls: "unit", html: inline(b.unit) },
         b.body && { cls: "body", html: inline(b.body) },
       ].filter(Boolean);
@@ -345,7 +345,6 @@ const src = document.getElementById('src');
 // line, not to be noticed; anything springier reads as a template.
 const easeOut = (x) => 1 - Math.pow(1 - Math.min(1, Math.max(0, x)), 3);
 
-const fmt = (v, d) => v.toFixed(d).replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',');
 
 /**
  * Paints the frame at time t. Called once per frame by the renderer and by
@@ -385,18 +384,28 @@ window.render = function (t) {
         ln.style.opacity = p;
         ln.style.transform = 'translateY(' + ((1 - p) * 30).toFixed(2) + 'px)';
 
-        // The counting figure is the one piece of motion that is meant to be
-        // noticed: a number arriving at its value holds an eye that a static
-        // number does not.
-        const spec = ln.dataset.count;
-        if (spec !== undefined) {
-          const f = window.__fig[spec];
-          if (f && f.value !== null) {
-            const k = first ? 1 : easeOut((u - lag) / 0.95);
-            ln.textContent = f.prefix + fmt(f.value * k, f.decimals) + f.suffix;
-          } else {
-            ln.textContent = spec;
-          }
+        // The figure is revealed, never computed.
+        //
+        // This used to count up from zero, painting the sourced value scaled by
+        // an easing ramp and writing the product into the element. It
+        // shipped in the first published Reel and it was wrong in the way this
+        // account can least afford: easeOut decelerates, so the animation spent
+        // its longest moments on 66, 67, 68, 69 on the way to a sourced 70 —
+        // exactly the values that read as a real attendance figure rather than
+        // as an artifact. A paused frame showed "66 people at one class" over a
+        // TechCrunch credit. That is a fabricated sourced statistic.
+        //
+        // No check could have caught it. The JSON says 70 and the validator
+        // verified 70; the multiplication happened in the browser at paint
+        // time, downstream of everything.
+        //
+        // So the arithmetic is gone. The element always holds the sourced text,
+        // and a clip-path wipes it into view. Every frame shows part of the
+        // real figure and no frame shows a different number, which makes the
+        // fault unreachable rather than merely fixed.
+        if (ln.dataset.count !== undefined) {
+          const w = first ? 1 : easeOut((u - lag) / 0.55);
+          ln.style.clipPath = 'inset(0 ' + ((1 - w) * 100).toFixed(2) + '% 0 0)';
         }
       });
     }
@@ -404,11 +413,6 @@ window.render = function (t) {
   }
   if (t >= TOTAL - 0.05) src.textContent = src.textContent;
 };
-window.__fig = ${JSON.stringify(
-    Object.fromEntries(
-      beats.filter((b) => b.type === "stat" && b.figure).map((b) => [b.figure, splitFigure(b.figure)])
-    )
-  )};
 window.render(0);
 </script></body></html>`;
 }

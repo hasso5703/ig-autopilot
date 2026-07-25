@@ -313,6 +313,46 @@ test("emphasis is never painted in the colour of the panel behind it", async () 
 });
 
 // ---------------------------------------------------------------------------
+// Incident 2026-07-25, found in the first published Reel: the stat beat counted
+// up from zero, so a paused frame read "66 people at one class" over a
+// TechCrunch credit. 66 appears in no source. The JSON said 70 and the
+// validator verified 70; the multiplication happened in the browser at paint
+// time, downstream of every check.
+//
+// The account's whole promise is that every figure is traceable to a sentence
+// in a source. A number the renderer invented for one second breaks it exactly
+// as thoroughly as one invented in the JSON.
+// ---------------------------------------------------------------------------
+test("the renderer never invents a figure the source does not contain", async () => {
+  const { html } = await import("../src/reel-template.mjs");
+  const { readFile } = await import("node:fs/promises");
+  const brand = JSON.parse(await readFile(new URL("../brand/brand.json", import.meta.url), "utf8"));
+
+  const post = {
+    slides: [
+      { type: "hook", headline: "A headline", kicker: "K", hero: { value: "70", label: "l" } },
+      { type: "stat", figure: "70", unit: "people at one class", body: "A dozen is usual.", source: { name: "TechCrunch" } },
+      { type: "cta", headline: "One story a day", sub: "A new one tomorrow." },
+    ],
+  };
+  const page = html(post, brand, { anton: "", archivo: "", archivoBold: "" });
+
+  // The figure must be in the document as written, not assembled at runtime.
+  assert.match(page, />70</, "the sourced figure is not in the markup, so something builds it at paint time");
+
+  // Strip comments before looking for arithmetic: the explanation of this very
+  // bug lives next to the fix and must not be mistaken for the bug.
+  const code = page
+    .slice(page.indexOf("<script>"))
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/^\s*\/\/.*$/gm, "");
+
+  for (const forbidden of [/\bfmt\s*\(/, /__fig\b/, /\.value\s*\*/, /dataset\.count[\s\S]{0,200}?textContent\s*=/]) {
+    assert.ok(!forbidden.test(code), `the render loop still builds a figure at paint time: ${forbidden}`);
+  }
+});
+
+// ---------------------------------------------------------------------------
 // Incident: a branch-path media URL would have baked a stale image into a post
 // permanently. raw.githubusercontent caches /main/ paths for minutes and treats
 // commit paths as immutable, and Meta copies whatever it fetches to its own CDN.
