@@ -397,6 +397,59 @@ Run the dry run first. If it fails, nothing was published and you can fix and
 retry. `IG_ACCESS_TOKEN` comes from the environment; if it is missing, stop and
 report — do not attempt any other publishing route.
 
+### 8b. The Reel
+
+The carousel is what people find. The Reel is how they find it.
+
+Two published carousels reached **zero** people, and that is not a defect: a feed
+post on a new account is shown to followers, and there are none. Reels are the
+surface where non-followers are, so from here every story ships in both forms.
+
+```bash
+node src/reel.mjs posts/<slug>.json media/<slug>
+```
+
+That writes `media/<slug>/<slug>.mp4`. **Rename it to `media/<slug>/reel.mp4`**,
+which is the path `reelUrl()` builds.
+
+It prints the beats it chose, the duration, an ffprobe reading of the file it
+actually produced, and `COMPLIANT` or a list of violations. **If it prints
+anything other than COMPLIANT, do not publish the Reel** — a Reel outside 5 to
+90 seconds at 9:16 still posts but is not eligible for the Reels tab, which is
+the entire reason for making one. Publish the carousel and report the violation.
+
+The Reel is a **trailer, not the carousel in another shape**. The template keeps
+at most five beats and drops the rest; that is deliberate and you should not
+fight it. Look at the frames before publishing:
+
+```bash
+cd media/<slug> && for t in 0.5 6 12 18 24; do ffmpeg -loglevel error -ss $t -i reel.mp4 -frames:v 1 -q:v 2 /tmp/f_$t.jpg -y; done
+```
+
+Open them. At 0.5s the opening beat must be fully readable, not fading in: that
+frame is the profile-grid thumbnail and it was pure black until it was fixed.
+
+**Order matters, because Meta fetches the file itself.** Commit and push the MP4
+*before* asking for its URL, then let the code confirm GitHub is really serving
+it:
+
+```bash
+git add media/<slug>/reel.mp4 && git commit -m "reel: <slug>" && git push origin main
+node src/publish-reel.mjs url <slug>          # SHA-pinned, never a /main/ path
+IG_REEL_URL="<that url>" node src/publish-reel.mjs dry-run media/<slug>/reel.mp4 "<caption>"
+IG_REEL_URL="<that url>" node src/publish-reel.mjs publish media/<slug>/reel.mp4 "<caption>"
+```
+
+`publish-reel.mjs` sends `share_to_feed=false` on purpose. The carousel owns the
+profile grid; the Reel owns the Reels tab. Putting both in the feed makes a grid
+that reads as repetition, and feed reach on an account with no followers is zero
+anyway, so nothing is given up.
+
+Transcoding takes minutes, not seconds. The command polls and tells you.
+
+Record the Reel with `recordPosted` too, so the watch reads its metrics and the
+gap guard counts it.
+
 ### 9. Record, ON MAIN
 
 This step is what makes the account autonomous rather than merely automated, and

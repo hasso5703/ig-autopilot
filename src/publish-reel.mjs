@@ -143,6 +143,42 @@ export async function createResumableContainer({ caption, shareToFeed = true, au
   }
 }
 
+/**
+ * Confirms the file is actually being served before handing the URL to Meta.
+ *
+ * A commit-path URL only works once the push has landed and the CDN has the
+ * object. Skip this and the failure surfaces as a container that transcodes for
+ * a while and then reports ERROR with no useful detail, which is a miserable
+ * thing to debug from a log. A HEAD request costs nothing and turns it into one
+ * clear sentence.
+ *
+ * @param {number} [expectBytes] size on disk, to catch a URL that resolves to
+ *        something other than the file just committed.
+ */
+export async function assertReachable(url, expectBytes) {
+  let res;
+  try {
+    res = await fetch(url, { method: "HEAD", redirect: "follow" });
+  } catch (e) {
+    throw new Error(`the video URL is not fetchable (${e.message}): ${url}`);
+  }
+  if (!res.ok) {
+    throw new Error(
+      `the video URL returned HTTP ${res.status}: ${url}\n` +
+        "If this is a 404 the commit is probably not pushed yet, or the path is wrong. " +
+        "Meta fetches this URL server-side, so it must be public and live before publishing."
+    );
+  }
+  const served = Number(res.headers.get("content-length"));
+  if (expectBytes && served && served !== expectBytes) {
+    throw new Error(
+      `the video URL serves ${served} bytes but the file on disk is ${expectBytes}. ` +
+        "Refusing to publish: a mismatched file means a stale or wrong video would be baked into the post."
+    );
+  }
+  return { ok: true, bytes: served || null, type: res.headers.get("content-type") };
+}
+
 /** Container that pulls the file from a URL, for when resumable is unavailable. */
 export async function createHostedContainer(videoUrl, { caption, shareToFeed = true, audioName, thumbOffsetMs = THUMB_OFFSET_MS } = {}) {
   if (!/^https:\/\//.test(videoUrl)) throw new Error(`video_url must be https: ${videoUrl}`);
@@ -209,7 +245,7 @@ export async function waitForContainer(id, { onTick } = {}) {
  * genuinely safe way to test: an unpublished container simply expires.
  */
 export async function publishReel(file, caption, opts = {}) {
-  const { shareToFeed = true, audioName, dryRun = false, videoUrl = null, onStep = () => {} } = opts;
+  const { shareToFeed = false, audioName, dryRun = false, videoUrl = null, onStep = () => {} } = opts;
 
   // The hosted route is the only one that works on this API path; resumable is
   // kept behind an explicit opt-in so that if Meta ever enables it for
@@ -239,6 +275,9 @@ export async function publishReel(file, caption, opts = {}) {
       );
     }
     route = "hosted";
+    const size = await stat(file).then((s) => s.size).catch(() => null);
+    const reach = await assertReachable(videoUrl, size);
+    onStep({ step: "reachable", url: videoUrl, ...reach });
     container = await createHostedContainer(videoUrl, { caption, shareToFeed, audioName });
   }
   onStep({ step: "container", route, id: container.id });
