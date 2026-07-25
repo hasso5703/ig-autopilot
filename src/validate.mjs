@@ -231,6 +231,18 @@ export async function validatePost(post, opts = {}) {
 
   // ---- structure ----------------------------------------------------------
   if (!post.slug || !/^[a-z0-9][a-z0-9-]{2,60}$/.test(post.slug)) err(`slug invalid or missing: ${post.slug}`);
+
+  /*
+   * The repository contains a complete, gate-clean post that must never be
+   * published: `test/fixtures/smoke-post.json`, which exercises the whole
+   * pipeline without touching the account. It is a story that has already been
+   * published and deleted, and nothing but a filename stopped a run in a hurry
+   * from copying it into `posts/` and shipping a repeat. Hasan asked the right
+   * question about test material sitting in a production repository; this is
+   * the answer to it.
+   */
+  if (!opts.fixture && /^(fixture|smoke|cloud-smoke|test)-/.test(post.slug || ""))
+    err(`slug "${post.slug}" belongs to a test fixture. Fixtures exercise the pipeline; they are never published. Research and write your own story.`);
   const slides = Array.isArray(post.slides) ? post.slides : [];
   if (slides.length < SLIDES_MIN || slides.length > SLIDES_MAX)
     err(`slide count ${slides.length} outside ${SLIDES_MIN}..${SLIDES_MAX}`);
@@ -463,6 +475,9 @@ if (process.argv[1] && process.argv[1].endsWith("validate.mjs")) {
   const r = await validatePost(post, {
     online: !process.argv.includes("--offline"),
     allowUnverifiable: process.argv.includes("--allow-unverifiable"),
+    // Only the smoke test passes this, and it publishes nothing. A production
+    // run that reaches for it is a run about to publish a fixture.
+    fixture: process.argv.includes("--fixture"),
   });
   console.log(JSON.stringify(r, null, 2));
   if (!r.ok) { console.error(`\nREJECTED — ${r.errors.length} error(s)`); process.exit(1); }

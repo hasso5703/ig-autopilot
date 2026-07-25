@@ -514,3 +514,19 @@ test("narration is the text on the screen, and does not say the unit twice", () 
   // Magnitude is meaning, not clumsiness: dropping the M would make it false.
   assert.ok(/2\.6M/.test(beats[2].narration), beats[2].narration);
 });
+
+// ---------------------------------------------------------------------------
+// Hasan, 2026-07-26, looking at the live run reading the smoke-test report:
+// "il fallait pas le cacher?" The report is fine and deliberate. The fixture
+// beside it was not: a complete, gate-clean post about a story that had just
+// been deleted from the account, one copy away from being republished.
+// ---------------------------------------------------------------------------
+test("a test fixture cannot be published, whatever else is right about it", async () => {
+  const p = goodPost();
+  p.slug = "fixture-do-not-publish";
+  assert.ok(hasErr(await errs(p), /belongs to a test fixture/));
+
+  // and the smoke test, which publishes nothing, can still exercise the gate
+  const allowed = await validatePost(p, { online: false, fixture: true });
+  assert.equal(allowed.ok, true, allowed.errors.join("\n"));
+});

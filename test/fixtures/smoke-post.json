@@ -1,5 +1,5 @@
 {
-  "slug": "cloud-smoke-2026-07-26",
+  "slug": "fixture-do-not-publish",
   "centralClaim": "Cyrus teaches a class called Avoiding AI on disabling AI, and about 70 people came, far more than her usual computer classes.",
   "corroboration": [
     {
@@ -148,5 +148,6 @@
       "accessed": "2026-07-25"
     }
   ],
-  "mood": "wonder"
+  "mood": "wonder",
+  "_fixture": "A TEST ASSET, NOT A STORY. It exercises acquisition, rendering, narration and encoding end to end without touching the account, and it is deliberately a story that has already been published and deleted. Copying it into posts/ would publish a repeat of something Hasan removed. validate.mjs refuses this slug outright."
 }
