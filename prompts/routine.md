@@ -84,6 +84,18 @@ is what buys distribution.
 | `contrast` | the turn: claim vs what the footnote says | `claim`, `caveat`, `claimLabel`, `caveatLabel`, `evidence`, `source` |
 | `cta` | last slide only | `headline`, `sub` |
 
+**The hero must reinforce the headline, never introduce a second comparison.**
+The first autonomous post put "half the price of the model it nearly matches"
+(a comparison with Fable 5) above a hero reading "$5, the same as the model it
+replaces" (a comparison with Opus 4.8). Both were true and sourced. Together, on
+the one slide that has to land in half a second, they read as a contradiction:
+half, or the same? Pick the comparison that carries the story and let the hero
+restate it in figures.
+
+**`figure` is a numeral, not words.** Write `3x`, `$5`, `40%`, `2.6M`. The stat
+archetype exists because a large numeral stops a thumb where a phrase does not;
+"Three times" set at 300px is just a long word. Put the words in `unit`.
+
 **Slide 2 must be a `stat`.** Instagram re-serves a carousel starting at slide 2
 to anyone who scrolled past slide 1, so slide 2 is a second cover. A paragraph
 there wastes the free second impression.
@@ -249,12 +261,38 @@ Run the dry run first. If it fails, nothing was published and you can fix and
 retry. `IG_ACCESS_TOKEN` comes from the environment; if it is missing, stop and
 report — do not attempt any other publishing route.
 
-### 9. Record
-Append to `state/posted.jsonl` via `recordPosted`, append every considered story
-via `recordSeen`, commit and push. **A run that publishes but does not record
-will republish the same story tomorrow.**
+### 9. Record, ON MAIN
 
----
+This step is what makes the account autonomous rather than merely automated, and
+the first live run got it wrong in a way worth spelling out.
+
+A cloud session starts on a `claude/…` working branch. Pushing your work there
+looks like success: the commit exists, the media URLs resolve (they are pinned
+to a commit SHA, which is reachable from any branch), and the post goes live.
+But the **next run clones the default branch**. If `state/posted.jsonl` only
+exists on a side branch, tomorrow's run starts with no memory of today, and
+republishes the same story to the same followers.
+
+So: append the published carousel with `recordPosted`, append every story you
+considered with `recordSeen`, and land both **on `main`**.
+
+```bash
+git checkout main && git merge --no-edit -   # bring your working branch across
+git add media/<slug> posts/<slug>.json state/
+git commit -m "post: <slug>"
+git push origin main
+```
+
+Then **verify it actually landed**, because a rejected push is easy to miss in a
+long log:
+
+```bash
+git ls-remote origin refs/heads/main    # must equal your local HEAD
+```
+
+If the push to `main` is refused, do not shrug and move on. Say so as the
+headline finding of your report, and name the exact error: an unattended account
+that cannot remember what it published is broken, however good the post was.
 
 ## When things go wrong
 

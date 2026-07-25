@@ -116,7 +116,7 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 
 /* ---------- stat: slide 2 doubles as a cover ---------- */
 .stat{justify-content:center;text-align:left}
-.stat .figure{font-family:'Anton',sans-serif;color:${c.accent};line-height:.92;
+.stat .figure{font-family:'Anton',sans-serif;color:${c.accent};line-height:.92;text-transform:uppercase;
               letter-spacing:-0.03em;margin-bottom:16px}
 .stat .unit{font-family:'Anton',sans-serif;font-size:64px;color:${c.ink};
             text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:40px}
