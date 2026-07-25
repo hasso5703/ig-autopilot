@@ -16,38 +16,13 @@
  */
 
 import { readFile, mkdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
-import { createRequire } from "node:module";
-import { execSync } from "node:child_process";
 import path from "node:path";
+import { loadPlaywright, chromiumExecutable, assertFontsLoaded } from "./browser.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SIZE = 1080;
 
-async function loadPlaywright() {
-  try {
-    return await import("playwright");
-  } catch {
-    const require = createRequire(import.meta.url);
-    for (const c of [process.env.PLAYWRIGHT_PKG, "/opt/node22/lib/node_modules/playwright"].filter(Boolean)) {
-      try { return require(c); } catch {}
-    }
-    try { return require(path.join(execSync("npm root -g", { encoding: "utf8" }).trim(), "playwright")); } catch {}
-    throw new Error("cannot resolve the 'playwright' package");
-  }
-}
 
-async function chromiumExecutable() {
-  const base = process.env.PLAYWRIGHT_BROWSERS_PATH;
-  if (!base || !existsSync(base)) return undefined;
-  const { readdir } = await import("node:fs/promises");
-  for (const e of (await readdir(base)).filter((x) => x.startsWith("chromium")).sort().reverse()) {
-    for (const rel of ["chrome-linux/chrome", "chrome-linux/headless_shell"]) {
-      const p = path.join(base, e, rel);
-      if (existsSync(p)) return p;
-    }
-  }
-}
 
 /**
  * @param {object} v variant
@@ -109,9 +84,7 @@ export async function renderAvatars(outDir) {
   const files = [];
   for (const v of variants) {
     await page.setContent(html(v, anton, c), { waitUntil: "load" });
-    await page.evaluate(async () => { await Promise.allSettled([...document.fonts].map((f) => f.load())); });
-    const ok = await page.evaluate(() => document.fonts.check("400 100px 'Anton'"));
-    if (!ok) throw new Error("Anton failed to load; refusing to render an off-brand avatar");
+    await assertFontsLoaded(page, ["400 100px 'Anton'"]);
     const f = path.join(outDir, `${v.name}.jpg`);
     await page.screenshot({ path: f, type: "jpeg", quality: 95 });
     files.push(f);

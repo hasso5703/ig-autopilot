@@ -13,12 +13,10 @@
  *   invisible until someone looks at the image.
  */
 
-import { readFile, mkdir, readdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
-import { createRequire } from "node:module";
-import { execSync } from "node:child_process";
+import { readFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { slideHtml } from "./template.mjs";
+import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -32,48 +30,12 @@ const ROOT = path.resolve(import.meta.dirname, "..");
  * locally), then fall back to requiring it by absolute path. This keeps the
  * pipeline a single command with no symlink or setup step to forget.
  */
-async function loadPlaywright() {
-  try {
-    return await import("playwright");
-  } catch (localMiss) {
-    const require = createRequire(import.meta.url);
-    const candidates = [process.env.PLAYWRIGHT_PKG, "/opt/node22/lib/node_modules/playwright"];
-    try {
-      candidates.push(path.join(execSync("npm root -g", { encoding: "utf8" }).trim(), "playwright"));
-    } catch {
-      /* npm not on PATH; the explicit candidates may still hit */
-    }
-    for (const c of candidates.filter(Boolean)) {
-      try {
-        return require(c);
-      } catch {
-        /* try the next candidate */
-      }
-    }
-    throw new Error(
-      `cannot resolve the 'playwright' package. Tried a local import and: ${candidates.filter(Boolean).join(", ")}. ` +
-        `Set PLAYWRIGHT_PKG to its absolute path. Original error: ${localMiss.message}`
-    );
-  }
-}
 
 /**
  * Playwright normally resolves its browser from PLAYWRIGHT_BROWSERS_PATH.
  * We fall back to globbing that directory so a bumped Chromium build number
  * does not break the pipeline.
  */
-async function chromiumExecutable() {
-  const base = process.env.PLAYWRIGHT_BROWSERS_PATH;
-  if (!base || !existsSync(base)) return undefined;
-  const entries = await readdir(base).catch(() => []);
-  for (const e of entries.filter((x) => x.startsWith("chromium")).sort().reverse()) {
-    for (const rel of ["chrome-linux/chrome", "chrome-linux/headless_shell"]) {
-      const p = path.join(base, e, rel);
-      if (existsSync(p)) return p;
-    }
-  }
-  return undefined;
-}
 
 async function loadFonts(brand) {
   const dir = path.join(ROOT, "brand", "fonts");

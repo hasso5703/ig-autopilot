@@ -17,48 +17,17 @@
  */
 
 import { readFile, mkdir, rm } from "node:fs/promises";
-import { existsSync } from "node:fs";
-import { createRequire } from "node:module";
 import { execFile, execSync } from "node:child_process";
 import { promisify } from "node:util";
 import path from "node:path";
 import { html, buildTimeline, totalDuration, FPS } from "./reel-template.mjs";
+import { loadPlaywright, chromiumExecutable, assertFontsLoaded } from "./browser.mjs";
 
 const run = promisify(execFile);
 const ROOT = path.resolve(import.meta.dirname, "..");
 const W = 1080;
 const H = 1920;
 
-/**
- * Node's ESM resolver ignores NODE_PATH, so a globally installed playwright is
- * invisible to `import`. A cloud run discovered this the hard way. The global
- * root also is not the same path in every sandbox, so ask npm rather than
- * guessing.
- */
-async function loadPlaywright() {
-  try {
-    return await import("playwright");
-  } catch {
-    const require = createRequire(import.meta.url);
-    for (const c of [process.env.PLAYWRIGHT_PKG, "/opt/node22/lib/node_modules/playwright"].filter(Boolean)) {
-      try { return require(c); } catch {}
-    }
-    try { return require(path.join(execSync("npm root -g", { encoding: "utf8" }).trim(), "playwright")); } catch {}
-    throw new Error("cannot resolve the 'playwright' package");
-  }
-}
-
-async function chromiumExecutable() {
-  const base = process.env.PLAYWRIGHT_BROWSERS_PATH;
-  if (!base || !existsSync(base)) return undefined;
-  const { readdir } = await import("node:fs/promises");
-  for (const e of (await readdir(base)).filter((x) => x.startsWith("chromium")).sort().reverse()) {
-    for (const rel of ["chrome-linux/chrome", "chrome-linux/headless_shell"]) {
-      const p = path.join(base, e, rel);
-      if (existsSync(p)) return p;
-    }
-  }
-}
 
 function ffmpegBin() {
   for (const c of [process.env.FFMPEG_BIN, "ffmpeg"].filter(Boolean)) {
@@ -93,13 +62,7 @@ export async function renderFrames(post, brand, fonts, dir) {
 
   await page.setContent(html(post, brand, fonts), { waitUntil: "load" });
 
-  // CSS font loading is lazy: document.fonts.check() answers false for a face
-  // nothing has requested yet, so ask for them before asking about them.
-  await page.evaluate(async () => { await Promise.allSettled([...document.fonts].map((f) => f.load())); });
-  for (const f of ["400 100px 'Anton'", "400 40px 'Archivo'", "700 40px 'Archivo'"]) {
-    if (!(await page.evaluate((s) => document.fonts.check(s), f)))
-      throw new Error(`font not loaded: ${f} — refusing to render off-brand video`);
-  }
+  await assertFontsLoaded(page, ["400 100px 'Anton'", "400 40px 'Archivo'", "700 40px 'Archivo'"]);
 
   const stage = await page.$("#stage");
   for (let n = 0; n < frames; n++) {
