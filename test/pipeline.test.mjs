@@ -12,9 +12,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 
-import { validatePost, claimOverlap } from "../src/validate.mjs";
+import { validatePost, claimOverlap, hookIssues, imageIssues } from "../src/validate.mjs";
 import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS } from "../src/state.mjs";
-import { shorten, splitFigure, buildTimeline, totalDuration } from "../src/reel-template.mjs";
+import { shorten, splitFigure, buildTimeline, totalDuration, applyNarrationTiming } from "../src/reel-template.mjs";
+import { queryLadder, scoreCandidate, creditLine } from "../src/imagery.mjs";
 import { complianceIssues } from "../src/reel.mjs";
 
 // ---------------------------------------------------------------------------
@@ -32,13 +33,21 @@ const goodPost = () => ({
   ],
   caption: "A short caption with the figure 70 in it. AI-assisted.",
   captionEvidence: [{ url: "https://techcrunch.com/a", quote: "About 70 people turned up to the class, far more than the usual dozen." }],
+  mood: "tension",
   slides: [
-    { type: "hook", headline: "Libraries now teach you to switch AI off", kicker: "25 July 2026", hero: { value: "70", label: "turned up" }, swipe: "Swipe" },
-    { type: "stat", figure: "70", unit: "people came", body: "A dozen is the usual turnout for this class.", evidence: "About 70 people turned up to the class, far more than the usual dozen.", source: { url: "https://techcrunch.com/a", name: "TechCrunch", date: "2026-07-25" } },
-    { type: "content", title: "What they teach", body: "How to switch the features off.", evidence: "The class explains how to switch the features off on a phone or laptop.", source: { url: "https://www.bangordailynews.com/b", name: "Bangor Daily News", date: "2026-07-02" } },
-    { type: "cta", headline: "One story a day", sub: "A new one tomorrow." },
+    { type: "hook", headline: "Libraries now teach you to switch AI off", kicker: "25 July 2026", hero: { value: "70", label: "turned up" }, swipe: "Swipe",
+      image: photo("public library interior") },
+    { type: "stat", figure: "70", unit: "people came", body: "A dozen is the usual turnout for this class.", evidence: "About 70 people turned up to the class, far more than the usual dozen.", source: { url: "https://techcrunch.com/a", name: "TechCrunch", date: "2026-07-25" },
+      image: photo("library reading room") },
+    { type: "content", title: "What they teach", body: "How to switch the features off.", evidence: "The class explains how to switch the features off on a phone or laptop.", source: { url: "https://www.bangordailynews.com/b", name: "Bangor Daily News", date: "2026-07-02" },
+      image: drawn("a dim room lit by one phone screen, cinematic, no text") },
+    { type: "cta", headline: "One story a day", sub: "A new one tomorrow.",
+      image: drawn("abstract field of small cyan lights in the dark, no text") },
   ],
 });
+
+const photo = (query) => ({ kind: "photo", query, alt: `a photograph of ${query}` });
+const drawn = (prompt) => ({ kind: "illustration", prompt, alt: "an illustration" });
 
 const errs = async (post) => (await validatePost(post, { online: false })).errors;
 const hasErr = (list, re) => list.some((e) => re.test(e));
@@ -406,4 +415,102 @@ test("compliance is judged on the produced file, and catches each violation", ()
   assert.ok(complianceIssues({ ...ok, sampleRate: 96000 }).length);
   assert.ok(complianceIssues({ ...ok, seconds: 3 }).length, "under 5s must be flagged");
   assert.ok(complianceIssues({ ...ok, seconds: 120 }).length, "over 90s must be flagged");
+});
+
+// ---------------------------------------------------------------------------
+// 2026-07-26, and this one came from Hasan rather than from a crash: two
+// carousels went out accurate, sourced, well typeset and ignored. The diagnosis
+// was the first line of each. "The data centers unplugged. The lights
+// flickered." is prose; it names nothing a stranger can grab.
+// ---------------------------------------------------------------------------
+test("a headline that names a mood instead of a thing is rejected", () => {
+  assert.ok(hookIssues("The data centers unplugged. The lights flickered.").length);
+  assert.ok(hookIssues("The future of work is changing").length);
+  assert.equal(hookIssues("3.1 gigawatts walked off the grid in 30 seconds").length, 0);
+  assert.equal(hookIssues("Libraries now teach you to switch AI off").length, 0);
+});
+
+test("a capital letter after a full stop does not count as a name", () => {
+  // The first version of the anchor rule passed the headline above on the
+  // strength of its second "The", which is the very headline it exists to
+  // catch. Sentence words are not anchors.
+  assert.ok(hookIssues("Everything stopped. They noticed. It flickered.").some((i) => /no number and no name/.test(i)));
+});
+
+test("hooks that announce a surprise, ask a question, or reach for filler are rejected", () => {
+  assert.ok(hookIssues("How AI is changing the workplace").some((i) => /description/.test(i)));
+  assert.ok(hookIssues("What happens when the grid loses 3 gigawatts?").some((i) => /question/.test(i)));
+  assert.ok(hookIssues("A game-changer for 3 million developers").some((i) => /means nothing/.test(i)));
+});
+
+// ---------------------------------------------------------------------------
+// Pictures. The account's promise is that what it shows is real, so a generated
+// picture may set a mood and may never appear to show someone it quotes.
+// ---------------------------------------------------------------------------
+test("every slide needs a picture", async () => {
+  const p = goodPost();
+  delete p.slides[1].image;
+  assert.ok(hasErr(await errs(p), /slide 2 \(stat\) image: missing/));
+});
+
+test("a generated picture may not depict a person the post quotes", () => {
+  const post = { slides: [{ type: "quote", attribution: "Hannah Cyrus, reference librarian" }] };
+  const slide = { type: "quote", image: { kind: "illustration", prompt: "a portrait of Hannah at her library desk, cinematic, no text", alt: "x" } };
+  assert.ok(imageIssues(slide, post).some((i) => /never appear to show someone real/.test(i)));
+});
+
+test("an illustration prompt must forbid lettering, and a photo needs a keyword query", () => {
+  assert.ok(imageIssues({ image: { kind: "illustration", prompt: "a wide cinematic shot of a server hall", alt: "x" } }).some((i) => /no text/.test(i)));
+  assert.ok(imageIssues({ image: { kind: "photo", alt: "x" } }).some((i) => /keyword `query`/.test(i)));
+  assert.equal(imageIssues({ image: { kind: "photo", query: "server rack", alt: "racks" } }).length, 0);
+});
+
+// ---------------------------------------------------------------------------
+// Openverse and Commons are keyword indexes. A sentence finds nothing at all.
+// ---------------------------------------------------------------------------
+test("a photo query that finds nothing is retried shorter, longest first", () => {
+  const ladder = queryLadder("librarian helping a patron at the public library desk");
+  assert.equal(ladder[0], "librarian helping a patron at the public library desk");
+  assert.ok(ladder.length > 2);
+  assert.equal(ladder.at(-1).split(/\s+/).length, 1);
+});
+
+test("diagrams and logos are ranked below photographs", () => {
+  const base = { width: 2000, height: 1400, license: "cc0", provider: "openverse/flickr" };
+  assert.ok(scoreCandidate({ ...base, title: "Power grid map of Poland" }) < scoreCandidate({ ...base, title: "Substation at dusk" }));
+});
+
+test("the credit line is one short line, not a catalogue entry", () => {
+  const line = creditLine({ generated: false, license: "by", creator: "Novoklimov", title: "Switchyard of electric substation 750kV in the Ural mountains" });
+  assert.equal(line, "Novoklimov · CC BY");
+  assert.equal(creditLine({ generated: true }), "Illustration · AI-generated");
+});
+
+// ---------------------------------------------------------------------------
+// 2026-07-26: beats were capped at 7.5s while a narration line took 8.0s to
+// say. The pad went negative, ffmpeg refused the filtergraph, and the run fell
+// back to a silent Reel. A whole feature lost to a clamp.
+// ---------------------------------------------------------------------------
+test("a beat is never shorter than the line it has to say", () => {
+  const timed = applyNarrationTiming([{ type: "cover" }, { type: "line" }, { type: "end" }], [{ seconds: 8.4 }, { seconds: 0.6 }, { seconds: 3.0 }]);
+  for (const [i, b] of timed.entries()) {
+    assert.ok(b.duration >= [8.4, 0.6, 3.0][i], `beat ${i} is shorter than its narration`);
+    assert.ok(b.silence >= 0, `beat ${i} would need negative silence`);
+  }
+  assert.ok(timed[0].long, "a line that takes 8.4s to say must be flagged for shortening");
+});
+
+test("narration is the text on the screen, and does not say the unit twice", () => {
+  const beats = buildTimeline({
+    slides: [
+      { type: "hook", headline: "Libraries now teach you to switch AI off" },
+      { type: "stat", figure: "3.1 GW", unit: "gigawatts of demand, gone in 30 seconds", body: "" },
+      { type: "stat", figure: "2.6M", unit: "downloads in a week", body: "" },
+      { type: "cta", headline: "One story a day", sub: "Follow for the next one." },
+    ],
+  });
+  assert.equal(beats[0].narration, "Libraries now teach you to switch AI off.");
+  assert.ok(!/gigawatts.*gigawatts/i.test(beats[1].narration), beats[1].narration);
+  // Magnitude is meaning, not clumsiness: dropping the M would make it false.
+  assert.ok(/2\.6M/.test(beats[2].narration), beats[2].narration);
 });

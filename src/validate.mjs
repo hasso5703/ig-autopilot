@@ -104,6 +104,125 @@ async function fetchPage(url) {
  * @param {object} post
  * @param {{online?: boolean, allowUnverifiable?: boolean}} opts
  */
+/**
+ * What a headline has to be before it is allowed to be the first thing anyone
+ * sees.
+ *
+ * The two carousels this account published were accurate, sourced and ignored.
+ * "The data centers unplugged. The lights flickered." is a fine line of prose
+ * and a bad hook: it describes rather than states, and it gives a thumb no
+ * reason to stop. The accounts that do reach people write "This Chinese
+ * developer just open sourced a model that predicts the future". The difference
+ * is not exaggeration — that particular claim is a stretch we may not make. The
+ * difference is that theirs names a subject, an action and a stake in nine
+ * words, and ours named a mood.
+ *
+ * So these rules check for the *shape* of a hook, never for volume. Nothing
+ * here permits overstating what a source said; the evidence gate below still
+ * decides that, and it is not negotiable. A headline can be sharp and true, and
+ * if it cannot be, the story is the wrong story.
+ */
+const HOOK_MAX_WORDS = 13;
+
+/** Openers that promise a thumb nothing. Every one of these is a description. */
+const DEAD_OPENERS = [
+  /^(the )?(rise|fall|future|state|age|era|dawn|world) of\b/i,
+  /^(how|why) [a-z]/i,
+  /^a (look|deep dive|guide|primer)\b/i,
+  /^everything you need to know\b/i,
+  /^(here'?s|this is) (how|why|what)\b/i,
+  /^(what|why) (this|that|it) means\b/i,
+  /^(inside|meet|introducing)\b/i,
+];
+
+/** Words that sound like something and mean nothing. */
+const FILLER = /\b(game[- ]?changer|revolutionary|revolutionize|landscape|journey|unlock|harness|delve|paradigm|disrupt(ing|ive)?|cutting[- ]edge|seamless|robust|leverage)\b/i;
+
+export function hookIssues(headline) {
+  const raw = String(headline || "").replace(/\*+/g, "").trim();
+  if (!raw) return ["missing"];
+  const issues = [];
+  const words = raw.split(/\s+/).filter(Boolean);
+
+  if (words.length > HOOK_MAX_WORDS)
+    issues.push(`${words.length} words. A hook is read in under a second, so ${HOOK_MAX_WORDS} is the ceiling. Cut it to the subject, the action and the stake.`);
+
+  for (const re of DEAD_OPENERS)
+    if (re.test(raw))
+      issues.push(`opens with a description ("${raw.split(/\s+/).slice(0, 3).join(" ")}…"). State the surprise instead of announcing that there is one.`);
+
+  const filler = raw.match(FILLER);
+  if (filler) issues.push(`contains "${filler[0]}", which is a word that sounds like something and means nothing. Say what actually happened.`);
+
+  if (/\?\s*$/.test(raw))
+    issues.push("is a question. A question hook makes the reader do the work; answer it on the slide instead.");
+
+  /*
+   * The anchor rule. A hook needs something concrete in it — a number, or a
+   * name. "Libraries now teach you to switch AI off" has one (AI, libraries as
+   * subject). "The future of work is changing" has none, and no amount of
+   * typography saves it. Checked as: at least one digit, or at least one
+   * capitalised word that is not merely the first word of the sentence.
+   */
+  const hasDigit = /\d/.test(raw);
+  // A capital after a full stop is not a name. The headline that started this
+  // rewrite, "The data centers unplugged. The lights flickered.", passed the
+  // first version of this check on the strength of its second "The".
+  const SENTENCE_WORDS = new Set(["the", "a", "an", "this", "that", "it", "and", "but", "in", "on", "for", "now", "when", "why", "how", "they", "its", "their", "no", "one", "two", "three"]);
+  const hasName = words
+    .slice(1)
+    .map((w) => w.replace(/[^\w.'-]/g, ""))
+    .some((w) => /^[A-Z][A-Za-z.'-]+$/.test(w) && !SENTENCE_WORDS.has(w.toLowerCase()));
+  if (!hasDigit && !hasName)
+    issues.push("has no number and no name in it. A hook needs one concrete anchor a stranger can grab: who did it, or how much.");
+
+  return issues;
+}
+
+/**
+ * Pictures are not optional any more, and generated ones are not documentary.
+ *
+ * The first rule is why this exists: two carousels of type on black reached
+ * nobody. The second is the one that could end the account. A generated picture
+ * that appears to show a real person or a reported event, on an account whose
+ * whole promise is that what it shows is real, is indefensible however good it
+ * looks — so a prompt may not name anyone the post itself quotes or credits.
+ */
+export function imageIssues(slide, post = {}) {
+  const img = slide.image;
+  if (!img) return ["missing. Every slide carries a picture: `image: { kind: 'photo', query: '…' }` or `{ kind: 'illustration', prompt: '…' }`"];
+  const issues = [];
+
+  if (img.kind !== "photo" && img.kind !== "illustration")
+    issues.push(`kind is "${img.kind}", expected "photo" or "illustration"`);
+  if (img.kind === "photo" && !String(img.query || "").trim())
+    issues.push("a photo needs a plain keyword `query`. Openverse and Commons are keyword indexes, not search engines: \"electrical substation\" finds one, \"the moment the substation tripped at night\" finds nothing");
+  if (img.kind === "illustration") {
+    const prompt = String(img.prompt || "").trim();
+    if (prompt.length < 25) issues.push("an illustration needs a `prompt` of at least 25 characters describing the scene");
+    if (!/\bno text\b/i.test(prompt))
+      issues.push('the prompt must end with "no text". Generated lettering comes out as garbled pseudo-English and it lands on the one account that cannot afford to look fake');
+
+    // Names the post itself quotes or credits, which a generated picture may
+    // not depict. Attributions carry them ("Hannah Cyrus, reference librarian"),
+    // so they are collected rather than guessed at.
+    const names = new Set();
+    for (const s of post.slides || []) {
+      const who = String(s.attribution || "").split(",")[0].trim();
+      if (who.split(/\s+/).length >= 2) for (const part of who.split(/\s+/)) if (/^[A-Z][a-z]{2,}$/.test(part)) names.add(part);
+    }
+    for (const name of names)
+      if (new RegExp(`\\b${name}\\b`).test(prompt))
+        issues.push(`the prompt names "${name}", who is a real person this post quotes. A generated picture may set a mood; it may never appear to show someone real`);
+  }
+  if (!String(img.alt || "").trim())
+    issues.push("needs `alt` text: one plain sentence describing what is in the picture");
+  if (img.mode && !["full", "top", "field"].includes(img.mode))
+    issues.push(`mode is "${img.mode}", expected full, top or field`);
+
+  return issues;
+}
+
 export async function validatePost(post, opts = {}) {
   const online = opts.online !== false;
   const errors = [];
@@ -121,6 +240,12 @@ export async function validatePost(post, opts = {}) {
   const hook = slides[0];
   if (hook?.headline && hook.headline.replace(/\*/g, "").length > HOOK_MAX_CHARS)
     err(`hook headline is ${hook.headline.length} chars, max ${HOOK_MAX_CHARS} — it would render too small to read`);
+  for (const issue of hookIssues(hook?.headline)) err(`hook headline: ${issue}`);
+
+  // ---- every slide carries a picture --------------------------------------
+  for (const [i, s] of slides.entries()) {
+    for (const issue of imageIssues(s, post)) err(`slide ${i + 1} (${s.type}) image: ${issue}`);
+  }
 
   // ---- house style: no dashes standing in for punctuation ------------------
   // An em dash is a writer's shortcut for a thought they have not decided how
