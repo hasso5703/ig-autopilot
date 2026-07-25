@@ -372,7 +372,7 @@ export function html(post, brand, fonts, opts = {}) {
        */
       const pic = pictures[b.slideIndex];
       const bg = pic
-        ? `<div class="bgw"><div class="bg" style="background-image:url('${pic.dataUri}')"></div><div class="tint"></div><div class="veil"></div></div>`
+        ? `<div class="bgw"><div class="bg" style="background-image:url('${pic.dataUri}')"></div><div class="tint"></div><div class="veil"></div><div class="dim"></div></div>`
         : `<div class="bgw"><div class="nofield"></div></div>`;
       return `<section class="beat b-${b.type}" data-b="${i}">${bg}${lines}</section>`;
     })
@@ -394,15 +394,20 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:${c.bg}}
    caption. */
 .beat{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
       padding:210px 200px 470px 96px;opacity:0;will-change:opacity}
-.ln{opacity:0;will-change:opacity,transform;position:relative;z-index:2}
+.ln{opacity:0;will-change:opacity,transform;position:relative;z-index:2;
+     text-shadow:0 3px 30px rgba(0,0,0,.62),0 1px 3px rgba(0,0,0,.5)}
 
 /* ---------- the picture behind each beat ---------- */
 .bgw{position:absolute;inset:0;z-index:0;overflow:hidden}
 .bg{position:absolute;inset:0;background-size:cover;background-position:center;
     filter:grayscale(.3) contrast(1.06) saturate(.9) brightness(.78);will-change:transform}
 .tint{position:absolute;inset:0;background:${c.accent};opacity:.1;mix-blend-mode:color}
-.veil{position:absolute;inset:0;
+.veil{position:absolute;inset:0;opacity:var(--scrim,1);
   background:linear-gradient(180deg,rgba(8,8,12,.72) 0%,rgba(8,8,12,.3) 26%,rgba(8,8,12,.55) 55%,rgba(8,8,12,.93) 82%,${c.bg} 100%)}
+/* Set per beat by the renderer, from the brightness it measures behind that
+   beat's own words. A single fixed veil put white body copy on a sunlit library
+   ceiling and every check called it fine. */
+.dim{position:absolute;inset:0;background:#08080C;opacity:var(--dim,0)}
 .nofield{position:absolute;inset:0;
   background:radial-gradient(60% 40% at 26% 20%, rgba(77,225,255,.2) 0%, rgba(8,8,12,0) 70%),${c.bg}}
 b{font-weight:700}
@@ -416,13 +421,13 @@ em.a{font-style:normal;color:${c.accent}}
 .headline.sm{font-size:86px}
 .hero{margin-top:56px;display:flex;flex-direction:column;gap:10px}
 .hv{font-family:'Anton';font-size:132px;line-height:1;color:${c.accent}}
-.hl{font-family:'Archivo';font-size:40px;color:#9aa0ab}
+.hl{font-family:'Archivo';font-size:40px;color:#D8DDE5}
 .figure{font-family:'Anton';font-size:286px;line-height:.94;color:${c.accent};letter-spacing:-.02em}
 .unit{font-family:'Anton';font-size:72px;line-height:1.1;color:#fff;margin-top:30px}
 .title{font-family:'Anton';font-size:92px;line-height:1.05;color:#fff;margin-bottom:34px}
-.body{font-family:'Archivo';font-size:50px;line-height:1.5;color:#d6dae1;margin-top:30px}
+.body{font-family:'Archivo';font-size:50px;line-height:1.5;color:#EEF1F6;margin-top:30px}
 .quote{font-family:'Anton';font-size:82px;line-height:1.28;color:#fff}
-.attrib{font-family:'Archivo';font-size:40px;color:#9aa0ab;margin-top:40px;display:flex;align-items:center;gap:20px}
+.attrib{font-family:'Archivo';font-size:40px;color:#D8DDE5;margin-top:40px;display:flex;align-items:center;gap:20px}
 .tick{display:inline-block;width:64px;height:5px;background:${c.accent}}
 .cell{font-family:'Archivo';font-weight:700;font-size:64px;line-height:1.3;color:#fff;
       border-left:10px solid #2a2d34;padding:36px 0 36px 44px;margin:22px 0}
@@ -432,9 +437,13 @@ em.a{font-style:normal;color:${c.accent}}
 
 #bar{position:absolute;top:0;left:0;height:6px;background:${c.accent};z-index:10}
 #mark{position:absolute;top:96px;left:0;right:0;text-align:center;font-family:'Archivo';font-weight:700;
-      font-size:28px;letter-spacing:.34em;text-transform:uppercase;color:#565c66;z-index:10}
+      font-size:28px;letter-spacing:.34em;text-transform:uppercase;color:#A9B0BA;z-index:10;
+      text-shadow:0 2px 16px rgba(0,0,0,.7)}
+/* #6a707a was chosen against flat black. Over a photograph it disappears, and a
+   source credit nobody can read is the same as no source credit. */
 #src{position:absolute;bottom:410px;left:96px;right:200px;font-family:'Archivo';font-size:30px;
-     letter-spacing:.06em;text-transform:uppercase;color:#6a707a;z-index:10}
+     letter-spacing:.06em;text-transform:uppercase;color:#C3C9D2;z-index:10;
+     text-shadow:0 2px 18px rgba(0,0,0,.7)}
 </style></head><body>
 <div id="stage">${stage}<div id="bar"></div><div id="mark">${esc(brand.wordmark)}</div><div id="src"></div></div>
 <script>
@@ -453,6 +462,35 @@ const easeOut = (x) => 1 - Math.pow(1 - Math.min(1, Math.max(0, x)), 3);
  * Paints the frame at time t. Called once per frame by the renderer and by
  * nothing else, so a frame is reproducible from t alone.
  */
+/**
+ * Exposure for one beat, set before any frame is painted. Kept off the render
+ * path on purpose: it must not change while the video plays.
+ */
+window.exposeBeat = function (i, scrim, dim) {
+  const el = els[i];
+  if (!el) return;
+  el.style.setProperty('--scrim', String(scrim));
+  el.style.setProperty('--dim', String(dim));
+};
+
+/** The box this beat's words occupy, for measuring what is behind them. */
+window.beatTextBox = function (i) {
+  const lines = [...els[i].querySelectorAll('.ln')];
+  if (!lines.length) return null;
+  const r = lines.map((l) => l.getBoundingClientRect());
+  return {
+    x: Math.min(...r.map((b) => b.left)),
+    y: Math.min(...r.map((b) => b.top)),
+    w: Math.max(...r.map((b) => b.right)) - Math.min(...r.map((b) => b.left)),
+    h: Math.max(...r.map((b) => b.bottom)) - Math.min(...r.map((b) => b.top)),
+    big: lines.every((l) => parseFloat(getComputedStyle(l).fontSize) >= 60),
+  };
+};
+
+window.showText = function (visible) {
+  for (const el of document.querySelectorAll('.ln, #bar, #mark, #src')) el.style.visibility = visible ? '' : 'hidden';
+};
+
 window.render = function (t) {
   bar.style.width = (Math.min(1, t / TOTAL) * ${W}) + 'px';
 

@@ -100,16 +100,24 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
    photograph: white on a bright sky is unreadable and no validator can see it. */
 .picwrap{position:absolute;inset:0;z-index:0;overflow:hidden}
 .pic{position:absolute;left:0;right:0;top:0;background-size:cover;background-position:center;
-     filter:grayscale(.32) contrast(1.06) saturate(.92) brightness(.8)}
+     filter:grayscale(.28) contrast(1.05) saturate(.95) brightness(.9)}
 .pic.full{height:100%}
 .pic.top{height:${TOP_IMAGE_H}px}
-.pic.field{height:100%;filter:grayscale(.5) contrast(1.04) brightness(.34) blur(3px);transform:scale(1.06)}
+.pic.field{height:100%;filter:grayscale(.45) contrast(1.03) brightness(.66) blur(2px);transform:scale(1.06)}
 .tint{position:absolute;inset:0;z-index:1;background:${c.accent};opacity:.11;mix-blend-mode:color;pointer-events:none}
-.scrim{position:absolute;left:0;right:0;z-index:2;pointer-events:none}
+/* The adaptive layer. Every fixed scrim is wrong for some photograph: the one
+   that made a night-time server hall readable turned Bates Hall, one of the
+   most photogenic reading rooms in the world, into grey mud — and the lighter
+   one used on the Reel left white type sitting on a pale cream ceiling. So the
+   renderer measures the actual backdrop under the actual text and turns this
+   up until the text is readable, and no further. Set from JavaScript at render
+   time, which is why it starts at nothing. */
+.dimmer{position:absolute;inset:0;z-index:2;pointer-events:none;background:#08080C;opacity:var(--dim,0)}
+.scrim{position:absolute;left:0;right:0;z-index:2;pointer-events:none;opacity:var(--scrim,1)}
 .scrim.bottom{bottom:0;height:82%;
-  background:linear-gradient(180deg,rgba(8,8,12,0) 0%,rgba(8,8,12,.42) 34%,rgba(8,8,12,.86) 66%,${c.bg} 96%)}
+  background:linear-gradient(180deg,rgba(8,8,12,0) 0%,rgba(8,8,12,.3) 34%,rgba(8,8,12,.72) 66%,${c.bg} 97%)}
 .scrim.topfade{top:0;height:30%;background:linear-gradient(180deg,rgba(8,8,12,.78) 0%,rgba(8,8,12,0) 100%)}
-.scrim.veil{inset:0;height:100%;background:rgba(8,8,12,.42)}
+.scrim.veil{inset:0;height:100%;background:rgba(8,8,12,.3)}
 .scrim.seam{top:${TOP_IMAGE_H - 190}px;height:190px;
   background:linear-gradient(180deg,rgba(8,8,12,0) 0%,${c.bg} 100%)}
 /* No picture: an abstract field rather than flat black, so a failed acquisition
@@ -299,6 +307,7 @@ function picture(image, mode) {
   if (mode === "full") layers.push(`<div class="scrim topfade"></div>`, `<div class="scrim bottom"></div>`);
   if (mode === "top") layers.push(`<div class="scrim seam"></div>`);
   if (mode === "field") layers.push(`<div class="scrim veil"></div>`);
+  layers.push(`<div class="dimmer"></div>`);
   return `<div class="picwrap">${layers.join("")}</div>`;
 }
 

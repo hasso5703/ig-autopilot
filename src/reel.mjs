@@ -22,7 +22,7 @@ import { promisify } from "node:util";
 import path from "node:path";
 import { html, buildTimeline, applyNarrationTiming, totalDuration, FPS } from "./reel-template.mjs";
 import { loadPlaywright, chromiumExecutable, assertFontsLoaded } from "./browser.mjs";
-import { loadSlideImages } from "./render.mjs";
+import { loadSlideImages, regionLuma, EXPOSURE_LADDER, TEXT_LUMA_MAX, DISPLAY_LUMA_MAX } from "./render.mjs";
 import { speak, DEFAULT_VOICE } from "./voice.mjs";
 import { pickBed } from "./music.mjs";
 
@@ -68,6 +68,40 @@ export async function renderFrames(post, brand, fonts, dir, opts = {}) {
   await assertFontsLoaded(page, ["400 100px 'Anton'", "400 40px 'Archivo'", "700 40px 'Archivo'"]);
 
   const stage = await page.$("#stage");
+
+  /*
+   * Expose each beat before painting a single frame of it.
+   *
+   * The Reel shipped white body copy across a sunlit library ceiling, and the
+   * carousel had the same photograph scrimmed to near-black on the same day:
+   * two surfaces, two hard-coded veils, one of them wrong. Neither
+   * `complianceIssues` nor `coverage` can see it, and a cloud run found it by
+   * opening frames. So the veil is measured here instead of chosen: hide the
+   * type, screenshot the backdrop at the middle of the beat, and take the
+   * lightest setting that keeps the brightest part of it under the ceiling.
+   */
+  const exposure = [];
+  let at = 0;
+  for (let i = 0; i < beats.length; i++) {
+    const mid = at + beats[i].duration / 2;
+    at += beats[i].duration;
+    await page.evaluate((t) => window.render(t), mid);
+    const box = await page.evaluate((n) => window.beatTextBox(n), i);
+    if (!box || box.w < 8 || box.h < 8) { exposure.push(null); continue; }
+    const ceiling = box.big ? DISPLAY_LUMA_MAX : TEXT_LUMA_MAX;
+    let chosen = EXPOSURE_LADDER.at(-1), luma = null;
+    for (const step of EXPOSURE_LADDER) {
+      await page.evaluate(([n, st]) => { window.exposeBeat(n, st.scrim, st.dim); window.showText(false); }, [i, step]);
+      luma = await regionLuma(await page.screenshot({ type: "png" }), box);
+      await page.evaluate(() => window.showText(true));
+      if (luma === null || luma <= ceiling) { chosen = step; break; }
+    }
+    await page.evaluate(([n, st]) => window.exposeBeat(n, st.scrim, st.dim), [i, chosen]);
+    exposure.push({ beat: i + 1, ...chosen, backdrop: luma === null ? null : +luma.toFixed(3), ceiling });
+  }
+  for (const e of exposure)
+    if (e) console.error(`beat ${e.beat} backdrop ${(e.backdrop * 100).toFixed(0)}% (scrim ${e.scrim}, dim ${e.dim}, ceiling ${(e.ceiling * 100).toFixed(0)}%)`);
+
   for (let n = 0; n < frames; n++) {
     await page.evaluate((t) => window.render(t), n / FPS);
     // JPEG, not PNG. These frames are an intermediate the encoder immediately
@@ -77,7 +111,7 @@ export async function renderFrames(post, brand, fonts, dir, opts = {}) {
     await stage.screenshot({ path: path.join(dir, `${String(n).padStart(5, "0")}.jpg`), type: "jpeg", quality: 92 });
   }
   await browser.close();
-  return { frames, total, beats };
+  return { frames, total, beats, exposure };
 }
 
 /**
@@ -248,7 +282,7 @@ export async function renderReel(postFile, outDir, opts = {}) {
 
   const bed = opts.silent ? null : await pickBed(post.mood || "tension");
 
-  const { frames, total } = await renderFrames(post, brand, fonts, frameDir, { beats, pictures });
+  const { frames, total, exposure } = await renderFrames(post, brand, fonts, frameDir, { beats, pictures });
   const painted = Date.now();
 
     // Named reel.mp4, not <slug>.mp4, because that is the path reelUrl() builds
@@ -267,6 +301,7 @@ export async function renderReel(postFile, outDir, opts = {}) {
     voice: vo ? { voice: vo.voice, seconds: +vo.duration.toFixed(2), lines: vo.segments.map((s) => s.text) } : null,
     music: bed ? { file: bed.file, title: bed.title, creator: bed.creator, license: bed.license } : null,
     pictures: Object.fromEntries(Object.entries(pictures).map(([k, v]) => [k, v.generated ? "generated" : "photo"])),
+    exposure: exposure.filter(Boolean),
     beats: beats.map((b) => ({
       type: b.type,
       seconds: +b.duration.toFixed(2),

@@ -22,6 +22,9 @@ import path from "node:path";
 import { slideHtml } from "./template.mjs";
 import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
 import { loadImagery } from "./imagery.mjs";
+import { ffmpeg } from "./ffmpeg.mjs";
+import { writeFile, rm } from "node:fs/promises";
+import os from "node:os";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -210,6 +213,114 @@ const CLIP_FN = () => {
   return [...new Set(problems)];
 };
 
+/**
+ * How bright is the brightest part of the backdrop under the text.
+ *
+ * Not the mean. The mean said 30% for a slide whose body copy sat across a
+ * sunlit barrel vault at nearly 70%, because the dark reading room below it
+ * pulled the average down — and the average is not what anyone reads on. The
+ * crop is box-averaged into a 6x8 grid instead and the check runs against the
+ * 88th percentile cell: bright enough to catch a window behind two words,
+ * forgiving enough not to be ruled by one specular highlight.
+ */
+export async function regionLuma(png, { x, y, w, h }) {
+  const file = path.join(os.tmpdir(), `oom-luma-${process.pid}.png`);
+  await writeFile(file, png);
+  try {
+    const { stdout } = await ffmpeg([
+      "-i", file,
+      "-vf", `crop=${Math.max(8, Math.round(w))}:${Math.max(8, Math.round(h))}:${Math.max(0, Math.round(x))}:${Math.max(0, Math.round(y))},scale=6:8:flags=area`,
+      "-f", "rawvideo", "-pix_fmt", "gray", "-",
+    ]);
+    const cells = [...Buffer.from(stdout, "binary")].map((v) => v / 255).sort((a, b) => a - b);
+    if (!cells.length) return null;
+    return cells[Math.min(cells.length - 1, Math.floor(cells.length * 0.88))];
+  } finally {
+    await rm(file, { force: true });
+  }
+}
+
+/**
+ * Turns the dimmer up until the type is readable on the picture behind it, and
+ * no further.
+ *
+ * Every fixed scrim is wrong for some photograph. The value tuned on a
+ * night-time server hall reduced a bright reading room to grey mud on the
+ * carousel, and the lighter value used for the Reel left white body copy on a
+ * pale cream ceiling — which a cloud run caught by opening the frames, after
+ * `coverage` and `complianceIssues` had both called it fine. Measuring what is
+ * actually behind the words removes the judgement call: hide the text, screenshot
+ * the backdrop, average the region the words occupy, and add darkness only while
+ * it is needed.
+ *
+ * The ceilings are the WCAG contrast floors read backwards for white text: 4.5:1
+ * for body copy lands near 0.42 of full brightness, 3:1 for large display type
+ * near 0.55. Below the floor the loop stops, so a dark photograph keeps all of
+ * its detail.
+ */
+// Calibrated by eye against the rendered slides, then left alone. White on a
+// backdrop at 0.34 is about 7:1; the WCAG floors would allow 0.46 for body copy
+// and 0.58 for large type, and both look strained on a phone at arm's length.
+export const EXPOSURE_LADDER = [
+  { scrim: 0.35, dim: 0 }, { scrim: 0.5, dim: 0 }, { scrim: 0.65, dim: 0 },
+  { scrim: 0.8, dim: 0 }, { scrim: 1, dim: 0 },
+  { scrim: 1, dim: 0.18 }, { scrim: 1, dim: 0.34 }, { scrim: 1, dim: 0.5 },
+];
+
+export const TEXT_LUMA_MAX = 0.34;
+export const DISPLAY_LUMA_MAX = 0.48;
+
+async function autoDim(page, brand) {
+  const region = await page.evaluate(() => {
+    const masses = [...document.querySelectorAll(".mass")].filter((el) => el.textContent.trim().length);
+    if (!masses.length) return null;
+    const rects = masses.map((el) => el.getBoundingClientRect());
+    // every, not some: a slide carrying one enormous figure above a paragraph
+    // is a slide whose paragraph decides how dark the backdrop has to be.
+    const big = masses.every((el) => parseFloat(getComputedStyle(el).fontSize) >= 60);
+    return {
+      x: Math.min(...rects.map((r) => r.left)),
+      y: Math.min(...rects.map((r) => r.top)),
+      w: Math.max(...rects.map((r) => r.right)) - Math.min(...rects.map((r) => r.left)),
+      h: Math.max(...rects.map((r) => r.bottom)) - Math.min(...rects.map((r) => r.top)),
+      big,
+    };
+  });
+  if (!region || region.w < 4 || region.h < 4) return { dim: 0, luma: null };
+
+  const ceiling = region.big ? DISPLAY_LUMA_MAX : TEXT_LUMA_MAX;
+
+  /*
+   * Lightest first, and stop at the first setting that is dark enough. Backdrop
+   * brightness falls monotonically along this ladder, so the first pass is also
+   * the most of the photograph anyone will ever see.
+   *
+   * That direction matters as much as the ceiling. The first version of this
+   * only ever added darkness, and a cloud run measured the result: backdrops at
+   * 3 to 16 percent brightness across a whole carousel, every photograph reduced
+   * to texture. Legible, and no reason to look. A scrim that can only tighten
+   * produces exactly the posts nobody saw.
+   */
+  const LADDER = EXPOSURE_LADDER;
+
+  let last = null;
+  for (const step of LADDER) {
+    await page.evaluate((s) => {
+      const slide = document.querySelector(".slide");
+      slide.style.setProperty("--dim", String(s.dim));
+      slide.style.setProperty("--scrim", String(s.scrim));
+      document.querySelectorAll(".inner, .credit, .rail").forEach((el) => (el.style.visibility = "hidden"));
+    }, step);
+    const png = await page.screenshot({ type: "png" });
+    await page.evaluate(() => {
+      document.querySelectorAll(".inner, .credit, .rail").forEach((el) => (el.style.visibility = ""));
+    });
+    last = await regionLuma(png, region);
+    if (last === null || last <= ceiling) return { ...step, luma: last, ceiling };
+  }
+  return { ...LADDER.at(-1), luma: last, ceiling, floorHit: true };
+}
+
 export async function renderPost(post, outDir, { images = null } = {}) {
   const { chromium } = await loadPlaywright();
   const brand = JSON.parse(await readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
@@ -269,6 +380,12 @@ export async function renderPost(post, outDir, { images = null } = {}) {
       if (clipped.length)
         throw new Error(`slide ${i + 1} (${slide.type}) puts text in a box that crops it:\n  ${clipped.join("\n  ")}`);
 
+      const dimming = pictures[i + 1] ? await autoDim(page, brand) : { dim: 0, scrim: 1, luma: null };
+      if (dimming.floorHit)
+        throw new Error(
+          `slide ${i + 1} (${slide.type}): the picture is still at ${(dimming.luma * 100).toFixed(0)}% brightness behind the text with the dimmer at maximum, and white type on it would not be readable. Choose a darker picture, or move the text off it.`
+        );
+
       const cov = await page.evaluate(COVERAGE_FN);
       const floor = brand.coverage?.[slide.type] ?? 0.55;
       if (cov.coverage < floor)
@@ -280,7 +397,11 @@ export async function renderPost(post, outDir, { images = null } = {}) {
       const file = path.join(outDir, `${String(i + 1).padStart(2, "0")}.jpg`);
       await page.screenshot({ path: file, type: "jpeg", quality: brand.jpegQuality });
       files.push(file);
-      console.error(`slide ${i + 1} ${slide.type.padEnd(8)} coverage ${(cov.coverage * 100).toFixed(0)}%  picture ${pictures[i + 1] ? (pictures[i + 1].generated ? "generated" : "photo") : "none"}`);
+      console.error(
+        `slide ${i + 1} ${slide.type.padEnd(8)} coverage ${(cov.coverage * 100).toFixed(0)}%  ` +
+          `picture ${pictures[i + 1] ? (pictures[i + 1].generated ? "generated" : "photo") : "none"}` +
+          (dimming.luma === null ? "" : `  backdrop ${(dimming.luma * 100).toFixed(0)}% (scrim ${dimming.scrim}, dim ${dimming.dim})`)
+      );
     }
   } finally {
     await browser.close();
