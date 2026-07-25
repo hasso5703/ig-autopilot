@@ -1,6 +1,6 @@
 {
   "slug": "2026-07-25-price-of-thinking",
-  "caption": "Anthropic released Claude Opus 5 on 24 July, and the number that matters is the one that did not change.\n\n$5 per million input tokens. $25 per million output. Exactly what the model it replaces cost. If you pay an AI bill, your invoice next month looks the same — what it buys does not.\n\nOn ARC-AGI 3, an evaluation where the model has to solve novel problems, Anthropic reports Opus 5 scoring three times as high as the next-best model. Problems it has never seen is the interesting part: memorising an answer does not help.\n\nWe are not going to bury the caveats. Nearly every figure above is Anthropic's, and its own footnote says the headline coding result came from an internal run, mean reward over 5 attempts per task. That is a company grading its own exam and taking the best of five. The one check here that is not Anthropic's is Simon Willison finding Opus 5 on top of the third-party Artificial Analysis leaderboard on launch day — and leaderboards move.\n\nSources on every slide.\nPrimary: anthropic.com/news/claude-opus-5\nCorroboration: simonwillison.net, techcrunch.com\n\nAI-assisted research and writing. Every claim on these slides is quoted from a cited page and machine-checked against that page before publishing.\n\n#AI #Anthropic #LLM #TechNews",
+  "caption": "Anthropic released Claude Opus 5 on 24 July, and the number that matters is the one that did not change.\n\n$5 per million input tokens. $25 per million output. Exactly what the model it replaces cost. If you pay an AI bill, your invoice next month looks the same. What it buys does not.\n\nOn ARC-AGI 3, an evaluation where the model has to solve novel problems, Anthropic reports Opus 5 scoring three times as high as the next-best model. Problems it has never seen is the interesting part, because memorising an answer does not help.\n\nWe are not going to bury the caveats. Nearly every figure above is Anthropic's own, and its footnote says the headline coding result came from an internal run, mean reward over 5 attempts per task. That is a company grading its own exam and taking the best of five. The one check here that is not Anthropic's is Simon Willison finding Opus 5 on top of the third-party Artificial Analysis leaderboard on launch day, and leaderboards move.\n\nSources on every slide.\nPrimary: anthropic.com/news/claude-opus-5\nCorroboration: simonwillison.net, techcrunch.com\n\nAI-assisted research and writing. Every claim on these slides is quoted from a cited page and machine-checked against that page before publishing.\n\n#AI #Anthropic #LLM #TechNews",
   "slides": [
     {
       "type": "hook",
@@ -27,7 +27,7 @@
     {
       "type": "content",
       "title": "Three times better at *problems it has never seen*",
-      "body": "That is the whole point of the test it won. Memorising an answer does not help you on a problem nobody has asked before — which is the difference between a machine that looks clever and one that **works out loud**.",
+      "body": "That is the whole point of the test it won. Memorising an answer does not help you on a problem nobody has asked before. That is the difference between a machine that looks clever and one that **works out loud**.",
       "evidence": "On ARC-AGI 3 , an evaluation where the model has to solve novel problems, Opus 5's score is three times as high as the next-best model.",
       "source": {
         "name": "Anthropic",
@@ -51,7 +51,7 @@
     {
       "type": "quote",
       "body": "It's currently leading the Artificial Analysis leaderboard, in front of even Fable 5.",
-      "attribution": "Simon Willison — the one check nobody at Anthropic ran",
+      "attribution": "Simon Willison, the one check nobody at Anthropic ran",
       "evidence": "It's currently leading the Artificial Analysis leaderboard , in front of even Fable 5.",
       "source": {
         "name": "Simon Willison",
@@ -62,7 +62,7 @@
     {
       "type": "content",
       "title": "They *deliberately* broke one thing",
-      "body": "Opus 5 may hunt for security holes in source code. It is blocked from hunting for them in a compiled program — the version an attacker would use. **Anthropic crippled a capability its own product could sell.**",
+      "body": "Opus 5 may hunt for security holes in source code. It is blocked from hunting for them in a compiled program, the version an attacker would use. **Anthropic crippled a capability its own product could sell.**",
       "evidence": "For instance, Opus 5 safeguards prevent it from being used to scan for vulnerabilities in a software binary, although it is permitted to search for vulnerabilities in source code",
       "source": {
         "name": "TechCrunch",

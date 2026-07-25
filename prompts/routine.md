@@ -178,6 +178,12 @@ million words", which is simply false and would be quoted back at us.
 Ask of every simplification: if the author of the source read this slide, would
 they say "yes, that is what I meant"? If they would wince, rewrite it.
 
+**No em dashes, en dashes, or "--".** Not in a slide, not in the caption. An em
+dash is usually a sentence whose punctuation was never decided; two shorter
+sentences read better and, on a slide, the glyph is a long grey bar that breaks
+the line rhythm. `validate.mjs` rejects them, so this is not a preference you can
+quietly skip.
+
 **The test, applied to the finished hook:** would someone who does not work in
 technology send this to a friend? If the honest answer is no, the story may
 still be right and the framing is wrong. Rewrite the framing, never the facts.

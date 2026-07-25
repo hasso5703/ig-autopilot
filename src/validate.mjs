@@ -93,6 +93,22 @@ export async function validatePost(post, opts = {}) {
   if (hook?.headline && hook.headline.replace(/\*/g, "").length > HOOK_MAX_CHARS)
     err(`hook headline is ${hook.headline.length} chars, max ${HOOK_MAX_CHARS} — it would render too small to read`);
 
+  // ---- house style: no dashes standing in for punctuation ------------------
+  // An em dash is a writer's shortcut for a thought they have not decided how
+  // to punctuate. Two shorter sentences almost always read better, and on a
+  // slide the glyph is a long grey bar that breaks the line rhythm. Banned
+  // outright so it cannot creep back in one post at a time.
+  const DASHES = /[—–]|(?<![-\w])--(?!-)/;
+  const textFields = (s) => [s.headline, s.kicker, s.title, s.body, s.figure, s.unit, s.claim, s.caveat, s.claimLabel, s.caveatLabel, s.sub, s.attribution, s.hero?.value, s.hero?.label];
+  for (const [i, s] of slides.entries()) {
+    for (const v of textFields(s)) {
+      if (v && DASHES.test(v))
+        err(`slide ${i + 1} (${s.type}): contains an em dash, en dash or "--" in "${String(v).slice(0, 70)}…" — rewrite as two sentences or use a comma`);
+    }
+  }
+  if (post.caption && DASHES.test(post.caption))
+    err(`caption contains an em dash, en dash or "--" — rewrite as two sentences or use a comma`);
+
   // ---- caption ------------------------------------------------------------
   if (!post.caption) err("caption missing");
   if (post.caption && post.caption.length > CAPTION_MAX)

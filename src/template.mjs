@@ -78,7 +78,7 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
               opacity:.055;pointer-events:none;mix-blend-mode:overlay}
 
 .display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;
-         letter-spacing:-0.012em;line-height:0.88}
+         letter-spacing:-0.012em;line-height:1.02}
 .a{color:${c.accent};font-style:normal}
 
 /* ---------- persistent furniture ---------- */
@@ -92,7 +92,7 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 
 .foot{margin-top:auto;flex:0 0 auto;padding-top:30px;
       border-top:1px solid rgba(255,255,255,.13);
-      font-size:22px;line-height:1.42;color:${c.muted}}
+      font-size:22px;line-height:1.55;color:${c.muted}}
 .foot b{color:${c.body};font-weight:700}
 .foot .u{color:${c.faint};word-break:break-all}
 
@@ -105,7 +105,7 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 .hook h1{margin-bottom:40px}
 .hook .heroWrap{display:flex;align-items:baseline;gap:26px;margin-bottom:44px}
 .hook .hero{font-family:'Anton',sans-serif;font-size:196px;line-height:.82;color:${c.accent};letter-spacing:-0.02em}
-.hook .heroLabel{font-weight:700;font-size:27px;line-height:1.3;letter-spacing:.06em;
+.hook .heroLabel{font-weight:700;font-size:27px;line-height:1.45;letter-spacing:.06em;
                  text-transform:uppercase;color:${c.body};max-width:540px}
 .hook .mark{display:flex;align-items:center;gap:22px}
 .hook .mark .line{flex:1;height:2px;background:${c.rule};opacity:.5}
@@ -116,25 +116,26 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 
 /* ---------- stat: slide 2 doubles as a cover ---------- */
 .stat{justify-content:center;text-align:left}
-.stat .figure{font-family:'Anton',sans-serif;color:${c.accent};line-height:.8;
+.stat .figure{font-family:'Anton',sans-serif;color:${c.accent};line-height:.92;
               letter-spacing:-0.03em;margin-bottom:16px}
 .stat .unit{font-family:'Anton',sans-serif;font-size:64px;color:${c.ink};
             text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:40px}
-.stat .say{font-size:44px;line-height:1.3;color:${c.body};max-width:900px}
+.stat .say{font-size:44px;line-height:1.5;color:${c.body};max-width:900px}
 .stat .say b{color:${c.ink};font-weight:700}
 
 /* ---------- content ---------- */
 .content .mid{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;
                padding:38px 0 44px}
 .content h2{margin-bottom:34px}
-.content .body{font-size:46px;line-height:1.3;color:${c.body};font-weight:400}
+.content .body{font-size:46px;line-height:1.5;color:${c.body};font-weight:400}
 .content .body b{color:${c.ink};font-weight:700}
 
 /* ---------- quote ---------- */
 .quote{justify-content:center}
 .quote .qm{font-family:'Anton',sans-serif;font-size:150px;line-height:.6;color:${c.accent};opacity:.85;margin-bottom:18px}
-.quote blockquote{font-weight:700;line-height:1.2;color:${c.ink};margin-bottom:38px}
-.quote .by{font-size:26px;letter-spacing:.05em;color:${c.muted}}
+.quote blockquote{font-weight:700;line-height:1.34;color:${c.ink};margin-bottom:38px}
+.quote .by{font-size:26px;letter-spacing:.05em;color:${c.muted};display:flex;align-items:center;gap:18px}
+.quote .by .tick{display:inline-block;width:46px;height:4px;background:${c.accent};flex:0 0 auto}
 .quote .by b{color:${c.accent};font-weight:700}
 
 /* ---------- contrast: claim vs caveat ---------- */
@@ -142,7 +143,7 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 .contrast .cell{padding:52px 48px;border-radius:6px}
 .contrast .cell .lab{font-weight:700;font-size:22px;letter-spacing:.24em;
                      text-transform:uppercase;margin-bottom:20px}
-.contrast .cell .txt{font-size:48px;line-height:1.24}
+.contrast .cell .txt{font-size:48px;line-height:1.42}
 .contrast .claim{background:rgba(255,255,255,.055)}
 .contrast .claim .lab{color:${c.muted}}
 .contrast .claim .txt{color:${c.body}}
@@ -155,7 +156,7 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 .cta h2{margin-bottom:34px}
 .cta .handle{font-family:'Anton',sans-serif;font-size:74px;color:${c.accent};
              text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:30px}
-.cta .sub{font-size:38px;line-height:1.34;color:${c.body};max-width:800px}
+.cta .sub{font-size:38px;line-height:1.5;color:${c.body};max-width:800px}
 .cta .disclosure{position:absolute;left:${g.margin}px;right:${g.margin}px;bottom:52px;
                  font-size:20px;line-height:1.4;color:${c.faint};text-align:center}`;
 }
@@ -229,7 +230,7 @@ function quote(brand, fonts, s, i, n) {
       <div style="flex:1 1 auto;display:flex;flex-direction:column;justify-content:center">
         <div class="qm">&ldquo;</div>
         <blockquote class="fit" data-max="${brand.type.quoteMax}" data-min="${brand.type.quoteMin}" data-maxlines="7">${nl(s.body)}</blockquote>
-        <div class="by">&mdash; <b>${esc(s.attribution ?? s.source?.name ?? "")}</b></div>
+        <div class="by"><span class="tick"></span><b>${esc(s.attribution ?? s.source?.name ?? "")}</b></div>
       </div>
       ${foot(s)}
     </div>`
