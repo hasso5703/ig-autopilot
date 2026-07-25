@@ -113,8 +113,15 @@ export async function validatePost(post, opts = {}) {
   if (!post.caption) err("caption missing");
   if (post.caption && post.caption.length > CAPTION_MAX)
     err(`caption is ${post.caption.length} chars, Instagram's limit is ${CAPTION_MAX}`);
-  if (post.caption && !/ai[- ]assisted|generated with ai|ai\b.*(assist|help)/i.test(post.caption))
-    err("caption carries no AI disclosure (required by EU AI Act art. 50 from 2026-08-02)");
+  if (post.caption && !/\bai[- ]assisted\b|\bmade with ai\b|\bwritten with ai\b/i.test(post.caption))
+    err("caption carries no AI disclosure (EU AI Act art. 50, applicable 2026-08-02). Two words at the end is enough: 'AI-assisted.'");
+
+  // Do not advertise rigour. Showing a source on every slide is the proof;
+  // a paragraph claiming that everything was checked reads as a defence, and
+  // protesting too much is what an account without sources does.
+  const SELF_PRAISE = /(every|each)\s+(claim|figure|fact|number)[^.]{0,80}(verified|checked|sourced|quoted)|machine[- ]checked|fact[- ]checked against|before (anything is|it is) (posted|published)|no hype[.,]? no reposts/i;
+  if (post.caption && SELF_PRAISE.test(post.caption))
+    err("caption claims its own rigour. The sources printed on every slide already prove it; delete the sentence rather than assert it");
 
   // ---- per-slide evidence -------------------------------------------------
   const contentSlides = slides.filter((s) => s.type !== "hook" && s.type !== "cta");

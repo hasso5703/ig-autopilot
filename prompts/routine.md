@@ -82,7 +82,7 @@ is what buys distribution.
 | `content` | an idea in two or three sentences | `title`, `body`, `evidence`, `source` |
 | `quote` | someone else's words, verbatim | `body` (the quote), `attribution`, `evidence`, `source` |
 | `contrast` | the turn: claim vs what the footnote says | `claim`, `caveat`, `claimLabel`, `caveatLabel`, `evidence`, `source` |
-| `cta` | last slide only | `headline`, `sub` |
+| `cta` | last slide only | `headline`, `sub` (state the offer, never claim rigour) |
 
 **The hero must reinforce the headline, never introduce a second comparison.**
 The first autonomous post put "half the price of the model it nearly matches"
@@ -208,6 +208,36 @@ lands on — never what you imagine might follow.
 **Writing the hook.** It must state the surprise, not tease it. `"OpenAI's new
 model runs on one GPU"` beats `"You won't believe what OpenAI just did"`. Never
 write a question you do not answer on slide 2.
+
+### 5b. Writing the caption
+
+The caption is read by people who already swiped. It carries the reporting the
+slides could not fit, and nothing else.
+
+**Never describe your own process.** No "every claim is quoted from a cited
+page", no "machine-checked before publishing", no "no hype, no reposts". Every
+slide already prints its source; that is the proof. A paragraph asserting rigour
+reads as a defence, and protesting is what an account without sources does.
+`validate.mjs` rejects captions that do this.
+
+**Structure that works:**
+1. What happened, in two or three sentences, with the figures.
+2. The detail that did not fit on a slide, and is worth the extra read.
+3. The caveat, plainly, without hedging or apology.
+4. The sources, as bare domains.
+5. `AI-assisted.` at the very end.
+
+**The AI disclosure is two words, not a paragraph.** "AI-assisted." is enough.
+It exists because EU AI Act art. 50 applies from 2 August 2026 to AI-generated
+text published to inform the public, not because it makes the account look
+careful. Keep it small, keep it last, never build a sentence around it.
+
+**3 to 5 hashtags, at the very end.** More reads as reach-chasing.
+
+**The same restraint applies to the CTA slide.** "One verified story a day"
+claims the very thing the sources on the six slides behind it already proved.
+Write the offer, not the boast: "One story a day" over "Sources on every slide."
+is stronger precisely because it stops arguing.
 
 ### 6. Gate
 ```bash

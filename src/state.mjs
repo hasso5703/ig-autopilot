@@ -95,9 +95,33 @@ export async function loadState() {
  * Matches on canonical URL first, then on the title fingerprint, so the same
  * story covered by three outlets only gets through once.
  */
+/**
+ * How long a merely-considered story stays excluded.
+ *
+ * The first live runs recorded every story they looked at as `considered`, and
+ * `considered` blocked forever: 54 stories were permanently unpublishable after
+ * two runs, including any that might become the story of the week tomorrow. At
+ * that rate the pipeline starves itself in days.
+ *
+ * So only two outcomes block permanently: `posted` (never repeat ourselves) and
+ * `rejected` (the fact gate killed it; do not spend another run on it). Anything
+ * merely considered comes back after this window, which is long enough to stop
+ * the same day's runs re-evaluating it and short enough that a developing story
+ * gets a second look.
+ */
+const CONSIDERED_TTL_MS = 3 * 24 * 3600 * 1000;
+const BLOCKS_FOREVER = new Set(["posted", "rejected"]);
+
+const stillBlocks = (r) => {
+  const outcome = r.outcome ?? "posted"; // posted.jsonl entries carry no outcome
+  if (BLOCKS_FOREVER.has(outcome)) return true;
+  const at = Date.parse(r.at ?? "");
+  return Number.isNaN(at) ? true : Date.now() - at < CONSIDERED_TTL_MS;
+};
+
 export async function filterFresh(items) {
   const { posted, seen } = await loadState();
-  const history = [...posted, ...seen];
+  const history = [...posted, ...seen].filter(stillBlocks);
   const urls = new Set(history.map((r) => canonical(r.url)).filter(Boolean));
   // Older records may predate token storage; recover them from the title.
   const knownTokens = history.map((r) => r.tokens ?? tokens(r.title ?? "")).filter((t) => t.length);
