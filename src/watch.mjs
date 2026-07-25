@@ -16,7 +16,7 @@ import { readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { loadState } from "./state.mjs";
-import { collectAll, latestPerPost } from "./insights.mjs";
+import { collectAll, latestPerPost, accountTrend } from "./insights.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const TOKEN_FILE = path.join(ROOT, "state", "token.json");
@@ -123,6 +123,15 @@ export function format(report) {
   else if (token.urgent) L.push(`TOKEN         ALERTE : ${plural(token.daysLeft, "jour restant", "jours restants")} (expire le ${token.expiresOn}). À renouveler maintenant.`);
   else L.push(`TOKEN         ${plural(token.daysLeft, "jour restant", "jours restants")} (expire le ${token.expiresOn})`);
 
+  const a = report.account;
+  if (a?.now?.ok) {
+    const f = a.now.followers_count;
+    const before = a.weekAgo?.followers_count;
+    const delta = typeof f === "number" && typeof before === "number" ? f - before : null;
+    const move = delta === null ? "" : delta > 0 ? ` (+${delta} en 7 jours)` : delta < 0 ? ` (${delta} en 7 jours)` : " (stable sur 7 jours)";
+    L.push(`COMPTE        ${n(f)} abonnés${move} · ${n(a.now.media_count)} posts`);
+  }
+
   L.push("");
   L.push("POSTS");
   if (!posts.length) L.push("  aucun");
@@ -141,11 +150,16 @@ export function format(report) {
 
 export async function buildReport({ collect = true } = {}) {
   if (collect) await collectAll();
-  const [health, token, posts] = await Promise.all([publishHealth(), tokenStatus(), performance()]);
+  const [health, token, posts, account] = await Promise.all([
+    publishHealth(),
+    tokenStatus(),
+    performance(),
+    accountTrend(),
+  ]);
   const alerts = [];
   if (!health.ok) alerts.push("publication");
   if (token.dead || token.urgent) alerts.push("token");
-  return { at: new Date().toISOString(), health, token, posts, alerts };
+  return { at: new Date().toISOString(), health, token, account, posts, alerts };
 }
 
 if (process.argv[1] && process.argv[1].endsWith("watch.mjs")) {

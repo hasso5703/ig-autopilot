@@ -40,6 +40,7 @@ import { loadState } from "./state.mjs";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const DIR = path.join(ROOT, "state");
 const METRICS = path.join(DIR, "metrics.jsonl");
+const ACCOUNT = path.join(DIR, "account.jsonl");
 const SUPPORT = path.join(DIR, "metrics-support.json");
 
 const API = "https://graph.instagram.com";
@@ -73,6 +74,25 @@ const CANDIDATES = [
 
 /** Fields that live on the media object itself, no insights permission needed. */
 const MEDIA_FIELDS = "id,media_type,media_product_type,permalink,timestamp,like_count,comments_count";
+
+/**
+ * The account itself, tracked over time.
+ *
+ * Follower count is the number this project is ultimately judged on, and it is
+ * the one number no per-post metric can give you: a post can reach thousands
+ * and convert nobody. Recorded as a series so growth is visible as a slope
+ * rather than guessed at from a single figure.
+ */
+const ACCOUNT_FIELDS = "id,username,account_type,followers_count,follows_count,media_count";
+
+export async function accountSnapshot() {
+  const r = await get("me", { fields: ACCOUNT_FIELDS });
+  // followers_count is not guaranteed on every account type, so a failure here
+  // is recorded and stepped over rather than allowed to kill the whole run.
+  return r.ok
+    ? { at: new Date().toISOString(), ok: true, ...r.data }
+    : { at: new Date().toISOString(), ok: false, error: r.error };
+}
 
 function requireToken() {
   const t = process.env.IG_ACCESS_TOKEN;
@@ -206,6 +226,10 @@ export async function mediaMetrics(mediaId, support) {
  * @returns {Promise<Array>} the records written
  */
 export async function collectAll() {
+  await mkdir(DIR, { recursive: true });
+  const account = await accountSnapshot();
+  await appendFile(ACCOUNT, JSON.stringify(account) + "\n", "utf8");
+
   const { posted } = await loadState();
   const ids = posted.map((p) => p.mediaId).filter(Boolean);
   if (!ids.length) return [];
@@ -243,11 +267,37 @@ export async function latestPerPost() {
   return [...byId.values()].sort((a, b) => String(b.at).localeCompare(String(a.at)));
 }
 
+/**
+ * Account readings, oldest first. Returns the newest plus the reading closest
+ * to 7 days before it, which is what turns a follower count into a growth rate.
+ */
+export async function accountTrend() {
+  if (!existsSync(ACCOUNT)) return { now: null, weekAgo: null };
+  const rows = (await readFile(ACCOUNT, "utf8"))
+    .split("\n")
+    .filter((l) => l.trim())
+    .map((l) => {
+      try { return JSON.parse(l); } catch { return null; }
+    })
+    .filter((r) => r && r.ok);
+
+  const now = rows.at(-1) ?? null;
+  if (!now) return { now: null, weekAgo: null };
+
+  const target = Date.parse(now.at) - 7 * 86400000;
+  let weekAgo = null;
+  for (const r of rows) {
+    if (Date.parse(r.at) <= target) weekAgo = r;
+  }
+  return { now, weekAgo };
+}
+
 if (process.argv[1] && process.argv[1].endsWith("insights.mjs")) {
   const cmd = process.argv[2] || "collect";
   const run = async () => {
     if (cmd === "support") return (await readSupport()) ?? "no cache yet; run collect first";
     if (cmd === "latest") return latestPerPost();
+    if (cmd === "account") return accountTrend();
     if (cmd === "collect") return collectAll();
     throw new Error(`unknown command: ${cmd}`);
   };
