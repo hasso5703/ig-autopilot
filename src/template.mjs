@@ -220,7 +220,12 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
    The published version put two fixed-height panels in the middle of the frame
    and left 55% of it empty. The cells stretch now, and their text is fitted to
    the height they end up with rather than set at 48px and hoped for. */
-.contrast .cells{flex:1 1 auto;display:flex;flex-direction:column;gap:${brand.grid.gutter}px;min-height:0}
+/* margin-top, because the cells stretch now and the top one ended up butting
+   straight against the index and the wordmark. Nothing measures the gap between
+   furniture and content, so it went out on a published slide reading as a
+   collision even though nothing technically overlapped. */
+.contrast .cells{flex:1 1 auto;display:flex;flex-direction:column;gap:${brand.grid.gutter}px;
+                 min-height:0;margin-top:30px}
 .contrast .cell{flex:1 1 0;min-height:0;padding:44px 46px;border-radius:8px;
                 display:flex;flex-direction:column;justify-content:center}
 .contrast .cell .lab{font-weight:700;font-size:26px;letter-spacing:.24em;
