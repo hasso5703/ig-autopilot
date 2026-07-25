@@ -1,8 +1,6 @@
 {
-  "discoveredAt": "2026-07-25T16:20:00.000Z",
-  "probedOn": "17905277859456798",
-  "probedMediaType": "CAROUSEL_ALBUM/FEED",
-  "note": "Established empirically, one metric per request, against a live published carousel. Meta's reference sentence 'Insights data is not available for any media within an Instagram Media album' describes the child images, not the parent album: the parent answers 200 for all ten metrics below.",
+  "discoveredAt": "2026-07-25T18:38:43.499Z",
+  "probedOn": "18132234304542418",
   "supported": [
     "shares",
     "saved",
@@ -10,13 +8,13 @@
     "views",
     "total_interactions",
     "likes",
-    "comments",
-    "profile_visits",
-    "profile_activity",
-    "follows"
+    "comments"
   ],
   "rejected": {
-    "navigation": "code=100 sub=- : The Media Insights API does not support the navigation metric for this media product type.",
-    "impressions": "code=100 sub=- : The Media Insights API does not support the impressions metric for this media product type."
+    "profile_visits": "code=100 sub=-: The Media Insights API does not support the profile_visits metric for this media product type.",
+    "profile_activity": "code=100 sub=-: The Media Insights API does not support the profile_activity metric for this media product type.",
+    "follows": "code=100 sub=-: The Media Insights API does not support the follows metric for this media product type.",
+    "navigation": "code=100 sub=-: The Media Insights API does not support the navigation metric for this media product type.",
+    "impressions": "code=100 sub=-: The Media Insights API does not support the impressions metric for this media product type."
   }
 }
