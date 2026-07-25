@@ -84,27 +84,29 @@ const FIT_FN = () => {
     slide.scrollHeight > slide.clientHeight + 1 ||
     document.body.scrollHeight > document.body.clientHeight + 1;
 
+  // Padding is not a line. Display elements now carry the padding that keeps
+  // their ink inside their own box, and counting it as content would tell the
+  // fitter a three-line headline was four.
   const lineCount = (el) => {
-    const lh = parseFloat(getComputedStyle(el).lineHeight);
+    const cs = getComputedStyle(el);
+    const lh = parseFloat(cs.lineHeight);
     if (!lh || Number.isNaN(lh)) return 1;
-    return Math.round(el.scrollHeight / lh);
+    const pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    return Math.round((el.scrollHeight - pad) / lh);
   };
 
   /*
-   * Anton's content area is taller than a line-height of 1.0, so a block of it
-   * reports a scrollHeight a fifth of an em past its own client height with no
-   * line actually spilling. Measured, not guessed: a 92px headline of three
-   * lines reports 299 against 276. Left unaccounted for, every display element
-   * flush to the bottom of its box looked overflowing at every size, the binary
-   * search never found a valid candidate, and every hook shipped at its floor.
-   * A real overflow is a whole extra line — an em — so a fifth of one is a safe
-   * allowance and still catches the failure this check exists for.
+   * No tolerance any more, and that is the point. An earlier version allowed a
+   * fifth of an em of slop here, because Anton paints outside a line box of 1.0
+   * and every display element flush to the bottom of its box looked like it was
+   * overflowing. Tolerating the ink meant the ink then got cropped by the
+   * clipping that hid it, which took the tops off capitals and the tails off
+   * descenders on published slides. The overhang is padding on the element now,
+   * so it is real layout, and this check can be exact again.
    */
   const boxOverflows = (el) => {
     const box = el.closest(".cell") || el.closest(".fitbox");
-    if (!box) return false;
-    const inkAllowance = Math.min(40, 0.22 * parseFloat(el.style.fontSize || getComputedStyle(el).fontSize));
-    return box.scrollHeight > box.clientHeight + 1 + inkAllowance;
+    return !!box && box.scrollHeight > box.clientHeight + 1;
   };
 
   for (const el of document.querySelectorAll(".fit")) {
@@ -164,6 +166,50 @@ const COVERAGE_FN = () => {
   };
 };
 
+/**
+ * Runs inside the page after fitting: is any text sitting inside a box that
+ * would crop it.
+ *
+ * Hasan found the bug this exists for by looking at a slide: the tops were
+ * shaved off the capitals of "WHAT IT LOOKED LIKE" and the tails off the
+ * descenders of the paragraph under it. Anton paints outside a line box of 1.0,
+ * a `.fitbox` was clipping in order to keep the slide's scrollHeight clean of a
+ * scaled background, and between them they trimmed published type. Every
+ * automated check was green: the fitter was satisfied, coverage was high, the
+ * facts were verified.
+ *
+ * The first version of this check compared bounding boxes and found nothing,
+ * because `getBoundingClientRect` returns the LAYOUT box and the cropped part
+ * was ink painting outside it. Measuring geometry cannot see this. The
+ * invariant can: clipping is the picture layers' job and never text's, so no
+ * ancestor of a text element may hide its overflow, the canvas itself excepted.
+ * Structural, exact, and it fails the moment someone reaches for overflow:hidden
+ * to fix a scrollHeight again.
+ */
+const CLIP_FN = () => {
+  // The canvas itself must clip: <body> is the 1080x1350 frame, .slide is the
+  // artwork, .picwrap holds the photograph that bleeds on purpose. Everything
+  // else that hides overflow is a box someone put text into.
+  const ALLOWED = new Set(["slide", "picwrap"]);
+  const problems = [];
+  const texts = [...document.querySelectorAll(".slide *")].filter(
+    (el) => el.children.length === 0 && el.textContent.trim().length && el.getBoundingClientRect().height > 1
+  );
+  for (const el of texts) {
+    for (let p = el.parentElement; p; p = p.parentElement) {
+      const cs = getComputedStyle(p);
+      if (cs.overflow === "visible" && cs.overflowX === "visible" && cs.overflowY === "visible") continue;
+      if (p === document.body || p === document.documentElement) continue;
+      if ([...p.classList].some((c) => ALLOWED.has(c))) continue;
+      problems.push(
+        `"${el.textContent.trim().slice(0, 34)}" sits inside .${p.className.split(" ")[0] || p.tagName.toLowerCase()}, which hides its overflow and will crop the ink of the type`
+      );
+      break;
+    }
+  }
+  return [...new Set(problems)];
+};
+
 export async function renderPost(post, outDir, { images = null } = {}) {
   const { chromium } = await loadPlaywright();
   const brand = JSON.parse(await readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
@@ -218,6 +264,10 @@ export async function renderPost(post, outDir, { images = null } = {}) {
       if (fit.overflowing)
         throw new Error(`slide ${i + 1} (${slide.type}) overflows the canvas even at minimum type size — the copy is too long for this archetype`);
       if (fit.atFloor.length) warnings.push(`slide ${i + 1}: text hit its minimum size (${fit.atFloor.join(", ")}) — consider shortening the copy`);
+
+      const clipped = await page.evaluate(CLIP_FN);
+      if (clipped.length)
+        throw new Error(`slide ${i + 1} (${slide.type}) puts text in a box that crops it:\n  ${clipped.join("\n  ")}`);
 
       const cov = await page.evaluate(COVERAGE_FN);
       const floor = brand.coverage?.[slide.type] ?? 0.55;

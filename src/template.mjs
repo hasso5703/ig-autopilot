@@ -123,6 +123,13 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
        padding:${g.margin}px;min-height:0}
 .inner.below{padding-top:${TOP_IMAGE_H - 96}px}
 
+/* Anton's glyphs are taller than a line box of 1.0: at 92px a three-line
+   headline paints 23px outside the element it belongs to. That ink used to be
+   cropped by the clipping below, which took the tops off capitals on the first
+   line and the descenders off the last. The padding is that overhang, in em so
+   it tracks whatever size the fitter lands on, and it means the ink is now
+   INSIDE the box rather than merely tolerated outside it. */
+.display,.figure,.hero,.unit,.qm,.handle,.hv{padding-top:.14em;padding-bottom:.14em}
 .display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;
          letter-spacing:-0.014em;line-height:1.0}
 .a{color:${c.accent};font-style:normal}
@@ -130,12 +137,13 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 
 /* A stretching box the auto-fitter measures against. Without it, text inside a
    flex child that grows can never be told apart from text that overflows it. */
-/* overflow:hidden here, and on .cells, for one specific reason: scrollHeight
-   still reports the true content height of a clipped box, so the fitter can
-   still see a spill, while the slide's own scrollHeight stops being polluted by
-   descendants that bleed on purpose (the scaled blur behind a field layout
-   made every stat slide look like it overflowed by 41px). */
-.fitbox{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;min-height:0;overflow:hidden}
+/* NOT overflow:hidden. It was, briefly, to keep the slide's scrollHeight clean
+   of the scaled blur behind a field layout — and it cropped letters. Clipping
+   is the picture layers' job (.picwrap) and never text's: a box that hides its
+   overflow hides a broken glyph just as willingly as a broken layout. The
+   fitter reads scrollHeight, which reports a spill whether or not it is
+   visible, so nothing is lost by letting type breathe. */
+.fitbox{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;min-height:0}
 
 /* ---------- persistent furniture ---------- */
 .rail{position:absolute;left:0;top:0;height:9px;width:100%;background:rgba(255,255,255,.09);z-index:6}
@@ -183,12 +191,12 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
               letter-spacing:-0.03em;margin-bottom:10px}
 .stat .unit{font-family:'Anton',sans-serif;font-size:70px;line-height:1.06;color:${c.ink};
             text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:38px}
-.stat .say{font-size:${t.bodyMax - 4}px;line-height:1.42;color:${c.body}}
+.stat .say{font-size:${t.bodyMax - 4}px;line-height:1.42;color:${c.body};padding-bottom:.12em}
 .stat .say b{color:${c.ink};font-weight:700}
 
 /* ---------- content ---------- */
 .content h2{margin-bottom:30px}
-.content .body{font-size:${t.bodyMax}px;line-height:1.4;color:${c.body};font-weight:400}
+.content .body{font-size:${t.bodyMax}px;line-height:1.4;color:${c.body};font-weight:400;padding-bottom:.12em}
 .content .body b{color:${c.ink};font-weight:700}
 
 /* ---------- quote ---------- */
@@ -204,12 +212,12 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
    The published version put two fixed-height panels in the middle of the frame
    and left 55% of it empty. The cells stretch now, and their text is fitted to
    the height they end up with rather than set at 48px and hoped for. */
-.contrast .cells{flex:1 1 auto;display:flex;flex-direction:column;gap:${brand.grid.gutter}px;min-height:0;overflow:hidden}
+.contrast .cells{flex:1 1 auto;display:flex;flex-direction:column;gap:${brand.grid.gutter}px;min-height:0}
 .contrast .cell{flex:1 1 0;min-height:0;padding:44px 46px;border-radius:8px;
                 display:flex;flex-direction:column;justify-content:center}
 .contrast .cell .lab{font-weight:700;font-size:26px;letter-spacing:.24em;
                      text-transform:uppercase;margin-bottom:22px;flex:0 0 auto}
-.contrast .cell .txt{line-height:1.18;font-weight:700}
+.contrast .cell .txt{line-height:1.18;font-weight:700;padding-bottom:.1em}
 .contrast .claim{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
 .contrast .claim .lab{color:${c.muted}}
 .contrast .claim .txt{color:${c.body}}
