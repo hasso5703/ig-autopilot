@@ -139,8 +139,19 @@ export async function renderPost(post, outDir) {
     // grotesque produces a publishable but off-brand image, and nobody notices
     // until it is on the grid — so check every family/weight we actually use,
     // not just the display face.
+    //
+    // Activate every declared face first. CSS font loading is lazy: a face is
+    // only fetched when a glyph actually needs it, so on the hook slide (whose
+    // Archivo text is all bold) Archivo 400 would still read "unloaded" and on
+    // the CTA slide (no bold) Archivo 700 would — a false alarm on a perfectly
+    // good font. load() resolves from the inlined data URI, or leaves the face
+    // unloaded if the font is genuinely broken, so the check below keeps its
+    // teeth: it still catches a real failure, it just no longer invents one.
     const missing = await page.evaluate(
-      (specs) => specs.filter((s) => !document.fonts.check(`${s.weight} 100px '${s.family}'`)),
+      async (specs) => {
+        await Promise.allSettled([...document.fonts].map((f) => f.load()));
+        return specs.filter((s) => !document.fonts.check(`${s.weight} 100px '${s.family}'`));
+      },
       fonts.map((f) => ({ family: f.family, weight: f.weight }))
     );
     if (missing.length) {
