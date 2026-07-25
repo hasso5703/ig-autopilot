@@ -313,6 +313,26 @@ test("emphasis is never painted in the colour of the panel behind it", async () 
 });
 
 // ---------------------------------------------------------------------------
+// Incident: a branch-path media URL would have baked a stale image into a post
+// permanently. raw.githubusercontent caches /main/ paths for minutes and treats
+// commit paths as immutable, and Meta copies whatever it fetches to its own CDN.
+// ---------------------------------------------------------------------------
+test("a reel URL is pinned to a commit, never to a branch", async () => {
+  const { reelUrl } = await import("../src/publish-reel.mjs");
+  const sha = "0123456789abcdef0123456789abcdef01234567";
+
+  const url = reelUrl("2026-07-25-test", sha);
+  assert.ok(url.includes(`/${sha}/`), "the SHA is not in the URL");
+  assert.ok(!/\/(main|master)\//.test(url), "a branch path would serve a cached, stale file");
+  assert.match(url, /^https:\/\/raw\.githubusercontent\.com\//);
+  assert.ok(url.endsWith(".mp4"));
+
+  // An empty or absent sha means "use HEAD" and is not an error.
+  for (const bad of ["main", "master", "abc", "0123456789abcdef0123456789abcdef0123456", "0123456789ABCDEF0123456789abcdef01234567"])
+    assert.throws(() => reelUrl("s", bad), /not a full commit sha/, `accepted "${bad}" as a commit`);
+});
+
+// ---------------------------------------------------------------------------
 // The encoder flags have been wrong before, so the file is checked, not the
 // intent behind it.
 // ---------------------------------------------------------------------------
