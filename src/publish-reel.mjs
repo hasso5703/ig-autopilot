@@ -32,6 +32,17 @@ const API = "https://graph.instagram.com";
 const VERSION = process.env.IG_API_VERSION || "v25.0";
 const TARGET = process.env.IG_TARGET || "me";
 
+/**
+ * Which frame becomes the grid thumbnail.
+ *
+ * Left to itself Instagram may take frame zero, and frame zero used to be pure
+ * black because the opening beat faded in. The template no longer does that,
+ * but a profile grid is the first thing a visitor judges and it is not worth
+ * depending on someone else's default. 1.2s is inside the opening beat, after
+ * any settle and well before the first cut.
+ */
+const THUMB_OFFSET_MS = 1200;
+
 const POLL_INTERVAL_MS = 5000;
 // Video containers take far longer than image ones: Meta transcodes.
 const POLL_TIMEOUT_MS = 10 * 60 * 1000;
@@ -71,11 +82,12 @@ async function call(method, pathname, params) {
  * @returns {Promise<{id: string, uri: string|null}>} uri is null when this API
  *          path does not offer resumable upload, which is the thing worth knowing.
  */
-export async function createResumableContainer({ caption, shareToFeed = true, audioName } = {}) {
+export async function createResumableContainer({ caption, shareToFeed = true, audioName, thumbOffsetMs = THUMB_OFFSET_MS } = {}) {
   const r = await call("POST", `${TARGET}/media`, {
     media_type: "REELS",
     upload_type: "resumable",
     share_to_feed: shareToFeed ? "true" : "false",
+    ...(thumbOffsetMs != null ? { thumb_offset: String(thumbOffsetMs) } : {}),
     ...(caption ? { caption } : {}),
     ...(audioName ? { audio_name: audioName } : {}),
   });
@@ -83,12 +95,13 @@ export async function createResumableContainer({ caption, shareToFeed = true, au
 }
 
 /** Container that pulls the file from a URL, for when resumable is unavailable. */
-export async function createHostedContainer(videoUrl, { caption, shareToFeed = true, audioName } = {}) {
+export async function createHostedContainer(videoUrl, { caption, shareToFeed = true, audioName, thumbOffsetMs = THUMB_OFFSET_MS } = {}) {
   if (!/^https:\/\//.test(videoUrl)) throw new Error(`video_url must be https: ${videoUrl}`);
   const r = await call("POST", `${TARGET}/media`, {
     media_type: "REELS",
     video_url: videoUrl,
     share_to_feed: shareToFeed ? "true" : "false",
+    ...(thumbOffsetMs != null ? { thumb_offset: String(thumbOffsetMs) } : {}),
     ...(caption ? { caption } : {}),
     ...(audioName ? { audio_name: audioName } : {}),
   });

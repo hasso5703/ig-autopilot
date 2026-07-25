@@ -361,9 +361,19 @@ window.render = function (t) {
 
     // Beats overlap by a fraction of a second at the seam. A hard cut is
     // punchier in theory and jarring in practice at this size.
+    //
+    // The opening beat is exempt from the fade. Frame zero of a Reel is not a
+    // neutral moment: it is the thumbnail Instagram can pick for the profile
+    // grid, and it is the frame that decides whether a thumb stops. Fading in
+    // from black spends both on nothing. The first beat is fully formed at t=0
+    // and simply holds.
     const IN = 0.22, OUT = 0.18;
+    const first = i === 0;
     let o = 0;
-    if (active) o = Math.min(easeOut(u / IN), u > d - OUT ? Math.max(0, (d - u) / OUT) : 1);
+    if (active) {
+      const fadeIn = first ? 1 : easeOut(u / IN);
+      o = Math.min(fadeIn, u > d - OUT ? Math.max(0, (d - u) / OUT) : 1);
+    }
     el.style.opacity = o;
 
     if (active) {
@@ -371,7 +381,7 @@ window.render = function (t) {
       const lines = el.querySelectorAll('.ln');
       lines.forEach((ln, j) => {
         const lag = 0.09 * j;
-        const p = easeOut((u - lag) / 0.42);
+        const p = first ? 1 : easeOut((u - lag) / 0.42);
         ln.style.opacity = p;
         ln.style.transform = 'translateY(' + ((1 - p) * 30).toFixed(2) + 'px)';
 
@@ -382,7 +392,7 @@ window.render = function (t) {
         if (spec !== undefined) {
           const f = window.__fig[spec];
           if (f && f.value !== null) {
-            const k = easeOut((u - lag) / 0.95);
+            const k = first ? 1 : easeOut((u - lag) / 0.95);
             ln.textContent = f.prefix + fmt(f.value * k, f.decimals) + f.suffix;
           } else {
             ln.textContent = spec;
