@@ -13,12 +13,49 @@
  *   invisible until someone looks at the image.
  */
 
-import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
+import { readFile, mkdir, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { createRequire } from "node:module";
+import { execSync } from "node:child_process";
 import path from "node:path";
 import { slideHtml } from "./template.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
+
+/**
+ * Playwright is installed globally in the cloud sandbox, not in this repo.
+ * `NODE_PATH` does not help: Node's ESM resolver ignores it entirely (it only
+ * ever applied to CommonJS `require`). Verified the hard way — a bare
+ * `import("playwright")` fails with ERR_MODULE_NOT_FOUND there.
+ *
+ * So resolve it explicitly: try a normal import first (works when installed
+ * locally), then fall back to requiring it by absolute path. This keeps the
+ * pipeline a single command with no symlink or setup step to forget.
+ */
+async function loadPlaywright() {
+  try {
+    return await import("playwright");
+  } catch (localMiss) {
+    const require = createRequire(import.meta.url);
+    const candidates = [process.env.PLAYWRIGHT_PKG, "/opt/node22/lib/node_modules/playwright"];
+    try {
+      candidates.push(path.join(execSync("npm root -g", { encoding: "utf8" }).trim(), "playwright"));
+    } catch {
+      /* npm not on PATH; the explicit candidates may still hit */
+    }
+    for (const c of candidates.filter(Boolean)) {
+      try {
+        return require(c);
+      } catch {
+        /* try the next candidate */
+      }
+    }
+    throw new Error(
+      `cannot resolve the 'playwright' package. Tried a local import and: ${candidates.filter(Boolean).join(", ")}. ` +
+        `Set PLAYWRIGHT_PKG to its absolute path. Original error: ${localMiss.message}`
+    );
+  }
+}
 
 /**
  * Playwright normally resolves its browser from PLAYWRIGHT_BROWSERS_PATH.
@@ -76,7 +113,7 @@ const FIT_FN = () => {
 };
 
 export async function renderPost(post, outDir) {
-  const { chromium } = await import("playwright");
+  const { chromium } = await loadPlaywright();
   const brand = JSON.parse(await readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
   if (post.accent) brand.colors.accent = post.accent;
   const fonts = await loadFonts(brand);
@@ -98,13 +135,18 @@ export async function renderPost(post, outDir) {
     await page.setContent(html, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
 
-    // Fail loudly if a font did not load: a silent Times New Roman fallback
-    // would produce a publishable but off-brand image.
-    const ok = await page.evaluate(
-      (fam) => document.fonts.check(`400 100px '${fam}'`),
-      brand.fonts.display.family
+    // Fail loudly if ANY font did not load. A silent fallback to a generic
+    // grotesque produces a publishable but off-brand image, and nobody notices
+    // until it is on the grid — so check every family/weight we actually use,
+    // not just the display face.
+    const missing = await page.evaluate(
+      (specs) => specs.filter((s) => !document.fonts.check(`${s.weight} 100px '${s.family}'`)),
+      fonts.map((f) => ({ family: f.family, weight: f.weight }))
     );
-    if (!ok) throw new Error(`Font '${brand.fonts.display.family}' failed to load — refusing to render`);
+    if (missing.length) {
+      const names = missing.map((m) => `${m.family} ${m.weight}`).join(", ");
+      throw new Error(`fonts failed to load (${names}) — refusing to render off-brand slides`);
+    }
 
     await page.evaluate(FIT_FN);
 

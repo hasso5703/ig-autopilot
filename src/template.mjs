@@ -92,9 +92,13 @@ body{
   letter-spacing:.18em;color:${c.muted};text-transform:uppercase;
 }
 .content h2{margin-bottom:46px}
+/* Short copy used to sit pinned to the top with dead space below it, which
+   read as sparse rather than composed. Centring the block in its remaining
+   space makes a two-line body look as deliberate as a six-line one. */
 .content .body{
   font-size:44px;line-height:1.34;color:#E9E9EF;font-weight:400;
   flex:1;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
 }
 .content .body strong{font-weight:700;color:${c.ink}}
 .content .src{
