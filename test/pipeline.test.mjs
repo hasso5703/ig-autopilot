@@ -153,6 +153,31 @@ test("two unrelated stories sharing a company name do not collide", () => {
 });
 
 // ---------------------------------------------------------------------------
+// Incident: a run found 3 fresh stories out of 29 because the run forty minutes
+// earlier had marked 26 of them considered under a three-day window.
+// ---------------------------------------------------------------------------
+test("the considered window is short enough not to starve the pool", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const day = 24 * 3600 * 1000;
+
+  const src = await readFile(new URL("../src/state.mjs", import.meta.url), "utf8");
+  const m = src.match(/const CONSIDERED_TTL_MS = ([^;]+);/);
+  assert.ok(m, "the window must stay a named constant, findable and reviewable");
+
+  const ttl = Function(`return ${m[1]}`)();
+  assert.ok(ttl <= 2 * day, `${ttl / day} days blocks the pool for longer than stories stay interesting`);
+  assert.ok(ttl >= day, "under a day lets a run re-evaluate what it already passed over");
+});
+
+test("an unseen story is always evaluable", async () => {
+  const { filterFresh } = await import("../src/state.mjs");
+  const r = await filterFresh([
+    { title: "A completely novel story about seahorse robotics in Reykjavik", url: "https://example.com/seahorse" },
+  ]);
+  assert.equal(r.fresh.length, 1, "dedup rejected a story it has never seen");
+});
+
+// ---------------------------------------------------------------------------
 // Incident: two runs fired forty minutes apart and only a sourcing failure
 // stopped a second carousel going out.
 // ---------------------------------------------------------------------------

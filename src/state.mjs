@@ -108,8 +108,15 @@ export async function loadState() {
  * merely considered comes back after this window, which is long enough to stop
  * the same day's runs re-evaluating it and short enough that a developing story
  * gets a second look.
+ *
+ * Three days turned out to still be too long. A run on 2026-07-25 found 3 fresh
+ * stories out of 29 because the run forty minutes earlier had marked 26 of them
+ * considered, and reported the pool as structurally empty. The window only has
+ * to outlast the same day's runs; a story worth publishing that lost yesterday's
+ * comparison deserves to be compared again today, especially now that primary
+ * sources carry a four-day freshness window of their own.
  */
-const CONSIDERED_TTL_MS = 3 * 24 * 3600 * 1000;
+const CONSIDERED_TTL_MS = 36 * 3600 * 1000;
 const BLOCKS_FOREVER = new Set(["posted", "rejected"]);
 
 const stillBlocks = (r) => {

@@ -397,8 +397,20 @@ But the **next run clones the default branch**. If `state/posted.jsonl` only
 exists on a side branch, tomorrow's run starts with no memory of today, and
 republishes the same story to the same followers.
 
-So: append the published carousel with `recordPosted`, append every story you
-considered with `recordSeen`, and land both **on `main`**.
+So: append the published carousel with `recordPosted`, append the stories you
+actually weighed with `recordSeen`, and land both **on `main`**.
+
+**Record only what you genuinely evaluated.** `recordSeen` is memory, not a log:
+anything written there is excluded from the next 36 hours of runs. A run that
+records all 60-odd gathered items blocks the whole pool over something it never
+read. This is not hypothetical: a run found 3 fresh stories out of 29 because
+the run forty minutes earlier had recorded 26 it had merely listed.
+
+So write a record for the story you picked, for anything you scored and passed
+over, and for anything the gate killed. Give the killed ones `outcome:
+"rejected"` and the passed-over ones `outcome: "considered"` with the reason,
+because `rejected` blocks forever and `considered` expires. Titles you only
+skimmed in the feed dump get nothing.
 
 ```bash
 git checkout main && git merge --no-edit -   # bring your working branch across
