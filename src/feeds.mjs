@@ -80,23 +80,51 @@ async function fetchFeed(feed) {
  * @param {{maxAgeHours?: number}} opts
  * @returns {Promise<{items: object[], report: object[]}>}
  */
+/**
+ * How long an item stays eligible, by tier.
+ *
+ * One window for every source was wrong, and a live check showed why: on a
+ * Saturday all seven primary sources were empty inside 36 hours while the press
+ * feeds carried 51 items. Nothing was broken — labs do not publish daily and
+ * arXiv is legitimately closed at weekends — but the effect was that the
+ * pipeline almost never saw the sources the manual tells it to prefer.
+ *
+ * The two kinds of source decay at different rates. A lab's own announcement
+ * from three days ago is still the story if nobody has told it well; a news
+ * report from three days ago is old news. So primary sources get four days and
+ * the press keeps the tight window. Repetition is already prevented by state,
+ * not by the clock.
+ */
+const TIER1_MAX_AGE_HOURS = 96;
+
 export async function gather(opts = {}) {
   const maxAgeHours = opts.maxAgeHours ?? 48;
   const cfg = JSON.parse(await readFile(path.join(ROOT, "sources.json"), "utf8"));
-  const feeds = [...cfg.tier1_primary, ...cfg.tier2_press];
+  const feeds = [
+    ...cfg.tier1_primary.map((f) => ({ ...f, tier: 1, maxAgeHours: f.maxAgeHours ?? Math.max(maxAgeHours, TIER1_MAX_AGE_HOURS) })),
+    ...cfg.tier2_press.map((f) => ({ ...f, tier: 2, maxAgeHours: f.maxAgeHours ?? maxAgeHours })),
+  ];
 
   const results = await Promise.all(feeds.map(fetchFeed));
-  const cutoff = Date.now() - maxAgeHours * 3600 * 1000;
+  const now = Date.now();
 
   const items = results
-    .flatMap((r) => r.items.map((i) => ({ ...i, weight: r.feed.weight ?? 0.5 })))
-    .filter((i) => !i.published || new Date(i.published).getTime() >= cutoff)
+    .flatMap((r) =>
+      r.items
+        .filter((i) => !i.published || new Date(i.published).getTime() >= now - r.feed.maxAgeHours * 3600 * 1000)
+        .map((i) => ({ ...i, weight: r.feed.weight ?? 0.5, tier: r.feed.tier }))
+    )
     .sort((a, b) => (b.published || "").localeCompare(a.published || ""));
+
+  const kept = {};
+  for (const i of items) kept[i.source] = (kept[i.source] ?? 0) + 1;
 
   const report = results.map((r) => ({
     name: r.feed.name,
     ok: r.ok,
-    count: r.items.length,
+    fetched: r.items.length,
+    fresh: kept[r.feed.name] ?? 0,
+    windowHours: r.feed.maxAgeHours,
     ...(r.ok ? {} : { error: r.error }),
   }));
 
@@ -106,10 +134,13 @@ export async function gather(opts = {}) {
 if (process.argv[1] && process.argv[1].endsWith("feeds.mjs")) {
   const hours = Number(process.argv[2] || 48);
   const { items, report } = await gather({ maxAgeHours: hours });
-  console.error("FEED REPORT");
+  console.error("FEED REPORT          fresh / fetched   window");
   for (const r of report) {
-    console.error(`  ${r.ok ? "ok  " : "FAIL"} ${String(r.count).padStart(3)}  ${r.name}${r.error ? "  <- " + r.error : ""}`);
+    console.error(
+      `  ${r.ok ? "ok  " : "FAIL"} ${String(r.fresh).padStart(4)} /${String(r.fetched).padStart(5)}   ${String(r.windowHours) + "h"}`.padEnd(34) +
+        `  ${r.name}${r.error ? "  <- " + r.error : ""}`
+    );
   }
-  console.error(`\n${items.length} items in the last ${hours}h\n`);
+  console.error(`\n${items.length} fresh items (press ${hours}h, primary sources ${TIER1_MAX_AGE_HOURS}h)\n`);
   console.log(JSON.stringify(items, null, 2));
 }
