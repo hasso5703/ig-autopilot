@@ -112,6 +112,20 @@ const FIT_FN = () => {
     return !!box && box.scrollHeight > box.clientHeight + 1;
   };
 
+  /*
+   * Width, which nothing measured until a stat slide shipped its figure clipped.
+   * "$100M" carries no space, so it can never wrap: the line count stays 1, no
+   * box spills vertically, and the fitter happily locked it to the 520px
+   * ceiling and painted the M off the right edge. `body` is overflow:hidden, so
+   * the spill was invisible to every other check here. Any figure past about
+   * three glyphs was affected, silently.
+   */
+  const widthOverflows = (el) => {
+    if (el.scrollWidth > el.clientWidth + 1) return true;
+    const box = el.closest(".cell") || el.closest(".fitbox");
+    return !!box && box.scrollWidth > box.clientWidth + 1;
+  };
+
   for (const el of document.querySelectorAll(".fit")) {
     const max = Number(el.dataset.max);
     const min = Number(el.dataset.min);
@@ -121,7 +135,7 @@ const FIT_FN = () => {
     while (lo <= hi) {
       const mid = Math.floor((lo + hi) / 2);
       el.style.fontSize = mid + "px";
-      if (lineCount(el) <= maxLines && !boxOverflows(el) && !overflows()) { best = mid; lo = mid + 1; }
+      if (lineCount(el) <= maxLines && !boxOverflows(el) && !widthOverflows(el) && !overflows()) { best = mid; lo = mid + 1; }
       else { hi = mid - 1; }
     }
     el.style.fontSize = best + "px";

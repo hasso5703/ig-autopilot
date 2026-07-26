@@ -25,3 +25,9 @@ media/*/src/
 # which IS committed and is the file Meta fetches; the loose wav is a 2.5 MB
 # intermediate that any run regenerates from the post's own narration text.
 media/*/voice.wav
+
+# The reel's intermediate painted frames. reel.mjs encodes them into reel.mp4,
+# which IS committed and is the file Meta fetches; the loose frames are ~550
+# jpgs per run that any run repaints from the post spec. One run committed them
+# by sweeping the whole media directory in.
+media/*/_frames/

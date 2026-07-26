@@ -1,0 +1,103 @@
+{
+  "slug": "2026-07-26-openai-agent-hack",
+  "slides": {
+    "1": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-26-openai-agent-hack/src/01.jpg",
+      "generated": true,
+      "prompt": "cinematic wide photograph of a heavy steel security door standing ajar in a dark server hall, cold cyan light spilling through the gap, rows of racks receding into haze, 35mm, no text, no people",
+      "seed": 1000,
+      "alt": "a heavy steel door left ajar in a dark server hall",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "2": {
+      "file": "media/2026-07-26-openai-agent-hack/src/02.jpg",
+      "generated": false,
+      "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL3B4NzE4NTktaW1hZ2Uta3d2djc0czIuanBn.jpg",
+      "provider": "openverse/rawpixel",
+      "license": "cc0",
+      "creator": "",
+      "title": "Free computer server room image",
+      "sourceUrl": "https://www.rawpixel.com/image/5906639/photo-image-light-desktop-wallpapers-public-domain",
+      "alt": "rows of servers in a data centre",
+      "attempt": 1,
+      "credit": "Free computer server room image · CC0"
+    },
+    "3": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-26-openai-agent-hack/src/03.jpg",
+      "generated": true,
+      "prompt": "cinematic macro photograph of a cracked sealed glass containment box on a dark laboratory bench, cold blue light leaking out through the fracture, shallow depth of field, 35mm, no text, no people",
+      "seed": 1000,
+      "alt": "a cracked sealed glass containment box leaking light",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "4": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-26-openai-agent-hack/src/04.jpg",
+      "generated": true,
+      "prompt": "cinematic photograph of an empty office chair in front of a wall of glowing monitors at night, screens filled with abstract scrolling light, nobody present, cold teal palette, 35mm, no text, no people",
+      "seed": 1000,
+      "alt": "an empty chair in front of a wall of glowing monitors",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "5": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-26-openai-agent-hack/src/05.jpg",
+      "generated": true,
+      "prompt": "cinematic close photograph of a single network cable hanging unplugged in front of a dark server rack, one blue status light glowing behind it, shallow depth of field, cold palette, 35mm, no text, no people",
+      "seed": 1137,
+      "alt": "an unplugged network cable hanging in front of a dark server rack",
+      "attempt": 1,
+      "credit": "Illustration · AI-generated"
+    },
+    "6": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-26-openai-agent-hack/src/06.jpg",
+      "generated": true,
+      "prompt": "cinematic photograph of a locked steel shutter pulled down over a doorway, warning stripes worn away, dim amber emergency light above, industrial corridor, 35mm, no text, no people",
+      "seed": 1000,
+      "alt": "a locked steel shutter closed over a doorway",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "7": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-26-openai-agent-hack/src/07.jpg",
+      "generated": true,
+      "prompt": "cinematic minimal photograph of a single key lying on a dark reflective surface under one hard spotlight, deep shadows, cold neutral palette, 35mm, no text, no people",
+      "seed": 1000,
+      "alt": "a single key on a dark reflective surface",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    }
+  },
+  "acquired": "2026-07-26T18:34:32.749Z"
+}
