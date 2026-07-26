@@ -834,10 +834,14 @@ node src/reel.mjs posts/<slug>.json media/<slug>
   text does not read aloud (a stat slide is the usual case), and hold whatever
   you write there to the same standard.
 - **Voice-driven timing.** Each beat lasts exactly as long as its line takes to
-  say, so **the copy is the runtime**. A beat flagged `"long"` takes over 6
-  seconds to speak: shorten it, do not ignore it. The whole Reel should land
-  between 15 and 25 seconds. The first one this account published ran 33 and was
-  watched for 6.
+  say, so **the copy is the runtime**. Target 15 to 25 seconds; the first Reel
+  this account published ran 33 and was watched for 6.
+
+  **`reel.mjs` now refuses an over-long Reel before it paints anything**, and
+  prints the three longest beats with their lines. Two runs in a row built a
+  27-second Reel, opened it, cut the narration and rebuilt — four to six minutes
+  of painting thrown away, twice. You find out in seconds now. `--overlong` exists
+  and you should need a reason a viewer would accept before using it.
 - **A music bed**, one of the CC0 tracks in `brand/audio/`, ducked under the
   voice. Never add music from anywhere else: Instagram's library is unreachable
   by API and everything else is a licensing problem.
@@ -847,10 +851,10 @@ node src/reel.mjs posts/<slug>.json media/<slug>
 
   | `mood` | Use it when the story is | Track |
   |---|---|---|
-  | `steady` | the default, when nothing else fits | Ethernight Club |
-  | `tension` | something broke, is at risk, or is being fought over | Volatile Reaction |
-  | `drive` | something is moving fast, scaling, being adopted | Newer Wave |
-  | `wonder` | something became possible that was not | Digital Lemonade |
+  | `steady` | the default, when nothing else fits | Simulacra — Scott Buckley |
+  | `tension` | something broke, is at risk, or is being fought over | Eyes In The Void — Scott Buckley |
+  | `drive` | something is moving fast, scaling, being adopted | Newer Wave — Kevin MacLeod |
+  | `wonder` | something became possible that was not | Amberlight — Scott Buckley |
 
   Pick from what the story *does*, not what it is about: a funding round that
   threatens a market is `tension`, not `drive`.
@@ -862,7 +866,16 @@ node src/reel.mjs posts/<slug>.json media/<slug>
   called it a horror soundtrack. Every bed is now between 1.3 and 4 kHz, low-cut
   at 130 Hz, with a dip at 1.6 kHz in the mix so the narration has a pocket.
   `node src/music.mjs measure` re-checks the claim; do not swap a bed without
-  running it.
+  running it. It has already earned its keep twice: a track measuring 1433 Hz
+  across the whole file measured 675 Hz on the 75 seconds actually committed,
+  because a different part of the piece was cut. The number that matters is the
+  one for the segment that ships.
+
+  The beds are cinematic rather than corporate now. The accounts that work in
+  this niche run moody, melodic audio under their posts, and the difference from
+  a documentary underscore is measurable as well as audible: these carry 12 dB of
+  dynamic movement where a drone carries two. Melody and movement are what make
+  someone stay for the voice.
 
   **CC BY is an obligation.** `reel.mjs` prints the required credit with the
   finished file. **Put that line in the Reel's caption, verbatim**, above the

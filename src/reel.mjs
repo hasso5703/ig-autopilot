@@ -31,6 +31,10 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 const W = 1080;
 const H = 1920;
 
+/** The retention window from the manual, enforced before anything is painted. */
+const MIN_SECONDS = 15;
+const MAX_SECONDS = 25;
+
 
 function ffmpegBin() {
   for (const c of [process.env.FFMPEG_BIN, "ffmpeg"].filter(Boolean)) {
@@ -284,7 +288,30 @@ export async function renderReel(postFile, outDir, opts = {}) {
     }
   }
 
-  const bed = opts.silent ? null : await pickBed(post.mood || "tension");
+  /*
+   * The length is known BEFORE the expensive part, so refuse here.
+   *
+   * Two runs in a row built a 27-second Reel, opened the output, cut the
+   * narration and rebuilt — four to six minutes of painting thrown away each
+   * time, twice. The durations come from the narration, and the narration is
+   * synthesised above; nothing needs painting to know the total. So the run
+   * finds out now, with the per-beat numbers and the lines to cut, instead of
+   * after Chromium has drawn five hundred frames.
+   */
+  const projected = totalDuration(beats);
+  if (vo && projected > MAX_SECONDS && !opts.overlong) {
+    const worst = beats
+      .map((b, i) => ({ i: i + 1, type: b.type, s: +b.duration.toFixed(2), n: b.narration }))
+      .sort((a, b2) => b2.s - a.s);
+    throw new Error(
+      `this Reel would run ${projected.toFixed(1)}s and the target is ${MIN_SECONDS}-${MAX_SECONDS}s. Nothing has been painted yet.\n` +
+        `Cut the narration on the longest beats and run again:\n` +
+        worst.slice(0, 3).map((b) => `  beat ${b.i} (${b.type}) ${b.s}s — "${b.n}"`).join("\n") +
+        `\nPass --overlong only if you have a reason a viewer will accept.`
+    );
+  }
+
+  const bed = opts.silent ? null : await pickBed(post.mood || "steady");
 
   const { frames, total, exposure } = await renderFrames(post, brand, fonts, frameDir, { beats, pictures });
   const painted = Date.now();
@@ -331,6 +358,7 @@ if (process.argv[1] && process.argv[1].endsWith("reel.mjs")) {
     silent: process.argv.includes("--silent"),
     keepFrames: process.argv.includes("--keep-frames"),
     voice: voiceIdx >= 0 ? process.argv[voiceIdx + 1] : undefined,
+    overlong: process.argv.includes("--overlong"),
   }).then(
     (r) => {
       console.log(JSON.stringify(r, null, 2));

@@ -29,6 +29,8 @@ const SLIDES_MIN = 4;
 const SLIDES_MAX = 10;         // Meta's carousel ceiling
 const HOOK_MAX_CHARS = 95;     // beyond this the auto-fit shrinks it to unreadable
 const EVIDENCE_MIN_CHARS = 40;
+const STALE_DAYS = 4;          // beyond this the newest source is not news any more
+const FIGURE_MAX_CHARS = 6;    // what the stat archetype can actually render at 190px on one line
 
 /**
  * How much of the central claim's vocabulary a corroborating quote must echo.
@@ -86,14 +88,32 @@ const normQuote = (s) =>
     .toLowerCase()
     .trim();
 
-async function fetchPage(url) {
+/**
+ * A 5xx is usually the origin having a bad second, not a verdict. TechCrunch
+ * returned 503 to the validator and 200 to the same user-agent moments later,
+ * and the run paid for a whole rejected gate cycle to find that out. Two
+ * retries, backing off; a 4xx is still an answer and is not retried.
+ */
+async function fetchPage(url, attempt = 0) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), 25000);
   try {
     const res = await fetch(url, { headers: { "user-agent": UA }, signal: ctrl.signal, redirect: "follow" });
-    if (!res.ok) return { ok: false, error: `HTTP ${res.status}` };
+    if (!res.ok) {
+      if (res.status >= 500 && attempt < 2) {
+        clearTimeout(t);
+        await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
+        return fetchPage(url, attempt + 1);
+      }
+      return { ok: false, error: `HTTP ${res.status}${attempt ? ` after ${attempt + 1} tries` : ""}` };
+    }
     return { ok: true, text: flatten(await res.text()) };
   } catch (e) {
+    if (attempt < 2 && e.name !== "AbortError") {
+      clearTimeout(t);
+      await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
+      return fetchPage(url, attempt + 1);
+    }
     return { ok: false, error: e.name === "AbortError" ? "timeout" : e.message };
   } finally {
     clearTimeout(t);
@@ -294,6 +314,47 @@ export async function validatePost(post, opts = {}) {
    * runs before a single picture is fetched, so complying costs nothing but
    * choosing better.
    */
+  /*
+   * Is this news today.
+   *
+   * The account published a story on 26 July whose event was 22 July, and it
+   * read exactly as it was: nothing happened, so something old that held up got
+   * dressed as news. `timeliness` was a 0.10 weight the run graded itself on,
+   * which is not a control. The dates are already in the spec, so measure them.
+   *
+   * The newest cited source is the test. A story every outlet covered four days
+   * ago is not what people are talking about now, whatever its merits.
+   */
+  const dates = slides
+    .map((s2) => s2.source?.date)
+    .filter((d) => /^\d{4}-\d{2}-\d{2}/.test(String(d || "")))
+    .map((d) => new Date(d).getTime());
+  if (dates.length) {
+    const ageDays = (Date.now() - Math.max(...dates)) / 86400000;
+    if (ageDays > STALE_DAYS)
+      err(
+        `the freshest source on this post is ${ageDays.toFixed(1)} days old. That is not news, it is an archive piece with a date on it. ` +
+          `Find today's story, or find a source published in the last ${STALE_DAYS} days that carries this one forward.`
+      );
+    else if (ageDays > 2)
+      nag(`the freshest source is ${ageDays.toFixed(1)} days old. It will read as "nothing happened today" unless the hook makes clear what is new about it now.`);
+  }
+
+  /*
+   * The stat archetype takes a short numeral and nothing else. `140,000` was
+   * rendered as "140,0" with the rest clipped off the frame, on a published
+   * slide, and only opening the JPEG caught it: at `statMin` 190px on one line,
+   * seven glyphs cannot fit. The archetype exists for `$5`, `3x`, `2.6M`.
+   */
+  for (const [i, s2] of slides.entries()) {
+    const fig = String(s2.figure || "").replace(/\*+/g, "").trim();
+    if (s2.type === "stat" && fig.length > FIGURE_MAX_CHARS)
+      err(
+        `slide ${i + 1}: the figure "${fig}" is ${fig.length} characters and the stat archetype fits ${FIGURE_MAX_CHARS}. ` +
+          `It renders clipped, not small. Use the shortest true form of the number, or pick a different figure and put this one in the body.`
+      );
+  }
+
   const sendTest = String(post.sendTest || "").trim();
   if (!sendTest)
     err('`sendTest` is missing. Write the one-line message someone would actually send a friend along with this post, in their words. If you cannot write it without wincing, the story is the wrong story.');

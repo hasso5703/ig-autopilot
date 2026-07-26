@@ -164,7 +164,13 @@ function defaultNarration(b) {
     case "contrast":
       return join(`${clean(b.claimLabel)}, ${clean(b.claim)}`, `${clean(b.caveatLabel)}, ${clean(b.caveat)}`);
     case "end":
-      return join(b.sub || b.headline);
+      /*
+       * The headline, not the sub. A run found the last spoken line of every
+       * Reel was the account tagline while the send ask sat on screen in
+       * silence — the most valuable second in the video spent on the one
+       * sentence that asks for nothing.
+       */
+      return join(b.headline || b.sub);
     default:
       return join(b.title, b.body);
   }
@@ -189,7 +195,7 @@ export function applyNarrationTiming(beats, segments, { pad = 0.55, min = 2.2, l
     // flagged as `long` for the run to shorten, and the picture waits for the
     // sentence to finish.
     const duration = Math.max(min, spoken + pad);
-    return { ...b, duration, spoken, long: spoken > long, silence: +(duration - spoken).toFixed(3) };
+    return { ...b, duration, spoken, long: spoken > long, longAt: long, silence: +(duration - spoken).toFixed(3) };
   });
 }
 

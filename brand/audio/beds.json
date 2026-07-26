@@ -1,15 +1,26 @@
 [
   {
+    "id": "steady",
+    "file": "steady.mp3",
+    "mood": "steady",
+    "title": "Simulacra",
+    "creator": "Scott Buckley",
+    "license": "cc-by-4.0",
+    "sourceUrl": "https://www.scottbuckley.com.au/library/wp-content/uploads/2025/03/Simulacra.mp3",
+    "attribution": "Music: \"Simulacra\" by Scott Buckley (scottbuckley.com.au), CC BY 4.0",
+    "why": "cinematic and level: the default",
+    "seconds": 75
+  },
+  {
     "id": "tension",
     "file": "tension.mp3",
     "mood": "tension",
-    "title": "Volatile Reaction",
-    "creator": "Kevin MacLeod (incompetech.com)",
+    "title": "Eyes In The Void",
+    "creator": "Scott Buckley",
     "license": "cc-by-4.0",
-    "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Volatile%20Reaction.mp3",
-    "attribution": "Music: \"Volatile Reaction\" by Kevin MacLeod (incompetech.com), CC BY 4.0",
-    "centroidHz": 1263,
-    "why": "tense, restrained, no sub-bass dread",
+    "sourceUrl": "https://www.scottbuckley.com.au/library/wp-content/uploads/2025/06/EyesInTheVoid.mp3",
+    "attribution": "Music: \"Eyes In The Void\" by Scott Buckley (scottbuckley.com.au), CC BY 4.0",
+    "why": "dark cinematic with real movement, for a story with a victim",
     "seconds": 75
   },
   {
@@ -29,26 +40,12 @@
     "id": "wonder",
     "file": "wonder.mp3",
     "mood": "wonder",
-    "title": "Digital Lemonade",
-    "creator": "Kevin MacLeod (incompetech.com)",
+    "title": "Amberlight",
+    "creator": "Scott Buckley",
     "license": "cc-by-4.0",
-    "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Digital%20Lemonade.mp3",
-    "attribution": "Music: \"Digital Lemonade\" by Kevin MacLeod (incompetech.com), CC BY 4.0",
-    "centroidHz": 4502,
-    "why": "bright and forward, for a story that opens something",
-    "seconds": 75
-  },
-  {
-    "id": "steady",
-    "file": "steady.mp3",
-    "mood": "steady",
-    "title": "Ethernight Club",
-    "creator": "Kevin MacLeod (incompetech.com)",
-    "license": "cc-by-4.0",
-    "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Ethernight%20Club.mp3",
-    "attribution": "Music: \"Ethernight Club\" by Kevin MacLeod (incompetech.com), CC BY 4.0",
-    "centroidHz": 1401,
-    "why": "the default: driving, mid-bright, editorial",
+    "sourceUrl": "https://www.scottbuckley.com.au/library/wp-content/uploads/2025/03/Amberlight.mp3",
+    "attribution": "Music: \"Amberlight\" by Scott Buckley (scottbuckley.com.au), CC BY 4.0",
+    "why": "warm and melodic, for a story that opens something",
     "seconds": 75
   }
 ]
