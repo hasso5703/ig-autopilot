@@ -1,26 +1,26 @@
 {
-  "at": "2026-07-26T10:04:15.114Z",
-  "fresh": 16,
+  "at": "2026-07-26T15:09:31.213Z",
+  "fresh": 15,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1050,
-      "fresh": 4,
+      "fresh": 1,
       "windowHours": 96
     },
     {
       "name": "Google AI",
       "ok": true,
       "fetched": 20,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
       "name": "Google DeepMind",
       "ok": true,
       "fetched": 100,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
@@ -34,7 +34,7 @@
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 4,
+      "fresh": 3,
       "windowHours": 96
     },
     {
@@ -53,11 +53,10 @@
     },
     {
       "name": "TechCrunch",
-      "ok": false,
-      "fetched": 0,
-      "fresh": 0,
-      "windowHours": 36,
-      "error": "HTTP 503"
+      "ok": true,
+      "fetched": 20,
+      "fresh": 7,
+      "windowHours": 36
     },
     {
       "name": "The Verge",
@@ -100,7 +99,7 @@
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 3,
+      "fresh": 1,
       "windowHours": 36
     }
   ]

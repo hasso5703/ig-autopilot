@@ -1,0 +1,132 @@
+{
+  "slug": "2026-07-26-monday-ai-layoffs",
+  "mood": "tension",
+  "sendTest": "Monday.com just cut 620 jobs and its own founders say AI was not the reason.",
+  "centralClaim": "Monday.com is cutting about 620 jobs, roughly 20% of its workforce, in a restructuring its SEC filing ties to an AI-driven growth strategy, while co-founder Eran Zinman told employees the cuts were not made to replace people with AI.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+      "quote": "On Wednesday, the company said in an SEC filing that it will lay off about 20% of its workforce, or just over 600 employees, as part of a \"restructuring plan\" tied to its \"ongoing transformation of its product, marketing, and go-to-market strategy\" in support of \"a leaner, more focused operating model\" as it continues investing in its \"AI-driven growth strategy.\""
+    },
+    {
+      "url": "https://thenextweb.com/news/monday-com-layoffs-20-percent-ai-growth-strategy",
+      "quote": "Monday.com is cutting roughly 20 percent of its global workforce, about 620 people, as the Israeli project management company restructures around what it calls its AI Work Platform."
+    }
+  ],
+  "caption": "620 people lost their jobs at Monday.com, and the company's own founders say AI was not the reason.\n\nThe filing and the letter went out in the same week. To the regulator, the cut was a leaner operating model in support of an AI-driven growth strategy. To the staff, it was not made to reduce costs or replace people with AI. Both sentences describe the same 620 jobs.\n\nMonday.com is not an outlier, and that is the part worth reading twice. The Financial Times counted nearly 140,000 US tech jobs cut since the start of this year. It also found that the companies naming AI as a factor went on to underperform the Nasdaq by almost 10% in the 30 trading days after they said so.\n\nThe caveat, plainly: nobody outside the company can say which of those 620 jobs would still exist without an AI strategy, and the filing does not break it down. Underperforming a stock index is not proof that a company was lying either.\n\nHas your employer used the word AI while cutting people, and did anybody in the room believe it?\n\ntechcrunch.com, calcalistech.com, thenextweb.com\n\nAI-assisted.\n\n#AI #layoffs #tech #jobs",
+  "captionEvidence": [
+    {
+      "quote": "U.S. tech companies have slashed nearly 140,000 jobs since the start of this year, with Amazon, Oracle, Meta, and Microsoft alone accounting for almost 50,000 of those cuts",
+      "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "22 July 2026 · Monday.com",
+      "headline": "Monday.com cut 620 jobs. Its founders say *AI is not why*.",
+      "hero": { "value": "20%", "label": "of everyone who worked there" },
+      "swipe": "Swipe for what the filing actually said",
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic wide photograph of an empty open plan office late at night, rows of vacant desks, chairs pushed back at angles, dark monitors, cold blue light falling through venetian blinds, volumetric haze, shallow depth of field, 35mm, no text, no people",
+        "alt": "an empty open plan office at night, chairs pushed back from vacant desks"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "10%",
+      "unit": "behind the market, after blaming AI",
+      "body": "The Financial Times checked every company that named **AI** in its job cuts. Investors did *not entirely buy it*.",
+      "narration": "Almost ten percent. That is how far behind the Nasdaq these companies fell in the thirty trading days after they blamed AI for the cuts.",
+      "evidence": "the FT also found that companies citing AI as a factor in job cuts have underperformed the Nasdaq by almost 10% in the 30 trading days following their announcements",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+        "date": "2026-07-25"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "aerial view of an enormous grid of identical empty office desks receding to the horizon, muted grey and steel blue, flat overcast light, minimal and severe, no text, no people",
+        "alt": "an endless grid of empty desks seen from directly above"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "To the regulator",
+      "claim": "A leaner model for its *AI-driven growth strategy*",
+      "caveatLabel": "To the staff",
+      "caveat": "*Not* made to reduce costs or replace people with AI",
+      "evidence": "On Wednesday, the company said in an SEC filing that it will lay off about 20% of its workforce, or just over 600 employees, as part of a \"restructuring plan\" tied to its \"ongoing transformation of its product, marketing, and go-to-market strategy\" in support of \"a leaner, more focused operating model\" as it continues investing in its \"AI-driven growth strategy.\" Co-founder Eran Zinman told employees in a LinkedIn memo that the move \"was not made to reduce costs or replace people with AI,\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+        "date": "2026-07-25"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "a long dark boardroom table with two empty chairs facing each other from opposite ends, one hard overhead light, cold desaturated tones, deep shadow, cinematic, no text, no people",
+        "alt": "two empty chairs facing each other across a dark boardroom table"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "We entered a new era where AI is transforming the role of software, creating the greatest opportunity our industry has ever seen.",
+      "attribution": "Roy Mann and Eran Zinman, co-founders, in a letter to employees",
+      "evidence": "“We entered a new era where AI is transforming the role of software, creating the greatest opportunity our industry has ever seen,” Mann and Zinman wrote in the letter.",
+      "source": {
+        "name": "Calcalist",
+        "url": "https://www.calcalistech.com/ctechnews/article/udx1nmbdq",
+        "date": "2026-07-22"
+      },
+      "image": {
+        "kind": "photo",
+        "query": "empty conference room",
+        "alt": "an empty conference room with a long table and chairs"
+      }
+    },
+    {
+      "type": "content",
+      "title": "What that sentence cost",
+      "body": "About **620 people** worldwide. The founders called it the *most painful decision* since they started the company.",
+      "evidence": "In a letter sent to employees, co-founders Roy Mann and Eran Zinman said the company had made the “most painful decision” since its founding, reducing its workforce by about 620 employees worldwide.",
+      "source": {
+        "name": "Calcalist",
+        "url": "https://www.calcalistech.com/ctechnews/article/udx1nmbdq",
+        "date": "2026-07-22"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "a single empty office chair alone in a large dark empty room, one shaft of cold window light across a bare concrete floor, deep shadow, muted slate and indigo, cinematic, 35mm, no text, no people",
+        "alt": "a single empty office chair alone in a large dark room"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Send this to anyone whose company blamed *AI* for the cuts",
+      "sub": "AI news for people who do not work in AI.",
+      "image": {
+        "kind": "illustration",
+        "prompt": "abstract field of deep indigo and slate grey, soft diagonal light bands, fine film grain, minimal, no text, no people, no objects",
+        "alt": "an abstract field of indigo and slate light"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+      "accessed": "2026-07-26"
+    },
+    {
+      "name": "Calcalist",
+      "url": "https://www.calcalistech.com/ctechnews/article/udx1nmbdq",
+      "accessed": "2026-07-26"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/monday-com-layoffs-20-percent-ai-growth-strategy",
+      "accessed": "2026-07-26"
+    }
+  ]
+}
