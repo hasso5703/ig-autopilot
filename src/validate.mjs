@@ -279,6 +279,32 @@ export async function validatePost(post, opts = {}) {
   if (heroValue && headlineText.includes(heroValue))
     nag(`the hero value "${heroValue}" already appears in the headline. The hero carries the comparison the headline does not: quote a different figure, or drop it.`);
 
+  /*
+   * The send test, and it is the most important field in the file.
+   *
+   * The rubric asks how sendable a story is and the run scores itself, which
+   * means it can rate a medical-physics simulation SDK at 0.75 and nothing
+   * contradicts it. So the score now has to produce an artefact: the actual
+   * message a person would send with this post. Reading it back is the test, and
+   * a machine can do half of it — a message that needs the word "framework" or
+   * "inference" to make sense is a message nobody sends.
+   *
+   * Fatal, not advisory. Hasan's judgement on the published output was
+   * unambiguous: the pipeline works and the stories are not stories. This check
+   * runs before a single picture is fetched, so complying costs nothing but
+   * choosing better.
+   */
+  const sendTest = String(post.sendTest || "").trim();
+  if (!sendTest)
+    err('`sendTest` is missing. Write the one-line message someone would actually send a friend along with this post, in their words. If you cannot write it without wincing, the story is the wrong story.');
+  else {
+    if (sendTest.length > 160) err(`\`sendTest\` is ${sendTest.length} characters. Nobody types that in a DM. Under 160.`);
+    const INSIDER = /\b(framework|sdk|api|library|libraries|open[- ]sourc\w*|benchmark|inference|pipeline|parameters?|weights|repo|repository|toolkit|runtime|latency|throughput)\b/i;
+    const hit = sendTest.match(INSIDER);
+    if (hit)
+      err(`\`sendTest\` contains "${hit[0]}". That is an industry word, and a message that needs one is a message nobody sends. Either the story has a consequence you can say in plain words, or it is not a story.`);
+  }
+
   // ---- every slide carries a picture --------------------------------------
   for (const [i, s] of slides.entries()) {
     for (const issue of imageIssues(s, post)) err(`slide ${i + 1} (${s.type}) image: ${issue}`);

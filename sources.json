@@ -1,42 +1,136 @@
 {
   "_comment": "Every host here must ALSO be in the cloud environment's Allowed domains list, or fetches fail with HTTP 403 and x-deny-reason: host_not_allowed. The allowlisted flag records whether that has been done.",
-  "_verified": "2026-07-25 — every feed below was fetched live and parsed; item counts recorded in _note.",
-
+  "_verified": "2026-07-25 \u2014 every feed below was fetched live and parsed; item counts recorded in _note.",
   "tier1_primary": [
-    { "name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "weight": 1.0, "allowlisted": true,
-      "_note": "1050 items / 637 KB — full archive every fetch. Fine, but the largest download in the set." },
-    { "name": "Google AI", "url": "https://blog.google/technology/ai/rss/", "weight": 1.0, "allowlisted": true, "_note": "20 items" },
-    { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "weight": 1.0, "allowlisted": true, "_note": "100 items" },
-    { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "weight": 0.9, "allowlisted": true, "_note": "831 items" },
-    { "name": "NVIDIA Blog", "url": "https://blogs.nvidia.com/feed/", "weight": 0.8, "allowlisted": false, "_note": "18 items — needs blogs.nvidia.com allowlisted" },
-    { "name": "Microsoft Research", "url": "https://www.microsoft.com/en-us/research/feed/", "weight": 0.8, "allowlisted": false, "_note": "10 items — needs www.microsoft.com allowlisted" },
-    { "name": "arXiv cs.AI", "url": "https://export.arxiv.org/rss/cs.AI", "weight": 0.6, "allowlisted": true,
-      "_note": "Legitimately EMPTY on weekends — the feed declares <skipDays>Saturday,Sunday</skipDays>. Zero items on a Sat/Sun is correct behaviour, not a failure." }
-  ],
-
-  "tier2_press": [
-    { "name": "TechCrunch", "url": "https://techcrunch.com/feed/", "weight": 0.8, "allowlisted": true, "_note": "20 items" },
-    { "name": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "weight": 0.7, "allowlisted": true, "_note": "HTTP 403 from the cloud sandbox, HTTP 200 from a residential IP with the same user-agent. Was an allowlist block until 2026-07-25; now the domain resolves and the origin refuses. That is outlet-side blocking of datacenter addresses, not something the network policy can fix. Do not re-diagnose it as an allowlist problem." },
-    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 0.7, "allowlisted": true, "_note": "HTTP 403 from the cloud sandbox, HTTP 200 from a residential IP. Same cause as The Verge: datacenter-IP blocking at the origin." },
-    { "name": "VentureBeat", "url": "https://venturebeat.com/feed/", "weight": 0.6, "allowlisted": true, "_note": "7 items" },
-    { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/", "weight": 0.7, "allowlisted": true, "_note": "10 items" },
-    { "name": "Hacker News (250+ points)", "url": "https://hnrss.org/frontpage?points=250", "weight": 0.5, "allowlisted": true, "_note": "10 items" },
-    { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "weight": 0.6, "allowlisted": false, "_note": "30 items — needs simonwillison.net allowlisted" }
-  ],
-
-  "_removed": [
-    { "name": "Anthropic News", "reason": "No public RSS feed as of 2026-07-25. Checked and 404: /rss.xml, /news/rss.xml, /feed.xml, /news/feed.xml, /news/rss, /index.xml, /engineering/rss.xml; the news page declares no <link rel=alternate>. Anthropic stories still reach the pipeline via the press tier and via WebSearch. Do not re-add without verifying a live feed." }
-  ],
-
-  "scoring": {
-    "_comment": "Used to pick which story becomes a post. Sendability is weighted highest because DM shares are Instagram's strongest ranking signal in 2026.",
-    "weights": {
-      "sendability": 0.35,
-      "novelty": 0.25,
-      "magnitude": 0.20,
-      "visualisability": 0.10,
-      "sourceQuality": 0.10
+    {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "weight": 1.0,
+      "allowlisted": true,
+      "_note": "1050 items / 637 KB \u2014 full archive every fetch. Fine, but the largest download in the set."
     },
+    {
+      "name": "Google AI",
+      "url": "https://blog.google/technology/ai/rss/",
+      "weight": 1.0,
+      "allowlisted": true,
+      "_note": "20 items"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "weight": 1.0,
+      "allowlisted": true,
+      "_note": "100 items"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "weight": 0.9,
+      "allowlisted": true,
+      "_note": "831 items"
+    },
+    {
+      "name": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/feed/",
+      "weight": 0.8,
+      "allowlisted": false,
+      "_note": "18 items \u2014 needs blogs.nvidia.com allowlisted"
+    },
+    {
+      "name": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/feed/",
+      "weight": 0.8,
+      "allowlisted": false,
+      "_note": "10 items \u2014 needs www.microsoft.com allowlisted"
+    },
+    {
+      "name": "arXiv cs.AI",
+      "url": "https://export.arxiv.org/rss/cs.AI",
+      "weight": 0.6,
+      "allowlisted": true,
+      "_note": "Legitimately EMPTY on weekends \u2014 the feed declares <skipDays>Saturday,Sunday</skipDays>. Zero items on a Sat/Sun is correct behaviour, not a failure."
+    }
+  ],
+  "tier2_press": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "weight": 0.8,
+      "allowlisted": true,
+      "_note": "20 items"
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "weight": 0.7,
+      "allowlisted": true,
+      "_note": "HTTP 403 from the cloud sandbox, HTTP 200 from a residential IP with the same user-agent. Was an allowlist block until 2026-07-25; now the domain resolves and the origin refuses. That is outlet-side blocking of datacenter addresses, not something the network policy can fix. Do not re-diagnose it as an allowlist problem."
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "weight": 0.7,
+      "allowlisted": true,
+      "_note": "HTTP 403 from the cloud sandbox, HTTP 200 from a residential IP. Same cause as The Verge: datacenter-IP blocking at the origin."
+    },
+    {
+      "name": "VentureBeat",
+      "url": "https://venturebeat.com/feed/",
+      "weight": 0.6,
+      "allowlisted": true,
+      "_note": "7 items"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "weight": 0.7,
+      "allowlisted": true,
+      "_note": "10 items"
+    },
+    {
+      "name": "Hacker News (250+ points)",
+      "url": "https://hnrss.org/frontpage?points=250",
+      "weight": 0.5,
+      "allowlisted": true,
+      "_note": "10 items"
+    },
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "weight": 0.6,
+      "allowlisted": false,
+      "_note": "30 items \u2014 needs simonwillison.net allowlisted"
+    }
+  ],
+  "_removed": [
+    {
+      "name": "Anthropic News",
+      "reason": "No public RSS feed as of 2026-07-25. Checked and 404: /rss.xml, /news/rss.xml, /feed.xml, /news/feed.xml, /news/rss, /index.xml, /engineering/rss.xml; the news page declares no <link rel=alternate>. Anthropic stories still reach the pipeline via the press tier and via WebSearch. Do not re-add without verifying a live feed."
+    }
+  ],
+  "scoring": {
+    "_comment": "Rewritten 2026-07-26 because the old rubric picked an NVIDIA simulation SDK over the launch of Opus 5. It rewarded 'novelty', which an LLM reads as obscurity, and 'magnitude', which a 5-hours-to-2-minutes speedup satisfies perfectly. Both pushed the account toward developer tooling nobody outside the industry can recognise. What replaces them is weighted on whether a stranger knows what the subject IS, and on an artefact rather than a feeling: the run has to write the actual message someone would send with the post, and the gate reads it.",
+    "weights": {
+      "recognition": 0.3,
+      "sendability": 0.3,
+      "stakes": 0.2,
+      "timeliness": 0.1,
+      "sourceQuality": 0.1
+    },
+    "_criteria": {
+      "recognition": "Would someone who does not work in technology recognise the subject AND what happened to it, from the hook alone, with nothing explained? NVIDIA is recognised; 'Isaac medical physics simulation framework' is not. This is the criterion the account was failing.",
+      "sendability": "Not a feeling. Write the message someone would actually send with it, put it in the spec as `sendTest`, and read it back. If it needs a word like framework, SDK or inference, nobody sends it.",
+      "stakes": "Name the person it lands on in one sentence, without speculating. If you cannot, this is zero and the story is probably not one.",
+      "timeliness": "Is this what people are already talking about today? A new account has to enter conversations that exist, not invent new ones. This is the opposite of the old 'novelty'.",
+      "sourceQuality": "A lab's own announcement outranks coverage of it, provided the page can actually be fetched."
+    },
+    "_vetoes": [
+      "A release of developer tooling is not a story on its own: a framework, an SDK, a library, an API, model weights, a benchmark. It qualifies only when a REPORTED human consequence already exists.",
+      "A funding round or a valuation is not a story unless the money changes something a named person experiences.",
+      "A paper or preprint with nothing deployed is not a story.",
+      "Any story whose hook needs a definition to be understood is out, however large the number in it."
+    ],
     "minScore": 0.62
   }
 }

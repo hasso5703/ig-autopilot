@@ -157,7 +157,11 @@ export async function encode(dir, out, seconds, { silent = false, voice = null, 
       audioIn.push("-i", bed);
       const idx = audioIn.filter((a) => a === "-i").length;
       filter.push(
-        `[${idx}:a]aresample=48000,aformat=channel_layouts=stereo,apad,atrim=0:${d},volume=0.34,` +
+        // A pocket under the voice. The bed is already low-cut at 130 Hz in the file;
+        // this dips the band where speech actually lives, so the music can be
+        // present without competing for the same frequencies.
+        `[${idx}:a]aresample=48000,aformat=channel_layouts=stereo,apad,atrim=0:${d},` +
+          `equalizer=f=1600:t=q:w=1.3:g=-3.5,volume=0.30,` +
           `afade=t=in:st=0:d=${fade.toFixed(2)},afade=t=out:st=${(seconds - fade).toFixed(2)}:d=${fade.toFixed(2)}[bedraw]`
       );
       if (voice) {
@@ -299,7 +303,9 @@ export async function renderReel(postFile, outDir, opts = {}) {
   return {
     file: out,
     voice: vo ? { voice: vo.voice, seconds: +vo.duration.toFixed(2), lines: vo.segments.map((s) => s.text) } : null,
-    music: bed ? { file: bed.file, title: bed.title, creator: bed.creator, license: bed.license } : null,
+    music: bed
+      ? { file: bed.file, title: bed.title, creator: bed.creator, license: bed.license, attribution: bed.attribution }
+      : null,
     pictures: Object.fromEntries(Object.entries(pictures).map(([k, v]) => [k, v.generated ? "generated" : "photo"])),
     exposure: exposure.filter(Boolean),
     beats: beats.map((b) => ({

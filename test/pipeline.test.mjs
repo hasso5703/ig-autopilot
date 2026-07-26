@@ -34,6 +34,7 @@ const goodPost = () => ({
   caption: "A short caption with the figure 70 in it. AI-assisted.",
   captionEvidence: [{ url: "https://techcrunch.com/a", quote: "About 70 people turned up to the class, far more than the usual dozen." }],
   mood: "tension",
+  sendTest: "Librarians are running free classes on switching AI off, and 70 people turned up to one.",
   slides: [
     { type: "hook", headline: "Libraries now teach you to switch AI off", kicker: "25 July 2026", hero: { value: "70", label: "turned up" }, swipe: "Swipe",
       image: photo("public library interior") },
@@ -51,6 +52,17 @@ const drawn = (prompt) => ({ kind: "illustration", prompt, alt: "an illustration
 
 const errs = async (post) => (await validatePost(post, { online: false })).errors;
 const hasErr = (list, re) => list.some((e) => re.test(e));
+
+test("the send test is the story's own sendability, made checkable", async () => {
+  const p = goodPost();
+  delete p.sendTest;
+  assert.ok(hasErr(await errs(p), /`sendTest` is missing/));
+
+  // The exact failure this exists for: a story whose imagined DM needs an
+  // industry word. That post scored 0.81 on the old rubric and Hasan hated it.
+  p.sendTest = "NVIDIA open sourced a surgical robot simulation framework, 8,192 environments in parallel.";
+  assert.ok(hasErr(await errs(p), /industry word/));
+});
 
 test("an honest post passes — a gate that rejects everything is not a gate", async () => {
   const r = await validatePost(goodPost(), { online: false });

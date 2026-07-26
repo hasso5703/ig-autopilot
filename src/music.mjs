@@ -7,18 +7,31 @@
  * means baking a track into the MP4, which means a track we are certain we may
  * bake in.
  *
- * The beds are therefore CURATED AND COMMITTED, not searched per run. Four CC0
- * tracks live in `brand/audio/`, each trimmed, loudness-matched and listened to
- * once by a human. Searching fresh every day would put a sound nobody has ever
- * heard under a video nobody can un-publish, which is the audio version of the
- * mistake this project has already made twice with pictures.
+ * The beds are CURATED AND COMMITTED, not searched per run, and they are chosen
+ * by MEASUREMENT rather than by title. That distinction cost a published Reel.
  *
- * Licence policy is the images' policy: CC0 or public domain only. Not CC BY
- * for audio — an attribution obligation discharged in an Instagram caption that
- * gets truncated is not discharged.
+ * The first four were picked from Openverse by reading their names, which I said
+ * at the time was a guess. Hasan listened to the result and called it a horror
+ * soundtrack. He was right, and it is measurable: the bed that shipped had a
+ * spectral centroid of 498 Hz. That is sub-bass rumble, and it does two bad
+ * things at once — it reads as dread, and it sits directly under the fundamentals
+ * of speech (300-3400 Hz) so it muddies the voice it is supposed to support.
+ * Openverse's CC0 audio is a sound-effects library; its whole music pool measured
+ * between 480 and 580 Hz.
+ *
+ * These four are Kevin MacLeod's, from incompetech.com, and every one was
+ * measured before it was committed: centroid between 1.2 and 4.5 kHz, an audible
+ * pulse, low-cut at 130 Hz so nothing competes with the narration. `node
+ * src/music.mjs measure` re-checks them, so the next person to swap a bed can
+ * check the claim instead of trusting the filename.
+ *
+ * Licence: CC BY 4.0, which is an obligation, not a formality. Every bed carries
+ * its `attribution` string, `reel.mjs` prints it with the finished file, and the
+ * manual requires it in the Reel's caption. Attribution we do not print is
+ * attribution we have not given.
  *
  *   node src/music.mjs list
- *   node src/music.mjs curate "dark ambient drone" 4     # dev-time, then listen
+ *   node src/music.mjs measure     # the centroid of every committed bed
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -48,86 +61,42 @@ export async function beds() {
 export async function pickBed(mood = "tension") {
   const all = await beds();
   if (!all.length) return null;
-  const hit = all.find((b) => b.mood === mood) || all[0];
+  const hit = all.find((b) => b.mood === mood) || all.find((b) => b.mood === "steady") || all[0];
   return { ...hit, path: path.join(AUDIO_DIR, hit.file) };
 }
 
-export const MOODS = ["tension", "wonder", "drive", "calm"];
+export const MOODS = ["steady", "tension", "drive", "wonder"];
 
 /* ------------------------------------------------------------------ *
  * Curation (run by a human, not by the routine)
  * ------------------------------------------------------------------ */
 
-async function curate(query, want = 4, mood = "tension") {
-  const u = new URL("https://api.openverse.org/v1/audio/");
-  u.searchParams.set("q", query);
-  u.searchParams.set("license", "cc0");
-  u.searchParams.set("page_size", "12");
-  const res = await fetch(u, { headers: { "User-Agent": UA } });
-  if (!res.ok) throw new Error(`openverse audio -> HTTP ${res.status}`);
-  const { results = [] } = await res.json();
-
-  await mkdir(AUDIO_DIR, { recursive: true });
-  const sheet = await beds();
-
-  let added = 0;
-  for (const r of results) {
-    if (added >= want) break;
-    const seconds = (r.duration || 0) / 1000;
-    if (seconds < 35 || seconds > 420) continue;
-    if (String(r.license).toLowerCase() !== "cc0") continue;
-    if (!r.url) continue;
-
-    const id = `${mood}-${r.id.slice(0, 8)}`;
-    if (sheet.some((b) => b.id === id)) continue;
-
-    const raw = path.join(AUDIO_DIR, `.${id}.dl`);
-    const out = `${id}.mp3`;
-    const audio = await fetch(r.url, { headers: { "User-Agent": UA } });
-    if (!audio.ok) continue;
-    await writeFile(raw, Buffer.from(await audio.arrayBuffer()));
-
-    /*
-     * 75 seconds is longer than the longest Reel we may publish, so a bed never
-     * has to loop. Loudness-normalised to -23 LUFS because it plays UNDER a
-     * voice: the mix in reel.mjs ducks it further, and starting from a known
-     * loudness is what stops one track sitting twice as loud as another.
-     */
-    await ffmpeg([
-      "-y", "-i", raw, "-t", "75",
-      "-af", "loudnorm=I=-23:TP=-2:LRA=11,afade=t=in:st=0:d=1.5,afade=t=out:st=73:d=2",
-      "-ac", "2", "-ar", "48000", "-b:a", "96k",
-      path.join(AUDIO_DIR, out),
+/**
+ * Re-measure what is committed. The point is that a bed's suitability is a
+ * number, not an opinion about its name: centroid tells you whether it will read
+ * as dread and whether it will fight the voice.
+ */
+async function measure() {
+  for (const b of await beds()) {
+    const file = path.join(AUDIO_DIR, b.file);
+    const { stdout } = await ffmpeg([
+      "-i", file, "-ss", "10", "-t", "20",
+      "-af", "aspectralstats=measure=centroid,ametadata=print:key=lavfi.aspectralstats.1.centroid:file=-",
+      "-f", "null", "-",
     ]);
-    await ffmpeg(["-y", "-i", raw, "-t", "0.1", "-f", "null", "-"]).catch(() => {});
-
-    sheet.push({
-      id,
-      file: out,
-      mood,
-      title: r.title || "",
-      creator: r.creator || "",
-      license: "cc0",
-      sourceUrl: r.foreign_landing_url || r.url,
-      provider: r.provider || "",
-      seconds: 75,
-    });
-    added++;
-    console.log(`added ${out}  ${r.title} — ${r.creator} (CC0)`);
+    const vals = String(stdout).split("\n").filter((l) => l.includes("centroid=")).map((l) => Number(l.split("=")[1]));
+    const mean = vals.length ? Math.round(vals.reduce((a, c) => a + c, 0) / vals.length) : 0;
+    const verdict = mean < 1000 ? "TOO DARK — reads as dread and masks the voice" : mean > 5000 ? "thin" : "in the editorial band";
+    console.log(`${b.mood.padEnd(8)} ${String(mean).padStart(5)} Hz  ${verdict}  (${b.title} — ${b.creator})`);
   }
-
-  await writeFile(SHEET, JSON.stringify(sheet, null, 2) + "\n");
-  console.log(`${sheet.length} bed(s) in ${path.relative(ROOT, SHEET)}`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(path.basename(process.argv[1]))) {
   const [cmd, ...rest] = process.argv.slice(2);
-  if (cmd === "curate") {
-    const moodIdx = rest.indexOf("--mood");
-    const mood = moodIdx >= 0 ? rest[moodIdx + 1] : "tension";
-    const args = rest.filter((a, i) => i !== moodIdx && i !== moodIdx + 1);
-    await curate(args[0] || "ambient", Number(args[1] || 2), mood);
+  if (cmd === "measure") {
+    await measure();
   } else {
-    for (const b of await beds()) console.log(`${b.mood.padEnd(8)} ${b.file.padEnd(24)} ${b.title.slice(0, 44)} — ${b.creator} (${b.license})`);
+      for (const b of await beds())
+      console.log(`${b.mood.padEnd(8)} ${b.file.padEnd(14)} ${b.title.padEnd(20)} ${b.creator} (${b.license})\n         ${b.why}\n         ${b.attribution}`);
   }
 }

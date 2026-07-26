@@ -291,18 +291,58 @@ Swipe-through is not measurable: the `navigation` metric is refused for feed
 carousels. Do not claim a swipe rate, and do not infer one from `views`.
 
 ### 3. Score and pick one
+
+**This step is where the account gets good or stays invisible, and it is where it
+has failed hardest so far.** On 2026-07-26 the pipeline worked end to end and
+published a story about an open-source medical-physics simulation framework. It
+scored 0.81. Hasan's verdict: *"on s'en bat les couilles, c'est pas une info"*.
+He was right, and the rubric was the reason — it rewarded "novelty", which reads
+as obscurity, and "magnitude", which a five-hours-to-two-minutes speedup
+satisfies perfectly. The stories it passed over were the launch of Opus 5, an
+OpenAI model going off the rails, and a defence-AI company raising at $100B.
+
 Rank the fresh items against `sources.json → scoring.weights`:
 
 | Signal | What you are judging |
 |---|---|
-| **sendability** (0.35) | Would a reader send this to a friend in DMs? DM shares are Instagram's heaviest ranking signal. Surprise, stakes and "you need to see this" beat completeness. |
-| **novelty** (0.25) | Is this actually new, or a rewrite of last week? |
-| **magnitude** (0.20) | Does it change something by a factor, not a percent? That is the account's name and its editorial line. |
-| **visualisability** (0.10) | Can it be told in 5 slides without a chart? |
-| **sourceQuality** (0.10) | A lab's own announcement outranks coverage of it. |
+| **recognition** (0.30) | Would someone who does not work in technology recognise the subject **and what happened to it**, from the hook alone, with nothing explained? This is the criterion the account was failing. |
+| **sendability** (0.30) | Not a feeling. Write the message someone would actually send with it. See below. |
+| **stakes** (0.20) | Name the person it lands on, in one sentence, without speculating. If you cannot, this is zero. |
+| **timeliness** (0.10) | Is this what people are already talking about **today**? A new account has to enter conversations that exist. This is the opposite of the old "novelty" and it points the other way. |
+| **sourceQuality** (0.10) | A lab's own announcement outranks coverage of it, provided the page can be fetched. |
+
+**The vetoes. These are not weights, they are refusals.**
+
+1. **A release of developer tooling is not a story on its own** — a framework, an
+   SDK, a library, an API, model weights, a benchmark. It qualifies only when a
+   *reported* human consequence already exists.
+2. **A funding round or a valuation is not a story** unless the money changes
+   something a named person experiences.
+3. **A paper or preprint with nothing deployed is not a story.**
+4. **Any story whose hook needs a definition is out**, however large its numbers.
+
+**The send test, and the gate reads it.** Write, into the post spec, the message
+a person would actually send a friend along with this:
+
+```jsonc
+"sendTest": "A pastor asked ChatGPT about his symptoms and it told him to stay home. He nearly died."
+```
+
+Under 160 characters, in their words, not ours. `validate.mjs` **refuses a post
+without it**, and refuses one containing an industry word — framework, SDK, API,
+inference, benchmark, open-source, parameters, latency. A message that needs one
+of those is a message nobody sends, and if the story cannot survive being
+described in plain words then the score you gave its sendability was a story you
+told yourself.
+
+Write it **before** you score, for the top two or three candidates, and put both
+in your report. Comparing two of those lines side by side is the most honest
+minute in the run.
 
 Discard anything below `minScore`. If nothing clears the bar, **stop and publish
-nothing** — record what you saw and say so in your summary.
+nothing** — record what you saw and say so. An empty slot costs one Reel. A slot
+spent on something nobody cares about teaches the ranking system that this
+account posts filler, and that is expensive and slow to undo.
 
 ### 4. Read the primary source
 Use WebFetch on the actual article, and on at least one **independent** second
@@ -802,19 +842,31 @@ node src/reel.mjs posts/<slug>.json media/<slug>
   voice. Never add music from anywhere else: Instagram's library is unreachable
   by API and everything else is a licensing problem.
 
-  **You choose it, per story, with `"mood"` at the top level of the post.** This
-  is an editorial decision, not a default, and it is the one place in the post
-  where you are setting how the story feels before a word is read:
+  **You choose it, per story, with `"mood"` at the top level of the post.** Four
+  beds, all Kevin MacLeod, all CC BY 4.0, all *measured* before being committed:
 
-  | `mood` | Use it when the story is | Sounds like |
+  | `mood` | Use it when the story is | Track |
   |---|---|---|
-  | `tension` | something broke, is at risk, or is being fought over | a low held drone, unresolved |
-  | `wonder` | something became possible that was not | open, airy, slower |
-  | `drive` | something is moving fast, scaling, or being adopted | rhythmic, forward |
+  | `steady` | the default, when nothing else fits | Ethernight Club |
+  | `tension` | something broke, is at risk, or is being fought over | Volatile Reaction |
+  | `drive` | something is moving fast, scaling, being adopted | Newer Wave |
+  | `wonder` | something became possible that was not | Digital Lemonade |
 
-  Pick the one that matches what the story *does*, not the subject it is about:
-  a funding round that threatens a market is `tension`, not `drive`. Run
-  `node src/music.mjs list` to see what is actually available.
+  Pick from what the story *does*, not what it is about: a funding round that
+  threatens a market is `tension`, not `drive`.
+
+  **Why they were replaced.** The first set was chosen by reading track titles.
+  The bed that shipped measured a spectral centroid of **498 Hz** — sub-bass
+  rumble, which reads as dread and sits directly under the fundamentals of
+  speech, so it muddied the voice it was meant to support. Hasan listened and
+  called it a horror soundtrack. Every bed is now between 1.3 and 4 kHz, low-cut
+  at 130 Hz, with a dip at 1.6 kHz in the mix so the narration has a pocket.
+  `node src/music.mjs measure` re-checks the claim; do not swap a bed without
+  running it.
+
+  **CC BY is an obligation.** `reel.mjs` prints the required credit with the
+  finished file. **Put that line in the Reel's caption, verbatim**, above the
+  hashtags. Attribution we do not print is attribution we have not given.
 - **The pictures from step 5c**, with a slow push in on each.
 
 If narration fails, the Reel is still made, silently, and the failure is printed
