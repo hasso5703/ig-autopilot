@@ -243,6 +243,15 @@ passes with no gather, whatever any report claimed. Do not write it by hand.
 at weekends, and the labs do not publish daily, which is why primary sources get
 a four-day window and the press keeps 36 hours.
 
+**openai.com article pages return HTTP 403 from this sandbox, and it is not our
+user-agent.** Tested 2026-07-26 with both the pipeline's agent and a normal
+Safari string: 403 either way, so it is an edge block on datacenter addresses.
+The consequence matters more than the cause: **the OpenAI feed still delivers
+titles, and the gate can never verify a quote from an openai.com page.** So an
+OpenAI announcement is publishable only if a reachable second outlet carries the
+sentence you need. Check that before you research it, not after — a run lost its
+best story of the day to this, having already written the claim.
+
 **The Verge and Ars Technica return HTTP 403 from this sandbox and will keep
 doing so.** They resolve fine and answer 200 from a residential address with the
 identical user-agent; the origins block datacenter IPs. This was an allowlist
