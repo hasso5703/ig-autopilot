@@ -55,7 +55,7 @@
       "figure": "8-10",
       "unit": "more episodes before it was serious",
       "body": "He told it he was dizzy, with his blood pressure swinging. The suit says it told him to stay *recliner bound* until he had **8-10 more**.",
-      "narration": "He told it he was dizzy, with his blood pressure swinging. The suit says it told him to stay recliner bound until he had eight to ten more episodes.",
+      "narration": "The suit says it told him to stay recliner bound until he had eight to ten more episodes.",
       "evidence": "The suit says it urged him to stay “recliner-bound” until he had “8-10 more” episodes.",
       "source": { "name": "The Next Web", "url": "https://thenextweb.com/news/openai-chatgpt-medical-advice-lawsuit-winters-pulmonary-embolism", "date": "2026-07-23" },
       "image": {
@@ -84,6 +84,7 @@
       "claim": "ChatGPT is not a doctor and should never be used as a substitute for medical care.",
       "caveatLabel": "What it did next",
       "caveat": "One day after the suit was filed, it began connecting ChatGPT to people's medical records.",
+      "narration": "One day after the suit was filed, it began connecting ChatGPT to people's medical records.",
       "evidence": "OpenAI is expanding its healthcare footprint by encouraging users to connect Apple Health data and supported medical records to ChatGPT - one day after a user sued the company, alleging the chatbot's medical advice nearly killed him.",
       "source": { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/24/chatgpt-wants-access-to-your-health-records-so-it-can-be-a-better-not-doctor/5278430", "date": "2026-07-24" },
       "image": {
