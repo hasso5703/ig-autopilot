@@ -186,7 +186,12 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
        font-weight:700;font-size:22px;letter-spacing:.1em;text-transform:uppercase;
        color:rgba(255,255,255,.82);white-space:nowrap;
        text-shadow:0 2px 16px rgba(0,0,0,.8),0 0 3px rgba(0,0,0,.6)}
-.topbar .idx{color:${c.accent}}
+/* The index sat in the accent colour over a blue-lit server rack and vanished.
+   Nothing was lost but the page number, and it is the same family as the slide
+   that shipped its point invisible: accent on a surface the accent matches. A
+   shadow costs nothing and works over any picture. */
+.topbar .idx{color:${c.accent};text-shadow:0 2px 10px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.7)}
+.topbar span:last-child{text-shadow:0 2px 10px rgba(0,0,0,.75)}
 
 /* The source line used to print the full URL, which cost two lines and 200px of
    canvas to render something nobody can read or click. The domain and the date

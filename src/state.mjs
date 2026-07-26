@@ -184,6 +184,25 @@ export async function recordSeen(entries) {
 }
 
 export async function recordPosted(entry) {
+  /*
+   * Refuse a record that cannot recognise its own story.
+   *
+   * A run passed the wrong field names and the fingerprint came out as the
+   * string "undefin" — the first seven characters of "undefined". It caught it
+   * by eye on the echoed line. Had it not, `filterFresh` would never have
+   * matched this story again and the next run would have been free to publish
+   * it a second time, to the same audience, as new.
+   *
+   * The fingerprint is derived from the title, so a missing title is not a
+   * cosmetic omission: it is a record that silently opts out of deduplication.
+   */
+  if (!entry?.slug) throw new Error("recordPosted: `slug` is required");
+  if (!String(entry.title || "").trim())
+    throw new Error(
+      "recordPosted: `title` is required — the fingerprint and tokens are derived from it, and without them this story is invisible to filterFresh and can be republished as new. Pass { slug, mediaId, permalink, url, title, source }."
+    );
+  if (!String(entry.url || "").trim()) throw new Error("recordPosted: `url` is required (the story's source page)");
+
   await mkdir(DIR, { recursive: true });
   const line = JSON.stringify({
     at: new Date().toISOString(),

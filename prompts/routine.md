@@ -203,6 +203,14 @@ pictures are normalised with it, and the narration is assembled with it. Install
 it at the top so a missing package fails the run in ten seconds rather than
 after the story has been researched, written and gated.
 
+**A run that starts outside 06:00, 10:00, 15:00 or 19:00 UTC is probably a human
+launching it by hand**, which happens whenever something has just been fixed and
+is worth testing before the next slot. It is not a misfire, and the gap guard is
+still the thing that decides whether you may publish. Report the off-slot start
+so it is visible, then carry on. What *would* be a misfire is two runs starting
+within a few minutes of each other; the guard catches that only if one has
+already published, so if you see it, say so loudly rather than assuming.
+
 `npm install` is here rather than left to the environment's setup script on
 purpose. A fresh clone has no `node_modules`, `src/render.mjs` needs Playwright,
 and Node's ESM resolver **ignores `NODE_PATH`** — so a globally installed copy is

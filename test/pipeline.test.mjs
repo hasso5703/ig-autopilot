@@ -13,7 +13,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 
 import { validatePost, claimOverlap, hookIssues, imageIssues } from "../src/validate.mjs";
-import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS } from "../src/state.mjs";
+import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted } from "../src/state.mjs";
 import { shorten, splitFigure, buildTimeline, totalDuration, applyNarrationTiming } from "../src/reel-template.mjs";
 import { queryLadder, scoreCandidate, creditLine } from "../src/imagery.mjs";
 import { complianceIssues } from "../src/reel.mjs";
@@ -605,4 +605,17 @@ test("the hero may not repeat a figure the headline already carries", async () =
   p.slides[0].hero = { value: "30", label: "was the cap on sign-ups" };
   const clean = await validatePost(p, { online: false });
   assert.ok(!clean.warnings.some((w) => /already appears in the headline/.test(w)));
+});
+
+// ---------------------------------------------------------------------------
+// 2026-07-26: a run passed the wrong field names to recordPosted and the
+// fingerprint came out "undefin" — the first seven characters of "undefined".
+// It caught that by eye. Had it not, filterFresh would never have matched the
+// story again and a later run could have republished it, to the same audience,
+// as new.
+// ---------------------------------------------------------------------------
+test("a posted record that cannot recognise its own story is refused", async () => {
+  await assert.rejects(() => recordPosted({ slug: "x", mediaId: "1", url: "https://a.com/x" }), /`title` is required/);
+  await assert.rejects(() => recordPosted({ slug: "x", mediaId: "1", title: "T" }), /`url` is required/);
+  await assert.rejects(() => recordPosted({ mediaId: "1", title: "T", url: "https://a.com/x" }), /`slug` is required/);
 });

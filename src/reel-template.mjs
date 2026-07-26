@@ -574,7 +574,12 @@ window.render = function (t) {
     // including through its fade, so the movement does not visibly start.
     const kb = el.querySelector('.bg');
     if (kb && u > -0.5 && u < d + 0.5) {
-      kb.style.transform = 'scale(' + (1.02 + 0.08 * Math.min(1, Math.max(0, u / d))).toFixed(4) + ')';
+      // The push-in is proportional to how long the beat holds. A 7-second beat
+      // moving the same 8% as a 3-second one is a still photograph for seven
+      // seconds, which is where a run predicted it would lose viewers. Longer
+      // beat, further travel, same perceived speed.
+      var travel = Math.min(0.16, 0.05 + 0.018 * d);
+      kb.style.transform = 'scale(' + (1.02 + travel * Math.min(1, Math.max(0, u / d))).toFixed(4) + ')';
     }
 
     // The follow badge breathes while the closing beat is up. Motion draws the
