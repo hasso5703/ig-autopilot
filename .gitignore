@@ -20,3 +20,8 @@ scratch/
 # ARE committed; the sources behind them are cache, and their provenance is
 # recorded in media/<slug>/imagery.json, which is committed.
 media/*/src/
+
+# The narration track, for the same reason. reel.mjs muxes it into reel.mp4,
+# which IS committed and is the file Meta fetches; the loose wav is a 2.5 MB
+# intermediate that any run regenerates from the post's own narration text.
+media/*/voice.wav
