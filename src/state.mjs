@@ -259,34 +259,45 @@ export async function publishGap() {
 }
 
 /**
- * What has already gone out today, UTC.
+ * Whether this run owes a carousel, and what has gone out lately.
  *
  * Four runs a day each publish one Reel; the carousel exists for the profile
- * grid, which a Reel viewer sees when they tap through, and one a day is
- * enough. A run has no memory of its siblings, so it asks this instead of
- * guessing from the clock.
+ * grid a Reel viewer taps through to, and one is enough. A run has no memory of
+ * its siblings, so it asks this rather than guessing.
+ *
+ * A ROLLING WINDOW, not a calendar day, and the difference is not academic. The
+ * first version counted carousels since midnight UTC. A carousel published at
+ * 23:54:52 UTC therefore belonged to yesterday, and the run six hours later was
+ * told the grid was empty and owed a second one — reasoning honestly from an
+ * arbitrary boundary. Hours since the last carousel cannot be gamed by where a
+ * clock happens to fall.
  */
-export async function postedToday(now = new Date()) {
+export const CAROUSEL_EVERY_HOURS = 20;
+
+const isReel = (p) => /-reel\b/.test(p.slug || "");
+
+export async function carouselDue(now = new Date()) {
   const { posted } = await loadState();
-  const day = now.toISOString().slice(0, 10);
-  const today = posted.filter((p) => String(p.at || "").slice(0, 10) === day);
-  const isReel = (p) => /-reel\b/.test(p.slug || "");
+  const last = posted.filter((p) => !isReel(p)).at(-1);
+  const hours = last ? (now - new Date(last.at)) / 3600000 : null;
+  const since24 = posted.filter((p) => now - new Date(p.at) < 24 * 3600000);
   return {
-    day,
-    reels: today.filter(isReel).length,
-    carousels: today.filter((p) => !isReel(p)).length,
-    slugs: today.map((p) => p.slug),
+    due: hours === null || hours >= CAROUSEL_EVERY_HOURS,
+    hoursSinceCarousel: hours === null ? null : Math.round(hours * 10) / 10,
+    every: CAROUSEL_EVERY_HOURS,
+    lastCarousel: last ? { at: last.at, slug: last.slug } : null,
+    last24h: { reels: since24.filter(isReel).length, carousels: since24.filter((p) => !isReel(p)).length },
   };
 }
 
 if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
   if (process.argv[2] === "today") {
-    const t = await postedToday();
+    const t = await carouselDue();
     console.log(JSON.stringify(t, null, 2));
     console.error(
-      t.carousels
-        ? `\nA carousel already went out today (${t.carousels}). This run is a Reel only.`
-        : "\nNo carousel yet today. This run publishes the carousel as well as the Reel."
+      t.due
+        ? `\nThis run OWES A CAROUSEL: the last one was ${t.hoursSinceCarousel === null ? "never" : t.hoursSinceCarousel + "h"} ago and the grid wants one every ${t.every}h.`
+        : `\nReel only. A carousel went out ${t.hoursSinceCarousel}h ago, inside the ${t.every}h window.`
     );
   } else if (process.argv[2] === "guard") {
     const g = await publishGap();

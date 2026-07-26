@@ -33,15 +33,19 @@ video.** The surface works; the length does not. A Reel nobody finishes teaches
 the ranking system to stop showing it. Target **15 to 25 seconds**, four beats,
 and a first two seconds that earn the next two.
 
-**The carousel still gets made, once a day, on the first run that finds none
-already posted:**
+**The carousel still gets made, roughly once a day, by whichever run finds the
+grid overdue:**
 
 ```bash
 node src/state.mjs today
 ```
 
-It prints what has gone out since midnight UTC and says plainly whether this run
-owes a carousel. The carousel is not for reach. It is what a stranger sees when
+It reports the hours since the last carousel and says plainly whether this run
+owes one. It is a **rolling twenty-hour window, not a calendar day**, because a
+calendar day has an edge: the first version counted since midnight UTC, a
+carousel went out at 23:54:52, and the run six hours later was duly told the
+grid was empty and owed another. Reasoning honestly from an arbitrary boundary
+is still the wrong answer. The carousel is not for reach. It is what a stranger sees when
 a Reel makes them tap the profile, and an empty grid loses the follow that the
 Reel just earned.
 

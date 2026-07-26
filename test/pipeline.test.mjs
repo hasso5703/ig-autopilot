@@ -13,7 +13,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 
 import { validatePost, claimOverlap, hookIssues, imageIssues } from "../src/validate.mjs";
-import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS } from "../src/state.mjs";
+import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS } from "../src/state.mjs";
 import { shorten, splitFigure, buildTimeline, totalDuration, applyNarrationTiming } from "../src/reel-template.mjs";
 import { queryLadder, scoreCandidate, creditLine } from "../src/imagery.mjs";
 import { complianceIssues } from "../src/reel.mjs";
@@ -556,4 +556,19 @@ test("the closing slide has to ask for something a stranger can do", async () =>
 
   p.slides.at(-1).sub = "Send this to anyone who turns off their phone's AI.";
   assert.ok(!hasErr(await errs(p), /asks for nothing/));
+});
+
+// ---------------------------------------------------------------------------
+// 2026-07-26: a carousel published at 23:54:52 UTC belonged to "yesterday", so
+// the run six hours later was told the grid was empty and owed a second one.
+// The code was right and the rule was arbitrary. Hasan spotted it in a live
+// run's own words: "no carousel yet today — so this run owes both."
+// ---------------------------------------------------------------------------
+test("the carousel window is rolling, not a calendar day", async () => {
+  const justBeforeMidnight = new Date("2026-07-25T23:54:52Z");
+  const sixHoursLater = new Date("2026-07-26T06:00:00Z");
+  const hours = (sixHoursLater - justBeforeMidnight) / 3600000;
+  assert.ok(hours < CAROUSEL_EVERY_HOURS, "six hours is inside the window");
+  // and a full day later it is due again
+  assert.ok((new Date("2026-07-26T20:30:00Z") - justBeforeMidnight) / 3600000 >= CAROUSEL_EVERY_HOURS);
 });
