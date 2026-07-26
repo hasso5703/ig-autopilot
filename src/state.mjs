@@ -213,7 +213,23 @@ export async function recordPosted(entry) {
  * while making the accidental double-post impossible. A manual re-run to test
  * the pipeline is exactly the situation that trips this, which is the point.
  */
-export const MIN_GAP_HOURS = 6;
+/*
+ * Two hours, not six.
+ *
+ * Six was right for one post a day. On 2026-07-26 the account's first measured
+ * numbers arrived and settled the strategy: the carousel got **zero views**, and
+ * the Reel got 168 from an audience that was 100% non-followers, 89.9% of it
+ * from the Reels tab. Reels are the only surface where strangers exist, so the
+ * cadence became four runs a day, one Reel each.
+ *
+ * The six-hour gap was already the binding constraint before anyone chose that:
+ * the first live run published its carousel and its Reel and was then blocked
+ * from a second story by its own guard. The guard is still here and still worth
+ * having — it is what stopped two carousels going out forty minutes apart — but
+ * it now measures the distance between scheduled runs (four to five hours) with
+ * margin, rather than forbidding the cadence outright.
+ */
+export const MIN_GAP_HOURS = 2;
 
 /**
  * The deliberate override, for when a human wants a second post the same day.
@@ -242,8 +258,37 @@ export async function publishGap() {
   };
 }
 
+/**
+ * What has already gone out today, UTC.
+ *
+ * Four runs a day each publish one Reel; the carousel exists for the profile
+ * grid, which a Reel viewer sees when they tap through, and one a day is
+ * enough. A run has no memory of its siblings, so it asks this instead of
+ * guessing from the clock.
+ */
+export async function postedToday(now = new Date()) {
+  const { posted } = await loadState();
+  const day = now.toISOString().slice(0, 10);
+  const today = posted.filter((p) => String(p.at || "").slice(0, 10) === day);
+  const isReel = (p) => /-reel\b/.test(p.slug || "");
+  return {
+    day,
+    reels: today.filter(isReel).length,
+    carousels: today.filter((p) => !isReel(p)).length,
+    slugs: today.map((p) => p.slug),
+  };
+}
+
 if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
-  if (process.argv[2] === "guard") {
+  if (process.argv[2] === "today") {
+    const t = await postedToday();
+    console.log(JSON.stringify(t, null, 2));
+    console.error(
+      t.carousels
+        ? `\nA carousel already went out today (${t.carousels}). This run is a Reel only.`
+        : "\nNo carousel yet today. This run publishes the carousel as well as the Reel."
+    );
+  } else if (process.argv[2] === "guard") {
     const g = await publishGap();
     console.log(JSON.stringify(g, null, 2));
     if (!g.ok) {

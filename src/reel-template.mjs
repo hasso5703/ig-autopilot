@@ -177,7 +177,7 @@ function defaultNarration(b) {
  * say, plus a held moment, and the pad is handed back so the audio can be
  * padded by the identical amount and stay in sync to the frame.
  */
-export function applyNarrationTiming(beats, segments, { pad = 0.55, min = 2.2, long = 7.5 } = {}) {
+export function applyNarrationTiming(beats, segments, { pad = 0.55, min = 2.2, long = 6 } = {}) {
   return beats.map((b, i) => {
     const spoken = segments[i]?.seconds ?? 0;
     // No upper clamp, deliberately. Capping the picture at 7.5s while the voice
@@ -215,18 +215,18 @@ export function buildTimeline(post) {
         };
         break;
       case "stat":
-        b = { type: "stat", figure: s.figure ?? "", unit: s.unit ?? "", body: shorten(s.body, 12), source: s.source?.name };
+        b = { type: "stat", figure: s.figure ?? "", unit: s.unit ?? "", body: shorten(s.body, 9), source: s.source?.name };
         break;
       case "quote":
-        b = { type: "quote", body: shorten(s.body, 20), attribution: s.attribution ?? "", source: s.source?.name };
+        b = { type: "quote", body: shorten(s.body, 14), attribution: s.attribution ?? "", source: s.source?.name };
         break;
       case "contrast":
         b = {
           type: "contrast",
           claimLabel: s.claimLabel ?? "Claimed",
-          claim: shorten(s.claim, 10),
+          claim: shorten(s.claim, 8),
           caveatLabel: s.caveatLabel ?? "In fact",
-          caveat: shorten(s.caveat, 10),
+          caveat: shorten(s.caveat, 8),
           source: s.source?.name,
         };
         break;
@@ -234,7 +234,7 @@ export function buildTimeline(post) {
         b = { type: "end", headline: s.headline ?? "", sub: s.sub ?? "" };
         break;
       default:
-        b = { type: "line", title: s.title ?? "", body: shorten(s.body, 16), source: s.source?.name };
+        b = { type: "line", title: s.title ?? "", body: shorten(s.body, 11), source: s.source?.name };
     }
     b.words = wordCount(b.headline, b.kicker, b.body, b.title, b.unit, b.claim, b.caveat, b.sub, b.attribution);
     b.duration = beatDuration(b.words, b.type);
@@ -275,7 +275,17 @@ export function buildTimeline(post) {
  * most send-worthy beat there is. A `quote` gives a human voice. Plain `line`
  * beats go first, because they are the ones the carousel tells better.
  */
-const MAX_BEATS = 5;
+/*
+ * Four, not five.
+ *
+ * The account's first measured Reel: 168 views, 100% non-followers, 89.9% of
+ * them from the Reels tab — and an average watch time of SIX SECONDS on a
+ * 33-second video, with 59.7% of viewers skipping it. The surface works. The
+ * length does not. A Reel that nobody finishes teaches the ranking system to
+ * stop showing it, so the target is now 15 to 25 seconds, which means four
+ * beats and less text in each.
+ */
+const MAX_BEATS = 4;
 const KEEP_ORDER = ["line", "quote", "contrast", "stat"];
 
 function select(beats) {
