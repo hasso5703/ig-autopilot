@@ -140,8 +140,12 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
   background:linear-gradient(180deg,rgba(8,8,12,0) 0%,rgba(8,8,12,.3) 34%,rgba(8,8,12,.72) 66%,${c.bg} 97%)}
 .scrim.topfade{top:0;height:30%;background:linear-gradient(180deg,rgba(8,8,12,.78) 0%,rgba(8,8,12,0) 100%)}
 .scrim.veil{inset:0;height:100%;background:rgba(8,8,12,.3)}
-.scrim.seam{top:${TOP_IMAGE_H - 190}px;height:190px;
-  background:linear-gradient(180deg,rgba(8,8,12,0) 0%,${c.bg} 100%)}
+/* The title of a top-picture layout starts 96px above the picture's edge, so it lands
+   on whatever the photograph is doing there. A run reported the result as
+   straddling the boundary and reading awkwardly. A deeper, earlier gradient
+   gives the overlap a surface to sit on instead of a seam to cross. */
+.scrim.seam{top:${TOP_IMAGE_H - 300}px;height:300px;
+  background:linear-gradient(180deg,rgba(8,8,12,0) 0%,rgba(8,8,12,.55) 45%,${c.bg} 100%)}
 /* No picture: an abstract field rather than flat black, so a failed acquisition
    still looks deliberate. */
 .field-fallback{position:absolute;inset:0;z-index:0;
@@ -211,8 +215,11 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 
 /* ---------- hook ---------- */
 .hook .inner{justify-content:flex-end}
+/* Legible over mist, not merely present in it. A run called this "low-contrast
+   over the mist, legible but not crisp" and it was being kind. */
 .hook .kicker{font-weight:700;font-size:24px;letter-spacing:.26em;text-transform:uppercase;
-              color:${c.accent};margin-bottom:26px}
+              color:${c.accent};margin-bottom:26px;
+              text-shadow:0 2px 14px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.7)}
 .hook h1{margin-bottom:30px}
 .hook .heroWrap{display:flex;align-items:center;gap:24px;margin-bottom:30px;
                 border-left:9px solid ${c.accent};padding-left:26px}

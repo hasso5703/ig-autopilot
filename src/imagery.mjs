@@ -70,13 +70,41 @@ function describeError(err) {
   return [...new Set(parts)].join(" — ") || `unnamed ${err?.constructor?.name || typeof err} with no message`;
 }
 
+/**
+ * Retry what is worth retrying. In one evening Openverse answered 503 once and
+ * pollinations 429 once, and both cost a run minutes of manual retrying. A 429
+ * is the most likely failure this pipeline has now that it runs four times a
+ * day: back off and ask again rather than losing the picture.
+ */
+async function withRetry(fn, what, tries = 3) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      last = err;
+      const retryable = /HTTP (429|5\d\d)|fetch failed|timeout|ECONNRESET|EAI_AGAIN/i.test(describeError(err));
+      if (!retryable || i === tries - 1) throw err;
+      await new Promise((r) => setTimeout(r, 2000 * (i + 1)));
+      console.error(`retrying ${what} after ${describeError(err)}`);
+    }
+  }
+  throw last;
+}
+
 async function getJson(url) {
-  const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
-  if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
-  return res.json();
+  return withRetry(async () => {
+    const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
+    if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
+    return res.json();
+  }, url.split("?")[0]);
 }
 
 async function download(url) {
+  return withRetry(() => downloadOnce(url), url.split("?")[0]);
+}
+
+async function downloadOnce(url) {
   const res = await fetch(url, { headers: { "User-Agent": UA } });
   if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
   const len = Number(res.headers.get("content-length") || 0);
@@ -181,14 +209,16 @@ export async function generate(prompt, { seed = 1, width = 1080, height = 1350, 
   u.searchParams.set("nologo", "true");
   u.searchParams.set("safe", "true");
   u.searchParams.set("seed", String(seed));
-  const res = await fetch(u.toString(), {
-    headers: { "User-Agent": UA, Referer: "https://github.com/hasso5703/ig-autopilot" },
-    signal: AbortSignal.timeout(timeout),
-  });
-  if (!res.ok) throw new Error(`pollinations -> HTTP ${res.status}`);
-  const buf = Buffer.from(await res.arrayBuffer());
-  if (buf.length < 8000) throw new Error(`pollinations returned ${buf.length} bytes`);
-  return buf;
+  return withRetry(async () => {
+    const res = await fetch(u.toString(), {
+      headers: { "User-Agent": UA, Referer: "https://github.com/hasso5703/ig-autopilot" },
+      signal: AbortSignal.timeout(timeout),
+    });
+    if (!res.ok) throw new Error(`pollinations -> HTTP ${res.status}`);
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length < 8000) throw new Error(`pollinations returned ${buf.length} bytes`);
+    return buf;
+  }, "pollinations");
 }
 
 /* ------------------------------------------------------------------ *

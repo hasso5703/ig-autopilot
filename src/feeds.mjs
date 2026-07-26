@@ -59,12 +59,27 @@ function parseFeed(xml, sourceName) {
     .filter((i) => i.title && i.url);
 }
 
-async function fetchFeed(feed) {
+/**
+ * A 5xx is not an answer. TechCrunch returned 503 twice and 200 on the third
+ * try, and it was carrying the story that run went on to publish — the run had
+ * to notice the pattern and retry by hand, minutes it should not have spent and
+ * a story it nearly lost. Hacker News did the same with a 502 the same evening.
+ * A 403 IS an answer (The Verge and Ars block datacenter addresses) and is not
+ * retried.
+ */
+async function fetchFeed(feed, attempt = 0) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
   try {
     const res = await fetch(feed.url, { headers: { "user-agent": UA, accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, */*" }, signal: ctrl.signal });
-    if (!res.ok) return { feed, ok: false, error: `HTTP ${res.status}`, items: [] };
+    if (!res.ok) {
+      if (res.status >= 500 && attempt < 2) {
+        clearTimeout(t);
+        await new Promise((r) => setTimeout(r, 1200 * (attempt + 1)));
+        return fetchFeed(feed, attempt + 1);
+      }
+      return { feed, ok: false, error: `HTTP ${res.status}${attempt ? ` after ${attempt + 1} tries` : ""}`, items: [] };
+    }
     const items = parseFeed(await res.text(), feed.name);
     return { feed, ok: true, items };
   } catch (e) {
