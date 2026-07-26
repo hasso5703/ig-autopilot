@@ -19,11 +19,11 @@
   "slides": [
     {
       "type": "hook",
-      "kicker": "22 July 2026 · NVIDIA",
+      "kicker": "22 July 2026 \u00b7 NVIDIA",
       "headline": "8,192 virtual surgical robots trained at once. *Five hours became two minutes.*",
       "hero": {
-        "value": "8,192",
-        "label": "training runs in parallel"
+        "value": "500",
+        "label": "hours of real surgery went into it"
       },
       "swipe": "Swipe for what they trained on",
       "narration": "Five hours became two minutes.",

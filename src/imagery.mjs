@@ -364,6 +364,7 @@ export async function acquireOne(spec, { dir, name, attempt = 0 }) {
       return {
         file: path.relative(ROOT, out),
         generated: false,
+        url: c.url,
         provider: c.provider,
         license: c.license,
         creator: c.creator,
@@ -376,6 +377,59 @@ export async function acquireOne(spec, { dir, name, attempt = 0 }) {
     }
   }
   throw new Error(`every candidate for "${query}" failed:\n  ${errors.join("\n  ")}`);
+}
+
+/**
+ * Resolve a recorded Commons landing page back to the file it points at.
+ *
+ * The sidecar keeps `sourceUrl`, which is where the licence lives and where a
+ * reader would go to check it — not a direct image URL. That was fine until a
+ * post needed one word changed on its cover: the slides can only be re-rendered
+ * from the raw pictures, `media/*\/src/` is gitignored, and a fresh search
+ * returns whatever the index feels like today. So the landing page is turned
+ * back into a file here, which makes any published post re-renderable from what
+ * the repository already records.
+ */
+async function resolveCommonsImage(sourceUrl) {
+  const u = new URL(sourceUrl);
+  const curid = u.searchParams.get("curid");
+  const api = new URL("https://commons.wikimedia.org/w/api.php");
+  api.searchParams.set("action", "query");
+  api.searchParams.set("format", "json");
+  api.searchParams.set("prop", "imageinfo");
+  api.searchParams.set("iiprop", "url|size");
+  api.searchParams.set("iiurlwidth", "1600");
+  if (curid) api.searchParams.set("pageids", curid);
+  else api.searchParams.set("titles", decodeURIComponent(u.pathname.replace(/^\/wiki\//, "")));
+  const data = await getJson(api.toString());
+  const page = Object.values(data?.query?.pages || {})[0];
+  const ii = page?.imageinfo?.[0];
+  if (!ii) throw new Error(`${sourceUrl} could not be resolved back to a file`);
+  return ii.thumburl || ii.url;
+}
+
+/**
+ * Rebuild one slide's picture from what the sidecar recorded, rather than by
+ * searching again. A generated picture comes back from its prompt and its seed,
+ * which is why the seed is written down; a photograph comes back from its
+ * recorded direct URL, or from its Commons landing page when the entry predates
+ * that field.
+ */
+export async function reacquireOne(entry, { dir, name }) {
+  await mkdir(dir, { recursive: true });
+  const tmp = path.join(dir, `.${name}.raw`);
+  const out = path.join(dir, `${name}.jpg`);
+
+  if (entry.generated) {
+    if (!entry.prompt) throw new Error("no prompt recorded, cannot reproduce this illustration");
+    await writeFile(tmp, await generate(entry.prompt, { seed: entry.seed ?? 1000 }));
+  } else {
+    const url = entry.url || (entry.sourceUrl?.includes("commons.wikimedia.org") ? await resolveCommonsImage(entry.sourceUrl) : entry.sourceUrl);
+    if (!url) throw new Error("no url or resolvable sourceUrl recorded, cannot reproduce this photograph");
+    await writeFile(tmp, await download(url));
+  }
+  await normalise(tmp, out);
+  return out;
 }
 
 /** Where a post's imagery lives. Raw pictures are cache, not history. */
@@ -456,6 +510,23 @@ if (process.argv[1] && import.meta.url.endsWith(path.basename(process.argv[1])))
       console.log(`       ${c.url}`);
     }
     if (!found.length) console.log(`no candidates for "${q}"`);
+  } else if (cmd === "reacquire") {
+    const post = JSON.parse(await readFile(rest[0], "utf8"));
+    const { dir } = imageryPaths(post.slug);
+    const sheet = await loadImagery(post.slug);
+    let ok = 0;
+    for (const [n, entry] of Object.entries(sheet.slides || {})) {
+      if (!entry || entry.failed) continue;
+      const name = String(n).padStart(2, "0");
+      try {
+        await reacquireOne(entry, { dir, name });
+        ok++;
+        console.log(`slide ${n}: rebuilt ${entry.generated ? "illustration" : "photograph"} — ${entry.credit || entry.provider}`);
+      } catch (err) {
+        console.error(`FAILED slide ${n}: ${describeError(err)}`);
+      }
+    }
+    console.error(`\n${ok}/${Object.keys(sheet.slides || {}).length} pictures rebuilt from imagery.json. Look at them before you trust them.`);
   } else if (cmd) {
     const post = JSON.parse(await readFile(cmd, "utf8"));
     const slideArg = rest.indexOf("--slide");

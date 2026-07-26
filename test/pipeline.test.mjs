@@ -548,14 +548,16 @@ test("a slide may not promise a publishing frequency", async () => {
   assert.ok(hasErr(await errs(q), /caption promises a publishing frequency/));
 });
 
-test("the closing slide has to ask for something a stranger can do", async () => {
+test("a close that asks for nothing is advice, not a refusal", async () => {
+  // Demoted 2026-07-26. A composition rule of mine refused a finished, verified
+  // carousel an hour after I wrote it, and Hasan had asked for that carousel.
+  // Only a wrong fact or one of his own standing rules stops a publish now.
   const p = goodPost();
   p.slides.at(-1).headline = "The takeaway";
   p.slides.at(-1).sub = "That is the story.";
-  assert.ok(hasErr(await errs(p), /asks for nothing/));
-
-  p.slides.at(-1).sub = "Send this to anyone who turns off their phone's AI.";
-  assert.ok(!hasErr(await errs(p), /asks for nothing/));
+  const r = await validatePost(p, { online: false });
+  assert.equal(r.ok, true, "style must not block: " + r.errors.join("; "));
+  assert.ok(r.warnings.some((w) => /asks for nothing/.test(w)), "but it must still say so");
 });
 
 // ---------------------------------------------------------------------------
@@ -584,8 +586,11 @@ test("the hero may not repeat a figure the headline already carries", async () =
   const p = goodPost();
   p.slides[0].headline = "70 people came to one class on switching AI off";
   p.slides[0].hero = { value: "70", label: "turned up" };
-  assert.ok(hasErr(await errs(p), /already appears in the headline/));
+  const r = await validatePost(p, { online: false });
+  assert.equal(r.ok, true, "a repeated figure is redundant, not false");
+  assert.ok(r.warnings.some((w) => /already appears in the headline/.test(w)));
 
   p.slides[0].hero = { value: "30", label: "was the cap on sign-ups" };
-  assert.ok(!hasErr(await errs(p), /already appears in the headline/));
+  const clean = await validatePost(p, { online: false });
+  assert.ok(!clean.warnings.some((w) => /already appears in the headline/.test(w)));
 });

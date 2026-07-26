@@ -228,6 +228,19 @@ export async function validatePost(post, opts = {}) {
   const errors = [];
   const warnings = [];
   const err = (m) => errors.push(m);
+  /*
+   * Taste is not a fact.
+   *
+   * A rule about a redundant figure on a cover went into the same list as "this
+   * sentence does not exist on the page it cites", and an hour later it refused a
+   * finished, verified, reviewed carousel that Hasan had asked to go out. That
+   * was my mistake, not the rule's. An error stops a publish, and only two kinds
+   * of thing have earned that: something that would make the account WRONG, and
+   * Hasan's own standing instructions. Composition rules I invented — a hero that
+   * repeats a figure, a hook that opens weakly, a close that asks for nothing —
+   * say their piece and get out of the way.
+   */
+  const nag = (m) => warnings.push(m);
 
   // ---- structure ----------------------------------------------------------
   if (!post.slug || !/^[a-z0-9][a-z0-9-]{2,60}$/.test(post.slug)) err(`slug invalid or missing: ${post.slug}`);
@@ -252,7 +265,7 @@ export async function validatePost(post, opts = {}) {
   const hook = slides[0];
   if (hook?.headline && hook.headline.replace(/\*/g, "").length > HOOK_MAX_CHARS)
     err(`hook headline is ${hook.headline.length} chars, max ${HOOK_MAX_CHARS} — it would render too small to read`);
-  for (const issue of hookIssues(hook?.headline)) err(`hook headline: ${issue}`);
+  for (const issue of hookIssues(hook?.headline)) nag(`hook headline: ${issue}`);
 
   /*
    * The hero restates the headline in figures; it does not print the same figure
@@ -264,7 +277,7 @@ export async function validatePost(post, opts = {}) {
   const heroValue = String(hook?.hero?.value || "").replace(/\*+/g, "").trim();
   const headlineText = String(hook?.headline || "").replace(/\*+/g, "");
   if (heroValue && headlineText.includes(heroValue))
-    err(`the hero value "${heroValue}" already appears in the headline. The hero carries the comparison the headline does not: quote a different figure, or drop it.`);
+    nag(`the hero value "${heroValue}" already appears in the headline. The hero carries the comparison the headline does not: quote a different figure, or drop it.`);
 
   // ---- every slide carries a picture --------------------------------------
   for (const [i, s] of slides.entries()) {
@@ -301,7 +314,7 @@ export async function validatePost(post, opts = {}) {
   if (cta?.type === "cta") {
     const asked = `${cta.headline || ""} ${cta.sub || ""}`;
     if (!/\b(send|share|save|show|forward|tag|follow)\b/i.test(asked))
-      err('the closing slide asks for nothing. Name one action a stranger can take, and prefer sending it to someone over a like: "Send this to anyone who…".');
+      nag('the closing slide asks for nothing. Name one action a stranger can take, and prefer sending it to someone over a like: "Send this to anyone who…".');
   }
 
   // ---- house style: no dashes standing in for punctuation ------------------
