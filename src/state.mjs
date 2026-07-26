@@ -260,6 +260,28 @@ export const MIN_GAP_HOURS = 2;
  */
 const OVERRIDE = "yes-i-want-a-second-post-today";
 
+/**
+ * The four scheduled slots, and how close we are to one.
+ *
+ * A run reported the thing nobody had noticed: a hand-launched run inside two
+ * hours of a scheduled slot silently eats that slot, and nothing warns you at
+ * launch time — you find out afterwards, from the blocked run's report. It cost
+ * nothing that evening because the day still delivered four Reels, but the
+ * person launching by hand is the one who needs to know, before they launch.
+ */
+export const SLOTS_UTC = [6, 10, 15, 19];
+
+export function nextSlot(now = new Date()) {
+  const h = now.getUTCHours() + now.getUTCMinutes() / 60;
+  const next = SLOTS_UTC.find((s) => s > h);
+  const hours = next === undefined ? 24 - h + SLOTS_UTC[0] : next - h;
+  return {
+    slotUtc: next === undefined ? SLOTS_UTC[0] : next,
+    hours: Math.round(hours * 10) / 10,
+    wouldEatIt: hours < MIN_GAP_HOURS,
+  };
+}
+
 export async function publishGap() {
   const { posted } = await loadState();
   const last = posted.at(-1);
@@ -328,6 +350,12 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
       );
       process.exit(1);
     }
+    const slot = nextSlot();
+    if (slot.wouldEatIt)
+      console.error(
+        `\nNOTE: the next scheduled slot is ${String(slot.slotUtc).padStart(2, "0")}:00 UTC, ${slot.hours}h away, which is inside the ${MIN_GAP_HOURS}h gap. ` +
+          `If this run publishes, that slot will be blocked when it fires. The day loses no Reel, but say so in your report.`
+      );
     console.error(
       g.overridden
         ? `\nCLEAR to publish — BUT ONLY BECAUSE THE GUARD WAS OVERRIDDEN. The last post was ${g.hours}h ago, under the ${g.min}h minimum. Say this in your final report.`

@@ -203,6 +203,14 @@ pictures are normalised with it, and the narration is assembled with it. Install
 it at the top so a missing package fails the run in ten seconds rather than
 after the story has been researched, written and gated.
 
+**`git fetch` reporting `(forced update)` on `origin/main` is expected**, and a
+published post's record being absent from main is not automatically the failure
+you think it is. On 2026-07-26 the whole account was emptied on purpose and the
+artefacts emptied with it, in the commit "Clear the grid". A container cloned
+before that carries a stale pointer. Read the commit message before you
+reconcile anything: restoring a record for a post nobody can see would re-arm the
+gap guard against a ghost and re-block the stories that record had considered.
+
 **A run that starts outside 06:00, 10:00, 15:00 or 19:00 UTC is probably a human
 launching it by hand**, which happens whenever something has just been fixed and
 is worth testing before the next slot. It is not a misfire, and the gap guard is
