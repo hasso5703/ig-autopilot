@@ -37,8 +37,8 @@
       "type": "stat",
       "figure": "8,192",
       "unit": "training runs at the same time",
-      "body": "Teaching one robot to handle a body used to take **over five hours**. It now takes **under two minutes**.",
-      "narration": "Eight thousand one hundred and ninety two training runs at the same time. Over five hours became under two minutes.",
+      "body": "It now takes **under two minutes** to train what once took **over five hours**.",
+      "narration": "Eight thousand one hundred and ninety two training runs at the same time.",
       "evidence": "By running 8,192 parallel simulation environments natively on GPUs, the platform reduces robotic policy training times from over five hours down to under two minutes.",
       "source": {
         "name": "HIT Consultant",
@@ -57,7 +57,7 @@
       "claim": "Nearly *500 hours* of anonymised data from one surgical robot.",
       "caveatLabel": "The procedures it feeds",
       "caveat": "Gallbladder removal. Prostate removal. Hernia repair. Hysterectomy.",
-      "narration": "Nearly five hundred hours of anonymised data from one surgical robot. Gallbladder removal. Prostate removal. Hernia repair. Hysterectomy.",
+      "narration": "Nearly five hundred hours of anonymised data from one surgical robot.",
       "evidence": "CMR contributed nearly 500 hours of anonymized clinical data from its Versius Surgical Robotic System to the Open-H Embodiment open dataset, benefiting procedures including cholecystectomy, prostatectomy, hernia repair and hysterectomy.",
       "source": {
         "name": "NVIDIA",
