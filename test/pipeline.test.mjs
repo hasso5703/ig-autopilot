@@ -41,7 +41,7 @@ const goodPost = () => ({
       image: photo("library reading room") },
     { type: "content", title: "What they teach", body: "How to switch the features off.", evidence: "The class explains how to switch the features off on a phone or laptop.", source: { url: "https://www.bangordailynews.com/b", name: "Bangor Daily News", date: "2026-07-02" },
       image: drawn("a dim room lit by one phone screen, cinematic, no text") },
-    { type: "cta", headline: "One story a day", sub: "A new one tomorrow.",
+    { type: "cta", headline: "Send this to *anyone* who still trusts a chatbot with symptoms", sub: "Follow for the next one.",
       image: drawn("abstract field of small cyan lights in the dark, no text") },
   ],
 });
@@ -529,4 +529,31 @@ test("a test fixture cannot be published, whatever else is right about it", asyn
   // and the smoke test, which publishes nothing, can still exercise the gate
   const allowed = await validatePost(p, { online: false, fixture: true });
   assert.equal(allowed.ok, true, allowed.errors.join("\n"));
+});
+
+// ---------------------------------------------------------------------------
+// 2026-07-26: the account went to four posts a day while every carousel it had
+// ever made still said "One story a day" and "A new one tomorrow" on its last
+// slide, and asked for nothing at all. Watch time is the heaviest ranking
+// signal, sends the next, and the sign-off was spending the one frame that
+// could ask for either.
+// ---------------------------------------------------------------------------
+test("a slide may not promise a publishing frequency", async () => {
+  const p = goodPost();
+  p.slides.at(-1).headline = "One story a day";
+  assert.ok(hasErr(await errs(p), /promises a publishing frequency/));
+
+  const q = goodPost();
+  q.caption = "A new one tomorrow. AI-assisted.";
+  assert.ok(hasErr(await errs(q), /caption promises a publishing frequency/));
+});
+
+test("the closing slide has to ask for something a stranger can do", async () => {
+  const p = goodPost();
+  p.slides.at(-1).headline = "The takeaway";
+  p.slides.at(-1).sub = "That is the story.";
+  assert.ok(hasErr(await errs(p), /asks for nothing/));
+
+  p.slides.at(-1).sub = "Send this to anyone who turns off their phone's AI.";
+  assert.ok(!hasErr(await errs(p), /asks for nothing/));
 });

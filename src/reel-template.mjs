@@ -16,6 +16,8 @@
  * timing cannot drift under load in a shared cloud sandbox.
  */
 
+import { iconRow } from "./template.mjs";
+
 const W = 1080;
 const H = 1920;
 
@@ -343,10 +345,25 @@ function beatLines(b, handle) {
         { cls: "cell alt", html: `<span class="cl">${esc(b.caveatLabel)}</span>${inline(b.caveat)}` },
       ];
     case "end":
+      /*
+       * The close does more work than any other beat and the old one wasted it
+       * on "A new one tomorrow.", which was a promise the account stopped
+       * keeping the day it went to four posts. What replaces it is what the
+       * ranking model actually rewards: a send ask first, because a DM share is
+       * worth three to five likes for reaching non-followers and it is the
+       * second heaviest signal there is, then the four actions drawn where the
+       * viewer's thumb already is, then the follow.
+       */
       return [
         b.headline && { cls: "headline sm", html: inline(b.headline) },
         b.sub && { cls: "body", html: inline(b.sub) },
-        { cls: "handle", html: esc(handle) },
+        {
+          cls: "engage",
+          html:
+            iconRow("#ffffff") +
+            `<div class="followRow"><span class="plus">+</span><span class="word">Follow</span></div>` +
+            `<div class="handle">${esc(handle)}</div>`,
+        },
       ].filter(Boolean);
     default:
       return [
@@ -443,19 +460,30 @@ em.a{font-style:normal;color:${c.accent}}
       border-left:10px solid #2a2d34;padding:36px 0 36px 44px;margin:22px 0}
 .cell.alt{border-left-color:${c.accent}}
 .cl{display:block;font-size:34px;letter-spacing:.14em;text-transform:uppercase;color:#8c929c;margin-bottom:16px}
-.handle{font-family:'Anton';font-size:76px;color:${c.accent};margin-top:72px;letter-spacing:-.01em}
+.handle{font-family:'Anton';font-size:76px;color:${c.accent};letter-spacing:-.01em}
+.engage{margin-top:56px}
+.engage .icons{display:flex;gap:40px;margin-bottom:30px}
+.engage .icons svg{filter:drop-shadow(0 3px 16px rgba(0,0,0,.7))}
+.followRow{display:flex;align-items:center;gap:20px;margin-bottom:16px}
+.followRow .plus{display:flex;align-items:center;justify-content:center;width:64px;height:64px;
+                 border-radius:50%;background:${c.accent};color:${c.accentInk};
+                 font-family:'Anton';font-size:48px;line-height:1;padding-bottom:5px;flex:0 0 auto;
+                 will-change:transform}
+.followRow .word{font-weight:700;font-size:36px;letter-spacing:.22em;text-transform:uppercase;color:#fff}
 
 #bar{position:absolute;top:0;left:0;height:6px;background:${c.accent};z-index:10}
+/* The handle, on every frame of every Reel. A Reel is the most stolen format
+   there is and the wordmark alone gives a viewer no way to find the account. */
 #mark{position:absolute;top:96px;left:0;right:0;text-align:center;font-family:'Archivo';font-weight:700;
-      font-size:28px;letter-spacing:.34em;text-transform:uppercase;color:#A9B0BA;z-index:10;
-      text-shadow:0 2px 16px rgba(0,0,0,.7)}
+      font-size:30px;letter-spacing:.2em;text-transform:uppercase;color:#D5DAE2;z-index:10;
+      text-shadow:0 2px 18px rgba(0,0,0,.8),0 0 3px rgba(0,0,0,.6)}
 /* #6a707a was chosen against flat black. Over a photograph it disappears, and a
    source credit nobody can read is the same as no source credit. */
 #src{position:absolute;bottom:410px;left:96px;right:200px;font-family:'Archivo';font-size:30px;
      letter-spacing:.06em;text-transform:uppercase;color:#C3C9D2;z-index:10;
      text-shadow:0 2px 18px rgba(0,0,0,.7)}
 </style></head><body>
-<div id="stage">${stage}<div id="bar"></div><div id="mark">${esc(brand.wordmark)}</div><div id="src"></div></div>
+<div id="stage">${stage}<div id="bar"></div><div id="mark">${esc(brand.handle)}</div><div id="src"></div></div>
 <script>
 const BEATS = ${JSON.stringify(beats.map((b) => ({ duration: b.duration, source: b.source ?? "" })))};
 const TOTAL = ${total};
@@ -531,6 +559,15 @@ window.render = function (t) {
     const kb = el.querySelector('.bg');
     if (kb && u > -0.5 && u < d + 0.5) {
       kb.style.transform = 'scale(' + (1.02 + 0.08 * Math.min(1, Math.max(0, u / d))).toFixed(4) + ')';
+    }
+
+    // The follow badge breathes while the closing beat is up. Motion draws the
+    // eye to the one control this beat is asking a stranger to use, and like
+    // every other thing here it is a function of t alone, so a frame is still
+    // reproducible from its timestamp.
+    const badge = el.querySelector('.followRow .plus');
+    if (badge && active) {
+      badge.style.transform = 'scale(' + (1 + 0.07 * Math.sin(u * 5.2)).toFixed(4) + ')';
     }
 
     if (active) {

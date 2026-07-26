@@ -60,6 +60,108 @@ stops being true, so treat the gate below as the product, not as paperwork.
 
 ---
 
+## How attention actually works here
+
+You are the one choosing the story, writing the hook and deciding the close, so
+this section is not background. It is the job. The goal is not "a good post" —
+it is to become the account people go to for AI news, which means winning
+attention from strangers who did not ask for us, one thumb at a time.
+
+Everything below is measured, either on this account or in published research on
+the platform. None of it is taste.
+
+### What the ranking model rewards, in order
+
+1. **Watch time, and above all completion rate.** Confirmed publicly by Adam
+   Mosseri in January 2025 and restated in March 2026 as the dominant Reels
+   signal. **Re-watches count separately**, which is why a Reel that loops
+   cleanly is worth more than one that stops dead.
+2. **Sends.** A DM share is worth **three to five times a like** for reaching
+   non-followers, and the December 2025 update raised its weight again. This is
+   the single most valuable thing a viewer can do for us.
+3. **Saves**, then comments — comment *depth* and reply quality entered the model
+   in 2025, so a comment worth answering is worth more than ten emoji.
+4. **Likes per reach**, last of the four. Never make the like the main ask.
+5. **Profile visits caused by a Reel feed back into discovery scoring**, which is
+   the only reason the carousel and the grid still exist.
+
+### The window you actually have
+
+- A viewer decides to keep watching or scroll in about **1.7 seconds**.
+- **Up to half of them are gone by three seconds.**
+- A Reel whose **3-second retention passes ~70%** gets pushed to a wider
+  non-follower audience. Under that, it dies quietly.
+- Our own first Reel: **average watch time 6 seconds out of 33, 59.7% skipped**,
+  168 views, 150 accounts reached, 100% non-followers, 89.9% of them from the
+  Reels tab. The surface works. We lost them at the start and never got them to
+  the end.
+
+So the first second and a half is not the introduction. **It is the whole
+audition.** Frame zero must already carry the surprise: fully formed type, no
+fade-in, no throat-clearing, no "in a lawsuit filed this week…" before the point.
+
+### Hook shapes, by measured 3-second retention
+
+From testing across ~50 million ad impressions, the shapes that hold viewers,
+best first:
+
+| Shape | Retention | What it looks like for us |
+|---|---:|---|
+| **Specific outcome** | 45% | "A pastor asked ChatGPT about his symptoms. He nearly died." |
+| **POV realism** | 42% | "You have asked a chatbot about a symptom. So did he." |
+| **Contrarian** | 38% | "The chatbot did not get it wrong. It got it confidently wrong." |
+| Question | 28% | weakest, and our gate refuses it outright |
+
+**Stack the hook and you gain another 35 to 45%.** Stacking means the on-screen
+line, the spoken line and the picture each carry a *different* piece of the
+surprise instead of repeating one another. The line says what happened, the voice
+adds the number, the picture supplies the dread. Three layers, one second.
+
+**For a small account, specificity beats reach.** A hook that names exactly who
+this lands on outperforms a broad one, every time. "Anyone who has asked a
+chatbot about a symptom" is better than "AI users".
+
+### Holding them to the end
+
+- **15 to 25 seconds.** Not a style preference: completion rate is the first
+  ranking signal and it falls off a cliff with length. The pipeline cuts beats to
+  the narration, so **your copy is the runtime**. Every word you cut is
+  retention you buy.
+- **Change something every two to three seconds.** A beat that sits still for six
+  seconds is where viewers leave, and the `long` flag in the Reel output is
+  telling you exactly which line to cut.
+- **End on the strongest frame, not on a goodbye.** The close is the last thing
+  the model sees you spend attention on.
+
+### The close, and what to ask for
+
+The old sign-off said "One story a day" and "A new one tomorrow", which asked for
+nothing and, after the cadence changed, was not even true. Both are now refused
+by the gate. What the last slide and the last beat must do:
+
+1. **Ask for the send, and name who to send it to.** "Send this to anyone who
+   asks a chatbot about symptoms" beats "share this". Sends are the
+   highest-value action a stranger can take and the ask is what triggers them.
+2. **Then the follow.** The template draws the four action icons and a pulsing
+   follow badge under whatever you write, so you never have to describe them.
+3. **Never print a cadence.** Not "daily", not "tomorrow", not "every morning".
+4. **Never make the like the ask.** It is the weakest of the four signals.
+
+### The caption, for the same reason
+
+Only the first line shows before "more". Put the stake there, not the source, not
+the date, not a windup. And if the story leaves a genuine open question, ask it
+in the caption: comment depth is in the ranking model now, and a question worth
+answering is worth more than a hundred emoji.
+
+**What none of this licenses.** Every rule here is about *framing*, and the
+evidence gate is untouched. You may compress, front-load, and drop qualifiers
+that change no meaning. You may never add a claim the source does not make, and
+"specific outcome" never means an outcome nobody reported. If the honest version
+of a hook cannot clear this bar, the story is the wrong story — pick another one.
+
+---
+
 ## Non-negotiables
 
 1. **Never assert what you have not read.** A claim is allowed only if a verbatim
@@ -260,7 +362,7 @@ swipe, and swipe-through is what buys distribution.
 | `content` | an idea in two or three sentences | `title`, `body`, `evidence`, `source` |
 | `quote` | someone else's words, verbatim | `body` (the quote), `attribution`, `evidence`, `source` |
 | `contrast` | the turn: claim vs what the footnote says | `claim`, `caveat`, `claimLabel`, `caveatLabel`, `evidence`, `source` |
-| `cta` | last slide only | `headline`, `sub` (state the offer, never claim rigour, and never write the handle: the template already stamps it) |
+| `cta` | last slide only | `headline` = **the send ask, naming who to send it to**; `sub` = one line on what the account is. Never write the handle, never print a cadence, never claim rigour: the template stamps the handle, draws the four action icons and pulses the follow badge |
 
 **The hero must reinforce the headline, never introduce a second comparison.**
 The first autonomous post put "half the price of the model it nearly matches"
@@ -484,10 +586,11 @@ Prose in the caption is free. Digits are not.
 
 **3 to 5 hashtags, at the very end.** More reads as reach-chasing.
 
-**The same restraint applies to the CTA slide.** "One verified story a day"
-claims the very thing the sources on the six slides behind it already proved.
-Write the offer, not the boast: "One story a day" over "Sources on every slide."
-is stronger precisely because it stops arguing.
+**The closing slide asks, it does not sign off.** See *How attention actually
+works here*: the headline is the send ask and it names who to send it to, the sub
+is one line on what the account is, and neither may print a cadence or claim
+rigour. The gate refuses a close that asks for nothing, and it refuses "one story
+a day" in any wording.
 
 ### 5c. The pictures
 

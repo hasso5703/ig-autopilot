@@ -75,6 +75,28 @@ const GRAIN =
     `<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='220' height='220' filter='url(%23n)' opacity='0.5'/></svg>`
   );
 
+/**
+ * The engagement row, drawn rather than fetched.
+ *
+ * Instagram's own controls sit outside the frame and a viewer has to think to
+ * find them. Showing the same four shapes inside the artwork names the action
+ * without pretending to be a button. Order is deliberate and it is the order the
+ * ranking model cares about: send first, then save, then comment, then like.
+ * Sends are worth three to five times a like for reaching non-followers, and
+ * likes per reach is the weakest of the three signals.
+ */
+export const ICONS = {
+  send: "M2 21l21-9L2 3v7l15 2-15 2v7z",
+  save: "M6 2h12a1 1 0 0 1 1 1v19l-7-5-7 5V3a1 1 0 0 1 1-1z",
+  comment: "M12 2C6.5 2 2 5.9 2 10.7c0 2.7 1.4 5.1 3.7 6.7L5 22l4.4-2.3c.8.2 1.7.3 2.6.3 5.5 0 10-3.9 10-8.7S17.5 2 12 2z",
+  like: "M12 21s-8.5-5.3-8.5-11A5 5 0 0 1 12 6.6 5 5 0 0 1 20.5 10c0 5.7-8.5 11-8.5 11z",
+};
+
+export const iconRow = (color) =>
+  `<div class="icons">${["send", "save", "comment", "like"]
+    .map((k) => `<svg viewBox="0 0 24 24" width="52" height="52" aria-hidden="true"><path d="${ICONS[k]}" fill="${color}"/></svg>`)
+    .join("")}</div>`;
+
 /** Height of the bleeding picture on a `top` layout. 44% of the canvas. */
 const TOP_IMAGE_H = 596;
 
@@ -157,9 +179,13 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 .rail{position:absolute;left:0;top:0;height:9px;width:100%;background:rgba(255,255,255,.09);z-index:6}
 .rail i{display:block;height:100%;background:${c.accent}}
 
-.topbar{display:flex;align-items:center;justify-content:space-between;
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;
         font-weight:700;font-size:22px;letter-spacing:.2em;text-transform:uppercase;
         color:${c.muted};flex:0 0 auto}
+.stamp{position:absolute;top:${g.margin}px;right:${g.margin}px;z-index:7;
+       font-weight:700;font-size:22px;letter-spacing:.1em;text-transform:uppercase;
+       color:rgba(255,255,255,.82);white-space:nowrap;
+       text-shadow:0 2px 16px rgba(0,0,0,.8),0 0 3px rgba(0,0,0,.6)}
 .topbar .idx{color:${c.accent}}
 
 /* The source line used to print the full URL, which cost two lines and 200px of
@@ -188,7 +214,7 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
                  text-transform:uppercase;color:${c.ink}}
 .hook .mark{display:flex;align-items:center;gap:20px;margin-bottom:18px}
 .hook .mark .line{flex:1;height:2px;background:${c.rule};opacity:.45}
-.hook .mark .name{font-weight:700;font-size:23px;letter-spacing:${brand.wordmarkTracking};
+.hook .mark .name{font-weight:700;font-size:24px;letter-spacing:.1em;
                   text-transform:uppercase;white-space:nowrap;color:${c.ink}}
 .hook .swipe{text-align:center;font-weight:700;font-size:22px;
              letter-spacing:.3em;text-transform:uppercase;color:${c.body}}
@@ -250,21 +276,52 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 
 /* ---------- cta ---------- */
 .cta .inner{align-items:center;text-align:center;justify-content:flex-end}
-.cta h2{margin-bottom:30px}
-.cta .handle{font-family:'Anton',sans-serif;font-size:88px;line-height:1;color:${c.accent};
-             text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:24px}
-.cta .sub{font-size:42px;line-height:1.36;color:${c.ink};max-width:840px;font-weight:700}
-.cta .disclosure{margin-top:30px;font-size:20px;line-height:1.4;color:${c.muted};
+.cta h2{margin-bottom:26px}
+.cta .sub{font-size:44px;line-height:1.3;color:${c.ink};max-width:880px;font-weight:700;margin-bottom:30px}
+.cta .icons{display:flex;justify-content:center;gap:34px;margin-bottom:28px}
+.cta .icons svg{filter:drop-shadow(0 3px 14px rgba(0,0,0,.6))}
+.cta .follow{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:14px}
+.cta .follow .plus{display:flex;align-items:center;justify-content:center;
+                   width:52px;height:52px;border-radius:50%;background:${c.accent};
+                   color:${c.accentInk};font-family:'Anton',sans-serif;font-size:40px;line-height:1;
+                   padding-bottom:4px;flex:0 0 auto}
+.cta .follow .word{font-weight:700;font-size:30px;letter-spacing:.22em;text-transform:uppercase;color:${c.ink}}
+.cta .handle{font-family:'Anton',sans-serif;font-size:84px;line-height:1;color:${c.accent};
+             text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:18px}
+.cta .disclosure{margin-top:26px;font-size:20px;line-height:1.4;color:${c.muted};
                  letter-spacing:.12em;text-transform:uppercase}`;
 }
 
 const doc = (brand, fonts, body) =>
   `<!doctype html><html><head><meta charset="utf-8"><style>${baseCss(brand, fonts)}</style></head><body>${body}</body></html>`;
 
+/**
+ * The handle, on every slide, whatever the archetype.
+ *
+ * It was in the topbar for one render, which put it on four slides out of seven:
+ * a `content` slide with a picture across the top has no topbar at all, so the
+ * one layout most worth lifting carried no mark. Absolutely positioned on the
+ * slide instead, so no archetype can forget it and no layout choice can drop it.
+ *
+ * Reposting accounts lift slides wholesale. "ORDER OF MAGNITUDE" tells a viewer
+ * who made it and gives them no way to find it; the handle does both, and it
+ * contains the brand name anyway.
+ */
+const stamp = (brand) => `<div class="stamp">${esc(brand.handle)}</div>`;
+
 const rail = (i, n) => `<div class="rail"><i style="width:${Math.round((i / n) * 100)}%"></i></div>`;
 
+/*
+ * The handle, not the wordmark, and on every single slide.
+ *
+ * Reposting accounts lift slides wholesale, and "ORDER OF MAGNITUDE" tells a
+ * viewer who made it while giving them no way to find it. The handle does both
+ * jobs at once, so it replaces the wordmark as furniture rather than sitting
+ * next to it: one mark, always in the same place, always actionable, and it
+ * still contains the brand name.
+ */
 const topbar = (brand, i, n) =>
-  `<div class="topbar"><span class="idx">${String(i).padStart(2, "0")} / ${String(n).padStart(2, "0")}</span><span>${esc(brand.wordmark)}</span></div>`;
+  `<div class="topbar"><span class="idx">${String(i).padStart(2, "0")} / ${String(n).padStart(2, "0")}</span></div>`;
 
 /** techcrunch.com -> TECHCRUNCH. The domain is the claim; the URL is caption material. */
 export function sourceLabel(source) {
@@ -430,8 +487,10 @@ function cta(brand, fonts, s, i, n, image) {
       <div class="inner">
         <div class="fitbox" style="justify-content:flex-end">
           <h2 class="display fit onpic mass" data-max="${brand.type.titleMax + 10}" data-min="${brand.type.titleMin}" data-maxlines="3">${accentize(s.headline)}</h2>
+          ${s.sub ? `<div class="sub mass">${accentize(s.sub)}</div>` : ""}
+          ${iconRow(brand.colors.ink)}
+          <div class="follow"><span class="plus">+</span><span class="word">Follow</span></div>
           <div class="handle mass">${esc(brand.handle)}</div>
-          ${s.sub ? `<div class="sub mass">${esc(s.sub)}</div>` : ""}
           <div class="disclosure">${esc(brand.aiDisclosure)}</div>
         </div>
       </div>
@@ -445,7 +504,10 @@ const ARCHETYPES = { hook, stat, content, quote, contrast, cta };
 export function slideHtml(brand, fonts, slide, index, total, image = null) {
   const fn = ARCHETYPES[slide.type];
   if (!fn) throw new Error(`unknown slide type '${slide.type}' — expected one of ${Object.keys(ARCHETYPES).join(", ")}`);
-  return fn(brand, fonts, slide, index, total, image);
+  const html = fn(brand, fonts, slide, index, total, image);
+  // Injected here rather than in each archetype: seven templates are seven
+  // chances to forget the one element that has to be on all of them.
+  return html.replace("</body>", `${stamp(brand)}</body>`);
 }
 
 export const SLIDE_TYPES = Object.keys(ARCHETYPES);

@@ -259,6 +259,39 @@ export async function validatePost(post, opts = {}) {
     for (const issue of imageIssues(s, post)) err(`slide ${i + 1} (${s.type}) image: ${issue}`);
   }
 
+  /*
+   * Never promise a frequency. The account published "One story a day" and
+   * "A new one tomorrow" on every carousel it made, and then went to four posts
+   * a day, which turned both lines into something a viewer can check and find
+   * false. A cadence that changes with the numbers cannot be printed on the
+   * artwork.
+   */
+  const FREQUENCY_CLAIM = /\b(one|two|three|1|2|3)\s+(story|stories|post|posts|reel|reels)\s+(a|per|each)\s+(day|week)\b|\b(a new one|another one)\s+(tomorrow|every day|daily)\b|\bdaily\s+(story|post|reel)\b/i;
+  for (const [i, s2] of slides.entries()) {
+    for (const v of [s2.headline, s2.sub, s2.title, s2.body]) {
+      if (v && FREQUENCY_CLAIM.test(v))
+        err(`slide ${i + 1} (${s2.type}) promises a publishing frequency ("${String(v).slice(0, 60)}"). The cadence changes with what the numbers say; do not print it on the artwork.`);
+    }
+  }
+  if (post.caption && FREQUENCY_CLAIM.test(post.caption))
+    err("the caption promises a publishing frequency. The cadence changes with what the numbers say; do not print it.");
+
+  /*
+   * The closing slide has one job and it is not signing off.
+   *
+   * Watch time is the heaviest ranking signal and DM sends are the next, worth
+   * three to five times a like for reaching non-followers. The old sign-off
+   * asked for nothing at all. So the last slide must ask for something a
+   * stranger can do, and the template already draws the icons and the follow
+   * badge underneath whatever it says.
+   */
+  const cta = slides.at(-1);
+  if (cta?.type === "cta") {
+    const asked = `${cta.headline || ""} ${cta.sub || ""}`;
+    if (!/\b(send|share|save|show|forward|tag|follow)\b/i.test(asked))
+      err('the closing slide asks for nothing. Name one action a stranger can take, and prefer sending it to someone over a like: "Send this to anyone who…".');
+  }
+
   // ---- house style: no dashes standing in for punctuation ------------------
   // An em dash is a writer's shortcut for a thought they have not decided how
   // to punctuate. Two shorter sentences almost always read better, and on a
