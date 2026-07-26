@@ -226,8 +226,11 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 /* ---------- stat: slide 2 doubles as a cover ---------- */
 .stat .figure{font-family:'Anton',sans-serif;color:${c.accent};line-height:.9;text-transform:uppercase;
               letter-spacing:-0.03em;margin-bottom:10px}
+/* text-wrap:balance so a two-line unit does not leave one word alone on the
+   second line. A run reported "AI" orphaned under a full line and left it,
+   correctly — it was readable. It should not have had to choose. */
 .stat .unit{font-family:'Anton',sans-serif;font-size:70px;line-height:1.06;color:${c.ink};
-            text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:38px}
+            text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:38px;text-wrap:balance}
 .stat .say{font-size:${t.bodyMax - 4}px;line-height:1.42;color:${c.body};padding-bottom:.12em}
 .stat .say b{color:${c.ink};font-weight:700}
 

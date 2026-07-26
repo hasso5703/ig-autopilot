@@ -54,7 +54,7 @@ export function shorten(text, maxWords = 14) {
     if (out && words(candidate) > maxWords) break;
     out = candidate;
   }
-  if (out && words(out) <= hard) return out;
+  if (out && words(out) <= hard) return out.replace(/\s+/g, " ");
 
   // A single sentence longer than the whole budget still has to fit, so fall
   // back to clause boundaries, which at least leave a grammatical fragment.
@@ -223,7 +223,16 @@ export function buildTimeline(post) {
         };
         break;
       case "stat":
-        b = { type: "stat", figure: s.figure ?? "", unit: s.unit ?? "", body: shorten(s.body, 9), source: s.source?.name };
+        /*
+       * 13, not 9. Twice in a row a run reported that this beat kept only the
+       * setup and dropped the payoff — "used to take over five hours" with no
+       * "now it takes two minutes", "the company said AI was the reason" with
+       * no "investors did not buy it". `shorten` only takes whole sentences, so
+       * a budget that fits one fits exactly the wrong one. The length this buys
+       * is no longer dangerous: the Reel refuses to paint if the total runs
+       * past 25 seconds.
+       */
+      b = { type: "stat", figure: s.figure ?? "", unit: s.unit ?? "", body: shorten(s.body, 13), source: s.source?.name };
         break;
       case "quote":
         b = { type: "quote", body: shorten(s.body, 14), attribution: s.attribution ?? "", source: s.source?.name };

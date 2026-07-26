@@ -267,10 +267,14 @@ different outlet. Do not second-guess it.
 
 ### 2b. Look at what has already worked
 ```bash
-node src/insights.mjs latest
+node src/insights.mjs collect >/dev/null && node src/insights.mjs latest
 ```
-The newest reading for every post this account has published. `oom-watch`
-collects these daily; you only read them.
+**Collect first, then read.** `oom-watch` writes readings once a day at 15:30
+UTC, and three of the four runs sit on the wrong side of that: the 15:06 run
+read `[]` and reported honestly that it had no signal, half an hour before the
+watch wrote the first numbers this account has ever had. Collecting costs one
+API round trip and means you are looking at this afternoon rather than at
+yesterday.
 
 Read **shares** and **saved** first, then **follows**. Ignore likes: it is the
 metric that flatters most and predicts least, and Instagram ranks on sends.
