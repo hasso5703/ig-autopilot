@@ -198,8 +198,11 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
       letter-spacing:.1em;text-transform:uppercase}
 .foot .src{color:${c.body}}
 .foot .src i{font-style:normal;color:${c.accent}}
-.credit{font-size:17px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.38);
-        text-align:right;max-width:440px;text-transform:none}
+/* One line, clipped. A two-line grey credit under a cyan panel reads as a
+   caption someone forgot to finish. */
+.credit{font-size:17px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.42);
+        text-align:right;max-width:430px;text-transform:none;
+        white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* ---------- hook ---------- */
 .hook .inner{justify-content:flex-end}
@@ -254,11 +257,16 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
                  min-height:0;margin-top:30px}
 .contrast .cell{flex:1 1 0;min-height:0;padding:44px 46px;border-radius:8px;
                 display:flex;flex-direction:column;justify-content:center}
-.contrast .cell .lab{font-weight:700;font-size:26px;letter-spacing:.24em;
-                     text-transform:uppercase;margin-bottom:22px;flex:0 0 auto}
+/* The label sits inside a translucent panel over a photograph, so muted grey
+   disappears into whatever is behind it. Bright, with an edge, and it may not
+   wrap: a two-line kicker over an operating theatre was the weakest thing on an
+   otherwise strong slide. */
+.contrast .cell .lab{font-weight:700;font-size:25px;letter-spacing:.2em;
+                     text-transform:uppercase;margin-bottom:22px;flex:0 0 auto;
+                     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .contrast .cell .txt{line-height:1.18;font-weight:700;padding-bottom:.1em}
 .contrast .claim{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
-.contrast .claim .lab{color:${c.muted}}
+.contrast .claim .lab{color:${c.body};text-shadow:0 2px 12px rgba(0,0,0,.8)}
 .contrast .claim .txt{color:${c.body}}
 .contrast .caveat{background:${c.accent}}
 .contrast .caveat .lab{color:rgba(4,18,26,.66)}

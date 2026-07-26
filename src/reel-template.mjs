@@ -459,7 +459,8 @@ em.a{font-style:normal;color:${c.accent}}
 .cell{font-family:'Archivo';font-weight:700;font-size:64px;line-height:1.3;color:#fff;
       border-left:10px solid #2a2d34;padding:36px 0 36px 44px;margin:22px 0}
 .cell.alt{border-left-color:${c.accent}}
-.cl{display:block;font-size:34px;letter-spacing:.14em;text-transform:uppercase;color:#8c929c;margin-bottom:16px}
+.cl{display:block;font-size:32px;letter-spacing:.12em;text-transform:uppercase;color:#CDD3DC;margin-bottom:16px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .handle{font-family:'Anton';font-size:76px;color:${c.accent};letter-spacing:-.01em}
 .engage{margin-top:56px}
 .engage .icons{display:flex;gap:40px;margin-bottom:30px}

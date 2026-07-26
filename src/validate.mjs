@@ -254,6 +254,18 @@ export async function validatePost(post, opts = {}) {
     err(`hook headline is ${hook.headline.length} chars, max ${HOOK_MAX_CHARS} — it would render too small to read`);
   for (const issue of hookIssues(hook?.headline)) err(`hook headline: ${issue}`);
 
+  /*
+   * The hero restates the headline in figures; it does not print the same figure
+   * twice. The manual has said so since the first post and nothing checked it,
+   * so a live Reel opened with "8,192 virtual surgical robots trained at once"
+   * above a hero reading "8,192". Compliant, sourced, and half the loudest
+   * space on the cover spent saying one thing.
+   */
+  const heroValue = String(hook?.hero?.value || "").replace(/\*+/g, "").trim();
+  const headlineText = String(hook?.headline || "").replace(/\*+/g, "");
+  if (heroValue && headlineText.includes(heroValue))
+    err(`the hero value "${heroValue}" already appears in the headline. The hero carries the comparison the headline does not: quote a different figure, or drop it.`);
+
   // ---- every slide carries a picture --------------------------------------
   for (const [i, s] of slides.entries()) {
     for (const issue of imageIssues(s, post)) err(`slide ${i + 1} (${s.type}) image: ${issue}`);

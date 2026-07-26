@@ -56,6 +56,20 @@ const MAX_DOWNLOAD = 30 * 1024 * 1024;
 /** Everything the pipeline is allowed to know about a picture. */
 const emptyCredit = { provider: null, license: null, creator: null, title: null, sourceUrl: null };
 
+/**
+ * Some failures arrive with nothing to read. A live run recorded a slide as
+ * `failed` with an empty error string and no candidates, which is the least
+ * useful thing a report can contain: `fetch` rejects with a TypeError whose
+ * detail is on `.cause`, and an abort rejects with a DOMException whose message
+ * can be empty. Name whatever came back.
+ */
+function describeError(err) {
+  const parts = [err?.message, err?.cause?.message, err?.name && !err?.message ? err.name : null]
+    .map((p) => (p ? String(p).trim() : ""))
+    .filter(Boolean);
+  return [...new Set(parts)].join(" — ") || `unnamed ${err?.constructor?.name || typeof err} with no message`;
+}
+
 async function getJson(url) {
   const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
   if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
@@ -413,9 +427,10 @@ export async function acquirePost(post, { only = null, reroll = false } = {}) {
       sheet.slides[n] = entry;
       console.log(`slide ${n}: ${entry.generated ? "generated" : "photo"} — ${entry.credit}  ->  ${entry.file}`);
     } catch (err) {
-      sheet.slides[n] = { failed: true, kind: spec.kind, query: spec.query || spec.prompt, error: err.message };
-      failures.push(`slide ${n} (${spec.kind}): ${err.message}`);
-      console.error(`FAILED slide ${n} (${spec.kind}): ${err.message}`);
+      const why = describeError(err);
+      sheet.slides[n] = { failed: true, kind: spec.kind, query: spec.query || spec.prompt, error: why };
+      failures.push(`slide ${n} (${spec.kind}): ${why}`);
+      console.error(`FAILED slide ${n} (${spec.kind}): ${why}`);
     }
   }
 

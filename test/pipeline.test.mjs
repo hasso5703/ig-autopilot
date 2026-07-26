@@ -572,3 +572,20 @@ test("the carousel window is rolling, not a calendar day", async () => {
   // and a full day later it is due again
   assert.ok((new Date("2026-07-26T20:30:00Z") - justBeforeMidnight) / 3600000 >= CAROUSEL_EVERY_HOURS);
 });
+
+// ---------------------------------------------------------------------------
+// 2026-07-26: a live Reel opened with "8,192 virtual surgical robots trained at
+// once" and printed "8,192" again in the hero underneath. The manual had
+// forbidden it since the first post; nothing checked, so half the loudest space
+// on the cover said one thing twice. The run caught it in its own report, which
+// is not a control.
+// ---------------------------------------------------------------------------
+test("the hero may not repeat a figure the headline already carries", async () => {
+  const p = goodPost();
+  p.slides[0].headline = "70 people came to one class on switching AI off";
+  p.slides[0].hero = { value: "70", label: "turned up" };
+  assert.ok(hasErr(await errs(p), /already appears in the headline/));
+
+  p.slides[0].hero = { value: "30", label: "was the cap on sign-ups" };
+  assert.ok(!hasErr(await errs(p), /already appears in the headline/));
+});
