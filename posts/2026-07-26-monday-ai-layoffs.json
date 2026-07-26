@@ -38,7 +38,7 @@
       "figure": "10%",
       "unit": "behind the market, after blaming AI",
       "body": "The Financial Times checked every company that named **AI** in its job cuts. Investors did *not entirely buy it*.",
-      "narration": "Almost ten percent. That is how far behind the Nasdaq these companies fell in the thirty trading days after they blamed AI for the cuts.",
+      "narration": "Companies that blamed AI fell almost ten percent behind the Nasdaq.",
       "evidence": "the FT also found that companies citing AI as a factor in job cuts have underperformed the Nasdaq by almost 10% in the 30 trading days following their announcements",
       "source": {
         "name": "TechCrunch",
@@ -57,6 +57,7 @@
       "claim": "A leaner model for its *AI-driven growth strategy*",
       "caveatLabel": "To the staff",
       "caveat": "*Not* made to reduce costs or replace people with AI",
+      "narration": "To the regulator, an AI-driven growth strategy. To the staff, not to replace people with AI.",
       "evidence": "On Wednesday, the company said in an SEC filing that it will lay off about 20% of its workforce, or just over 600 employees, as part of a \"restructuring plan\" tied to its \"ongoing transformation of its product, marketing, and go-to-market strategy\" in support of \"a leaner, more focused operating model\" as it continues investing in its \"AI-driven growth strategy.\" Co-founder Eran Zinman told employees in a LinkedIn memo that the move \"was not made to reduce costs or replace people with AI,\"",
       "source": {
         "name": "TechCrunch",
@@ -105,6 +106,7 @@
       "type": "cta",
       "headline": "Send this to anyone whose company blamed *AI* for the cuts",
       "sub": "AI news for people who do not work in AI.",
+      "narration": "Send this to anyone whose company blamed AI for the cuts.",
       "image": {
         "kind": "illustration",
         "prompt": "abstract field of deep indigo and slate grey, soft diagonal light bands, fine film grain, minimal, no text, no people, no objects",
