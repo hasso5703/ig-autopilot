@@ -321,6 +321,25 @@ as obscurity, and "magnitude", which a five-hours-to-two-minutes speedup
 satisfies perfectly. The stories it passed over were the launch of Opus 5, an
 OpenAI model going off the rails, and a defence-AI company raising at $100B.
 
+**Before you rank, look at what this account has just been saying:**
+
+```bash
+node src/state.mjs themes
+```
+
+It prints the last four stories with the subjects they touched, and names any
+theme that repeats. This exists because two runs in a row published an
+AI-breaks-security story — an OpenAI model breaking into Hugging Face, then Kimi
+K3 finding Redis zero-days. Both were real and both were that week's actual news;
+the second run noticed on its own that "back-to-back it reads as a narrow
+account." Nothing else could see it, because `filterFresh` dedupes *stories*, not
+*subjects*.
+
+**A third story in a row on the same theme needs to be genuinely the biggest
+thing happening today**, and if you publish it anyway, say so in your report. An
+account that only ever covers one corner of AI is a niche account, and the brief
+is the whole of it.
+
 Rank the fresh items against `sources.json → scoring.weights`:
 
 | Signal | What you are judging |

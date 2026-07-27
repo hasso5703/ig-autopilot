@@ -317,6 +317,57 @@ export const CAROUSEL_EVERY_HOURS = 20;
 
 const isReel = (p) => /-reel\b/.test(p.slug || "");
 
+/**
+ * What this account has been talking about, so a run can avoid saying it again.
+ *
+ * Two runs in a row published an AI-breaks-security story — the OpenAI test
+ * model breaking into Hugging Face, then Kimi K3 finding Redis zero-days. Both
+ * were real, both were what was actually happening that week, and the second run
+ * flagged it itself: "back-to-back it reads as a narrow account." Nothing else
+ * could see it. `filterFresh` dedupes stories, not subjects, so two distinct
+ * stories about the same thing pass every check we have.
+ *
+ * These themes are coarse on purpose. The judgement of whether a story is really
+ * the same subject belongs to the run; this only puts the recent record in front
+ * of it, in one line, so the question gets asked.
+ */
+const THEMES = {
+  security: /\b(hack|hacked|hacking|breach|exploit|zero[- ]day|vulnerab|malware|ransom|intrusion|cyber|penetrat)/i,
+  jobs: /\b(layoff|laid off|job cuts|redundanc|fired|hiring freeze|workforce|replace(d|s)? (staff|workers|people))/i,
+  money: /\b(billion|valuation|funding|raise[sd]?|backstop|invest|ipo|revenue|bubble)/i,
+  safety: /\b(lawsuit|sued|suing|regulat|ban|court|liabilit|harm|died|death|injur)/i,
+  models: /\b(launch|releas|open[- ]sourc|weights|benchmark|model card|outperform)/i,
+  infra: /\b(data cent|datacent|gigawatt|power|grid|chips?|gpu|fab|energy)/i,
+};
+
+export function themesOf(text) {
+  const t = String(text || "");
+  return Object.entries(THEMES).filter(([, re]) => re.test(t)).map(([k]) => k);
+}
+
+export async function recentThemes(now = new Date(), { posts = 4 } = {}) {
+  const { posted } = await loadState();
+  // One entry per story: a carousel and its Reel share a title and would
+  // otherwise count twice.
+  const seen = new Set();
+  const stories = [];
+  for (const p of [...posted].reverse()) {
+    const key = p.fingerprint || p.title || p.slug;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    stories.push(p);
+    if (stories.length >= posts) break;
+  }
+  const counts = {};
+  for (const p of stories) for (const th of themesOf(`${p.title || ""} ${p.slug || ""}`)) counts[th] = (counts[th] || 0) + 1;
+  const runOn = Object.entries(counts).filter(([, n]) => n >= 2).map(([k]) => k);
+  return {
+    stories: stories.map((p) => ({ at: p.at, title: p.title || p.slug, themes: themesOf(`${p.title || ""} ${p.slug || ""}`) })),
+    counts,
+    runOn,
+  };
+}
+
 export async function carouselDue(now = new Date()) {
   const { posted } = await loadState();
   const last = posted.filter((p) => !isReel(p)).at(-1);
@@ -332,7 +383,15 @@ export async function carouselDue(now = new Date()) {
 }
 
 if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
-  if (process.argv[2] === "today") {
+  if (process.argv[2] === "themes") {
+    const r = await recentThemes();
+    for (const s2 of r.stories) console.log(`${s2.at.slice(0, 16)}  [${s2.themes.join(", ") || "-"}]  ${s2.title.slice(0, 66)}`);
+    console.error(
+      r.runOn.length
+        ? `\nTHE LAST FOUR STORIES LEAN ON: ${r.runOn.join(", ")}. A third in a row reads as a narrow account. Prefer a story that is not about ${r.runOn.join(" or ")}, unless today's is genuinely the biggest thing happening.`
+        : "\nNo theme repeats across the last four stories. Nothing to avoid."
+    );
+  } else if (process.argv[2] === "today") {
     const t = await carouselDue();
     console.log(JSON.stringify(t, null, 2));
     console.error(

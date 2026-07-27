@@ -13,7 +13,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 
 import { validatePost, claimOverlap, hookIssues, imageIssues } from "../src/validate.mjs";
-import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted } from "../src/state.mjs";
+import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted, themesOf } from "../src/state.mjs";
 import { shorten, splitFigure, buildTimeline, totalDuration, applyNarrationTiming } from "../src/reel-template.mjs";
 import { queryLadder, scoreCandidate, creditLine } from "../src/imagery.mjs";
 import { complianceIssues } from "../src/reel.mjs";
@@ -618,4 +618,19 @@ test("a posted record that cannot recognise its own story is refused", async () 
   await assert.rejects(() => recordPosted({ slug: "x", mediaId: "1", url: "https://a.com/x" }), /`title` is required/);
   await assert.rejects(() => recordPosted({ slug: "x", mediaId: "1", title: "T" }), /`url` is required/);
   await assert.rejects(() => recordPosted({ mediaId: "1", title: "T", url: "https://a.com/x" }), /`slug` is required/);
+});
+
+// ---------------------------------------------------------------------------
+// 2026-07-27: two runs in a row published an AI-breaks-security story — an
+// OpenAI test model breaking into Hugging Face, then Kimi K3 finding Redis
+// zero-days. Both real, both the week's actual news, and the second run flagged
+// it itself: "back-to-back it reads as a narrow account." Nothing could see it,
+// because filterFresh dedupes stories and not subjects.
+// ---------------------------------------------------------------------------
+test("a theme running through recent posts is named, and a carousel plus its Reel count once", () => {
+  assert.deepEqual(themesOf("Kimi K3 agents found Redis zero-days and built an RCE exploit"), ["security"]);
+  assert.ok(themesOf("Monday.com blames AI for layoffs").includes("jobs"));
+  assert.ok(themesOf("Nvidia to guarantee $250 billion of data centre financing").includes("money"));
+  // A story with no matching theme is not forced into one.
+  assert.deepEqual(themesOf("Librarians teach a class on turning features off"), []);
 });
