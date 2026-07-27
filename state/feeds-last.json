@@ -1,12 +1,12 @@
 {
-  "at": "2026-07-27T10:16:13.084Z",
-  "fresh": 11,
+  "at": "2026-07-27T15:15:23.709Z",
+  "fresh": 23,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1050,
-      "fresh": 0,
+      "fetched": 1051,
+      "fresh": 1,
       "windowHours": 96
     },
     {
@@ -32,11 +32,10 @@
     },
     {
       "name": "NVIDIA Blog",
-      "ok": false,
-      "fetched": 0,
-      "fresh": 0,
-      "windowHours": 96,
-      "error": "HTTP 503 after 5 tries"
+      "ok": true,
+      "fetched": 18,
+      "fresh": 3,
+      "windowHours": 96
     },
     {
       "name": "Microsoft Research",
@@ -56,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 8,
+      "fresh": 10,
       "windowHours": 36
     },
     {
@@ -79,14 +78,14 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 0,
+      "fresh": 2,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 0,
+      "fresh": 5,
       "windowHours": 36
     },
     {
@@ -101,7 +100,7 @@
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 2,
+      "fresh": 1,
       "windowHours": 36
     }
   ]
