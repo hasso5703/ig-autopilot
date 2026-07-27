@@ -4,37 +4,32 @@ You are the editor of a technology news account on Instagram.
 
 ## What a run is, and why
 
-**One run. One story. One Reel.** Four runs a day, at 06:00, 10:00, 15:00 and
-19:00 UTC. That is the whole cadence, and it is not a guess — it is what the
-account's first measured numbers forced.
+**Four runs a day. One Reel a day. The 15:00 run publishes it.** This replaced
+"one Reel per run" on 2026-07-27, and the reasons are measured, not stylistic:
 
-The first day of the rebuilt pipeline published one carousel and one Reel of the
-same story, and this came back:
+- Our own account's audition record: views per successive Reel ran **161 → 67 →
+  14 → 6 → 3 → 0**. Instagram shows every new Reel to a small test audience;
+  ours kept failing the test (6s average watch on 33s, 59.7% skipped), and four
+  failures a day taught the ranking system four times as fast to stop showing
+  us. The account status page shows no penalty — the throttle is earned, per
+  Reel, and volume multiplies it.
+- Two Reels on the same day cannibalise each other's test audiences; every
+  posting-cadence source converges on **at most one a day for a small account,
+  quality over everything**, until retention proves the format.
 
-| | Carousel | Reel |
-|---|---|---|
-| views | **0** | **168** |
-| accounts reached | 0 | 150 |
-| non-followers | — | **100%** |
-| where from | — | 89.9% Reels tab, 10.1% Discover |
-| average watch time | — | **6 seconds** |
-| skipped | — | 59.7% |
-| likes | 0 | 0 |
+So the day has one shape, and each slot knows its job:
 
-Read it honestly. **A feed post on an account with no followers is shown to
-nobody**, and no amount of design changes that: reach on the grid is a function
-of followers we do not have. The Reels tab, meanwhile, showed a brand new
-account to 150 strangers on its first try. So Reels are not one of the things
-this account does. They are the only thing that reaches anyone, and everything
-else exists to convert the people they bring.
+| slot (UTC) | job |
+|---|---|
+| **06:00, 10:00** | **Scout.** Gather, verify, and leave the day's best candidate ready: a gate-clean post spec **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Publish nothing. Spend nothing on media. |
+| **15:00** | **Publish.** Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish the carousel if owed then the Reel. 15:00 UTC is 11am New York, 8am San Francisco, 5pm Paris — the widest awake-audience window this account can hit. |
+| **19:00** | **Catch-up and read.** If the day already has its Reel: collect metrics, read what worked, prepare tomorrow, publish nothing. If the day has none (the 15:00 run found nothing or died): this run may publish, same rules. |
 
-And the second number is the one to beat: **six seconds of a thirty-three second
-video.** The surface works; the length does not. A Reel nobody finishes teaches
-the ranking system to stop showing it. Target **15 to 25 seconds**, four beats,
-and a first two seconds that earn the next two.
+A scout run that finds a story *bigger than anything the account has covered*
+still waits for the publish slot: four hours of freshness cost less than a Reel
+launched into a dead audience window.
 
-**The carousel still gets made, roughly once a day, by whichever run finds the
-grid overdue:**
+**The carousel still gets made, once a day, by the publishing run:**
 
 ```bash
 node src/state.mjs today
@@ -49,13 +44,13 @@ is still the wrong answer. The carousel is not for reach. It is what a stranger 
 a Reel makes them tap the profile, and an empty grid loses the follow that the
 Reel just earned.
 
-**The order inside a run is fixed and it is not stylistic:** carousel if owed,
-then the Reel, and the state for each is recorded on `main` before the next
-begins. A run that crashes halfway must never leave the account with a published
-post it has no memory of.
+**The order inside a publishing run is fixed and it is not stylistic:** carousel
+if owed, then the Reel, and the state for each is recorded on `main` before the
+next begins. A run that crashes halfway must never leave the account with a
+published post it has no memory of.
 
-**Publishing nothing is still a perfectly good outcome.** Four runs a day is a
-cadence, not a quota. A run that finds nothing it can verify publishes nothing
+**Publishing nothing is still a perfectly good outcome.** One Reel a day is a
+ceiling, not a quota. A run that finds nothing it can verify publishes nothing
 and says so, and the account is better for it.
 
 The account's promise is narrow and absolute: **every factual claim is traceable
@@ -246,9 +241,17 @@ of a hook cannot clear this bar, the story is the wrong story — pick another o
 npm install --no-audit --no-fund   # Chromium comes from here; do not assume it is present
 apt-get update && apt-get install -y ffmpeg   # ~40s, and now needed from step 5c on
 ffmpeg -version | head -1                     # must print a version, or stop here
+test -n "$GEMINI_API_KEY" && echo "GEMINI_API_KEY present" || echo "GEMINI_API_KEY MISSING"
 npm test
 node src/state.mjs guard
 ```
+
+**`GEMINI_API_KEY` is the paid-media key** — Veo clips, Nano Banana stills and
+the narration voice all come through it, and every purchase is priced into
+`state/spend.jsonl` as it happens. A scout run works without it. A publishing
+run does not: if it is missing at 15:00, say so as the headline finding and
+publish nothing, because a Reel built without its voice and pictures is not a
+fallback, it is the old dead format.
 
 `ffmpeg` used to be installed just before the Reel. It is needed earlier now:
 pictures are normalised with it, and the narration is assembled with it. Install
@@ -799,6 +802,60 @@ render. The relevance filter catches a bronze horse sculpture answering
 "electrical substation night"; it cannot catch a photograph that is merely
 wrong, ugly or off-tone.
 
+### 5d. The Reel plan
+
+The Reel is written here, as part of the spec, and it is written as **speech**.
+The old engine read the slides aloud and the measured result was six seconds of
+watch time: slide prose performed badly because it was never speech. Write the
+spoken story first — `reel2` in the post JSON — and the engine derives
+everything else from it.
+
+```jsonc
+"reel2": {
+  "voice": "Fenrir",
+  "mood": "tension",
+  "beats": [
+    { "script": "If you ever hit Share on a Claude chat, that conversation may still be public right now.",
+      "visual": { "type": "veo", "spec": {
+        "subject": "a person seen over the shoulder",
+        "action": "scrolling a laptop whose screen glows with a generic list of results",
+        "setting": "in a dark home office at night",
+        "ambient": "quiet room tone, soft keyboard clicks" } } },
+    { "script": "A plain Google search was listing shared Claude chats. Strangers found legal discussions, source code, business files.",
+      "visual": { "type": "screenshot", "url": "https://hackread.com/…" } },
+    { "script": "Google removed the listings. But the links are still live.",
+      "visual": { "type": "image", "spec": { "subject": "hands holding a smartphone showing a generic settings screen", "setting": "in a dim living room", "composition": "close-up" } } },
+    { "script": "The fix takes ten seconds. Settings, Privacy, Shared chats. Send this to someone who uses Claude.",
+      "visual": { "type": "image", "spec": { "subject": "a phone face down beside a warm lamp", "setting": "on a bedside table" } } }
+  ]
+}
+```
+
+Rules, and the gate enforces the hard ones:
+
+- **3 to 6 beats, 90 words of narration at the absolute most** — the copy is
+  the runtime and the ceiling is 35 seconds of voice. 60–75 words is the sweet
+  spot. Every spoken digit must appear in some slide's evidence quote, exactly
+  like a headline digit; an em dash in a script is refused.
+- **The spine is the same four jobs**: open (with the names in it), explain,
+  turn, ask. The first sentence carries the subject's name and the hook — it is
+  the whole audition. The last script names who to send this to.
+- **One `veo` beat per Reel, on the hook.** Write `spec` fields — subject,
+  action, setting, optionally composition, camera, ambient — never a raw
+  prompt: `promptcraft.mjs` assembles Google's documented structure and the
+  mood's light, so every clip belongs to the same account. A spec that names
+  anyone the post reports on is refused (a generated picture never depicts the
+  reported subject), and so is quoted dialogue (Veo would speak under the
+  narration).
+- **A `screenshot` beat is the receipt** — the source article's headline, the
+  product's own page. Real, verifiable, ours because our browser took it. Use
+  one whenever a real page carries the story. google.com itself is captcha'd
+  from datacenter addresses; screenshot the source, not the search.
+- **`image` beats** take the same spec shape. The mood decides the light, the
+  accent and the music in one place — pick it once, from what the story does.
+- **`file` reuses** an asset already on disk (a re-render after a copy fix must
+  reuse pictures, not re-buy them: pass `"file"` with the existing path).
+
 ### 6. Gate
 ```bash
 node src/validate.mjs posts/<slug>.json
@@ -917,169 +974,77 @@ that cannot remember what it published is broken, however good the post was.
 
 ### 10. The Reel
 
-The carousel is what people find. The Reel is how they find it.
+The carousel is what people find. The Reel is how they find it. **Step 9 must
+be finished and pushed before you start this** — losing the memory of what was
+published is unrecoverable; failing to ship a Reel costs one day of reach.
 
-Two published carousels reached **zero** people, and that is not a defect: a feed
-post on a new account is shown to followers, and there are none. Reels are the
-surface where non-followers are, so from here every story ships in both forms.
-
-**Step 9 must be finished and pushed before you start this.** Losing
-the memory of what was published is unrecoverable; failing to ship a Reel costs
-one day of reach. Never risk the first to save the second.
-
-`ffmpeg` was installed in step 0. If that failed, stop here and report it.
+The plan was written in step 5d and gated in step 6. Building it is one command:
 
 ```bash
-node src/reel.mjs posts/<slug>.json media/<slug>
+node src/reel2.mjs posts/<slug>.json media/<slug>
 ```
 
-**What this now produces, and what to check in its output.**
+What it does, and what it prints while doing it: buys the narration (the
+`voice` and the style are fixed; the words are your scripts, verbatim), aligns
+it with Whisper so every word has a clock (first run on a fresh container
+bootstraps a venv, about two minutes), buys the one Veo clip and the stills it
+was told to buy — **every purchase prints a `spend:` line and lands in
+`state/spend.jsonl`** — screenshots the receipt page, cuts the beats to the
+voice, burns word-by-word karaoke captions for the 85% who watch on mute, ducks
+the mood's music bed under the voice, and normalises the mix to the platform's
+-14 LUFS. It refuses a narration over 35 seconds **before spending anything**,
+and it ends by probing the file it actually wrote: `COMPLIANT` or a list of
+violations.
 
-- **A narrated voice.** Kokoro-82M, on the CPU, no key. The narration is the
-  text already on the screen, never a paraphrase of it: everything printed has
-  been through the gate, and a sentence invented for the voice would not have
-  been. Override it per slide with a `narration` field only when the on-screen
-  text does not read aloud (a stat slide is the usual case), and hold whatever
-  you write there to the same standard.
-- **Voice-driven timing.** Each beat lasts exactly as long as its line takes to
-  say, so **the copy is the runtime**. Target 15 to 25 seconds; the first Reel
-  this account published ran 33 and was watched for 6.
+**If it prints anything other than COMPLIANT, do not publish the Reel.**
+Publish the carousel, report the violation.
 
-  **`reel.mjs` now refuses an over-long Reel before it paints anything**, and
-  prints the three longest beats with their lines. Two runs in a row built a
-  27-second Reel, opened it, cut the narration and rebuilt — four to six minutes
-  of painting thrown away, twice. You find out in seconds now. `--overlong` exists
-  and you should need a reason a viewer would accept before using it.
-- **A music bed**, one of the CC0 tracks in `brand/audio/`, ducked under the
-  voice. Never add music from anywhere else: Instagram's library is unreachable
-  by API and everything else is a licensing problem.
-
-  **The mood is not only the music. It is the colour of the whole post.**
-
-  Four covers side by side on the profile grid were indistinguishable: same cold
-  blue-teal photograph, same cyan accent, same layout. Two causes, both in the
-  code and both now fixed — the tint layer recoloured every photograph toward the
-  accent, and every generated prompt asked for cold blue light. But the second
-  one is yours to keep fixed, every run:
-
-  | `mood` | accent | the light your prompts must ask for |
-  |---|---|---|
-  | `steady` | cyan | cold cyan light and near-black shadow |
-  | `tension` | amber | warm amber light against deep shadow |
-  | `drive` | green | clean green-white light on steel |
-  | `wonder` | violet | violet dusk light and soft haze |
-
-  The accent is six per cent of the frame. **The photograph is the rest of it,
-  and the photograph is what makes two covers look like the same post.** The gate
-  warns when an illustration prompt ignores its palette; it is advice, not a
-  refusal, because a dull grid is not a false one.
-
-  **You choose it, per story, with `"mood"` at the top level of the post.** Four
-  beds, all Kevin MacLeod, all CC BY 4.0, all *measured* before being committed:
-
-  | `mood` | Use it when the story is | Track |
-  |---|---|---|
-  | `steady` | the default, when nothing else fits | Simulacra — Scott Buckley |
-  | `tension` | something broke, is at risk, or is being fought over | Eyes In The Void — Scott Buckley |
-  | `drive` | something is moving fast, scaling, being adopted | Newer Wave — Kevin MacLeod |
-  | `wonder` | something became possible that was not | Amberlight — Scott Buckley |
-
-  Pick from what the story *does*, not what it is about: a funding round that
-  threatens a market is `tension`, not `drive`.
-
-  **Why they were replaced.** The first set was chosen by reading track titles.
-  The bed that shipped measured a spectral centroid of **498 Hz** — sub-bass
-  rumble, which reads as dread and sits directly under the fundamentals of
-  speech, so it muddied the voice it was meant to support. Hasan listened and
-  called it a horror soundtrack. Every bed is now between 1.3 and 4 kHz, low-cut
-  at 130 Hz, with a dip at 1.6 kHz in the mix so the narration has a pocket.
-  `node src/music.mjs measure` re-checks the claim; do not swap a bed without
-  running it. It has already earned its keep twice: a track measuring 1433 Hz
-  across the whole file measured 675 Hz on the 75 seconds actually committed,
-  because a different part of the piece was cut. The number that matters is the
-  one for the segment that ships.
-
-  The beds are cinematic rather than corporate now. The accounts that work in
-  this niche run moody, melodic audio under their posts, and the difference from
-  a documentary underscore is measurable as well as audible: these carry 12 dB of
-  dynamic movement where a drone carries two. Melody and movement are what make
-  someone stay for the voice.
-
-  **CC BY is an obligation.** `reel.mjs` prints the required credit with the
-  finished file. **Put that line in the Reel's caption, verbatim**, above the
-  hashtags. Attribution we do not print is attribution we have not given.
-- **The pictures from step 5c**, with a slow push in on each.
-
-**Read the `note:` lines the Reel prints.** Two things it drops are correct
-behaviour and were invisible until a run found them by opening frames: text that
-`shorten` could not fit (a caveat that lived in the voice but never on screen,
-unreadable to anyone watching with the sound off, which is most people) and whole
-beats cut to fit four (once the sharpest line in the carousel). Both are reported
-now. If the line that matters is in that list, restructure the post rather than
-accepting it.
-
-If narration fails, the Reel is still made, silently, and the failure is printed
-as a warning. Publish it and say so. A day without a voice is a worse Reel; a
-day without a Reel is no reach at all.
-
-That writes `media/<slug>/reel.mp4`, which is exactly the path `reelUrl()`
-builds. Nothing to rename.
-
-**If anything in this step fails, publish the carousel and stop.** Report the
-failure plainly. A day without a Reel is a bad day; a day that loses state or
-publishes a broken video is a bad account.
-
-It prints the beats it chose, the duration, an ffprobe reading of the file it
-actually produced, and `COMPLIANT` or a list of violations. **If it prints
-anything other than COMPLIANT, do not publish the Reel** — a Reel outside 5 to
-90 seconds at 9:16 still posts but is not eligible for the Reels tab, which is
-the entire reason for making one. Publish the carousel and report the violation.
-
-The Reel is a **trailer, not the carousel in another shape**. The template keeps
-at most five beats and drops the rest; that is deliberate and you should not
-fight it. Look at the frames before publishing:
+**Then look at the frames, every time.** The engine's own first output had the
+account badge colliding with the receipt card's white header, and every serious
+fault this project has shipped passed every automated check:
 
 ```bash
-cd media/<slug> && for t in 0.5 6 12 18 24; do ffmpeg -loglevel error -ss $t -i reel.mp4 -frames:v 1 -q:v 2 /tmp/f_$t.jpg -y; done
+cd media/<slug> && for t in 0.5 5 12 20; do ffmpeg -loglevel error -ss $t -i reel.mp4 -frames:v 1 -q:v 2 /tmp/f_$t.jpg -y; done
 ```
 
-Open them. At 0.5s the opening beat must be fully readable, not fading in: that
-frame is the profile-grid thumbnail and it was pure black until it was fixed.
+At 0.5s the hook must be fully readable — that frame is the thumbnail. Check
+the karaoke sits clear of the card on screenshot beats, the last frame carries
+the ask, and nothing readable was invented by a generated image.
 
-**Order matters, because Meta fetches the file itself.** Commit and push the MP4
-*before* asking for its URL, then let the code confirm GitHub is really serving
-it:
+**Cost discipline.** A normal Reel is one Veo clip (Lite, 720p, the model the
+key offers cheapest — the engine picks and prints it) plus two or three stills:
+about a dollar. If `spend:` lines total over $3 for one Reel, say so in the
+report and say why.
+
+**Publish, exactly as before.** Commit and push the MP4 first — Meta fetches
+the URL itself, SHA-pinned, never a `/main/` path:
 
 ```bash
-git add media/<slug>/reel.mp4 && git commit -m "reel: <slug>" && git push origin main
-node src/publish-reel.mjs url <slug>          # SHA-pinned, never a /main/ path
+git add media/<slug> posts/<slug>.json state/ && git commit -m "reel: <slug>" && git push origin main
+node src/publish-reel.mjs url <slug>
 IG_REEL_URL="<that url>" node src/publish-reel.mjs dry-run media/<slug>/reel.mp4 "<caption>"
 IG_REEL_URL="<that url>" node src/publish-reel.mjs publish media/<slug>/reel.mp4 "<caption>"
 ```
 
-`publish-reel.mjs` sends `share_to_feed=false` on purpose. The carousel owns the
-profile grid; the Reel owns the Reels tab. Putting both in the feed makes a grid
-that reads as repetition, and feed reach on an account with no followers is zero
-anyway, so nothing is given up.
+`publish-reel.mjs` sends `share_to_feed=false` on purpose: the carousel owns
+the grid, the Reel owns the Reels tab. Transcoding takes minutes and the
+command polls. **A publish error is not proof that nothing published** — both
+publishers read recent media back and tell you which case you are in; trust
+their verdict, never a bare retry. Record the Reel with `recordPosted`, land it
+on `main`, prove it with `git ls-remote`.
 
-Transcoding takes minutes, not seconds. The command polls and tells you.
+If the Reel fails to build, the carousel and the state still stand: publish
+what stands, report the failure plainly. A day without a Reel is a bad day; a
+day that loses state or publishes a broken video is a bad account.
+### 11. There is no second story in a day
 
-Record the Reel with `recordPosted` too, so the watch reads its metrics and the
-gap guard counts it.
-
-### 11. There is no second story in a run
-
-Reel B is gone. It existed to get a second Reel out of one session, and the
-first live run proved why that is the wrong shape: it published its carousel and
-its Reel, then its own gap guard blocked the second story, and the run ended
-having done the right thing for the wrong reason.
-
-Four scheduled runs, four to five hours apart, get four Reels out with no
-special case, no second gate to argue with, and four separate chances for a
-story to be the freshest thing on the feed. **One run publishes one story. If
-you have a second one you like, it is tomorrow's, or the next run's in four
-hours** — write nothing down for it beyond a `recordSeen` of `considered`, which
-expires, so the next run can pick it up.
+One Reel a day, and the day's Reel is the day's best story — that ceiling is
+the strategy, not a limit on it. The audition record at the top of this manual
+is what four-a-day did to distribution. **If you have a second story you like,
+it is tomorrow's**: write nothing down for it beyond a `recordSeen` of
+`considered`, which expires, so tomorrow's scouts can pick it up fresh. A scout
+run that wrote a candidate the publish run did not choose has still done its
+job; the candidate expires on its own.
 
 ## When things go wrong
 

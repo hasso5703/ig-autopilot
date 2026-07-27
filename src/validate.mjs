@@ -739,6 +739,37 @@ export async function validatePost(post, opts = {}) {
       );
   }
 
+  // ---- the Reel's spoken script is held to the slide standard --------------
+  //
+  // reel2 scripts are new prose, not slide text read aloud, which means they
+  // are a fresh path for an unquoted figure to reach the public — spoken AND
+  // printed as karaoke, the loudest surface the account has. Same rule as
+  // everywhere else: prose is free, digits are not. Shape errors are caught
+  // here too, because reel2.mjs only runs after money starts being spent.
+  if (post.reel2 !== undefined) {
+    const beats = Array.isArray(post.reel2?.beats) ? post.reel2.beats : [];
+    if (beats.length < 3 || beats.length > 6) err(`reel2: ${beats.length} beats — the spine is 3 to 6`);
+    const VISUALS = new Set(["veo", "screenshot", "image", "file"]);
+    let words = 0;
+    for (const [i, b] of beats.entries()) {
+      const at = `reel2 beat ${i + 1}`;
+      if (!b?.script?.trim()) { err(`${at}: no script — the copy is the runtime`); continue; }
+      words += b.script.trim().split(/\s+/).length;
+      if (DASHES.test(b.script)) err(`${at}: contains an em dash, en dash or "--" — rewrite as two sentences`);
+      const unsupported = [...new Set(numbers(b.script))].filter((n) => !allEvidence.has(n));
+      if (unsupported.length)
+        err(`${at}: figure(s) ${unsupported.join(", ")} are spoken but appear in no evidence quote — a number must be copied, never derived`);
+      const type = b.visual?.type ?? "image";
+      if (!VISUALS.has(type)) err(`${at}: unknown visual type "${type}"`);
+      if (type === "screenshot" && !b.visual?.url && !b.visual?.file) err(`${at}: a screenshot beat needs a url or a file`);
+      if ((type === "veo" || type === "image") && !b.visual?.spec && !b.visual?.prompt && !b.visual?.file)
+        err(`${at}: a ${type} beat needs a spec, a prompt or a file`);
+    }
+    if (words > 90) err(`reel2: ${words} words of narration — over the 90-word runtime budget, cut the longest beats first`);
+    if (post.reel2?.mood && !["steady", "tension", "drive", "wonder"].includes(post.reel2.mood))
+      err(`reel2: unknown mood "${post.reel2.mood}"`);
+  }
+
   // ---- corroboration of the central claim ---------------------------------
   //
   // This used to be one warning: "fewer than 2 distinct domains". It was the

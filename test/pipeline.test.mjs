@@ -684,3 +684,23 @@ test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, sc
   assert.equal((low[0].match(/\\k\d+/g) || []).length, 5, "the orphan 'chats.' rejoined its four-word sentence");
   assert.ok(dialogues.every((d) => (d.match(/\\k\d+/g) || []).length >= 2), "every caption carries at least two timed words");
 });
+
+test("reel2 scripts are held to the slide standard: digits quoted, shape checked", async () => {
+  const p = goodPost();
+  p.reel2 = { voice: "Fenrir", mood: "tension", beats: [
+    { script: "Libraries now teach you to switch AI off.", visual: { type: "veo", spec: { subject: "a librarian's hands", action: "closing a laptop", setting: "in a small-town library" } } },
+    { script: "About 70 people turned up to one class.", visual: { type: "screenshot", url: "https://techcrunch.com/a" } },
+    { script: "Send this to someone who hates AI popups.", visual: { type: "image", spec: { subject: "a phone face down", setting: "on a wooden table" } } },
+  ] };
+  assert.equal((await errs(p)).filter((e) => /reel2/.test(e)).length, 0, "a clean plan passes");
+
+  p.reel2.beats[1].script = "It found 19 unknown holes in 90 minutes.";
+  assert.ok(hasErr(await errs(p), /spoken but appear in no evidence/), "an unquoted spoken figure is refused");
+
+  p.reel2.beats[1].script = "About 70 people turned up.";
+  p.reel2.beats[1].visual = { type: "screenshot" };
+  assert.ok(hasErr(await errs(p), /screenshot beat needs a url or a file/));
+
+  p.reel2.beats = p.reel2.beats.slice(0, 2);
+  assert.ok(hasErr(await errs(p), /the spine is 3 to 6/));
+});
