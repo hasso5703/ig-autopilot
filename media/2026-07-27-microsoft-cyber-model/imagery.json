@@ -1,0 +1,103 @@
+{
+  "slug": "2026-07-27-microsoft-cyber-model",
+  "slides": {
+    "1": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-27-microsoft-cyber-model/src/01.jpg",
+      "generated": true,
+      "prompt": "cinematic wide photograph of a vast dark data hall, rows of server racks with small amber status lights receding into haze, clean green-white key light on steel, 35mm, volumetric, no text, no people",
+      "seed": 1977,
+      "alt": "a dark server hall with amber lights",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "2": {
+      "file": "media/2026-07-27-microsoft-cyber-model/src/02.jpg",
+      "generated": false,
+      "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL3B4NzE4NTktaW1hZ2Uta3d2djc0czIuanBn.jpg",
+      "provider": "openverse/rawpixel",
+      "license": "cc0",
+      "creator": "",
+      "title": "Free computer server room image",
+      "sourceUrl": "https://www.rawpixel.com/image/5906639/photo-image-light-desktop-wallpapers-public-domain",
+      "alt": "a server room with racks of machines",
+      "attempt": 1,
+      "credit": "Free computer server room image · CC0"
+    },
+    "3": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-27-microsoft-cyber-model/src/03.jpg",
+      "generated": true,
+      "prompt": "macro photograph of a dark circuit board, one copper trace glowing faintly where it is broken, clean green-white light on steel, shallow depth of field, no text, no people",
+      "seed": 1000,
+      "alt": "a broken trace on a dark circuit board",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "4": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-27-microsoft-cyber-model/src/04.jpg",
+      "generated": true,
+      "prompt": "two metal chess kings facing each other on a brushed steel table, harsh green-white spotlight, deep black background, no text, no people",
+      "seed": 1000,
+      "alt": "two chess kings facing off on steel",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "5": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-27-microsoft-cyber-model/src/05.jpg",
+      "generated": true,
+      "prompt": "a wall of dark monitors with unreadable scrolling glyphs in a dim room, one empty chair in the foreground, clean green-white light on steel, deep shadow, no text, no people",
+      "seed": 1000,
+      "alt": "a wall of dark monitors and an empty chair",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "6": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-27-microsoft-cyber-model/src/06.jpg",
+      "generated": true,
+      "prompt": "three glass office towers at night viewed from street level, grids of lit windows, cold green-white light, light haze, no text, no people",
+      "seed": 1000,
+      "alt": "three office towers at night",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    },
+    "7": {
+      "provider": "pollinations/sana",
+      "license": "generated",
+      "creator": null,
+      "title": null,
+      "sourceUrl": null,
+      "file": "media/2026-07-27-microsoft-cyber-model/src/07.jpg",
+      "generated": true,
+      "prompt": "a smartphone lying on a dark steel desk, screen glowing faintly, single green-white rim light, deep shadow, no text, no people",
+      "seed": 1000,
+      "alt": "a phone on a dark desk",
+      "attempt": 0,
+      "credit": "Illustration · AI-generated"
+    }
+  },
+  "acquired": "2026-07-27T20:19:21.402Z"
+}

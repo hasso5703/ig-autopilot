@@ -33,7 +33,10 @@
       "type": "hook",
       "kicker": "27 July 2026 · Microsoft",
       "headline": "Microsoft says its new flaw-hunting AI *beats OpenAI, Google and Anthropic*",
-      "hero": { "value": "96%", "label": "at finding real flaws in software, by Microsoft's own count" },
+      "hero": {
+        "value": "96%",
+        "label": "at finding real flaws in software, by Microsoft's own count"
+      },
       "swipe": "Swipe for the receipts",
       "image": {
         "kind": "illustration",
@@ -47,19 +50,27 @@
       "unit": "at finding real flaws in software",
       "body": "Microsoft's new security AI scored **96%** at finding real vulnerabilities in code, *12 points* above Anthropic's Mythos. Every score is Microsoft's own count.",
       "evidence": "The result is that the unified system of MDASH with MAI-Cyber-1-Flash delivers 96% on CyberGym (+12 pt above Mythos)",
-      "source": { "name": "Microsoft AI", "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/", "date": "2026-07-27" },
+      "source": {
+        "name": "Microsoft AI",
+        "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/",
+        "date": "2026-07-27"
+      },
       "image": {
         "kind": "photo",
-        "query": "Microsoft headquarters",
-        "alt": "Microsoft headquarters campus"
+        "query": "server room",
+        "alt": "a server room with racks of machines"
       }
     },
     {
       "type": "content",
       "title": "The first model Microsoft built just for security",
-      "body": "It is called **MAI-Cyber-1-Flash**, built to *find challenging vulnerabilities in complex codebases*, in Microsoft's words. It reads code the way a burglar reads a building, looking for the doors nobody locked.",
+      "body": "**MAI-Cyber-1-Flash** was built to *find challenging vulnerabilities in complex codebases*. It reads code the way a burglar reads a building.",
       "evidence": "That's the motivation behind MAI-Cyber-1-Flash, which has been built to find challenging vulnerabilities in complex codebases.",
-      "source": { "name": "Microsoft AI", "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/", "date": "2026-07-27" },
+      "source": {
+        "name": "Microsoft AI",
+        "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/",
+        "date": "2026-07-27"
+      },
       "image": {
         "kind": "illustration",
         "prompt": "macro photograph of a dark circuit board, one copper trace glowing faintly where it is broken, clean green-white light on steel, shallow depth of field, no text, no people",
@@ -73,7 +84,11 @@
       "caveat": "Every number so far is **Microsoft's own reporting**, in its own announcement",
       "caveatLabel": "The catch",
       "evidence": "Microsoft says that MAI-Cyber-1-Flash inside MDASH outperformed Mythos, Gemini and GPT on the CyberGym benchmark, which it describes as a benchmark for evaluating how AI systems reason over large codebases to identify software vulnerabilities.",
-      "source": { "name": "Help Net Security", "url": "https://www.helpnetsecurity.com/2026/07/27/microsoft-mai-cyber-1-flash-ai-model/", "date": "2026-07-27" },
+      "source": {
+        "name": "Help Net Security",
+        "url": "https://www.helpnetsecurity.com/2026/07/27/microsoft-mai-cyber-1-flash-ai-model/",
+        "date": "2026-07-27"
+      },
       "image": {
         "kind": "illustration",
         "prompt": "two metal chess kings facing each other on a brushed steel table, harsh green-white spotlight, deep black background, no text, no people",
@@ -85,7 +100,11 @@
       "body": "Defend against AI with AI at the scale and speed that the attackers have.",
       "attribution": "Hayete Gallot, Microsoft's vice president for security, on Perception, its new team of defense agents",
       "evidence": "Noting that hackers are increasingly using AI in their cyberattacks, Hayete Gallot, Microsoft's vice president for security, described Perception as a way for enterprise defenders to \"defend against AI with AI at the scale and speed that the attackers have.\"",
-      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/", "date": "2026-07-27" },
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+        "date": "2026-07-27"
+      },
       "image": {
         "kind": "illustration",
         "prompt": "a wall of dark monitors with unreadable scrolling glyphs in a dim room, one empty chair in the foreground, clean green-white light on steel, deep shadow, no text, no people",
@@ -95,9 +114,13 @@
     {
       "type": "content",
       "title": "All three AI giants now sell you a guard",
-      "body": "Anthropic launched **Mythos** this year, a security platform for a small circle of partners. OpenAI opened its own program, *Daybreak*, in May. Microsoft says its system is shipping into production immediately.",
+      "body": "Anthropic released **Mythos** to a small circle of partners this year. OpenAI opened *Daybreak* in May. Microsoft says its own is shipping immediately.",
       "evidence": "Earlier this year, Anthropic launched Mythos , a security platform that was released to a small coterie of partner organizations through a program called Glasswing. OpenAI has also launched its own security solution in May through a program called Daybreak.",
-      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/", "date": "2026-07-27" },
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+        "date": "2026-07-27"
+      },
       "image": {
         "kind": "illustration",
         "prompt": "three glass office towers at night viewed from street level, grids of lit windows, cold green-white light, light haze, no text, no people",
@@ -116,9 +139,21 @@
     }
   ],
   "sources": [
-    { "name": "Microsoft AI", "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/", "accessed": "2026-07-27" },
-    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/", "accessed": "2026-07-27" },
-    { "name": "Help Net Security", "url": "https://www.helpnetsecurity.com/2026/07/27/microsoft-mai-cyber-1-flash-ai-model/", "accessed": "2026-07-27" }
+    {
+      "name": "Microsoft AI",
+      "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/",
+      "accessed": "2026-07-27"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+      "accessed": "2026-07-27"
+    },
+    {
+      "name": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/07/27/microsoft-mai-cyber-1-flash-ai-model/",
+      "accessed": "2026-07-27"
+    }
   ],
   "reel2": {
     "voice": "Fenrir",
