@@ -272,7 +272,14 @@ export function buildTimeline(post, { keepAll = false } = {}) {
         b = { type: "end", headline: s.headline ?? "", sub: s.sub ?? "" };
         break;
       default:
-        b = { type: "line", title: s.title ?? "", body: shorten(s.body, 11), source: s.source?.name };
+        /*
+       * Fourteen words, up from eleven. This beat is now protected from being
+       * dropped, which makes it the one that has to carry the story — and a
+       * sentence of eleven words explains nothing. The total is still capped at
+       * twenty-five seconds, so the budget can be generous and the cap can be
+       * the thing that bites.
+       */
+      b = { type: "line", title: s.title ?? "", body: shorten(s.body, 14), source: s.source?.name };
     }
     /*
      * What this beat could not carry. Collected here rather than at each call
@@ -339,28 +346,68 @@ export function buildTimeline(post, { keepAll = false } = {}) {
  * stop showing it, so the target is now 15 to 25 seconds, which means four
  * beats and less text in each.
  */
-const MAX_BEATS = 4;
-const KEEP_ORDER = ["line", "quote", "contrast", "stat"];
+/*
+ * Which beats make the cut, and why the old answer produced Reels nobody could
+ * follow.
+ *
+ * The first version dropped beats by type priority, and `line` — the `content`
+ * archetype, the beat that says what actually happened — was first on the list.
+ * So every Reel came out as cover, figure, contrast, ask: a poster, a number, a
+ * turn and a request, with the explanation deleted. Hasan watched them and said
+ * you cannot follow the story, and he was reading the structure correctly. The
+ * beat that carried the story was the one guaranteed to be cut.
+ *
+ * What replaces it is a spine rather than a ranking. A Reel needs four things in
+ * order and one of each is enough:
+ *
+ *   OPEN     the cover. What happened, with the names in it.
+ *   EXPLAIN  what actually happened, in a sentence. `content`, or `stat`.
+ *   TURN     the catch, the caveat, or a human voice. `contrast`, or `quote`.
+ *   ASK      the close.
+ *
+ * Five beats, not four, because with four there is room for either the number or
+ * the explanation and never both, and the account needs both. The number of
+ * beats was never the constraint anyway — the seconds are, and `reel.mjs` refuses
+ * to paint anything past twenty-five of them.
+ */
+const MAX_BEATS = 5;
+
+const ROLE = {
+  cover: "open",
+  end: "ask",
+  line: "explain",
+  stat: "explain",
+  contrast: "turn",
+  quote: "turn",
+};
 
 function select(beats) {
   if (beats.length <= MAX_BEATS) return beats;
 
-  const structural = new Set([0, beats.length - 1]);
-  const droppable = beats
-    .map((b, i) => ({ b, i }))
-    .filter(({ i }) => !structural.has(i));
+  const keep = new Set();
+  const structural = [0, beats.length - 1];
+  for (const i of structural) keep.add(i);
 
-  const toDrop = new Set();
-  let need = beats.length - MAX_BEATS;
+  /*
+   * One of each role, in the post's own order, and the explanation is claimed
+   * before the number: a figure with no sentence around it is trivia. Where a
+   * post has both a `content` and a `stat`, the `content` takes the explain slot
+   * and the `stat` competes for whatever is left.
+   */
+  const claim = (pred) => {
+    const i = beats.findIndex((b, idx) => !keep.has(idx) && pred(b));
+    if (i >= 0) keep.add(i);
+    return i >= 0;
+  };
 
-  for (const type of KEEP_ORDER) {
-    for (const { i, b } of droppable) {
-      if (need <= 0) break;
-      if (b.type === type && !toDrop.has(i)) { toDrop.add(i); need--; }
-    }
-    if (need <= 0) break;
-  }
-  return beats.filter((_, i) => !toDrop.has(i));
+  claim((b) => b.type === "line");
+  claim((b) => ROLE[b.type] === "turn");
+  claim((b) => ROLE[b.type] === "explain");
+
+  // Any room left goes to whatever comes first and is not already in.
+  for (let i = 0; i < beats.length && keep.size < MAX_BEATS; i++) keep.add(i);
+
+  return beats.filter((_, i) => keep.has(i)).slice(0, MAX_BEATS);
 }
 
 export const totalDuration = (beats) => beats.reduce((a, b) => a + b.duration, 0);

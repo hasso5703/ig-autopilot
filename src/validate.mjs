@@ -142,7 +142,64 @@ async function fetchPage(url, attempt = 0) {
  * decides that, and it is not negotiable. A headline can be sharp and true, and
  * if it cannot be, the story is the wrong story.
  */
-const HOOK_MAX_WORDS = 13;
+/*
+ * Fifteen, not thirteen, and the two extra words are for a name.
+ *
+ * "Kimi K3, a Chinese AI, found 19 security holes in Redis in 90 minutes" is
+ * fourteen words. Under the old ceiling it did not fit, so the run wrote "A
+ * Chinese AI found 19 unknown ways into a database" instead — and a rule I wrote
+ * to keep hooks readable had quietly taught it to delete the proper nouns. Two
+ * words of brevity is a bad trade for the name of the thing.
+ */
+const HOOK_MAX_WORDS = 15;
+
+/**
+ * Nationality is not a name.
+ *
+ * The anchor rule asked for "a number or a capitalised word", and "Chinese"
+ * satisfied both halves of the account's worst hook. A nationality tells a
+ * reader nothing they can look up, and "a Chinese AI" reads as a category where
+ * "Kimi K3, from the Chinese lab Moonshot" reads as a fact.
+ */
+const NATIONALITIES = new Set(
+  ("chinese american french british english japanese korean indian european russian german israeli " +
+   "canadian australian dutch swedish spanish italian brazilian mexican african asian western")
+    .split(" ")
+);
+
+/** Capitalised words that name nothing: too generic to be an anchor. */
+const NOT_A_NAME = new Set(["the", "a", "an", "this", "that", "it", "its", "and", "but", "for", "one", "two", "three", "new", "now", "how", "why", "when", "they", "their", "his", "her", "he", "she", "we", "you", "i", "no", "so", "if", "in", "on", "at", "of", "to", "by"]);
+
+/**
+ * The proper nouns in a sentence that name actors — companies, products, people,
+ * places. Multi-word names are returned token by token, which is enough: if a
+ * slide says "Hugging Face" the token "Hugging" is present.
+ */
+export function namedActors(text) {
+  const words = String(text || "").replace(/[^\w\s.'-]/g, " ").split(/\s+/);
+  const out = [];
+  for (let i = 0; i < words.length; i++) {
+    // The possessive is not part of the name. "OpenAI's" must match a cover that
+    // says "OpenAI", which it did not until this line existed.
+    const clean = (w) => w.replace(/['’]s$/i, "").replace(/[.'’-]+$/, "");
+    const isName = (w) => {
+      const c = clean(w);
+      return (
+        /^[A-Z][A-Za-z0-9.'’-]{2,}$/.test(c) &&
+        c.length >= 3 &&
+        !NOT_A_NAME.has(c.toLowerCase()) &&
+        !NATIONALITIES.has(c.toLowerCase())
+      );
+    };
+    if (!isName(words[i])) continue;
+    // Consecutive capitalised words are one name: "Hugging Face", not two
+    // complaints about "Hugging" and "Face".
+    const parts = [clean(words[i])];
+    while (i + 1 < words.length && isName(words[i + 1])) parts.push(clean(words[++i]));
+    out.push(parts.join(" "));
+  }
+  return [...new Set(out)];
+}
 
 /** Openers that promise a thumb nothing. Every one of these is a description. */
 const DEAD_OPENERS = [
@@ -188,11 +245,30 @@ export function hookIssues(headline) {
   // A capital after a full stop is not a name. The headline that started this
   // rewrite, "The data centers unplugged. The lights flickered.", passed the
   // first version of this check on the strength of its second "The".
-  const SENTENCE_WORDS = new Set(["the", "a", "an", "this", "that", "it", "and", "but", "in", "on", "for", "now", "when", "why", "how", "they", "its", "their", "no", "one", "two", "three"]);
+  /*
+   * Words that open a sentence without naming anything. The list matters more
+   * than it looks: the check used to skip the first word outright, which threw
+   * away the anchor in every hook that opens with its subject — "Libraries now
+   * teach you to switch AI off", "Nvidia would co-sign $250 billion". Position 0
+   * is where the best hooks put the name, so it is read like any other word and
+   * filtered by meaning instead.
+   */
+  const SENTENCE_WORDS = new Set([
+    "the", "a", "an", "this", "that", "it", "and", "but", "in", "on", "for", "now", "when", "why", "how",
+    "they", "its", "their", "no", "one", "two", "three", "everything", "something", "nothing", "anything",
+    "everyone", "someone", "anyone", "nobody", "people", "most", "many", "some", "all", "after", "before",
+    "once", "since", "what", "who", "there", "here", "we", "you", "he", "she", "his", "her", "if", "so",
+    "your", "our", "these", "those", "every", "both", "each", "another", "other", "more", "less", "first", "last",
+  ]);
   const hasName = words
-    .slice(1)
     .map((w) => w.replace(/[^\w.'-]/g, ""))
-    .some((w) => /^[A-Z][A-Za-z.'-]+$/.test(w) && !SENTENCE_WORDS.has(w.toLowerCase()));
+    .some(
+      (w) =>
+        /^[A-Z][A-Za-z.'-]+$/.test(w) &&
+        !SENTENCE_WORDS.has(w.toLowerCase()) &&
+        !NATIONALITIES.has(w.toLowerCase()) &&
+        !NOT_A_NAME.has(w.toLowerCase())
+    );
   if (!hasDigit && !hasName)
     issues.push("has no number and no name in it. A hook needs one concrete anchor a stranger can grab: who did it, or how much.");
 
@@ -288,16 +364,103 @@ export async function validatePost(post, opts = {}) {
   for (const issue of hookIssues(hook?.headline)) nag(`hook headline: ${issue}`);
 
   /*
+   * NAME THE THING. This is fatal, and it is the rule this account most needed.
+   *
+   * Two published posts anonymised their own subjects. A verified claim read
+   * "the Chinese AI model Kimi K3 … the Redis database" and the cover read "A
+   * Chinese AI found 19 unknown ways into a database" — "Kimi K3" appeared on no
+   * slide at all. Another claim named "the production servers of Hugging Face"
+   * and the cover said "it hacked a real company", with the victim first named
+   * on slide six of seven.
+   *
+   * The cause was my own rubric. `recognition` says NVIDIA is recognisable and a
+   * simulation framework is not, and the run read that as an instruction to
+   * remove names a layperson would not know. It is the opposite: a name is what
+   * makes a story real, and the fix for an unfamiliar name is a two-word
+   * apposition, not deletion — "Kimi K3, a Chinese AI model", "Hugging Face,
+   * where the world's AI models are kept". That is how every newsroom does it,
+   * and it is why the routine's own email reports read better than the posts
+   * they describe: the reports name things.
+   *
+   * So: every actor the central claim names must appear on the cover or on slide
+   * two, the two slides anyone actually sees.
+   */
+  /*
    * The hero restates the headline in figures; it does not print the same figure
-   * twice. The manual has said so since the first post and nothing checked it,
-   * so a live Reel opened with "8,192 virtual surgical robots trained at once"
-   * above a hero reading "8,192". Compliant, sourced, and half the loudest
-   * space on the cover spent saying one thing.
+   * twice. A live Reel opened with "8,192 virtual surgical robots trained at
+   * once" above a hero reading "8,192" — half the loudest space on a cover spent
+   * saying one thing. Advice, not a refusal: it is redundant, not false.
    */
   const heroValue = String(hook?.hero?.value || "").replace(/\*+/g, "").trim();
   const headlineText = String(hook?.headline || "").replace(/\*+/g, "");
   if (heroValue && headlineText.includes(heroValue))
     nag(`the hero value "${heroValue}" already appears in the headline. The hero carries the comparison the headline does not: quote a different figure, or drop it.`);
+
+  /*
+   * The placeholders that stood where a name belonged.
+   *
+   * Requiring "every actor in the claim must appear on the cover" was the first
+   * attempt and it was wrong: it reads "Librarians" at the start of a sentence
+   * as a proper noun and refuses honest copy. The defect is narrower and more
+   * precise than that. It is a phrase like "a Chinese AI", "a real company", "a
+   * database" standing in for something the claim names — evasion, not brevity.
+   */
+  const PLACEHOLDERS = [
+    /\b(?:a|an|another|one|the)\s+(?:real|major|big|large|small|tech|technology|unnamed|certain|leading|prominent|other)?\s*(?:company|companies|firm|startup|start-up|business|lab|laboratory|organisation|organization|vendor)\b/i,
+    /\b(?:a|an|the)\s+(?:chinese|american|french|british|japanese|korean|indian|european|russian|german|israeli)\s+(?:ai|model|company|firm|startup|lab|team|developer|researcher|giant)\b/i,
+    /\b(?:a|an)\s+(?:database|chatbot|search engine|social network|hospital|newspaper|university|bank)\b/i,
+    /\bthe\s+(?:company|firm|lab|startup)\s+(?:that|which|whose)\b/i,
+  ];
+
+  const claimNames = namedActors(post.centralClaim);
+  const coverSlides = slides.slice(0, 2);
+  const coverText = coverSlides
+    .flatMap((s2) => [s2?.headline, s2?.kicker, s2?.title, s2?.figure, s2?.unit, s2?.body, s2?.claim, s2?.caveat, s2?.hero?.value, s2?.hero?.label])
+    .filter(Boolean)
+    .join(" ");
+  const allSlideText = slides
+    .flatMap((s2) => [s2?.headline, s2?.kicker, s2?.title, s2?.figure, s2?.unit, s2?.body, s2?.claim, s2?.caveat, s2?.hero?.value, s2?.hero?.label, s2?.attribution])
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  const onCover = (n) => coverText.toLowerCase().includes(n.toLowerCase().split(" ")[0]);
+  const namesOffCover = claimNames.filter((n) => !onCover(n));
+
+  /*
+   * NAME THE THING. Fatal, and the rule this account most needed.
+   *
+   * Two published posts anonymised their own subjects. A verified claim read
+   * "the Chinese AI model Kimi K3 … the Redis database" and the cover read "A
+   * Chinese AI found 19 unknown ways into a database" — "Kimi K3" appeared on no
+   * slide at all. Another claim named "the production servers of Hugging Face"
+   * and the cover said "it hacked a real company", the victim first named on
+   * slide six of seven.
+   *
+   * The cause was my own rubric: `recognition` says NVIDIA is recognisable and a
+   * simulation framework is not, and the run read that as licence to delete names
+   * a layperson would not know. It is the opposite. A name is what makes a story
+   * real, and an unfamiliar name is fixed by two words of apposition, never by
+   * deletion — "Kimi K3, a Chinese AI model", "Hugging Face, where the world's AI
+   * models are kept". It is also why the routine's own email reports read better
+   * than the posts they describe: the reports name things.
+   */
+  for (const re of PLACEHOLDERS) {
+    const hit = coverText.match(re);
+    if (!hit) continue;
+    if (namesOffCover.length)
+      err(
+        `the cover says "${hit[0].trim()}" while your own central claim names ${namesOffCover.join(" and ")}. ` +
+          `Name it. An unfamiliar name is fixed with a two-word apposition ("Kimi K3, a Chinese AI model"), never by deleting it — "a Chinese AI" and "a real company" are what this account looked like when it went wrong.`
+      );
+    else
+      nag(`the cover says "${hit[0].trim()}", which names nothing. If the source names it, so should the cover.`);
+    break;
+  }
+
+  for (const n of claimNames)
+    if (!allSlideText.includes(n.toLowerCase().split(" ")[0]))
+      nag(`"${n}" is in your central claim and on no slide at all. If it is the subject, the reader should be able to look it up.`);
 
   /*
    * The send test, and it is the most important field in the file.

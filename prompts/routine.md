@@ -104,6 +104,43 @@ So the first second and a half is not the introduction. **It is the whole
 audition.** Frame zero must already carry the surprise: fully formed type, no
 fade-in, no throat-clearing, no "in a lawsuit filed this week…" before the point.
 
+### Name the thing
+
+**This is the rule this account most needed, and the gate now refuses a post
+without it.**
+
+Two published posts anonymised their own subjects. A verified central claim read
+*"the Chinese AI model **Kimi K3** … the **Redis** database"* and the cover read
+*"A Chinese AI found 19 unknown ways into a database"* — "Kimi K3" appeared on no
+slide at all. Another claim named *"the production servers of **Hugging Face**"*
+and the cover said *"it hacked a real company"*, with the victim first named on
+slide six of seven.
+
+Hasan's verdict on those two: the information is good and the way it is said is
+terrible. He is right, and the diagnosis is worth more than the complaint —
+**the routine's own email reports read better than the posts they describe**, and
+the only difference is that the reports name things. "Kimi K3 found 19 Redis
+zero-days in 90 minutes" is a report sentence. "A Chinese AI found 19 unknown
+ways into a database" is what the post said instead. Same facts, one is news and
+the other is a rumour.
+
+**The cause was in the rubric, not in the judgement.** `recognition` says NVIDIA
+is recognisable and "medical physics simulation framework" is not, and that reads
+as an instruction to remove names a stranger would not know. It is the opposite.
+
+- **An unfamiliar name is fixed by two words of apposition, never by deletion.**
+  "Kimi K3, a Chinese AI model". "Hugging Face, where the world's AI models are
+  kept". "Redis, the database behind millions of websites." That is what every
+  newsroom does, and it costs four words to turn a vague claim into a fact.
+- **A nationality is not a name.** "A Chinese AI" tells a reader nothing they can
+  look up, and it makes the story sound like a rumour about a country instead of
+  a fact about a product. The gate no longer accepts one as the hook's anchor.
+- **Name the victim, not just the actor.** Being hacked is what happened *to
+  somebody*. "It hacked a real company" throws away the most concrete noun in
+  the story.
+- The hook ceiling is **15 words**, raised from 13 for exactly this: a name plus
+  its apposition needs the room.
+
 ### Hook shapes, by measured 3-second retention
 
 From testing across ~50 million ad impressions, the shapes that hold viewers,
@@ -131,6 +168,21 @@ chatbot about a symptom" is better than "AI users".
   ranking signal and it falls off a cliff with length. The pipeline cuts beats to
   the narration, so **your copy is the runtime**. Every word you cut is
   retention you buy.
+- **A Reel has to be followable, and for a while ours were not.** The template
+  used to drop beats by type priority, and the `content` beat — the one that says
+  what actually happened — was first on the list. Every Reel came out as cover,
+  figure, turn, ask: a poster, a number and a request, with the explanation
+  deleted. The selection is a spine now, five beats, one of each job:
+
+  | | |
+  |---|---|
+  | **open** | the cover, with the names in it |
+  | **explain** | what actually happened, in a sentence. `content`, or `stat` |
+  | **turn** | the catch, the caveat, or a human voice. `contrast`, or `quote` |
+  | **ask** | the close |
+
+  Write the post so those four exist and the Reel will carry the story. If it
+  reports dropping a beat you needed, the post is the wrong shape, not the Reel.
 - **Change something every two to three seconds.** A beat that sits still for six
   seconds is where viewers leave, and the `long` flag in the Reel output is
   telling you exactly which line to cut.
