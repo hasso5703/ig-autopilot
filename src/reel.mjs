@@ -273,7 +273,25 @@ export async function renderReel(postFile, outDir, opts = {}) {
    * If synthesis fails the Reel is still made — silent, and loudly reported.
    * A day without narration is a worse Reel; a day without a Reel is no reach.
    */
+  /*
+   * What the Reel silently threw away, said out loud.
+   *
+   * Two runs reported losses they found only by opening frames: a caveat that
+   * lived in the voice but not on screen, and "the sharpest line in the carousel
+   * is not in the video" when the quote beat was dropped to fit four. Both are
+   * correct behaviour — a trailer is not the carousel — and both were invisible.
+   */
+  const allBeats = buildTimeline(post, { keepAll: true });
   let beats = buildTimeline(post);
+  const keptTypes = beats.map((b) => b.slideIndex);
+  const droppedBeats = allBeats
+    .filter((b) => !keptTypes.includes(b.slideIndex))
+    .map((b) => `slide ${b.slideIndex} (${b.type})`);
+  const droppedText = beats.flatMap((b, i) =>
+    (b.dropped || []).map((d) => `beat ${i + 1} (${b.type}) dropped from ${d.field}: "${d.lost}"`)
+  );
+  for (const line of [...droppedBeats.map((d) => `the Reel drops ${d} entirely — if it carried the sharpest line, restructure the post`), ...droppedText])
+    console.error(`note: ${line}`);
   let vo = null;
   if (!opts.silent) {
     try {
@@ -335,6 +353,7 @@ export async function renderReel(postFile, outDir, opts = {}) {
       : null,
     pictures: Object.fromEntries(Object.entries(pictures).map(([k, v]) => [k, v.generated ? "generated" : "photo"])),
     exposure: exposure.filter(Boolean),
+    dropped: { beats: droppedBeats, text: droppedText },
     beats: beats.map((b) => ({
       type: b.type,
       seconds: +b.duration.toFixed(2),

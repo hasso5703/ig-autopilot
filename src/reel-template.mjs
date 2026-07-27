@@ -37,6 +37,27 @@ const inline = (text) =>
  * Trims a carousel body down to what can be read while it is on screen.
  * Cuts on sentence boundaries, never mid-thought, and never mid-number.
  */
+/**
+ * What `shorten` had to leave out.
+ *
+ * A run found this by opening a frame: `shorten(caveat, 8)` keeps whole
+ * sentences only, so its second sentence — "The counts and the timings are
+ * self-reported" — never reached the screen. The caveat existed in the voice
+ * alone, invisible to anyone watching with the sound off, which is most people.
+ * The run caught it and rewrote the copy. Nothing told it; it looked.
+ *
+ * Dropping text is the right behaviour — a beat with one whole line beats a beat
+ * with one broken one — but doing it silently is not. This reports the loss so
+ * `reel.mjs` can print it, in the same breath as a `long` flag.
+ */
+export function shortenLoss(text, maxWords = 14) {
+  const clean = String(text ?? "").replace(/\s+/g, " ").trim();
+  const kept = shorten(text, maxWords);
+  if (!clean || clean === kept) return null;
+  const lost = kept ? clean.slice(kept.length).trim() : clean;
+  return lost || null;
+}
+
 export function shorten(text, maxWords = 14) {
   const clean = String(text ?? "").replace(/\s+/g, " ").trim();
   if (!clean) return "";
@@ -207,7 +228,7 @@ const wordCount = (...parts) =>
  * one sheds text on the way: what reads well when you control the pace is too
  * much when you do not.
  */
-export function buildTimeline(post) {
+export function buildTimeline(post, { keepAll = false } = {}) {
   const beats = [];
 
   for (const s of post.slides ?? []) {
@@ -253,6 +274,22 @@ export function buildTimeline(post) {
       default:
         b = { type: "line", title: s.title ?? "", body: shorten(s.body, 11), source: s.source?.name };
     }
+    /*
+     * What this beat could not carry. Collected here rather than at each call
+     * site so a new archetype cannot forget it.
+     */
+    b.dropped = [
+      ["body", s.body, b.type === "stat" ? 13 : 11],
+      ["claim", s.claim, 8],
+      ["caveat", s.caveat, 8],
+      ["quote", b.type === "quote" ? s.body : null, 14],
+    ]
+      .map(([field, text, budget]) => {
+        const lost = text ? shortenLoss(text, budget) : null;
+        return lost ? { field, lost } : null;
+      })
+      .filter(Boolean);
+
     b.words = wordCount(b.headline, b.kicker, b.body, b.title, b.unit, b.claim, b.caveat, b.sub, b.attribution);
     b.duration = beatDuration(b.words, b.type);
     b.slideIndex = post.slides.indexOf(s) + 1;
@@ -260,7 +297,7 @@ export function buildTimeline(post) {
     beats.push(b);
   }
 
-  const chosen = select(beats);
+  const chosen = keepAll ? beats : select(beats);
 
   // A Reel shorter than 5 seconds is not eligible for the Reels tab, which is
   // the entire reason for making one. Stretch the last beat rather than
@@ -413,10 +450,23 @@ export function html(post, brand, fonts, opts = {}) {
        * flip, and no check in this repository can see contrast.
        */
       const pic = pictures[b.slideIndex];
+      /*
+       * The picture credit, which this template did not have at all.
+       *
+       * A run checked rather than assumed and found it: `imagery.mjs` produces
+       * "Illustration · AI-generated", `template.mjs` paints it on every
+       * carousel slide, and this file had no equivalent element. Three of that
+       * Reel's five pictures were generated and went out with no on-screen
+       * disclosure. Nothing misrepresented anything and the caption carried
+       * "AI-assisted." — but the rule was written as "every generated picture is
+       * stamped", and it was true of the grid only. A disclosure that exists on
+       * one surface is a disclosure we do not have.
+       */
       const bg = pic
         ? `<div class="bgw"><div class="bg" style="background-image:url('${pic.dataUri}')"></div><div class="tint"></div><div class="veil"></div><div class="dim"></div></div>`
         : `<div class="bgw"><div class="nofield"></div></div>`;
-      return `<section class="beat b-${b.type}" data-b="${i}">${bg}${lines}</section>`;
+      const credit = pic?.credit ? `<div class="cred">${esc(pic.credit)}</div>` : "";
+      return `<section class="beat b-${b.type}" data-b="${i}">${bg}${lines}${credit}</section>`;
     })
     .join("");
 
@@ -495,6 +545,12 @@ em.a{font-style:normal;color:${c.accent}}
       text-shadow:0 2px 18px rgba(0,0,0,.8),0 0 3px rgba(0,0,0,.6)}
 /* #6a707a was chosen against flat black. Over a photograph it disappears, and a
    source credit nobody can read is the same as no source credit. */
+/* Bottom-right, above the caption strip and clear of the action column: the same
+   box the source line lives in, which was placed once and measured against
+   Instagram's chrome. Small on purpose — it is a disclosure, not a caption. */
+.cred{position:absolute;bottom:352px;left:96px;right:200px;text-align:right;z-index:10;
+      font-family:'Archivo';font-weight:400;font-size:24px;letter-spacing:.04em;
+      color:rgba(255,255,255,.55);text-shadow:0 2px 14px rgba(0,0,0,.85)}
 #src{position:absolute;bottom:410px;left:96px;right:200px;font-family:'Archivo';font-size:30px;
      letter-spacing:.06em;text-transform:uppercase;color:#C3C9D2;z-index:10;
      text-shadow:0 2px 18px rgba(0,0,0,.7)}

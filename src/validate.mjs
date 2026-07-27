@@ -355,6 +355,43 @@ export async function validatePost(post, opts = {}) {
       );
   }
 
+  /*
+   * Two domains can be one source.
+   *
+   * A run published a story corroborated by Reuters and Benzinga — two
+   * newsrooms, two domains, both VERIFIED — and said plainly in its own report
+   * that underneath them was a single Wall Street Journal scoop it could not
+   * fetch. It was right, it hedged every slide with "in talks", and the gate had
+   * nothing to say. A green gate proves quotation, and this is the second shape
+   * of the corroboration hole: not an unrelated page, but the same page twice.
+   *
+   * Detectable, because a rewrite says so. "the Wall Street Journal reported",
+   * "according to Reuters" — when every corroborating quote credits the same
+   * third party, they are not independent. A warning, not a refusal: the story
+   * may still be worth publishing, hedged, and that call needs judgement the
+   * gate does not have. But the run should never have had to notice this alone.
+   */
+  const wireCheck = Array.isArray(post.corroboration) ? post.corroboration : [];
+  if (wireCheck.length >= 2) {
+    /*
+     * Who a quote credits. Two shapes cover almost every rewrite: "according to
+     * a Wall Street Journal report" and "the Wall Street Journal reported". The
+     * determiner matters — the first version required "the" and missed "a", so
+     * it saw nothing in the exact pair of quotes that prompted it.
+     */
+    const CREDITS = /\b(?:according to|citing|per)\s+(?:a|an|the)?\s*([A-Z][\w'.]+(?:\s+[A-Z][\w'.]+){0,3})|\b(?:the\s+)?([A-Z][\w'.]+(?:\s+[A-Z][\w'.]+){0,3})\s+(?:reported|report(?:s|ed)?\b|first reported)/;
+    const attributed = wireCheck.map((c) => {
+      const m = CREDITS.exec(String(c.quote || ""));
+      return (m && (m[1] || m[2]) || "").trim().toLowerCase();
+    });
+    const named = attributed.filter(Boolean);
+    if (named.length >= 2 && new Set(named).size === 1)
+      nag(
+        `every corroborating quote credits the same third party ("${named[0]}"), so these are ${wireCheck.length} rewrites of one report, not ${wireCheck.length} independent sources. ` +
+          `Publish it hedged if it is worth publishing, say "reported" rather than asserting it, and say so in your run report — but do not treat a green gate as corroboration here.`
+      );
+  }
+
   const sendTest = String(post.sendTest || "").trim();
   if (!sendTest)
     err('`sendTest` is missing. Write the one-line message someone would actually send a friend along with this post, in their words. If you cannot write it without wincing, the story is the wrong story.');

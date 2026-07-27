@@ -408,6 +408,14 @@ measurement rather than to the truth, and the measurement stops meaning
 anything. If the overlap comes back low, the answer is a better source, not a
 reworded claim.
 
+**Two domains can be one source, and the gate now says so.** A run corroborated
+a story with Reuters and Benzinga — two newsrooms, both VERIFIED — and reported
+honestly that underneath them was a single Wall Street Journal scoop it could not
+fetch. When every corroborating quote credits the same third party, you have one
+report wearing two domains. It may still be worth publishing: hedge it, write
+"reported" rather than asserting, say so in your report. But do not read a green
+gate as corroboration in that case, because it is not.
+
 Each corroborating quote must be **the sentence where that source states the
 claim itself**, copied verbatim, from a different domain. Not a sentence that
 happens to be on a page about a related subject.
@@ -779,7 +787,16 @@ node src/publish.mjs publish "<caption>" <url1> <url2> …   # goes live
 ```
 
 Run the dry run first. If it fails, nothing was published and you can fix and
-retry. `IG_ACCESS_TOKEN` comes from the environment; if it is missing, stop and
+retry.
+
+**A publish error is not proof that nothing published.** `media_publish` once
+returned HTTP 403 "Application request limit reached" *after* the carousel was
+already on the grid; the CLI printed FAILED and a retry would have posted it
+twice. Both publishers now read `me/media` back before surfacing any error, and
+tell you which case you are in — `recoveredFromError` with `DO NOT RETRY` means
+it is live, and a plain failure says explicitly that nothing was published. If
+you ever see a bare publish error without one of those two verdicts, check
+`node src/publish.mjs recent` yourself before doing anything. `IG_ACCESS_TOKEN` comes from the environment; if it is missing, stop and
 report — do not attempt any other publishing route.
 
 ### 9. Record, ON MAIN
@@ -901,6 +918,14 @@ node src/reel.mjs posts/<slug>.json media/<slug>
   finished file. **Put that line in the Reel's caption, verbatim**, above the
   hashtags. Attribution we do not print is attribution we have not given.
 - **The pictures from step 5c**, with a slow push in on each.
+
+**Read the `note:` lines the Reel prints.** Two things it drops are correct
+behaviour and were invisible until a run found them by opening frames: text that
+`shorten` could not fit (a caveat that lived in the voice but never on screen,
+unreadable to anyone watching with the sound off, which is most people) and whole
+beats cut to fit four (once the sharpest line in the carousel). Both are reported
+now. If the line that matters is in that list, restructure the post rather than
+accepting it.
 
 If narration fails, the Reel is still made, silently, and the failure is printed
 as a warning. Publish it and say so. A day without a voice is a worse Reel; a

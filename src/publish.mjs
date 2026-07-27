@@ -168,8 +168,72 @@ export async function publishCarousel(imageUrls, caption, opts = {}) {
 
   if (opts.dryRun) return { published: false, carouselId, childIds };
 
-  const r = await call("POST", `${TARGET}/media_publish`, { creation_id: carouselId });
-  return { published: true, id: r.id, carouselId, childIds };
+  return publishContainer(carouselId, caption, { childIds });
+}
+
+/**
+ * Publish a finished container, and never report a success as a failure.
+ *
+ * A live run watched `media_publish` return HTTP 403 "Application request limit
+ * reached" — and the carousel was already on the grid, created seconds earlier.
+ * The CLI printed FAILED. The run's own instinct was to retry, which would have
+ * put the same carousel on the account twice; it queried `me/media` by hand
+ * first and found the post. That check belongs here, not in the judgement of
+ * whoever happens to be reading the output.
+ *
+ * The asymmetry is the point: a retry after a real failure costs one duplicate
+ * post that cannot be deleted through this API, while a wrongly-reported failure
+ * costs nothing once somebody looks. So when the publish call throws, go and
+ * look before believing it.
+ */
+export async function publishContainer(creationId, caption, extra = {}) {
+  try {
+    const r = await call("POST", `${TARGET}/media_publish`, { creation_id: creationId });
+    return { published: true, id: r.id, creationId, ...extra };
+  } catch (err) {
+    const found = await findRecentByCaption(caption).catch(() => null);
+    if (found) {
+      return {
+        published: true,
+        id: found.id,
+        permalink: found.permalink ?? null,
+        creationId,
+        ...extra,
+        recoveredFromError: err.message,
+        note:
+          "media_publish reported an error but the post is live — found by reading back me/media. " +
+          "DO NOT RETRY. Record this id and permalink as published.",
+      };
+    }
+    throw new Error(
+      `${err.message}
+
+Checked me/media and found no post matching this caption, so nothing was published. ` +
+        `Safe to retry once, after checking the quota.`
+    );
+  }
+}
+
+/**
+ * The most recent post whose caption starts the same way as ours, published in
+ * the last few minutes. Captions are compared on their first line only: Meta
+ * normalises whitespace and can truncate, and the first line is the part this
+ * pipeline writes most deliberately.
+ */
+export async function findRecentByCaption(caption, { withinMinutes = 15 } = {}) {
+  const mine = String(caption || "").split("\n")[0].replace(/\s+/g, " ").trim().slice(0, 60).toLowerCase();
+  if (mine.length < 12) return null;
+  const r = await call("GET", `${TARGET}/media`, {
+    fields: "id,caption,permalink,media_type,media_product_type,timestamp",
+    limit: "10",
+  });
+  const cutoff = Date.now() - withinMinutes * 60000;
+  for (const m of r.data || []) {
+    if (new Date(m.timestamp).getTime() < cutoff) continue;
+    const theirs = String(m.caption || "").split("\n")[0].replace(/\s+/g, " ").trim().slice(0, 60).toLowerCase();
+    if (theirs && theirs === mine) return m;
+  }
+  return null;
 }
 
 // ---- CLI -------------------------------------------------------------------
@@ -181,6 +245,7 @@ if (process.argv[1] && process.argv[1].endsWith("publish.mjs")) {
   const [cmd, ...rest] = process.argv.slice(2);
   const run = async () => {
     if (cmd === "whoami") return whoami();
+    if (cmd === "recent") return call("GET", `${TARGET}/media`, { fields: "id,caption,permalink,media_type,timestamp", limit: "10" });
     if (cmd === "quota") return publishingQuota();
     if (cmd === "urls") {
       const [slug, count] = rest;

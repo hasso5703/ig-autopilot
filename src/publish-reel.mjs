@@ -33,6 +33,7 @@
 import { readFile, stat } from "node:fs/promises";
 import { execSync } from "node:child_process";
 import path from "node:path";
+import { publishContainer } from "./publish.mjs";
 
 const REPO = process.env.IG_MEDIA_REPO || "hasso5703/ig-autopilot";
 
@@ -287,8 +288,14 @@ export async function publishReel(file, caption, opts = {}) {
 
   if (dryRun) return { published: false, route, containerId: container.id };
 
-  const r = await call("POST", `${TARGET}/media_publish`, { creation_id: container.id });
-  return { published: true, route, id: r.id, containerId: container.id };
+  /*
+   * Same read-back as the carousel path, and for the same reason: a 403
+   * "Application request limit reached" arrived from media_publish AFTER the
+   * post had been created, the CLI printed FAILED, and a retry would have
+   * double-posted. Reels are the surface that actually reaches people, so a
+   * duplicate here costs more, not less.
+   */
+  return publishContainer(container.id, caption, { route, containerId: container.id });
 }
 
 // ---- CLI -------------------------------------------------------------------
