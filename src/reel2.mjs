@@ -42,6 +42,7 @@ import os from "node:os";
 import { ffmpeg, ffprobe } from "./ffmpeg.mjs";
 import { tts, genVideo, genImage } from "./genmedia.mjs";
 import { veoPrompt, imagePrompt, promptIssues, MOODS } from "./promptcraft.mjs";
+import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
 
 const run = promisify(execFile);
 
@@ -174,8 +175,9 @@ export function buildAss(words, beats, ranges, accentHex) {
 /* ------------------------------ visuals ---------------------------------- */
 
 async function screenshot(url, outFile) {
-  const { chromium } = await import("playwright");
-  const browser = await chromium.launch({ args: ["--disable-blink-features=AutomationControlled"] });
+  const { chromium } = await loadPlaywright();
+  const executablePath = await chromiumExecutable();
+  const browser = await chromium.launch({ executablePath, args: ["--disable-blink-features=AutomationControlled"] });
   try {
     const ctx = await browser.newContext({
       viewport: { width: 430, height: 932 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true,
