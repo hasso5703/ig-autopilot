@@ -1,0 +1,181 @@
+{
+  "slug": "2026-07-27-nvidia-openai-ohio-backstop",
+  "mood": "tension",
+  "sendTest": "Nvidia might co-sign $250 billion of OpenAI's rent. The site is a shut down uranium plant in Ohio.",
+  "centralClaim": "Nvidia is in talks to provide a roughly $250 billion financial backstop for OpenAI as part of a massive data center project in southern Ohio.",
+  "corroboration": [
+    {
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/",
+      "quote": "Nvidia is in talks to provide roughly $250 billion in financing guarantees for OpenAI as part of a massive data center project, the Wall Street Journal reported on Sunday."
+    },
+    {
+      "url": "https://www.benzinga.com/markets/tech/26/07/60686864/nvidia-openai-data-center-financing-michael-burry",
+      "quote": "Nvidia is in talks to provide a roughly $250 billion financial backstop for OpenAI as part of a massive data center project in southern Ohio that could ultimately cost more than $500 billion, according to a Wall Street Journal report citing people familiar with the matter."
+    }
+  ],
+  "caption": "Nvidia may co-sign $250 billion of the rent on OpenAI's next data center.\n\nThe Wall Street Journal reported on Sunday that Nvidia is in talks to guarantee roughly $250 billion of financing so OpenAI can lease a 10-gigawatt campus that SoftBank's energy arm is building in southern Ohio. The whole project is expected to cost more than $500 billion. The guarantee covers the lease and the debt to build the place. It does not cover the Nvidia chips going inside, which are a separate discussion worth up to $350 billion.\n\nThe ground it would sit on is a decommissioned uranium enrichment plant in Pike County, Ohio. The power there is controlled by the U.S. government, and Commerce Secretary Howard Lutnick is involved in deciding who gets access. Anthropic, Microsoft and Google have spoken to him too.\n\nThe caveat, plainly: this is one newspaper report citing people familiar with the matter. Reuters could not verify it. Nvidia, OpenAI and the Commerce Department did not comment. Nothing has been signed.\n\nSo what would you want promised before you lent money into this?\n\nsrnnews.com, benzinga.com, cbsnews.com\n\nAI-assisted.\n\n#AInews #Nvidia #OpenAI #datacenters",
+  "captionEvidence": [
+    {
+      "quote": "Nvidia is in talks to provide roughly $250 billion in financing guarantees for OpenAI as part of a massive data center project, the Wall Street Journal reported on Sunday.",
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/"
+    },
+    {
+      "quote": "The backstop from Nvidia would help the ChatGPT maker lease a 10-gigawatt project that SoftBank’s energy subsidiary is developing in southern Ohio, the newspaper said, citing people familiar with the matter.",
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/"
+    },
+    {
+      "quote": "The project is expected to cost more than $500 billion in total, including the chips inside the data center, according to the WSJ.",
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/"
+    },
+    {
+      "quote": "The $250 billion guarantee covers the data center lease and debt financing, but would not cover the Nvidia chips inside the center, the WSJ said, adding that the chipmaker was also discussing financing OpenAI’s chip purchases worth up to $350 billion.",
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/"
+    },
+    {
+      "quote": "The power is controlled by the U.S. government and funded separately by Japan under a recent trade deal, tied to Tokyo’s pledge to invest $33 billion in a natural gas plant. U.S. Commerce Secretary Howard Lutnick is involved in deciding who gets access, according to the report.",
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/"
+    },
+    {
+      "quote": "OpenAI, in advanced talks for several weeks to lease the site, is among the companies showing the strongest interest in the project, while Anthropic, Microsoft and Google have also spoken to Lutnick in recent weeks, the report said.",
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/"
+    },
+    {
+      "quote": "The U.S. Department of Energy on Friday announced a public-private partnership to develop a major data center with its own power supply on the site of a decommissioned uranium enrichment plant in southern Ohio, as it pushes commercial development of artificial intelligence technology.",
+      "url": "https://www.cbsnews.com/pittsburgh/news/data-center-gas-plants-ohio/"
+    },
+    {
+      "quote": "The Portsmouth Gaseous Diffusion Plant in Pike County",
+      "url": "https://www.cbsnews.com/pittsburgh/news/data-center-gas-plants-ohio/"
+    },
+    {
+      "quote": "Reuters could not immediately verify the report.",
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "26 July 2026 · Nvidia and OpenAI",
+      "headline": "Nvidia would co-sign $250 billion of *OpenAI's lease*",
+      "hero": { "value": "$500B", "label": "what the whole Ohio site could cost" },
+      "swipe": "Swipe for what the money does not cover",
+      "narration": "Nvidia would co sign two hundred and fifty billion dollars of OpenAI's lease. The ground is a shut down uranium plant in Ohio.",
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic wide photograph of a vast empty industrial turbine hall at dusk, steel gantries overhead, shafts of cold blue light falling through high broken windows, dust suspended in the air, 35mm, no text, no people",
+        "alt": "a vast empty industrial hall in cold blue light"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "$250B",
+      "unit": "guaranteed by the company selling the chips",
+      "body": "Nvidia is in talks to stand behind the **lease and the debt to build it**. The whole site could cost more than *half a trillion dollars*.",
+      "narration": "Two hundred and fifty billion dollars, guaranteed by the company selling the chips. It stands behind the lease and the debt to build it.",
+      "evidence": "Nvidia is in talks to provide a roughly $250 billion financial backstop for OpenAI as part of a massive data center project in southern Ohio that could ultimately cost more than $500 billion, according to a Wall Street Journal report citing people familiar with the matter.",
+      "source": {
+        "name": "Benzinga",
+        "url": "https://www.benzinga.com/markets/tech/26/07/60686864/nvidia-openai-data-center-financing-michael-burry",
+        "date": "2026-07-26"
+      },
+      "image": {
+        "kind": "photo",
+        "query": "computer chip",
+        "alt": "a computer processor chip close up"
+      }
+    },
+    {
+      "type": "content",
+      "title": "What OpenAI *gets*",
+      "body": "Today it runs on computers it **rents from Microsoft, Amazon and Oracle**. This would be its first step toward owning the ground instead.",
+      "evidence": "For OpenAI, a deal would be the first step toward controlling its own infrastructure instead of renting it from Microsoft, Amazon and Oracle, while for Nvidia, it would guarantee demand for its chips for years to come.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/",
+        "date": "2026-07-26"
+      },
+      "image": {
+        "kind": "photo",
+        "query": "server room",
+        "alt": "rows of computer servers in a machine room"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Covered by the guarantee",
+      "claim": "The lease on the buildings, and the debt to put them up.",
+      "caveatLabel": "Not covered",
+      "caveat": "The Nvidia chips going inside. That is a separate talk, worth up to $350 billion.",
+      "evidence": "The $250 billion guarantee covers the data center lease and debt financing, but would not cover the Nvidia chips inside the center, the WSJ said, adding that the chipmaker was also discussing financing OpenAI’s chip purchases worth up to $350 billion.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/",
+        "date": "2026-07-26"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic wide photograph of a vast empty concrete foundation slab at dusk, steel reinforcement bars casting long shadows, cold blue light, volumetric haze, 35mm, no text, no people",
+        "alt": "an enormous empty concrete foundation at dusk"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Around and around we go.",
+      "attribution": "Michael Burry, the Big Short investor, reacting on X",
+      "evidence": "Around and around we go. Nvidia to guarantee $200 billion of ChatGPT’s spending on $NVDA chips.",
+      "source": {
+        "name": "Benzinga",
+        "url": "https://www.benzinga.com/markets/tech/26/07/60686864/nvidia-openai-data-center-financing-michael-burry",
+        "date": "2026-07-26"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic macro photograph of a single loop of heavy steel chain lying on dark wet concrete, cold rim light, shallow depth of field, volumetric haze, 35mm, no text, no people",
+        "alt": "a closed loop of steel chain on wet concrete"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Where it would *land*",
+      "body": "On a **decommissioned uranium enrichment plant** in southern Ohio. The Energy Department is putting the data center, and its own power supply, on top of it.",
+      "evidence": "The U.S. Department of Energy on Friday announced a public-private partnership to develop a major data center with its own power supply on the site of a decommissioned uranium enrichment plant in southern Ohio, as it pushes commercial development of artificial intelligence technology.",
+      "source": {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/pittsburgh/news/data-center-gas-plants-ohio/",
+        "date": "2026-03-20"
+      },
+      "image": {
+        "kind": "photo",
+        "query": "Portsmouth Gaseous Diffusion Plant",
+        "alt": "the Portsmouth uranium enrichment site in Piketon, Ohio"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Send this to the friend who says the *AI money* makes no sense",
+      "sub": "The AI stories that change something, for someone.",
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic wide photograph of a lone streetlight over an empty rural road at night, fields disappearing into dark mist, cold blue tone, 35mm, no text, no people",
+        "alt": "a streetlight over an empty rural road at night"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Reuters",
+      "url": "https://srnnews.com/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports/",
+      "accessed": "2026-07-27"
+    },
+    {
+      "name": "Benzinga",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60686864/nvidia-openai-data-center-financing-michael-burry",
+      "accessed": "2026-07-27"
+    },
+    {
+      "name": "CBS News",
+      "url": "https://www.cbsnews.com/pittsburgh/news/data-center-gas-plants-ohio/",
+      "accessed": "2026-07-27"
+    }
+  ]
+}
