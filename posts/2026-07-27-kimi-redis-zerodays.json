@@ -1,0 +1,125 @@
+{
+  "slug": "2026-07-27-kimi-redis-zerodays",
+  "mood": "tension",
+  "sendTest": "Someone pointed a Chinese AI at a database and it found 19 unknown ways to break in. Ninety minutes. Seven emergency fixes went out.",
+  "centralClaim": "A researcher used the Chinese AI model Kimi K3 to find 19 previously unknown vulnerabilities in the Redis database in about 90 minutes.",
+  "corroboration": [
+    {
+      "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+      "quote": "Chaofan Shou said on X that Kimi K3 agents found 19 Redis zero-days in about 90 minutes, and said another run produced the Redis 8.8.0 exploit in 27 minutes."
+    },
+    {
+      "url": "https://www.heise.de/en/news/Kimi-K3-Chinese-AI-finds-several-zero-day-vulnerabilities-in-redis-database-11377430.html",
+      "quote": "The user “Chaofan Shou” posted on X that he found a total of 19 zero-day vulnerabilities in the then-current version 8.8.0 of the redis database in 90 minutes using the AI from the Chinese start-up Moonshot AI."
+    }
+  ],
+  "caption": "A researcher pointed a Chinese AI at Redis, and it found 19 unknown ways in. It took 90 minutes.\n\nRedis is an open source database that keeps data in memory so software can reach it fast. On July 23 the project shipped seven security releases, right after working attack code for the flaws was published. Anyone running an affected version has to update.\n\nThe AI was Kimi K3, from the Chinese company Moonshot. Demand for it has run so far ahead of the computers behind it that Moonshot has temporarily stopped taking new subscriptions.\n\nThe caveat matters. The count of 19, the 90 minutes, and how much of the work the AI did on its own are all things the researcher reported. Redis confirms the flaws and the fixes. It does not confirm the count.\n\nSo does a machine that finds 19 holes before lunch make software safer, or does it just make the race faster?\n\nSources: thehackernews.com, heise.de\n\nAI-assisted.\n\n#AI #cybersecurity #Redis #KimiK3",
+  "captionEvidence": [
+    {
+      "quote": "Chaofan Shou said on X that Kimi K3 agents found 19 Redis zero-days in about 90 minutes, and said another run produced the Redis 8.8.0 exploit in 27 minutes. Those counts, timings, and the claimed degree of autonomy remain self-reported. Redis's public record confirms the flaws and fixes. It does not validate the claimed zero-day count or how independently the agents worked.",
+      "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
+    },
+    {
+      "quote": "Redis shipped seven security releases on July 23 after researchers published authenticated RCE PoCs for stock Redis 6.2.22, 7.4.9, 8.6.4, and 8.8.0.",
+      "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
+    },
+    {
+      "quote": "The developers of the open-source in-memory database redis have released updated versions that close several vulnerabilities within it.",
+      "url": "https://www.heise.de/en/news/Kimi-K3-Chinese-AI-finds-several-zero-day-vulnerabilities-in-redis-database-11377430.html"
+    },
+    {
+      "quote": "The Kimi-K3 AI from Moonshot AI is experiencing high demand. The provider has temporarily stopped new subscriptions due to GPU bottlenecks.",
+      "url": "https://www.heise.de/en/news/Kimi-K3-Chinese-AI-finds-several-zero-day-vulnerabilities-in-redis-database-11377430.html"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "24 July 2026 · Moonshot AI",
+      "headline": "A Chinese AI found 19 *unknown ways* into a database",
+      "hero": { "value": "90 min", "label": "how long the whole thing took" },
+      "swipe": "Swipe for what got patched",
+      "narration": "A Chinese AI found nineteen unknown ways into a database. Ninety minutes.",
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic wide photograph of a dark server aisle at night, rows of racks receding into cold blue fog, one small red indicator light glowing, volumetric haze, 35mm, no text, no people",
+        "alt": "a dark aisle of server racks with a single red light"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "19",
+      "unit": "unknown ways in",
+      "body": "One researcher. One AI from the Chinese company **Moonshot**. **90 minutes** of work.",
+      "narration": "Nineteen unknown ways in. One researcher, one AI, ninety minutes.",
+      "evidence": "The user “Chaofan Shou” posted on X that he found a total of 19 zero-day vulnerabilities in the then-current version 8.8.0 of the redis database in 90 minutes using the AI from the Chinese start-up Moonshot AI.",
+      "source": {
+        "name": "heise online",
+        "url": "https://www.heise.de/en/news/Kimi-K3-Chinese-AI-finds-several-zero-day-vulnerabilities-in-redis-database-11377430.html",
+        "date": "2026-07-24"
+      },
+      "image": {
+        "kind": "photo",
+        "query": "server room",
+        "alt": "a room full of computer servers"
+      }
+    },
+    {
+      "type": "content",
+      "title": "The database was *Redis*",
+      "body": "It shipped **seven security releases on July 23**, straight after working attack code for the flaws was published.",
+      "evidence": "Redis shipped seven security releases on July 23 after researchers published authenticated RCE PoCs for stock Redis 6.2.22, 7.4.9, 8.6.4, and 8.8.0.",
+      "source": {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+        "date": "2026-07-24"
+      },
+      "image": {
+        "kind": "photo",
+        "query": "server rack technician",
+        "alt": "a technician working on a server rack"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "What one researcher claimed",
+      "claim": "**19** unknown holes in **90 minutes**, all *self-reported*.",
+      "caveatLabel": "What Redis confirms",
+      "caveat": "**Seven fixes shipped on July 23**.",
+      "narration": "Claimed, nineteen unknown holes in ninety minutes. Self-reported. Redis confirms seven fixes shipped.",
+      "evidence": "Chaofan Shou said on X that Kimi K3 agents found 19 Redis zero-days in about 90 minutes, and said another run produced the Redis 8.8.0 exploit in 27 minutes. Those counts, timings, and the claimed degree of autonomy remain self-reported. Redis's public record confirms the flaws and fixes.",
+      "source": {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+        "date": "2026-07-24"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic macro photograph of a cracked pane of dark glass over a faint grid of blue light, shallow depth of field, cold tone, no text, no people",
+        "alt": "cracked dark glass lit from behind"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Send this to whoever *patches your servers*",
+      "sub": "AI news for people who do not work in AI.",
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic wide photograph of a single desk lamp lighting an empty office at night, deep blue shadows, soft bokeh, 35mm, no text, no people",
+        "alt": "a desk lamp in a dark empty office"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "The Hacker News",
+      "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+      "accessed": "2026-07-27"
+    },
+    {
+      "name": "heise online",
+      "url": "https://www.heise.de/en/news/Kimi-K3-Chinese-AI-finds-several-zero-day-vulnerabilities-in-redis-database-11377430.html",
+      "accessed": "2026-07-27"
+    }
+  ]
+}

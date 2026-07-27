@@ -1,12 +1,12 @@
 {
-  "at": "2026-07-26T18:23:20.923Z",
-  "fresh": 20,
+  "at": "2026-07-27T06:18:31.848Z",
+  "fresh": 21,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1050,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
@@ -27,7 +27,7 @@
       "name": "Hugging Face Blog",
       "ok": true,
       "fetched": 831,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
@@ -64,7 +64,7 @@
       "fetched": 0,
       "fresh": 0,
       "windowHours": 36,
-      "error": "HTTP 403"
+      "error": "HTTP 403 after 9 tries"
     },
     {
       "name": "Ars Technica",
@@ -72,7 +72,7 @@
       "fetched": 0,
       "fresh": 0,
       "windowHours": 36,
-      "error": "HTTP 403"
+      "error": "HTTP 403 after 10 tries"
     },
     {
       "name": "VentureBeat",
@@ -91,15 +91,15 @@
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 4,
-      "fresh": 4,
+      "fetched": 6,
+      "fresh": 6,
       "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 1,
+      "fresh": 2,
       "windowHours": 36
     }
   ]
