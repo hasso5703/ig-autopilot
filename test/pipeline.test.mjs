@@ -650,3 +650,37 @@ test("every module in src/ parses and loads", async () => {
     await assert.doesNotReject(() => import(`../src/${f}`), `${f} does not load`);
   }
 });
+
+test("promptcraft: the mood decides the light, and the refusals refuse", async () => {
+  const { veoPrompt, imagePrompt, promptIssues, MOODS } = await import("../src/promptcraft.mjs");
+  const p = veoPrompt({ subject: "a person", action: "typing", setting: "in a dark office", mood: "tension" });
+  assert.ok(p.includes(MOODS.tension.light), "the mood's light phrase reaches the prompt");
+  assert.ok(/No readable text/.test(p), "the no-text rule is always present");
+  assert.ok(/No speech, no dialogue/.test(p), "Veo must not talk under the narration");
+  const i = imagePrompt({ subject: "hands", setting: "a desk", mood: "wonder" });
+  assert.ok(i.includes(MOODS.wonder.light));
+  assert.deepEqual(promptIssues("a quiet street at night"), []);
+  assert.ok(promptIssues("the Hugging Face office at night", { forbidNames: ["Hugging Face"] }).length === 1,
+    "a prompt naming the reported subject is refused");
+  assert.ok(promptIssues('a man says "hello there" softly').length === 1, "quoted dialogue is refused");
+});
+
+test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, screenshots caption low", async () => {
+  const { hexToAss, buildAss } = await import("../src/reel2.mjs");
+  assert.equal(hexToAss("FFB300"), "&H0000B3FF", "RRGGBB becomes ASS &H00BBGGRR");
+  const words = [
+    { w: "Google", s: 0.0, e: 0.3 }, { w: "listed", s: 0.3, e: 0.6 }, { w: "shared", s: 0.6, e: 0.9 },
+    { w: "Claude", s: 0.9, e: 1.2 }, { w: "chats.", s: 1.2, e: 1.5 },
+    { w: "The", s: 1.5, e: 1.7 }, { w: "links", s: 1.7, e: 2.0 }, { w: "live.", s: 2.0, e: 2.3 },
+  ];
+  const beats = [{ script: "Google listed shared Claude chats.", visual: { type: "screenshot" } },
+                 { script: "The links live.", visual: { type: "image" } }];
+  const ranges = [{ start: 0, end: 4 }, { start: 5, end: 7 }];
+  const ass = buildAss(words, beats, ranges, "FFB300");
+  assert.ok(!/Dialogue:[^\n]*,K[^L]*,{\\k\d+}CHATS\s*$/m.test(ass), "no dialogue holds a single orphan word");
+  const dialogues = ass.split("\n").filter((l) => l.startsWith("Dialogue:"));
+  const low = dialogues.filter((d) => d.includes(",KLOW,"));
+  assert.equal(low.length, 1, "the screenshot beat's caption sits in the low band");
+  assert.equal((low[0].match(/\\k\d+/g) || []).length, 5, "the orphan 'chats.' rejoined its four-word sentence");
+  assert.ok(dialogues.every((d) => (d.match(/\\k\d+/g) || []).length >= 2), "every caption carries at least two timed words");
+});
