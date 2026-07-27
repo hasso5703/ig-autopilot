@@ -57,9 +57,12 @@
       "type": "hook",
       "kicker": "26 July 2026 · Nvidia and OpenAI",
       "headline": "Nvidia would co-sign $250 billion of *OpenAI's lease*",
-      "hero": { "value": "$500B", "label": "what the whole Ohio site could cost" },
+      "hero": {
+        "value": "$500B",
+        "label": "what the whole Ohio site could cost"
+      },
       "swipe": "Swipe for what the money does not cover",
-      "narration": "Nvidia would co sign two hundred and fifty billion dollars of OpenAI's lease. The ground is a shut down uranium plant in Ohio.",
+      "narration": "The ground is a shut down uranium plant in southern Ohio.",
       "image": {
         "kind": "illustration",
         "prompt": "cinematic wide photograph of a vast empty industrial turbine hall at dusk, steel gantries overhead, shafts of cold blue light falling through high broken windows, dust suspended in the air, 35mm, no text, no people",
@@ -71,7 +74,7 @@
       "figure": "$250B",
       "unit": "guaranteed by the company selling the chips",
       "body": "Nvidia is in talks to stand behind the **lease and the debt to build it**. The whole site could cost more than *half a trillion dollars*.",
-      "narration": "Two hundred and fifty billion dollars, guaranteed by the company selling the chips. It stands behind the lease and the debt to build it.",
+      "narration": "Two hundred and fifty billion dollars, guaranteed by the company selling the chips.",
       "evidence": "Nvidia is in talks to provide a roughly $250 billion financial backstop for OpenAI as part of a massive data center project in southern Ohio that could ultimately cost more than $500 billion, according to a Wall Street Journal report citing people familiar with the matter.",
       "source": {
         "name": "Benzinga",
@@ -116,7 +119,8 @@
         "kind": "illustration",
         "prompt": "cinematic wide photograph of a vast empty concrete foundation slab at dusk, steel reinforcement bars casting long shadows, cold blue light, volumetric haze, 35mm, no text, no people",
         "alt": "an enormous empty concrete foundation at dusk"
-      }
+      },
+      "narration": "Covered, the buildings. Not covered, the chips going inside."
     },
     {
       "type": "quote",
