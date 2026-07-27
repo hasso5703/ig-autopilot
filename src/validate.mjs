@@ -18,6 +18,7 @@
  */
 
 import { readFile } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import { tokens } from "./state.mjs";
 
@@ -284,6 +285,38 @@ export function hookIssues(headline) {
  * whole promise is that what it shows is real, is indefensible however good it
  * looks — so a prompt may not name anyone the post itself quotes or credits.
  */
+/** The palette table, read once, so validate does not need the render pipeline. */
+let _palettes = null;
+function brandPalettes() {
+  if (!_palettes) {
+    try {
+      _palettes = JSON.parse(readFileSync(path.join(ROOT, "brand", "brand.json"), "utf8")).palettes || {};
+    } catch {
+      _palettes = {};
+    }
+  }
+  return _palettes;
+}
+
+/**
+ * The light belongs to the mood, and this is advice rather than a refusal.
+ *
+ * Three consecutive posts declared `tension` and every prompt still asked for
+ * cold blue, so four covers side by side on the profile read as one post
+ * repeated. The accent is six per cent of the frame; the photograph is the rest
+ * of it, and the photograph is what makes two covers look identical. But a
+ * prompt that ignores its palette produces a dull grid, not a false one, so it
+ * says its piece and gets out of the way.
+ */
+export function imageStyleIssues(slide, post = {}) {
+  const img = slide?.image;
+  const light = post?.moodLight;
+  if (!img || img.kind !== "illustration" || !light) return [];
+  const key = light.split(" ")[1] || light.split(" ")[0];
+  if (new RegExp(key, "i").test(String(img.prompt || ""))) return [];
+  return [`the prompt does not ask for the light this post's mood carries ("${light}"). Two covers look alike because of the photograph, not because of the accent.`];
+}
+
 export function imageIssues(slide, post = {}) {
   const img = slide.image;
   if (!img) return ["missing. Every slide carries a picture: `image: { kind: 'photo', query: '…' }` or `{ kind: 'illustration', prompt: '…' }`"];
@@ -567,8 +600,10 @@ export async function validatePost(post, opts = {}) {
   }
 
   // ---- every slide carries a picture --------------------------------------
-  for (const [i, s] of slides.entries()) {
-    for (const issue of imageIssues(s, post)) err(`slide ${i + 1} (${s.type}) image: ${issue}`);
+  const moodLight = brandPalettes()[post.mood]?.light;
+  for (const [i, s2] of slides.entries()) {
+    for (const issue of imageIssues(s2, post)) err(`slide ${i + 1} (${s2.type}) image: ${issue}`);
+    for (const issue of imageStyleIssues(s2, { ...post, moodLight })) nag(`slide ${i + 1} image: ${issue}`);
   }
 
   /*

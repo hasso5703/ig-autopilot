@@ -954,6 +954,26 @@ node src/reel.mjs posts/<slug>.json media/<slug>
   voice. Never add music from anywhere else: Instagram's library is unreachable
   by API and everything else is a licensing problem.
 
+  **The mood is not only the music. It is the colour of the whole post.**
+
+  Four covers side by side on the profile grid were indistinguishable: same cold
+  blue-teal photograph, same cyan accent, same layout. Two causes, both in the
+  code and both now fixed — the tint layer recoloured every photograph toward the
+  accent, and every generated prompt asked for cold blue light. But the second
+  one is yours to keep fixed, every run:
+
+  | `mood` | accent | the light your prompts must ask for |
+  |---|---|---|
+  | `steady` | cyan | cold cyan light and near-black shadow |
+  | `tension` | amber | warm amber light against deep shadow |
+  | `drive` | green | clean green-white light on steel |
+  | `wonder` | violet | violet dusk light and soft haze |
+
+  The accent is six per cent of the frame. **The photograph is the rest of it,
+  and the photograph is what makes two covers look like the same post.** The gate
+  warns when an illustration prompt ignores its palette; it is advice, not a
+  refusal, because a dull grid is not a false one.
+
   **You choose it, per story, with `"mood"` at the top level of the post.** Four
   beds, all Kevin MacLeod, all CC BY 4.0, all *measured* before being committed:
 

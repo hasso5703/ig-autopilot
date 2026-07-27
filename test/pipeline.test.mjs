@@ -634,3 +634,19 @@ test("a theme running through recent posts is named, and a carousel plus its Ree
   // A story with no matching theme is not forced into one.
   assert.deepEqual(themesOf("Librarians teach a class on turning features off"), []);
 });
+
+// ---------------------------------------------------------------------------
+// Three times now I have put a backtick inside the CSS template literal in
+// template.mjs — writing `top` or `mix-blend-mode` in a comment — and each time
+// the file stopped parsing. The suite caught it only because something happened
+// to import it. This imports every module, so nothing can be added to src/ and
+// go unparsed.
+// ---------------------------------------------------------------------------
+test("every module in src/ parses and loads", async () => {
+  const { readdir } = await import("node:fs/promises");
+  const files = (await readdir(new URL("../src", import.meta.url))).filter((f) => f.endsWith(".mjs"));
+  assert.ok(files.length >= 10, `expected the whole pipeline, found ${files.length} modules`);
+  for (const f of files) {
+    await assert.doesNotReject(() => import(`../src/${f}`), `${f} does not load`);
+  }
+});

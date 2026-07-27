@@ -126,7 +126,11 @@ body{background:${c.bg};color:${c.ink};font-family:'Archivo',sans-serif;
 .pic.full{height:100%}
 .pic.top{height:${TOP_IMAGE_H}px}
 .pic.field{height:100%;filter:grayscale(.45) contrast(1.03) brightness(.66) blur(2px);transform:scale(1.06)}
-.tint{position:absolute;inset:0;z-index:1;background:${c.accent};opacity:.11;mix-blend-mode:color;pointer-events:none}
+/* .06, down from .11. A mix-blend-mode of color replaces the hue of everything
+   under it, so at .11 every photograph in the account came out the same cyan
+   whatever it actually showed. A trace of the accent still ties the frame
+   together; a wash of it made four different stories look like one post. */
+.tint{position:absolute;inset:0;z-index:1;background:${c.accent};opacity:.06;mix-blend-mode:color;pointer-events:none}
 /* The adaptive layer. Every fixed scrim is wrong for some photograph: the one
    that made a night-time server hall readable turned Bates Hall, one of the
    most photogenic reading rooms in the world, into grey mud — and the lighter

@@ -290,8 +290,42 @@ async function normalise(inputPath, outputPath) {
   await ffmpeg(["-y", "-i", inputPath, "-vf", filters, "-q:v", "3", outputPath]);
   await rm(inputPath, { force: true });
   const { size } = await stat(outputPath);
+
+  /*
+   * Reject what cannot be a backdrop for this brand.
+   *
+   * A run had to replace three of eight pictures by eye: clip-art sitting on a
+   * transparency checkerboard with legible handwriting on it, hands photographing
+   * festive bokeh, and a bright-daylight stock office block. The relevance filter
+   * passed all three, because all three were about the right subject. What they
+   * had in common is measurable — large fields of near-white, which is what
+   * clip-art, transparency checkerboards, cut-out stock and blown-out skies all
+   * have and a lit interior at night does not.
+   *
+   * A quarter of the frame is the line. Bates Hall, a genuinely bright reading
+   * room that made a good slide once the exposure system darkened it, measures
+   * well under that; a product shot on white measures over half.
+   */
+  const white = await whiteFraction(outputPath);
+  if (white > 0.25)
+    throw new Error(
+      `${(white * 100).toFixed(0)}% of this picture is near-white, which is clip-art, a cut-out on white, or a blown-out sky rather than a photograph this brand can put type on`
+    );
   if (size < 5000) throw new Error(`normalised image is ${size} bytes — the source was probably not an image`);
   return outputPath;
+}
+
+/**
+ * How much of a picture is near-white. Sampled at 64x64, which is enough to
+ * separate a white background from a bright interior and costs one ffmpeg call.
+ */
+async function whiteFraction(file) {
+  const { stdout } = await ffmpeg(["-i", file, "-vf", "scale=64:64:flags=area,format=gray", "-f", "rawvideo", "-"]);
+  const px = Buffer.from(stdout, "binary");
+  if (!px.length) return 0;
+  let hot = 0;
+  for (const v of px) if (v >= 235) hot++;
+  return hot / px.length;
 }
 
 /* ------------------------------------------------------------------ *
@@ -326,10 +360,26 @@ export async function acquireOne(spec, { dir, name, attempt = 0 }) {
   const out = path.join(dir, `${name}.jpg`);
 
   if (spec.kind === "illustration") {
-    const seed = spec.seed ?? 1000 + attempt * 137;
-    const buf = await generate(spec.prompt, { seed });
-    await writeFile(tmp, buf);
-    await normalise(tmp, out);
+    /*
+     * Three tries, because a generator has bad days and one of them cost a run
+     * three manual rerolls. A new seed is a new picture from the same prompt, so
+     * the retry costs nothing editorially.
+     */
+    let seed = spec.seed ?? 1000 + attempt * 137;
+    let lastErr;
+    for (let i = 0; i < 3; i++) {
+      try {
+        await writeFile(tmp, await generate(spec.prompt, { seed }));
+        await normalise(tmp, out);
+        lastErr = null;
+        break;
+      } catch (err) {
+        lastErr = err;
+        console.error(`reroll: seed ${seed} gave ${describeError(err)}`);
+        seed += 977;
+      }
+    }
+    if (lastErr) throw lastErr;
     return {
       ...emptyCredit,
       file: path.relative(ROOT, out),

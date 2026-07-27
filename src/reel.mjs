@@ -22,7 +22,7 @@ import { promisify } from "node:util";
 import path from "node:path";
 import { html, buildTimeline, applyNarrationTiming, totalDuration, FPS } from "./reel-template.mjs";
 import { loadPlaywright, chromiumExecutable, assertFontsLoaded } from "./browser.mjs";
-import { loadSlideImages, regionLuma, EXPOSURE_LADDER, TEXT_LUMA_MAX, DISPLAY_LUMA_MAX } from "./render.mjs";
+import { loadSlideImages, regionLuma, applyPalette, EXPOSURE_LADDER, TEXT_LUMA_MAX, DISPLAY_LUMA_MAX } from "./render.mjs";
 import { speak, DEFAULT_VOICE } from "./voice.mjs";
 import { pickBed } from "./music.mjs";
 
@@ -181,11 +181,19 @@ export async function encode(dir, out, seconds, { silent = false, voice = null, 
     } else {
       parts.push("[vo]");
     }
-    filter.push(
-      parts.length > 1
-        ? `${parts.join("")}amix=inputs=${parts.length}:duration=first:normalize=0[a]`
-        : `${parts[0]}anull[a]`
-    );
+    /*
+     * Loudness, last, and it is not a detail.
+     *
+     * The published mix measured -21.4 dB mean with the speech band at -24.4.
+     * Instagram normalises to about -14 LUFS, so a Reel that quiet arrives
+     * thinner than whatever the viewer was just watching — the sound is judged
+     * in the first half second, against the Reel before it, and ours was
+     * starting the comparison two stops down. `loudnorm` to the platform target
+     * with a true-peak ceiling, then a limiter as a belt.
+     */
+    const mixed = parts.length > 1 ? `${parts.join("")}amix=inputs=${parts.length}:duration=first:normalize=0[mix]` : `${parts[0]}anull[mix]`;
+    filter.push(mixed);
+    filter.push(`[mix]loudnorm=I=-14:TP=-1.5:LRA=11,alimiter=limit=0.97[a]`);
   }
 
   const filterArgs = filter.length ? ["-filter_complex", filter.join(";")] : [];
@@ -252,7 +260,7 @@ export function complianceIssues(p) {
 
 export async function renderReel(postFile, outDir, opts = {}) {
   const post = JSON.parse(await readFile(path.resolve(postFile), "utf8"));
-  const brand = JSON.parse(await readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
+  const brand = applyPalette(JSON.parse(await readFile(path.join(ROOT, "brand", "brand.json"), "utf8")), post);
   const f = brand.fonts;
   const fonts = {
     anton: (await readFile(path.join(ROOT, "brand", "fonts", f.display.file))).toString("base64"),

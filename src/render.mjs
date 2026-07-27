@@ -28,6 +28,29 @@ import os from "node:os";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
+/**
+ * One account, not one post.
+ *
+ * Four covers side by side on the profile grid were indistinguishable: the same
+ * cold blue-teal photograph, the same cyan accent, the same layout, the same
+ * position. What makes this one account is the typeface, the black ground and
+ * the handle. What should make each post a different one is the accent, and it
+ * was nailed to a single cyan.
+ *
+ * The mood the post already declares picks it. An explicit `accent` still wins,
+ * because a story occasionally wants a colour no mood covers.
+ */
+export function applyPalette(brand, post) {
+  const p = brand.palettes?.[post?.mood];
+  if (p) {
+    brand.colors.accent = p.accent;
+    brand.colors.accentInk = p.accentInk;
+  }
+  if (post?.accent) brand.colors.accent = post.accent;
+  if (post?.accentInk) brand.colors.accentInk = post.accentInk;
+  return brand;
+}
+
 async function loadFonts(brand) {
   const dir = path.join(ROOT, "brand", "fonts");
   const specs = [brand.fonts.display, brand.fonts.body, brand.fonts.bodyBold];
@@ -338,7 +361,7 @@ async function autoDim(page, brand) {
 export async function renderPost(post, outDir, { images = null } = {}) {
   const { chromium } = await loadPlaywright();
   const brand = JSON.parse(await readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
-  if (post.accent) brand.colors.accent = post.accent;
+  applyPalette(brand, post);
   const fonts = await loadFonts(brand);
   const pictures = images ?? (await loadSlideImages(post));
 
