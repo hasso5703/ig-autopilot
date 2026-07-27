@@ -177,7 +177,8 @@ export function buildAss(words, beats, ranges, accentHex) {
 async function screenshot(url, outFile) {
   const { chromium } = await loadPlaywright();
   const executablePath = await chromiumExecutable();
-  const browser = await chromium.launch({ executablePath, args: ["--disable-blink-features=AutomationControlled"] });
+  const proxy = process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined;
+  const browser = await chromium.launch({ executablePath, proxy, args: ["--disable-blink-features=AutomationControlled"] });
   try {
     const ctx = await browser.newContext({
       viewport: { width: 430, height: 932 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true,
