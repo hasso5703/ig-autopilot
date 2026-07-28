@@ -1,0 +1,188 @@
+{
+  "slug": "2026-07-28-claude-chats-google",
+  "mood": "tension",
+  "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
+  "centralClaim": "Claude chats and Artifacts that users had shared were found publicly searchable on Google, some containing sensitive personal information.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+      "quote": "An untold number of Claude chats and Artifacts — the interactive mini apps and documents users can build inside Claude — were found publicly searchable on Google over the weekend, after Reddit users discovered that typing search operators like “site:claude.ai/share” into Google surfaced a long list of shared conversations."
+    },
+    {
+      "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible",
+      "quote": "A trove of chat logs and projects created with Anthropic’s Claude — some including sensitive personal and company information — have been left exposed to Google, making them them searchable to anyone on the web."
+    }
+  ],
+  "caption": "Your shared Claude chats may have been sitting on Google for anyone to find.\n\nOver the weekend, Reddit users noticed that a single search listed Claude conversations and Artifacts that people had shared by link. Futurism reviewed what was exposed and found what appeared to be a real patient's medical report, clinical trial results with patient names, and documents naming primary school-aged children along with their phone numbers.\n\nAnthropic said the system was working as intended: share links reach search results only when they have been posted somewhere search engines can see, and a link sent privately stays out of search. Google said it does not control what pages are made public on the web. By Monday afternoon, TechCrunch's test search returned no results.\n\nThe caveat, plainly: the exposed pages were ones users had turned into public links with the Share button. The warning on a shared chat says anyone with the link can view, and does not mention search engines; the warning on a published Artifact does. And Futurism notes that in a similar case last year, Forbes found a user who denied ever posting their link anywhere.\n\nTo check yours: Settings, then Privacy, then Shared Chats.\n\nWould you have read anyone with the link as anyone on Google? Say it in the comments.\n\ntechcrunch.com, futurism.com\n\nAI-assisted.\n\n#AInews #Claude #Anthropic #privacy",
+  "captionEvidence": [
+    {
+      "quote": "Such documents, which were reviewed by Futurism by way of Google Search, included what appeared to be a detailed medical report of a real patient, clinical trial results that included patient names, documents sharing the names and phone numbers of primary school-aged children, company documents marked for internal use only, and employee reviews that included personal information about workers.",
+      "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible"
+    },
+    {
+      "quote": "Reached for comment, Anthropic said the system was working as intended.",
+      "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible"
+    },
+    {
+      "quote": "When asked about what happened, the company told TechCrunch that share links only appear in search results when they’ve been posted somewhere search engines can see, like a forum or social media post; it added that a link sent privately to someone stays out of search.",
+      "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/"
+    },
+    {
+      "quote": "As of Monday afternoon, a test search by TechCrunch on Google following the method outlined in the Reddit post does not return any results, suggesting that the exposure has somehow been remediated.",
+      "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/"
+    },
+    {
+      "quote": "Google spokesperson Ned Adriance told TechCrunch that “Neither Google nor any other search engine controls what pages are made public on the web, and these pages were indexed across many search engines. We give site owners clear controls to decide whether pages can be crawled or indexed, and we always respect those directives.",
+      "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/"
+    },
+    {
+      "quote": "After hitting the “share” button in the top right corner, Claude notes that sharing will create a “public” link, which “anyone with the link can view.” The warning, though, doesn’t alert users that shared content could wind up being indexed by a search engine — meaning that a user could effectively be sharing their Claude-generated document with the entire internet.",
+      "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible"
+    },
+    {
+      "quote": "That platform does warn users that publishing an Artifact “will make it accessible to anyone on the internet and potentially visible in search engine results.",
+      "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible"
+    },
+    {
+      "quote": "However, in its investigation last year, Forbes tracked down a user whose Claude material was appearing in Google search results who denied sharing the materials online.",
+      "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "27 July 2026 · Anthropic",
+      "headline": "Claude chats meant for a colleague ended up on *Google*, medical records included",
+      "hero": {
+        "value": "Share",
+        "label": "the one button that turned private conversations into public pages"
+      },
+      "swipe": "Swipe for the receipts",
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic photograph of a laptop alone on a desk in a dark room, its screen the only light spilling across scattered papers, warm amber light against deep shadow, 35mm, no text, no people",
+        "alt": "a glowing laptop alone in a dark room"
+      }
+    },
+    {
+      "type": "content",
+      "title": "One Google search listed them",
+      "body": "Reddit users typed a single search into **Google** and it surfaced a long list of shared Claude conversations and Artifacts, *open to anyone who clicked*.",
+      "evidence": "An untold number of Claude chats and Artifacts — the interactive mini apps and documents users can build inside Claude — were found publicly searchable on Google over the weekend, after Reddit users discovered that typing search operators like “site:claude.ai/share” into Google surfaced a long list of shared conversations.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+        "date": "2026-07-27"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "macro photograph of a magnifying glass resting on a dark laptop keyboard, warm amber rim light against deep shadow, shallow depth of field, no text, no people",
+        "alt": "a magnifying glass on a dark keyboard"
+      }
+    },
+    {
+      "type": "content",
+      "title": "What strangers could open",
+      "body": "Futurism reviewed the exposed pages and found what appeared to be **a real patient's medical report**, clinical trial results with patient names, and *the names and phone numbers of primary school-aged children*.",
+      "evidence": "Such documents, which were reviewed by Futurism by way of Google Search, included what appeared to be a detailed medical report of a real patient, clinical trial results that included patient names, documents sharing the names and phone numbers of primary school-aged children, company documents marked for internal use only, and employee reviews that included personal information about workers.",
+      "source": {
+        "name": "Futurism",
+        "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible",
+        "date": "2026-07-27"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "a stack of manila folders on a steel table, the top one fallen open with blank pages fanned out, warm amber light against deep shadow, no text, no people",
+        "alt": "an open folder of blank pages on a steel table"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "What the button says",
+      "claim": "Anyone *with the link* can view",
+      "caveatLabel": "What it never says",
+      "caveat": "Nothing warns that a shared chat can surface in a **search engine**, in front of the entire internet",
+      "evidence": "After hitting the “share” button in the top right corner, Claude notes that sharing will create a “public” link, which “anyone with the link can view.” The warning, though, doesn’t alert users that shared content could wind up being indexed by a search engine — meaning that a user could effectively be sharing their Claude-generated document with the entire internet.",
+      "source": {
+        "name": "Futurism",
+        "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible",
+        "date": "2026-07-27"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "a frosted glass office door standing ajar in a dark corridor, warm amber light spilling through the gap into deep shadow, no text, no people",
+        "alt": "a glass door standing ajar in a dark corridor"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Send this to *anyone who uses Claude*",
+      "sub": "AI news, told in plain words",
+      "image": {
+        "kind": "illustration",
+        "prompt": "a smartphone lying face down on a bedside table beside a small warm lamp at night, warm amber light against deep shadow, no text, no people",
+        "alt": "a phone face down beside a warm lamp"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+      "accessed": "2026-07-28"
+    },
+    {
+      "name": "Futurism",
+      "url": "https://futurism.com/artificial-intelligence/claude-chats-publicly-accessible",
+      "accessed": "2026-07-28"
+    }
+  ],
+  "reel2": {
+    "voice": "Fenrir",
+    "mood": "tension",
+    "beats": [
+      {
+        "script": "If you ever hit Share on a Claude chat, that conversation may have ended up on Google.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a person in silhouette seen from behind",
+            "action": "slowly scrolling a laptop whose screen casts pale shifting light over a dark desk",
+            "setting": "a dark home office late at night",
+            "composition": "over-the-shoulder medium shot",
+            "ambient": "quiet room tone, faint keyboard clicks"
+          }
+        }
+      },
+      {
+        "script": "Reddit users found shared Claude chats listed on Google. Some held health records, private company documents, and children's names and phone numbers.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/"
+        }
+      },
+      {
+        "script": "Anthropic says the system worked as intended. A shared link is a public page.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a frosted glass office door standing ajar with warm light spilling through the gap",
+            "setting": "a dark office corridor",
+            "composition": "wide shot"
+          }
+        }
+      },
+      {
+        "script": "Check yours in Settings, Privacy, Shared chats. Then send this to anyone who uses Claude.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a smartphone face up on a bedside table, its screen a soft indistinct glow",
+            "setting": "a dim bedroom at night",
+            "composition": "close-up"
+          }
+        }
+      }
+    ]
+  }
+}
