@@ -40,7 +40,7 @@ import { promisify } from "node:util";
 import path from "node:path";
 import os from "node:os";
 import { ffmpeg, ffprobe } from "./ffmpeg.mjs";
-import { tts, genVideo, genImage } from "./genmedia.mjs";
+import { tts, genVideo, genImage, journal } from "./genmedia.mjs";
 import { veoPrompt, imagePrompt, promptIssues, MOODS } from "./promptcraft.mjs";
 import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
 
@@ -199,6 +199,15 @@ async function screenshot(url, outFile) {
     for (const sel of ['button:has-text("Accept")', 'button:has-text("AGREE")', ".fc-cta-consent"]) {
       try { await page.locator(sel).first().click({ timeout: 1200 }); } catch { /* no banner is the good case */ }
     }
+    // The receipt is the page's journalism, not its ad inventory: a Norton
+    // banner shipped inside the TechCrunch receipt on the first live Reel.
+    // Heuristic and best-effort — a hidden ad leaves a gap, which reads fine.
+    await page.addStyleTag({
+      content:
+        '[id*="google_ads"],[id^="ad-"],[class*="advert"],[class^="ad-"],[class*=" ad-"],' +
+        'ins.adsbygoogle,iframe[src*="ads"],iframe[src*="doubleclick"],[data-ad],[data-ad-unit],' +
+        '[aria-label*="advertisement" i]{display:none!important;visibility:hidden!important}',
+    }).catch(() => {});
     await page.waitForTimeout(600);
     await page.screenshot({ path: outFile });
   } finally {
@@ -226,6 +235,12 @@ async function segmentFromImage(img, dur, outFile) {
  * leaves the low band clear, and reads as evidence rather than as our design.
  */
 async function segmentFromScreenshot(shot, dur, outFile) {
+  // The card is CROPPED to a fixed height so its bottom edge is deterministic:
+  // 880x1250 at x=100,y~230 ends by ~1480, and the KLOW caption band at ~1690
+  // can never collide with it. The first live Reel proved the alternative —
+  // position the captions in a fixed place under a card of page-dependent
+  // height, and some page's headline will eventually sit exactly there.
+  const CARD_W = 880, CARD_H = 1250;
   await ffmpeg([
     "-y", "-loop", "1", "-i", shot, "-t", String(dur),
     "-filter_complex",
@@ -233,7 +248,8 @@ async function segmentFromScreenshot(shot, dur, outFile) {
       `[bg]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=28,eq=brightness=-0.25[bgb];` +
       // The card starts under the handle badge and never drifts up into it —
       // the first cut had white site chrome sliding beneath white type.
-      `[fg]scale=880:-1[card];[bgb][card]overlay=x=100:y='230-80*t/${dur}'[v]`,
+      `[fg]scale=${CARD_W}:-1,crop=${CARD_W}:'min(ih,${CARD_H})':0:0[card];` +
+      `[bgb][card]overlay=x=100:y='230-80*t/${dur}'[v]`,
     "-map", "[v]", "-r", String(FPS), "-c:v", "libx264", "-preset", "fast", "-crf", "18", outFile,
   ]);
 }
@@ -350,6 +366,7 @@ export async function buildReel(postFile, mediaDir) {
     }
     segFiles.push(seg);
     console.log(`beat ${i}: ${type} ${dur}s — "${beat.script.split(/\s+/).slice(0, 6).join(" ")}…"`);
+    await journal(`beat ${i} built: ${type} ${dur}s`);
   }
 
   /* 4 — one video track, captions burned over it. */
@@ -401,6 +418,7 @@ export async function buildReel(postFile, mediaDir) {
   if (!(v?.width === W && v?.height === H)) violations.push(`frame ${v?.width}x${v?.height}`);
   if (a?.codec_name !== "aac") violations.push(`audio codec ${a?.codec_name}`);
   console.log(violations.length ? `VIOLATIONS: ${violations.join("; ")}` : `COMPLIANT ${dur.toFixed(1)}s ${W}x${H} h264+aac`);
+  await journal(violations.length ? `reel VIOLATIONS: ${violations.join("; ")}` : `reel COMPLIANT ${dur.toFixed(1)}s`);
   return { file: outFile, seconds: dur, compliant: violations.length === 0, violations };
 }
 

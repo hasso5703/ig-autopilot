@@ -113,7 +113,26 @@ async function recordSpend(entry) {
     /* a missing state/ dir means we are not in the repo root; the console line still tells the story */
   }
   console.log(`spend: $${line.usd} ${entry.kind} ${entry.model}${entry.note ? ` (${entry.note})` : ""}`);
+  await journal(`spend $${line.usd} — ${entry.kind} ${entry.model} ${entry.units ?? ""}`);
   return line;
+}
+
+/**
+ * The run journal: one line per event, appended to whatever file RUN_JOURNAL
+ * points at, silently skipped when it points nowhere. It exists because a run
+ * that dies on a usage limit takes its narration with it — the 27 July death
+ * left a bought Veo clip visible only by inference from a commit message. The
+ * journal is the flight recorder: cheap lines, written at the moment things
+ * happen, committed with whatever lands next.
+ */
+export async function journal(line) {
+  const file = process.env.RUN_JOURNAL;
+  if (!file) return;
+  try {
+    await appendFile(file, `- ${new Date().toISOString().slice(11, 19)} ${line}\n`);
+  } catch {
+    /* a journal must never be able to fail a run */
+  }
 }
 
 let modelListCache = null;

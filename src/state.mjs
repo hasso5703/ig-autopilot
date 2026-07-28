@@ -117,7 +117,19 @@ export async function loadState() {
  * sources carry a four-day freshness window of their own.
  */
 const CONSIDERED_TTL_MS = 36 * 3600 * 1000;
-const BLOCKS_FOREVER = new Set(["posted", "rejected"]);
+// `published-deleted`: the story went out, a human wiped the grid, and nobody
+// should re-cover it as new — the 28 July morning run did exactly that after a
+// wipe emptied posted.jsonl and took the fingerprints with it.
+const BLOCKS_FOREVER = new Set(["posted", "rejected", "published-deleted"]);
+
+/**
+ * The most recent record by timestamp, never by file position. The ledgers
+ * merge by union when two writers race (.gitattributes), and a union keeps
+ * every line but promises nothing about order — so "last line" stopped meaning
+ * "latest post" the day concurrent pushes became survivable.
+ */
+export const latestBy = (rows) =>
+  rows.reduce((best, r) => (!best || Date.parse(r.at ?? 0) > Date.parse(best.at ?? 0) ? r : best), null);
 
 const stillBlocks = (r) => {
   const outcome = r.outcome ?? "posted"; // posted.jsonl entries carry no outcome
@@ -284,7 +296,7 @@ export function nextSlot(now = new Date()) {
 
 export async function publishGap() {
   const { posted } = await loadState();
-  const last = posted.at(-1);
+  const last = latestBy(posted);
   if (!last) return { ok: true, hours: null, min: MIN_GAP_HOURS, last: null, overridden: false };
 
   const hours = (Date.now() - Date.parse(last.at)) / 3600000;
@@ -351,7 +363,8 @@ export async function recentThemes(now = new Date(), { posts = 4 } = {}) {
   // otherwise count twice.
   const seen = new Set();
   const stories = [];
-  for (const p of [...posted].reverse()) {
+  const newestFirst = [...posted].sort((a, b) => Date.parse(b.at ?? 0) - Date.parse(a.at ?? 0));
+  for (const p of newestFirst) {
     const key = p.fingerprint || p.title || p.slug;
     if (seen.has(key)) continue;
     seen.add(key);
@@ -370,7 +383,7 @@ export async function recentThemes(now = new Date(), { posts = 4 } = {}) {
 
 export async function carouselDue(now = new Date()) {
   const { posted } = await loadState();
-  const last = posted.filter((p) => !isReel(p)).at(-1);
+  const last = latestBy(posted.filter((p) => !isReel(p)));
   const hours = last ? (now - new Date(last.at)) / 3600000 : null;
   const since24 = posted.filter((p) => now - new Date(p.at) < 24 * 3600000);
   return {
@@ -380,6 +393,36 @@ export async function carouselDue(now = new Date()) {
     lastCarousel: last ? { at: last.at, slug: last.slug } : null,
     last24h: { reels: since24.filter(isReel).length, carousels: since24.filter((p) => !isReel(p)).length },
   };
+}
+
+/**
+ * A grid wipe with the memory kept.
+ *
+ * When Hasan empties the account, the repo's record follows — but the first
+ * wipe emptied posted.jsonl and the anti-repeat fingerprints died with it, so
+ * the next morning's run re-covered a story the account had already told.
+ * Wiping is now one command: every published record migrates into seen.jsonl
+ * as `published-deleted` (blocks forever), and only then are the ledgers of
+ * dead media emptied.
+ */
+export async function wipeGrid({ dir = DIR } = {}) {
+  const postedFile = path.join(dir, "posted.jsonl");
+  const seenFile = path.join(dir, "seen.jsonl");
+  const metricsFile = path.join(dir, "metrics.jsonl");
+  const posted = await readJsonl(postedFile);
+  const at = new Date().toISOString();
+  const lines = posted.map((p) =>
+    JSON.stringify({
+      at, url: p.url ?? null, title: p.title ?? p.slug, source: p.source ?? null,
+      fingerprint: p.fingerprint ?? fingerprint(p.title ?? p.slug ?? ""),
+      tokens: p.tokens ?? tokens(p.title ?? ""),
+      outcome: "published-deleted", reason: `grid wipe ${at.slice(0, 10)}`,
+    })
+  );
+  if (lines.length) await appendFile(seenFile, lines.join("\n") + "\n", "utf8");
+  await writeFile(postedFile, "", "utf8");
+  await writeFile(metricsFile, "", "utf8");
+  return { migrated: lines.length };
 }
 
 if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
@@ -405,15 +448,28 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
     console.log(JSON.stringify({ ...t, carouselsRetired: "2026-07-28" }, null, 2));
     console.error("\nCarousels are retired. This run publishes a Reel or nothing; Reels populate the grid themselves.");
   } else if (process.argv[2] === "guard") {
+    const role = process.argv[3] === "scout" ? "scout" : "publish";
     const g = await publishGap();
-    console.log(JSON.stringify(g, null, 2));
+    console.log(JSON.stringify({ ...g, role }, null, 2));
     if (!g.ok) {
-      console.error(
-        `\nBLOCKED — the last post went out ${g.hours}h ago and the minimum gap is ${g.min}h.` +
-          `\nStop this run now. Do not research, render or publish.`
-      );
-      process.exit(1);
+      // The guard exists to stop a second PUBLICATION landing too close to the
+      // first. A scout publishes nothing, so killing it here only costs the
+      // day its preparation — which is what happened on 2026-07-28 when the
+      // morning publish put the 10:00 scout inside the gap for no benefit.
+      if (role === "scout") {
+        console.error(
+          `\nGAP ACTIVE (last post ${g.hours}h ago, minimum ${g.min}h) — but you are a scout and publish nothing.` +
+            `\nCarry on: gather, verify, leave the candidate on main. Do NOT publish anything this run.`
+        );
+      } else {
+        console.error(
+          `\nBLOCKED — the last post went out ${g.hours}h ago and the minimum gap is ${g.min}h.` +
+            `\nA publish run stops here. If the day still needs its Reel, a later slot will have room.`
+        );
+        process.exit(1);
+      }
     }
+    if (!g.ok) { /* scout with the gap active: notes above, nothing else to print */ } else {
     const slot = nextSlot();
     if (slot.wouldEatIt)
       console.error(
@@ -425,8 +481,16 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
         ? `\nCLEAR to publish — BUT ONLY BECAUSE THE GUARD WAS OVERRIDDEN. The last post was ${g.hours}h ago, under the ${g.min}h minimum. Say this in your final report.`
         : "\nCLEAR to publish"
     );
+    }
+  } else if (process.argv[2] === "wipe-grid") {
+    const r = await wipeGrid();
+    console.log(JSON.stringify(r, null, 2));
+    console.error(
+      `\n${r.migrated} published record(s) migrated to seen.jsonl as published-deleted; posted.jsonl and metrics.jsonl emptied.` +
+        `\nCommit and land this with land.mjs, then delete the posts in the app if not already done.`
+    );
   } else {
     const { posted, seen } = await loadState();
-    console.log(JSON.stringify({ posted: posted.length, seen: seen.length, lastPosted: posted.at(-1) ?? null }, null, 2));
+    console.log(JSON.stringify({ posted: posted.length, seen: seen.length, lastPosted: latestBy(posted) ?? null }, null, 2));
   }
 }

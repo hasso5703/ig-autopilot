@@ -244,13 +244,30 @@ of a hook cannot clear this bar, the story is the wrong story — pick another o
 
 ### 0. Are you even allowed to publish right now
 ```bash
+cat prompts/notes.md                          # the pilot's notebook: read it before you re-learn it
+export RUN_JOURNAL="reports/journal/$(date -u +%F)-$(date -u +%H)h.md"   # the flight recorder
 npm install --no-audit --no-fund   # Chromium comes from here; do not assume it is present
 apt-get update && apt-get install -y ffmpeg   # ~40s, and now needed from step 5c on
 ffmpeg -version | head -1                     # must print a version, or stop here
 test -n "$GEMINI_API_KEY" && echo "GEMINI_API_KEY present" || echo "GEMINI_API_KEY MISSING"
 npm test
-node src/state.mjs guard
+node src/state.mjs guard          # publish runs; scouts run `guard scout` instead
 ```
+
+**The notebook (`prompts/notes.md`) is the runs' own memory**, and its rules
+live at the top of the file: at most 20 dated operational facts, and you may —
+should — edit it when you learn one worth a future run's minutes or correct
+one that is wrong. The hierarchy is fixed: fix code before adding a test,
+add a test before writing a note, write a note before proposing manual changes
+in your report. The constitution (this manual, the gates, the ceilings) is
+never edited by a run; propose, don't apply.
+
+**The journal is the flight recorder.** Append a line at every numbered step
+(`echo "- $(date -u +%H:%M:%S) step 3: picked <slug>" >> "$RUN_JOURNAL"`), and
+the engine appends its own spend and verdict lines through `RUN_JOURNAL`.
+**Commit and land the journal before every purchase and before publishing** —
+the 27 July run died on a usage limit and its last twenty minutes exist only
+by inference. Prune journal files older than 14 days when you add one.
 
 **`GEMINI_API_KEY` is the paid-media key** — Veo clips, Nano Banana stills and
 the narration voice all come through it, and every purchase is priced into
@@ -298,13 +315,20 @@ is how a silent regression reaches a live account. If any test fails, stop and
 report the failures as the whole run. **Do not edit the tests to make them
 pass.**
 
-**`node src/state.mjs guard`** enforces the minimum gap between posts, now two
-hours. It exists because two runs once fired forty minutes apart and only a
-sourcing failure stopped a second carousel going out to an account holding one
-post. Two hours leaves the four scheduled runs, four to five hours apart, plenty
-of room while still catching a double-fire. A non-zero exit means stop now: do
-not research, render or publish. If it reports that it was overridden, say so
-plainly in your final report.
+**`node src/state.mjs guard`** enforces the minimum gap between publications,
+now two hours, and it blocks **publish runs only**. A scout runs
+`node src/state.mjs guard scout`, which never exits non-zero: a scout publishes
+nothing, and the 28 July morning proved that killing one over the gap only
+costs the day its preparation. For a publish run, a non-zero exit means stop:
+do not research, render or publish. If it reports that it was overridden, say
+so plainly in your final report.
+
+**A publish run's first act is the orphan check:** `node src/publish.mjs
+recent`, compared against `state/posted.jsonl`. A dead run may have published
+without recording (the 27 July run died minutes after its publish call), and an
+unrecorded post republished as new is the worst failure this account has. If
+the account holds media the record does not know, stop and reconcile with
+`recordPosted` before anything else.
 
 ### 1. Gather
 ```bash
@@ -329,13 +353,14 @@ OpenAI announcement is publishable only if a reachable second outlet carries the
 sentence you need. Check that before you research it, not after — a run lost its
 best story of the day to this, having already written the claim.
 
-**The Verge and Ars Technica return HTTP 403 from this sandbox and will keep
-doing so.** They resolve fine and answer 200 from a residential address with the
-identical user-agent; the origins block datacenter IPs. This was an allowlist
-problem until 2026-07-25 and is not one any more, so do not report it as one and
-do not try to work around it. Everything else being reachable is the normal
-state now: network access is Full, and a corroborating source that cannot be
-fetched is a real failure of that source.
+**Some origins block datacenter IPs and always will — the notebook
+(`prompts/notes.md`) keeps the measured list** (The Verge, Ars Technica,
+VentureBeat articles, Axios, Cybernews, openai.com articles as of 28 July).
+They answer 200 from residential addresses; from here a 403 is an answer, not
+a bug. Do not work around it, and add newly-discovered blockers to the
+notebook rather than to this manual. Everything else being reachable is the
+normal state: network access is Full, and a corroborating source that cannot
+be fetched is a real failure of that source.
 
 ### 2. Deduplicate
 Filter the items through `filterFresh` from `src/state.mjs`. It removes anything
@@ -893,13 +918,11 @@ story. That judgement is yours and it is the last one before publication.
 
 ### 8. Publish
 
-Commit and push the media first — Instagram fetches the URLs server-side, so
-they must be live before publishing:
+Land the media first — Instagram fetches the URLs server-side, so they must be
+live before publishing:
 
 ```bash
-git add media/<slug> posts/<slug>.json state/
-git commit -m "post: <slug>"
-git push origin main
+node src/land.mjs "post: <slug>" media/<slug> posts/<slug>.json state/ reports/journal/
 ```
 
 Then build the URLs with the helper. **Never hand-write a `/main/` URL.**
@@ -960,23 +983,29 @@ over, and for anything the gate killed. Give the killed ones `outcome:
 because `rejected` blocks forever and `considered` expires. Titles you only
 skimmed in the feed dump get nothing.
 
-```bash
-git checkout main && git merge --no-edit -   # bring your working branch across
-git add media/<slug> posts/<slug>.json state/
-git commit -m "post: <slug>"
-git push origin main
-```
-
-Then **verify it actually landed**, because a rejected push is easy to miss in a
-long log:
+**Landing on main is one command, and it is the only way anything lands:**
 
 ```bash
-git ls-remote origin refs/heads/main    # must equal your local HEAD
+node src/land.mjs "post: <slug>" media/<slug> posts/<slug>.json state/ reports/journal/
 ```
 
-If the push to `main` is refused, do not shrug and move on. Say so as the
-headline finding of your report, and name the exact error: an unattended account
-that cannot remember what it published is broken, however good the post was.
+It commits, fetches, rebases your work onto the real `origin/main`, pushes,
+retries the race if someone pushed meanwhile, and proves the result
+(`ls-remote` equals local HEAD) before saying `landed and proven`. **Never run
+`git checkout main`, never `git push` by hand, never force anything.** The 28
+July run's `checkout main` landed on a clone-time branch five commits behind
+with an empty `posted.jsonl` — one push away from erasing the account's memory
+— and only a rejected push exposed it. The container's local `main` is a
+photograph, not an authority; `land.mjs` treats `origin/main` as the only
+truth.
+
+Concurrent writes are expected, not exceptional: you and a human may push
+within the same minute. The append-only ledgers (`state/*.jsonl`) merge by
+union automatically, which is why their readers select by timestamp and never
+by "last line". If `land.mjs` exits 2 with `REAL CONFLICT`, a run and a human
+changed the same lines of the same file: keep your work on your branch, report
+the conflicting files as a headline finding, and let the human decide. Do not
+resolve it yourself, and above all do not resolve it with force.
 
 ### 10. The Reel
 
@@ -1026,7 +1055,7 @@ report and say why.
 the URL itself, SHA-pinned, never a `/main/` path:
 
 ```bash
-git add media/<slug> posts/<slug>.json state/ && git commit -m "reel: <slug>" && git push origin main
+node src/land.mjs "reel: <slug>" media/<slug> posts/<slug>.json state/ reports/journal/
 node src/publish-reel.mjs url <slug>
 IG_REEL_URL="<that url>" node src/publish-reel.mjs dry-run media/<slug>/reel.mp4 "<caption>"
 IG_REEL_URL="<that url>" node src/publish-reel.mjs publish media/<slug>/reel.mp4 "<caption>"
@@ -1062,6 +1091,15 @@ job; the candidate expires on its own.
 - **The publish step errors after media_publish** → check
   `node src/publish.mjs quota` and `state/posted.jsonl` before retrying. Never
   retry blindly; you risk double-posting.
+- **`land.mjs` exits 2 (REAL CONFLICT)** → a run and a human edited the same
+  lines. Keep your work on your branch, name the files in your report, change
+  nothing by force. The human resolves; you carry on with what does not depend
+  on it.
+- **The grid was emptied on purpose** → the record follows the account via
+  `node src/state.mjs wipe-grid`, which migrates every published fingerprint
+  into `seen.jsonl` as `published-deleted` before emptying the ledgers. Never
+  empty `posted.jsonl` by hand: the 28 July morning run re-covered a deleted
+  story because a hand-wipe threw the fingerprints away.
 
 ## Ending the run
 

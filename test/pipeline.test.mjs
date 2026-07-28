@@ -714,3 +714,42 @@ test("a sentence-opening The is not a name, and Microsoft still is", async () =>
   for (const noise of ["The", "This", "Send", "Every"]) assert.ok(!names.includes(noise), `"${noise}" must not be treated as a name`);
   for (const real of ["Microsoft", "Redis", "Anthropic"]) assert.ok(names.includes(real), `"${real}" must be caught`);
 });
+
+test("the notebook stays small, dated and below its own rules line", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const text = await readFile(new URL("../prompts/notes.md", import.meta.url), "utf8");
+  const entriesAt = text.indexOf("ENTRIES:");
+  assert.ok(entriesAt > 0, "the ENTRIES line must exist — it is the border between constitution and notes");
+  const entries = text.slice(entriesAt).split("\n").filter((l) => /^- /.test(l));
+  assert.ok(entries.length <= 20, `${entries.length} entries — the cap is 20; merge or delete before adding`);
+  for (const e of entries) assert.ok(/^- \d{4}-\d{2}-\d{2} · /.test(e), `entry lacks a date: "${e.slice(0, 60)}"`);
+  assert.ok(!/—/.test(text.slice(entriesAt)), "no em dashes, even here");
+});
+
+test("the latest record is found by timestamp, not by file position", async () => {
+  const { latestBy } = await import("../src/state.mjs");
+  const rows = [
+    { at: "2026-07-28T09:12:00Z", slug: "middle" },
+    { at: "2026-07-28T11:00:00Z", slug: "newest" },
+    { at: "2026-07-27T20:00:00Z", slug: "oldest" },
+  ];
+  assert.equal(latestBy(rows).slug, "newest", "a union merge may reorder lines; the reader must not care");
+  assert.equal(latestBy([]), null);
+});
+
+test("a grid wipe migrates fingerprints instead of erasing them", async () => {
+  const { mkdtemp, writeFile: wf, readFile: rf } = await import("node:fs/promises");
+  const os = await import("node:os");
+  const path = await import("node:path");
+  const { wipeGrid } = await import("../src/state.mjs");
+  const dir = await mkdtemp(path.join(os.tmpdir(), "oom-wipe-"));
+  await wf(path.join(dir, "posted.jsonl"), JSON.stringify({ at: "2026-07-28T09:12:00Z", slug: "s", title: "Claude chats on Google", url: "https://x.test/a" }) + "\n");
+  await wf(path.join(dir, "metrics.jsonl"), "{}\n");
+  const r = await wipeGrid({ dir });
+  assert.equal(r.migrated, 1);
+  assert.equal(await rf(path.join(dir, "posted.jsonl"), "utf8"), "", "posted.jsonl is emptied");
+  assert.equal(await rf(path.join(dir, "metrics.jsonl"), "utf8"), "", "metrics.jsonl is emptied");
+  const seen = (await rf(path.join(dir, "seen.jsonl"), "utf8")).trim().split("\n").map(JSON.parse);
+  assert.equal(seen[0].outcome, "published-deleted");
+  assert.ok(seen[0].fingerprint && seen[0].tokens.length, "the anti-repeat identity survives the wipe");
+});

@@ -1,0 +1,7 @@
+# The state ledgers are append-only JSONL: when a run and a human (or two runs)
+# both append and race to push, the right merge is always "keep both lines".
+# Union merging makes that automatic during land.mjs's rebase, so a push race
+# costs a retry, never a conflict prompt and never a lost record. Readers must
+# not assume file order is chronological (state.mjs sorts by timestamp).
+state/*.jsonl merge=union
+reports/journal/*.md merge=union
