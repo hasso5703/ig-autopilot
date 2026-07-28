@@ -1,20 +1,42 @@
 {
-  "discoveredAt": "2026-07-25T18:38:43.499Z",
-  "probedOn": "18132234304542418",
-  "supported": [
-    "shares",
-    "saved",
-    "reach",
-    "views",
-    "total_interactions",
-    "likes",
-    "comments"
-  ],
-  "rejected": {
-    "profile_visits": "code=100 sub=-: The Media Insights API does not support the profile_visits metric for this media product type.",
-    "profile_activity": "code=100 sub=-: The Media Insights API does not support the profile_activity metric for this media product type.",
-    "follows": "code=100 sub=-: The Media Insights API does not support the follows metric for this media product type.",
-    "navigation": "code=100 sub=-: The Media Insights API does not support the navigation metric for this media product type.",
-    "impressions": "code=100 sub=-: The Media Insights API does not support the impressions metric for this media product type."
+  "types": {
+    "REELS": {
+      "discoveredAt": "2026-07-28T10:12:03.147Z",
+      "probedOn": "17869105260582275",
+      "candidates": [
+        "shares",
+        "saved",
+        "reach",
+        "views",
+        "ig_reels_avg_watch_time",
+        "ig_reels_video_view_total_time",
+        "total_interactions",
+        "likes",
+        "comments",
+        "profile_visits",
+        "profile_activity",
+        "follows",
+        "navigation",
+        "impressions"
+      ],
+      "supported": [
+        "shares",
+        "saved",
+        "reach",
+        "views",
+        "ig_reels_avg_watch_time",
+        "ig_reels_video_view_total_time",
+        "total_interactions",
+        "likes",
+        "comments"
+      ],
+      "rejected": {
+        "profile_visits": "code=100 sub=-: The Media Insights API does not support the profile_visits metric for this media product type.",
+        "profile_activity": "code=100 sub=-: The Media Insights API does not support the profile_activity metric for this media product type.",
+        "follows": "code=100 sub=-: The Media Insights API does not support the follows metric for this media product type.",
+        "navigation": "code=100 sub=-: The Media Insights API does not support the navigation metric for this media product type.",
+        "impressions": "code=100 sub=-: The Media Insights API does not support the impressions metric for this media product type."
+      }
+    }
   }
 }

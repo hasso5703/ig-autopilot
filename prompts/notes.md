@@ -41,3 +41,7 @@ ENTRIES:
 - 2026-07-28 · Set RUN_JOURNAL=reports/journal/<UTC-date>-<slot>.md at step 0;
   the engine appends spend/beat/verdict lines itself. Commit the journal
   before every purchase and publish, so a quota death leaves the receipts.
+- 2026-07-28 · techcrunch.com and prnewswire.com answer 503 to the session's
+  WebFetch tool but 200 to curl with a browser UA; the gate's own fetcher is
+  unaffected (quotes VERIFIED same day). Read articles via curl. Proof: 10h
+  scout 28/07.

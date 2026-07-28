@@ -1,0 +1,170 @@
+{
+  "slug": "2026-07-28-baidu-robotaxi-london",
+  "mood": "drive",
+  "sendTest": "Driverless taxis just started testing on London streets. Baidu and Lyft are behind them, and you can hail one from 2027.",
+  "centralClaim": "Baidu has begun road testing its Apollo Go robotaxis on London streets with safety operators on board, ahead of public rides planned for 2027.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/07/28/lyft-and-baidu-enter-londons-robotaxi-battleground-as-testing-begins/",
+      "quote": "Chinese tech giant Baidu has started testing autonomous vehicles in London as part of its partnership with Lyft and Freenow, the German taxi and multi-mobility app that Lyft now owns. Baidu is the latest in a string of companies to test self-driving technology in the UK ahead of commercial robotaxi deployments. The testing, which began Tuesday with human safety operators, comes nearly a year after the two companies struck a strategic partnership to deploy Baidu’s purpose-built Apollo Go RT6 robotaxi across key European markets through the Lyft platform."
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-freenow-by-lyft-begin-road-testing-in-london-302836171.html",
+      "quote": "Baidu, Inc. (NASDAQ: BIDU and HKEX: 9888) today announced that its autonomous ride-hailing platform, Apollo Go, has begun road testing in London with Freenow by Lyft. Testing will begin in the borough of Brent with safety operators on board, covering a mix of urban and suburban driving environments."
+    }
+  ],
+  "caption": "Driverless taxis are now on London's streets, and the public can hail one from 2027.\n\nBaidu's Apollo Go began road testing in London this week through Freenow, the taxi app Lyft owns. The first cars run in the borough of Brent with human safety operators on board. Worldwide, Apollo Go has already given more than 22 million rides.\n\nLondon is becoming the robotaxi race's main stage. Waymo has been testing there since April, and Uber plans a London service with its partner Wayve this year. A survey commissioned by Freenow found 58% of Londoners saying they would be likely to try one.\n\nThe caveat, plainly: public rides depend on regulatory approval that does not exist yet, and the companies gave no date beyond 2027. Human drivers stay on the platform alongside the robotaxis.\n\nWould you get into a taxi with nobody at the wheel? Say it in the comments.\n\ntechcrunch.com, prnewswire.com\n\nAI-assisted.\n\n#AInews #robotaxi #London #selfdriving",
+  "captionEvidence": [
+    {
+      "quote": "Apollo Go and Freenow by Lyft plan to welcome public riders starting in 2027, subject to regulatory approvals.",
+      "url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-freenow-by-lyft-begin-road-testing-in-london-302836171.html"
+    },
+    {
+      "quote": "As of April 2026, Apollo Go had provided more than 22 million cumulative rides to the public.",
+      "url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-freenow-by-lyft-begin-road-testing-in-london-302836171.html"
+    },
+    {
+      "quote": "Research by Censuswide shows a strong appetite for autonomous vehicles among Londoners, with 58% saying they would be likely to try one",
+      "url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-freenow-by-lyft-begin-road-testing-in-london-302836171.html"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "28 July 2026 · London",
+      "headline": "Baidu's driverless taxis just hit *London* streets",
+      "hero": {
+        "value": "2027",
+        "label": "when Londoners can hail one"
+      },
+      "swipe": "Swipe for the receipts",
+      "image": {
+        "kind": "illustration",
+        "prompt": "cinematic photograph of a sleek white electric car with a rooftop sensor dome gliding down a rain-slicked city avenue at dusk, clean green-white light on steel, motion blur in the passing traffic, 35mm, no text, no people",
+        "alt": "a driverless car with a rooftop sensor on a wet city street at dusk"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "22M",
+      "unit": "rides already given, worldwide",
+      "body": "Apollo Go, Baidu's driverless taxi service, has carried the public on **more than 22 million rides**. Its cars are now driving in *London*.",
+      "evidence": "As of April 2026, Apollo Go had provided more than 22 million cumulative rides to the public.",
+      "source": {
+        "name": "Baidu",
+        "url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-freenow-by-lyft-begin-road-testing-in-london-302836171.html",
+        "date": "2026-07-28"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "a long row of identical white electric cars in a bright depot at night, receding perspective, clean green-white light on steel, no text, no people",
+        "alt": "a row of identical white cars in a depot at night"
+      }
+    },
+    {
+      "type": "content",
+      "title": "London is the battleground",
+      "body": "**Waymo** has been testing there since April. **Uber** and its partner Wayve plan a London service this year. Baidu, riding on *Lyft's* Freenow taxi app, makes three.",
+      "evidence": "In April, Waymo began testing its autonomous vehicles with human safety operators in the city. Uber and its self-driving tech partner, Wayve, also announced plans to launch a robotaxi service in London this year.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/28/lyft-and-baidu-enter-londons-robotaxi-battleground-as-testing-begins/",
+        "date": "2026-07-28"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "three pairs of headlights approaching down a wide empty city avenue at night, low angle, clean green-white light on steel, no text, no people",
+        "alt": "three cars' headlights approaching on an empty avenue at night"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "The plan",
+      "claim": "Public rides from *2027*",
+      "caveatLabel": "The catch",
+      "caveat": "Only **with regulators' approval**, and for now a human safety operator rides in every car",
+      "evidence": "Testing will begin in the borough of Brent with safety operators on board, covering a mix of urban and suburban driving environments. Apollo Go and Freenow by Lyft plan to welcome public riders starting in 2027, subject to regulatory approvals.",
+      "source": {
+        "name": "Baidu",
+        "url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-freenow-by-lyft-begin-road-testing-in-london-302836171.html",
+        "date": "2026-07-28"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "view from the back seat of a car interior of an empty driver's seat and steering wheel, city lights blurred through the windshield, clean green-white light on steel, no text",
+        "alt": "an empty driver's seat seen from the back seat of a car"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Send this to a *Londoner* who says they'd never get in one",
+      "sub": "AI and technology news, told in plain words",
+      "image": {
+        "kind": "illustration",
+        "prompt": "a green traffic light glowing over an empty city intersection at night, wet asphalt reflections, clean green-white light on steel, no text, no people",
+        "alt": "a green traffic light over an empty intersection at night"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/28/lyft-and-baidu-enter-londons-robotaxi-battleground-as-testing-begins/",
+      "accessed": "2026-07-28"
+    },
+    {
+      "name": "Baidu (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-freenow-by-lyft-begin-road-testing-in-london-302836171.html",
+      "accessed": "2026-07-28"
+    }
+  ],
+  "reel2": {
+    "voice": "Fenrir",
+    "mood": "drive",
+    "beats": [
+      {
+        "script": "Baidu, China's tech giant, just put its driverless taxis on London's streets.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a sleek white electric car with a rooftop sensor dome",
+            "action": "gliding through light traffic on a rain-slicked avenue, reflections streaking across its body",
+            "setting": "a modern city street with anonymous storefronts at dusk",
+            "composition": "low tracking shot",
+            "camera": "slow lateral tracking",
+            "ambient": "quiet electric hum, distant traffic"
+          }
+        }
+      },
+      {
+        "script": "Testing began this week with human safety operators on board. These cars have already given more than 22 million rides.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/07/28/lyft-and-baidu-enter-londons-robotaxi-battleground-as-testing-begins/"
+        }
+      },
+      {
+        "script": "Waymo is already testing in London. Uber is coming. Public rides start in 2027, if regulators approve.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "three pairs of headlights approaching down a wide empty avenue",
+            "setting": "a dark city at night",
+            "composition": "low angle wide shot"
+          }
+        }
+      },
+      {
+        "script": "Send this to a Londoner who swears they'd never get in a car with no driver.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a green traffic light glowing over an empty wet intersection",
+            "setting": "a city at night",
+            "composition": "wide shot"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "at": "2026-07-28T08:43:44.634Z",
-  "fresh": 629,
+  "at": "2026-07-28T10:10:58.433Z",
+  "fresh": 630,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -39,10 +39,11 @@
     },
     {
       "name": "Microsoft Research",
-      "ok": true,
-      "fetched": 10,
+      "ok": false,
+      "fetched": 0,
       "fresh": 0,
-      "windowHours": 96
+      "windowHours": 96,
+      "error": "HTTP 503 after 6 tries"
     },
     {
       "name": "arXiv cs.AI",
@@ -85,7 +86,7 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 6,
+      "fresh": 7,
       "windowHours": 36
     },
     {
