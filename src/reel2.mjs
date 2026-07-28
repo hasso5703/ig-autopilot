@@ -185,6 +185,14 @@ async function screenshot(url, outFile) {
       userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1",
       locale: "en-US",
     });
+    // The egress proxy resets Chromium's TLS handshakes (any site, any TLS
+    // version, ECH and post-quantum off — measured 2026-07-28), while
+    // Playwright's Node-side fetch through the same proxy is fine. So the
+    // browser renders and Node does all the fetching.
+    await ctx.route("**/*", async (route) => {
+      try { await route.fulfill({ response: await route.fetch() }); }
+      catch { try { await route.abort(); } catch { /* page may be gone */ } }
+    });
     const page = await ctx.newPage();
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
     await page.waitForTimeout(2500);
