@@ -239,6 +239,35 @@ async function segmentFromVideo(clip, dur, outFile) {
   ]);
 }
 
+/* ------------------------- names a picture may not show ------------------- */
+
+/**
+ * The names the post itself uses must never reach a generated picture. The
+ * first live run lost minutes to this being naive: every capitalized word in
+ * the slides counted as a name, so beat 1's spec tripped on "The" and the run
+ * had to reword a prompt that named nobody. English capitalizes sentence
+ * openers; a stoplist of those words stays out of the net, and what remains —
+ * Microsoft, Redis, Kimi — is what the rule was ever about.
+ */
+const CAPITALIZED_NOISE = new Set([
+  "The", "And", "But", "For", "Not", "With", "From", "That", "This", "These", "Those",
+  "Its", "They", "Their", "There", "Then", "Than", "When", "Where", "What", "Who", "Whose",
+  "How", "Why", "Will", "Would", "Could", "Should", "Can", "May", "Might", "Must",
+  "Has", "Have", "Had", "Was", "Were", "Are", "Been", "Being", "Does", "Did", "Done",
+  "Say", "Says", "Said", "New", "Now", "One", "Two", "Three", "First", "Last", "Next",
+  "More", "Most", "Less", "Over", "Under", "About", "After", "Before", "Between",
+  "Into", "Onto", "Out", "Off", "All", "Any", "Some", "Every", "Each", "Both",
+  "Few", "Many", "Much", "Very", "Just", "Also", "Still", "Even", "Only", "Here",
+  "Send", "Swipe", "Follow", "You", "Your", "Our", "His", "Her", "Him", "Them", "She",
+]);
+
+export function extractForbidNames(post) {
+  const text = JSON.stringify(post.slides || "") + (post.centralClaim || "");
+  return [...new Set(text.match(/[A-Z][a-zA-Z0-9-]{2,}/g) || [])]
+    .filter((w) => !CAPITALIZED_NOISE.has(w))
+    .slice(0, 40);
+}
+
 /* --------------------------------- main ---------------------------------- */
 
 export async function buildReel(postFile, mediaDir) {
@@ -251,9 +280,7 @@ export async function buildReel(postFile, mediaDir) {
   const slug = post.slug || path.basename(postFile, ".json");
   await mkdir(mediaDir, { recursive: true });
 
-  // The names the post itself uses must never reach a generated picture.
-  const forbidNames = [...new Set((JSON.stringify(post.slides || "") + (post.centralClaim || ""))
-    .match(/[A-Z][a-zA-Z0-9-]{2,}/g) || [])].slice(0, 40);
+  const forbidNames = extractForbidNames(post);
 
   /* 1 — the voice. The copy is the runtime, so this is the budget gate too. */
   const narration = plan.beats.map((b) => b.script.trim()).join("\n\n");

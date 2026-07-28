@@ -704,3 +704,13 @@ test("reel2 scripts are held to the slide standard: digits quoted, shape checked
   p.reel2.beats = p.reel2.beats.slice(0, 2);
   assert.ok(hasErr(await errs(p), /the spine is 3 to 6/));
 });
+
+test("a sentence-opening The is not a name, and Microsoft still is", async () => {
+  const { extractForbidNames } = await import("../src/reel2.mjs");
+  const names = extractForbidNames({
+    centralClaim: "The company said Microsoft's model found flaws in Redis. This beat Anthropic.",
+    slides: [{ headline: "Send this to your team. Every score is Microsoft's own." }],
+  });
+  for (const noise of ["The", "This", "Send", "Every"]) assert.ok(!names.includes(noise), `"${noise}" must not be treated as a name`);
+  for (const real of ["Microsoft", "Redis", "Anthropic"]) assert.ok(names.includes(real), `"${real}" must be caught`);
+});
