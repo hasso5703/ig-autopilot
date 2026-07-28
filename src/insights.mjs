@@ -62,6 +62,12 @@ const CANDIDATES = [
   "saved",
   "reach",
   "views",
+  // Retention is the number era 2 lives or dies on, and the one the first era
+  // never collected: avg watch time (ms) against the Reel's duration is the
+  // completion signal Instagram ranks on, and it is the gate for any cadence
+  // increase. Reels-only metrics; the probe drops them on other media types.
+  "ig_reels_avg_watch_time",
+  "ig_reels_video_view_total_time",
   "total_interactions",
   "likes",
   "comments",
@@ -150,21 +156,42 @@ function flatten(payload) {
   return out;
 }
 
-async function readSupport() {
-  if (!existsSync(SUPPORT)) return null;
+/**
+ * The support cache is keyed by media product type AND remembers which
+ * candidates produced it. Both lessons were bought: the first cache was probed
+ * on a carousel and silently decided what Reels were allowed to report, and
+ * when the Reels watch-time metrics were added to CANDIDATES on 2026-07-28,
+ * a shape that never re-probes would have ignored them forever. A record whose
+ * candidate list differs from today's is stale and rediscovered.
+ */
+async function readSupportFile() {
+  if (!existsSync(SUPPORT)) return { types: {} };
   try {
     const s = JSON.parse(await readFile(SUPPORT, "utf8"));
-    return Array.isArray(s.supported) ? s : null;
+    if (s && typeof s.types === "object") return s;
+    // Legacy single-record shape: probed on a since-deleted carousel with an
+    // older candidate list. Carrying it forward would only preserve its blind
+    // spots; rediscovery costs a dozen requests once per type.
+    return { types: {} };
   } catch {
-    return null;
+    return { types: {} };
   }
 }
 
+async function readSupport(type) {
+  const file = await readSupportFile();
+  const rec = file.types[type];
+  if (!rec || !Array.isArray(rec.supported)) return null;
+  const sameCandidates = JSON.stringify(rec.candidates ?? []) === JSON.stringify(CANDIDATES);
+  return sameCandidates ? rec : null;
+}
+
 /**
- * Determines which metrics this account can actually read for this media type,
- * by asking for each one alone. Twelve requests, run once and cached.
+ * Determines which metrics this account can actually read for one media
+ * product type, by asking for each candidate alone. Run once per type per
+ * candidate-list, then cached.
  */
-async function discoverSupport(mediaId) {
+async function discoverSupport(mediaId, type) {
   const supported = [];
   const rejected = {};
   for (const m of CANDIDATES) {
@@ -172,9 +199,11 @@ async function discoverSupport(mediaId) {
     if (r.ok) supported.push(m);
     else rejected[m] = `code=${r.error.code ?? "?"} sub=${r.error.subcode ?? "-"}: ${r.error.message}`;
   }
-  const record = { discoveredAt: new Date().toISOString(), probedOn: mediaId, supported, rejected };
+  const record = { discoveredAt: new Date().toISOString(), probedOn: mediaId, candidates: CANDIDATES, supported, rejected };
+  const file = await readSupportFile();
+  file.types[type] = record;
   await mkdir(DIR, { recursive: true });
-  await writeFile(SUPPORT, JSON.stringify(record, null, 2) + "\n", "utf8");
+  await writeFile(SUPPORT, JSON.stringify(file, null, 2) + "\n", "utf8");
   return record;
 }
 
@@ -183,11 +212,16 @@ async function discoverSupport(mediaId) {
  * falls back to rediscovery if the batch call breaks, which is what happens
  * when Meta retires a metric under us.
  */
-export async function mediaMetrics(mediaId, support) {
+export async function mediaMetrics(mediaId, supports = {}) {
   const media = await get(mediaId, { fields: MEDIA_FIELDS });
+  if (!media.ok) {
+    return { mediaId, at: new Date().toISOString(), ok: false, media: null, mediaError: media.error, insights: {}, insightsError: null, supported: [] };
+  }
+  const type = media.data.media_product_type || media.data.media_type || "UNKNOWN";
 
-  let sup = support ?? (await readSupport());
-  if (!sup) sup = await discoverSupport(mediaId);
+  let sup = supports[type] ?? (await readSupport(type));
+  if (!sup) sup = await discoverSupport(mediaId, type);
+  supports[type] = sup;
 
   let insights = {};
   let insightsError = null;
@@ -197,8 +231,9 @@ export async function mediaMetrics(mediaId, support) {
     if (batch.ok) {
       insights = flatten(batch.data);
     } else {
-      const fresh = await discoverSupport(mediaId);
+      const fresh = await discoverSupport(mediaId, type);
       sup = fresh;
+      supports[type] = fresh;
       if (fresh.supported.length) {
         const retry = await get(`${mediaId}/insights`, { metric: fresh.supported.join(",") });
         if (retry.ok) insights = flatten(retry.data);
@@ -213,8 +248,8 @@ export async function mediaMetrics(mediaId, support) {
     mediaId,
     at: new Date().toISOString(),
     ok: media.ok,
-    media: media.ok ? media.data : null,
-    mediaError: media.ok ? null : media.error,
+    media: media.data,
+    mediaError: null,
     insights,
     insightsError,
     supported: sup.supported,
@@ -234,14 +269,13 @@ export async function collectAll() {
   const ids = posted.map((p) => p.mediaId).filter(Boolean);
   if (!ids.length) return [];
 
-  // Discover once, on the oldest post: a post published minutes ago may not
-  // have insights yet even when the account is fully entitled to them, which
-  // would poison the cache with false negatives.
-  let support = await readSupport();
-  if (!support) support = await discoverSupport(ids[0]);
-
+  // Discovery happens per media product type, on the oldest post of that type
+  // encountered (posted.jsonl is oldest-first): a post published minutes ago
+  // may not have insights yet, which would poison the cache with false
+  // negatives. The shared map keeps it to one discovery per type per run.
+  const supports = {};
   const records = [];
-  for (const id of ids) records.push(await mediaMetrics(id, support));
+  for (const id of ids) records.push(await mediaMetrics(id, supports));
 
   await mkdir(DIR, { recursive: true });
   await appendFile(METRICS, records.map((r) => JSON.stringify(r)).join("\n") + "\n", "utf8");
@@ -295,7 +329,7 @@ export async function accountTrend() {
 if (process.argv[1] && process.argv[1].endsWith("insights.mjs")) {
   const cmd = process.argv[2] || "collect";
   const run = async () => {
-    if (cmd === "support") return (await readSupport()) ?? "no cache yet; run collect first";
+    if (cmd === "support") return await readSupportFile();
     if (cmd === "latest") return latestPerPost();
     if (cmd === "account") return accountTrend();
     if (cmd === "collect") return collectAll();
