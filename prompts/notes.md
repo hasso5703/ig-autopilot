@@ -45,3 +45,12 @@ ENTRIES:
   WebFetch tool but 200 to curl with a browser UA; the gate's own fetcher is
   unaffected (quotes VERIFIED same day). Read articles via curl. Proof: 10h
   scout 28/07.
+- 2026-07-28 · Outlets edit articles after publication: TechCrunch changed
+  "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
+  Re-run validate.mjs on any stored spec before building from it; re-copy the
+  quote verbatim from the live page. Proof: 19h journal 28/07.
+- 2026-07-28 · The 27/07 Microsoft carousel was deleted from the account
+  (mediaId 17884181772455155 returns "does not exist"; only the day's Reel
+  remains). Its posted.jsonl entry is intentional memory that still blocks
+  re-coverage; never reconcile or delete it. insights.mjs reporting ok:false
+  for that id is normal. Proof: publish.mjs recent + insights, 19h 28/07.
