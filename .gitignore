@@ -31,3 +31,16 @@ media/*/voice.wav
 # jpgs per run that any run repaints from the post spec. One run committed them
 # by sweeping the whole media directory in.
 media/*/_frames/
+
+# reel2's intermediates, same reason as voice.wav above: everything here is
+# muxed into reel.mp4, which IS committed. The bought assets that cost money
+# (veo_*.mp4, still_*.jpg, shot_*.png) and words.json ARE committed so a
+# retry pins them instead of buying twice.
+media/*/voice2.wav
+media/*/mix2.wav
+media/*/seg2_*.mp4
+media/*/reel2_nosub.mp4
+media/*/reel2_sub.mp4
+media/*/cap2.ass
+media/*/concat2.txt
+media/*/align.py
