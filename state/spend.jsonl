@@ -1,3 +1,9 @@
 {"at":"2026-07-27T19:31:10.176Z","slug":"2026-07-27-claude-shared-chats-google","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"23.5s Fenrir","usd":0.0059}
 {"at":"2026-07-27T19:32:47.269Z","slug":"2026-07-27-claude-shared-chats-google","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"24.0s Fenrir","usd":0.006}
 {"at":"2026-07-28T08:53:46.666Z","slug":"2026-07-28-claude-chats-google","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"22.9s Fenrir","usd":0.0057}
+{"at":"2026-07-28T08:56:51.528Z","slug":"2026-07-28-claude-chats-google","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"24.5s Fenrir","usd":0.0061}
+{"at":"2026-07-28T08:57:31.278Z","slug":"2026-07-28-claude-chats-google","kind":"video","model":"veo-3.1-lite-generate-preview","units":"6s@720p","usd":0.3}
+{"at":"2026-07-28T08:58:31.965Z","slug":"2026-07-28-claude-chats-google","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"22.5s Fenrir","usd":0.0056}
+{"at":"2026-07-28T09:06:24.330Z","slug":"2026-07-28-claude-chats-google","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"23.5s Fenrir","usd":0.0059}
+{"at":"2026-07-28T09:07:00.337Z","slug":"2026-07-28-claude-chats-google","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-28T09:07:08.506Z","slug":"2026-07-28-claude-chats-google","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
