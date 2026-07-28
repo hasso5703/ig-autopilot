@@ -392,13 +392,18 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
         : "\nNo theme repeats across the last four stories. Nothing to avoid."
     );
   } else if (process.argv[2] === "today") {
+    /*
+     * Carousels are retired (2026-07-28), and the published record settled it:
+     * every carousel this account made measured 0 reach, and the final one
+     * peaked at a single view, because Instagram does not push feed posts from
+     * an account nobody follows. Worse, carousel-first ordering cost a Reel —
+     * the 2026-07-27 run published its carousel, then died on a usage limit
+     * while still building the Reel. All of the spend, none of the discovery.
+     * Reels carry share_to_feed=true now, so the Reel IS the grid.
+     */
     const t = await carouselDue();
-    console.log(JSON.stringify(t, null, 2));
-    console.error(
-      t.due
-        ? `\nThis run OWES A CAROUSEL: the last one was ${t.hoursSinceCarousel === null ? "never" : t.hoursSinceCarousel + "h"} ago and the grid wants one every ${t.every}h.`
-        : `\nReel only. A carousel went out ${t.hoursSinceCarousel}h ago, inside the ${t.every}h window.`
-    );
+    console.log(JSON.stringify({ ...t, carouselsRetired: "2026-07-28" }, null, 2));
+    console.error("\nCarousels are retired. This run publishes a Reel or nothing; Reels populate the grid themselves.");
   } else if (process.argv[2] === "guard") {
     const g = await publishGap();
     console.log(JSON.stringify(g, null, 2));

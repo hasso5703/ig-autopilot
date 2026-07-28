@@ -246,7 +246,14 @@ export async function waitForContainer(id, { onTick } = {}) {
  * genuinely safe way to test: an unpublished container simply expires.
  */
 export async function publishReel(file, caption, opts = {}) {
-  const { shareToFeed = false, audioName, dryRun = false, videoUrl = null, onStep = () => {} } = opts;
+  /*
+   * shareToFeed defaults to TRUE since 2026-07-28, because carousels are
+   * retired. The false default existed so the carousel owned the profile grid
+   * and the Reel owned the Reels tab; with no carousels, false would leave the
+   * profile of a new account permanently empty. A Reel on the grid is now the
+   * only grid there is.
+   */
+  const { shareToFeed = true, audioName, dryRun = false, videoUrl = null, onStep = () => {} } = opts;
 
   // The hosted route is the only one that works on this API path; resumable is
   // kept behind an explicit opt-in so that if Meta ever enables it for

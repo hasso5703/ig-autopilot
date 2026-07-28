@@ -22,32 +22,35 @@ So the day has one shape, and each slot knows its job:
 | slot (UTC) | job |
 |---|---|
 | **06:00, 10:00** | **Scout.** Gather, verify, and leave the day's best candidate ready: a gate-clean post spec **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Publish nothing. Spend nothing on media. |
-| **15:00** | **Publish.** Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish the carousel if owed then the Reel. 15:00 UTC is 11am New York, 8am San Francisco, 5pm Paris — the widest awake-audience window this account can hit. |
+| **15:00** | **Publish.** Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **the Reel and nothing else**. 15:00 UTC is 11am New York, 8am San Francisco, 5pm Paris — the widest awake-audience window this account can hit. |
 | **19:00** | **Catch-up and read.** If the day already has its Reel: collect metrics, read what worked, prepare tomorrow, publish nothing. If the day has none (the 15:00 run found nothing or died): this run may publish, same rules. |
 
 A scout run that finds a story *bigger than anything the account has covered*
 still waits for the publish slot: four hours of freshness cost less than a Reel
 launched into a dead audience window.
 
-**The carousel still gets made, once a day, by the publishing run:**
+**Carousels are retired (2026-07-28), and this was measured, not decided on
+taste.** Every carousel this account published reached 0 accounts; the final
+one, on a freshly emptied profile, peaked at **a single view**. Instagram does
+not push feed posts from an account nobody follows — only Reels are shown to
+strangers. The retirement was sealed by an ordering failure: on 27 July the
+publishing run put the carousel first, then died on a usage limit while still
+building the Reel. It spent the evening's budget on the surface that reaches
+nobody and never shipped the one that reaches everyone.
 
-```bash
-node src/state.mjs today
-```
+Two mechanical consequences, both already in the code:
 
-It reports the hours since the last carousel and says plainly whether this run
-owes one. It is a **rolling twenty-hour window, not a calendar day**, because a
-calendar day has an edge: the first version counted since midnight UTC, a
-carousel went out at 23:54:52, and the run six hours later was duly told the
-grid was empty and owed another. Reasoning honestly from an arbitrary boundary
-is still the wrong answer. The carousel is not for reach. It is what a stranger sees when
-a Reel makes them tap the profile, and an empty grid loses the follow that the
-Reel just earned.
+- `publish-reel.mjs` now sends **`share_to_feed=true`**, so the Reel appears on
+  the profile grid. The grid a Reel viewer taps through to is made of Reels.
+- `node src/state.mjs today` no longer reports a carousel as owed. If you think
+  a specific story deserves one anyway, say so in your report and leave it to
+  Hasan — do not spend the run on it.
 
-**The order inside a publishing run is fixed and it is not stylistic:** carousel
-if owed, then the Reel, and the state for each is recorded on `main` before the
-next begins. A run that crashes halfway must never leave the account with a
-published post it has no memory of.
+**The publishing run builds the Reel, publishes it, and records it on `main`
+before anything else happens.** The most valuable artefact ships first, always:
+the 27 July run died mid-build with its least valuable post live and its Reel
+unfinished, and that ordering mistake is not coming back. A run that crashes
+halfway must never leave the account with a published post it has no memory of.
 
 **Publishing nothing is still a perfectly good outcome.** One Reel a day is a
 ceiling, not a quota. A run that finds nothing it can verify publishes nothing
@@ -1026,7 +1029,7 @@ IG_REEL_URL="<that url>" node src/publish-reel.mjs dry-run media/<slug>/reel.mp4
 IG_REEL_URL="<that url>" node src/publish-reel.mjs publish media/<slug>/reel.mp4 "<caption>"
 ```
 
-`publish-reel.mjs` sends `share_to_feed=false` on purpose: the carousel owns
+`publish-reel.mjs` sent `share_to_feed=false` while carousels existed: the carousel owned
 the grid, the Reel owns the Reels tab. Transcoding takes minutes and the
 command polls. **A publish error is not proof that nothing published** — both
 publishers read recent media back and tell you which case you are in; trust
