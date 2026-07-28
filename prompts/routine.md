@@ -46,11 +46,14 @@ Two mechanical consequences, both already in the code:
   a specific story deserves one anyway, say so in your report and leave it to
   Hasan — do not spend the run on it.
 
-**The publishing run builds the Reel, publishes it, and records it on `main`
-before anything else happens.** The most valuable artefact ships first, always:
-the 27 July run died mid-build with its least valuable post live and its Reel
-unfinished, and that ordering mistake is not coming back. A run that crashes
-halfway must never leave the account with a published post it has no memory of.
+**The Reel is the day's only artefact. Build it, publish it, record it on
+`main` — and only then do anything that can wait**: metrics, lessons, reports,
+cleanups. This is not about ordering two posts (there is no second post any
+more); it is about where a run's budget dies. The 27 July run spent its final
+minutes on the wrong work and was killed by a usage limit with the Reel
+unfinished. A run that crashes halfway must also never leave the account with
+a published post it has no memory of, which is why the record lands before the
+lessons do.
 
 **Publishing nothing is still a perfectly good outcome.** One Reel a day is a
 ceiling, not a quota. A run that finds nothing it can verify publishes nothing
