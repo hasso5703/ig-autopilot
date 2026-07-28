@@ -1,6 +1,6 @@
 {
-  "at": "2026-07-28T10:10:58.433Z",
-  "fresh": 630,
+  "at": "2026-07-28T15:14:26.486Z",
+  "fresh": 636,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -13,7 +13,7 @@
       "name": "Google AI",
       "ok": true,
       "fetched": 20,
-      "fresh": 0,
+      "fresh": 2,
       "windowHours": 96
     },
     {
@@ -26,24 +26,23 @@
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "fetched": 831,
-      "fresh": 1,
+      "fetched": 832,
+      "fresh": 2,
       "windowHours": 96
     },
     {
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 2,
+      "fresh": 3,
       "windowHours": 96
     },
     {
       "name": "Microsoft Research",
-      "ok": false,
-      "fetched": 0,
+      "ok": true,
+      "fetched": 10,
       "fresh": 0,
-      "windowHours": 96,
-      "error": "HTTP 503 after 6 tries"
+      "windowHours": 96
     },
     {
       "name": "arXiv cs.AI",
@@ -79,20 +78,20 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 6,
+      "fresh": 7,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 7,
+      "fresh": 8,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 4,
+      "fetched": 5,
       "fresh": 4,
       "windowHours": 36
     },
