@@ -22,7 +22,7 @@ So the day has one shape, and each slot knows its job:
 | slot (UTC) | job |
 |---|---|
 | **06:00, 10:00** | **Scout.** Gather, verify, and leave the day's best candidate ready: a gate-clean post spec **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Publish nothing. Spend nothing on media. |
-| **15:00** | **Publish.** Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **the Reel and nothing else**. 15:00 UTC is 11am New York, 8am San Francisco, 5pm Paris — the widest awake-audience window this account can hit. |
+| **15:00** | **Publish — if and only if the day has no Reel yet** (check `state/posted.jsonl` first; a hand-launched run may already have used the day's slot). Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **the Reel and nothing else**. If the day's Reel exists, you are a scout: prepare tomorrow. 15:00 UTC is 11am New York, 8am San Francisco, 5pm Paris — the widest awake-audience window this account can hit. |
 | **19:00** | **Catch-up and read.** If the day already has its Reel: collect metrics, read what worked, prepare tomorrow, publish nothing. If the day has none (the 15:00 run found nothing or died): this run may publish, same rules. |
 
 A scout run that finds a story *bigger than anything the account has covered*
