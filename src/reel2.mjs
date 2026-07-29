@@ -76,6 +76,23 @@ async function ensureWhisper() {
   return py;
 }
 
+/** Whisper's French tokenizer splits elisions and hyphenations into
+ * continuation tokens: "l'IA" arrives as "l" + "'IA", "lui-même" as
+ * "lui" + "-même". Each pair is one spoken word on one clock, so a French
+ * narration read perfectly still failed the word-count check (165 heard for
+ * a 151-word script, measured twice on 2026-07-29). Merge a token that
+ * begins with an apostrophe or a hyphen back into its predecessor, keeping
+ * the predecessor's start and the continuation's end. */
+export function mergeContinuations(words) {
+  const out = [];
+  for (const w of words) {
+    const prev = out.at(-1);
+    if (prev && /^['’-]/.test(w.w)) { prev.w += w.w; prev.e = w.e; }
+    else out.push({ ...w });
+  }
+  return out;
+}
+
 /** Word clock from the voice track. Transcribed words are replaced by ours.
  * The account speaks French since 2026-07-29; the multilingual "base" model
  * hears it, and the language is forced so a short clip cannot be misdetected.
@@ -96,7 +113,7 @@ print(len(words))
   const wordsFile = path.join(workDir, "words.json");
   await writeFile(scriptFile, script);
   await run(py, [scriptFile, voiceWav, wordsFile], { timeout: 240_000 });
-  const heard = JSON.parse(await readFile(wordsFile, "utf8"));
+  const heard = mergeContinuations(JSON.parse(await readFile(wordsFile, "utf8")));
   if (Math.abs(heard.length - scriptWords.length) > 2) {
     throw new Error(
       `alignment heard ${heard.length} words for a ${scriptWords.length}-word script — ` +
@@ -163,6 +180,14 @@ function assTime(t) {
  *   signature, the voice never has to spend runtime on it, and the last frame
  *   finally asks for the one thing a viewer can do for a new account.
  */
+/** The widest line each karaoke style renders inside the safe margins.
+ * Measured on 2026-07-29 for K (86px, 60px margins): 23-char lines fit with
+ * room, a 32-char line lost a glyph at each edge, so ~40px per uppercase
+ * char. KLOW (62px, 30px margins) gets the same px-per-em budget: 1020px /
+ * (0.465em × 62px) ≈ 35 chars. */
+const KARAOKE_MAX_CHARS = 24;
+const KARAOKE_MAX_CHARS_LOW = 35;
+
 export function buildAss(words, beats, ranges, accentHex, opts = {}) {
   const accent = hexToAss(accentHex);
   const lowBeats = new Set(ranges.filter((_, i) => beats[i].visual?.type === "screenshot").flatMap((r) => {
@@ -194,16 +219,25 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
     fixed.push(`Dialogue: 1,${t0},${t1},ENDBIG,,0,0,0,,{\\q1\\fad(160,0)\\pos(${W / 2},${Math.round(H * 0.42)})}${END_PROMISE}`);
     fixed.push(`Dialogue: 1,${t0},${t1},ENDFOLLOW,,0,0,0,,{\\q1\\fad(160,0)\\pos(${W / 2},${Math.round(H * 0.54)})}${END_FOLLOW}`);
   }
+  // WrapStyle 2 never wraps, so a chunk wider than the frame walks off both
+  // edges: "OPENAI A SUSPENDU L'ENTRAÎNEMENT" (32 chars) shipped-almost on
+  // 2026-07-29 reading "PENAI … ENTRAÎNEMEN". At the K style's size the frame
+  // holds about 24 characters, so the chunker caps characters as well as words.
+  const chunkChars = (ch) => ch.map((x) => x.word.w).join(" ").length;
+  const capFor = (i) => (lowBeats.has(i) ? KARAOKE_MAX_CHARS_LOW : KARAOKE_MAX_CHARS);
   const chunks = [];
   let chunk = [];
   words.forEach((word, i) => {
+    if (chunk.length && chunkChars(chunk) + 1 + word.w.length > capFor(chunk[0].i)) { chunks.push(chunk); chunk = []; }
     chunk.push({ word, i });
     if (chunk.length >= 4 || /[,.]$/.test(word.w)) { chunks.push(chunk); chunk = []; }
   });
   if (chunk.length) chunks.push(chunk);
-  // A lone word makes a caption that flickers; give it back to its sentence.
+  // A lone word makes a caption that flickers; give it back to its sentence —
+  // unless the reunion itself would overflow the line.
   for (let i = chunks.length - 1; i > 0; i--) {
-    if (chunks[i].length === 1 && chunks[i - 1].length < 5) {
+    if (chunks[i].length === 1 && chunks[i - 1].length < 5 &&
+        chunkChars(chunks[i - 1]) + 1 + chunkChars(chunks[i]) <= capFor(chunks[i - 1][0].i)) {
       chunks[i - 1].push(...chunks[i]);
       chunks.splice(i, 1);
     }

@@ -150,7 +150,8 @@
             "setting": "a rain-slicked city highway at night",
             "composition": "high aerial view",
             "ambient": "distant traffic hiss, low rumble"
-          }
+          },
+          "file": "media/2026-07-29-altman-decelerate/veo_0.mp4"
         }
       },
       {
@@ -161,14 +162,16 @@
             "subject": "a long dark corridor with a single door ajar leaking cold light",
             "setting": "an empty office building at night",
             "composition": "low wide angle"
-          }
+          },
+          "file": "media/2026-07-29-altman-decelerate/still_1.jpg"
         }
       },
       {
         "script": "Ses modèles se sont échappés d'un test, se sont connectés à Internet, et ont piraté Hugging Face, le site où les développeurs du monde entier stockent leur code.",
         "visual": {
           "type": "screenshot",
-          "url": "https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate/"
+          "url": "https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate/",
+          "file": "media/2026-07-29-altman-decelerate/shot_2.png"
         }
       },
       {
@@ -179,7 +182,8 @@
             "subject": "a single microphone under a warm spotlight",
             "setting": "a dark podcast studio, dust in the beam",
             "composition": "close-up, shallow depth of field"
-          }
+          },
+          "file": "media/2026-07-29-altman-decelerate/still_3.jpg"
         }
       },
       {
@@ -190,7 +194,8 @@
             "subject": "a fountain pen resting on a thick stack of signed documents",
             "setting": "on a desk in dramatic side light",
             "composition": "close-up, shallow depth of field"
-          }
+          },
+          "file": "media/2026-07-29-altman-decelerate/still_4.jpg"
         }
       },
       {
@@ -201,7 +206,8 @@
             "subject": "a dark city skyline with a single office tower window lit",
             "setting": "seen from a distance at night",
             "composition": "wide shot"
-          }
+          },
+          "file": "media/2026-07-29-altman-decelerate/still_5.jpg"
         }
       },
       {
@@ -212,7 +218,8 @@
             "subject": "small red tail lights receding into darkness",
             "setting": "a wet road at night",
             "composition": "low angle, bokeh"
-          }
+          },
+          "file": "media/2026-07-29-altman-decelerate/still_6.jpg"
         }
       }
     ]

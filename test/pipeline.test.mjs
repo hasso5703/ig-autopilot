@@ -674,6 +674,27 @@ test("promptcraft: the mood decides the light, and the refusals refuse", async (
   assert.ok(promptIssues('a man says "hello there" softly').length === 1, "quoted dialogue is refused");
 });
 
+test("reel2 alignment: whisper's French elision fragments merge back into one spoken word", async () => {
+  const { mergeContinuations } = await import("../src/reel2.mjs");
+  const heard = [
+    { w: "pause", s: 0.0, e: 0.4 },
+    { w: "de", s: 0.4, e: 0.5 },
+    { w: "l", s: 0.5, e: 0.6 },
+    { w: "'IA.", s: 0.6, e: 0.9 },
+    { w: "lui", s: 1.0, e: 1.2 },
+    { w: "-même", s: 1.2, e: 1.5 },
+    { w: "qu", s: 1.6, e: 1.7 },
+    { w: "’il", s: 1.7, e: 1.9 },
+  ];
+  const merged = mergeContinuations(heard);
+  assert.deepEqual(merged.map((x) => x.w), ["pause", "de", "l'IA.", "lui-même", "qu’il"],
+    "a token opening with an apostrophe or hyphen is a fragment of the previous word");
+  assert.equal(merged[2].s, 0.5, "the merged word keeps the fragment's start");
+  assert.equal(merged[2].e, 0.9, "and the continuation's end");
+  assert.equal(mergeContinuations([{ w: "'orphan", s: 0, e: 1 }]).length, 1,
+    "a leading fragment with no predecessor survives unmerged");
+});
+
 test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, screenshots caption low", async () => {
   const { hexToAss, buildAss } = await import("../src/reel2.mjs");
   assert.equal(hexToAss("FFB300"), "&H0000B3FF", "RRGGBB becomes ASS &H00BBGGRR");
@@ -692,6 +713,19 @@ test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, sc
   assert.equal(low.length, 1, "the screenshot beat's caption sits in the low band");
   assert.equal((low[0].match(/\\k\d+/g) || []).length, 5, "the orphan 'chats.' rejoined its four-word sentence");
   assert.ok(dialogues.every((d) => (d.match(/\\k\d+/g) || []).length >= 2), "every caption carries at least two timed words");
+
+  // WrapStyle 2 never wraps, so a wide line walks off both frame edges:
+  // "OPENAI A SUSPENDU L'ENTRAÎNEMENT" nearly shipped clipped on 2026-07-29.
+  const wide = [
+    { w: "OpenAI", s: 0.0, e: 0.4 }, { w: "a", s: 0.4, e: 0.5 }, { w: "suspendu", s: 0.5, e: 1.0 },
+    { w: "l'entraînement", s: 1.0, e: 1.8 }, { w: "du", s: 1.8, e: 2.0 }, { w: "modèle.", s: 2.0, e: 2.5 },
+  ];
+  const wideAss = buildAss(wide, [{ script: "x", visual: { type: "image" } }], [{ start: 0, end: 5 }], "FFB300");
+  const wideLines = wideAss.split("\n").filter((l) => l.startsWith("Dialogue: 0"));
+  for (const d of wideLines) {
+    const textLen = d.replace(/^.*?,,0,0,0,,/, "").replace(/\{[^}]*\}/g, "").length;
+    assert.ok(textLen <= 24, `karaoke line wider than the K style's frame budget: ${textLen} chars`);
+  }
 });
 
 const goodReel2 = () => ({

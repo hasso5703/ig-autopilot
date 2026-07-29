@@ -7,3 +7,13 @@
 {"at":"2026-07-28T09:06:24.330Z","slug":"2026-07-28-claude-chats-google","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"23.5s Fenrir","usd":0.0059}
 {"at":"2026-07-28T09:07:00.337Z","slug":"2026-07-28-claude-chats-google","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
 {"at":"2026-07-28T09:07:08.506Z","slug":"2026-07-28-claude-chats-google","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-29T12:20:27.440Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"44.0s Charon","usd":0.011}
+{"at":"2026-07-29T12:22:36.996Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"45.8s Charon","usd":0.0115}
+{"at":"2026-07-29T12:25:54.392Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"46.9s Charon","usd":0.0117}
+{"at":"2026-07-29T12:27:13.081Z","slug":"2026-07-29-altman-decelerate","kind":"video","model":"veo-3.1-lite-generate-preview","units":"8s@720p","usd":0.4}
+{"at":"2026-07-29T12:27:28.560Z","slug":"2026-07-29-altman-decelerate","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-29T12:27:59.888Z","slug":"2026-07-29-altman-decelerate","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-29T12:28:10.287Z","slug":"2026-07-29-altman-decelerate","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-29T12:28:21.116Z","slug":"2026-07-29-altman-decelerate","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-29T12:28:30.383Z","slug":"2026-07-29-altman-decelerate","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-29T12:33:27.495Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"45.6s Charon","usd":0.0114}
