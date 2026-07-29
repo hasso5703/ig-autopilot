@@ -49,6 +49,11 @@ ENTRIES:
   "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
   Re-run validate.mjs on any stored spec before building from it; re-copy the
   quote verbatim from the live page. Proof: 19h journal 28/07.
+- 2026-07-29 · The freshness gate (STALE_DAYS=4) ages fixtures against the
+  wall clock: goodPost()'s hardcoded 2026-07-25 failed 4 suite tests at once
+  on 29/07 (now dynamic). test/fixtures/smoke-post.json still carries static
+  07-25 dates, so CLI-validating it fails on staleness: age, not regression.
+  Proof: 06h journal 29/07.
 - 2026-07-28 · The 27/07 Microsoft carousel was deleted from the account
   (mediaId 17884181772455155 returns "does not exist"; only the day's Reel
   remains). Its posted.jsonl entry is intentional memory that still blocks

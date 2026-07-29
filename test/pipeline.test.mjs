@@ -24,6 +24,15 @@ import { complianceIssues } from "../src/reel.mjs";
 const CLAIM =
   "Librarians across the United States are running free public workshops that teach people how to switch AI features off.";
 
+// The gate ages sources against the wall clock (STALE_DAYS). A hardcoded date
+// here put a time bomb in the suite: on 2026-07-29 every goodPost() test failed
+// at once because "2026-07-25" had quietly become four days old. The newest
+// source must stay fresh relative to the day the suite runs.
+const FRESH_DATE = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+// The kicker's digits must exist among the evidence tokens, which include the
+// source date split as ["2026","07","28"] — so the day stays zero-padded.
+const FRESH_KICKER = `${FRESH_DATE.slice(8, 10)} July ${FRESH_DATE.slice(0, 4)}`;
+
 const goodPost = () => ({
   slug: "2026-07-25-test",
   centralClaim: CLAIM,
@@ -36,9 +45,9 @@ const goodPost = () => ({
   mood: "tension",
   sendTest: "Librarians are running free classes on switching AI off, and 70 people turned up to one.",
   slides: [
-    { type: "hook", headline: "Libraries now teach you to switch AI off", kicker: "25 July 2026", hero: { value: "70", label: "turned up" }, swipe: "Swipe",
+    { type: "hook", headline: "Libraries now teach you to switch AI off", kicker: FRESH_KICKER, hero: { value: "70", label: "turned up" }, swipe: "Swipe",
       image: photo("public library interior") },
-    { type: "stat", figure: "70", unit: "people came", body: "A dozen is the usual turnout for this class.", evidence: "About 70 people turned up to the class, far more than the usual dozen.", source: { url: "https://techcrunch.com/a", name: "TechCrunch", date: "2026-07-25" },
+    { type: "stat", figure: "70", unit: "people came", body: "A dozen is the usual turnout for this class.", evidence: "About 70 people turned up to the class, far more than the usual dozen.", source: { url: "https://techcrunch.com/a", name: "TechCrunch", date: FRESH_DATE },
       image: photo("library reading room") },
     { type: "content", title: "What they teach", body: "How to switch the features off.", evidence: "The class explains how to switch the features off on a phone or laptop.", source: { url: "https://www.bangordailynews.com/b", name: "Bangor Daily News", date: "2026-07-02" },
       image: drawn("a dim room lit by one phone screen, cinematic, no text") },
