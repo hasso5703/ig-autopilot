@@ -76,3 +76,11 @@ ENTRIES:
   type `photo` (vraies photos créditées Openverse/Commons) pour les
   personnes et produits nommés. Frames : une par beat, jamais des timestamps
   fixes.
+- 2026-07-29 · Chirurgie volontaire du registre (14h UTC): Hasan a supprimé
+  du compte le Reel DbYIlApjil_ (altman-decelerate, publié 12h49) car
+  l'apposition Hugging Face fautive y était prononcée. Son enregistrement
+  posted a été retiré à la main pour que le créneau de 16:30 republie le
+  spec corrigé (gate PASSED, vraies photos d'Altman aux beats 2 et 4, veo
+  et screenshot réutilisés via file). Ce n'est pas une perte de mémoire:
+  c'est le remplacement assumé d'un Reel retiré. Le spend du premier build
+  reste dû dans spend.jsonl.
