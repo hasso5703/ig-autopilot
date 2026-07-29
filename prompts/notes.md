@@ -37,7 +37,8 @@ ENTRIES:
   post republished as new is the account's worst failure. Proof: 27/07 death.
 - 2026-07-28 · Veo Lite 720p ($0.05/s) is the default and looked broadcast-
   clean on the first live Reel; do not pay Fast/1080p without a reason a
-  viewer would notice. A full Reel lands ≈ $0.40. Proof: spend.jsonl 28/07.
+  viewer would notice. A 33s Reel landed ≈ $0.40; the 60s FR format (7 beats,
+  1 veo + 5 stills) lands ≈ $0.61. Proof: spend.jsonl 28-29/07.
 - 2026-07-28 · Set RUN_JOURNAL=reports/journal/<UTC-date>-<slot>.md at step 0;
   the engine appends spend/beat/verdict lines itself. Commit the journal
   before every purchase and publish, so a quota death leaves the receipts.
