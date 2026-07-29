@@ -62,8 +62,8 @@
     "gutter": 30
   },
   "jpegQuality": 88,
-  "aiDisclosure": "AI-assisted",
-  "_paletteNote": "One account, not one post. Four covers side by side on the profile grid were indistinguishable: same cold blue-teal, same cyan accent, same layout. Two causes, both mine \u2014 the .tint layer recoloured every photograph toward the accent with mix-blend-mode:color, and every generated prompt asked for cold blue light. The typeface, the black ground and the handle are what make this one account; the accent is what makes each post a different one. Chosen by the story's mood, which the post already declares. The accent alone was not enough: three of four posts declared mood `tension`, so the grid stayed one colour. The mood therefore sets the light of the PICTURE too \u2014 every illustration prompt carries its palette's `light` phrase \u2014 because what makes two covers look alike is the photograph, not the eight per cent of accent sitting on top of it.",
+  "aiDisclosure": "Assisté par IA",
+  "_paletteNote": "One account, not one post. Four covers side by side on the profile grid were indistinguishable: same cold blue-teal, same cyan accent, same layout. Two causes, both mine — the .tint layer recoloured every photograph toward the accent with mix-blend-mode:color, and every generated prompt asked for cold blue light. The typeface, the black ground and the handle are what make this one account; the accent is what makes each post a different one. Chosen by the story's mood, which the post already declares. The accent alone was not enough: three of four posts declared mood `tension`, so the grid stayed one colour. The mood therefore sets the light of the PICTURE too — every illustration prompt carries its palette's `light` phrase — because what makes two covers look alike is the photograph, not the eight per cent of accent sitting on top of it.",
   "palettes": {
     "steady": {
       "accent": "#4DE1FF",

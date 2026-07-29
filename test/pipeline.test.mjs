@@ -694,24 +694,131 @@ test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, sc
   assert.ok(dialogues.every((d) => (d.match(/\\k\d+/g) || []).length >= 2), "every caption carries at least two timed words");
 });
 
+const goodReel2 = () => ({
+  voice: "Charon", mood: "tension", lang: "fr",
+  title: "70 personnes pour apprendre à couper l'IA",
+  beats: [
+    { script: "Des bibliothèques américaines apprennent maintenant à couper l'IA.", visual: { type: "veo", spec: { subject: "a librarian's hands", action: "closing a laptop", setting: "in a small-town library" } } },
+    { script: "70 personnes sont venues à un seul cours.", visual: { type: "screenshot", url: "https://techcrunch.com/a" } },
+    { script: "Et la demande ne vient pas de qui vous croyez.", visual: { type: "image", spec: { subject: "a dim reading room", setting: "in a public library" } } },
+    { script: "Envoie ça à quelqu'un qui subit les popups IA.", visual: { type: "image", spec: { subject: "a phone face down", setting: "on a wooden table" } } },
+  ],
+});
+
 test("reel2 scripts are held to the slide standard: digits quoted, shape checked", async () => {
   const p = goodPost();
-  p.reel2 = { voice: "Fenrir", mood: "tension", beats: [
-    { script: "Libraries now teach you to switch AI off.", visual: { type: "veo", spec: { subject: "a librarian's hands", action: "closing a laptop", setting: "in a small-town library" } } },
-    { script: "About 70 people turned up to one class.", visual: { type: "screenshot", url: "https://techcrunch.com/a" } },
-    { script: "Send this to someone who hates AI popups.", visual: { type: "image", spec: { subject: "a phone face down", setting: "on a wooden table" } } },
-  ] };
+  p.reel2 = goodReel2();
   assert.equal((await errs(p)).filter((e) => /reel2/.test(e)).length, 0, "a clean plan passes");
 
-  p.reel2.beats[1].script = "It found 19 unknown holes in 90 minutes.";
-  assert.ok(hasErr(await errs(p), /spoken but appear in no evidence/), "an unquoted spoken figure is refused");
+  p.reel2.beats[1].script = "Il a trouvé 19 failles en 90 minutes.";
+  assert.ok(hasErr(await errs(p), /spoken but appear in no evidence/), "an unquoted spoken figure is refused, in French too");
 
-  p.reel2.beats[1].script = "About 70 people turned up.";
+  p.reel2.beats[1].script = "70 personnes sont venues.";
   p.reel2.beats[1].visual = { type: "screenshot" };
   assert.ok(hasErr(await errs(p), /screenshot beat needs a url or a file/));
 
-  p.reel2.beats = p.reel2.beats.slice(0, 2);
-  assert.ok(hasErr(await errs(p), /the spine is 3 to 6/));
+  p.reel2.beats = p.reel2.beats.slice(0, 3);
+  assert.ok(hasErr(await errs(p), /the 60-second spine is 4 to 7/));
+});
+
+test("reel2: the hook card is required and held to headline rules", async () => {
+  const p = goodPost();
+  p.reel2 = goodReel2();
+
+  delete p.reel2.title;
+  assert.ok(hasErr(await errs(p), /`title` is missing/), "no title, no audition frame");
+
+  p.reel2.title = "Un chiffre que personne n'avait vérifié: 2 300 inscrits";
+  assert.ok(hasErr(await errs(p), /title figure\(s\) 2300/), "a title figure outside the evidence is refused");
+
+  p.reel2.title = "70 personnes pour apprendre à couper l'IA";
+  assert.equal((await errs(p)).filter((e) => /title/.test(e)).length, 0);
+});
+
+test("reel2: the last beat must name who to send it to", async () => {
+  const p = goodPost();
+  p.reel2 = goodReel2();
+  p.reel2.beats.at(-1).script = "Voilà pour aujourd'hui.";
+  assert.ok(hasErr(await errs(p), /last beat asks for nothing/));
+  p.reel2.beats.at(-1).script = "Préviens un ami qui partage ses chats IA.";
+  assert.ok(!hasErr(await errs(p), /last beat asks for nothing/));
+});
+
+test("French thousands separators match English evidence, dates never merge", async () => {
+  const p = goodPost();
+  p.slides.splice(3, 0, {
+    type: "content", title: "Les chiffres",
+    body: "Au total, 1 100 personnes se sont inscrites cette année.",
+    evidence: "In total, 1,100 people signed up for the workshops this year across the state of Maine.",
+    source: { url: "https://techcrunch.com/a", name: "TechCrunch", date: FRESH_DATE },
+    image: photo("library shelves"),
+  });
+  const list = await errs(p);
+  assert.ok(!hasErr(list, /1100/), "1 100 in French copy matches 1,100 in the quote:\n" + list.join("\n"));
+
+  p.slides[3].body = "Au total, 2 300 personnes se sont inscrites cette année.";
+  assert.ok(hasErr(await errs(p), /2300/), "a spaced figure with no evidence is still refused");
+});
+
+test("the caption disclosure and the gate speak French now", async () => {
+  const p = goodPost();
+  p.caption = "Une légende avec le chiffre 70 dedans. Assisté par IA.";
+  assert.ok(!hasErr(await errs(p), /AI disclosure/), "the French disclosure is accepted");
+  p.caption = "Une légende avec le chiffre 70 dedans, sans mention.";
+  assert.ok(hasErr(await errs(p), /AI disclosure/), "no disclosure, no pass");
+});
+
+test("French dead openers and filler are refused like their English twins", async () => {
+  assert.ok(hookIssues("Pourquoi l'IA change tout").some((i) => /description/.test(i)));
+  assert.ok(hookIssues("Tout savoir sur les agents IA").some((i) => /description/.test(i)));
+  assert.ok(hookIssues("Une avancée révolutionnaire pour 3 millions de développeurs").some((i) => /means nothing/.test(i)));
+  assert.equal(hookIssues("OpenAI a coupé 3.1 gigawatts en 30 secondes").length, 0);
+  assert.ok(hookIssues("Les modèles progressent encore").some((i) => /no number and no name/.test(i)), "a French sentence-opener capital is not a name");
+});
+
+test("the caption may not promise a cadence, in either language", async () => {
+  const p = goodPost();
+  p.caption = "Une actu par jour, chaque jour. Le chiffre 70. Assisté par IA.";
+  assert.ok(hasErr(await errs(p), /publishing frequency/));
+});
+
+test("the hook card and the end-card ride above the karaoke", async () => {
+  const { buildAss } = await import("../src/reel2.mjs");
+  const words = [
+    { w: "Google", s: 0.0, e: 0.3 }, { w: "listait", s: 0.3, e: 0.6 }, { w: "des", s: 0.6, e: 0.9 },
+    { w: "chats", s: 0.9, e: 1.2 }, { w: "partagés.", s: 1.2, e: 1.5 },
+  ];
+  const beats = [{ script: "Google listait des chats partagés.", visual: { type: "image" } }];
+  const ranges = [{ start: 0, end: 4 }];
+  const ass = buildAss(words, beats, ranges, "FF8A3D", { title: "Google exposait vos chats Claude", endcard: { from: 40, dur: 3 } });
+  assert.ok(/Style: TITLE,Anton/.test(ass), "the title style uses the display face");
+  assert.ok(/Dialogue: 1,0:00:00\.00,[^,]+,TITLE,.*GOOGLE EXPOSAIT VOS CHATS CLAUDE/.test(ass), "the full hook is burned from frame zero, upper-cased");
+  assert.ok(/Dialogue: 1,0:00:40\.00,0:00:43\.00,ENDBIG,.*UNE ACTU IA PAR JOUR\./.test(ass), "the end-card prints the serial promise");
+  assert.ok(/Dialogue: 1,0:00:40\.00,0:00:43\.00,ENDFOLLOW,.*ABONNE-TOI POUR LA SUIVANTE/.test(ass), "the end-card asks for the follow");
+  const plain = buildAss(words, beats, ranges, "FF8A3D");
+  assert.ok(!/TITLE|ENDBIG|ENDFOLLOW/.test(plain.split("[Events]")[1]), "no opts, no fixed layers — old call sites unchanged");
+});
+
+test("retention is arithmetic in code, not a guess in a prompt", async () => {
+  const { retentionPct } = await import("../src/watch.mjs");
+  assert.equal(retentionPct(12000, 24), 50);
+  assert.equal(retentionPct(63970, 58.2), 110, "loops can push retention past 100, and that is the good case");
+  assert.equal(retentionPct(null, 24), null);
+  assert.equal(retentionPct(12000, undefined), null);
+  assert.equal(retentionPct(12000, 0), null);
+});
+
+test("engagement helpers: only real published media, only real comments", async () => {
+  const { recentPublished, commentTextIssues } = await import("../src/engage.mjs");
+  const posted = [
+    { slug: "a", mediaId: "1" },
+    { slug: "b" },
+    { slug: "c", mediaId: "3" },
+  ];
+  assert.deepEqual(recentPublished(posted).map((p) => p.slug), ["c", "a"], "no mediaId, no conversation surface; newest first");
+  assert.ok(commentTextIssues("").includes("empty"));
+  assert.ok(commentTextIssues("👍").length > 0, "an emoji nod is not a comment");
+  assert.equal(commentTextIssues("Bonne question, la réponse est dans la source citée.").length, 0);
 });
 
 test("a sentence-opening The is not a name, and Microsoft still is", async () => {

@@ -61,9 +61,16 @@ export function claimOverlap(claim, quote) {
   return { shared, ratio: shared.length / a.size };
 }
 
-/** Digit runs, normalised: "1,050" -> "1050", "$30.5B" -> "30.5" */
+/** Digit runs, normalised: "1,050" -> "1050", "$30.5B" -> "30.5".
+ * French copy groups thousands with spaces: "1 100" in a script must match
+ * "1,100" in an English evidence quote. A space only joins digits when it
+ * separates groups of exactly three ("10 000"), so "July 27, 2026" stays two
+ * numbers and never merges. Decimals stay on the point: figures are copied as
+ * the source writes them ("3.5"), never re-punctuated into "3,5". */
 const numbers = (s) =>
-  (String(s).match(/\d[\d,]*(?:\.\d+)?/g) || []).map((n) => n.replace(/,/g, "").replace(/\.$/, ""));
+  (String(s).match(/\d{1,3}(?:[\u00A0\u202F ]\d{3})+(?:\.\d+)?|\d[\d,]*(?:\.\d+)?/g) || []).map((n) =>
+    n.replace(/[,\u00A0\u202F ]/g, "").replace(/\.$/, "")
+  );
 
 const flatten = (html) =>
   html
@@ -202,7 +209,9 @@ export function namedActors(text) {
   return [...new Set(out)];
 }
 
-/** Openers that promise a thumb nothing. Every one of these is a description. */
+/** Openers that promise a thumb nothing. Every one of these is a description.
+ * The account writes in French since 2026-07-29; the French half of each list
+ * is the same disease in the other language. */
 const DEAD_OPENERS = [
   /^(the )?(rise|fall|future|state|age|era|dawn|world) of\b/i,
   /^(how|why) [a-z]/i,
@@ -211,10 +220,16 @@ const DEAD_OPENERS = [
   /^(here'?s|this is) (how|why|what)\b/i,
   /^(what|why) (this|that|it) means\b/i,
   /^(inside|meet|introducing)\b/i,
+  /^(comment|pourquoi) [a-zà-ü]/i,
+  /^(l['’]essor|la mont[ée]e|le futur|l['’]avenir|l['’][èe]re|le monde) d/i,
+  /^tout (savoir|comprendre) sur\b/i,
+  /^ce qu['’]il faut (savoir|retenir)\b/i,
+  /^(zoom|focus|retour) sur\b/i,
+  /^(d[ée]couvrez|plong[ée]e? (dans|au)|voici (comment|pourquoi))\b/i,
 ];
 
 /** Words that sound like something and mean nothing. */
-const FILLER = /\b(game[- ]?changer|revolutionary|revolutionize|landscape|journey|unlock|harness|delve|paradigm|disrupt(ing|ive)?|cutting[- ]edge|seamless|robust|leverage)\b/i;
+const FILLER = /\b(game[- ]?changer|revolutionary|revolutionize|landscape|journey|unlock|harness|delve|paradigm|disrupt(ing|ive)?|cutting[- ]edge|seamless|robust|leverage|r[ée]volutionnaire|r[ée]volutionne[rnt]?|incontournable|paradigme|disruptif|disruptive|bouleverse[rnt]?|d[ée]cryptage)\b/i;
 
 export function hookIssues(headline) {
   const raw = String(headline || "").replace(/\*+/g, "").trim();
@@ -260,6 +275,13 @@ export function hookIssues(headline) {
     "everyone", "someone", "anyone", "nobody", "people", "most", "many", "some", "all", "after", "before",
     "once", "since", "what", "who", "there", "here", "we", "you", "he", "she", "his", "her", "if", "so",
     "your", "our", "these", "those", "every", "both", "each", "another", "other", "more", "less", "first", "last",
+    // French sentence-openers: capitalised by position, naming nothing.
+    "le", "la", "les", "un", "une", "des", "ce", "cette", "ces", "cet", "il", "elle", "ils", "elles",
+    "et", "mais", "dans", "sur", "pour", "quand", "pourquoi", "comment", "leur", "leurs", "son", "sa", "ses",
+    "ne", "pas", "plus", "moins", "tout", "tous", "toute", "toutes", "rien", "personne", "quelque",
+    "après", "avant", "depuis", "alors", "donc", "voici", "voilà", "chaque", "autre", "autres",
+    "notre", "votre", "nos", "vos", "nous", "vous", "je", "tu", "on", "si", "déjà", "encore",
+    "hier", "demain", "aujourd'hui", "être", "avoir", "faire", "sont", "était", "vient", "vont",
   ]);
   const hasName = words
     .map((w) => w.replace(/[^\w.'-]/g, ""))
@@ -593,7 +615,7 @@ export async function validatePost(post, opts = {}) {
     err('`sendTest` is missing. Write the one-line message someone would actually send a friend along with this post, in their words. If you cannot write it without wincing, the story is the wrong story.');
   else {
     if (sendTest.length > 160) err(`\`sendTest\` is ${sendTest.length} characters. Nobody types that in a DM. Under 160.`);
-    const INSIDER = /\b(framework|sdk|api|library|libraries|open[- ]sourc\w*|benchmark|inference|pipeline|parameters?|weights|repo|repository|toolkit|runtime|latency|throughput)\b/i;
+    const INSIDER = /\b(framework|sdk|api|library|libraries|open[- ]sourc\w*|benchmark|inference|pipeline|parameters?|weights|repo|repository|toolkit|runtime|latency|throughput|inf[ée]rence|latence|param[èe]tres?|biblioth[èe]que logicielle|d[ée]p[ôo]t de code)\b/i;
     const hit = sendTest.match(INSIDER);
     if (hit)
       err(`\`sendTest\` contains "${hit[0]}". That is an industry word, and a message that needs one is a message nobody sends. Either the story has a consequence you can say in plain words, or it is not a story.`);
@@ -613,7 +635,7 @@ export async function validatePost(post, opts = {}) {
    * false. A cadence that changes with the numbers cannot be printed on the
    * artwork.
    */
-  const FREQUENCY_CLAIM = /\b(one|two|three|1|2|3)\s+(story|stories|post|posts|reel|reels)\s+(a|per|each)\s+(day|week)\b|\b(a new one|another one)\s+(tomorrow|every day|daily)\b|\bdaily\s+(story|post|reel)\b/i;
+  const FREQUENCY_CLAIM = /\b(one|two|three|1|2|3)\s+(story|stories|post|posts|reel|reels)\s+(a|per|each)\s+(day|week)\b|\b(a new one|another one)\s+(tomorrow|every day|daily)\b|\bdaily\s+(story|post|reel)\b|\b(une|deux|trois|1|2|3)\s+(actu|actus|info|infos|vid[ée]o|vid[ée]os|story|stories)s?\s+par\s+(jour|semaine)\b|\bchaque\s+(jour|matin|soir)\b|\btous les (jours|matins|soirs)\b|\bquotidien(ne)?s?\b|\b[àa] demain\b|\brendez-vous demain\b/i;
   for (const [i, s2] of slides.entries()) {
     for (const v of [s2.headline, s2.sub, s2.title, s2.body]) {
       if (v && FREQUENCY_CLAIM.test(v))
@@ -659,8 +681,8 @@ export async function validatePost(post, opts = {}) {
   if (!post.caption) err("caption missing");
   if (post.caption && post.caption.length > CAPTION_MAX)
     err(`caption is ${post.caption.length} chars, Instagram's limit is ${CAPTION_MAX}`);
-  if (post.caption && !/\bai[- ]assisted\b|\bmade with ai\b|\bwritten with ai\b/i.test(post.caption))
-    err("caption carries no AI disclosure (EU AI Act art. 50, applicable 2026-08-02). Two words at the end is enough: 'AI-assisted.'");
+  if (post.caption && !/\bai[- ]assisted\b|\bmade with ai\b|\bwritten with ai\b|\bassist[ée]e? par (l['’])?ia\b|\bg[ée]n[ée]r[ée]e?s? (avec|par) (l['’])?ia\b/i.test(post.caption))
+    err("caption carries no AI disclosure (EU AI Act art. 50, applicable 2026-08-02, and Meta policy for realistic synthetic audio). The house line: 'Voix et images générées par IA · Script écrit et vérifié par un humain.'");
 
   // Do not advertise rigour. Showing a source on every slide is the proof;
   // a paragraph claiming that everything was checked reads as a defence, and
@@ -748,7 +770,27 @@ export async function validatePost(post, opts = {}) {
   // here too, because reel2.mjs only runs after money starts being spent.
   if (post.reel2 !== undefined) {
     const beats = Array.isArray(post.reel2?.beats) ? post.reel2.beats : [];
-    if (beats.length < 3 || beats.length > 6) err(`reel2: ${beats.length} beats — the spine is 3 to 6`);
+    if (beats.length < 4 || beats.length > 7) err(`reel2: ${beats.length} beats — the 60-second spine is 4 to 7`);
+
+    /*
+     * The hook card. The karaoke reveals the spoken line word by word, which
+     * meant frame zero — the whole audition, and the grid thumbnail — used to
+     * carry three words of a sixteen-word sentence. `title` is the full hook,
+     * burned fully formed from the first frame. It is held to the same shape
+     * rules as a slide headline, and its digits to the same evidence rule as
+     * every other digit on the account.
+     */
+    const title = String(post.reel2?.title || "").trim();
+    if (!title) err("reel2: `title` is missing — 5 to 8 words shown as a static card from frame zero; it is the audition and the grid thumbnail");
+    else {
+      if (title.length > 64) err(`reel2: title is ${title.length} chars — it renders at display size, 64 is the ceiling`);
+      if (DASHES.test(title)) err("reel2: title contains an em dash, en dash or \"--\" — rewrite as two sentences");
+      const unsupportedT = [...new Set(numbers(title))].filter((n) => !allEvidence.has(n));
+      if (unsupportedT.length) err(`reel2: title figure(s) ${unsupportedT.join(", ")} appear in no evidence quote — a number must be copied, never derived`);
+      for (const issue of hookIssues(title)) nag(`reel2 title: ${issue}`);
+    }
+    if (post.reel2?.lang && !["fr", "en"].includes(post.reel2.lang))
+      err(`reel2: unknown lang "${post.reel2.lang}" — "fr" (the account's language) or "en"`);
     const VISUALS = new Set(["veo", "screenshot", "image", "file"]);
     let words = 0;
     for (const [i, b] of beats.entries()) {
@@ -765,7 +807,19 @@ export async function validatePost(post, opts = {}) {
       if ((type === "veo" || type === "image") && !b.visual?.spec && !b.visual?.prompt && !b.visual?.file)
         err(`${at}: a ${type} beat needs a spec, a prompt or a file`);
     }
-    if (words > 90) err(`reel2: ${words} words of narration — over the 90-word runtime budget, cut the longest beats first`);
+    if (words > 160) err(`reel2: ${words} words of narration — over the 160-word runtime budget for the 60-second format (130 to 155 is the target), cut the longest beats first`);
+
+    /*
+     * The last spoken thing is the send. Sends are the escalation signal that
+     * reaches non-followers, and the engine's end-card handles the follow ask
+     * after the voice stops — so the voice's close has exactly one job: name
+     * who to send this to. A close that asks for nothing shipped on every
+     * early Reel, and the account has the follower count that buys.
+     */
+    const lastScript = String(beats.at(-1)?.script || "");
+    if (lastScript && !/(envoie|envoyez|partage|partagez|montre|montrez|transf[èe]re|transf[èe]rez|pr[ée]viens|pr[ée]venez|send|share|forward|show|tag)/i.test(lastScript))
+      err("reel2: the last beat asks for nothing — name who to send this to (\"Envoie ça à…\", \"Préviens…\"). The end-card handles the follow; the voice handles the send.");
+
     if (post.reel2?.mood && !["steady", "tension", "drive", "wonder"].includes(post.reel2.mood))
       err(`reel2: unknown mood "${post.reel2.mood}"`);
   }

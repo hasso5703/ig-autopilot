@@ -123,9 +123,22 @@ async function performance() {
       interactions: i.total_interactions ?? null,
       follows: i.follows ?? null,
       profileVisits: i.profile_visits ?? null,
+      avgWatchS: typeof i.ig_reels_avg_watch_time === "number" ? Math.round(i.ig_reels_avg_watch_time / 100) / 10 : null,
+      retention: retentionPct(i.ig_reels_avg_watch_time, p.durationS),
       error: r?.insightsError ?? null,
     };
   });
+}
+
+/**
+ * Average watch time over real duration, as a percentage — the single number
+ * that predicts whether Instagram widens a Reel's audience. The API reports
+ * milliseconds; the duration comes from `recordPosted` (ffprobe at publish
+ * time). Null when either side is missing, never guessed.
+ */
+export function retentionPct(avgWatchMs, durationS) {
+  if (typeof avgWatchMs !== "number" || !Number.isFinite(durationS) || durationS <= 0) return null;
+  return Math.round((avgWatchMs / 1000 / durationS) * 100);
 }
 
 const n = (v) => (v === null || v === undefined ? "-" : String(v));
@@ -174,6 +187,7 @@ export function format(report) {
   for (const p of posts) {
     L.push(`  ${p.slug}`);
     L.push(`    portée ${n(p.reach)} · partages ${n(p.shares)} · saves ${n(p.saved)} · vues ${n(p.views)} · abonnés gagnés ${n(p.follows)}`);
+    if (p.retention !== null) L.push(`    rétention ${p.retention}% (watch moyen ${n(p.avgWatchS)}s) — sous 40% le hook ou la longueur est en cause`);
     if (p.error) L.push(`    stats indisponibles : ${p.error.message}`);
   }
 

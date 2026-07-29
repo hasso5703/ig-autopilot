@@ -227,6 +227,9 @@ export async function recordPosted(entry) {
     fingerprint: entry.fingerprint ?? fingerprint(entry.title),
     tokens: entry.tokens ?? tokens(entry.title),
     sources: entry.sources ?? [],
+    // The Reel's real duration, so the watch can turn the API's average watch
+    // time into a retention percentage. Optional: carousels never had one.
+    ...(Number.isFinite(entry.durationS) ? { durationS: entry.durationS } : {}),
   });
   await appendFile(POSTED, line + "\n", "utf8");
 }

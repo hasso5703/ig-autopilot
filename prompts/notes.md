@@ -59,3 +59,11 @@ ENTRIES:
   remains). Its posted.jsonl entry is intentional memory that still blocks
   re-coverage; never reconcile or delete it. insights.mjs reporting ok:false
   for that id is normal. Proof: publish.mjs recent + insights, 19h 28/07.
+- 2026-07-29 · PIVOT FR + format 60s (commit du 29/07 après-midi) : tout le
+  public en français; reel2 exige `title` (hook card frame 0) + `lang: fr` +
+  dernier beat avec envoi nominatif; narration 130-155 mots, plafond moteur
+  56s + end-card 3s auto; voix Charon + direction FR; disclosure "Voix et
+  images générées par IA · Script écrit et vérifié par un humain."; premier
+  commentaire + réponses via src/engage.mjs (dry-run par défaut);
+  recordPosted accepte durationS pour la rétention du watch. Un spec anglais
+  d'avant le pivot se réécrit en français puis se re-gate.

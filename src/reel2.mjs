@@ -11,8 +11,10 @@
  * The spine of a post is `reel2` in the post JSON:
  *
  *   "reel2": {
- *     "voice": "Fenrir",
+ *     "voice": "Charon",
  *     "mood": "tension",
+ *     "lang": "fr",
+ *     "title": "5 à 8 mots, la carte affichée frame 0",
  *     "beats": [
  *       { "script": "…", "visual": { "type": "veo",        "spec": { subject, action, setting, … } } },
  *       { "script": "…", "visual": { "type": "screenshot", "url": "https://…" } },
@@ -47,9 +49,19 @@ import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
 const run = promisify(execFile);
 
 const W = 1080, H = 1920, FPS = 25;
-const MIN_S = 12, MAX_S = 35;
+// 60 seconds is the brand ("L'actu IA en 60 secondes"), and the ceiling below
+// is what keeps the promise checkable: narration ≤ 56s + the 3s end-card and
+// the tail pad land the file under 60. 130–155 French words fill it at news
+// pace; the gate holds the copy to 160 before any money is spent.
+const MIN_S = 40, MAX_S = 56;
+const END_S = 3.0;
+const BG_HEX = "0x08080C"; // brand.colors.bg
 const FONT_DIR = path.join(process.cwd(), "brand", "fonts");
 const HANDLE = "@ORDER.OF.MAGNITUDE";
+// The end-card is fixed text, not per-post copy: the ritual is the point.
+// "Pour la suivante" is the serialization ask — the viewer closes the loop.
+const END_PROMISE = "UNE ACTU IA PAR JOUR.";
+const END_FOLLOW = "ABONNE-TOI POUR LA SUIVANTE";
 
 /* ------------------------- whisper, once per machine ---------------------- */
 
@@ -64,14 +76,18 @@ async function ensureWhisper() {
   return py;
 }
 
-/** Word clock from the voice track. Transcribed words are replaced by ours. */
-async function alignWords(voiceWav, scriptWords, workDir) {
+/** Word clock from the voice track. Transcribed words are replaced by ours.
+ * The account speaks French since 2026-07-29; the multilingual "base" model
+ * hears it, and the language is forced so a short clip cannot be misdetected.
+ * English is kept for fixtures and for any deliberate English post. */
+async function alignWords(voiceWav, scriptWords, workDir, lang = "fr") {
   const py = await ensureWhisper();
+  const model = lang === "en" ? "base.en" : "base";
   const script = `
 from faster_whisper import WhisperModel
 import json, sys
-m = WhisperModel("base.en", device="cpu", compute_type="int8")
-segs, _ = m.transcribe(sys.argv[1], word_timestamps=True, language="en")
+m = WhisperModel("${model}", device="cpu", compute_type="int8")
+segs, _ = m.transcribe(sys.argv[1], word_timestamps=True, language="${lang}")
 words = [{"w": w.word.strip(), "s": round(w.start, 3), "e": round(w.end, 3)} for s in segs for w in s.words]
 json.dump(words, open(sys.argv[2], "w"))
 print(len(words))
@@ -130,8 +146,24 @@ function assTime(t) {
  * coloured one. Screenshot beats push their captions to the low band so type
  * never sits on the article it is quoting — that collision shipped once in
  * the prototype and was caught by looking, which is the only way it can be.
+ *
+ * Two fixed layers ride above the karaoke, and both exist because of measured
+ * behaviour, not taste:
+ *
+ * - `opts.title` — the hook card. The full hook, fully formed on frame zero,
+ *   in the display face, gone by ~3.2s. The karaoke reveals the spoken line
+ *   word by word, which means that without this card the first frame of the
+ *   Reel — the whole audition, and the grid thumbnail — carried three words
+ *   of a sixteen-word sentence. Stacked hooks (card states the claim, voice
+ *   opens the story, picture sets the scene) hold measurably more viewers
+ *   through the first seconds than any single layer does.
+ * - `opts.endcard {from, dur}` — the close. The engine appends a brand-dark
+ *   card after the last spoken word and prints the fixed serial promise and
+ *   the follow ask on it. Fixed on purpose: the ritual close is the account's
+ *   signature, the voice never has to spend runtime on it, and the last frame
+ *   finally asks for the one thing a viewer can do for a new account.
  */
-export function buildAss(words, beats, ranges, accentHex) {
+export function buildAss(words, beats, ranges, accentHex, opts = {}) {
   const accent = hexToAss(accentHex);
   const lowBeats = new Set(ranges.filter((_, i) => beats[i].visual?.type === "screenshot").flatMap((r) => {
     const list = [];
@@ -144,9 +176,24 @@ export function buildAss(words, beats, ranges, accentHex) {
     "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
     `Style: K,Archivo SemiBold,86,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,7,3,2,60,60,600,1`,
     `Style: KLOW,Archivo SemiBold,62,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,7,3,2,30,30,170,1`,
+    `Style: TITLE,Anton,116,&H00FFFFFF,&H00FFFFFF,&H00101010,&HB4000000,0,0,0,0,100,100,0,0,1,6,3,8,64,64,400,1`,
+    `Style: ENDBIG,Anton,100,&H00FFFFFF,&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,3,2,5,80,80,0,1`,
+    `Style: ENDFOLLOW,Archivo SemiBold,58,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,3,2,5,80,80,0,1`,
     "", "[Events]",
     "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
   ];
+  const fixed = [];
+  if (opts.title) {
+    const tEnd = Math.min(3.2, Math.max(2.2, words[0] ? (ranges[0] ? words[Math.min(ranges[0].end, words.length - 1)].e : 3.2) : 3.2));
+    const text = String(opts.title).toUpperCase().replace(/\\/g, "").replace(/[{}]/g, "");
+    fixed.push(`Dialogue: 1,${assTime(0)},${assTime(tEnd)},TITLE,,0,0,0,,{\\q1\\fad(0,220)}${text}`);
+  }
+  if (opts.endcard) {
+    const { from, dur } = opts.endcard;
+    const t0 = assTime(from), t1 = assTime(from + dur);
+    fixed.push(`Dialogue: 1,${t0},${t1},ENDBIG,,0,0,0,,{\\q1\\fad(160,0)\\pos(${W / 2},${Math.round(H * 0.42)})}${END_PROMISE}`);
+    fixed.push(`Dialogue: 1,${t0},${t1},ENDFOLLOW,,0,0,0,,{\\q1\\fad(160,0)\\pos(${W / 2},${Math.round(H * 0.54)})}${END_FOLLOW}`);
+  }
   const chunks = [];
   let chunk = [];
   words.forEach((word, i) => {
@@ -169,7 +216,7 @@ export function buildAss(words, beats, ranges, accentHex) {
     });
     return `Dialogue: 0,${assTime(ch[0].word.s)},${assTime(ch.at(-1).word.e + 0.06)},${style},,0,0,0,,${parts.join(" ")}`;
   });
-  return head.concat(events).join("\n");
+  return head.concat(events).concat(fixed).join("\n");
 }
 
 /* ------------------------------ visuals ---------------------------------- */
@@ -206,7 +253,20 @@ async function screenshot(url, outFile) {
       content:
         '[id*="google_ads"],[id^="ad-"],[class*="advert"],[class^="ad-"],[class*=" ad-"],' +
         'ins.adsbygoogle,iframe[src*="ads"],iframe[src*="doubleclick"],[data-ad],[data-ad-unit],' +
+        '[id*="taboola"],[class*="outbrain"],[class*="sponsor"],[id*="sponsor"],' +
         '[aria-label*="advertisement" i]{display:none!important;visibility:hidden!important}',
+    }).catch(() => {});
+    // The receipt is the headline, and the top of an article page is not where
+    // the headline lives: the first live Reel's card framed the site chrome, a
+    // display ad and a decorative photo, with the headline below the crop.
+    // Scroll the h1 to the top of the viewport (minus a little context) so the
+    // crop that follows starts on the journalism.
+    await page.evaluate(() => {
+      const h = document.querySelector("article h1") || document.querySelector("h1");
+      if (h) {
+        h.scrollIntoView({ block: "start" });
+        window.scrollBy(0, -96);
+      }
     }).catch(() => {});
     await page.waitForTimeout(600);
     await page.screenshot({ path: outFile });
@@ -254,6 +314,16 @@ async function segmentFromScreenshot(shot, dur, outFile) {
   ]);
 }
 
+/** The end-card: the brand's dark ground, silent; the ASS layer prints the
+ * promise and the follow ask over it. Encoded with the same codec settings as
+ * every other segment so the concat demuxer's `-c copy` stays valid. */
+async function segmentEndcard(dur, outFile) {
+  await ffmpeg([
+    "-y", "-f", "lavfi", "-i", `color=c=${BG_HEX}:s=${W}x${H}:r=${FPS}:d=${dur}`,
+    "-pix_fmt", "yuv420p", "-r", String(FPS), "-c:v", "libx264", "-preset", "fast", "-crf", "18", outFile,
+  ]);
+}
+
 /** A clip, trimmed to the beat; a beat longer than its clip holds the last frame. */
 async function segmentFromVideo(clip, dur, outFile) {
   await ffmpeg([
@@ -298,7 +368,9 @@ export async function buildReel(postFile, mediaDir) {
   const post = JSON.parse(await readFile(postFile, "utf8"));
   const plan = post.reel2;
   if (!plan?.beats?.length) throw new Error("post has no reel2 plan");
-  if (plan.beats.length < 3 || plan.beats.length > 6) throw new Error(`reel2 wants 3 to 6 beats, got ${plan.beats.length}`);
+  if (plan.beats.length < 4 || plan.beats.length > 7) throw new Error(`reel2 wants 4 to 7 beats for the 60-second format, got ${plan.beats.length}`);
+  if (!plan.title?.trim()) throw new Error("reel2 has no `title` — the hook card is frame zero and the grid thumbnail; 5 to 8 words, fully formed");
+  const lang = plan.lang === "en" ? "en" : "fr";
   const mood = MOODS[plan.mood] ? plan.mood : "steady";
   const accent = MOODS[mood].accent;
   const slug = post.slug || path.basename(postFile, ".json");
@@ -306,9 +378,23 @@ export async function buildReel(postFile, mediaDir) {
 
   const forbidNames = extractForbidNames(post);
 
-  /* 1 — the voice. The copy is the runtime, so this is the budget gate too. */
+  /* 1 — the voice. The copy is the runtime, so this is the budget gate too.
+     French narration gets a French news direction — the default style prompt
+     is English and steers the accent wrong — and Charon (Google's
+     "Informative" voice) as the default register. Gemini TTS has a documented
+     quality cliff past ~60 seconds of output and a ~1-in-10 accent/pacing
+     drift; the 56s ceiling keeps us under the cliff, and a failed word-count
+     alignment downstream is the cue to regenerate once before debugging. */
   const narration = plan.beats.map((b) => b.script.trim()).join("\n\n");
-  const voice = await tts({ text: narration, voice: plan.voice || "Fenrir", outFile: path.join(mediaDir, "voice2.wav"), slug });
+  const frStyle =
+    "Lis ce texte comme un journaliste français qui présente un flash info: débit rapide mais articulé, environ 160 mots par minute, ton assuré et direct, accent français de France, pauses courtes entre les paragraphes, aucune emphase théâtrale";
+  const voice = await tts({
+    text: narration,
+    voice: plan.voice || (lang === "fr" ? "Charon" : "Fenrir"),
+    ...(lang === "fr" ? { style: frStyle } : {}),
+    outFile: path.join(mediaDir, "voice2.wav"),
+    slug,
+  });
   if (voice.seconds > MAX_S) {
     throw new Error(
       `narration is ${voice.seconds.toFixed(1)}s, over the ${MAX_S}s ceiling — cut the scripts, longest beats first. Nothing was painted.`
@@ -318,7 +404,7 @@ export async function buildReel(postFile, mediaDir) {
 
   /* 2 — the clock. */
   const scriptWords = narration.split(/\s+/).filter(Boolean);
-  const words = await alignWords(path.join(mediaDir, "voice2.wav"), scriptWords, mediaDir);
+  const words = await alignWords(path.join(mediaDir, "voice2.wav"), scriptWords, mediaDir, lang);
   const ranges = beatWordRanges(plan.beats);
   const bounds = ranges.map((r, i) => ({
     t0: i === 0 ? 0 : words[r.start].s - 0.05,
@@ -326,6 +412,9 @@ export async function buildReel(postFile, mediaDir) {
   }));
   for (let i = 1; i < bounds.length; i++) bounds[i].t0 = bounds[i - 1].t1;
   const total = bounds.at(-1).t1;
+  // The video outlives the voice by the end-card: promise + follow ask on the
+  // brand ground, music still under it, hard cut at the end.
+  const videoTotal = total + END_S;
 
   /* 3 — the pictures, cheapest that serves the beat. */
   const segFiles = [];
@@ -369,13 +458,21 @@ export async function buildReel(postFile, mediaDir) {
     await journal(`beat ${i} built: ${type} ${dur}s`);
   }
 
+  /* 3b — the end-card segment, after the last spoken beat. */
+  const endSeg = path.join(mediaDir, `seg2_end.mp4`);
+  await segmentEndcard(END_S, endSeg);
+  segFiles.push(endSeg);
+
   /* 4 — one video track, captions burned over it. */
   const concatList = path.join(mediaDir, "concat2.txt");
   await writeFile(concatList, segFiles.map((f) => `file '${path.resolve(f)}'`).join("\n"));
   const noSub = path.join(mediaDir, "reel2_nosub.mp4");
   await ffmpeg(["-y", "-f", "concat", "-safe", "0", "-i", concatList, "-c", "copy", noSub]);
   const assFile = path.join(mediaDir, "cap2.ass");
-  await writeFile(assFile, buildAss(words, plan.beats, ranges, accent));
+  await writeFile(assFile, buildAss(words, plan.beats, ranges, accent, {
+    title: plan.title,
+    endcard: { from: total, dur: END_S },
+  }));
   const withSub = path.join(mediaDir, "reel2_sub.mp4");
   await ffmpeg([
     "-y", "-i", noSub, "-vf",
@@ -393,19 +490,19 @@ export async function buildReel(postFile, mediaDir) {
   let ambFilter = "anullsrc=r=48000:cl=stereo,atrim=0:0.1[amb];";
   if (veoAudio) {
     inputs.push("-i", veoAudio.file);
-    ambFilter = `[2:a]aresample=48000,atrim=0:${veoAudio.dur},volume=0.35,afade=t=out:st=${Math.max(0, veoAudio.dur - 0.5)}:d=0.5,adelay=${Math.round(veoAudio.at * 1000)}|${Math.round(veoAudio.at * 1000)},apad=whole_dur=${total}[amb];`;
+    ambFilter = `[2:a]aresample=48000,atrim=0:${veoAudio.dur},volume=0.35,afade=t=out:st=${Math.max(0, veoAudio.dur - 0.5)}:d=0.5,adelay=${Math.round(veoAudio.at * 1000)}|${Math.round(veoAudio.at * 1000)},apad=whole_dur=${videoTotal}[amb];`;
   }
   await ffmpeg([
     "-y", ...inputs, "-filter_complex",
-    `[0:a]aresample=48000,apad=pad_dur=1.5,asplit=2[vo1][vo2];` +
-      `[1:a]aresample=48000,atrim=0:${total},volume=0.30,afade=t=in:d=0.4,afade=t=out:st=${Math.max(0, total - 1.2)}:d=1.2[mus];` +
+    `[0:a]aresample=48000,apad=whole_dur=${videoTotal},asplit=2[vo1][vo2];` +
+      `[1:a]aresample=48000,atrim=0:${videoTotal},volume=0.30,afade=t=in:d=0.4,afade=t=out:st=${Math.max(0, videoTotal - 1.4)}:d=1.4[mus];` +
       ambFilter +
       `[mus][vo1]sidechaincompress=threshold=0.05:ratio=8:attack=40:release=400[duck];` +
       `[vo2][duck][amb]amix=inputs=3:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[out]`,
     "-map", "[out]", "-ac", "2", "-ar", "48000", mix,
   ]);
   const outFile = path.join(mediaDir, "reel.mp4");
-  await ffmpeg(["-y", "-i", withSub, "-i", mix, "-t", String(total), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", outFile]);
+  await ffmpeg(["-y", "-i", withSub, "-i", mix, "-t", String(videoTotal), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", outFile]);
 
   /* 6 — believe the file, not the plan. */
   const probed = await ffprobe(outFile);
@@ -414,6 +511,7 @@ export async function buildReel(postFile, mediaDir) {
   const a = probed.streams.find((s) => s.codec_type === "audio");
   const violations = [];
   if (!(dur >= 5 && dur <= 90)) violations.push(`duration ${dur}s outside 5–90`);
+  if (dur > 62) violations.push(`duration ${dur.toFixed(1)}s breaks the 60-second promise — cut the scripts`);
   if (v?.codec_name !== "h264") violations.push(`video codec ${v?.codec_name}`);
   if (!(v?.width === W && v?.height === H)) violations.push(`frame ${v?.width}x${v?.height}`);
   if (a?.codec_name !== "aac") violations.push(`audio codec ${a?.codec_name}`);
