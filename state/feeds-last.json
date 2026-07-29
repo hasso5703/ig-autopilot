@@ -1,6 +1,6 @@
 {
-  "at": "2026-07-29T12:13:40.392Z",
-  "fresh": 394,
+  "at": "2026-07-29T16:39:52.199Z",
+  "fresh": 391,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -20,7 +20,7 @@
       "name": "Google DeepMind",
       "ok": true,
       "fetched": 100,
-      "fresh": 0,
+      "fresh": 1,
       "windowHours": 96
     },
     {
@@ -85,14 +85,14 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 3,
+      "fresh": 4,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 8,
-      "fresh": 8,
+      "fetched": 3,
+      "fresh": 3,
       "windowHours": 36
     },
     {
