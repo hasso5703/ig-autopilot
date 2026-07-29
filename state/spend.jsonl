@@ -17,3 +17,10 @@
 {"at":"2026-07-29T12:28:21.116Z","slug":"2026-07-29-altman-decelerate","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
 {"at":"2026-07-29T12:28:30.383Z","slug":"2026-07-29-altman-decelerate","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
 {"at":"2026-07-29T12:33:27.495Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"45.6s Charon","usd":0.0114}
+{"at":"2026-07-29T16:41:17.268Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"43.7s Charon","usd":0.0109}
+{"at":"2026-07-29T16:42:59.870Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"49.5s Charon","usd":0.0124}
+{"at":"2026-07-29T16:44:17.812Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"47.1s Charon","usd":0.0118}
+{"at":"2026-07-29T16:45:42.265Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"46.5s Charon","usd":0.0116}
+{"at":"2026-07-29T16:46:28.837Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"48.6s Charon","usd":0.0121}
+{"at":"2026-07-29T16:48:46.312Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"48.1s Charon","usd":0.012}
+{"at":"2026-07-29T16:51:40.867Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"47.2s Charon","usd":0.0118}

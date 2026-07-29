@@ -159,7 +159,9 @@
         "visual": {
           "type": "photo",
           "query": "sam altman",
-          "alt": "Sam Altman, portrait en conférence"
+          "alt": "Sam Altman, portrait en conférence",
+          "file": "media/2026-07-29-altman-decelerate/photo_1.jpg",
+          "credit": "Steve Jurvetson · CC BY"
         }
       },
       {
@@ -174,8 +176,10 @@
         "script": "Altman parle du premier incident de sécurité qu'il ressent viscéralement. Donc il propose de ralentir, pour laisser au monde le temps de s'adapter.",
         "visual": {
           "type": "photo",
-          "query": "sam altman openai ceo",
-          "alt": "Sam Altman s'exprimant au micro"
+          "query": "sam altman event",
+          "alt": "Sam Altman à la table du Premier ministre britannique",
+          "file": "media/2026-07-29-altman-decelerate/photo_3.jpg",
+          "credit": "UK Prime Minister · CC BY"
         }
       },
       {

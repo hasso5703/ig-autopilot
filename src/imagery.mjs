@@ -287,7 +287,10 @@ async function normalise(inputPath, outputPath) {
     "scale='if(gt(a,1),min(1440,max(iw,1080)),-2)':'if(gt(a,1),-2,min(1800,max(ih,1350)))':flags=lanczos",
     "unsharp=5:5:0.35:3:3:0.2",
   ].join(",");
-  await ffmpeg(["-y", "-i", inputPath, "-vf", filters, "-q:v", "3", outputPath]);
+  // -frames:v 1 -update 1: some Commons JPEGs carry a second embedded image
+  // (thumbnail/MPO), and ffmpeg 6.1 refuses to write two frames to one output
+  // file ("Cannot write more than one file with the same name").
+  await ffmpeg(["-y", "-i", inputPath, "-vf", filters, "-frames:v", "1", "-update", "1", "-q:v", "3", outputPath]);
   await rm(inputPath, { force: true });
   const { size } = await stat(outputPath);
 
