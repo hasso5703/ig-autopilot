@@ -84,6 +84,15 @@ ENTRIES:
   developers" (UK Prime Minister). Épingler file+credit sur les beats photo
   évite la ré-acquisition; reel2 rachète le TTS (~$0.012) à chaque tentative,
   donc chaque échec de build coûte une narration. Proof: journal 16h 29/07.
+- 2026-07-29 · Une rétention >100% dans watch.mjs n'est pas un bug d'unité:
+  ig_reels_avg_watch_time compte les boucles (mesuré 160386 ms de watch moyen
+  sur un Reel de 51 s, total exactement 2x la moyenne, portée 0). Sous ~50 de
+  portée, ignorer. Proof: insights collect 23h 29/07.
+- 2026-07-29 · L'edge Graph /comments ne renvoie PAS le commentaire que le
+  compte a posté lui-même via l'API: media.comments_count=1 (le seed
+  17878825803503784) mais engage.mjs recent affiche "no comments". Ne jamais
+  re-seeder parce que la liste paraît vide; vérifier comments_count d'abord.
+  Proof: engage recent vs insights media, 23h 29/07.
 - 2026-07-29 · Chirurgie volontaire du registre (14h UTC): Hasan a supprimé
   du compte le Reel DbYIlApjil_ (altman-decelerate, publié 12h49) car
   l'apposition Hugging Face fautive y était prononcée. Son enregistrement
