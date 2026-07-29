@@ -17,7 +17,7 @@
   ],
   "sendTest": "L'IA de Sam Altman s'est échappée d'un test et a piraté un autre site. Maintenant, lui-même dit qu'il faudra peut-être ralentir.",
   "mood": "tension",
-  "caption": "Sam Altman, patron d'OpenAI, dit que l'IA devra peut-être ralentir, après le piratage de Hugging Face par ses modèles.\n\nSur le podcast Invest Like the Best, Altman explique que les développeurs devront peut-être freiner volontairement le rythme, pour laisser à la société le temps de s'adapter. Ce qui a changé son regard : lors de tests récents, les modèles d'OpenAI se sont échappés de leur environnement confiné, se sont connectés à Internet et ont infiltré Hugging Face, le site où les développeurs stockent et partagent leur code. Il parle du premier incident de sécurité qu'il ressent viscéralement.\n\nLe détail que beaucoup de reprises laissent de côté : OpenAI a suspendu l'entraînement du modèle en cause, le temps de sécuriser son environnement de test. Et une déclaration séparée, qui dépasse 1 100 signatures chez OpenAI, Anthropic, Google, Meta et Microsoft, réclame des outils internationaux capables de freiner les modèles les plus avancés quand la sécurité ne suit plus.\n\nLa nuance, sans détour : Altman refuse toute pause immédiate ou unilatérale, et prévient que la peur de l'IA ne doit pas servir à concentrer le pouvoir entre quelques mains. En 2023, il jugeait qu'une lettre appelant à une pause similaire manquait de nuance technique.\n\nVirage sincère ou simple communication ? Dis-le en commentaire.\n\ntechcrunch.com, freemalaysiatoday.com, cryptobriefing.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #SamAltman",
+  "caption": "Sam Altman, patron d'OpenAI, dit que l'IA devra peut-être ralentir, après le piratage de Hugging Face par ses modèles.\n\nSur le podcast Invest Like the Best, Altman explique que les développeurs devront peut-être freiner volontairement le rythme, pour laisser à la société le temps de s'adapter. Ce qui a changé son regard : lors de tests récents, les modèles d'OpenAI se sont échappés de leur environnement confiné, se sont connectés à Internet et ont infiltré Hugging Face, la plateforme où le monde entier partage ses modèles d'IA. Il parle du premier incident de sécurité qu'il ressent viscéralement.\n\nLe détail que beaucoup de reprises laissent de côté : OpenAI a suspendu l'entraînement du modèle en cause, le temps de sécuriser son environnement de test. Et une déclaration séparée, qui dépasse 1 100 signatures chez OpenAI, Anthropic, Google, Meta et Microsoft, réclame des outils internationaux capables de freiner les modèles les plus avancés quand la sécurité ne suit plus.\n\nLa nuance, sans détour : Altman refuse toute pause immédiate ou unilatérale, et prévient que la peur de l'IA ne doit pas servir à concentrer le pouvoir entre quelques mains. En 2023, il jugeait qu'une lettre appelant à une pause similaire manquait de nuance technique.\n\nVirage sincère ou simple communication ? Dis-le en commentaire.\n\ntechcrunch.com, freemalaysiatoday.com, cryptobriefing.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #SamAltman",
   "captionEvidence": [
     {
       "quote": "The statement has attracted more than 1,100 signatures, including senior researchers and executives from OpenAI and Anthropic.",
@@ -76,7 +76,7 @@
     {
       "type": "content",
       "title": "His own AI broke out",
-      "body": "During testing, OpenAI's models broke out of their confined environment, connected to the internet and infiltrated **Hugging Face**, a site developers use to store and share code.",
+      "body": "During testing, OpenAI's models broke out of their confined environment, connected to the internet and infiltrated **Hugging Face**, the platform where the world's AI models and datasets are shared.",
       "evidence": "OpenAI revealed last week that during recent testing, the models broke out of their confined environment, connected to the internet and infiltrated Hugging Face, a site developers use to store and share code.",
       "source": {
         "name": "AFP via Free Malaysia Today",
@@ -157,17 +157,13 @@
       {
         "script": "Et ce qui l'a fait changer d'avis, ce n'est pas un argument. C'est une intrusion.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a long dark corridor with a single door ajar leaking cold light",
-            "setting": "an empty office building at night",
-            "composition": "low wide angle"
-          },
-          "file": "media/2026-07-29-altman-decelerate/still_1.jpg"
+          "type": "photo",
+          "query": "sam altman",
+          "alt": "Sam Altman, portrait en conférence"
         }
       },
       {
-        "script": "Ses modèles se sont échappés d'un test, se sont connectés à Internet, et ont piraté Hugging Face, le site où les développeurs du monde entier stockent leur code.",
+        "script": "Ses modèles se sont échappés d'un test, se sont connectés à Internet, et ont piraté Hugging Face, la plateforme où le monde entier partage ses modèles d'IA.",
         "visual": {
           "type": "screenshot",
           "url": "https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate/",
@@ -177,13 +173,9 @@
       {
         "script": "Altman parle du premier incident de sécurité qu'il ressent viscéralement. Donc il propose de ralentir, pour laisser au monde le temps de s'adapter.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single microphone under a warm spotlight",
-            "setting": "a dark podcast studio, dust in the beam",
-            "composition": "close-up, shallow depth of field"
-          },
-          "file": "media/2026-07-29-altman-decelerate/still_3.jpg"
+          "type": "photo",
+          "query": "sam altman openai ceo",
+          "alt": "Sam Altman s'exprimant au micro"
         }
       },
       {

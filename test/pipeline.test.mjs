@@ -833,6 +833,36 @@ test("the hook card and the end-card ride above the karaoke", async () => {
   assert.ok(!/TITLE|ENDBIG|ENDFOLLOW/.test(plain.split("[Events]")[1]), "no opts, no fixed layers — old call sites unchanged");
 });
 
+test("the known-facts lint catches the Hugging Face incident, in both languages", async () => {
+  const { factIssues } = await import("../src/validate.mjs");
+  assert.ok(factIssues("il a piraté Hugging Face, le site où les développeurs du monde entier stockent leur code").length, "the exact published sentence is refused");
+  assert.ok(factIssues("Hugging Face, a site developers use to store and share code").length, "the English source phrasing is refused too");
+  assert.equal(factIssues("Hugging Face, la plateforme où le monde entier partage ses modèles d'IA").length, 0);
+  assert.ok(factIssues("Claude, le modèle d'OpenAI, progresse encore").length, "wrong maker is refused");
+  assert.ok(factIssues("OpenAI's Claude scored higher this week").length);
+  assert.equal(factIssues("Claude, le modèle d'Anthropic, progresse encore").length, 0);
+});
+
+test("reel2: photo beats validated, mood wallpaper capped at three stills", async () => {
+  const p = goodPost();
+  p.reel2 = goodReel2();
+  p.reel2.beats[1].visual = { type: "photo" };
+  assert.ok(hasErr(await errs(p), /photo beat needs a `query`/));
+  p.reel2.beats[1].visual = { type: "photo", query: "sam altman" };
+  assert.ok(!hasErr(await errs(p), /photo beat needs/));
+
+  const mk = (script) => ({ script, visual: { type: "image", spec: { subject: "a dim room", setting: "at night" } } });
+  p.reel2 = goodReel2();
+  p.reel2.beats = [
+    p.reel2.beats[0],
+    mk("Une salle sombre, encore."),
+    mk("Une autre salle sombre."),
+    mk("Toujours une salle sombre."),
+    { script: "Envoie ça à un ami.", visual: { type: "image", spec: { subject: "a phone face down", setting: "on a table" } } },
+  ];
+  assert.ok(hasErr(await errs(p), /ceiling is 3/), "four generated stills read as wallpaper");
+});
+
 test("retention is arithmetic in code, not a guess in a prompt", async () => {
   const { retentionPct } = await import("../src/watch.mjs");
   assert.equal(retentionPct(12000, 24), 50);

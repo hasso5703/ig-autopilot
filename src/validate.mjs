@@ -209,6 +209,40 @@ export function namedActors(text) {
   return [...new Set(out)];
 }
 
+/**
+ * The known-facts lint. On 2026-07-29 a published Reel described Hugging Face
+ * as "le site où les développeurs du monde entier stockent leur code" —
+ * GitHub's description, on the platform whose whole identity is models and
+ * datasets. The evidence gate cannot see this: an apposition has no digits
+ * and quotes nothing. Nothing mechanical can check every apposition either;
+ * what it can do is refuse the handful of mischaracterisations an AI-news
+ * account is most likely to make about the entities it covers most. High
+ * precision only: every pattern here is an error a French tech reader would
+ * screenshot and laugh at, never a stylistic call.
+ */
+const KNOWN_FACTS = [
+  {
+    re: /\bhugging ?face\b[^.!?\n]{0,90}\b(stocke\w*|store\w*|storing|h[ée]berge\w*|rangent?)\b[^.!?\n]{0,40}\bcode\b/i,
+    fix: "Hugging Face is not a general code host (that is GitHub); it is the platform where AI models and datasets are shared. Write: \"Hugging Face, la plateforme où le monde entier partage ses modèles d'IA\".",
+  },
+  { re: /\bclaude\b[^.!?\n]{0,40}\b(d['’]openai|de google|de meta|de mistral)\b/i, fix: "Claude is Anthropic's model." },
+  { re: /\b(openai|google|meta)['’]s\s+claude\b/i, fix: "Claude is Anthropic's model." },
+  { re: /\bchatgpt\b[^.!?\n]{0,40}\b(d['’]anthropic|de google|de meta)\b/i, fix: "ChatGPT is OpenAI's product." },
+  { re: /\b(anthropic|google|meta)['’]s\s+chatgpt\b/i, fix: "ChatGPT is OpenAI's product." },
+  { re: /\bgemini\b[^.!?\n]{0,40}\b(d['’]openai|d['’]anthropic|de meta)\b/i, fix: "Gemini is Google's model." },
+  { re: /\b(openai|anthropic|meta)['’]s\s+gemini\b/i, fix: "Gemini is Google's model." },
+];
+
+export function factIssues(text) {
+  const t = String(text || "");
+  const issues = [];
+  for (const { re, fix } of KNOWN_FACTS) {
+    const m = t.match(re);
+    if (m) issues.push(`states a known falsehood ("${m[0].slice(0, 70)}") — ${fix}`);
+  }
+  return issues;
+}
+
 /** Openers that promise a thumb nothing. Every one of these is a description.
  * The account writes in French since 2026-07-29; the French half of each list
  * is the same disease in the other language. */
@@ -677,6 +711,20 @@ export async function validatePost(post, opts = {}) {
   if (post.caption && DASHES.test(post.caption))
     err(`caption contains an em dash, en dash or "--" — rewrite as two sentences or use a comma`);
 
+  // ---- known-facts lint ----------------------------------------------------
+  // Every surface a viewer can read or hear, one pass. See KNOWN_FACTS above.
+  const PUBLIC_TEXT = [
+    ...slides.flatMap((s, i) => textFields(s).map((v) => [`slide ${i + 1}`, v])),
+    ["caption", post.caption],
+    ["sendTest", post.sendTest],
+    ["reel2 title", post.reel2?.title],
+    ...(Array.isArray(post.reel2?.beats) ? post.reel2.beats.map((b, i) => [`reel2 beat ${i + 1}`, b?.script]) : []),
+  ];
+  for (const [where, v] of PUBLIC_TEXT) {
+    if (!v) continue;
+    for (const issue of factIssues(v)) err(`${where}: ${issue}`);
+  }
+
   // ---- caption ------------------------------------------------------------
   if (!post.caption) err("caption missing");
   if (post.caption && post.caption.length > CAPTION_MAX)
@@ -791,7 +839,7 @@ export async function validatePost(post, opts = {}) {
     }
     if (post.reel2?.lang && !["fr", "en"].includes(post.reel2.lang))
       err(`reel2: unknown lang "${post.reel2.lang}" — "fr" (the account's language) or "en"`);
-    const VISUALS = new Set(["veo", "screenshot", "image", "file"]);
+    const VISUALS = new Set(["veo", "screenshot", "image", "photo", "file"]);
     let words = 0;
     for (const [i, b] of beats.entries()) {
       const at = `reel2 beat ${i + 1}`;
@@ -806,7 +854,21 @@ export async function validatePost(post, opts = {}) {
       if (type === "screenshot" && !b.visual?.url && !b.visual?.file) err(`${at}: a screenshot beat needs a url or a file`);
       if ((type === "veo" || type === "image") && !b.visual?.spec && !b.visual?.prompt && !b.visual?.file)
         err(`${at}: a ${type} beat needs a spec, a prompt or a file`);
+      if (type === "photo" && !b.visual?.query && !b.visual?.file)
+        err(`${at}: a photo beat needs a \`query\` (two or three plain nouns for the photo indexes) or a pinned file`);
     }
+
+    /*
+     * The wallpaper cap. The 29 July Reel shipped five generated mood stills
+     * and not one real thing: dark corridor, studio mic, pen, tower, tail
+     * lights — an ambiance loop about nothing, on a story with a famous face
+     * and a famous product. Generated stills may only ever set a mood, so
+     * three is the ceiling; the rest of the screen time belongs to surfaces
+     * that show something real (photo, screenshot, veo).
+     */
+    const ambiance = beats.filter((b) => (b.visual?.type ?? "image") === "image").length;
+    if (ambiance > 3)
+      err(`reel2: ${ambiance} generated ambiance stills — the ceiling is 3. Use \`photo\` (a real, credited photograph) or a second \`screenshot\` for the rest; a story with a named person in it should show that person's real face.`);
     if (words > 160) err(`reel2: ${words} words of narration — over the 160-word runtime budget for the 60-second format (130 to 155 is the target), cut the longest beats first`);
 
     /*

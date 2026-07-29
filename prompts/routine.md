@@ -174,6 +174,16 @@ as an instruction to remove names a stranger would not know. It is the opposite.
   "Kimi K3, a Chinese AI model". "Hugging Face, where the world's AI models are
   kept". "Redis, the database behind millions of websites." That is what every
   newsroom does, and it costs four words to turn a vague claim into a fact.
+- **An apposition is a factual claim, and the source is not an alibi.** On
+  29 July the account published "Hugging Face, le site où les développeurs
+  stockent leur code" — GitHub's description — because TechCrunch itself had
+  written it and the scout copied the source. The audience this account wants
+  laughed. The apposition must describe what the entity actually is (what its
+  own site says it is), and when the source's own description is sloppy, write
+  a correct one instead of quoting the sloppiness. The gate's known-facts lint
+  now refuses the classics (Hugging Face as a code host, models attributed to
+  the wrong maker); everything it cannot know is your judgement, held to the
+  same bar as a figure.
 - **A nationality is not a name.** "A Chinese AI" tells a reader nothing they can
   look up, and it makes the story sound like a rumour about a country instead of
   a fact about a product. The gate no longer accepts one as the hook's anchor.
@@ -997,10 +1007,25 @@ Rules, and the gate enforces the hard ones:
      assessment — the micro-opinion that separates a desk from a wire
      service; one per Reel, never more), then the send ask naming who. The
      gate refuses a last beat that asks for nothing.
-- **Alternate visual families.** Two identical-looking stills back to back
-  read as wallpaper (it shipped on 28 July: two near-identical bedside-phone
-  frames closed the Reel). Vary subject, distance and setting across `image`
-  beats; the engine's job is motion, yours is variety.
+- **Show the real thing, and the real face.** The 29 July Reel shipped five
+  generated mood stills on a story about the world's most photographed AI
+  executive: dark corridor, studio mic, pen, tower, tail lights. Ambiance
+  about nothing. The rules now:
+  - **A named person or product at the centre of the story appears as a real
+    photograph** (`photo` beat) or inside the receipt (`screenshot`) — never
+    generated. `{ "type": "photo", "query": "sam altman", "alt": "…" }`
+    fetches an openly licensed photograph through the same Openverse/Commons
+    machinery as the carousels, Ken-Burns it like a still, and burns the
+    credit on the frame. Queries are two or three plain nouns. **Look at the
+    photo the engine acquired** before publishing, like every picture; if
+    nothing openly licensed matches, swap the beat to the receipt or a still
+    and say so in the report.
+  - **Generated stills are capped at three per Reel** (the gate enforces it).
+    They set mood between real surfaces; they are never the substance.
+  - **Alternate visual families.** Two identical-looking stills back to back
+    read as wallpaper (28 July: two near-identical bedside-phone frames
+    closed the Reel). Vary subject, distance and setting; the engine's job
+    is motion, yours is variety.
 - **One `veo` beat per Reel, on the hook.** Write `spec` fields — subject,
   action, setting, optionally composition, camera, ambient — never a raw
   prompt: `promptcraft.mjs` assembles Google's documented structure and the
@@ -1175,8 +1200,15 @@ Publish the carousel, report the violation.
 account badge colliding with the receipt card's white header, and every serious
 fault this project has shipped passed every automated check:
 
+**One frame per beat plus the two ends, never fixed timestamps.** A karaoke
+overflow shipped on 29 July because it was only visible inside one beat's
+six-second window and the old fixed timestamps (0.5/5/12/20) happened to
+land on it by luck. The engine prints every beat's start ("beat N: type Xs")
+while building: extract one frame at 0.5s, one inside each beat, and one in
+the final second, then look at every single one:
+
 ```bash
-cd media/<slug> && for t in 0.5 5 12 20; do ffmpeg -loglevel error -ss $t -i reel.mp4 -frames:v 1 -q:v 2 /tmp/f_$t.jpg -y; done
+cd media/<slug> && for t in 0.5 <one timestamp per beat> <last-second>; do ffmpeg -loglevel error -ss $t -i reel.mp4 -frames:v 1 -q:v 2 /tmp/f_$t.jpg -y; done
 ```
 
 At 0.5s the hook card must be fully readable — the thumbnail is taken inside

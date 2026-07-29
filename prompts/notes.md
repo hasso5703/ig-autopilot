@@ -68,3 +68,11 @@ ENTRIES:
   commentaire + réponses via src/engage.mjs (dry-run par défaut);
   recordPosted accepte durationS pour la rétention du watch. Un spec anglais
   d'avant le pivot se réécrit en français puis se re-gate.
+- 2026-07-29 · Leçons du 1er Reel FR (DbYIlApjil_) : une apposition copiée
+  d'une source négligente (TechCrunch décrivant Hugging Face comme un dépôt
+  de code) a atteint la publication; le gate a maintenant un lint
+  known-facts qui refuse les classiques, et l'apposition se vérifie comme un
+  chiffre. Visuels : 5 stills d'ambiance = papier peint; plafond 3 stills,
+  type `photo` (vraies photos créditées Openverse/Commons) pour les
+  personnes et produits nommés. Frames : une par beat, jamais des timestamps
+  fixes.

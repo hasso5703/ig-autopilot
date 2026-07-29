@@ -45,6 +45,7 @@ import { ffmpeg, ffprobe } from "./ffmpeg.mjs";
 import { tts, genVideo, genImage, journal } from "./genmedia.mjs";
 import { veoPrompt, imagePrompt, promptIssues, MOODS } from "./promptcraft.mjs";
 import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
+import { acquireOne, creditLine } from "./imagery.mjs";
 
 const run = promisify(execFile);
 
@@ -348,6 +349,37 @@ async function segmentFromScreenshot(shot, dur, outFile) {
   ]);
 }
 
+/** A real photograph, panned like a still, with its credit burned small in
+ * the lower-left — above the platform's bottom UI band, below the karaoke.
+ *
+ * This type exists because of 2026-07-29: a Reel about Sam Altman shipped
+ * with five generated mood stills and never showed a single real thing or
+ * person. The account's rule stands — a generated picture may NEVER depict a
+ * real person — but the conclusion was never "no faces": it is real,
+ * openly-licensed photographs, credited, through the same Openverse/Commons
+ * machinery the carousels always had. The credit rides on the segment
+ * itself; a licence you cannot see is a licence you are not honouring. */
+async function segmentFromPhoto(img, dur, credit, outFile, workDir) {
+  const frames = Math.max(1, Math.round(dur * FPS));
+  const filters = [
+    `scale=${Math.round(W * 1.2)}:${Math.round(H * 1.2)}:force_original_aspect_ratio=increase,` +
+      `crop=${Math.round(W * 1.2)}:${Math.round(H * 1.2)},` +
+      `zoompan=z='1+0.07*on/${frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${frames}:s=${W}x${H}:fps=${FPS},setsar=1`,
+  ];
+  if (credit) {
+    const creditFile = path.join(workDir, `${path.basename(outFile, ".mp4")}.credit.txt`);
+    await writeFile(creditFile, credit);
+    filters.push(
+      `drawtext=fontfile=${path.join(FONT_DIR, "archivo-bold.ttf")}:textfile=${creditFile}:fontsize=26:fontcolor=white@0.72:x=48:y=${H - 400}:shadowcolor=black@0.7:shadowx=2:shadowy=2`
+    );
+  }
+  await ffmpeg([
+    "-y", "-loop", "1", "-i", img, "-t", String(dur),
+    "-vf", filters.join(","),
+    "-r", String(FPS), "-c:v", "libx264", "-preset", "fast", "-crf", "18", outFile,
+  ]);
+}
+
 /** The end-card: the brand's dark ground, silent; the ASS layer prints the
  * promise and the follow ask over it. Encoded with the same codec settings as
  * every other segment so the concat demuxer's `-c copy` stays valid. */
@@ -473,6 +505,20 @@ export async function buildReel(postFile, mediaDir) {
       const shot = beat.visual.file || path.join(mediaDir, `shot_${i}.png`);
       if (!beat.visual.file) await screenshot(beat.visual.url, shot);
       await segmentFromScreenshot(shot, dur, seg);
+    } else if (type === "photo") {
+      let file = beat.visual.file || null;
+      let credit = beat.visual.credit || null;
+      if (!file) {
+        const entry = await acquireOne(
+          { kind: "photo", query: beat.visual.query, alt: beat.visual.alt || "" },
+          { dir: mediaDir, name: `photo_${i}` }
+        );
+        file = path.resolve(process.cwd(), entry.file);
+        credit = creditLine(entry);
+        console.log(`photo ${i}: "${entry.title || beat.visual.query}" — ${credit}. LOOK at it before publishing.`);
+        await journal(`photo ${i} acquired: ${credit}`);
+      }
+      await segmentFromPhoto(file, dur, credit, seg, mediaDir);
     } else if (type === "file") {
       const src = beat.visual.file;
       if (/\.(mp4|mov|webm)$/i.test(src)) await segmentFromVideo(src, dur, seg);
