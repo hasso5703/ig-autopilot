@@ -76,6 +76,14 @@ ENTRIES:
   type `photo` (vraies photos créditées Openverse/Commons) pour les
   personnes et produits nommés. Frames : une par beat, jamais des timestamps
   fixes.
+- 2026-07-29 · Photo beats (16h): l'API Openverse peut répondre 503 quelques
+  minutes (curl direct répondait 200 pendant que le build échouait; réessayer,
+  pas déboguer). Le filtre fond-blanc rejette presque toutes les photos de
+  conférence d'Altman; deux photos CC BY sombres qui passent: "Sam Altman
+  speaking at TED" (Steve Jurvetson) et "The Prime Minister meets with AI
+  developers" (UK Prime Minister). Épingler file+credit sur les beats photo
+  évite la ré-acquisition; reel2 rachète le TTS (~$0.012) à chaque tentative,
+  donc chaque échec de build coûte une narration. Proof: journal 16h 29/07.
 - 2026-07-29 · Chirurgie volontaire du registre (14h UTC): Hasan a supprimé
   du compte le Reel DbYIlApjil_ (altman-decelerate, publié 12h49) car
   l'apposition Hugging Face fautive y était prononcée. Son enregistrement
