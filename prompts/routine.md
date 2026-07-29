@@ -40,7 +40,7 @@ What that means in practice:
 
 ## What a run is, and why
 
-**Four runs a day. One Reel a day. The 15:00 run publishes it.** This replaced
+**Four runs a day. One Reel a day. The 16:30 run publishes it.** This replaced
 "one Reel per run" on 2026-07-27, and the reasons are measured, not stylistic:
 
 - Our own account's audition record: views per successive Reel ran **161 → 67 →
@@ -62,12 +62,12 @@ So the day has one shape, and each slot knows its job:
 
 | slot (UTC) | job |
 |---|---|
-| **06:00, 10:00** | **Scout.** Gather, verify, and leave the day's best candidate ready: a gate-clean post spec **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Publish nothing. Spend nothing on media. |
-| **15:00** | **Publish — if and only if the day has no Reel yet** (check `state/posted.jsonl` first; a hand-launched run may already have used the day's slot). Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **the Reel and nothing else**, then seed the first comment (step 10b). If the day's Reel exists, you are a scout: prepare tomorrow. 15:00 UTC is 17h in Paris — the audience is French now, and the measured French engagement window runs 17h–21h with its peak at 18h–19h. (Moving this slot to 16:00 UTC to sit on the 18h peak is Hasan's call, not a run's.) |
-| **19:00** | **Catch-up, read, and answer.** If the day already has its Reel: collect metrics, read what worked, **reply to every comment worth replying to on recent posts (step 10b)** — 21h Paris is the evening scroll, and reply speed while a post is still distributing is measured leverage — then prepare tomorrow, publish nothing. If the day has none (the 15:00 run found nothing or died): this run may publish, same rules. |
+| **06:30, 10:30** | **Scout.** Gather, verify, and leave the day's best candidate ready: a gate-clean post spec **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Publish nothing. Spend nothing on media. |
+| **16:30** | **Publish — if and only if the day has no Reel yet** (check `state/posted.jsonl` first; a hand-launched run may already have used the day's slot). Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **the Reel and nothing else**, then seed the first comment (step 10b). If the day's Reel exists, you are a scout: prepare tomorrow. 16:30 UTC is 18h30 in Paris: inside the measured French engagement peak (18h–19h), the same anchor HugoDécrypte publishes into. Moved from 15:00 on 2026-07-29 (Hasan's call), which also keeps every slot clear of the account's daily quota-reset window. |
+| **19:30** | **Catch-up, read, and answer.** If the day already has its Reel: collect metrics, read what worked, **reply to every comment worth replying to on recent posts (step 10b)** — 21h Paris is the evening scroll, and reply speed while a post is still distributing is measured leverage — then prepare tomorrow, publish nothing. If the day has none (the 16:30 run found nothing or died): this run may publish, same rules. |
 
 A scout run that finds a story *bigger than anything the account has covered*
-still waits for the publish slot: four hours of freshness cost less than a Reel
+still waits for the publish slot: a few hours of freshness cost less than a Reel
 launched into a dead audience window.
 
 **Carousels are retired (2026-07-28), and this was measured, not decided on
@@ -349,7 +349,7 @@ by inference. Prune journal files older than 14 days when you add one.
 **`GEMINI_API_KEY` is the paid-media key** — Veo clips, Nano Banana stills and
 the narration voice all come through it, and every purchase is priced into
 `state/spend.jsonl` as it happens. A scout run works without it. A publishing
-run does not: if it is missing at 15:00, say so as the headline finding and
+run does not: if it is missing at publish time, say so as the headline finding and
 publish nothing, because a Reel built without its voice and pictures is not a
 fallback, it is the old dead format.
 
@@ -366,7 +366,7 @@ before that carries a stale pointer. Read the commit message before you
 reconcile anything: restoring a record for a post nobody can see would re-arm the
 gap guard against a ghost and re-block the stories that record had considered.
 
-**A run that starts outside 06:00, 10:00, 15:00 or 19:00 UTC is probably a human
+**A run that starts outside 06:30, 10:30, 16:30 or 19:30 UTC is probably a human
 launching it by hand**, which happens whenever something has just been fixed and
 is worth testing before the next slot. It is not a misfire, and the gap guard is
 still the thing that decides whether you may publish. Report the off-slot start
@@ -448,7 +448,7 @@ different outlet. Do not second-guess it.
 ```bash
 node src/insights.mjs collect >/dev/null && node src/insights.mjs latest
 ```
-**Collect first, then read.** `oom-watch` writes readings once a day at 15:30
+**Collect first, then read.** `oom-watch` writes readings once a day at 17:30
 UTC, and three of the four runs sit on the wrong side of that: the 15:06 run
 read `[]` and reported honestly that it had no signal, half an hour before the
 watch wrote the first numbers this account has ever had. Collecting costs one
