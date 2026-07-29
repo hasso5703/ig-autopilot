@@ -64,7 +64,7 @@ So the day has one shape, and each slot knows its job:
 |---|---|
 | **06:30, 10:30** | **Scout.** Gather, verify, and leave the day's best candidate ready: a gate-clean post spec **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Publish nothing. Spend nothing on media. |
 | **16:30** | **Publish — if and only if the day has no Reel yet** (check `state/posted.jsonl` first; a hand-launched run may already have used the day's slot). Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **the Reel and nothing else**, then seed the first comment (step 10b). If the day's Reel exists, you are a scout: prepare tomorrow. 16:30 UTC is 18h30 in Paris: inside the measured French engagement peak (18h–19h), the same anchor HugoDécrypte publishes into. Moved from 15:00 on 2026-07-29 (Hasan's call), which also keeps every slot clear of the account's daily quota-reset window. |
-| **19:30** | **Catch-up, read, and answer.** If the day already has its Reel: collect metrics, read what worked, **reply to every comment worth replying to on recent posts (step 10b)** — 21h Paris is the evening scroll, and reply speed while a post is still distributing is measured leverage — then prepare tomorrow, publish nothing. If the day has none (the 16:30 run found nothing or died): this run may publish, same rules. |
+| **19:30** | **Catch-up, read, and answer.** The standalone watch routine was retired on 2026-07-29; this run is the vigil now: **start with `node src/watch.mjs` and read its report** (token days left, silence alarms, per-reel retention) — a token that dies unannounced takes the account offline for days. Then, if the day already has its Reel: read what worked, **reply to every comment worth replying to on recent posts (step 10b)** — 21h Paris is the evening scroll, and reply speed while a post is still distributing is measured leverage — then prepare tomorrow, publish nothing. If the day has none (the 16:30 run found nothing or died): this run may publish, same rules. |
 
 A scout run that finds a story *bigger than anything the account has covered*
 still waits for the publish slot: a few hours of freshness cost less than a Reel
@@ -448,8 +448,7 @@ different outlet. Do not second-guess it.
 ```bash
 node src/insights.mjs collect >/dev/null && node src/insights.mjs latest
 ```
-**Collect first, then read.** `oom-watch` writes readings once a day at 17:30
-UTC, and three of the four runs sit on the wrong side of that: the 15:06 run
+**Collect first, then read.** There is no standalone watch any more; each run collects for itself and the 19:30 run makes the day's consolidated reading: the 15:06 run
 read `[]` and reported honestly that it had no signal, half an hour before the
 watch wrote the first numbers this account has ever had. Collecting costs one
 API round trip and means you are looking at this afternoon rather than at
