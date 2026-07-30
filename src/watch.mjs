@@ -187,7 +187,9 @@ export function format(report) {
   for (const p of posts) {
     L.push(`  ${p.slug}`);
     L.push(`    portée ${n(p.reach)} · partages ${n(p.shares)} · saves ${n(p.saved)} · vues ${n(p.views)} · abonnés gagnés ${n(p.follows)}`);
-    if (p.retention !== null) L.push(`    rétention ${p.retention}% (watch moyen ${n(p.avgWatchS)}s) — sous 40% le hook ou la longueur est en cause`);
+    if (p.retention !== null) L.push(p.retention > 100
+      ? `    rétention ${p.retention}% (watch moyen ${n(p.avgWatchS)}s) — au-delà de 100 ce sont des boucles comptées, pas un bug`
+      : `    rétention ${p.retention}% (watch moyen ${n(p.avgWatchS)}s) — sous 40% le hook ou la longueur est en cause`);
     if (p.error) L.push(`    stats indisponibles : ${p.error.message}`);
   }
 

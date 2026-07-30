@@ -1260,7 +1260,10 @@ to post; if the API answers with a permission error, the token lacks the
 comments scope — report it as a finding and move on):
 
 - **The publish run seeds the first comment**, right after step 9's record
-  lands. One comment, in French, under the account's own Reel: the sharp
+  lands. `engage.mjs` refuses to seed a media the ledger
+  (`state/engagement.jsonl`) already shows seeded — the Graph /comments edge
+  does not return the account's own comments, so the ledger is the only
+  memory that prevents a double seed. One comment, in French, under the account's own Reel: the sharp
   one-line take that did not belong in the caption, or the question restated
   with an angle. This is also the one surface allowed to carry tomorrow:
   "L'actu IA de demain arrive. Dis-moi en commentaire si tu veux la suite

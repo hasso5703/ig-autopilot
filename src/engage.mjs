@@ -37,6 +37,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
+const LEDGER = path.join(ROOT, "state", "engagement.jsonl");
 const API = "https://graph.instagram.com";
 const VERSION = process.env.IG_API_VERSION || "v25.0";
 
@@ -72,6 +73,22 @@ async function call(method, pathname, params = {}) {
     );
   }
   return json;
+}
+
+/** The Graph /comments edge does not return comments the account itself
+ * wrote (measured 2026-07-30): a run checking "did I already seed?" through
+ * the API sees nothing and seeds twice. This ledger is the only reliable
+ * memory of what the account said, so every live write lands here. */
+export function alreadySeeded(rows, mediaId) {
+  return rows.some((r) => r.kind === "comment" && r.target === mediaId);
+}
+
+export async function readLedger() {
+  try {
+    return (await readFile(LEDGER, "utf8")).split("\n").filter(Boolean).map((l) => JSON.parse(l));
+  } catch {
+    return [];
+  }
 }
 
 /** The most recent posted entries that actually carry a mediaId — the ledger
@@ -140,14 +157,20 @@ if (invokedDirectly) {
       if (!a || !b) usage();
       const issues = commentTextIssues(b);
       if (issues.length) throw new Error(`refused: ${issues.join("; ")}`);
-      const target = cmd === "comment" ? `${await resolveMediaId(a)}/comments` : `${a}/replies`;
+      const resolved = cmd === "comment" ? await resolveMediaId(a) : a;
+      const target = cmd === "comment" ? `${resolved}/comments` : `${resolved}/replies`;
+      if (cmd === "comment" && alreadySeeded(await readLedger(), resolved)) {
+        console.log(`refused: the ledger says media ${resolved} already carries a seeded comment — the /comments edge would not show it, but we remember.`);
+        return;
+      }
       if (!live) {
         console.log(`DRY RUN — would POST ${target}:\n  ${b}\nRe-run with --live to post it.`);
         return;
       }
       const r = await call("POST", target, { message: b });
       console.log(`posted: ${r.id}`);
-      await journal(`engage: ${cmd} on ${a} -> ${r.id}`);
+      await appendFile(LEDGER, JSON.stringify({ at: new Date().toISOString(), kind: cmd, target: resolved, id: r.id, text: b.slice(0, 300) }) + "\n").catch(() => {});
+      await journal(`engage: ${cmd} on ${resolved} -> ${r.id}`);
       return;
     }
     usage();

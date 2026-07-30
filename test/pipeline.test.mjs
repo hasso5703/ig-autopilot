@@ -872,6 +872,26 @@ test("retention is arithmetic in code, not a guess in a prompt", async () => {
   assert.equal(retentionPct(12000, 0), null);
 });
 
+test("the seed ledger closes the /comments blind spot", async () => {
+  const { alreadySeeded } = await import("../src/engage.mjs");
+  const rows = [{ kind: "comment", target: "111", id: "c1" }, { kind: "reply", target: "222", id: "c2" }];
+  assert.ok(alreadySeeded(rows, "111"), "a seeded media is remembered even though the API would show nothing");
+  assert.ok(!alreadySeeded(rows, "222"), "a reply is not a seed");
+  assert.ok(!alreadySeeded([], "111"));
+});
+
+test("the closing-slide ask speaks French since the pivot", async () => {
+  const p = goodPost();
+  p.slides.at(-1).headline = "Envoie ça à quelqu'un qui fait confiance aux chatbots";
+  p.slides.at(-1).sub = "Une info par jour, sans le bruit.";
+  const r = await validatePost(p, { online: false });
+  assert.ok(!r.warnings.some((w) => /asks for nothing/.test(w)), "a French send ask is an ask:\n" + r.warnings.join("\n"));
+  p.slides.at(-1).headline = "Voilà pour aujourd'hui";
+  p.slides.at(-1).sub = "À bientôt.";
+  const r2 = await validatePost(p, { online: false });
+  assert.ok(r2.warnings.some((w) => /asks for nothing/.test(w)), "a close that asks nothing still warns");
+});
+
 test("engagement helpers: only real published media, only real comments", async () => {
   const { recentPublished, commentTextIssues } = await import("../src/engage.mjs");
   const posted = [

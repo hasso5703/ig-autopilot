@@ -691,7 +691,7 @@ export async function validatePost(post, opts = {}) {
   const cta = slides.at(-1);
   if (cta?.type === "cta") {
     const asked = `${cta.headline || ""} ${cta.sub || ""}`;
-    if (!/\b(send|share|save|show|forward|tag|follow)\b/i.test(asked))
+    if (!/\b(send|share|save|show|forward|tag|follow|envoie[sz]?|partage[sz]?|montre[sz]?|transf[èe]re[sz]?|pr[ée]viens|pr[ée]venez|enregistre[sz]?|abonne)\b/i.test(asked))
       nag('the closing slide asks for nothing. Name one action a stranger can take, and prefer sending it to someone over a like: "Send this to anyone who…".');
   }
 
