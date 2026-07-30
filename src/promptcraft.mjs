@@ -78,12 +78,17 @@ export function veoPrompt({
   if (!subject || !action || !setting) throw new Error("veoPrompt needs subject, action and setting");
   const m = MOODS[mood] || MOODS.steady;
   const audio = [`Ambient sound: ${ambient}`, sfx && `Sound effect: ${sfx}`].filter(Boolean).join(". ");
+  // Exclusions are phrased descriptively, per Google's own guidance ("describe
+  // what you don't want to see" rather than instructive "no X"), and quotation
+  // marks never appear in a built prompt: the Cloud best-practices doc warns
+  // they can make the model render the words as on-screen text.
   return (
     `${composition} of ${subject} ${action}, ${setting}. ` +
-    `One clear subject in frame, simple deliberate motion. ` +
+    `One clear subject, a single continuous moment, simple deliberate motion. ` +
     `Cinematic, photorealistic, ${m.world}. ${m.light}. ` +
     `${camera}, ${lens}. Vertical 9:16 composition. ` +
-    `${audio}. No speech, no dialogue. ${NO_TEXT_RULE}`
+    `${audio}. The scene is silent apart from that ambient sound; nobody speaks. ` +
+    `Every visible surface and screen is clean, unbranded and free of readable lettering.`
   );
 }
 
@@ -129,11 +134,14 @@ export function promptIssues(prompt, { forbidNames = [] } = {}) {
 
 /**
  * The artifact multipliers. The 29 July Reel opened on "dense night highway
- * traffic, rows of red brake lights": dozens of small moving objects, which
- * is exactly where video models fall apart — malformed cars, traffic driving
- * both ways, and a viewer who clocks "AI slop" in half a second. Google's
- * own guidance favours one subject, close framing, simple motion. Anything
- * matching here is refused before a cent is spent.
+ * traffic, rows of red brake lights": dozens of small moving objects, and
+ * the published result had malformed cars driving both ways — clocked as AI
+ * slop by the account's own owner in half a second. Google's docs publish no
+ * artifact list; what they do say all points one way (dedicate each clip to
+ * a single focused moment; subtle actions are the reliable ones; camera
+ * motion is "the simplest and most reliable way to add dynamism"). The ban
+ * below is this account's own measured rule on top of that guidance, and it
+ * is refused before a cent is spent.
  */
 const COMPLEXITY = /\b(traffic|highway|freeway|motorway|crowds?|crowded|dozens|hundreds|rows? of|line of|swarm|flock|many (people|cars|vehicles|hands)|busy street|time-?lapse)\b/i;
 
@@ -156,7 +164,7 @@ export const EXAMPLES = {
     setting: "in a bright modern office corridor",
     mood: "tension",
     composition: "close-up",
-    camera: "slow push-in",
+    camera: "slow dolly-in",
     ambient: "quiet corridor tone, one soft mechanical clunk",
   }),
   image: imagePrompt({

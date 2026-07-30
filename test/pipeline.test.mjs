@@ -678,8 +678,10 @@ test("promptcraft: the mood decides the light, and the refusals refuse", async (
   const { veoPrompt, imagePrompt, promptIssues, MOODS } = await import("../src/promptcraft.mjs");
   const p = veoPrompt({ subject: "a person", action: "typing", setting: "in a dark office", mood: "tension" });
   assert.ok(p.includes(MOODS.tension.light), "the mood's light phrase reaches the prompt");
-  assert.ok(/No readable text/.test(p), "the no-text rule is always present");
-  assert.ok(/No speech, no dialogue/.test(p), "Veo must not talk under the narration");
+  // Exclusions moved to descriptive phrasing on 2026-07-30, per Google's own
+  // guide (avoid instructive "no X"); the intent is unchanged and asserted.
+  assert.ok(/free of readable lettering/.test(p), "the no-lettering rule is always present");
+  assert.ok(/nobody speaks/.test(p), "Veo must not talk under the narration");
   const i = imagePrompt({ subject: "hands", setting: "a desk", mood: "wonder" });
   assert.ok(i.includes(MOODS.wonder.light));
   assert.deepEqual(promptIssues("a quiet street at night"), []);
