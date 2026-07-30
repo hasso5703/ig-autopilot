@@ -69,25 +69,25 @@
       "accent": "#4DE1FF",
       "accentInk": "#04121A",
       "why": "the house colour, cold and neutral",
-      "light": "cold cyan light and near-black shadow"
+      "light": "soft even daylight through large windows, neutral white balance"
     },
     "tension": {
       "accent": "#FF8A3D",
       "accentInk": "#1C0B02",
       "why": "amber: something broke, or someone was hurt",
-      "light": "warm amber light against deep shadow"
+      "light": "crisp morning light with sharp clean shadows, high contrast"
     },
     "drive": {
       "accent": "#7CF08D",
       "accentInk": "#03190A",
       "why": "green: money moving, scale, adoption",
-      "light": "clean green-white light on steel"
+      "light": "bright industrial daylight on glass and steel"
     },
     "wonder": {
       "accent": "#C79BFF",
       "accentInk": "#150726",
       "why": "violet: something became possible that was not",
-      "light": "violet dusk light and soft haze"
+      "light": "clear golden-hour light under an open sky"
     }
   }
 }

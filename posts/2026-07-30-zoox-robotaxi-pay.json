@@ -1,0 +1,207 @@
+{
+  "slug": "2026-07-30-zoox-robotaxi-pay",
+  "centralClaim": "Federal regulators have granted Zoox, Amazon's driverless robotaxi company, an exemption that lets it charge passengers for rides, starting next month in Las Vegas.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/",
+      "quote": "Federal safety regulators have given Zoox a temporary exemption that will allow the Amazon-owned autonomous vehicle technology company to charge customers for rides in its custom-built robotaxi."
+    },
+    {
+      "url": "https://www.cnbc.com/2026/07/30/amazon-zoox-robotaxi-rides-las-vegas.html",
+      "quote": "Amazon-owned Zoox will soon begin charging for robotaxi rides after the National Highway Traffic Safety Administration issued it a temporary exemption."
+    }
+  ],
+  "sendTest": "À Las Vegas, tu vas bientôt pouvoir monter dans un taxi sans volant, ni pédales, ni chauffeur, et payer la course.",
+  "mood": "drive",
+  "caption": "Amazon peut désormais faire payer les courses de son robotaxi Zoox, sans volant ni pédales.\n\nLes régulateurs fédéraux américains viennent d'accorder à Zoox une exemption inédite : le droit de facturer les trajets de son robotaxi, un véhicule sans volant ni pédales. La flotte reste plafonnée à 2 500 véhicules par an, pendant deux ans, sous surveillance renforcée. Les paiements démarrent le mois prochain, à Las Vegas.\n\nLe détail qui ne tient pas dans la vidéo : Zoox transportait déjà des passagers, gratuitement, depuis près d'un an dans plusieurs villes américaines, sans avoir le droit de leur faire payer la course.\n\nLa nuance, sans détour : en Californie, où l'entreprise est née, Zoox doit encore obtenir les permis de l'État avant de pouvoir facturer qui que ce soit.\n\nTu monterais dans une voiture sans volant, toi, oui ou non ?\n\ntechcrunch.com, cnbc.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Amazon #Robotaxi",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "30 July 2026 · NHTSA",
+      "headline": "Amazon's robotaxi with no steering wheel can now charge fares",
+      "hero": {
+        "value": "2,500",
+        "label": "robotaxis a year, the new federal cap"
+      },
+      "swipe": "How the deal works",
+      "image": {
+        "kind": "photo",
+        "query": "Zoox robotaxi",
+        "alt": "a Zoox robotaxi without a steering wheel"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "2,500",
+      "unit": "robotaxis a year, capped for two years",
+      "body": "Federal regulators are letting Zoox charge for rides, but capping its fleet at **2,500** vehicles a year, for two years, under enhanced oversight.",
+      "evidence": "It limits Zoox's commercial fleet up to 2,500 vehicles annually for two years.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/",
+        "date": "2026-07-30"
+      },
+      "image": {
+        "kind": "photo",
+        "query": "parking garage daytime",
+        "alt": "a bright parking garage"
+      }
+    },
+    {
+      "type": "content",
+      "title": "A year of free rides first",
+      "body": "Zoox has been carrying passengers in cities like San Francisco and Las Vegas for almost a year, for free. It just was not allowed to charge them anything.",
+      "evidence": "Nearly a year ago, the NHTSA gave Zoox an exemption that allowed it to demonstrate its robotaxis on public roads, and even give rides to passengers in cities like San Francisco and Las Vegas. But the company couldn’t charge customers for those rides.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/",
+        "date": "2026-07-30"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "photograph of a hand signing an official document at a bright wooden desk, bright industrial daylight through a window, shallow depth of field, no text, no people",
+        "alt": "a hand signing a document"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Also this week",
+      "body": "The same day, the agency said it is putting **$5 million** toward new safety standards shared across every self-driving car maker.",
+      "evidence": "The agency also said it was partnering with SAE Industry Technologies Consortia, which will fund a three-year, $5 million consortium to gather data and accelerate creation of AV performance standards.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/",
+        "date": "2026-07-30"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "photograph of a stack of official documents tied with string on a bright desk, bright industrial daylight, shallow depth of field, no text, no people",
+        "alt": "a stack of official documents"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Zoox calls it the first-ever commercial exemption for a purpose-built robotaxi",
+      "caveat": "In its home state of California, Zoox still needs state permits before it can charge anyone",
+      "claimLabel": "Zoox",
+      "caveatLabel": "Still pending",
+      "evidence": "In California, where Zoox is headquartered, tests its AVs, and provides passengers with free rides, the company still needs driverless deployment permits from the state Public Utilities Commission and the Department of Motor Vehicles.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/",
+        "date": "2026-07-30"
+      },
+      "image": {
+        "kind": "photo",
+        "query": "san francisco street",
+        "alt": "a street in San Francisco, where Zoox is based"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "We are honored to receive the first-ever commercial exemption for a purpose-built robotaxi from NHTSA, enabling us to begin charging for our service and take another step toward bringing autonomous ride-hailing to more communities.",
+      "attribution": "Aicha Evans, Zoox CEO",
+      "evidence": "We are honored to receive the first-ever commercial exemption for a purpose-built robotaxi from NHTSA, enabling us to begin charging for our service and take another step toward bringing autonomous ride-hailing to more communities,” Evans said in a statement.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/",
+        "date": "2026-07-30"
+      },
+      "image": {
+        "kind": "illustration",
+        "prompt": "photograph of a bright modern office corridor with glass walls in bright industrial daylight, no text, no people",
+        "alt": "a bright glass office corridor"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Send this to the friend who refuses to give up the wheel",
+      "sub": "AI news that names names.",
+      "image": {
+        "kind": "illustration",
+        "prompt": "photograph of a car door handle catching bright industrial daylight, close-up, shallow depth of field, no text, no people",
+        "alt": "a car door handle in daylight"
+      }
+    }
+  ],
+  "reel2": {
+    "voice": "Charon",
+    "mood": "drive",
+    "lang": "fr",
+    "title": "Amazon peut enfin faire payer son robotaxi",
+    "beats": [
+      {
+        "script": "Amazon peut désormais faire payer les courses de Zoox, sa voiture-robot sans volant ni pédales. Une première aux États-Unis.",
+        "visual": {
+          "type": "photo",
+          "query": "Zoox robotaxi",
+          "alt": "un robotaxi Zoox sans volant"
+        }
+      },
+      {
+        "script": "Et ce feu vert fédéral n'était pas gagné d'avance.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a hand signing an official document",
+            "setting": "at a bright wooden desk near a window",
+            "composition": "close-up"
+          }
+        }
+      },
+      {
+        "script": "Zoox transportait déjà des passagers gratuitement depuis un an, mais sans le droit de les faire payer.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/"
+        }
+      },
+      {
+        "script": "Les régulateurs fédéraux lèvent l'interdiction, mais limitent sa flotte à 2 500 véhicules par an, pendant deux ans, sous surveillance renforcée.",
+        "visual": {
+          "type": "photo",
+          "query": "parking garage daytime",
+          "alt": "un parking en pleine journée"
+        }
+      },
+      {
+        "script": "Sa patronne, Aicha Evans, parle de la toute première exemption commerciale jamais accordée à un robotaxi sans volant.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.cnbc.com/2026/07/30/amazon-zoox-robotaxi-rides-las-vegas.html"
+        }
+      },
+      {
+        "script": "En Californie, où Zoox est né, il faut donc encore attendre les permis de l'État avant de faire payer qui que ce soit.",
+        "visual": {
+          "type": "photo",
+          "query": "san francisco street",
+          "alt": "une rue de San Francisco"
+        }
+      },
+      {
+        "script": "La même semaine, Washington annonce 5 millions de dollars pour créer des normes de sécurité communes à toutes les voitures autonomes. Envoie ça à ton pote qui refuse de lâcher le volant.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a stack of official documents tied with string",
+            "setting": "on a bright desk near a window",
+            "composition": "close-up"
+          }
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/",
+      "accessed": "2026-07-30"
+    },
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/30/amazon-zoox-robotaxi-rides-las-vegas.html",
+      "accessed": "2026-07-30"
+    }
+  ]
+}

@@ -43,9 +43,12 @@ ENTRIES:
   the engine appends spend/beat/verdict lines itself. Commit the journal
   before every purchase and publish, so a quota death leaves the receipts.
 - 2026-07-28 · techcrunch.com and prnewswire.com answer 503 to the session's
-  WebFetch tool but 200 to curl with a browser UA; the gate's own fetcher is
-  unaffected (quotes VERIFIED same day). Read articles via curl. Proof: 10h
-  scout 28/07.
+  WebFetch tool but 200 to curl with a browser UA. Read articles via curl.
+  Correction 30/07: validate.mjs's own Node fetch can ALSO 503 techcrunch.com
+  intermittently even though curl succeeds at the same moment (seen 3x in
+  ~20s); its built-in 2-retry backoff was not always enough. Just rerun
+  `node src/validate.mjs` after a short wait, it passes. Proof: 10h scout
+  28/07, 16h scout 30/07.
 - 2026-07-28 · Outlets edit articles after publication: TechCrunch changed
   "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
   Re-run validate.mjs on any stored spec before building from it; re-copy the
@@ -117,4 +120,9 @@ ENTRIES:
   = slop reconnu en 0,3 s); simplicityIssues refuse foules, trafic et
   rangées avant tout achat, au gate comme au moteur. Les prompts
   d'illustration des slides écrits avant ce jour portent l'ancienne lumière:
-  le warning du gate est attendu, pas bloquant.
+  le warning du gate est attendu, pas bloquant. Correction 30/07 apres midi:
+  brand.json/palettes.*.light n'avait pas ete resynchronise avec ce commit
+  (seul promptcraft.mjs MOODS l'etait), d'ou le warning meme sur des prompts
+  neufs; corrige (les deux fichiers portent la meme lumiere). brand.json.light
+  n'est lu que par le nag de validate.mjs, jamais par render.mjs/template.mjs
+  qui n'utilisent que .accent, donc l'edition etait sans risque.
