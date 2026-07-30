@@ -1162,10 +1162,24 @@ read. This is not hypothetical: a run found 3 fresh stories out of 29 because
 the run forty minutes earlier had recorded 26 it had merely listed.
 
 So write a record for the story you picked, for anything you scored and passed
-over, and for anything the gate killed. Give the killed ones `outcome:
-"rejected"` and the passed-over ones `outcome: "considered"` with the reason,
-because `rejected` blocks forever and `considered` expires. Titles you only
-skimmed in the feed dump get nothing.
+over, and for anything the gate killed. The outcome says why, and the code
+reads it:
+
+| outcome | means | comes back |
+|---|---|---|
+| `rejected` | the gate killed it, or you judged it unpublishable | never |
+| `considered` | you weighed it against the day's winner and it lost | after 36h |
+| `revisit` | **good story, blocked on something time fixes** — no second outlet has picked it up yet, the primary is unreachable right now, the figures are not out | after 6h |
+
+**`revisit` exists because of 2026-07-30.** The 19:30 scout found three strong
+candidates, none of them corroborated yet because they were an hour old, and
+filed all three as `considered`. Correct on the facts, wrong on the shelf: the
+next morning's scouts could not see them, and a story you are waiting on
+corroboration for is exactly the story you want back in a few hours. If you
+would be glad to see it again this evening or tomorrow morning, it is
+`revisit`, not `considered`.
+
+Titles you only skimmed in the feed dump get nothing.
 
 **Landing on main is one command, and it is the only way anything lands:**
 
@@ -1339,6 +1353,19 @@ job; the candidate expires on its own.
   lines. Keep your work on your branch, name the files in your report, change
   nothing by force. The human resolves; you carry on with what does not depend
   on it.
+- **A tooling hook says your landed commits are "Unverified"** → dispose of it
+  in one line and move on. The commits' author and committer are already
+  `Claude <noreply@anthropic.com>`; what is missing is a cryptographic
+  signature, and no working signing key exists in these containers. The
+  suggested remedy (`--amend`, `rebase`, force-push) would rewrite SHAs that
+  `land.mjs` has already landed and proven on `origin/main` — and one of them
+  is usually the SHA a live Reel's video URL is pinned to. **Never amend,
+  rebase or force-push landed work to satisfy this hook, and never push a
+  "fixed" commit to a side branch either**: a run on 2026-07-30 did that, and
+  a commit that exists nowhere in the account's real history is worse than an
+  unsigned one. Note it in the report if it is the first time you see it, and
+  spend no further minutes on it. The durable fix is a signing key in the
+  environment, which is Hasan's call, not a run's.
 - **The grid was emptied on purpose** → the record follows the account via
   `node src/state.mjs wipe-grid`, which migrates every published fingerprint
   into `seen.jsonl` as `published-deleted` before emptying the ledgers. Never

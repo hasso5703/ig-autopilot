@@ -117,6 +117,26 @@ export async function loadState() {
  * sources carry a four-day freshness window of their own.
  */
 const CONSIDERED_TTL_MS = 36 * 3600 * 1000;
+
+/*
+ * `revisit`: a good story the run could not publish YET, not one it judged
+ * and passed over.
+ *
+ * On 2026-07-30 the 19:30 scout found three genuinely strong candidates
+ * (LinkedIn's report-AI-slop button, Chrome fixing 1,072 bugs in a month,
+ * a self-replicating prompt-injection worm in Copilot) and recorded all three
+ * `considered` because they were one to two hours old and no second outlet
+ * had picked them up yet. Correct call on the corroboration, wrong shelf:
+ * 36 hours hides them from the next morning's scouts, and by the time they
+ * reappear the second sources they were waiting for have made them ordinary.
+ *
+ * So the outcome now says WHY a story was left: `considered` means weighed
+ * and beaten, `revisit` means blocked on something that resolves with time —
+ * usually corroboration that has not been published yet. Six hours is one
+ * news cycle: long enough that the same run's siblings do not re-litigate it,
+ * short enough that the next slot sees it while it is still today's story.
+ */
+const REVISIT_TTL_MS = 6 * 3600 * 1000;
 // `published-deleted`: the story went out, a human wiped the grid, and nobody
 // should re-cover it as new — the 28 July morning run did exactly that after a
 // wipe emptied posted.jsonl and took the fingerprints with it.
@@ -131,11 +151,14 @@ const BLOCKS_FOREVER = new Set(["posted", "rejected", "published-deleted"]);
 export const latestBy = (rows) =>
   rows.reduce((best, r) => (!best || Date.parse(r.at ?? 0) > Date.parse(best.at ?? 0) ? r : best), null);
 
-const stillBlocks = (r) => {
+/** Exported so the rule can be tested against the real code rather than a
+ * reimplementation of it: a test that restates the logic proves nothing. */
+export const stillBlocks = (r, now = Date.now()) => {
   const outcome = r.outcome ?? "posted"; // posted.jsonl entries carry no outcome
   if (BLOCKS_FOREVER.has(outcome)) return true;
   const at = Date.parse(r.at ?? "");
-  return Number.isNaN(at) ? true : Date.now() - at < CONSIDERED_TTL_MS;
+  const ttl = outcome === "revisit" ? REVISIT_TTL_MS : CONSIDERED_TTL_MS;
+  return Number.isNaN(at) ? true : now - at < ttl;
 };
 
 export async function filterFresh(items) {

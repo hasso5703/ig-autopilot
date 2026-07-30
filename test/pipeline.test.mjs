@@ -950,6 +950,24 @@ test("the notebook stays small, dated and below its own rules line", async () =>
   assert.ok(!/—/.test(text.slice(entriesAt)), "no em dashes, even here");
 });
 
+// Incident 2026-07-30: the 19:30 scout filed three strong candidates as
+// `considered` because no second outlet had picked them up yet — hiding them
+// from the next morning's scouts for 36 hours, by which time the corroboration
+// they were waiting for had made them ordinary.
+test("a story blocked on corroboration comes back in one news cycle, not two days", async () => {
+  const { stillBlocks } = await import("../src/state.mjs");
+  const now = Date.parse("2026-07-31T08:00:00Z");
+  const at = (h) => new Date(now - h * 3600000).toISOString();
+
+  assert.equal(stillBlocks({ at: at(8), outcome: "revisit" }, now), false, "a revisit story is visible again after 6h");
+  assert.equal(stillBlocks({ at: at(2), outcome: "revisit" }, now), true, "and does not re-litigate inside the same cycle");
+  assert.equal(stillBlocks({ at: at(8), outcome: "considered" }, now), true, "a considered story still waits out its 36h");
+  assert.equal(stillBlocks({ at: at(40), outcome: "considered" }, now), false);
+  assert.equal(stillBlocks({ at: at(999), outcome: "rejected" }, now), true, "rejected blocks forever, whatever the shelf life");
+  assert.equal(stillBlocks({ at: at(999), outcome: "posted" }, now), true);
+  assert.equal(stillBlocks({ at: "not a date", outcome: "revisit" }, now), true, "an unparseable date fails closed");
+});
+
 test("the latest record is found by timestamp, not by file position", async () => {
   const { latestBy } = await import("../src/state.mjs");
   const rows = [

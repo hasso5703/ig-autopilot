@@ -96,14 +96,6 @@ ENTRIES:
   17878825803503784) mais engage.mjs recent affiche "no comments". Ne jamais
   re-seeder parce que la liste paraît vide; vérifier comments_count d'abord.
   Proof: engage recent vs insights media, 23h 29/07.
-- 2026-07-29 · Chirurgie volontaire du registre (14h UTC): Hasan a supprimé
-  du compte le Reel DbYIlApjil_ (altman-decelerate, publié 12h49) car
-  l'apposition Hugging Face fautive y était prononcée. Son enregistrement
-  posted a été retiré à la main pour que le créneau de 16:30 republie le
-  spec corrigé (gate PASSED, vraies photos d'Altman aux beats 2 et 4, veo
-  et screenshot réutilisés via file). Ce n'est pas une perte de mémoire:
-  c'est le remplacement assumé d'un Reel retiré. Le spend du premier build
-  reste dû dans spend.jsonl.
 - 2026-07-30 · Whisper hears a digit after a word as a hyphen-prefixed
   fragment ("Opus 5" -> "Opus"+"-5"), and mergeContinuations wrongly folded
   it into the previous word as an elision, silently swallowing the digit and
@@ -126,3 +118,9 @@ ENTRIES:
   neufs; corrige (les deux fichiers portent la meme lumiere). brand.json.light
   n'est lu que par le nag de validate.mjs, jamais par render.mjs/template.mjs
   qui n'utilisent que .accent, donc l'edition etait sans risque.
+- 2026-07-31 · `revisit` est le troisieme outcome de recordSeen: bonne
+  histoire bloquee par le temps (pas encore corroboree, primaire
+  injoignable), revient au bout de 6h au lieu de 36h. Ne mets `considered`
+  que sur ce qui a perdu la comparaison. Et le hook "Unverified" de GitHub:
+  une ligne dans le rapport, rien d'autre, jamais d'amend ni de commit
+  correctif sur une branche laterale (voir routine.md, When things go wrong).
