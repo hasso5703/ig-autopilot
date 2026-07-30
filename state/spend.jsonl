@@ -24,3 +24,13 @@
 {"at":"2026-07-29T16:46:28.837Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"48.6s Charon","usd":0.0121}
 {"at":"2026-07-29T16:48:46.312Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"48.1s Charon","usd":0.012}
 {"at":"2026-07-29T16:51:40.867Z","slug":"2026-07-29-altman-decelerate","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"47.2s Charon","usd":0.0118}
+{"at":"2026-07-30T12:58:21.596Z","slug":"2026-07-30-opus5-vending-cartels","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"42.7s Charon","usd":0.0107}
+{"at":"2026-07-30T12:59:41.823Z","slug":"2026-07-30-opus5-vending-cartels","kind":"video","model":"veo-3.1-lite-generate-preview","units":"8s@720p","usd":0.4}
+{"at":"2026-07-30T13:01:39.902Z","slug":"2026-07-30-opus5-vending-cartels","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"46.1s Charon","usd":0.0115}
+{"at":"2026-07-30T13:02:27.641Z","slug":"2026-07-30-opus5-vending-cartels","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"48.1s Charon","usd":0.012}
+{"at":"2026-07-30T13:05:38.706Z","slug":"2026-07-30-opus5-vending-cartels","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"43.7s Charon","usd":0.0109}
+{"at":"2026-07-30T13:06:31.613Z","slug":"2026-07-30-opus5-vending-cartels","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"47.7s Charon","usd":0.0119}
+{"at":"2026-07-30T13:08:56.146Z","slug":"2026-07-30-opus5-vending-cartels","kind":"tts","model":"gemini-2.5-flash-preview-tts","units":"46.3s Charon","usd":0.0116}
+{"at":"2026-07-30T13:09:34.075Z","slug":"2026-07-30-opus5-vending-cartels","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-30T13:09:42.337Z","slug":"2026-07-30-opus5-vending-cartels","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-30T13:09:51.893Z","slug":"2026-07-30-opus5-vending-cartels","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}

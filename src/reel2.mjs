@@ -83,12 +83,20 @@ async function ensureWhisper() {
  * narration read perfectly still failed the word-count check (165 heard for
  * a 151-word script, measured twice on 2026-07-29). Merge a token that
  * begins with an apostrophe or a hyphen back into its predecessor, keeping
- * the predecessor's start and the continuation's end. */
+ * the predecessor's start and the continuation's end.
+ *
+ * A digit following a word ("Opus 5") sometimes comes back as "Opus" +
+ * "-5" — Whisper's way of writing the numeral, not a hyphenated compound —
+ * and merging it swallows a real script word every time a name is followed
+ * by a number (measured on "Opus 5" spoken twice, 2026-07-30: heard count
+ * undershot by 2 for exactly this reason). A hyphen continuation that is
+ * pure digits is kept as its own token instead. */
 export function mergeContinuations(words) {
   const out = [];
   for (const w of words) {
     const prev = out.at(-1);
-    if (prev && /^['’-]/.test(w.w)) { prev.w += w.w; prev.e = w.e; }
+    if (prev && /^-\d/.test(w.w)) { out.push({ ...w, w: w.w.slice(1) }); }
+    else if (prev && /^['’-]/.test(w.w)) { prev.w += w.w; prev.e = w.e; }
     else out.push({ ...w });
   }
   return out;

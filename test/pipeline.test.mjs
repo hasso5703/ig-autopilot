@@ -709,6 +709,14 @@ test("reel2 alignment: whisper's French elision fragments merge back into one sp
   assert.equal(merged[2].e, 0.9, "and the continuation's end");
   assert.equal(mergeContinuations([{ w: "'orphan", s: 0, e: 1 }]).length, 1,
     "a leading fragment with no predecessor survives unmerged");
+  const heardDigit = [
+    { w: "Opus", s: 0, e: 0.3 },
+    { w: "-5", s: 0.3, e: 0.6 },
+    { w: "vient", s: 0.6, e: 0.9 },
+  ];
+  const mergedDigit = mergeContinuations(heardDigit);
+  assert.deepEqual(mergedDigit.map((x) => x.w), ["Opus", "5", "vient"],
+    "a hyphen before a digit is Whisper's numeral, not a compound-word fragment, and stays its own word");
 });
 
 test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, screenshots caption low", async () => {

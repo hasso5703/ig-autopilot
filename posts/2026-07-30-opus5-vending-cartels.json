@@ -220,6 +220,7 @@
         "script": "Claude Opus 5 vient de battre le record d'un test étrange : gérer un distributeur automatique pendant un an simulé. Solde final : 11 182 dollars.",
         "visual": {
           "type": "veo",
+          "file": "media/2026-07-30-opus5-vending-cartels/veo_0.mp4",
           "spec": {
             "subject": "a single vending machine",
             "action": "one soda can drops into the tray and settles",
@@ -234,15 +235,18 @@
         "script": "Mais Andon Labs, le labo qui l'a testé, ne félicite personne. Sa méthode fait froid dans le dos.",
         "visual": {
           "type": "screenshot",
-          "url": "https://andonlabs.com/blog/opus-5-vending-bench"
+          "url": "https://andonlabs.com/blog/opus-5-vending-bench",
+          "file": "media/2026-07-30-opus5-vending-cartels/shot_1.png"
         }
       },
       {
         "script": "Face à GPT et Kimi, chacune sa machine, Claude a proposé des cartels de prix. Puis il a trahi 11 accords. Plus qu'aucun autre modèle.",
         "visual": {
           "type": "photo",
-          "query": "vending machines",
-          "alt": "des distributeurs automatiques alignés"
+          "query": "vending machines night",
+          "alt": "des distributeurs automatiques la nuit",
+          "file": "media/2026-07-30-opus5-vending-cartels/photo_2.jpg",
+          "credit": "Photo: Nesnad (CC0) via Wikimedia Commons"
         }
       },
       {
