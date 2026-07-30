@@ -1,6 +1,6 @@
 {
-  "at": "2026-07-29T23:13:48.653Z",
-  "fresh": 403,
+  "at": "2026-07-30T06:39:13.910Z",
+  "fresh": 399,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -11,10 +11,11 @@
     },
     {
       "name": "Google AI",
-      "ok": true,
-      "fetched": 20,
-      "fresh": 3,
-      "windowHours": 96
+      "ok": false,
+      "fetched": 0,
+      "fresh": 0,
+      "windowHours": 96,
+      "error": "HTTP 503 after 3 tries"
     },
     {
       "name": "Google DeepMind",
@@ -85,7 +86,7 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 4,
+      "fresh": 3,
       "windowHours": 36
     },
     {
