@@ -1,5 +1,5 @@
 {
-  "at": "2026-07-30T06:39:13.910Z",
+  "at": "2026-07-30T10:39:29.002Z",
   "fresh": 399,
   "feeds": [
     {
@@ -11,11 +11,10 @@
     },
     {
       "name": "Google AI",
-      "ok": false,
-      "fetched": 0,
-      "fresh": 0,
-      "windowHours": 96,
-      "error": "HTTP 503 after 3 tries"
+      "ok": true,
+      "fetched": 20,
+      "fresh": 3,
+      "windowHours": 96
     },
     {
       "name": "Google DeepMind",
@@ -79,28 +78,28 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 7,
+      "fresh": 5,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 3,
+      "fresh": 4,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 8,
-      "fresh": 8,
+      "fetched": 10,
+      "fresh": 9,
       "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 8,
+      "fresh": 5,
       "windowHours": 36
     }
   ]
