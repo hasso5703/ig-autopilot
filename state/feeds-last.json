@@ -1,6 +1,6 @@
 {
-  "at": "2026-07-30T10:39:29.002Z",
-  "fresh": 399,
+  "at": "2026-07-30T12:40:41.623Z",
+  "fresh": 396,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -85,21 +85,21 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 4,
+      "fresh": 5,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 10,
-      "fresh": 9,
+      "fetched": 8,
+      "fresh": 7,
       "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 5,
+      "fresh": 3,
       "windowHours": 36
     }
   ]
