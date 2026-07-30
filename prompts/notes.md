@@ -20,8 +20,8 @@ ENTRIES:
 
 - 2026-07-28 · Datacenter-IP blocks, measured: The Verge, Ars Technica,
   openai.com article pages, VentureBeat article pages (feed works), Axios,
-  Cybernews. A quote can never be gated from these; corroborate elsewhere.
-  Proof: runs of 26-28/07.
+  Cybernews, nytimes.com articles (403 with browser UA, 30/07). A quote can
+  never be gated from these; corroborate elsewhere. Proof: runs of 26-30/07.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-28 · Cold container costs: npm install ~40s, ffmpeg install ~40s,
