@@ -101,6 +101,15 @@ ENTRIES:
   et screenshot réutilisés via file). Ce n'est pas une perte de mémoire:
   c'est le remplacement assumé d'un Reel retiré. Le spend du premier build
   reste dû dans spend.jsonl.
+- 2026-07-30 · Whisper hears a digit after a word as a hyphen-prefixed
+  fragment ("Opus 5" -> "Opus"+"-5"), and mergeContinuations wrongly folded
+  it into the previous word as an elision, silently swallowing the digit and
+  tripping the word-count alignment guard every time a name is followed by a
+  number. Fixed in src/reel2.mjs (pure-digit hyphen fragments stay their own
+  token); test added. Also: a bare plural product query ("vending machines")
+  can return only near-white cutouts on Openverse and fail every candidate;
+  add a qualifier (place, time of day: "vending machines night") to reach
+  real documentary photos. Proof: 12h55 hand-launched publish run 30/07.
 - 2026-07-30 · Doctrine visuelle v2 (commit de midi): palettes MOODS
   réécrites du noir nocturne vers la lumière du jour éditoriale; hiérarchie
   par beat (photo réelle du sujet, reçu, photo d'objet, veo simple, stills
