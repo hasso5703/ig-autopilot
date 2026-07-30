@@ -370,7 +370,16 @@ gap guard against a ghost and re-block the stories that record had considered.
 launching it by hand**, which happens whenever something has just been fixed and
 is worth testing before the next slot. It is not a misfire, and the gap guard is
 still the thing that decides whether you may publish. Report the off-slot start
-so it is visible, then carry on. What *would* be a misfire is two runs starting
+so it is visible, then carry on.
+
+**And when that hand-launched run finds a day with no Reel, it publishes. Now.**
+This was learned on 2026-07-30: Hasan fired the routine at 12:38 UTC precisely
+because he wanted the day's Reel out immediately, and the run chose to scout
+instead, reasoning that 14h38 Paris sat off the measured 18h peak. The
+reasoning was sound and the decision was still wrong: a manual fire IS the
+editorial decision, made by the person who owns the account and the trade-off.
+The audience window belongs to Hasan, not to the run. Note the off-peak cost
+in one line of the report, then build and publish. What *would* be a misfire is two runs starting
 within a few minutes of each other; the guard catches that only if one has
 already published, so if you see it, say so loudly rather than assuming.
 
