@@ -1,13 +1,14 @@
 {
-  "at": "2026-07-30T16:38:52.201Z",
-  "fresh": 393,
+  "at": "2026-07-30T19:38:58.320Z",
+  "fresh": 394,
   "feeds": [
     {
       "name": "OpenAI News",
-      "ok": true,
-      "fetched": 1055,
-      "fresh": 5,
-      "windowHours": 96
+      "ok": false,
+      "fetched": 0,
+      "fresh": 0,
+      "windowHours": 96,
+      "error": "HTTP 503 after 3 tries"
     },
     {
       "name": "Google AI",
@@ -41,7 +42,7 @@
       "name": "Microsoft Research",
       "ok": true,
       "fetched": 10,
-      "fresh": 1,
+      "fresh": 2,
       "windowHours": 96
     },
     {
@@ -85,7 +86,7 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 5,
+      "fresh": 6,
       "windowHours": 36
     },
     {
@@ -98,11 +99,10 @@
     },
     {
       "name": "Simon Willison",
-      "ok": false,
-      "fetched": 0,
-      "fresh": 0,
-      "windowHours": 36,
-      "error": "HTTP 503 after 14 tries"
+      "ok": true,
+      "fetched": 30,
+      "fresh": 4,
+      "windowHours": 36
     }
   ]
 }
