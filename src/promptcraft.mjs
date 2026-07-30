@@ -22,26 +22,36 @@
  * The mood decides the light, and the light is most of why two posts do or do
  * not look alike. Accent hexes match the palettes the templates use.
  */
+/*
+ * Rewritten 2026-07-30. The first palettes all described night: "near-black
+ * shadow", "deep shadow", "dusk", "nocturnal" — so every generated visual on
+ * the account came out dark by construction, and Hasan's verdict on the
+ * result was right ("sombre, pas beau, on ne comprend pas ce que ça vient
+ * faire ici"). News reads in daylight: the reference frames (HugoDécrypte,
+ * every desk that reaches people) are bright, clean, legible on a phone in a
+ * lit room. The accent hexes stay (karaoke and music key off them); only the
+ * world the pictures live in moves from noir to editorial daylight.
+ */
 export const MOODS = {
   steady: {
     accent: "00E5FF",
-    light: "cold cyan light and near-black shadow",
-    world: "clean, precise, nocturnal",
+    light: "soft even daylight through large windows, neutral white balance",
+    world: "calm, precise, modern",
   },
   tension: {
     accent: "FFB300",
-    light: "warm amber light against deep shadow",
-    world: "tense, urgent, human",
+    light: "crisp morning light with sharp clean shadows, high contrast",
+    world: "urgent, concrete, contemporary",
   },
   drive: {
     accent: "00E676",
-    light: "clean green-white light on steel",
-    world: "fast, industrial, forward",
+    light: "bright industrial daylight on glass and steel",
+    world: "fast, engineered, forward",
   },
   wonder: {
     accent: "B388FF",
-    light: "violet dusk light and soft haze",
-    world: "quiet, vast, luminous",
+    light: "clear golden-hour light under an open sky",
+    world: "open, vast, optimistic",
   },
 };
 
@@ -70,6 +80,7 @@ export function veoPrompt({
   const audio = [`Ambient sound: ${ambient}`, sfx && `Sound effect: ${sfx}`].filter(Boolean).join(". ");
   return (
     `${composition} of ${subject} ${action}, ${setting}. ` +
+    `One clear subject in frame, simple deliberate motion. ` +
     `Cinematic, photorealistic, ${m.world}. ${m.light}. ` +
     `${camera}, ${lens}. Vertical 9:16 composition. ` +
     `${audio}. No speech, no dialogue. ${NO_TEXT_RULE}`
@@ -112,7 +123,25 @@ export function promptIssues(prompt, { forbidNames = [] } = {}) {
   }
   if (/\b(logo|brand mark|trademark)\b/i.test(prompt)) issues.push("prompt asks for a logo");
   if (/"[^"]+"/.test(prompt)) issues.push("prompt contains quoted dialogue — Veo will speak it under the narration");
+  issues.push(...simplicityIssues(prompt));
   return issues;
+}
+
+/**
+ * The artifact multipliers. The 29 July Reel opened on "dense night highway
+ * traffic, rows of red brake lights": dozens of small moving objects, which
+ * is exactly where video models fall apart — malformed cars, traffic driving
+ * both ways, and a viewer who clocks "AI slop" in half a second. Google's
+ * own guidance favours one subject, close framing, simple motion. Anything
+ * matching here is refused before a cent is spent.
+ */
+const COMPLEXITY = /\b(traffic|highway|freeway|motorway|crowds?|crowded|dozens|hundreds|rows? of|line of|swarm|flock|many (people|cars|vehicles|hands)|busy street|time-?lapse)\b/i;
+
+export function simplicityIssues(text) {
+  const m = String(text || "").match(COMPLEXITY);
+  return m
+    ? [`describes a many-moving-objects scene ("${m[0]}") — video models multiply artifacts with every extra moving thing. One subject, close shot, simple motion.`]
+    : [];
 }
 
 /**
@@ -122,17 +151,19 @@ export function promptIssues(prompt, { forbidNames = [] } = {}) {
  */
 export const EXAMPLES = {
   veo: veoPrompt({
-    subject: "a person seen over the shoulder",
-    action: "scrolling a laptop whose screen glows with a generic list of results",
-    setting: "in a dark home office at night",
-    mood: "tension",
-    ambient: "quiet room tone, soft keyboard clicks",
-  }),
-  image: imagePrompt({
-    subject: "hands holding a smartphone showing a generic settings screen",
-    setting: "in a dim living room in the evening",
+    subject: "a single vending machine",
+    action: "dropping one can into the tray with a soft mechanical thud",
+    setting: "in a bright modern office corridor",
     mood: "tension",
     composition: "close-up",
-    detail: "warm lamp bokeh in the background",
+    camera: "slow push-in",
+    ambient: "quiet corridor tone, one soft mechanical clunk",
+  }),
+  image: imagePrompt({
+    subject: "a hand pressing a button on a vending machine keypad",
+    setting: "in a bright office lobby in the morning",
+    mood: "tension",
+    composition: "close-up",
+    detail: "clean depth of field, daylight from a window",
   }),
 };

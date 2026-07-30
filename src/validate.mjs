@@ -21,6 +21,7 @@ import { readFile } from "node:fs/promises";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { tokens } from "./state.mjs";
+import { simplicityIssues } from "./promptcraft.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const UA = "order-of-magnitude/1.0 (+https://github.com/hasso5703/ig-autopilot)";
@@ -856,6 +857,10 @@ export async function validatePost(post, opts = {}) {
         err(`${at}: a ${type} beat needs a spec, a prompt or a file`);
       if (type === "photo" && !b.visual?.query && !b.visual?.file)
         err(`${at}: a photo beat needs a \`query\` (two or three plain nouns for the photo indexes) or a pinned file`);
+      if ((type === "veo" || type === "image") && !b.visual?.file) {
+        const specText = [b.visual?.prompt, ...(b.visual?.spec ? Object.values(b.visual.spec) : [])].filter(Boolean).join(" ");
+        for (const issue of simplicityIssues(specText)) err(`${at}: ${issue}`);
+      }
     }
 
     /*

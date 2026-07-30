@@ -101,3 +101,11 @@ ENTRIES:
   et screenshot réutilisés via file). Ce n'est pas une perte de mémoire:
   c'est le remplacement assumé d'un Reel retiré. Le spend du premier build
   reste dû dans spend.jsonl.
+- 2026-07-30 · Doctrine visuelle v2 (commit de midi): palettes MOODS
+  réécrites du noir nocturne vers la lumière du jour éditoriale; hiérarchie
+  par beat (photo réelle du sujet, reçu, photo d'objet, veo simple, stills
+  ponts); métaphores visuelles interdites (l'autoroute qui freine du 29/07
+  = slop reconnu en 0,3 s); simplicityIssues refuse foules, trafic et
+  rangées avant tout achat, au gate comme au moteur. Les prompts
+  d'illustration des slides écrits avant ce jour portent l'ancienne lumière:
+  le warning du gate est attendu, pas bloquant.

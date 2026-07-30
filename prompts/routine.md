@@ -1009,7 +1009,25 @@ Rules, and the gate enforces the hard ones:
 - **Show the real thing, and the real face.** The 29 July Reel shipped five
   generated mood stills on a story about the world's most photographed AI
   executive: dark corridor, studio mic, pen, tower, tail lights. Ambiance
-  about nothing. The rules now:
+  about nothing — and its opener was an AI highway with malformed cars
+  driving both ways, clocked as slop in half a second. The rules now:
+  - **The visual hierarchy, for every beat.** (1) The real photograph of the
+    story's subject (`photo`). (2) The receipt (`screenshot` — up to two; a
+    second receipt beats a third still). (3) A real photograph of the
+    story's concrete objects or places. (4) `veo`, only when a simple
+    concrete shot serves the story. (5) Generated stills as bridges, capped
+    at three. The opener behind the hook card is the MOST concrete thing
+    available, in this order — never a metaphor.
+  - **A visual metaphor is filler.** Braking traffic for "slowing AI", a
+    dark corridor for "a security incident", tail lights for "waiting":
+    a stranger reads these as stock wallpaper and swipes. Show the subject,
+    the object, the place, the document — never the idea.
+  - **Veo is held to Google's own craft rules, mechanically.** One clear
+    subject, close or medium framing, one simple deliberate motion, no
+    crowds, no traffic, no rows of anything, no time-lapse — the gate and
+    the engine refuse the artifact multipliers (`simplicityIssues`). Video
+    models fall apart on many moving objects, and a malformed car is all a
+    viewer needs to write the account off.
   - **A named person or product at the centre of the story appears as a real
     photograph** (`photo` beat) or inside the receipt (`screenshot`) — never
     generated. `{ "type": "photo", "query": "sam altman", "alt": "…" }`
@@ -1025,13 +1043,16 @@ Rules, and the gate enforces the hard ones:
     read as wallpaper (28 July: two near-identical bedside-phone frames
     closed the Reel). Vary subject, distance and setting; the engine's job
     is motion, yours is variety.
-- **One `veo` beat per Reel, on the hook.** Write `spec` fields — subject,
-  action, setting, optionally composition, camera, ambient — never a raw
-  prompt: `promptcraft.mjs` assembles Google's documented structure and the
-  mood's light, so every clip belongs to the same account. A spec that names
-  anyone the post reports on is refused (a generated picture never depicts the
-  reported subject), and so is quoted dialogue (Veo would speak under the
-  narration).
+- **At most one `veo` beat per Reel, and it must earn its place.** A real
+  photograph of the subject beats a generated clip on the opener; use veo
+  when a simple concrete shot genuinely serves the story (the machine
+  dropping a can, a hand pressing the button). Write `spec` fields —
+  subject, action, setting, optionally composition, camera, ambient — never
+  a raw prompt: `promptcraft.mjs` assembles Google's documented structure,
+  the mood's light (bright editorial daylight since 2026-07-30 — the noir
+  palettes are retired), and the single-subject constraint. A spec that
+  names anyone the post reports on is refused, so is quoted dialogue, and
+  so is any many-moving-objects scene.
 - **A `screenshot` beat is the receipt** — the source article's headline, the
   product's own page. Real, verifiable, ours because our browser took it. Use
   one whenever a real page carries the story. google.com itself is captcha'd

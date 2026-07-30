@@ -660,6 +660,20 @@ test("every module in src/ parses and loads", async () => {
   }
 });
 
+test("the artifact multipliers are refused before money, at gate and engine", async () => {
+  const { simplicityIssues, promptIssues, veoPrompt } = await import("../src/promptcraft.mjs");
+  assert.ok(simplicityIssues("dense night highway traffic, rows of red brake lights").length, "the 29 July opener is now refused");
+  assert.ok(simplicityIssues("a crowded station at rush hour").length);
+  assert.equal(simplicityIssues("a single vending machine dropping one can into the tray").length, 0);
+  const p = veoPrompt({ subject: "highway traffic", action: "flowing", setting: "at night" });
+  assert.ok(promptIssues(p).some((i) => /many-moving-objects/.test(i)), "promptIssues carries the same refusal");
+
+  const post = goodPost();
+  post.reel2 = goodReel2();
+  post.reel2.beats[0].visual = { type: "veo", spec: { subject: "dense highway traffic", action: "braking", setting: "at night" } };
+  assert.ok(hasErr(await errs(post), /many-moving-objects/), "the gate refuses it before the publish run wastes a cycle");
+});
+
 test("promptcraft: the mood decides the light, and the refusals refuse", async () => {
   const { veoPrompt, imagePrompt, promptIssues, MOODS } = await import("../src/promptcraft.mjs");
   const p = veoPrompt({ subject: "a person", action: "typing", setting: "in a dark office", mood: "tension" });

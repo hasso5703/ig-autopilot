@@ -221,11 +221,12 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a row of vending machines on a dark city street",
-            "action": "their lights flicker on one after another as rain falls",
-            "setting": "a rain-slicked street at night, empty",
-            "composition": "slow dolly push toward the machines",
-            "ambient": "soft rain, electrical hum, distant traffic"
+            "subject": "a single vending machine",
+            "action": "one soda can drops into the tray and settles",
+            "setting": "in a bright office lobby in the morning",
+            "composition": "close-up",
+            "camera": "slow push-in",
+            "ambient": "quiet lobby tone, one soft mechanical clunk"
           }
         }
       },
@@ -249,9 +250,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "an opened cardboard shipping box on a concrete floor",
-            "setting": "a dark warehouse under a single harsh overhead light",
-            "composition": "high angle, deep shadows"
+            "subject": "an opened cardboard shipping box overflowing with packing paper",
+            "setting": "on a clean concrete floor in bright daylight",
+            "composition": "close-up"
           }
         }
       },
@@ -260,9 +261,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a green banker's lamp glowing over an empty dark desk",
-            "setting": "a pitch-black office at night",
-            "composition": "close-up, dust in the light beam"
+            "subject": "a fountain pen resting on a blank printed page",
+            "setting": "on a bright desk beside a window",
+            "composition": "close-up"
           }
         }
       },
@@ -271,9 +272,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a vending machine keypad glowing green in darkness",
-            "setting": "total darkness around the glow",
-            "composition": "extreme close-up, shallow depth of field"
+            "subject": "a vending machine coin return releasing coins into an open hand",
+            "setting": "in a bright hallway",
+            "composition": "extreme close-up"
           }
         }
       }
