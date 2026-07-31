@@ -72,8 +72,78 @@ export function claimOverlap(claim, quote) {
  * separates groups of exactly three ("10 000"), so "July 27, 2026" stays two
  * numbers and never merges. Decimals stay on the point: figures are copied as
  * the source writes them ("3.5"), never re-punctuated into "3,5". */
+/**
+ * A hostname is a name, and the digits inside it are spelling, not evidence.
+ *
+ * The caption of every post credits its sources by domain, and on 2026-07-31 one
+ * of them was `actionnews5.com`. The gate extracted "5" from it, found no
+ * evidence quote containing a 5, and refused the post \u2014 for a figure nobody had
+ * claimed. The run spent a gate round adding a quote that carried the words
+ * "Action News 5" purely to satisfy the arithmetic. Local American television is
+ * numbered by convention (Action News 5, WMC 5, Channel 4), so this was never a
+ * one-off, and the same trap sits in any URL with a year in its path.
+ *
+ * Only whole hostnames and URLs are removed, and only when the part after the
+ * last dot is alphabetic \u2014 so "actionnews5.com" goes and "1.2", "GPT-5.6" and
+ * "2,000" stay, which is the whole point.
+ */
+const HOSTS = /\bhttps?:\/\/\S+|\b[a-z0-9][a-z0-9-]*(?:\.[a-z0-9-]+)*\.[a-z]{2,}\b/gi;
+
+/**
+ * French written without its accents.
+ *
+ * Both runs on 2026-07-31 wrote their entire first draft — narration, caption,
+ * every script — as "penurie", "memoire", "telephone". Both caught it by
+ * re-reading, and both said in their report that nothing in the pipeline would
+ * have. They were right: it gates green, and then the voice reads "retire" for
+ * "retiré" and "installees" for "installées" through a whole Reel, in public,
+ * on an account whose entire promise is that a human checked it.
+ *
+ * Two nets, because they fail differently. The density check is the one that
+ * cannot argue: measured on this account's own published French, narration runs
+ * 3.8–4.0% accented letters and a stripped draft runs 0.00%, so a floor of 1%
+ * over a body long enough to be meaningful sits four times below real French and
+ * far above a stripped one. It says nothing about a short string — the hook card
+ * "xAI fait tourner 69 turbines sans permis" is legitimately 0%.
+ *
+ * The word list catches the half-stripped draft the density check would let by,
+ * and every entry on it is a word whose unaccented form is not French at all.
+ * Ambiguous ones are deliberately absent: "retire", "marche", "a" and "ou" are
+ * all real words without their accents, and a rule that cries wolf on those
+ * would be turned off within a week.
+ */
+const NEVER_UNACCENTED =
+  /\b(?:tres|apres|deja|etre|etait|etaient|memes?|systemes?|modeles?|problemes?|donnees|securite|energie|electricite|realite|verite|qualite|capacite|activite|societes?|annees?|premiere|derniere|penurie|memoire|telephones?|numerique|resultats?|interet|acces|succes|progres|evenement|developpement|reseaux?|operationnel|prefere)\b/gi;
+
+const ACCENTED = /[àâäéèêëîïôöùûüçœæ]/gi;
+const LETTERS = /[a-zàâäéèêëîïôöùûüçœæ]/gi;
+
+/** Accented letters per 100 letters. Only meaningful over a real body of text. */
+export function accentDensity(text) {
+  const letters = (String(text).match(LETTERS) || []).length;
+  if (!letters) return { letters: 0, accents: 0, per100: null };
+  const accents = (String(text).match(ACCENTED) || []).length;
+  return { letters, accents, per100: (accents / letters) * 100 };
+}
+
+/** Where French has lost its accents. `min` letters before the density test
+ * means anything; below that only the word list speaks. */
+export function frenchAccentIssues(text, { min = 200 } = {}) {
+  const out = [];
+  const s = String(text || "");
+  const { letters, per100 } = accentDensity(s);
+  if (letters >= min && per100 < 1)
+    out.push(
+      `${per100.toFixed(2)}% of its letters carry an accent, over ${letters} letters. This account's own published French runs 3.8 to 4.0%. ` +
+        `The accents have been stripped: the gate cannot see it, and the voice will read them out.`
+    );
+  const words = [...new Set((s.match(NEVER_UNACCENTED) || []).map((w) => w.toLowerCase()))];
+  if (words.length) out.push(`unaccented French: ${words.slice(0, 8).join(", ")}${words.length > 8 ? "…" : ""}`);
+  return out;
+}
+
 const numbers = (s) =>
-  (String(s).match(/\d{1,3}(?:[\u00A0\u202F ]\d{3})+(?:\.\d+)?|\d[\d,]*(?:\.\d+)?/g) || []).map((n) =>
+  (String(s).replace(HOSTS, " ").match(/\d{1,3}(?:[\u00A0\u202F ]\d{3})+(?:\.\d+)?|\d[\d,]*(?:\.\d+)?/g) || []).map((n) =>
     n.replace(/[,\u00A0\u202F ]/g, "").replace(/\.$/, "")
   );
 
@@ -171,12 +241,48 @@ const actorForms = (name) => {
 const NAMED_ENTITIES = {
   rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“", apos: "'", quot: '"',
   mdash: "—", ndash: "–", hellip: "…", lt: "<", gt: ">", nbsp: " ",
+  // Punctuation a newsroom actually emits around figures and quotes.
+  deg: "°", euro: "€", pound: "£", cent: "¢", times: "×", minus: "−",
+  frac12: "1/2", frac14: "1/4", frac34: "3/4", middot: "·", bull: "•",
+  laquo: "«", raquo: "»", sbquo: "‚", bdquo: "„", prime: "′",
+  // Accented Latin-1. The account writes French and reads sources that spell
+  // café, Pokémon and Nvidia's señor with entities; without these a quote
+  // carrying one is unmatchable, which is the same failure as &rsquo; wearing a
+  // different letter.
+  eacute: "é", egrave: "è", ecirc: "ê", euml: "ë", agrave: "à", acirc: "â",
+  auml: "ä", aacute: "á", ccedil: "ç", icirc: "î", iuml: "ï", iacute: "í",
+  ocirc: "ô", ouml: "ö", oacute: "ó", ugrave: "ù", ucirc: "û", uuml: "ü",
+  uacute: "ú", ntilde: "ñ", szlig: "ß", oslash: "ø", aring: "å", aelig: "æ",
+  // Keys are lower-case only: the lookup lower-cases the entity name, and
+  // flatten lower-cases the whole page before any comparison, so `&Eacute;` and
+  // `&eacute;` resolve to the same thing. A capitalised key here would be a line
+  // that can never run.
 };
+
+/**
+ * Tags that never break a word, and are therefore removed without leaving a
+ * space where they stood.
+ *
+ * Every tag used to become a space, which is right for a paragraph and wrong for
+ * a subscript. TechCrunch sets nitrogen oxides as `NO<sub>x</sub>`, so the
+ * flattened page read "no x" while the quote read "nox", and the gate answered
+ * NOT_FOUND on a sentence that was on the page word for word. The 15:35 run lost
+ * a gate round to it and then rewrote the beat — "polluants qui forment le smog"
+ * instead of the term the source uses — to route around a bug in this file. That
+ * is editorial damage caused by a space.
+ *
+ * Inline elements render with no gap between them and their neighbours, so
+ * removing them outright is what a reader sees: `<b>Bold</b>text` reads
+ * "Boldtext", and `NO<sub>x</sub>` reads "NOx". Everything not on this list —
+ * p, div, li, br, td, h1 — still becomes a space, because those do separate.
+ */
+const INLINE_TAGS = "a|abbr|b|bdi|bdo|cite|code|data|del|dfn|em|font|i|ins|kbd|mark|q|rp|rt|ruby|s|samp|small|span|strong|sub|sup|time|tt|u|var|wbr";
 
 export const flatten = (html) =>
   html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(new RegExp(`</?(?:${INLINE_TAGS})(?:\\s[^>]*)?/?>`, "gi"), "")
     .replace(/<[^>]+>/g, " ")
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
@@ -866,6 +972,12 @@ export async function validatePost(post, opts = {}) {
   if (post.caption && SELF_PRAISE.test(post.caption))
     err("caption claims its own rigour. The sources printed on every slide already prove it; delete the sentence rather than assert it");
 
+  /* The caption is public French too, and it is the surface a reader can quote
+     back. The house disclosure line at its foot carries accents of its own, so
+     the density is measured on the caption as written. */
+  if (post.caption && (post.reel2?.lang ?? "fr") === "fr")
+    for (const issue of frenchAccentIssues(post.caption)) err(`caption: ${issue}`);
+
   // ---- the caption is not a free-text field ------------------------------
   // It was, and that was the largest hole left in the gate. The manual tells
   // the writer to put "what did not fit on a slide" in the caption, which is
@@ -1025,6 +1137,15 @@ export async function validatePost(post, opts = {}) {
     }
     if (post.reel2?.lang && !["fr", "en"].includes(post.reel2.lang))
       err(`reel2: unknown lang "${post.reel2.lang}" — "fr" (the account's language) or "en"`);
+
+    /* Accents, on everything the public hears or reads. The narration is checked
+       whole rather than beat by beat, because a single beat is too short for the
+       density to mean anything. */
+    if ((post.reel2?.lang ?? "fr") === "fr") {
+      const narration = beats.map((b) => b?.script || "").join(" ");
+      for (const issue of frenchAccentIssues(narration)) err(`reel2 narration: ${issue}`);
+      for (const issue of frenchAccentIssues(post.reel2?.title || "", { min: Infinity })) err(`reel2 title: ${issue}`);
+    }
     const VISUALS = new Set(["veo", "screenshot", "image", "photo", "card", "file"]);
     /**
      * Everything the sources actually say, minus the proper names.

@@ -27,6 +27,8 @@
 
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import { existsSync } from "node:fs";
+import path from "node:path";
 
 const run = promisify(execFile);
 
@@ -99,8 +101,30 @@ export async function land(message, paths = []) {
    * are what the run needs to read.
    */
   const staged = () => run("git", ["diff", "--cached", "--quiet"]).then(() => false).catch(() => true);
+  /*
+   * The ledgers ride along, whatever paths were named.
+   *
+   * On 2026-07-31 the run that published the day's Reel wrote in its journal:
+   * "recordPosted with durationS 60.0, recordSeen x8. Landed on main." Its
+   * commit touches one file and inserts one line — state/posted.jsonl. The eight
+   * recordSeen rows were written to state/seen.jsonl, never staged, and died
+   * with the container. The run had passed explicit paths, land.mjs staged
+   * exactly those, printed "landed and proven on main", and the run believed it.
+   *
+   * What was lost is that run's memory of the 44 candidates it weighed — what it
+   * rejected and what it shelved to revisit — so nothing stops a later run
+   * spending its slot re-evaluating a story that was already turned down.
+   *
+   * Naming paths is meant to narrow a commit, never to drop the account's
+   * memory. `state/` and `reports/journal/` are append-only and always correct
+   * to land, which is the same reasoning that already lets them land on a red
+   * suite. One bad pathspec aborts the whole `git add`, so only directories that
+   * actually exist are added to the list.
+   */
+  const ALWAYS_STAGED = ["state", "reports/journal"].filter((p) => existsSync(path.join(process.cwd(), p)));
+  const pathspec = paths.length ? [...new Set([...paths, ...ALWAYS_STAGED])] : ["."];
   try {
-    await git("add", "-A", "--", ...(paths.length ? paths : ["."]));
+    await git("add", "-A", "--", ...pathspec);
   } catch (err) {
     if (!(await staged())) {
       throw new Error(
@@ -183,6 +207,24 @@ export async function land(message, paths = []) {
     return 2;
   }
   console.log(`landed and proven on main: ${local.slice(0, 12)}`);
+
+  /*
+   * Say what did NOT land.
+   *
+   * "landed and proven on main" is the sentence a run quotes in its report as
+   * proof its work is safe, and it only ever spoke about the commit that was
+   * pushed — never about what was left behind in the worktree. A run that named
+   * paths and forgot one read that line and moved on. Listing the remainder
+   * costs one git call and turns a silent loss into a visible one.
+   */
+  const leftover = await git("status", "--porcelain").catch(() => "");
+  if (leftover.trim()) {
+    const files = leftover.trim().split("\n").map((l) => `  ${l.trim()}`).join("\n");
+    console.error(
+      `\nNOT LANDED — still uncommitted in this container, and it dies with it:\n${files}\n` +
+        `If any of that is work you meant to keep, land it now: \`node src/land.mjs "msg"\` with no paths takes everything.`
+    );
+  }
   return 0;
 }
 

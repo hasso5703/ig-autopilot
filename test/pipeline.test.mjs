@@ -1494,5 +1494,91 @@ test("flatten decodes named and hex entities, not only numeric ones", async () =
   assert.match(flatten("<p>the &ldquo;RAMaggedon&rdquo; is here</p>"), /the "ramaggedon" is here/);
   assert.match(flatten("<p>Samsung&#x2019;s call</p>"), /samsung's call/, "hex entities decode too");
   assert.match(flatten("<p>2027 &mdash; 2028</p>"), /2027 - 2028/, "&mdash; normalises like a literal em dash");
-  assert.match(flatten("<p>caf&eacute; &unknownentity; stays</p>"), /&unknownentity; stays/, "an unknown entity is left alone rather than mangled");
+  assert.match(flatten("<p>&unknownentity; stays</p>"), /&unknownentity; stays/, "an unknown entity is left alone rather than mangled");
+  // The account writes French and its sources spell café and Pokémon with
+  // entities. Missing those is the same failure as &rsquo; wearing other letters.
+  assert.match(flatten("<p>un caf&eacute; &agrave; Paris</p>"), /un café à paris/, "accented named entities decode");
+  assert.match(flatten("<p>90&deg;C et 2&nbsp;000&euro;</p>"), /90°c et 2 000€/, "so do the ones a newsroom puts next to figures");
+});
+
+/* 2026-07-31 (15:35 publish run): TechCrunch sets nitrogen oxides as
+   `NO<sub>x</sub>`. Every tag became a space, so the flattened page read "no x"
+   while the quote read "nox", and the gate answered NOT_FOUND on a sentence that
+   was on the page word for word. The run lost a gate round and then rewrote the
+   beat — "polluants qui forment le smog" instead of the term the source uses —
+   to route around a bug in the gate. Verified against the live article: it does
+   contain the literal string NO<sub>x</sub>. */
+test("a word split by inline markup is still the word the source printed", async () => {
+  const { flatten } = await import("../src/validate.mjs");
+
+  assert.match(flatten("<p>more than 2,000 tons of smog-forming NO<sub>x</sub> per year</p>"), /smog-forming nox per year/,
+    "the exact sentence that cost the 31 July run a gate round and a beat rewrite");
+  assert.match(flatten("<p>CO<sub>2</sub> and m<sup>3</sup></p>"), /co2 and m3/, "subscripts and superscripts both");
+  assert.match(flatten('<p>a <a href="/x">link</a>ed word</p>'), /a linked word/, "an anchor inside a word does not split it");
+  assert.match(flatten('<p><span class="x">69</span> turbines</p>'), /69 turbines/, "a span carrying a figure keeps it whole");
+
+  // And the space must survive where it means something, or every paragraph
+  // boundary would weld two sentences into one unmatchable string.
+  assert.match(flatten("<p>Une phrase.</p><p>Une autre.</p>"), /une phrase\. une autre\./, "block elements still separate");
+  assert.match(flatten("<li>un</li><li>deux</li>"), /un deux/, "so do list items");
+  assert.match(flatten("ligne un<br>ligne deux"), /ligne un ligne deux/, "and line breaks");
+});
+
+/* 2026-07-31, both runs, independently: each wrote its entire first draft —
+   narration, caption, every script — with the French accents stripped.
+   "penurie", "memoire", "telephone". Both caught it by re-reading and both said
+   in their report that nothing in the pipeline would have. They were right: it
+   gates green, and then the voice reads "retire" for "retiré" through a whole
+   Reel on an account whose promise is that a human checked it.
+
+   Thresholds are measured, not chosen: this account's own published French runs
+   3.8-4.0% accented letters and a stripped draft runs 0.00%. */
+test("French that has lost its accents is refused before the voice reads it", async () => {
+  const { frenchAccentIssues, accentDensity } = await import("../src/validate.mjs");
+  const real =
+    "SpaceX annonce le retrait des 69 turbines à gaz sans permis qui alimentent Colossus, " +
+    "ses centres de données près de Memphis. Les turbines resteront installées jusqu'en 2027, " +
+    "et la société précise que la qualité de l'air reste conforme aux normes fédérales américaines. " +
+    "Le problème n'est pas réglé pour autant : le développement du site dépend d'une énergie qu'il " +
+    "produit lui-même, année après année.";
+  const strip = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+
+  assert.ok(accentDensity(real).per100 > 3, "the fixture really is normal French");
+  assert.deepEqual(frenchAccentIssues(real), [], "real French raises nothing");
+
+  const stripped = frenchAccentIssues(strip(real));
+  assert.ok(stripped.some((i) => /carry an accent/.test(i)), "a fully stripped draft fails on density");
+  assert.ok(stripped.some((i) => /unaccented French/.test(i)), "and on words that are not French without their accents");
+
+  // Half-stripped sits above the density floor, so only the word list can see it.
+  const half = real.replace(/é/g, (m, i) => (i % 2 ? "e" : m));
+  assert.ok(accentDensity(half).per100 > 1, "half-stripped clears the density floor");
+  assert.ok(frenchAccentIssues(half).some((i) => /unaccented French/.test(i)), "the word list catches what density cannot");
+
+  // What must never fire: a short line legitimately without accents. The hook
+  // card "xAI fait tourner 69 turbines sans permis" carries none at all.
+  assert.deepEqual(frenchAccentIssues("xAI fait tourner 69 turbines sans permis", { min: Infinity }), [],
+    "a short accent-free hook is not a defect");
+  assert.deepEqual(frenchAccentIssues("Samsung dit que la pause va durer", { min: Infinity }), []);
+
+  // And words that ARE French without an accent must not be on the list.
+  for (const ok of ["il retire les turbines", "le marche public", "les derniers jours", "ou bien"])
+    assert.deepEqual(frenchAccentIssues(ok, { min: Infinity }), [], `"${ok}" is correct French and must not be flagged`);
+});
+
+/* Same run, same gate round: the caption credits its sources by domain, and one
+   was actionnews5.com. The gate extracted "5", found no evidence quote carrying
+   a 5, and refused the post for a figure nobody had claimed. The run then added
+   a quote containing "Action News 5" purely to satisfy the arithmetic. Local
+   American television is numbered by convention, so this was never a one-off. */
+test("digits inside a hostname are spelling, not evidence", async () => {
+  const p = goodPost();
+  p.caption = `${p.caption}\n\nSources : techcrunch.com, actionnews5.com, selc.org`;
+  const e = await errs(p);
+  assert.ok(!hasErr(e, /caption figure/), "a numbered domain is not a claim the post has to source");
+
+  // What must still be caught: a real figure in the same caption.
+  const q = goodPost();
+  q.caption = `${q.caption}\n\nCela concerne 4173 personnes. Sources : actionnews5.com`;
+  assert.ok(hasErr(await errs(q), /4173/), "a bare figure beside a domain is still a claim");
 });
