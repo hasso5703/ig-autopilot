@@ -117,6 +117,12 @@ const SUPERSAMPLE = 4;
 const REFRAME_S = 5.2;
 const BG_HEX = "0x08080C"; // brand.colors.bg
 const FONT_DIR = path.join(process.cwd(), "brand", "fonts");
+/** The two small surfaces drawn by ffmpeg rather than by libass: the handle
+ * badge that rides every frame, and the credit line a photo beat owes its
+ * photographer. Both were still on Archivo Bold after the typefaces changed on
+ * 2026-07-31 — the badge is on screen for the whole sixty seconds, so it was
+ * the most-seen leftover of the old identity. */
+const UI_FONT = path.join(FONT_DIR, "oom-ui.ttf");
 const HANDLE = "@ORDER.OF.MAGNITUDE";
 /* The end-card is fixed text, not per-post copy: the ritual is the point.
  *
@@ -653,7 +659,7 @@ async function segmentFromPhoto(img, dur, credit, outFile, workDir) {
     const creditFile = path.join(workDir, `${path.basename(outFile, ".mp4")}.credit.txt`);
     await writeFile(creditFile, credit);
     extra.push(
-      `drawtext=fontfile=${path.join(FONT_DIR, "archivo-bold.ttf")}:textfile=${creditFile}:fontsize=26:fontcolor=white@0.72:x=48:y=${H - 400}:shadowcolor=black@0.7:shadowx=2:shadowy=2`
+      `drawtext=fontfile=${UI_FONT}:textfile=${creditFile}:fontsize=26:fontcolor=white@0.72:x=48:y=${H - 400}:shadowcolor=black@0.7:shadowx=2:shadowy=2`
     );
   }
   // A photograph gets the same re-framing as a still, credit burned on both
@@ -819,10 +825,11 @@ export async function buildReel(postFile, mediaDir) {
      copy's fault. */
   const scriptWords = narration.split(/\s+/).filter(Boolean);
     /* Sadaltager since 2026-07-31, Hasan's ear: "je veux la voix F à partir de
-     maintenant". Measured that day on the same 188-word script, it reads at
-     3.49 words a second against Charon's 3.44 median — close enough that the
-     word window barely moves, but the ledger is filtered by voice anyway so a
-     future change to a slower one cannot quietly mis-size three Reels. */
+     maintenant". A single A/B reading suggested 3.49 words a second; measuring
+     it properly with calibrate-voice.mjs gave 3.22, 3.34, 3.44 — a median of
+     3.34, five percent slower than the anecdote. That is why the ledger is
+     filtered by voice and why a voice change is calibrated before the next run
+     and not after it. */
   const voiceName = plan.voice || (lang === "fr" ? "Sadaltager" : "Fenrir");
   const rawWav = path.join(mediaDir, "voice2_raw.wav");
   let voice = null, tempo = 0, rate = 0;
@@ -988,7 +995,7 @@ export async function buildReel(postFile, mediaDir) {
   await ffmpeg([
     "-y", "-i", noSub, "-vf",
     `subtitles=${assFile}:fontsdir=${FONT_DIR},` +
-      `drawtext=fontfile=${path.join(FONT_DIR, "archivo-bold.ttf")}:text='${HANDLE}':fontsize=34:fontcolor=white@0.8:x=(w-text_w)/2:y=100:shadowcolor=black@0.6:shadowx=2:shadowy=2`,
+      `drawtext=fontfile=${UI_FONT}:text='${HANDLE}':fontsize=34:fontcolor=white@0.8:x=(w-text_w)/2:y=100:shadowcolor=black@0.6:shadowx=2:shadowy=2`,
     "-c:v", "libx264", "-preset", "fast", "-crf", FINAL_CRF, withSub,
   ]);
 
