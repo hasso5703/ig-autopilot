@@ -71,7 +71,11 @@ ENTRIES:
   intermittently even though curl succeeds at the same moment (seen 3x in
   ~20s); its built-in 2-retry backoff was not always enough. Just rerun
   `node src/validate.mjs` after a short wait, it passes. Proof: 10h scout
-  28/07, 16h scout 30/07.
+  28/07, 16h scout 30/07. Ajout 31/07 (19h): pcgamer.com fait pareil. Le meme
+  spec a donne REJECTED 4 erreurs puis PASSED 0 erreur sur deux lancements
+  consecutifs, toutes les erreurs sur des URL pcgamer. Une citation qui revient
+  NOT_FOUND en lot sur un seul domaine est un reseau qui tousse, pas un article
+  reecrit: relance avant de rouvrir la page.
 - 2026-07-28 · Outlets edit articles after publication: TechCrunch changed
   "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
   Re-run validate.mjs on any stored spec before building from it; re-copy the
@@ -113,7 +117,16 @@ ENTRIES:
   pale. Remede, ~2 min: telecharger l'original Commons, le recadrer en 9:16 sur
   le sujet avec ffmpeg, et l'epingler avec `file` + `credit` (le credit se
   recupere sur l'API Commons, champ extmetadata.Artist + LicenseShortName).
-  Le moteur brule alors le credit normalement.
+  Le moteur brule alors le credit normalement. Ajout 31/07 (19h): le candidat
+  le MIEUX classe peut etre historiquement faux, et aucun filtre ne le voit.
+  "computer memory modules" met en tete (8.0) un module memoire de CDC 7600
+  expose au National Cryptologic Museum: vraie photo, bien licenciee, 0% de
+  blanc, et une piece de musee des annees 1970 sur une actu de prix de RAM
+  2027. Meme forme que la centrale en ruine du 15h. Donc sur un beat photo qui
+  compte, lance `imagery.mjs candidates`, REGARDE les trois premiers, et epingle
+  celui que tu as choisi avec `file` + `credit` (creditLine = creator + licence,
+  le creator se lit sur api.openverse.org/v1/images/?q=...). Sans epinglage, le
+  build prend le premier.
 - 2026-07-30 · Doctrine visuelle v2 (commit de midi): palettes MOODS
   réécrites du noir nocturne vers la lumière du jour éditoriale; hiérarchie
   par beat (photo réelle du sujet, reçu, photo d'objet, veo simple, stills

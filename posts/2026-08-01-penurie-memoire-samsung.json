@@ -185,7 +185,9 @@
         "visual": {
           "type": "photo",
           "query": "computer memory modules",
-          "alt": "Des barrettes de mémoire vive"
+          "file": "media/2026-08-01-penurie-memoire-samsung/photo_3.jpg",
+          "credit": "Charlie Belvin Designs · CC0",
+          "alt": "Des barrettes de mémoire vive, contacts dorés et puces noires sur circuit vert"
         }
       },
       {
@@ -219,9 +221,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "memory chips on a green circuit board",
-            "setting": "on a bright workbench in daylight",
-            "composition": "macro close-up"
+            "subject": "a silicon wafer of memory chips on a workbench",
+            "setting": "in a bright factory in daylight",
+            "composition": "overhead wide shot"
           }
         }
       }
