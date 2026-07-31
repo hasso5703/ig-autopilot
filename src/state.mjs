@@ -13,7 +13,7 @@
  * not come back tomorrow and be re-examined from scratch every single run.
  */
 
-import { readFile, writeFile, mkdir, appendFile } from "node:fs/promises";
+import { readFile, writeFile, mkdir, appendFile, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 
@@ -320,6 +320,60 @@ export function nextSlot(now = new Date()) {
   };
 }
 
+/**
+ * Is another run alive right now?
+ *
+ * The publish gap guard cannot see one. It measures time since the last
+ * RECORDED publication, and a run that is halfway through a build has recorded
+ * nothing — it has spent a dollar fifty and has nothing to show a guard. So on
+ * 2026-07-31, when Hasan hand-launched the day's run an hour before the
+ * scheduled one, the two would have been invisible to each other: the 16:36 run
+ * would have found no Reel for the day, no gap violation and no orphan on the
+ * account, and started a second build. Two Reels in a day, against a ceiling the
+ * manual calls hard, and neither run doing anything wrong.
+ *
+ * The flight recorder is the signal that already exists. Runs land their journal
+ * before every purchase, so a journal whose last line is minutes old means
+ * somebody is working. File mtimes are useless here — a fresh clone stamps every
+ * file with the checkout time — so the timestamp comes from the content: the
+ * date is in the filename, the time is in the line.
+ *
+ * This reports; it does not block. A journal left warm by a run that died would
+ * otherwise cost the day its Reel, which is a worse failure than the one being
+ * prevented. The manual carries the procedure: wait, look again, and if the
+ * other journal has not moved, it is not a run any more.
+ */
+export async function runsInFlight({ now = Date.now(), mine = process.env.RUN_JOURNAL || "", warmMinutes = 20 } = {}) {
+  const dir = path.join(ROOT, "reports", "journal");
+  let names = [];
+  try {
+    names = (await readdir(dir)).filter((f) => f.endsWith(".md"));
+  } catch {
+    return [];
+  }
+  const mineBase = mine ? path.basename(mine) : "";
+  const out = [];
+  for (const name of names) {
+    if (name === mineBase) continue;
+    const day = name.match(/^(\d{4}-\d{2}-\d{2})/)?.[1];
+    if (!day) continue;
+    let text = "";
+    try { text = await readFile(path.join(dir, name), "utf8"); } catch { continue; }
+    const times = [...text.matchAll(/^- (\d{2}:\d{2}(?::\d{2})?)\b/gm)].map((m) => m[1]);
+    if (!times.length) continue;
+    const clock = times.at(-1).length === 5 ? `${times.at(-1)}:00` : times.at(-1);
+    let t = Date.parse(`${day}T${clock}Z`);
+    if (!Number.isFinite(t)) continue;
+    // A run that crosses midnight UTC keeps writing into the previous day's
+    // file, so a line that looks 20 hours old is really minutes old.
+    if (now - t > 12 * 3600_000) t += 24 * 3600_000;
+    if (t - now > 5 * 60_000) continue;            // clock skew or a bad line: not evidence
+    const minutesAgo = Math.round(((now - t) / 60_000) * 10) / 10;
+    if (minutesAgo <= warmMinutes) out.push({ journal: `reports/journal/${name}`, lastLineAt: new Date(t).toISOString(), minutesAgo });
+  }
+  return out.sort((a, b) => a.minutesAgo - b.minutesAgo);
+}
+
 export async function publishGap() {
   const { posted } = await loadState();
   const last = latestBy(posted);
@@ -509,7 +563,17 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
   } else if (process.argv[2] === "guard") {
     const role = process.argv[3] === "scout" ? "scout" : "publish";
     const g = await publishGap();
-    console.log(JSON.stringify({ ...g, role }, null, 2));
+    const others = await runsInFlight();
+    console.log(JSON.stringify({ ...g, role, otherRunsInFlight: others }, null, 2));
+    if (others.length && role !== "scout") {
+      console.error(
+        `\nANOTHER RUN IS ALIVE. ${others.map((o) => `${o.journal} wrote a line ${o.minutesAgo} minutes ago`).join("; ")}.` +
+          "\nIt has probably spent money and has certainly not recorded anything yet, so no guard here can see it:" +
+          "\nthe gap guard measures time since the last RECORDED publication, and a build in progress has recorded nothing." +
+          "\nDo not build. Wait ten minutes and run this again. If that journal has not moved, the run behind it is dead" +
+          "\nand the day is yours; if it has, you are the scout for tomorrow. Say which one you concluded, and why."
+      );
+    }
     if (!g.ok) {
       // The guard exists to stop a second PUBLICATION landing too close to the
       // first. A scout publishes nothing, so killing it here only costs the

@@ -407,6 +407,23 @@ add a test before writing a note, write a note before proposing manual changes
 in your report. The constitution (this manual, the gates, the ceilings) is
 never edited by a run; propose, don't apply.
 
+**If `guard` says another run is alive, you are not building anything yet.**
+No guard in this repo can see a run that is mid-build: the gap guard measures
+time since the last *recorded* publication, the orphan check asks Instagram what
+is *published*, and a run that is twelve minutes into buying a Reel has done
+neither. On 2026-07-31 Hasan hand-launched the day's run an hour before the
+scheduled one, and the two would have been invisible to each other — same day,
+no Reel recorded, no gap violation, no orphan — so the second would have built
+and published a second Reel against a ceiling this manual calls hard.
+
+So `guard` now reads the other journals: a file whose last line is under twenty
+minutes old means somebody is working. **Wait ten minutes and run `guard` again.**
+If that journal has moved, the other run is alive and the day is theirs: you are
+the scout for tomorrow. If it has not moved, that run is dead and the day is
+yours — pick up from what its journal says it had already done and paid for,
+rather than starting over. Say in your report which of the two you concluded and
+what the journal showed.
+
 **The journal is the flight recorder.** Append a line at every numbered step
 (`echo "- $(date -u +%H:%M:%S) step 3: picked <slug>" >> "$RUN_JOURNAL"`), and
 the engine appends its own spend and verdict lines through `RUN_JOURNAL`.

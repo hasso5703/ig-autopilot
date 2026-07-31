@@ -1301,6 +1301,60 @@ test("every ledger reader sorts by timestamp, because a union merge shuffles lin
 // carousel — on an account where the manual says carousels are retired. The
 // permalink is the fact Instagram itself returns.
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// 2026-07-31, 15:33 UTC: Hasan hand-launched the day's run an hour before the
+// scheduled one. The two would have been invisible to each other — the 16:36 run
+// would have found no Reel recorded for the day, no gap violation, and no orphan
+// on the account, because a build in progress has recorded nothing anywhere. It
+// would have started a second build: two Reels in one day against a ceiling the
+// manual calls hard, and neither run doing anything wrong.
+//
+// The flight recorder was already the signal. File mtimes cannot carry it (a
+// fresh clone stamps every file with the checkout time), so liveness is read
+// from the content: the date from the filename, the time from the line.
+// ---------------------------------------------------------------------------
+test("a run can tell that another run is still alive", async () => {
+  const { runsInFlight } = await import("../src/state.mjs");
+  const { writeFile, unlink } = await import("node:fs/promises");
+  const stamp = (msAgo) => new Date(Date.now() - msAgo).toISOString();
+  const day = (iso) => iso.slice(0, 10);
+  const clock = (iso) => iso.slice(11, 19);
+
+  const warm = stamp(4 * 60_000);
+  const f = `reports/journal/${day(warm)}-t1h.md`;
+  const cold = stamp(90 * 60_000);
+  const g = `reports/journal/${day(cold)}-t2h.md`;
+  await writeFile(f, `# fixture\n\n- ${clock(warm)} step 5: building\n`);
+  await writeFile(g, `# fixture\n\n- ${clock(cold)} step 9: recorded\n`);
+  try {
+    const live = await runsInFlight();
+    assert.ok(live.some((o) => o.journal === f), "a journal written four minutes ago is a run at work");
+    assert.ok(!live.some((o) => o.journal === g), "one written ninety minutes ago is not");
+
+    assert.ok(!(await runsInFlight({ mine: f })).some((o) => o.journal === f), "a run does not mistake its own recorder for somebody else's");
+    assert.ok(!(await runsInFlight({ warmMinutes: 2 })).some((o) => o.journal === f), "the warm window is what decides, and it is a parameter");
+
+    // A line dated in the future is bad data, not evidence of a run.
+    const ahead = stamp(-60 * 60_000);
+    const h = `reports/journal/${day(ahead)}-t3h.md`;
+    await writeFile(h, `# fixture\n\n- ${clock(ahead)} step 0: skewed clock\n`);
+    try {
+      assert.ok(!(await runsInFlight()).some((o) => o.journal === h), "an hour in the future is skew, and skew is not a signal");
+    } finally { await unlink(h); }
+
+    // Both journal line shapes in the real files parse: with and without seconds.
+    const m = stamp(3 * 60_000);
+    const k = `reports/journal/${day(m)}-t4h.md`;
+    await writeFile(k, `# fixture\n\n- ${clock(m).slice(0, 5)} step 1: no seconds on this one\n`);
+    try {
+      assert.ok((await runsInFlight()).some((o) => o.journal === k), "half the real lines carry HH:MM only");
+    } finally { await unlink(k); }
+  } finally {
+    await unlink(f).catch(() => {});
+    await unlink(g).catch(() => {});
+  }
+});
+
 test("a Reel is recognised by what Instagram returned, not by its slug", async () => {
   const { isReel, REEL_EVERY_HOURS, CAROUSEL_EVERY_HOURS } = await import("../src/state.mjs");
 
