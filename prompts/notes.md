@@ -29,7 +29,12 @@ ENTRIES:
   Ajout 31/07: anthropic.com/news repond 200 et se gate sans probleme (les
   citations du post du 30/07 sont passees VERIFIED du premier coup). Quand
   l'histoire est l'annonce d'un labo, tenter le primaire d'abord: openai.com
-  est l'exception qui bloque, pas la regle.
+  est l'exception qui bloque, pas la regle. Ajout 31/07 (dossier xAI Memphis):
+  bloquent aussi wreg.com, localmemphis.com, datacenterdynamics.com et x.ai;
+  repondent 200 et se gatent sans probleme actionnews5.com (Gray TV, la presse
+  locale americaine en general) et selc.org. Sur une histoire locale, la
+  station TV locale est souvent la seule source joignable qui porte la
+  declaration de l'entreprise.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -65,24 +70,11 @@ ENTRIES:
   "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
   Re-run validate.mjs on any stored spec before building from it; re-copy the
   quote verbatim from the live page. Proof: 19h journal 28/07.
-- 2026-07-29 · The freshness gate (STALE_DAYS=4) ages fixtures against the
-  wall clock: goodPost()'s hardcoded 2026-07-25 failed 4 suite tests at once
-  on 29/07 (now dynamic). test/fixtures/smoke-post.json still carries static
-  07-25 dates, so CLI-validating it fails on staleness: age, not regression.
-  Proof: 06h journal 29/07.
 - 2026-07-28 · The 27/07 Microsoft carousel was deleted from the account
   (mediaId 17884181772455155 returns "does not exist"; only the day's Reel
   remains). Its posted.jsonl entry is intentional memory that still blocks
   re-coverage; never reconcile or delete it. insights.mjs reporting ok:false
   for that id is normal. Proof: publish.mjs recent + insights, 19h 28/07.
-- 2026-07-29 · Leçons du 1er Reel FR (DbYIlApjil_) : une apposition copiée
-  d'une source négligente (TechCrunch décrivant Hugging Face comme un dépôt
-  de code) a atteint la publication; le gate a maintenant un lint
-  known-facts qui refuse les classiques, et l'apposition se vérifie comme un
-  chiffre. Visuels : 5 stills d'ambiance = papier peint; plafond 3 stills,
-  type `photo` (vraies photos créditées Openverse/Commons) pour les
-  personnes et produits nommés. Frames : une par beat, jamais des timestamps
-  fixes.
 - 2026-07-29 · Photo beats (16h): l'API Openverse peut répondre 503 quelques
   minutes (curl direct répondait 200 pendant que le build échouait; réessayer,
   pas déboguer). Le filtre fond-blanc rejette presque toutes les photos de
@@ -105,6 +97,13 @@ ENTRIES:
   ajoute un qualificatif (lieu, moment: "vending machines night") pour
   atteindre de vraies photos documentaires. (Le piege Whisper "Opus 5" du meme
   jour est corrige dans reel2.mjs et couvert par un test.) Proof: run 30/07.
+  Ajout 31/07: un panorama large echoue autrement, sur le filtre fond-blanc.
+  Les trois photos "memphis mississippi river skyline" ont ete refusees a
+  48-59% de quasi-blanc, parce qu'un panorama de ville est surtout du ciel
+  pale. Remede, ~2 min: telecharger l'original Commons, le recadrer en 9:16 sur
+  le sujet avec ffmpeg, et l'epingler avec `file` + `credit` (le credit se
+  recupere sur l'API Commons, champ extmetadata.Artist + LicenseShortName).
+  Le moteur brule alors le credit normalement.
 - 2026-07-30 · Doctrine visuelle v2 (commit de midi): palettes MOODS
   réécrites du noir nocturne vers la lumière du jour éditoriale; hiérarchie
   par beat (photo réelle du sujet, reçu, photo d'objet, veo simple, stills
@@ -202,4 +201,21 @@ ENTRIES:
   retombe sur DEFAULT_RATE tant qu'il n'a pas 3 lectures de la voix courante.
   Donc: apres tout changement de voix ou de direction, lance la calibration
   avant le premier run. Proof: calibrate-voice 31/07.
-
+- 2026-07-31 · Le navigateur peut mourir APRES avoir ecrit la capture, et le
+  build entier meurt avec lui. Deux builds sur cinq ont plante sur un
+  Playwright ProtocolError ("closed", pendant les cookies) juste apres avoir
+  ecrit shot_N.png, sur des pages lourdes (TechCrunch: cloudflare + recaptcha +
+  regie; Action News 5: taboola). Le fichier sur disque est COMPLET et
+  utilisable. Donc a chaque echec de build: epingler avec `"file"` tout ce qui
+  est deja ecrit dans media/<slug>/ (shot_N.png, still_N.jpg, photo_N.jpg)
+  avant de relancer. Le relance ne rachete alors que la narration (~$0,05 pour
+  1 a 3 lectures) au lieu des images. Reel entier du 31/07: $0,53 en 5 builds.
+  Proof: journal 15h 31/07.
+- 2026-07-31 · Un caractere enveloppe dans du balisage coupe la phrase en deux
+  dans le texte aplati du gate: TechCrunch ecrit NOx en <sub>, et la page lue
+  par validate.mjs contient "no x", donc une citation d'evidence qui traverse
+  ce mot repond NOT_FOUND alors qu'elle est mot pour mot sur la page. Ca ne
+  s'invente pas depuis le rendu visuel. Quand une citation echoue alors que tu
+  l'as copiee de la page, refais le fetch en Node et cherche la sous-chaine
+  avant de suspecter une reecriture de l'article: ici la reponse etait de
+  couper la citation avant le mot, pas de la reformuler. Proof: gate 16h 31/07.
