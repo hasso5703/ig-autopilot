@@ -96,9 +96,26 @@ unfinished. A run that crashes halfway must also never leave the account with
 a published post it has no memory of, which is why the record lands before the
 lessons do.
 
-**Publishing nothing is still a perfectly good outcome.** One Reel a day is a
-ceiling, not a quota. A run that finds nothing it can verify publishes nothing
-and says so, and the account is better for it.
+**The bio promises one a day, and the promises are ranked.** In order, and this
+order settles every conflict between them:
+
+1. **Every claim traceable to a verified sentence.** The account is worth
+   nothing the day this stops being true. Nothing outranks it.
+2. **One Reel a day, sixty seconds.** Both halves of that are printed in the
+   bio, so both are claims the account makes in public. The duration is now
+   built by the engine and cannot be missed by accident (step 10). The daily
+   half is on you.
+3. **One Reel a day is also a ceiling**, and a second one is never the answer.
+
+So publishing nothing is still a legitimate outcome, and it is the *only*
+legitimate one when nothing can be verified — but it stopped being a free one.
+A day heading for empty is a promise about to break, and the 19:30 run is the
+last chance to keep it: before conceding, work the `revisit` shelf and the
+scouts' banked candidates, and try the strongest thing that can be honestly
+gated. Concede only to a real wall — nothing gates, the media key is missing,
+the engine will not build — and when you concede, **say plainly in the report
+that the day was missed and why**. A missed day that nobody names is how a
+daily account quietly becomes a weekly one.
 
 The account's promise is narrow and absolute: **every factual claim is traceable
 to a sentence in a cited source.** The account is worth nothing the day that
@@ -129,7 +146,8 @@ the platform. None of it is taste.
    in 2025, so a comment worth answering is worth more than ten emoji.
 4. **Likes per reach**, last of the four. Never make the like the main ask.
 5. **Profile visits caused by a Reel feed back into discovery scoring**, which is
-   the only reason the carousel and the grid still exist.
+   why the grid still matters even though nothing but Reels is on it: a viewer
+   who taps through must find a shelf of them, not one post and a gap.
 
 ### The window you actually have
 
@@ -190,6 +208,30 @@ as an instruction to remove names a stranger would not know. It is the opposite.
 - **Name the victim, not just the actor.** Being hacked is what happened *to
   somebody*. "It hacked a real company" throws away the most concrete noun in
   the story.
+- **One actor, one action. Two incidents are never narrated as one.** This is
+  the rule the account came closest to breaking, on 2026-07-31, and it is worth
+  the space because nothing else would have caught it. Anthropic disclosed three
+  separate incidents: **Claude Mythos 5** published the booby-trapped package to
+  PyPI, **Claude Opus 4.7** was the one that kept attacking after realising the
+  target was real. The day's script said only "Claude" for five beats, then named
+  "Opus 4.7" in the sixth. Every sentence was true. Every digit was quoted. The
+  gate passed twice, four hours apart. And a viewer with six seconds on that beat
+  reconstructs one story in which Opus 4.7 shipped the malware — a false, named,
+  public accusation about a real product, assembled entirely out of true
+  sentences by the edit between them.
+
+  So: **the actor of the central claim is named in the attaque, spelled as the
+  sources spell it** (the gate refuses a script whose first two beats name none
+  of them), and **any second actor arrives attached to its own verb**, in the
+  same sentence, with what distinguishes it. "Un autre modèle, Opus 4.7, a
+  continué d'attaquer" — *un autre*, and then what it did. Telling a story
+  anonymously and letting a name arrive later is how the wrong name captures it.
+
+  **A name is a fact, and it is now checked like a figure**: a versioned product
+  name spoken in a script must appear in an evidence quote, exactly like a
+  digit. What the gate cannot check is whether the edit fuses two of them. That
+  is yours, it is the third time this account has been saved only by someone
+  reading the finished thing, and it is why *look at the output* is a rule.
 - The hook ceiling is **15 words**, raised from 13 for exactly this: a name plus
   its apposition needs the room.
 
@@ -216,32 +258,46 @@ chatbot about a symptom" is better than "AI users".
 
 ### Holding them to the end
 
-- **The format is 60 seconds, and the shape inside it is what holds.** The
-  measured 2026 bracket data (6M Reels, Jan–Jun 2026) puts 45–60s at both the
-  best reach rate and the best engagement rate of any length; the old 15–25s
-  rule optimised completion on stories too thin to hold anyone. Sixty seconds
-  is HugoDécrypte's proven daily-news container, it is the série's name, and
-  it only works **dense**: 130 to 155 French words, every sentence either new
-  information or a turn. The pipeline cuts beats to the narration, so **your
-  copy is the runtime**. A 60-second Reel with 40% retention beats a 20-second
-  Reel watched fully for total watch time, and total watch time is the
-  ranking currency. Under 40% retention in the readings, shorten before you
-  soften.
-- **A Reel has to be followable, and for a while ours were not.** The template
-  used to drop beats by type priority, and the `content` beat — the one that says
-  what actually happened — was first on the list. Every Reel came out as cover,
-  figure, turn, ask: a poster, a number and a request, with the explanation
-  deleted. The selection is a spine now, five beats, one of each job:
+- **Sixty seconds is a contract, not a target.** The bio says "L'actu IA en 60
+  secondes" and promises one every day, so the duration is a claim the account
+  makes in public, and it is held to the same standard as every other claim it
+  makes. It was not, until 2026-07-31: the manual asked for 130 to 155 words,
+  the engine only ever refused a file *over* 62 seconds, and the four Reels
+  this account had published ran **47, 48, 50 and 51 seconds** — every one of
+  them reported COMPLIANT. Hasan's instruction, that day: *"on dit en bio que
+  c'est 60 secondes tous les jours, il faut donc que ça soit vraiment 60
+  secondes, tous les jours, sans exceptions."*
 
-  | | |
-  |---|---|
-  | **open** | the cover, with the names in it |
-  | **explain** | what actually happened, in a sentence. `content`, or `stat` |
-  | **turn** | the catch, the caveat, or a human voice. `contrast`, or `quote` |
-  | **ask** | the close |
+  So the runtime is now built rather than hoped for, and `src/format.mjs` is
+  the only place its numbers live. The engine time-stretches the narration onto
+  the speech budget and cuts the file to exactly 60.0 seconds; the gate holds
+  your copy to the word window that keeps that stretch inaudible. **You do not
+  do this arithmetic** — the gate prints the window and the target, computed
+  from the voice's own measured reading rate. You write to the number it gives
+  you, which is about **180 French words over 7 to 10 beats**.
 
-  Write the post so those four exist and the Reel will carry the story. If it
-  reports dropping a beat you needed, the post is the wrong shape, not the Reel.
+  The research behind the length is unchanged: the measured 2026 bracket data
+  (6M Reels, Jan–Jun 2026) puts 45–60s at both the best reach rate and the best
+  engagement rate of any length, sixty seconds is HugoDécrypte's proven
+  daily-news container, and a 60-second Reel at 40% retention beats a 20-second
+  Reel watched whole, because total watch time is the ranking currency.
+
+  **What to do when retention is low, and this replaced a rule that would now
+  break the promise.** The old line said "under 40% retention, shorten before
+  you soften". Shortening is no longer available: the length is the série's
+  name and the bio's promise, and a run does not get to renegotiate either. The
+  lever is the shape inside the minute — a harder attaque, an earlier turn, the
+  tease paid sooner, more visual changes, a kicker that arrives before the
+  viewer expects it. If the readings stay under 40% for five posts, that is a
+  finding for the report and a decision for Hasan, not an edit a run makes on
+  its own.
+- **A Reel has to be followable, and for a while ours were not.** The first
+  engine dropped beats by type priority and the `content` beat — the one that
+  says what actually happened — was first on the list, so every Reel came out
+  as cover, figure, turn, ask: a poster, a number and a request, with the
+  explanation deleted. Nothing drops beats any more; you write the spoken story
+  and the engine performs it. **The spine is in step 5d**, it is the one that
+  governs, and every job in it has to exist or the story does not land.
 - **Change something every two to three seconds.** A beat that sits still for six
   seconds is where viewers leave, and the `long` flag in the Reel output is
   telling you exactly which line to cut.
@@ -332,7 +388,7 @@ node src/state.mjs guard          # publish runs; scouts run `guard scout` inste
 ```
 
 **The notebook (`prompts/notes.md`) is the runs' own memory**, and its rules
-live at the top of the file: at most 20 dated operational facts, and you may —
+live at the top of the file: at most 26 dated operational facts, and you may —
 should — edit it when you learn one worth a future run's minutes or correct
 one that is wrong. The hierarchy is fixed: fix code before adding a test,
 add a test before writing a note, write a note before proposing manual changes
@@ -463,10 +519,13 @@ watch wrote the first numbers this account has ever had. Collecting costs one
 API round trip and means you are looking at this afternoon rather than at
 yesterday.
 
-Read **retention** first when it exists (the watch computes average watch
-time over real duration for every Reel with a recorded `durationS` — under
-40% the hook or the length is the problem, over 60% the format is working and
-distribution will follow), then **shares** and **saved**, then **follows**.
+Read **retention** first when it exists (the watch computes average watch time
+over real duration for every Reel with a recorded `durationS` — under 40% the
+hook or the shape inside the minute is the problem, over 60% the format is
+working and distribution will follow), then **shares** and **saved**, then
+**follows**. The length is not on that list of suspects any more: it is fixed
+by the série's promise, and what a low reading indicts is the attaque, the
+pacing of the turns, or how long a picture sits.
 Ignore likes: it is the metric that flatters most and predicts least, and
 Instagram ranks on sends.
 
@@ -482,8 +541,13 @@ The discipline that matters here is refusing to see a pattern that is not there:
   step 3. It adjusts ranking between stories that already cleared the bar. It
   never promotes a story below `minScore`, and it never touches the gate.
 
-Swipe-through is not measurable: the `navigation` metric is refused for feed
-carousels. Do not claim a swipe rate, and do not infer one from `views`.
+**These two rules govern each other, and two runs froze between them on
+2026-07-31.** "Under 40% retention, look at the hook" is a diagnosis; "under 5
+posts there is no signal" is what licenses you to act on one. The floor wins:
+under five readings you *report* the number, name what you think it means, and
+change nothing. What you may always do, at any sample size, is make this Reel
+better than the last one — a harder attaque, an earlier turn, a picture that
+changes sooner. That is craft, not a rule invented from two posts.
 
 ### 3. Score and pick one
 
@@ -514,6 +578,19 @@ account." Nothing else could see it, because `filterFresh` dedupes *stories*, no
 thing happening today**, and if you publish it anyway, say so in your report. An
 account that only ever covers one corner of AI is a niche account, and the brief
 is the whole of it.
+
+**And do not read a green theme check as absolution — it compares words, you
+compare meaning.** On 2026-07-31 `themes` reported no repeat, and both scouts
+noticed on their own that the day's candidate was the *fourth* consecutive
+AI-goes-wrong story and the *third* in five days naming Claude or Opus:
+27/07 a cybersecurity model, 28/07 Claude chats indexed by Google, 29/07 Altman
+after a security scare, 30/07 Opus 5 misbehaving, 31/07 Claude shipping malware.
+Nothing mechanical could see it, because `filterFresh` dedupes stories and
+`themes` matches title tokens; neither knows that "a lab's model did something
+alarming" is one subject wearing five headlines. Ask it in words, every time:
+*if a stranger scrolled our last five, what would they say this account is
+about?* If the answer is narrower than "AI news", the runner-up is worth its
+audition even at a lower score, and say so in the report either way.
 
 Rank the fresh items against `sources.json → scoring.weights`:
 
@@ -571,6 +648,18 @@ discrepancy is itself worth a slide.
 
 Write `posts/<slug>.json`, slug `YYYY-MM-DD-short-topic`.
 
+**What the public sees, and what it does not — read this before you spend an
+hour on the wrong surface.** Since carousels were retired, the only things that
+reach a human being are the **`reel2` scripts**, the **`title`** on the hook
+card, and the **`caption`**. The **slides are never rendered and never
+published**: they are the evidence backbone, the structure that forces the story
+to be decomposed into claims each carrying its own verified quote, and they are
+what the gate reads to decide whether a spoken digit or a spoken name is allowed
+out. Write them properly, because everything the Reel may say is derived from
+them — and do not polish their prose, do not agonise over their archetypes, and
+never spend money on pictures for them. Four honest, well-sourced slides beat
+nine decorative ones.
+
 **`test/fixtures/` is not a source of posts.** It holds one complete, gate-clean
 post used to exercise this pipeline without touching the account, and it is
 deliberately a story that has already been published and deleted. Copying it
@@ -583,7 +672,7 @@ has no reason to type it.
 without them:**
 
 ```json
-"centralClaim": "One sentence: the single thing this whole carousel rests on.",
+"centralClaim": "One sentence: the single thing this whole post rests on.",
 "corroboration": [
   { "url": "https://…", "quote": "the sentence where this source states that claim" },
   { "url": "https://…", "quote": "the sentence where a DIFFERENT outlet states it" }
@@ -627,8 +716,9 @@ The rule the run wrote, worth keeping in mind whenever the gate goes green:
 **a green gate does not prove corroboration, only quotation.**
 
 Slides are not one shape with fields swapped — pick the **archetype** that fits
-what the slide has to do. A carousel of seven identical layouts is dull to
-swipe, and swipe-through is what buys distribution.
+what the claim has to do. The archetypes are how the story gets decomposed into
+separately-evidenced pieces; a post whose slides are seven identical `content`
+blocks is a post that was never really taken apart.
 
 | `type` | Use it for | Required fields |
 |---|---|---|
@@ -651,9 +741,10 @@ restate it in figures.
 archetype exists because a large numeral stops a thumb where a phrase does not;
 "Three times" set at 300px is just a long word. Put the words in `unit`.
 
-**Slide 2 must be a `stat`.** Instagram re-serves a carousel starting at slide 2
-to anyone who scrolled past slide 1, so slide 2 is a second cover. A paragraph
-there wastes the free second impression.
+**Slide 2 should be a `stat`** — the story's hardest number, isolated, with its
+own evidence. Nothing renders it now; the reason to keep the habit is that a
+story whose central figure cannot be pulled out and quoted on its own is usually
+a story you have not finished verifying.
 
 A good spine: `hook → stat → content → contrast → quote → content → cta`.
 
@@ -692,7 +783,7 @@ Rules the validator enforces — save yourself a rejection:
 - every digit in a body must appear in that slide's evidence
 - **every digit anywhere else — headline, hero, figure, unit, claim, caveat —
   must appear in the evidence of some slide in the post.** A hero figure is the
-  loudest text on the carousel and carries no evidence of its own, so a derived
+  loudest text in the post and carries no evidence of its own, so a derived
   number like "$0 extra" is rejected: quote a figure, never compute one
 - at least two distinct source domains across the post
 
@@ -701,8 +792,8 @@ Rules the validator enforces — save yourself a rejection:
 This is the rule that decides whether the account reaches a hundred thousand
 people or ten thousand. It is not a style preference.
 
-A carousel about a benchmark reaches people who follow benchmarks. A carousel
-about what the benchmark *changes* reaches everyone else. The facts stay
+A Reel about a benchmark reaches people who follow benchmarks. A Reel about what
+the benchmark *changes* reaches everyone else. The facts stay
 identical — only the framing moves. `evolving.ai` did not reach five million
 followers posting about model evaluations; it posted about repositories killing
 $30B of revenue. Same information, translated into stakes.
@@ -711,7 +802,7 @@ $30B of revenue. Same information, translated into stakes.
 
 1. **No number without a consequence.** A figure may not be the point of a
    slide. The point is what it changes, and for whom. If you cannot name who is
-   affected, the slide does not belong in the carousel.
+   affected, the claim does not belong in the post.
 
 2. **Slides 1 and 2 carry no jargon.** They are the two covers, and they must be
    understood by someone who has never read a technical document. Any term you
@@ -889,11 +980,17 @@ is one line on what the account is, and neither may print a cadence or claim
 rigour. The gate refuses a close that asks for nothing, and it refuses "one story
 a day" in any wording.
 
-### 5c. The pictures
+### 5c. The pictures — for the Reel only
 
-**Every slide carries a picture, and the gate refuses a post without one on
-every slide.** This is not decoration. Two carousels of type on black reached
-zero people; what stops a thumb is an image, and type is what keeps it stopped.
+**The slides' `image` blocks are still required by the gate and are never
+acquired, never rendered and never seen.** Write the two-line block each slide
+needs and move on; **do not run `imagery.mjs` on a post spec** and do not buy a
+picture for a slide. The Reel's pictures are step 5d's business, and they are
+the only ones that exist.
+
+The rules below are kept because the Reel's `photo` beats go through the same
+Openverse/Commons machinery, with the same licensing, the same query discipline
+and the same absolute line between a documentary photograph and a generated one.
 
 Each slide gets an `image` block, in one of two kinds:
 
@@ -924,14 +1021,14 @@ keyword indexes. `"electrical substation"` finds hundreds; `"the moment the
 substation tripped on a summer night"` finds nothing. Two or three plain nouns.
 
 ```bash
-node src/imagery.mjs candidates "electrical substation"     # look first
-node src/imagery.mjs posts/<slug>.json                      # acquire all
-node src/imagery.mjs posts/<slug>.json --slide 4 --reroll   # try the next one
+node src/imagery.mjs candidates "electrical substation"     # look before you plan a photo beat
 ```
 
-It writes `media/<slug>/imagery.json` with the licence, the author and the
-source URL of every picture, and caches the files under `media/<slug>/src/`
-(gitignored — only the composed slides are committed).
+That is the only invocation a production run has any use for: it lists what is
+openly licensed for a query, at no cost, so a `photo` beat is planned against
+photographs that exist. The spec-wide acquire commands belong to the retired
+carousel path. The Reel's own photo beats are acquired by `reel2.mjs` when it
+builds, with the licence and the author burned onto the frame.
 
 **A failed slide is reported, never substituted.** If nothing openly licensed
 matches, that slide is recorded as failed, the render falls back to an abstract
@@ -992,12 +1089,25 @@ Rules, and the gate enforces the hard ones:
   words.
 - **`lang` is "fr".** It drives the narration alignment; "en" exists for
   fixtures and nothing else now.
-- **5 to 7 beats, 130 to 155 French words, 160 at the absolute ceiling** —
-  the copy is the runtime, the voice ceiling is 56 seconds, and with the
-  3-second end-card the file lands under the 60 the série promises. News
-  pace, not radio pace: short declaratives, one idea per sentence. Every
-  spoken digit must appear in some slide's evidence quote, exactly like a
-  headline digit; an em dash in a script is refused.
+- **7 to 10 beats, and the word window the gate prints** — about 180 French
+  words at the voice's current rate. Do not memorise that figure and do not
+  compute it: run the gate, read the window it gives you, write to it. It is
+  derived in `src/format.mjs` from the 60-second contract and from the
+  account's own measured reading rate (`state/voice-rate.jsonl`, written by
+  the engine after every narration), so it moves on its own if the voice or
+  its direction ever changes and a number typed into this manual would go
+  stale without anyone noticing.
+
+  **A script under the floor is refused, and that is the point.** Being ten
+  seconds short is not a tight edit, it is the bio's promise broken; the fix
+  is more reporting, never padding. The detail that did not fit, the caveat,
+  the second source's figure, the response from the accused party — a
+  60-second Reel is not a 50-second Reel with air in it.
+
+  News pace, not radio pace: short declaratives, one idea per sentence. Every
+  spoken digit must appear in an evidence quote, exactly like a headline
+  digit, and so must every versioned product name; an em dash in a script is
+  refused.
 - **The spine is a 60-second arc, and each beat is one job:**
   1. **L'attaque** (~2 phrases): consequence first, a name and a number in
      the first sentence. Never "OpenAI a annoncé…" — announcement framing is
@@ -1046,8 +1156,13 @@ Rules, and the gate enforces the hard ones:
     photo the engine acquired** before publishing, like every picture; if
     nothing openly licensed matches, swap the beat to the receipt or a still
     and say so in the report.
-  - **Generated stills are capped at three per Reel** (the gate enforces it).
-    They set mood between real surfaces; they are never the substance.
+  - **Generated stills are capped at four per Reel, and at least three beats
+    must show something real** (the gate enforces both). The cap moved from
+    three to four with the beat count so the ratio did not get worse; the
+    floor is the same rule said usefully, because a cap alone is satisfied by
+    a Reel that shows nothing real at all. `photo`, `screenshot` and `veo`
+    are the real surfaces. Stills set mood between them; they are never the
+    substance.
   - **Alternate visual families.** Two identical-looking stills back to back
     read as wallpaper (28 July: two near-identical bedside-phone frames
     closed the Reel). Vary subject, distance and setting; the engine's job
@@ -1079,41 +1194,28 @@ If it rejects, **fix the post, never the gate**. If a quote came back
 `NOT_FOUND`, you paraphrased — go back to the page and copy the sentence
 character for character. If a source is `UNVERIFIABLE`, replace that source.
 
-### 7. Render
-```bash
-node src/render.mjs posts/<slug>.json media/<slug>
-```
-Produces `media/<slug>/01.jpg …` at exactly 1080×1350, with the pictures from
-step 5c composited in. The renderer throws rather than shipping a bad slide, on
-three counts, and none of them is a formality:
+### 7. Render — RETIRED, do not run
 
-- a font that failed to load, which produces a publishable but off-brand image;
-- text that overflows its shape even at minimum size;
-- **a slide whose type covers less of the frame than the floor in
-  `brand.json`.** The published contrast slide that triggered this rewrite used
-  38% of its frame and left the rest black. Layouts stretch now, so this should
-  never fire; when it does, the copy is too thin for the archetype. Write more,
-  or move the point onto that slide. Do not lower the floor.
+`src/render.mjs` paints carousel slides. Carousels were retired on 2026-07-28
+and nothing has rendered a slide since. **A production run never runs this
+step**, never acquires slide pictures with `imagery.mjs`, and never spends a
+cent on a surface nobody sees. The code stays in the repo because the renderer
+is the only thing that would have to be rebuilt if the grid ever came back; it
+is not a fallback and it is not an option when the Reel is difficult.
 
-It prints the coverage of each slide as it goes. Then **look at every slide**
-with the Read tool. The validator checks facts, the renderer checks geometry,
-and neither can see that a photograph is ugly, off-tone or subtly wrong for the
-story. That judgement is yours and it is the last one before publication.
+Skip to step 10. Steps 8 and 9 below are the orphan check and the record, both
+of which still matter.
 
-### 8. Publish
+### 8. Publish the carousel — RETIRED, do not run
 
-Land the media first — Instagram fetches the URLs server-side, so they must be
-live before publishing:
+`publish.mjs publish` posts a carousel. It is kept for exactly one thing, and
+that thing runs at the top of every publish run: **the orphan check**,
+`node src/publish.mjs recent`, compared against `state/posted.jsonl`. The Reel's
+own publishing lives in step 10 and uses `publish-reel.mjs`.
 
-```bash
-node src/land.mjs "post: <slug>" media/<slug> posts/<slug>.json state/ reports/journal/
-```
-
-Then build the URLs with the helper. **Never hand-write a `/main/` URL.**
-
-```bash
-node src/publish.mjs urls <slug> <slide-count>
-```
+What still applies from this step, and applies to the Reel too: **land the media
+before publishing.** Instagram fetches the URL server-side, so the file has to
+be live and SHA-pinned first. **Never hand-write a `/main/` URL.**
 
 raw.githubusercontent caches branch paths for minutes but treats commit paths as
 immutable. Measured: right after a push that changed a slide from 63450 to
@@ -1122,13 +1224,8 @@ immutable. Measured: right after a push that changed a slide from 63450 to
 publish time, so a stale fetch bakes the wrong artwork into the post forever,
 silently. `publish.mjs` refuses branch-path URLs for this reason.
 
-```bash
-node src/publish.mjs dry-run "<caption>" <url1> <url2> …   # containers only
-node src/publish.mjs publish "<caption>" <url1> <url2> …   # goes live
-```
-
-Run the dry run first. If it fails, nothing was published and you can fix and
-retry.
+**Run the dry run first**, whichever publisher you are using. If it fails,
+nothing was published and you can fix and retry.
 
 **A publish error is not proof that nothing published.** `media_publish` once
 returned HTTP 403 "Application request limit reached" *after* the carousel was
@@ -1152,8 +1249,10 @@ But the **next run clones the default branch**. If `state/posted.jsonl` only
 exists on a side branch, tomorrow's run starts with no memory of today, and
 republishes the same story to the same followers.
 
-So: append the published carousel with `recordPosted`, append the stories you
-actually weighed with `recordSeen`, and land both **on `main`**.
+So: append the published Reel with `recordPosted` — **with its probed
+`durationS`**, which is what makes retention computable — append the stories you
+actually weighed with `recordSeen`, and land both **on `main`**, in the minute
+the post goes live.
 
 **Record only what you genuinely evaluated.** `recordSeen` is memory, not a log:
 anything written there is excluded from the next 36 hours of runs. A run that
@@ -1207,9 +1306,13 @@ resolve it yourself, and above all do not resolve it with force.
 
 ### 10. The Reel
 
-The carousel is what people find. The Reel is how they find it. **Step 9 must
-be finished and pushed before you start this** — losing the memory of what was
-published is unrecoverable; failing to ship a Reel costs one day of reach.
+**The Reel is the artefact. There is no other one.** Carousels are retired, so
+the order that used to matter — record the carousel, then build the Reel — no
+longer exists: nothing is published before this step, and `recordPosted` runs
+after the Reel is live, not before. What survives from that lesson is the rule
+underneath it: **the record lands on `main` in the same minute the post goes
+live**, because a run that dies between publishing and recording leaves the
+account with a post it has no memory of, and the next run republishes it.
 
 The plan was written in step 5d and gated in step 6. Building it is one command:
 
@@ -1229,15 +1332,29 @@ zero — it is also the 1.2s grid thumbnail), the word-by-word karaoke for the
 85% who watch on mute, and the **end-card** (the fixed serial promise and
 follow ask, three seconds on the brand ground after the last word), ducks the
 mood's music bed under the voice, and normalises the mix to the platform's
--14 LUFS. It refuses a narration over 56 seconds **before spending anything**
-— a ceiling that is also protection, because Gemini TTS has a documented
-quality cliff past ~60 seconds of output and a ~1-in-10 accent/pacing drift:
-**if the word-count alignment fails, regenerate the narration once before
-debugging anything else.** It ends by probing the file it actually wrote:
-`COMPLIANT` or a list of violations.
+-14 LUFS. A still that has to hold longer than about five seconds is re-framed
+once, mid-beat, so a long beat still changes something every three seconds;
+that costs ffmpeg time and no money. It ends by probing the file it actually
+wrote: `COMPLIANT` or a list of violations.
 
-**If it prints anything other than COMPLIANT, do not publish the Reel.**
-Publish the carousel, report the violation.
+**How it keeps the minute.** Right after the voice comes back — and before a
+single picture is bought — the engine measures the reading, records it raw to
+`state/voice-rate.jsonl`, and time-stretches it onto the speech budget so the
+finished file is exactly 60 seconds. The stretch is a few percent and inaudible.
+If it would have to be more than that, the engine **stops there and tells you
+how many words to write**: only the narration has been paid for at that point
+(about $0.012), and no Veo clip, still or screenshot has been bought. That is
+also the guard against Gemini TTS's documented quality cliff past ~60 seconds of
+output, and against its ~1-in-10 accent and pacing drift: **if the word-count
+alignment fails afterwards, regenerate the narration once before debugging
+anything else.**
+
+**If it prints anything other than COMPLIANT, do not publish.** There is no
+second surface to fall back to any more — the sentence that used to live here
+said "publish the carousel instead", and a carousel reaches nobody. Read the
+violation, fix its cause, rebuild. A duration violation means the narration
+came out outside the window and the copy is what has to change, never the
+tolerance.
 
 **Then look at the frames, every time.** The engine's own first output had the
 account badge colliding with the receipt card's white header, and every serious
@@ -1261,7 +1378,7 @@ frame is the end-card with the promise and the follow ask on it, and nothing
 readable was invented by a generated image.
 
 **Cost discipline.** A normal Reel is one Veo clip (Lite, 720p, the model the
-key offers cheapest — the engine picks and prints it) plus two or three stills:
+key offers cheapest — the engine picks and prints it) plus three or four stills:
 about a dollar. If `spend:` lines total over $3 for one Reel, say so in the
 report and say why.
 
@@ -1275,16 +1392,17 @@ IG_REEL_URL="<that url>" node src/publish-reel.mjs dry-run media/<slug>/reel.mp4
 IG_REEL_URL="<that url>" node src/publish-reel.mjs publish media/<slug>/reel.mp4 "<caption>"
 ```
 
-`publish-reel.mjs` sent `share_to_feed=false` while carousels existed: the carousel owned
-the grid, the Reel owns the Reels tab. Transcoding takes minutes and the
+`publish-reel.mjs` sends **`share_to_feed=true`**: the Reel is the grid now, so
+it has to land on both surfaces. It sent `false` while carousels owned the grid. Transcoding takes minutes and the
 command polls. **A publish error is not proof that nothing published** — both
 publishers read recent media back and tell you which case you are in; trust
 their verdict, never a bare retry. Record the Reel with `recordPosted`, land it
 on `main`, prove it with `git ls-remote`.
 
-If the Reel fails to build, the carousel and the state still stand: publish
-what stands, report the failure plainly. A day without a Reel is a bad day; a
-day that loses state or publishes a broken video is a bad account.
+If the Reel fails to build, there is nothing else to publish: land the state
+and the journal so the day's work is not lost, report the failure plainly, and
+say what you would need to build it. A day without a Reel is a bad day; a day
+that loses state or publishes a broken video is a bad account.
 
 **Record the duration.** `recordPosted` now accepts `durationS` — pass the
 probed duration from the build (`COMPLIANT 58.3s` prints it, and
@@ -1318,7 +1436,7 @@ comments scope — report it as a finding and move on):
   node src/engage.mjs comment last "…" --live
   ```
 
-- **The 19:00 run answers.** `node src/engage.mjs recent` lists what
+- **The 19:30 run answers.** `node src/engage.mjs recent` lists what
   strangers wrote on the recent posts. Reply to everything worth replying
   to: a real answer, in French, with substance — a source, a number, a
   correction, a genuine question back. Never an emoji, never "merci !", never

@@ -8,7 +8,11 @@ command to trust — used to die inside mail reports the next run never read. --
 
 RULES (enforced by `npm test`, which every run executes before anything else):
 - Entries live below the ENTRIES line, one dash-bullet each, dated, with proof.
-- **At most 20 entries.** To add when full, first merge or delete a stale one.
+- **At most 26 entries.** When full, delete before you merge, and delete in
+  this order: first any entry whose lesson has since been encoded in the code,
+  a test or the manual (it is not operational memory any more, it is history),
+  then the oldest entry nothing has needed. Merging two live facts into one
+  bullet is the last resort, not the first, because merged notes get skimmed.
 - Operational facts only: timings, endpoints, blocks, command usage. Never
   editorial taste, never anything that loosens a gate or a ceiling — those are
   proposals for the report, not notes. A note that argues policy gets deleted.

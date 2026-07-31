@@ -1029,13 +1029,19 @@ test("a sentence-opening The is not a name, and Microsoft still is", async () =>
   for (const real of ["Microsoft", "Redis", "Anthropic"]) assert.ok(names.includes(real), `"${real}" must be caught`);
 });
 
+// The cap rose from 20 to 26 on 2026-07-31: it had started evicting measured
+// facts. Two runs that week each learned something worth a future run's
+// minutes and had to throw it away to stay under the ceiling, which is the
+// notebook failing at the one job it has.
+const NOTES_MAX = 26;
+
 test("the notebook stays small, dated and below its own rules line", async () => {
   const { readFile } = await import("node:fs/promises");
   const text = await readFile(new URL("../prompts/notes.md", import.meta.url), "utf8");
   const entriesAt = text.indexOf("ENTRIES:");
   assert.ok(entriesAt > 0, "the ENTRIES line must exist — it is the border between constitution and notes");
   const entries = text.slice(entriesAt).split("\n").filter((l) => /^- /.test(l));
-  assert.ok(entries.length <= 20, `${entries.length} entries — the cap is 20; merge or delete before adding`);
+  assert.ok(entries.length <= NOTES_MAX, `${entries.length} entries — the cap is ${NOTES_MAX}; merge or delete before adding`);
   for (const e of entries) assert.ok(/^- \d{4}-\d{2}-\d{2} · /.test(e), `entry lacks a date: "${e.slice(0, 60)}"`);
   assert.ok(!/—/.test(text.slice(entriesAt)), "no em dashes, even here");
 });
