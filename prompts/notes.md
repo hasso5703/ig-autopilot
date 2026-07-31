@@ -132,3 +132,14 @@ ENTRIES:
   que sur ce qui a perdu la comparaison. Et le hook "Unverified" de GitHub:
   une ligne dans le rapport, rien d'autre, jamais d'amend ni de commit
   correctif sur une branche laterale (voir routine.md, When things go wrong).
+- 2026-07-31 · Le format 60 s est tenu par le code, plus par un comptage de
+  mots. src/format.mjs porte tous les nombres (7 a 10 beats, plafond 4 stills,
+  plancher 3 surfaces reelles, fenetre de mots calculee sur SPEECH_S et sur le
+  debit reel de la voix, journalise dans state/voice-rate.jsonl). reel2 etire la
+  narration a l'atempo et coupe le fichier a 60,0 s exactement; un script hors
+  fenetre arrete le build juste apres la narration (~$0,012 depense, aucune
+  image achetee) et donne le nombre de mots a ecrire. Ne recopie jamais un
+  nombre de mots de memoire: lance validate.mjs et ecris a la fenetre imprimee.
+  Un still qui tient plus de 5,2 s est recadre une fois, gratuitement. Proof:
+  suite verte 73/73 et gate en ligne PASSED sur le spec du 31/07.
+
