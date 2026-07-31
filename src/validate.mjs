@@ -22,7 +22,10 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { tokens } from "./state.mjs";
 import { simplicityIssues } from "./promptcraft.mjs";
-import { BEATS_MIN, BEATS_MAX, STILLS_MAX, REAL_MIN, DEFAULT_RATE, medianRate, wordWindow, TARGET_S } from "./format.mjs";
+import {
+  BEATS_MIN, BEATS_MAX, STILLS_MAX, REAL_MIN, DEFAULT_RATE, BEAT_MIN_WORDS,
+  VEO_MAX_S, VEO_STRETCH_MAX, beatSeconds, medianRate, wordWindow, TARGET_S,
+} from "./format.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const UA = "order-of-magnitude/1.0 (+https://github.com/hasso5703/ig-autopilot)";
@@ -1029,11 +1032,32 @@ export async function validatePost(post, opts = {}) {
     const storyVocab = new Set(
       [...new Set(tokens([post.centralClaim || "", evidenceText].join(" ")))].filter((w) => !properNouns.has(w))
     );
+    /*
+     * How long each beat holds the screen, predicted before anything is bought.
+     * The engine derives the same split from Whisper's alignment of the
+     * narration it actually paid for, so the two never agree to the frame — but
+     * they agree closely enough to refuse the shapes that cannot work, and
+     * refusing them here costs nothing.
+     */
+    const perBeat = beatSeconds(beats.map((b) => (b?.script?.trim() || "").split(/\s+/).filter(Boolean).length));
+
     let words = 0;
     for (const [i, b] of beats.entries()) {
       const at = `reel2 beat ${i + 1}`;
       if (!b?.script?.trim()) { err(`${at}: no script — the copy is the runtime`); continue; }
-      words += b.script.trim().split(/\s+/).length;
+      const beatWords = b.script.trim().split(/\s+/).length;
+      words += beatWords;
+      if (beatWords < BEAT_MIN_WORDS)
+        err(`${at}: ${beatWords} word(s) — under ${BEAT_MIN_WORDS} the picture flashes and the caption cannot be read, and the seconds it gives up land on another beat as a still held far too long. Merge it into its neighbour.`);
+      /*
+       * A veo beat cannot outlast its clip. Veo's maximum is 8 seconds, the
+       * engine's purchase ladder stops there, and the renderer covers a small
+       * shortfall by slowing the clip — past that it freezes the last frame.
+       * Refuse the script rather than ship the freeze: this is the one beat of
+       * the Reel that moves, and paying for it to stop is waste.
+       */
+      if (b.visual?.type === "veo" && !b.visual?.file && perBeat[i] > VEO_MAX_S * VEO_STRETCH_MAX * 0.94)
+        err(`${at}: a veo beat that speaks for ${perBeat[i].toFixed(1)}s cannot be shown — Veo's longest clip is ${VEO_MAX_S}s and the engine may slow it by ${Math.round((VEO_STRETCH_MAX - 1) * 100)}%, so past ~${(VEO_MAX_S * VEO_STRETCH_MAX * 0.94).toFixed(1)}s it ends on a frozen frame. Shorten this beat, or move the sentence to its neighbour.`);
       if (DASHES.test(b.script)) err(`${at}: contains an em dash, en dash or "--" — rewrite as two sentences`);
       const unsupported = [...new Set(numbers(b.script))].filter((n) => !allEvidence.has(n));
       if (unsupported.length)

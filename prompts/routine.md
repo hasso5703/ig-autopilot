@@ -1131,6 +1131,24 @@ Rules, and the gate enforces the hard ones:
   spoken digit must appear in an evidence quote, exactly like a headline
   digit, and so must every versioned product name; an em dash in a script is
   refused.
+- **Spread the words across the beats, because the words are the clock.** A
+  beat's share of the minute is its share of the words, so a beat written short
+  is a picture that flashes and a beat written long is a picture held until it
+  dies. Two edges, both refused by the gate:
+
+  **No beat under six words.** At one word it renders nine frames: the picture
+  is subliminal, the caption cannot be read, and the seconds it gave up land on
+  some other beat as a still nobody wanted to look at that long.
+
+  **A `veo` beat may not speak past about 8.6 seconds.** Veo's longest clip is
+  eight; the engine buys 4, 6 or 8 to fit the beat, and past that it can only
+  slow the clip a little before the last frame freezes. Both builds on
+  2026-07-31 overran by about a third of a second and ended the account's one
+  moving shot on a still — measured on the rendered file, those final frames
+  carried 89% less motion than the rest of the clip. It is the most expensive
+  beat in the Reel: do not buy motion and then stop it. Every other surface
+  (`image`, `photo`, `screenshot`, `card`) re-frames itself mid-beat and can
+  carry a long one.
 - **The spine is a 60-second arc, and each beat is one job:**
   1. **L'attaque** (~2 phrases): consequence first, a name and a number in
      the first sentence. Never "OpenAI a annoncé…" — announcement framing is

@@ -37,6 +37,7 @@
  */
 
 import { readFile, writeFile, appendFile, mkdir, access } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import path from "node:path";
@@ -48,7 +49,7 @@ import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
 import { acquireOne, creditLine } from "./imagery.mjs";
 import {
   TARGET_S, END_S, TAIL_S, SPEECH_S, TEMPO_MIN, TEMPO_MAX, RAW_MAX_S,
-  BEATS_MIN, BEATS_MAX, TTS_TRIES, medianRate, wordWindow,
+  BEATS_MIN, BEATS_MAX, TTS_TRIES, VEO_STRETCH_MAX, medianRate, wordWindow,
 } from "./format.mjs";
 
 const run = promisify(execFile);
@@ -585,6 +586,80 @@ export function panFilter(dur, variant = 0) {
 const ENC = ["-r", String(FPS), "-c:v", "libx264", "-preset", "fast", "-crf", "18"];
 
 /**
+ * How many segments may render at once.
+ *
+ * Read from the machine, never assumed. This code runs on a 20-core workstation
+ * when a human is testing and on whatever a cloud routine is given at 18:36, and
+ * the wrong constant is bad in both directions: too low wastes most of a build's
+ * wall-clock, too high gets an ffmpeg killed by the kernel halfway through a
+ * Reel that has already been paid for.
+ *
+ * Two limits, whichever is stricter. Cores, because a supersampled `zoompan`
+ * uses about 1.5 of them; memory, because each render peaks near 1.8 GB and a
+ * container's ceiling is not its host's. `os.totalmem()` reports the HOST in a
+ * container, so the cgroup file is read first and only falls back to the OS
+ * when there is none. Three is the cap: measured on the day's real beats,
+ * three-at-a-time was 2.06x and five only 2.41x, for double the memory.
+ *
+ * One is always allowed. A single-core container simply behaves as it did
+ * before this existed.
+ */
+function renderConcurrency() {
+  const cores = Math.floor((os.availableParallelism?.() ?? os.cpus()?.length ?? 2) / 2);
+  let free = os.freemem();
+  for (const p of ["/sys/fs/cgroup/memory.max", "/sys/fs/cgroup/memory/memory.limit_in_bytes"]) {
+    try {
+      const raw = readFileSync(p, "utf8").trim();
+      // "max" means no cgroup ceiling; a limit far past the host's RAM means the
+      // same thing written as a number.
+      if (raw !== "max" && Number(raw) > 0 && Number(raw) < os.totalmem()) free = Math.min(free, Number(raw) * 0.6);
+    } catch { /* no cgroup here, or not readable: the OS numbers stand */ }
+  }
+  const byMemory = Math.floor(free / (2.2 * 1024 ** 3));
+  const n = Math.max(1, Math.min(3, cores, byMemory));
+  return Number(process.env.REEL_RENDER_JOBS) > 0 ? Number(process.env.REEL_RENDER_JOBS) : n;
+}
+
+/**
+ * Run the beat renders, several at a time, and report each as it lands.
+ *
+ * A failure must not be swallowed by the ones still running: the first rejection
+ * is re-thrown after the pool drains, so the build stops with the real error
+ * instead of a later, stranger one about a missing segment. The journal records
+ * completion order, which is the honest thing for a flight recorder to hold —
+ * if the run dies mid-render, what it wrote is what had actually finished.
+ */
+export async function renderAll(renders, beats) {
+  /* Count against the beats, not against `renders.length`: a sparse array is as
+     long as its highest assigned index, so a missing LAST render would make the
+     two agree and the hole would only surface later as a missing segment file. */
+  const jobs = Array.from({ length: beats.length }, (_, i) => ({ fn: renders[i], i }))
+    .filter((j) => typeof j.fn === "function");
+  if (jobs.length !== beats.length)
+    throw new Error(`internal: ${beats.length - jobs.length} beat(s) produced no render step — this is a bug in the engine, not a problem with the spec`);
+  const n = renderConcurrency();
+  console.log(`rendering ${jobs.length} beats, ${n} at a time`);
+  const queue = [...jobs];
+  let failure = null;
+  await Promise.all(
+    Array.from({ length: n }, async () => {
+      while (queue.length) {
+        const job = queue.shift();
+        if (failure) return;                     // stop starting new work once one has failed
+        try {
+          await job.fn();
+          await journal(`beat ${job.i} rendered: ${beats[job.i]?.visual?.type || "image"}`);
+        } catch (err) {
+          failure ??= err;
+          return;
+        }
+      }
+    })
+  );
+  if (failure) throw failure;
+}
+
+/**
  * The one encode that ends up in the repository, and it is not the one the
  * segments use.
  *
@@ -609,10 +684,20 @@ async function concatSegments(parts, outFile) {
 }
 
 /** A still, panned and zoomed just enough to never sit still — and re-framed
- * once if the beat is long enough that drift alone would read as a freeze. */
+ * once if the beat is long enough that drift alone would read as a freeze.
+ *
+ * No `-loop 1`. `zoompan` generates all `d` output frames from a single input
+ * frame, so looping the image only fed the graph hundreds of copies that the
+ * `scale` in front of it dutifully enlarged to 4320x7680 before `zoompan` threw
+ * them away. Removing it leaves the output byte-for-byte identical — verified on
+ * 2026-07-31 by comparing the md5 of the decoded stream, and across seven beat
+ * durations for frame count — while peak memory falls from 3.6 GB to 1.8 GB per
+ * render. That halving is what makes several renders at once safe on a container
+ * whose size this code does not get to know.
+ */
 export async function segmentFromImage(img, dur, outFile, extraFilters = []) {
   const shot = async (d, variant, out) =>
-    ffmpeg(["-y", "-loop", "1", "-i", img, "-t", String(d),
+    ffmpeg(["-y", "-i", img, "-t", String(d),
       "-vf", [panFilter(d, variant), ...extraFilters].join(","), ...ENC, out]);
   if (dur <= REFRAME_S) return shot(dur, 0, outFile);
   const a = outFile.replace(/\.mp4$/, "_a.mp4");
@@ -739,13 +824,38 @@ async function segmentEndcard(dur, outFile) {
 }
 
 /** A clip, trimmed to the beat; a beat longer than its clip holds the last frame. */
+/**
+ * A beat may want more seconds than the clip has. Veo's ceiling is 8 and the
+ * purchase ladder stops there, so any beat that speaks for longer used to end
+ * on a frozen frame — `tpad=stop_mode=clone` holds the last picture for the
+ * remainder. 2026-07-31's two builds both did it, by 0.30s and 0.23s: small
+ * enough to read as a stutter rather than a fault, which is exactly why it
+ * survived three days of watching the output.
+ *
+ * Retiming is the honest repair. Slowing an ambient shot by up to 15% is not
+ * perceptible — there is no lip movement to desynchronise and no cut to soften
+ * — and it fills the beat with motion instead of a still. `setpts` runs before
+ * `framerate` so the blend resamples the stretched timeline, not the original.
+ * `tpad` stays as the last resort for the case the gate is supposed to have
+ * already refused.
+ */
 async function segmentFromVideo(clip, dur, outFile) {
+  let stretch = 1;
+  try {
+    const have = Number((await ffprobe(clip)).format.duration);
+    if (Number.isFinite(have) && have > 0.5 && dur > have)
+      stretch = Math.min(dur / have, VEO_STRETCH_MAX);
+  } catch {
+    /* Unreadable duration is not a reason to fail a build that has already been
+       paid for: fall through to the old behaviour, which is a freeze at worst. */
+  }
+  const retime = stretch > 1.001 ? `setpts=${stretch.toFixed(5)}*PTS,` : "";
   // `framerate` resamples by blending neighbours; without it, -r would simply
   // duplicate frames and Veo's native 24 against the timeline's 30 produced a
   // freeze roughly once every four frames.
   await ffmpeg([
     "-y", "-i", clip, "-t", String(dur),
-    "-vf", `framerate=fps=${FPS},scale=${W}:${H}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W}:${H},tpad=stop_mode=clone:stop_duration=${dur},setsar=1`,
+    "-vf", `${retime}framerate=fps=${FPS},scale=${W}:${H}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W}:${H},tpad=stop_mode=clone:stop_duration=${dur},setsar=1`,
     "-r", String(FPS), "-an", "-c:v", "libx264", "-preset", "fast", "-crf", "18", outFile,
   ]);
 }
@@ -929,8 +1039,24 @@ export async function buildReel(postFile, mediaDir) {
   // brand ground, music still under it, hard cut at exactly TARGET_S.
   const videoTotal = Number((total + END_S).toFixed(2));
 
-  /* 3 — the pictures, cheapest that serves the beat. */
+  /* 3 — the pictures, cheapest that serves the beat.
+   *
+   * Two phases, and the split is the point. Everything that spends money or
+   * reaches the network happens first, in beat order, one at a time: a refused
+   * prompt stops the run before the next purchase, the spend ledger reads in the
+   * order a human expects, and a failure costs the fewest dollars it can.
+   *
+   * Rendering is then pure CPU over files named after their own beat — every
+   * temporary path in here is derived from `outFile`, so nothing is shared and
+   * several can run at once. `zoompan` is single-threaded: one ffmpeg uses about
+   * 1.5 cores and the rest of the machine sits idle. Measured 2026-07-31 over
+   * the day's real beat durations, on identical output: 70.9s one at a time,
+   * 34.3s at three. Five was only 17% faster than three and doubles the memory,
+   * so three is the knee and the cap.
+   */
   const segFiles = [];
+  const renders = [];
+  const render = (i, fn) => { renders[i] = fn; };
   let veoAudio = null;
   for (let i = 0; i < plan.beats.length; i++) {
     const beat = plan.beats[i];
@@ -953,12 +1079,12 @@ export async function buildReel(postFile, mediaDir) {
         const resolution = beat.visual.resolution || (durationSeconds === 8 ? "1080p" : "720p");
         await genVideo({ prompt, durationSeconds, resolution, outFile: clip, slug });
       }
-      await segmentFromVideo(clip, dur, seg);
+      render(i, () => segmentFromVideo(clip, dur, seg));
       if (!veoAudio) veoAudio = { file: clip, at: bounds[i].t0, dur };
     } else if (type === "screenshot") {
       const shot = beat.visual.file || path.join(mediaDir, `shot_${i}.png`);
       if (!beat.visual.file) await screenshot(beat.visual.url, shot);
-      await segmentFromScreenshot(shot, dur, seg);
+      render(i, () => segmentFromScreenshot(shot, dur, seg));
     } else if (type === "photo") {
       let file = beat.visual.file || null;
       let credit = beat.visual.credit || null;
@@ -972,13 +1098,12 @@ export async function buildReel(postFile, mediaDir) {
         console.log(`photo ${i}: "${entry.title || beat.visual.query}" — ${credit}. LOOK at it before publishing.`);
         await journal(`photo ${i} acquired: ${credit}`);
       }
-      await segmentFromPhoto(file, dur, credit, seg, mediaDir);
+      render(i, () => segmentFromPhoto(file, dur, credit, seg, mediaDir));
     } else if (type === "card") {
-      await segmentCard(dur, seg);
+      render(i, () => segmentCard(dur, seg));
     } else if (type === "file") {
       const src = beat.visual.file;
-      if (/\.(mp4|mov|webm)$/i.test(src)) await segmentFromVideo(src, dur, seg);
-      else await segmentFromImage(src, dur, seg);
+      render(i, () => (/\.(mp4|mov|webm)$/i.test(src) ? segmentFromVideo(src, dur, seg) : segmentFromImage(src, dur, seg)));
     } else {
       const img = beat.visual?.file || path.join(mediaDir, `still_${i}.jpg`);
       if (!beat.visual?.file) {
@@ -987,12 +1112,14 @@ export async function buildReel(postFile, mediaDir) {
         if (issues.length) throw new Error(`image prompt refused:\n  ${issues.join("\n  ")}`);
         await genImage({ prompt, outFile: img, slug });
       }
-      await segmentFromImage(img, dur, seg);
+      render(i, () => segmentFromImage(img, dur, seg));
     }
     segFiles.push(seg);
     console.log(`beat ${i}: ${type} ${dur}s — "${beat.script.split(/\s+/).slice(0, 6).join(" ")}…"`);
-    await journal(`beat ${i} built: ${type} ${dur}s`);
+    await journal(`beat ${i} acquired: ${type} ${dur}s`);
   }
+
+  await renderAll(renders, plan.beats);
 
   /* 3b — the end-card, sized to whatever is left of the minute.
      Every segment is quantised to whole frames, and a re-framed still is two

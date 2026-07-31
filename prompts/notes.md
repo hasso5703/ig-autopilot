@@ -132,8 +132,13 @@ ENTRIES:
   fenetre arrete le build juste apres la narration (~$0,012 depense, aucune
   image achetee) et donne le nombre de mots a ecrire. Ne recopie jamais un
   nombre de mots de memoire: lance validate.mjs et ecris a la fenetre imprimee.
-  Un still qui tient plus de 5,2 s est recadre une fois, gratuitement. Proof:
-  suite verte 73/73 et gate en ligne PASSED sur le spec du 31/07.
+  Un still qui tient plus de 5,2 s est recadre une fois, gratuitement. La duree
+  d'un beat est sa part des mots: sous 6 mots l'image clignote (refuse), et un
+  beat `veo` au-dela de ~8,6 s ne peut pas etre montre, car le plus long clip Veo
+  fait 8 s et le moteur ne peut que le ralentir un peu avant que la derniere
+  image ne gele. Les deux builds du 31/07 ont gele ~0,3 s: mesure sur le fichier,
+  89% de mouvement en moins sur les dernieres images. Proof: suite verte 79/79 et
+  gate en ligne PASSED sur le spec du 31/07.
 - 2026-07-31 · Paliers de modeles (consigne Hasan: un cran au-dessus, jamais le
   plus cher). Veo 3.1 Fast, 1080p des que le beat prend 8 s (natif pour
   1080x1920; le 720p etait agrandi 1,5x). Images gemini-3.1-flash-image en 2K:

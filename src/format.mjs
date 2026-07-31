@@ -59,6 +59,46 @@ export const BEATS_MIN = 7, BEATS_MAX = 10;
  * show something that exists (a credited photograph, a receipt, a Veo shot). */
 export const STILLS_MAX = 4, REAL_MIN = 3;
 
+/**
+ * A Veo clip is at most 8 seconds. That is the API's ceiling, not a preference,
+ * and it silently becomes a picture defect when a beat talks for longer.
+ *
+ * `segmentFromVideo` pads a short clip with `tpad=stop_mode=clone`, which holds
+ * the last frame. The engine sizes the purchase to the beat (4, 6 or 8 seconds)
+ * but the ladder stops at 8, so every second past that is a frozen frame in the
+ * middle of a Reel that is otherwise moving. Both of 2026-07-31's builds did it:
+ * the veo beat measured 8.30s and 8.23s against a clip Veo delivers at exactly
+ * 8.000s, so both ended that beat on a third of a second of still image. Nobody
+ * noticed, which is the point — at 0.3s it reads as a stutter, and at 4s it
+ * reads as a broken video.
+ *
+ * Two defences, because one is not enough. The engine retimes a clip that falls
+ * short, up to VEO_STRETCH_MAX — a 15% slowdown of an ambient shot is not
+ * visible, and it turns a freeze into motion. The gate refuses a script whose
+ * veo beat is predicted past what that stretch can cover, because a beat that
+ * needs 14 seconds of an 8-second clip is a writing problem, not a rendering
+ * one, and slowing a clip to half speed would look like an error.
+ */
+export const VEO_MAX_S = 8.0;
+export const VEO_STRETCH_MAX = 1.15;
+
+/** A beat shorter than this cannot be seen. Its picture flashes, its karaoke
+ * line appears and vanishes, and the time it gives up lands on some other beat
+ * as a picture held far too long. Across every spec this account has published
+ * the shortest beat is 9 words, so this floor refuses nothing a run would
+ * plausibly write — it exists for the degenerate case the gate would otherwise
+ * accept: a one-word beat renders 9 frames, and the gate said yes. */
+export const BEAT_MIN_WORDS = 6;
+
+/** The share of the spoken run a beat gets, from its share of the words. Both
+ * the gate (predicting, before any money) and any diagnostic use this one
+ * function, so they cannot drift apart. */
+export function beatSeconds(wordsPerBeat) {
+  const total = wordsPerBeat.reduce((a, b) => a + b, 0);
+  if (!total) return wordsPerBeat.map(() => 0);
+  return wordsPerBeat.map((w) => (w / total) * SPEECH_S);
+}
+
 /** The account's default speaking rate in French words per second, used only
  * until `state/voice-rate.jsonl` holds three readings of the voice actually
  * configured.

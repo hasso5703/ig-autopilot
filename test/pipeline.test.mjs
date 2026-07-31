@@ -1086,6 +1086,56 @@ test("reel2: photo beats validated, mood wallpaper capped at three stills", asyn
 });
 
 // ---------------------------------------------------------------------------
+// A beat's share of the run is decided by its share of the words, and both ends
+// of that share have a limit the gate never checked.
+//
+// The short end is a flash: a one-word beat renders nine frames — its picture
+// is subliminal, its caption cannot be read, and the seconds it gives up land
+// on another beat as a picture held far too long.
+//
+// The long end costs money. Veo's longest clip is eight seconds; the engine
+// sizes its purchase to the beat but the ladder stops there, and every second
+// past it used to hold the last frame. Both of 2026-07-31's builds did exactly
+// that, by 0.30s and 0.23s against a clip Veo delivers at 8.000s — measured on
+// the rendered file, the last nine frames carried 89% less motion than the body
+// of the clip. Small enough to read as a stutter, which is why three days of
+// watching the output never caught it.
+// ---------------------------------------------------------------------------
+test("a beat is neither a flash nor longer than the clip it bought", async () => {
+  const p = goodPost();
+
+  p.reel2 = goodReel2();
+  p.reel2.beats[2].script = "Voilà.";
+  assert.ok(hasErr(await errs(p), /1 word\(s\) — under \d+ the picture flashes/), "a one-word beat is a flash frame, not a beat");
+
+  // A veo beat may not talk for longer than the engine can cover by slowing the
+  // clip. Give it every other beat's words and it is far past that.
+  p.reel2 = goodReel2();
+  const vi = p.reel2.beats.findIndex((b) => b.visual?.type === "veo");
+  assert.ok(vi >= 0, "the fixture must carry a veo beat for this rule to be exercised");
+  p.reel2.beats[vi].script += ` ${p.reel2.beats.map((b) => b.script).join(" ")}`;
+  assert.ok(hasErr(await errs(p), /Veo's longest clip is 8s.*frozen frame/s), "a veo beat past the stretch is refused before it is bought");
+
+  // The rule is a floor on the degenerate case, not a tax on real writing: the
+  // fixture's own beats sit inside it untouched.
+  p.reel2 = goodReel2();
+  assert.ok(!hasErr(await errs(p), /picture flashes|frozen frame/));
+
+  // A pinned clip is not bought and may be any length, so the rule stands down.
+  p.reel2 = goodReel2();
+  p.reel2.beats[vi].visual.file = "media/pinned/clip.mp4";
+  p.reel2.beats[vi].script += ` ${p.reel2.beats.map((b) => b.script).join(" ")}`;
+  assert.ok(!hasErr(await errs(p), /frozen frame/), "a pinned clip is not sized by Veo's ceiling");
+
+  // The prediction and the arithmetic the engine will do are the same function.
+  const { beatSeconds, SPEECH_S } = await import("../src/format.mjs");
+  const secs = beatSeconds(p.reel2.beats.map((b) => b.script.trim().split(/\s+/).length));
+  assert.ok(Math.abs(secs.reduce((a, b) => a + b, 0) - SPEECH_S) < 0.01, "the beats share the spoken run exactly");
+  assert.deepEqual(beatSeconds([]), [], "no beats is not a division by zero");
+  assert.deepEqual(beatSeconds([0, 0]), [0, 0], "empty scripts are not a division by zero");
+});
+
+// ---------------------------------------------------------------------------
 // 2026-07-31. Anthropic disclosed three incidents: Claude Mythos 5 published
 // the malicious PyPI package, Claude Opus 4.7 was the one that kept attacking
 // after realising the target was real. The day's script said "Claude" for five
