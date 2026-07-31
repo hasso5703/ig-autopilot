@@ -365,8 +365,19 @@ export async function runsInFlight({ now = Date.now(), mine = process.env.RUN_JO
     let t = Date.parse(`${day}T${clock}Z`);
     if (!Number.isFinite(t)) continue;
     // A run that crosses midnight UTC keeps writing into the previous day's
-    // file, so a line that looks 20 hours old is really minutes old.
-    if (now - t > 12 * 3600_000) t += 24 * 3600_000;
+    // file, so a line that looks 20 hours old is really minutes old. But that
+    // correction only applies to a run that really did cross midnight, and the
+    // filename says whether it could have: a journal named `<day>-19h.md` whose
+    // last line reads 19:37 is a day old, not three minutes old. Shifting it
+    // anyway made every scheduled run see yesterday's run at the same slot as
+    // alive (measured, 19h run of 2026-07-31), which tells a publish run to
+    // stand down and hand the day away. So shift only when the clock is earlier
+    // in the day than the slot the file is named for, and when the name carries
+    // no slot hour, do not shift: a missed warning costs a wait, a false one
+    // costs the day's Reel.
+    const slotHour = Number(name.match(/^\d{4}-\d{2}-\d{2}-(\d{2})h/)?.[1]);
+    const lineHour = Number(clock.slice(0, 2));
+    if (now - t > 12 * 3600_000 && Number.isFinite(slotHour) && lineHour < slotHour) t += 24 * 3600_000;
     if (t - now > 5 * 60_000) continue;            // clock skew or a bad line: not evidence
     const minutesAgo = Math.round(((now - t) / 60_000) * 10) / 10;
     if (minutesAgo <= warmMinutes) out.push({ journal: `reports/journal/${name}`, lastLineAt: new Date(t).toISOString(), minutesAgo });

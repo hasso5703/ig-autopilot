@@ -1381,6 +1381,45 @@ test("a run can tell that another run is still alive", async () => {
   }
 });
 
+// ---------------------------------------------------------------------------
+// The liveness signal has to survive being a day old. A run that crosses
+// midnight UTC keeps appending to the previous day's journal, so a line that
+// reads 20 hours old is really minutes old — but that correction was applied to
+// every stale line, and the slots are the same every day. On 2026-07-31 the 19h
+// run's guard reported the 19h run of the day before as alive, three minutes
+// ago, because 19:37 shifted forward by 24 hours lands on 19:37. The manual's
+// answer to a warm journal is to stand down and let the other run own the day,
+// so this false positive hands the day away every time it fires.
+//
+// The filename is what tells the two apart: a run writing into `<day>-23h.md`
+// at 00:08 crossed midnight; one writing 19:37 into `<day>-19h.md` did not.
+// ---------------------------------------------------------------------------
+test("yesterday's run at the same slot is not this evening's run", async () => {
+  const { runsInFlight } = await import("../src/state.mjs");
+  const { writeFile, unlink } = await import("node:fs/promises");
+
+  const sameSlot = "reports/journal/1999-01-02-19h.md";
+  const crossed = "reports/journal/1999-01-02-23h.md";
+  await writeFile(sameSlot, "# fixture\n\n- 19:37:23 step 0: yesterday's vigil\n");
+  await writeFile(crossed, "# fixture\n\n- 00:08:00 step 5: still building, past midnight\n");
+  try {
+    const evening = await runsInFlight({ now: Date.parse("1999-01-03T19:40:00Z") });
+    assert.ok(
+      !evening.some((o) => o.journal === sameSlot),
+      "a journal from the same slot one day earlier is history, not a run at work",
+    );
+
+    const midnight = await runsInFlight({ now: Date.parse("1999-01-03T00:10:00Z") });
+    assert.ok(
+      midnight.some((o) => o.journal === crossed),
+      "a run that really crossed midnight is still alive, and still has to be seen",
+    );
+  } finally {
+    await unlink(sameSlot).catch(() => {});
+    await unlink(crossed).catch(() => {});
+  }
+});
+
 test("a Reel is recognised by what Instagram returned, not by its slug", async () => {
   const { isReel, REEL_EVERY_HOURS, CAROUSEL_EVERY_HOURS } = await import("../src/state.mjs");
 
