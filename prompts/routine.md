@@ -937,12 +937,13 @@ reads as a defence, and protesting is what an account without sources does.
 `validate.mjs` rejects captions that do this.
 
 **Structure that works, in French:**
-1. **First line ≤ 125 characters, and it is now a search result.** Since July
-   2025 public professional-account content is indexed by Google, and the
-   first caption line is the snippet. Write it as the second-best fact plus
-   the entity names spelled out ("OpenAI", "Hugging Face") — not a repeat of
-   the hook, not a windup. Someone googling the story in French should land
-   here.
+1. **First line between 40 and 125 characters, and it has two jobs.** It is a
+   search result — since July 2025 public professional-account content is
+   indexed by Google and this line is the snippet. And it is what
+   `publish.mjs` matches on to tell "the post went live despite the error"
+   from "nothing was published": the read-back compares the first 60
+   characters and gives up under 12, so a short first line silently disarms
+   the guard against a double post. The gate enforces both ends now.
 2. What happened, in two or three short sentences, with the figures.
 3. The detail that did not fit in the video, worth the "plus" tap.
 4. The caveat, plainly, without hedging or apology.

@@ -839,6 +839,13 @@ test("the caption's first line is the Google snippet, and it is bounded", async 
   assert.ok(hasErr(await errs(p), /first line is 126 characters/));
   p.caption = "x".repeat(120) + "\n\nreste de la légende. AI-assisted.";
   assert.ok(!hasErr(await errs(p), /first line is/));
+
+  // The floor is not style. publish.mjs recognises a post that went live
+  // despite an error by matching the first 60 characters of this line, and it
+  // gives up under 12 — so a short first line silently disarms the guard
+  // against a double post, which is the worst thing this account can do.
+  p.caption = "Anthropic.\n\nreste de la légende. AI-assisted.";
+  assert.ok(hasErr(await errs(p), /first line is only 10 characters/));
 });
 
 test("the runtime is a contract: a script too short for 60 seconds is refused", async () => {

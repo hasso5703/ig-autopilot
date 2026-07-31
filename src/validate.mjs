@@ -915,6 +915,20 @@ export async function validatePost(post, opts = {}) {
    * checked it, which is how a rule becomes decoration.
    */
   const firstLine = String(post.caption ?? "").split("\n")[0].trim();
+  /*
+   * And a floor, which is not a style rule at all.
+   *
+   * `findRecentByCaption` in publish.mjs is what decides, when `media_publish`
+   * errors, whether the post went live anyway. It matches the first 60
+   * characters of the caption's first line against recent media — and it gives
+   * up and returns null when that line is under 12 characters. A short first
+   * line therefore silently disables the guard against the account's worst
+   * failure: a publish error that was actually a success, retried into a double
+   * post. Forty characters keeps the match distinctive, and it is also what the
+   * line needs to be a useful search snippet.
+   */
+  if (firstLine.length && firstLine.length < 40)
+    err(`caption: the first line is only ${firstLine.length} characters. It has two jobs and fails both short: it is the Google snippet, and it is what the publisher matches on to tell "the post went live despite the error" from "nothing was published". Under 12 characters that check silently gives up. Write the second-best fact and the entity names, 40 to 125 characters.`);
   if (firstLine.length > 125)
     err(`caption: the first line is ${firstLine.length} characters. Only the first line shows before "more", and it is the Google snippet: 125 is the ceiling. Put the second-best fact and the entity names there, not a windup.`);
 
