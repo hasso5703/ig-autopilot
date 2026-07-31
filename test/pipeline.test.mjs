@@ -833,6 +833,41 @@ test("the fixture sits inside the window the gate actually computes", async () =
     `goodReel2 is ${words} words and the gate refuses it: ${e[0] || ""}. Resize the fixture, do not widen the window.`);
 });
 
+// The manual has banned a printed cadence since the account promised "One
+// story a day" and then published four. It said the gate enforced it "in both
+// languages" and on every surface. On 2026-07-31 the gate missed all three of
+// these: an adjective between the number and the noun defeated the pattern, the
+// spoken script was never checked at all, and `\bà` never matches after a space
+// because JavaScript's word boundary is ASCII-only.
+test("a printed cadence is refused wherever it appears", async () => {
+  const p = goodPost();
+  p.reel2 = goodReel2();
+
+  const freq = async () => (await errs(p)).filter((e) => /frequency/i.test(e)).length;
+  assert.equal(await freq(), 0, "the clean fixture promises nothing");
+
+  p.caption = "Une actu IA par jour.\n\n" + p.caption;
+  assert.ok(await freq(), "an adjective between the number and the noun must not defeat it");
+
+  p.caption = goodPost().caption;
+  p.slides.at(-1).headline = "One verified story a day";
+  assert.ok(await freq(), "same trap in English");
+
+  p.slides.at(-1).headline = goodPost().slides.at(-1).headline;
+  p.reel2.beats[2].script = "On en reparle chaque jour ici, promis.";
+  assert.ok(await freq(), "the spoken script is a surface too");
+
+  p.reel2.beats[2].script = goodReel2().beats[2].script;
+  p.reel2.beats.at(-1).script = "Abonne-toi pour la suite. À demain.";
+  assert.ok(await freq(), "an accented word boundary is not a word boundary in JavaScript");
+
+  // And it must not fire on a figure the story actually reports.
+  p.reel2 = goodReel2();
+  p.caption = goodPost().caption;
+  p.reel2.beats[2].script = "La classe accueille 70 personnes par jour selon le rapport. Abonne-toi pour demain.";
+  assert.equal(await freq(), 0, "a reported rate is not a promise about this account");
+});
+
 test("the caption's first line is the Google snippet, and it is bounded", async () => {
   const p = goodPost();
   p.caption = "x".repeat(126) + "\n\nreste de la légende. AI-assisted.";

@@ -148,9 +148,12 @@ ENTRIES:
   l'ancienne table se trompait de 40%. Reel normal ~$1,20-1,60. Proof: img_ab
   et voice_ab du 31/07.
 - 2026-07-31 · La voix et sa direction fixent le debit, donc la fenetre de mots.
-  Mesure sur le script du jour (188 mots): 2.5-flash/Charon 3,36 mots/s,
-  3.1-flash/Charon 3,26, Sadaltager 3,49, Puck 3,04, Rasalgethi 2,97 HORS
-  fenetre, 2.5-pro/Charon 2,84 HORS fenetre. Le Pro n'est pas une amelioration
+  Une lecture chacune sur le script du jour (188 mots): 2.5-flash/Charon 3,36
+  mots/s, 3.1-flash/Charon 3,26, Sadaltager 3,49, Puck 3,04, Rasalgethi 2,97
+  HORS fenetre, 2.5-pro/Charon 2,84 HORS fenetre. CES CHIFFRES SONT DES
+  ANECDOTES, une lecture chacun: Sadaltager mesure trois fois le meme jour donne
+  3,34 de mediane, pas 3,49. Sers-t'en pour ecarter une voix, jamais pour
+  dimensionner une fenetre (voir l'entree calibration). Le Pro n'est pas une amelioration
   ici: il lit trop lentement pour 60 s. Et retirer le "environ 200 mots par
   minute" de la direction fait tomber le debit a 2,77 (build refuse). Changer
   de voix = recalibrer (3 builds de state/voice-rate.jsonl), jamais un detail.

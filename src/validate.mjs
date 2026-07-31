@@ -761,7 +761,13 @@ export async function validatePost(post, opts = {}) {
    * false. A cadence that changes with the numbers cannot be printed on the
    * artwork.
    */
-  const FREQUENCY_CLAIM = /\b(one|two|three|1|2|3)\s+(story|stories|post|posts|reel|reels)\s+(a|per|each)\s+(day|week)\b|\b(a new one|another one)\s+(tomorrow|every day|daily)\b|\bdaily\s+(story|post|reel)\b|\b(une|deux|trois|1|2|3)\s+(actu|actus|info|infos|vid[ée]o|vid[ée]os|story|stories)s?\s+par\s+(jour|semaine)\b|\bchaque\s+(jour|matin|soir)\b|\btous les (jours|matins|soirs)\b|\bquotidien(ne)?s?\b|\b[àa] demain\b|\brendez-vous demain\b/i;
+  /* `\b` is ASCII-only in JavaScript, so `\bà` never matches after a space:
+   * the boundary needs a word character on one side and neither a space nor an
+   * accented letter is one. "À demain" slipped through this check for that
+   * reason alone. Any pattern anchored on an accented letter needs an explicit
+   * class, not a word boundary. */
+  const FREQUENCY_CLAIM =
+    /\b(one|two|three|1|2|3)\s+(?:\w+\s+){0,2}(story|stories|post|posts|reel|reels|video|videos)\s+(?:\w+\s+){0,2}(a|per|each)\s+(day|week)\b|\b(a new one|another one)\s+(tomorrow|every day|daily)\b|\bdaily\s+(?:\w+\s+){0,2}(story|post|reel|video)\b|\b(une|deux|trois|1|2|3)\s+(?:\w+\s+){0,2}(actu|actus|info|infos|vid[ée]o|vid[ée]os|story|stories)s?\s+(?:\w+\s+){0,2}(?:par|chaque)\s+(jour|semaine|matin|soir)\b|\bchaque\s+(jour|matin|soir)\b|\btous les (jours|matins|soirs)\b|\bquotidien(ne)?s?\b|(?:^|[\s.,;:!?\"'])[àa] demain\b|\brendez-vous demain\b/i;
   for (const [i, s2] of slides.entries()) {
     for (const v of [s2.headline, s2.sub, s2.title, s2.body]) {
       if (v && FREQUENCY_CLAIM.test(v))
@@ -770,6 +776,17 @@ export async function validatePost(post, opts = {}) {
   }
   if (post.caption && FREQUENCY_CLAIM.test(post.caption))
     err("the caption promises a publishing frequency. The cadence changes with what the numbers say; do not print it.");
+  /*
+   * And to the spoken script, which the manual has always covered ("not in the
+   * caption, not on a slide, not spoken") and the check never reached. The
+   * end-card carries the promise because it is a fixed surface that gets
+   * updated if the cadence ever changes; a sentence the voice says is a claim a
+   * viewer can check against the grid and find false.
+   */
+  for (const [i, b] of (post.reel2?.beats || []).entries()) {
+    if (FREQUENCY_CLAIM.test(String(b?.script || "")))
+      err(`reel2 beat ${i + 1} speaks a publishing frequency. The end-card carries the promise, and it is the only surface that does, because it is the one that gets updated if the cadence changes.`);
+  }
 
   /*
    * The closing slide has one job and it is not signing off.

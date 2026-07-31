@@ -781,8 +781,8 @@ Do not write raw HTML; it is escaped and will appear literally on the slide.
       "evidence": "Verbatim sentence from the source, checked against the live page.",
       "source": { "name": "Anthropic", "url": "https://…", "date": "2026-07-24" } },
 
-    { "type": "cta", "headline": "One *verified* story a day",
-      "sub": "No hype. No reposts. Sources on every slide." }
+    { "type": "cta", "headline": "Envoie ça à *quelqu'un* qui installe des paquets Python",
+      "sub": "Les sources sont sur chaque diapositive." }
   ],
   "sources": [ { "name": "…", "url": "https://…", "accessed": "2026-07-25" } ]
 }
@@ -1040,31 +1040,41 @@ spoken story first — `reel2` in the post JSON — and the engine derives
 everything else from it.
 
 ```jsonc
+// EXTRACT: beats 1, 2, 6 and 8 of eight. The count and the word budget are the
+// gate's, not this example's — run validate.mjs and write to the window it
+// prints. Every surface type the account uses appears below.
 "reel2": {
-  "voice": "Sadaltager",
   "mood": "tension",
   "lang": "fr",
-  "title": "Vos chats Claude étaient sur Google",
+  "title": "Claude a piégé 15 machines bien réelles",
   "beats": [
-    { "script": "Si tu as déjà partagé un chat Claude, cette conversation était peut-être publique sur Google.",
-      "visual": { "type": "veo", "spec": {
-        "subject": "a person seen over the shoulder",
-        "action": "scrolling a laptop whose screen glows with a generic list of results",
-        "setting": "in a dark home office at night",
-        "ambient": "quiet room tone, soft keyboard clicks" } } },
-    { "script": "Et le pire n'est pas le bug. C'est qu'il n'y en a pas.",
-      "visual": { "type": "image", "spec": { "subject": "a search bar glowing on a dark screen", "setting": "close-up, shallow depth of field" } } },
-    { "script": "Une simple recherche Google listait des conversations partagées. Des dossiers médicaux, du code, des documents d'entreprise.",
-      "visual": { "type": "screenshot", "url": "https://hackread.com/…" } },
-    { "script": "Anthropic répond que le système marche comme prévu. Un lien partagé est une page publique.",
-      "visual": { "type": "image", "spec": { "subject": "an office corridor at night, one door lit", "setting": "in a dark building" } } },
-    { "script": "Google a retiré les résultats. Mais les liens, eux, sont toujours en ligne.",
-      "visual": { "type": "image", "spec": { "subject": "hands holding a smartphone showing a generic settings screen", "setting": "in a dim living room", "composition": "close-up" } } },
-    { "script": "La vérification prend dix secondes. Réglages, Confidentialité, Chats partagés. Préviens un ami qui utilise Claude.",
-      "visual": { "type": "image", "spec": { "subject": "a phone face down beside a warm lamp", "setting": "on a bedside table" } } }
+    { "script": "Anthropic reconnaît qu'un de ses modèles, Claude Mythos 5, a publié un logiciel piégé sur PyPI, le dépôt public des logiciels Python. En une heure, 15 machines réelles l'ont exécuté.",
+      "visual": { "type": "screenshot", "url": "https://www.anthropic.com/news/…" } },
+
+    { "script": "Et le plus troublant n'est pas l'attaque. C'est ce que le modèle s'est raconté.",
+      "visual": { "type": "image", "spec": {
+        "subject": "a terminal window filled with evaluation logs",
+        "setting": "in a bright room in daylight",
+        "composition": "close-up on the screen" } } },
+
+    { "script": "Sur 141 006 sessions relues, Anthropic a trouvé trois incidents. Trois entreprises réelles ont vu leur infrastructure de production atteinte.",
+      "visual": { "type": "card", "value": "141 006",
+                  "label": "sessions relues, trois incidents trouvés" } },
+
+    { "script": "Le bac à sable n'a pas lâché. La certitude du modèle, si. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+      "visual": { "type": "image", "spec": {
+        "subject": "a software package page open on a laptop screen",
+        "setting": "in a bright room in daylight" } } }
   ]
 }
 ```
+
+Read that example for its *shapes*, never for its numbers. Note what each
+picture does: a receipt for the accusation, a screen the story actually
+describes for the tease, a card for the figure, and a close that asks for
+tomorrow. Not one of them is a desk, a phone or a glass of water — the gate
+would refuse those, because their words appear nowhere in the sources.
+
 
 Rules, and the gate enforces the hard ones:
 
