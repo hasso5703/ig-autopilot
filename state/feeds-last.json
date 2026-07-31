@@ -1,12 +1,12 @@
 {
-  "at": "2026-07-31T10:38:38.587Z",
-  "fresh": 348,
+  "at": "2026-07-31T15:36:51.562Z",
+  "fresh": 349,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1059,
-      "fresh": 8,
+      "fetched": 1060,
+      "fresh": 9,
       "windowHours": 96
     },
     {
@@ -39,10 +39,11 @@
     },
     {
       "name": "Microsoft Research",
-      "ok": true,
-      "fetched": 10,
-      "fresh": 2,
-      "windowHours": 96
+      "ok": false,
+      "fetched": 0,
+      "fresh": 0,
+      "windowHours": 96,
+      "error": "HTTP 503 after 6 tries"
     },
     {
       "name": "arXiv cs.AI",
@@ -85,14 +86,14 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 4,
+      "fresh": 5,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 8,
-      "fresh": 8,
+      "fetched": 9,
+      "fresh": 9,
       "windowHours": 36
     },
     {

@@ -1,0 +1,221 @@
+{
+  "slug": "2026-07-31-xai-turbines-memphis",
+  "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
+  "centralClaim": "SpaceXAI will remove all 69 temporary gas turbines powering its data center near Memphis, starting in August 2026 and finishing only in July 2027.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+      "quote": "The turbines won't be completely removed until July 2027, though. SpaceX said that it's currently operating 69 gas turbines to power the Colossus data centers, of which many have been operating for months."
+    },
+    {
+      "url": "https://www.actionnews5.com/2026/07/31/spacexai-announces-removal-temporary-turbines-southaven-data-center/",
+      "quote": "These temporary turbines will be removed starting in August 2026, with all turbines to be removed by July 2027."
+    }
+  ],
+  "caption": "SpaceX va retirer les 69 turbines à gaz sans permis qui alimentent les centres de données de xAI près de Memphis.\n\nLe retrait commence en août 2026 et ne sera terminé qu'en juillet 2027. En attendant, les turbines tournent. SpaceX construit à la place une centrale permanente de 1.2 gigawatt, composée de 41 turbines autorisées par le Mississippi.\n\nLe détail qui ne tient pas dans la vidéo : SpaceX soutient pouvoir faire tourner les turbines actuelles sans permis parce qu'elles n'ont jamais quitté les remorques de livraison. La réglementation fédérale impose un permis quelle que soit la remorque, vu leur taille et leur usage. La NAACP et le Southern Environmental Law Center ont attaqué xAI en justice, et le mois dernier le ministère américain de la Justice s'est rangé du côté de SpaceX.\n\nLa nuance, sans détour : SpaceX équipe les turbines de dispositifs de réduction catalytique et affirme que la qualité de l'air locale respecte les normes de l'agence américaine de l'environnement. L'entreprise annonce aussi des murs antibruit et des silencieux pour les riverains.\n\nUne centrale sans permis pendant un an de plus, acceptable ou pas ?\n\ntechcrunch.com, actionnews5.com, selc.org\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #SpaceX #xAI",
+  "captionEvidence": [
+    {
+      "quote": "SpaceX said on Thursday that it will remove the unpermitted turbines powering its xAI data centers near Memphis as it transitions to a permanent, 1.2 gigawatt natural gas power plant.",
+      "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/"
+    },
+    {
+      "quote": "The new power plant that SpaceX is building will consist of 41 gas turbines ranging in size from 16.48 megawatts to 50 megawatts, according to permit documents issued by the state of Mississippi.",
+      "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/"
+    },
+    {
+      "quote": "These temporary turbines will be removed starting in August 2026, with all turbines to be removed by July 2027.",
+      "url": "https://www.actionnews5.com/2026/07/31/spacexai-announces-removal-temporary-turbines-southaven-data-center/"
+    },
+    {
+      "quote": "SpaceXAI has announced that the company intends to remove all 69 of the temporary mobile turbines that power the facility in Southaven and replace them with a permanent power plant.",
+      "url": "https://www.actionnews5.com/2026/07/31/spacexai-announces-removal-temporary-turbines-southaven-data-center/"
+    },
+    {
+      "quote": "SpaceXAI told Action News 5 that as the turbines are removed from the site, a permanent 1.2 GW power plant is being constructed under their Clean Air Act permit.",
+      "url": "https://www.actionnews5.com/2026/07/31/spacexai-announces-removal-temporary-turbines-southaven-data-center/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "31 juillet 2026 · SpaceX",
+      "headline": "69 turbines à gaz sans permis font tourner les centres de données de xAI",
+      "hero": {
+        "value": "2027",
+        "label": "la date de retrait complet des 69 turbines"
+      },
+      "swipe": "Les reçus, diapositive par diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "69",
+      "unit": "turbines à gaz sans permis",
+      "body": "SpaceX annonce enfin le retrait de celles qui alimentent Colossus. Il ne sera pas terminé avant *juillet 2027*.",
+      "evidence": "The turbines won't be completely removed until July 2027, though. SpaceX said that it's currently operating 69 gas turbines to power the Colossus data centers, of which many have been operating for months. The NAACP and Southern Environmental Law Center have sued xAI over the use of unpermitted turbines. SpaceX acquired xAI in February.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La défense tient à la remorque",
+      "body": "SpaceX soutient pouvoir faire tourner les turbines **sans permis** parce qu'elles n'ont jamais quitté les remorques de livraison. La réglementation fédérale dit l'inverse.",
+      "evidence": "SpaceX claims that it is allowed to operate the existing turbines without permits because they remain on the trailers they were shipped on. But federal regulations say that the turbines xAI has been using, regardless of what they sit on, require permits because of their size and how they're being used.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une des régions les plus polluées du pays",
+      "body": "Les turbines sont au sud de Memphis, côté Mississippi. Elles peuvent rejeter plus de *2 000 tonnes* par an de polluants qui forment le smog.",
+      "evidence": "The turbines are currently located south of Memphis in Mississippi, just over the border with Tennessee. The region is among the most polluted in the U.S., and xAI has been operating gas turbines that have the potential to emit more than 2,000 tons of smog-forming",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Des maisons, des écoles, des églises",
+      "body": "La NAACP et le Southern Environmental Law Center ont attaqué xAI. Ils décrivent une **centrale électrique illégale** installée au milieu d'un quartier habité.",
+      "evidence": "The company's failure to get a permit for its power plant—which is located near homes, schools, and churches—creates added health risks for families in North Mississippi and Memphis.",
+      "source": {
+        "name": "Southern Environmental Law Center",
+        "url": "https://www.selc.org/news/xai-built-an-illegal-power-plant-to-power-its-data-center/",
+        "date": "2026-04-14"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Washington a tranché pour SpaceX",
+      "body": "Le mois dernier, le ministère américain de la Justice s'est **rangé du côté de SpaceX** : les turbines sans permis relèvent selon lui de la sécurité nationale.",
+      "evidence": "Last month, the Department of Justice sided with SpaceX in the NAACP's lawsuit, saying the unpermitted turbines were a matter of \"national, economic, and energy security.\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La réponse de l'entreprise",
+      "body": "SpaceXAI équipe les turbines de dispositifs de réduction catalytique et affirme que *l'air local respecte les normes* de l'agence américaine de l'environnement.",
+      "evidence": "Current monitoring shows that local air quality continues to meet or exceed EPA standards.",
+      "source": {
+        "name": "Action News 5",
+        "url": "https://www.actionnews5.com/2026/07/31/spacexai-announces-removal-temporary-turbines-southaven-data-center/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et la suite est déjà commandée",
+      "body": "Dans son dossier d'entrée en bourse, SpaceX prévoit d'acheter pour **2.8 milliards de dollars** de turbines à gaz pour ses centres de données sur trois ans.",
+      "evidence": "In its IPO filing, SpaceX said it plans to buy $2.8 billion worth of gas turbines for its data centers over the next three years.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui vit à côté d'un centre de données",
+      "sub": "L'actualité de l'intelligence artificielle, en une minute."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+      "accessed": "2026-07-31"
+    },
+    {
+      "name": "Action News 5",
+      "url": "https://www.actionnews5.com/2026/07/31/spacexai-announces-removal-temporary-turbines-southaven-data-center/",
+      "accessed": "2026-07-31"
+    },
+    {
+      "name": "Southern Environmental Law Center",
+      "url": "https://www.selc.org/news/xai-built-an-illegal-power-plant-to-power-its-data-center/",
+      "accessed": "2026-07-31"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "xAI fait tourner 69 turbines sans permis",
+    "beats": [
+      {
+        "script": "SpaceX, qui a racheté xAI en février, annonce le retrait des 69 turbines à gaz sans permis qui alimentent Colossus, ses centres de données près de Memphis.",
+        "visual": {
+          "type": "photo",
+          "query": "gas turbine power station",
+          "alt": "Une centrale électrique au gaz"
+        }
+      },
+      {
+        "script": "Mais tout ne sera pas retiré avant juillet 2027. Et le problème n'est pas le calendrier.",
+        "visual": {
+          "type": "card",
+          "value": "2027",
+          "label": "retrait complet des 69 turbines à gaz sans permis"
+        }
+      },
+      {
+        "script": "SpaceX affirme avoir le droit de les faire tourner sans permis, parce qu'elles sont restées sur leurs remorques de livraison. La réglementation fédérale dit l'inverse.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/"
+        }
+      },
+      {
+        "script": "Ces turbines sont installées au sud de Memphis, côté Mississippi, juste de l'autre côté de la frontière.",
+        "visual": {
+          "type": "photo",
+          "query": "memphis mississippi river skyline",
+          "alt": "La ville de Memphis"
+        }
+      },
+      {
+        "script": "Elles peuvent rejeter plus de 2 000 tonnes par an de polluants qui forment le smog. Une des régions les plus polluées du pays.",
+        "visual": {
+          "type": "card",
+          "value": "2 000 t",
+          "label": "de polluants qui forment le smog, chaque année"
+        }
+      },
+      {
+        "script": "La NAACP et le Southern Environmental Law Center ont porté plainte. Ils décrivent une centrale électrique illégale, installée près de maisons, d'écoles et d'églises.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.selc.org/news/xai-built-an-illegal-power-plant-to-power-its-data-center/"
+        }
+      },
+      {
+        "script": "Mais le mois dernier, le ministère américain de la Justice s'est rangé du côté de SpaceX. L'entreprise assure que l'air local respecte les normes américaines.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.actionnews5.com/2026/07/31/spacexai-announces-removal-temporary-turbines-southaven-data-center/"
+        }
+      },
+      {
+        "script": "Et dans son dossier d'entrée en bourse, SpaceX prévoit 2.8 milliards de dollars de turbines à gaz sur trois ans. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single portable gas turbine unit sitting on a shipping trailer",
+            "setting": "on a cleared industrial lot in bright daylight",
+            "composition": "medium shot"
+          }
+        }
+      }
+    ]
+  }
+}
