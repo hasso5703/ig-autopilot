@@ -549,6 +549,24 @@ export function panFilter(dur, variant = 0) {
  * valid — the same reason the end-card is encoded rather than generated inline. */
 const ENC = ["-r", String(FPS), "-c:v", "libx264", "-preset", "fast", "-crf", "18"];
 
+/**
+ * The one encode that ends up in the repository, and it is not the one the
+ * segments use.
+ *
+ * Every published reel.mp4 is committed forever, because Instagram fetches the
+ * URL server-side at publish time. That is 19 MB a day at the segments' CRF 18,
+ * which is 0.7 GB a month and 8.6 GB a year of history that every cloud run
+ * clones before it can start working. Measured on 2026-07-31 on the hardest
+ * frame the account produces — fine green terminal type on black, under
+ * karaoke: CRF 18 gives 19.06 MB, CRF 22 gives 11.35 MB, and at 100% zoom they
+ * are indistinguishable. 21 keeps a margin for the harder motion a Veo beat can
+ * contain and still cuts about a third of the weight.
+ *
+ * The intermediate segments stay at 18 on purpose: they are re-encoded once by
+ * the subtitle burn, and starting lossier there would compound.
+ */
+const FINAL_CRF = "21";
+
 async function concatSegments(parts, outFile) {
   const list = outFile.replace(/\.mp4$/, "_parts.txt");
   await writeFile(list, parts.map((f) => `file '${path.resolve(f)}'`).join("\n"));
@@ -971,7 +989,7 @@ export async function buildReel(postFile, mediaDir) {
     "-y", "-i", noSub, "-vf",
     `subtitles=${assFile}:fontsdir=${FONT_DIR},` +
       `drawtext=fontfile=${path.join(FONT_DIR, "archivo-bold.ttf")}:text='${HANDLE}':fontsize=34:fontcolor=white@0.8:x=(w-text_w)/2:y=100:shadowcolor=black@0.6:shadowx=2:shadowy=2`,
-    "-c:v", "libx264", "-preset", "fast", "-crf", "18", withSub,
+    "-c:v", "libx264", "-preset", "fast", "-crf", FINAL_CRF, withSub,
   ]);
 
   /* 5 — the mix: voice on top, the mood's bed ducked under it, the Veo clip's

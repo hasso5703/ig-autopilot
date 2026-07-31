@@ -32,6 +32,14 @@ ENTRIES:
   est l'exception qui bloque, pas la regle.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
+- 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
+  qu'Instagram le fetch), soit ~0,6 Go/mois et ~7 Go/an que CHAQUE run clone
+  avant de commencer. L'encodage final est passe de CRF 18 a 21 (mesure sur le
+  pire cas, du texte fin vert sur noir sous karaoke: 19,06 Mo contre 11,35 a
+  CRF 22, indiscernables a 100%): -35% environ. Ca ralentit la croissance, ca ne
+  la resout pas. Quand le clone deviendra lent, la vraie reponse est de retirer
+  les vieux reel.mp4 de HEAD (Instagram a copie la video sur son CDN a la
+  publication, l'URL ne sert plus apres). Proof: mesures du 31/07.
 - 2026-07-28 · Cold container costs: npm install ~40s, ffmpeg install ~40s,
   Whisper venv bootstrap ~2min + 140MB model, first Kokoro-free run. Budget
   them before the story work, not during. Proof: journals 27-28/07.
