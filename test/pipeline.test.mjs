@@ -1475,4 +1475,8 @@ test("the receipt's style block hides video players, not only ads", async () => 
   assert.ok(style, "screenshotOnce still injects a style tag");
   assert.match(style[0], /(^|[,'"\s])video\b/, "bare <video> is hidden in the receipt");
   assert.match(style[0], /adsbygoogle/, "and the ad rules are still there");
+  // CSS alone was not enough: Action News 5 mounts its player inside a shadow
+  // root, which an injected stylesheet does not cross, so the slab survived a
+  // rebuild made specifically to remove it. The nodes have to be deleted.
+  assert.match(src, /shadowRoot\.querySelector\("video,audio"\)/, "shadow-root players are removed, not just styled");
 });

@@ -547,6 +547,24 @@ async function screenshotOnce(url, outFile, gotoTimeout) {
         'video,[class*="video-player"],[class*="videoPlayer"],[id*="video-player"]' +
         '{display:none!important;visibility:hidden!important}',
     }).catch(() => {});
+    // ...and CSS is not enough on its own. Action News 5 mounts its player
+    // inside a shadow root (`div.powa-shadow`), which an injected stylesheet
+    // does not cross, so the black error slab survived the rule above and was
+    // still sitting in the middle of the receipt. Remove the nodes outright,
+    // shadow hosts included, before anything measures the layout.
+    await page.evaluate(() => {
+      for (const el of document.querySelectorAll("video,audio")) el.remove();
+      const hosts = [];
+      const walk = (root) => {
+        for (const el of root.querySelectorAll("*")) {
+          if (!el.shadowRoot) continue;
+          if (el.shadowRoot.querySelector("video,audio")) hosts.push(el);
+          else walk(el.shadowRoot);
+        }
+      };
+      walk(document);
+      for (const el of hosts) el.remove();
+    }).catch(() => {});
     // The receipt is the headline, and the top of an article page is not where
     // the headline lives: the first live Reel's card framed the site chrome, a
     // display ad and a decorative photo, with the headline below the crop.
