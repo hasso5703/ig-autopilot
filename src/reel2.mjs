@@ -173,12 +173,39 @@ export async function voiceRateSamples() {
 
 const VENV = path.join(os.homedir(), ".cache", "oom-whisper");
 
-async function ensureWhisper() {
+/** The alignment model, by name, so the fetch and the transcription agree. */
+const WHISPER_MODEL = { fr: "large-v3-turbo", en: "base.en" };
+
+async function ensureWhisper(lang = "fr") {
   const py = path.join(VENV, "bin", "python");
-  try { await access(py); return py; } catch { /* build it */ }
-  console.log("bootstrapping whisper venv (first run on this machine, ~2 min)…");
-  await run("python3", ["-m", "venv", VENV]);
-  await run(path.join(VENV, "bin", "pip"), ["-q", "install", "faster-whisper"], { timeout: 300_000 });
+  try {
+    await access(py);
+  } catch {
+    console.log("bootstrapping whisper venv (first run on this machine, ~2 min)…");
+    await run("python3", ["-m", "venv", VENV]);
+    await run(path.join(VENV, "bin", "pip"), ["-q", "install", "faster-whisper"], { timeout: 300_000 });
+  }
+  /*
+   * Fetch the weights as their own step, always.
+   *
+   * They used to download lazily inside the transcription call, whose timeout
+   * has to cover the reading itself — fine while the model was `base` at 142
+   * MB, and a trap from the moment it became `large-v3-turbo` at 1.6 GB on
+   * 2026-07-31. A cold container would have had four minutes to pull 1.6 GB,
+   * load it and transcribe a minute of speech, and the failure would have
+   * arrived after the narration was already paid for, phrased as a timeout with
+   * nothing to say about downloads.
+   *
+   * On a warm machine this returns in about three seconds, so it costs nothing
+   * to do it every time; on a cold one it is the honest place for the wait, and
+   * it says so.
+   */
+  const model = WHISPER_MODEL[lang] ?? WHISPER_MODEL.fr;
+  const t0 = Date.now();
+  await run(py, ["-c", `from faster_whisper import WhisperModel; WhisperModel("${model}", device="cpu", compute_type="int8")`],
+    { timeout: 900_000 });
+  const secs = (Date.now() - t0) / 1000;
+  if (secs > 20) console.log(`whisper ${model} fetched in ${Math.round(secs)}s (cold container, ~1.6 GB)`);
   return py;
 }
 
@@ -212,7 +239,7 @@ export function mergeContinuations(words) {
  * hears it, and the language is forced so a short clip cannot be misdetected.
  * English is kept for fixtures and for any deliberate English post. */
 async function alignWords(voiceWav, scriptWords, workDir, lang = "fr") {
-  const py = await ensureWhisper();
+  const py = await ensureWhisper(lang);
   /* `base` was heard on 2026-07-31 against the day's real French narration and
      it sits on the edge of the guard below: 192 words heard for a 188-word
      script, when the tolerance is 4. It writes "Entropique" for Anthropic and
@@ -226,7 +253,7 @@ async function alignWords(voiceWav, scriptWords, workDir, lang = "fr") {
      boundaries are what the beat cuts and the karaoke are made of. Greedy
      decoding (beam_size 1) is used deliberately — nothing downstream reads the
      text, so paying for a beam search over wording buys nothing. */
-  const model = lang === "en" ? "base.en" : "large-v3-turbo";
+  const model = WHISPER_MODEL[lang] ?? WHISPER_MODEL.fr;
   const script = `
 from faster_whisper import WhisperModel
 import json, sys, os
@@ -239,7 +266,9 @@ print(len(words))
   const scriptFile = path.join(workDir, "align.py");
   const wordsFile = path.join(workDir, "words.json");
   await writeFile(scriptFile, script);
-  await run(py, [scriptFile, voiceWav, wordsFile], { timeout: 240_000 });
+  /* The weights are already on disk by now, so this budget is for the reading
+     alone: about 40 seconds on twenty cores, and a cloud container has fewer. */
+  await run(py, [scriptFile, voiceWav, wordsFile], { timeout: 420_000 });
   const heard = mergeContinuations(JSON.parse(await readFile(wordsFile, "utf8")));
   // The tolerance was a flat 2 words when a script was ~150 words long. At the
   // 60-second format's ~180 it is scaled, because the chance of one honest

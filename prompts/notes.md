@@ -163,7 +163,12 @@ ENTRIES:
   192 mots pour un script de 188 (tolerance 4, donc au bord du refus) et ecrit
   Entropique pour Anthropic; turbo entend 189 avec les noms corrects. Cout:
   ~70 s de plus par build sur 20 coeurs et 1,6 Go au premier demarrage du
-  conteneur. Proof: wbench 31/07.
+  conteneur. Ce 1,6 Go est telecharge par ensureWhisper AVANT la transcription
+  (budget propre de 900 s, ~3 s a chaud): il se chargeait paresseusement dans
+  l'appel de transcription, dont le delai devait couvrir telechargement +
+  chargement + lecture. Tenable avec `base` (142 Mo), piege des le passage a
+  turbo, et l'echec serait arrive APRES l'achat de la narration sous forme d'un
+  timeout ne parlant pas de telechargement. Proof: wbench 31/07.
 - 2026-07-31 · Ce qu'on MONTRE est desormais tenu par le gate, pas par le gout.
   Une image generee ou un veo dont le `spec` ne partage aucun mot (>=5 lettres)
   avec les sources est REFUSE: c'est ce qui a laisse passer un verre d'eau, une
