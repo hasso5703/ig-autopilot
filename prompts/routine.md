@@ -1544,9 +1544,17 @@ job; the candidate expires on its own.
   `node src/publish.mjs quota` and `state/posted.jsonl` before retrying. Never
   retry blindly; you risk double-posting.
 - **`land.mjs` exits 2 (REAL CONFLICT)** → a run and a human edited the same
-  lines. Keep your work on your branch, name the files in your report, change
-  nothing by force. The human resolves; you carry on with what does not depend
-  on it.
+  lines, and the message names the files. Keep your work on your branch, name
+  them in your report, change nothing by force. The human resolves; you carry on
+  with what does not depend on it. **It only says this when files are genuinely
+  in conflict.** Any other rebase refusal now prints what git actually said and
+  is yours to fix — until 2026-07-31 every refusal read as a human conflict,
+  including "you have unstaged changes", which is the state you are always in
+  when you land the journal mid-run.
+- **`land.mjs` refuses because the suite is red** → it will not put source or
+  prompt changes on `main` while `npm test` fails, which is the manual's own
+  rule finally enforced. `state/` and `reports/journal/` always land anyway:
+  a flight recorder that cannot record a death is worse than a red suite.
 - **A tooling hook says your landed commits are "Unverified"** → dispose of it
   in one line and move on. The commits' author and committer are already
   `Claude <noreply@anthropic.com>`; what is missing is a cryptographic
