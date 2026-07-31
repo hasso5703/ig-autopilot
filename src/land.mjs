@@ -81,9 +81,35 @@ export async function land(message, paths = []) {
     }
   }
 
-  // Stage and commit. An empty commit is not an error: landing may only need
-  // to push commits made earlier in the run.
-  await git("add", ...(paths.length ? paths : ["-A"]));
+  /*
+   * Stage and commit. An empty commit is not an error: landing may only need to
+   * push commits made earlier in the run.
+   *
+   * `git add` cannot be trusted to succeed here, and its failure is not always a
+   * failure. Hand it the path of a file that has already been removed — by
+   * `git rm`, or by a run cleaning up after itself — and git answers "pathspec
+   * did not match any files" and exits non-zero, because the path is gone from
+   * both the worktree and the index. The deletion is nevertheless staged and
+   * ready to commit. On 2026-07-31 that stopped a landing dead, with a git error
+   * that says nothing about what to do next.
+   *
+   * So: try to stage, and if git refuses, ask the index whether there is work
+   * anyway. Something staged means the caller had already staged it and we
+   * carry on; nothing staged means the paths were wrong, and git's own words
+   * are what the run needs to read.
+   */
+  const staged = () => run("git", ["diff", "--cached", "--quiet"]).then(() => false).catch(() => true);
+  try {
+    await git("add", "-A", "--", ...(paths.length ? paths : ["."]));
+  } catch (err) {
+    if (!(await staged())) {
+      throw new Error(
+        `git add refused and nothing is staged, so there is nothing to land:\n\n` +
+          `${String(err.stdout || "")}${String(err.stderr || err.message || "")}\n\n` +
+          `Check the paths you passed. Nothing was pushed and nothing was lost.`
+      );
+    }
+  }
   /*
    * Ask git whether anything is staged instead of reading what it says about
    * it. `diff --cached --quiet` exits 0 for "nothing staged" and 1 otherwise,
@@ -98,7 +124,7 @@ export async function land(message, paths = []) {
    * here. A run in that state is stranded: its work is committed locally,
    * invisible to everyone, and no command it is allowed to run can publish it.
    */
-  const nothingStaged = await run("git", ["diff", "--cached", "--quiet"]).then(() => true).catch(() => false);
+  const nothingStaged = !(await staged());
   if (nothingStaged) console.log("nothing new to commit; pushing what is already committed here");
   else await git("commit", "-m", message);
 
