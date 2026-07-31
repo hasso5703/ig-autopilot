@@ -43,11 +43,6 @@ ENTRIES:
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
-- 2026-07-28 · PERIME le 31/07, garde pour l'historique: Veo Lite 720p
-  ($0,05/s) etait le defaut et un Reel de 33 s coutait ≈ $0,40. Depuis le
-  31/07 la consigne est un cran au-dessus (Veo Fast, 1080p quand le beat prend
-  8 s) et un Reel de 60 s coute ≈ $1,20-1,60. Ne reviens pas a Lite pour
-  economiser: voir l'entree paliers du 31/07.
 - 2026-07-28 · Set RUN_JOURNAL=reports/journal/<UTC-date>-<slot>.md at step 0;
   the engine appends spend/beat/verdict lines itself. Commit the journal
   before every purchase and publish, so a quota death leaves the receipts.

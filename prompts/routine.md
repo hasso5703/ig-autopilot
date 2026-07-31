@@ -1125,7 +1125,14 @@ Rules, and the gate enforces the hard ones:
   the six differed by up to 18% in reading pace, which is the whole width of the
   word window, so a change means the gate sizes the next three scripts against a
   voice that is no longer speaking. The window is filtered by voice for exactly
-  that reason, and it needs three builds of the new one before it means anything.
+  that reason, and it needs three readings of the new one before it means
+  anything. **So calibrate before the next run rather than after:**
+  `node src/calibrate-voice.mjs posts/<slug>.json 3` buys three readings for
+  about nine cents, throws the audio away and writes the rates to the ledger.
+  One reading is not a measurement — Sadaltager read at 3.49 words a second in
+  a single A/B and at 3.22, 3.34, 3.44 when it was actually measured, and the
+  window built on the anecdote had an upper bound this voice would have read in
+  65 seconds: past the engine's ceiling, refused after being paid for.
 
 - **`lang` is "fr".** It drives the narration alignment; "en" exists for
   fixtures and nothing else now.
