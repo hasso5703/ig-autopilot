@@ -44,7 +44,16 @@ export async function land(message, paths = []) {
   try {
     await git("commit", "-m", message);
   } catch (err) {
-    if (!/nothing to commit|nothing added/.test(String(err.stderr || err.message))) throw err;
+    // git says "nothing to commit, working tree clean" on STDOUT, not stderr,
+    // and execFile's error message carries only the command line. Reading just
+    // stderr meant this net never caught the case it was written for: on
+    // 2026-07-31 a landing whose push had failed once could never be retried,
+    // because every retry died here with nothing new to stage. A run in that
+    // state is stranded — its work committed locally, invisible to everyone,
+    // and no command it is allowed to run can publish it.
+    const said = `${err.stdout || ""}\n${err.stderr || ""}\n${err.message || ""}`;
+    if (!/nothing to commit|nothing added|no changes added/.test(said)) throw err;
+    console.log("nothing new to commit; pushing what is already committed here");
   }
 
   for (let attempt = 1; attempt <= 4; attempt++) {
