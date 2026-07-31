@@ -662,13 +662,15 @@ async function segmentFromPhoto(img, dur, credit, outFile, workDir) {
  * story (it prints its own figures, which the gate holds to the evidence like
  * every other digit), and looks designed rather than bought.
  *
- * A slow push-in keeps it from being a slide.
+ * The ground is a flat colour and it stays one: the first cut ran a push-in
+ * over it, which is eight megapixels a frame of arithmetic producing an
+ * identical image, because a solid colour zoomed is the same solid colour. The
+ * movement a card needs is the cut into it and the type fading up; both are
+ * free.
  */
 async function segmentCard(dur, outFile) {
-  const frames = Math.max(1, Math.round(dur * FPS));
   await ffmpeg([
-    "-y", "-f", "lavfi", "-i", `color=c=${BG_HEX}:s=${W * 2}x${H * 2}:r=${FPS}:d=${dur}`,
-    "-vf", `zoompan=z='1+0.03*on/${frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${frames}:s=${W}x${H}:fps=${FPS},setsar=1`,
+    "-y", "-f", "lavfi", "-i", `color=c=${BG_HEX}:s=${W}x${H}:r=${FPS}:d=${dur}`,
     "-pix_fmt", "yuv420p", ...ENC, outFile,
   ]);
 }
