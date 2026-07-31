@@ -1,0 +1,230 @@
+{
+  "slug": "2026-08-01-penurie-memoire-samsung",
+  "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher.",
+  "centralClaim": "Samsung, which supplies roughly a third of the world's memory chips, expects the memory supply shortage to become even more severe in 2027 than 2026 and to persist through 2028.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/",
+      "quote": "The ongoing shortage of RAM chips is not only expected to persist into the next year, but will likely intensify in 2027, with tight supply conditions lasting until at least 2028, according to Samsung, which manufactures and supplies roughly a third of the world’s memory chips."
+    },
+    {
+      "url": "https://www.pcgamer.com/hardware/memory/gleefully-counting-its-billions-samsung-cries-warning-of-a-severe-memory-supply-crisis-next-year/",
+      "quote": "The supply constraints are expected to become even more severe in 2027 than 2026, reinforcing our view that the supply shortage will persist through 2028."
+    }
+  ],
+  "caption": "Samsung prévoit que la pénurie de mémoire s'aggrave en 2027 et dure au moins jusqu'en 2028.\n\nLe groupe fabrique environ un tiers des puces mémoire du monde. Lors de son appel de résultats du deuxième trimestre, il a dit que les contraintes d'approvisionnement seraient encore plus sévères en 2027 qu'en 2026. La demande des centres de données d'IA est la principale pression : Samsung compte placer 60 à 70 % de sa capacité mémoire sous contrats longue durée.\n\nLe détail qui ne tient pas dans la vidéo : la hausse revient vers Samsung. Les puces plus chères ont donné des profits record à sa division semi-conducteurs, et coûté à sa division mobile une perte trimestrielle de 700 milliards de wons. Apple a augmenté le prix des MacBook et des iPad après avoir dit ne plus pouvoir absorber la hausse du coût de la mémoire et du stockage.\n\nLa nuance : Samsung n'a pas confirmé de hausse générale sur ses prochains appareils. Mais son dernier pliant, le Galaxy Z Flip 8, est sorti avec une fiche technique quasi inchangée et 100 dollars de plus au prix de départ.\n\nTu repousses ton prochain achat d'un an, oui ou non ?\n\ntechcrunch.com, pcgamer.com, digitaltrends.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Samsung #Nvidia",
+  "captionEvidence": [
+    {
+      "quote": "The ongoing shortage of RAM chips is not only expected to persist into the next year, but will likely intensify in 2027, with tight supply conditions lasting until at least 2028, according to Samsung, which manufactures and supplies roughly a third of the world’s memory chips.",
+      "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/"
+    },
+    {
+      "quote": "The supply constraints are expected to become even more severe in 2027 than 2026, reinforcing our view that the supply shortage will persist through 2028.",
+      "url": "https://www.pcgamer.com/hardware/memory/gleefully-counting-its-billions-samsung-cries-warning-of-a-severe-memory-supply-crisis-next-year/"
+    },
+    {
+      "quote": "Samsung says customers are requesting multi-year supply agreements, and it plans to place roughly 60% to 70% of its memory capacity under long-term contracts.",
+      "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/"
+    },
+    {
+      "quote": "Higher chip prices delivered record profits for Samsung’s semiconductor business, but those same costs helped push its mobile division to a 700 billion won quarterly loss.",
+      "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/"
+    },
+    {
+      "quote": "Samsung has not confirmed broader price increases for its upcoming devices, but the Galaxy Z Flip 8 already hints at what buyers may be in for. The new foldable arrived with a largely unchanged spec sheet and a $100 higher starting price.",
+      "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/"
+    },
+    {
+      "quote": "Apple has already raised MacBook and iPad prices after saying it could no longer absorb rising memory and storage costs",
+      "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "30 juillet 2026 · Samsung",
+      "headline": "Samsung prévoit une pénurie de mémoire qui empire encore",
+      "hero": {
+        "value": "2028",
+        "label": "la fin de la pénurie de mémoire, au plus tôt"
+      },
+      "swipe": "Les reçus, diapositive par diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "2027",
+      "unit": "l'année où les contraintes empirent",
+      "body": "Samsung dit que les contraintes d'approvisionnement seront *encore plus sévères* qu'en 2026, et que la pénurie tiendra **jusqu'en 2028**.",
+      "evidence": "The supply constraints are expected to become even more severe in 2027 than 2026, reinforcing our view that the supply shortage will persist through 2028.",
+      "source": {
+        "name": "PC Gamer",
+        "url": "https://www.pcgamer.com/hardware/memory/gleefully-counting-its-billions-samsung-cries-warning-of-a-severe-memory-supply-crisis-next-year/",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un tiers de la mémoire mondiale",
+      "body": "Samsung fabrique et fournit environ **un tiers** des puces mémoire du monde. La pénurie de RAM devrait s'intensifier en *2027* et tenir jusqu'en 2028.",
+      "evidence": "The ongoing shortage of RAM chips is not only expected to persist into the next year, but will likely intensify in 2027, with tight supply conditions lasting until at least 2028, according to Samsung, which manufactures and supplies roughly a third of the world’s memory chips.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où part la mémoire",
+      "body": "Les clients demandent des contrats pluriannuels. Samsung compte placer **60 à 70 %** de sa capacité mémoire sous contrats longue durée.",
+      "evidence": "Samsung says customers are requesting multi-year supply agreements, and it plans to place roughly 60% to 70% of its memory capacity under long-term contracts.",
+      "source": {
+        "name": "Digital Trends",
+        "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Apple a déjà augmenté",
+      "body": "Apple a monté le prix des **MacBook** et des **iPad** après avoir dit ne plus pouvoir absorber la hausse du coût de la mémoire et du stockage.",
+      "evidence": "Apple has already raised MacBook and iPad prices after saying it could no longer absorb rising memory and storage costs",
+      "source": {
+        "name": "Digital Trends",
+        "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Samsung n'a pas confirmé de hausse générale sur ses prochains appareils.",
+      "caveat": "Son dernier pliant, le Galaxy Z Flip 8, est sorti avec une fiche quasi inchangée et 100 dollars de plus.",
+      "claimLabel": "Ce que dit Samsung",
+      "caveatLabel": "Ce que montre le dernier téléphone",
+      "evidence": "Samsung has not confirmed broader price increases for its upcoming devices, but the Galaxy Z Flip 8 already hints at what buyers may be in for. The new foldable arrived with a largely unchanged spec sheet and a $100 higher starting price.",
+      "source": {
+        "name": "Digital Trends",
+        "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et les cartes graphiques",
+      "body": "Nvidia devrait augmenter le prix de ses cartes graphiques grand public de **20 à 30 %**. Les consoles, les PC de bureau et les portables suivent.",
+      "evidence": "With memory manufacturers shifting production capacity toward AI data centers and away from consumer electronics, consumers are facing a new reality: higher device prices. Nvidia is expected to raise its consumer graphics card prices by 20% to 30%, which may further drive up prices of gaming devices, desktop computers, consoles, laptops, and the like.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le retour de bâton",
+      "body": "Les puces plus chères ont donné des profits record aux semi-conducteurs de Samsung. Elles ont aussi coûté à sa division mobile une perte trimestrielle de **700 milliards de wons**.",
+      "evidence": "Higher chip prices delivered record profits for Samsung’s semiconductor business, but those same costs helped push its mobile division to a 700 billion won quarterly loss.",
+      "source": {
+        "name": "Digital Trends",
+        "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui doit changer de téléphone",
+      "sub": "L'actualité de l'intelligence artificielle, en une minute."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/",
+      "accessed": "2026-07-31"
+    },
+    {
+      "name": "PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/memory/gleefully-counting-its-billions-samsung-cries-warning-of-a-severe-memory-supply-crisis-next-year/",
+      "accessed": "2026-07-31"
+    },
+    {
+      "name": "Digital Trends",
+      "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/",
+      "accessed": "2026-07-31"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Samsung prévient : la mémoire manque jusqu'en 2028",
+    "beats": [
+      {
+        "script": "Ton prochain téléphone va coûter plus cher, et Samsung vient de dire pendant combien de temps. Le groupe, qui fournit environ un tiers de la mémoire mondiale, prévoit une pénurie qui tient jusqu'en 2028.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/"
+        }
+      },
+      {
+        "script": "Et le problème n'est pas la production. C'est à qui elle est vendue.",
+        "visual": {
+          "type": "card",
+          "value": "2028",
+          "label": "la fin de la pénurie de mémoire, au plus tôt"
+        }
+      },
+      {
+        "script": "Lors de son appel de résultats, Samsung a dit que les contraintes d'approvisionnement seraient encore plus sévères en 2027 qu'en 2026.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.pcgamer.com/hardware/memory/gleefully-counting-its-billions-samsung-cries-warning-of-a-severe-memory-supply-crisis-next-year/"
+        }
+      },
+      {
+        "script": "Donc la mémoire part vers les centres de données d'IA. Samsung compte y placer 60 à 70 % de sa capacité. Celle qui manque dans ton ordinateur n'a pas disparu.",
+        "visual": {
+          "type": "photo",
+          "query": "computer memory modules",
+          "alt": "Des barrettes de mémoire vive"
+        }
+      },
+      {
+        "script": "Apple a déjà monté le prix des MacBook et des iPad, en disant ne plus pouvoir absorber la hausse du coût de la mémoire et du stockage.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.digitaltrends.com/computing/samsung-lays-out-grim-pricing-prophecy-for-mobile-and-pc-gear/"
+        }
+      },
+      {
+        "script": "Samsung n'a pas confirmé de hausse générale. Mais son dernier pliant, le Galaxy Z Flip 8, est sorti avec une fiche quasi inchangée et cent dollars de plus.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a folding smartphone open on a retail display stand",
+            "setting": "in a bright electronics shop in daylight",
+            "composition": "close-up"
+          }
+        }
+      },
+      {
+        "script": "Et ça dépasse les téléphones. Nvidia devrait augmenter le prix de ses cartes graphiques grand public de 20 à 30 %. Les consoles et les portables suivent.",
+        "visual": {
+          "type": "card",
+          "value": "20 à 30 %",
+          "label": "la hausse attendue sur les cartes graphiques Nvidia"
+        }
+      },
+      {
+        "script": "Et Samsung y perd aussi : la mémoire chère a coûté 700 milliards de wons à sa division mobile. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "memory chips on a green circuit board",
+            "setting": "on a bright workbench in daylight",
+            "composition": "macro close-up"
+          }
+        }
+      }
+    ]
+  }
+}

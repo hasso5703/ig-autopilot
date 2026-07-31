@@ -34,7 +34,13 @@ ENTRIES:
   repondent 200 et se gatent sans probleme actionnews5.com (Gray TV, la presse
   locale americaine en general) et selc.org. Sur une histoire locale, la
   station TV locale est souvent la seule source joignable qui porte la
-  declaration de l'entreprise.
+  declaration de l'entreprise. Ajout 31/07 (16h): pcgamer.com et
+  digitaltrends.com repondent 200 et se gatent du premier coup; sur une
+  publication de resultats, la presse specialisee joignable porte souvent la
+  citation verbatim de l'appel que le primaire ne publie pas. Attention, elle
+  peut l'attribuer a des personnes differentes (meme phrase donnee a Daniel Oh
+  par PC Gamer et a Jaejune Kim par Digital Trends): cite l'entreprise, pas la
+  personne, tant qu'un transcript n'a pas tranche.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour

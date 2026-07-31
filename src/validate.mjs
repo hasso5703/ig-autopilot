@@ -160,7 +160,20 @@ const actorForms = (name) => {
   return [...new Set([name, parts.slice(-2).join(" ")])].filter((f) => /[A-Za-z]{2}/.test(f));
 };
 
-const flatten = (html) =>
+/**
+ * Named entities, decoded because a page that writes `&rsquo;` was answering
+ * NOT_FOUND on a quote that was on it word for word. Numeric entities were
+ * already handled, which is why the gap stayed invisible: TechCrunch serves a
+ * literal apostrophe, Digital Trends serves `&rsquo;`, and only the second one
+ * broke. Same failure shape as the markup-split quote — the sentence is really
+ * there, the flattened page just does not spell it the same way.
+ */
+const NAMED_ENTITIES = {
+  rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“", apos: "'", quot: '"',
+  mdash: "—", ndash: "–", hellip: "…", lt: "<", gt: ">", nbsp: " ",
+};
+
+export const flatten = (html) =>
   html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -168,6 +181,8 @@ const flatten = (html) =>
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(+d))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)))
+    .replace(/&([a-z]+);/gi, (m, n) => NAMED_ENTITIES[n.toLowerCase()] ?? m)
     .replace(/[‘’]/g, "'")
     .replace(/[“”]/g, '"')
     .replace(/[–—]/g, "-")

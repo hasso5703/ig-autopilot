@@ -1480,3 +1480,19 @@ test("the receipt's style block hides video players, not only ads", async () => 
   // rebuild made specifically to remove it. The nodes have to be deleted.
   assert.match(src, /shadowRoot\.querySelector\("video,audio"\)/, "shadow-root players are removed, not just styled");
 });
+
+/* 2026-07-31 (16h scout): a Digital Trends sentence copied character for
+   character out of the live page came back NOT_FOUND. The page writes
+   `Samsung&rsquo;s`, and flatten() decoded numeric entities but not named
+   ones, so the flattened page read "samsung&rsquo;s" while the quote read
+   "samsung's". The gate was calling a real quote invented, which is the one
+   direction of error nobody double-checks. */
+test("flatten decodes named and hex entities, not only numeric ones", async () => {
+  const { flatten } = await import("../src/validate.mjs");
+  const page = "<p>Higher chip prices delivered record profits for Samsung&rsquo;s semiconductor business.</p>";
+  assert.match(flatten(page), /samsung's semiconductor business/, "&rsquo; becomes a plain apostrophe");
+  assert.match(flatten("<p>the &ldquo;RAMaggedon&rdquo; is here</p>"), /the "ramaggedon" is here/);
+  assert.match(flatten("<p>Samsung&#x2019;s call</p>"), /samsung's call/, "hex entities decode too");
+  assert.match(flatten("<p>2027 &mdash; 2028</p>"), /2027 - 2028/, "&mdash; normalises like a literal em dash");
+  assert.match(flatten("<p>caf&eacute; &unknownentity; stays</p>"), /&unknownentity; stays/, "an unknown entity is left alone rather than mangled");
+});
