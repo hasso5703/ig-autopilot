@@ -1293,6 +1293,34 @@ test("every ledger reader sorts by timestamp, because a union merge shuffles lin
   }
 });
 
+// ---------------------------------------------------------------------------
+// `state.mjs today` is the first thing a run reads, and for three days it was
+// wrong about the only kind of post this account makes. `isReel` tested the slug
+// for "-reel"; no slug this account has ever written contains it, so the report
+// said `"reels": 0` right after publishing a Reel and counted that Reel as a
+// carousel — on an account where the manual says carousels are retired. The
+// permalink is the fact Instagram itself returns.
+// ---------------------------------------------------------------------------
+test("a Reel is recognised by what Instagram returned, not by its slug", async () => {
+  const { isReel, REEL_EVERY_HOURS, CAROUSEL_EVERY_HOURS } = await import("../src/state.mjs");
+
+  // The two records this account actually holds, verbatim in shape.
+  assert.equal(
+    isReel({ slug: "2026-07-27-microsoft-cyber-model", permalink: "https://www.instagram.com/p/DbT0CNwCdYu/" }),
+    false, "a /p/ permalink is a feed post"
+  );
+  assert.equal(
+    isReel({ slug: "2026-07-30-opus5-vending-cartels", permalink: "https://www.instagram.com/reel/DbaxRq1EuJN/", durationS: 50.16 }),
+    true, "a /reel/ permalink is a Reel — and note the slug contains no '-reel', which is what the old test looked for"
+  );
+  assert.equal(isReel({ slug: "x", durationS: 60 }), true, "only a Reel record carries a probed duration");
+  assert.equal(isReel({ slug: "2026-07-30-opus5-vending-cartels" }), false, "no permalink and no duration: not claimed as a Reel");
+  assert.equal(isReel({}), false, "and an empty record claims nothing");
+
+  assert.equal(REEL_EVERY_HOURS, 20, "the cadence the report measures is the Reel's now");
+  assert.equal(CAROUSEL_EVERY_HOURS, REEL_EVERY_HOURS, "the retired name still resolves, so nothing outside breaks on the rename");
+});
+
 test("engagement helpers: only real published media, only real comments", async () => {
   const { recentPublished, commentTextIssues } = await import("../src/engage.mjs");
   const posted = [

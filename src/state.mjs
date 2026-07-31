@@ -351,9 +351,28 @@ export async function publishGap() {
  * arbitrary boundary. Hours since the last carousel cannot be gamed by where a
  * clock happens to fall.
  */
-export const CAROUSEL_EVERY_HOURS = 20;
+export const REEL_EVERY_HOURS = 20;
 
-const isReel = (p) => /-reel\b/.test(p.slug || "");
+/** The old name, kept so nothing outside this file breaks on the rename.
+ * Carousels are retired; the cadence it measured is the Reel's now. */
+export const CAROUSEL_EVERY_HOURS = REEL_EVERY_HOURS;
+
+/**
+ * Is this published record a Reel?
+ *
+ * By what Instagram gave back, not by the slug. This used to test the slug for
+ * "-reel" and no slug this account has ever written contains it: the account's
+ * slugs are dated story names (`2026-07-30-opus5-vending-cartels`). So it
+ * returned false for everything, and `state.mjs today` — the report a run reads
+ * at step 0 — has been saying `"reels": 0` after publishing a Reel and counting
+ * that Reel as a carousel, on an account where carousels are retired.
+ *
+ * The permalink is the fact: Instagram serves Reels under `/reel/` and feed
+ * posts under `/p/`. `durationS` backs it up, because only a Reel record carries
+ * one. A record with neither is old or hand-written, and reads as not-a-Reel,
+ * which is what it would have done before.
+ */
+export const isReel = (p) => /\/reel\//.test(p.permalink || "") || Number(p.durationS) > 0;
 
 /**
  * What this account has been talking about, so a run can avoid saying it again.
@@ -407,17 +426,31 @@ export async function recentThemes(now = new Date(), { posts = 4 } = {}) {
   };
 }
 
-export async function carouselDue(now = new Date()) {
+/**
+ * What the account owes today.
+ *
+ * This answered a retired question until 2026-07-31: it measured the gap since
+ * the last CAROUSEL and reported `lastCarousel` and a carousel count, three days
+ * after the manual started telling runs that "`state.mjs today` no longer
+ * reports a carousel as owed". A run reading it saw `"due": true` beside a
+ * `lastCarousel` field and a Reel counted as a carousel — the report and the
+ * manual said different things about the same account.
+ *
+ * It now measures what there is to measure: the gap since the last publication
+ * of any kind, and what the last 24 hours actually contain. `due` is the bio's
+ * promise — one story a day — not a carousel cadence.
+ */
+export async function publishDue(now = new Date()) {
   const { posted } = await loadState();
-  const last = latestBy(posted.filter((p) => !isReel(p)));
+  const last = latestBy(posted);
   const hours = last ? (now - new Date(last.at)) / 3600000 : null;
   const since24 = posted.filter((p) => now - new Date(p.at) < 24 * 3600000);
   return {
-    due: hours === null || hours >= CAROUSEL_EVERY_HOURS,
-    hoursSinceCarousel: hours === null ? null : Math.round(hours * 10) / 10,
-    every: CAROUSEL_EVERY_HOURS,
-    lastCarousel: last ? { at: last.at, slug: last.slug } : null,
-    last24h: { reels: since24.filter(isReel).length, carousels: since24.filter((p) => !isReel(p)).length },
+    due: hours === null || hours >= REEL_EVERY_HOURS,
+    hoursSinceLastPost: hours === null ? null : Math.round(hours * 10) / 10,
+    every: REEL_EVERY_HOURS,
+    lastPost: last ? { at: last.at, slug: last.slug, reel: isReel(last) } : null,
+    last24h: { reels: since24.filter(isReel).length, other: since24.filter((p) => !isReel(p)).length },
   };
 }
 
@@ -470,7 +503,7 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
      * while still building the Reel. All of the spend, none of the discovery.
      * Reels carry share_to_feed=true now, so the Reel IS the grid.
      */
-    const t = await carouselDue();
+    const t = await publishDue();
     console.log(JSON.stringify({ ...t, carouselsRetired: "2026-07-28" }, null, 2));
     console.error("\nCarousels are retired. This run publishes a Reel or nothing; Reels populate the grid themselves.");
   } else if (process.argv[2] === "guard") {
