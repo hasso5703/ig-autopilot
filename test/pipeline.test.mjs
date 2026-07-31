@@ -928,6 +928,28 @@ test("reel2: the hook card is required and held to headline rules", async () => 
 
   p.reel2.title = "70 personnes pour apprendre à couper l'IA";
   assert.equal((await errs(p)).filter((e) => /title/.test(e)).length, 0);
+
+  // The four hook rules are errors on the card, not warnings. The manual called
+  // them "hard rules, enforced by the gate" from the day of the French pivot,
+  // and until 2026-07-31 the card that is the audition frame only got nagged.
+  for (const bad of [
+    "Claude a-t-il piégé 15 machines ?",
+    "Comment Claude a piégé des machines",
+    "Une révolution dans le paysage de l'IA",
+  ]) {
+    p.reel2.title = bad;
+    assert.ok(hasErr(await errs(p), /reel2 title:/), `hook refused: ${bad}`);
+  }
+
+  // And it must not fire on the shapes this account actually publishes.
+  for (const good of [
+    "Claude a piégé 15 machines bien réelles",
+    "Vos chats Claude étaient sur Google",
+    "OpenAI vient de perdre le contrôle de ses modèles",
+  ]) {
+    p.reel2.title = good;
+    assert.equal((await errs(p)).filter((e) => /reel2 title:/.test(e)).length, 0, `hook accepted: ${good}`);
+  }
 });
 
 test("reel2: the last beat asks for the subscription, and says what it buys", async () => {

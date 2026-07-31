@@ -348,7 +348,7 @@ const DEAD_OPENERS = [
 ];
 
 /** Words that sound like something and mean nothing. */
-const FILLER = /\b(game[- ]?changer|revolutionary|revolutionize|landscape|journey|unlock|harness|delve|paradigm|disrupt(ing|ive)?|cutting[- ]edge|seamless|robust|leverage|r[ée]volutionnaire|r[ée]volutionne[rnt]?|incontournable|paradigme|disruptif|disruptive|bouleverse[rnt]?|d[ée]cryptage)\b/i;
+const FILLER = /\b(game[- ]?changer|revolutionary|revolutionize|landscape|journey|unlock|harness|delve|paradigm|disrupt(ing|ive)?|cutting[- ]edge|seamless|robust|leverage|r[ée]volutionnaire|r[ée]volutionne[rnt]?|r[ée]volution|paysage|[ée]cosyst[èe]me|incontournable|paradigme|disruptif|disruptive|bouleverse[rnt]?|d[ée]cryptage)\b/i;
 
 export function hookIssues(headline) {
   const raw = String(headline || "").replace(/\*+/g, "").trim();
@@ -991,7 +991,19 @@ export async function validatePost(post, opts = {}) {
       if (DASHES.test(title)) err("reel2: title contains an em dash, en dash or \"--\" — rewrite as two sentences");
       const unsupportedT = [...new Set(numbers(title))].filter((n) => !allEvidence.has(n));
       if (unsupportedT.length) err(`reel2: title figure(s) ${unsupportedT.join(", ")} appear in no evidence quote — a number must be copied, never derived`);
-      for (const issue of hookIssues(title)) nag(`reel2 title: ${issue}`);
+      /*
+       * An error, not a warning, since 2026-07-31. The manual has called these
+       * "four hard rules, enforced by the gate" since the pivot and said "the
+       * gate refuses it, and it will reject the next one like it" — and on the
+       * card that IS the audition frame and the grid thumbnail they were only
+       * ever nags. A question, a "Comment X…" opener or a hook with no name and
+       * no number in it is the single most expensive thing this account can
+       * publish, because nothing after it gets watched.
+       *
+       * Checked against six real hooks from this account's own history before
+       * promoting it: all six pass, all four known bad shapes are caught.
+       */
+      for (const issue of hookIssues(title)) err(`reel2 title: ${issue}`);
     }
     if (post.reel2?.lang && !["fr", "en"].includes(post.reel2.lang))
       err(`reel2: unknown lang "${post.reel2.lang}" — "fr" (the account's language) or "en"`);
