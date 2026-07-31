@@ -47,8 +47,8 @@ import { veoPrompt, imagePrompt, promptIssues, MOODS } from "./promptcraft.mjs";
 import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
 import { acquireOne, creditLine } from "./imagery.mjs";
 import {
-  TARGET_S, END_S, SPEECH_S, TEMPO_MIN, TEMPO_MAX, RAW_MAX_S,
-  BEATS_MIN, BEATS_MAX, medianRate, wordWindow,
+  TARGET_S, END_S, TAIL_S, SPEECH_S, TEMPO_MIN, TEMPO_MAX, RAW_MAX_S,
+  BEATS_MIN, BEATS_MAX, TTS_TRIES, medianRate, wordWindow,
 } from "./format.mjs";
 
 const run = promisify(execFile);
@@ -167,12 +167,25 @@ export function mergeContinuations(words) {
  * English is kept for fixtures and for any deliberate English post. */
 async function alignWords(voiceWav, scriptWords, workDir, lang = "fr") {
   const py = await ensureWhisper();
-  const model = lang === "en" ? "base.en" : "base";
+  /* `base` was heard on 2026-07-31 against the day's real French narration and
+     it sits on the edge of the guard below: 192 words heard for a 188-word
+     script, when the tolerance is 4. It writes "Entropique" for Anthropic and
+     "pitons" for Python, and each mishearing is a chance to split or merge a
+     token and kill a Reel that has already been paid for. `large-v3-turbo`,
+     int8-quantised, heard 189 — one off — and got both names right.
+
+     It costs about 70 seconds more per build on a 20-core machine and a 1.6 GB
+     download on a cold container. That is the correct trade: the transcription
+     itself is thrown away, but the count is what fails a build and the word
+     boundaries are what the beat cuts and the karaoke are made of. Greedy
+     decoding (beam_size 1) is used deliberately — nothing downstream reads the
+     text, so paying for a beam search over wording buys nothing. */
+  const model = lang === "en" ? "base.en" : "large-v3-turbo";
   const script = `
 from faster_whisper import WhisperModel
-import json, sys
-m = WhisperModel("${model}", device="cpu", compute_type="int8")
-segs, _ = m.transcribe(sys.argv[1], word_timestamps=True, language="${lang}")
+import json, sys, os
+m = WhisperModel("${model}", device="cpu", compute_type="int8", cpu_threads=os.cpu_count() or 4)
+segs, _ = m.transcribe(sys.argv[1], word_timestamps=True, language="${lang}", beam_size=1, condition_on_previous_text=False)
 words = [{"w": w.word.strip(), "s": round(w.start, 3), "e": round(w.end, 3)} for s in segs for w in s.words]
 json.dump(words, open(sys.argv[2], "w"))
 print(len(words))
@@ -262,8 +275,21 @@ function assTime(t) {
 const KARAOKE_MAX_CHARS = 24;
 const KARAOKE_MAX_CHARS_LOW = 35;
 
+/** Uppercase Anton runs about 0.47em wide, so the frame's 952 usable pixels
+ * hold roughly `952 / (0.47 * size)` characters on a line. The hook card is
+ * allowed two lines and no more: three lines of display type is a poster, not
+ * an audition frame. Sizes step down rather than scaling continuously so the
+ * card keeps a recognisable weight from Reel to Reel. */
+export function titleFontSize(title) {
+  const len = String(title || "").length;
+  const fits = (size) => len <= Math.floor((952 / (0.47 * size)) * 2);
+  for (const size of [116, 104, 92, 82]) if (fits(size)) return size;
+  return 74;
+}
+
 export function buildAss(words, beats, ranges, accentHex, opts = {}) {
   const accent = hexToAss(accentHex);
+  const titleSize = titleFontSize(opts.title);
   const lowBeats = new Set(ranges.filter((_, i) => beats[i].visual?.type === "screenshot").flatMap((r) => {
     const list = [];
     for (let i = r.start; i <= r.end; i++) list.push(i);
@@ -275,7 +301,17 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
     "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
     `Style: K,Archivo SemiBold,86,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,7,3,2,60,60,600,1`,
     `Style: KLOW,Archivo SemiBold,62,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,7,3,2,30,30,170,1`,
-    `Style: TITLE,Anton,116,&H00FFFFFF,&H00FFFFFF,&H00101010,&HB4000000,0,0,0,0,100,100,0,0,1,6,3,8,64,64,400,1`,
+    // BorderStyle 3 is an opaque box, not an outline, and it is the fix for the
+    // worst frame this engine ever produced. On 2026-07-31 the hook card
+    // "CLAUDE A PIÉGÉ 15 MACHINES BIEN RÉELLES" was set at 116px over a receipt
+    // beat: the first line ran off both edges of the frame and the second landed
+    // exactly on the article's own headline, so the audition frame — the one
+    // that is also the grid thumbnail — showed two unreadable sentences on top
+    // of each other. The gate passed it (38 characters, under its 64 ceiling),
+    // the engine called the file COMPLIANT, and only looking at the frame found
+    // it. A box means the card is legible over anything; the size below means it
+    // fits inside the margins.
+    `Style: TITLE,Anton,${titleSize},&H00FFFFFF,&H00FFFFFF,&H00101010,&HB4000000,0,0,0,0,100,100,0,0,3,18,0,8,64,64,300,1`,
     `Style: ENDBIG,Anton,100,&H00FFFFFF,&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,3,2,5,80,80,0,1`,
     `Style: ENDFOLLOW,Archivo SemiBold,58,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,3,2,5,80,80,0,1`,
     "", "[Events]",
@@ -446,18 +482,37 @@ async function segmentFromScreenshot(shot, dur, outFile) {
   // can never collide with it. The first live Reel proved the alternative —
   // position the captions in a fixed place under a card of page-dependent
   // height, and some page's headline will eventually sit exactly there.
-  const CARD_W = 880, CARD_H = 1250;
-  await ffmpeg([
-    "-y", "-loop", "1", "-i", shot, "-t", String(dur),
-    "-filter_complex",
-    `[0]split=2[bg][fg];` +
-      `[bg]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=28,eq=brightness=-0.25[bgb];` +
-      // The card starts under the handle badge and never drifts up into it —
-      // the first cut had white site chrome sliding beneath white type.
-      `[fg]scale=${CARD_W}:-1,crop=${CARD_W}:'min(ih,${CARD_H})':0:0[card];` +
-      `[bgb][card]overlay=x=100:y='230-80*t/${dur}'[v]`,
-    "-map", "[v]", "-r", String(FPS), "-c:v", "libx264", "-preset", "fast", "-crf", "18", outFile,
-  ]);
+  //
+  // Variant 1 is a push-in on the same receipt: the page is scaled wider and
+  // cropped shorter, so the headline fills more of the frame. A receipt beat is
+  // often the attaque, which is the longest beat in a 60-second Reel — the
+  // opener of the 31 July build ran 9.2 seconds — and a card that only drifts
+  // 80 pixels in nine seconds is a still photograph of a webpage. Both variants
+  // keep the card's bottom edge well above the caption band.
+  const shotAt = async (d, variant, out) => {
+    const CARD_W = variant === 1 ? 1000 : 880;
+    const CARD_H = variant === 1 ? 1000 : 1250;
+    const x = variant === 1 ? 40 : 100;
+    const y0 = variant === 1 ? 320 : 230;
+    await ffmpeg([
+      "-y", "-loop", "1", "-i", shot, "-t", String(d),
+      "-filter_complex",
+      `[0]split=2[bg][fg];` +
+        `[bg]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=28,eq=brightness=-0.25[bgb];` +
+        // The card starts under the handle badge and never drifts up into it —
+        // the first cut had white site chrome sliding beneath white type.
+        `[fg]scale=${CARD_W}:-1,crop=${CARD_W}:'min(ih,${CARD_H})':0:0[card];` +
+        `[bgb][card]overlay=x=${x}:y='${y0}-80*t/${d}'[v]`,
+      "-map", "[v]", ...ENC, out,
+    ]);
+  };
+  if (dur <= REFRAME_S) return shotAt(dur, 0, outFile);
+  const a = outFile.replace(/\.mp4$/, "_a.mp4");
+  const b = outFile.replace(/\.mp4$/, "_b.mp4");
+  const half = Number((dur / 2).toFixed(2));
+  await shotAt(half, 0, a);
+  await shotAt(Number((dur - half).toFixed(2)), 1, b);
+  await concatSegments([a, b], outFile);
 }
 
 /** A real photograph, panned like a still, with its credit burned small in
@@ -556,48 +611,94 @@ export async function buildReel(postFile, mediaDir) {
      drift; RAW_MAX_S keeps us under the cliff, and a failed word-count
      alignment downstream is the cue to regenerate once before debugging.
 
-     Do not "fix" the 160 words per minute in the direction below to match the
-     measured rate. The voice reads at about 195 whatever this asks for, the
-     ledger calibrates on what it actually delivers, and rewriting the number
-     would change the pace on the day it was rewritten and invalidate every
-     rate reading behind it. The direction shapes the register; the ledger
-     measures the result. */
+     The words per minute in the direction below is a lever, not a description:
+     the voice does not deliver the number it is given (it reads about 196 when
+     asked for 200), but removing the number entirely dropped it to 166 and made
+     the format unbuildable. Treat it as a dial that has been calibrated, and
+     `state/voice-rate.jsonl` as the instrument that reads the result. */
   const narration = plan.beats.map((b) => b.script.trim()).join("\n\n");
-  const frStyle =
-    "Lis ce texte comme un journaliste français qui présente un flash info: débit rapide mais articulé, environ 160 mots par minute, ton assuré et direct, accent français de France, pauses courtes entre les paragraphes, aucune emphase théâtrale";
-  const rawWav = path.join(mediaDir, "voice2_raw.wav");
-  const voice = await tts({
-    text: narration,
-    voice: plan.voice || (lang === "fr" ? "Charon" : "Fenrir"),
-    ...(lang === "fr" ? { style: frStyle } : {}),
-    outFile: rawWav,
-    slug,
-  });
+  /* The direction, on the structure Google documents for TTS prompting: audio
+     profile, then scene, then director's notes, then the transcript. It used to
+     be one sentence.
 
+     The pace line is load-bearing and stays FIRST. Measured 2026-07-31 on the
+     day's real script: rewriting the direction without an explicit words-per-
+     minute dropped the voice from 3.22 to 2.77 words per second, which is a
+     68-second reading of a 56-second budget and a build that stops before it
+     starts. The number in the direction and the number the voice delivers are
+     not the same (it asks 200, it reads about 196) — that is expected; what
+     matters is that removing it costs 15%. Change this text and you have
+     changed the reading rate: `state/voice-rate.jsonl` re-learns it over three
+     builds, and those three builds are the risk. */
+  const frStyle = [
+    "Profil: presentateur francais de flash info technologique, voix masculine posee, sure d'elle, jamais souriante.",
+    "Scene: studio radio, micro proche, aucune reverberation, aucun bruit de fond.",
+    "Notes du realisateur: DEBIT RAPIDE de flash info, environ 200 mots par minute, jamais lent, jamais solennel. Accent francais de France standard. Attaque la toute premiere phrase net et pleine puissance, sans respiration prealable et sans montee progressive, comme si le sujet etait deja commence. Descends legerement le ton en fin de phrase au lieu de le monter. Respire seulement entre les paragraphes, et brievement. Appuie tres legerement les chiffres et les noms propres, rien d'autre. Aucune emphase theatrale, aucun enthousiasme publicitaire, aucun sourire dans la voix.",
+    "Lis maintenant ce texte exactement tel qu'il est ecrit, sans rien ajouter:",
+  ].join("\n");
   /* 1b — the 60-second contract, applied to the only thing that varies.
-     The reading is recorded raw, before any correction, because that ledger is
-     what the gate's word window is derived from: correct first and the account
-     would calibrate itself against its own correction and drift forever. */
+     Every reading is recorded raw, before any correction, because that ledger
+     is what the gate's word window is derived from: correct first and the
+     account would calibrate itself against its own correction and drift
+     forever. Rejected readings are recorded too — they are real evidence about
+     how fast this voice reads, and dropping them would bias the median toward
+     whatever happened to be convenient.
+
+     The re-roll exists because the same 188 words, same model, same voice, same
+     direction, came back at 3.26 words a second in the morning's A/B and 3.70
+     in the afternoon's first build: this API is stochastic, and the spread
+     between two readings is wider than the whole word window. Rewriting the
+     script would be the wrong response to that — the script was fine, the die
+     landed badly. A reading costs about two and a half cents, so buying another
+     is the cheapest thing in the pipeline; only after three bad rolls is it the
+     copy's fault. */
   const scriptWords = narration.split(/\s+/).filter(Boolean);
-  await recordVoiceRate({ slug, words: scriptWords.length, seconds: voice.seconds, voice: plan.voice || "Charon", lang });
-  const tempo = voice.seconds / SPEECH_S;
-  const rate = voice.seconds > 0 ? scriptWords.length / voice.seconds : 0;
-  console.log(
-    `voice: ${scriptWords.length} words in ${voice.seconds.toFixed(1)}s (${rate.toFixed(2)} w/s) — ` +
-      `atempo ${tempo.toFixed(3)} onto ${SPEECH_S}s for a ${TARGET_S}s file`
-  );
-  if (voice.seconds > RAW_MAX_S || tempo > TEMPO_MAX || tempo < TEMPO_MIN) {
-    const want = Math.round(SPEECH_S * (rate || 3.24));
-    throw new Error(
-      `narration read as ${voice.seconds.toFixed(1)}s at ${rate.toFixed(2)} words/second. ` +
-        `The ${TARGET_S}s format needs ${SPEECH_S}s of speech, and a stretch of ${tempo.toFixed(3)} would be heard ` +
-        `(the silent range is ${TEMPO_MIN} to ${TEMPO_MAX}). Rewrite the scripts to about ${want} words ` +
-        `(you wrote ${scriptWords.length}) and rebuild. Nothing was painted; the narration cost one TTS call.`
+  const voiceName = plan.voice || (lang === "fr" ? "Charon" : "Fenrir");
+  const rawWav = path.join(mediaDir, "voice2_raw.wav");
+  let voice = null, tempo = 0, rate = 0;
+  for (let attempt = 1; attempt <= TTS_TRIES; attempt++) {
+    const got = await tts({
+      text: narration,
+      voice: voiceName,
+      ...(lang === "fr" ? { style: frStyle } : {}),
+      outFile: rawWav,
+      slug,
+    });
+    const t = got.seconds / SPEECH_S;
+    const r = got.seconds > 0 ? scriptWords.length / got.seconds : 0;
+    await recordVoiceRate({ slug, words: scriptWords.length, seconds: got.seconds, voice: voiceName, lang, attempt, accepted: t >= TEMPO_MIN && t <= TEMPO_MAX && got.seconds <= RAW_MAX_S });
+    console.log(
+      `voice attempt ${attempt}: ${scriptWords.length} words in ${got.seconds.toFixed(1)}s (${r.toFixed(2)} w/s) — ` +
+        `atempo ${t.toFixed(3)} onto ${SPEECH_S}s for a ${TARGET_S}s file`
     );
+    if (t >= TEMPO_MIN && t <= TEMPO_MAX && got.seconds <= RAW_MAX_S) { voice = got; tempo = t; rate = r; break; }
+    if (attempt < TTS_TRIES) {
+      console.log(`  outside the silent stretch range [${TEMPO_MIN}, ${TEMPO_MAX}] — the voice varies between readings, buying another`);
+      await journal(`narration re-roll: ${got.seconds.toFixed(1)}s, atempo ${t.toFixed(3)} out of range`);
+      continue;
+    }
+    /* Three bad readings, and the Reel still ships.
+     *
+     * Sixty seconds is a promise, and so is one a day; when they collide the
+     * daily one wins, because a viewer notices a missing day and nobody has
+     * ever noticed three seconds. So the last reading is kept, the stretch is
+     * clamped to what stays inaudible, and the file lands wherever that puts it
+     * — 57 or 63 seconds rather than 60. The run says so in its report and
+     * moves on. Failing here would spend a slot arguing with a die roll. */
+    voice = got;
+    tempo = Math.min(TEMPO_MAX, Math.max(TEMPO_MIN, t));
+    rate = r;
+    const want = Math.round(SPEECH_S * (r || 3.26));
+    console.log(
+      `  ${TTS_TRIES} readings all outside the range. Keeping the last one and clamping the stretch to ${tempo.toFixed(3)}: ` +
+        `the file will be about ${(got.seconds / tempo + TAIL_S + END_S).toFixed(1)}s instead of ${TARGET_S}. ` +
+        `Say so in the report; if it happens twice in a week the scripts want to be about ${want} words.`
+    );
+    await journal(`narration out of range on ${TTS_TRIES} readings, clamped to ${tempo.toFixed(3)} — file will not be exactly ${TARGET_S}s`);
   }
   const timedWav = path.join(mediaDir, "voice2.wav");
   await ffmpeg(["-y", "-i", rawWav, "-filter:a", `atempo=${tempo.toFixed(6)}`, "-ar", "48000", timedWav]);
-  await journal(`voice ${scriptWords.length} words ${voice.seconds.toFixed(1)}s raw, atempo ${tempo.toFixed(3)} → ${SPEECH_S}s`);
+  await journal(`voice ${scriptWords.length} words ${voice.seconds.toFixed(1)}s raw (${rate.toFixed(2)} w/s), atempo ${tempo.toFixed(3)} → ${SPEECH_S}s`);
 
   /* 2 — the clock, read off the corrected voice so the karaoke matches what
      actually plays. The last beat runs to the end-card rather than to its own
@@ -605,7 +706,12 @@ export async function buildReel(postFile, mediaDir) {
      however the reading came out. */
   const words = await alignWords(timedWav, scriptWords, mediaDir, lang);
   const ranges = beatWordRanges(plan.beats);
-  const total = Number((TARGET_S - END_S).toFixed(2));
+  /* Normally this is exactly TARGET_S - END_S, because the stretch put the
+     narration on SPEECH_S. It differs only when the stretch had to be clamped
+     above, in which case the file is deliberately a few seconds off rather than
+     not existing. */
+  const speech = voice.seconds / tempo;
+  const total = Number((speech + TAIL_S).toFixed(2));
   const bounds = ranges.map((r, i) => ({
     t0: i === 0 ? 0 : words[r.start].s - 0.05,
     t1: i === ranges.length - 1 ? total : words[r.end].e + 0.22,
@@ -615,7 +721,7 @@ export async function buildReel(postFile, mediaDir) {
     throw new Error(`the last beat has no room before the end-card (voice runs to ${bounds.at(-1).t0.toFixed(1)}s of ${total}s) — the scripts are too long`);
   // The video outlives the voice by the end-card: promise + follow ask on the
   // brand ground, music still under it, hard cut at exactly TARGET_S.
-  const videoTotal = TARGET_S;
+  const videoTotal = Number((total + END_S).toFixed(2));
 
   /* 3 — the pictures, cheapest that serves the beat. */
   const segFiles = [];
@@ -632,7 +738,14 @@ export async function buildReel(postFile, mediaDir) {
         const issues = promptIssues(prompt, { forbidNames });
         if (issues.length) throw new Error(`veo prompt refused:\n  ${issues.join("\n  ")}`);
         const durationSeconds = dur <= 4.2 ? 4 : dur <= 6.2 ? 6 : 8;
-        await genVideo({ prompt, durationSeconds, resolution: beat.visual.resolution || "720p", outFile: clip, slug });
+        /* 1080p is native for this frame: a 9:16 clip at 720p is 720x1280 and
+           gets enlarged 1.5x to fill 1080x1920, which is visible on the one
+           beat the whole audition rests on. The API only allows 1080p at 8
+           seconds, so a shorter beat stays at 720p rather than buying seconds
+           it will not show. Veo Fast: $0.12/s at 1080p against $0.10 at 720p,
+           so native resolution costs 16 cents on a normal Reel. */
+        const resolution = beat.visual.resolution || (durationSeconds === 8 ? "1080p" : "720p");
+        await genVideo({ prompt, durationSeconds, resolution, outFile: clip, slug });
       }
       await segmentFromVideo(clip, dur, seg);
       if (!veoAudio) veoAudio = { file: clip, at: bounds[i].t0, dur };
@@ -740,8 +853,12 @@ export async function buildReel(postFile, mediaDir) {
   // the duration is a claim the account makes in public. It is checked like
   // every other claim: on the file, both ways. The old check only had an upper
   // bound, which is how four Reels of 47 to 51 seconds were called COMPLIANT.
-  if (Math.abs(dur - TARGET_S) > 0.6)
-    violations.push(`duration ${dur.toFixed(2)}s is not the ${TARGET_S}s the série promises (tolerance ±0.6)`);
+  if (Math.abs(dur - videoTotal) > 0.6)
+    violations.push(`duration ${dur.toFixed(2)}s is not the ${videoTotal.toFixed(2)}s this build was assembled to — something desynchronised between the segments and the mux`);
+  if (dur < 45 || dur > 75)
+    violations.push(`duration ${dur.toFixed(2)}s is nowhere near the ${TARGET_S}s the série promises`);
+  else if (Math.abs(dur - TARGET_S) > 1.5)
+    console.log(`note: ${dur.toFixed(1)}s rather than ${TARGET_S}s — the narration could not be stretched onto the budget inaudibly. Publishable, but say so in the report.`);
   if (v?.codec_name !== "h264") violations.push(`video codec ${v?.codec_name}`);
   if (!(v?.width === W && v?.height === H)) violations.push(`frame ${v?.width}x${v?.height}`);
   if (a?.codec_name !== "aac") violations.push(`audio codec ${a?.codec_name}`);

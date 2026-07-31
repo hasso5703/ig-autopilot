@@ -926,7 +926,11 @@ export async function validatePost(post, opts = {}) {
     const title = String(post.reel2?.title || "").trim();
     if (!title) err("reel2: `title` is missing — 5 to 8 words shown as a static card from frame zero; it is the audition and the grid thumbnail");
     else {
-      if (title.length > 64) err(`reel2: title is ${title.length} chars — it renders at display size, 64 is the ceiling`);
+      // 52, not 64: the card is display type inside 952 usable pixels and it is
+      // allowed two lines. A 61-character title still needs three lines at the
+      // smallest size the engine will use, and three lines of Anton over a
+      // photograph is a poster nobody reads in 1.7 seconds.
+      if (title.length > 52) err(`reel2: title is ${title.length} chars — it is burned as display type on the audition frame and 52 is what fits on two lines. Cut it to the subject, the action and the stake.`);
       if (DASHES.test(title)) err("reel2: title contains an em dash, en dash or \"--\" — rewrite as two sentences");
       const unsupportedT = [...new Set(numbers(title))].filter((n) => !allEvidence.has(n));
       if (unsupportedT.length) err(`reel2: title figure(s) ${unsupportedT.join(", ")} appear in no evidence quote — a number must be copied, never derived`);

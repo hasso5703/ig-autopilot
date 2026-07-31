@@ -274,7 +274,7 @@ chatbot about a symptom" is better than "AI users".
   your copy to the word window that keeps that stretch inaudible. **You do not
   do this arithmetic** — the gate prints the window and the target, computed
   from the voice's own measured reading rate. You write to the number it gives
-  you, which is about **180 French words over 7 to 10 beats**.
+  you, which is about **195 French words over 7 to 10 beats**.
 
   The research behind the length is unchanged: the measured 2026 bracket data
   (6M Reels, Jan–Jun 2026) puts 45–60s at both the best reach rate and the best
@@ -1089,7 +1089,7 @@ Rules, and the gate enforces the hard ones:
   words.
 - **`lang` is "fr".** It drives the narration alignment; "en" exists for
   fixtures and nothing else now.
-- **7 to 10 beats, and the word window the gate prints** — about 180 French
+- **7 to 10 beats, and the word window the gate prints** — about 195 French
   words at the voice's current rate. Do not memorise that figure and do not
   compute it: run the gate, read the window it gives you, write to it. It is
   derived in `src/format.mjs` from the 60-second contract and from the
@@ -1341,9 +1341,20 @@ wrote: `COMPLIANT` or a list of violations.
 single picture is bought — the engine measures the reading, records it raw to
 `state/voice-rate.jsonl`, and time-stretches it onto the speech budget so the
 finished file is exactly 60 seconds. The stretch is a few percent and inaudible.
-If it would have to be more than that, the engine **stops there and tells you
-how many words to write**: only the narration has been paid for at that point
-(about $0.012), and no Veo clip, still or screenshot has been bought. That is
+If it would have to be more than that, **the engine buys another reading rather
+than blaming your copy**, up to three: the same script, model, voice and
+direction were measured at 3.26, 3.51 and 3.70 words a second on 2026-07-31, so
+a single bad reading is a die roll, not a diagnosis.
+
+**And if all three come out badly, the Reel still ships.** The stretch is
+clamped to what stays inaudible and the file lands at 57 or 63 seconds instead
+of 60; the engine prints a note and you put one line in the report. Hasan's
+rule, the day the contract was built: *"quelques secondes de plus ou de moins ça
+va aussi le faire… on doit dépenser notre énergie sur ce qui apporte."* He is
+right, and the ordering follows from the ranked promises above — a viewer
+notices a missing day, nobody has ever noticed three seconds. Rewrite the
+scripts only if it happens twice in a week, which would mean the word count is
+genuinely wrong rather than unlucky. That is
 also the guard against Gemini TTS's documented quality cliff past ~60 seconds of
 output, and against its ~1-in-10 accent and pacing drift: **if the word-count
 alignment fails afterwards, regenerate the narration once before debugging
@@ -1377,10 +1388,20 @@ beats, the article headline is actually what the receipt shows, the last
 frame is the end-card with the promise and the follow ask on it, and nothing
 readable was invented by a generated image.
 
-**Cost discipline.** A normal Reel is one Veo clip (Lite, 720p, the model the
-key offers cheapest — the engine picks and prints it) plus three or four stills:
-about a dollar. If `spend:` lines total over $3 for one Reel, say so in the
-report and say why.
+**Cost discipline, and the model tier it now assumes.** On 2026-07-31 Hasan
+moved the standing order from *"the cheapest tier of everything"* to *"one tier
+up on video, images and voice, never the most expensive"*. The engine buys **Veo
+3.1 Fast** (1080p when the beat takes an 8-second clip, which is native for a
+1080x1920 frame and stops the 1.5x enlargement a 720p clip needed), **Nano
+Banana 2 at 2K** for stills (1536x2752, so the Ken-Burns oversample is finally a
+downscale instead of a blow-up), and **Gemini 3.1 Flash TTS** for the voice.
+Deliberately not bought: Veo standard, Nano Banana Pro, Pro TTS.
+
+That puts a normal Reel at **about $1.20 to $1.60**, against roughly $0.60
+before. Over **$3**, say so in the report and say why. And do not "save money"
+by dropping a tier: the choices are in `genmedia.mjs` with the measurement that
+justified each one, and a run that quietly reverts them is undoing a decision it
+did not make.
 
 **Publish, exactly as before.** Commit and push the MP4 first — Meta fetches
 the URL itself, SHA-pinned, never a `/main/` path:

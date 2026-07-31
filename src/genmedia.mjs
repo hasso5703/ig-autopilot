@@ -6,13 +6,16 @@
  * state/spend.jsonl next to the metrics, because a pipeline that pays per asset
  * and cannot name its own bill is how budgets die quietly.
  *
- * Model policy, per Hasan (2026-07-27): the cheapest tier of everything, always.
- * Video prefers Veo Lite and only falls back up the price list when a model is
- * absent from the key; images default to Nano Banana Lite; batch is used for
+ * Model policy, per Hasan: it was "the cheapest tier of everything, always"
+ * (2026-07-27) and became "one tier up on video, images and voice, never the
+ * most expensive" (2026-07-31). So: Veo Fast rather than Lite, Nano Banana 2 at
+ * 2K rather than its Lite distillation at 1K, Gemini 3.1 Flash TTS rather than
+ * 2.5 — and explicitly NOT Veo standard, not Nano Banana Pro, not Pro TTS. Each
+ * choice below carries the measurement that justified it. Batch is used for
  * images when the caller can wait, because Google sells the same pixels at half
- * price under a 24h SLA that in practice resolves far sooner. The price table
- * below is copied from ai.google.dev/gemini-api/docs/pricing on 2026-07-27 —
- * when Google moves a price, move it here, nowhere else.
+ * price under a 24h SLA that in practice resolves far sooner. Prices come from
+ * ai.google.dev/gemini-api/docs/pricing; per-picture cost is measured off the
+ * response, because the per-picture figures in that table were wrong by 40%.
  */
 
 import { readFile, writeFile, appendFile, unlink } from "node:fs/promises";
@@ -28,27 +31,88 @@ export const PRICES = {
     "veo-3.1-fast-generate-preview": { "720p": 0.10, "1080p": 0.12 },
     "veo-3.1-generate-preview": { "720p": 0.40, "1080p": 0.40 },
   },
-  image: {
-    "gemini-3.1-flash-lite-image": 0.0336,
-    "gemini-3.1-flash-image": 0.067,
-    "gemini-3-pro-image": 0.134,
+  /**
+   * Images are sold per token, not per picture, so the per-picture figures that
+   * used to live here were guesses dressed as facts — and they were wrong.
+   * Measured against the live API on 2026-07-31 with a real house-style prompt:
+   *
+   *   lite,   1K (768x1376)    1531 tok   $0.0459   (the table said $0.0336)
+   *   flash,  1K (768x1376)    1647 tok   $0.0988   (the table said $0.0670)
+   *   flash,  2K (1536x2752)   2138 tok   $0.1283
+   *
+   * So the rate below is per million OUTPUT tokens, straight off the official
+   * table, and every picture's cost is computed from what the API says it
+   * actually produced. A ledger that reports a number nobody measured is worse
+   * than no ledger: it is a number people plan with.
+   */
+  imagePerMTok: {
+    "gemini-3.1-flash-lite-image": 30,
+    "gemini-3.1-flash-image": 60,
+    "gemini-3-pro-image": 120,
   },
   imageBatchFactor: 0.5,
-  // 2.5 Flash TTS: $10 per million audio tokens at 25 tokens a second.
-  ttsPerSecond: 0.00025,
+  // 3.1 Flash TTS: $20 per million audio tokens at 25 tokens a second.
+  ttsPerSecond: 0.0005,
 };
 
-/** Cheapest first. pickVideoModel() takes the first one the key can see. */
+/** What one picture cost, from the response rather than from a table. Falls back
+ * to the measured 2K flash figure only when the API omits its own accounting. */
+function imageUsd(model, usageMetadata, { batched = false } = {}) {
+  const tok = usageMetadata?.candidatesTokenCount ?? 0;
+  const rate = PRICES.imagePerMTok[model] ?? 60;
+  const usd = tok > 0 ? (tok / 1e6) * rate : 0.1283;
+  return batched ? usd * PRICES.imageBatchFactor : usd;
+}
+
+/**
+ * The video tier, and why it moved up on 2026-07-31 (Hasan: *"on peut dépenser
+ * un tout petit plus pour la vidéo et les images sans abuser et sans utiliser
+ * le plus gros modèle le plus cher"*).
+ *
+ * Lite was the default while the policy was "cheapest of everything, always".
+ * The measured cost of that policy is on the account: a generated clip that
+ * reads as slop is clocked in half a second and the audition is over, and the
+ * one Veo beat is usually the opener. Fast is one tier up, twice the price and
+ * a different model; the $0.40 standard is eight times Lite and is deliberately
+ * NOT in this list, so a missing Fast can never silently produce a bill four
+ * times what the run expected. If neither is on the key, that is a finding, not
+ * a fallback.
+ */
 const VIDEO_PREFERENCE = [
-  "veo-3.1-lite-generate-preview",
   "veo-3.1-fast-generate-preview",
-  "veo-3.1-generate-preview",
+  "veo-3.1-lite-generate-preview",
 ];
 
-export const IMAGE_MODEL = "gemini-3.1-flash-lite-image";
+/**
+ * Stills, one tier up on the same day and for the same reason: Nano Banana 2
+ * rather than its Lite distillation. Lite also caps at 1K, which is under the
+ * 1080x1920 frame before the Ken-Burns oversample even starts, so the upgrade
+ * buys resolution as well as drawing.
+ */
+export const IMAGE_MODEL = "gemini-3.1-flash-image";
+export const IMAGE_SIZE = "2K";
 /** For the rare picture that must carry legible type — covers, not backgrounds. */
 export const IMAGE_MODEL_TEXT = "gemini-3-pro-image";
-const TTS_MODEL = "gemini-2.5-flash-preview-tts";
+/**
+ * The voice, moved up a generation on 2026-07-31 for the same reason as the
+ * pictures. Measured that day on the day's real 188-word script, with the
+ * rewritten French direction:
+ *
+ *   2.5-flash  Charon      55.9s   3.36 w/s   in window
+ *   3.1-flash  Charon      57.7s   3.26 w/s   in window   <- chosen
+ *   3.1-flash  Sadaltager  53.9s   3.49 w/s   in window
+ *   3.1-flash  Puck        61.9s   3.04 w/s   in window
+ *   3.1-flash  Rasalgethi  63.3s   2.97 w/s   OUT
+ *   2.5-pro    Charon      66.2s   2.84 w/s   OUT
+ *
+ * Two things that table settles. The Pro tier is not an upgrade here: it reads
+ * so much more deliberately that 188 words no longer fit a 60-second Reel, and
+ * buying it would mean rewriting the format around it. And the voice is not a
+ * free choice either — swapping it moves the reading rate by up to 18%, which
+ * is the whole width of the word window, so a voice change is a recalibration
+ * (three builds of `state/voice-rate.jsonl`) and never a casual edit.
+ */
+const TTS_MODEL = "gemini-3.1-flash-tts-preview";
 
 function apiKey() {
   const k = process.env.GEMINI_API_KEY;
@@ -208,17 +272,28 @@ function extractInlineImage(candidates) {
   return null;
 }
 
-/** One picture, interactively, at the Lite price unless told otherwise. */
-export async function genImage({ prompt, aspectRatio = "9:16", model = IMAGE_MODEL, outFile, slug = "" }) {
+/**
+ * One picture, interactively.
+ *
+ * `imageSize` matters more than it looks: a "1K" 9:16 picture comes back at
+ * 768x1376, which is smaller than the 1080x1920 frame before the Ken-Burns
+ * oversample has even started, so every still used to be enlarged about 1.7x on
+ * screen. 2K returns 1536x2752 and the whole chain becomes a downscale. It cost
+ * 30% more, not the 4x the area suggests, because image tokens do not scale
+ * with pixels. Measured 2026-07-31; Lite cannot do 2K at all.
+ */
+export async function genImage({ prompt, aspectRatio = "9:16", imageSize = IMAGE_SIZE, model = IMAGE_MODEL, outFile, slug = "" }) {
+  const imageConfig = { aspectRatio };
+  if (imageSize && model !== "gemini-3.1-flash-lite-image") imageConfig.imageSize = imageSize;
   const out = await api(`models/${model}:generateContent`, {
     contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { responseModalities: ["TEXT", "IMAGE"], imageConfig: { aspectRatio } },
+    generationConfig: { responseModalities: ["TEXT", "IMAGE"], imageConfig },
   });
   const buf = extractInlineImage(out.candidates);
   if (!buf) throw new Error(`image model returned no image: ${JSON.stringify(out).slice(0, 300)}`);
   await writeFile(outFile, buf);
-  const usd = PRICES.image[model] ?? 0.067;
-  await recordSpend({ slug, kind: "image", model, units: aspectRatio, usd });
+  const usd = imageUsd(model, out.usageMetadata);
+  await recordSpend({ slug, kind: "image", model, units: `${aspectRatio} ${imageConfig.imageSize || "1K"}`, usd });
   return { file: outFile, model, usd };
 }
 
@@ -233,10 +308,14 @@ export async function genImage({ prompt, aspectRatio = "9:16", model = IMAGE_MOD
  * ceiling nobody has hit yet.
  */
 export async function genImagesBatch(items, { model = IMAGE_MODEL, timeoutMs = 10 * 60_000, slug = "" } = {}) {
+  const sized = model !== "gemini-3.1-flash-lite-image";
   const requests = items.map((it, i) => ({
     request: {
       contents: [{ parts: [{ text: it.prompt }] }],
-      generationConfig: { responseModalities: ["TEXT", "IMAGE"], imageConfig: { aspectRatio: it.aspectRatio || "9:16" } },
+      generationConfig: {
+        responseModalities: ["TEXT", "IMAGE"],
+        imageConfig: { aspectRatio: it.aspectRatio || "9:16", ...(sized ? { imageSize: it.imageSize || IMAGE_SIZE } : {}) },
+      },
     },
     metadata: { key: String(i) },
   }));
@@ -260,7 +339,7 @@ export async function genImagesBatch(items, { model = IMAGE_MODEL, timeoutMs = 1
           const buf = extractInlineImage(item.response?.candidates);
           if (i >= 0 && buf) {
             await writeFile(items[i].outFile, buf);
-            results[i] = { file: items[i].outFile, model, usd: (PRICES.image[model] ?? 0.067) * PRICES.imageBatchFactor, batched: true };
+            results[i] = { file: items[i].outFile, model, usd: imageUsd(model, item.response?.usageMetadata, { batched: true }), batched: true };
             batchUsd += results[i].usd;
           }
         }
@@ -294,8 +373,12 @@ export async function genImagesBatch(items, { model = IMAGE_MODEL, timeoutMs = 1
  * file rather than estimated off the text.
  */
 export async function tts({ text, voice = "Fenrir", style = "Narrate as a sharp, energetic tech news voice. Fast paced, urgent, clear articulation, short pauses between paragraphs", outFile, slug = "" }) {
+  // Direction and transcript are separated by a blank line, not by a colon:
+  // that is the shape Google documents and the shape every rate measurement on
+  // 2026-07-31 was taken with. The colon form used to glue the last word of the
+  // direction onto the first word of the news.
   const out = await api(`models/${TTS_MODEL}:generateContent`, {
-    contents: [{ parts: [{ text: `${style}: ${text}` }] }],
+    contents: [{ parts: [{ text: `${style}\n\n${text}` }] }],
     generationConfig: {
       responseModalities: ["AUDIO"],
       speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voice } } },

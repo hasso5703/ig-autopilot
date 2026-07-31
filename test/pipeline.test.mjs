@@ -764,7 +764,7 @@ const goodReel2 = () => ({
   beats: [
     { script: "Dans une bibliothèque publique américaine, un cours gratuit apprend à éteindre l'intelligence artificielle de son téléphone. 70 personnes se sont présentées un mardi après-midi.",
       visual: { type: "veo", spec: { subject: "a librarian's hands", action: "closing a laptop", setting: "in a small-town library" } } },
-    { script: "Et le plus parlant n'est pas le nombre. C'est ce que les gens venaient y chercher.",
+    { script: "Et le plus parlant n'est pas le nombre venu ce jour-là. C'est très exactement ce que ces gens étaient venus y chercher.",
       visual: { type: "screenshot", url: "https://techcrunch.com/a" } },
     { script: "La salle en attendait une douzaine, comme chaque semaine depuis l'ouverture de l'atelier. Le bibliothécaire a fini par refuser du monde à la porte.",
       visual: { type: "photo", query: "public library interior", alt: "a public library reading room" } },
@@ -772,7 +772,7 @@ const goodReel2 = () => ({
       visual: { type: "photo", query: "library reading room", alt: "a library reading room" } },
     { script: "Donc les bibliothèques ont ouvert des séances sans inscription et sans frais, un après-midi par semaine, dans des villes où personne d'autre ne le fait.",
       visual: { type: "image", spec: { subject: "a dim reading room", setting: "in a public library" } } },
-    { script: "Mais la demande ne vient pas de qui vous croyez. La moitié de la salle avait moins de quarante ans.",
+    { script: "Mais la demande ne vient pas de qui vous croyez. La moitié de la salle avait moins de quarante ans, et beaucoup travaillent avec ces outils toute la journée.",
       visual: { type: "image", spec: { subject: "an empty chair", setting: "beside a tall window" } } },
     { script: "Le cours ne dit jamais que la technologie est mauvaise. Il dit que le réglage existe, qu'il est caché, et qu'il vous appartient.",
       visual: { type: "image", spec: { subject: "a switch on a wall", setting: "in a bright corridor" } } },

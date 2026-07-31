@@ -34,3 +34,10 @@
 {"at":"2026-07-30T13:09:34.075Z","slug":"2026-07-30-opus5-vending-cartels","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
 {"at":"2026-07-30T13:09:42.337Z","slug":"2026-07-30-opus5-vending-cartels","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
 {"at":"2026-07-30T13:09:51.893Z","slug":"2026-07-30-opus5-vending-cartels","kind":"image","model":"gemini-3.1-flash-lite-image","units":"9:16","usd":0.0336}
+{"at":"2026-07-31T11:55:03.276Z","slug":"2026-07-31-claude-pypi-malware","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"50.8s Charon","usd":0.0254}
+{"at":"2026-07-31T11:59:54.876Z","slug":"2026-07-31-claude-pypi-malware","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"53.5s Charon","usd":0.0268}
+{"at":"2026-07-31T12:03:41.537Z","slug":"2026-07-31-claude-pypi-malware","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-07-31T12:04:02.619Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1267}
+{"at":"2026-07-31T12:04:25.667Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1294}
+{"at":"2026-07-31T12:04:48.858Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1276}
+{"at":"2026-07-31T12:05:09.575Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1293}

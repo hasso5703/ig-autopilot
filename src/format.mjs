@@ -34,6 +34,14 @@ export const SPEECH_S = Number((TARGET_S - END_S - TAIL_S).toFixed(2)); // 55.6
  * die at the stretch. */
 export const TEMPO_MIN = 0.90, TEMPO_MAX = 1.12;
 
+/** How many narrations a build may buy before blaming the copy.
+ *
+ * The same script, model, voice and direction were read at 3.26 and 3.70 words
+ * a second within four hours on 2026-07-31 — a 13% spread, wider than the whole
+ * word window. A reading costs about $0.025 and a rewrite costs a run's
+ * attention, so a bad roll is re-rolled, not argued with. */
+export const TTS_TRIES = 3;
+
 /** Gemini TTS has a documented quality cliff past about 60 seconds of output,
  * and a stretch cannot repair a bad reading. A raw narration longer than this
  * is refused whatever the tempo maths says. */
@@ -53,9 +61,18 @@ export const STILLS_MAX = 4, REAL_MIN = 3;
 
 /** The account's default speaking rate in French words per second, used until
  * `state/voice-rate.jsonl` holds enough real readings to speak for itself.
- * Measured on the two Reels that carried a recorded duration: 158 words in
- * 47.2s (3.35 w/s) and 150 in 48.0s (3.13 w/s). */
-export const DEFAULT_RATE = 3.24;
+ * The MEDIAN of three readings of the same 188-word script on 2026-07-31, with
+ * the voice and direction the engine ships (Gemini 3.1 Flash TTS, Charon, the
+ * French news direction): 3.26, 3.51 and 3.70 words a second.
+ *
+ * Taking the median rather than the first reading is the whole point, and it
+ * was nearly got wrong: calibrating on 3.26 targets 181 words, and a 181-word
+ * script read at 3.70 needs a stretch of 0.88, outside the silent range, so
+ * roughly one build in three would have re-rolled its narration for nothing.
+ * Centred on 3.51, the entire observed spread lands inside the range and the
+ * re-roll stays what it is meant to be: an exception. This only governs the
+ * first three builds; after that the ledger speaks for itself. */
+export const DEFAULT_RATE = 3.51;
 export const RATE_SAMPLES_MIN = 3;
 
 /** Rate readings are noisy, so the window is derived from the median of the
@@ -72,13 +89,17 @@ export function medianRate(samples) {
 
 /**
  * The word window a script must land in so that the engine's stretch stays
- * inside [TEMPO_MIN, TEMPO_MAX]. Narrower than the stretch allows on purpose:
- * the gate should reject a script the engine would only just rescue, so the
- * margin absorbs the day-to-day variation of the voice rather than being spent
- * in advance.
+ * inside [TEMPO_MIN, TEMPO_MAX], with a little margin for the voice's own
+ * day-to-day variation.
+ *
+ * It is deliberately not tighter than that. A refusal here costs a run a
+ * rewrite, and a rewrite is the most expensive thing in the pipeline that
+ * produces nothing: the stretch already absorbs ±10%, so demanding a narrower
+ * word count would be spending the run's attention to buy precision the
+ * viewer cannot perceive. About 26 words of latitude at the current rate.
  */
 export function wordWindow(rate = DEFAULT_RATE) {
-  const min = Math.ceil(SPEECH_S * rate * 0.96);
-  const max = Math.floor(SPEECH_S * rate * 1.06);
+  const min = Math.ceil(SPEECH_S * rate * 0.94);
+  const max = Math.floor(SPEECH_S * rate * 1.08);
   return { min, max, target: Math.round(SPEECH_S * rate), rate };
 }

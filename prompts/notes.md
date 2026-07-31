@@ -43,10 +43,11 @@ ENTRIES:
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
-- 2026-07-28 · Veo Lite 720p ($0.05/s) is the default and looked broadcast-
-  clean on the first live Reel; do not pay Fast/1080p without a reason a
-  viewer would notice. A 33s Reel landed ≈ $0.40; the 60s FR format (7 beats,
-  1 veo + 5 stills) lands ≈ $0.61. Proof: spend.jsonl 28-29/07.
+- 2026-07-28 · PERIME le 31/07, garde pour l'historique: Veo Lite 720p
+  ($0,05/s) etait le defaut et un Reel de 33 s coutait ≈ $0,40. Depuis le
+  31/07 la consigne est un cran au-dessus (Veo Fast, 1080p quand le beat prend
+  8 s) et un Reel de 60 s coute ≈ $1,20-1,60. Ne reviens pas a Lite pour
+  economiser: voir l'entree paliers du 31/07.
 - 2026-07-28 · Set RUN_JOURNAL=reports/journal/<UTC-date>-<slot>.md at step 0;
   the engine appends spend/beat/verdict lines itself. Commit the journal
   before every purchase and publish, so a quota death leaves the receipts.
@@ -142,4 +143,31 @@ ENTRIES:
   nombre de mots de memoire: lance validate.mjs et ecris a la fenetre imprimee.
   Un still qui tient plus de 5,2 s est recadre une fois, gratuitement. Proof:
   suite verte 73/73 et gate en ligne PASSED sur le spec du 31/07.
+- 2026-07-31 · Paliers de modeles (consigne Hasan: un cran au-dessus, jamais le
+  plus cher). Veo 3.1 Fast, 1080p des que le beat prend 8 s (natif pour
+  1080x1920; le 720p etait agrandi 1,5x). Images gemini-3.1-flash-image en 2K:
+  mesure live, 1536x2752 pour $0,128 contre 768x1376 pour $0,046 en Lite, soit
+  +30% seulement car les tokens image ne suivent pas la surface, et c'est la
+  premiere taille qui depasse le cadre. Voix gemini-3.1-flash-tts-preview.
+  Le prix par image est desormais calcule sur usageMetadata, pas sur une table:
+  l'ancienne table se trompait de 40%. Reel normal ~$1,20-1,60. Proof: img_ab
+  et voice_ab du 31/07.
+- 2026-07-31 · La voix et sa direction fixent le debit, donc la fenetre de mots.
+  Mesure sur le script du jour (188 mots): 2.5-flash/Charon 3,36 mots/s,
+  3.1-flash/Charon 3,26, Sadaltager 3,49, Puck 3,04, Rasalgethi 2,97 HORS
+  fenetre, 2.5-pro/Charon 2,84 HORS fenetre. Le Pro n'est pas une amelioration
+  ici: il lit trop lentement pour 60 s. Et retirer le "environ 200 mots par
+  minute" de la direction fait tomber le debit a 2,77 (build refuse). Changer
+  de voix = recalibrer (3 builds de state/voice-rate.jsonl), jamais un detail.
+  ATTENTION: le meme script/modele/voix/direction a donne 3,26 puis 3,70 mots/s
+  a 4 h d'intervalle, soit 13% d'ecart, plus large que la fenetre entiere. Donc
+  un debit hors fenetre n'accuse PAS le script: le moteur rachete une lecture
+  (jusqu'a 3, ~$0,025 piece) avant de refuser. Ne reecris le script que si les
+  trois lectures echouent.
+- 2026-07-31 · Whisper: modele large-v3-turbo int8, beam_size=1 (le texte est
+  jete, seule l'horloge compte). Mesure sur 58 s de narration FR: base entend
+  192 mots pour un script de 188 (tolerance 4, donc au bord du refus) et ecrit
+  Entropique pour Anthropic; turbo entend 189 avec les noms corrects. Cout:
+  ~70 s de plus par build sur 20 coeurs et 1,6 Go au premier demarrage du
+  conteneur. Proof: wbench 31/07.
 
