@@ -41,20 +41,23 @@ export async function land(message, paths = []) {
   // Stage and commit. An empty commit is not an error: landing may only need
   // to push commits made earlier in the run.
   await git("add", ...(paths.length ? paths : ["-A"]));
-  try {
-    await git("commit", "-m", message);
-  } catch (err) {
-    // git says "nothing to commit, working tree clean" on STDOUT, not stderr,
-    // and execFile's error message carries only the command line. Reading just
-    // stderr meant this net never caught the case it was written for: on
-    // 2026-07-31 a landing whose push had failed once could never be retried,
-    // because every retry died here with nothing new to stage. A run in that
-    // state is stranded — its work committed locally, invisible to everyone,
-    // and no command it is allowed to run can publish it.
-    const said = `${err.stdout || ""}\n${err.stderr || ""}\n${err.message || ""}`;
-    if (!/nothing to commit|nothing added|no changes added/.test(said)) throw err;
-    console.log("nothing new to commit; pushing what is already committed here");
-  }
+  /*
+   * Ask git whether anything is staged instead of reading what it says about
+   * it. `diff --cached --quiet` exits 0 for "nothing staged" and 1 otherwise,
+   * and an exit code is the same in every language.
+   *
+   * The version this replaces matched the English strings "nothing to commit"
+   * and "nothing added" against stderr. Two things were wrong with it and both
+   * shipped: git writes that sentence to STDOUT, and on a French machine it
+   * writes "rien à valider, la copie de travail est propre" instead. So the net
+   * never caught the case it existed for, and on 2026-07-31 a landing whose
+   * push had already succeeded once could not be retried — every attempt died
+   * here. A run in that state is stranded: its work is committed locally,
+   * invisible to everyone, and no command it is allowed to run can publish it.
+   */
+  const nothingStaged = await run("git", ["diff", "--cached", "--quiet"]).then(() => true).catch(() => false);
+  if (nothingStaged) console.log("nothing new to commit; pushing what is already committed here");
+  else await git("commit", "-m", message);
 
   for (let attempt = 1; attempt <= 4; attempt++) {
     await git("fetch", "origin");
