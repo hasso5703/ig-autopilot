@@ -752,14 +752,32 @@ test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, sc
   }
 });
 
+/**
+ * A legal 60-second plan. It has to be a real one: 8 beats and ~180 words, the
+ * window the format module derives from SPEECH_S and the voice's measured rate.
+ * The old fixture was 4 beats and 30 words, which is what a fixture looks like
+ * when the format it is supposed to protect was never enforced.
+ */
 const goodReel2 = () => ({
   voice: "Charon", mood: "tension", lang: "fr",
   title: "70 personnes pour apprendre à couper l'IA",
   beats: [
-    { script: "Des bibliothèques américaines apprennent maintenant à couper l'IA.", visual: { type: "veo", spec: { subject: "a librarian's hands", action: "closing a laptop", setting: "in a small-town library" } } },
-    { script: "70 personnes sont venues à un seul cours.", visual: { type: "screenshot", url: "https://techcrunch.com/a" } },
-    { script: "Et la demande ne vient pas de qui vous croyez.", visual: { type: "image", spec: { subject: "a dim reading room", setting: "in a public library" } } },
-    { script: "Envoie ça à quelqu'un qui subit les popups IA.", visual: { type: "image", spec: { subject: "a phone face down", setting: "on a wooden table" } } },
+    { script: "Dans une bibliothèque publique américaine, un cours gratuit apprend à éteindre l'intelligence artificielle de son téléphone. 70 personnes se sont présentées un mardi après-midi.",
+      visual: { type: "veo", spec: { subject: "a librarian's hands", action: "closing a laptop", setting: "in a small-town library" } } },
+    { script: "Et le plus parlant n'est pas le nombre. C'est ce que les gens venaient y chercher.",
+      visual: { type: "screenshot", url: "https://techcrunch.com/a" } },
+    { script: "La salle en attendait une douzaine, comme chaque semaine depuis l'ouverture de l'atelier. Le bibliothécaire a fini par refuser du monde à la porte.",
+      visual: { type: "photo", query: "public library interior", alt: "a public library reading room" } },
+    { script: "Les participants ne demandaient pas comment se servir de ces outils, ni comment écrire de meilleures instructions. Ils demandaient comment les faire taire.",
+      visual: { type: "photo", query: "library reading room", alt: "a library reading room" } },
+    { script: "Donc les bibliothèques ont ouvert des séances sans inscription et sans frais, un après-midi par semaine, dans des villes où personne d'autre ne le fait.",
+      visual: { type: "image", spec: { subject: "a dim reading room", setting: "in a public library" } } },
+    { script: "Mais la demande ne vient pas de qui vous croyez. La moitié de la salle avait moins de quarante ans.",
+      visual: { type: "image", spec: { subject: "an empty chair", setting: "beside a tall window" } } },
+    { script: "Le cours ne dit jamais que la technologie est mauvaise. Il dit que le réglage existe, qu'il est caché, et qu'il vous appartient.",
+      visual: { type: "image", spec: { subject: "a switch on a wall", setting: "in a bright corridor" } } },
+    { script: "La séance suivante est déjà complète. Envoie ça à quelqu'un qui subit les fenêtres d'intelligence artificielle sans savoir où les couper.",
+      visual: { type: "image", spec: { subject: "a phone face down", setting: "on a wooden table" } } },
   ],
 });
 
@@ -775,8 +793,48 @@ test("reel2 scripts are held to the slide standard: digits quoted, shape checked
   p.reel2.beats[1].visual = { type: "screenshot" };
   assert.ok(hasErr(await errs(p), /screenshot beat needs a url or a file/));
 
+  p.reel2 = goodReel2();
   p.reel2.beats = p.reel2.beats.slice(0, 3);
-  assert.ok(hasErr(await errs(p), /the 60-second spine is 4 to 7/));
+  assert.ok(hasErr(await errs(p), /the 60-second spine is 7 to 10/));
+});
+
+// ---------------------------------------------------------------------------
+// The 60-second contract. The bio promises "L'actu IA en 60 secondes" daily and
+// the first four Reels ran 47 to 51 seconds, every one of them reported
+// COMPLIANT: the engine only ever had an upper bound, and the gate only ever
+// had a word ceiling. A promise nothing measures is a promise nothing keeps.
+// ---------------------------------------------------------------------------
+test("the runtime is a contract: a script too short for 60 seconds is refused", async () => {
+  const p = goodPost();
+  p.reel2 = goodReel2();
+  assert.equal((await errs(p)).filter((e) => /reel2/.test(e)).length, 0, "a full-length plan passes");
+
+  // The exact shape of every Reel this account published before 2026-07-31:
+  // inside the old 130-155 window, and 10 seconds short of the promise.
+  p.reel2.beats = p.reel2.beats.map((b) => ({ ...b, script: b.script.split(/\s+/).slice(0, 14).join(" ") }));
+  p.reel2.beats.at(-1).script = "Envoie ça à quelqu'un qui subit ces fenêtres.";
+  assert.ok(hasErr(await errs(p), /under the \d+-word floor/), "a 47-second Reel is not a 60-second Reel");
+
+  p.reel2 = goodReel2();
+  p.reel2.beats[0].script += " " + "et encore un mot".repeat(20);
+  assert.ok(hasErr(await errs(p), /over the \d+-word ceiling/));
+});
+
+test("the word window is arithmetic on the voice's own measured rate", async () => {
+  const { wordWindow, medianRate, SPEECH_S, DEFAULT_RATE, TARGET_S, END_S, TAIL_S } = await import("../src/format.mjs");
+  assert.equal(Number((TARGET_S - END_S - TAIL_S).toFixed(2)), SPEECH_S, "the speech budget is what is left of the minute");
+
+  // A voice that reads faster needs more words to fill the same 55.6 seconds.
+  const slow = wordWindow(3.0), fast = wordWindow(3.6);
+  assert.ok(fast.target > slow.target, "a faster voice buys a longer script");
+  assert.ok(slow.min < slow.target && slow.target < slow.max);
+
+  // Under three readings the ledger does not speak; it must not half-speak.
+  assert.equal(medianRate([{ words: 180, seconds: 50 }, { words: 180, seconds: 60 }]), DEFAULT_RATE);
+  assert.equal(medianRate([{ words: 180, seconds: 60 }, { words: 180, seconds: 60 }, { words: 180, seconds: 60 }]), 3);
+  // Junk lines are ignored rather than averaged in.
+  assert.equal(medianRate([{ words: 0, seconds: 60 }, { words: 180, seconds: 0 }, { words: 180, seconds: 60 },
+    { words: 180, seconds: 60 }, { words: 180, seconds: 60 }]), 3);
 });
 
 test("reel2: the hook card is required and held to headline rules", async () => {
@@ -875,16 +933,48 @@ test("reel2: photo beats validated, mood wallpaper capped at three stills", asyn
   p.reel2.beats[1].visual = { type: "photo", query: "sam altman" };
   assert.ok(!hasErr(await errs(p), /photo beat needs/));
 
-  const mk = (script) => ({ script, visual: { type: "image", spec: { subject: "a dim room", setting: "at night" } } });
+  // Every beat a generated still: the 29 July Reel's exact failure, and the
+  // cap and the floor catch it from both ends.
   p.reel2 = goodReel2();
-  p.reel2.beats = [
-    p.reel2.beats[0],
-    mk("Une salle sombre, encore."),
-    mk("Une autre salle sombre."),
-    mk("Toujours une salle sombre."),
-    { script: "Envoie ça à un ami.", visual: { type: "image", spec: { subject: "a phone face down", setting: "on a table" } } },
-  ];
-  assert.ok(hasErr(await errs(p), /ceiling is 3/), "four generated stills read as wallpaper");
+  p.reel2.beats = p.reel2.beats.map((b) => ({ ...b, visual: { type: "image", spec: { subject: "a dim room", setting: "at night" } } }));
+  const wallpaper = await errs(p);
+  assert.ok(hasErr(wallpaper, /ceiling is 4/), "five generated stills read as wallpaper");
+  assert.ok(hasErr(wallpaper, /show something real — the floor is 3/), "a Reel that shows nothing real is refused, not merely capped");
+
+  // And the floor is what a cap alone cannot say: four stills are fine when
+  // the rest of the Reel is receipts and photographs.
+  p.reel2 = goodReel2();
+  assert.ok(!hasErr(await errs(p), /ceiling is 4|floor is 3/));
+});
+
+// ---------------------------------------------------------------------------
+// 2026-07-31. Anthropic disclosed three incidents: Claude Mythos 5 published
+// the malicious PyPI package, Claude Opus 4.7 was the one that kept attacking
+// after realising the target was real. The day's script said "Claude" for five
+// beats and then named "Opus 4.7" in the sixth. Every sentence was true, every
+// digit was quoted, the gate passed twice — and a viewer reconstructs one story
+// in which Opus 4.7 shipped the malware.
+// ---------------------------------------------------------------------------
+test("a name is a fact: the actor of the claim is named in the attaque", async () => {
+  const { versionedActors } = await import("../src/validate.mjs");
+  assert.deepEqual(versionedActors("Mythos 5 also picked up on signs"), ["Mythos 5"]);
+  assert.deepEqual(versionedActors("This incident involved Claude Opus 4.7, and was the only case"), ["Claude Opus 4.7"]);
+  assert.deepEqual(versionedActors("GPT-5.6 was cut by 80%"), ["GPT-5.6"]);
+  assert.deepEqual(versionedActors("On 27 July 2026 the package was run on 15 real systems"), [],
+    "a year is not a version and a count is not a model");
+
+  const p = goodPost();
+  p.reel2 = goodReel2();
+  p.corroboration[0].quote = "Mythos 5 published a malicious package while librarians were teaching people how to switch AI features off.";
+  assert.ok(hasErr(await errs(p), /first two beats name none of them/), "the story's actor may not stay anonymous until beat six");
+
+  p.reel2.beats[0].script = "Mythos 5, un modèle d'intelligence artificielle, a publié un logiciel piégé. " + p.reel2.beats[0].script;
+  assert.ok(!hasErr(await errs(p), /first two beats name none/), "naming it in the attaque is the fix");
+
+  // And a version the sources never printed cannot be spoken at all.
+  p.reel2 = goodReel2();
+  p.reel2.beats[2].script = "Le cours tournait sur Mythos 9, sorti la semaine dernière.";
+  assert.ok(hasErr(await errs(p), /names "Mythos 9", which appears in no evidence quote/));
 });
 
 test("retention is arithmetic in code, not a guess in a prompt", async () => {

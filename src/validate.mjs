@@ -22,6 +22,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { tokens } from "./state.mjs";
 import { simplicityIssues } from "./promptcraft.mjs";
+import { BEATS_MIN, BEATS_MAX, STILLS_MAX, REAL_MIN, DEFAULT_RATE, medianRate, wordWindow, TARGET_S } from "./format.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const UA = "order-of-magnitude/1.0 (+https://github.com/hasso5703/ig-autopilot)";
@@ -72,6 +73,81 @@ const numbers = (s) =>
   (String(s).match(/\d{1,3}(?:[\u00A0\u202F ]\d{3})+(?:\.\d+)?|\d[\d,]*(?:\.\d+)?/g) || []).map((n) =>
     n.replace(/[,\u00A0\u202F ]/g, "").replace(/\.$/, "")
   );
+
+/**
+ * The account's own measured speaking rate, in French words per second.
+ *
+ * The word window a script has to hit is not a taste; it is the arithmetic of a
+ * 60-second file, and the only unknown in it is how fast the voice reads. The
+ * engine writes every raw reading to `state/voice-rate.jsonl`, so the window
+ * follows the voice instead of a number somebody typed once. The last dozen
+ * readings, not all of them: a voice or direction change should take effect in
+ * days, not be averaged away by history.
+ */
+function measuredRate() {
+  try {
+    const lines = readFileSync(path.join(ROOT, "state", "voice-rate.jsonl"), "utf8").split("\n").filter(Boolean);
+    return medianRate(lines.slice(-12).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean));
+  } catch { return DEFAULT_RATE; }
+}
+
+/**
+ * Product and model names that carry a version: "Mythos 5", "Claude Opus 4.7",
+ * "GPT-5.6". These are the names an edit can silently swap, and swapping one
+ * changes who did what.
+ *
+ * The near-miss this exists for, 2026-07-31: Anthropic disclosed three separate
+ * incidents. Claude Mythos 5 published the malicious PyPI package; Claude Opus
+ * 4.7 was the one that kept attacking after realising the target was real. The
+ * scouts' script narrated the PyPI story for five beats saying only "Claude",
+ * then named "Opus 4.7" in the sixth — every sentence true, and a viewer with
+ * six seconds reconstructs one story in which Opus 4.7 shipped the malware.
+ * Nothing caught it: the digits were quoted, the quotes were verbatim, the gate
+ * was green twice. A name is a fact, and until now it was the only kind of fact
+ * on this account that nothing checked.
+ *
+ * Years and counts are excluded — the number must be small or carry a decimal,
+ * which is what a version looks like and what "2026" and "141,006" do not.
+ */
+export function versionedActors(text) {
+  const out = [];
+  const s = String(text || "");
+  const isVersion = (n) => /\./.test(n) || Number(n) < 100;
+  const isActor = (name) => !NOT_A_VERSIONED_NAME.has(name.split(/\s+/).at(-1).toLowerCase());
+  for (const m of s.matchAll(/\b((?:[A-Z][A-Za-z]{2,}\s+){0,2}[A-Z][A-Za-z]{2,})\s+(\d+(?:\.\d+)?)\b/g)) {
+    if (isVersion(m[2]) && isActor(m[1])) out.push(`${m[1]} ${m[2]}`);
+  }
+  for (const m of s.matchAll(/\b([A-Z][A-Za-z]{2,}-\d+(?:\.\d+)?)\b/g)) if (isActor(m[1].split("-")[0])) out.push(m[1]);
+  return [...new Set(out)];
+}
+
+/** A capitalised word before a number is usually a sentence opener or a date,
+ * not a model: "On 27 July", "Depuis 5 ans", "Sur 15 machines". The check only
+ * exists to catch product versions, so anything that reads as prose is out. */
+const NOT_A_VERSIONED_NAME = new Set([
+  ...["january", "february", "march", "april", "may", "june", "july", "august",
+    "september", "october", "november", "december"],
+  ...["janvier", "février", "fevrier", "mars", "avril", "mai", "juin", "juillet",
+    "août", "aout", "septembre", "octobre", "novembre", "décembre", "decembre"],
+  ...["the", "this", "that", "these", "those", "and", "but", "for", "with", "from",
+    "over", "under", "about", "after", "before", "between", "since", "only", "all",
+    "some", "each", "every", "one", "two", "three", "another", "than", "then", "when",
+    "where", "what", "who", "how", "why", "now", "new", "its", "their", "his", "her",
+    "they", "there", "was", "were", "are", "has", "have", "had", "said", "says"],
+  ...["le", "la", "les", "un", "une", "des", "du", "de", "dans", "sur", "avec", "pour",
+    "par", "que", "qui", "est", "sont", "ils", "elle", "son", "ses", "ces", "cette",
+    "depuis", "selon", "après", "apres", "avant", "plus", "moins", "tout", "tous",
+    "environ", "près", "pres", "soit", "puis", "donc", "mais", "chaque", "entre"],
+]);
+
+/** "Claude Mythos 5" is also "Mythos 5" when spoken. Both spellings satisfy the
+ * naming rule; neither is satisfied by saying "Claude" alone. */
+const actorForms = (name) => {
+  const parts = name.split(/\s+/);
+  // The full name and the short one a French sentence would actually use. Never
+  // the bare version number: "5" is in half the scripts this account writes.
+  return [...new Set([name, parts.slice(-2).join(" ")])].filter((f) => /[A-Za-z]{2}/.test(f));
+};
 
 const flatten = (html) =>
   html
@@ -787,10 +863,27 @@ export async function validatePost(post, opts = {}) {
   // anywhere in the post must be supported by the evidence of SOME slide.
   // Without this, a derived figure like "$0 extra" — true-sounding, never
   // actually stated by the source — walks straight onto slide 1.
+  /* Corroboration quotes belong here, and their absence was a real hole found
+   * on 2026-07-31: the sources named the model "Mythos 5" in the corroborating
+   * sentence and nowhere else, so naming it in the script — the correct thing
+   * to do — was refused as an unquoted figure. A corroboration quote is fetched
+   * from its page and must match verbatim, exactly like slide evidence; it is
+   * evidence, and every check that reads evidence must read it. */
   const allEvidence = new Set([
     ...slides.flatMap((s) => [...numbers(s.evidence ?? ""), ...numbers(s.source?.date ?? "")]),
     ...capEv.flatMap((e) => numbers(e.quote ?? "")),
+    ...(post.corroboration || []).flatMap((c) => numbers(c?.quote ?? "")),
   ]);
+
+  /* The same corpus as prose, for the checks that are about words rather than
+   * digits. Corroboration quotes belong here even though they carry no slide:
+   * they are the sentences where the sources state the central claim, which is
+   * exactly where the story's actors are named. */
+  const evidenceText = [
+    ...slides.map((s) => s.evidence ?? ""),
+    ...capEv.map((e) => e.quote ?? ""),
+    ...(post.corroboration || []).map((c) => c?.quote ?? ""),
+  ].join(" \n ");
 
   // Digits in the caption get the same treatment as digits on a slide.
   const capUnsupported = [...new Set(numbers(post.caption ?? ""))].filter((n) => !allEvidence.has(n));
@@ -819,7 +912,8 @@ export async function validatePost(post, opts = {}) {
   // here too, because reel2.mjs only runs after money starts being spent.
   if (post.reel2 !== undefined) {
     const beats = Array.isArray(post.reel2?.beats) ? post.reel2.beats : [];
-    if (beats.length < 4 || beats.length > 7) err(`reel2: ${beats.length} beats — the 60-second spine is 4 to 7`);
+    if (beats.length < BEATS_MIN || beats.length > BEATS_MAX)
+      err(`reel2: ${beats.length} beats — the ${TARGET_S}-second spine is ${BEATS_MIN} to ${BEATS_MAX}. Fewer than ${BEATS_MIN} means a picture holds for ten seconds; more than ${BEATS_MAX} means beats too short to say anything.`);
 
     /*
      * The hook card. The karaoke reveals the spoken line word by word, which
@@ -872,9 +966,50 @@ export async function validatePost(post, opts = {}) {
      * that show something real (photo, screenshot, veo).
      */
     const ambiance = beats.filter((b) => (b.visual?.type ?? "image") === "image").length;
-    if (ambiance > 3)
-      err(`reel2: ${ambiance} generated ambiance stills — the ceiling is 3. Use \`photo\` (a real, credited photograph) or a second \`screenshot\` for the rest; a story with a named person in it should show that person's real face.`);
-    if (words > 160) err(`reel2: ${words} words of narration — over the 160-word runtime budget for the 60-second format (130 to 155 is the target), cut the longest beats first`);
+    if (ambiance > STILLS_MAX)
+      err(`reel2: ${ambiance} generated ambiance stills — the ceiling is ${STILLS_MAX}. Use \`photo\` (a real, credited photograph) or a second \`screenshot\` for the rest; a story with a named person in it should show that person's real face.`);
+    /* Stated the other way round, because a cap alone can be satisfied by a Reel
+     * that shows nothing real at all: at least REAL_MIN beats must be a surface
+     * that exists — a credited photograph, a receipt, or a Veo shot of a
+     * concrete action. The 29 July Reel had zero and read as an ambiance loop. */
+    const real = beats.filter((b) => ["photo", "screenshot", "veo"].includes(b.visual?.type ?? "image")).length;
+    if (beats.length >= BEATS_MIN && real < REAL_MIN)
+      err(`reel2: only ${real} beat(s) show something real — the floor is ${REAL_MIN} (\`photo\`, \`screenshot\` or \`veo\`). Generated stills set a mood; they are never the substance.`);
+
+    /* The runtime, which is now a contract rather than a hope.
+     *
+     * "L'actu IA en 60 secondes" is the série's name and the bio's promise, and
+     * for the first four Reels it was neither: 130-155 words read as 47 to 51
+     * seconds and nothing checked the floor. The window below is arithmetic —
+     * SPEECH_S of narration at the voice's own measured rate — and the engine
+     * time-stretches whatever residue is left, so a script inside the window
+     * always yields exactly a 60-second file and a script outside it is a Reel
+     * that would have to be rescued audibly. */
+    const win = wordWindow(measuredRate());
+    if (words > win.max)
+      err(`reel2: ${words} words of narration — over the ${win.max}-word ceiling for the ${TARGET_S}-second format (target ${win.target} at the voice's measured ${win.rate.toFixed(2)} words/second). Cut the longest beats first.`);
+    if (beats.length && words < win.min)
+      err(`reel2: ${words} words of narration — under the ${win.min}-word floor for the ${TARGET_S}-second format (target ${win.target} at ${win.rate.toFixed(2)} words/second). The série promises 60 seconds every day; a short script is a broken promise, not a tight edit. Add reporting, not padding: the detail that did not fit, the caveat, the second source's number.`);
+
+    /* Who did what. See versionedActors: the account's near-miss of 2026-07-31
+     * was an edit that let a viewer attach one model's incident to another
+     * model's name, with every sentence true and the gate green twice. */
+    const narration = beats.map((b) => String(b?.script || "")).join(" ");
+    const claimActors = [...new Set((post.corroboration || []).flatMap((c) => versionedActors(c?.quote)))];
+    const spokenActors = versionedActors(narration);
+    for (const a of spokenActors) {
+      if (!actorForms(a).some((f) => evidenceText.includes(f)))
+        err(`reel2: the narration names "${a}", which appears in no evidence quote. A name is a fact like a figure: copy it from the source or do not say it.`);
+    }
+    if (claimActors.length) {
+      const opening = beats.slice(0, 2).map((b) => String(b?.script || "")).join(" ");
+      const named = claimActors.filter((a) => actorForms(a).some((f) => opening.includes(f)));
+      if (!named.length)
+        err(
+          `reel2: the sources name the actor of the central claim as ${claimActors.map((a) => `"${a}"`).join(" / ")}, and the first two beats name none of them. ` +
+            `Telling the story anonymously and naming a model later is how a viewer attaches the wrong incident to the wrong name. Name the actor in the attaque, with its apposition.`
+        );
+    }
 
     /*
      * The last spoken thing is the send. Sends are the escalation signal that
