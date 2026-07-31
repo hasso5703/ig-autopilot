@@ -528,12 +528,24 @@ async function screenshotOnce(url, outFile, gotoTimeout) {
     // The receipt is the page's journalism, not its ad inventory: a Norton
     // banner shipped inside the TechCrunch receipt on the first live Reel.
     // Heuristic and best-effort — a hidden ad leaves a gap, which reads fine.
+    //
+    // `video` is hidden for a different reason, found on 2026-07-31: this
+    // Chromium has no proprietary codecs, so a local-news page's embedded
+    // player renders as a black rectangle with "DEMUXER_ERROR_NO_SUPPORTED_
+    // STREAMS / FFmpegDemuxer: no supported streams" printed across it. That
+    // shipped into a built Reel's Action News 5 receipt, sitting between the
+    // headline and the byline, and no automated check could see it: the
+    // screenshot succeeded, the page was the right one, the crop was correct.
+    // A receipt exists to show the headline, never the outlet's video, so the
+    // player is dropped like an ad and leaves the same harmless gap.
     await page.addStyleTag({
       content:
         '[id*="google_ads"],[id^="ad-"],[class*="advert"],[class^="ad-"],[class*=" ad-"],' +
         'ins.adsbygoogle,iframe[src*="ads"],iframe[src*="doubleclick"],[data-ad],[data-ad-unit],' +
         '[id*="taboola"],[class*="outbrain"],[class*="sponsor"],[id*="sponsor"],' +
-        '[aria-label*="advertisement" i]{display:none!important;visibility:hidden!important}',
+        '[aria-label*="advertisement" i],' +
+        'video,[class*="video-player"],[class*="videoPlayer"],[id*="video-player"]' +
+        '{display:none!important;visibility:hidden!important}',
     }).catch(() => {});
     // The receipt is the headline, and the top of an article page is not where
     // the headline lives: the first live Reel's card framed the site chrome, a

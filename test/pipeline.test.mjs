@@ -1460,3 +1460,19 @@ test("a grid wipe migrates fingerprints instead of erasing them", async () => {
   assert.equal(seen[0].outcome, "published-deleted");
   assert.ok(seen[0].fingerprint && seen[0].tokens.length, "the anti-repeat identity survives the wipe");
 });
+
+/* 2026-07-31: a built Reel shipped the Action News 5 receipt with a black
+   rectangle across it reading "DEMUXER_ERROR_NO_SUPPORTED_STREAMS /
+   FFmpegDemuxer: no supported streams" — this Chromium has no proprietary
+   codecs, so the outlet's embedded player renders as its own error message.
+   The screenshot succeeded, the page was right, the crop was right, and only
+   looking at the frame caught it. A receipt shows the headline, never the
+   outlet's video player. */
+test("the receipt's style block hides video players, not only ads", async () => {
+  const { readFile: rf } = await import("node:fs/promises");
+  const src = await rf(new URL("../src/reel2.mjs", import.meta.url), "utf8");
+  const style = src.match(/await page\.addStyleTag\(\{[\s\S]*?\}\)/);
+  assert.ok(style, "screenshotOnce still injects a style tag");
+  assert.match(style[0], /(^|[,'"\s])video\b/, "bare <video> is hidden in the receipt");
+  assert.match(style[0], /adsbygoogle/, "and the ad rules are still there");
+});

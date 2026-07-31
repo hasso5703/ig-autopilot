@@ -62,3 +62,10 @@
 {"at":"2026-07-31T13:45:33.034Z","slug":"calibration-Sadaltager","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"58.2s Sadaltager","usd":0.0291}
 {"at":"2026-07-31T13:46:08.757Z","slug":"calibration-Sadaltager","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"56.4s Sadaltager","usd":0.0282}
 {"at":"2026-07-31T15:49:34.391Z","slug":"2026-07-31-xai-turbines-memphis","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"54.5s Sadaltager","usd":0.0272}
+{"at":"2026-07-31T15:54:53.257Z","slug":"2026-07-31-xai-turbines-memphis","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"45.2s Sadaltager","usd":0.0226}
+{"at":"2026-07-31T15:55:27.385Z","slug":"2026-07-31-xai-turbines-memphis","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"47.6s Sadaltager","usd":0.0238}
+{"at":"2026-07-31T15:56:03.681Z","slug":"2026-07-31-xai-turbines-memphis","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"53.3s Sadaltager","usd":0.0267}
+{"at":"2026-07-31T15:57:16.986Z","slug":"2026-07-31-xai-turbines-memphis","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1273}
+{"at":"2026-07-31T15:59:50.838Z","slug":"2026-07-31-xai-turbines-memphis","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"47.1s Sadaltager","usd":0.0236}
+{"at":"2026-07-31T16:00:25.893Z","slug":"2026-07-31-xai-turbines-memphis","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"52.0s Sadaltager","usd":0.026}
+{"at":"2026-07-31T16:01:49.282Z","slug":"2026-07-31-xai-turbines-memphis","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1228}

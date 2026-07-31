@@ -176,7 +176,8 @@
             "subject": "a single portable gas turbine unit still sitting on the shipping trailer it arrived on",
             "setting": "on a cleared industrial lot in bright daylight",
             "composition": "medium shot"
-          }
+          },
+          "file": "media/2026-07-31-xai-turbines-memphis/still_2.jpg"
         }
       },
       {
@@ -184,7 +185,9 @@
         "visual": {
           "type": "photo",
           "query": "memphis mississippi river skyline",
-          "alt": "La ville de Memphis"
+          "alt": "Le centre de Memphis vu depuis le Mississippi",
+          "file": "media/2026-07-31-xai-turbines-memphis/photo_memphis.jpg",
+          "credit": "Quintin Soloviev · CC BY 4.0"
         }
       },
       {
@@ -217,7 +220,8 @@
             "subject": "a natural gas power plant with tall exhaust stacks",
             "setting": "under a bright open sky in daylight",
             "composition": "wide shot"
-          }
+          },
+          "file": "media/2026-07-31-xai-turbines-memphis/still_7.jpg"
         }
       }
     ]

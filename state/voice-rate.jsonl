@@ -11,3 +11,8 @@
 {"at":"2026-07-31T13:45:33.035Z","slug":"calibration-Sadaltager","words":194,"seconds":58.16,"voice":"Sadaltager","lang":"fr","calibration":true}
 {"at":"2026-07-31T13:46:08.758Z","slug":"calibration-Sadaltager","words":194,"seconds":56.4,"voice":"Sadaltager","lang":"fr","calibration":true}
 {"at":"2026-07-31T15:49:34.394Z","slug":"2026-07-31-xai-turbines-memphis","words":188,"seconds":54.48,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true}
+{"at":"2026-07-31T15:54:53.259Z","slug":"2026-07-31-xai-turbines-memphis","words":188,"seconds":45.16,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false}
+{"at":"2026-07-31T15:55:27.387Z","slug":"2026-07-31-xai-turbines-memphis","words":188,"seconds":47.64,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":false}
+{"at":"2026-07-31T15:56:03.684Z","slug":"2026-07-31-xai-turbines-memphis","words":188,"seconds":53.32,"voice":"Sadaltager","lang":"fr","attempt":3,"accepted":true}
+{"at":"2026-07-31T15:59:50.841Z","slug":"2026-07-31-xai-turbines-memphis","words":188,"seconds":47.12,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false}
+{"at":"2026-07-31T16:00:25.895Z","slug":"2026-07-31-xai-turbines-memphis","words":188,"seconds":52.04,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true}
