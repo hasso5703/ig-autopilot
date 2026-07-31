@@ -15,7 +15,7 @@
 import { readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { loadState } from "./state.mjs";
+import { loadState, latestBy } from "./state.mjs";
 import { collectAll, latestPerPost, accountTrend } from "./insights.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -85,7 +85,13 @@ export async function gatherHealth() {
 
 export async function publishHealth() {
   const { posted } = await loadState();
-  const last = posted.at(-1);
+  /* By timestamp, and specifically through the same helper the publish gap
+     guard uses, so the alarm and the guard can never disagree about which
+     publication was the last one. Reading the last LINE meant a union-merged
+     ledger could put an older entry at the end and raise a silence alarm about
+     an account that had published that morning — and the vigil run acts on that
+     alarm. */
+  const last = latestBy(posted);
   if (!last) return { ok: false, ever: false, note: "nothing has ever been published" };
 
   const ageHours = (Date.now() - Date.parse(last.at)) / 3600000;

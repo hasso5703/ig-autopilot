@@ -296,9 +296,22 @@ export async function latestPerPost() {
     })
     .filter(Boolean);
 
+  /*
+   * Newest by timestamp, never by file position. `.gitattributes` says it in as
+   * many words — "Readers must not assume file order is chronological" — because
+   * these ledgers merge by union, and a union keeps every line while promising
+   * nothing about their order. This reader used to let the last line win, so one
+   * push race between a collection run and a human would have made a stale
+   * reading outrank a fresh one, silently and for good: a post's numbers keep
+   * climbing for days, and the run reading "what worked" would have been shown
+   * the hour-old figure instead of the settled one.
+   */
   const byId = new Map();
-  for (const r of rows) byId.set(r.mediaId, r); // later lines win
-  return [...byId.values()].sort((a, b) => String(b.at).localeCompare(String(a.at)));
+  for (const r of rows) {
+    const held = byId.get(r.mediaId);
+    if (!held || Date.parse(r.at ?? 0) > Date.parse(held.at ?? 0)) byId.set(r.mediaId, r);
+  }
+  return [...byId.values()].sort((a, b) => Date.parse(b.at ?? 0) - Date.parse(a.at ?? 0));
 }
 
 /**
@@ -315,6 +328,12 @@ export async function accountTrend() {
     })
     .filter((r) => r && r.ok);
 
+  /* Sort before reading, for the same reason as above: union-merged lines carry
+     no order, and both "the newest reading" and "the one closest to a week
+     before it" were being taken from file position. A growth rate computed from
+     the wrong pair of readings is worse than no growth rate, because it looks
+     like an answer. */
+  rows.sort((a, b) => Date.parse(a.at ?? 0) - Date.parse(b.at ?? 0));
   const now = rows.at(-1) ?? null;
   if (!now) return { now: null, weekAgo: null };
 

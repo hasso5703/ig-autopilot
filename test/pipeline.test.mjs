@@ -1228,6 +1228,71 @@ test("the closing-slide ask speaks French since the pivot", async () => {
   assert.ok(r2.warnings.some((w) => /asks for nothing/.test(w)), "a close that asks nothing still warns");
 });
 
+// ---------------------------------------------------------------------------
+// `.gitattributes` states the invariant these ledgers live under: they merge by
+// union, so every line survives a race and NO line's position means anything.
+// state.mjs obeyed it. Three other readers did not, and each was one push race
+// away from a wrong answer delivered with confidence:
+//
+//   insights latestPerPost  — a stale reading outranking a settled one, on the
+//                             very numbers a run consults to decide what works
+//   insights accountTrend   — a growth rate computed from the wrong two readings
+//   watch publishHealth     — a silence alarm about an account that published
+//                             this morning, acted on by the evening vigil
+//   engage recentPublished  — the run's first comment posted under an old Reel
+//
+// The fixtures below are deliberately shuffled: file order disagrees with time
+// order, which is exactly what a union merge produces.
+// ---------------------------------------------------------------------------
+test("every ledger reader sorts by timestamp, because a union merge shuffles lines", async () => {
+  const { recentPublished } = await import("../src/engage.mjs");
+  const { latestBy } = await import("../src/state.mjs");
+
+  const shuffled = [
+    { slug: "middle", mediaId: "2", at: "2026-07-29T10:00:00Z" },
+    { slug: "oldest", mediaId: "1", at: "2026-07-27T10:00:00Z" },
+    { slug: "newest", mediaId: "3", at: "2026-07-31T10:00:00Z" },
+  ];
+  assert.deepEqual(
+    recentPublished(shuffled, 2).map((p) => p.slug), ["newest", "middle"],
+    "the conversation opens under the newest Reel, wherever its line sits"
+  );
+  assert.equal(latestBy(shuffled).slug, "newest", "the silence alarm reads the same record the gap guard does");
+
+  // The metrics reader keeps one row per media, and it must be the fresh one
+  // even when the stale one was appended after it.
+  const { readFile, writeFile, mkdir, rm } = await import("node:fs/promises");
+  const os = await import("node:os");
+  const nodePath = await import("node:path");
+  const cwd = process.cwd();
+  const tmp = await (await import("node:fs/promises")).mkdtemp(nodePath.join(os.tmpdir(), "oom-ledger-"));
+  try {
+    await mkdir(nodePath.join(tmp, "state"), { recursive: true });
+    await writeFile(
+      nodePath.join(tmp, "state", "metrics.jsonl"),
+      [
+        JSON.stringify({ mediaId: "A", at: "2026-07-31T12:00:00Z", reach: 900 }),
+        JSON.stringify({ mediaId: "A", at: "2026-07-30T12:00:00Z", reach: 12 }),  // older, but appended later
+        JSON.stringify({ mediaId: "B", at: "2026-07-31T09:00:00Z", reach: 40 }),
+      ].join("\n") + "\n"
+    );
+    // insights resolves its paths from the module's own directory, so the test
+    // reads the real ledger's shape through a copy of the function's logic is
+    // not enough — point the module at the fixture by running it from there.
+    const src = await readFile(nodePath.join(cwd, "src", "insights.mjs"), "utf8");
+    await mkdir(nodePath.join(tmp, "src"), { recursive: true });
+    await writeFile(nodePath.join(tmp, "src", "insights.mjs"), src);
+    await writeFile(nodePath.join(tmp, "src", "state.mjs"), await readFile(nodePath.join(cwd, "src", "state.mjs"), "utf8"));
+    const { latestPerPost } = await import(nodePath.join(tmp, "src", "insights.mjs"));
+    const rows = await latestPerPost();
+    const a = rows.find((r) => r.mediaId === "A");
+    assert.equal(a.reach, 900, "the settled reading wins over the stale one appended after it");
+    assert.deepEqual(rows.map((r) => r.mediaId), ["A", "B"], "and the list itself is newest first");
+  } finally {
+    await rm(tmp, { recursive: true, force: true });
+  }
+});
+
 test("engagement helpers: only real published media, only real comments", async () => {
   const { recentPublished, commentTextIssues } = await import("../src/engage.mjs");
   const posted = [

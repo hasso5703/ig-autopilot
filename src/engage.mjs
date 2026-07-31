@@ -94,8 +94,27 @@ export async function readLedger() {
 /** The most recent posted entries that actually carry a mediaId — the ledger
  * also remembers deleted posts, whose ids the API answers with "does not
  * exist"; those are memory, not conversation surfaces. */
+/**
+ * The most recent published posts, newest first — by timestamp, not by where
+ * their line happens to sit in the file.
+ *
+ * `.gitattributes` spells the rule out: the ledgers merge by union, and a union
+ * keeps every line while promising nothing about their order. This function
+ * used to take the last N lines, and it is the one that decides which post gets
+ * the run's first comment and whose comments get answered. One push race
+ * between a run and a human and the account would have opened a conversation
+ * under a week-old Reel, in public, with nobody able to explain why.
+ *
+ * Rows with no timestamp keep their old relative order, so a caller passing
+ * bare records still gets file order reversed.
+ */
 export function recentPublished(posted, limit = 5) {
-  return posted.filter((p) => p.mediaId).slice(-limit).reverse();
+  return posted
+    .filter((p) => p.mediaId)
+    .map((p, i) => ({ p, i, t: Date.parse(p.at ?? "") || 0 }))
+    .sort((a, b) => b.t - a.t || b.i - a.i)
+    .slice(0, limit)
+    .map((x) => x.p);
 }
 
 /** Under 3 characters a "reply" is an emoji nod, and emoji nods are what the
