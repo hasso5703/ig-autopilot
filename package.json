@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Autonomous AI/tech news carousels for Instagram, rendered with Chromium and published via the Instagram Graph API.",
+  "description": "Autonomous French AI-news Reels for Instagram: verified claims, a 60-second spoken format, published via the Instagram Graph API.",
   "scripts": {
     "test": "node --test test/pipeline.test.mjs",
-    "render": "node src/render.mjs",
-    "reel": "node src/reel.mjs",
     "guard": "node src/state.mjs guard",
     "watch": "node src/watch.mjs",
     "whoami": "node src/publish.mjs whoami",
-    "quota": "node src/publish.mjs quota"
+    "quota": "node src/publish.mjs quota",
+    "calibrate": "node src/calibrate-voice.mjs"
   },
   "engines": {
     "node": ">=20"

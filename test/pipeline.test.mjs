@@ -468,10 +468,20 @@ test("hooks that announce a surprise, ask a question, or reach for filler are re
 // Pictures. The account's promise is that what it shows is real, so a generated
 // picture may set a mood and may never appear to show someone it quotes.
 // ---------------------------------------------------------------------------
-test("every slide needs a picture", async () => {
+// A slide's `image` block described what the carousel renderer would composite.
+// Carousels were retired on 2026-07-28 and the block stayed mandatory until
+// 2026-07-31, so every post cost its writer nine invented picture descriptions
+// that nothing acquired, nothing rendered and nobody saw — and forgetting one
+// blocked the build. It is optional now; what it must NOT do is stop being
+// checked when it IS there, because the same shapes describe `photo` beats.
+test("a slide's picture block is optional, and still linted when present", async () => {
   const p = goodPost();
   delete p.slides[1].image;
-  assert.ok(hasErr(await errs(p), /slide 2 \(stat\) image: missing/));
+  assert.equal((await errs(p)).filter((e) => /image: missing/.test(e)).length, 0,
+    "a missing block is not an error any more");
+
+  p.slides[1].image = { kind: "illustration", prompt: "a photo of Kimi K3 hacking Redis", alt: "x" };
+  assert.ok(hasErr(await errs(p), /slide 2/), "a block that IS there is still held to the rules");
 });
 
 test("a generated picture may not depict a person the post quotes", () => {
@@ -809,6 +819,28 @@ test("reel2 scripts are held to the slide standard: digits quoted, shape checked
 // COMPLIANT: the engine only ever had an upper bound, and the gate only ever
 // had a word ceiling. A promise nothing measures is a promise nothing keeps.
 // ---------------------------------------------------------------------------
+/**
+ * The fixture's length is coupled to a ledger that real runs keep writing to,
+ * and a red suite stops every run. If this ever fails, the fix is to resize
+ * goodReel2 to the window the message prints — never to loosen the window.
+ */
+test("the fixture sits inside the window the gate actually computes", async () => {
+  const p = goodPost();
+  p.reel2 = goodReel2();
+  const words = p.reel2.beats.reduce((n, b) => n + b.script.trim().split(/\s+/).length, 0);
+  const e = (await errs(p)).filter((x) => /word (floor|ceiling)|words of narration/.test(x));
+  assert.equal(e.length, 0,
+    `goodReel2 is ${words} words and the gate refuses it: ${e[0] || ""}. Resize the fixture, do not widen the window.`);
+});
+
+test("the caption's first line is the Google snippet, and it is bounded", async () => {
+  const p = goodPost();
+  p.caption = "x".repeat(126) + "\n\nreste de la légende. AI-assisted.";
+  assert.ok(hasErr(await errs(p), /first line is 126 characters/));
+  p.caption = "x".repeat(120) + "\n\nreste de la légende. AI-assisted.";
+  assert.ok(!hasErr(await errs(p), /first line is/));
+});
+
 test("the runtime is a contract: a script too short for 60 seconds is refused", async () => {
   const p = goodPost();
   p.reel2 = goodReel2();

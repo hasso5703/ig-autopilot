@@ -460,7 +460,14 @@ export function imageStyleIssues(slide, post = {}) {
 
 export function imageIssues(slide, post = {}) {
   const img = slide.image;
-  if (!img) return ["missing. Every slide carries a picture: `image: { kind: 'photo', query: '…' }` or `{ kind: 'illustration', prompt: '…' }`"];
+  // Optional since 2026-07-31. This block described the picture the carousel
+  // renderer would composite onto a slide, and carousels were retired three
+  // days earlier: nothing acquires it, nothing renders it, nobody sees it. It
+  // was still mandatory, so every post cost its writer nine invented picture
+  // descriptions and a forgotten one blocked the build. When a block IS
+  // present the checks below still apply, because the same shapes describe the
+  // Reel's `photo` beats.
+  if (!img) return [];
   const issues = [];
 
   if (img.kind !== "photo" && img.kind !== "illustration")
@@ -900,6 +907,17 @@ export async function validatePost(post, opts = {}) {
       `caption: figure(s) ${capUnsupported.join(", ")} appear in the caption but in no evidence quote. ` +
         `Add the supporting sentence to captionEvidence: [{ quote, url }], or drop the figure`
     );
+  /*
+   * The caption's first line is a Google search result. Public professional
+   * accounts have been indexed since July 2025 and the snippet is that line, so
+   * a windup or a repeat of the hook wastes the only sentence a searcher reads.
+   * The manual has said 125 characters since the French pivot and nothing
+   * checked it, which is how a rule becomes decoration.
+   */
+  const firstLine = String(post.caption ?? "").split("\n")[0].trim();
+  if (firstLine.length > 125)
+    err(`caption: the first line is ${firstLine.length} characters. Only the first line shows before "more", and it is the Google snippet: 125 is the ceiling. Put the second-best fact and the entity names there, not a windup.`);
+
   const LOUD_FIELDS = ["headline", "kicker", "title", "figure", "unit", "claim", "caveat", "sub", "attribution"];
   for (const [i, s] of slides.entries()) {
     const fields = [...LOUD_FIELDS.map((f) => s[f]), s.hero?.value, s.hero?.label];
@@ -1041,6 +1059,9 @@ export async function validatePost(post, opts = {}) {
      * that shows nothing real at all: at least REAL_MIN beats must be a surface
      * that exists — a credited photograph, a receipt, or a Veo shot of a
      * concrete action. The 29 July Reel had zero and read as an ambiance loop. */
+    const receipts = beats.filter((b) => b.visual?.type === "screenshot").length;
+    if (receipts > 3)
+      err(`reel2: ${receipts} screenshot receipts — the ceiling is 3. A receipt beats a still every time, which is why the cap is generous, but four pages of somebody else's website in a row is a press review, not a Reel.`);
     const cards = beats.filter((b) => b.visual?.type === "card").length;
     if (cards > 2)
       err(`reel2: ${cards} typographic cards — the ceiling is 2. A card is a strong surface precisely because it is rare; three of them is a slideshow with a voice over it.`);

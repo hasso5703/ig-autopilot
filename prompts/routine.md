@@ -274,7 +274,9 @@ chatbot about a symptom" is better than "AI users".
   your copy to the word window that keeps that stretch inaudible. **You do not
   do this arithmetic** — the gate prints the window and the target, computed
   from the voice's own measured reading rate. You write to the number it gives
-  you, which is about **195 French words over 7 to 10 beats**.
+  you. It moves with the voice, so read it and never remember it: at the time
+  of writing it is around 185 words over 7 to 10 beats, and it changed twice in
+  one day.
 
   The research behind the length is unchanged: the measured 2026 bracket data
   (6M Reels, Jan–Jun 2026) puts 45–60s at both the best reach rate and the best
@@ -992,86 +994,41 @@ a day" in any wording.
 
 ### 5c. The pictures — for the Reel only
 
-**The slides' `image` blocks are still required by the gate and are never
-acquired, never rendered and never seen.** Write the two-line block each slide
-needs and move on; **do not run `imagery.mjs` on a post spec** and do not buy a
-picture for a slide. The Reel's pictures are step 5d's business, and they are
-the only ones that exist.
+Slides no longer carry pictures. The `image` block was what the carousel
+renderer composited onto a slide; carousels went on 2026-07-28 and the block
+stopped being required on 2026-07-31, because it cost every post nine invented
+picture descriptions that nothing acquired and nobody saw. **Do not write them
+and do not run `imagery.mjs` on a post spec.** Every picture on this account is
+a Reel beat, planned in step 5d.
 
-The rules below are kept because the Reel's `photo` beats go through the same
-Openverse/Commons machinery, with the same licensing, the same query discipline
-and the same absolute line between a documentary photograph and a generated one.
+What survives is the line that matters most, and it governs `photo` beats:
 
-Each slide gets an `image` block, in one of two kinds:
+**A `photo` is documentary — a real, openly licensed photograph of a real
+thing. A generated picture may only ever set a mood.** It may never appear to
+show the reported event, a named person, or an identifiable place; the engine
+refuses a prompt that names anything the post reports on. On an account whose
+whole promise is that what it shows is real, a generated picture passed off as
+documentary is the one mistake there is no recovering from.
 
-```jsonc
-"image": { "kind": "photo", "query": "electrical substation",
-           "alt": "a high voltage substation at dusk" }
-
-"image": { "kind": "illustration",
-           "prompt": "cinematic wide photograph of an immense dark server hall, rows of racks receding into fog, cold cyan light, volumetric haze, 35mm, no text, no people",
-           "alt": "a dark server hall" }
-```
-
-**Which kind, and this is the rule that matters most.** A `photo` is
-documentary: a real, openly licensed photograph of a real thing. An
-`illustration` is generated, and it may only ever set a mood. It may never
-appear to show the reported event, a named person, or an identifiable place. The
-gate blocks a prompt that names anyone the post quotes, and every generated
-picture is stamped "Illustration · AI-generated" on the slide. On an account
-whose entire promise is that what it shows is real, a generated picture passed
-off as documentary is the one mistake there is no recovering from.
-
-So: **photo when a real photograph of the subject plausibly exists** (a building,
-a device, a substation, a library, a named company's hardware), **illustration
-for everything abstract** (a concept, an atmosphere, a scene nobody photographed).
-
-**Write photo queries as keywords, not as sentences.** Openverse and Commons are
-keyword indexes. `"electrical substation"` finds hundreds; `"the moment the
-substation tripped on a summer night"` finds nothing. Two or three plain nouns.
+**Write photo queries as keywords, not sentences.** Openverse and Commons are
+keyword indexes: `"server room rack"` finds hundreds, `"the moment the scanner
+installed the package"` finds nothing. Two or three plain nouns, and add a
+qualifier when a bare plural returns cut-outs on white (the notebook records
+that trap).
 
 ```bash
-node src/imagery.mjs candidates "electrical substation"     # look before you plan a photo beat
+node src/imagery.mjs candidates "server room rack"   # look before you plan a photo beat
 ```
 
-That is the only invocation a production run has any use for: it lists what is
-openly licensed for a query, at no cost, so a `photo` beat is planned against
-photographs that exist. The spec-wide acquire commands belong to the retired
-carousel path. The Reel's own photo beats are acquired by `reel2.mjs` when it
-builds, with the licence and the author burned onto the frame.
+That is the only invocation a production run has any use for. It costs nothing
+and it tells you whether a `photo` beat is even possible — **and if it is not,
+that is an answer**: take a receipt or a card instead of forcing one.
 
-**A failed slide is reported, never substituted.** If nothing openly licensed
-matches, that slide is recorded as failed, the render falls back to an abstract
-field, and you fix it with a plainer query or by switching it to an
-illustration. It will never quietly put a generated picture where you asked for
-a real one.
-
-**Then look at every picture you acquired**, with the Read tool, before you
-render. The relevance filter catches a bronze horse sculpture answering
-"electrical substation night"; it cannot catch a photograph that is merely
-wrong, ugly or off-tone.
-
-### The type, and why it changed
-
-On 2026-07-31 Hasan asked for captions that can actually be read on a phone, a
-bigger end-card, and *"de meilleures polices, pour que ce soit professionnel
-mais en même temps de meilleure qualité visuelle, agréable à regarder."* Three
-things moved, and none of them is yours to change per post:
-
-- **The faces.** Anton is gone. It is a very condensed poster face and it read
-  as social-video default rather than as a news desk. Display type is now
-  **Archivo Black** (`oom-display`, and a wide cut `oom-display-wide` for the
-  end-card): heavier, calmer, wider. Captions are **Inter Black**
-  (`oom-caption`), drawn for screen legibility at speed and with proper French
-  diacritics, which is what a line read in motion actually needs. Both are SIL
-  OFL; the instances and the reasoning are in `brand/fonts/LICENSES.md`.
-- **The captions grew** from 86px to 104px, and the low band from 62 to 78. A
-  bigger face holds fewer characters, so the line budgets dropped with it and
-  captions now break at three words instead of four. Those numbers move
-  together; raising one alone puts type off the edge of the frame.
-- **The hook card sits on an opaque band** and steps down in size to fit two
-  lines. Before that it ran off both edges and landed on top of the receipt it
-  was sitting over.
+`reel2.mjs` acquires the photo itself while building, burns the credit onto the
+frame, and prints the licence line. **Look at what it acquired** before you
+publish: the relevance filter catches a bronze horse answering "substation at
+night"; it cannot catch a photograph that is merely ugly, off-tone, or a
+saturated blue server-room cliché.
 
 ### 5d. The Reel plan
 
@@ -1136,8 +1093,10 @@ Rules, and the gate enforces the hard ones:
 
 - **`lang` is "fr".** It drives the narration alignment; "en" exists for
   fixtures and nothing else now.
-- **7 to 10 beats, and the word window the gate prints** — about 195 French
-  words at the voice's current rate. Do not memorise that figure and do not
+- **7 to 10 beats, and the word window the gate prints.** Do not carry a
+  number in your head: it is derived from the voice's own measured rate and it
+  moved from 180 to 195 to 186 in a single afternoon as the voice changed and
+  was measured properly. Do not memorise that figure and do not
   compute it: run the gate, read the window it gives you, write to it. It is
   derived in `src/format.mjs` from the 60-second contract and from the
   account's own measured reading rate (`state/voice-rate.jsonl`, written by
