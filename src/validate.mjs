@@ -938,7 +938,9 @@ export async function validatePost(post, opts = {}) {
     }
     if (post.reel2?.lang && !["fr", "en"].includes(post.reel2.lang))
       err(`reel2: unknown lang "${post.reel2.lang}" — "fr" (the account's language) or "en"`);
-    const VISUALS = new Set(["veo", "screenshot", "image", "photo", "file"]);
+    const VISUALS = new Set(["veo", "screenshot", "image", "photo", "card", "file"]);
+    /** Everything the sources actually say, tokenised once. */
+    const storyVocab = new Set(tokens([post.centralClaim || "", evidenceText].join(" ")));
     let words = 0;
     for (const [i, b] of beats.entries()) {
       const at = `reel2 beat ${i + 1}`;
@@ -955,9 +957,45 @@ export async function validatePost(post, opts = {}) {
         err(`${at}: a ${type} beat needs a spec, a prompt or a file`);
       if (type === "photo" && !b.visual?.query && !b.visual?.file)
         err(`${at}: a photo beat needs a \`query\` (two or three plain nouns for the photo indexes) or a pinned file`);
+      if (type === "card") {
+        if (!b.visual?.value?.trim()) err(`${at}: a card beat needs a \`value\` — the figure or the short phrase it prints large`);
+        if (!b.visual?.label?.trim()) err(`${at}: a card beat needs a \`label\` — one line under the value saying what it counts`);
+        else if (b.visual.label.length > 62) err(`${at}: the card's label is ${b.visual.label.length} chars — it is set large under the figure and 62 is what fits on two lines`);
+        if (b.visual?.value && b.visual.value.length > 12) err(`${at}: the card's value is ${b.visual.value.length} chars — it renders at 150px, so it is a figure or two words, never a sentence`);
+        const cardNums = [...new Set(numbers(`${b.visual?.value || ""} ${b.visual?.label || ""}`))].filter((n) => !allEvidence.has(n));
+        if (cardNums.length) err(`${at}: card figure(s) ${cardNums.join(", ")} appear in no evidence quote — a card is printed at 150px, so its digits are the loudest on the account`);
+        if (DASHES.test(`${b.visual?.value || ""}${b.visual?.label || ""}`)) err(`${at}: the card contains an em dash, en dash or "--"`);
+      }
       if ((type === "veo" || type === "image") && !b.visual?.file) {
         const specText = [b.visual?.prompt, ...(b.visual?.spec ? Object.values(b.visual.spec) : [])].filter(Boolean).join(" ");
         for (const issue of simplicityIssues(specText)) err(`${at}: ${issue}`);
+        /*
+         * The furniture rule. On 2026-07-31 six of a Reel's eight beats showed
+         * nothing that was in the news: a laptop alone on a table, stacks of
+         * paper, an office door ajar, a smartphone beside a glass of water.
+         * Hasan: *"pourquoi on regarde un smartphone et un verre d'eau posé sur
+         * une table ? Il faut vraiment mieux choisir ce qu'on montre."*
+         *
+         * Every one of those had passed, because nothing checked whether the
+         * picture had anything to do with the story. This does: the spec's own
+         * words must overlap the vocabulary of the sources. Both are in English
+         * — the specs because Veo and Imagen read English, the evidence because
+         * the sources are international — so the comparison is fair.
+         *
+         * It is a floor, not taste. It cannot tell a good picture from a dull
+         * one; it can tell a picture OF the story from a picture of a desk.
+         */
+        const specNouns = new Set(tokens([b.visual?.spec?.subject, b.visual?.spec?.action, b.visual?.spec?.setting, b.visual?.prompt].filter(Boolean).join(" ")));
+        // Five letters or more: "left" matched "a misconfiguration left the
+        // machines with live internet access" and let an office door through,
+        // which is precisely the kind of accident that makes a rule useless.
+        const shared = [...specNouns].filter((w) => w.length >= 5 && storyVocab.has(w));
+        if (specNouns.size && !shared.length)
+          err(
+            `${at}: this ${type} shows nothing the story contains. "${b.visual?.spec?.subject || b.visual?.prompt || ""}" shares no word with the sources, ` +
+              `which is how a Reel about a malicious package ends up showing a glass of water. Pick a subject the evidence actually names — available here: ` +
+              `${[...storyVocab].filter((w) => w.length > 4).slice(0, 18).join(", ")}. If nothing fits, the beat wants a receipt, a real photograph or a \`card\`, not a still.`
+          );
       }
     }
 
@@ -976,6 +1014,9 @@ export async function validatePost(post, opts = {}) {
      * that shows nothing real at all: at least REAL_MIN beats must be a surface
      * that exists — a credited photograph, a receipt, or a Veo shot of a
      * concrete action. The 29 July Reel had zero and read as an ambiance loop. */
+    const cards = beats.filter((b) => b.visual?.type === "card").length;
+    if (cards > 2)
+      err(`reel2: ${cards} typographic cards — the ceiling is 2. A card is a strong surface precisely because it is rare; three of them is a slideshow with a voice over it.`);
     const real = beats.filter((b) => ["photo", "screenshot", "veo"].includes(b.visual?.type ?? "image")).length;
     if (beats.length >= BEATS_MIN && real < REAL_MIN)
       err(`reel2: only ${real} beat(s) show something real — the floor is ${REAL_MIN} (\`photo\`, \`screenshot\` or \`veo\`). Generated stills set a mood; they are never the substance.`);
@@ -1016,15 +1057,25 @@ export async function validatePost(post, opts = {}) {
     }
 
     /*
-     * The last spoken thing is the send. Sends are the escalation signal that
-     * reaches non-followers, and the engine's end-card handles the follow ask
-     * after the voice stops — so the voice's close has exactly one job: name
-     * who to send this to. A close that asks for nothing shipped on every
-     * early Reel, and the account has the follower count that buys.
+     * The last spoken thing is the ask, and on 2026-07-31 Hasan changed what it
+     * asks for: *"le 'envoie ça à celui qui répète que…' franchement c'est pas
+     * fou, c'est pas sérieux. Au lieu de ça à la fin on peut vraiment demander
+     * de s'abonner pour la news de demain et de lâcher un like."*
+     *
+     * The trade-off, stated once so nobody has to rediscover it: a DM share is
+     * worth three to five times a like for reaching non-followers, so on pure
+     * ranking the send was the stronger ask. But the send ask this account
+     * actually wrote — "envoie ça à celui qui répète que l'IA reste enfermée" —
+     * was a strawman addressed to nobody, and an ask that makes a viewer wince
+     * converts worse than a weaker ask that sounds like a person. At zero
+     * followers the subscription is also the thing the account most needs, and
+     * the serial promise ("celle de demain") is what makes it answerable.
      */
     const lastScript = String(beats.at(-1)?.script || "");
-    if (lastScript && !/(envoie|envoyez|partage|partagez|montre|montrez|transf[èe]re|transf[èe]rez|pr[ée]viens|pr[ée]venez|send|share|forward|show|tag)/i.test(lastScript))
-      err("reel2: the last beat asks for nothing — name who to send this to (\"Envoie ça à…\", \"Préviens…\"). The end-card handles the follow; the voice handles the send.");
+    if (lastScript && !/(abonne|abonnez|abonnement|suis[- ]moi|follow)/i.test(lastScript))
+      err("reel2: the last beat asks for nothing — ask for the subscription, and say what it buys (\"Abonne-toi pour l'actu IA de demain\"). A close that only summarises is a close a viewer scrolls past.");
+    else if (lastScript && !/(demain|suivante|prochaine)/i.test(lastScript))
+      nag("reel2: the last beat asks for a follow without saying what comes next — a viewer subscribes to the next edition, never to the one just watched. Name tomorrow.");
 
     if (post.reel2?.mood && !["steady", "tension", "drive", "wonder"].includes(post.reel2.mood))
       err(`reel2: unknown mood "${post.reel2.mood}"`);

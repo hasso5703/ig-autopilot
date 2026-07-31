@@ -53,7 +53,41 @@ import {
 
 const run = promisify(execFile);
 
-const W = 1080, H = 1920, FPS = 25;
+const W = 1080, H = 1920;
+
+/* ------------------------------ why 30, and why ×4 -----------------------
+ * Hasan, 2026-07-31: *"les vidéos tremblent un peu, ne sont pas stables, genre
+ * les zooms vers les images et même la vidéo, même sur les reels déjà
+ * publiés."* He was right, and it was three separate defects. All three were
+ * measured on a test pattern before anything was changed.
+ *
+ * 1. THE ZOOM. `zoompan` truncates its crop origin to whole INPUT pixels. The
+ *    Ken-Burns move is 7% over a whole beat, so the origin creeps by a fraction
+ *    of a pixel per frame and the truncation makes it hesitate between two
+ *    positions. Measured on a line that should have drifted a steady -0.148
+ *    px/frame: it went +0.16, +0.19, 0.00, -0.67, +0.18, 0.00, -0.68 — moving
+ *    the WRONG WAY two frames out of three, ±0.46px of vibration. The visible
+ *    error is `zoom × output_width / input_width`, so the only lever is a
+ *    bigger input. At SUPERSAMPLE 4 the same line drifts -0.15, -0.15, -0.14,
+ *    -0.15: standard deviation falls from 0.352px to 0.053px. ×8 buys almost
+ *    nothing more and triples the render (76s against 23s for a 6-second clip).
+ *
+ * 2. THE RECEIPT. `overlay` truncates y the same way, and the card's 80-pixel
+ *    drift over a beat is well under a pixel per frame: measured, it froze for
+ *    three or four frames then jumped two pixels, over and over. The drift is
+ *    gone — the mid-beat re-frame is what keeps a long receipt alive now.
+ *
+ * 3. THE FRAME RATE. Veo renders at 24, the timeline ran at 25, so one frame
+ *    in every 24 was duplicated: measured at 24 near-identical frames out of 89
+ *    on a plain `fps` conversion. And a 25 fps master is not what the platform
+ *    plays, so everything else was being re-timed after upload too. The
+ *    timeline is 30 now, and the Veo clip is converted by blending rather than
+ *    duplication (`framerate`): same measured smoothness as motion-compensated
+ *    interpolation, 7 seconds of work instead of 90, and no ghosting on the
+ *    deliberately simple shots the manual allows.
+ */
+const FPS = 30;
+const SUPERSAMPLE = 4;
 
 /* ---------------------------- the 60-second contract ----------------------
  * The série is "L'actu IA en 60 secondes" and the bio promises one every day.
@@ -84,10 +118,16 @@ const REFRAME_S = 5.2;
 const BG_HEX = "0x08080C"; // brand.colors.bg
 const FONT_DIR = path.join(process.cwd(), "brand", "fonts");
 const HANDLE = "@ORDER.OF.MAGNITUDE";
-// The end-card is fixed text, not per-post copy: the ritual is the point.
-// "Pour la suivante" is the serialization ask — the viewer closes the loop.
-const END_PROMISE = "UNE ACTU IA PAR JOUR.";
-const END_FOLLOW = "ABONNE-TOI POUR LA SUIVANTE";
+/* The end-card is fixed text, not per-post copy: the ritual is the point.
+ *
+ * Rewritten on 2026-07-31 on Hasan's instruction. It used to be one line of
+ * promise and one thin line of follow ask, both small enough to read as a
+ * legal notice. Now the promise is set across two lines of wide display black
+ * and the ask is explicit about what it wants and when: tomorrow's edition, and
+ * a like. The serial promise is still what does the work — a viewer subscribes
+ * to the NEXT one, never to the one they just watched. */
+const END_PROMISE = ["UNE ACTU IA", "PAR JOUR."];
+const END_ASK = ["ABONNE-TOI POUR DEMAIN", "ET LAISSE UN LIKE"];
 
 /* ------------------------- the voice's own rate --------------------------- */
 
@@ -268,12 +308,17 @@ function assTime(t) {
  *   finally asks for the one thing a viewer can do for a new account.
  */
 /** The widest line each karaoke style renders inside the safe margins.
- * Measured on 2026-07-29 for K (86px, 60px margins): 23-char lines fit with
- * room, a 32-char line lost a glyph at each edge, so ~40px per uppercase
- * char. KLOW (62px, 30px margins) gets the same px-per-em budget: 1020px /
- * (0.465em × 62px) ≈ 35 chars. */
-const KARAOKE_MAX_CHARS = 24;
-const KARAOKE_MAX_CHARS_LOW = 35;
+ *
+ * Recomputed on 2026-07-31 from the caption face's own metrics rather than by
+ * eye: OOM Caption averages 0.58 em per uppercase character, so a line holds
+ * `usable_width / (0.58 × size)`. The captions went from 86px to 104px because
+ * they were hard to read on a phone, and a bigger face holds fewer characters —
+ * the two numbers below move together and neither may be raised alone. The
+ * chunker also drops from four words to three for the same reason; a shorter
+ * caption is read faster, which is the point of having one. */
+const KARAOKE_MAX_CHARS = 18;
+const KARAOKE_MAX_CHARS_LOW = 26;
+const KARAOKE_MAX_WORDS = 3;
 
 /** Uppercase Anton runs about 0.47em wide, so the frame's 952 usable pixels
  * hold roughly `952 / (0.47 * size)` characters on a line. The hook card is
@@ -290,17 +335,24 @@ export function titleFontSize(title) {
 export function buildAss(words, beats, ranges, accentHex, opts = {}) {
   const accent = hexToAss(accentHex);
   const titleSize = titleFontSize(opts.title);
-  const lowBeats = new Set(ranges.filter((_, i) => beats[i].visual?.type === "screenshot").flatMap((r) => {
+  const wordsOfBeats = (pred) => new Set(ranges.filter((_, i) => pred(beats[i])).flatMap((r) => {
     const list = [];
     for (let i = r.start; i <= r.end; i++) list.push(i);
     return list;
   }));
+  const lowBeats = wordsOfBeats((b) => b.visual?.type === "screenshot");
+  /* A card beat carries its own type, so the karaoke stays off it. Rendered
+   * together the first time, the figure, its line and the caption stacked into
+   * three blocks of text saying the same thing — the card printed "141 006 /
+   * sessions d'évaluation relues" and the caption underneath read "SESSIONS
+   * RELUES". The voice still speaks; the screen shows one thing. */
+  const cardWords = wordsOfBeats((b) => b.visual?.type === "card");
   const head = [
     "[Script Info]", `PlayResX: ${W}`, `PlayResY: ${H}`, "WrapStyle: 2", "",
     "[V4+ Styles]",
     "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
-    `Style: K,Archivo SemiBold,86,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,7,3,2,60,60,600,1`,
-    `Style: KLOW,Archivo SemiBold,62,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,7,3,2,30,30,170,1`,
+    `Style: K,OOM Caption,104,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,8,4,2,60,60,560,1`,
+    `Style: KLOW,OOM Caption,78,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,7,4,2,30,30,170,1`,
     // BorderStyle 3 is an opaque box, not an outline, and it is the fix for the
     // worst frame this engine ever produced. On 2026-07-31 the hook card
     // "CLAUDE A PIÉGÉ 15 MACHINES BIEN RÉELLES" was set at 116px over a receipt
@@ -311,9 +363,11 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
     // the engine called the file COMPLIANT, and only looking at the frame found
     // it. A box means the card is legible over anything; the size below means it
     // fits inside the margins.
-    `Style: TITLE,Anton,${titleSize},&H00FFFFFF,&H00FFFFFF,&H00101010,&HB4000000,0,0,0,0,100,100,0,0,3,18,0,8,64,64,300,1`,
-    `Style: ENDBIG,Anton,100,&H00FFFFFF,&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,3,2,5,80,80,0,1`,
-    `Style: ENDFOLLOW,Archivo SemiBold,58,${accent},&H00FFFFFF,&H00101010,&H96000000,-1,0,0,0,100,100,1,0,1,3,2,5,80,80,0,1`,
+    `Style: TITLE,OOM Display,${titleSize},&H00FFFFFF,&H00FFFFFF,&H00101010,&HB4000000,0,0,0,0,100,100,0,0,3,18,0,8,64,64,300,1`,
+    `Style: CARDBIG,OOM Display Wide,150,&H00FFFFFF,&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,0,0,5,70,70,0,1`,
+    `Style: CARDLINE,OOM Caption,58,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,1,0,1,0,0,5,90,90,0,1`,
+    `Style: ENDBIG,OOM Display Wide,104,&H00FFFFFF,&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,2,0,1,3,2,5,70,70,0,1`,
+    `Style: ENDFOLLOW,OOM Caption,68,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,1,0,1,3,2,5,70,70,0,1`,
     "", "[Events]",
     "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
   ];
@@ -323,11 +377,36 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
     const text = String(opts.title).toUpperCase().replace(/\\/g, "").replace(/[{}]/g, "");
     fixed.push(`Dialogue: 1,${assTime(0)},${assTime(tEnd)},TITLE,,0,0,0,,{\\q1\\fad(0,220)}${text}`);
   }
+  // Cards print inside their own beat's window, taken from the word clock like
+  // everything else on this timeline.
+  beats.forEach((b, i) => {
+    if ((b.visual?.type) !== "card") return;
+    const r = ranges[i];
+    if (!r || !words[r.start] || !words[r.end]) return;
+    const t0 = assTime(Math.max(0, words[r.start].s - 0.05));
+    const t1 = assTime(words[r.end].e + 0.22);
+    const clean = (v) => String(v || "").replace(/\\/g, "").replace(/[{}]/g, "").toUpperCase();
+    const value = clean(b.visual.value);
+    const label = clean(b.visual.label);
+    if (value) fixed.push(`Dialogue: 1,${t0},${t1},CARDBIG,,0,0,0,,{\\q2\\fad(180,120)\\pos(${W / 2},${Math.round(H * 0.40)})}${value}`);
+    if (label) fixed.push(`Dialogue: 1,${t0},${t1},CARDLINE,,0,0,0,,{\\q1\\fad(180,120)\\pos(${W / 2},${Math.round(H * 0.53)})}${label}`);
+  });
+
   if (opts.endcard) {
     const { from, dur } = opts.endcard;
     const t0 = assTime(from), t1 = assTime(from + dur);
-    fixed.push(`Dialogue: 1,${t0},${t1},ENDBIG,,0,0,0,,{\\q1\\fad(160,0)\\pos(${W / 2},${Math.round(H * 0.42)})}${END_PROMISE}`);
-    fixed.push(`Dialogue: 1,${t0},${t1},ENDFOLLOW,,0,0,0,,{\\q1\\fad(160,0)\\pos(${W / 2},${Math.round(H * 0.54)})}${END_FOLLOW}`);
+    // Four positioned lines rather than two wrapped ones: the wrap point of a
+    // display face is not something to leave to the renderer on the one frame
+    // that asks the viewer for something.
+    const lines = [
+      [END_PROMISE[0], "ENDBIG", 0.335],
+      [END_PROMISE[1], "ENDBIG", 0.425],
+      [END_ASK[0], "ENDFOLLOW", 0.565],
+      [END_ASK[1], "ENDFOLLOW", 0.635],
+    ];
+    for (const [text, style, yFrac] of lines) {
+      fixed.push(`Dialogue: 1,${t0},${t1},${style},,0,0,0,,{\\q2\\fad(160,0)\\pos(${W / 2},${Math.round(H * yFrac)})}${text}`);
+    }
   }
   // WrapStyle 2 never wraps, so a chunk wider than the frame walks off both
   // edges: "OPENAI A SUSPENDU L'ENTRAÎNEMENT" (32 chars) shipped-almost on
@@ -338,15 +417,16 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
   const chunks = [];
   let chunk = [];
   words.forEach((word, i) => {
+    if (cardWords.has(i)) { if (chunk.length) { chunks.push(chunk); chunk = []; } return; }
     if (chunk.length && chunkChars(chunk) + 1 + word.w.length > capFor(chunk[0].i)) { chunks.push(chunk); chunk = []; }
     chunk.push({ word, i });
-    if (chunk.length >= 4 || /[,.]$/.test(word.w)) { chunks.push(chunk); chunk = []; }
+    if (chunk.length >= KARAOKE_MAX_WORDS || /[,.]$/.test(word.w)) { chunks.push(chunk); chunk = []; }
   });
   if (chunk.length) chunks.push(chunk);
   // A lone word makes a caption that flickers; give it back to its sentence —
   // unless the reunion itself would overflow the line.
   for (let i = chunks.length - 1; i > 0; i--) {
-    if (chunks[i].length === 1 && chunks[i - 1].length < 5 &&
+    if (chunks[i].length === 1 && chunks[i - 1].length < KARAOKE_MAX_WORDS + 1 &&
         chunkChars(chunks[i - 1]) + 1 + chunkChars(chunks[i]) <= capFor(chunks[i - 1][0].i)) {
       chunks[i - 1].push(...chunks[i]);
       chunks.splice(i, 1);
@@ -365,7 +445,26 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
 
 /* ------------------------------ visuals ---------------------------------- */
 
-async function screenshot(url, outFile) {
+/**
+ * Two attempts, and a longer patience on the second.
+ *
+ * A build on 2026-07-31 died on `page.goto: Timeout 30000ms exceeded` against a
+ * page that had screenshotted fine an hour earlier — the narration was already
+ * bought and the run was over. A receipt page being slow once is weather, not a
+ * finding, and it must not cost a Reel.
+ */
+async function screenshot(url, outFile, attempt = 1) {
+  try {
+    return await screenshotOnce(url, outFile, attempt === 1 ? 30_000 : 60_000);
+  } catch (err) {
+    if (attempt >= 2) throw err;
+    console.log(`screenshot of ${url} failed (${err.message.split("\n")[0]}) — one more try with a longer wait`);
+    await new Promise((r) => setTimeout(r, 4000));
+    return screenshot(url, outFile, attempt + 1);
+  }
+}
+
+async function screenshotOnce(url, outFile, gotoTimeout) {
   const { chromium } = await loadPlaywright();
   const executablePath = await chromiumExecutable();
   const proxy = process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined;
@@ -385,7 +484,7 @@ async function screenshot(url, outFile) {
       catch { try { await route.abort(); } catch { /* page may be gone */ } }
     });
     const page = await ctx.newPage();
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: gotoTimeout });
     await page.waitForTimeout(2500);
     for (const sel of ['button:has-text("Accept")', 'button:has-text("AGREE")', ".fc-cta-consent"]) {
       try { await page.locator(sel).first().click({ timeout: 1200 }); } catch { /* no banner is the good case */ }
@@ -436,7 +535,7 @@ async function screenshot(url, outFile) {
  */
 export function panFilter(dur, variant = 0) {
   const frames = Math.max(1, Math.round(dur * FPS));
-  const cw = Math.round(W * 1.2), ch = Math.round(H * 1.2);
+  const cw = W * SUPERSAMPLE, ch = H * SUPERSAMPLE;
   const z = variant === 1 ? `1.26+0.06*on/${frames}` : `1+0.07*on/${frames}`;
   const x = "iw/2-(iw/zoom/2)";
   const y = variant === 1 ? "ih-ih/zoom" : "ih/2-(ih/zoom/2)";
@@ -502,7 +601,12 @@ async function segmentFromScreenshot(shot, dur, outFile) {
         // The card starts under the handle badge and never drifts up into it —
         // the first cut had white site chrome sliding beneath white type.
         `[fg]scale=${CARD_W}:-1,crop=${CARD_W}:'min(ih,${CARD_H})':0:0[card];` +
-        `[bgb][card]overlay=x=${x}:y='${y0}-80*t/${d}'[v]`,
+          // A FIXED y. The drift that used to live here moved 80 pixels over a
+        // beat, which is well under one pixel per frame, and overlay rounds y
+        // down: measured, the card froze for three or four frames and then
+        // jumped two. A card that does not move at all is stable, and the
+        // mid-beat re-frame below is what stops it being static.
+        `[bgb][card]overlay=x=${x}:y=${y0}[v]`,
       "-map", "[v]", ...ENC, out,
     ]);
   };
@@ -539,6 +643,36 @@ async function segmentFromPhoto(img, dur, credit, outFile, workDir) {
   await segmentFromImage(img, dur, outFile, extra);
 }
 
+/**
+ * A typographic card: the brand's ground, with the beat's figure and its line
+ * printed over it by the ASS layer. It costs nothing and it is the answer to a
+ * problem that had been solved with wallpaper.
+ *
+ * Hasan, 2026-07-31, on the Reel built that afternoon: *"à la fin quand on voit
+ * un verre d'eau et un smartphone à côté, franchement c'est pas au niveau,
+ * pourquoi on regarde un smartphone et un verre d'eau posé sur une table ? Il
+ * faut vraiment mieux choisir ce qu'on montre."* Six of that Reel's eight beats
+ * showed nothing from the story: a laptop on a table, stacks of paper, a door
+ * ajar, a phone beside a glass of water. Not one of them was in the news.
+ *
+ * The cause was structural, not editorial. Receipts are capped at two and real
+ * photographs only exist for some subjects, so everything else got filled with
+ * whatever a generated still could safely depict — which is furniture. A card
+ * gives the writer a fourth surface that is always available, always about the
+ * story (it prints its own figures, which the gate holds to the evidence like
+ * every other digit), and looks designed rather than bought.
+ *
+ * A slow push-in keeps it from being a slide.
+ */
+async function segmentCard(dur, outFile) {
+  const frames = Math.max(1, Math.round(dur * FPS));
+  await ffmpeg([
+    "-y", "-f", "lavfi", "-i", `color=c=${BG_HEX}:s=${W * 2}x${H * 2}:r=${FPS}:d=${dur}`,
+    "-vf", `zoompan=z='1+0.03*on/${frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${frames}:s=${W}x${H}:fps=${FPS},setsar=1`,
+    "-pix_fmt", "yuv420p", ...ENC, outFile,
+  ]);
+}
+
 /** The end-card: the brand's dark ground, silent; the ASS layer prints the
  * promise and the follow ask over it. Encoded with the same codec settings as
  * every other segment so the concat demuxer's `-c copy` stays valid. */
@@ -551,9 +685,12 @@ async function segmentEndcard(dur, outFile) {
 
 /** A clip, trimmed to the beat; a beat longer than its clip holds the last frame. */
 async function segmentFromVideo(clip, dur, outFile) {
+  // `framerate` resamples by blending neighbours; without it, -r would simply
+  // duplicate frames and Veo's native 24 against the timeline's 30 produced a
+  // freeze roughly once every four frames.
   await ffmpeg([
     "-y", "-i", clip, "-t", String(dur),
-    "-vf", `scale=${W}:${H}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W}:${H},tpad=stop_mode=clone:stop_duration=${dur},setsar=1`,
+    "-vf", `framerate=fps=${FPS},scale=${W}:${H}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W}:${H},tpad=stop_mode=clone:stop_duration=${dur},setsar=1`,
     "-r", String(FPS), "-an", "-c:v", "libx264", "-preset", "fast", "-crf", "18", outFile,
   ]);
 }
@@ -767,6 +904,8 @@ export async function buildReel(postFile, mediaDir) {
         await journal(`photo ${i} acquired: ${credit}`);
       }
       await segmentFromPhoto(file, dur, credit, seg, mediaDir);
+    } else if (type === "card") {
+      await segmentCard(dur, seg);
     } else if (type === "file") {
       const src = beat.visual.file;
       if (/\.(mp4|mov|webm)$/i.test(src)) await segmentFromVideo(src, dur, seg);

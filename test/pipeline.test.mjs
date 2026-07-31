@@ -734,8 +734,13 @@ test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, sc
   assert.ok(!/Dialogue:[^\n]*,K[^L]*,{\\k\d+}CHATS\s*$/m.test(ass), "no dialogue holds a single orphan word");
   const dialogues = ass.split("\n").filter((l) => l.startsWith("Dialogue:"));
   const low = dialogues.filter((d) => d.includes(",KLOW,"));
-  assert.equal(low.length, 1, "the screenshot beat's caption sits in the low band");
-  assert.equal((low[0].match(/\\k\d+/g) || []).length, 5, "the orphan 'chats.' rejoined its four-word sentence");
+  // The captions grew from 86px to 104px on 2026-07-31 because they were hard
+  // to read on a phone, so a five-word sentence no longer fits on one line and
+  // the screenshot beat now captions in two. What must stay true is that every
+  // one of its captions is in the LOW band, clear of the receipt card.
+  assert.ok(low.length >= 1, "the screenshot beat captions in the low band");
+  assert.equal(low.reduce((n, d) => n + (d.match(/\\k\d+/g) || []).length, 0), 5,
+    "all five words of the screenshot beat are captioned, none dropped");
   assert.ok(dialogues.every((d) => (d.match(/\\k\d+/g) || []).length >= 2), "every caption carries at least two timed words");
 
   // WrapStyle 2 never wraps, so a wide line walks off both frame edges:
@@ -748,7 +753,7 @@ test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, sc
   const wideLines = wideAss.split("\n").filter((l) => l.startsWith("Dialogue: 0"));
   for (const d of wideLines) {
     const textLen = d.replace(/^.*?,,0,0,0,,/, "").replace(/\{[^}]*\}/g, "").length;
-    assert.ok(textLen <= 24, `karaoke line wider than the K style's frame budget: ${textLen} chars`);
+    assert.ok(textLen <= 18, `karaoke line wider than the K style's frame budget: ${textLen} chars`);
   }
 });
 
@@ -773,10 +778,10 @@ const goodReel2 = () => ({
     { script: "Donc les bibliothèques ont ouvert des séances sans inscription et sans frais, un après-midi par semaine, dans des villes où personne d'autre ne le fait.",
       visual: { type: "image", spec: { subject: "a dim reading room", setting: "in a public library" } } },
     { script: "Mais la demande ne vient pas de qui vous croyez. La moitié de la salle avait moins de quarante ans, et beaucoup travaillent avec ces outils toute la journée.",
-      visual: { type: "image", spec: { subject: "an empty chair", setting: "beside a tall window" } } },
+      visual: { type: "image", spec: { subject: "a public library computer", setting: "in a bright reading room" } } },
     { script: "Le cours ne dit jamais que la technologie est mauvaise. Il dit que le réglage existe, qu'il est caché, et qu'il vous appartient.",
       visual: { type: "image", spec: { subject: "a switch on a wall", setting: "in a bright corridor" } } },
-    { script: "La séance suivante est déjà complète. Envoie ça à quelqu'un qui subit les fenêtres d'intelligence artificielle sans savoir où les couper.",
+    { script: "La séance suivante est déjà complète. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
       visual: { type: "image", spec: { subject: "a phone face down", setting: "on a wooden table" } } },
   ],
 });
@@ -851,12 +856,24 @@ test("reel2: the hook card is required and held to headline rules", async () => 
   assert.equal((await errs(p)).filter((e) => /title/.test(e)).length, 0);
 });
 
-test("reel2: the last beat must name who to send it to", async () => {
+test("reel2: the last beat asks for the subscription, and says what it buys", async () => {
   const p = goodPost();
   p.reel2 = goodReel2();
   p.reel2.beats.at(-1).script = "Voilà pour aujourd'hui.";
   assert.ok(hasErr(await errs(p), /last beat asks for nothing/));
-  p.reel2.beats.at(-1).script = "Préviens un ami qui partage ses chats IA.";
+
+  // The send ask this account used to write was a strawman addressed to nobody;
+  // Hasan replaced it on 2026-07-31 with the subscription. A send ask alone is
+  // no longer enough.
+  p.reel2.beats.at(-1).script = "Envoie ça à celui qui répète que l'IA reste enfermée.";
+  assert.ok(hasErr(await errs(p), /last beat asks for nothing/), "a send ask is not the ask any more");
+
+  // Asking for the follow without naming the next edition is the weak version.
+  p.reel2.beats.at(-1).script = "Abonne-toi si ça t'a plu.";
+  const warns = (await validatePost(p, { online: false })).warnings;
+  assert.ok(warns.some((w) => /without saying what comes next/.test(w)), "a follow ask with no tomorrow is flagged");
+
+  p.reel2.beats.at(-1).script = "Abonne-toi pour l'actu IA de demain, et laisse un like.";
   assert.ok(!hasErr(await errs(p), /last beat asks for nothing/));
 });
 
@@ -907,10 +924,19 @@ test("the hook card and the end-card ride above the karaoke", async () => {
   const beats = [{ script: "Google listait des chats partagés.", visual: { type: "image" } }];
   const ranges = [{ start: 0, end: 4 }];
   const ass = buildAss(words, beats, ranges, "FF8A3D", { title: "Google exposait vos chats Claude", endcard: { from: 40, dur: 3 } });
-  assert.ok(/Style: TITLE,Anton/.test(ass), "the title style uses the display face");
+  assert.ok(/Style: TITLE,OOM Display,/.test(ass), "the title style uses the display face");
+  assert.ok(/Style: TITLE,[^,]+,\d+,[^\n]*,3,\d+,\d+,8,/.test(ass),
+    "the title rides on an opaque box (BorderStyle 3), which is what stopped it colliding with the receipt underneath");
   assert.ok(/Dialogue: 1,0:00:00\.00,[^,]+,TITLE,.*GOOGLE EXPOSAIT VOS CHATS CLAUDE/.test(ass), "the full hook is burned from frame zero, upper-cased");
-  assert.ok(/Dialogue: 1,0:00:40\.00,0:00:43\.00,ENDBIG,.*UNE ACTU IA PAR JOUR\./.test(ass), "the end-card prints the serial promise");
-  assert.ok(/Dialogue: 1,0:00:40\.00,0:00:43\.00,ENDFOLLOW,.*ABONNE-TOI POUR LA SUIVANTE/.test(ass), "the end-card asks for the follow");
+  // The end-card is four positioned lines since 2026-07-31: the promise across
+  // two lines of wide display black, then what it wants and when.
+  const end = ass.split("\n").filter((l) => /,(ENDBIG|ENDFOLLOW),/.test(l));
+  assert.equal(end.length, 4, "four lines on the end-card");
+  assert.ok(end.every((l) => /0:00:40\.00,0:00:43\.00/.test(l)), "all of them for the card's whole three seconds");
+  const endText = end.join(" ");
+  assert.ok(/UNE ACTU IA/.test(endText) && /PAR JOUR\./.test(endText), "the serial promise");
+  assert.ok(/ABONNE-TOI POUR DEMAIN/.test(endText), "the follow ask names when");
+  assert.ok(/ET LAISSE UN LIKE/.test(endText), "and the like ask Hasan called for on 2026-07-31");
   const plain = buildAss(words, beats, ranges, "FF8A3D");
   assert.ok(!/TITLE|ENDBIG|ENDFOLLOW/.test(plain.split("[Events]")[1]), "no opts, no fixed layers — old call sites unchanged");
 });

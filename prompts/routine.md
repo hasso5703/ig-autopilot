@@ -313,27 +313,37 @@ never had all three until now:
    never "voilà pour aujourd'hui" — viewers can smell an outro coming and
    leave before it. The strongest close is a fact, a precedent, or one sharp
    sentence of assessment that reframes what came before.
-2. **The send, spoken, naming who.** "Envoie ça à ton pote qui colle ses
-   symptômes dans ChatGPT" beats "partage cette vidéo", every time. Sends are
-   the escalation signal that reaches non-followers, and the gate now refuses
-   a last beat that does not name a recipient. Rotate the three send motives
-   across days: gagner un débat ("Envoie ça à celui qui dit que l'IA
-   plafonne"), être le premier du groupe ("Envoie ça dans le groupe avant que
-   tout le monde en parle"), rendre service ("Préviens un ami qui utilise
-   Claude").
-3. **The follow, on the end-card, never spoken.** The engine appends a
-   3-second brand card after the last word: "Une actu IA par jour." +
-   "Abonne-toi pour la suivante". The serial promise is the follow's whole
-   argument — a viewer subscribes to *the next one*, not to this one — and it
-   lives on the fixed card and in the bio, so it stays true by construction.
-   Your voice never spends runtime on it.
+2. **The subscription, spoken, naming what it buys.** Changed by Hasan on
+   2026-07-31: *"le 'envoie ça à celui qui répète que…' franchement c'est pas
+   fou, c'est pas sérieux. Au lieu de ça à la fin on peut vraiment demander de
+   s'abonner pour la news de demain et de lâcher un like."*
+
+   He is right about the copy, and the honest trade-off is worth stating once:
+   a DM share is worth three to five times a like for reaching non-followers,
+   so on ranking alone the send was the stronger ask. But the send ask this
+   account actually wrote was a strawman addressed to nobody, and an ask that
+   makes a viewer wince converts worse than a weaker ask that sounds like a
+   person. At zero followers the subscription is also the thing the account
+   most needs.
+
+   So: **"Abonne-toi pour l'actu IA de demain"**, and a like if you want one.
+   The gate refuses a last beat with no follow ask, and flags one that asks
+   without naming what comes next — a viewer subscribes to *the next
+   edition*, never to the one just watched.
+3. **The end-card repeats it, larger.** The engine appends a 3-second brand
+   card after the last word: "UNE ACTU IA / PAR JOUR." across two lines of
+   wide display black, then "ABONNE-TOI POUR DEMAIN" and "ET LAISSE UN LIKE".
+   Fixed text, never per-post: the ritual close is the account's signature and
+   the promise lives on the card and in the bio, so it stays true by
+   construction.
 
 **Cadence still never appears in YOUR text** — not in the caption, not on a
 slide, not spoken. The gate enforces this in both languages. The end-card and
 the bio are the only surfaces that carry the promise, because they are the
 two surfaces that get updated if the cadence ever changes.
 
-**Never make the like the ask.** It is the weakest of the four signals.
+**The like is never the ask on its own.** It is the weakest of the four
+signals, and it rides along with the subscription rather than replacing it.
 
 ### The caption, for the same reason
 
@@ -1041,6 +1051,28 @@ render. The relevance filter catches a bronze horse sculpture answering
 "electrical substation night"; it cannot catch a photograph that is merely
 wrong, ugly or off-tone.
 
+### The type, and why it changed
+
+On 2026-07-31 Hasan asked for captions that can actually be read on a phone, a
+bigger end-card, and *"de meilleures polices, pour que ce soit professionnel
+mais en même temps de meilleure qualité visuelle, agréable à regarder."* Three
+things moved, and none of them is yours to change per post:
+
+- **The faces.** Anton is gone. It is a very condensed poster face and it read
+  as social-video default rather than as a news desk. Display type is now
+  **Archivo Black** (`oom-display`, and a wide cut `oom-display-wide` for the
+  end-card): heavier, calmer, wider. Captions are **Inter Black**
+  (`oom-caption`), drawn for screen legibility at speed and with proper French
+  diacritics, which is what a line read in motion actually needs. Both are SIL
+  OFL; the instances and the reasoning are in `brand/fonts/LICENSES.md`.
+- **The captions grew** from 86px to 104px, and the low band from 62 to 78. A
+  bigger face holds fewer characters, so the line budgets dropped with it and
+  captions now break at three words instead of four. Those numbers move
+  together; raising one alone puts type off the edge of the frame.
+- **The hook card sits on an opaque band** and steps down in size to fit two
+  lines. Before that it ran off both edges and landed on top of the receipt it
+  was sitting over.
+
 ### 5d. The Reel plan
 
 The Reel is written here, as part of the spec, and it is written as **speech**.
@@ -1130,13 +1162,51 @@ Rules, and the gate enforces the hard ones:
   executive: dark corridor, studio mic, pen, tower, tail lights. Ambiance
   about nothing — and its opener was an AI highway with malformed cars
   driving both ways, clocked as slop in half a second. The rules now:
+  - **Every picture must show something the story contains. The gate now
+    refuses one that does not, and this is the rule the account most needed.**
+    On 2026-07-31 a Reel built from a story about a model publishing malware
+    to a package registry showed, across eight beats: a blue server room, a
+    hand pressing a key, a laptop alone on a table, stacks of paper, an office
+    door ajar, and a smartphone beside a glass of water. Six of eight showed
+    nothing that was in the news. Hasan: *"pourquoi on regarde un smartphone et
+    un verre d'eau posé sur une table ? Il faut vraiment mieux choisir ce qu'on
+    montre… le contenu de la news est très bon mais la forme du reel n'est pas
+    au niveau."* The gate now compares the words of your `spec` against the
+    words of your sources and refuses a picture that shares none of them.
+
+    It was never an editorial failure so much as a structural one: receipts
+    were capped, real photographs only exist for some subjects, and everything
+    left over got filled with furniture. So the surfaces changed.
+
   - **The visual hierarchy, for every beat.** (1) The real photograph of the
-    story's subject (`photo`). (2) The receipt (`screenshot` — up to two; a
-    second receipt beats a third still). (3) A real photograph of the
-    story's concrete objects or places. (4) `veo`, only when a simple
-    concrete shot serves the story. (5) Generated stills as bridges, capped
-    at three. The opener behind the hook card is the MOST concrete thing
+    story's subject (`photo`). (2) The receipt (`screenshot` — **up to three
+    now**; a receipt always beats a still, and the old cap of two is what
+    forced the wallpaper). (3) A **`card`**: the story's own figure set large
+    on the brand ground, see below. (4) A real photograph of the story's
+    concrete objects or places. (5) `veo`, when a simple concrete shot
+    genuinely serves the story. (6) Generated stills as bridges, capped at
+    four. The opener behind the hook card is the MOST concrete thing
     available, in this order — never a metaphor.
+
+  - **When nothing real exists for a beat, that is an answer, not a problem.**
+    Do not force a `photo` the indexes cannot deliver and do not invent a mood
+    still to fill the hole: use a second receipt, or a card. A picture of a
+    desk costs the same as a picture of the story and says nothing.
+
+  - **The `card` beat.** A figure or a short phrase, printed at display size on
+    the brand's ground with one line under it, pushing in slowly. It costs
+    nothing, it is always available, and its digits are held to the evidence
+    like every other digit on the account — a card is the loudest surface here,
+    so a number on one is a number somebody quoted.
+
+    ```jsonc
+    { "script": "Sur 141 006 sessions relues, Anthropic a trouvé trois incidents.",
+      "visual": { "type": "card", "value": "141 006",
+                  "label": "sessions d'évaluation relues, trois incidents trouvés" } }
+    ```
+
+    Two per Reel at most. A card is strong because it is rare; three of them is
+    a slideshow with a voice over it.
   - **A visual metaphor is filler.** Braking traffic for "slowing AI", a
     dark corridor for "a security incident", tail lights for "waiting":
     a stranger reads these as stock wallpaper and swipes. Show the subject,

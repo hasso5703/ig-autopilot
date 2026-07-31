@@ -170,4 +170,22 @@ ENTRIES:
   Entropique pour Anthropic; turbo entend 189 avec les noms corrects. Cout:
   ~70 s de plus par build sur 20 coeurs et 1,6 Go au premier demarrage du
   conteneur. Proof: wbench 31/07.
+- 2026-07-31 · Ce qu'on MONTRE est desormais tenu par le gate, pas par le gout.
+  Une image generee ou un veo dont le `spec` ne partage aucun mot (>=5 lettres)
+  avec les sources est REFUSE: c'est ce qui a laisse passer un verre d'eau, une
+  porte entrouverte et des piles de papier sur une actu de paquet malveillant.
+  Si la regle se declenche, ne cherche pas un synonyme qui passe: le beat veut
+  une autre surface. Recus jusqu'a 3 (un recu bat toujours un still), nouveau
+  type `card` (valeur + label sur le fond de marque, 0 $, 2 max, chiffres tenus
+  par l'evidence), stills 4 max, 3 surfaces reelles min. Proof: build 31/07.
+- 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
+  corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
+  zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
+  Corrige par un surechantillonnage x4 avant zoompan, ecart-type 0,352 -> 0,086
+  px, +85 s de rendu par Reel. (2) overlay tronque y pareil: la carte du recu
+  restait figee 3-4 frames puis sautait 2 px. Derive supprimee, c'est le
+  recadrage a mi-beat qui l'anime. (3) Veo rend en 24 i/s, la timeline etait a
+  25: une frame dupliquee par seconde. Timeline a 30 i/s et conversion du clip
+  par `framerate` (melange), aussi lisse que minterpolate pour 7 s au lieu de
+  90. Proof: mesures sur mire, jitter/ 31/07.
 
