@@ -11,7 +11,7 @@
  * The spine of a post is `reel2` in the post JSON:
  *
  *   "reel2": {
- *     "voice": "Charon",
+ *     "voice": "Sadaltager",
  *     "mood": "tension",
  *     "lang": "fr",
  *     "title": "5 à 8 mots, la carte affichée frame 0",
@@ -744,8 +744,9 @@ export async function buildReel(postFile, mediaDir) {
   const forbidNames = extractForbidNames(post);
 
   /* 1 — the voice. French narration gets a French news direction — the default
-     style prompt is English and steers the accent wrong — and Charon (Google's
-     "Informative" voice) as the default register. Gemini TTS has a documented
+     style prompt is English and steers the accent wrong — and Sadaltager
+     (Google's "Lively" voice) as the default register, chosen by ear on
+     2026-07-31 over Charon's "Informative". Gemini TTS has a documented
      quality cliff past ~60 seconds of output and a ~1-in-10 accent/pacing
      drift; RAW_MAX_S keeps us under the cliff, and a failed word-count
      alignment downstream is the cue to regenerate once before debugging.
@@ -792,7 +793,12 @@ export async function buildReel(postFile, mediaDir) {
      is the cheapest thing in the pipeline; only after three bad rolls is it the
      copy's fault. */
   const scriptWords = narration.split(/\s+/).filter(Boolean);
-  const voiceName = plan.voice || (lang === "fr" ? "Charon" : "Fenrir");
+    /* Sadaltager since 2026-07-31, Hasan's ear: "je veux la voix F à partir de
+     maintenant". Measured that day on the same 188-word script, it reads at
+     3.49 words a second against Charon's 3.44 median — close enough that the
+     word window barely moves, but the ledger is filtered by voice anyway so a
+     future change to a slower one cannot quietly mis-size three Reels. */
+  const voiceName = plan.voice || (lang === "fr" ? "Sadaltager" : "Fenrir");
   const rawWav = path.join(mediaDir, "voice2_raw.wav");
   let voice = null, tempo = 0, rate = 0;
   for (let attempt = 1; attempt <= TTS_TRIES; attempt++) {

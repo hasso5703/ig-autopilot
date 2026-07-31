@@ -84,10 +84,18 @@ const numbers = (s) =>
  * readings, not all of them: a voice or direction change should take effect in
  * days, not be averaged away by history.
  */
-function measuredRate() {
+function measuredRate(voice) {
   try {
-    const lines = readFileSync(path.join(ROOT, "state", "voice-rate.jsonl"), "utf8").split("\n").filter(Boolean);
-    return medianRate(lines.slice(-12).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean));
+    const all = readFileSync(path.join(ROOT, "state", "voice-rate.jsonl"), "utf8")
+      .split("\n").filter(Boolean)
+      .map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+    // Readings from the voice this post actually uses, when there are enough of
+    // them. Voices differ by up to 18% in pace — measured across six on
+    // 2026-07-31 — so a ledger full of the previous voice would size the next
+    // three Reels wrong, which is exactly the window's job to prevent.
+    const mine = all.filter((r) => !voice || r.voice === voice);
+    const sample = mine.length >= 3 ? mine : all;
+    return medianRate(sample.slice(-12));
   } catch { return DEFAULT_RATE; }
 }
 
@@ -1049,7 +1057,7 @@ export async function validatePost(post, opts = {}) {
      * time-stretches whatever residue is left, so a script inside the window
      * always yields exactly a 60-second file and a script outside it is a Reel
      * that would have to be rescued audibly. */
-    const win = wordWindow(measuredRate());
+    const win = wordWindow(measuredRate(post.reel2?.voice));
     if (words > win.max)
       err(`reel2: ${words} words of narration — over the ${win.max}-word ceiling for the ${TARGET_S}-second format (target ${win.target} at the voice's measured ${win.rate.toFixed(2)} words/second). Cut the longest beats first.`);
     if (beats.length && words < win.min)

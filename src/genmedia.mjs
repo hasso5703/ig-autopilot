@@ -99,8 +99,8 @@ export const IMAGE_MODEL_TEXT = "gemini-3-pro-image";
  * rewritten French direction:
  *
  *   2.5-flash  Charon      55.9s   3.36 w/s   in window
- *   3.1-flash  Charon      57.7s   3.26 w/s   in window   <- chosen
- *   3.1-flash  Sadaltager  53.9s   3.49 w/s   in window
+ *   3.1-flash  Charon      57.7s   3.26 w/s   in window
+ *   3.1-flash  Sadaltager  53.9s   3.49 w/s   in window   <- chosen 31/07, Hasan's ear
  *   3.1-flash  Puck        61.9s   3.04 w/s   in window
  *   3.1-flash  Rasalgethi  63.3s   2.97 w/s   OUT
  *   2.5-pro    Charon      66.2s   2.84 w/s   OUT

@@ -1083,7 +1083,7 @@ everything else from it.
 
 ```jsonc
 "reel2": {
-  "voice": "Charon",
+  "voice": "Sadaltager",
   "mood": "tension",
   "lang": "fr",
   "title": "Vos chats Claude étaient sur Google",
@@ -1119,6 +1119,14 @@ Rules, and the gate enforces the hard ones:
   picture are three layers of one hook: the card states the claim, the voice
   opens the story, the picture sets the scene. Do not make them say the same
   words.
+- **The voice is `Sadaltager` and it is not a per-post choice.** Hasan picked
+  it by ear on 2026-07-31 from six read side by side on the same script. Leave
+  `voice` out of the plan unless you have a reason you can defend in the report:
+  the six differed by up to 18% in reading pace, which is the whole width of the
+  word window, so a change means the gate sizes the next three scripts against a
+  voice that is no longer speaking. The window is filtered by voice for exactly
+  that reason, and it needs three builds of the new one before it means anything.
+
 - **`lang` is "fr".** It drives the narration alignment; "en" exists for
   fixtures and nothing else now.
 - **7 to 10 beats, and the word window the gate prints** — about 195 French
@@ -1391,7 +1399,7 @@ node src/reel2.mjs posts/<slug>.json media/<slug>
 ```
 
 What it does, and what it prints while doing it: buys the narration (French
-direction and the Charon voice by default; the words are your scripts,
+direction and the Sadaltager voice by default; the words are your scripts,
 verbatim), aligns it with Whisper so every word has a clock (first run on a
 fresh container bootstraps a venv, about two minutes; French uses the larger
 multilingual model), buys the one Veo clip and the stills it was told to buy
