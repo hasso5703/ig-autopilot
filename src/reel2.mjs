@@ -726,6 +726,18 @@ export function extractForbidNames(post) {
     .slice(0, 40);
 }
 
+/**
+ * The French news direction, at module level so a calibration run can buy a
+ * reading with exactly the text the engine ships. It used to be a local inside
+ * the build, which meant any tool measuring the voice was measuring a copy.
+ */
+export const FR_DIRECTION = [
+    "Profil: presentateur francais de flash info technologique, voix masculine posee, sure d'elle, jamais souriante.",
+    "Scene: studio radio, micro proche, aucune reverberation, aucun bruit de fond.",
+    "Notes du realisateur: DEBIT RAPIDE de flash info, environ 200 mots par minute, jamais lent, jamais solennel. Accent francais de France standard. Attaque la toute premiere phrase net et pleine puissance, sans respiration prealable et sans montee progressive, comme si le sujet etait deja commence. Descends legerement le ton en fin de phrase au lieu de le monter. Respire seulement entre les paragraphes, et brievement. Appuie tres legerement les chiffres et les noms propres, rien d'autre. Aucune emphase theatrale, aucun enthousiasme publicitaire, aucun sourire dans la voix.",
+    "Lis maintenant ce texte exactement tel qu'il est ecrit, sans rien ajouter:",
+  ].join("\n");
+
 /* --------------------------------- main ---------------------------------- */
 
 export async function buildReel(postFile, mediaDir) {
@@ -770,12 +782,7 @@ export async function buildReel(postFile, mediaDir) {
      matters is that removing it costs 15%. Change this text and you have
      changed the reading rate: `state/voice-rate.jsonl` re-learns it over three
      builds, and those three builds are the risk. */
-  const frStyle = [
-    "Profil: presentateur francais de flash info technologique, voix masculine posee, sure d'elle, jamais souriante.",
-    "Scene: studio radio, micro proche, aucune reverberation, aucun bruit de fond.",
-    "Notes du realisateur: DEBIT RAPIDE de flash info, environ 200 mots par minute, jamais lent, jamais solennel. Accent francais de France standard. Attaque la toute premiere phrase net et pleine puissance, sans respiration prealable et sans montee progressive, comme si le sujet etait deja commence. Descends legerement le ton en fin de phrase au lieu de le monter. Respire seulement entre les paragraphes, et brievement. Appuie tres legerement les chiffres et les noms propres, rien d'autre. Aucune emphase theatrale, aucun enthousiasme publicitaire, aucun sourire dans la voix.",
-    "Lis maintenant ce texte exactement tel qu'il est ecrit, sans rien ajouter:",
-  ].join("\n");
+  const frStyle = FR_DIRECTION;
   /* 1b — the 60-second contract, applied to the only thing that varies.
      Every reading is recorded raw, before any correction, because that ledger
      is what the gate's word window is derived from: correct first and the

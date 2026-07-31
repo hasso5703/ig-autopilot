@@ -188,4 +188,14 @@ ENTRIES:
   25: une frame dupliquee par seconde. Timeline a 30 i/s et conversion du clip
   par `framerate` (melange), aussi lisse que minterpolate pour 7 s au lieu de
   90. Proof: mesures sur mire, jitter/ 31/07.
+- 2026-07-31 · Changer de voix EXIGE de la recalibrer, et une seule lecture ne
+  suffit pas. Sadaltager mesuree une fois en A/B: 3,49 mots/s. Mesuree trois
+  fois avec `node src/calibrate-voice.mjs posts/<slug>.json 3` (~$0,09, les
+  narrations sont jetees, seul le debit est garde): 3,22 / 3,34 / 3,44, mediane
+  3,34. Soit 5% d'ecart avec l'anecdote, et la borne haute de l'ancienne
+  fenetre (210 mots) aurait donne une lecture de 65 s, au-dessus du plafond
+  moteur: build refuse APRES paiement. Le gate filtre le registre par voix et
+  retombe sur DEFAULT_RATE tant qu'il n'a pas 3 lectures de la voix courante.
+  Donc: apres tout changement de voix ou de direction, lance la calibration
+  avant le premier run. Proof: calibrate-voice 31/07.
 

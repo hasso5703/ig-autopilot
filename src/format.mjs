@@ -59,20 +59,20 @@ export const BEATS_MIN = 7, BEATS_MAX = 10;
  * show something that exists (a credited photograph, a receipt, a Veo shot). */
 export const STILLS_MAX = 4, REAL_MIN = 3;
 
-/** The account's default speaking rate in French words per second, used until
- * `state/voice-rate.jsonl` holds enough real readings to speak for itself.
- * The MEDIAN of three readings of the same 188-word script on 2026-07-31, with
- * the voice and direction the engine ships (Gemini 3.1 Flash TTS, Charon, the
- * French news direction): 3.26, 3.51 and 3.70 words a second.
+/** The account's default speaking rate in French words per second, used only
+ * until `state/voice-rate.jsonl` holds three readings of the voice actually
+ * configured.
  *
- * Taking the median rather than the first reading is the whole point, and it
- * was nearly got wrong: calibrating on 3.26 targets 181 words, and a 181-word
- * script read at 3.70 needs a stretch of 0.88, outside the silent range, so
- * roughly one build in three would have re-rolled its narration for nothing.
- * Centred on 3.51, the entire observed spread lands inside the range and the
- * re-roll stays what it is meant to be: an exception. This only governs the
- * first three builds; after that the ledger speaks for itself. */
-export const DEFAULT_RATE = 3.51;
+ * 3.34 is Sadaltager's measured median, bought on 2026-07-31 with
+ * `src/calibrate-voice.mjs` right after Hasan chose that voice: 3.22, 3.34,
+ * 3.44 on the day's real 194-word script. The number it replaced was 3.51,
+ * Charon's median, and a single A/B reading of Sadaltager had suggested 3.49 —
+ * both wrong by about 5%, because one reading of a stochastic voice is an
+ * anecdote. At 3.51 the window's upper bound was 210 words, which this voice
+ * would read in 65 seconds: past the engine's raw ceiling, so a script written
+ * to the top of its own allowance would have been refused after being paid
+ * for. Measure the voice before trusting a window derived from it. */
+export const DEFAULT_RATE = 3.34;
 export const RATE_SAMPLES_MIN = 3;
 
 /** Rate readings are noisy, so the window is derived from the median of the

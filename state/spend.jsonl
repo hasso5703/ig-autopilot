@@ -58,3 +58,6 @@
 {"at":"2026-07-31T13:22:28.630Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1267}
 {"at":"2026-07-31T13:23:26.794Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1265}
 {"at":"2026-07-31T13:23:52.937Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1292}
+{"at":"2026-07-31T13:44:58.214Z","slug":"calibration-Sadaltager","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"60.3s Sadaltager","usd":0.0301}
+{"at":"2026-07-31T13:45:33.034Z","slug":"calibration-Sadaltager","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"58.2s Sadaltager","usd":0.0291}
+{"at":"2026-07-31T13:46:08.757Z","slug":"calibration-Sadaltager","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"56.4s Sadaltager","usd":0.0282}
