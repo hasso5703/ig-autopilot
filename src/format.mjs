@@ -99,21 +99,33 @@ export function beatSeconds(wordsPerBeat) {
   return wordsPerBeat.map((w) => (w / total) * SPEECH_S);
 }
 
-/** The account's default speaking rate in French words per second, used only
- * until `state/voice-rate.jsonl` holds three readings of the voice actually
+/**
+ * The account's default speaking rate in French words per second, used only
+ * until `state/voice-rate.jsonl` holds enough readings of the voice actually
  * configured.
  *
- * 3.34 is Sadaltager's measured median, bought on 2026-07-31 with
- * `src/calibrate-voice.mjs` right after Hasan chose that voice: 3.22, 3.34,
- * 3.44 on the day's real 194-word script. The number it replaced was 3.51,
- * Charon's median, and a single A/B reading of Sadaltager had suggested 3.49 —
- * both wrong by about 5%, because one reading of a stochastic voice is an
- * anecdote. At 3.51 the window's upper bound was 210 words, which this voice
- * would read in 65 seconds: past the engine's raw ceiling, so a script written
- * to the top of its own allowance would have been refused after being paid
- * for. Measure the voice before trusting a window derived from it. */
-export const DEFAULT_RATE = 3.34;
-export const RATE_SAMPLES_MIN = 3;
+ * 3.63 is the median of every Sadaltager reading this account has bought — all
+ * 14 of them, spanning 3.22 to 4.16.
+ *
+ * It was 3.34 for one afternoon, and that number cost the 2026-07-31 publish run
+ * six refused narrations out of eleven. 3.34 was honestly measured, with
+ * `calibrate-voice.mjs`, from three readings — but all three were of ONE script,
+ * the day's PyPI story. The evening's turbines script, same voice, same
+ * direction, same model, read at a median of 3.77: **the same voice reads
+ * different copy about 13% apart**, which is wider than the whole word window.
+ *
+ * The arithmetic of what that does: at 188 words the engine needs a raw reading
+ * of at least 50.0s to stay inside the stretch band, which is a ceiling of 3.76
+ * words a second — and the median reading that night was 3.77. Half of every
+ * reading bought was refused before it was played, because the script had been
+ * sized 10% short by a rate measured on other words.
+ *
+ * So: calibrate on more than one script, and treat any rate derived from a
+ * single one as provisional. `RATE_SAMPLES_MIN` is 4 rather than 3 for the same
+ * reason — three is exactly what one calibration run produces, and one script's
+ * three readings should never be enough to size every script that follows. */
+export const DEFAULT_RATE = 3.63;
+export const RATE_SAMPLES_MIN = 4;
 
 /** Rate readings are noisy, so the window is derived from the median of the
  * recent ones rather than the last one. */

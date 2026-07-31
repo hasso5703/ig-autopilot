@@ -1,2 +1,0 @@
-file '/home/user/ig-autopilot/media/2026-07-31-xai-turbines-memphis/seg2_5_a.mp4'
-file '/home/user/ig-autopilot/media/2026-07-31-xai-turbines-memphis/seg2_5_b.mp4'

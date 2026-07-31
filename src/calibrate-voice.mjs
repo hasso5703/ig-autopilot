@@ -4,6 +4,14 @@
  *
  *   node src/calibrate-voice.mjs posts/<slug>.json [howMany]
  *
+ * **Calibrate on more than one script.** This is the lesson of 2026-07-31 and it
+ * cost a run six refused narrations. Three readings of one post reached the
+ * ledger's floor and set the window for every post that followed — and the same
+ * voice, direction and model read a different script 13% faster, which is wider
+ * than the whole word window. Run this against two or three different posts, or
+ * simply let real builds fill the ledger; the floor is four readings now
+ * precisely because one calibration produces exactly three.
+ *
  * Why this exists. The gate derives the word window from the median reading
  * rate in `state/voice-rate.jsonl`, filtered to the voice actually configured.
  * That ledger is filled by real builds, which is the right way round — but it

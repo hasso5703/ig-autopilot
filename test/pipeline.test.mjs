@@ -924,12 +924,38 @@ test("the word window is arithmetic on the voice's own measured rate", async () 
   assert.ok(fast.target > slow.target, "a faster voice buys a longer script");
   assert.ok(slow.min < slow.target && slow.target < slow.max);
 
-  // Under three readings the ledger does not speak; it must not half-speak.
-  assert.equal(medianRate([{ words: 180, seconds: 50 }, { words: 180, seconds: 60 }]), DEFAULT_RATE);
-  assert.equal(medianRate([{ words: 180, seconds: 60 }, { words: 180, seconds: 60 }, { words: 180, seconds: 60 }]), 3);
-  // Junk lines are ignored rather than averaged in.
-  assert.equal(medianRate([{ words: 0, seconds: 60 }, { words: 180, seconds: 0 }, { words: 180, seconds: 60 },
-    { words: 180, seconds: 60 }, { words: 180, seconds: 60 }]), 3);
+  /*
+   * The floor is four readings, not three, and three is exactly why.
+   *
+   * On 2026-07-31 `calibrate-voice.mjs` bought three readings of Sadaltager and
+   * the ledger reached its old floor of three on the strength of them. All three
+   * were of ONE script — that day's PyPI story — and gave a median of 3.34. The
+   * evening's turbines script, same voice, same direction, same model, read at a
+   * median of 3.77: the same voice reads different copy about 13% apart, wider
+   * than the whole word window.
+   *
+   * The publish run then wrote 188 words to a window centred on 3.34. At 188
+   * words the engine needs 50.0s of raw audio to stay inside the stretch band,
+   * a ceiling of 3.76 words a second — and the night's median reading was 3.77.
+   * Six of its eleven narrations were refused before they were ever played.
+   *
+   * One calibration run produces exactly three readings of exactly one script,
+   * so three could never be enough to size every script that follows.
+   */
+  assert.equal(medianRate([{ words: 180, seconds: 50 }, { words: 180, seconds: 60 }]), DEFAULT_RATE, "two readings do not speak");
+  assert.equal(medianRate([{ words: 180, seconds: 60 }, { words: 180, seconds: 60 }, { words: 180, seconds: 60 }]), DEFAULT_RATE,
+    "and neither do the three a single calibration produces");
+  assert.equal(medianRate(Array.from({ length: 4 }, () => ({ words: 180, seconds: 60 }))), 3, "four is the floor");
+
+  // Junk lines are ignored rather than averaged in — and they do not count
+  // towards the floor either.
+  assert.equal(medianRate([{ words: 0, seconds: 60 }, { words: 180, seconds: 0 }, ...Array.from({ length: 4 }, () => ({ words: 180, seconds: 60 }))]), 3);
+  assert.equal(medianRate([{ words: 0, seconds: 60 }, { words: 180, seconds: 0 }, ...Array.from({ length: 3 }, () => ({ words: 180, seconds: 60 }))]), DEFAULT_RATE,
+    "three good readings plus two junk ones is still three good readings");
+
+  // The default is measured, not chosen: the median of every Sadaltager reading
+  // this account has bought. A wrong default is what a fresh ledger inherits.
+  assert.ok(DEFAULT_RATE > 3.5 && DEFAULT_RATE < 3.8, `DEFAULT_RATE ${DEFAULT_RATE} should sit inside the measured 3.22-4.16 spread, near its middle`);
 });
 
 test("reel2: the hook card is required and held to headline rules", async () => {
@@ -1522,6 +1548,39 @@ test("a word split by inline markup is still the word the source printed", async
   assert.match(flatten("<p>Une phrase.</p><p>Une autre.</p>"), /une phrase\. une autre\./, "block elements still separate");
   assert.match(flatten("<li>un</li><li>deux</li>"), /un deux/, "so do list items");
   assert.match(flatten("ligne un<br>ligne deux"), /ligne un ligne deux/, "and line breaks");
+});
+
+/* The 31 July publish run built its Reel five times: Chromium died mid-
+   screenshot, a photograph turned out to be a derelict building, and a broken
+   video player on a receipt took two more attempts to remove. The script stopped
+   changing after the second build. Each rebuild bought two or three fresh
+   narrations anyway — eleven in all, six refused for tempo — and ran Whisper
+   over every one. Most of the run's narration spend, and minutes of its wall
+   clock, went on hearing the same words again because a picture was wrong.
+
+   The reading is now keyed on everything that decides how it sounds. Verified
+   end to end: a fully-pinned build with GEMINI_API_KEY unset completes and
+   prints COMPLIANT 60.0s off the cached reading, and the same build with one
+   word changed in one beat stops on the missing key instead of reusing it. */
+test("a narration is reused only for the exact words it says", async () => {
+  const { voiceCacheKey } = await import("../src/reel2.mjs");
+  const narration = "Première phrase du script.\n\nDeuxième phrase.";
+  const base = { narration, voice: "Sadaltager", lang: "fr", style: "DEBIT RAPIDE" };
+  const key = voiceCacheKey(base);
+
+  assert.equal(voiceCacheKey({ ...base }), key, "the same input is the same reading");
+  for (const [why, change] of [
+    ["a word changed", { narration: narration.replace("Deuxième", "Troisième") }],
+    ["an accent dropped", { narration: narration.replace("Première", "Premiere") }],
+    ["a comma added", { narration: narration.replace("script.", "script,") }],
+    ["trailing whitespace", { narration: `${narration} ` }],
+    ["another voice", { voice: "Charon" }],
+    ["another language", { lang: "en" }],
+    ["a different direction", { style: "DEBIT RAPIDE " }],
+  ]) {
+    assert.notEqual(voiceCacheKey({ ...base, ...change }), key, `${why} must buy a new reading, never reuse the old one`);
+  }
+  assert.match(key, /^[0-9a-f]{16}$/);
 });
 
 /* 2026-07-31, both runs, independently: each wrote its entire first draft —

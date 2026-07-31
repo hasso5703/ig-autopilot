@@ -1116,14 +1116,27 @@ Rules, and the gate enforces the hard ones:
   the six differed by up to 18% in reading pace, which is the whole width of the
   word window, so a change means the gate sizes the next three scripts against a
   voice that is no longer speaking. The window is filtered by voice for exactly
-  that reason, and it needs three readings of the new one before it means
-  anything. **So calibrate before the next run rather than after:**
+  that reason, and it needs four readings of the new one before it means
+  anything. **So calibrate before the next run rather than after, and calibrate
+  on more than one script:**
   `node src/calibrate-voice.mjs posts/<slug>.json 3` buys three readings for
-  about nine cents, throws the audio away and writes the rates to the ledger.
-  One reading is not a measurement — Sadaltager read at 3.49 words a second in
-  a single A/B and at 3.22, 3.34, 3.44 when it was actually measured, and the
-  window built on the anecdote had an upper bound this voice would have read in
-  65 seconds: past the engine's ceiling, refused after being paid for.
+  about nine cents, throws the audio away and writes the rates to the ledger —
+  run it against two different posts, or let real builds finish the job.
+
+  **One script is not a measurement either, and that is the expensive half of
+  this lesson.** On 2026-07-31 three honest readings of the day's PyPI story
+  gave 3.34 words a second and set the window. That evening the same voice, same
+  direction, same model read the turbines script at a median of 3.77 — the same
+  voice reads different copy about 13% apart, which is wider than the whole word
+  window. The script was written to a window centred 10% short, and **six of the
+  run's eleven narrations were refused before they were ever played**: at 188
+  words the stretch band needs a reading of at least 50 seconds, a ceiling of
+  3.76 words a second, and the night's median reading was 3.77. Exactly half the
+  distribution was on the wrong side of it.
+
+  So the ledger's floor is four readings, not the three a single calibration
+  produces, and a rate derived from one script is provisional until real builds
+  have widened it.
 
 - **`lang` is "fr".** It drives the narration alignment; "en" exists for
   fixtures and nothing else now.
@@ -1281,6 +1294,15 @@ Rules, and the gate enforces the hard ones:
   accent and the music in one place — pick it once, from what the story does.
 - **`file` reuses** an asset already on disk (a re-render after a copy fix must
   reuse pictures, not re-buy them: pass `"file"` with the existing path).
+- **The narration reuses itself, but only inside the same build directory.**
+  The engine stores the reading beside a fingerprint of the exact narration,
+  voice, language and direction, so a rebuild triggered by a picture — a dead
+  browser, a wrong photograph, a receipt that needs different CSS — costs no
+  narration and no Whisper pass. Change one word in one script and the
+  fingerprint changes and it buys a fresh reading, which is the point: there is
+  no stale audio to reason about. **So rebuild into the same `media/<slug>`
+  directory and do not empty it between attempts.** On 2026-07-31 five builds
+  bought eleven readings of a script that stopped changing after the second one.
 
 ### 6. Gate
 ```bash

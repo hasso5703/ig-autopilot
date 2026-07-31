@@ -36,8 +36,9 @@
  * wrote.
  */
 
-import { readFile, writeFile, appendFile, mkdir, access } from "node:fs/promises";
+import { readFile, writeFile, appendFile, mkdir, access, rm } from "node:fs/promises";
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import path from "node:path";
@@ -49,7 +50,7 @@ import { loadPlaywright, chromiumExecutable } from "./browser.mjs";
 import { acquireOne, creditLine } from "./imagery.mjs";
 import {
   TARGET_S, END_S, TAIL_S, SPEECH_S, TEMPO_MIN, TEMPO_MAX, RAW_MAX_S,
-  BEATS_MIN, BEATS_MAX, TTS_TRIES, VEO_STRETCH_MAX, medianRate, wordWindow,
+  BEATS_MIN, BEATS_MAX, TTS_TRIES, VEO_STRETCH_MAX, DEFAULT_RATE, medianRate, wordWindow,
 } from "./format.mjs";
 
 const run = promisify(execFile);
@@ -611,6 +612,20 @@ export function panFilter(dur, variant = 0) {
   );
 }
 
+/**
+ * What a bought narration is keyed on: everything that decides how it sounds.
+ *
+ * Exported so the rule is tested against the real function and not a copy of it
+ * in the test file — the same reason `latestBy` is exported from state.mjs. The
+ * failure this guards against is silent and public: a reading reused for a
+ * script it does not say. So the key is the whole input, not a summary of it,
+ * and any edit anywhere in any beat produces a different key and a cache that is
+ * simply absent.
+ */
+export function voiceCacheKey({ narration, voice, lang, style = "" }) {
+  return createHash("sha256").update(JSON.stringify([narration, voice, lang, style])).digest("hex").slice(0, 16);
+}
+
 /** Every segment is encoded identically so the concat demuxer's `-c copy` stays
  * valid — the same reason the end-card is encoded rather than generated inline. */
 const ENC = ["-r", String(FPS), "-c:v", "libx264", "-preset", "fast", "-crf", "18"];
@@ -1002,7 +1017,43 @@ export async function buildReel(postFile, mediaDir) {
   const voiceName = plan.voice || (lang === "fr" ? "Sadaltager" : "Fenrir");
   const rawWav = path.join(mediaDir, "voice2_raw.wav");
   let voice = null, tempo = 0, rate = 0;
-  for (let attempt = 1; attempt <= TTS_TRIES; attempt++) {
+
+  /*
+   * A narration already bought for exactly this text is not bought again.
+   *
+   * On 2026-07-31 the day's Reel was built five times: once because Chromium
+   * died mid-screenshot, once because a photograph turned out to be a derelict
+   * building, twice more to get a broken video player off a receipt. The script
+   * stopped changing after the second build. Each rebuild bought two or three
+   * fresh readings anyway — eleven in all, six of them refused for tempo — and
+   * ran Whisper over each one. That is most of the run's narration spend and
+   * several minutes of its wall clock, paid to hear the same words again
+   * because a picture was wrong.
+   *
+   * The key is everything that decides the audio: the narration text, the voice,
+   * the language, the direction. A photo, a prompt or a screenshot's CSS
+   * changing leaves the reading valid. Any edit to any script changes the key
+   * and the cache is simply absent — there is no staleness to reason about,
+   * which is the point of hashing the input rather than trusting a timestamp.
+   */
+  const voiceKey = voiceCacheKey({ narration, voice: voiceName, lang, style: lang === "fr" ? frStyle : "" });
+  const voiceKeyFile = path.join(mediaDir, "voice2_raw.key");
+  if ((await readFile(voiceKeyFile, "utf8").catch(() => "")).trim() === voiceKey) {
+    const probed = await ffprobe(rawWav).then((p) => Number(p.format.duration)).catch(() => 0);
+    const t = probed / SPEECH_S;
+    if (probed > 0 && t >= TEMPO_MIN && t <= TEMPO_MAX && probed <= RAW_MAX_S) {
+      voice = { file: rawWav, seconds: probed, usd: 0 };
+      tempo = t;
+      rate = scriptWords.length / probed;
+      console.log(
+        `voice: reusing the reading already bought for this exact script — ${probed.toFixed(1)}s ` +
+          `(${rate.toFixed(2)} w/s), atempo ${tempo.toFixed(3)}. No purchase.`
+      );
+      await journal(`narration reused for an unchanged script (${probed.toFixed(1)}s, atempo ${tempo.toFixed(3)}) — no spend`);
+    }
+  }
+
+  for (let attempt = 1; voice === null && attempt <= TTS_TRIES; attempt++) {
     const got = await tts({
       text: narration,
       voice: voiceName,
@@ -1034,7 +1085,7 @@ export async function buildReel(postFile, mediaDir) {
     voice = got;
     tempo = Math.min(TEMPO_MAX, Math.max(TEMPO_MIN, t));
     rate = r;
-    const want = Math.round(SPEECH_S * (r || 3.26));
+    const want = Math.round(SPEECH_S * (r || DEFAULT_RATE));
     console.log(
       `  ${TTS_TRIES} readings all outside the range. Keeping the last one and clamping the stretch to ${tempo.toFixed(3)}: ` +
         `the file will be about ${(got.seconds / tempo + TAIL_S + END_S).toFixed(1)}s instead of ${TARGET_S}. ` +
@@ -1042,6 +1093,14 @@ export async function buildReel(postFile, mediaDir) {
     );
     await journal(`narration out of range on ${TTS_TRIES} readings, clamped to ${tempo.toFixed(3)} — file will not be exactly ${TARGET_S}s`);
   }
+  /* Stamp the reading with what produced it, so a rebuild for a picture does
+     not pay to hear the same words again. Written only once the reading is the
+     one being used, and only when it is inside the stretch range — a clamped
+     reading is a compromise this build settled for, never a thing to hand to
+     the next one. */
+  if (tempo >= TEMPO_MIN && tempo <= TEMPO_MAX) await writeFile(voiceKeyFile, voiceKey);
+  else await rm(voiceKeyFile, { force: true }).catch(() => {});
+
   const timedWav = path.join(mediaDir, "voice2.wav");
   await ffmpeg(["-y", "-i", rawWav, "-filter:a", `atempo=${tempo.toFixed(6)}`, "-ar", "48000", timedWav]);
   await journal(`voice ${scriptWords.length} words ${voice.seconds.toFixed(1)}s raw (${rate.toFixed(2)} w/s), atempo ${tempo.toFixed(3)} → ${SPEECH_S}s`);

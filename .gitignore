@@ -47,3 +47,4 @@ media/*/align.py
 # The photo credit lines are written for ffmpeg's drawtext and burned into the
 # segment; three of them reached the repo before this line existed.
 media/*/seg2_*.credit.txt
+media/*/seg2_*_parts.txt
