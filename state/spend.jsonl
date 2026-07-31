@@ -45,3 +45,8 @@
 {"at":"2026-07-31T12:59:14.195Z","slug":"2026-07-31-claude-pypi-malware","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"56.6s Charon","usd":0.0283}
 {"at":"2026-07-31T13:01:21.621Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1258}
 {"at":"2026-07-31T13:03:20.671Z","slug":"2026-07-31-claude-pypi-malware","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-07-31T13:08:55.894Z","slug":"2026-07-31-claude-pypi-malware","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"58.6s Charon","usd":0.0293}
+{"at":"2026-07-31T13:10:19.391Z","slug":"2026-07-31-claude-pypi-malware","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"59.9s Charon","usd":0.0299}
+{"at":"2026-07-31T13:12:15.248Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.129}
+{"at":"2026-07-31T13:13:19.974Z","slug":"2026-07-31-claude-pypi-malware","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1291}
+{"at":"2026-07-31T13:16:01.965Z","slug":"2026-07-31-claude-pypi-malware","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"56.6s Charon","usd":0.0283}
