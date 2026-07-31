@@ -155,9 +155,9 @@
       {
         "script": "SpaceX, qui a racheté xAI en février, annonce le retrait des 69 turbines à gaz sans permis qui alimentent Colossus, ses centres de données près de Memphis.",
         "visual": {
-          "type": "photo",
-          "query": "gas turbine power station",
-          "alt": "Une centrale électrique au gaz"
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+          "file": "media/2026-07-31-xai-turbines-memphis/shot_2.png"
         }
       },
       {
@@ -171,8 +171,12 @@
       {
         "script": "SpaceX affirme avoir le droit de les faire tourner sans permis, parce qu'elles sont restées sur leurs remorques de livraison. La réglementation fédérale dit l'inverse.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/"
+          "type": "image",
+          "spec": {
+            "subject": "a single portable gas turbine unit still sitting on the shipping trailer it arrived on",
+            "setting": "on a cleared industrial lot in bright daylight",
+            "composition": "medium shot"
+          }
         }
       },
       {
@@ -210,9 +214,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a single portable gas turbine unit sitting on a shipping trailer",
-            "setting": "on a cleared industrial lot in bright daylight",
-            "composition": "medium shot"
+            "subject": "a natural gas power plant with tall exhaust stacks",
+            "setting": "under a bright open sky in daylight",
+            "composition": "wide shot"
           }
         }
       }
