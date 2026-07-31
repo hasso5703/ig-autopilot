@@ -23,7 +23,7 @@ import path from "node:path";
 import { tokens } from "./state.mjs";
 import { simplicityIssues } from "./promptcraft.mjs";
 import {
-  BEATS_MIN, BEATS_MAX, STILLS_MAX, REAL_MIN, DEFAULT_RATE, BEAT_MIN_WORDS,
+  BEATS_MIN, BEATS_MAX, STILLS_MAX, REAL_MIN, DEFAULT_RATE, BEAT_MIN_WORDS, RATE_SAMPLES_MIN,
   VEO_MAX_S, VEO_STRETCH_MAX, beatSeconds, medianRate, wordWindow, TARGET_S,
 } from "./format.mjs";
 
@@ -157,19 +157,28 @@ const numbers = (s) =>
  * readings, not all of them: a voice or direction change should take effect in
  * days, not be averaged away by history.
  */
-function measuredRate(voice) {
+/** The readings the window is built from: this voice's when there are enough of
+ * them, the whole ledger otherwise. Voices differ by up to 18% in pace —
+ * measured across six on 2026-07-31 — so a ledger full of the previous voice
+ * would size the next Reels wrong, which is exactly the window's job to prevent.
+ *
+ * The floor is `RATE_SAMPLES_MIN`, read from format.mjs rather than written here.
+ * It was a hardcoded 3 in this function while format.mjs said 3 as well, and the
+ * two agreed by luck until the floor moved to 4 — at which point the gate would
+ * have sized scripts from a sample its own module considers too small. */
+export function voiceSamples(voice) {
   try {
     const all = readFileSync(path.join(ROOT, "state", "voice-rate.jsonl"), "utf8")
       .split("\n").filter(Boolean)
       .map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
-    // Readings from the voice this post actually uses, when there are enough of
-    // them. Voices differ by up to 18% in pace — measured across six on
-    // 2026-07-31 — so a ledger full of the previous voice would size the next
-    // three Reels wrong, which is exactly the window's job to prevent.
     const mine = all.filter((r) => !voice || r.voice === voice);
-    const sample = mine.length >= 3 ? mine : all;
-    return medianRate(sample.slice(-12));
-  } catch { return DEFAULT_RATE; }
+    return (mine.length >= RATE_SAMPLES_MIN ? mine : all).slice(-12);
+  } catch { return []; }
+}
+
+function measuredRate(voice) {
+  const sample = voiceSamples(voice);
+  return sample.length ? medianRate(sample) : DEFAULT_RATE;
 }
 
 /**
@@ -1443,7 +1452,42 @@ export async function validatePost(post, opts = {}) {
 
 if (process.argv[1] && process.argv[1].endsWith("validate.mjs")) {
   const file = process.argv[2];
-  if (!file) { console.error("usage: node src/validate.mjs <post.json> [--offline] [--allow-unverifiable]"); process.exit(2); }
+
+  /*
+   * `window` exists so nobody has to compute it.
+   *
+   * The manual says in bold, twice, not to carry the word count in your head and
+   * not to derive it. On 2026-07-31 the 16:30 run read that sentence and then
+   * wrote its own snippet to print the window anyway — filtered the voice ledger
+   * on a field name that does not exist, got zero samples, silently fell back to
+   * the default rate, and trimmed a script that had gated green from 199 words
+   * to 189. The real floor was 194. The gate caught it on the next run; had it
+   * not, tomorrow's publish run would have burned a narration on a script the
+   * engine refuses.
+   *
+   * The instruction was right and the run still went around it, so the answer is
+   * not a louder instruction. It is one command, shorter to type than the
+   * snippet, that reads the same ledger the gate reads.
+   */
+  if (file === "window") {
+    const voice = process.argv[3] || "Sadaltager";
+    const samples = voiceSamples(voice);
+    const w = wordWindow(measuredRate(voice));
+    const enough = samples.filter((r) => r.voice === voice).length >= RATE_SAMPLES_MIN;
+    console.log(JSON.stringify({
+      voice, min: w.min, max: w.max, target: w.target, rate: Number(w.rate.toFixed(3)),
+      readings: samples.length,
+      source: enough ? `measured, ${voice}` : `too few readings of ${voice} — falling back`,
+    }, null, 2));
+    console.error(
+      `\n${w.min} to ${w.max} words, aim for ${w.target}, at ${w.rate.toFixed(2)} words a second over ${samples.length} reading(s).` +
+        `\nThis is the number the gate will hold you to. Do not compute it yourself: on 2026-07-31 a run did, ` +
+        `\nfiltered the ledger on a field that does not exist, and trimmed a script from 199 words to 189 against a floor of 194.`
+    );
+    process.exit(0);
+  }
+
+  if (!file) { console.error("usage: node src/validate.mjs <post.json> [--offline] [--allow-unverifiable]\n       node src/validate.mjs window [voice]   # the word window, without computing it yourself"); process.exit(2); }
   const post = JSON.parse(await readFile(path.resolve(file), "utf8"));
   const r = await validatePost(post, {
     online: !process.argv.includes("--offline"),

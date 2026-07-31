@@ -1142,9 +1142,25 @@ Rules, and the gate enforces the hard ones:
   fixtures and nothing else now.
 - **7 to 10 beats, and the word window the gate prints.** Do not carry a
   number in your head: it is derived from the voice's own measured rate and it
-  moved from 180 to 195 to 186 in a single afternoon as the voice changed and
-  was measured properly. Do not memorise that figure and do not
-  compute it: run the gate, read the window it gives you, write to it. It is
+  moved from 180 to 195 to 186 to 206 as the voice changed and was measured
+  properly. Ask for it, in one command, before you write a word:
+
+  ```bash
+  node src/validate.mjs window        # min, max, target, and how many readings it rests on
+  ```
+
+  **Do not compute it yourself, and this is not a style preference.** On
+  2026-07-31 the 16:30 run read this exact instruction and then wrote its own
+  snippet anyway: it filtered the voice ledger on a field name that does not
+  exist, got zero samples, silently fell back to the default rate, and trimmed a
+  script that had already gated green from 199 words down to 189 — against a
+  real floor of 194. The gate caught it on the next run. Had it not, the next
+  publish run would have bought a narration for a script the engine refuses.
+  The command above reads the same ledger the gate reads and prints the same
+  numbers the gate will hold you to.
+
+  Do not memorise the figure and do not
+  compute it: run the command, read the window, write to it. It is
   derived in `src/format.mjs` from the 60-second contract and from the
   account's own measured reading rate (`state/voice-rate.jsonl`, written by
   the engine after every narration), so it moves on its own if the voice or

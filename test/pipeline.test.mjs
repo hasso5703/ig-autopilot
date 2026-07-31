@@ -1550,6 +1550,32 @@ test("a word split by inline markup is still the word the source printed", async
   assert.match(flatten("ligne un<br>ligne deux"), /ligne un ligne deux/, "and line breaks");
 });
 
+/* The 16:30 run read "do not compute the word window yourself" in bold, then
+   computed it: it filtered the voice ledger on a field name that does not exist,
+   got zero samples, silently fell back to the default rate, and trimmed a script
+   that had gated green from 199 words to 189 — against a real floor of 194. The
+   answer to an instruction a run goes around is not a louder instruction, it is
+   one command that is shorter than the snippet. Its numbers must be the gate's
+   own, from the same reader, or it would be a fourth place for them to drift. */
+test("the window a run can ask for is the window the gate enforces", async () => {
+  const { voiceSamples } = await import("../src/validate.mjs");
+  const { wordWindow, medianRate, RATE_SAMPLES_MIN, DEFAULT_RATE } = await import("../src/format.mjs");
+
+  const samples = voiceSamples("Sadaltager");
+  assert.ok(Array.isArray(samples), "the ledger reader is exported so the CLI and the gate share it");
+  assert.ok(samples.length <= 12, "and it is the recent readings, not the whole history");
+
+  // The floor lives in format.mjs and nowhere else. It was hardcoded as 3 in
+  // validate.mjs while format.mjs also said 3; the two agreed by luck, and the
+  // day the floor moved to 4 the gate would have sized scripts from a sample its
+  // own module considers too small.
+  assert.equal(medianRate(Array.from({ length: RATE_SAMPLES_MIN - 1 }, () => ({ words: 180, seconds: 60 }))), DEFAULT_RATE);
+  assert.equal(medianRate(Array.from({ length: RATE_SAMPLES_MIN }, () => ({ words: 180, seconds: 60 }))), 3);
+
+  const w = wordWindow(3.71);
+  assert.ok(w.min < w.target && w.target < w.max, "the window brackets its own target");
+});
+
 /* The 31 July publish run built its Reel five times: Chromium died mid-
    screenshot, a photograph turned out to be a derelict building, and a broken
    video player on a receipt took two more attempts to remove. The script stopped
