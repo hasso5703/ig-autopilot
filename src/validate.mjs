@@ -868,7 +868,7 @@ export async function validatePost(post, opts = {}) {
 
   // ---- per-slide evidence -------------------------------------------------
   const contentSlides = slides.filter((s) => s.type !== "hook" && s.type !== "cta");
-  if (contentSlides.length < 2) err(`only ${contentSlides.length} content slides — a carousel needs at least 2`);
+  if (contentSlides.length < 2) err(`only ${contentSlides.length} evidence-bearing slide(s). The slides are not rendered any more, they are the backbone that forces the story into claims that each carry their own quote — and one claim is not a story you can corroborate.`);
 
   const domains = new Set();
 
@@ -1196,7 +1196,7 @@ export async function validatePost(post, opts = {}) {
   const corr = Array.isArray(post.corroboration) ? post.corroboration : [];
 
   if (!claim || String(claim).trim().length < 30) {
-    err("centralClaim is missing or too short — state in one sentence the single claim this carousel rests on, so corroboration has something to be checked against");
+    err("centralClaim is missing or too short — state in one sentence the single claim this whole post rests on, so corroboration has something to be checked against");
   } else if (corr.length < 2) {
     err(`corroboration has ${corr.length} entr${corr.length === 1 ? "y" : "ies"} — the central claim needs at least 2 independent sources, each with { url, quote }`);
   } else {
