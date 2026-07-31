@@ -87,8 +87,12 @@ ENTRIES:
   conférence d'Altman; deux photos CC BY sombres qui passent: "Sam Altman
   speaking at TED" (Steve Jurvetson) et "The Prime Minister meets with AI
   developers" (UK Prime Minister). Épingler file+credit sur les beats photo
-  évite la ré-acquisition; reel2 rachète le TTS (~$0.012) à chaque tentative,
-  donc chaque échec de build coûte une narration. Proof: journal 16h 29/07.
+  évite la ré-acquisition. Correction 31/07: reel2 ne rachète PLUS la narration
+  quand le script n'a pas bougé: la lecture est empreintée (texte + voix +
+  langue + direction) dans le dossier du build, donc un rebuild déclenché par
+  une image ne coûte ni narration ni passe Whisper. Condition: reconstruire dans
+  le MÊME `media/<slug>` et ne pas le vider entre deux tentatives.
+  Proof: journal 16h 29/07; cache prouvé de bout en bout le 31/07.
 - 2026-07-29 · Une rétention >100% dans watch.mjs n'est pas un bug d'unité:
   ig_reels_avg_watch_time compte les boucles (mesuré 160386 ms de watch moyen
   sur un Reel de 51 s, total exactement 2x la moyenne, portée 0). Sous ~50 de
@@ -217,11 +221,14 @@ ENTRIES:
   avant de relancer. Le relance ne rachete alors que la narration (~$0,05 pour
   1 a 3 lectures) au lieu des images. Reel entier du 31/07: $0,53 en 5 builds.
   Proof: journal 15h 31/07.
-- 2026-07-31 · Un caractere enveloppe dans du balisage coupe la phrase en deux
-  dans le texte aplati du gate: TechCrunch ecrit NOx en <sub>, et la page lue
-  par validate.mjs contient "no x", donc une citation d'evidence qui traverse
-  ce mot repond NOT_FOUND alors qu'elle est mot pour mot sur la page. Ca ne
-  s'invente pas depuis le rendu visuel. Quand une citation echoue alors que tu
-  l'as copiee de la page, refais le fetch en Node et cherche la sous-chaine
-  avant de suspecter une reecriture de l'article: ici la reponse etait de
-  couper la citation avant le mot, pas de la reformuler. Proof: gate 16h 31/07.
+- 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
+  personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
+  par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
+  chiffre lu dans un nom de domaine (actionnews5.com). Les trois sont corriges
+  dans le code et couverts par des tests, donc ils ne reviendront pas. La
+  METHODE, elle, reste: quand une citation que tu as copiee mot pour mot revient
+  NOT_FOUND, refais le fetch en Node et cherche la sous-chaine dans le texte
+  aplati AVANT de reformuler la phrase ou de suspecter une reecriture de
+  l'article. Le 31/07 un run a reecrit un beat ("polluants qui forment le smog"
+  au lieu du terme de sa source) pour contourner un bug du gate: c'est du degat
+  editorial cause par une espace. Proof: gate 16h 31/07, correctifs du soir.
