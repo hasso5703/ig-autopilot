@@ -839,6 +839,22 @@ test("the fixture sits inside the window the gate actually computes", async () =
 // these: an adjective between the number and the noun defeated the pattern, the
 // spoken script was never checked at all, and `\bà` never matches after a space
 // because JavaScript's word boundary is ASCII-only.
+// land.mjs is the only way anything reaches main, so its failure modes are the
+// account's failure modes. Two of them shipped and were found on 2026-07-31:
+// it could not push a commit it had already made, and it called every rebase
+// refusal a conflict with a human — including "you have unstaged changes",
+// which is the state a run is ALWAYS in when the manual tells it to land the
+// journal before a purchase.
+test("landing refuses a red suite for code, never for the flight recorder", async () => {
+  const src = await (await import("node:fs/promises")).readFile(new URL("../src/land.mjs", import.meta.url), "utf8");
+  assert.match(src, /ALWAYS_LANDABLE\s*=\s*\/\^\(state\\\/\|reports\\\/journal\\\/\)/,
+    "state/ and reports/journal/ always land: a journal that cannot record a death is worse than a red suite");
+  assert.match(src, /npm.*test|suiteIsGreen/, "code landings run the suite first");
+  assert.match(src, /rebase", "--autostash"/,
+    "a dirty tree is the normal state mid-run; without autostash git refuses and the failure reads as a human conflict");
+  assert.doesNotMatch(src, /--force|-f\b/, "there is no force in this file and none is ever to be added");
+});
+
 test("a printed cadence is refused wherever it appears", async () => {
   const p = goodPost();
   p.reel2 = goodReel2();

@@ -75,14 +75,6 @@ ENTRIES:
   remains). Its posted.jsonl entry is intentional memory that still blocks
   re-coverage; never reconcile or delete it. insights.mjs reporting ok:false
   for that id is normal. Proof: publish.mjs recent + insights, 19h 28/07.
-- 2026-07-29 · PIVOT FR + format 60s (commit du 29/07 après-midi) : tout le
-  public en français; reel2 exige `title` (hook card frame 0) + `lang: fr` +
-  dernier beat avec envoi nominatif; narration 130-155 mots, plafond moteur
-  56s + end-card 3s auto; voix Charon + direction FR; disclosure "Voix et
-  images générées par IA · Script écrit et vérifié par un humain."; premier
-  commentaire + réponses via src/engage.mjs (dry-run par défaut);
-  recordPosted accepte durationS pour la rétention du watch. Un spec anglais
-  d'avant le pivot se réécrit en français puis se re-gate.
 - 2026-07-29 · Leçons du 1er Reel FR (DbYIlApjil_) : une apposition copiée
   d'une source négligente (TechCrunch décrivant Hugging Face comme un dépôt
   de code) a atteint la publication; le gate a maintenant un lint
@@ -108,15 +100,11 @@ ENTRIES:
   17878825803503784) mais engage.mjs recent affiche "no comments". Ne jamais
   re-seeder parce que la liste paraît vide; vérifier comments_count d'abord.
   Proof: engage recent vs insights media, 23h 29/07.
-- 2026-07-30 · Whisper hears a digit after a word as a hyphen-prefixed
-  fragment ("Opus 5" -> "Opus"+"-5"), and mergeContinuations wrongly folded
-  it into the previous word as an elision, silently swallowing the digit and
-  tripping the word-count alignment guard every time a name is followed by a
-  number. Fixed in src/reel2.mjs (pure-digit hyphen fragments stay their own
-  token); test added. Also: a bare plural product query ("vending machines")
-  can return only near-white cutouts on Openverse and fail every candidate;
-  add a qualifier (place, time of day: "vending machines night") to reach
-  real documentary photos. Proof: 12h55 hand-launched publish run 30/07.
+- 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
+  renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
+  ajoute un qualificatif (lieu, moment: "vending machines night") pour
+  atteindre de vraies photos documentaires. (Le piege Whisper "Opus 5" du meme
+  jour est corrige dans reel2.mjs et couvert par un test.) Proof: run 30/07.
 - 2026-07-30 · Doctrine visuelle v2 (commit de midi): palettes MOODS
   réécrites du noir nocturne vers la lumière du jour éditoriale; hiérarchie
   par beat (photo réelle du sujet, reçu, photo d'objet, veo simple, stills

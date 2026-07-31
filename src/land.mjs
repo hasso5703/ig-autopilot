@@ -35,8 +35,51 @@ async function git(...args) {
   return stdout.trim();
 }
 
+/**
+ * Source and prompts do not land on a red suite. The flight recorder always does.
+ *
+ * The manual has said since the pivot that a failing test stops the run: "a red
+ * suite means something that used to be true is not any more, and publishing on
+ * top of that is how a silent regression reaches a live account." Nothing
+ * enforced it, and on 2026-07-31 the same person landed a red suite twice in
+ * one afternoon — once with a notebook over its own cap, once with a manual
+ * edit that had silently failed. If it happens twice to someone watching, it
+ * happens to a run that is not.
+ *
+ * The exception matters as much as the rule. `state/` and `reports/journal/`
+ * must land whatever else is broken: the journal is what a usage-limit death
+ * leaves behind, and a ledger that cannot record a publication is how the
+ * account forgets what it posted. So the check looks at WHAT is being landed.
+ */
+const ALWAYS_LANDABLE = /^(state\/|reports\/journal\/)/;
+
+async function suiteIsGreen() {
+  try {
+    await run("npm", ["test"], { maxBuffer: 32 * 1024 * 1024, timeout: 180_000 });
+    return { green: true };
+  } catch (err) {
+    const out = `${err.stdout || ""}\n${err.stderr || ""}`;
+    const failing = [...out.matchAll(/^✖ (.+?) \(/gm)].map((m) => m[1]);
+    return { green: false, failing };
+  }
+}
+
 export async function land(message, paths = []) {
   if (!message) throw new Error("land needs a commit message");
+
+  const touchesCode = !paths.length || paths.some((p) => !ALWAYS_LANDABLE.test(p));
+  if (touchesCode) {
+    const { green, failing } = await suiteIsGreen();
+    if (!green) {
+      const names = failing?.length ? `\n  ${failing.join("\n  ")}` : "";
+      throw new Error(
+        `npm test is red, so this is not landing.${names}\n\n` +
+          "Every assertion in that suite is a bug that shipped or nearly shipped. Fix the failure, " +
+          "or land only state/ and reports/journal/ — those always land, because a journal that cannot " +
+          "record a death is worse than a red suite."
+      );
+    }
+  }
 
   // Stage and commit. An empty commit is not an error: landing may only need
   // to push commits made earlier in the run.
@@ -62,12 +105,32 @@ export async function land(message, paths = []) {
   for (let attempt = 1; attempt <= 4; attempt++) {
     await git("fetch", "origin");
     try {
-      // Replay everything this container has done on top of the real main.
-      // state/*.jsonl merges by union; anything else that conflicts stops us.
-      await git("rebase", "origin/main");
+      /* Replay everything this container has done on top of the real main.
+       * state/*.jsonl merges by union; anything else that conflicts stops us.
+       *
+       * `--autostash` is not a convenience, it is what makes the manual's own
+       * instruction work. Runs are told to land the journal before every
+       * purchase, and at that moment other tracked files are always dirty —
+       * state/feeds-last.json for one, rewritten by the gather. Git refuses to
+       * rebase with unstaged changes, and this function used to read ANY rebase
+       * failure as a content conflict: a run doing exactly what the manual says
+       * was told "a run and a human changed the same lines, stop and escalate",
+       * which is neither true nor recoverable by anything it is allowed to do.
+       */
+      await git("rebase", "--autostash", "origin/main");
     } catch (err) {
       const conflicts = await git("diff", "--name-only", "--diff-filter=U").catch(() => "");
       await git("rebase", "--abort").catch(() => {});
+      // A rebase can also refuse for reasons that are not a disagreement with
+      // anybody. Saying "REAL CONFLICT" about those sends a run down a road
+      // that has no end.
+      if (!conflicts) {
+        throw new Error(
+          `git rebase refused, and no file is in conflict, so this is not a disagreement with a human:\n\n` +
+            `${String(err.stdout || "")}${String(err.stderr || err.message || "")}\n\n` +
+            `Read what git said above and fix that. Nothing was pushed and nothing was lost.`
+        );
+      }
       console.error(
         "REAL CONFLICT with origin/main in:\n  " + (conflicts || "(unknown)") +
           "\nA run and a human changed the same lines. Do not resolve this by force:" +
