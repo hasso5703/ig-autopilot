@@ -1079,8 +1079,14 @@ would refuse those, because their words appear nowhere in the sources.
 Rules, and the gate enforces the hard ones:
 
 - **`title` is the hook card, and it is required.** Five to eight French
-  words, the full surprise, no dashes; its digits obey the evidence rule like
-  every digit on the account. The engine burns it fully formed from **frame
+  words and **52 characters at most**, the full surprise, no dashes; its digits
+  obey the evidence rule like every digit on the account, and so do the four
+  hook rules above (no question, no description opener, no filler, one concrete
+  anchor) — those are errors on this card, not warnings, because nothing after
+  the audition frame gets watched if it fails. The 52 is not arbitrary: the
+  card is display type inside 952 usable pixels and it is allowed two lines,
+  and a longer one used to run off both edges and land on top of the receipt
+  underneath it. The engine burns it fully formed from **frame
   zero** — because the karaoke reveals the spoken line word by word, and
   before the card existed the audition frame (and the grid thumbnail, taken
   at 1.2s) carried three words of a sixteen-word sentence. Card, voice and
