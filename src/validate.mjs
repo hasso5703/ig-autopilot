@@ -939,8 +939,27 @@ export async function validatePost(post, opts = {}) {
     if (post.reel2?.lang && !["fr", "en"].includes(post.reel2.lang))
       err(`reel2: unknown lang "${post.reel2.lang}" — "fr" (the account's language) or "en"`);
     const VISUALS = new Set(["veo", "screenshot", "image", "photo", "card", "file"]);
-    /** Everything the sources actually say, tokenised once. */
-    const storyVocab = new Set(tokens([post.centralClaim || "", evidenceText].join(" ")));
+    /**
+     * Everything the sources actually say, minus the proper names.
+     *
+     * The names have to come out, and a build on 2026-07-31 is why. The gate
+     * asks a picture to share vocabulary with the story; the engine separately
+     * refuses a generated picture whose prompt names anything the post reports
+     * on, because a generated image must never look like documentation of a
+     * real thing. A spec that satisfied the first rule with "a Python package
+     * page" was then refused by the second, and a run could have bounced
+     * between them until it ran out of time.
+     *
+     * Common nouns are the answer to both: "package", "registry", "scanner",
+     * "credentials" anchor a picture in the story without pretending to depict
+     * a named product.
+     */
+    const properNouns = new Set(
+      namedActors([post.centralClaim || "", evidenceText].join(" ")).flatMap((n) => tokens(n))
+    );
+    const storyVocab = new Set(
+      [...new Set(tokens([post.centralClaim || "", evidenceText].join(" ")))].filter((w) => !properNouns.has(w))
+    );
     let words = 0;
     for (const [i, b] of beats.entries()) {
       const at = `reel2 beat ${i + 1}`;
@@ -994,7 +1013,7 @@ export async function validatePost(post, opts = {}) {
           err(
             `${at}: this ${type} shows nothing the story contains. "${b.visual?.spec?.subject || b.visual?.prompt || ""}" shares no word with the sources, ` +
               `which is how a Reel about a malicious package ends up showing a glass of water. Pick a subject the evidence actually names — available here: ` +
-              `${[...storyVocab].filter((w) => w.length > 4).slice(0, 18).join(", ")}. If nothing fits, the beat wants a receipt, a real photograph or a \`card\`, not a still.`
+              `${[...storyVocab].filter((w) => w.length > 4).slice(0, 18).join(", ")}. Common nouns only — a generated picture may never name a product or a company, so the overlap has to come from what the story is ABOUT. If nothing fits, the beat wants a receipt, a real photograph or a \`card\`, not a still.`
           );
       }
     }

@@ -981,6 +981,40 @@ test("reel2: photo beats validated, mood wallpaper capped at three stills", asyn
 // digit was quoted, the gate passed twice — and a viewer reconstructs one story
 // in which Opus 4.7 shipped the malware.
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// 2026-07-31. Six of a Reel's eight beats showed nothing that was in the news:
+// a laptop alone on a table, stacks of paper, a door ajar, a phone beside a
+// glass of water. Hasan: "pourquoi on regarde un smartphone et un verre d'eau
+// posé sur une table ?" Nothing checked whether a picture had anything to do
+// with the story, so nothing stopped it.
+// ---------------------------------------------------------------------------
+test("a picture has to show something the story contains", async () => {
+  const p = goodPost();
+  p.reel2 = goodReel2();
+  assert.equal((await errs(p)).filter((e) => /shows nothing/.test(e)).length, 0, "a plan anchored in the story passes");
+
+  p.reel2.beats[4].visual = { type: "image", spec: { subject: "a smartphone lying face up beside a glass of water", setting: "on a pale wooden table" } };
+  assert.ok(hasErr(await errs(p), /shows nothing the story contains/), "furniture is refused");
+
+  // "a laptop keyboard" would NOT be refused here, and correctly so: this
+  // fixture's sources mention a laptop. The rule is about a picture with no
+  // connection to the story, not about a banned list of objects.
+  p.reel2.beats[4].visual = { type: "veo", spec: { subject: "a single hand", action: "turns a brass doorknob", setting: "in a dim corridor" } };
+  assert.ok(hasErr(await errs(p), /shows nothing the story contains/), "a stock gesture is refused, and it is the most expensive beat");
+
+  // The trap this rule created, and the reason proper nouns are excluded from
+  // the vocabulary it accepts: the engine separately refuses a generated
+  // picture whose prompt names anything the post reports on. A spec that
+  // satisfied this rule with a brand name would have died later in the build,
+  // after the narration was paid for.
+  p.reel2.beats[4].visual = { type: "image", spec: { subject: "a Librarians conference banner", setting: "in a hall" } };
+  assert.ok(hasErr(await errs(p), /shows nothing the story contains/),
+    "overlapping only on a proper noun does not count — the engine would refuse that prompt anyway");
+
+  p.reel2.beats[4].visual = { type: "image", spec: { subject: "a public workshop sign", setting: "in a bright hall" } };
+  assert.ok(!hasErr(await errs(p), /shows nothing/), "a common noun from the story is what anchors a picture");
+});
+
 test("a name is a fact: the actor of the claim is named in the attaque", async () => {
   const { versionedActors } = await import("../src/validate.mjs");
   assert.deepEqual(versionedActors("Mythos 5 also picked up on signs"), ["Mythos 5"]);
