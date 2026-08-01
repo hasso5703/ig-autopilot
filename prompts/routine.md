@@ -40,8 +40,12 @@ What that means in practice:
 
 ## What a run is, and why
 
-**Four runs a day. One Reel a day. The 16:30 run publishes it.** This replaced
-"one Reel per run" on 2026-07-27, and the reasons are measured, not stylistic:
+**Four runs a day. One Reel per run, at most two in a day, and the 16:30 run
+publishes the day's first.** The "one Reel per run" ceiling replaced
+"one Reel per slot" on 2026-07-27; the daily count was opened from one to a
+capped two on 2026-08-01 (Hasan — see the ranked promises below for the bar
+the second has to clear). The reasons for restraint are measured, not
+stylistic, and they are why the second is rare rather than routine:
 
 - Our own account's audition record: views per successive Reel ran **161 → 67 →
   14 → 6 → 3 → 0**. Instagram shows every new Reel to a small interest-matched
@@ -50,10 +54,12 @@ What that means in practice:
   there is **no documented account-level volume penalty** — the measured data
   (Buffer, 2M posts) actually shows more posts per week growing accounts
   faster with no per-post cannibalisation. The honest reasons this account
-  posts once a day are different and sufficient: **every mediocre Reel wastes
-  an audition and teaches the recommender what to skip; a second Reel a day
-  doubles cost and halves the attention each one gets from us; and quality is
-  currently the binding constraint, not volume.** At 1,000 followers,
+  posts once a day *by default* are different and sufficient: **every mediocre
+  Reel wastes an audition and teaches the recommender what to skip; a second
+  Reel a day doubles cost and halves the attention each one gets from us; and
+  quality is currently the binding constraint, not volume.** None of that
+  forbids a second Reel on a day that genuinely produced two stories worth an
+  audition — it is exactly why the second one has to earn it. At 1,000 followers,
   Instagram unlocks Trial Reels (tested on non-followers only, schedulable) —
   that is the sanctioned second lane for volume and hook A/B testing, and the
   reason to sprint to 1,000 rather than to two-a-day.
@@ -63,8 +69,8 @@ So the day has one shape, and each slot knows its job:
 | slot (UTC) | job |
 |---|---|
 | **06:30, 10:30** | **Scout.** Gather, verify, and leave the day's best candidate ready: a gate-clean post spec **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Publish nothing. Spend nothing on media. |
-| **16:30** | **Publish — if and only if the day has no Reel yet** (check `state/posted.jsonl` first; a hand-launched run may already have used the day's slot). Re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **the Reel and nothing else**, then seed the first comment (step 10b). If the day's Reel exists, you are a scout: prepare tomorrow. 16:30 UTC is 18h30 in Paris: inside the measured French engagement peak (18h–19h), the same anchor HugoDécrypte publishes into. Moved from 15:00 on 2026-07-29 (Hasan's call), which also keeps every slot clear of the account's daily quota-reset window. |
-| **19:30** | **Catch-up, read, and answer.** The standalone watch routine was retired on 2026-07-29; this run is the vigil now: **start with `node src/watch.mjs` and read its report** (token days left, silence alarms, per-reel retention) — a token that dies unannounced takes the account offline for days. Then, if the day already has its Reel: read what worked, **reply to every comment worth replying to on recent posts (step 10b)** — 21h Paris is the evening scroll, and reply speed while a post is still distributing is measured leverage — then prepare tomorrow, publish nothing. If the day has none (the 16:30 run found nothing or died): this run may publish, same rules. |
+| **16:30** | **Publish.** If the day has no Reel yet (check `state/posted.jsonl` first; a hand-launched run may already have used the slot), this is the day's Reel and it is not optional. If the day already has one, you may still publish a **second** — but only if your story clears the bar in the ranked promises below, and you say in the report what made it clear it; otherwise you are a scout, and preparing tomorrow is the honourable outcome. Either way: re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **one Reel and nothing else**, then seed the first comment (step 10b). 16:30 UTC is 18h30 in Paris: inside the measured French engagement peak (18h–19h), the same anchor HugoDécrypte publishes into. Moved from 15:00 on 2026-07-29 (Hasan's call), which also keeps every slot clear of the account's daily quota-reset window. |
+| **19:30** | **Catch-up, read, and answer.** The standalone watch routine was retired on 2026-07-29; this run is the vigil now: **start with `node src/watch.mjs` and read its report** (token days left, silence alarms, per-reel retention) — a token that dies unannounced takes the account offline for days. Then, if the day already has its Reel: read what worked, **reply to every comment worth replying to on recent posts (step 10b)** — 21h Paris is the evening scroll, and reply speed while a post is still distributing is measured leverage — then prepare tomorrow. This run may publish the day's **second** Reel, but the bar in the ranked promises applies in full and the default here is not to: 21h30 Paris is past the measured peak, and a story that only just cleared the bar is worth more as tomorrow morning's banked candidate than as tonight's second audition. If the day has none (the 16:30 run found nothing or died): this run publishes, same rules — that is the day's promise, not a second Reel. |
 
 A scout run that finds a story *bigger than anything the account has covered*
 still waits for the publish slot: a few hours of freshness cost less than a Reel
@@ -87,7 +93,7 @@ Two mechanical consequences, both already in the code:
   a specific story deserves one anyway, say so in your report and leave it to
   Hasan — do not spend the run on it.
 
-**The Reel is the day's only artefact. Build it, publish it, record it on
+**The Reel is your run's only artefact. Build it, publish it, record it on
 `main` — and only then do anything that can wait**: metrics, lessons, reports,
 cleanups. This is not about ordering two posts (there is no second post any
 more); it is about where a run's budget dies. The 27 July run spent its final
@@ -101,11 +107,47 @@ order settles every conflict between them:
 
 1. **Every claim traceable to a verified sentence.** The account is worth
    nothing the day this stops being true. Nothing outranks it.
-2. **One Reel a day, sixty seconds.** Both halves of that are printed in the
-   bio, so both are claims the account makes in public. The duration is now
-   built by the engine and cannot be missed by accident (step 10). The daily
-   half is on you.
-3. **One Reel a day is also a ceiling**, and a second one is never the answer.
+2. **At least one Reel a day, sixty seconds.** Both halves of that are printed
+   in the bio, so both are claims the account makes in public. This is a
+   **floor**, not a quota: the duration is built by the engine and cannot be
+   missed by accident (step 10), and the daily half is on you. Promise 3 is
+   what caps the other end.
+3. **One Reel per RUN is the hard ceiling. Two a day is possible, and rare.**
+   Changed by Hasan on 2026-08-01, after a hand-launched run built the day's
+   second Reel on his instruction and it came out the best the account had
+   made: *"si une histoire est assez intéressante il peut y avoir 2 reels par
+   jour, mais les deux reels ne peuvent jamais être produit par un seul run,
+   un reel par run mais deux reels possible par jour."*
+
+   The two halves are not the same kind of rule, and the difference matters:
+
+   - **One Reel per run is mechanical and absolute.** Once a run has published,
+     that run is finished publishing, whatever it finds next. This is the
+     27 July lesson and it has nothing to do with taste: a run that goes
+     looking for a second artefact is a run that spends its last minutes and
+     its remaining quota on the surface it did not finish. Bank the second
+     story with `recordSeen` and let the next run take it.
+   - **The second Reel of a day is editorial, and it has a bar**, because the
+     measured reasons for restraint did not go away: a mediocre Reel still
+     wastes an audition, and attention split two ways is attention halved.
+     The bar is a single question, asked honestly: **would this story have won
+     the day on its own this morning?** If it would merely have been a decent
+     runner-up, it is tomorrow's, and tomorrow's scouts will find it. Three
+     things must also be true, and they are cheap to check:
+
+     1. `node src/state.mjs guard` is CLEAR — the two-hour minimum gap is
+        mechanical and it is not negotiable.
+     2. `node src/state.mjs themes` does not put the second story on the same
+        subject as the first. Two Reels in one day about one theme is the
+        narrow-account failure at double speed, and a stranger scrolling the
+        grid sees them side by side.
+     3. The second story gates clean **on its own merits**, with the same
+        corroboration standard. A second Reel is never the place to relax
+        anything.
+
+   **And say so in the report**: which Reel of the day this is, and, in one
+   sentence, what made the second one clear the bar. A second Reel nobody has
+   to justify is how two a day quietly becomes the default.
 
 So publishing nothing is still a legitimate outcome, and it is the *only*
 legitimate one when nothing can be verified — but it stopped being a free one.
@@ -471,7 +513,10 @@ is *published*, and a run that is twelve minutes into buying a Reel has done
 neither. On 2026-07-31 Hasan hand-launched the day's run an hour before the
 scheduled one, and the two would have been invisible to each other — same day,
 no Reel recorded, no gap violation, no orphan — so the second would have built
-and published a second Reel against a ceiling this manual calls hard.
+and published a Reel neither run knew about. Two Reels in a day are allowed
+now, but *only* as a decision somebody made against the bar; two runs
+colliding blind is not that decision, it is the same accident with a nicer
+outcome, and the next one lands inside the two-hour gap.
 
 So `guard` now reads the other journals: a file whose last line is under twenty
 minutes old means somebody is working. **Wait ten minutes and run `guard` again.**
@@ -1709,15 +1754,34 @@ comments scope — report it as a finding and move on):
   node src/engage.mjs reply <commentId> "…" --live
   ```
 
-### 11. There is no second story in a day
+### 11. There is no second story in a RUN
 
-One Reel a day, and the day's Reel is the day's best story — that ceiling is
-the strategy, not a limit on it. The audition record at the top of this manual
-is what four-a-day did to distribution. **If you have a second story you like,
-it is tomorrow's**: write nothing down for it beyond a `recordSeen` of
-`considered`, which expires, so tomorrow's scouts can pick it up fresh. A scout
-run that wrote a candidate the publish run did not choose has still done its
-job; the candidate expires on its own.
+**Your run publishes one Reel. When it is live and recorded, you are done
+publishing** — not because a second story would be bad, but because a run that
+starts a second artefact is the run that dies with the first one unfinished.
+That is the 27 July failure exactly, and it cost the account its whole evening
+budget on a surface nobody saw.
+
+So when you find a second story you like, and you will, **do not build it.**
+Write it down properly and let the next run have it:
+
+- `recordSeen` with `considered` if it simply lost today's comparison; it
+  expires in 36 hours and tomorrow's scouts pick it up fresh.
+- `recordSeen` with `revisit` if it is good and blocked only on time — no
+  second outlet yet, primary unreachable, figures not out. It comes back in
+  six hours, which may well be the *next run of the same day*, and that is
+  now how a legitimate second Reel usually arrives: one run banks it, a later
+  run builds it.
+- A gate-clean spec with its `reel2` plan is even better than a note, and it
+  is exactly what a scout run is for.
+
+**Two Reels in one day are therefore always the work of two runs**, spaced by
+at least the two-hour guard, each one having published exactly once. The bar
+the second has to clear is in the ranked promises near the top of this manual;
+it is editorial, it is deliberately high, and the report has to defend it. The
+audition record at the top is what four-a-day did to distribution, and the
+thing that record actually indicts is publishing *without* a bar — not the
+number two.
 
 ## When things go wrong
 
