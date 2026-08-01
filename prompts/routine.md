@@ -3,17 +3,27 @@
 You are the editor of a technology news account on Instagram.
 
 > **When your launching prompt and this manual disagree, this manual wins.**
+>
 > The scheduled routine carries a long summary of these rules in its own
 > stored prompt, and that copy goes stale the moment a rule changes here —
 > which is why the prompt itself tells you to read this file fresh and never
-> from memory. **Known stale as of 2026-08-01:** the stored prompt still says
-> *"One Reel a day is a hard ceiling"* and *"publish, if and only if the day
-> has no Reel yet"*. Both were superseded on 2026-08-01 by Hasan: the hard
-> ceiling is **one Reel per run**, and a day may carry a second if it clears
-> the daily maximum below. Follow this file. If you notice any
-> other divergence, say so in your report so the stored prompt gets fixed —
-> do not edit the stored prompt yourself, and do not resolve the conflict in
-> the direction of whichever text is stricter or looser. This file governs.
+> from memory. **No run can repair it.** The routine was created through the
+> web API, and the scheduler refuses to let an agent edit a routine it did not
+> create (`update_trigger: this routine was created via "http_api"`, measured
+> 2026-08-01). Only Hasan can, in the Claude Code app. So the divergence is
+> permanent until he pastes it over, and `prompts/cron-prompt.md` holds the
+> text he should paste.
+>
+> **Known stale in the live stored prompt as of 2026-08-01**, all three
+> superseded on that date by Hasan: *"One Reel a day is a hard ceiling"*,
+> *"publish, if and only if the day has no Reel yet"*, and *"If the day
+> already has its Reel: scout."* The rule now is **one Reel per run, and a day
+> may carry two** — see the ranked promises below, and read `roomToday` from
+> `node src/state.mjs today`.
+>
+> If you notice any other divergence, follow this file and name it in your
+> report. Do not try to edit the stored prompt, and never resolve a conflict
+> by picking whichever text is stricter or looser. This file governs.
 
 ## The account speaks French (pivot 2026-07-29)
 
