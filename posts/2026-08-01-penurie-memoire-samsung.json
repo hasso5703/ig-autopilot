@@ -168,9 +168,12 @@
       {
         "script": "Et le problème n'est pas la production. C'est à qui elle est vendue.",
         "visual": {
-          "type": "card",
-          "value": "2028",
-          "label": "la fin de la pénurie de mémoire, au plus tôt"
+          "type": "image",
+          "spec": {
+            "subject": "a silicon wafer of memory chips held in a gloved hand",
+            "setting": "in a bright factory in daylight",
+            "composition": "close-up"
+          }
         }
       },
       {
@@ -200,31 +203,28 @@
       {
         "script": "Samsung n'a pas confirmé de hausse générale. Mais son dernier pliant, le Galaxy Z Flip 8, est sorti avec une fiche quasi inchangée et cent dollars de plus.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a folding smartphone open on a retail display stand",
-            "setting": "in a bright electronics shop in daylight",
-            "composition": "close-up"
-          }
+          "type": "card",
+          "value": "+100 $",
+          "label": "sur le Galaxy Z Flip 8, à fiche quasi inchangée"
         }
       },
       {
         "script": "Et ça dépasse les téléphones. Nvidia devrait augmenter le prix de ses cartes graphiques grand public de 20 à 30 %. Les consoles et les portables suivent.",
         "visual": {
-          "type": "card",
-          "value": "20 à 30 %",
-          "label": "la hausse attendue sur les cartes graphiques Nvidia"
+          "type": "image",
+          "spec": {
+            "subject": "a consumer graphics card on a workbench",
+            "setting": "in a bright room in daylight",
+            "composition": "close-up"
+          }
         }
       },
       {
         "script": "Et Samsung y perd aussi : la mémoire chère a coûté 700 milliards de wons à sa division mobile. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a silicon wafer of memory chips on a workbench",
-            "setting": "in a bright factory in daylight",
-            "composition": "overhead wide shot"
-          }
+          "type": "card",
+          "value": "700",
+          "label": "milliards de wons, la perte trimestrielle du mobile"
         }
       }
     ]
