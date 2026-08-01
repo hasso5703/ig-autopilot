@@ -1,0 +1,255 @@
+{
+  "slug": "2026-08-01-astra-dix-problemes",
+  "centralClaim": "OpenAI says an internal version of Astra solved ten open problems in mathematics and theoretical computer science, none of which had seen progress for at least a decade.",
+  "corroboration": [
+    {
+      "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/",
+      "quote": "solved ten open problems in math and theoretical computer science. Mathematicians had made no progress on any of them for at least a decade, and much longer in most cases."
+    },
+    {
+      "url": "https://officechai.com/ai/gpt-5-6-sol-helps-prove-that-non-sofic-groups-exist-in-big-math-breakthrough/",
+      "quote": "OpenAI says every one of these had been open for at least a decade, and in most cases far longer."
+    }
+  ],
+  "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
+  "caption": "Une question de maths posée en 1999 est restée sans réponse pendant 27 ans. OpenAI dit l'avoir fermée.\n\nLe rapport publié aujourd'hui décrit dix résultats, obtenus selon OpenAI par une version interne d'Astra, sa prochaine famille de modèles. Parmi eux, la construction d'un groupe non sofic, qui tranche la question posée par Mikhail Gromov en 1999. Deux autres ferment les problèmes 146 et 180 de Paul Erdős, en théorie des graphes. Un autre repousse les bornes connues sur l'empilement de sphères.\n\nLe détail qui circule le plus: les jetons de calcul des dix solutions auraient coûté environ 2 000 dollars au tarif de Sol, le modèle actuel d'OpenAI. Chaque démonstration est formalisée en Lean, donc vérifiable par une machine, et les certificats sont publics.\n\nLa réserve est entière. Les mathématiciens qui suivent ces travaux les traitent comme non vérifiés tant que la relecture n'a pas eu lieu, et ce sont des chercheurs d'OpenAI qui ont rédigé les articles et formalisé les preuves. Thomas Bloom, qui tient la base des problèmes d'Erdős à Manchester, refuse par ailleurs l'idée que l'IA remplace les mathématiciens.\n\nBascule réelle, ou annonce d'entreprise à vérifier ?\n\nSources: the-decoder.com, officechai.com, github.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Maths",
+  "captionEvidence": [
+    {
+      "quote": "settling a question raised by the mathematician Mikhail Gromov in 1999 and left open ever since",
+      "url": "https://officechai.com/ai/gpt-5-6-sol-helps-prove-that-non-sofic-groups-exist-in-big-math-breakthrough/"
+    },
+    {
+      "quote": "this time closing a 27-year-old open problem in group theory rather than just a competition-style puzzle",
+      "url": "https://officechai.com/ai/gpt-5-6-sol-helps-prove-that-non-sofic-groups-exist-in-big-math-breakthrough/"
+    },
+    {
+      "quote": "everyone involved is still treating it as unverified pending peer review",
+      "url": "https://officechai.com/ai/gpt-5-6-sol-helps-prove-that-non-sofic-groups-exist-in-big-math-breakthrough/"
+    },
+    {
+      "quote": "Improved asymptotic upper bounds on sphere-packing density, reaching the Cohn–Elkies threshold.",
+      "url": "https://raw.githubusercontent.com/openai/ten-proofs/main/README.md"
+    },
+    {
+      "quote": "Counterexamples to the compactness and degeneracy conjectures in extremal graph theory, resolving Erdős problems 146 and 180.",
+      "url": "https://raw.githubusercontent.com/openai/ten-proofs/main/README.md"
+    },
+    {
+      "quote": "OpenAI says the tokens used to generate all ten solutions would have cost about $2,000 at Sol's API rates.",
+      "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+    },
+    {
+      "quote": "Bloom also rejected the idea that AI is replacing mathematicians",
+      "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "OpenAI · Astra",
+      "headline": "OpenAI tranche un problème de maths de *1999*",
+      "hero": {
+        "value": "27 ans",
+        "label": "la question de Gromov, restée sans réponse"
+      },
+      "swipe": "Les reçus sont dans le Reel"
+    },
+    {
+      "type": "stat",
+      "figure": "2000 $",
+      "unit": "les jetons de calcul des dix solutions",
+      "body": "Le coût du calcul, au tarif public de **Sol**, pour produire les dix démonstrations.",
+      "evidence": "OpenAI says the tokens used to generate all ten solutions would have cost about $2,000 at Sol's API rates.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/",
+        "date": "2026-08-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "D'où viennent les preuves",
+      "body": "Les démonstrations viennent d'*Astra*, la prochaine famille de modèles d'OpenAI, dans une version interne.",
+      "evidence": "The mathematical arguments themselves, however, came from Astra.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/",
+        "date": "2026-08-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La question de Gromov",
+      "body": "Un des dix résultats construit un *groupe non sofic*. La question avait été posée en 1999 et laissée ouverte depuis 27 ans.",
+      "evidence": "this time closing a 27-year-old open problem in group theory rather than just a competition-style puzzle. The paper's abstract claims to construct an infinite, finitely presented group that is not \"sofic,\" settling a question raised by the mathematician Mikhail Gromov in 1999 and left open ever since.",
+      "source": {
+        "name": "OfficeChai",
+        "url": "https://officechai.com/ai/gpt-5-6-sol-helps-prove-that-non-sofic-groups-exist-in-big-math-breakthrough/",
+        "date": "2026-08-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que la question demandait",
+      "body": "Elle demandait si *tout groupe* se laisse approcher par des objets finis. Astra a construit celui qui résiste.",
+      "evidence": "A construction of a non-sofic group, resolving whether every group admits finite permutation approximations.",
+      "source": {
+        "name": "OpenAI, ten-proofs",
+        "url": "https://raw.githubusercontent.com/openai/ten-proofs/main/README.md",
+        "date": "2026-08-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Deux problèmes d'Erdős",
+      "body": "Deux des résultats ferment les problèmes d'Erdős **146** et **180**, en théorie des graphes.",
+      "evidence": "Counterexamples to the compactness and degeneracy conjectures in extremal graph theory, resolving Erdős problems 146 and 180.",
+      "source": {
+        "name": "OpenAI, ten-proofs",
+        "url": "https://raw.githubusercontent.com/openai/ten-proofs/main/README.md",
+        "date": "2026-08-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Des preuves lisibles par une machine",
+      "body": "Les dix démonstrations sont formalisées en *Lean*, et les certificats sont publiés.",
+      "evidence": "The project uses Lean 4.32.0, mathlib, and Lake. With",
+      "source": {
+        "name": "OpenAI, ten-proofs",
+        "url": "https://raw.githubusercontent.com/openai/ten-proofs/main/README.md",
+        "date": "2026-08-01"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Les certificats de preuve sont publics et vérifiables par une machine.",
+      "caveat": "Ce sont des chercheurs d'OpenAI qui ont rédigé les articles et formalisé les preuves.",
+      "claimLabel": "Ce qui est publié",
+      "caveatLabel": "Qui a tenu la plume",
+      "evidence": "OpenAI said its researchers helped prepare the papers and formalize the proofs, and that the company takes responsibility for their accuracy.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/",
+        "date": "2026-08-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Astra devant les régulateurs",
+      "body": "Sam Altman a déjà montré *Astra* à Washington. Le modèle sera le premier soumis au nouvel examen fédéral avant toute sortie publique.",
+      "evidence": "CEO Sam Altman has already showcased Astra in Washington, D.C. The models are currently being tested and will be the first to go through a planned U.S. government review process that requires official approval before public release.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/",
+        "date": "2026-08-01"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui aime les maths",
+      "sub": "Le compte qui raconte l'actu IA avec ses sources."
+    }
+  ],
+  "reel2": {
+    "mood": "wonder",
+    "lang": "fr",
+    "title": "OpenAI tranche un problème de maths de 1999",
+    "beats": [
+      {
+        "script": "En 1999, le mathématicien Mikhail Gromov pose une question. Pendant vingt-sept ans, personne n'y répond. OpenAI dit qu'un de ses modèles internes, Astra, vient de la trancher.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+        }
+      },
+      {
+        "script": "Et ce n'est qu'un des dix. Tous bloqués depuis au moins dix ans. Le premier repousse les bornes connues sur l'empilement de sphères.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a dense sphere packing of identical spheres",
+            "action": "holding still",
+            "setting": "on a plain pale surface in bright daylight",
+            "camera": "slow push in",
+            "composition": "close-up"
+          }
+        }
+      },
+      {
+        "script": "Un groupe, c'est la liste des façons de bouger un objet sans le déformer. Gromov demandait si tout groupe se laisse approcher par des objets finis. Astra a construit celui qui résiste.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed page of a mathematical proof about a group",
+            "setting": "on a pale surface in bright daylight",
+            "composition": "overhead close-up on the page"
+          }
+        }
+      },
+      {
+        "script": "Deux autres résultats ferment des problèmes posés par le mathématicien Paul Erdős, les numéros 146 et 180. Ils portaient sur la théorie des graphes.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.erdosproblems.com/146"
+        }
+      },
+      {
+        "script": "Deux mille dollars. C'est ce qu'auraient coûté les jetons de calcul des dix solutions, au tarif public de Sol, le modèle actuel d'OpenAI.",
+        "visual": {
+          "type": "card",
+          "value": "2 000 $",
+          "label": "le calcul des dix démonstrations, au tarif de Sol"
+        }
+      },
+      {
+        "script": "Chaque preuve est écrite en Lean, un langage qui fait vérifier une démonstration par la machine. N'importe qui peut donc les contrôler.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "lines of formal proof code on a computer screen",
+            "setting": "in a bright room in daylight",
+            "composition": "close-up on the screen"
+          }
+        }
+      },
+      {
+        "script": "Mais rien n'est vérifié. Les mathématiciens qui suivent ces preuves attendent la relecture. Et ce sont des chercheurs d'OpenAI qui ont rédigé les articles et formalisé les démonstrations.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://raw.githubusercontent.com/openai/ten-proofs/main/README.md"
+        }
+      },
+      {
+        "script": "Et Sam Altman a déjà montré Astra aux régulateurs à Washington. Ce sera le premier modèle soumis au nouvel examen fédéral avant toute sortie publique. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "sam altman",
+          "alt": "Sam Altman, directeur général d'OpenAI"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/",
+      "accessed": "2026-08-01"
+    },
+    {
+      "name": "OfficeChai",
+      "url": "https://officechai.com/ai/gpt-5-6-sol-helps-prove-that-non-sofic-groups-exist-in-big-math-breakthrough/",
+      "accessed": "2026-08-01"
+    },
+    {
+      "name": "OpenAI, ten-proofs (README)",
+      "url": "https://raw.githubusercontent.com/openai/ten-proofs/main/README.md",
+      "accessed": "2026-08-01"
+    },
+    {
+      "name": "Erdős Problems, #146",
+      "url": "https://www.erdosproblems.com/146",
+      "accessed": "2026-08-01"
+    }
+  ]
+}
