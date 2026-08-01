@@ -151,6 +151,49 @@ const END_ASK = ["ABONNE-TOI POUR DEMAIN", "ET LAISSE UN LIKE"];
  */
 const RATE_LEDGER = path.join(process.cwd(), "state", "voice-rate.jsonl");
 
+/**
+ * How much quieter the reading ends than it starts, in dB.
+ *
+ * Hasan, 2026-08-01, on the day's Reel: "à la fin la voix google tts chuchote un
+ * peu". He is right that something changes, and the last beat is the one that
+ * asks for the follow, so it is worth watching.
+ *
+ * What the measurements actually say, on the two published narrations:
+ *
+ *   31 July  decline -2.20 dB   spectral drift +0.09 dB   transcribed fine
+ *   1 August decline -1.60 dB   spectral drift +1.78 dB   transcriber drifted
+ *
+ * So the level is NOT the differentiator — the day he heard it declines less.
+ * What differs is timbre: the reading drifts towards the high end, which is what
+ * breathiness looks like. Levelling cannot repair that; speechnorm recovers
+ * about a decibel of gain and leaves the voice exactly as breathy.
+ *
+ * Nor is it why Whisper failed: the 31 July narration has the larger decline and
+ * transcribed perfectly, and the 1 August one anchors 90% off that container.
+ *
+ * This records the cheap half of the picture — two ffmpeg passes, about a
+ * second — because two files are not enough to put a threshold on. That is
+ * precisely the mistake three readings of one script made with the word window.
+ * A fortnight of numbers in the ledger is what would justify a rule; a hunch
+ * from two is not. A failure here is never allowed to matter.
+ */
+async function voiceDecline(wav) {
+  const meanOf = async (ss, t) => {
+    try {
+      const { stderr } = await run("ffmpeg", ["-v", "info", "-nostats", "-ss", String(ss), "-t", String(t), "-i", wav, "-af", "volumedetect", "-f", "null", "-"], { maxBuffer: 4 * 1024 * 1024 });
+      return Number(/mean_volume:\s*(-?\d+(?:\.\d+)?)\s*dB/.exec(stderr)?.[1]);
+    } catch { return NaN; }
+  };
+  try {
+    const total = Number((await ffprobe(wav)).format.duration);
+    if (!Number.isFinite(total) || total < 6) return null;
+    const third = total / 3;
+    const [head, tail] = await Promise.all([meanOf(0, third), meanOf(total - third, third)]);
+    if (!Number.isFinite(head) || !Number.isFinite(tail)) return null;
+    return Number((tail - head).toFixed(2));
+  } catch { return null; }
+}
+
 async function recordVoiceRate(entry) {
   try {
     await mkdir(path.dirname(RATE_LEDGER), { recursive: true });
@@ -300,12 +343,68 @@ print(len(words))
   /* The weights are already on disk by now, so this budget is for the reading
      alone: about 40 seconds on twenty cores, and a cloud container has fewer. */
   await run(py, [scriptFile, voiceWav, wordsFile], { timeout: 420_000 });
-  const heard = mergeContinuations(JSON.parse(await readFile(wordsFile, "utf8")));
-  const anchored = anchorToScript(heard, scriptWords);
+  let heard = mergeContinuations(JSON.parse(await readFile(wordsFile, "utf8")));
+  let anchored = anchorToScript(heard, scriptWords, { floor: 0 });
+  let coverage = anchored.filter((w) => w.anchored).length / scriptWords.length;
   console.log(
     `alignment: ${heard.length} tokens heard for ${scriptWords.length} script words, ` +
-      `${anchored.filter((w) => w.anchored).length} anchored`
+      `${anchored.filter((w) => w.anchored).length} anchored (${(coverage * 100).toFixed(0)}%)`
   );
+
+  /*
+   * A poor whole-file decode gets one windowed retry, automatically.
+   *
+   * This is the hour the 2026-08-01 run spent, encoded. Its whole-file decode
+   * dropped 30 of 209 words and anchored 69% — barely over the floor — and the
+   * message it got said the VOICE was wrong, so it bought a second narration
+   * chasing a phantom. It then bisected by hand for close to an hour before
+   * finding what a slice test says in four seconds: every 12-second piece of
+   * that audio transcribes verbatim, and only the long file drifts. It measured
+   * the fix too, and did not have time to build it: windowed decoding gave it
+   * 201 of 209 where the whole file gave 179.
+   *
+   * Measured here on the same published audio, on a healthy machine: whole-file
+   * anchors 90%, windowed 90%, so nothing is gained when nothing is wrong —
+   * and windowed costs about three times the wall clock, which is why it is a
+   * retry and not the default. On the container that produced 69%, it is the
+   * difference between a run that continues and a run that spends an hour.
+   *
+   * Whisper's long-form pass carries its own state across a whole file and can
+   * lose it; a window cannot drift further than its own length. Nothing
+   * downstream reads the transcription's words — only its clock — so a slightly
+   * worse wording with a sound clock is a strictly better trade.
+   */
+  if (coverage < ALIGN_HEALTHY) {
+    console.log(
+      `alignment: ${(coverage * 100).toFixed(0)}% is under the ${(ALIGN_HEALTHY * 100).toFixed(0)}% this normally reaches — ` +
+        "re-reading in windows before blaming the voice. This costs time, never money."
+    );
+    await journal(`alignment thin at ${(coverage * 100).toFixed(0)}%, retrying windowed`);
+    try {
+      const windowedFile = path.join(workDir, "words-windowed.json");
+      await writeFile(scriptFile, windowedScript(model, lang));
+      await run(py, [scriptFile, voiceWav, windowedFile], { timeout: 600_000 });
+      const heard2 = mergeContinuations(JSON.parse(await readFile(windowedFile, "utf8")));
+      const anchored2 = anchorToScript(heard2, scriptWords, { floor: 0 });
+      const coverage2 = anchored2.filter((w) => w.anchored).length / scriptWords.length;
+      console.log(`alignment: windowed re-read anchors ${(coverage2 * 100).toFixed(0)}% (whole file was ${(coverage * 100).toFixed(0)}%)`);
+      if (coverage2 > coverage) { heard = heard2; anchored = anchored2; coverage = coverage2; }
+    } catch (err) {
+      /* A failed retry must not lose the decode we already have: fall through
+         to the guard below with the whole-file result and let it decide. */
+      console.error(`alignment: the windowed re-read failed (${String(err.message).slice(0, 120)}); keeping the whole-file decode`);
+    }
+  }
+
+  if (coverage < ALIGN_FLOOR) {
+    throw new Error(
+      `alignment recognised only ${(coverage * 100).toFixed(0)}% of the script (floor ${(ALIGN_FLOOR * 100).toFixed(0)}%), ` +
+        "and a windowed re-read of the same audio did no better.\n" +
+        "Two independent decodes agreeing is what makes this the voice's fault rather than the transcriber's: " +
+        "listen to voice2_raw.wav before spending anything. If it reads the script correctly, this is a bug in the alignment, not a bad narration — " +
+        "do not buy another reading."
+    );
+  }
   if (cacheKey) {
     await writeFile(alignFile, JSON.stringify(anchored));
     await writeFile(alignKeyFile, cacheKey);
@@ -339,7 +438,51 @@ const alignKey = (s) =>
  * something else anchors almost nothing and still fails, which is the case the
  * guard was built for.
  */
-export function anchorToScript(heard, scriptWords) {
+/** Where a healthy decode lands, and where one stops being usable.
+ *
+ * Both measured on the same published narration of 2026-08-01. A machine that
+ * transcribes it properly anchors 90% of the script, whole-file or windowed,
+ * three passes running and identical every time. The container that built that
+ * Reel anchored 69%. A voice reading an entirely different script anchors 32%.
+ *
+ * So 85% is "this went normally", and below it something is worth retrying;
+ * 65% is "no reading of this script could look like that", and it stands where
+ * the run that measured it put it. */
+export const ALIGN_HEALTHY = 0.85;
+export const ALIGN_FLOOR = 0.65;
+
+/** Whisper again, in overlapping windows with their offsets added back.
+ *
+ * Long-form decoding carries state across the whole file and can lose it; a
+ * window cannot drift beyond its own length. Slices are cut with ffmpeg, which
+ * is already a hard dependency, so this adds nothing to install. Tokens landing
+ * inside a window's overlap are dropped in favour of what the previous window
+ * already heard there, which keeps the clock monotonic across the seams. */
+const windowedScript = (model, lang) => `
+from faster_whisper import WhisperModel
+import json, sys, os, subprocess, tempfile
+WIN, OVERLAP = 20.0, 4.0
+wav, out = sys.argv[1], sys.argv[2]
+dur = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",wav],
+                           capture_output=True, text=True, check=True).stdout.strip())
+m = WhisperModel("${model}", device="cpu", compute_type="int8", cpu_threads=os.cpu_count() or 4)
+words, start, tmp = [], 0.0, tempfile.mkdtemp()
+while start < dur - 0.05:
+    length = min(WIN, dur - start)
+    piece = os.path.join(tmp, "w%d.wav" % int(start * 100))
+    subprocess.run(["ffmpeg","-v","error","-y","-ss","%.3f" % start,"-t","%.3f" % length,"-i",wav,piece], check=True)
+    segs, _ = m.transcribe(piece, word_timestamps=True, language="${lang}", beam_size=1, condition_on_previous_text=False)
+    for s in segs:
+        for w in s.words:
+            ws, we = w.start + start, w.end + start
+            if words and ws < words[-1]["e"] - 0.02: continue
+            words.append({"w": w.word.strip(), "s": round(ws, 3), "e": round(we, 3)})
+    start += WIN - OVERLAP
+json.dump(words, open(out, "w"))
+print(len(words))
+`;
+
+export function anchorToScript(heard, scriptWords, { floor = ALIGN_FLOOR } = {}) {
   if (!heard.length) throw new Error("alignment heard nothing at all — the narration is silent or unreadable");
   const A = scriptWords.map(alignKey);
   const B = heard.map((h) => alignKey(h.w));
@@ -366,12 +509,16 @@ export function anchorToScript(heard, scriptWords) {
      and invents tokens over trailing silence; two thirds of a script recognised
      in order is a voice reading that script badly heard, and a voice reading a
      different one lands nowhere near it. */
+  /* `floor: 0` is how alignWords asks for the numbers without a verdict: it
+     wants to know how the decode went so it can decide whether to re-read the
+     audio in windows before anyone concludes the voice is wrong. The verdict
+     itself moved there, where both decodes are in hand. */
   const coverage = anchors / scriptWords.length;
-  if (coverage < 0.65)
+  if (floor > 0 && coverage < floor)
     throw new Error(
       `alignment recognised only ${anchors} of ${scriptWords.length} script words ` +
-        `(${(coverage * 100).toFixed(0)}%, floor 65%) — the voice said something the script does not, ` +
-        "listen to voice.wav before publishing"
+        `(${(coverage * 100).toFixed(0)}%, floor ${(floor * 100).toFixed(0)}%) — the voice said something the script does not, ` +
+        "listen to voice2_raw.wav before publishing"
     );
 
   // Fill the gaps: interpolate inside, extrapolate at the ends, keep it monotonic.
@@ -1178,7 +1325,7 @@ export async function buildReel(postFile, mediaDir) {
     });
     const t = got.seconds / SPEECH_S;
     const r = got.seconds > 0 ? scriptWords.length / got.seconds : 0;
-    await recordVoiceRate({ slug, words: scriptWords.length, seconds: got.seconds, voice: voiceName, lang, attempt, accepted: t >= TEMPO_MIN && t <= TEMPO_MAX && got.seconds <= RAW_MAX_S });
+    await recordVoiceRate({ slug, words: scriptWords.length, seconds: got.seconds, voice: voiceName, lang, attempt, accepted: t >= TEMPO_MIN && t <= TEMPO_MAX && got.seconds <= RAW_MAX_S, declineDb: await voiceDecline(rawWav) });
     console.log(
       `voice attempt ${attempt}: ${scriptWords.length} words in ${got.seconds.toFixed(1)}s (${r.toFixed(2)} w/s) — ` +
         `atempo ${t.toFixed(3)} onto ${SPEECH_S}s for a ${TARGET_S}s file`

@@ -700,6 +700,68 @@ test("promptcraft: the mood decides the light, and the refusals refuse", async (
   assert.ok(promptIssues('a man says "hello there" softly').length === 1, "quoted dialogue is refused");
 });
 
+/*
+ * 2026-08-01. The build stopped twice on "the voice said something the script
+ * does not". The voice had said exactly what the script says: the transcriber
+ * was dropping 30 words of 209 and anchoring 69%. The run bought a second
+ * narration chasing that phantom, then bisected by hand for close to an hour
+ * before finding what a slice test says in four seconds — every 12-second piece
+ * of that audio comes back verbatim and only the whole file drifts.
+ *
+ * Re-measured here on the audio that Reel published, three passes each:
+ *
+ *   healthy machine, whole file    219 tokens heard   90.0% anchored
+ *   healthy machine, 20s windows   219 tokens heard   90.4% anchored
+ *   the container that built it    179 tokens heard   68.9% anchored
+ *   a voice reading another script                     2.4% anchored
+ *
+ * So the windowed re-read is a retry, never the default: it buys nothing when
+ * nothing is wrong and costs about three times the wall clock. The run measured
+ * its value on the sick container itself — 201 of 209, against 179 whole-file.
+ */
+test("a thin decode is re-read in windows before the voice is blamed", async () => {
+  const { anchorToScript, ALIGN_HEALTHY, ALIGN_FLOOR } = await import("../src/reel2.mjs");
+
+  const script = "le groupe qui fournit environ un tiers de la memoire mondiale previent que la penurie va durer jusqu en deux mille vingt huit et que les prix montent deja partout".split(" ");
+  const asHeard = (words) => words.map((w, i) => ({ w, s: i * 0.3, e: i * 0.3 + 0.28 }));
+  const coverage = (heard) => {
+    const out = anchorToScript(heard, script, { floor: 0 });
+    return out.filter((o) => o.anchored).length / script.length;
+  };
+
+  // Everything heard: the clock is the transcription's, one for one.
+  const perfect = anchorToScript(asHeard(script), script, { floor: 0 });
+  assert.equal(perfect.length, script.length, "every script word gets a slot, always");
+  assert.ok(perfect.every((o) => o.anchored), "and each one is anchored when each one was heard");
+  assert.ok(coverage(asHeard(script)) >= ALIGN_HEALTHY);
+
+  // The container's failure shape: a third of the words silently missing, in
+  // order. Above the floor, under healthy — which is exactly the case the retry
+  // exists for, and exactly the case that used to read as a broken narration.
+  const thin = asHeard(script.filter((_, i) => i % 3 !== 0));
+  const thinCov = coverage(thin);
+  assert.ok(thinCov < ALIGN_HEALTHY, `a decode missing a third of the script (${(thinCov * 100).toFixed(0)}%) is not healthy`);
+  assert.ok(thinCov >= ALIGN_FLOOR, "but it is not proof the voice is wrong either");
+  assert.doesNotThrow(() => anchorToScript(thin, script, { floor: 0 }), "asking for the numbers must not deliver a verdict");
+
+  // A voice reading something else anchors almost nothing, and that is what the
+  // floor is for. It still throws by default, so no caller loses the guard by
+  // forgetting an option.
+  const wrong = asHeard("ceci est un tout autre texte qui ne partage presque rien avec ce script".split(" "));
+  assert.ok(coverage(wrong) < ALIGN_FLOOR, "a different script lands far below the floor");
+  assert.throws(() => anchorToScript(wrong, script), /alignment recognised only/, "the default floor is still armed");
+
+  // Interpolation: every word gets a time, the clock never goes backwards, and
+  // it stays inside the reading. This is what the karaoke and the beat cuts are
+  // made of, so a non-monotonic clock is a visibly broken Reel.
+  const gappy = anchorToScript(asHeard(script.filter((_, i) => i % 4 !== 1)), script, { floor: 0 });
+  assert.ok(gappy.every((o) => Number.isFinite(o.s) && Number.isFinite(o.e)), "no word is left without a time");
+  for (let i = 1; i < gappy.length; i++) assert.ok(gappy[i].s >= gappy[i - 1].s - 1e-6, `word ${i} starts before the one before it`);
+  assert.ok(gappy.every((o) => o.e >= o.s), "no word ends before it starts");
+
+  assert.ok(ALIGN_FLOOR < ALIGN_HEALTHY, "the floor is a refusal, the healthy mark is a retry, and they are not the same number");
+});
+
 test("reel2 alignment: whisper's French elision fragments merge back into one spoken word", async () => {
   const { mergeContinuations } = await import("../src/reel2.mjs");
   const heard = [

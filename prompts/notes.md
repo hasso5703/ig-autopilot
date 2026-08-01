@@ -200,20 +200,22 @@ ENTRIES:
   (jusqu'a 3, ~$0,025 piece) avant de refuser. Ne reecris le script que si les
   trois lectures echouent.
 - 2026-07-31 · Whisper: modele large-v3-turbo int8, beam_size=1, 1,6 Go
-  telecharges par ensureWhisper AVANT la transcription (~70 s de plus par build
-  sur 20 coeurs). ATTENTION 01/08, mesure sur un conteneur a 4 coeurs (`nproc`,
-  verifie-le): la transcription LONGUE est instable et NON DETERMINISTE. Le meme
-  audio en cache a donne 78%, 61% puis 72% de son script sur trois passes, avec
-  des tokens inventes ("labishopsie", "Hyper Auxerrecher", une boucle "pouce
-  pouce pouce"). Ce n'est PAS la narration: chaque tranche de 12 s du meme
-  fichier, transcrite seule, revient mot pour mot. Donc un taux bas n'accuse
-  jamais la voix. LE DIAGNOSTIC, 2 min et gratuit: `ffmpeg -ss T -t 12` sur
-  voice2_raw.wav puis transcris la tranche; si elle est juste, l'audio est bon.
-  Teste et ecarte le 01/08: base (perd 14 mots), small (tronque le dernier
-  beat), vad_filter et beam_size=5 (pires, boucles), decoupage en chunks
-  (63-75%, instable aussi). Le code encaisse maintenant la derive (ancrage LCS
-  sur le script + interpolation, plancher a 65% de mots reconnus), donc ne
-  repars pas en chasse. Proof: wbench 31/07, run 08h 01/08.
+  telecharges par ensureWhisper AVANT la transcription. Le 01/08 la transcription
+  longue a derive sur le conteneur du run de 8h: 179 tokens pour 209 mots, 69%
+  d'ancrage, des tokens inventes ("labishopsie", boucle "pouce pouce pouce").
+  Ce n'etait PAS la narration: chaque tranche de 12 s du meme fichier revenait
+  mot pour mot. UN TAUX BAS N'ACCUSE JAMAIS LA VOIX, ne rachete pas de lecture.
+  CORRECTION 01/08, re-mesure hors conteneur sur le voice2_raw.wav publie: la
+  cause n'est PAS le nombre de coeurs. A 4 threads comme a 20, le meme fichier
+  rend 219 tokens et 90% d'ancrage, identique sur 3 passes donc deterministe;
+  l'audio etire par atempo donne exactement pareil. La derive appartient a
+  l'environnement du conteneur et ne se reproduit pas ailleurs: ne pars pas la
+  chasser. Ecartes aussi: base (perd 14 mots), small (tronque le dernier beat),
+  vad_filter et beam_size=5 (pires). LE CODE S'EN CHARGE: sous 85% d'ancrage il
+  relit l'audio en fenetres de 20 s tout seul (~3x plus lent, zero dollar) et
+  garde le meilleur des deux decodages; il ne refuse que si les DEUX echouent, et
+  le message le dit alors explicitement. Lis la ligne "alignment: ... anchored
+  (N%)" et laisse-le faire. Proof: wbench 31/07, run 08h 01/08, re-mesures 01/08.
 - 2026-07-31 · Ce qu'on MONTRE est desormais tenu par le gate, pas par le gout.
   Une image generee ou un veo dont le `spec` ne partage aucun mot (>=5 lettres)
   avec les sources est REFUSE: c'est ce qui a laisse passer un verre d'eau, une
