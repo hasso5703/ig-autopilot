@@ -1,0 +1,50 @@
+{
+  "_note": "NOT a post. This is the tweet's claim written up as a spec so the gate can be run against it. No reel2 block, and it lives outside posts/ so no run can pick it up. Expected result: REJECTED.",
+  "slug": "factcheck-tweet-bostrom-preuve-simulation",
+  "centralClaim": "Oxford scholar Nick Bostrom proved that our world is statistically almost certain to be a computer simulation, which implies that the universe and its physical rules were deliberately programmed by a higher intelligence.",
+  "corroboration": [
+    {
+      "url": "https://www.simulation-argument.com/simulation.html",
+      "quote": "Nick Bostrom proved that our world is statistically almost certain to be a computer simulation, and that the universe and its physical rules were deliberately programmed by a higher intelligence."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Simulation_hypothesis",
+      "quote": "Bostrom proved that our world is almost certainly a computer simulation, whose physical rules were deliberately programmed by a higher intelligence."
+    }
+  ],
+  "sendTest": "Un philosophe d'Oxford aurait prouvé que notre monde est presque certainement une simulation programmee par une intelligence superieure.",
+  "caption": "Nick Bostrom aurait prouvé que notre monde est presque certainement une simulation informatique.\n\nSelon cette lecture, les règles physiques de l'univers auraient été délibérément programmées par une intelligence supérieure.\n\nSources: simulation-argument.com, wikipedia.org\n\n#IA #Simulation #Philosophie #Bostrom #Sciences\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Nick Bostrom · simulation",
+      "headline": "Bostrom aurait *prouvé* que notre monde est une simulation",
+      "hero": { "value": "presque certain", "label": "le degré de certitude annoncé" },
+      "swipe": "Les reçus sont dans le Reel"
+    },
+    {
+      "type": "content",
+      "title": "La preuve annoncée",
+      "body": "Le philosophe d'Oxford Nick Bostrom aurait *prouvé* que notre monde est presque certainement une simulation informatique.",
+      "evidence": "Nick Bostrom proved that our world is statistically almost certain to be a computer simulation, and that the universe and its physical rules were deliberately programmed by a higher intelligence.",
+      "source": { "name": "Simulation Argument", "url": "https://www.simulation-argument.com/simulation.html", "date": "2003-01-01" }
+    },
+    {
+      "type": "content",
+      "title": "Une intelligence supérieure",
+      "body": "Cette logique impliquerait que les règles physiques de l'univers ont été délibérément *programmées* par une intelligence supérieure.",
+      "evidence": "Bostrom proved that our world is almost certainly a computer simulation, whose physical rules were deliberately programmed by a higher intelligence.",
+      "source": { "name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Simulation_hypothesis", "date": "2026-08-01" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui parle de simulation",
+      "sub": "Le compte qui raconte l'actu IA avec ses sources."
+    }
+  ],
+  "sources": [
+    { "name": "Simulation Argument", "url": "https://www.simulation-argument.com/simulation.html" },
+    { "name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Simulation_hypothesis" }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "_note": "NOT a post. The corrected version of the same claim, written so every sentence carries a verbatim source quote. No reel2 block, and it lives outside posts/ so no run can pick it up. Expected result: PASSED.",
+  "slug": "factcheck-bostrom-argument-simulation-trilemme",
+  "centralClaim": "Nick Bostrom's simulation argument does not show that we are living in a computer simulation: it argues that at least one of three propositions is true, and Bostrom says our credence should be apportioned roughly evenly between them.",
+  "corroboration": [
+    {
+      "url": "https://www.simulation-argument.com/simulation.html",
+      "quote": "this paper argues that at least one of the following propositions is true: (1) the human species is very likely to go extinct before reaching a \"posthuman\" stage; (2) any posthuman civilization is extremely unlikely to run a significant number of simulations of their evolutionary history (or variations thereof); (3) we are almost certainly living in a computer simulation."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Simulation_hypothesis",
+      "quote": "in 2003, bostrom proposed a trilemma that he called \"the simulation argument\". despite its name, the \"simulation argument\" does not directly argue that humans live in a simulation; instead, it argues that one of three unlikely-seeming propositions is almost certainly true"
+    }
+  ],
+  "sendTest": "Bostrom n'a pas prouvé que nous vivons dans une simulation : son argument dit qu'une de trois hypothèses est vraie, sans dire laquelle.",
+  "caption": "Nick Bostrom n'a pas prouvé que nous vivons dans une simulation : son argument est un trilemme.\n\nSon article de 2003 défend une disjonction : au moins une de trois propositions est vraie. Soit l'espèce humaine s'éteint avant le stade posthumain, soit les civilisations posthumaines ne lancent presque jamais de simulations de leur histoire, soit nous vivons presque certainement dans une simulation. L'argument ne dit pas laquelle des trois est la bonne.\n\nBostrom l'écrit lui-même : il faut répartir sa créance à peu près également entre les trois branches, et on peut accepter l'argument tout en rejetant l'hypothèse de la simulation. Il refuse même de donner un chiffre, et traite d'excès de confiance ceux qui choisissent une branche.\n\nSur l'idée d'une intelligence supérieure : il précise que les simulateurs seraient des entités naturalistes, soumises aux lois de la nature à leur propre niveau de réalité, ni omniscientes ni toutes-puissantes, et que l'hypothèse n'implique ni l'existence ni l'inexistence d'une divinité. Il note aussi que simuler l'univers entier au niveau quantique serait hors de portée, et inutile.\n\nDétail : il enseignait bien à Oxford en 2003, mais le Future of Humanity Institute a fermé en 2024 et il est aujourd'hui chercheur principal de la Macrostrategy Research Initiative.\n\nUn argument disjonctif transformé en preuve, ça reste une erreur de lecture.\n\nSources: simulation-argument.com, wikipedia.org\n\n#IA #Simulation #Philosophie #Bostrom #FactCheck\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "the argument shows only that at least one of three possibilities obtains, but it does not tell us which one(s). one could accept the simulation argument while rejecting the simulation hypothesis (i.e. that we are in a simulation).",
+      "url": "https://www.simulation-argument.com/faq.html"
+    },
+    {
+      "quote": "in the dark forest of our current ignorance, it seems sensible to apportion one's credence roughly evenly between (1), (2), and (3).",
+      "url": "https://www.simulation-argument.com/simulation.html"
+    },
+    {
+      "quote": "i would assign a \"substantial probability\" to the simulation hypothesis. i tend to refrain from providing a specific number.",
+      "url": "https://www.simulation-argument.com/faq.html"
+    },
+    {
+      "quote": "many if not all of these people are overconfident.",
+      "url": "https://www.simulation-argument.com/faq.html"
+    },
+    {
+      "quote": "it is important to stress that the simulators implied by the simulation hypothesis would be naturalistic entities, subject to the laws of nature at their own level of reality. they would not be strictly omniscient or omnipotent, and they might well be finite.",
+      "url": "https://www.simulation-argument.com/faq.html"
+    },
+    {
+      "quote": "the simulation hypothesis does not imply the existence of such a deity, nor does it imply its non-existence.",
+      "url": "https://www.simulation-argument.com/faq.html"
+    },
+    {
+      "quote": "simulating the entire universe down to the quantum level is obviously infeasible, unless radically new physics is discovered. but in order to get a realistic simulation of human experience, much less is needed",
+      "url": "https://www.simulation-argument.com/simulation.html"
+    },
+    {
+      "quote": "by nick bostrom faculty of philosophy, oxford university published in philosophical quarterly (2003)",
+      "url": "https://www.simulation-argument.com/simulation.html"
+    },
+    {
+      "quote": "he was the founding director of the later defunct future of humanity institute at the university of oxford",
+      "url": "https://en.wikipedia.org/wiki/Nick_Bostrom"
+    },
+    {
+      "quote": "has become principal researcher at the macrostrategy research initiative",
+      "url": "https://en.wikipedia.org/wiki/Nick_Bostrom"
+    },
+    {
+      "quote": "until its shutdown in 2024, researched the far future of human civilization",
+      "url": "https://en.wikipedia.org/wiki/Nick_Bostrom"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Nick Bostrom · fact-check",
+      "headline": "Non, Bostrom n'a *pas* prouvé que nous vivons dans une simulation",
+      "hero": { "value": "trois", "label": "les branches de son trilemme, et il n'en tranche aucune" },
+      "swipe": "Les reçus sont dans le Reel"
+    },
+    {
+      "type": "content",
+      "title": "Une disjonction, pas une preuve",
+      "body": "L'article de Nick Bostrom défend qu'*au moins une* de trois propositions est vraie. Il ne dit jamais laquelle.",
+      "evidence": "this paper argues that at least one of the following propositions is true: (1) the human species is very likely to go extinct before reaching a \"posthuman\" stage; (2) any posthuman civilization is extremely unlikely to run a significant number of simulations of their evolutionary history (or variations thereof); (3) we are almost certainly living in a computer simulation.",
+      "source": { "name": "Simulation Argument", "url": "https://www.simulation-argument.com/simulation.html", "date": "2003-01-01" }
+    },
+    {
+      "type": "content",
+      "title": "Bostrom ne tranche pas",
+      "body": "Il écrit qu'il faut répartir sa créance *à peu près également* entre les trois branches du trilemme.",
+      "evidence": "in the dark forest of our current ignorance, it seems sensible to apportion one's credence roughly evenly between (1), (2), and (3).",
+      "source": { "name": "Simulation Argument", "url": "https://www.simulation-argument.com/simulation.html", "date": "2003-01-01" }
+    },
+    {
+      "type": "content",
+      "title": "On peut accepter l'argument et refuser la conclusion",
+      "body": "Bostrom précise qu'accepter l'argument *n'oblige pas* à accepter l'hypothèse de la simulation.",
+      "evidence": "the argument shows only that at least one of three possibilities obtains, but it does not tell us which one(s). one could accept the simulation argument while rejecting the simulation hypothesis (i.e. that we are in a simulation).",
+      "source": { "name": "Simulation Argument, FAQ", "url": "https://www.simulation-argument.com/faq.html", "date": "2026-08-01" }
+    },
+    {
+      "type": "content",
+      "title": "Pas une intelligence supérieure",
+      "body": "Les simulateurs seraient des entités *naturalistes*, ni omniscientes ni toutes-puissantes, soumises aux lois de la nature à leur propre niveau.",
+      "evidence": "it is important to stress that the simulators implied by the simulation hypothesis would be naturalistic entities, subject to the laws of nature at their own level of reality. they would not be strictly omniscient or omnipotent, and they might well be finite.",
+      "source": { "name": "Simulation Argument, FAQ", "url": "https://www.simulation-argument.com/faq.html", "date": "2026-08-01" }
+    },
+    {
+      "type": "content",
+      "title": "Aucun lien avec une divinité",
+      "body": "L'hypothèse *n'implique* ni l'existence ni l'inexistence d'une divinité omnisciente et toute-puissante.",
+      "evidence": "the simulation hypothesis does not imply the existence of such a deity, nor does it imply its non-existence.",
+      "source": { "name": "Simulation Argument, FAQ", "url": "https://www.simulation-argument.com/faq.html", "date": "2026-08-01" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui a partagé le tweet",
+      "sub": "Le compte qui raconte l'actu IA avec ses sources."
+    }
+  ],
+  "sources": [
+    { "name": "Simulation Argument", "url": "https://www.simulation-argument.com/simulation.html" },
+    { "name": "Simulation Argument, FAQ", "url": "https://www.simulation-argument.com/faq.html" },
+    { "name": "Wikipedia, Simulation hypothesis", "url": "https://en.wikipedia.org/wiki/Simulation_hypothesis" },
+    { "name": "Wikipedia, Nick Bostrom", "url": "https://en.wikipedia.org/wiki/Nick_Bostrom" }
+  ]
+}
