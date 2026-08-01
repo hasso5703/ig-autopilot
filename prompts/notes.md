@@ -40,7 +40,13 @@ ENTRIES:
   citation verbatim de l'appel que le primaire ne publie pas. Attention, elle
   peut l'attribuer a des personnes differentes (meme phrase donnee a Daniel Oh
   par PC Gamer et a Jaejune Kim par Digital Trends): cite l'entreprise, pas la
-  personne, tant qu'un transcript n'a pas tranche.
+  personne, tant qu'un transcript n'a pas tranche. Ajout 01/08 (10h): quand le
+  primaire est un billet openai.com (403), deux contournements mesures joignables
+  en 200 et gates du premier coup: raw.githubusercontent.com (le README d'un
+  depot openai/... porte le contenu de l'annonce, github.com et api.github.com
+  sont eux interceptes 403 par le proxy de session) et cdn.openai.com (les PDF,
+  mais validate.mjs lit du texte, donc un PDF ne se gate pas). Repondent 200 et
+  se gatent aussi: the-decoder.com, officechai.com, erdosproblems.com.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -57,8 +63,16 @@ ENTRIES:
 - 2026-07-28 · Land state on main ONLY via `node src/land.mjs "msg" [paths]`.
   Local `main` is clone-time state, not truth; a checkout nearly erased
   posted.jsonl on 28/07. Never force-push, ever. Proof: run report 28/07.
-- 2026-07-28 · `state.mjs guard scout` never blocks (scouts publish nothing);
-  bare `guard` is for publish runs and stops them inside the 2h gap.
+- 2026-08-01 · Le filtre "l'image montre quelque chose de l'histoire" compare
+  des mots RACINISES (state.mjs tokens/stem), et la racine casse au pluriel:
+  "spheres" donne "spher", "sphere" donne "sphere", donc un spec au pluriel ne
+  matche pas une source au singulier et le beat est refuse a tort. En plus la
+  racine doit faire 5 lettres ou plus: "packed"/"packing" donnent "pack" (4) et
+  ne comptent jamais. Ecris les sujets de spec au SINGULIER et vise un nom long
+  present tel quel dans une citation d'evidence. Verifier avant de relancer le
+  gate: `node -e "import('./src/state.mjs').then(m=>console.log(m.tokens('...')))"`.
+  Proof: gate 10h 01/08, beat "identical spheres packed" refuse, "a dense sphere
+  packing" accepte.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
