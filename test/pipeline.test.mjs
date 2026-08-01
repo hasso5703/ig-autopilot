@@ -729,6 +729,57 @@ test("reel2 alignment: whisper's French elision fragments merge back into one sp
     "a hyphen before a digit is Whisper's numeral, not a compound-word fragment, and stays its own word");
 });
 
+test("reel2 alignment: a drifting transcriber times the whole script, a wrong one still fails", async () => {
+  const { anchorToScript } = await import("../src/reel2.mjs");
+  const script = "Samsung prévoit une pénurie de mémoire qui tient jusqu'en 2028 et ça coûte cher".split(" ");
+  // What a drifting Whisper actually returns: right words, wrong words, dropped
+  // words. On 2026-08-01 it dropped 23 of 209 twice on correct audio.
+  // 11 of 14 anchor here: the same 78% the real 209-word narration scored,
+  // against 32% for a narration of something else.
+  const heard = [
+    { w: "Samsung", s: 0.0, e: 0.5 },
+    { w: "prevoit", s: 0.5, e: 1.0 },     // heard without its accent
+    { w: "une", s: 1.0, e: 1.2 },
+    { w: "pénurie", s: 1.2, e: 1.8 },
+    // "de mémoire" dropped entirely
+    { w: "qui", s: 3.0, e: 3.2 },
+    { w: "tient", s: 3.2, e: 3.5 },
+    { w: "jusqu'en", s: 3.5, e: 3.9 },
+    { w: "2028", s: 3.9, e: 4.5 },
+    { w: "labishopsie", s: 4.5, e: 4.7 }, // hallucinated, anchors nowhere
+    // "et" dropped
+    { w: "ça", s: 4.9, e: 5.1 },
+    { w: "coûte", s: 5.1, e: 5.5 },
+    { w: "cher", s: 5.5, e: 5.9 },
+  ];
+  const out = anchorToScript(heard, script);
+  assert.equal(out.length, script.length, "every script word gets a timing, however badly it was heard");
+  assert.deepEqual(out.map((o) => o.w), script, "the words are ours, never the transcriber's");
+  assert.ok(out.every((o) => Number.isFinite(o.s) && Number.isFinite(o.e)), "no gap is left unfilled");
+  for (let i = 1; i < out.length; i++)
+    assert.ok(out[i].s >= out[i - 1].s - 1e-6, `word ${i} does not travel backwards in time`);
+  assert.equal(out[0].s, 0.0, "an anchored word keeps the clock it was heard on");
+  assert.equal(out[3].e, 1.8, "and its end");
+  // "de mémoire" was never heard: interpolated across the gap it left.
+  assert.ok(out[4].s >= 1.8 - 1e-6 && out[5].e <= 3.0 + 1e-6,
+    "dropped words are spread across the silence they left, not stacked on a neighbour");
+  assert.ok(out[10].s >= 4.5 - 1e-6 && out[10].e <= 4.9 + 1e-6,
+    "a word dropped next to a hallucination still lands between its neighbours");
+  assert.equal(out.at(-1).e, 5.9, "the last anchored word still ends the clock");
+
+  // Accents, case and punctuation must not break an anchor.
+  assert.equal(anchorToScript([{ w: "TELEPHONE,", s: 1, e: 2 }], ["téléphone"])[0].s, 1,
+    "an anchor survives accents, case and punctuation");
+
+  // The case the guard exists for: a voice reading something else.
+  assert.throws(
+    () => anchorToScript(heard, "le chat dort sur le canapé pendant que la pluie tombe".split(" ")),
+    /recognised only/,
+    "a narration that is not this script anchors almost nothing and still fails the build"
+  );
+  assert.throws(() => anchorToScript([], script), /heard nothing at all/, "silence is not an alignment");
+});
+
 test("reel2 karaoke: ASS colours convert, orphan words rejoin their sentence, screenshots caption low", async () => {
   const { hexToAss, buildAss } = await import("../src/reel2.mjs");
   assert.equal(hexToAss("FFB300"), "&H0000B3FF", "RRGGBB becomes ASS &H00BBGGRR");

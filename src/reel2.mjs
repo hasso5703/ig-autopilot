@@ -272,25 +272,90 @@ print(len(words))
      alone: about 40 seconds on twenty cores, and a cloud container has fewer. */
   await run(py, [scriptFile, voiceWav, wordsFile], { timeout: 420_000 });
   const heard = mergeContinuations(JSON.parse(await readFile(wordsFile, "utf8")));
-  // The tolerance was a flat 2 words when a script was ~150 words long. At the
-  // 60-second format's ~180 it is scaled, because the chance of one honest
-  // mishearing grows with the length of the reading and a single token must not
-  // cost a built Reel. It stays tight enough that a whole dropped sentence
-  // still fails, which is what the guard is for.
-  const slack = Math.max(2, Math.ceil(scriptWords.length / 60));
-  if (Math.abs(heard.length - scriptWords.length) > slack) {
-    throw new Error(
-      `alignment heard ${heard.length} words for a ${scriptWords.length}-word script — ` +
-        "the voice said something the script does not, listen to voice.wav before publishing"
-    );
+  return anchorToScript(heard, scriptWords);
+}
+
+/** Strip a token to what two transcriptions of the same word must share. */
+const alignKey = (s) =>
+  s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, "");
+
+/**
+ * Our words, whisper's clock — matched by content instead of by position.
+ *
+ * This used to be a positional mapping guarded by a word count: heard[i] gave
+ * the timing of scriptWords[i], and a count more than a few off failed the
+ * build. That is exact when the transcription is, and it was, until a container
+ * with four cores read the same narration twice on 2026-08-01 and dropped
+ * twenty-three words of it both times. The audio was fine: every slice of it,
+ * transcribed on its own, came back verbatim, and the whole file came back with
+ * "labishopsie", "Hyper Auxerrecher" and a runaway of "pouce pouce pouce".
+ * large-v3-turbo drifts on long dense French here; `small` truncated the last
+ * beat instead, `base` lost fourteen words, VAD and beam search made it worse.
+ *
+ * A drifting transcriber is not the same event as a voice reading the wrong
+ * script, and only the second one is worth killing a paid Reel over. So the
+ * heard tokens are anchored onto the script by longest common subsequence, the
+ * words nothing was heard for have their timings interpolated between the
+ * anchors around them, and the guard measures how much of the script was
+ * actually recognised rather than how many tokens came back. A voice reading
+ * something else anchors almost nothing and still fails, which is the case the
+ * guard was built for.
+ */
+export function anchorToScript(heard, scriptWords) {
+  if (!heard.length) throw new Error("alignment heard nothing at all — the narration is silent or unreadable");
+  const A = scriptWords.map(alignKey);
+  const B = heard.map((h) => alignKey(h.w));
+  // LCS table. A 200-word script against ~200 tokens is 40k cells: free.
+  const dp = Array.from({ length: A.length + 1 }, () => new Uint16Array(B.length + 1));
+  for (let i = A.length - 1; i >= 0; i--)
+    for (let j = B.length - 1; j >= 0; j--)
+      dp[i][j] = A[i] && A[i] === B[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+
+  const out = scriptWords.map((w) => ({ w, s: null, e: null }));
+  let i = 0, j = 0, anchors = 0;
+  while (i < A.length && j < B.length) {
+    if (A[i] && A[i] === B[j]) {
+      out[i].s = heard[j].s;
+      out[i].e = heard[j].e;
+      anchors++;
+      i++; j++;
+    } else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
+    else j++;
   }
-  // Positional mapping: our words, whisper's clock. Off-by-a-couple is spread
-  // proportionally rather than guessed at.
-  const n = Math.min(heard.length, scriptWords.length);
-  const out = [];
-  for (let i = 0; i < scriptWords.length; i++) {
-    const src = heard[Math.min(i, n - 1)];
-    out.push({ w: scriptWords[i], s: src.s, e: src.e });
+
+  /* The floor is deliberately low. Whisper mishears names, splits contractions
+     and invents tokens over trailing silence; two thirds of a script recognised
+     in order is a voice reading that script badly heard, and a voice reading a
+     different one lands nowhere near it. */
+  const coverage = anchors / scriptWords.length;
+  if (coverage < 0.65)
+    throw new Error(
+      `alignment recognised only ${anchors} of ${scriptWords.length} script words ` +
+        `(${(coverage * 100).toFixed(0)}%, floor 65%) — the voice said something the script does not, ` +
+        "listen to voice.wav before publishing"
+    );
+
+  // Fill the gaps: interpolate inside, extrapolate at the ends, keep it monotonic.
+  const known = out.map((o, k) => (o.s === null ? -1 : k)).filter((k) => k >= 0);
+  const first = known[0], last = known.at(-1);
+  const span = out[last].e - out[first].s;
+  const per = span > 0 ? span / Math.max(1, last - first) : 0.3;
+  for (let k = first - 1; k >= 0; k--) {
+    out[k].e = out[k + 1].s;
+    out[k].s = Math.max(0, out[k].e - per);
+  }
+  for (let k = last + 1; k < out.length; k++) {
+    out[k].s = out[k - 1].e;
+    out[k].e = out[k].s + per;
+  }
+  for (let a = 0; a < known.length - 1; a++) {
+    const lo = known[a], hi = known[a + 1];
+    if (hi === lo + 1) continue;
+    const step = (out[hi].s - out[lo].e) / (hi - lo);
+    for (let k = lo + 1; k < hi; k++) {
+      out[k].s = out[lo].e + step * (k - lo - 1);
+      out[k].e = out[lo].e + step * (k - lo);
+    }
   }
   return out;
 }
