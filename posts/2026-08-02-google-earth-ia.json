@@ -1,0 +1,228 @@
+{
+  "slug": "2026-08-02-google-earth-ia",
+  "centralClaim": "Google rolled back the image generation feature in Google Earth one day after launching it worldwide, after people used it to create generated imagery on top of the real satellite imagery of real places.",
+  "corroboration": [
+    {
+      "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/",
+      "quote": "We know that people uniquely trust Google Earth for a reliable view of the world. We’ve seen geospatial professionals using this feature for a range of useful purposes, however we’ve also seen people sharing screenshots of generated imagery that appear to violate our policies. So we’re rolling back this feature in Google Earth while we work on implementing stronger guardrails."
+    },
+    {
+      "url": "https://www.npr.org/2026/07/31/nx-s1-5914652/google-adds-ai-to-satellite-images-raising-fears-of-deepfakes-in-the-sky",
+      "quote": "A day after Google unveiled a new feature that allowed users to create AI-generated satellite images with the click of a button on its Google Earth platform, the company announced it was removing the tool."
+    }
+  ],
+  "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
+  "caption": "Google a mis un générateur d'images dans Google Earth jeudi. Vendredi, il l'avait retiré.\n\nLe bouton permettait de taper une phrase et d'obtenir une image photoréaliste posée sur l'imagerie satellite réelle du lieu visé, partout dans le monde, sans liste d'attente.\n\nLe chercheur en sources ouvertes Henk van Ess a planté une centrale nucléaire en Iran, un accident mortel dans une rue d'Amsterdam et un hôpital avec un cratère de bombe à Gaza. Rien n'a été refusé. De son côté, NPR a inondé le Capitole des États-Unis et incendié l'île iranienne de Kharg.\n\nLe détail qui n'a pas tenu dans la vidéo. Google répond que chaque image porte son filigrane SynthID, lisible par Gemini. Van Ess a photographié l'image à l'écran et le filigrane a cessé d'être lu. Hive, un des plus gros détecteurs d'IA hors Google, a noté son clip à 1% de vidéo générée par IA.\n\nÀ décharge, Google précise que les images générées n'apparaissaient pas dans l'expérience Google Earth partagée avec les autres, et qu'elles étaient marquées comme générées par IA.\n\nUn filigrane que seul Google sait lire, ça compte comme une preuve, oui ou non ?\n\nSources : blog.google, digitaldigging.org, npr.org, engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #Google #GoogleEarth\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Hive, one of the biggest names in AI detection outside Google, scanned the post automatically and published its verdict underneath: AI Generated Video 1%, Deepfake 0%, AI Generated Speech 0%, AI Generated Music 36%.",
+      "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "31 juillet 2026 · Google",
+      "headline": "Google Earth a *dessiné* ce qu'on lui demandait",
+      "hero": {
+        "value": "Un jour",
+        "label": "entre le lancement mondial et le retrait"
+      },
+      "swipe": "Les reçus sont dans le Reel"
+    },
+    {
+      "type": "stat",
+      "figure": "1%",
+      "unit": "de vidéo générée par IA, selon Hive",
+      "body": "Le verdict d'un des plus gros détecteurs d'IA **hors Google** sur un clip sorti du modèle quelques minutes plus tôt.",
+      "evidence": "Hive, one of the biggest names in AI detection outside Google, scanned the post automatically and published its verdict underneath: AI Generated Video 1%, Deepfake 0%, AI Generated Speech 0%, AI Generated Music 36%.",
+      "source": {
+        "name": "Digital Digging",
+        "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que faisait le bouton",
+      "body": "Tu zoomais sur un lieu, tu tapais ce que tu voulais voir, et le modèle repartait de *l'imagerie satellite* de Google pour rendre une image photoréaliste de cet endroit précis.",
+      "evidence": "For the first time, you can generate custom images using Google Earth's satellite, aerial, and 3D imagery alongside Nano Banana, which creates concepts grounded in the real world.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Lancé partout, tout de suite",
+      "body": "Le générateur s'appelle *Nano Banana 2*. Il est arrivé sur le web dans le monde entier, pour tout le monde, **sans liste d'attente**.",
+      "evidence": "Image generation went live in Google Earth on the web this afternoon, powered by Nano Banana 2, worldwide, for everyone, with no waitlist and no application.",
+      "source": {
+        "name": "Digital Digging",
+        "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que le chercheur a obtenu",
+      "body": "Une centrale nucléaire en Iran, un accident mortel à Amsterdam, un hôpital avec un cratère de bombe à Gaza. *Rien n'a été refusé.*",
+      "evidence": "Refugees at a border, a nuclear plant in Iran, a fatal crash on an Amsterdam street, a hospital with a bomb crater in Gaza. Nothing was refused, nothing was softened, and nothing suggested I try a different prompt.",
+      "source": {
+        "name": "Digital Digging",
+        "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une rédaction a refait le test",
+      "body": "NPR a généré l'île iranienne de Kharg en feu et le Capitole des États-Unis sous les eaux. **Deux événements qui n'ont jamais eu lieu.**",
+      "evidence": "NPR was able to easily generate images of Iran's Kharg Island on fire, and a flooded U.S. Capitol complex.",
+      "source": {
+        "name": "NPR",
+        "url": "https://www.npr.org/2026/07/31/nx-s1-5914652/google-adds-ai-to-satellite-images-raising-fears-of-deepfakes-in-the-sky",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Chaque image porte le filigrane SynthID, lisible dans Gemini ou dans Lens.",
+      "caveat": "Photographié à l'écran, le filigrane cesse d'être lu. Hors de Google, l'image passe pour authentique.",
+      "claimLabel": "La réponse de Google",
+      "caveatLabel": "Ce que donne le test",
+      "evidence": "The watermark was there the whole time. Outside Google, it reads as authentic.",
+      "source": {
+        "name": "Digital Digging",
+        "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Google spent twenty years building the reference the world checks against.",
+      "attribution": "Henk van Ess, chercheur en sources ouvertes",
+      "evidence": "Google spent twenty years building the reference the world checks against.",
+      "source": {
+        "name": "Digital Digging",
+        "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran",
+        "date": "2026-07-30"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Google fait marche arrière",
+      "body": "L'entreprise retire la fonction le temps de poser des *garde-fous plus solides*, en reconnaissant que les gens font une confiance particulière à Google Earth.",
+      "evidence": "We know that people uniquely trust Google Earth for a reliable view of the world.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui croit ce qu'il voit sur une carte",
+      "sub": "Le compte qui raconte l'actu IA avec ses sources."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "L'IA de Google Earth a vécu un jour",
+    "beats": [
+      {
+        "script": "Jeudi, Google a ajouté un bouton dans Google Earth: tu tapes ce que tu veux voir, et il le dessine sur l'imagerie satellite réelle. Vendredi, Google l'avait retiré.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/"
+        }
+      },
+      {
+        "script": "Et ce n'est pas Google qui a vu le problème. Ce sont ceux dont le métier est de vérifier les images.",
+        "visual": {
+          "type": "card",
+          "value": "UN JOUR",
+          "label": "entre le lancement mondial et le retrait de la fonction"
+        }
+      },
+      {
+        "script": "Le générateur s'appelle Nano Banana 2. Il partait de l'imagerie satellite de Google pour rendre une photo réaliste du lieu exact que tu visais.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a mapping application showing satellite imagery of a coastline",
+            "setting": "on a computer monitor in a bright room in daylight",
+            "composition": "close-up on the screen"
+          }
+        }
+      },
+      {
+        "script": "Donc Henk van Ess, chercheur en sources ouvertes, a essayé. Une centrale nucléaire en Iran. Un accident mortel à Amsterdam. Un hôpital avec un cratère de bombe à Gaza.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran"
+        }
+      },
+      {
+        "script": "Rien n'a été refusé, rien n'a été adouci. De son côté, NPR a inondé le Capitole des États-Unis et incendié l'île iranienne de Kharg.",
+        "visual": {
+          "type": "card",
+          "value": "AUCUN REFUS",
+          "label": "une centrale nucléaire, un hôpital, un cratère de bombe"
+        }
+      },
+      {
+        "script": "Google a répondu que chaque image porte SynthID, son filigrane invisible, et qu'il suffit de demander à Gemini. Mais van Ess a photographié son écran, et le filigrane a cessé d'être lu.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.npr.org/2026/07/31/nx-s1-5914652/google-adds-ai-to-satellite-images-raising-fears-of-deepfakes-in-the-sky"
+        }
+      },
+      {
+        "script": "Donc vendredi, Google a fait marche arrière, le temps d'installer des garde-fous plus solides. L'entreprise reconnaît que les gens font une confiance unique à Google Earth.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a digital watermark on the corner of a photograph",
+            "setting": "on a plain pale surface in bright daylight",
+            "composition": "close-up"
+          }
+        }
+      },
+      {
+        "script": "Van Ess résume: Google a passé vingt ans à bâtir la référence que le monde consulte pour vérifier. Il vient d'y ajouter un bouton qui invente. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "satellite image coastline",
+          "alt": "Vraie image satellite de la savane guyanaise prise par Terra MODIS",
+          "file": "media/2026-08-02-google-earth-ia/photo_7.jpg",
+          "credit": "Terra / MODIS · domaine public"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Google",
+      "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/",
+      "accessed": "2026-08-01"
+    },
+    {
+      "name": "Digital Digging",
+      "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran",
+      "accessed": "2026-08-01"
+    },
+    {
+      "name": "NPR",
+      "url": "https://www.npr.org/2026/07/31/nx-s1-5914652/google-adds-ai-to-satellite-images-raising-fears-of-deepfakes-in-the-sky",
+      "accessed": "2026-08-01"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/",
+      "accessed": "2026-08-01"
+    }
+  ]
+}

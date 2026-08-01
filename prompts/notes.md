@@ -46,7 +46,14 @@ ENTRIES:
   depot openai/... porte le contenu de l'annonce, github.com et api.github.com
   sont eux interceptes 403 par le proxy de session) et cdn.openai.com (les PDF,
   mais validate.mjs lit du texte, donc un PDF ne se gate pas). Repondent 200 et
-  se gatent aussi: the-decoder.com, officechai.com, erdosproblems.com.
+  se gatent aussi: the-decoder.com, officechai.com, erdosproblems.com. Ajout
+  01/08 (16h): blog.google, npr.org, engadget.com et digitaldigging.org
+  (Substack) repondent 200 et se gatent du premier coup. Reflexe sur une actu
+  produit Google: blog.google porte l'annonce ET le retrait DANS LA MEME PAGE
+  ("Update, 7/31:" avant "Original post, 7/30:"), donc un seul recu couvre le
+  lancement et le retropedalage, et c'est le primaire. Le Substack d'un
+  chercheur (digitaldigging.org) est souvent le vrai primaire d'une histoire
+  OSINT, avant toute reprise presse.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -296,3 +303,12 @@ ENTRIES:
   l'article. Le 31/07 un run a reecrit un beat ("polluants qui forment le smog"
   au lieu du terme de sa source) pour contourner un bug du gate: c'est du degat
   editorial cause par une espace. Proof: gate 16h 31/07, correctifs du soir.
+  Ajout 01/08 (16h), le sens INVERSE et il est plus frequent: un NOT_FOUND est
+  souvent TA normalisation typographique, pas une reecriture de l'article. Ecrit
+  "So we are rolling back" la ou blog.google ecrit "So we're rolling back" avec
+  une apostrophe courbe (U+2019): NOT_FOUND immediat, alors que la citation
+  voisine sans apostrophe passait VERIFIED du premier coup. Ne recopie jamais
+  une citation a la main depuis une lecture a l'ecran: extrais les octets
+  exacts d'abord et colle-les. Le repr() Python sur le texte aplati montre
+  apostrophes courbes, tirets longs et espaces insecables AVANT qu'ils ne
+  coutent un aller-retour de gate (~90 s par citation).
