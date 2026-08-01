@@ -23,3 +23,6 @@
 {"at":"2026-07-31T16:12:27.776Z","slug":"2026-07-31-xai-turbines-memphis","words":188,"seconds":51.44,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true}
 {"at":"2026-08-01T08:43:32.452Z","slug":"2026-08-01-penurie-memoire-samsung","words":209,"seconds":55.68,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true}
 {"at":"2026-08-01T08:46:00.564Z","slug":"2026-08-01-penurie-memoire-samsung","words":209,"seconds":53.2,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true}
+{"at":"2026-08-01T15:03:40.309Z","slug":"2026-08-01-astra-dix-problemes","words":214,"seconds":67.16,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":1}
+{"at":"2026-08-01T15:04:18.198Z","slug":"2026-08-01-astra-dix-problemes","words":214,"seconds":63.48,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":false,"declineDb":0}
+{"at":"2026-08-01T15:04:47.571Z","slug":"2026-08-01-astra-dix-problemes","words":214,"seconds":60.84,"voice":"Sadaltager","lang":"fr","attempt":3,"accepted":true,"declineDb":0.8}

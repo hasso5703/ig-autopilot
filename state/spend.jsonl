@@ -78,3 +78,11 @@
 {"at":"2026-08-01T08:46:00.562Z","slug":"2026-08-01-penurie-memoire-samsung","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"53.2s Sadaltager","usd":0.0266}
 {"at":"2026-08-01T09:01:39.228Z","slug":"2026-08-01-penurie-memoire-samsung","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1319}
 {"at":"2026-08-01T09:03:29.564Z","slug":"2026-08-01-penurie-memoire-samsung","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1313}
+{"at":"2026-08-01T15:03:40.185Z","slug":"2026-08-01-astra-dix-problemes","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"67.2s Sadaltager","usd":0.0336}
+{"at":"2026-08-01T15:04:18.050Z","slug":"2026-08-01-astra-dix-problemes","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"63.5s Sadaltager","usd":0.0317}
+{"at":"2026-08-01T15:04:47.455Z","slug":"2026-08-01-astra-dix-problemes","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"60.8s Sadaltager","usd":0.0304}
+{"at":"2026-08-01T15:07:31.789Z","slug":"2026-08-01-astra-dix-problemes","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
+{"at":"2026-08-01T15:07:42.703Z","slug":"2026-08-01-astra-dix-problemes","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1231}
+{"at":"2026-08-01T15:08:03.250Z","slug":"2026-08-01-astra-dix-problemes","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1291}
+{"at":"2026-08-01T15:42:58.926Z","slug":"2026-08-01-astra-dix-problemes","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1318}
+{"at":"2026-08-01T15:43:11.043Z","slug":"2026-08-01-astra-dix-problemes","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1312}

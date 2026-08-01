@@ -160,7 +160,8 @@
         "script": "En 1999, le mathématicien Mikhail Gromov pose une question. Pendant vingt-sept ans, personne n'y répond. OpenAI dit qu'un de ses modèles internes, Astra, vient de la trancher.",
         "visual": {
           "type": "screenshot",
-          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/"
+          "url": "https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/",
+          "file": "media/2026-08-01-astra-dix-problemes/shot_0.png"
         }
       },
       {
@@ -173,7 +174,8 @@
             "setting": "on a plain pale surface in bright daylight",
             "camera": "slow push in",
             "composition": "close-up"
-          }
+          },
+          "file": "media/2026-08-01-astra-dix-problemes/veo_1.mp4"
         }
       },
       {
@@ -181,9 +183,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a printed page of a mathematical proof about a group",
-            "setting": "on a pale surface in bright daylight",
-            "composition": "overhead close-up on the page"
+            "subject": "a mathematical proof written out in symbols on a white board",
+            "setting": "in bright daylight",
+            "composition": "close-up, the writing fills the whole frame"
           }
         }
       },
@@ -191,7 +193,8 @@
         "script": "Deux autres résultats ferment des problèmes posés par le mathématicien Paul Erdős, les numéros 146 et 180. Ils portaient sur la théorie des graphes.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.erdosproblems.com/146"
+          "url": "https://www.erdosproblems.com/146",
+          "file": "media/2026-08-01-astra-dix-problemes/shot_3.png"
         }
       },
       {
@@ -207,17 +210,18 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "lines of formal proof code on a computer screen",
-            "setting": "in a bright room in daylight",
-            "composition": "close-up on the screen"
+            "subject": "a computer screen filled with formal proof code",
+            "setting": "in bright daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
           }
         }
       },
       {
         "script": "Mais rien n'est vérifié. Les mathématiciens qui suivent ces preuves attendent la relecture. Et ce sont des chercheurs d'OpenAI qui ont rédigé les articles et formalisé les démonstrations.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://raw.githubusercontent.com/openai/ten-proofs/main/README.md"
+          "type": "card",
+          "value": "Non vérifié",
+          "label": "les preuves attendent encore la relecture des mathématiciens"
         }
       },
       {
