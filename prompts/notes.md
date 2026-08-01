@@ -96,7 +96,12 @@ ENTRIES:
   langue + direction) dans le dossier du build, donc un rebuild déclenché par
   une image ne coûte ni narration ni passe Whisper. Condition: reconstruire dans
   le MÊME `media/<slug>` et ne pas le vider entre deux tentatives.
-  Proof: journal 16h 29/07; cache prouvé de bout en bout le 31/07.
+  Correction 01/08: "ni passe Whisper" etait FAUX, la moitie seulement etait
+  vraie. L'audio etait reutilise puis RE-TRANSCRIT a chaque build. Corrige
+  (align.json + align.key, meme empreinte que la narration): un rebuild pour une
+  image ne retranscrit plus rien. Verifie a la ligne "alignment: reusing the
+  clock already measured for this reading".
+  Proof: journal 16h 29/07; cache prouvé de bout en bout le 31/07; correction 01/08.
 - 2026-07-29 · Une rétention >100% dans watch.mjs n'est pas un bug d'unité:
   ig_reels_avg_watch_time compte les boucles (mesuré 160386 ms de watch moyen
   sur un Reel de 51 s, total exactement 2x la moyenne, portée 0). Sous ~50 de
@@ -194,17 +199,21 @@ ENTRIES:
   un debit hors fenetre n'accuse PAS le script: le moteur rachete une lecture
   (jusqu'a 3, ~$0,025 piece) avant de refuser. Ne reecris le script que si les
   trois lectures echouent.
-- 2026-07-31 · Whisper: modele large-v3-turbo int8, beam_size=1 (le texte est
-  jete, seule l'horloge compte). Mesure sur 58 s de narration FR: base entend
-  192 mots pour un script de 188 (tolerance 4, donc au bord du refus) et ecrit
-  Entropique pour Anthropic; turbo entend 189 avec les noms corrects. Cout:
-  ~70 s de plus par build sur 20 coeurs et 1,6 Go au premier demarrage du
-  conteneur. Ce 1,6 Go est telecharge par ensureWhisper AVANT la transcription
-  (budget propre de 900 s, ~3 s a chaud): il se chargeait paresseusement dans
-  l'appel de transcription, dont le delai devait couvrir telechargement +
-  chargement + lecture. Tenable avec `base` (142 Mo), piege des le passage a
-  turbo, et l'echec serait arrive APRES l'achat de la narration sous forme d'un
-  timeout ne parlant pas de telechargement. Proof: wbench 31/07.
+- 2026-07-31 · Whisper: modele large-v3-turbo int8, beam_size=1, 1,6 Go
+  telecharges par ensureWhisper AVANT la transcription (~70 s de plus par build
+  sur 20 coeurs). ATTENTION 01/08, mesure sur un conteneur a 4 coeurs (`nproc`,
+  verifie-le): la transcription LONGUE est instable et NON DETERMINISTE. Le meme
+  audio en cache a donne 78%, 61% puis 72% de son script sur trois passes, avec
+  des tokens inventes ("labishopsie", "Hyper Auxerrecher", une boucle "pouce
+  pouce pouce"). Ce n'est PAS la narration: chaque tranche de 12 s du meme
+  fichier, transcrite seule, revient mot pour mot. Donc un taux bas n'accuse
+  jamais la voix. LE DIAGNOSTIC, 2 min et gratuit: `ffmpeg -ss T -t 12` sur
+  voice2_raw.wav puis transcris la tranche; si elle est juste, l'audio est bon.
+  Teste et ecarte le 01/08: base (perd 14 mots), small (tronque le dernier
+  beat), vad_filter et beam_size=5 (pires, boucles), decoupage en chunks
+  (63-75%, instable aussi). Le code encaisse maintenant la derive (ancrage LCS
+  sur le script + interpolation, plancher a 65% de mots reconnus), donc ne
+  repars pas en chasse. Proof: wbench 31/07, run 08h 01/08.
 - 2026-07-31 · Ce qu'on MONTRE est desormais tenu par le gate, pas par le gout.
   Une image generee ou un veo dont le `spec` ne partage aucun mot (>=5 lettres)
   avec les sources est REFUSE: c'est ce qui a laisse passer un verre d'eau, une
@@ -242,7 +251,14 @@ ENTRIES:
   est deja ecrit dans media/<slug>/ (shot_N.png, still_N.jpg, photo_N.jpg)
   avant de relancer. Le relance ne rachete alors que la narration (~$0,05 pour
   1 a 3 lectures) au lieu des images. Reel entier du 31/07: $0,53 en 5 builds.
-  Proof: journal 15h 31/07.
+  Ajout 01/08: REGARDE le shot_N.png lui-meme, pas seulement le frame rendu.
+  digitaltrends.com a livre deux recus de suite ou un lecteur flottant "Ad
+  Loading" couvrait le titre, puis un carton Google One Tap le paragraphe. Aucun
+  ne matchait les selecteurs anti-pub (le lecteur est un `[class*=player]` sans
+  `video` tant qu'il charge sa pub, One Tap est nomme d'apres les credentials).
+  Selecteurs elargis dans reel2.mjs, le 3e tir etait propre. Un recu qui montre
+  la regie au lieu du titre passe tous les controles automatiques.
+  Proof: journal 15h 31/07, run 08h 01/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
