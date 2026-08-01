@@ -418,6 +418,35 @@ export async function publishGap() {
  */
 export const REEL_EVERY_HOURS = 20;
 
+/**
+ * How many Reels a single UTC day may carry.
+ *
+ * One was the rule until 2026-08-01, when Hasan raised it: *"c'est un reel par
+ * jour minimum; quand il y a beaucoup d'histoires qui sont intéressantes, j'en
+ * veux deux… ce n'est pas un problème que ça devienne une norme."* So two is a
+ * normal day, not an exception that needs defending, and `REEL_EVERY_HOURS`
+ * keeps meaning what it always meant: the FLOOR the bio promises, not a cap.
+ *
+ * The hard ceiling that survives is one Reel per RUN, and it is not enforced
+ * here because no run can see its siblings mid-build — it is enforced by the
+ * run itself, which stops publishing once it has published (manual, step 11).
+ * What this constant does is stop a run reasoning from `due: false` that the
+ * day is closed: the day is closed when `roomToday` is 0.
+ *
+ * A CALENDAR DAY here, deliberately, unlike REEL_EVERY_HOURS above. "Two a day"
+ * is a statement about a day, so it has to be counted on the same boundary the
+ * bio's reader uses. The rolling window still governs the gap and the floor, so
+ * a Reel at 23:50 UTC cannot unlock two more at 00:10: the 2h gap and the
+ * 20h floor both still apply on top of this.
+ */
+export const REELS_PER_DAY_MAX = 2;
+
+/** Same UTC calendar day. Used only by the per-day Reel count. */
+export const sameUtcDay = (a, b) =>
+  a.getUTCFullYear() === b.getUTCFullYear() &&
+  a.getUTCMonth() === b.getUTCMonth() &&
+  a.getUTCDate() === b.getUTCDate();
+
 /** The old name, kept so nothing outside this file breaks on the rename.
  * Carousels are retired; the cadence it measured is the Reel's now. */
 export const CAROUSEL_EVERY_HOURS = REEL_EVERY_HOURS;
@@ -510,10 +539,14 @@ export async function publishDue(now = new Date()) {
   const last = latestBy(posted);
   const hours = last ? (now - new Date(last.at)) / 3600000 : null;
   const since24 = posted.filter((p) => now - new Date(p.at) < 24 * 3600000);
+  const reelsToday = posted.filter((p) => isReel(p) && sameUtcDay(new Date(p.at), now)).length;
   return {
     due: hours === null || hours >= REEL_EVERY_HOURS,
     hoursSinceLastPost: hours === null ? null : Math.round(hours * 10) / 10,
     every: REEL_EVERY_HOURS,
+    reelsToday,
+    dailyMax: REELS_PER_DAY_MAX,
+    roomToday: Math.max(0, REELS_PER_DAY_MAX - reelsToday),
     lastPost: last ? { at: last.at, slug: last.slug, reel: isReel(last) } : null,
     last24h: { reels: since24.filter(isReel).length, other: since24.filter((p) => !isReel(p)).length },
   };
@@ -571,6 +604,15 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
     const t = await publishDue();
     console.log(JSON.stringify({ ...t, carouselsRetired: "2026-07-28" }, null, 2));
     console.error("\nCarousels are retired. This run publishes a Reel or nothing; Reels populate the grid themselves.");
+    console.error(
+      t.roomToday > 0
+        ? `\nThe day holds ${t.reelsToday} Reel(s) of ${t.dailyMax}. There is room for ${t.roomToday} more.` +
+            (t.due
+              ? " `due` is true: the bio's floor is unmet, so this one is owed, not optional."
+              : " `due` is false, which means the FLOOR is already met — not that the day is closed." +
+                " A second Reel is a normal day here; publish one if a second story is worth an audition.")
+        : `\nThe day already holds ${t.reelsToday} Reel(s), which is the daily maximum. You are a scout: prepare tomorrow.`
+    );
   } else if (process.argv[2] === "guard") {
     const role = process.argv[3] === "scout" ? "scout" : "publish";
     const g = await publishGap();
@@ -598,7 +640,8 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
       } else {
         console.error(
           `\nBLOCKED — the last post went out ${g.hours}h ago and the minimum gap is ${g.min}h.` +
-            `\nA publish run stops here. If the day still needs its Reel, a later slot will have room.`
+            `\nA publish run stops here. This guard is about SPACING, not about the daily count:` +
+            `\nthe day may still be owed a Reel, or still have room for its second, and a later slot will have both.`
         );
         process.exit(1);
       }
@@ -608,7 +651,8 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
     if (slot.wouldEatIt)
       console.error(
         `\nNOTE: the next scheduled slot is ${String(slot.slotUtc).padStart(2, "0")}:00 UTC, ${slot.hours}h away, which is inside the ${MIN_GAP_HOURS}h gap. ` +
-          `If this run publishes, that slot will be blocked when it fires. The day loses no Reel, but say so in your report.`
+          `If this run publishes, that slot will be blocked when it fires. Check \`state.mjs today\` for roomToday before you decide: ` +
+          `if the day would still have room for another Reel afterwards, that slot losing its turn may cost the day one. Say so in your report.`
       );
     console.error(
       g.overridden

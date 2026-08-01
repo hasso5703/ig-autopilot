@@ -1834,3 +1834,24 @@ test("a receipt's consent dialog is clicked by text, not by tag", async () => {
     "at least one Agree selector must not be tag-locked to <button>",
   );
 });
+
+test("a day may carry two Reels, and `due` false does not mean the day is closed", async () => {
+  const { REELS_PER_DAY_MAX, REEL_EVERY_HOURS, sameUtcDay, publishDue } = await import("../src/state.mjs");
+  // 2026-08-01, Hasan: one Reel a day is the FLOOR, two is a normal day.
+  assert.equal(REELS_PER_DAY_MAX, 2);
+  // The floor and the cap are different clocks on purpose: the floor is a
+  // rolling window (it cannot be gamed by where midnight falls), the cap is a
+  // calendar day (because "two a day" is a claim about a day).
+  assert.equal(REEL_EVERY_HOURS, 20);
+  assert.ok(sameUtcDay(new Date("2026-08-01T00:10:00Z"), new Date("2026-08-01T23:50:00Z")));
+  assert.ok(!sameUtcDay(new Date("2026-08-01T23:50:00Z"), new Date("2026-08-02T00:10:00Z")));
+
+  // The report a run reads at step 0 must answer "is there room" separately
+  // from "is one owed", or a run reasons from due:false that the day is over.
+  const t = await publishDue();
+  for (const k of ["due", "reelsToday", "dailyMax", "roomToday"]) {
+    assert.ok(k in t, `publishDue must report ${k}`);
+  }
+  assert.equal(t.dailyMax, REELS_PER_DAY_MAX);
+  assert.equal(t.roomToday, Math.max(0, REELS_PER_DAY_MAX - t.reelsToday));
+});
