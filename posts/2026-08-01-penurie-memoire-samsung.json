@@ -162,13 +162,15 @@
         "script": "Ton prochain téléphone va coûter plus cher, et Samsung vient de dire pendant combien de temps. Le groupe, qui fournit environ un tiers de la mémoire mondiale, prévoit une pénurie qui tient jusqu'en 2028.",
         "visual": {
           "type": "screenshot",
-          "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/"
+          "url": "https://techcrunch.com/2026/07/31/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-2028/",
+          "file": "media/2026-08-01-penurie-memoire-samsung/shot_0.png"
         }
       },
       {
         "script": "Et le problème n'est pas la production. C'est à qui elle est vendue.",
         "visual": {
           "type": "image",
+          "file": "media/2026-08-01-penurie-memoire-samsung/still_1.jpg",
           "spec": {
             "subject": "a silicon wafer of memory chips held in a gloved hand",
             "setting": "in a bright factory in daylight",
@@ -180,7 +182,8 @@
         "script": "Lors de son appel de résultats, Samsung a dit que les contraintes d'approvisionnement seraient encore plus sévères en 2027 qu'en 2026.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.pcgamer.com/hardware/memory/gleefully-counting-its-billions-samsung-cries-warning-of-a-severe-memory-supply-crisis-next-year/"
+          "url": "https://www.pcgamer.com/hardware/memory/gleefully-counting-its-billions-samsung-cries-warning-of-a-severe-memory-supply-crisis-next-year/",
+          "file": "media/2026-08-01-penurie-memoire-samsung/shot_2.png"
         }
       },
       {
@@ -212,6 +215,7 @@
         "script": "Et ça dépasse les téléphones. Nvidia devrait augmenter le prix de ses cartes graphiques grand public de 20 à 30 %. Les consoles et les portables suivent.",
         "visual": {
           "type": "image",
+          "file": "media/2026-08-01-penurie-memoire-samsung/still_6.jpg",
           "spec": {
             "subject": "a consumer graphics card on a workbench",
             "setting": "in a bright room in daylight",

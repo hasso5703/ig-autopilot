@@ -240,7 +240,36 @@ export function mergeContinuations(words) {
  * The account speaks French since 2026-07-29; the multilingual "base" model
  * hears it, and the language is forced so a short clip cannot be misdetected.
  * English is kept for fixtures and for any deliberate English post. */
-async function alignWords(voiceWav, scriptWords, workDir, lang = "fr") {
+async function alignWords(voiceWav, scriptWords, workDir, lang = "fr", cacheKey = "") {
+  /*
+   * The alignment is cached beside the reading it belongs to, for the same
+   * reason the reading is.
+   *
+   * The narration has been fingerprinted since 2026-07-31 so that a rebuild
+   * triggered by a picture — a dead browser, an advert caught on a receipt —
+   * costs nothing. The notebook recorded that as costing "ni narration ni
+   * passe Whisper". Half of that was untrue: the audio was reused and then
+   * transcribed again, every single build.
+   *
+   * That was invisible while transcription was deterministic. On a four-core
+   * container on 2026-08-01 it is not: the same cached narration scored 78% of
+   * its script on one pass and 61% on the next, so every re-render for a
+   * picture re-rolled the karaoke's clock and could fail a build that had
+   * already passed. Cache the clock with the voice, and a picture fix is a
+   * picture fix.
+   */
+  const alignFile = path.join(workDir, "align.json");
+  const alignKeyFile = path.join(workDir, "align.key");
+  if (cacheKey) {
+    const stored = (await readFile(alignKeyFile, "utf8").catch(() => "")).trim();
+    if (stored === cacheKey) {
+      const cached = await readFile(alignFile, "utf8").then(JSON.parse).catch(() => null);
+      if (Array.isArray(cached) && cached.length === scriptWords.length) {
+        console.log(`alignment: reusing the clock already measured for this reading (${cached.length} words). No transcription.`);
+        return cached;
+      }
+    }
+  }
   const py = await ensureWhisper(lang);
   /* `base` was heard on 2026-07-31 against the day's real French narration and
      it sits on the edge of the guard below: 192 words heard for a 188-word
@@ -272,7 +301,16 @@ print(len(words))
      alone: about 40 seconds on twenty cores, and a cloud container has fewer. */
   await run(py, [scriptFile, voiceWav, wordsFile], { timeout: 420_000 });
   const heard = mergeContinuations(JSON.parse(await readFile(wordsFile, "utf8")));
-  return anchorToScript(heard, scriptWords);
+  const anchored = anchorToScript(heard, scriptWords);
+  console.log(
+    `alignment: ${heard.length} tokens heard for ${scriptWords.length} script words, ` +
+      `${anchored.filter((w) => w.anchored).length} anchored`
+  );
+  if (cacheKey) {
+    await writeFile(alignFile, JSON.stringify(anchored));
+    await writeFile(alignKeyFile, cacheKey);
+  }
+  return anchored;
 }
 
 /** Strip a token to what two transcriptions of the same word must share. */
@@ -317,6 +355,7 @@ export function anchorToScript(heard, scriptWords) {
     if (A[i] && A[i] === B[j]) {
       out[i].s = heard[j].s;
       out[i].e = heard[j].e;
+      out[i].anchored = true;
       anchors++;
       i++; j++;
     } else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
@@ -610,7 +649,18 @@ async function screenshotOnce(url, outFile, gotoTimeout) {
         'ins.adsbygoogle,iframe[src*="ads"],iframe[src*="doubleclick"],[data-ad],[data-ad-unit],' +
         '[id*="taboola"],[class*="outbrain"],[class*="sponsor"],[id*="sponsor"],' +
         '[aria-label*="advertisement" i],' +
-        'video,[class*="video-player"],[class*="videoPlayer"],[id*="video-player"]' +
+        'video,[class*="video-player"],[class*="videoPlayer"],[id*="video-player"],' +
+        // Digital Trends, 2026-08-01: a float player captioned "Ad Loading" sat
+        // across the headline in two consecutive receipts, and a Google One Tap
+        // card covered the paragraph under it. Neither matched anything above:
+        // the player is a generic `[class*=player]` wrapper with no `video` in
+        // it while it is still loading its ad, and One Tap is a same-origin
+        // iframe named after credentials rather than after advertising. A
+        // receipt is the page's journalism; both of these are the page asking
+        // for something.
+        '[class*="player"],[id*="player"],[class*="jw-"],[id*="connatix"],[class*="cnx_"],' +
+        '[id*="credential_picker"],iframe[src*="accounts.google.com"],[class*="one-tap"],' +
+        '[class*="onetap"],[aria-label*="sign in" i]' +
         '{display:none!important;visibility:hidden!important}',
     }).catch(() => {});
     // ...and CSS is not enough on its own. Action News 5 mounts its player
@@ -1174,7 +1224,7 @@ export async function buildReel(postFile, mediaDir) {
      actually plays. The last beat runs to the end-card rather than to its own
      last word plus a pad: that is what makes the file exactly TARGET_S long
      however the reading came out. */
-  const words = await alignWords(timedWav, scriptWords, mediaDir, lang);
+  const words = await alignWords(timedWav, scriptWords, mediaDir, lang, `${voiceKey}:${tempo.toFixed(6)}`);
   const ranges = beatWordRanges(plan.beats);
   /* Normally this is exactly TARGET_S - END_S, because the stretch put the
      narration on SPEECH_S. It differs only when the stretch had to be clamped
