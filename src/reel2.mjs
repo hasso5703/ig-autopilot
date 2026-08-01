@@ -741,6 +741,20 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
  * bought and the run was over. A receipt page being slow once is weather, not a
  * finding, and it must not cost a Reel.
  */
+/**
+ * The consent-dialog selectors, exported so the cross-frame click is testable
+ * without a browser. `:has-text()` is a substring match and case-insensitive,
+ * so "Agree" covers "I Agree" and "AGREE".
+ */
+export const CONSENT_SELECTORS = [
+  'button:has-text("Accept")',
+  'button:has-text("Agree")',
+  'a:has-text("Agree")',
+  '[role="button"]:has-text("Agree")',
+  'button:has-text("Zustimmen")',
+  ".fc-cta-consent",
+];
+
 async function screenshot(url, outFile, attempt = 1) {
   try {
     return await screenshotOnce(url, outFile, attempt === 1 ? 30_000 : 60_000);
@@ -774,9 +788,32 @@ async function screenshotOnce(url, outFile, gotoTimeout) {
     const page = await ctx.newPage();
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: gotoTimeout });
     await page.waitForTimeout(2500);
-    for (const sel of ['button:has-text("Accept")', 'button:has-text("AGREE")', ".fc-cta-consent"]) {
-      try { await page.locator(sel).first().click({ timeout: 1200 }); } catch { /* no banner is the good case */ }
+    // Consent dialogs live in an iframe as often as not, and a locator on the
+    // page only ever searches the main frame. On 2026-08-01 the Decoder receipt
+    // came back as a full-frame GDPR wall — "We and our 193 partners…", the two
+    // green buttons, and the headline nowhere — because its CMP is framed and
+    // every selector below silently missed it. That shot was the Reel's opening
+    // beat, which is the audition frame and the grid thumbnail, and it passed
+    // every automated check. So click in every frame, not just the top one.
+    for (const frame of page.frames()) {
+      for (const sel of CONSENT_SELECTORS) {
+        try { await frame.locator(sel).first().click({ timeout: 1200 }); } catch { /* no banner is the good case */ }
+      }
     }
+    await page.waitForTimeout(800);
+    // Belt and braces: whatever survived the clicks and still covers the page
+    // is not journalism. A consent wall is always fixed or sticky and always
+    // large, so removing large fixed overlays leaves the article behind it.
+    await page.evaluate(() => {
+      for (const el of document.querySelectorAll("body *")) {
+        const cs = getComputedStyle(el);
+        if (cs.position !== "fixed" && cs.position !== "sticky") continue;
+        const r = el.getBoundingClientRect();
+        if (r.height > 350 && r.width > 250) el.remove();
+      }
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    }).catch(() => {});
     // The receipt is the page's journalism, not its ad inventory: a Norton
     // banner shipped inside the TechCrunch receipt on the first live Reel.
     // Heuristic and best-effort — a hidden ad leaves a gap, which reads fine.

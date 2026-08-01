@@ -274,7 +274,17 @@ ENTRIES:
   `video` tant qu'il charge sa pub, One Tap est nomme d'apres les credentials).
   Selecteurs elargis dans reel2.mjs, le 3e tir etait propre. Un recu qui montre
   la regie au lieu du titre passe tous les controles automatiques.
-  Proof: journal 15h 31/07, run 08h 01/08.
+  Ajout 01/08 (14h), deux causes de plus, les DEUX corrigees dans reel2.mjs.
+  (1) La banniere de consentement peut etre dans une IFRAME: page.locator() ne
+  cherche que la frame principale, donc the-decoder.com a rendu un mur RGPD
+  plein cadre en beat 0 (l'audition ET la vignette). Le moteur clique
+  desormais dans page.frames() puis supprime tout overlay fixed/sticky de plus
+  de 350px. (2) Une URL qui sert du text/plain ne se capture PAS:
+  raw.githubusercontent.com/.../README.md a fige le build 26 min (Playwright
+  attend un rendu qui n'arrive jamais, puis "Target page has been closed").
+  Pour montrer un depot, il n'y a pas de recu joignable ici (github.com est
+  403 via le proxy): prends une `card`.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un

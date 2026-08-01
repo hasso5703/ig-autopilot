@@ -1819,3 +1819,18 @@ test("digits inside a hostname are spelling, not evidence", async () => {
   q.caption = `${q.caption}\n\nCela concerne 4173 personnes. Sources : actionnews5.com`;
   assert.ok(hasErr(await errs(q), /4173/), "a bare figure beside a domain is still a claim");
 });
+
+test("a receipt's consent dialog is clicked by text, not by tag", async () => {
+  const { CONSENT_SELECTORS } = await import("../src/reel2.mjs");
+  // 2026-08-01: the Decoder's consent wall is two green "Agree"/"Settings"
+  // controls that are not <button> elements, inside an iframe. The old list was
+  // ['button:has-text("Accept")', 'button:has-text("AGREE")', '.fc-cta-consent']
+  // — every entry tag-locked to <button> except the vendor class — so the click
+  // missed and the Reel's opening frame shipped as a full-frame GDPR dialog.
+  const agree = CONSENT_SELECTORS.filter((s) => /agree/i.test(s));
+  assert.ok(agree.length >= 2, "more than one way to hit an Agree control");
+  assert.ok(
+    agree.some((s) => !s.startsWith("button")),
+    "at least one Agree selector must not be tag-locked to <button>",
+  );
+});
