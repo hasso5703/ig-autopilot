@@ -1,12 +1,12 @@
 {
-  "at": "2026-08-01T16:39:27.596Z",
-  "fresh": 52,
+  "at": "2026-08-01T19:39:05.351Z",
+  "fresh": 50,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1105,
-      "fresh": 11,
+      "fresh": 10,
       "windowHours": 96
     },
     {
@@ -72,7 +72,7 @@
       "fetched": 0,
       "fresh": 0,
       "windowHours": 36,
-      "error": "HTTP 503 after 10 tries"
+      "error": "HTTP 403 after 10 tries"
     },
     {
       "name": "VentureBeat",
@@ -91,8 +91,8 @@
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 5,
-      "fresh": 5,
+      "fetched": 4,
+      "fresh": 4,
       "windowHours": 36
     },
     {
