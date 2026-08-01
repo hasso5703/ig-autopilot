@@ -256,6 +256,63 @@ adds the number, the picture supplies the dread. Three layers, one second.
 this lands on outperforms a broad one, every time. "Anyone who has asked a
 chatbot about a symptom" is better than "AI users".
 
+### One tension, not a list — and what actually makes a stranger react
+
+**This section exists because a gate-clean script can still be unwatchable, and
+nothing in this manual caught it until a human read the thing out loud.** On
+2026-08-01 a scout banked a spec on OpenAI's Astra solving ten open maths
+problems. Every claim was sourced, the gate passed twice, the word count was
+inside the window, and the script was still dead on the page, because its
+shape was an inventory: *"le premier résultat… trois de ces résultats… un
+autre… chaque preuve… et le chiffre…"*. Hasan, mid-run: *"il faut que ça soit
+vraiment intéressant la façon dont c'est raconté, les gens doivent s'arrêter
+de scroller et regarder jusqu'à la fin."*
+
+**The test, and apply it before you write the beats.** Can the middle beats be
+reordered without the story losing anything? If yes, you have written a list.
+A list has no reason to be watched to the end, because nothing in beat 3 makes
+beat 4 necessary. Find the one tension the reporting actually contains and
+build the minute on it; everything else in the story becomes evidence for that
+tension or gets cut. The Astra Reel was rewritten onto a single line — a
+question asked by a named person in 1999, twenty-seven years of silence, a
+machine that answered it — and the other nine results became the *payoff
+tease* ("et ce n'est qu'un des dix") instead of nine items on a shelf.
+
+**Then ask, in words: why would a stranger subscribe or like?** The tempting
+answers are the ones this account must refuse, and they are worth naming
+because they will occur to you every single time: *the AI is frightening, it
+is going too fast, maths is finished, this is AGI, this is the singularity*.
+None of them are in any source, so all of them are barred by the evidence
+rule — and an account that reaches for them is the hype account this pipeline
+was built not to be.
+
+The levers that do work are in the reporting, and they rank:
+
+1. **The number a person would repeat.** Not the biggest figure in the story,
+   the most *transferable* one. Ten decade-old problems for about $2,000 of
+   compute is a sentence someone sends a friend; "superexponential lower
+   bound" is not. Put it on a `card` and give it its own beat, early enough to
+   be reached.
+2. **The doubt, stated by us before anyone else states it.** "Rien n'est
+   vérifié, et ce sont des chercheurs d'OpenAI qui ont rédigé les articles."
+   Counter-intuitive for an AI account, and it is the single strongest reason
+   to follow one: a viewer subscribes to a desk that brakes, not to a desk
+   that cheers.
+3. **The unfinished next step, as the kicker.** The close has to earn
+   "abonne-toi pour l'actu IA de demain", and it earns it by showing the story
+   is not over — a review, a hearing, a deadline, a response still owed. A
+   kicker that merely assesses is weaker than one that points forward.
+4. **The argument, in the seeded comment.** The sharpest disagreement in your
+   sources rarely fits the minute and almost always fits step 10b. On the
+   Astra Reel it was Thomas Bloom refusing the idea that AI replaces
+   mathematicians. Comment depth is in the ranking model; an argument a
+   stranger wants to settle outperforms any question we could invent.
+
+**None of this licenses a claim.** Every lever above is a *choice of which
+true sentence to lead with*. If the honest version of a story has no
+transferable number, no admitted doubt and no next step, it is a weak story,
+and the answer is a different story — never a borrowed frame.
+
 ### Holding them to the end
 
 - **Sixty seconds is a contract, not a target.** The bio says "L'actu IA en 60
@@ -1243,6 +1300,31 @@ Rules, and the gate enforces the hard ones:
     four. The opener behind the hook card is the MOST concrete thing
     available, in this order — never a metaphor.
 
+  - **The hierarchy is a floor to reach, not a menu to browse.** It was
+    written to stop a Reel filling with furniture, and it does — but a plan
+    can satisfy every cap and every floor while never once reaching the top of
+    the list. The Astra spec banked on 2026-08-01 gated green with three
+    screenshots, two cards and three generated stills: legal, and it contained
+    no human face and nothing that moved. Hasan, on seeing it: *"les visuels
+    doivent être très bons, on doit voir Altman, tu dois générer une vidéo de
+    qualité qui attire l'œil."* So audition the top two surfaces on **every**
+    build, before you settle for a still:
+
+    - **Is a person named in the sources?** Then a `photo` beat of that person
+      is available, and a real face is the strongest last frame this account
+      can end on. Check it costs nothing: `node src/imagery.mjs candidates
+      "<name>"`. Beware the namesake — "mikhail gromov" returns the Soviet
+      test pilot, not the mathematician, and the mathematician's own portraits
+      are too small to pass. If the person you need is unreachable, another
+      named person in the same story may not be.
+    - **Does one beat depict a moment the sources actually report?** Then it
+      is the `veo` beat. Name the sentence it depicts before you buy it. On
+      the Astra Reel that sentence was the sphere-packing result, and the clip
+      was the single most arresting frame in the minute.
+
+    Reaching the top of the hierarchy is also what keeps the still count low,
+    which is the ratio the gate's floor was trying to protect all along.
+
   - **When nothing real exists for a beat, that is an answer, not a problem.**
     Do not force a `photo` the indexes cannot deliver and do not invent a mood
     still to fill the hole: use a second receipt, or a card. A picture of a
@@ -1521,6 +1603,31 @@ its window. Check the karaoke sits clear of the receipt card on screenshot
 beats, the article headline is actually what the receipt shows, the last
 frame is the end-card with the promise and the follow ask on it, and nothing
 readable was invented by a generated image.
+
+**And looking has to have consequences, which for a long time it did not.**
+Every rule above was already written on 2026-08-01 and the run still nearly
+shipped three bad frames, because "look at the frames" had no stated remedy
+and the file said COMPLIANT. It does now. **A still costs about $0.13 and a
+rebuild reuses the narration for nothing** (the reading is fingerprinted, so
+only the picture is re-bought) — against an audition you do not get twice.
+Re-buy, do not rationalise, when a frame shows any of these:
+
+- **Invented prose you can read.** A generated "page of a proof" came back
+  covered in garbled English sentences next to a coffee cup. Formulas and code
+  survive generation because nonsense reads as notation; English does not.
+  If a beat needs a document, ask for symbols, formulas or code, never prose.
+- **The desk instead of the story.** The laptop alone on a table, the phone
+  beside a glass, the sunset terrace behind the screen. If the environment is
+  larger in frame than the subject, re-frame the spec: *"extreme close-up, the
+  screen fills the entire frame"* is a different picture from the same words.
+- **A receipt showing the site's plumbing.** A consent wall, an ad, a sign-in
+  card. The engine now clicks consent across every frame and strips large
+  fixed overlays, but look anyway: this failure has shipped three times and
+  passes every automated check, and on beat 0 it costs the thumbnail too.
+
+If a frame is merely *fine*, leave it. If a frame is one a stranger would
+scroll past, it is the whole Reel's ceiling, and $0.13 is the cheapest thing
+in this pipeline.
 
 **Cost discipline, and the model tier it now assumes.** On 2026-07-31 Hasan
 moved the standing order from *"the cheapest tier of everything"* to *"one tier
