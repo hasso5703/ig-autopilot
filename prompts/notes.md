@@ -126,7 +126,16 @@ ENTRIES:
   compte, lance `imagery.mjs candidates`, REGARDE les trois premiers, et epingle
   celui que tu as choisi avec `file` + `credit` (creditLine = creator + licence,
   le creator se lit sur api.openverse.org/v1/images/?q=...). Sans epinglage, le
-  build prend le premier.
+  build prend le premier. Ajout 01/08: le piege existe aussi en MARQUE, pas
+  seulement en epoque. "folding smartphone" ne renvoie que des Huawei Mate XT
+  dans un magasin Huawei de Guangzhou (les 12 premiers), et "nvidia graphics
+  card" une GeForce 7600 de 2006: sur un beat qui nomme un produit precis,
+  interroge le produit ("samsung galaxy z flip"), pas sa categorie. Et quand
+  meme le produit ne donne que la mauvaise generation, la carte `card` portant
+  le chiffre est plus honnete qu'une photo du bon fabricant au mauvais modele.
+  Mesure 01/08 aussi: AUCUNE photo documentaire de datacenter n'est atteignable
+  ici ("data center server hall" 0 candidat, "data center" sort le batiment NSA
+  d'Utah, "server room rack" des salles bleues rawpixel). N'y passe pas de temps.
 - 2026-07-30 · Doctrine visuelle v2 (commit de midi): palettes MOODS
   réécrites du noir nocturne vers la lumière du jour éditoriale; hiérarchie
   par beat (photo réelle du sujet, reçu, photo d'objet, veo simple, stills
