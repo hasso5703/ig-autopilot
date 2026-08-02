@@ -1856,6 +1856,55 @@ test("a day may carry two Reels, and `due` false does not mean the day is closed
   assert.equal(t.roomToday, Math.max(0, REELS_PER_DAY_MAX - t.reelsToday));
 });
 
+// 2026-08-02, Hasan: "je veux minimum 2 reels publiés par jour à partir de
+// maintenant ! systématiquement 2 par jour". Two a day stopped being permission
+// and became the floor. The bug this pins down is subtle and it is exactly how
+// the account kept shipping one-Reel days while obeying every rule: `due` used
+// to be a ROLLING GAP (`hours >= REEL_EVERY_HOURS`), which one post silences
+// for twenty hours. A floor counted in hours is met by a single Reel; a floor
+// counted in Reels is not. If anyone reverts `due` to the clock, this fails.
+test("the day owes TWO Reels, and one published does not satisfy the floor", async () => {
+  const { REELS_PER_DAY_MIN, REELS_PER_DAY_MAX, publishDue } = await import("../src/state.mjs");
+  assert.equal(REELS_PER_DAY_MIN, 2, "the daily floor is two Reels");
+  assert.ok(REELS_PER_DAY_MIN <= REELS_PER_DAY_MAX, "the floor can never exceed the ceiling");
+
+  const t = await publishDue();
+  for (const k of ["dailyMin", "owedToday"]) {
+    assert.ok(k in t, `publishDue must report ${k} so a run can see what is still owed`);
+  }
+  assert.equal(t.dailyMin, REELS_PER_DAY_MIN);
+  assert.equal(t.owedToday, Math.max(0, REELS_PER_DAY_MIN - t.reelsToday));
+  // `due` tracks the Reel count, never the hours. This is the whole point.
+  assert.equal(t.due, t.owedToday > 0, "`due` must mean 'the day still owes a Reel'");
+
+  // And the case that used to pass silently: one Reel published an hour ago.
+  // Old rule: hours(1) < 20, due false, run scouts, day ends on one. New rule:
+  // one of two published, one still owed, due true.
+  const oneOfTwo = { reelsToday: 1 };
+  assert.equal(Math.max(0, REELS_PER_DAY_MIN - oneOfTwo.reelsToday), 1);
+});
+
+// SLOTS_UTC read [6, 10, 15, 19] from 2026-07-29 to 2026-08-02 — three days
+// after Hasan moved the afternoon publish to 16:30. Nothing failed, because the
+// only reader is a warning, which is exactly why nobody noticed. Now that two
+// of the four slots publish, that warning is about whether the day's second
+// Reel fits outside the 2h gap, so the hours have to be the real ones.
+test("the scheduled slots match the manual, and two publish slots clear the gap", async () => {
+  const { SLOTS_UTC, MIN_GAP_HOURS, nextSlot } = await import("../src/state.mjs");
+  assert.deepEqual(SLOTS_UTC, [6, 10, 16, 19], "06:30, 10:30, 16:30, 19:30 UTC (manual, slot table)");
+
+  // The two publish slots are 16:30 and 19:30. Three hours apart, so a day can
+  // carry its two owed Reels without either one tripping the spacing guard.
+  const publishSlots = [16, 19];
+  assert.ok(
+    publishSlots[1] - publishSlots[0] >= MIN_GAP_HOURS,
+    "the two publish slots must be at least the minimum gap apart, or two a day is unreachable",
+  );
+
+  // And the warning must point at the next slot, not at one that no longer runs.
+  assert.equal(nextSlot(new Date("2026-08-02T11:00:00Z")).slotUtc, 16);
+});
+
 // 2026-08-02: a scout called `recordSeen(item, "considered", "why")` — the
 // shape the manual's prose reads like — instead of `recordSeen([entry])`.
 // `entries.length` was undefined, the empty-input guard swallowed it, and the

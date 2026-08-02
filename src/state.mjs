@@ -116,7 +116,20 @@ export async function loadState() {
  * comparison deserves to be compared again today, especially now that primary
  * sources carry a four-day freshness window of their own.
  */
-const CONSIDERED_TTL_MS = 36 * 3600 * 1000;
+/*
+ * Shortened from 36 hours to 24 on 2026-08-02, when the daily floor became two
+ * Reels. The arithmetic is the whole reason: the day now needs two publishable
+ * stories instead of one, so the pool is asked for twice as much, while a
+ * 36-hour window kept every story a scout weighed and passed over out of reach
+ * until the middle of the NEXT day — past two of the four slots that would have
+ * wanted it. A story that lost this morning's comparison should be comparable
+ * again tomorrow morning, not tomorrow evening.
+ *
+ * 24 hours still does the job the window exists for, which is stopping the same
+ * day's four runs from re-litigating each other's rejects: the widest gap
+ * inside a day is 06:30 to 19:30, thirteen hours, comfortably inside it.
+ */
+const CONSIDERED_TTL_MS = 24 * 3600 * 1000;
 
 /*
  * `revisit`: a good story the run could not publish YET, not one it judged
@@ -327,7 +340,17 @@ const OVERRIDE = "yes-i-want-a-second-post-today";
  * nothing that evening because the day still delivered four Reels, but the
  * person launching by hand is the one who needs to know, before they launch.
  */
-export const SLOTS_UTC = [6, 10, 15, 19];
+/*
+ * The four scheduled slots, on the hour they actually fire.
+ *
+ * The third entry read 15 until 2026-08-02, three days after Hasan moved the
+ * afternoon publish from 15:00 to 16:30 (2026-07-29) to sit inside the French
+ * 18h–19h engagement peak. Only `nextSlot` reads this, and only to warn that
+ * publishing now would leave the next slot inside the 2-hour gap — so the stale
+ * 15 made that warning fire an hour early and, worse, understated the gap. It
+ * matters more now that two of the four slots publish rather than one.
+ */
+export const SLOTS_UTC = [6, 10, 16, 19];
 
 export function nextSlot(now = new Date()) {
   const h = now.getUTCHours() + now.getUTCMinutes() / 60;
@@ -461,6 +484,33 @@ export const REEL_EVERY_HOURS = 20;
  */
 export const REELS_PER_DAY_MAX = 2;
 
+/**
+ * How many Reels a single UTC day OWES. This is the floor, and it is the
+ * number a run is failing when it publishes less.
+ *
+ * It was 1 — expressed only as `REEL_EVERY_HOURS`, a rolling 20-hour gap —
+ * until 2026-08-02, when Hasan closed the gap between "two are allowed" and
+ * "two happen": *"je veux minimum 2 reels publiés par jour à partir de
+ * maintenant ! systématiquement 2 par jour"*.
+ *
+ * The distinction that matters, because the previous rule kept producing
+ * one-Reel days while being followed to the letter: two a day stopped being
+ * PERMISSION and became an OBLIGATION. A run that publishes the day's first
+ * Reel has not met the day's promise, it has met half of it, and the second is
+ * owed exactly the way the first one is. `due` is computed from this constant
+ * now, not from the rolling gap, because a floor counted in hours can be
+ * satisfied by a single post and a floor counted in posts cannot.
+ *
+ * What did NOT change, and must not be inferred away:
+ *   - One Reel per RUN is still the hard ceiling (the 27 July death). Two a day
+ *     is therefore always the work of two runs.
+ *   - The 2-hour spacing guard still applies between them.
+ *   - Promise 1 outranks this. A story that cannot be verified is not
+ *     published to make a count, ever — a missed floor is named in the report,
+ *     it is never met with something unsourced.
+ */
+export const REELS_PER_DAY_MIN = 2;
+
 /** Same UTC calendar day. Used only by the per-day Reel count. */
 export const sameUtcDay = (a, b) =>
   a.getUTCFullYear() === b.getUTCFullYear() &&
@@ -516,7 +566,14 @@ export function themesOf(text) {
   return Object.entries(THEMES).filter(([, re]) => re.test(t)).map(([k]) => k);
 }
 
-export async function recentThemes(now = new Date(), { posts = 4 } = {}) {
+/*
+ * `posts` was 4 until 2026-08-02. Four stories used to be four days of grid; at
+ * two Reels a day it is two, and the question this command exists to answer —
+ * "would a stranger scrolling our recent posts think this account is narrow?" —
+ * is asked about a scroll, not about a day. Six keeps it three days wide, which
+ * is what four used to buy.
+ */
+export async function recentThemes(now = new Date(), { posts = 6 } = {}) {
   const { posted } = await loadState();
   // One entry per story: a carousel and its Reel share a title and would
   // otherwise count twice.
@@ -560,11 +617,17 @@ export async function publishDue(now = new Date()) {
   const hours = last ? (now - new Date(last.at)) / 3600000 : null;
   const since24 = posted.filter((p) => now - new Date(p.at) < 24 * 3600000);
   const reelsToday = posted.filter((p) => isReel(p) && sameUtcDay(new Date(p.at), now)).length;
+  const owedToday = Math.max(0, REELS_PER_DAY_MIN - reelsToday);
   return {
-    due: hours === null || hours >= REEL_EVERY_HOURS,
+    // The floor is counted in Reels published today, not in hours since the
+    // last one: a rolling gap goes quiet after a single post and that is
+    // exactly how the account kept producing one-Reel days (Hasan, 2026-08-02).
+    due: owedToday > 0,
     hoursSinceLastPost: hours === null ? null : Math.round(hours * 10) / 10,
     every: REEL_EVERY_HOURS,
     reelsToday,
+    dailyMin: REELS_PER_DAY_MIN,
+    owedToday,
     dailyMax: REELS_PER_DAY_MAX,
     roomToday: Math.max(0, REELS_PER_DAY_MAX - reelsToday),
     lastPost: last ? { at: last.at, slug: last.slug, reel: isReel(last) } : null,
@@ -608,8 +671,10 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
     for (const s2 of r.stories) console.log(`${s2.at.slice(0, 16)}  [${s2.themes.join(", ") || "-"}]  ${s2.title.slice(0, 66)}`);
     console.error(
       r.runOn.length
-        ? `\nTHE LAST FOUR STORIES LEAN ON: ${r.runOn.join(", ")}. A third in a row reads as a narrow account. Prefer a story that is not about ${r.runOn.join(" or ")}, unless today's is genuinely the biggest thing happening.`
-        : "\nNo theme repeats across the last four stories. Nothing to avoid."
+        ? `\nTHE LAST ${r.stories.length} STORIES LEAN ON: ${r.runOn.join(", ")}. A third in a row reads as a narrow account. Prefer a story that is not about ${r.runOn.join(" or ")}, unless today's is genuinely the biggest thing happening.`
+        : `\nNo theme repeats across the last ${r.stories.length} stories. Nothing to avoid.` +
+          "\nThis compares WORDS. You compare MEANING, and at two Reels a day the grid fills twice as fast:" +
+          " ask in words what a stranger would say the last six posts are about, and check the day's TWO Reels are not one subject twice."
     );
   } else if (process.argv[2] === "today") {
     /*
@@ -625,13 +690,13 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
     console.log(JSON.stringify({ ...t, carouselsRetired: "2026-07-28" }, null, 2));
     console.error("\nCarousels are retired. This run publishes a Reel or nothing; Reels populate the grid themselves.");
     console.error(
-      t.roomToday > 0
-        ? `\nThe day holds ${t.reelsToday} Reel(s) of ${t.dailyMax}. There is room for ${t.roomToday} more.` +
-            (t.due
-              ? " `due` is true: the bio's floor is unmet, so this one is owed, not optional."
-              : " `due` is false, which means the FLOOR is already met — not that the day is closed." +
-                " A second Reel is a normal day here; publish one if a second story is worth an audition.")
-        : `\nThe day already holds ${t.reelsToday} Reel(s), which is the daily maximum. You are a scout: prepare tomorrow.`
+      t.owedToday > 0
+        ? `\nThe day holds ${t.reelsToday} Reel(s) and OWES ${t.owedToday} more of ${t.dailyMin}.` +
+            " `due` is true. Two Reels a day is the floor Hasan set on 2026-08-02, not a target:" +
+            " publishing one and scouting is a HALF-KEPT day, and it is named as a miss in the report." +
+            " One Reel per RUN is still the ceiling, so this run publishes one and the next slot owes the other."
+        : `\nThe day holds ${t.reelsToday} Reel(s) of ${t.dailyMax}, so the floor of ${t.dailyMin} is met and the day is full.` +
+            " You are a scout: bank TWO gate-clean candidates for tomorrow, because tomorrow owes two."
     );
   } else if (process.argv[2] === "guard") {
     const role = process.argv[3] === "scout" ? "scout" : "publish";
