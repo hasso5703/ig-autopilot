@@ -176,8 +176,8 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a satellite image with a small watermark in the corner",
-            "setting": "on a computer monitor in a bright room in daylight",
+            "subject": "a satellite picture of a coastline with a faint watermark in the corner",
+            "setting": "on a computer screen in a dim room at night",
             "composition": "close-up on the screen"
           }
         }

@@ -118,13 +118,25 @@ export function imagePrompt({
  * asking the model to depict the event, which is the one picture this account
  * must never fake. The caller passes the names its own claims use; matching is
  * whole-word and case-insensitive so "Redis" is caught and "read" is not.
+ *
+ * `authored` is the text the writer actually chose — the spec's subject, action,
+ * setting and composition — as opposed to the fixed camera and audio boilerplate
+ * these builders append to every prompt alike. Only the authored half is tested
+ * for forbidden names, because the boilerplate cannot depict anything: on
+ * 2026-08-02 a post about Google Earth had "Lens" among its names (Google Lens,
+ * named in a slide) and the standing suffix "Shot on a 35mm lens" therefore
+ * refused EVERY generated still on that post, whatever it showed. Nothing is
+ * loosened by this — a spec that names Google, Earth, SynthID or Lens is refused
+ * exactly as before, and a hand-written `visual.prompt` passes no `authored`, so
+ * it is still checked whole.
  */
-export function promptIssues(prompt, { forbidNames = [] } = {}) {
+export function promptIssues(prompt, { forbidNames = [], authored = null } = {}) {
   const issues = [];
+  const named = authored ?? prompt;
   for (const name of forbidNames) {
     if (!name || name.length < 3) continue;
     const re = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
-    if (re.test(prompt)) issues.push(`prompt names "${name}" — a generated picture may never depict the reported subject`);
+    if (re.test(named)) issues.push(`prompt names "${name}" — a generated picture may never depict the reported subject`);
   }
   if (/\b(logo|brand mark|trademark)\b/i.test(prompt)) issues.push("prompt asks for a logo");
   if (/"[^"]+"/.test(prompt)) issues.push("prompt contains quoted dialogue — Veo will speak it under the narration");

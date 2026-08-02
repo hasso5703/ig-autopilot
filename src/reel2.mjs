@@ -468,6 +468,19 @@ export const ALIGN_FLOOR = 0.65;
  * hour and found every 12-second slice coming back verbatim, so two containers
  * now agree. The cost is wall clock on the retry path only (about 60 seconds
  * here on four cores); a healthy decode never reaches this function. */
+/** The words a writer actually chose for a beat's picture.
+ *
+ * A `spec` is the author's; the camera, lens, ambiance and no-text rules that
+ * the prompt builders append are the engine's, identical on every prompt, and
+ * cannot depict anybody. Only the former is tested against the post's forbidden
+ * names — see promptIssues. A beat that carries a hand-written `prompt` instead
+ * of a `spec` returns null, so that prompt keeps being checked in full. */
+export function authoredText(visual) {
+  const spec = visual?.spec;
+  if (!spec || typeof spec !== "object") return null;
+  return Object.values(spec).filter((v) => typeof v === "string").join(" ");
+}
+
 export const windowedScript = (model, lang) => `
 from faster_whisper import WhisperModel
 import json, sys, os, subprocess, tempfile
@@ -1465,7 +1478,7 @@ export async function buildReel(postFile, mediaDir) {
       const clip = beat.visual.file || path.join(mediaDir, `veo_${i}.mp4`);
       if (!beat.visual.file) {
         const prompt = beat.visual.prompt || veoPrompt({ ...beat.visual.spec, mood });
-        const issues = promptIssues(prompt, { forbidNames });
+        const issues = promptIssues(prompt, { forbidNames, authored: authoredText(beat.visual) });
         if (issues.length) throw new Error(`veo prompt refused:\n  ${issues.join("\n  ")}`);
         const durationSeconds = dur <= 4.2 ? 4 : dur <= 6.2 ? 6 : 8;
         /* 1080p is native for this frame: a 9:16 clip at 720p is 720x1280 and
@@ -1506,7 +1519,7 @@ export async function buildReel(postFile, mediaDir) {
       const img = beat.visual?.file || path.join(mediaDir, `still_${i}.jpg`);
       if (!beat.visual?.file) {
         const prompt = beat.visual?.prompt || imagePrompt({ ...beat.visual?.spec, mood });
-        const issues = promptIssues(prompt, { forbidNames });
+        const issues = promptIssues(prompt, { forbidNames, authored: authoredText(beat.visual) });
         if (issues.length) throw new Error(`image prompt refused:\n  ${issues.join("\n  ")}`);
         await genImage({ prompt, outFile: img, slug });
       }

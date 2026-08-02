@@ -778,6 +778,46 @@ test("a thin decode is re-read in windows before the voice is blamed", async () 
  * so two containers agree on it. A healthy decode never reaches this path, so
  * the extra wall clock is only ever spent on a run that would otherwise stop.
  */
+/*
+ * The forbidden-name check reads what the writer wrote, not the boilerplate.
+ *
+ * On 2026-08-02 a post about Google Earth carried "Lens" among its extracted
+ * names (Google Lens is quoted on a slide). Every prompt this repo builds ends
+ * with the fixed camera line "Shot on a 35mm lens", so every generated still on
+ * that post was refused for naming Lens — regardless of what it depicted. The
+ * boilerplate depicts nothing; the spec is what has to be clean.
+ */
+test("a forbidden name is looked for in the spec, not in the camera boilerplate", async () => {
+  const { promptIssues, imagePrompt } = await import("../src/promptcraft.mjs");
+  const { authoredText } = await import("../src/reel2.mjs");
+
+  const innocent = { subject: "a weather map on a paper chart", setting: "on a desk in daylight" };
+  const prompt = imagePrompt({ ...innocent });
+  assert.ok(/\blens\b/i.test(prompt), "the builders really do append the word this test is about");
+
+  assert.deepEqual(
+    promptIssues(prompt, { forbidNames: ["Lens", "Google"], authored: authoredText({ spec: innocent }) }),
+    [],
+    "boilerplate must not trip a product name the picture does not show"
+  );
+
+  // What the guard is for still fires, on the writer's own words.
+  const guilty = { subject: "the Google Lens result screen", setting: "on a phone in daylight" };
+  const issues = promptIssues(imagePrompt({ ...guilty }), {
+    forbidNames: ["Lens", "Google"],
+    authored: authoredText({ spec: guilty }),
+  });
+  assert.ok(issues.some((i) => /names "Google"/.test(i)), "a spec naming the reported subject is still refused");
+  assert.ok(issues.some((i) => /names "Lens"/.test(i)), "both names, not just the first");
+
+  // A hand-written prompt has no spec to isolate, so it keeps being read whole.
+  assert.equal(authoredText({ prompt: "a photorealistic shot of the Google Earth interface" }), null);
+  assert.ok(
+    promptIssues("a photorealistic shot of the Google Earth interface", { forbidNames: ["Google"] }).length,
+    "a beat that skips the spec is still checked in full"
+  );
+});
+
 test("the windowed re-read slices short enough to stop a long-form drift", async () => {
   const { windowedScript } = await import("../src/reel2.mjs");
   const src = windowedScript("large-v3-turbo", "fr");
