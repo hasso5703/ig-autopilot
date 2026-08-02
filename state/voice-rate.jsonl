@@ -26,3 +26,7 @@
 {"at":"2026-08-01T15:03:40.309Z","slug":"2026-08-01-astra-dix-problemes","words":214,"seconds":67.16,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":1}
 {"at":"2026-08-01T15:04:18.198Z","slug":"2026-08-01-astra-dix-problemes","words":214,"seconds":63.48,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":false,"declineDb":0}
 {"at":"2026-08-01T15:04:47.571Z","slug":"2026-08-01-astra-dix-problemes","words":214,"seconds":60.84,"voice":"Sadaltager","lang":"fr","attempt":3,"accepted":true,"declineDb":0.8}
+{"at":"2026-08-02T15:38:45.354Z","slug":"2026-08-02-xai-minnesota-nudification","words":220,"seconds":62.12,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-0.4}
+{"at":"2026-08-02T15:39:21.528Z","slug":"2026-08-02-xai-minnesota-nudification","words":220,"seconds":62.48,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":false,"declineDb":-0.8}
+{"at":"2026-08-02T15:40:00.789Z","slug":"2026-08-02-xai-minnesota-nudification","words":220,"seconds":68.4,"voice":"Sadaltager","lang":"fr","attempt":3,"accepted":false,"declineDb":-1.2}
+{"at":"2026-08-02T15:50:06.680Z","slug":"2026-08-02-xai-minnesota-nudification","words":202,"seconds":60.92,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":0}

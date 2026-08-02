@@ -133,10 +133,11 @@
     "title": "Le Minnesota interdit les applis qui te déshabillent",
     "beats": [
       {
-        "script": "Quelqu'un prend tes photos sur les réseaux sociaux, et une appli les transforme en images sexuelles. Le Minnesota vient d'interdire ça. xAI, l'entreprise d'Elon Musk, a voulu bloquer la loi.",
+        "script": "Quelqu'un prend tes photos sur les réseaux sociaux, une appli les transforme en images sexuelles. Le Minnesota vient d'interdire ça. xAI, l'entreprise d'Elon Musk, a voulu bloquer la loi.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993"
+          "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993",
+          "file": "media/2026-08-02-xai-minnesota-nudification/shot_0.png"
         }
       },
       {
@@ -150,7 +151,7 @@
         }
       },
       {
-        "script": "xAI n'a pas perdu sur le fond, mais sur une date. Recours déposé le 29 juillet : presque trois mois après la signature de la loi, trois jours avant son application.",
+        "script": "xAI n'a pas perdu sur le fond, mais sur une date. Recours déposé presque trois mois après la signature de la loi, et trois jours avant son application.",
         "visual": {
           "type": "photo",
           "query": "donovan frank judge",
@@ -160,7 +161,7 @@
         }
       },
       {
-        "script": "Pour le juge, attendre aussi longtemps montre que le préjudice n'est pas immédiat. Donc la loi s'applique : jusqu'à 500 000 dollars par accès ou usage illicite.",
+        "script": "Pour le juge, attendre autant montre que le préjudice n'est pas immédiat. La loi s'applique : jusqu'à 500 000 dollars par accès illicite.",
         "visual": {
           "type": "card",
           "value": "500 000 $",
@@ -168,21 +169,23 @@
         }
       },
       {
-        "script": "Ce texte ne vient pas de la tech. La sénatrice Erin Maye Quade l'a lancé après que des femmes lui ont raconté qu'un homme de leur entourage avait transformé leurs photos en images sexuelles.",
+        "script": "Et cette loi ne vient pas de la tech. La sénatrice Erin Maye Quade l'a lancée après que des femmes lui ont raconté qu'un homme de leur entourage avait fait ça.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/"
+          "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/",
+          "file": "media/2026-08-02-xai-minnesota-nudification/shot_4.png"
         }
       },
       {
-        "script": "Donc xAI connaît le problème. En janvier, elle a posé des restrictions. En avril, Grok générait encore des images sexualisées de personnes sans leur consentement.",
+        "script": "Donc xAI connaît le problème. En janvier, elle a posé des restrictions. En avril, Grok générait encore des images sexualisées sans consentement.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.engadget.com/2228460/judge-refuses-xai-request-to-stop-minnesota-law-banning-nudify-apps/"
+          "url": "https://www.engadget.com/2228460/judge-refuses-xai-request-to-stop-minnesota-law-banning-nudify-apps/",
+          "file": "media/2026-08-02-xai-minnesota-nudification/shot_5.png"
         }
       },
       {
-        "script": "Sauf que xAI n'est pas seule. L'ACLU du Minnesota avait soutenu une première version du texte en février. Depuis, elle s'y oppose.",
+        "script": "Sauf que xAI n'est pas seule. L'ACLU du Minnesota avait soutenu une première version en février. Depuis, elle s'y oppose.",
         "visual": {
           "type": "card",
           "value": "février",
@@ -190,11 +193,13 @@
         }
       },
       {
-        "script": "Le 19 août, le même juge décide si la loi est suspendue. Le procureur Keith Ellison, lui, dit défendre la dignité des habitants. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Le 19 août, le même juge décide si la loi est suspendue. Keith Ellison, procureur du Minnesota, dit défendre leur dignité. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
           "query": "keith ellison official portrait",
-          "alt": "Keith Ellison, procureur général du Minnesota"
+          "alt": "Keith Ellison, procureur général du Minnesota",
+          "file": "media/2026-08-02-xai-minnesota-nudification/photo_7.jpg",
+          "credit": "Congress of the United States · domaine public"
         }
       }
     ]
