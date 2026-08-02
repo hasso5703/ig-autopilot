@@ -762,6 +762,32 @@ test("a thin decode is re-read in windows before the voice is blamed", async () 
   assert.ok(ALIGN_FLOOR < ALIGN_HEALTHY, "the floor is a refusal, the healthy mark is a retry, and they are not the same number");
 });
 
+/*
+ * The retry window is 12 seconds, and 20 was not short enough.
+ *
+ * Measured on 2026-08-02, one paid 200-word narration of the Google Earth
+ * script, three decodes of the same file on the same container:
+ *
+ *   whole file          86 tokens heard   35% anchored
+ *   20-second windows  139 tokens heard   59% anchored   (still under the floor)
+ *   12-second windows  193 tokens heard   82% anchored
+ *
+ * At 20 seconds a drifting window swallowed two entire beats and the build died
+ * over the 65% floor with the reading already bought. Twelve is also what the
+ * 2026-08-01 run measured by hand when it bisected the same failure for an hour,
+ * so two containers agree on it. A healthy decode never reaches this path, so
+ * the extra wall clock is only ever spent on a run that would otherwise stop.
+ */
+test("the windowed re-read slices short enough to stop a long-form drift", async () => {
+  const { windowedScript } = await import("../src/reel2.mjs");
+  const src = windowedScript("large-v3-turbo", "fr");
+
+  const [, win, overlap] = src.match(/WIN,\s*OVERLAP\s*=\s*([\d.]+),\s*([\d.]+)/).map(Number);
+  assert.ok(win <= 12, `a ${win}s window let a drift eat two beats on 2026-08-02; keep it at 12 or shorter`);
+  assert.ok(overlap > 0 && overlap < win, "windows must overlap, and by less than their own length");
+  assert.ok(src.includes("condition_on_previous_text=False"), "each window must decode without state from the last one");
+});
+
 test("reel2 alignment: whisper's French elision fragments merge back into one spoken word", async () => {
   const { mergeContinuations } = await import("../src/reel2.mjs");
   const heard = [

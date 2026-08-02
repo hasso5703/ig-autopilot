@@ -457,11 +457,21 @@ export const ALIGN_FLOOR = 0.65;
  * window cannot drift beyond its own length. Slices are cut with ffmpeg, which
  * is already a hard dependency, so this adds nothing to install. Tokens landing
  * inside a window's overlap are dropped in favour of what the previous window
- * already heard there, which keeps the clock monotonic across the seams. */
-const windowedScript = (model, lang) => `
+ * already heard there, which keeps the clock monotonic across the seams.
+ *
+ * The window is 12 seconds because 20 was not short enough. Measured on the
+ * 2026-08-02 Google Earth narration, one 200-word reading, three decodes of the
+ * same file: whole-file 35%, 20-second windows 59%, 12-second windows 82%. At
+ * 20 seconds a drifting window still swallowed two whole beats and the build
+ * died over the 65% floor with the narration already paid for. Twelve is also
+ * the length the 2026-08-01 run measured by hand when it bisected this for an
+ * hour and found every 12-second slice coming back verbatim, so two containers
+ * now agree. The cost is wall clock on the retry path only (about 60 seconds
+ * here on four cores); a healthy decode never reaches this function. */
+export const windowedScript = (model, lang) => `
 from faster_whisper import WhisperModel
 import json, sys, os, subprocess, tempfile
-WIN, OVERLAP = 20.0, 4.0
+WIN, OVERLAP = 12.0, 4.0
 wav, out = sys.argv[1], sys.argv[2]
 dur = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",wav],
                            capture_output=True, text=True, check=True).stdout.strip())
