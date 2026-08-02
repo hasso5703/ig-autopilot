@@ -709,7 +709,13 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
           "\nIt has probably spent money and has certainly not recorded anything yet, so no guard here can see it:" +
           "\nthe gap guard measures time since the last RECORDED publication, and a build in progress has recorded nothing." +
           "\nDo not build. Wait ten minutes and run this again. If that journal has not moved, the run behind it is dead" +
-          "\nand the day is yours; if it has, you are the scout for tomorrow. Say which one you concluded, and why."
+          "\nand the day is yours; if it has, you are the scout for tomorrow. Say which one you concluded, and why." +
+          (process.env.RUN_JOURNAL
+            ? ""
+            : "\n\nBUT FIRST: RUN_JOURNAL is not set in this process, so this check could not exclude YOUR OWN journal." +
+              "\nShell state does not persist between tool calls — export it in the same command as the guard:" +
+              `\n  export RUN_JOURNAL="reports/journal/$(date -u +%F)-$(date -u +%H)h.md" && node src/state.mjs guard` +
+              "\nIf the journal named above is the one this run is writing, that is a false alarm, not a sibling run.")
       );
     }
     if (!g.ok) {

@@ -185,19 +185,20 @@ ENTRIES:
   mauvaise personne. Mesure 01/08 aussi: AUCUNE photo documentaire de datacenter n'est atteignable
   ici ("data center server hall" 0 candidat, "data center" sort le batiment NSA
   d'Utah, "server room rack" des salles bleues rawpixel). N'y passe pas de temps.
-- 2026-07-30 · Doctrine visuelle v2 (commit de midi): palettes MOODS
-  réécrites du noir nocturne vers la lumière du jour éditoriale; hiérarchie
-  par beat (photo réelle du sujet, reçu, photo d'objet, veo simple, stills
-  ponts); métaphores visuelles interdites (l'autoroute qui freine du 29/07
-  = slop reconnu en 0,3 s); simplicityIssues refuse foules, trafic et
-  rangées avant tout achat, au gate comme au moteur. Les prompts
-  d'illustration des slides écrits avant ce jour portent l'ancienne lumière:
-  le warning du gate est attendu, pas bloquant. Correction 30/07 apres midi:
-  brand.json/palettes.*.light n'avait pas ete resynchronise avec ce commit
-  (seul promptcraft.mjs MOODS l'etait), d'ou le warning meme sur des prompts
-  neufs; corrige (les deux fichiers portent la meme lumiere). brand.json.light
-  n'est lu que par le nag de validate.mjs, jamais par render.mjs/template.mjs
-  qui n'utilisent que .accent, donc l'edition etait sans risque.
+- 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
+  PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
+  mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
+  3,22. atempo clampe a 1,12, fichier a 65,5 s, build refuse APRES paiement des
+  3 narrations ($0,097), message "only -2.47s left for the end-card". Ces 3
+  lectures sont ecrites dans state/voice-rate.jsonl au passage, donc relancer
+  `node src/validate.mjs window` juste apres donne une AUTRE fenetre (194-222 ->
+  185-212) et le script de 220 mots etait alors au-dessus du plafond. DONC:
+  ecris a la CIBLE imprimee, jamais au plafond (a la cible l'atempo vaut ~1,0 et
+  absorbe une lecture lente; au plafond il part deja a 1,12 et la moindre
+  lenteur casse le build), et relance `window` apres tout build echoue AVANT de
+  reecrire. Et epingle avec `file` tout ce qui est deja sur le disque
+  (shot_N.png, photo_N.jpg) avant de relancer: le 2e build n'a rachete qu'une
+  narration ($0,03) au lieu de toutes les images. Proof: run 15h 02/08.
 - 2026-07-31 · `revisit` est le troisieme outcome de recordSeen: bonne
   histoire bloquee par le temps (pas encore corroboree, primaire
   injoignable), revient au bout de 6h au lieu de 36h. Ne mets `considered`
