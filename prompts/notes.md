@@ -261,6 +261,15 @@ ENTRIES:
   garde le meilleur des deux decodages; il ne refuse que si les DEUX echouent, et
   le message le dit alors explicitement. Lis la ligne "alignment: ... anchored
   (N%)" et laisse-le faire. Proof: wbench 31/07, run 08h 01/08, re-mesures 01/08.
+  CORRECTION 02/08 (19h30): la relecture se fait en fenetres de 12 s, pas de 20.
+  A 20 s la derive survit et avale des beats entiers. Meme fichier, une seule
+  narration payee, trois decodages: fichier entier 86 tokens/35%, fenetres 20 s
+  139/59% (SOUS le plancher, build refuse apres paiement), fenetres 12 s
+  193/82%. Corrige dans reel2.mjs (windowedScript) + test. Donc si un build
+  meurt encore a l'alignement, ce n'est plus la longueur de fenetre: verifie
+  d'abord que la DUREE de la lecture correspond au nombre de mots (200 mots a
+  3,32 mots/s = 60,2 s), ce qui prouve en 5 secondes que la voix a tout lu et
+  que c'est le transcripteur qui derive.
 - 2026-07-31 · Ce qu'on MONTRE est desormais tenu par le gate, pas par le gout.
   Une image generee ou un veo dont le `spec` ne partage aucun mot (>=5 lettres)
   avec les sources est REFUSE: c'est ce qui a laisse passer un verre d'eau, une
@@ -315,7 +324,15 @@ ENTRIES:
   attend un rendu qui n'arrive jamais, puis "Target page has been closed").
   Pour montrer un depot, il n'y a pas de recu joignable ici (github.com est
   403 via le proxy): prends une `card`.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08.
+  Ajout 02/08 (19h30): blog.google passe encore a travers, sa banniere cookies
+  ("uses cookies from Google" + bouton "OK, got it") occupe le bas du recu et
+  elle a survecu au clic dans les frames et au retrait des overlays. Le recu
+  etait le beat 0, donc l'audition ET la vignette. Remede en 10 s, gratuit,
+  sans relancer la capture: le shot fait 1290x2796 et la banniere commence a
+  y=2293, soit exactement le 9:16 du haut, donc
+  `ffmpeg -i shot_0.png -vf "crop=1290:2293:0:0" shot_0.png` puis epingler avec
+  `file`. REGARDE tes shot_N.png avant de construire, pas seulement apres.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
