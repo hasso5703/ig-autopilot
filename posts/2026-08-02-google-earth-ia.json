@@ -155,7 +155,7 @@
         }
       },
       {
-        "script": "Et c'était pas réservé à quelques testeurs. Le générateur, Nano Banana 2, est arrivé partout dans le monde, pour tout le monde, sans liste d'attente.",
+        "script": "Et c'était pas réservé à des testeurs. Le générateur, Nano Banana 2, est arrivé partout dans le monde, pour tout le monde, sans liste d'attente.",
         "visual": {
           "type": "photo",
           "query": "satellite image coastline",
@@ -172,7 +172,7 @@
         }
       },
       {
-        "script": "Google répond que chaque image porte SynthID, son filigrane. Sauf que le chercheur a photographié son écran, et le filigrane a cessé d'être lu.",
+        "script": "Google répond que chaque image porte son filigrane, SynthID. Sauf que le chercheur a photographié son écran: le filigrane a cessé d'être lu.",
         "visual": {
           "type": "image",
           "spec": {
@@ -191,7 +191,7 @@
         }
       },
       {
-        "script": "Henk van Ess résume: Google a passé vingt ans à bâtir la référence que le monde consulte pour vérifier. Il vient d'y ajouter un bouton qui invente. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Henk van Ess résume: Google a passé vingt ans à bâtir la référence que le monde consulte pour vérifier. Il vient d'y ajouter un bouton qui invente. Abonne-toi pour l'actu IA de demain, laisse un like.",
         "visual": {
           "type": "photo",
           "query": "henk van ess",
