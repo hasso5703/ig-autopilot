@@ -59,7 +59,16 @@ ENTRIES:
   ("Update, 7/31:" avant "Original post, 7/30:"), donc un seul recu couvre le
   lancement et le retropedalage, et c'est le primaire. Le Substack d'un
   chercheur (digitaldigging.org) est souvent le vrai primaire d'une histoire
-  OSINT, avant toute reprise presse.
+  OSINT, avant toute reprise presse. Ajout 02/08 (10h): sur une actu de
+  reglementation europeenne, repondent 200 et se gatent du premier coup
+  digital-strategy.ec.europa.eu (le primaire: c'est la Commission elle-meme),
+  euronews.com (redaction de Bruxelles, interviews d'experts a elle), et deux
+  sources juridiques qui portent les dates que la presse resume mal,
+  joneswalker.com et techpolicy.press. Bloquent: politico.eu (403),
+  reuters.com (401). Attention a la date de l'analyse juridique:
+  techpolicy.press du 02/04 decrivait le report comme une PROPOSITION, c'est
+  joneswalker.com du 16/07 qui atteste qu'il a ete adopte en juin. Lis la date
+  de signature avant de citer un cabinet comme s'il decrivait aujourd'hui.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -326,3 +335,15 @@ ENTRIES:
   exacts d'abord et colle-les. Le repr() Python sur le texte aplati montre
   apostrophes courbes, tirets longs et espaces insecables AVANT qu'ils ne
   coutent un aller-retour de gate (~90 s par citation).
+  Ajout 02/08 (10h): extraire avec TON PROPRE aplatissement ne suffit pas, il
+  faut celui du gate. Un regex maison garde "Digital Omnibus , which" (l'espace
+  avant la virgule vient d'un lien retire) la ou validate.mjs normalise en
+  "digital omnibus, which": citation copiee en octets exacts, NOT_FOUND quand
+  meme, sur 2 des 18 verifications. Extrais toujours depuis la fonction du
+  gate, elle est exportee:
+  `node --input-type=module -e "import{flatten}from'./src/validate.mjs';
+  const r=await fetch(URL,{headers:{'user-agent':'Mozilla/5.0'}});
+  const t=flatten(await r.text());const i=t.indexOf('debut en minuscules');
+  console.log(JSON.stringify(t.slice(i,i+400)))"` puis recasse a la main.
+  Elle minuscule tout, donc relis la casse; elle seule connait ses
+  normalisations.

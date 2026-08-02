@@ -1,0 +1,243 @@
+{
+  "slug": "2026-08-02-ai-act-transparence",
+  "centralClaim": "From 2 August 2026 the European Commission began enforcing the EU AI Act's transparency rules, which require deepfakes and other AI-generated content to be labelled and made recognisable as artificial.",
+  "sendTest": "Depuis aujourd'hui en Europe, un chatbot doit t'avouer qu'il est une machine, et les deepfakes doivent être étiquetés.",
+  "corroboration": [
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+      "quote": "From 2 August 2026, the European Commission’s AI Office, together with national authorities, will begin enforcing the Artificial Intelligence (AI) Act. On the same date, new transparency rules will start to apply, requiring certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it."
+    },
+    {
+      "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work",
+      "quote": "From this Sunday, AI companies will be subject to new obligations under the EU's AI Act requiring them to make deepfakes and other AI-generated content clearly recognisable as artificial."
+    }
+  ],
+  "caption": "Depuis ce 2 août, un chatbot en Europe doit dire qu'il n'est pas humain.\n\nLa Commission européenne a commencé à faire appliquer l'AI Act. Les deepfakes doivent être étiquetés, et tout contenu généré par IA doit porter une marque lisible par machine. Plus de 180 organisations ont signé le code de bonnes pratiques sur la transparence, dont OpenAI et Google.\n\nLe détail qui n'a pas tenu dans la vidéo. Ces mêmes entreprises préviennent que la détection et le marquage restent une cible mouvante, et il n'existe aujourd'hui aucune solution commune à toute l'industrie. Les filigranes peuvent être retirés, modifiés ou perdus quand un contenu est édité, compressé ou partagé.\n\nÀ décharge, la loi n'est pas vide pour autant. Mais sa partie la plus lourde a été repoussée: en juin, le Parlement et le Conseil ont déplacé les obligations sur les IA à haut risque au 2 décembre 2027, et à août 2028 pour celles intégrées dans des produits déjà réglementés. Le chercheur Bram Vranken estime qu'une grande partie des systèmes mis sur le marché avant décembre 2027 n'aura jamais à s'y conformer.\n\nUne étiquette sur les contenus générés par IA, ça peut marcher, oui ou non ?\n\nSources : digital-strategy.ec.europa.eu, euronews.com, joneswalker.com, techpolicy.press\n\n#IA #IntelligenceArtificielle #ActuIA #AIAct #Europe\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "From 2 August 2026, the European Commission’s AI Office, together with national authorities, will begin enforcing the Artificial Intelligence (AI) Act. On the same date, new transparency rules will start to apply, requiring certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it.",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+    },
+    {
+      "quote": "The Commission published a first list of more than 180 organisations that have signed the Code of Practice on transparency of AI-generated content that operationalises the rules on transparency of AI-generated content.",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+    },
+    {
+      "quote": "Major AI companies like OpenAI and Google have broadly backed transparency requirements, signing the Commission's code of practice. However, they have also warned that detection and marking technologies remain a moving target. There is currently no single industry-wide solution.",
+      "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work"
+    },
+    {
+      "quote": "Experts warn that watermarks can be removed, altered or lost when content is edited, compressed or shared across platforms. Tracing the full history of an AI-generated image or video through multiple edits can be extremely difficult.",
+      "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work"
+    },
+    {
+      "quote": "In June, the European Parliament and Council approved the Digital Omnibus, which moves that deadline to December 2, 2027, once the amendments are published in the Official Journal and enter into force. High-risk systems embedded in regulated products generally move to August 2, 2028.",
+      "url": "https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html"
+    },
+    {
+      "quote": "Bram Vranken, researcher and campaigner at Corporate Europe Observatory (CEO), made a similar argument: “a large part of high-risk AI systems that have been placed on the market before December 2027 will never have to comply with the rules.",
+      "url": "https://www.techpolicy.press/eus-ai-act-delays-let-highrisk-systems-dodge-oversight/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "2 août 2026 · Commission européenne",
+      "headline": "L'Europe oblige les chatbots à dire qu'ils ne sont pas *humains*.",
+      "hero": {
+        "value": "180",
+        "label": "organisations ont signé le code de transparence"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "180",
+      "unit": "organisations signataires",
+      "body": "La Commission a publié une première liste de **plus de 180 organisations** ayant signé le code de bonnes pratiques sur la transparence des contenus générés par IA.",
+      "evidence": "The Commission published a first list of more than 180 organisations that have signed the Code of Practice on transparency of AI-generated content that operationalises the rules on transparency of AI-generated content.",
+      "source": {
+        "name": "Commission européenne",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui s'applique depuis le 2 août",
+      "body": "La Commission européenne et les autorités nationales ont commencé à faire appliquer l'*AI Act*. Les nouvelles règles de transparence s'appliquent à la même date.",
+      "evidence": "From 2 August 2026, the European Commission’s AI Office, together with national authorities, will begin enforcing the Artificial Intelligence (AI) Act. On the same date, new transparency rules will start to apply, requiring certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it.",
+      "source": {
+        "name": "Commission européenne",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que les chatbots doivent dire",
+      "body": "Un chatbot doit désormais dire à l'utilisateur qu'il a affaire à une IA, **pas à un humain**. Les deepfakes doivent être étiquetés.",
+      "evidence": "Under the new rules, chatbots and other interactive AI systems will have to tell users they are dealing with AI, not a human. Deepfakes (images, videos, or audio that have been edited or generated using AI) will have to be labelled.",
+      "source": {
+        "name": "Commission européenne",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les signataires préviennent eux-mêmes",
+      "body": "OpenAI et Google ont signé le code, puis ont prévenu que la détection et le marquage restent *une cible mouvante*. **Aucune solution commune à toute l'industrie n'existe.**",
+      "evidence": "Major AI companies like OpenAI and Google have broadly backed transparency requirements, signing the Commission's code of practice. However, they have also warned that detection and marking technologies remain a moving target. There is currently no single industry-wide solution.",
+      "source": {
+        "name": "Euronews",
+        "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work",
+        "date": "2026-07-28"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que la règle exige",
+      "claim": "Tout contenu généré ou modifié par IA doit porter une marque lisible par machine.",
+      "caveatLabel": "Ce que disent les experts",
+      "caveat": "Les filigranes peuvent être retirés, modifiés ou perdus dès qu'un contenu est édité, compressé ou partagé.",
+      "evidence": "Experts warn that watermarks can be removed, altered or lost when content is edited, compressed or shared across platforms. Tracing the full history of an AI-generated image or video through multiple edits can be extremely difficult.",
+      "source": {
+        "name": "Euronews",
+        "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work",
+        "date": "2026-07-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le régulateur le reconnaît",
+      "body": "L'étude technique de la Commission conclut qu'une *combinaison de solutions* est plus puissante qu'une mesure unique.",
+      "evidence": "A combination of solutions is more powerful than any single measure. Therefore, a best practice is to implement multiple layers of marking and detection for AI-generated content,\" the European Commission's technical study on the topic concluded.",
+      "source": {
+        "name": "Euronews",
+        "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work",
+        "date": "2026-07-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La partie la plus lourde a été repoussée",
+      "body": "En juin, le Parlement et le Conseil ont déplacé les obligations sur les IA à haut risque au **2 décembre 2027**, et à *août 2028* pour celles intégrées dans des produits déjà réglementés.",
+      "evidence": "In June, the European Parliament and Council approved the Digital Omnibus, which moves that deadline to December 2, 2027, once the amendments are published in the Official Journal and enter into force. High-risk systems embedded in regulated products generally move to August 2, 2028.",
+      "source": {
+        "name": "Jones Walker",
+        "url": "https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html",
+        "date": "2026-07-16"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "a loophole and a weak spot in the law",
+      "attribution": "Sergey Lagodinsky, député européen",
+      "evidence": "MEP Sergey Lagodinsky of Germany’s Greens described the provision as “a loophole” and “a weak spot” in the law.",
+      "source": {
+        "name": "Tech Policy Press",
+        "url": "https://www.techpolicy.press/eus-ai-act-delays-let-highrisk-systems-dodge-oversight/",
+        "date": "2026-04-02"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui croit reconnaître une image truquée",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Tout deepfake doit être étiqueté en Europe",
+    "beats": [
+      {
+        "script": "Depuis ce 2 août, en Europe, un chatbot doit te dire qu'il n'est pas humain, et tout deepfake doit être étiqueté. La Commission européenne a commencé à faire appliquer son AI Act.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+        }
+      },
+      {
+        "script": "Et le problème n'est pas la loi. C'est que l'étiquette ne tient pas.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work"
+        }
+      },
+      {
+        "script": "Plus de 180 organisations ont signé le code de bonnes pratiques sur la transparence des contenus générés par IA. OpenAI et Google en font partie.",
+        "visual": {
+          "type": "card",
+          "value": "180",
+          "label": "organisations ont signé le code de transparence de l'UE"
+        }
+      },
+      {
+        "script": "Mais ces mêmes entreprises préviennent que les technologies de détection et de marquage restent une cible mouvante. Il n'existe aujourd'hui aucune solution commune à toute l'industrie.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a faint watermark repeated across a photograph",
+            "setting": "in bright editorial daylight",
+            "composition": "extreme close-up, the photograph fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Donc les filigranes peuvent être retirés, modifiés ou perdus dès qu'un contenu est édité, compressé ou partagé d'une plateforme à l'autre.",
+        "visual": {
+          "type": "card",
+          "value": "filigrane",
+          "label": "retiré, modifié ou perdu au premier partage"
+        }
+      },
+      {
+        "script": "Et ce n'est pas un reproche extérieur. L'étude technique de la Commission européenne conclut elle-même qu'une combinaison de solutions est plus puissante qu'une mesure unique.",
+        "visual": {
+          "type": "photo",
+          "query": "european commission berlaymont building",
+          "alt": "Le Berlaymont, siège de la Commission européenne à Bruxelles"
+        }
+      },
+      {
+        "script": "Et l'autre moitié du texte n'arrive pas aujourd'hui. En juin, le Parlement et le Conseil ont repoussé les obligations sur les IA à haut risque au 2 décembre 2027, et à août 2028 pour d'autres.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html"
+        }
+      },
+      {
+        "script": "L'eurodéputé Sergey Lagodinsky, lui, appelle cette clause une faille et un point faible de la loi. Le texte est arrivé avant la technique. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "sergey lagodinsky",
+          "alt": "Sergey Lagodinsky, député européen"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Commission européenne",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+      "accessed": "2026-08-02"
+    },
+    {
+      "name": "Euronews",
+      "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work",
+      "accessed": "2026-08-02"
+    },
+    {
+      "name": "Jones Walker",
+      "url": "https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html",
+      "accessed": "2026-08-02"
+    },
+    {
+      "name": "Tech Policy Press",
+      "url": "https://www.techpolicy.press/eus-ai-act-delays-let-highrisk-systems-dodge-oversight/",
+      "accessed": "2026-08-02"
+    }
+  ]
+}

@@ -1855,3 +1855,22 @@ test("a day may carry two Reels, and `due` false does not mean the day is closed
   assert.equal(t.dailyMax, REELS_PER_DAY_MAX);
   assert.equal(t.roomToday, Math.max(0, REELS_PER_DAY_MAX - t.reelsToday));
 });
+
+// 2026-08-02: a scout called `recordSeen(item, "considered", "why")` — the
+// shape the manual's prose reads like — instead of `recordSeen([entry])`.
+// `entries.length` was undefined, the empty-input guard swallowed it, and the
+// call returned having written nothing and thrown nothing. The run printed
+// "recorded 5" and `seen.jsonl` never moved. A ledger that silently declines to
+// remember is worse than one that errors: the next run re-reads and can
+// re-publish a story this one already weighed.
+test("recordSeen refuses a non-array instead of silently writing nothing", async () => {
+  const { recordSeen } = await import("../src/state.mjs");
+  await assert.rejects(
+    () => recordSeen({ title: "T", url: "https://a.com/x", outcome: "considered" }),
+    /expects an ARRAY/,
+    "a single entry object must throw, not no-op"
+  );
+  await assert.rejects(() => recordSeen(undefined), /expects an ARRAY/);
+  // the legitimate empty case stays a no-op
+  await recordSeen([]);
+});

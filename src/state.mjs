@@ -209,6 +209,26 @@ export function canonical(url) {
 }
 
 export async function recordSeen(entries) {
+  /*
+   * Refuse anything that is not an array, loudly.
+   *
+   * The signature is `recordSeen([{ ...item, outcome, reason }])` — one array,
+   * each entry carrying its own outcome. On 2026-08-02 a run called it the
+   * other way round, `recordSeen(item, "considered", "why")`, which is the
+   * shape the manual's prose suggests. `entries.length` was then `undefined`,
+   * the guard below read that as "nothing to write", and the function returned
+   * having written nothing and thrown nothing. The run's echo said "recorded 5"
+   * and the ledger was untouched.
+   *
+   * That failure mode is the expensive one: `seen.jsonl` is what stops the next
+   * run re-reading and re-publishing a story this one already weighed, so a
+   * silent no-op here does not lose a log line, it loses the account's memory.
+   * A caller that gets the shape wrong must find out now, not in the morning.
+   */
+  if (!Array.isArray(entries))
+    throw new TypeError(
+      "recordSeen: expects an ARRAY of entries — recordSeen([{ ...item, outcome, reason }]), not (item, outcome, reason). Each entry carries its own `outcome` and `reason` as fields."
+    );
   if (!entries.length) return;
   await mkdir(DIR, { recursive: true });
   const at = new Date().toISOString();
