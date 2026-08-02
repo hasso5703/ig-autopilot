@@ -136,7 +136,8 @@
         "script": "Google Earth, c'est la carte que tu ouvres pour voir à quoi ressemble vraiment un endroit. Jeudi, Google y a mis un bouton qui dessine ce que tu demandes, sur la vraie image satellite.",
         "visual": {
           "type": "screenshot",
-          "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/"
+          "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/",
+          "file": "media/2026-08-02-google-earth-ia/shot_0.png"
         }
       },
       {
@@ -151,7 +152,8 @@
         "script": "Une centrale nucléaire en Iran. Un accident mortel dans une rue d'Amsterdam. Un hôpital avec un cratère de bombe à Gaza. Rien n'a été refusé.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran"
+          "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran",
+          "file": "media/2026-08-02-google-earth-ia/shot_2.png"
         }
       },
       {
@@ -168,7 +170,8 @@
         "script": "Donc NPR, une radio américaine, a refait le test: l'île iranienne de Kharg en feu, le Capitole des États-Unis sous les eaux.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.npr.org/2026/07/31/nx-s1-5914652/google-adds-ai-to-satellite-images-raising-fears-of-deepfakes-in-the-sky"
+          "url": "https://www.npr.org/2026/07/31/nx-s1-5914652/google-adds-ai-to-satellite-images-raising-fears-of-deepfakes-in-the-sky",
+          "file": "media/2026-08-02-google-earth-ia/shot_4.png"
         }
       },
       {
