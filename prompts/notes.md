@@ -48,7 +48,13 @@ ENTRIES:
   mais validate.mjs lit du texte, donc un PDF ne se gate pas). Repondent 200 et
   se gatent aussi: the-decoder.com, officechai.com, erdosproblems.com. Ajout
   01/08 (16h): blog.google, npr.org, engadget.com et digitaldigging.org
-  (Substack) repondent 200 et se gatent du premier coup. Reflexe sur une actu
+  (Substack) repondent 200 et se gatent du premier coup. Ajout 02/08 (06h):
+  nbcnews.com, cbsnews.com (y compris ses editions locales /minnesota/) et
+  fox9.com repondent 200 et se gatent du premier coup, 7 citations sur 7. Sur
+  une decision de justice americaine, TechCrunch n'est qu'une breve qui cite
+  NBC: remonte au newsroom d'origine, et prends la station locale CBS/FOX pour
+  la SECONDE source, elle lit les minutes du greffe elle-meme et porte les
+  citations que le national coupe. Reflexe sur une actu
   produit Google: blog.google porte l'annonce ET le retrait DANS LA MEME PAGE
   ("Update, 7/31:" avant "Original post, 7/30:"), donc un seul recu couvre le
   lancement et le retropedalage, et c'est le primaire. Le Substack d'un
@@ -159,7 +165,15 @@ ENTRIES:
   interroge le produit ("samsung galaxy z flip"), pas sa categorie. Et quand
   meme le produit ne donne que la mauvaise generation, la carte `card` portant
   le chiffre est plus honnete qu'une photo du bon fabricant au mauvais modele.
-  Mesure 01/08 aussi: AUCUNE photo documentaire de datacenter n'est atteignable
+  Ajout 02/08: sur un responsable politique, la requete au nom nu sort une
+  photo VRAIE mais hors ton, et le premier candidat part au build. "keith
+  ellison" met en tete une poignee de main a la Farm Fest sous une banderole
+  "BEEF, IT'S WHAT'S FOR DINNER" (8.0), inutilisable sur une actu de loi;
+  "keith ellison official portrait" met en tete le portrait officiel, fond bleu
+  et drapeau, meme score. Ajoute "official portrait" a la requete des elus.
+  Verifie aussi l'identite a l'oeil: "erin maye quade 2018" (5.0) ne ressemble
+  pas aux photos de la senatrice, beat abandonne plutot que de nommer la
+  mauvaise personne. Mesure 01/08 aussi: AUCUNE photo documentaire de datacenter n'est atteignable
   ici ("data center server hall" 0 candidat, "data center" sort le batiment NSA
   d'Utah, "server room rack" des salles bleues rawpixel). N'y passe pas de temps.
 - 2026-07-30 · Doctrine visuelle v2 (commit de midi): palettes MOODS

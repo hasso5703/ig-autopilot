@@ -1,0 +1,143 @@
+{
+  "slug": "2026-08-02-xai-minnesota-nudification",
+  "centralClaim": "A federal judge denied Elon Musk's company xAI's request to block Minnesota's first-in-the-nation law banning nudification apps, letting the law take effect.",
+  "sendTest": "Un juge a laissé passer la première loi américaine contre les apps qui déshabillent une photo. xAI, l'entreprise de Musk, voulait la bloquer.",
+  "corroboration": [
+    {
+      "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993",
+      "quote": "A federal judge on Friday denied a request from Elon Musk’s artificial intelligence company xAI to block a Minnesota law that will be the first in the nation to ban nudification technology."
+    },
+    {
+      "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/",
+      "quote": "A federal judge has denied a request for a temporary restraining order that would have stopped a Minnesota law that bans apps and websites that create fake, sexualized photos of people from going into effect, according to a court document filed on Friday."
+    }
+  ],
+  "caption": "Depuis samedi, le Minnesota interdit les applications qui déshabillent une photo. xAI a voulu bloquer la loi.\n\nL'entreprise d'Elon Musk a saisi un juge fédéral trois jours avant l'entrée en vigueur du texte, en invoquant le Premier Amendement. Le juge Donovan Frank a refusé, en relevant que xAI avait attendu presque trois mois après la signature de la loi avant de crier à l'urgence. C'est la première loi de ce genre aux États-Unis, et elle prévoit jusqu'à 500 000 dollars de pénalité civile pour chaque accès, téléchargement ou usage illicite.\n\nLe détail qui n'a pas tenu dans la vidéo. La sénatrice Erin Maye Quade a commencé à écrire ce texte il y a deux ans, après que des femmes lui ont raconté qu'un homme de leur entourage avait pris leurs photos sur leurs réseaux sociaux pour en faire des images sexuelles hyperréalistes.\n\nÀ décharge, l'argument de xAI n'est pas isolé. L'ACLU du Minnesota avait soutenu une version antérieure du texte en février, puis a changé d'avis, estimant que la version finale ne trouve pas le bon équilibre avec le Premier Amendement. Rien n'est joué: le juge tient une audience le 19 août pour décider si la loi est suspendue pendant le procès.\n\nInterdire l'outil, ou punir la diffusion, oui ou non ?\n\nSources : nbcnews.com, cbsnews.com, engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #xAI #Grok\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "“xAI filed the motion on July 29, 2026, nearly three months after the law was signed, and only three days before the law is set to take effect. Such a delay in bringing the action and the motion suggests that harm is not immediate,”",
+      "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993"
+    },
+    {
+      "quote": "Violating Minnesota’s law could result in a civil penalty of up to $500,000 “for each unlawful access, download or use,”",
+      "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993"
+    },
+    {
+      "quote": "A hearing on the motion is scheduled for Aug. 19, court records say.",
+      "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/"
+    },
+    {
+      "quote": "State Sen. Erin Maye Quade, a Democrat who authored the bill, said she started working on the bill two years ago after a group of women told her that a man in their life had taken photos off their social media accounts and turned them into hyperrealistic sexual images and videos.",
+      "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Minnesota · xAI",
+      "headline": "Le Minnesota interdit les apps qui déshabillent. *xAI* a perdu.",
+      "hero": { "value": "500 000 $", "label": "de pénalité civile par accès illicite" },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "content",
+      "title": "Ce que la loi coûte, par image",
+      "body": "Jusqu'à *500 000 $* de pénalité civile par accès, téléchargement ou usage illicite, et **les victimes peuvent poursuivre elles-mêmes**.",
+      "evidence": "Violating Minnesota’s law could result in a civil penalty of up to $500,000 “for each unlawful access, download or use,” in addition to civil penalties for mental anguish, punitive damages, attorney’s fees or “other relief the court deems just and equitable.”",
+      "source": { "name": "NBC News", "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993", "date": "2026-07-31" }
+    },
+    {
+      "type": "content",
+      "title": "Un juge a refusé de suspendre la loi",
+      "body": "xAI, l'entreprise d'Elon Musk, voulait empêcher l'entrée en vigueur du texte. C'est *la première loi du pays* à interdire cette technologie.",
+      "evidence": "A federal judge on Friday denied a request from Elon Musk’s artificial intelligence company xAI to block a Minnesota law that will be the first in the nation to ban nudification technology.",
+      "source": { "name": "NBC News", "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993", "date": "2026-07-31" }
+    },
+    {
+      "type": "content",
+      "title": "Le juge a tranché sur le calendrier",
+      "body": "xAI a attendu presque trois mois après la signature de la loi, puis a demandé l'urgence trois jours avant son application. **Le juge y a vu la preuve que rien n'était urgent.**",
+      "evidence": "xAI filed the motion on July 29, 2026, nearly three months after the law was signed, and only three days before the law is set to take effect. Such a delay in bringing the action and the motion suggests that harm is not immediate,",
+      "source": { "name": "NBC News", "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993", "date": "2026-07-31" }
+    },
+    {
+      "type": "content",
+      "title": "La loi ne vient pas d'un débat sur la technologie",
+      "body": "La sénatrice Erin Maye Quade a commencé à l'écrire il y a deux ans, après que des femmes lui ont raconté qu'un homme de leur entourage avait pris leurs photos sur les réseaux sociaux.",
+      "evidence": "State Sen. Erin Maye Quade, a Democrat who authored the bill, said she started working on the bill two years ago after a group of women told her that a man in their life had taken photos off their social media accounts and turned them into hyperrealistic sexual images and videos.",
+      "source": { "name": "CBS Minnesota", "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/", "date": "2026-07-31" }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi xAI est concernée",
+      "body": "En avril, Grok générait encore des images sexualisées de personnes *sans leur consentement*, pendant que des utilisateurs contournaient les restrictions posées en janvier.",
+      "evidence": "As recently as April, Grok was continuing to generate sexualized images of people without their consent, as users tried to break through restrictions that xAI put in place in January.",
+      "source": { "name": "NBC News", "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993", "date": "2026-07-31" }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que plaide xAI",
+      "claim": "La loi est trop large et il existe des solutions moins restrictives pour arriver au même résultat.",
+      "caveatLabel": "Ce que dit l'ACLU du Minnesota",
+      "caveat": "Elle avait soutenu une version antérieure du texte en février, puis a changé d'avis sur la version finale.",
+      "evidence": "xAI’s criticism of the law is drawing support from some free-speech advocates including the American Civil Liberties Union of Minnesota, which supported passage of the law in an earlier form in February but has since turned against it.",
+      "source": { "name": "NBC News", "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993", "date": "2026-07-31" }
+    },
+    {
+      "type": "quote",
+      "body": "I'm proud to be in court defending the dignity of Minnesotans.",
+      "attribution": "Keith Ellison, procureur général du Minnesota",
+      "evidence": "\"I'm proud to be in court defending the dignity of Minnesotans,\" Ellison said in response to Friday's ruling.",
+      "source": { "name": "CBS Minnesota", "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/", "date": "2026-07-31" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* dont les photos traînent en ligne",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Le Minnesota interdit les apps qui déshabillent",
+    "beats": [
+      {
+        "script": "Depuis samedi, le Minnesota interdit les applications qui déshabillent la photo de quelqu'un. Trois jours avant, xAI, l'entreprise d'Elon Musk, a demandé à un juge fédéral de la bloquer. Il a refusé.",
+        "visual": { "type": "screenshot", "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993" }
+      },
+      {
+        "script": "Et xAI n'a pas perdu sur le fond, mais sur l'horloge.",
+        "visual": { "type": "photo", "query": "elon musk", "alt": "Elon Musk, dont l'entreprise xAI a attaqué la loi du Minnesota" }
+      },
+      {
+        "script": "Le juge Donovan Frank écrit que xAI a déposé sa demande presque trois mois après la signature de la loi, et trois jours avant son application. Un tel délai suggère que le préjudice n'est pas immédiat.",
+        "visual": { "type": "photo", "query": "donovan frank judge", "alt": "Le juge fédéral Donovan Frank" }
+      },
+      {
+        "script": "C'est la première loi de ce genre aux États-Unis, avec jusqu'à 500 000 dollars de pénalité par accès ou usage illicite.",
+        "visual": { "type": "card", "value": "500 000 $", "label": "de pénalité civile par accès, téléchargement ou usage" }
+      },
+      {
+        "script": "Mais cette loi ne sort pas d'un débat technologique. La sénatrice Erin Maye Quade l'a commencée il y a deux ans, après que des femmes lui ont raconté qu'un homme avait pris leurs photos sur les réseaux sociaux.",
+        "visual": { "type": "screenshot", "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/" }
+      },
+      {
+        "script": "Donc xAI connaît le problème. En avril, Grok générait encore des images sexualisées de personnes sans leur consentement, pendant que des utilisateurs contournaient les restrictions posées en janvier.",
+        "visual": { "type": "screenshot", "url": "https://www.engadget.com/2228460/judge-refuses-xai-request-to-stop-minnesota-law-banning-nudify-apps/" }
+      },
+      {
+        "script": "Et pourtant, xAI n'est pas seule. L'ACLU du Minnesota a soutenu cette loi en février, puis a changé d'avis: le texte final ne trouve pas l'équilibre.",
+        "visual": { "type": "card", "value": "février", "label": "le mois où l'ACLU du Minnesota soutenait encore ce texte" }
+      },
+      {
+        "script": "Le 19 août, le même juge décidera si la loi est suspendue pendant le procès. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "photo", "query": "keith ellison official portrait", "alt": "Keith Ellison, procureur général du Minnesota" }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "NBC News", "url": "https://www.nbcnews.com/tech/elon-musk/judge-denies-request-elon-musks-xai-block-mn-nudification-ban-rcna589993", "accessed": "2026-08-02" },
+    { "name": "CBS Minnesota", "url": "https://www.cbsnews.com/minnesota/news/restraining-order-denied-ai-nudification-ban-law/", "accessed": "2026-08-02" },
+    { "name": "Engadget", "url": "https://www.engadget.com/2228460/judge-refuses-xai-request-to-stop-minnesota-law-banning-nudify-apps/", "accessed": "2026-08-02" }
+  ]
+}
