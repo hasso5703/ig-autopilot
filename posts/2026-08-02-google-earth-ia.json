@@ -12,7 +12,7 @@
     }
   ],
   "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
-  "caption": "Google a mis un générateur d'images dans Google Earth jeudi. Vendredi, il l'avait retiré.\n\nLe bouton permettait de taper une phrase et d'obtenir une image photoréaliste posée sur l'imagerie satellite réelle du lieu visé, partout dans le monde, sans liste d'attente.\n\nLe chercheur en sources ouvertes Henk van Ess a planté une centrale nucléaire en Iran, un accident mortel dans une rue d'Amsterdam et un hôpital avec un cratère de bombe à Gaza. Rien n'a été refusé. De son côté, NPR a inondé le Capitole des États-Unis et incendié l'île iranienne de Kharg.\n\nLe détail qui n'a pas tenu dans la vidéo. Google répond que chaque image porte son filigrane SynthID, lisible par Gemini. Van Ess a photographié l'image à l'écran et le filigrane a cessé d'être lu. Hive, un des plus gros détecteurs d'IA hors Google, a noté son clip à 1% de vidéo générée par IA.\n\nÀ décharge, Google précise que les images générées n'apparaissaient pas dans l'expérience Google Earth partagée avec les autres, et qu'elles étaient marquées comme générées par IA.\n\nUn filigrane que seul Google sait lire, ça compte comme une preuve, oui ou non ?\n\nSources : blog.google, digitaldigging.org, npr.org, engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #Google #GoogleEarth\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "caption": "Pendant un jour, Google Earth a accepté de dessiner ce qu'on lui demandait sur la vraie image satellite.\n\nLe bouton permettait de taper une phrase et d'obtenir une image photoréaliste posée sur l'imagerie satellite réelle du lieu visé, partout dans le monde, sans liste d'attente.\n\nLe chercheur en sources ouvertes Henk van Ess a planté une centrale nucléaire en Iran, un accident mortel dans une rue d'Amsterdam et un hôpital avec un cratère de bombe à Gaza. Rien n'a été refusé. De son côté, NPR a inondé le Capitole des États-Unis et incendié l'île iranienne de Kharg.\n\nLe détail qui n'a pas tenu dans la vidéo. Google répond que chaque image porte son filigrane SynthID, lisible par Gemini. Van Ess a photographié l'image à l'écran et le filigrane a cessé d'être lu. Hive, un des plus gros détecteurs d'IA hors Google, a noté son clip à 1% de vidéo générée par IA.\n\nÀ décharge, Google précise que les images générées n'apparaissaient pas dans l'expérience Google Earth partagée avec les autres, et qu'elles étaient marquées comme générées par IA.\n\nUn filigrane que seul Google sait lire, ça compte comme une preuve, oui ou non ?\n\nSources : blog.google, digitaldigging.org, npr.org, engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #Google #GoogleEarth\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
   "captionEvidence": [
     {
       "quote": "Hive, one of the biggest names in AI detection outside Google, scanned the post automatically and published its verdict underneath: AI Generated Video 1%, Deepfake 0%, AI Generated Speech 0%, AI Generated Music 36%.",
@@ -130,17 +130,17 @@
   "reel2": {
     "mood": "tension",
     "lang": "fr",
-    "title": "L'IA de Google Earth a vécu un jour",
+    "title": "Une fausse centrale nucléaire sur Google Earth",
     "beats": [
       {
-        "script": "Jeudi, Google a ajouté un bouton dans Google Earth: tu tapes ce que tu veux voir, et il le dessine sur l'imagerie satellite réelle. Vendredi, Google l'avait retiré.",
+        "script": "Google Earth, c'est la carte que tu ouvres pour voir à quoi ressemble vraiment un endroit. Jeudi, Google y a mis un bouton qui dessine ce que tu demandes, sur la vraie image satellite.",
         "visual": {
           "type": "screenshot",
           "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/"
         }
       },
       {
-        "script": "Et ce n'est pas Google qui a vu le problème. Ce sont ceux dont le métier est de vérifier les images.",
+        "script": "Vendredi, Google l'avait déjà retiré. Tu sais ce qu'un chercheur lui avait fait dessiner ?",
         "visual": {
           "type": "card",
           "value": "UN JOUR",
@@ -148,57 +148,56 @@
         }
       },
       {
-        "script": "Le générateur s'appelle Nano Banana 2. Il partait de l'imagerie satellite de Google pour rendre une photo réaliste du lieu exact que tu visais.",
-        "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a mapping application showing satellite imagery of a coastline",
-            "setting": "on a computer monitor in a bright room in daylight",
-            "composition": "close-up on the screen"
-          }
-        }
-      },
-      {
-        "script": "Donc Henk van Ess, chercheur en sources ouvertes, a essayé. Une centrale nucléaire en Iran. Un accident mortel à Amsterdam. Un hôpital avec un cratère de bombe à Gaza.",
+        "script": "Une centrale nucléaire en Iran. Un accident mortel dans une rue d'Amsterdam. Un hôpital avec un cratère de bombe à Gaza. Rien n'a été refusé.",
         "visual": {
           "type": "screenshot",
           "url": "https://www.digitaldigging.org/p/how-to-plant-a-nuclear-plant-in-iran"
         }
       },
       {
-        "script": "Rien n'a été refusé, rien n'a été adouci. De son côté, NPR a inondé le Capitole des États-Unis et incendié l'île iranienne de Kharg.",
-        "visual": {
-          "type": "card",
-          "value": "AUCUN REFUS",
-          "label": "une centrale nucléaire, un hôpital, un cratère de bombe"
-        }
-      },
-      {
-        "script": "Google a répondu que chaque image porte SynthID, son filigrane invisible, et qu'il suffit de demander à Gemini. Mais van Ess a photographié son écran, et le filigrane a cessé d'être lu.",
-        "visual": {
-          "type": "screenshot",
-          "url": "https://www.npr.org/2026/07/31/nx-s1-5914652/google-adds-ai-to-satellite-images-raising-fears-of-deepfakes-in-the-sky"
-        }
-      },
-      {
-        "script": "Donc vendredi, Google a fait marche arrière, le temps d'installer des garde-fous plus solides. L'entreprise reconnaît que les gens font une confiance unique à Google Earth.",
-        "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a digital watermark on the corner of a photograph",
-            "setting": "on a plain pale surface in bright daylight",
-            "composition": "close-up"
-          }
-        }
-      },
-      {
-        "script": "Van Ess résume: Google a passé vingt ans à bâtir la référence que le monde consulte pour vérifier. Il vient d'y ajouter un bouton qui invente. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Et c'était pas réservé à quelques testeurs. Le générateur, Nano Banana 2, est arrivé partout dans le monde, pour tout le monde, sans liste d'attente.",
         "visual": {
           "type": "photo",
           "query": "satellite image coastline",
           "alt": "Vraie image satellite de la savane guyanaise prise par Terra MODIS",
           "file": "media/2026-08-02-google-earth-ia/photo_7.jpg",
           "credit": "Terra / MODIS · domaine public"
+        }
+      },
+      {
+        "script": "Donc NPR, une radio américaine, a refait le test: l'île iranienne de Kharg en feu, le Capitole des États-Unis sous les eaux.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.npr.org/2026/07/31/nx-s1-5914652/google-adds-ai-to-satellite-images-raising-fears-of-deepfakes-in-the-sky"
+        }
+      },
+      {
+        "script": "Google répond que chaque image porte SynthID, son filigrane. Sauf que le chercheur a photographié son écran, et le filigrane a cessé d'être lu.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a satellite image with a small watermark in the corner",
+            "setting": "on a computer monitor in a bright room in daylight",
+            "composition": "close-up on the screen"
+          }
+        }
+      },
+      {
+        "script": "Et un des plus gros détecteurs d'IA hors Google a analysé une vidéo du modèle. Verdict: 1% générée par IA.",
+        "visual": {
+          "type": "card",
+          "value": "1 %",
+          "label": "le verdict d'un des plus gros détecteurs d'IA hors Google"
+        }
+      },
+      {
+        "script": "Henk van Ess résume: Google a passé vingt ans à bâtir la référence que le monde consulte pour vérifier. Il vient d'y ajouter un bouton qui invente. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "henk van ess",
+          "alt": "Henk van Ess, chercheur en sources ouvertes, lors de la Nacht van de Journalistiek",
+          "file": "media/2026-08-02-google-earth-ia/photo_vaness.jpg",
+          "credit": "Sebastiaan ter Burg · CC BY 2.0"
         }
       }
     ]
