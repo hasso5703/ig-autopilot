@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-03T12:02:07.847Z",
-  "fresh": 273,
+  "at": "2026-08-03T16:39:57.123Z",
+  "fresh": 288,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -20,21 +20,21 @@
       "name": "Google DeepMind",
       "ok": true,
       "fetched": 100,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
       "name": "Hugging Face Blog",
       "ok": true,
       "fetched": 834,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
@@ -55,15 +55,15 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 1,
-      "windowHours": 12
+      "fresh": 9,
+      "windowHours": 36
     },
     {
       "name": "The Verge",
       "ok": false,
       "fetched": 0,
       "fresh": 0,
-      "windowHours": 12,
+      "windowHours": 36,
       "error": "HTTP 403 after 9 tries"
     },
     {
@@ -71,37 +71,36 @@
       "ok": false,
       "fetched": 0,
       "fresh": 0,
-      "windowHours": 12,
+      "windowHours": 36,
       "error": "HTTP 403 after 10 tries"
     },
     {
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 0,
-      "windowHours": 12
+      "fresh": 2,
+      "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 1,
-      "windowHours": 12
+      "fresh": 2,
+      "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
-      "ok": false,
-      "fetched": 0,
-      "fresh": 0,
-      "windowHours": 12,
-      "error": "HTTP 502 after 13 tries"
+      "ok": true,
+      "fetched": 5,
+      "fresh": 5,
+      "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 0,
-      "windowHours": 12
+      "fresh": 2,
+      "windowHours": 36
     }
   ]
 }
