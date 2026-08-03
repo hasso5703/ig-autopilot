@@ -146,16 +146,18 @@
   "reel2": {
     "mood": "tension",
     "lang": "fr",
-    "title": "MacBook Air: 200 dollars de plus en juin",
+    "title": "MacBook Air: jusqu'à 6 semaines d'attente",
     "beats": [
       {
         "script": "Ton prochain ordinateur portable, tu vas l'attendre et le payer plus cher. Le MacBook Air d'Apple est en rupture, et il a pris 200 dollars en juin.",
         "visual": {
-          "type": "photo",
-          "query": "ddr5 memory module",
-          "alt": "Une main gantée tient une barrette de mémoire DDR5",
-          "file": "media/2026-08-03-macbook-air-memoire/photo_0.jpg",
-          "credit": "dumanag · CC0"
+          "type": "veo",
+          "spec": {
+            "subject": "a single memory module",
+            "action": "is pressed down into its slot on a laptop board until it lies flat",
+            "setting": "on a bright workbench in daylight",
+            "composition": "extreme close-up, the module filling the frame"
+          }
         }
       },
       {
@@ -168,13 +170,11 @@
       {
         "script": "Les entreprises d'intelligence artificielle. Elles construisent des centres de données partout, et elles achètent la mémoire en masse.",
         "visual": {
-          "type": "veo",
-          "spec": {
-            "subject": "a single grey server cabinet",
-            "action": "rolls slowly across the bare floor into its final position",
-            "setting": "in a bright unfinished data center hall",
-            "composition": "medium shot, the cabinet centred and filling most of the frame"
-          }
+          "type": "photo",
+          "query": "ddr5 memory module",
+          "alt": "Une main gantée tient une barrette de mémoire DDR5 devant une pile d'autres barrettes",
+          "file": "media/2026-08-03-macbook-air-memoire/photo_0.jpg",
+          "credit": "dumanag · CC0"
         }
       },
       {
