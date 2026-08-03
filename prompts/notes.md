@@ -185,6 +185,14 @@ ENTRIES:
   mauvaise personne. Mesure 01/08 aussi: AUCUNE photo documentaire de datacenter n'est atteignable
   ici ("data center server hall" 0 candidat, "data center" sort le batiment NSA
   d'Utah, "server room rack" des salles bleues rawpixel). N'y passe pas de temps.
+  Ajout 03/08: ne "monte" JAMAIS a la main la resolution d'une image rawpixel.
+  Openverse sert /editor_1024/<cle>.jpg (1024 px, propre); la MEME cle en
+  /image_1300/ rend 1300 px avec le filigrane "rawpixel" en travers du cadre, et
+  editor_2048 / image_2000 repondent 404. Mesure sur la photo MacBook Air du
+  03/08, filigrane visible sur tout le crop, beat abandonne. Corollaire: une
+  source rawpixel plafonne a 1024 px, donc un crop 9:16 y fait 381x678 et
+  remonte a 1080x1920 en x2,8, trop mou pour un beat 0. Cherche du portrait
+  natif (pd.w.org rend du 1536x2048) ou du Commons haute resolution d'abord.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
