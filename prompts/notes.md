@@ -347,7 +347,18 @@ ENTRIES:
   y=2293, soit exactement le 9:16 du haut, donc
   `ffmpeg -i shot_0.png -vf "crop=1290:2293:0:0" shot_0.png` puis epingler avec
   `file`. REGARDE tes shot_N.png avant de construire, pas seulement apres.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08.
+  Ajout 03/08 (12h): UN DOMAINE PEUT SE GATER VERT ET RESTER INCAPTURABLE, ce sont
+  deux chemins reseau differents. macrumors.com rend ses 8 citations VERIFIED
+  (fetch Node de validate.mjs) et rend au navigateur un mur Cloudflare
+  "forums.macrumors / Performing security verification / Verify you are human":
+  vu sur 3 captures, dont une hors moteur avec 6 rechargements et attente longue,
+  ou le titre de l'article revient bien puis la page se re-challenge avant le
+  screenshot. Ne perds pas de temps a le contourner. Reflexe: si le recu d'un
+  domaine sort un mur, cherche un QUATRIEME media joignable qui porte la meme
+  affirmation et ajoute-le en source (engadget.com se capture proprement, titre
+  + signature + photo, du premier coup). Et epingle d'abord tout ce qui est deja
+  achete (veo_0.mp4 a 0,96 $ ici): les 2 rebuilds n'ont alors coute 0 $.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
