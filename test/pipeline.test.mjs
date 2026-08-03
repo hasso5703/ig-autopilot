@@ -1421,6 +1421,24 @@ test("the seed ledger closes the /comments blind spot", async () => {
   assert.ok(!alreadySeeded([], "111"));
 });
 
+test("an empty comment listing never proves silence", async () => {
+  const { unreadableComments } = await import("../src/engage.mjs");
+  // 2026-08-03, MacBook Air Reel: comments_count 2, one seed, listing empty.
+  // A stranger had written and the run was about to report "no comments".
+  assert.match(
+    unreadableComments({ commentsCount: 2, listed: 0, seeded: 1 }) ?? "",
+    /1 comment\(s\) the API did not return/,
+    "a stranger's comment behind an empty listing must be named",
+  );
+  assert.equal(unreadableComments({ commentsCount: 1, listed: 0, seeded: 1 }), null,
+    "our own seed is expected to be invisible and is not a finding");
+  assert.equal(unreadableComments({ commentsCount: 0, listed: 0, seeded: 0 }), null,
+    "a genuinely silent post raises nothing");
+  assert.equal(unreadableComments({ commentsCount: 3, listed: 3, seeded: 0 }), null,
+    "everything readable and read raises nothing");
+  assert.equal(unreadableComments(), null, "no counts at all is not an alarm");
+});
+
 test("the closing-slide ask speaks French since the pivot", async () => {
   const p = goodPost();
   p.slides.at(-1).headline = "Envoie ça à quelqu'un qui fait confiance aux chatbots";

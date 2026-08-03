@@ -69,6 +69,20 @@ ENTRIES:
   techpolicy.press du 02/04 decrivait le report comme une PROPOSITION, c'est
   joneswalker.com du 16/07 qui atteste qu'il a ete adopte en juin. Lis la date
   de signature avant de citer un cabinet comme s'il decrivait aujourd'hui.
+  Ajout 03/08 (19h30), LE PIEGE INVERSE, mesure sur cnbc.com: un 403 en curl ou
+  en WebFetch NE PROUVE PAS que le gate est bloque, ce sont trois chemins reseau
+  differents. cnbc.com rend 403 a curl (UA navigateur) ET a WebFetch, et 200 /
+  791 ko au fetch Node de validate.mjs, qui est le seul qui compte pour le gate:
+  les 8 citations CNBC sont passees VERIFIED du premier coup. Avant d'abandonner
+  une histoire dont le primaire "bloque", teste-le comme le gate le testera:
+  `node --input-type=module -e "const r=await fetch(URL,{headers:{'user-agent':
+  'Mozilla/5.0'}});console.log(r.status,(await r.text()).length)"`. Joignables et
+  gates du premier coup ce jour-la: cnbc.com, cbsnews.com, thehill.com,
+  technologyreview.com. Bloquent: fcc.gov (403), therobotreport.com (403),
+  qz.com (403 partout), washingtonpost.com (503), reuters.com et theverge.com
+  (403). Et attention aux coquilles du primaire: techcrunch.com a ecrit "during
+  the year ending in March 31" (le "in" est d'eux), citation NOT_FOUND tant que
+  tu ne le recopies pas.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -162,11 +176,20 @@ ENTRIES:
   17878825803503784) mais engage.mjs recent affiche "no comments". Ne jamais
   re-seeder parce que la liste paraît vide; vérifier comments_count d'abord.
   Proof: engage recent vs insights media, 23h 29/07.
-  Ajout 03/08 (17h): l'ecart peut aussi cacher un commentaire d'inconnu. Le Reel
-  MacBook Air affichait comments_count=2 pour 1 seul seed au registre, et
-  `engage.mjs recent` rendait "no comments" sur les 5 Reels. Donc un commentaire
-  existe et le pipeline ne peut ni le lire ni y repondre. Compare toujours
-  comments_count au registre avant de conclure "personne n'a ecrit".
+  Ajout 03/08 (17h), precise et CORRIGE le 03/08 (19h30): ce n'est pas seulement
+  que l'edge cache nos propres commentaires, LE TOKEN ECRIT LES COMMENTAIRES MAIS
+  NE LES LIT PAS. Mesure: /comments rend `data: []` AVEC des curseurs de paging
+  valides (donc il y a bien des lignes, filtrees a la sortie), et un commentaire
+  interroge PAR SON ID rend `{}`, y compris nos propres seeds, dont l'id est au
+  registre. Le compte est bien un BUSINESS et le token est valide (`me` repond).
+  Il manque la capacite de lecture des commentaires; seul Hasan peut re-autoriser
+  le token. En attendant, `engage.mjs recent` compare desormais tout seul
+  comments_count au registre et imprime "⚠ N comment(s) the API did not return"
+  (fonction `unreadableComments`, couverte par un test): ne re-diagnostique pas ca
+  a la main, lis la ligne. Le 03/08 elle a trouve 1 commentaire d'inconnu sur le
+  Reel MacBook Air, le mieux distribue du compte, impossible a lire ni a repondre.
+  Note aussi: le token est un token Instagram Login, donc graph.facebook.com
+  repond "Cannot parse access token"; tout passe par graph.instagram.com.
 - 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
   renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
   ajoute un qualificatif (lieu, moment: "vending machines night") pour

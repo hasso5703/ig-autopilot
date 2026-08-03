@@ -83,6 +83,30 @@ export function alreadySeeded(rows, mediaId) {
   return rows.some((r) => r.kind === "comment" && r.target === mediaId);
 }
 
+/**
+ * Comments that exist on a media but that the API refused to hand back.
+ *
+ * `GET /{media}/comments` does not return the account's own comments, which is
+ * why `alreadySeeded` exists. On 2026-08-03 the MacBook Air Reel — the account's
+ * best-reaching post — carried `comments_count: 2` against a single seed in the
+ * ledger, and the edge answered `data: []` with valid paging cursors. Fetching
+ * either comment by its own id, including our own seeds, returned `{}`. So the
+ * token can WRITE comments and cannot READ them, and the run that trusts the
+ * listing concludes "nobody wrote" while a stranger is waiting under the post.
+ *
+ * `comments_count` is the only honest number here, so compare against it and
+ * say what is missing. Never let a run report silence it did not verify.
+ */
+export function unreadableComments({ commentsCount = 0, listed = 0, seeded = 0 } = {}) {
+  const missing = Math.max(0, commentsCount - seeded) - listed;
+  if (missing <= 0) return null;
+  return (
+    `${missing} comment(s) the API did not return ` +
+    `(comments_count ${commentsCount}, ${seeded} seeded by us, ${listed} listed). ` +
+    `This token posts comments but cannot read them — read and answer in the Instagram app, and report it.`
+  );
+}
+
 export async function readLedger() {
   try {
     return (await readFile(LEDGER, "utf8")).split("\n").filter(Boolean).map((l) => JSON.parse(l));
@@ -133,6 +157,7 @@ async function listRecent() {
   const file = path.join(ROOT, "state", "posted.jsonl");
   if (!existsSync(file)) { console.log("nothing has ever been published"); return; }
   const posted = (await readFile(file, "utf8")).split("\n").filter(Boolean).map((l) => JSON.parse(l));
+  const ledger = await readLedger();
   for (const p of recentPublished(posted)) {
     console.log(`\n${p.slug}  (media ${p.mediaId})  ${p.permalink ?? ""}`);
     try {
@@ -140,7 +165,20 @@ async function listRecent() {
         fields: "id,text,username,timestamp,like_count,replies{id,text,username}",
       });
       const rows = r.data ?? [];
-      if (!rows.length) { console.log("  no comments"); continue; }
+
+      // The listing alone cannot prove silence: check it against comments_count.
+      let counted = null;
+      try {
+        const meta = await call("GET", `${p.mediaId}`, { fields: "comments_count" });
+        counted = meta.comments_count ?? null;
+      } catch { /* the count is a courtesy; its absence is not a failure */ }
+      if (counted !== null) {
+        const seeded = ledger.filter((l) => l.kind === "comment" && l.target === p.mediaId).length;
+        const warn = unreadableComments({ commentsCount: counted, listed: rows.length, seeded });
+        if (warn) console.log(`  ⚠ ${warn}`);
+      }
+
+      if (!rows.length) { console.log("  no comments returned by the API"); continue; }
       for (const c of rows) {
         console.log(`  [${c.id}] @${c.username ?? "?"}: ${String(c.text ?? "").slice(0, 200)}`);
         for (const rep of c.replies?.data ?? []) {

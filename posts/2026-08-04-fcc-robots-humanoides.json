@@ -1,0 +1,240 @@
+{
+  "slug": "2026-08-04-fcc-robots-humanoides",
+  "centralClaim": "The US Federal Communications Commission has banned imports of new foreign-made humanoid robots and power inverters, citing national security risks, in a move aimed at China, which holds roughly 85% of the global humanoid robot market.",
+  "sendTest": "Les États-Unis viennent d'interdire l'importation des robots humanoïdes étrangers. 85 % du marché est chinois.",
+  "corroboration": [
+    {
+      "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/",
+      "quote": "The Federal Communications Commission is banning imports of new foreign-made humanoid robots and power inverters, citing national security risks, in a move that targets China."
+    },
+    {
+      "url": "https://thehill.com/homenews/5996462-fcc-bans-foreign-humanoid-robots/",
+      "quote": "The Federal Communications Commission (FCC) has banned imports of foreign-produced humanoid robotic devices and power inverters, citing \"national security\" as its primary concern."
+    }
+  ],
+  "caption": "Les États-Unis viennent d'interdire l'importation des robots humanoïdes fabriqués à l'étranger.\n\nLa FCC, le régulateur américain des télécoms, a bloqué les importations de nouveaux robots humanoïdes et d'onduleurs, au nom de la sécurité nationale, dans une décision qui vise la Chine. Celle-ci pèse environ 85 % du marché mondial des robots humanoïdes. Les robots à quatre pattes, les chiens robots, sont visés aussi.\n\nLe détail qui n'a pas tenu dans la vidéo. Les appareils ont été ajoutés à la liste des équipements que la FCC juge présenter un risque inacceptable pour la sécurité nationale des États-Unis. La décision s'appuie sur les conclusions d'un groupe de travail réuni par la Maison-Blanche.\n\nÀ décharge, le rapport de force industriel est réel. Sur environ 15 000 robots humanoïdes livrés dans le monde en 2025, les chinois Unitree et AgiBot en ont livré plus de 5 000 chacun, quand Tesla et Figure AI en ont livré quelques centaines ou moins.\n\nPékin accuse Washington d'étirer la notion de sécurité nationale. Et le MIT Technology Review relève un défaut: les entreprises et les laboratoires américains dépendent eux-mêmes des robots chinois bon marché pour faire leur recherche.\n\nProtéger une industrie naissante, ça justifie une interdiction, oui ou non ?\n\nSources : cbsnews.com, thehill.com, technologyreview.com\n\n#IA #IntelligenceArtificielle #ActuIA #Robotique #Chine\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "The Federal Communications Commission is banning imports of new foreign-made humanoid robots and power inverters, citing national security risks, in a move that targets China.",
+      "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/"
+    },
+    {
+      "quote": "China dominates the global market for humanoid robots with an estimated market share of roughly 85%.",
+      "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/"
+    },
+    {
+      "quote": "The FCC's ban also includes new imports of quadruped robots - often referred to as four-legged robot dogs.",
+      "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/"
+    },
+    {
+      "quote": "Of the around 15,000 humanoid robots shipped globally in 2025, Unitree and AgiBot, two of China's largest advanced robotics companies, each shipped more than 5,000.",
+      "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/"
+    },
+    {
+      "quote": "The devices were added to the FCC's covered list, meaning the products posed an \"unacceptable risk to the national security of the United States or the safety and security of United States persons,\"",
+      "url": "https://thehill.com/homenews/5996462-fcc-bans-foreign-humanoid-robots/"
+    },
+    {
+      "quote": "But if the new rule aims to boost US robotics companies, there's a big flaw. Those companies, as well as academic robotics labs, are hugely reliant on cheap robots from China to do research.",
+      "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Juillet 2026 · FCC",
+      "headline": "Washington interdit les robots humanoïdes *étrangers*.",
+      "hero": {
+        "value": "85%",
+        "label": "du marché mondial des robots humanoïdes est chinois"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "85%",
+      "unit": "du marché mondial est chinois",
+      "body": "La Chine domine le marché mondial des robots humanoïdes avec une part estimée à **environ 85 %**.",
+      "evidence": "China dominates the global market for humanoid robots with an estimated market share of roughly 85%.",
+      "source": {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/",
+        "date": "2026-07-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que la FCC a bloqué",
+      "body": "Les importations de **nouveaux robots humanoïdes** fabriqués à l'étranger et d'onduleurs, au nom de la *sécurité nationale*, dans une décision qui vise la Chine.",
+      "evidence": "The Federal Communications Commission is banning imports of new foreign-made humanoid robots and power inverters, citing national security risks, in a move that targets China.",
+      "source": {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/",
+        "date": "2026-07-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les chiens robots aussi",
+      "body": "L'interdiction couvre également les **robots à quatre pattes**, ceux qu'on appelle les *chiens robots*.",
+      "evidence": "The FCC's ban also includes new imports of quadruped robots - often referred to as four-legged robot dogs.",
+      "source": {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/",
+        "date": "2026-07-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La raison invoquée",
+      "body": "Un groupe de travail réuni par la Maison-Blanche a conclu que des robots fabriqués à l'étranger pouvaient créer un **risque pour la sécurité des infrastructures critiques**.",
+      "evidence": "The FCC's decision was based on findings from a task force convened by the White House that concluded foreign-built robots could create \"a cybersecurity risk that threatens the security of critical infrastructure\" and \"the safety and security\" of U.S. residents, French news agency AFP reported.",
+      "source": {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/",
+        "date": "2026-07-29"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que livrent les chinois",
+      "claim": "Unitree et AgiBot ont livré plus de 5 000 robots humanoïdes chacun en 2025.",
+      "caveatLabel": "Ce que livrent les américains",
+      "caveat": "Tesla et Figure AI en ont livré quelques centaines chacun, ou moins.",
+      "evidence": "Of the around 15,000 humanoid robots shipped globally in 2025, Unitree and AgiBot, two of China's largest advanced robotics companies, each shipped more than 5,000. Their U.S. counterparts, like Tesla and Figure AI, each shipped a few hundred or less, according to the technology research and advisory group Omdia.",
+      "source": {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/",
+        "date": "2026-07-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La liste des équipements à risque",
+      "body": "Les appareils ont été ajoutés à la liste de la FCC, ce qui signifie qu'ils présentent un **risque inacceptable** pour la sécurité nationale des États-Unis.",
+      "evidence": "The devices were added to the FCC's covered list, meaning the products posed an \"unacceptable risk to the national security of the United States or the safety and security of United States persons,\"",
+      "source": {
+        "name": "The Hill",
+        "url": "https://thehill.com/homenews/5996462-fcc-bans-foreign-humanoid-robots/",
+        "date": "2026-07-29"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "If today's announcement encourages stronger cybersecurity and a more level competitive environment, that's good for customers and good for the robotics industry",
+      "attribution": "Gavin Kenneally, patron de Ghost Robotics",
+      "evidence": "\"If today's announcement encourages stronger cybersecurity and a more level competitive environment, that's good for customers and good for the robotics industry,\" Kenneally said in an email.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le défaut de la règle",
+      "body": "Ces mêmes entreprises, et les laboratoires de recherche, **dépendent massivement des robots chinois bon marché** pour faire leur recherche.",
+      "evidence": "But if the new rule aims to boost US robotics companies, there's a big flaw. Those companies, as well as academic robotics labs, are hugely reliant on cheap robots from China to do research.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui attend un robot à la maison",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Washington interdit les robots humanoïdes étrangers",
+    "beats": [
+      {
+        "script": "Environ 15 000 robots humanoïdes ont été livrés dans le monde l'an dernier. Les États-Unis viennent d'interdire l'importation de ceux fabriqués à l'étranger. Tu sais pourquoi ?",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a four legged walking robot with a metal body",
+            "action": "walking steadily across a bare concrete floor, its body level and the whole robot visible in frame",
+            "setting": "in an empty hall in bright daylight",
+            "composition": "medium shot, a single robot alone in the frame"
+          }
+        }
+      },
+      {
+        "script": "Parce que 85 pour cent de ce marché mondial est chinois. Et c'est la FCC, le régulateur américain des télécoms, qui a signé l'interdiction.",
+        "visual": {
+          "type": "card",
+          "value": "85 %",
+          "label": "du marché mondial des robots humanoïdes est chinois"
+        }
+      },
+      {
+        "script": "Elle bloque les importations de nouveaux robots humanoïdes fabriqués à l'étranger, au nom de la sécurité nationale, dans une décision qui vise la Chine.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/"
+        }
+      },
+      {
+        "script": "Un groupe de travail réuni par la Maison-Blanche a conclu que des robots fabriqués à l'étranger pouvaient créer un risque pour la sécurité des infrastructures critiques.",
+        "visual": {
+          "type": "photo",
+          "query": "humanoid robot",
+          "alt": "Un robot humanoide expose au public"
+        }
+      },
+      {
+        "script": "Et ça ne s'arrête pas aux humanoïdes. Les robots à quatre pattes, ceux qu'on appelle les chiens robots, sont visés aussi.",
+        "visual": {
+          "type": "photo",
+          "query": "unitree robot dog",
+          "alt": "Un chien robot Unitree lors d'une demonstration"
+        }
+      },
+      {
+        "script": "Sur ces 15 000 humanoïdes, deux entreprises chinoises, Unitree et AgiBot, en ont livré plus de 5 000 chacune l'an dernier.",
+        "visual": {
+          "type": "card",
+          "value": "5 000",
+          "label": "humanoïdes livrés par Unitree, et autant par AgiBot"
+        }
+      },
+      {
+        "script": "En face, Tesla et Figure AI en ont livré quelques centaines, voire moins. Et un patron américain applaudit: pour Gavin Kenneally, de Ghost Robotics, c'est bon pour les clients.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/"
+        }
+      },
+      {
+        "script": "Sauf que ces mêmes entreprises, et les labos de recherche, dépendent des robots chinois bon marché pour faire leur recherche. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "unitree building",
+          "alt": "Le siege de Unitree en Chine"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "CBS News",
+      "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/",
+      "accessed": "2026-08-03"
+    },
+    {
+      "name": "The Hill",
+      "url": "https://thehill.com/homenews/5996462-fcc-bans-foreign-humanoid-robots/",
+      "accessed": "2026-08-03"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
+      "accessed": "2026-08-03"
+    }
+  ]
+}
