@@ -166,7 +166,8 @@
         "script": "Et tout deepfake doit être étiqueté. Sauf que l'étiquette ne tient pas. Et tu sais qui le dit ? Ceux qui ont signé le code.",
         "visual": {
           "type": "screenshot",
-          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+          "file": "media/2026-08-03-ai-act-transparence/shot_1.png"
         }
       },
       {
@@ -180,12 +181,11 @@
       {
         "script": "Mais ces mêmes entreprises préviennent que la détection et le marquage restent une cible mouvante. Aucune solution commune à toute l'industrie n'existe.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a faint watermark repeated across a photograph",
-            "setting": "in bright editorial daylight",
-            "composition": "extreme close-up, the photograph fills the entire frame"
-          }
+          "type": "photo",
+          "query": "google headquarters ireland building sign",
+          "alt": "Le siege europeen de Google a Dublin",
+          "file": "media/2026-08-03-ai-act-transparence/photo_3.jpg",
+          "credit": "OutreachPete · CC BY 2.0"
         }
       },
       {
@@ -200,14 +200,16 @@
         "script": "Et ce n'est pas un reproche extérieur. L'étude technique de la Commission conclut elle-même qu'une combinaison de solutions est plus puissante qu'une mesure unique.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work"
+          "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work",
+          "file": "media/2026-08-03-ai-act-transparence/shot_5.png"
         }
       },
       {
         "script": "Et l'autre moitié du texte n'arrive pas. En juin, Parlement et Conseil ont repoussé les obligations sur les IA à haut risque au 2 décembre 2027.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html"
+          "url": "https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html",
+          "file": "media/2026-08-03-ai-act-transparence/shot_6.png"
         }
       },
       {
