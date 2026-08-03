@@ -13,10 +13,14 @@
     {
       "url": "https://techcrunch.com/2026/08/02/the-global-memory-shortage-hits-the-macbook-air/",
       "quote": "But it seems the company is now struggling to keep the MacBook Air in stock, with retailers saying that supply seems to be more constrained than ever before."
+    },
+    {
+      "url": "https://www.engadget.com/2228802/macbook-airs-reportedly-in-short-supply-due-to-ramaggedon/",
+      "quote": "Not only did MacBook Air prices recently go up from $1,099 to $1,299, but you couldn't get one today even if you wanted to."
     }
   ],
   "sendTest": "Le MacBook Air a pris 200 dollars et il est en rupture, parce que les boîtes d'IA rachètent toute la mémoire pour leurs centres de données.",
-  "caption": "Le MacBook Air a pris 200 dollars en juin, et Apple n'arrive toujours pas à en livrer assez.\n\nEn juin, Apple a augmenté le prix de 14 produits. Aux États-Unis, le MacBook Air est passé de 1099 à 1299 dollars. Sur la boutique en ligne d'Apple, la livraison est estimée entre 2 et 6 semaines, et les configurations avec le plus de mémoire attendent le plus longtemps.\n\nLa cause tient en une phrase: les centres de données que construisent les entreprises d'IA absorbent la mémoire, et les prix montent depuis le début de l'année. Apple prépare même de s'approvisionner chez des fournisseurs chinois, au moins pour les appareils vendus en Chine.\n\nLe détail qui manque presque partout: Apple a aussi fait passer le stockage de base de 256 à 512 gigaoctets. Pour qui payait déjà l'option, la hausse est moins violente qu'elle en a l'air.\n\nÀ noter: la rupture et les délais viennent des informations de Mark Gurman, chez Bloomberg. Apple n'a rien confirmé publiquement.\n\nTu paierais 1299 dollars pour un MacBook Air aujourd'hui, oui ou non ?\n\nSources: macrumors.com, 9to5mac.com, techcrunch.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Apple #MacBookAir",
+  "caption": "Le MacBook Air a pris 200 dollars en juin, et Apple n'arrive toujours pas à en livrer assez.\n\nEn juin, Apple a augmenté le prix de 14 produits. Aux États-Unis, le MacBook Air est passé de 1099 à 1299 dollars. Sur la boutique en ligne d'Apple, la livraison est estimée entre 2 et 6 semaines, et les configurations avec le plus de mémoire attendent le plus longtemps.\n\nLa cause tient en une phrase: les centres de données que construisent les entreprises d'IA absorbent la mémoire, et les prix montent depuis le début de l'année. Apple prépare même de s'approvisionner chez des fournisseurs chinois, au moins pour les appareils vendus en Chine.\n\nLe détail qui manque presque partout: Apple a aussi fait passer le stockage de base de 256 à 512 gigaoctets. Pour qui payait déjà l'option, la hausse est moins violente qu'elle en a l'air.\n\nÀ noter: la rupture et les délais viennent des informations de Mark Gurman, chez Bloomberg. Apple n'a rien confirmé publiquement.\n\nTu paierais 1299 dollars pour un MacBook Air aujourd'hui, oui ou non ?\n\nSources: macrumors.com, 9to5mac.com, techcrunch.com, engadget.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Apple #MacBookAir",
   "captionEvidence": [
     {
       "quote": "In June, Apple raised prices on 14 products, including the MacBook Air. In the U.S., the laptop now starts at $1,299, up from $1,099.",
@@ -157,14 +161,16 @@
             "action": "is pressed down into its slot on a laptop board until it lies flat",
             "setting": "on a bright workbench in daylight",
             "composition": "extreme close-up, the module filling the frame"
-          }
+          },
+          "file": "media/2026-08-03-macbook-air-memoire/veo_0.mp4"
         }
       },
       {
         "script": "Et ce n'est pas Apple qui a décidé ça. Le vrai responsable est ailleurs. Tu sais qui ?",
         "visual": {
           "type": "screenshot",
-          "url": "https://9to5mac.com/2026/08/02/macbook-air-reportedly-facing-major-supply-shortages-due-to-ai-driven-memory-crisis/"
+          "url": "https://9to5mac.com/2026/08/02/macbook-air-reportedly-facing-major-supply-shortages-due-to-ai-driven-memory-crisis/",
+          "file": "media/2026-08-03-macbook-air-memoire/shot_1.png"
         }
       },
       {
@@ -189,7 +195,7 @@
         "script": "Sauf que la hausse n'a rien réglé. Sur la boutique en ligne d'Apple, la livraison prend de 2 à 6 semaines, et les vendeurs disent à Bloomberg n'avoir jamais vu des livraisons aussi limitées.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.macrumors.com/2026/08/02/macbook-air-shortage-report/"
+          "url": "https://www.engadget.com/2228802/macbook-airs-reportedly-in-short-supply-due-to-ramaggedon/"
         }
       },
       {
@@ -214,7 +220,8 @@
         "script": "Mais dans sa pub de rentrée, Apple prévient: MacBook Air sous réserve de disponibilité. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "screenshot",
-          "url": "https://techcrunch.com/2026/08/02/the-global-memory-shortage-hits-the-macbook-air/"
+          "url": "https://techcrunch.com/2026/08/02/the-global-memory-shortage-hits-the-macbook-air/",
+          "file": "media/2026-08-03-macbook-air-memoire/shot_7.png"
         }
       }
     ]
@@ -233,6 +240,11 @@
     {
       "name": "TechCrunch",
       "url": "https://techcrunch.com/2026/08/02/the-global-memory-shortage-hits-the-macbook-air/",
+      "accessed": "2026-08-03"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/2228802/macbook-airs-reportedly-in-short-supply-due-to-ramaggedon/",
       "accessed": "2026-08-03"
     }
   ]

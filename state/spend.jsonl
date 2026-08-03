@@ -92,3 +92,5 @@
 {"at":"2026-08-02T15:50:06.548Z","slug":"2026-08-02-xai-minnesota-nudification","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"60.9s Sadaltager","usd":0.0305}
 {"at":"2026-08-02T19:40:42.008Z","slug":"2026-08-02-google-earth-ia","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"60.2s Sadaltager","usd":0.0301}
 {"at":"2026-08-02T19:54:38.478Z","slug":"2026-08-02-google-earth-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1275}
+{"at":"2026-08-03T12:06:30.058Z","slug":"2026-08-03-macbook-air-memoire","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"55.1s Sadaltager","usd":0.0275}
+{"at":"2026-08-03T12:10:36.622Z","slug":"2026-08-03-macbook-air-memoire","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
