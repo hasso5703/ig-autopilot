@@ -162,6 +162,11 @@ ENTRIES:
   17878825803503784) mais engage.mjs recent affiche "no comments". Ne jamais
   re-seeder parce que la liste paraît vide; vérifier comments_count d'abord.
   Proof: engage recent vs insights media, 23h 29/07.
+  Ajout 03/08 (17h): l'ecart peut aussi cacher un commentaire d'inconnu. Le Reel
+  MacBook Air affichait comments_count=2 pour 1 seul seed au registre, et
+  `engage.mjs recent` rendait "no comments" sur les 5 Reels. Donc un commentaire
+  existe et le pipeline ne peut ni le lire ni y repondre. Compare toujours
+  comments_count au registre avant de conclure "personne n'a ecrit".
 - 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
   renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
   ajoute un qualificatif (lieu, moment: "vending machines night") pour
@@ -373,7 +378,17 @@ ENTRIES:
   affirmation et ajoute-le en source (engadget.com se capture proprement, titre
   + signature + photo, du premier coup). Et epingle d'abord tout ce qui est deja
   achete (veo_0.mp4 a 0,96 $ ici): les 2 rebuilds n'ont alors coute 0 $.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08.
+  Ajout 03/08 (17h): euronews.com a rendu une page BLANCHE (14 ko) tenue 7,3 s
+  en beat 5. Cause: son CMP (bouton "Agree and close") monte TARD, donc a 2,5 s
+  il n'y avait rien a cliquer ni a retirer, et le modal blanc couvrait l'article
+  au moment de la capture. Une page blanche accuse un CMP lent, pas un domaine
+  bloque. CORRIGE dans reel2.mjs: la passe de consentement se fait maintenant
+  DEUX fois, la seconde 2 s plus tard (un clic qui ne trouve rien ne coute
+  rien). Ne PAS elargir le retrait d'overlays pour ce cas: en ajoutant
+  iframe/[class*=player]/aside a la liste, la page est revenue blanche a
+  nouveau, le conteneur d'article y passe. Et euronews garde une pub Invesco en
+  bas a droite: recadrer `crop=1290:1800:0:0` garde titre + signature + chapo.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un

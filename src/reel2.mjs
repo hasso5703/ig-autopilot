@@ -818,9 +818,20 @@ async function screenshotOnce(url, outFile, gotoTimeout) {
     // every selector below silently missed it. That shot was the Reel's opening
     // beat, which is the audition frame and the grid thumbnail, and it passed
     // every automated check. So click in every frame, not just the top one.
-    for (const frame of page.frames()) {
-      for (const sel of CONSENT_SELECTORS) {
-        try { await frame.locator(sel).first().click({ timeout: 1200 }); } catch { /* no banner is the good case */ }
+    // And a consent layer that has not rendered yet cannot be clicked. On
+    // 2026-08-03 euronews.com came back as a blank white page: its CMP mounts
+    // late, so at 2.5s there was nothing to click and nothing to strip, and by
+    // the time the shot was taken the white modal covered the article. One
+    // extra pass a couple of seconds later costs nothing when there is no
+    // banner (every click simply finds nothing) and saves the beat when the
+    // banner is slow. Measured: the same URL renders the headline, the byline
+    // and the standfirst once the second pass clicks "Agree and close".
+    for (const pass of [0, 1]) {
+      if (pass) await page.waitForTimeout(2000);
+      for (const frame of page.frames()) {
+        for (const sel of CONSENT_SELECTORS) {
+          try { await frame.locator(sel).first().click({ timeout: 1200 }); } catch { /* no banner is the good case */ }
+        }
       }
     }
     await page.waitForTimeout(800);
