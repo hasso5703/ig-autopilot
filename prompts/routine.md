@@ -397,6 +397,63 @@ So the first second and a half is not the introduction. **It is the whole
 audition.** Frame zero must already carry the surprise: fully formed type, no
 fade-in, no throat-clearing, no "in a lawsuit filed this week…" before the point.
 
+### The curve, measured on our own account (2026-08-03)
+
+Everything above was published research. This is **our own retention curve**,
+read off the Instagram app by Hasan on the Google Earth Reel of 2 August — the
+account's best-reaching post. The Graph API only ever gives an average, so this
+shape had never been visible to any run, and it settles arguments that two runs
+had been having in the dark.
+
+```
+100% |*
+     | *
+     |  *
+ 50% |  *
+     |   *
+     |    ****************************************.....
+  0% |________________________________________________*_
+     0s   3s                                    50s   61s
+```
+
+- 236 views, 211 accounts reached, **98.3% non-followers**, 92.1% from the
+  Reels tab. Total watch 44 min 01 s, **average view 12 s**.
+- Skip rate **61.5%** on this Reel against **79.2%** as the account's usual —
+  so this was our best, and three in five still swiped.
+- **The drop is a cliff, not a bleed. Roughly three quarters of the audience is
+  gone within two to three seconds.**
+- **From 3 s to 50 s the curve is almost flat**, around 18%. The people who
+  survive the opening watch essentially the whole minute.
+- The fall at the very end is the 3-second end-card, after the last spoken
+  word. That is viewers leaving a finished story, and it is normal.
+
+**Three conclusions, and they are worth more than any hook research above
+because they are measured on this account's own audience.**
+
+1. **All of the loss is in the first three seconds. There is no mid-Reel
+   problem.** A run that spends its craft on the pacing of beats 4 to 7 is
+   polishing a part of the minute that is already working. The attaque, the
+   hook card and the opening picture are where the whole audience is won or
+   lost.
+2. **The middle is not boring.** One viewer in five watches sixty seconds of AI
+   news to the end, which is a real core to build on. What looks like a
+   catastrophic 18% is a good completion rate hiding behind a failed audition.
+3. **Do not shorten the Reel.** This was a live proposal on 2026-08-03 and the
+   curve kills it. If the same cliff happens at 3 s on a 30-second Reel, the
+   survivors watch 30 s instead of 50: retention *rises* to about 25% and
+   average watch *falls* from 12 s to about 7.6 s. Watch time is the ranking
+   currency and retention percentage is not, so shortening would buy a
+   better-looking number and pay for it with a third of the account's reach.
+   **The 60-second contract is not the problem.** It was never in evidence,
+   and now it is out of suspicion.
+
+**What this asks of Hasan's "bataille tout au long du reel".** He is right
+about the intent and the data narrows the front: the battle is essentially over
+by the third second. Everything in *Hold them for the whole minute* stays
+worth doing — the flat plateau may well be *why* the middle holds — but when a
+run has to choose where to spend an hour, it spends it on the first three
+seconds, every time.
+
 ### L'ouverture doit bouger (Hasan, 2026-08-03)
 
 **The last five Reels contain no moving picture at all.** Every one of them
@@ -433,6 +490,42 @@ staying.
 justify in the report.** Not every Reel: see the table below. But the burden of
 proof moved, and it moved because the current default has been measured six
 times and lost every time.
+
+**What the six measured Reels opened on, and what they scored.** This was
+checked on 2026-08-03 against the specs themselves, and it is the strongest
+signal this account has produced about its own opener:
+
+| Reel | beat 0 surface | retention |
+|---|---|---:|
+| 30/07 opus5 vending | **`veo`** | **30%** |
+| 02/08 google earth | `screenshot` | 21% |
+| 01/08 astra | `screenshot` | 19% |
+| 02/08 minnesota | `screenshot` | 18% |
+| 31/07 turbines | `screenshot` | 16% |
+| 01/08 samsung | `screenshot` | 10% |
+
+**Read that honestly: n=1 on the veo side, and it is confounded.** The vending
+Reel was also the only one under 60 seconds, and an AI running a vending machine
+into a cartel is a funnier story than a memory shortage before anybody chooses a
+picture. It does not prove the opener caused the gap. What it does do is point
+the same way as the curve, as the platform research, and as Hasan's instinct
+twice, and no other structural difference between those six Reels is under our
+control the way this one is. Treat it as the best available reason to change the
+default, not as a finding.
+
+**And there is a second fault in that opening frame that has nothing to do with
+motion.** On the Google Earth Reel, frame zero is: the hook card (white type on
+an opaque black band), the karaoke line (white type), and behind them a
+screenshot of a blog post (a page of type). **Three layers of text, at the exact
+moment three quarters of the audience leaves.** *Stack the hook* asks the card,
+the voice and the picture to each carry a different piece of the surprise; a
+receipt behind a hook card does not carry a different piece, it carries the same
+piece in the same medium. So:
+
+> **A `screenshot` is a receipt, and a receipt is evidence, not an audition.
+> Move it off beat 0.** It is the strongest beat 2 or 3 in this account's
+> vocabulary and the weakest beat 0. Five of the six measured Reels opened on
+> one.
 
 **And none of this licenses wallpaper.** This is the same person who on
 2026-07-31 refused a smartphone beside a glass of water, and that verdict is not

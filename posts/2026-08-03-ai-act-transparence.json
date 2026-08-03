@@ -155,15 +155,18 @@
       {
         "script": "En Europe, un chatbot n'a plus le droit de te faire croire qu'il est humain. Depuis le 2 août, la Commission européenne fait appliquer son AI Act.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+          "type": "photo",
+          "query": "european commission berlaymont building",
+          "alt": "Le Berlaymont, siege de la Commission europeenne a Bruxelles",
+          "file": "media/2026-08-03-ai-act-transparence/photo_5.jpg",
+          "credit": "acediscovery · CC BY 4.0"
         }
       },
       {
         "script": "Et tout deepfake doit être étiqueté. Sauf que l'étiquette ne tient pas. Et tu sais qui le dit ? Ceux qui ont signé le code.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work"
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
         }
       },
       {
@@ -196,11 +199,8 @@
       {
         "script": "Et ce n'est pas un reproche extérieur. L'étude technique de la Commission conclut elle-même qu'une combinaison de solutions est plus puissante qu'une mesure unique.",
         "visual": {
-          "type": "photo",
-          "query": "european commission berlaymont building",
-          "alt": "Le Berlaymont, siège de la Commission européenne à Bruxelles",
-          "file": "media/2026-08-03-ai-act-transparence/photo_5.jpg",
-          "credit": "acediscovery · CC BY 4.0"
+          "type": "screenshot",
+          "url": "https://www.euronews.com/my-europe/2026/07/28/the-eu-is-forcing-tech-companies-to-label-deepfakes-will-it-work"
         }
       },
       {
