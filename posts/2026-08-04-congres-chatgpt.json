@@ -1,0 +1,205 @@
+{
+  "slug": "2026-08-04-congres-chatgpt",
+  "centralClaim": "A CNBC analysis of US House disbursement records found that OpenAI's ChatGPT accounted for about 88% of identifiable spending on AI tools by House offices in the year ending 31 March 2026, while the same offices decide how AI is regulated.",
+  "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
+  "corroboration": [
+    {
+      "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html",
+      "quote": "The maker of ChatGPT accounted for roughly $9 out of every $10 spent on identifiable AI tools by House offices, committees and institutional accounts during the year ending March 31, according to a CNBC analysis of House disbursement records."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/03/congresss-favorite-ai-tool-chatgpt/",
+      "quote": "OpenAI's ChatGPT is Congress's AI tool of choice so far in terms of money spent, according to a report from CNBC. OpenAI received roughly 90% of all spending on AI tools by House offices, committees and institutional accounts during the year ending in March 31, per House disbursement records."
+    }
+  ],
+  "caption": "Le Congrès américain a payé ChatGPT 798 fois en un an, et c'est lui qui écrira les règles de l'IA.\n\nCNBC a analysé les registres de dépenses de la Chambre des représentants. Entre avril 2025 et mars 2026, au moins 113 740 dollars sont partis dans des outils d'IA nommément identifiés. ChatGPT en prend 100 580, soit environ 88 % des dollars et 96 % des transactions. Claude, d'Anthropic, suit à 13 160 dollars.\n\nLe détail qui n'a pas tenu dans la vidéo. Les achats de ChatGPT apparaissent dans au moins 71 bureaux d'élus, environ 1 sur 6. Les bureaux démocrates ont dépensé 54 165 dollars, plus de trois fois les 15 782 dollars des bureaux républicains, alors qu'une partie de ce camp alerte depuis des mois sur les risques de l'IA.\n\nÀ décharge, ces chiffres sous-estiment l'usage réel. Ils ne comptent ni les comptes gratuits, ni l'IA incluse dans des contrats logiciels plus larges, ni l'essentiel du Sénat.\n\nUn élu qui travaille avec ChatGPT écrit-il de meilleures lois sur l'IA, oui ou non ?\n\nSources : cnbc.com, techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #ChatGPT\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "CNBC identified at least $113,740 in spending on named AI vendors between April 1, 2025, and March 31, 2026, the most recent data available. ChatGPT accounted for $100,580 of that total across 798 transactions - about 88% of the dollars and 96% of the transactions reviewed. Anthropic's Claude, ChatGPT's closest chatbot rival, was a distant second, totaling $13,160 across 37 transactions.",
+      "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html"
+    },
+    {
+      "quote": "ChatGPT purchases appeared in at least 71 House member offices - roughly 1 in 6 - while Democratic offices spent more than three times as much as Republican offices on identifiable AI tools.",
+      "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html"
+    },
+    {
+      "quote": "Democratic member offices accounted for $54,165 in identified AI purchases, more than three times the $15,782 spent by Republican offices.",
+      "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html"
+    },
+    {
+      "quote": "The numbers underscore an awkward political dynamic: Democrats are leading the visible spending on AI tools, even as many in the party have warned about the technology's risks to workers, privacy, civil rights, elections and corporate power.",
+      "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html"
+    },
+    {
+      "quote": "The records offer only a partial view of Congress' AI adoption because they exclude free accounts, AI bundled into broader software contracts and most Senate use.",
+      "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Août 2026 · CNBC",
+      "headline": "Le Congrès américain a payé ChatGPT *798 fois* en un an.",
+      "hero": {
+        "value": "88%",
+        "label": "des dollars d'IA de la Chambre sont allés à ChatGPT"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "798",
+      "unit": "achats de ChatGPT en un an",
+      "body": "Sur au moins **113 740 dollars** d'achats d'outils d'IA identifiés, ChatGPT en prend *100 580*, en 798 transactions.",
+      "evidence": "CNBC identified at least $113,740 in spending on named AI vendors between April 1, 2025, and March 31, 2026, the most recent data available. ChatGPT accounted for $100,580 of that total across 798 transactions - about 88% of the dollars and 96% of the transactions reviewed. Anthropic's Claude, ChatGPT's closest chatbot rival, was a distant second, totaling $13,160 across 37 transactions.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que les équipes en font",
+      "body": "Résumer des lois, rédiger des notes, préparer des auditions, et **répondre au courrier des électeurs**.",
+      "evidence": "Congressional staff are using the tools to summarize legislation, draft memos, prepare hearing materials and respond to constituents - work that can shape how offices understand policy, communicate with voters and manage the flood of information arriving on Capitol Hill.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Combien de bureaux",
+      "body": "Les achats de ChatGPT apparaissent dans au moins **71 bureaux d'élus**, soit environ *1 sur 6* à la Chambre.",
+      "evidence": "ChatGPT purchases appeared in at least 71 House member offices - roughly 1 in 6 - while Democratic offices spent more than three times as much as Republican offices on identifiable AI tools.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que ces bureaux achètent",
+      "claim": "Les mêmes bureaux qui achètent ChatGPT décident comment l'IA sera achetée, utilisée et encadrée.",
+      "caveatLabel": "Ce que les vendeurs dépensent",
+      "caveat": "OpenAI a mis 1 million de dollars dans le lobbying fédéral au premier trimestre 2026, en hausse de 82.5 %.",
+      "evidence": "OpenAI spent $1 million on federal lobbying in the first quarter of 2026, up 82.5% from the same period a year earlier, according to an analysis by Issue One, a nonprofit government watchdog, of federal lobbying disclosures. Anthropic spent nearly $1.6 million, more than tripling its spending from the first quarter of 2025.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "saving dozens and dozens of hours every week of staff time",
+      "attribution": "Julie Fedorchak, représentante républicaine du Dakota du Nord",
+      "evidence": "She said using AI to produce briefing memos from that information is \"saving dozens and dozens of hours every week of staff time.\"",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "content",
+      "title": "À quoi servent ces abonnements",
+      "body": "Écrire des notes, résumer et analyser des textes de loi, **répondre aux électeurs**, préparer des auditions, et même rédiger des publications sur les réseaux.",
+      "evidence": "Congressional staffers are using ChatGPT and other tools to write memos, summarize and analyze legislation, respond to constituents, prepare hearing materials, sort through policy research, and even draft social media posts.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/03/congresss-favorite-ai-tool-chatgpt/",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pense que les lois sur l'IA sont écrites sans elle",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Le Congrès américain a payé ChatGPT 798 fois",
+    "beats": [
+      {
+        "script": "Ceux qui vont écrire les règles de l'IA sont déjà clients d'OpenAI. La Chambre des représentants américaine a payé ChatGPT 798 fois en un an. Tu vois le problème ?",
+        "visual": {
+          "type": "photo",
+          "query": "sam altman",
+          "alt": "Sam Altman, patron d'OpenAI"
+        }
+      },
+      {
+        "script": "Et ce n'est pas une histoire de budget. C'est une histoire de qui écrit quoi, et pour qui.",
+        "visual": {
+          "type": "card",
+          "value": "798",
+          "label": "achats de ChatGPT par la Chambre en un an"
+        }
+      },
+      {
+        "script": "CNBC a épluché les registres de dépenses de la Chambre. Sur un an, au moins 113 740 dollars sont partis dans des outils d'IA.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html"
+        }
+      },
+      {
+        "script": "ChatGPT en récupère 100 580, soit environ 88 pour cent des dollars. Claude, d'Anthropic, arrive loin derrière, à 13 160 dollars.",
+        "visual": {
+          "type": "card",
+          "value": "88 %",
+          "label": "des dollars d'IA de la Chambre sont allés à ChatGPT"
+        }
+      },
+      {
+        "script": "Et voilà à quoi ça sert. Résumer des lois, préparer des auditions, rédiger des notes, et répondre au courrier des électeurs.",
+        "visual": {
+          "type": "photo",
+          "query": "united states capitol dome",
+          "alt": "Le dome du Capitole des Etats-Unis"
+        }
+      },
+      {
+        "script": "La représentante Julie Fedorchak dit que produire ses notes de cette façon fait gagner des dizaines et des dizaines d'heures par semaine.",
+        "visual": {
+          "type": "photo",
+          "query": "julie fedorchak",
+          "alt": "Julie Fedorchak, representante du Dakota du Nord"
+        }
+      },
+      {
+        "script": "Sauf que ces mêmes bureaux décident comment l'IA sera achetée, utilisée et encadrée. Et au premier trimestre 2026, OpenAI a mis un million de dollars dans le lobbying fédéral.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/08/03/congresss-favorite-ai-tool-chatgpt/"
+        }
+      },
+      {
+        "script": "Soit 82.5 pour cent de plus qu'un an avant. Anthropic, près d'1.6 million. Le vendeur paie pour parler au client qui écrit la loi. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "sam altman speaking at TED",
+          "alt": "Sam Altman lors d'une intervention publique"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html",
+      "accessed": "2026-08-03"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/03/congresss-favorite-ai-tool-chatgpt/",
+      "accessed": "2026-08-03"
+    }
+  ]
+}
