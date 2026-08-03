@@ -180,6 +180,13 @@ ENTRIES:
   "BEEF, IT'S WHAT'S FOR DINNER" (8.0), inutilisable sur une actu de loi;
   "keith ellison official portrait" met en tete le portrait officiel, fond bleu
   et drapeau, meme score. Ajoute "official portrait" a la requete des elus.
+  Nuance 03/08: le qualificatif peut rendre ZERO candidat la ou le nom nu
+  marche. "sergey lagodinsky official portrait" ne renvoie rien; "sergey
+  lagodinsky" sort en 2e un crop Commons 2729x3328 deja en portrait, cadre
+  poitrine au Parlement europeen, parfait en 9:16. Lance donc les DEUX
+  requetes et regarde: une requete qualifiee vide ne prouve pas qu'il n'y a
+  pas de photo. Sur un elu peu photographie, le candidat "(cropped)" de
+  Commons bat presque toujours l'original paysage pour un beat vertical.
   Verifie aussi l'identite a l'oeil: "erin maye quade 2018" (5.0) ne ressemble
   pas aux photos de la senatrice, beat abandonne plutot que de nommer la
   mauvaise personne. Mesure 01/08 aussi: AUCUNE photo documentaire de datacenter n'est atteignable
