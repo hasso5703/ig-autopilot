@@ -1830,6 +1830,77 @@ Rules, and the gate enforces the hard ones:
   palettes are retired), and the single-subject constraint. A spec that
   names anyone the post reports on is refused, so is quoted dialogue, and
   so is any many-moving-objects scene.
+
+  #### L'action, pas la destination — comment écrire `action` (Hasan, 2026-08-03)
+
+  The 3 August MacBook Air Reel opened on a memory module being seated into a
+  laptop board. Across the eight seconds the module is lowered, pressed, and
+  then **swallowed by the board**: at 4s it is sinking, at 6s the slot is empty
+  and the hand withdraws. A stick of RAM cannot go into a circuit board. Hasan:
+  *"la barrette est enfoncée dans le slot de la carte mère et elle disparait…
+  le modèle veo n'a pas bien fait ou bien le prompt n'était pas assez bon, il
+  faudra vraiment utiliser le guide de google sur comment prompter ces modèles
+  sinon on aura des incohérences de merde comme ça."*
+
+  The prompt was `"is pressed down into its slot on a laptop board until it
+  lies flat"`. Read it the way a generative model reads it: a downward motion
+  with the instruction to end **flat**. Veo did exactly that, and the only way
+  for the module to end flat against the board was for it to stop existing.
+  The model was not wrong; the direction was.
+
+  Google's guidance is the ground here and it is worth following literally
+  (`cloud.google.com/blog/…/ultimate-prompting-guide-for-veo-3-1`, and the
+  Vertex prompt guide): the documented formula is **[Cinematography] +
+  [Subject] + [Action] + [Context] + [Style & Ambiance]** — which is exactly
+  what `veoPrompt()` assembles, so your job is only the three middle fields —
+  *"prompt like you're directing a shot, not just describing a scene"*, and
+  exclusions are phrased as description (*"a desolate landscape with no
+  buildings or roads"*, never *"no man-made structures"*). Four rules on top,
+  all of them earned:
+
+  1. **Write a motion, never a destination.** `action` is a present participle
+     doing one thing: *"dropping one can into the tray"*, *"tilting slowly
+     until it tips over the edge"*. The moment you write *until it lies flat*,
+     *until it is flush*, *into place*, *fully inserted*, you have given the
+     model an end state to reach and no rule about what may be destroyed to
+     reach it. **A terminal state is the single most dangerous thing you can
+     put in an `action`.**
+  2. **One stage. Not two.** Seating a module is really *insert at an angle*,
+     then *rotate down until the clips latch* — two motions with a hinge
+     between them. Google's own guidance is one dominant action per clip, and
+     its physics fails on sequential or conflicting actions in a single
+     generation. If the real gesture has two stages, film the first one and
+     stop, or pick a different gesture.
+  3. **Say what must still be true in the last frame.** A video model has no
+     object permanence: nothing tells it the subject continues to exist. When
+     the subject could plausibly leave frame, be covered, or be absorbed, put
+     it in `action` in positive terms — *"…, the module still standing proud
+     of the slot"*. Describe the state you want, never *"it does not
+     disappear"*.
+  4. **Insertion is the high-risk family, so prefer motions that keep the
+     subject whole.** Anything that goes *into* something else — a stick into
+     a slot, a card into a reader, a plug into a socket — invites the model to
+     merge the two objects. Falling, sliding, tilting, being lifted, being
+     turned over, a lid closing, a tray ejecting: the subject stays entire and
+     visible for all eight seconds. Reach for those first.
+
+  **And the check changed, because the old one structurally could not see
+  this.** The frame protocol in step 10 samples one still per beat. Both stills
+  taken inside this beat (0.5s and 3.0s) were perfectly plausible — the fault
+  only exists *between* frames. **A still cannot audit motion.** For every
+  `veo` beat, build the filmstrip and look at it as one image:
+
+  ```bash
+  cd media/<slug> && for t in 0 1 2 3 4 5 6 7; do ffmpeg -loglevel error -ss $t -i veo_0.mp4 -frames:v 1 -q:v 3 -vf scale=360:-1 v_$t.jpg -y; done
+  ffmpeg -loglevel error -i v_0.jpg -i v_1.jpg -i v_2.jpg -i v_3.jpg -i v_4.jpg -i v_5.jpg -i v_6.jpg -i v_7.jpg -filter_complex hstack=inputs=8 strip.jpg -y
+  ```
+
+  Read the strip left to right and ask one question: **is the subject still
+  the same object, the same size, and still there in the last panel?** If it
+  has shrunk, merged, vanished, doubled, or grown a limb, the clip is refused
+  — rebuy it with the action rewritten per the four rules above. $0.60 against
+  the one beat the whole audition rests on. **Say in the report that you read
+  the strip**, not that you looked at the frames.
 - **A `screenshot` beat is the receipt** — the source article's headline, the
   product's own page. Real, verifiable, ours because our browser took it. Use
   one whenever a real page carries the story. google.com itself is captcha'd
@@ -2050,6 +2121,15 @@ beats, the article headline is actually what the receipt shows, the last
 frame is the end-card with the promise and the follow ask on it, and nothing
 readable was invented by a generated image.
 
+**One still per beat is the right check for a still and the wrong check for a
+clip.** On 2026-08-03 both stills sampled inside the veo beat were plausible
+and the object dissolved in the seconds between them. So the `veo` beat gets
+the eight-panel filmstrip as well — the command is in *L'action, pas la
+destination* under step 5d — and the question you ask of it is whether the
+subject is still the same object, the same size, and still present in the last
+panel. That is a separate look with a separate verdict, and both go in the
+report.
+
 **And looking has to have consequences, which for a long time it did not.**
 Every rule above was already written on 2026-08-01 and the run still nearly
 shipped three bad frames, because "look at the frames" had no stated remedy
@@ -2251,3 +2331,9 @@ opener.** Say which of these three it was, and never leave it implicit:
 This line exists because between 2026-08-01 and 2026-08-03 five consecutive
 runs quietly chose option 3 without ever writing it down, and the pattern was
 invisible until Hasan watched the grid.
+
+**And when it was option 1, the verdict has a second half, added 2026-08-03
+after the memory module dissolved into the board: the filmstrip.** Say that
+you built it, and say whether the subject is the same object, the same size,
+and still present in the eighth panel. "The frames look good" is not an answer
+to that question — the frames looked good that day too.

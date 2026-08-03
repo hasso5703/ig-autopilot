@@ -1,10 +1,10 @@
 # The pilot's notebook
 
-<!-- CONSTITUTION — runs never edit anything above the RULES line.
+<!-- CONSTITUTION, runs never edit anything above the RULES line.
 The manual (routine.md) says what to do; this file is where runs leave each
 other operational facts the code cannot encode. It exists because the lessons
-that make runs fast — which sites block us, what a cold container costs, which
-command to trust — used to die inside mail reports the next run never read. -->
+that make runs fast, which sites block us, what a cold container costs, which
+command to trust, used to die inside mail reports the next run never read. -->
 
 RULES (enforced by `npm test`, which every run executes before anything else):
 - Entries live below the ENTRIES line, one dash-bullet each, dated, with proof.
@@ -14,7 +14,7 @@ RULES (enforced by `npm test`, which every run executes before anything else):
   then the oldest entry nothing has needed. Merging two live facts into one
   bullet is the last resort, not the first, because merged notes get skimmed.
 - Operational facts only: timings, endpoints, blocks, command usage. Never
-  editorial taste, never anything that loosens a gate or a ceiling — those are
+  editorial taste, never anything that loosens a gate or a ceiling, those are
   proposals for the report, not notes. A note that argues policy gets deleted.
 - Fix code before writing a note: a fixed bug cannot recur, a noted one can.
 - Wrong notes are worse than no notes. If a note contradicts what you observe,
@@ -95,6 +95,21 @@ ENTRIES:
   gate: `node -e "import('./src/state.mjs').then(m=>console.log(m.tokens('...')))"`.
   Proof: gate 10h 01/08, beat "identical spheres packed" refuse, "a dense sphere
   packing" accepte.
+  Ajout 03/08 (11h): DANS UN SPEC VEO, `action` EST UN MOUVEMENT, JAMAIS UNE
+  DESTINATION. Ecrit "is pressed down into its slot on a laptop board until it
+  lies flat": Veo a interpole vers l'etat final et la barrette a ete AVALEE par
+  la carte (pellicule: presente a 3 s, en train de couler a 4 s, slot vide a
+  6 s). Les mots qui declenchent ca sont les etats finaux, until it lies flat,
+  into place, fully inserted, flush. Ecris un participe present qui fait UNE
+  chose ("dropping one can into the tray"), une seule etape (pas inserer-puis-
+  basculer: la physique lache sur les actions sequentielles), et nomme en
+  positif ce qui doit rester vrai a la derniere image. Tout ce qui rentre DANS
+  autre chose est la famille a risque; ce qui tombe/glisse/bascule garde le
+  sujet entier. ET LE CONTROLE: une image fixe ne peut pas auditer un
+  mouvement, les deux images prises dans ce beat (0,5 s et 3,0 s) etaient
+  parfaitement plausibles, la faute n'existe qu'ENTRE elles. Monte la pellicule
+  de 8 vignettes (hstack, commande dans routine.md) sur tout beat veo.
+  Proof: Reel 2026-08-03-macbook-air-memoire, publie avec le defaut.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
