@@ -165,8 +165,19 @@ ENTRIES:
   Ajout 03/08 (17h): l'ecart peut aussi cacher un commentaire d'inconnu. Le Reel
   MacBook Air affichait comments_count=2 pour 1 seul seed au registre, et
   `engage.mjs recent` rendait "no comments" sur les 5 Reels. Donc un commentaire
-  existe et le pipeline ne peut ni le lire ni y repondre. Compare toujours
-  comments_count au registre avant de conclure "personne n'a ecrit".
+  existe et le pipeline ne peut ni le lire ni y repondre.
+  Ajout 03/08 (19h), mesure complete: AUCUN contenu de commentaire n'est lisible
+  avec ce token, ni le notre ni celui d'un inconnu. /comments -> data:[] mais
+  avec des curseurs de pagination; `?fields=comments{}` -> la cle est absente;
+  GET <comment_id> -> {}. Identique en v21/v22/v23/v25, donc ce n'est pas une
+  histoire de version. La preuve que les lignes existent, ce sont les curseurs:
+  leur nombre suit comments_count (deux chaines differentes sur le Reel a 2
+  commentaires, la meme deux fois sur chaque Reel a 1). Lecture = Advanced
+  Access sur instagram_business_manage_comments (App Review), decision de Hasan;
+  l'ecriture, elle, marche deja. Ne compte plus ca a la main: `engage.mjs recent`
+  fait la soustraction (comments_count - registre), couvre toute la grille (10
+  et non 5), et ne dit "no comments" que si comments_count vaut vraiment 0.
+  Proof: sondes + suite verte, 19h 03/08.
 - 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
   renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
   ajoute un qualificatif (lieu, moment: "vending machines night") pour

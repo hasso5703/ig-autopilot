@@ -1421,6 +1421,41 @@ test("the seed ledger closes the /comments blind spot", async () => {
   assert.ok(!alreadySeeded([], "111"));
 });
 
+// An empty `data` array from the /comments edge means "we will not show you
+// these", not "there are none" — measured 03/08 on v21 through v25, with the
+// paging cursors proving the rows exist. Two runs read that array as silence.
+// The count is the only honest signal, so the unread number is a subtraction
+// and never a length.
+test("an empty comments edge is not an empty Reel", async () => {
+  const { unreadCount, ownComments } = await import("../src/engage.mjs");
+  const ledger = [
+    { kind: "comment", target: "macbook", id: "seed1" },
+    { kind: "comment", target: "aiact", id: "seed2" },
+    { kind: "reply", target: "someCommentId", media: "aiact", id: "rep1" },
+  ];
+
+  assert.equal(ownComments(ledger, "macbook"), 1, "the seed is the account's own voice");
+  assert.equal(ownComments(ledger, "aiact"), 2, "a reply counts too, when the row remembers its media");
+
+  // The real numbers from 2026-08-03: comments_count=2 against one seed.
+  assert.equal(unreadCount(2, ledger, "macbook"), 1, "a stranger wrote, and the edge showed nothing");
+  assert.equal(unreadCount(1, ledger, "macbook"), 0, "our own seed is not a comment owed an answer");
+  assert.equal(unreadCount(3, ledger, "aiact"), 1);
+  assert.equal(unreadCount(0, ledger, "macbook"), 0, "silence is only silence when the count says so");
+
+  // A reply whose media was never resolved must round toward looking: better a
+  // wasted glance at the app than a stranger left unanswered.
+  const unattributed = [{ kind: "comment", target: "m", id: "s" }, { kind: "reply", target: "c", id: "r" }];
+  assert.equal(unreadCount(2, unattributed, "m"), 1, "an unattributable reply never suppresses an unread count");
+
+  // comments_count is live and the ledger is forever: a deleted seed must not
+  // drive this negative and start hiding real comments.
+  assert.equal(unreadCount(1, [...ledger, { kind: "comment", target: "macbook", id: "seed-deleted" }], "macbook"), 0);
+  for (const junk of [null, undefined, "", NaN, -3]) {
+    assert.equal(unreadCount(junk, ledger, "macbook"), 0, `a missing count is not an alarm: ${String(junk)}`);
+  }
+});
+
 test("the closing-slide ask speaks French since the pivot", async () => {
   const p = goodPost();
   p.slides.at(-1).headline = "Envoie ça à quelqu'un qui fait confiance aux chatbots";

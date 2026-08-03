@@ -2238,6 +2238,27 @@ comments scope — report it as a finding and move on):
   node src/engage.mjs reply <commentId> "…" --live
   ```
 
+  **Read the counts line, not the absence of comments.** Under Standard
+  Access this token cannot read a single comment's text — not a stranger's,
+  not the account's own. The edge answers `data: []` with paging cursors that
+  prove the rows are there, and it does it without an error, which is how
+  "no comments" got reported on 29/07 and again at 17h on 03/08 while a real
+  comment sat unanswered. `recent` now prints
+  `comments_count=N · written by the account=M · not ours=N-M` for every Reel
+  on the grid and shouts when the difference is positive. So:
+
+  - `not ours=0` everywhere → the account is genuinely quiet. Say so.
+  - `not ours>0` → somebody wrote and **you cannot read it or answer it**.
+    Never invent a reply to a comment you have not read, and never post a
+    placeholder: an emoji nod is what the ranking model stopped counting, and
+    a wrong answer under a stranger's question is worse than silence. Name
+    the Reel and the number in your report — it is an answer owed from the
+    app, by a human, not a run.
+
+  Reading them needs Advanced Access on `instagram_business_manage_comments`,
+  which means App Review. That is Hasan's call, not a run's; writing already
+  works, so seeding is unaffected.
+
 ### 11. There is no second story in a RUN
 
 **Your run publishes one Reel. When it is live and recorded, you are done
