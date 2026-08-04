@@ -157,11 +157,12 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a humanoid robot with a white and grey body",
+            "subject": "a humanoid robot with a pale grey metal body",
             "action": "walking forward at a steady pace across a bare concrete floor, the whole robot visible from head to feet the entire time",
             "setting": "in an empty exhibition hall in bright daylight",
             "composition": "medium shot, one robot alone in the frame"
-          }
+          },
+          "file": "media/2026-08-04-fcc-robots-humanoides/veo_0.mp4"
         }
       },
       {
@@ -175,18 +176,21 @@
       {
         "script": "Elle bloque les importations de nouveaux robots humanoïdes fabriqués à l'étranger, au nom de la sécurité nationale, dans une décision qui vise la Chine.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.cbsnews.com/news/humanoid-robots-imports-us-ban-china-national-security-concerns/"
+          "type": "photo",
+          "query": "unitree g1",
+          "alt": "Un robot humanoide Unitree G1, vise par l'interdiction d'importation",
+          "file": "media/2026-08-04-fcc-robots-humanoides/photo_3.jpg",
+          "credit": "Sayanesy · CC0"
         }
       },
       {
         "script": "Un groupe de travail réuni par la Maison-Blanche a conclu que des robots fabriqués à l'étranger pouvaient créer un risque pour la sécurité des infrastructures critiques.",
         "visual": {
           "type": "photo",
-          "query": "unitree g1",
-          "alt": "Un robot humanoide Unitree G1, de fabrication chinoise",
-          "file": "media/2026-08-04-fcc-robots-humanoides/photo_3.jpg",
-          "credit": "Sayanesy · CC0"
+          "query": "white house south lawn",
+          "alt": "La Maison-Blanche, vue du sud",
+          "file": "media/2026-08-04-fcc-robots-humanoides/photo_wh.jpg",
+          "credit": "PHC C.M. Fitzpatrick · Public domain"
         }
       },
       {
@@ -211,7 +215,8 @@
         "script": "En face, Tesla et Figure AI en ont livré quelques centaines, voire moins. Et un patron américain applaudit: pour Gavin Kenneally, de Ghost Robotics, c'est bon pour les clients.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/"
+          "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
+          "file": "media/2026-08-04-fcc-robots-humanoides/shot_6.png"
         }
       },
       {

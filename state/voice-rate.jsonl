@@ -33,3 +33,5 @@
 {"at":"2026-08-02T19:40:42.132Z","slug":"2026-08-02-google-earth-ia","words":200,"seconds":60.16,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.2}
 {"at":"2026-08-03T12:06:30.170Z","slug":"2026-08-03-macbook-air-memoire","words":198,"seconds":55.08,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":1.1}
 {"at":"2026-08-03T16:44:07.574Z","slug":"2026-08-03-ai-act-transparence","words":196,"seconds":54.48,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-1.8}
+{"at":"2026-08-04T11:16:59.041Z","slug":"2026-08-04-fcc-robots-humanoides","words":202,"seconds":61.76,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-3}
+{"at":"2026-08-04T11:17:33.085Z","slug":"2026-08-04-fcc-robots-humanoides","words":202,"seconds":56.88,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-1.1}

@@ -97,3 +97,6 @@
 {"at":"2026-08-03T16:44:07.408Z","slug":"2026-08-03-ai-act-transparence","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"54.5s Sadaltager","usd":0.0272}
 {"at":"2026-08-03T16:46:12.086Z","slug":"2026-08-03-ai-act-transparence","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1223}
 {"at":"2026-08-03T16:57:35.644Z","slug":"2026-08-03-ai-act-transparence","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1226}
+{"at":"2026-08-04T11:16:58.896Z","slug":"2026-08-04-fcc-robots-humanoides","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.8s Sadaltager","usd":0.0309}
+{"at":"2026-08-04T11:17:32.948Z","slug":"2026-08-04-fcc-robots-humanoides","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"56.9s Sadaltager","usd":0.0284}
+{"at":"2026-08-04T11:20:47.427Z","slug":"2026-08-04-fcc-robots-humanoides","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
