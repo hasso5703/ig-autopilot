@@ -1,0 +1,97 @@
+{
+  "slug": "2026-08-05-apple-openai-gel",
+  "sendTest": "Apple accuse ses ex-employés d'avoir filé ses secrets à OpenAI pour leur gadget, et demande à un juge de tout geler.",
+  "centralClaim": "Apple is seeking a preliminary injunction in its trade secrets case to stop OpenAI from moving forward with developing an AI device based on Apple's technology.",
+  "corroboration": [
+    { "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+      "quote": "apple is now seeking a preliminary injunction in its trade secrets case against openai, which aims to stop the ai model maker from moving forward with developing an ai device or other products based on apple's" },
+    { "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/",
+      "quote": "apple has filed a request for a preliminary injunction in its ongoing trade secrets lawsuit against openai" }
+  ],
+  "caption": "Apple demande à un juge de geler le gadget secret d'OpenAI, et vise 11 autres anciens employés.\n\nDans son procès pour vol de secrets industriels, Apple réclame maintenant une injonction: interdire à OpenAI d'avancer sur tout appareil construit à partir de sa technologie. Son enquête a identifié 11 autres anciens employés possiblement impliqués, en plus des deux déjà accusés.\n\nLe détail qui n'a pas tenu dans la vidéo. Selon la plainte, un ancien employé a fait des captures d'écran de documents confidentiels sur un produit jamais annoncé, juste avant un entretien d'embauche chez OpenAI. Et après le dépôt de la plainte, plusieurs anciens d'Apple, aujourd'hui chez OpenAI, ont recontacté Apple pour rendre les appareils de travail qu'ils avaient gardés.\n\nÀ décharge, OpenAI conteste tout: elle dit n'avoir, et ne vouloir, aucun secret d'Apple, et qualifie la plainte de négligente, agressive et bizarrement personnelle. L'audience est fixée au 1er octobre 2026.\n\nTu crois plutôt la version d'Apple ou celle d'OpenAI ?\n\nSources : techcrunch.com, 9to5mac.com, engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #Apple #OpenAI\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    { "quote": "apple also notes that its continued investigation has so far revealed 11 other former apple employees beyond liu and tan may have been witnesses or otherwise in",
+      "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/" },
+    { "quote": "the hearing on the injunction is set for oct. 1, 2026",
+      "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/" },
+    { "quote": "yet another former apple employee took screenshots of confidential apple documents relating to an unannounced apple prod",
+      "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/" },
+    { "quote": "multiple former apple employees now working at openai reached out to discuss returning apple-issued work devices they kept when th",
+      "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/" }
+  ],
+  "slides": [
+    { "type": "hook",
+      "kicker": "Août 2026 · Apple c. OpenAI",
+      "headline": "Apple veut faire *geler* le gadget secret d'OpenAI",
+      "hero": { "value": "11", "label": "autres anciens employés d'Apple possiblement impliqués" },
+      "swipe": "Les reçus sont sur chaque diapositive." },
+    { "type": "stat",
+      "figure": "11",
+      "unit": "autres anciens employés possiblement impliqués",
+      "body": "Au-delà des **deux premiers accusés**, l'enquête d'Apple a identifié 11 anciens employés de plus, témoins ou impliqués.",
+      "evidence": "apple also notes that its continued investigation has so far revealed 11 other former apple employees beyond liu and tan may have been witnesses or otherwise in",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/", "date": "2026-08-04" } },
+    { "type": "content",
+      "title": "Ce qu'Apple demande au juge",
+      "body": "**Stopper OpenAI**: ne plus utiliser ni obtenir de secrets d'Apple, préserver les preuves, laisser Apple inspecter appareils et comptes.",
+      "evidence": "apple is asking the judge to immediately stop openai from using or obtaining any apple trade secrets, preserve all evidence",
+      "source": { "name": "9to5Mac", "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/", "date": "2026-08-04" } },
+    { "type": "quote",
+      "body": "both based on false information and completely unnecessary because we do not have, nor want, any of their trade secrets",
+      "attribution": "OpenAI, dans sa réponse publique",
+      "evidence": "both based on false information and completely unnecessary because we do not have, nor want, any of their trad",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/", "date": "2026-08-04" } },
+    { "type": "contrast",
+      "claim": "Apple: chaque jour sans injonction aggrave les dégâts",
+      "caveat": "OpenAI: une plainte négligente, agressive et bizarrement personnelle",
+      "claimLabel": "Apple",
+      "caveatLabel": "OpenAI",
+      "evidence": "careless, aggressive and oddly personal lawsuit\" doesn't live up to apple's reputation as \"one of the greatest companies of all time.\" the hearing on the injunction is set for oct.",
+      "source": { "name": "9to5Mac", "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/", "date": "2026-08-04" } },
+    { "type": "content",
+      "title": "Rendez-vous le 1er octobre",
+      "body": "L'audience sur l'injonction est fixée au **1er octobre 2026**. D'ici là, le développement continue.",
+      "evidence": "the hearing on the injunction is set for oct. 1, 2026",
+      "source": { "name": "9to5Mac", "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/", "date": "2026-08-04" } },
+    { "type": "cta",
+      "headline": "Envoie ça à *celui* qui attend le prochain gadget d'OpenAI",
+      "sub": "Les sources sont sur chaque diapositive." }
+  ],
+  "sources": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/", "accessed": "2026-08-04" },
+    { "name": "9to5Mac", "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/", "accessed": "2026-08-04" },
+    { "name": "Engadget", "url": "https://www.engadget.com/2230042/apple-claims-that-even-more-ex-employees-may-have-given-trade-secrets-to-openai/", "accessed": "2026-08-04" }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Apple veut faire geler le gadget secret d'OpenAI",
+    "beats": [
+      { "script": "Le prochain gadget d'OpenAI est peut-être construit avec des secrets volés chez Apple. C'est Apple qui l'affirme, et elle demande à un juge de tout geler.",
+        "visual": { "type": "screenshot", "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/" } },
+      { "script": "Et ce que décrit sa plainte ressemble à de l'espionnage industriel. Tu veux savoir ce que ses anciens salariés auraient emporté ?",
+        "visual": { "type": "image", "spec": {
+          "subject": "a confidential document with technical diagrams displayed on a screen",
+          "setting": "in a dim office at night",
+          "composition": "extreme close-up, the screen fills the entire frame" } } },
+      { "script": "Dans sa plainte, Apple raconte qu'un ancien employé a fait des captures d'écran de documents confidentiels sur un produit jamais annoncé, juste avant un entretien d'embauche chez OpenAI.",
+        "visual": { "type": "screenshot", "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/" } },
+      { "script": "Et son enquête vient d'identifier 11 autres anciens employés possiblement impliqués, en plus des deux déjà accusés dans la plainte initiale.",
+        "visual": { "type": "card", "value": "11", "label": "autres anciens employés possiblement impliqués, selon Apple" } },
+      { "script": "Certains, aujourd'hui chez OpenAI, ont même recontacté Apple après la plainte, pour rendre les appareils de travail qu'ils avaient gardés en partant.",
+        "visual": { "type": "screenshot", "url": "https://www.engadget.com/2230042/apple-claims-that-even-more-ex-employees-may-have-given-trade-secrets-to-openai/" } },
+      { "script": "Donc Apple demande le blocage: interdire à OpenAI d'avancer sur tout appareil construit à partir de sa technologie. Et elle exige d'inspecter ses appareils et ses comptes.",
+        "visual": { "type": "image", "spec": {
+          "subject": "an unmarked electronic device prototype held in a gloved hand",
+          "setting": "in a bright workshop in daylight",
+          "composition": "close-up on the device" } } },
+      { "script": "Sauf qu'OpenAI répond que tout est faux: elle dit n'avoir, et ne vouloir, aucun secret d'Apple. Et elle qualifie la plainte de bizarrement personnelle.",
+        "visual": { "type": "card", "value": "FAUX", "label": "la réponse d'OpenAI à la demande de blocage d'Apple" } },
+      { "script": "Un juge tranchera le 1er octobre. D'ici là, le développement continue, et Apple répète que les dégâts s'aggravent. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "image", "spec": {
+          "subject": "an empty federal hearing room with a judge's bench",
+          "setting": "in soft morning light",
+          "composition": "wide interior shot" } } }
+    ]
+  }
+}

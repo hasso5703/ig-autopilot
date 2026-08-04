@@ -82,7 +82,12 @@ ENTRIES:
   qz.com (403 partout), washingtonpost.com (503), reuters.com et theverge.com
   (403). Et attention aux coquilles du primaire: techcrunch.com a ecrit "during
   the year ending in March 31" (le "in" est d'eux), citation NOT_FOUND tant que
-  tu ne le recopies pas.
+  tu ne le recopies pas. Ajout 04/08 (19h30): repondent 200 au fetch gate et se
+  gatent du premier coup: waymo.com/blog, 9to5mac.com, appleinsider.com,
+  dallasinnovates.com. engadget.com re-confirme mais sa reprise du dossier
+  Apple-OpenAI credite TechCrunch ("according to a report by techcrunch"):
+  pour corroborer, prends 9to5mac ou appleinsider, qui lisent le dossier
+  judiciaire eux-memes.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
