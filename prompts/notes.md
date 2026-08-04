@@ -423,6 +423,11 @@ ENTRIES:
   le recu (ici: Unitree G1 en beat 2, Maison-Blanche Commons en beat 3,
   recadree 9:16 a la main + file/credit). technologyreview.com se capture
   proprement du premier coup.
+  Ajout 04/08 (16h): cnbc.com est le MEME piege que macrumors, mesure au frame
+  check: le gate le lit (fetch Node 200, 8/8 VERIFIED) mais le navigateur recoit
+  un mur Akamai "Access Denied" plein cadre, deux builds de suite. Remplacement
+  mesure: thenextweb.com repond 200 au fetch gate, porte les chiffres CNBC
+  verbatim, et se capture proprement du premier coup (titre TNW + chapo).
   Ajout 03/08 (17h): euronews.com a rendu une page BLANCHE (14 ko) tenue 7,3 s
   en beat 5. Cause: son CMP (bouton "Agree and close") monte TARD, donc a 2,5 s
   il n'y avait rien a cliquer ni a retirer, et le modal blanc couvrait l'article
