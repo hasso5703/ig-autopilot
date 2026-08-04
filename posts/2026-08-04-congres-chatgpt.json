@@ -132,7 +132,7 @@
           "type": "photo",
           "query": "sam altman",
           "alt": "Sam Altman, patron d OpenAI, sur scene",
-          "file": "media/2026-08-04-congres-chatgpt/photo_0.jpg",
+          "file": "media/2026-08-04-congres-chatgpt/photo_0_recrop.jpg",
           "credit": "Steve Jurvetson · CC BY"
         }
       },
@@ -148,7 +148,7 @@
         "script": "CNBC a épluché les registres de dépenses de la Chambre. Sur un an, au moins 113 740 dollars sont partis dans des outils d'IA.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.cnbc.com/2026/08/03/openai-chatgpt-anthropic-congress-house-ai-spending.html"
+          "url": "https://thenextweb.com/news/congress-chatgpt-ai-spending-openai-dominance-house"
         }
       },
       {
@@ -208,6 +208,11 @@
       "name": "TechCrunch",
       "url": "https://techcrunch.com/2026/08/03/congresss-favorite-ai-tool-chatgpt/",
       "accessed": "2026-08-03"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/congress-chatgpt-ai-spending-openai-dominance-house",
+      "accessed": "2026-08-04"
     }
   ]
 }
