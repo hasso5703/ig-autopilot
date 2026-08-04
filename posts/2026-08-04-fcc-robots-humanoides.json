@@ -183,8 +183,10 @@
         "script": "Un groupe de travail réuni par la Maison-Blanche a conclu que des robots fabriqués à l'étranger pouvaient créer un risque pour la sécurité des infrastructures critiques.",
         "visual": {
           "type": "photo",
-          "query": "humanoid robot",
-          "alt": "Un robot humanoide expose au public"
+          "query": "unitree g1",
+          "alt": "Un robot humanoide Unitree G1, de fabrication chinoise",
+          "file": "media/2026-08-04-fcc-robots-humanoides/photo_3.jpg",
+          "credit": "Sayanesy · CC0"
         }
       },
       {
@@ -192,7 +194,9 @@
         "visual": {
           "type": "photo",
           "query": "unitree robot dog",
-          "alt": "Un chien robot Unitree lors d'une demonstration"
+          "alt": "Un robot quadrupede Unitree, dans un jardin",
+          "file": "media/2026-08-04-fcc-robots-humanoides/photo_4.jpg",
+          "credit": "Sgt. Amber Edwards · Public domain"
         }
       },
       {
@@ -215,7 +219,9 @@
         "visual": {
           "type": "photo",
           "query": "unitree building",
-          "alt": "Le siege de Unitree en Chine"
+          "alt": "Le siege de Unitree, a Hangzhou",
+          "file": "media/2026-08-04-fcc-robots-humanoides/photo_7.jpg",
+          "credit": "Huandy618 · CC0"
         }
       }
     ]

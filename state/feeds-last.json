@@ -1,12 +1,12 @@
 {
-  "at": "2026-08-04T06:38:50.772Z",
-  "fresh": 300,
+  "at": "2026-08-04T10:39:09.234Z",
+  "fresh": 295,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1108,
-      "fresh": 7,
+      "fresh": 6,
       "windowHours": 96
     },
     {
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 19,
+      "fresh": 17,
       "windowHours": 36
     },
     {
@@ -78,7 +78,7 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 4,
+      "fresh": 3,
       "windowHours": 36
     },
     {
@@ -100,7 +100,7 @@
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 5,
+      "fresh": 4,
       "windowHours": 36
     }
   ]
