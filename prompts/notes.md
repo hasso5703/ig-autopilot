@@ -119,7 +119,11 @@ ENTRIES:
   basculer: la physique lache sur les actions sequentielles), et nomme en
   positif ce qui doit rester vrai a la derniere image. Tout ce qui rentre DANS
   autre chose est la famille a risque; ce qui tombe/glisse/bascule garde le
-  sujet entier. ET LE CONTROLE: une image fixe ne peut pas auditer un
+  sujet entier. Ajout 04/08: le controle "le spec ne nomme personne du post"
+  matche par MOT, pas par entite: "a white and grey body" est refuse parce que
+  les sources disent "White House". Sur une histoire qui cite la Maison-Blanche,
+  ecris les couleurs autrement ("pale grey"); le message du moteur nomme le mot
+  fautif, lis-le avant de chercher plus loin. ET LE CONTROLE: une image fixe ne peut pas auditer un
   mouvement, les deux images prises dans ce beat (0,5 s et 3,0 s) etaient
   parfaitement plausibles, la faute n'existe qu'ENTRE elles. Monte la pellicule
   de 8 vignettes (hstack, commande dans routine.md) sur tout beat veo.
@@ -409,6 +413,16 @@ ENTRIES:
   affirmation et ajoute-le en source (engadget.com se capture proprement, titre
   + signature + photo, du premier coup). Et epingle d'abord tout ce qui est deja
   achete (veo_0.mp4 a 0,96 $ ici): les 2 rebuilds n'ont alors coute 0 $.
+  Ajout 04/08 (11h): cbsnews.com pareil en pire, gate 16/16 VERIFIED mais la
+  capture rend un blanc de 14,8 ko DEUX fois (octets identiques) et un
+  navigateur direct prend ERR_CONNECTION_RESET, AMP compris; thehill.com se
+  capture mais rend un mur "Press & Hold to confirm you are a human". Quand
+  AUCUN media joignable ne porte l'histoire (verifie via les RSS des
+  redactions, pas Google News: ses liens rss/articles sont opaques et les flux
+  NBC/Fox ont des <link> desappaires), la photo documentaire du sujet remplace
+  le recu (ici: Unitree G1 en beat 2, Maison-Blanche Commons en beat 3,
+  recadree 9:16 a la main + file/credit). technologyreview.com se capture
+  proprement du premier coup.
   Ajout 03/08 (17h): euronews.com a rendu une page BLANCHE (14 ko) tenue 7,3 s
   en beat 5. Cause: son CMP (bouton "Agree and close") monte TARD, donc a 2,5 s
   il n'y avait rien a cliquer ni a retirer, et le modal blanc couvrait l'article
