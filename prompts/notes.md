@@ -229,7 +229,15 @@ ENTRIES:
   poitrine au Parlement europeen, parfait en 9:16. Lance donc les DEUX
   requetes et regarde: une requete qualifiee vide ne prouve pas qu'il n'y a
   pas de photo. Sur un elu peu photographie, le candidat "(cropped)" de
-  Commons bat presque toujours l'original paysage pour un beat vertical.
+  Commons est souvent deja en portrait, MAIS c'est aussi un re-televersement
+  minuscule une fois sur deux: CORRECTION 04/08, "Rep. Julie Fedorchak official
+  photo, 119th Congress (cropped)" fait 228x305 sur Commons. Il s'affichait
+  1600x2140 dans `candidates` parce que l'API MediaWiki renvoie la largeur
+  DEMANDEE (iiurlwidth=1600) meme quand elle sert l'original intact
+  (utm_content=thumbnail_unscaled), donc il echappait au malus width<900 et
+  sortait PREMIER. Corrige dans imagery.mjs (servedSize + test): la taille
+  annoncee est desormais min(thumb, original). Le classement est donc fiable,
+  mais regarde quand meme la taille avant d'epingler un "(cropped)".
   Verifie aussi l'identite a l'oeil: "erin maye quade 2018" (5.0) ne ressemble
   pas aux photos de la senatrice, beat abandonne plutot que de nommer la
   mauvaise personne. Mesure 01/08 aussi: AUCUNE photo documentaire de datacenter n'est atteignable

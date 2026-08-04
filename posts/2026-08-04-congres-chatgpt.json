@@ -9,7 +9,7 @@
     },
     {
       "url": "https://techcrunch.com/2026/08/03/congresss-favorite-ai-tool-chatgpt/",
-      "quote": "OpenAI's ChatGPT is Congress's AI tool of choice so far in terms of money spent, according to a report from CNBC. OpenAI received roughly 90% of all spending on AI tools by House offices, committees and institutional accounts during the year ending in March 31, per House disbursement records."
+      "quote": "OpenAI's ChatGPT is Congress' AI tool of choice so far in terms of money spent, according to a report from CNBC. OpenAI received roughly 90% of all spending on AI tools by House offices, committees, and institutional accounts during the year ending in March 31, per House disbursement records."
     }
   ],
   "caption": "Le Congrès américain a payé ChatGPT 798 fois en un an, et c'est lui qui écrira les règles de l'IA.\n\nCNBC a analysé les registres de dépenses de la Chambre des représentants. Entre avril 2025 et mars 2026, au moins 113 740 dollars sont partis dans des outils d'IA nommément identifiés. ChatGPT en prend 100 580, soit environ 88 % des dollars et 96 % des transactions. Claude, d'Anthropic, suit à 13 160 dollars.\n\nLe détail qui n'a pas tenu dans la vidéo. Les achats de ChatGPT apparaissent dans au moins 71 bureaux d'élus, environ 1 sur 6. Les bureaux démocrates ont dépensé 54 165 dollars, plus de trois fois les 15 782 dollars des bureaux républicains, alors qu'une partie de ce camp alerte depuis des mois sur les risques de l'IA.\n\nÀ décharge, ces chiffres sous-estiment l'usage réel. Ils ne comptent ni les comptes gratuits, ni l'IA incluse dans des contrats logiciels plus larges, ni l'essentiel du Sénat.\n\nUn élu qui travaille avec ChatGPT écrit-il de meilleures lois sur l'IA, oui ou non ?\n\nSources : cnbc.com, techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #ChatGPT\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
@@ -131,7 +131,9 @@
         "visual": {
           "type": "photo",
           "query": "sam altman",
-          "alt": "Sam Altman, patron d'OpenAI"
+          "alt": "Sam Altman, patron d OpenAI, sur scene",
+          "file": "media/2026-08-04-congres-chatgpt/photo_0.jpg",
+          "credit": "Steve Jurvetson · CC BY"
         }
       },
       {
@@ -161,8 +163,10 @@
         "script": "Et voilà à quoi ça sert. Résumer des lois, préparer des auditions, rédiger des notes, et répondre au courrier des électeurs.",
         "visual": {
           "type": "photo",
-          "query": "united states capitol dome",
-          "alt": "Le dome du Capitole des Etats-Unis"
+          "query": "congressional hearing",
+          "alt": "Une audition au Congres americain, un elu et une collaboratrice",
+          "file": "media/2026-08-04-congres-chatgpt/photo_4.jpg",
+          "credit": "usicegov · Public domain"
         }
       },
       {
@@ -170,7 +174,9 @@
         "visual": {
           "type": "photo",
           "query": "julie fedorchak",
-          "alt": "Julie Fedorchak, representante du Dakota du Nord"
+          "alt": "Julie Fedorchak, representante du Dakota du Nord",
+          "file": "media/2026-08-04-congres-chatgpt/photo_5.jpg",
+          "credit": "House Creative Services · Public domain"
         }
       },
       {
@@ -184,8 +190,10 @@
         "script": "Soit 82.5 pour cent de plus qu'un an avant. Anthropic, près d'1.6 million. Le vendeur paie pour parler au client qui écrit la loi. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "sam altman speaking at TED",
-          "alt": "Sam Altman lors d'une intervention publique"
+          "query": "united states capitol dome",
+          "alt": "Le dome du Capitole des Etats-Unis",
+          "file": "media/2026-08-04-congres-chatgpt/photo_7.jpg",
+          "credit": "Diliff · CC BY"
         }
       }
     ]

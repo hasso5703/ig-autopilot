@@ -181,10 +181,11 @@ export async function searchCommons(query, { limit = 10 } = {}) {
       const ii = p.imageinfo?.[0];
       if (!ii) return null;
       const meta = ii.extmetadata || {};
+      const served = servedSize(ii);
       return {
         url: ii.thumburl || ii.url,
-        width: ii.thumbwidth || ii.width || 0,
-        height: ii.thumbheight || ii.height || 0,
+        width: served.width,
+        height: served.height,
         title: (p.title || "").replace(/^File:/, "").replace(/\.[a-z]+$/i, ""),
         creator: strip(meta.Artist?.value),
         license: licence(meta),
@@ -229,6 +230,29 @@ export async function generate(prompt, { seed = 1, width = 1080, height = 1350, 
  * A picture editor's ranking, written down. Resolution first, because a slide
  * is 1080 wide and a 640px photograph blown up to fill it looks like a scan.
  */
+/**
+ * What Commons will actually hand us, in pixels.
+ *
+ * We ask the MediaWiki API for a 1600px-wide rendering (`iiurlwidth`), and it
+ * answers with `thumbwidth`/`thumbheight` echoing what we asked for — even when
+ * the original is smaller and it therefore serves the untouched file instead
+ * (the URL says so: `utm_content=thumbnail_unscaled`). MediaWiki never upscales,
+ * so the truth is the smaller of the two, and believing the echo is expensive:
+ * on 2026-08-04 the "(cropped)" official portrait of a US representative was
+ * listed at 1600x2140 and is 228x305 on disk. At the echoed size it cleared the
+ * `width < 900` penalty and ranked FIRST of its query, so an unpinned build
+ * would have opened a beat on a 228px portrait blown up almost five times.
+ */
+export function servedSize(ii) {
+  const ow = ii?.width || 0;
+  const oh = ii?.height || 0;
+  const tw = ii?.thumbwidth || 0;
+  const th = ii?.thumbheight || 0;
+  if (!ow || !oh) return { width: tw || ow, height: th || oh };
+  if (!tw || !th) return { width: ow, height: oh };
+  return { width: Math.min(tw, ow), height: Math.min(th, oh) };
+}
+
 export function scoreCandidate(c) {
   let score = 0;
   const px = c.width * c.height;

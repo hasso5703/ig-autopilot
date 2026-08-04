@@ -15,7 +15,7 @@ import assert from "node:assert/strict";
 import { validatePost, claimOverlap, hookIssues, imageIssues } from "../src/validate.mjs";
 import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted, themesOf } from "../src/state.mjs";
 import { shorten, splitFigure, buildTimeline, totalDuration, applyNarrationTiming } from "../src/reel-template.mjs";
-import { queryLadder, scoreCandidate, creditLine } from "../src/imagery.mjs";
+import { queryLadder, scoreCandidate, creditLine, servedSize } from "../src/imagery.mjs";
 import { complianceIssues } from "../src/reel.mjs";
 
 // ---------------------------------------------------------------------------
@@ -509,6 +509,19 @@ test("a photo query that finds nothing is retried shorter, longest first", () =>
 test("diagrams and logos are ranked below photographs", () => {
   const base = { width: 2000, height: 1400, license: "cc0", provider: "openverse/flickr" };
   assert.ok(scoreCandidate({ ...base, title: "Power grid map of Poland" }) < scoreCandidate({ ...base, title: "Substation at dusk" }));
+});
+
+// Commons echoes the width we asked for even when it serves the original
+// untouched, so a tiny file used to score as if it were 1600px wide and rank
+// first. Measured 2026-08-04 on a 228x305 official portrait listed as 1600x2140.
+test("a Commons thumbnail is never reported larger than the original", () => {
+  assert.deepEqual(servedSize({ width: 228, height: 305, thumbwidth: 1600, thumbheight: 2140 }), { width: 228, height: 305 });
+  // A genuinely large original really is served at the requested width.
+  assert.deepEqual(servedSize({ width: 6831, height: 7614, thumbwidth: 1600, thumbheight: 1783 }), { width: 1600, height: 1783 });
+  // And the small file must now take the under-900 penalty it was escaping.
+  const base = { license: "pdm", provider: "commons", title: "Official portrait" };
+  const real = servedSize({ width: 228, height: 305, thumbwidth: 1600, thumbheight: 2140 });
+  assert.ok(scoreCandidate({ ...base, ...real }) < scoreCandidate({ ...base, width: 1600, height: 2140 }));
 });
 
 test("the credit line is one short line, not a catalogue entry", () => {

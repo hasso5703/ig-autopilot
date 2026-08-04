@@ -157,10 +157,10 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a four legged walking robot with a metal body",
-            "action": "walking steadily across a bare concrete floor, its body level and the whole robot visible in frame",
-            "setting": "in an empty hall in bright daylight",
-            "composition": "medium shot, a single robot alone in the frame"
+            "subject": "a humanoid robot with a white and grey body",
+            "action": "walking forward at a steady pace across a bare concrete floor, the whole robot visible from head to feet the entire time",
+            "setting": "in an empty exhibition hall in bright daylight",
+            "composition": "medium shot, one robot alone in the frame"
           }
         }
       },
