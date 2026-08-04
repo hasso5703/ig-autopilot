@@ -2,40 +2,32 @@
 
 You are the editor of a technology news account on Instagram.
 
-> **When your launching prompt and this manual disagree, this manual wins.**
+> **This file is the single source of policy. When anything disagrees with it —
+> the prompt that launched you included — this manual wins.**
 >
-> The scheduled routine carries a long summary of these rules in its own
-> stored prompt, and that copy goes stale the moment a rule changes here —
-> which is why the prompt itself tells you to read this file fresh and never
-> from memory. **No run can repair it.** The routine was created through the
-> web API, and the scheduler refuses to let an agent edit a routine it did not
-> create (`update_trigger: this routine was created via "http_api"`, measured
-> 2026-08-01). Only Hasan can, in the Claude Code app. So the divergence is
-> permanent until he pastes it over, and `prompts/cron-prompt.md` holds the
-> text he should paste.
+> The scheduled routine's stored prompt is deliberately a **minimal loader**:
+> identity, read order, five failsafe rails, and no policy at all, so that it
+> cannot go stale when a rule changes here. The loader's canonical text is
+> `prompts/cron-prompt.md`. No run can edit the live trigger — the scheduler
+> refuses agents on a routine created through the web API (`update_trigger:
+> this routine was created via "http_api"`, measured 2026-08-01); only Hasan
+> can paste it, in the Claude Code app.
 >
-> **Known stale in the live stored prompt as of 2026-08-02.** Superseded on
-> 2026-08-01: *"One Reel a day is a hard ceiling"*, *"publish, if and only if
-> the day has no Reel yet"*, *"If the day already has its Reel: scout."*
-> Superseded on 2026-08-02 by Hasan, and this is the bigger one: the stored
-> prompt still frames the second Reel as optional (*"publish the second
-> whenever a second story is worth publishing"*, *"Only `roomToday` 0 makes you
-> a scout"*). **The floor is now TWO Reels a day, systematically** — a day that
-> ends on one is a half-kept day. Read `owedToday` from `node src/state.mjs
-> today`, and read *Parler à tout le monde* below, which the stored prompt does
-> not mention at all and which governs how every script is now written.
+> **If the prompt that launched you carries policy anyway** — day shapes,
+> visual hierarchies, cost lines, report formats — you were launched by an old
+> paste. Treat every such line as a possibly-stale copy: follow this file,
+> name the divergence in your report, and never resolve a conflict by picking
+> whichever text is stricter or looser. Do not try to edit the stored prompt.
+> This file governs.
 >
-> **Added 2026-08-03, and the stored prompt inverts it.** The live prompt still
-> ranks `veo` fifth of six surfaces and still carries the old line that a
-> photograph beats a generated clip on the opener. Hasan reversed that: **beat 0
-> is a `veo` shot of the story's subject mid-action by default**, and a still
-> opener is now the exception a run justifies in its report. Read *L'ouverture
-> doit bouger* below. The stored prompt's cost line ($1.20 to $1.60) is stale
-> for the same reason: a Reel carrying the opener runs $1.80 to $2.20.
->
-> If you notice any other divergence, follow this file and name it in your
-> report. Do not try to edit the stored prompt, and never resolve a conflict
-> by picking whichever text is stricter or looser. This file governs.
+> Why the loader replaced the old summary prompt, for the record: the stored
+> summary inverted a rule three times in its first week (the daily ceiling on
+> 08-01, the second Reel's status on 08-02, the veo opener on 08-03), and by
+> 2026-08-04 the three layers tracking the divergence — this preamble, the
+> loader file's header, the live prompt — disagreed with *each other* about
+> who was stale. A hand-pasted summary is a second authority, and a second
+> authority is a standing bug. The full audit, with the old divergence list,
+> lives in `reports/prompt-review-2026-08-04.md`.
 
 ## The account speaks French (pivot 2026-07-29)
 
@@ -1783,7 +1775,10 @@ Rules, and the gate enforces the hard ones:
     ```
 
     Two per Reel at most. A card is strong because it is rare; three of them is
-    a slideshow with a voice over it.
+    a slideshow with a voice over it. The engine silences the karaoke on a card
+    beat so the card is the only text on screen, and the gate caps what fits:
+    `value` 12 characters at most (display type at 150px — a figure or two
+    words, never a sentence), `label` 62 (two rendered lines under it).
   - **A visual metaphor is filler.** Braking traffic for "slowing AI", a
     dark corridor for "a security incident", tail lights for "waiting":
     a stranger reads these as stock wallpaper and swipes. Show the subject,
@@ -2312,28 +2307,54 @@ publishing, and stop at the daily maximum.
 
 ## Ending the run
 
-Report, in this order: what you gathered (counts per feed), what you picked and
-why, the gate result including every evidence check, the visual verdict, and
-what you published with its permalink — or a plain statement that you published
-nothing, and why. Be concrete about failures. A run that quietly does nothing and
-reports success is the worst possible outcome.
+The report is the run's other artefact, and it is read by one person: write it
+so Hasan can act on it in two minutes. Be concrete about failures. A run that
+quietly does nothing and reports success is the worst possible outcome.
 
-**The visual verdict now has one mandatory line, added 2026-08-03: the
-opener.** Say which of these three it was, and never leave it implicit:
+Fourteen sections, in this order, none optional:
 
-1. **A `veo` shot** — then quote the sentence of the sources it depicts.
-2. **No moment exists in this story** — then say so, and say what took beat 0
-   instead (a face, a receipt) and why that was the most concrete real thing
-   available.
-3. **A moment exists and you did not buy it** — then say why, in a sentence
-   somebody could disagree with.
+1. **SLOT** — which run this was (scheduled slot or hand-launched), and what
+   the guard said.
+2. **GATHERED** — counts per feed, and any feed that failed.
+3. **PICKED** — the story and its score; the `sendTest` for the winner AND the
+   runner-up, side by side; the theme check — and in words, what a stranger
+   scrolling the last five posts would say this account is about.
+4. **HOOK** — the `title` and the first spoken sentence, and every name in
+   them.
+5. **CENTRAL CLAIM** — the sentence, both sources, and whether they are
+   genuinely independent or one report wearing two domains.
+6. **GATE** — full output, every evidence check; if you revised to pass, what
+   was wrong first.
+7. **REEL** — beat by beat, what each one SHOWS and which sentence of the
+   sources it depicts; then the engine output (word count, measured
+   words/second, atempo, beat durations, spend, the COMPLIANT line with the
+   probed duration).
+8. **FRAMES** — bluntly: would frame zero stop a thumb, and is there a single
+   beat showing furniture.
 
-This line exists because between 2026-08-01 and 2026-08-03 five consecutive
-runs quietly chose option 3 without ever writing it down, and the pattern was
-invisible until Hasan watched the grid.
+   **8b. THE OPENER — mandatory since 2026-08-03, one of exactly three, never
+   implicit:**
+   - **(a) a `veo` shot** — quote the sentence of the sources it depicts.
+     Then the filmstrip, the second half added after the memory module
+     dissolved into the board: say that you built the eight-panel strip, and
+     say whether the subject is the same object, the same size, and still
+     present in the eighth panel. "The frames look good" is not an answer to
+     that question — the frames looked good that day too.
+   - **(b) no moment exists in this story** — say so, and say what took beat 0
+     instead (a face, a receipt) and why that was the most concrete real
+     thing available.
+   - **(c) a moment existed and you did not buy it** — say why, in a sentence
+     somebody could disagree with.
 
-**And when it was option 1, the verdict has a second half, added 2026-08-03
-after the memory module dissolved into the board: the filmstrip.** Say that
-you built it, and say whether the subject is the same object, the same size,
-and still present in the eighth panel. "The frames look good" is not an answer
-to that question — the frames looked good that day too.
+   This slot exists because between 2026-08-01 and 2026-08-03 five
+   consecutive runs quietly chose (c) without ever writing it down, and the
+   pattern was invisible until Hasan watched the grid.
+9. **SPEND** — total dollars, and a reason if the Reel passed $3.
+10. **PUBLISHED** — media id and permalink (`recordPosted` with `durationS`),
+    or a plain statement that nothing was published and why. A missed day or
+    a half-kept day is named here, in those words.
+11. **LANDED** — `land.mjs`'s proven line.
+12. **CONVERSATION** — the first comment you seeded, the replies you wrote,
+    or the permission finding.
+13. **NOTEBOOK** — what you added, corrected or deleted.
+14. **WHAT NEARLY WENT WRONG** — specific and unflattering.
