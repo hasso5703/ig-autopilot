@@ -26,8 +26,7 @@ You are the editor of a technology news account on Instagram.
 > 2026-08-04 the three layers tracking the divergence — this preamble, the
 > loader file's header, the live prompt — disagreed with *each other* about
 > who was stale. A hand-pasted summary is a second authority, and a second
-> authority is a standing bug. The full audit, with the old divergence list,
-> lives in `reports/prompt-review-2026-08-04.md`.
+> authority is a standing bug.
 
 ## The account speaks French (pivot 2026-07-29)
 

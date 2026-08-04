@@ -20,7 +20,7 @@ other about who was stale. The fix is architectural, not editorial: the
 stored prompt is now a MINIMAL LOADER carrying identity, read order and
 failsafe rails, and NO policy. Policy has exactly one home, routine.md,
 versioned and tested in this repo and read fresh by every run. A loader with
-no policy cannot go stale. The full audit: reports/prompt-review-2026-08-04.md.
+no policy cannot go stale.
 
 WHAT TO DO WITH IT.
 - If you are a run: nothing. You cannot change the trigger, and you must not
