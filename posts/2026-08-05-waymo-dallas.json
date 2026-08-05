@@ -3,89 +3,195 @@
   "sendTest": "À Dallas tu peux commander un taxi sans chauffeur comme un Uber, plus de liste d'attente. 150 000 personnes l'ont déjà fait.",
   "centralClaim": "Waymo dropped the waitlist for its robotaxi service in Dallas, so anyone can now download the app and hail a fully autonomous ride.",
   "corroboration": [
-    { "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/",
-      "quote": "waymo has dropped the waitlist for its robotaxi service in dallas, opening it up to all residents and visitors" },
-    { "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
-      "quote": "anyone in dallas can download the waymo app and hail a fully autonomous ride" }
+    {
+      "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/",
+      "quote": "waymo has dropped the waitlist for its robotaxi service in dallas, opening it up to all residents and visitors"
+    },
+    {
+      "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+      "quote": "anyone in dallas can download the waymo app and hail a fully autonomous ride"
+    }
   ],
   "caption": "À Dallas, plus de liste d'attente: n'importe qui peut commander un taxi sans chauffeur.\n\nWaymo, du groupe Alphabet, la maison mère de Google, a ouvert mardi son service de robotaxis à tout le monde à Dallas. Depuis février, près de 150 000 passagers étaient montés via la liste d'attente. Tu télécharges l'appli, la voiture arrive, sans personne au volant.\n\nLe détail qui n'a pas tenu dans la vidéo. La flotte de SUV électriques Jaguar I-Pace est gérée avec le loueur Avis, qui s'occupe de la recharge et de l'entretien. Et l'aéroport de Dallas Love Field n'est pas encore desservi: les tests y continuent, comme sur les autoroutes, dernière étape avant l'ouverture de ces trajets.\n\nÀ décharge, tout n'a pas été lisse. En mai, Waymo avait suspendu le service à Dallas, Houston, San Antonio et Atlanta: ses voitures géraient mal les pluies violentes et les routes inondées.\n\nTu monterais dans un taxi sans chauffeur, oui ou non ?\n\nSources : waymo.com, techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #Waymo #Robotaxi\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
   "captionEvidence": [
-    { "quote": "since opening our service in february, we've welcomed nearly 150,000 riders in dallas from our interest list to experience the safety, reliability, and magic of waymo, and now we're offering our servi",
-      "url": "https://waymo.com/blog/shorts/dallas-open-to-all/" },
-    { "quote": "avis budget group to manage its fleet of all-electric autonomous jaguar i-pace vehicles. avis handles general depot oper",
-      "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/" },
-    { "quote": "for now, riders won't be able to hail a ride to dallas love field airport",
-      "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/" },
-    { "quote": "we continue fully autonomous testing at dallas love field airport terminals and look forward to serving travelers there",
-      "url": "https://waymo.com/blog/shorts/dallas-open-to-all/" }
+    {
+      "quote": "since opening our service in february, we've welcomed nearly 150,000 riders in dallas from our interest list to experience the safety, reliability, and magic of waymo, and now we're offering our servi",
+      "url": "https://waymo.com/blog/shorts/dallas-open-to-all/"
+    },
+    {
+      "quote": "avis budget group to manage its fleet of all-electric autonomous jaguar i-pace vehicles. avis handles general depot oper",
+      "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/"
+    },
+    {
+      "quote": "for now, riders won't be able to hail a ride to dallas love field airport",
+      "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/"
+    },
+    {
+      "quote": "we continue fully autonomous testing at dallas love field airport terminals and look forward to serving travelers there",
+      "url": "https://waymo.com/blog/shorts/dallas-open-to-all/"
+    }
   ],
   "slides": [
-    { "type": "hook",
+    {
+      "type": "hook",
       "kicker": "Août 2026 · Dallas",
       "headline": "Dallas ouvre le *taxi sans chauffeur* à tout le monde",
-      "hero": { "value": "150 000", "label": "passagers pendant la phase de liste d'attente" },
-      "swipe": "Les reçus sont sur chaque diapositive." },
-    { "type": "content",
+      "hero": {
+        "value": "150 000",
+        "label": "passagers pendant la phase de liste d'attente"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "content",
       "title": "Le vrai test de confiance",
       "body": "Depuis février, **près de 150 000 passagers** sont montés à Dallas. Maintenant, plus aucune liste.",
       "evidence": "since opening our service in february, we've welcomed nearly 150,000 riders in dallas from our interest list to experience the safety, reliability, and magic of waymo, and now we're offering our servi",
-      "source": { "name": "Waymo", "url": "https://waymo.com/blog/shorts/dallas-open-to-all/", "date": "2026-08-04" } },
-    { "type": "content",
+      "source": {
+        "name": "Waymo",
+        "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+        "date": "2026-08-04"
+      }
+    },
+    {
+      "type": "content",
       "title": "La liste d'attente a sauté",
       "body": "Waymo a retiré la liste d'attente: **résidents et visiteurs** peuvent commander une course immédiatement, depuis l'appli.",
       "evidence": "waymo said tuesday that anyone can now download the app and immediately hail one of its robotaxis in dallas",
-      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/", "date": "2026-08-04" } },
-    { "type": "contrast",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/",
+        "date": "2026-08-04"
+      }
+    },
+    {
+      "type": "contrast",
       "claim": "Ouvert à tous, après des mois de tests avec liste d'attente",
       "caveat": "En mai, le service avait été suspendu: pluies violentes et routes inondées",
       "claimLabel": "L'annonce",
       "caveatLabel": "Le rappel",
       "evidence": "in may, waymo paused its service in dallas, houston, and san antonio, texas, as well as atlanta, due to problems with how its robotaxis handled heavy rain and f",
-      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/", "date": "2026-08-04" } },
-    { "type": "content",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/",
+        "date": "2026-08-04"
+      }
+    },
+    {
+      "type": "content",
       "title": "La dernière étape",
       "body": "**Pas encore l'aéroport**: les tests continuent aux terminaux, et les autoroutes sont la dernière étape avant d'ouvrir ces trajets au public.",
       "evidence": "begin fully autonomous testing on dallas freeways, which is the final step before offering these routes to public riders",
-      "source": { "name": "Waymo", "url": "https://waymo.com/blog/shorts/dallas-open-to-all/", "date": "2026-08-04" } },
-    { "type": "cta",
+      "source": {
+        "name": "Waymo",
+        "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+        "date": "2026-08-04"
+      }
+    },
+    {
+      "type": "cta",
       "headline": "Envoie ça à *celui* qui jure qu'il ne montera jamais dans une voiture sans chauffeur",
-      "sub": "Les sources sont sur chaque diapositive." }
+      "sub": "Les sources sont sur chaque diapositive."
+    }
   ],
   "sources": [
-    { "name": "Waymo", "url": "https://waymo.com/blog/shorts/dallas-open-to-all/", "accessed": "2026-08-04" },
-    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/", "accessed": "2026-08-04" }
+    {
+      "name": "Waymo",
+      "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+      "accessed": "2026-08-04"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/",
+      "accessed": "2026-08-04"
+    }
   ],
   "reel2": {
     "mood": "drive",
     "lang": "fr",
     "title": "Dallas ouvre le taxi sans chauffeur à tous",
     "beats": [
-      { "script": "Un taxi sans personne au volant, tu peux en commander un ce soir à Dallas. La liste d'attente vient de sauter, tout le monde peut monter.",
-        "visual": { "type": "veo", "spec": {
-          "subject": "a single autonomous electric taxi with a rooftop sensor dome",
-          "action": "rolling steadily toward the camera along a wide avenue, staying whole and centered in frame",
-          "setting": "a calm downtown avenue in early evening light, the road otherwise empty",
-          "composition": "medium shot, low angle" } } },
-      { "script": "Et la vraie question, c'est: qui monte dans une voiture vide ? Beaucoup plus de monde que tu crois.",
-        "visual": { "type": "image", "spec": {
-          "subject": "the empty front seat of an electric taxi seen from the back seat",
-          "setting": "in a bright interior in daylight",
-          "composition": "close-up over the seat back" } } },
-      { "script": "Depuis février, Waymo, l'entreprise du groupe Alphabet, la maison mère de Google, testait le service avec une liste d'attente. Près de 150 000 passagers sont montés pendant cette période.",
-        "visual": { "type": "screenshot", "url": "https://waymo.com/blog/shorts/dallas-open-to-all/" } },
-      { "script": "La voiture, c'est ce SUV électrique bardé de capteurs, géré avec le loueur Avis. Tu télécharges l'appli, elle arrive, sans personne devant.",
-        "visual": { "type": "photo", "query": "waymo jaguar", "alt": "Un robotaxi Waymo, un SUV électrique Jaguar I-Pace couvert de capteurs", "file": "media/2026-08-05-waymo-dallas/photo_sensor.jpg", "credit": "9yz · CC BY 4.0" } },
-      { "script": "Sauf que tout n'est pas gagné. En mai, Waymo a suspendu le service à Dallas, Houston, San Antonio et Atlanta: ses voitures géraient mal les pluies violentes et les routes inondées.",
-        "visual": { "type": "screenshot", "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/" } },
-      { "script": "Donc il reste des limites. Pas de course vers l'aéroport de Dallas Love Field pour l'instant, les tests continuent là-bas, et l'autoroute arrive juste après.",
-        "visual": { "type": "image", "spec": {
-          "subject": "a bright airport terminal hall with a large departure board",
-          "setting": "in daylight through tall glass windows",
-          "composition": "wide interior shot" } } },
-      { "script": "Près de 150 000 passagers pendant la seule phase de liste d'attente. C'est le vrai test de confiance, et il est passé.",
-        "visual": { "type": "card", "value": "150 000", "label": "passagers pendant la liste d'attente, à Dallas" } },
-      { "script": "Phoenix, Los Angeles, San Francisco: à chaque fois, tester puis ouvrir à tous. La suite annoncée: l'Europe. Abonne-toi pour l'actu IA de demain, et laisse un like.",
-        "visual": { "type": "photo", "query": "waymo jaguar san francisco", "alt": "Un robotaxi Waymo dans une rue de San Francisco", "file": "media/2026-08-05-waymo-dallas/photo_sf.jpg", "credit": "Dllu · CC BY 4.0" } }
+      {
+        "script": "Un taxi sans personne au volant, tu peux en commander un ce soir à Dallas. La liste d'attente vient de sauter, tout le monde peut monter.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single autonomous electric taxi with a rooftop sensor dome",
+            "action": "rolling steadily toward the camera along a wide avenue, staying whole and centered in frame",
+            "setting": "a calm downtown avenue in early evening light, the road otherwise empty",
+            "composition": "medium shot, low angle"
+          },
+          "file": "media/2026-08-05-waymo-dallas/veo_0.mp4"
+        }
+      },
+      {
+        "script": "Et la vraie question, c'est: qui monte dans une voiture vide ? Beaucoup plus de monde que tu crois.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "the empty front seat of an electric taxi seen from the back seat",
+            "setting": "in a bright interior in daylight",
+            "composition": "close-up over the seat back"
+          },
+          "file": "media/2026-08-05-waymo-dallas/still_1.jpg"
+        }
+      },
+      {
+        "script": "Depuis février, Waymo, l'entreprise du groupe Alphabet, la maison mère de Google, testait le service avec une liste d'attente. Près de 150 000 passagers sont montés pendant cette période.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+          "file": "media/2026-08-05-waymo-dallas/shot_2.png"
+        }
+      },
+      {
+        "script": "La voiture, c'est ce SUV électrique bardé de capteurs, géré avec le loueur Avis. Tu télécharges l'appli, elle arrive, sans personne devant.",
+        "visual": {
+          "type": "photo",
+          "query": "waymo jaguar",
+          "alt": "Un robotaxi Waymo, un SUV électrique Jaguar I-Pace couvert de capteurs",
+          "file": "media/2026-08-05-waymo-dallas/photo_sensor.jpg",
+          "credit": "9yz · CC BY 4.0"
+        }
+      },
+      {
+        "script": "Sauf que tout n'est pas gagné. En mai, Waymo a suspendu le service à Dallas, Houston, San Antonio et Atlanta: ses voitures géraient mal les pluies violentes et les routes inondées.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/",
+          "file": "media/2026-08-05-waymo-dallas/shot_4.png"
+        }
+      },
+      {
+        "script": "Donc il reste des limites. Pas de course vers l'aéroport de Dallas Love Field pour l'instant, les tests continuent là-bas, et l'autoroute arrive juste après.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a bright airport terminal hall with a large departure board",
+            "setting": "in daylight through tall glass windows",
+            "composition": "wide interior shot"
+          },
+          "file": "media/2026-08-05-waymo-dallas/still_5.jpg"
+        }
+      },
+      {
+        "script": "Près de 150 000 passagers pendant la seule phase de liste d'attente. C'est le vrai test de confiance, et il est passé.",
+        "visual": {
+          "type": "card",
+          "value": "150 000",
+          "label": "passagers pendant la liste d'attente, à Dallas"
+        }
+      },
+      {
+        "script": "Phoenix, Los Angeles, San Francisco: à chaque fois, tester puis ouvrir à tous. La suite annoncée: l'Europe. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "waymo jaguar san francisco",
+          "alt": "Un robotaxi Waymo dans une rue de San Francisco",
+          "file": "media/2026-08-05-waymo-dallas/photo_sf.jpg",
+          "credit": "Dllu · CC BY 4.0"
+        }
+      }
     ]
   }
 }

@@ -36,3 +36,4 @@
 {"at":"2026-08-04T11:16:59.041Z","slug":"2026-08-04-fcc-robots-humanoides","words":202,"seconds":61.76,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-3}
 {"at":"2026-08-04T11:17:33.085Z","slug":"2026-08-04-fcc-robots-humanoides","words":202,"seconds":56.88,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-1.1}
 {"at":"2026-08-04T17:08:26.532Z","slug":"2026-08-04-congres-chatgpt","words":199,"seconds":56.92,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.9}
+{"at":"2026-08-05T16:48:54.802Z","slug":"2026-08-05-waymo-dallas","words":201,"seconds":55.76,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":0.3}

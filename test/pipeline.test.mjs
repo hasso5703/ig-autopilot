@@ -1271,6 +1271,37 @@ test("the hook card and the end-card ride above the karaoke", async () => {
   assert.ok(!/TITLE|ENDBIG|ENDFOLLOW/.test(plain.split("[Events]")[1]), "no opts, no fixed layers — old call sites unchanged");
 });
 
+test("karaoke never merges a lone word across a silenced card beat", async () => {
+  const { buildAss } = await import("../src/reel2.mjs");
+  // Three beats: speech ending on a lone word, a card (silenced), speech
+  // starting on a lone word. On 2026-08-05 the singleton-merge stitched the
+  // last word of beat 0 and the first word of beat 2 into one line whose
+  // window covered the whole card ("APRÈS PHOENIX").
+  const words = [
+    { w: "l'autoroute", s: 0.0, e: 0.5 }, { w: "arrive", s: 0.5, e: 0.9 }, { w: "juste", s: 0.9, e: 1.2 },
+    { w: "après.", s: 1.2, e: 1.5 },
+    { w: "cent", s: 1.6, e: 2.0 }, { w: "cinquante", s: 2.0, e: 2.4 }, { w: "mille", s: 2.4, e: 2.8 },
+    { w: "passagers", s: 2.8, e: 3.2 }, { w: "sont", s: 3.2, e: 3.5 }, { w: "montés.", s: 3.5, e: 3.9 },
+    { w: "Phoenix,", s: 4.0, e: 4.4 }, { w: "Los", s: 4.4, e: 4.7 }, { w: "Angeles,", s: 4.7, e: 5.1 },
+    { w: "San", s: 5.1, e: 5.4 }, { w: "Francisco.", s: 5.4, e: 5.8 },
+  ];
+  const beats = [
+    { script: "l'autoroute arrive juste après.", visual: { type: "image" } },
+    { script: "cent cinquante mille passagers sont montés.", visual: { type: "card", value: "150 000", label: "passagers" } },
+    { script: "Phoenix, Los Angeles, San Francisco.", visual: { type: "image" } },
+  ];
+  const ranges = [{ start: 0, end: 3 }, { start: 4, end: 9 }, { start: 10, end: 14 }];
+  const ass = buildAss(words, beats, ranges, "FF8A3D");
+  const karaoke = ass.split("\n").filter((l) => l.startsWith("Dialogue: 0,"));
+  assert.ok(!karaoke.some((l) => /APRÈS.*PHOENIX/.test(l)),
+    "the last word before the card and the first word after it never share a line");
+  for (const l of karaoke) {
+    const [, s, e] = l.match(/Dialogue: 0,([\d:.]+),([\d:.]+),/);
+    const toS = (t) => { const [h, m, sec] = t.split(":"); return (+h) * 3600 + (+m) * 60 + (+sec); };
+    assert.ok(!(toS(s) < 1.6 && toS(e) > 3.9), "no karaoke line spans the silenced card window");
+  }
+});
+
 test("the known-facts lint catches the Hugging Face incident, in both languages", async () => {
   const { factIssues } = await import("../src/validate.mjs");
   assert.ok(factIssues("il a piraté Hugging Face, le site où les développeurs du monde entier stockent leur code").length, "the exact published sentence is refused");

@@ -735,9 +735,15 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
   });
   if (chunk.length) chunks.push(chunk);
   // A lone word makes a caption that flickers; give it back to its sentence —
-  // unless the reunion itself would overflow the line.
+  // unless the reunion itself would overflow the line, or the two chunks are
+  // not adjacent words. The adjacency check is what keeps a merged line from
+  // spanning a silenced card beat: the last word before the card and the first
+  // word after it are neighbours in `chunks` but not on the clock, and a line
+  // built from both ("APRÈS PHOENIX", 2026-08-05) sits on screen for the whole
+  // card as a nonsense caption the card silencing was meant to prevent.
   for (let i = chunks.length - 1; i > 0; i--) {
     if (chunks[i].length === 1 && chunks[i - 1].length < KARAOKE_MAX_WORDS + 1 &&
+        chunks[i][0].i === chunks[i - 1].at(-1).i + 1 &&
         chunkChars(chunks[i - 1]) + 1 + chunkChars(chunks[i]) <= capFor(chunks[i - 1][0].i)) {
       chunks[i - 1].push(...chunks[i]);
       chunks.splice(i, 1);
