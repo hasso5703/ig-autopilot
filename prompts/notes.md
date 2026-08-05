@@ -101,6 +101,12 @@ ENTRIES:
 - 2026-07-28 · Cold container costs: npm install ~40s, ffmpeg install ~40s,
   Whisper venv bootstrap ~2min + 140MB model, first Kokoro-free run. Budget
   them before the story work, not during. Proof: journals 27-28/07.
+  Ajout 05/08: un premier build complet a froid (venv Whisper + narration +
+  veo + stills + captures + rendu) depasse la fenetre de 10 min d'un outil
+  Bash en avant-plan: le build du 05/08 a ete TUE a l'assemblage a ~13 min.
+  Lance reel2.mjs en arriere-plan (run_in_background). Un build tue apres les
+  achats ne perd rien: epingle tout ce qui est sur disque avec `file` et
+  relance dans le MEME dossier, le rebuild du 05/08 a coute $0.
 - 2026-07-28 · Land state on main ONLY via `node src/land.mjs "msg" [paths]`.
   Local `main` is clone-time state, not truth; a checkout nearly erased
   posted.jsonl on 28/07. Never force-push, ever. Proof: run report 28/07.
@@ -433,6 +439,14 @@ ENTRIES:
   un mur Akamai "Access Denied" plein cadre, deux builds de suite. Remplacement
   mesure: thenextweb.com repond 200 au fetch gate, porte les chiffres CNBC
   verbatim, et se capture proprement du premier coup (titre TNW + chapo).
+  Ajout 05/08: waymo.com/blog (pages /shorts/) est le meme piege que
+  blog.google en pire: banniere cookies Google en bas ET la capture s'ouvre
+  sur le masthead du blog (Waypoint, Topic, Search blog), le titre de
+  l'article est SOUS le pli et n'apparait pas du tout. Le recu utile est le
+  bloc hero WAYMO + ville en bas de la capture: recadre
+  (`crop=1290:893:0:1400` le 05/08) et epingle avec `file`. Un recadrage qui
+  garde le HAUT de cette capture donne un recu 100% plomberie qui passe tous
+  les controles.
   Ajout 03/08 (17h): euronews.com a rendu une page BLANCHE (14 ko) tenue 7,3 s
   en beat 5. Cause: son CMP (bouton "Agree and close") monte TARD, donc a 2,5 s
   il n'y avait rien a cliquer ni a retirer, et le modal blanc couvrait l'article
