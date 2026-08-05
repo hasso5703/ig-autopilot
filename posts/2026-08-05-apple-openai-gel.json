@@ -68,7 +68,11 @@
     "title": "Apple veut faire geler le gadget secret d'OpenAI",
     "beats": [
       { "script": "Le prochain gadget d'OpenAI est peut-être construit avec des secrets volés chez Apple. C'est Apple qui l'affirme, et elle demande à un juge de tout geler.",
-        "visual": { "type": "screenshot", "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/" } },
+        "visual": { "type": "veo", "spec": {
+          "subject": "an unmarked electronic device prototype",
+          "action": "slowly turning over in a gloved hand, the device staying whole and centered in frame",
+          "setting": "in a bright workshop in daylight",
+          "composition": "close-up on the device" } } },
       { "script": "Et ce que décrit sa plainte ressemble à de l'espionnage industriel. Tu veux savoir ce que ses anciens salariés auraient emporté ?",
         "visual": { "type": "image", "spec": {
           "subject": "a confidential document with technical diagrams displayed on a screen",
@@ -81,10 +85,7 @@
       { "script": "Certains, aujourd'hui chez OpenAI, ont même recontacté Apple après la plainte, pour rendre les appareils de travail qu'ils avaient gardés en partant.",
         "visual": { "type": "screenshot", "url": "https://www.engadget.com/2230042/apple-claims-that-even-more-ex-employees-may-have-given-trade-secrets-to-openai/" } },
       { "script": "Donc Apple demande le blocage: interdire à OpenAI d'avancer sur tout appareil construit à partir de sa technologie. Et elle exige d'inspecter ses appareils et ses comptes.",
-        "visual": { "type": "image", "spec": {
-          "subject": "an unmarked electronic device prototype held in a gloved hand",
-          "setting": "in a bright workshop in daylight",
-          "composition": "close-up on the device" } } },
+        "visual": { "type": "screenshot", "url": "https://9to5mac.com/2026/08/04/apple-preliminary-injunction-openai/" } },
       { "script": "Sauf qu'OpenAI répond que tout est faux: elle dit n'avoir, et ne vouloir, aucun secret d'Apple. Et elle qualifie la plainte de bizarrement personnelle.",
         "visual": { "type": "card", "value": "FAUX", "label": "la réponse d'OpenAI à la demande de blocage d'Apple" } },
       { "script": "Un juge tranchera le 1er octobre. D'ici là, le développement continue, et Apple répète que les dégâts s'aggravent. Abonne-toi pour l'actu IA de demain, et laisse un like.",
