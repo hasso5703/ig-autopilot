@@ -105,3 +105,7 @@
 {"at":"2026-08-05T16:51:20.653Z","slug":"2026-08-05-waymo-dallas","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
 {"at":"2026-08-05T16:51:35.896Z","slug":"2026-08-05-waymo-dallas","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1283}
 {"at":"2026-08-05T16:56:37.053Z","slug":"2026-08-05-waymo-dallas","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1297}
+{"at":"2026-08-05T19:47:19.363Z","slug":"2026-08-05-apple-openai-gel","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"57.8s Sadaltager","usd":0.0289}
+{"at":"2026-08-05T19:51:00.074Z","slug":"2026-08-05-apple-openai-gel","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-05T19:51:12.539Z","slug":"2026-08-05-apple-openai-gel","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1281}
+{"at":"2026-08-05T20:22:10.560Z","slug":"2026-08-05-apple-openai-gel","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1294}
