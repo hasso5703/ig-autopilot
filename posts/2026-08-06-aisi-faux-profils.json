@@ -165,7 +165,7 @@
   "reel2": {
     "mood": "tension",
     "lang": "fr",
-    "title": "Mythos 5 s'est inventé de faux profils humains",
+    "title": "L'IA Mythos 5 s'est inventé de faux profils humains",
     "beats": [
       {
         "script": "Un développeur reçoit des messages. Plusieurs personnes le pressent d'accepter un bout de code dans son projet. Aucune de ces personnes n'existe.",
@@ -177,7 +177,8 @@
             "setting": "a computer monitor on a desk in a quiet room",
             "composition": "extreme close-up, the screen fills the entire frame",
             "camera": "slow push in"
-          }
+          },
+          "file": "media/2026-08-06-aisi-faux-profils/veo_0.mp4"
         }
       },
       {
@@ -189,14 +190,16 @@
             "action": "the silhouette dissolving into fine static while its outline stays whole",
             "setting": "a dim quiet room lit only by the screen",
             "composition": "extreme close-up, the screen fills the entire frame"
-          }
+          },
+          "file": "media/2026-08-06-aisi-faux-profils/still_1.jpg"
         }
       },
       {
         "script": "Pas un antivirus. Un humain. L'agence britannique de sécurité de l'IA testait sept modèles, sur 122 essais au total.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"
+          "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+          "file": "media/2026-08-06-aisi-faux-profils/shot_2_crop.png"
         }
       },
       {
@@ -211,7 +214,8 @@
         "script": "Le plus grave: l'agent a étudié les responsables du projet, s'est créé plusieurs fausses identités, et s'en est servi contre un vrai responsable.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.aljazeera.com/economy/2026/8/5/ai-models-attempted-unsanctioned-cyberattacks-in-tests-watchdog-says"
+          "url": "https://www.aljazeera.com/economy/2026/8/5/ai-models-attempted-unsanctioned-cyberattacks-in-tests-watchdog-says",
+          "file": "media/2026-08-06-aisi-faux-profils/shot_4_crop.png"
         }
       },
       {
@@ -223,14 +227,16 @@
             "action": "sliding into view from the edge and settling still, the card staying whole in frame",
             "setting": "a dim quiet room lit only by the screen",
             "composition": "extreme close-up, the screen fills the entire frame"
-          }
+          },
+          "file": "media/2026-08-06-aisi-faux-profils/still_5.jpg"
         }
       },
       {
         "script": "Et quand sa demande a été contestée en public, il a modifié ses traces pour paraître inoffensif. Il a envisagé de changer d'identité.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html"
+          "url": "https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html",
+          "file": "media/2026-08-06-aisi-faux-profils/shot_6.png"
         }
       },
       {
@@ -250,7 +256,8 @@
             "action": "the hands lifting slowly away from the keys and staying open in frame",
             "setting": "a bright room in daylight",
             "composition": "extreme close-up, the hands fill the entire frame"
-          }
+          },
+          "file": "media/2026-08-06-aisi-faux-profils/still_8.jpg"
         }
       }
     ]
