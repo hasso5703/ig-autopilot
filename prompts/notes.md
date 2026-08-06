@@ -102,7 +102,16 @@ ENTRIES:
   couper. Et pour tester une capture hors moteur, il FAUT rejouer le
   `ctx.route` de reel2 (fulfill via fetch Node) et passer `proxy`: un
   Playwright nu prend ERR_CONNECTION_RESET sur tous les domaines et ne prouve
-  rien.
+  rien. Ajout 06/08 (19h30): deepmind.google/blog repond 200 au fetch gate
+  (157 ko) et porte le texte entier de l'annonce, c'est un primaire joignable
+  au meme titre que blog.google. MAIS le piege du soir n'etait pas l'acces,
+  c'etait la CORROBORATION: sur une annonce de labo vieille de 4 h, la seule
+  reprise existante etait venturebeat.com, qui a rendu 429 puis 503 en quatre
+  minutes, et aucun autre media joignable ne portait l'histoire. Une actu de
+  labo publiee dans l'apres-midi n'a souvent PAS de second domaine avant le
+  lendemain matin: c'est un `revisit`, pas un `considered`, et ca se teste en
+  5 minutes (fetch du concurrent + une recherche) AVANT d'ecrire quoi que ce
+  soit.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -125,6 +134,14 @@ ENTRIES:
 - 2026-07-28 · Land state on main ONLY via `node src/land.mjs "msg" [paths]`.
   Local `main` is clone-time state, not truth; a checkout nearly erased
   posted.jsonl on 28/07. Never force-push, ever. Proof: run report 28/07.
+  Ajout 06/08 (19h30), PIEGE DE SHELL a la publication: le CLI imprime TOUTES
+  ses reponses en JSON, donc `publish-reel.mjs url <slug>` sort l'URL AVEC ses
+  guillemets. `URL=$(node src/publish-reel.mjs url <slug> | tail -1)` capture
+  donc `"https://..."` et le dry-run meurt sur `FAILED: the video URL is not
+  fetchable (Failed to parse URL from ...)`. Ce n'est ni le reseau ni l'URL:
+  c'est une paire de guillemets. Pipe le dans `tr -d '\"' | xargs` avant de
+  l'exporter. Echec bruyant, gratuit, attrape par le dry-run (rien n'est
+  publie), mais il coute un aller-retour a chaque run qui script cette etape.
 - 2026-08-01 · Le filtre "l'image montre quelque chose de l'histoire" compare
   des mots RACINISES (state.mjs tokens/stem), et la racine casse au pluriel:
   "spheres" donne "spher", "sphere" donne "sphere", donc un spec au pluriel ne
@@ -285,6 +302,20 @@ ENTRIES:
   dirigeants, teste les visages AVANT d'ecrire les beats: le script doit nommer
   en premier la personne dont tu as le portrait, sinon le spectateur attribue le
   visage au nom prononce.
+  Ajout 06/08 (19h30), dossier passage de relais Google, trois requetes qui
+  marchent du premier coup et sont parties au build sans epinglage manuel:
+  "jeff dean google" (Purdue Engineering, 1600x1200 reel, CC BY, il parle en
+  gros plan devant une slide Google, excellent beat 0), "sundar pichai"
+  (portrait Lukasz Kobus / Commission europeenne, CC BY, DEJA en portrait,
+  drapeau UE derriere, identite verifiee a l'oeil) et "googleplex sign"
+  (domaine public). Donc sur une actu de dirigeants Google, Dean/Pichai/le
+  panneau sont disponibles la ou Hassabis, Koray et Vinyals ne le sont pas
+  (mesure du 06/08 10h30 ci-dessus): construis le script autour des visages
+  que tu as. Mesure aussi ce soir pour le dossier WeatherNext mis en revisit:
+  l'imagerie de cyclones est ABONDANTE et en domaine public, "hurricane
+  satellite" sort du 4200x5400 CC0 (Kirk 2024) et "hurricane melissa" sort
+  quatre vues CIRA 2025-10-26 dont une intitulee "Rapid Intensification of
+  Hurricane Melissa", soit exactement la phrase que raconte l'histoire.
   Ajout 03/08: ne "monte" JAMAIS a la main la resolution d'une image rawpixel.
   Openverse sert /editor_1024/<cle>.jpg (1024 px, propre); la MEME cle en
   /image_1300/ rend 1300 px avec le filigrane "rawpixel" en travers du cadre, et
@@ -520,6 +551,12 @@ ENTRIES:
   portait a lui seul l'attribution ("AI Security Institute says Mythos 5
   attempted to insert malicious code..."), donc le recadrage n'est pas cosmetique,
   c'est ce qui garde la preuve dans le cadre.
+  Ajout 06/08 (19h30), re-confirme EN MOTEUR sur blog.google: la capture sort
+  en ~20 s (1 seule frame utile), la banniere cookies est toujours en bas, et
+  `crop=1290:2250:0:0` la coupe avec de la marge tout en gardant logo Google,
+  titre, "5 min read" et LES DEUX signatures ("Demis Hassabis / Chair, Google
+  DeepMind and Chief Scientist, Alphabet") plus l'editor's note qui nomme
+  Koray. discoveryloop.com se capture propre du premier coup, 0 pub, 0 mur.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
@@ -553,3 +590,12 @@ ENTRIES:
   console.log(JSON.stringify(t.slice(i,i+400)))"` puis recasse a la main.
   Elle minuscule tout, donc relis la casse; elle seule connait ses
   normalisations.
+  Ajout 06/08 (19h30), la variante UNVERIFIABLE de la meme toux reseau: un
+  re-gate d'un spec deja PASSED est revenu `ok:false` avec les 19 controles
+  en UNVERIFIABLE sur les QUATRE domaines a la fois (blog.google, cnbc,
+  9to5google, discoveryloop). Quatre domaines qui tombent ensemble a la
+  seconde pres, ce n'est pas quatre articles reecrits, c'est la sortie reseau
+  du conteneur. Les deux relances suivantes ont rendu PASSED, 0 erreur. Regle
+  generale: un echec de gate EN LOT (tous statuts identiques, tous domaines)
+  se relance avant d'etre diagnostique; c'est un echec SELECTIF (une citation,
+  un domaine) qui accuse vraiment le texte.
