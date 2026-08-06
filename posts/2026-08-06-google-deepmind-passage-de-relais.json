@@ -33,6 +33,10 @@
     {
       "quote": "Demis will become the chair of GDM and chief scientist of Alphabet, while continuing to lead Isomorphic Labs.",
       "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    },
+    {
+      "quote": "Historically, scientific progress has relied on these sequential human iterations. In many domains, this process remains incredibly slow and labor-intensive.",
+      "url": "https://www.discoveryloop.com/"
     }
   ],
   "slides": [
@@ -118,12 +122,12 @@
     {
       "type": "content",
       "title": "Discovery Loop veut retirer le goulot humain",
-      "body": "La société veut lancer des milliers d'expériences en même temps. Son communiqué désigne *les itérations humaines lentes* comme le frein.",
-      "evidence": "Discovery Loop says it plans to use high-octane algorithms to initiate and iterate thousands of experiments simultaneously, with the goal of partially automating the research process and expanding the scale at which experimentation can be conducted.",
+      "body": "La société veut lancer des milliers d'expériences **en parallèle**. Son site parle d'automatiser *la boucle expérimentale* entière.",
+      "evidence": "At Discovery Loop, we are building systems to automate these entire experimental loops. By utilizing frontier AI models and large-scale computational infrastructure, our systems will be able to rapidly propose, run, and learn from evaluations. This approach allows for the parallel execution of thousands of experiments, drastically compressing iteration time and driving up the quantity and quality of scientific and engineering output.",
       "source": {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
-        "date": "2026-08-05"
+        "name": "Discovery Loop",
+        "url": "https://www.discoveryloop.com/",
+        "date": "2026-08-06"
       }
     },
     {
@@ -183,7 +187,7 @@
         "script": "Jeff Dean, lui, monte Discovery Loop avec Sanjay Ghemawat. Elle veut lancer des milliers d'expériences scientifiques en même temps, parce que, dit-elle, ce sont les humains qui ralentissent tout.",
         "visual": {
           "type": "screenshot",
-          "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/"
+          "url": "https://www.discoveryloop.com/"
         }
       },
       {
@@ -223,6 +227,11 @@
     {
       "name": "9to5Google",
       "url": "https://9to5google.com/2026/08/05/demis-hassabis-deepmind/",
+      "accessed": "2026-08-06"
+    },
+    {
+      "name": "Discovery Loop",
+      "url": "https://www.discoveryloop.com/",
       "accessed": "2026-08-06"
     }
   ]

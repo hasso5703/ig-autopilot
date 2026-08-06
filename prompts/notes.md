@@ -489,13 +489,19 @@ ENTRIES:
   CONSENT_SELECTORS dans CHAQUE page.frames(), deux fois, avec un timeout de
   1,2 s par selecteur qui ne trouve rien. Sur une page bourree d'iframes de
   regie ca domine tout le reste du build. Mesure: techcrunch.com rend 36 frames
-  (donc 36 x 6 x 1,2 s x 2 = ~8,6 min pour UN recu), 9to5google.com n'a pas fini
-  en 10 min sur deux essais, blog.google se capture en ~40 s. Donc un recu lent
+  (donc 36 x 6 x 1,2 s x 2 = ~8,6 min pour UN recu, et il MEURT en route:
+  "Target page, context or browser has been closed", aucun fichier ecrit),
+  9to5google.com n'a pas fini en 10 min sur deux essais, blog.google se capture
+  en ~40 s et discoveryloop.com en 20,5 s avec 1 SEULE frame. La correlation
+  frames/duree est nette dans les deux sens. Donc un recu lent
   n'accuse NI le domaine NI le reseau: compte les frames avant de conclure
   (`page.frames().length` juste apres le goto). Et budgetise-le comme un achat:
   deux recus lourds ajoutent ~15 min a un build, ce qui suffit a expliquer une
   mort a l'assemblage. Quand le plan le permet, prends un recu leger (le blog du
-  primaire) + des photos Commons reelles plutot que trois recus de presse.
+  primaire) + des photos Commons reelles plutot que trois recus de presse. Le
+  meilleur recu leger sur une actu d'entreprise, c'est le SITE DE L'ENTREPRISE:
+  discoveryloop.com rend son nom + sa mission en pleine page, 0 pub, 0 mur de
+  cookies, et c'est le primaire.
   Re-confirme ce jour-la: blog.google garde sa banniere cookies en bas et
   `crop=1290:2293:0:0` la coupe pile, en laissant titre + chapo + les deux
   signatures (c'etait le recu ideal: il imprime "Demis Hassabis / Chair, Google
