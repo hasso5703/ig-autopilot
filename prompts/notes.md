@@ -506,7 +506,21 @@ ENTRIES:
   `crop=1290:2293:0:0` la coupe pile, en laissant titre + chapo + les deux
   signatures (c'etait le recu ideal: il imprime "Demis Hassabis / Chair, Google
   DeepMind and Chief Scientist, Alphabet").
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08.
+  Ajout 06/08 (16h30), dossier AISI, trois recus mesures EN MOTEUR: aisi.gov.uk
+  se capture en ~1 min et `crop=1290:2293:0:0` coupe pile la banniere cookies
+  (la mesure hors moteur du scout de 06h30 a tenu telle quelle en moteur).
+  csoonline.com se capture proprement du PREMIER coup en ~1 min, sans recadrage:
+  logo CSO + signature + titre + date + chapo, 0 pub. aljazeera.com se capture
+  mais a pris ~8,5 MIN pour ce seul recu (meme famille O(frames) que techcrunch,
+  sauf qu'il SURVIT au lieu de mourir): ne le declare pas mort avant ~10 min, et
+  budgetise-le comme un achat. Il garde en bas un mur de confidentialite plein
+  cadre ("You rely on Al Jazeera for truth and transparency" + Allow all /
+  Reject all) qui survit aux deux passes de consentement; `crop=1290:2200:0:0`
+  le coupe et laisse logo + titre + chapo. Sur ce dossier le chapo d'aljazeera
+  portait a lui seul l'attribution ("AI Security Institute says Mythos 5
+  attempted to insert malicious code..."), donc le recadrage n'est pas cosmetique,
+  c'est ce qui garde la preuve dans le cadre.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
