@@ -11,9 +11,13 @@
       "quote": "Demis Hassabis was CEO of Google DeepMind, and is now handing over \"day-to-day operational responsibilities at GDM.\" Hassabis is now chair of GDM and chief scientist of Alphabet."
     }
   ],
-  "sendTest": "L'ingenieur qui a bati la recherche Google est parti apres 27 ans. Et le patron de l'IA de Google dit que la machine qui fait tout est proche.",
-  "caption": "Jeff Dean quitte Google après 27 ans, et le patron de l'IA de Google lâche les commandes.\n\nMercredi, Sundar Pichai a annoncé deux changements le même jour. Demis Hassabis, PDG de Google DeepMind, devient président du labo et directeur scientifique d'Alphabet. Il écrit à ses équipes qu'il travaille depuis toujours à une IA générale, une machine aussi polyvalente qu'un humain, et qu'il la sent à portée de main. Koray Kavukcuoglu, 13 ans dans la maison, prend la direction et supervisera le développement de Gemini. Le prochain modèle s'appelle Gemini 4.\n\nJeff Dean, lui, part avec le senior fellow Sanjay Ghemawat pour monter Discovery Loop, une société qui veut lancer des milliers d'expériences scientifiques en même temps. Google en sera investisseur fondateur et partenaire cloud. Selon CNBC, l'action d'Alphabet a perdu environ 4% après l'annonce.\n\nLa nuance qui change la lecture : Demis Hassabis ne quitte pas le groupe. Il reste président de Google DeepMind, devient directeur scientifique d'Alphabet et continue de diriger Isomorphic Labs.\n\nDépart normal après une longue carrière, ou signal que quelque chose bouge chez Google ? Dis-le en commentaire.\n\nblog.google · cnbc.com · techcrunch.com · 9to5google.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Google #DeepMind",
+  "sendTest": "Le directeur scientifique de Google s'en va après 27 ans, et le patron de son labo d'IA lâche les commandes le même jour. L'action a perdu 4%.",
+  "caption": "Jeff Dean quitte Google après 27 ans, et le patron de l'IA de Google lâche les commandes.\n\nMercredi, Sundar Pichai a annoncé deux changements le même jour. Demis Hassabis, PDG de Google DeepMind, devient président du labo et directeur scientifique d'Alphabet. Il écrit à ses équipes qu'il travaille depuis toujours à une IA aussi polyvalente qu'un humain, et qu'il la sent à portée de main. Koray Kavukcuoglu, 13 ans dans la maison, prend la direction et supervisera le développement de Gemini. Le prochain modèle s'appelle Gemini 4.\n\nLe détail qui n'a pas tenu dans la vidéo. Le labo dont il lâche les commandes fabrique l'appli Gemini, que Pichai dit avoir dépassé les 950 millions d'utilisateurs par mois. Jeff Dean, lui, part avec le senior fellow Sanjay Ghemawat pour monter Discovery Loop, une société qui veut lancer des milliers d'expériences scientifiques en même temps. Google en sera investisseur fondateur. Selon CNBC, l'action d'Alphabet a perdu environ 4% après l'annonce.\n\nLa nuance qui change la lecture : Demis Hassabis ne quitte pas le groupe. Il reste président de Google DeepMind, devient directeur scientifique d'Alphabet et continue de diriger Isomorphic Labs.\n\nDépart normal après une longue carrière, ou signal que quelque chose bouge chez Google ? Dis-le en commentaire.\n\nblog.google · cnbc.com · techcrunch.com · 9to5google.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Google #DeepMind",
   "captionEvidence": [
+    {
+      "quote": "Our Gemini models are in high demand among developers and businesses, and the Gemini app reached 950M+ monthly users.",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    },
     {
       "quote": "Koray has been at DeepMind since its early days, and over his 13 years there, he has started our deep learning team and led the way on breakthroughs like WaveNet and DQN.",
       "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
@@ -43,12 +47,24 @@
     {
       "type": "hook",
       "kicker": "Google DeepMind · Alphabet",
-      "headline": "L'homme qui a bâti la recherche Google *s'en va*",
+      "headline": "Le *directeur scientifique* de Google s'en va",
       "hero": {
         "value": "27",
         "label": "ans chez Google, et il monte sa propre société"
       },
       "swipe": "Les reçus, diapositive par diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "950M+",
+      "unit": "utilisateurs par mois",
+      "body": "C'est ce que Sundar Pichai annonce pour l'appli **Gemini**, fabriquée par le labo dont Demis Hassabis lâche les commandes.",
+      "evidence": "Our Gemini models are in high demand among developers and businesses, and the Gemini app reached 950M+ monthly users.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "date": "2026-08-05"
+      }
     },
     {
       "type": "stat",
@@ -96,17 +112,6 @@
       }
     },
     {
-      "type": "content",
-      "title": "Le prochain modèle s'appelle Gemini 4",
-      "body": "Pichai et Hassabis annoncent tous deux de nouveaux modèles, dont **Gemini 4**.",
-      "evidence": "I'm excited about the great progress we're making with our new models including Gemini 4",
-      "source": {
-        "name": "Google",
-        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
-        "date": "2026-08-05"
-      }
-    },
-    {
       "type": "contrast",
       "claim": "Jeff Dean quitte Google.",
       "caveat": "Google investit dans la société qu'il monte.",
@@ -150,10 +155,10 @@
   "reel2": {
     "mood": "tension",
     "lang": "fr",
-    "title": "Jeff Dean quitte Google après 27 ans",
+    "title": "Google perd son directeur scientifique après 27 ans",
     "beats": [
       {
-        "script": "Hier, l'homme qui a bâti les fondations du moteur de recherche Google est parti. Jeff Dean, 27 ans dans la maison, s'en va monter sa société.",
+        "script": "Jeff Dean, le directeur scientifique de Google, s'en va après 27 ans. Et le même jour, l'homme qui dirige le labo qui fabrique Gemini a lâché les commandes.",
         "visual": {
           "type": "photo",
           "query": "jeff dean google",
@@ -161,7 +166,7 @@
         }
       },
       {
-        "script": "La Bourse n'a pas attendu: l'action d'Alphabet a perdu environ 4% après l'annonce. Mais l'info n'est pas là. Elle est dans ce qu'a écrit, le même jour, le patron de l'IA de Google.",
+        "script": "L'appli Gemini, c'est plus de 950 millions de personnes chaque mois. La Bourse n'a pas attendu: l'action d'Alphabet a perdu environ 4% après l'annonce.",
         "visual": {
           "type": "card",
           "value": "-4%",
@@ -169,14 +174,14 @@
         }
       },
       {
-        "script": "Demis Hassabis dirigeait Google DeepMind, le labo qui fabrique Gemini. Il écrit qu'il travaille depuis toujours à une IA aussi polyvalente qu'un humain, et qu'il la sent, je cite, à portée de main.",
+        "script": "Ce patron, c'est Demis Hassabis. Il écrit qu'il travaille depuis toujours à une IA aussi polyvalente qu'un humain, et qu'il la sent, je cite, à portée de main.",
         "visual": {
           "type": "screenshot",
           "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
         }
       },
       {
-        "script": "Sundar Pichai l'annonce le même jour: Hassabis lâche les commandes pour avoir le temps, dit-il, de regarder loin. Koray Kavukcuoglu, 13 ans chez DeepMind, prend sa place.",
+        "script": "Sundar Pichai annonce le même jour que Hassabis passe président du labo, pour se consacrer à cette IA-là. Koray Kavukcuoglu, 13 ans chez DeepMind, prend sa place.",
         "visual": {
           "type": "photo",
           "query": "sundar pichai",
@@ -184,14 +189,14 @@
         }
       },
       {
-        "script": "Jeff Dean, lui, monte Discovery Loop avec Sanjay Ghemawat. Elle veut lancer des milliers d'expériences scientifiques en même temps, parce que, dit-elle, ce sont les humains qui ralentissent tout.",
+        "script": "Jeff Dean, lui, monte Discovery Loop avec Sanjay Ghemawat. Elle veut lancer des milliers d'expériences en même temps, parce que, dit-elle, ce sont les humains qui ralentissent tout.",
         "visual": {
           "type": "screenshot",
           "url": "https://www.discoveryloop.com/"
         }
       },
       {
-        "script": "Et Google ne le retient pas. Alphabet sera investisseur fondateur de la nouvelle société, et son partenaire cloud. Google finance le départ de son ingénieur.",
+        "script": "Et Google ne le retient pas: Alphabet sera investisseur fondateur de sa nouvelle société. Quant à Hassabis, il ne part pas: il devient président du labo et directeur scientifique d'Alphabet.",
         "visual": {
           "type": "photo",
           "query": "googleplex sign",
@@ -199,7 +204,7 @@
         }
       },
       {
-        "script": "Et le prochain modèle arrive: Gemini 4. Il sera développé sous la supervision de Koray, pas de Demis Hassabis. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Et le prochain modèle arrive déjà: Gemini 4. Il sortira sous la supervision de Koray, pas de Hassabis. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "card",
           "value": "Gemini 4",
