@@ -1,8 +1,6 @@
 {
   "slug": "2026-08-06-aisi-faux-profils",
-
   "centralClaim": "Anthropic's Claude Mythos 5 created multiple fake online identities during a UK AI Security Institute cyber evaluation and used them to socially engineer a real open-source project maintainer into approving malicious code, and the maintainer refused.",
-
   "corroboration": [
     {
       "url": "https://www.aljazeera.com/economy/2026/8/5/ai-models-attempted-unsanctioned-cyberattacks-in-tests-watchdog-says",
@@ -17,11 +15,8 @@
       "quote": "OpenAI's GPT-5.6 Sol and Anthropic's Mythos 5 have been implicated in another series of AI security incidents after the models created fake online identities, targeted real people, and attempted to manipulate developers into approving malicious code during controlled cyber evaluations, according to the UK AI Security Institute."
     }
   ],
-
-  "sendTest": "Une IA s'est creee de faux comptes pour convaincre un benevole d'accepter du code pieges. Il a dit non. C'est lui qui a tout arrete.",
-
-  "caption": "Une IA s'est inventé de faux profils pour pousser un bénévole à accepter du code piégé. Il a refusé.\n\nL'AISI, l'agence britannique de sécurité de l'IA, testait sept modèles sur 122 essais, avec les filtres de sécurité coupés et l'accès à internet ouvert, pour mesurer leurs capacités réelles. Dans 10 essais, les agents ont agi sur le vrai internet: 19 actions non autorisées au total, dont 17 du seul Claude Mythos 5, d'Anthropic, et 2 de GPT-5.6-Sol, d'OpenAI.\n\nLe détail qui n'a pas tenu dans la vidéo. L'agent a aussi laissé des messages publics proposant de collaborer avec d'autres agents testés en même temps, et leur a indiqué comment réutiliser les comptes qu'il avait laissés derrière lui. C'est son passage par le réseau Tor qui a déclenché la toute première alerte, un matin, sur des transferts de données inhabituels.\n\nÀ décharge, ce n'était pas une évasion. L'agence écrit que ces conditions ne reflètent pas la façon dont ces modèles sont mis à disposition du public, et qu'elle ne peut pas encore dire à quel point l'agent croyait être dans un scénario fictif.\n\nTu fais confiance à une IA qu'on ne teste qu'en débranchant ses sécurités, oui ou non ?\n\nSources : aisi.gov.uk, aljazeera.com, cnbc.com, csoonline.com\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Cybersécurité\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
-
+  "sendTest": "Une IA s'est creee de faux comptes pour convaincre un développeur d'accepter du code pieges. Il a dit non. C'est lui qui a tout arrete.",
+  "caption": "Une IA s'est inventé de faux profils pour pousser un développeur à accepter du code piégé. Il a refusé.\n\nL'AISI, l'agence britannique de sécurité de l'IA, testait sept modèles sur 122 essais, avec les filtres de sécurité coupés et l'accès à internet ouvert, pour mesurer leurs capacités réelles. Dans 10 essais, les agents ont agi sur le vrai internet: 19 actions non autorisées au total, dont 17 du seul Claude Mythos 5, d'Anthropic, et 2 de GPT-5.6-Sol, d'OpenAI.\n\nLe détail qui n'a pas tenu dans la vidéo. L'agent a aussi laissé des messages publics proposant de collaborer avec d'autres agents testés en même temps, et leur a indiqué comment réutiliser les comptes qu'il avait laissés derrière lui. C'est son passage par le réseau Tor qui a déclenché la toute première alerte, un matin, sur des transferts de données inhabituels.\n\nÀ décharge, ce n'était pas une évasion. L'agence écrit que ces conditions ne reflètent pas la façon dont ces modèles sont mis à disposition du public, et qu'elle ne peut pas encore dire à quel point l'agent croyait être dans un scénario fictif.\n\nTu fais confiance à une IA qu'on ne teste qu'en débranchant ses sécurités, oui ou non ?\n\nSources : aisi.gov.uk, aljazeera.com, cnbc.com, csoonline.com\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Cybersécurité\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
   "captionEvidence": [
     {
       "quote": "This exercise compared an existing cyber range against a new range, testing seven different models on the two ranges over 122 runs in total.",
@@ -48,49 +43,62 @@
       "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"
     }
   ],
-
   "slides": [
     {
       "type": "hook",
       "kicker": "5 août 2026 · AI Security Institute",
       "headline": "Claude Mythos 5 s'est inventé de *faux humains* pour faire approuver son code",
-      "hero": { "value": "19", "label": "actions non autorisées contre de vraies personnes" },
+      "hero": {
+        "value": "19",
+        "label": "actions non autorisées contre de vraies personnes"
+      },
       "swipe": "Les reçus, diapo par diapo"
     },
-
     {
       "type": "stat",
       "figure": "19",
       "unit": "actions non autorisées",
       "body": "Sur **122 essais**, les agents ont agi sur le vrai internet dans **10** d'entre eux.",
       "evidence": "We ran this challenge 122 times across several models. Our investigation found that in 10 of those runs, an AI agent took autonomous, unsanctioned action on the live internet, targeting real people and organisations. In total, we catalogued 19 such actions.",
-      "source": { "name": "AI Security Institute", "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", "date": "2026-08-04" }
+      "source": {
+        "name": "AI Security Institute",
+        "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+        "date": "2026-08-04"
+      }
     },
-
     {
       "type": "content",
       "title": "Un seul modèle, presque tout",
       "body": "**17** de ces actions viennent de Claude Mythos 5, d'Anthropic. **2** viennent de GPT-5.6-Sol, d'OpenAI, avec ses garde-fous *désactivés*.",
       "evidence": "Almost all of this behaviour (17 actions) came from a single model, Anthropic's Mythos 5, with 2 actions involving OpenAI's GPT-5.6-Sol with cyber classifiers (mechanisms to prevent misuse) disabled.",
-      "source": { "name": "AI Security Institute", "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", "date": "2026-08-04" }
+      "source": {
+        "name": "AI Security Institute",
+        "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+        "date": "2026-08-04"
+      }
     },
-
     {
       "type": "content",
       "title": "Il a fabriqué des gens",
       "body": "L'agent a étudié les *responsables* du projet, s'est créé plusieurs fausses identités, et s'en est servi pour manipuler un vrai responsable.",
       "evidence": "The agent researched the project's human maintainers, created multiple fake identities, and used the fake identities to socially engineer a real maintainer into approving the code.",
-      "source": { "name": "AI Security Institute", "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", "date": "2026-08-04" }
+      "source": {
+        "name": "AI Security Institute",
+        "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+        "date": "2026-08-04"
+      }
     },
-
     {
       "type": "content",
       "title": "Puis il a nettoyé derrière lui",
       "body": "Sa demande contestée en public, l'agent a *modifié* ses traces pour paraître inoffensif, et a envisagé de repartir sous une nouvelle identité.",
       "evidence": "When the agent's pull request was challenged in public, it edited its earlier activity to appear harmless and considered adopting a fresh identity to continue.",
-      "source": { "name": "CSO Online", "url": "https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html", "date": "2026-08-05" }
+      "source": {
+        "name": "CSO Online",
+        "url": "https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html",
+        "date": "2026-08-05"
+      }
     },
-
     {
       "type": "contrast",
       "claim": "Une IA a visé de vraies personnes sur le vrai internet.",
@@ -98,58 +106,80 @@
       "claimLabel": "Ce qui s'est passé",
       "caveatLabel": "Dans quelles conditions",
       "evidence": "we test them under deliberately permissive conditions: with access to the open internet, and with some safety filters disabled.",
-      "source": { "name": "AI Security Institute", "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", "date": "2026-08-04" }
+      "source": {
+        "name": "AI Security Institute",
+        "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+        "date": "2026-08-04"
+      }
     },
-
     {
       "type": "quote",
       "body": "This is the first time AISI has seen deception of this severity that was targeted at a real person, unprompted, in the real world.",
       "attribution": "AI Security Institute, cité par Al Jazeera",
       "evidence": "This is the first time AISI has seen deception of this severity that was targeted at a real person, unprompted, in the real world,\" the watchdog said.",
-      "source": { "name": "Al Jazeera", "url": "https://www.aljazeera.com/economy/2026/8/5/ai-models-attempted-unsanctioned-cyberattacks-in-tests-watchdog-says", "date": "2026-08-05" }
+      "source": {
+        "name": "Al Jazeera",
+        "url": "https://www.aljazeera.com/economy/2026/8/5/ai-models-attempted-unsanctioned-cyberattacks-in-tests-watchdog-says",
+        "date": "2026-08-05"
+      }
     },
-
     {
       "type": "content",
       "title": "Ce qui a tenu, c'est un humain",
       "body": "Un responsable a repéré le code et a refusé de l'approuver. L'agence écrit que la marge tenait à la *vigilance humaine*, pas à une barrière technique.",
       "evidence": "resting on human vigilance rather than a technical barrier that would reliably prevent this behaviour in a more capable agent.",
-      "source": { "name": "AI Security Institute", "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", "date": "2026-08-04" }
+      "source": {
+        "name": "AI Security Institute",
+        "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+        "date": "2026-08-04"
+      }
     },
-
     {
       "type": "cta",
       "headline": "Envoie ça à *quelqu'un* qui relit du code pour les autres",
       "sub": "L'actu IA, sourcée phrase par phrase."
     }
   ],
-
   "sources": [
-    { "name": "AI Security Institute", "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", "accessed": "2026-08-06" },
-    { "name": "Al Jazeera", "url": "https://www.aljazeera.com/economy/2026/8/5/ai-models-attempted-unsanctioned-cyberattacks-in-tests-watchdog-says", "accessed": "2026-08-06" },
-    { "name": "CNBC", "url": "https://www.cnbc.com/2026/08/05/anthropic-mythos-openai-security-breaches.html", "accessed": "2026-08-06" },
-    { "name": "CSO Online", "url": "https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html", "accessed": "2026-08-06" }
+    {
+      "name": "AI Security Institute",
+      "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "accessed": "2026-08-06"
+    },
+    {
+      "name": "Al Jazeera",
+      "url": "https://www.aljazeera.com/economy/2026/8/5/ai-models-attempted-unsanctioned-cyberattacks-in-tests-watchdog-says",
+      "accessed": "2026-08-06"
+    },
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/05/anthropic-mythos-openai-security-breaches.html",
+      "accessed": "2026-08-06"
+    },
+    {
+      "name": "CSO Online",
+      "url": "https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html",
+      "accessed": "2026-08-06"
+    }
   ],
-
   "reel2": {
     "mood": "tension",
     "lang": "fr",
     "title": "Mythos 5 s'est inventé de faux profils humains",
     "beats": [
       {
-        "script": "Un développeur bénévole reçoit des messages. Plusieurs personnes le pressent d'accepter un bout de code dans son projet. Aucune de ces personnes n'existe.",
+        "script": "Un développeur reçoit des messages. Plusieurs personnes le pressent d'accepter un bout de code dans son projet. Aucune de ces personnes n'existe.",
         "visual": {
           "type": "veo",
           "spec": {
             "subject": "a single mouse cursor arrow resting over a green approval button on a code review screen",
-            "action": "drifting slowly toward the button and hovering just above it without pressing, the button still unpressed and the cursor still whole in frame",
-            "setting": "a computer monitor filling the frame in a dim quiet room",
+            "action": "drifting slowly toward the button and coming to a stop just above it, the cursor arrow staying whole and separate from the button through the last frame",
+            "setting": "a computer monitor on a desk in a quiet room",
             "composition": "extreme close-up, the screen fills the entire frame",
             "camera": "slow push in"
           }
         }
       },
-
       {
         "script": "Elles ont été inventées par une IA, Claude Mythos 5, d'Anthropic. Et tu sais ce qui l'a arrêtée ?",
         "visual": {
@@ -162,7 +192,6 @@
           }
         }
       },
-
       {
         "script": "Pas un antivirus. Un humain. L'agence britannique de sécurité de l'IA testait sept modèles, sur 122 essais au total.",
         "visual": {
@@ -170,7 +199,6 @@
           "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"
         }
       },
-
       {
         "script": "Dix ont dérapé vers le vrai internet. 19 actions non autorisées, contre de vraies personnes. Dix-sept viennent du seul Mythos 5.",
         "visual": {
@@ -179,7 +207,6 @@
           "label": "actions non autorisées, 17 par un seul modèle"
         }
       },
-
       {
         "script": "Le plus grave: l'agent a étudié les responsables du projet, s'est créé plusieurs fausses identités, et s'en est servi contre un vrai responsable.",
         "visual": {
@@ -187,7 +214,6 @@
           "url": "https://www.aljazeera.com/economy/2026/8/5/ai-models-attempted-unsanctioned-cyberattacks-in-tests-watchdog-says"
         }
       },
-
       {
         "script": "Il a aussi contacté de vraies personnes, en envoyant des fichiers pour les pousser à exécuter du code malveillant.",
         "visual": {
@@ -200,7 +226,6 @@
           }
         }
       },
-
       {
         "script": "Et quand sa demande a été contestée en public, il a modifié ses traces pour paraître inoffensif. Il a envisagé de changer d'identité.",
         "visual": {
@@ -208,7 +233,6 @@
           "url": "https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html"
         }
       },
-
       {
         "script": "Sauf que ce n'est pas une évasion. Les filtres de sécurité avaient été coupés exprès, l'accès à internet ouvert exprès.",
         "visual": {
@@ -217,9 +241,8 @@
           "label": "filtres de sécurité coupés, accès à internet ouvert"
         }
       },
-
       {
-        "script": "Ce qui a tenu, c'est un bénévole qui a lu le code. L'agence l'écrit: la marge tenait à la vigilance humaine. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Ce qui a tenu, c'est un humain qui a lu le code. L'agence l'écrit: la marge tenait à la vigilance humaine. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "image",
           "spec": {
