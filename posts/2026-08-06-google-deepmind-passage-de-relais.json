@@ -1,0 +1,229 @@
+{
+  "slug": "2026-08-06-google-deepmind-passage-de-relais",
+  "centralClaim": "Google announced that Demis Hassabis is handing over day-to-day operational responsibilities at Google DeepMind and becoming chair of Google DeepMind and chief scientist of Alphabet, while chief scientist Jeff Dean is leaving Google after 27 years to launch his own company.",
+  "corroboration": [
+    {
+      "url": "https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html",
+      "quote": "Google's AI divisions are getting reshuffled, the search giant announced on Wednesday, with chief scientist Jeff Dean leaving the company after 27 years. Demis Hassabis, the CEO of Google DeepMind, is moving into a chairman role of that unit and also assuming the title chief scientist of parent company Alphabet, according to a memo from CEO Sundar Pichai that was posted to Google's blog."
+    },
+    {
+      "url": "https://9to5google.com/2026/08/05/demis-hassabis-deepmind/",
+      "quote": "Demis Hassabis was CEO of Google DeepMind, and is now handing over \"day-to-day operational responsibilities at GDM.\" Hassabis is now chair of GDM and chief scientist of Alphabet."
+    }
+  ],
+  "sendTest": "L'ingenieur qui a bati la recherche Google est parti apres 27 ans. Et le patron de l'IA de Google dit que la machine qui fait tout est proche.",
+  "caption": "Jeff Dean quitte Google après 27 ans, et le patron de l'IA de Google lâche les commandes.\n\nMercredi, Sundar Pichai a annoncé deux changements le même jour. Demis Hassabis, PDG de Google DeepMind, devient président du labo et directeur scientifique d'Alphabet. Il écrit à ses équipes qu'il travaille depuis toujours à une IA générale, une machine aussi polyvalente qu'un humain, et qu'il la sent à portée de main. Koray Kavukcuoglu, 13 ans dans la maison, prend la direction et supervisera le développement de Gemini. Le prochain modèle s'appelle Gemini 4.\n\nJeff Dean, lui, part avec le senior fellow Sanjay Ghemawat pour monter Discovery Loop, une société qui veut lancer des milliers d'expériences scientifiques en même temps. Google en sera investisseur fondateur et partenaire cloud. Selon CNBC, l'action d'Alphabet a perdu environ 4% après l'annonce.\n\nLa nuance qui change la lecture : Demis Hassabis ne quitte pas le groupe. Il reste président de Google DeepMind, devient directeur scientifique d'Alphabet et continue de diriger Isomorphic Labs.\n\nDépart normal après une longue carrière, ou signal que quelque chose bouge chez Google ? Dis-le en commentaire.\n\nblog.google · cnbc.com · techcrunch.com · 9to5google.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Google #DeepMind",
+  "captionEvidence": [
+    {
+      "quote": "Koray has been at DeepMind since its early days, and over his 13 years there, he has started our deep learning team and led the way on breakthroughs like WaveNet and DQN.",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    },
+    {
+      "quote": "I'm excited about the great progress we're making with our new models including Gemini 4",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    },
+    {
+      "quote": "Alphabet shares fell about 4% after the announcement.",
+      "url": "https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html"
+    },
+    {
+      "quote": "After an incredible 27-year run, Jeff Dean is at a moment where he wants to try something new, and we're excited to support him in that. Jeff and Google senior fellow Sanjay Ghemawat are launching an independent public benefit corporation to accelerate discoveries in ML, science, and engineering.",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    },
+    {
+      "quote": "Demis will become the chair of GDM and chief scientist of Alphabet, while continuing to lead Isomorphic Labs.",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Google DeepMind · Alphabet",
+      "headline": "L'homme qui a bâti la recherche Google *s'en va*",
+      "hero": {
+        "value": "27",
+        "label": "ans chez Google, et il monte sa propre société"
+      },
+      "swipe": "Les reçus, diapositive par diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "27",
+      "unit": "ans chez Google",
+      "body": "Jeff Dean part avec le senior fellow **Sanjay Ghemawat**. Les deux lancent une société indépendante à but d'intérêt public.",
+      "evidence": "After an incredible 27-year run, Jeff Dean is at a moment where he wants to try something new, and we're excited to support him in that. Jeff and Google senior fellow Sanjay Ghemawat are launching an independent public benefit corporation to accelerate discoveries in ML, science, and engineering.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "I've been working towards AGI my whole life and now, like many of you, I feel it is close at hand.",
+      "attribution": "Demis Hassabis, dans son message aux équipes de Google DeepMind",
+      "evidence": "I've been working towards AGI my whole life and now, like many of you, I feel it is close at hand.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Il lâche les commandes du labo",
+      "body": "Hassabis dit vouloir *le temps et l'espace* de regarder loin. Il devient président de Google DeepMind et directeur scientifique d'Alphabet.",
+      "evidence": "With this backdrop, I've decided that now is the right time for me to hand over my day-to-day operational responsibilities at GDM, so that I have the time and space to focus on the big picture and help influence what is to come to the best of my ability.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Koray Kavukcuoglu prend le labo",
+      "body": "L'ancien directeur technique de Google DeepMind devient **vice-président senior** et supervisera le développement de Gemini.",
+      "evidence": "Google DeepMind will now be led by Koray Kavukcuoglu. He was previously chief technology officer of GDM and will now become senior vice president (SVP), reporting to Pichai.",
+      "source": {
+        "name": "9to5Google",
+        "url": "https://9to5google.com/2026/08/05/demis-hassabis-deepmind/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le prochain modèle s'appelle Gemini 4",
+      "body": "Pichai et Hassabis annoncent tous deux de nouveaux modèles, dont **Gemini 4**.",
+      "evidence": "I'm excited about the great progress we're making with our new models including Gemini 4",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Jeff Dean quitte Google.",
+      "caveat": "Google investit dans la société qu'il monte.",
+      "claimLabel": "Le départ",
+      "caveatLabel": "Le financement",
+      "evidence": "We'll continue to work with them as a founding investor and cloud partner, and collaborate on a research framework for ML systems and related infrastructure advances.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Discovery Loop veut retirer le goulot humain",
+      "body": "La société veut lancer des milliers d'expériences en même temps. Son communiqué désigne *les itérations humaines lentes* comme le frein.",
+      "evidence": "Discovery Loop says it plans to use high-octane algorithms to initiate and iterate thousands of experiments simultaneously, with the goal of partially automating the research process and expanding the scale at which experimentation can be conducted.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La Bourse a réagi le jour même",
+      "body": "L'action d'Alphabet a perdu environ **4%** après l'annonce, selon CNBC.",
+      "evidence": "Alphabet shares fell about 4% after the announcement.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui bosse chez Google",
+      "sub": "L'actu IA, vérifiée, sources sur chaque diapositive."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Jeff Dean quitte Google après 27 ans",
+    "beats": [
+      {
+        "script": "Hier, l'homme qui a bâti les fondations du moteur de recherche Google est parti. Jeff Dean, 27 ans dans la maison, s'en va monter sa société.",
+        "visual": {
+          "type": "photo",
+          "query": "jeff dean google",
+          "alt": "Jeff Dean lors d'une conférence sur l'apprentissage automatique"
+        }
+      },
+      {
+        "script": "La Bourse n'a pas attendu: l'action d'Alphabet a perdu environ 4% après l'annonce. Mais l'info n'est pas là. Elle est dans ce qu'a écrit, le même jour, le patron de l'IA de Google.",
+        "visual": {
+          "type": "card",
+          "value": "-4%",
+          "label": "l'action d'Alphabet après l'annonce"
+        }
+      },
+      {
+        "script": "Demis Hassabis dirigeait Google DeepMind, le labo qui fabrique Gemini. Il écrit qu'il travaille depuis toujours à une IA aussi polyvalente qu'un humain, et qu'il la sent, je cite, à portée de main.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+        }
+      },
+      {
+        "script": "Sundar Pichai l'annonce le même jour: Hassabis lâche les commandes pour avoir le temps, dit-il, de regarder loin. Koray Kavukcuoglu, 13 ans chez DeepMind, prend sa place.",
+        "visual": {
+          "type": "photo",
+          "query": "sundar pichai",
+          "alt": "Sundar Pichai, directeur général de Google et d'Alphabet"
+        }
+      },
+      {
+        "script": "Jeff Dean, lui, monte Discovery Loop avec Sanjay Ghemawat. Elle veut lancer des milliers d'expériences scientifiques en même temps, parce que, dit-elle, ce sont les humains qui ralentissent tout.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/"
+        }
+      },
+      {
+        "script": "Et Google ne le retient pas. Alphabet sera investisseur fondateur de la nouvelle société, et son partenaire cloud. Google finance le départ de son ingénieur.",
+        "visual": {
+          "type": "photo",
+          "query": "googleplex sign",
+          "alt": "Le panneau d'accueil du siège de Google en Californie"
+        }
+      },
+      {
+        "script": "Et le prochain modèle arrive: Gemini 4. Il sera développé sous la supervision de Koray, pas de Demis Hassabis. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "card",
+          "value": "Gemini 4",
+          "label": "le prochain modèle de Google"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Google",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+      "accessed": "2026-08-06"
+    },
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html",
+      "accessed": "2026-08-06"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
+      "accessed": "2026-08-06"
+    },
+    {
+      "name": "9to5Google",
+      "url": "https://9to5google.com/2026/08/05/demis-hassabis-deepmind/",
+      "accessed": "2026-08-06"
+    }
+  ]
+}

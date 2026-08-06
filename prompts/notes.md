@@ -273,6 +273,18 @@ ENTRIES:
   mauvaise personne. Mesure 01/08 aussi: AUCUNE photo documentaire de datacenter n'est atteignable
   ici ("data center server hall" 0 candidat, "data center" sort le batiment NSA
   d'Utah, "server room rack" des salles bleues rawpixel). N'y passe pas de temps.
+  Ajout 06/08 (10h30), dossier Google DeepMind: certains noms tres connus n'ont
+  AUCUNE photo libre atteignable ici. Zero candidat pour "demis hassabis",
+  "hassabis", "demis hassabis official portrait", "koray kavukcuoglu", "oriol
+  vinyals", "google deepmind london office". Et "quoc le" est le piege du
+  homonyme en pire: les deux premiers candidats sont l'ile de Phu Quoc au
+  Vietnam (7.0). Repondent bien: "jeff dean google" (1768x1326 reel, CC BY 3.0
+  Purdue Engineering, il parle devant une slide "Machine Learning" + "Google",
+  parfait), "sundar pichai" (plusieurs, dont un 1656x2184 deja en portrait) et
+  "googleplex sign" (1600x1200, domaine public). Donc sur une actu de
+  dirigeants, teste les visages AVANT d'ecrire les beats: le script doit nommer
+  en premier la personne dont tu as le portrait, sinon le spectateur attribue le
+  visage au nom prononce.
   Ajout 03/08: ne "monte" JAMAIS a la main la resolution d'une image rawpixel.
   Openverse sert /editor_1024/<cle>.jpg (1024 px, propre); la MEME cle en
   /image_1300/ rend 1300 px avec le filigrane "rawpixel" en travers du cadre, et
@@ -472,7 +484,23 @@ ENTRIES:
   iframe/[class*=player]/aside a la liste, la page est revenue blanche a
   nouveau, le conteneur d'article y passe. Et euronews garde une pub Invesco en
   bas a droite: recadrer `crop=1290:1800:0:0` garde titre + signature + chapo.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08.
+  Ajout 06/08 (10h30), CORRIGE le "un clic qui ne trouve rien ne coute rien"
+  ci-dessus: c'est FAUX, et le cout est en O(frames). La passe essaie les 6
+  CONSENT_SELECTORS dans CHAQUE page.frames(), deux fois, avec un timeout de
+  1,2 s par selecteur qui ne trouve rien. Sur une page bourree d'iframes de
+  regie ca domine tout le reste du build. Mesure: techcrunch.com rend 36 frames
+  (donc 36 x 6 x 1,2 s x 2 = ~8,6 min pour UN recu), 9to5google.com n'a pas fini
+  en 10 min sur deux essais, blog.google se capture en ~40 s. Donc un recu lent
+  n'accuse NI le domaine NI le reseau: compte les frames avant de conclure
+  (`page.frames().length` juste apres le goto). Et budgetise-le comme un achat:
+  deux recus lourds ajoutent ~15 min a un build, ce qui suffit a expliquer une
+  mort a l'assemblage. Quand le plan le permet, prends un recu leger (le blog du
+  primaire) + des photos Commons reelles plutot que trois recus de presse.
+  Re-confirme ce jour-la: blog.google garde sa banniere cookies en bas et
+  `crop=1290:2293:0:0` la coupe pile, en laissant titre + chapo + les deux
+  signatures (c'etait le recu ideal: il imprime "Demis Hassabis / Chair, Google
+  DeepMind and Chief Scientist, Alphabet").
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
