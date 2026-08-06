@@ -162,7 +162,9 @@
         "visual": {
           "type": "photo",
           "query": "jeff dean google",
-          "alt": "Jeff Dean lors d'une conférence sur l'apprentissage automatique"
+          "alt": "Jeff Dean lors d'une conférence sur l'apprentissage automatique",
+          "file": "media/2026-08-06-google-deepmind-passage-de-relais/photo_0.jpg",
+          "credit": "Purdue Engineering · CC BY"
         }
       },
       {
@@ -177,7 +179,8 @@
         "script": "Ce patron, c'est Demis Hassabis. Il écrit qu'il travaille depuis toujours à une IA aussi polyvalente qu'un humain, et qu'il la sent, je cite, à portée de main.",
         "visual": {
           "type": "screenshot",
-          "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+          "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+          "file": "media/2026-08-06-google-deepmind-passage-de-relais/shot_2.png"
         }
       },
       {
@@ -185,14 +188,17 @@
         "visual": {
           "type": "photo",
           "query": "sundar pichai",
-          "alt": "Sundar Pichai, directeur général de Google et d'Alphabet"
+          "alt": "Sundar Pichai, directeur général de Google et d'Alphabet",
+          "file": "media/2026-08-06-google-deepmind-passage-de-relais/photo_3.jpg",
+          "credit": "Photographer: Lukasz Kobus (Europ… · CC BY"
         }
       },
       {
         "script": "Jeff Dean, lui, monte Discovery Loop avec Sanjay Ghemawat. Elle veut lancer des milliers d'expériences en même temps, parce que, dit-elle, ce sont les humains qui ralentissent tout.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.discoveryloop.com/"
+          "url": "https://www.discoveryloop.com/",
+          "file": "media/2026-08-06-google-deepmind-passage-de-relais/shot_4.png"
         }
       },
       {
@@ -200,7 +206,9 @@
         "visual": {
           "type": "photo",
           "query": "googleplex sign",
-          "alt": "Le panneau d'accueil du siège de Google en Californie"
+          "alt": "Le panneau d'accueil du siège de Google en Californie",
+          "file": "media/2026-08-06-google-deepmind-passage-de-relais/photo_5.jpg",
+          "credit": "Ardo191 at English Wikipedia · Public domain"
         }
       },
       {
