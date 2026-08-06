@@ -87,7 +87,22 @@ ENTRIES:
   dallasinnovates.com. engadget.com re-confirme mais sa reprise du dossier
   Apple-OpenAI credite TechCrunch ("according to a report by techcrunch"):
   pour corroborer, prends 9to5mac ou appleinsider, qui lisent le dossier
-  judiciaire eux-memes.
+  judiciaire eux-memes. Ajout 06/08 (06h30), dossier AISI: repondent 200 au
+  fetch gate ET se capturent proprement du premier coup aisi.gov.uk (blog),
+  aljazeera.com, csoonline.com; cnn.com se gate aussi (200). Bloquent:
+  bleepingcomputer.com (403), bbc.com et theguardian.com (403). venturebeat.com
+  rend 429 sur ses pages article (limite de debit, pas un blocage: reessayer
+  plus tard peut marcher). PIEGE DE CAPTURE sur aisi.gov.uk: banniere cookies
+  "WWW.AISI.GOV.UK uses cookies" + bouton "I understand" collee en BAS de la
+  capture, survit au clic dans les frames, meme famille que blog.google.
+  Remede gratuit: `crop=1290:2293:0:0` garde titre + chapo + date. aljazeera
+  garde un bandeau "Advertisement" fin tout en haut (crop du haut si le beat
+  compte). Sur une actu d'une agence publique, le blog de l'agence est le
+  meilleur recu: titre, chapo et date tiennent dans le cadre 9:16 sans rien
+  couper. Et pour tester une capture hors moteur, il FAUT rejouer le
+  `ctx.route` de reel2 (fulfill via fetch Node) et passer `proxy`: un
+  Playwright nu prend ERR_CONNECTION_RESET sur tous les domaines et ne prouve
+  rien.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
