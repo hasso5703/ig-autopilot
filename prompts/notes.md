@@ -111,7 +111,16 @@ ENTRIES:
   labo publiee dans l'apres-midi n'a souvent PAS de second domaine avant le
   lendemain matin: c'est un `revisit`, pas un `considered`, et ca se teste en
   5 minutes (fetch du concurrent + une recherche) AVANT d'ecrire quoi que ce
-  soit.
+  soit. Ajout 07/08 (06h30), dossier Suno: repondent 200 au fetch gate et se
+  gatent du premier coup suno.com/blog (le primaire), gizmodo.com et
+  engadget.com; techcrunch.com re-confirme. Sur une actu d'entreprise, le blog
+  de la boite porte l'annonce entiere et c'est le recu le plus leger. ET LE
+  PIEGE DU JOUR, a tester AVANT de choisir l'histoire: bloomberg.com rend 403
+  au fetch gate. Une exclu Bloomberg est donc INGATABLE au primaire, et ses
+  reprises (9to5mac, macrumors, siliconangle, androidheadlines, techcrunch)
+  creditent toutes Bloomberg: c'est un seul rapport habille de six domaines,
+  pas une corroboration, meme quand le gate passe au vert. Le reflexe qui
+  coute 30 s: fetch le primaire cite par la depeche avant de scorer l'histoire.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour

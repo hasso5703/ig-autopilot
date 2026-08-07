@@ -1,0 +1,230 @@
+{
+  "slug": "2026-08-07-suno-chansons-marquees",
+  "centralClaim": "Suno announced that it will adopt new audio watermarking and fingerprinting technology so that songs generated on Suno can be identified when they are shared on other streaming platforms, and that it will introduce a new downloads policy limiting mass distribution.",
+  "corroboration": [
+    {
+      "url": "https://suno.com/blog/building-the-future-of-music-responsibly",
+      "quote": "In the coming weeks, we will also be adopting new audio watermarking and fingerprinting technology so we can partner more closely with distribution platforms on combatting fraud and misuse."
+    },
+    {
+      "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561",
+      "quote": "Co-founder and CEO Mikey Shulman wrote in a blog post that the company plans to introduce audio watermarking and fingerprinting technology that will make it easier for music platforms to identify and trace songs created with Suno."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/06/amid-legal-battles-suno-says-it-will-start-watermarking-songs/",
+      "quote": "Suno said that now it will use audio watermarking and fingerprinting to prevent misuse on other streaming platforms."
+    }
+  ],
+  "sendTest": "Un homme a encaissé plus de 8 millions de dollars de droits d'auteur avec des chansons faites par une IA. Il a plaidé coupable.",
+  "caption": "Un homme a encaissé plus de 8 millions de dollars de droits d'auteur avec des chansons faites par une IA.\n\nIl a plaidé coupable cette année: des centaines de milliers de chansons générées, des milliards de fausses écoutes. C'est exactement ce genre d'abus que vise Suno, le service qui permet de créer des chansons avec une IA. Il a annoncé jeudi qu'il adopterait un tatouage audio et une empreinte sonore, pour que ses chansons soient reconnaissables quand elles arrivent sur les plateformes d'écoute, et qu'il limiterait les téléchargements pour empêcher la distribution en masse.\n\nLe détail qui n'a pas tenu dans la vidéo. Les grandes maisons de disques, Sony, Universal et Warner, demandent que les morceaux d'IA qui inondent les classements musicaux du monde entier en soient purement écartés. Suno dit travailler avec Audible Magic et Musixmatch pour filtrer les fichiers et les paroles envoyés sur sa plateforme.\n\nÀ décharge, et c'est la nuance qui compte: rien dans ces sources ne dit quel service l'homme condamné utilisait. Et Suno, qui promet aujourd'hui de faire le ménage, est visé par les plaintes d'Universal et de Sony, et vient d'être jugé en Allemagne pour avoir entraîné son IA sur de la musique protégée. Suno conteste et envisage un appel.\n\nUne chanson faite par une IA devrait être signalée comme telle, oui ou non ?\n\nsuno.com · gizmodo.com · techcrunch.com · engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #Musique #Suno\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Earlier this year, a North Carolina man pleaded guilty to using hundreds of thousands of AI-generated songs and billions of fake streams to collect more than $8 million in royalties.",
+      "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Suno · Musique générée par IA",
+      "headline": "Des chansons d'IA lui rapportent *8 millions*",
+      "hero": {
+        "value": "8 M$",
+        "label": "de droits d'auteur, avant de plaider coupable"
+      },
+      "swipe": "Les reçus, en dessous"
+    },
+    {
+      "type": "stat",
+      "figure": "8 M$",
+      "unit": "de droits d'auteur encaissés",
+      "body": "Un homme de Caroline du Nord a plaidé coupable cette année. **Des centaines de milliers de chansons faites par une IA**, des milliards de fausses écoutes.",
+      "evidence": "Earlier this year, a North Carolina man pleaded guilty to using hundreds of thousands of AI-generated songs and billions of fake streams to collect more than $8 million in royalties.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'arnaque que Suno dit viser",
+      "body": "Fabriquer des chansons en masse, les envoyer sur les plateformes d'écoute, puis payer des robots pour les jouer en boucle. *Rien ne dit quel service l'homme condamné utilisait.*",
+      "evidence": "The changes appear to primarily target schemes in which users generate hundreds and sometimes even thousands of AI songs, upload them to streaming services, and then use bots to repeatedly play the tracks to collect fraudulent royalties.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un tatouage dans le son",
+      "body": "Suno va marquer ses chansons pour qu'on les reconnaisse ailleurs. Les outils sont **conçus pour résister à la falsification**, sans changer ce que tu entends.",
+      "evidence": "In the coming weeks, we will also be adopting new audio watermarking and fingerprinting technology so we can partner more closely with distribution platforms on combatting fraud and misuse. These tools are designed to be durable and resistant to tampering, without affecting the listening experience.",
+      "source": {
+        "name": "Suno",
+        "url": "https://suno.com/blog/building-the-future-of-music-responsibly",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et moins de téléchargements",
+      "body": "Une nouvelle règle doit empêcher la distribution en masse sur les plateformes d'écoute. Suno dit que *la grande majorité de ses utilisateurs ne verra rien changer*.",
+      "evidence": "We will soon introduce a new downloads policy designed to limit the ability to mass distribute songs on streaming platforms, while preserving the professional, creative, and personal ways people use Suno. These changes won't affect the vast majority of our users, but they will make large-scale abuse much harder.",
+      "source": {
+        "name": "Suno",
+        "url": "https://suno.com/blog/building-the-future-of-music-responsibly",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Suno promet de faire le ménage sur les plateformes d'écoute.",
+      "caveat": "Un tribunal allemand vient de juger que Suno avait violé les droits de musiciens.",
+      "claimLabel": "Ce que Suno annonce",
+      "caveatLabel": "Ce qu'un juge a dit",
+      "evidence": "Just last week, a court in Germany ruled that Suno violated the copyrights of musicians represented by GEMA, the country's music-licensing agency. Suno disputed the ruling and is considering its options, including an appeal.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les majors, en face",
+      "body": "Universal et Sony poursuivent Suno pour avoir entraîné son IA **sur leurs enregistrements sans autorisation**. Warner a signé un accord.",
+      "evidence": "Universal Music Group and Sony Music Entertainment are suing the company, accusing it of using copyrighted recordings without permission to train its AI models. Warner Music Group, which was initially part of the lawsuit, settled with Suno last year and reached an agreement allowing participating artists and songwriters to opt into approving the use of their music and likeness in AI-generated songs.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Ils ne sont pas non plus destinés à juger si une chanson est bonne, si elle a du sens, ou si elle est suffisamment humaine.",
+      "attribution": "Mikey Shulman, cofondateur et PDG de Suno",
+      "evidence": "They are also not intended to pass judgment on whether a song is good, meaningful, or sufficiently human.",
+      "source": {
+        "name": "Suno",
+        "url": "https://suno.com/blog/building-the-future-of-music-responsibly",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que veulent les maisons de disques",
+      "body": "Sony, Universal et Warner demandent que les morceaux d'IA *qui inondent les classements* en soient écartés.",
+      "evidence": "but it comes in the wake of a coalition of major music labels, including the big three of Sony Music, Universal Music Group and Warner Music Group, calling for AI slop tracks that are flooding music charts across the world to be disqualified from entering them.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2231870/suno-adding-audio-watermarks-ai-generated-songs-identifiable/",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui écoute de la musique en boucle",
+      "sub": "L'actu IA, vérifiée sur pièces."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Suno",
+      "url": "https://suno.com/blog/building-the-future-of-music-responsibly",
+      "accessed": "2026-08-07"
+    },
+    {
+      "name": "Gizmodo",
+      "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561",
+      "accessed": "2026-08-07"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/06/amid-legal-battles-suno-says-it-will-start-watermarking-songs/",
+      "accessed": "2026-08-07"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/2231870/suno-adding-audio-watermarks-ai-generated-songs-identifiable/",
+      "accessed": "2026-08-07"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Des chansons d'IA lui rapportent 8 millions",
+    "beats": [
+      {
+        "script": "Des chansons faites par une IA inondent les classements musicaux du monde entier. Un homme a encaissé plus de 8 millions de dollars de droits d'auteur. Il a plaidé coupable.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://suno.com/blog/building-the-future-of-music-responsibly"
+        }
+      },
+      {
+        "script": "Cette semaine, Suno, le service qui crée des chansons avec une IA, a réagi. Rien ne dit que cet homme utilisait Suno. Mais c'est ce genre d'abus qu'elle vise.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a music streaming platform open on a phone screen",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "L'arnaque marche comme ça: des milliers de chansons fabriquées, envoyées sur les plateformes, et des robots payés pour les jouer en boucle.",
+        "visual": {
+          "type": "card",
+          "value": "8 M$",
+          "label": "de droits d'auteur, avant de plaider coupable"
+        }
+      },
+      {
+        "script": "Alors Suno va marquer ses chansons. Un tatouage dans le son, que tu n'entends pas, pour les reconnaître quand elles arrivent ailleurs.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.engadget.com/2231870/suno-adding-audio-watermarks-ai-generated-songs-identifiable/"
+        }
+      },
+      {
+        "script": "Et elle va limiter les téléchargements, pour couper la distribution en masse sur les plateformes d'écoute.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "an audio waveform on a computer screen",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Sauf que la boîte qui promet de faire le ménage vient d'être jugée en Allemagne pour avoir violé les droits de musiciens.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561"
+        }
+      },
+      {
+        "script": "Universal et Sony la poursuivent aussi, pour avoir entraîné son IA sur leurs enregistrements sans autorisation. Warner a signé un accord.",
+        "visual": {
+          "type": "card",
+          "value": "Universal",
+          "label": "et Sony poursuivent Suno. Warner a signé un accord."
+        }
+      },
+      {
+        "script": "Suno conteste et envisage un appel. Son tatouage, prévient-elle, ne dira pas si une chanson est bonne, ni si elle est suffisamment humaine. Abonne-toi pour l'actu IA de demain.",
+        "visual": {
+          "type": "photo",
+          "query": "recording studio microphone",
+          "alt": "Un microphone de studio d'enregistrement"
+        }
+      }
+    ]
+  }
+}
