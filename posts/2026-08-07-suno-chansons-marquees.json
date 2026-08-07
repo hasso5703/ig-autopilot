@@ -167,14 +167,16 @@
             "action": "the progress bar sliding steadily to the right as the track plays, the phone still lying flat and whole in frame",
             "setting": "in a bright room in daylight",
             "composition": "extreme close-up, the phone screen filling the entire frame"
-          }
+          },
+          "file": "media/2026-08-07-suno-chansons-marquees/veo_0.mp4"
         }
       },
       {
         "script": "Et les chansons faites par une IA inondent les classements du monde entier. Cette semaine, Suno, le service qui en fabrique, a réagi. Rien ne dit que cet homme l'utilisait.",
         "visual": {
           "type": "screenshot",
-          "url": "https://suno.com/blog/building-the-future-of-music-responsibly"
+          "url": "https://suno.com/blog/building-the-future-of-music-responsibly",
+          "file": "media/2026-08-07-suno-chansons-marquees/shot_1.png"
         }
       },
       {
@@ -189,7 +191,8 @@
         "script": "Alors Suno va marquer ses chansons. Un tatouage dans le son, que tu n'entends pas, pour les reconnaître quand elles arrivent ailleurs.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.engadget.com/2231870/suno-adding-audio-watermarks-ai-generated-songs-identifiable/"
+          "url": "https://www.engadget.com/2231870/suno-adding-audio-watermarks-ai-generated-songs-identifiable/",
+          "file": "media/2026-08-07-suno-chansons-marquees/shot_3.png"
         }
       },
       {
@@ -200,14 +203,16 @@
             "subject": "an audio waveform on a computer screen",
             "setting": "in a bright room in daylight",
             "composition": "extreme close-up, the screen fills the entire frame"
-          }
+          },
+          "file": "media/2026-08-07-suno-chansons-marquees/still_4.jpg"
         }
       },
       {
         "script": "Sauf que la boîte qui promet de faire le ménage vient d'être jugée en Allemagne pour avoir violé les droits de musiciens.",
         "visual": {
           "type": "screenshot",
-          "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561"
+          "url": "https://gizmodo.com/ai-music-startup-suno-is-adding-a-watermark-to-songs-as-legal-troubles-pile-up-2000795561",
+          "file": "media/2026-08-07-suno-chansons-marquees/shot_5_crop.png"
         }
       },
       {
@@ -223,7 +228,9 @@
         "visual": {
           "type": "photo",
           "query": "recording studio microphone",
-          "alt": "Un microphone de studio d'enregistrement"
+          "alt": "Un microphone de studio d'enregistrement",
+          "file": "media/2026-08-07-suno-chansons-marquees/photo_7_pin.jpg",
+          "credit": "The Midnite Wolf · CC0"
         }
       }
     ]
