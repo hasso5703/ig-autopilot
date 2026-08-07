@@ -157,7 +157,9 @@
         "visual": {
           "type": "photo",
           "query": "hurricane melissa",
-          "alt": "vue satellite de l'ouragan Melissa"
+          "alt": "vue satellite de l'ouragan Melissa",
+          "file": "media/2026-08-07-ouragan-un-jour-davance/photo_0.png",
+          "credit": "GOES imagery: CSU/CIRA & NOAA · Domaine public"
         }
       },
       {
@@ -180,7 +182,9 @@
         "visual": {
           "type": "photo",
           "query": "hurricane melissa jamaica",
-          "alt": "Melissa au-dessus de la Jamaïque"
+          "alt": "intensification rapide de Melissa vue par satellite",
+          "file": "media/2026-08-07-ouragan-un-jour-davance/photo_3.png",
+          "credit": "GOES imagery: CSU/CIRA & NOAA · Domaine public"
         }
       },
       {
@@ -188,7 +192,9 @@
         "visual": {
           "type": "photo",
           "query": "jamaica hurricane relief",
-          "alt": "aide humanitaire livrée en Jamaïque"
+          "alt": "une rue de la Jamaïque après le passage de Melissa",
+          "file": "media/2026-08-07-ouragan-un-jour-davance/photo_4.jpg",
+          "credit": "World Central Kitchen · CC BY 4.0"
         }
       },
       {
@@ -211,7 +217,9 @@
         "visual": {
           "type": "photo",
           "query": "hurricane melissa sunset",
-          "alt": "Melissa au coucher du soleil"
+          "alt": "Melissa au coucher du soleil",
+          "file": "media/2026-08-07-ouragan-un-jour-davance/photo_7.png",
+          "credit": "GOES imagery: CSU/CIRA & NOAA · Domaine public"
         }
       }
     ]
