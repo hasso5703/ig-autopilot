@@ -115,3 +115,5 @@
 {"at":"2026-08-06T16:59:06.504Z","slug":"2026-08-06-aisi-faux-profils","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.127}
 {"at":"2026-08-06T17:07:03.559Z","slug":"2026-08-06-aisi-faux-profils","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1289}
 {"at":"2026-08-06T19:50:35.542Z","slug":"2026-08-06-google-deepmind-passage-de-relais","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"58.5s Sadaltager","usd":0.0292}
+{"at":"2026-08-07T16:45:44.891Z","slug":"2026-08-07-ouragan-un-jour-davance","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"49.3s Sadaltager","usd":0.0247}
+{"at":"2026-08-07T16:46:10.492Z","slug":"2026-08-07-ouragan-un-jour-davance","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"52.6s Sadaltager","usd":0.0263}
