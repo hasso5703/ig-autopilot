@@ -121,6 +121,22 @@ ENTRIES:
   creditent toutes Bloomberg: c'est un seul rapport habille de six domaines,
   pas une corroboration, meme quand le gate passe au vert. Le reflexe qui
   coute 30 s: fetch le primaire cite par la depeche avant de scorer l'histoire.
+  Ajout 07/08 (10h30), dossier WeatherNext: repondent 200 au fetch gate et se
+  gatent du premier coup unite.ai et opensourceforu.com (deux reprises de
+  l'annonce Google DeepMind), et deepmind.google/blog se re-confirme. Bloquent
+  au fetch gate sur le dossier Meta/Nouveau-Mexique: theguardian.com, bbc.com,
+  reuters.com, apnews.com, france24.com. Repondent 200: cbsnews.com,
+  edition.cnn.com, pbs.org, cbc.ca, techpolicy.press, npr.org. venturebeat.com
+  re-rend 429 (limite de debit, deuxieme jour de suite). ATTENTION corroboration
+  sur une annonce de labo: unite.ai et opensourceforu ne sont pas des enquetes,
+  ils reecrivent le meme billet + le meme papier Nature. Le gate passe au vert
+  et c'est UNE annonce habillee de trois domaines; ce qui la valide vraiment est
+  externe au web (papier revu par les pairs, forecasters du NHC/CIRA/Met Office
+  co-auteurs). Dis-le dans le rapport plutot que de lire le vert comme une
+  corroboration. ET la coquille du jour, meme famille que le "during the year
+  ending in March 31" de TechCrunch: unite.ai ecrit "cyclones from 2023 through
+  2025" la ou le primaire ecrit "from 2023 to 2024". Le primaire gagne (manuel),
+  et le plus simple est de ne pas faire porter la fourchette au texte public.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -325,6 +341,19 @@ ENTRIES:
   satellite" sort du 4200x5400 CC0 (Kirk 2024) et "hurricane melissa" sort
   quatre vues CIRA 2025-10-26 dont une intitulee "Rapid Intensification of
   Hurricane Melissa", soit exactement la phrase que raconte l'histoire.
+  Confirme et etendu 07/08 (10h30), quatre requetes qui rendent QUATRE images
+  DISTINCTES, toutes reelles et en domaine public (le moteur prend le premier
+  candidat, donc une requete par beat sinon tu recuperes deux fois la meme):
+  "hurricane melissa" -> Light Fades on a Powerful Hurricane Melissa (CIRA,
+  1600x1067), "hurricane melissa jamaica" -> Hurricane Melissa Crosses Jamaica
+  (CIRA 2025-10-28), "hurricane melissa sunset" -> A Stunning View of Hurricane
+  Melissa as the Sun Sets, "jamaica hurricane relief" -> livraison d'aide
+  Ghana/US en Jamaique (1600x1065, de vrais visages, autre famille visuelle).
+  Toutes en 1600 de large et en paysage: le crop 9:16 remonte donc en x1,8,
+  acceptable mais pas net; si un beat 0 doit etre parfait, cherche l'original
+  Commons haute resolution avant d'epingler. Regle generale utile: sur une
+  catastrophe naturelle, l'imagerie satellite NOAA/CIRA est en domaine public
+  et nomme souvent l'evenement exact que raconte le script.
   Ajout 03/08: ne "monte" JAMAIS a la main la resolution d'une image rawpixel.
   Openverse sert /editor_1024/<cle>.jpg (1024 px, propre); la MEME cle en
   /image_1300/ rend 1300 px avec le filigrane "rawpixel" en travers du cadre, et
@@ -599,6 +628,17 @@ ENTRIES:
   console.log(JSON.stringify(t.slice(i,i+400)))"` puis recasse a la main.
   Elle minuscule tout, donc relis la casse; elle seule connait ses
   normalisations.
+  Ajout 07/08 (10h30), FAUX POSITIF DU FILTRE D'ACCENTS, non corrige (un run
+  n'edite pas le gate): NEVER_UNACCENTED teste /\btres\b/ et le \b de JS est
+  ASCII, donc "e accent grave" compte comme une frontiere de mot. Resultat:
+  "kilometres" ecrit CORRECTEMENT avec son accent declenche
+  "caption: unaccented French: tres". La regle vaut pour toute la liste: tout
+  mot francais dont la fin est un de ces radicaux precede d'une lettre accentuee
+  se fait refuser a tort (metres, kilometres, ...). Contournement gratuit et
+  sans degat editorial: ecris "28 km". Ne reformule PAS a l'aveugle et ne
+  soupconne pas ton texte: cherche le radical fautif dans les mots accentues
+  d'abord (`grep -iE "\w*tres\w*"`). Proposition de correctif dans le rapport du
+  07/08 (ancrer la regex sur des frontieres conscientes des accents).
   Ajout 06/08 (19h30), la variante UNVERIFIABLE de la meme toux reseau: un
   re-gate d'un spec deja PASSED est revenu `ok:false` avec les 19 controles
   en UNVERIFIABLE sur les QUATRE domaines a la fois (blog.google, cnbc,
