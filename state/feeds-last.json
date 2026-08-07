@@ -1,11 +1,11 @@
 {
-  "at": "2026-08-07T06:38:31.398Z",
-  "fresh": 368,
+  "at": "2026-08-07T10:39:52.177Z",
+  "fresh": 366,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1113,
+      "fetched": 1114,
       "fresh": 7,
       "windowHours": 96
     },
@@ -78,7 +78,7 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 5,
+      "fresh": 4,
       "windowHours": 36
     },
     {
@@ -99,7 +99,7 @@
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 8,
+      "fresh": 7,
       "windowHours": 36
     }
   ]

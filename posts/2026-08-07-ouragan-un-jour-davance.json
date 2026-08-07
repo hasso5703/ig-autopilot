@@ -1,0 +1,241 @@
+{
+  "slug": "2026-08-07-ouragan-un-jour-davance",
+  "centralClaim": "Google DeepMind's WeatherNext AI model, published in Nature on 6 August 2026 and now open sourced, gives forecasters more than a full day of extra lead time on a cyclone's track, intensity and wind structure, and helped the National Hurricane Center predict Hurricane Melissa's rapid intensification and category 5 landfall in Jamaica.",
+  "corroboration": [
+    {
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "quote": "Today, in a paper published in Nature, we show that our WeatherNext AI model achieved state-of-the-art accuracy in predicting a cyclone's track, intensity, and wind structure."
+    },
+    {
+      "url": "https://www.unite.ai/googles-weathernext-2-gains-a-full-day-of-cyclone-warning-goes-open-source/",
+      "quote": "During the 2025 Atlantic hurricane season, the model ran alongside the National Hurricane Center's operational workflow and helped forecasters anticipate Hurricane Melissa's rapid intensification and landfall in Jamaica far enough in advance to support an early warning."
+    },
+    {
+      "url": "https://www.opensourceforu.com/2026/08/google-deepmind-weathernext-ai/",
+      "quote": "On 6 August 2026, Google DeepMind published a research in Nature demonstrating state-of-the-art accuracy in predicting tropical cyclone track, intensity, and wind structure using its WeatherNext AI model. The system provides an extra day of warning, delivering three-day cyclone forecasts that match the accuracy previously achieved at two days."
+    }
+  ],
+  "sendTest": "Une IA a prévu qu'un ouragan de catégorie 5 allait frapper la Jamaïque, cinq jours avant. Les gens ont eu le temps d'évacuer.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "6 août 2026 · Google DeepMind",
+      "headline": "Une IA a vu l'ouragan *cinq jours* avant",
+      "hero": {
+        "value": "5 jours",
+        "label": "d'avance sur une catégorie 5 en Jamaïque"
+      },
+      "swipe": "Les reçus en dessous"
+    },
+    {
+      "type": "stat",
+      "figure": "5",
+      "unit": "jours avant l'arrivée",
+      "body": "Le modèle annonçait déjà une **catégorie 5** sur la Jamaïque, avec 80% de confiance.",
+      "evidence": "WeatherNext, however, predicted a category 5 strength landfall in Jamaica five days in advance with 80% confidence, which increased to near 100% three days in advance.",
+      "source": {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/",
+        "date": "2026-05-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le centre américain s'en est servi",
+      "body": "Pendant la saison 2025, le modèle a aidé le **National Hurricane Center** à prévoir l'intensification rapide de l'ouragan **Melissa** et son arrivée en Jamaïque.",
+      "evidence": "During the 2025 hurricane season, our model helped the NHC to make a historic forecast for Hurricane Melissa by predicting the storm's rapid intensification and landfall in Jamaica.",
+      "source": {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un jour entier de gagné",
+      "body": "Les prévisions à trois jours valent désormais celles qu'on obtenait à deux jours.",
+      "evidence": "On average, our model gives forecasters an extra day's worth of predictive accuracy: our three-day forecasts are as good as what prior models were able to provide for only the next two days.",
+      "source": {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le plus dur, c'est la force",
+      "body": "Melissa est passée de la **catégorie 1** à la **catégorie 5**. Une première.",
+      "evidence": "For the first time, they predicted a storm would reach category 5 intensity starting from category 1 wind speed.",
+      "source": {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/",
+        "date": "2026-05-19"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "it does actually save their lives, and it saves the livelihoods that they want to secure.",
+      "attribution": "Evan Thompson, Meteorological Service Jamaica",
+      "evidence": "it does actually save their lives, and it saves the livelihoods that they want to secure.",
+      "source": {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/",
+        "date": "2026-05-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le modèle est ouvert à tous",
+      "body": "Google DeepMind publie ses résultats dans **Nature** et met les modèles en accès libre.",
+      "evidence": "The paper appeared in Nature on August 6, 2026, and Google is open-sourcing the models alongside it.",
+      "source": {
+        "name": "Unite.AI",
+        "url": "https://www.unite.ai/googles-weathernext-2-gains-a-full-day-of-cyclone-warning-goes-open-source/",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que ça change",
+      "claim": "Les cyclones ont fait plus de 700 000 morts en cinquante ans.",
+      "caveatLabel": "Ce qu'on ne sait pas",
+      "caveat": "Personne n'explique encore pourquoi le modèle est aussi précis.",
+      "evidence": "responsible for more than 700,000 deaths and $1.4 trillion in economic losses globally over the past 50 years",
+      "source": {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une zone d'ombre assumée",
+      "body": "Le laboratoire écrit lui-même que sa précision reste une question de recherche ouverte.",
+      "evidence": "This has surprised scientists, and it remains an open research question to fully understand how our models produce such accurate predictions at this resolution.",
+      "source": {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui vit où passent les ouragans",
+      "sub": "Chaque chiffre vient d'une source citée."
+    }
+  ],
+  "caption": "Une IA a annoncé un ouragan de catégorie 5 sur la Jamaïque cinq jours avant qu'il arrive.\n\nGoogle DeepMind a publié jeudi dans Nature les résultats de son modèle WeatherNext. Il gagne en moyenne plus d'une journée entière d'avance sur les meilleurs modèles opérationnels, pour la trajectoire, la force et la structure des vents. Ses prévisions à trois jours valent celles qu'on obtenait à deux jours.\n\nLe détail qui n'a pas tenu dans la vidéo. En octobre 2025, Melissa a d'abord été repérée comme une faible dépression, et les modèles classiques hésitaient entre Haïti et la Jamaïque. C'était la première fois qu'un centre de prévision annonçait qu'une tempête atteindrait la catégorie 5 en partant de vents de catégorie 1. Le système simule aujourd'hui 1 000 scénarios par cyclone, contre 50 l'an dernier.\n\nÀ décharge, ces résultats sont publiés par Google, et le laboratoire reconnaît lui-même une zone d'ombre. Son modèle travaille sur une résolution de 28 km, cent fois plus grossière que les modèles traditionnels, et les scientifiques ne savent pas encore expliquer pourquoi il est aussi précis.\n\nUne IA qui prévoit mieux qu'un modèle physique, tu trouves ça rassurant ou inquiétant ?\n\nSources : deepmind.google, unite.ai, opensourceforu.com\n\n#IA #IntelligenceArtificielle #ActuIA #GoogleDeepMind #Ouragan\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "On average, our model gives forecasters an extra day's worth of predictive accuracy: our three-day forecasts are as good as what prior models were able to provide for only the next two days.",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+    },
+    {
+      "quote": "For the first time, they predicted a storm would reach category 5 intensity starting from category 1 wind speed.",
+      "url": "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/"
+    },
+    {
+      "quote": "Last year, our system produced 50 predictions at a time, matching global physics models. This year we scaled our ensemble size to 1,000 members",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+    },
+    {
+      "quote": "WeatherNext cyclones only needs data with a resolution of 28x28km, 100x coarser than traditional models.",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+    },
+    {
+      "quote": "In October 2025, Hurricane Melissa made history.",
+      "url": "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Une IA a prévu l'ouragan cinq jours avant",
+    "beats": [
+      {
+        "script": "Quand un ouragan arrive, tu as maintenant un jour de plus pour te préparer. Un jour entier. Tu sais ce qui a changé ? Une IA de Google DeepMind.",
+        "visual": {
+          "type": "photo",
+          "query": "hurricane melissa",
+          "alt": "vue satellite de l'ouragan Melissa"
+        }
+      },
+      {
+        "script": "En octobre 2025, l'ouragan Melissa a frappé la Jamaïque. Le plus puissant jamais enregistré sur l'île. Et cette fois, on l'a vu venir.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/"
+        }
+      },
+      {
+        "script": "Cinq jours avant, le modèle annonçait déjà une catégorie 5 sur la Jamaïque, avec 80% de confiance. Trois jours avant, c'était quasiment certain.",
+        "visual": {
+          "type": "card",
+          "value": "5 JOURS",
+          "label": "d'avance, avec 80% de confiance"
+        }
+      },
+      {
+        "script": "Sauf que le plus dur à prévoir, ce n'est pas la trajectoire. C'est la force. Melissa est passée de catégorie 1 à catégorie 5.",
+        "visual": {
+          "type": "photo",
+          "query": "hurricane melissa jamaica",
+          "alt": "Melissa au-dessus de la Jamaïque"
+        }
+      },
+      {
+        "script": "Sur place, ça donne des évacuations lancées plus tôt. Evan Thompson, qui dirige la météo jamaïcaine, dit que ça sauve des vies.",
+        "visual": {
+          "type": "photo",
+          "query": "jamaica hurricane relief",
+          "alt": "aide humanitaire livrée en Jamaïque"
+        }
+      },
+      {
+        "script": "Hier, Google DeepMind a publié ces résultats dans Nature, et mis le modèle en accès libre. N'importe quelle agence météo peut le télécharger.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+        }
+      },
+      {
+        "script": "Les cyclones ont fait plus de 700 000 morts en cinquante ans. Un jour d'avance, c'est des gens qui ont le temps de partir.",
+        "visual": {
+          "type": "card",
+          "value": "700 000",
+          "label": "morts causés par les cyclones en cinquante ans"
+        }
+      },
+      {
+        "script": "Et personne ne sait encore expliquer pourquoi ça marche aussi bien. Google le dit lui-même. Abonne-toi pour l'actu IA de demain.",
+        "visual": {
+          "type": "photo",
+          "query": "hurricane melissa sunset",
+          "alt": "Melissa au coucher du soleil"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "accessed": "2026-08-07"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/how-weathernext-helped-the-national-hurricane-center-better-predict-hurricane-melissas-historic-landfall-in-jamaica/",
+      "accessed": "2026-08-07"
+    },
+    {
+      "name": "Unite.AI",
+      "url": "https://www.unite.ai/googles-weathernext-2-gains-a-full-day-of-cyclone-warning-goes-open-source/",
+      "accessed": "2026-08-07"
+    },
+    {
+      "name": "Open Source For You",
+      "url": "https://www.opensourceforu.com/2026/08/google-deepmind-weathernext-ai/",
+      "accessed": "2026-08-07"
+    }
+  ]
+}
