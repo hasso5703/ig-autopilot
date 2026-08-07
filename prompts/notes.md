@@ -196,6 +196,19 @@ ENTRIES:
   parfaitement plausibles, la faute n'existe qu'ENTRE elles. Monte la pellicule
   de 8 vignettes (hstack, commande dans routine.md) sur tout beat veo.
   Proof: Reel 2026-08-03-macbook-air-memoire, publie avec le defaut.
+  Ajout 07/08 (19h30), GENERALISE le piege "White House" ci-dessus: storyVocab
+  RETIRE tout token appartenant a un nom propre des sources, donc un mot commun
+  tres banal peut devenir invisible au filtre. Dossier Suno: "music" est
+  supprime parce que les citations disent "Universal Music Group" et "Sony
+  Music Entertainment", donc un spec veo decrivant "its music player screen"
+  a ete refuse "shares no word with the sources" alors que l'histoire parle de
+  musique de bout en bout. "generat" tombe pareil (AI-generated). Et le message
+  du gate ne liste que les 18 premiers mots autorises par ordre alphabetique,
+  donc il coupe avant celui qui t'interesse: ne devine pas, imprime la liste
+  entiere en 10 s (storyVocab = tokens(centralClaim + evidence) MOINS
+  tokens(namedActors(...)), les deux exportes). Mots surs et utiles ici: audio,
+  track, stream, platform, listen, recording, download. Remede applique:
+  "audio player screen" + "as the track plays", accepte du premier coup.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -382,6 +395,21 @@ ENTRIES:
   `candidates` annonce la taille SERVIE (1600xN): les originaux de ce dossier
   faisaient 1631x1088, 1920x1080 et 4176x2784, donc verifie avant de renoncer a
   un beat 0 pour cause de resolution.
+  Ajout 07/08 (19h30), LE CLASSEMENT BOUGE EN 25 MINUTES, pas seulement dans la
+  journee, et le prix est un beat gache: "recording studio microphone" mettait
+  en tete a 19h44 un Shure SM7 (Commons, CC0, 8.0), et le build de 20h10 a
+  ramene sur la MEME requete une regie radio bresilienne sombre en paysage
+  (console "BB tech", ecran de playlist en portugais lisible dans le cadre),
+  en dernier beat avant l'end-card. Donc si tu lances `candidates` pour DECIDER
+  d'un beat photo, epingle dans la foulee avec `file`+`credit`, meme quand une
+  seule requete sert un seul beat: le delai entre le repere et le build suffit.
+  Deuxieme motif du meme incident: creditLine peut rendre un nom d'auteur
+  PERCENT-ENCODE ("Jo%E3o%20Silas · CC0") et il se grave tel quel sur l'image;
+  un credit qui contient un % dans le journal est donc a reecrire a la main
+  (epinglage `credit`) avant publication. Valeur sure retenue sur une actu
+  musique: File:Shure_SM7.jpg, CC0, "The Midnite Wolf", 4032x3024 AVEC rotation
+  EXIF (ffprobe annonce du paysage, ffmpeg decode en portrait, donc
+  `crop=2268:4032:378:0,scale=1080:1920` passe direct).
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -623,7 +651,22 @@ ENTRIES:
   garde toujours sa banniere en bas et exige `crop=1290:2293:0:0`,
   deepmind.google n'a besoin de rien. Sur une actu DeepMind, deux recus du blog
   du labo coutent moins cher en temps qu'un seul recu de presse.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08.
+  Ajout 07/08 (19h30), dossier Suno, trois recus mesures EN MOTEUR:
+  suno.com/blog se capture proprement du PREMIER coup en ~45 s, sans recadrage
+  (titre, signature "By Mikey Shulman, Co-Founder & CEO", date, photo de tete),
+  0 pub, 0 banniere cookies. Sur une actu d'entreprise le blog de la boite
+  reste le recu le plus leger, ca se re-confirme. engadget.com pareil, ~1 min,
+  sans recadrage (titre + chapo + signature + date). gizmodo.com est le piege du
+  jour et il est DOUBLE: (1) il a pris ~11,5 MIN pour ce seul recu, famille
+  O(frames) comme techcrunch/aljazeera, donc budgetise-le comme un achat et ne
+  le declare pas mort avant ~12 min; (2) sa capture porte DEUX plomberies a la
+  fois, une pub voiture flottante avec sa croix de fermeture posee SUR l'image
+  de tete, et la banniere bleue "About Cookies on this Site" en bas, et aucune des
+  deux n'est retiree par les deux passes de consentement. `crop=1290:1490:0:0`
+  coupe les deux et garde chapeau "ARTIFICIAL INTELLIGENCE" + titre + chapo +
+  "BY <auteur>" + date. Le recadrage n'est pas cosmetique: la pub etait visible
+  en plein cadre sur le rendu et passe tous les controles automatiques.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
