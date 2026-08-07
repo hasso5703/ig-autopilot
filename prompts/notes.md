@@ -362,6 +362,26 @@ ENTRIES:
   source rawpixel plafonne a 1024 px, donc un crop 9:16 y fait 381x678 et
   remonte a 1080x1920 en x2,8, trop mou pour un beat 0. Cherche du portrait
   natif (pd.w.org rend du 1536x2048) ou du Commons haute resolution d'abord.
+  Ajout 07/08 (16h30), LE CLASSEMENT OPENVERSE BOUGE DANS LA JOURNEE: le scout
+  de 10h30 avait mesure "hurricane melissa sunset" -> "A Stunning View ... as
+  the Sun Sets"; a 16h30 la MEME requete rend "Light Fades on a Powerful
+  Hurricane Melissa" en tete, soit le meme premier candidat que la requete nue
+  "hurricane melissa". Les beats 0 et 7 auraient donc montre LA MEME image. Une
+  mesure de classement laissee par un run anterieur, meme du meme jour, ne
+  garantit donc rien: relance `candidates` et EPINGLE avec `file`+`credit` des
+  que deux beats piochent dans le meme sujet. Piege de ton du meme dossier:
+  "jamaica hurricane relief" sort SIX candidats a 7.0 qui sont tous la meme
+  ceremonie de drapeaux dans la soute d'un avion (Ghana/US), une photo
+  diplomatique et pas du secours; la vraie photo de terrain est
+  "-ChefsforJamaica- Providing relief after Hurricane Melissa" (World Central
+  Kitchen, CC BY 4.0, 4176x2784, une rue detruite avec de vrais gens), qui note
+  6.0 et ne gagne jamais toute seule. Pour telecharger un original Commons,
+  PERCENT-ENCODE le nom de fichier: un curl sur un nom brut avec parentheses ou
+  virgules rend une page d'erreur de 4 ko que ffprobe refuse ("Invalid data
+  found"), ce qui ressemble a une image cassee et n'en est pas une. Et
+  `candidates` annonce la taille SERVIE (1600xN): les originaux de ce dossier
+  faisaient 1631x1088, 1920x1080 et 4176x2784, donc verifie avant de renoncer a
+  un beat 0 pour cause de resolution.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -595,6 +615,14 @@ ENTRIES:
   titre, "5 min read" et LES DEUX signatures ("Demis Hassabis / Chair, Google
   DeepMind and Chief Scientist, Alphabet") plus l'editor's note qui nomme
   Koray. discoveryloop.com se capture propre du premier coup, 0 pub, 0 mur.
+  Ajout 07/08 (16h30): deepmind.google/blog SE CAPTURE PROPREMENT EN MOTEUR, du
+  premier coup et sans recadrage, sur deux pages article differentes du meme
+  build: logo "Google DeepMind", date, titre entier sur 3-4 lignes, signature
+  "WeatherNext team" et le visuel de tete dans le cadre, 0 pub, AUCUNE banniere
+  cookies. C'est donc l'exception utile dans la famille Google: blog.google
+  garde toujours sa banniere en bas et exige `crop=1290:2293:0:0`,
+  deepmind.google n'a besoin de rien. Sur une actu DeepMind, deux recus du blog
+  du labo coutent moins cher en temps qu'un seul recu de presse.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
