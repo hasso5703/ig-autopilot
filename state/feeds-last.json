@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-07T16:40:00.290Z",
-  "fresh": 367,
+  "at": "2026-08-07T19:40:22.774Z",
+  "fresh": 364,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -27,7 +27,7 @@
       "name": "Hugging Face Blog",
       "ok": true,
       "fetched": 835,
-      "fresh": 2,
+      "fresh": 3,
       "windowHours": 96
     },
     {
@@ -91,15 +91,15 @@
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 10,
-      "fresh": 9,
+      "fetched": 6,
+      "fresh": 4,
       "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 4,
+      "fresh": 5,
       "windowHours": 36
     }
   ]

@@ -156,28 +156,29 @@
   "reel2": {
     "mood": "tension",
     "lang": "fr",
-    "title": "Des chansons d'IA lui rapportent 8 millions",
+    "title": "8 millions de dollars avec des chansons d'IA",
     "beats": [
       {
-        "script": "Des chansons faites par une IA inondent les classements musicaux du monde entier. Un homme a encaissé plus de 8 millions de dollars de droits d'auteur. Il a plaidé coupable.",
+        "script": "Un homme a encaissé plus de 8 millions de dollars de droits d'auteur avec des chansons faites par une IA. Il a plaidé coupable.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a smartphone lying flat on a table, its audio player screen glowing with a circle of album artwork above a thin progress bar",
+            "action": "the progress bar sliding steadily to the right as the track plays, the phone still lying flat and whole in frame",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the phone screen filling the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et les chansons faites par une IA inondent les classements du monde entier. Cette semaine, Suno, le service qui en fabrique, a réagi. Rien ne dit que cet homme l'utilisait.",
         "visual": {
           "type": "screenshot",
           "url": "https://suno.com/blog/building-the-future-of-music-responsibly"
         }
       },
       {
-        "script": "Cette semaine, Suno, le service qui crée des chansons avec une IA, a réagi. Rien ne dit que cet homme utilisait Suno. Mais c'est ce genre d'abus qu'elle vise.",
-        "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a music streaming platform open on a phone screen",
-            "setting": "in a bright room in daylight",
-            "composition": "extreme close-up, the screen fills the entire frame"
-          }
-        }
-      },
-      {
-        "script": "L'arnaque marche comme ça: des milliers de chansons fabriquées, envoyées sur les plateformes, et des robots payés pour les jouer en boucle.",
+        "script": "Mais c'est ce genre d'abus qu'elle vise: des milliers de chansons fabriquées, envoyées sur les plateformes, et des robots payés pour les jouer en boucle.",
         "visual": {
           "type": "card",
           "value": "8 M$",
@@ -192,7 +193,7 @@
         }
       },
       {
-        "script": "Et elle va limiter les téléchargements, pour couper la distribution en masse sur les plateformes d'écoute.",
+        "script": "Et elle va limiter les téléchargements, pour couper la distribution en masse. Suno dit que la grande majorité de ses utilisateurs ne verra rien changer.",
         "visual": {
           "type": "image",
           "spec": {
