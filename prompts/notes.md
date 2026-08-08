@@ -189,6 +189,17 @@ ENTRIES:
   c'est une paire de guillemets. Pipe le dans `tr -d '\"' | xargs` avant de
   l'exporter. Echec bruyant, gratuit, attrape par le dry-run (rien n'est
   publie), mais il coute un aller-retour a chaque run qui script cette etape.
+  Ajout 08/08 (06h30), LE HOOK DE FIN DE SESSION MENT, et sa consigne est un
+  piege: il imprime "There are N unpushed commit(s) on branch claude/<...>.
+  Please push these changes". C'est FAUX apres un land.mjs reussi. Il compare la
+  branche de travail a origin/claude/<...>, qui n'existe pas, donc il compte les
+  commits de land.mjs comme non pousses alors qu'ils sont deja sur origin/main
+  et prouves. Verifie en 5 s avant de toucher a quoi que ce soit:
+  `git rev-parse HEAD` et `git rev-parse origin/main` rendent le MEME sha, et
+  `git log origin/main..HEAD` est vide. Ne pousse PAS la branche laterale: le
+  prochain run clone la branche par defaut, tout y est deja, et un ref de plus
+  vers des commits deja dans main ne sauve rien (voir le 30/07). Meme traitement
+  que le hook "Unverified": une ligne dans le rapport, et on passe.
 - 2026-08-01 · Le filtre "l'image montre quelque chose de l'histoire" compare
   des mots RACINISES (state.mjs tokens/stem), et la racine casse au pluriel:
   "spheres" donne "spher", "sphere" donne "sphere", donc un spec au pluriel ne
