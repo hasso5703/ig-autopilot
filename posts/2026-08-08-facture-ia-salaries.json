@@ -160,18 +160,18 @@
       {
         "script": "50 000 dollars d'IA en un mois, pour un seul ingénieur. Sa boîte ne l'a vu qu'en ouvrant la facture. Tu vas voir pourquoi ça te regarde.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.rippling.com/blog/introducing-ai-spend-console"
-        }
-      },
-      {
-        "script": "Rippling, un éditeur de logiciels de ressources humaines, avait ouvert l'IA à tous ses salariés. Aucune limite, aucun plafond.",
-        "visual": {
           "type": "photo",
           "query": "open plan office",
           "alt": "un plateau de bureaux presque vide",
           "file": "media/2026-08-08-facture-ia-salaries/photo_1.jpg",
           "credit": "Jadon Barnes xjadonx · CC0"
+        }
+      },
+      {
+        "script": "Rippling, un éditeur de logiciels de ressources humaines, avait ouvert l'IA à tous ses salariés. Aucune limite, aucun plafond.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.rippling.com/blog/introducing-ai-spend-console"
         }
       },
       {
