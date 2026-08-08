@@ -1,0 +1,235 @@
+{
+  "slug": "2026-08-08-facture-ia-salaries",
+  "centralClaim": "Rippling found its AI spending was on a path to consume 40% of its R&D headcount budget, with one engineer spending $50,000 a month, and has launched a product that ties each employee's AI spend to what that employee produces.",
+  "corroboration": [
+    {
+      "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+      "quote": "Our AI token spend was growing 80% MoM, and we were on a path to spend 40% of our R&D headcount budget on tokens."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
+      "quote": "Rippling was on track to burn 40% of its R&D headcount budget on AI tokens, meaning it was spending as much on tokens as 40% of all the compensation it paid employees in that unit."
+    }
+  ],
+  "sendTest": "Un ingénieur a dépensé 50 000 dollars d'IA en un mois. Son entreprise note maintenant chaque salarié sur ce que l'IA lui coûte.",
+  "caption": "Un seul ingénieur a dépensé 50 000 dollars d'IA en un mois, et son entreprise ne l'a vu qu'après.\n\nRippling, un éditeur de logiciels de ressources humaines, avait ouvert l'IA à tous ses salariés sans aucune limite. La facture grimpait de 80 % par mois. À ce rythme, elle allait absorber 40 % du budget salaires des équipes techniques, et 90 % l'année suivante. Quand l'entreprise a regardé qui dépensait, 10 à 15 % des salariés faisaient environ 60 % du total.\n\nLe détail qui n'a pas tenu dans la vidéo. Le tableau de bord que Rippling a construit relie la dépense d'IA de chaque salarié à ce qu'il produit, et pose noir sur blanc la question de savoir quels ingénieurs dépensent beaucoup tout en faisant refaire leur travail par leurs collègues. Rippling vend maintenant cet outil aux autres entreprises.\n\nÀ décharge, le constat le plus intéressant va contre l'intuition. Ceux qui dépensaient le plus n'étaient pas les plus productifs : selon l'entreprise, le vrai gain venait du fait de se mettre à l'IA, pas du montant dépensé ensuite. La facture est depuis retombée à environ 15 % du budget salaires.\n\nMesurer la dépense d'IA salarié par salarié, c'est du bon sens ou de la surveillance, selon toi ?\n\nrippling.com · techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #Travail #Entreprise\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Our AI token spend was growing 80% MoM, and we were on a path to spend 40% of our R&D headcount budget on tokens.",
+      "url": "https://www.rippling.com/blog/introducing-ai-spend-console"
+    },
+    {
+      "quote": "We built a model to forecast costs and discovered that we were on a path to spend 40% of our R&D headcount budget on AI tokens. The following year, we’d approach 90%.",
+      "url": "https://www.rippling.com/blog/introducing-ai-spend-console"
+    },
+    {
+      "quote": "Roughly 10–15% of our employees were driving about 60% of total AI spend. One engineer was spending $50,000 a month.",
+      "url": "https://www.rippling.com/blog/introducing-ai-spend-console"
+    },
+    {
+      "quote": "With this tool in place, Rippling said it dropped its token spend from 40% of its headcount budget to about 15%.",
+      "url": "https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Rippling · TechCrunch",
+      "headline": "Un ingénieur a dépensé *50 000 dollars* d'IA en un mois",
+      "hero": {
+        "value": "50 000 $",
+        "label": "d'IA en un mois, pour un seul ingénieur"
+      },
+      "swipe": "Les reçus, en dessous"
+    },
+    {
+      "type": "content",
+      "title": "Personne ne regardait la facture",
+      "body": "L'entreprise avait ouvert l'IA à **tous ses salariés**, sans aucune limite, et encourageait même à s'en servir le plus possible.",
+      "evidence": "We turned on AI tools for all employees, and there were no limits.",
+      "source": {
+        "name": "Rippling",
+        "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "80%",
+      "unit": "de hausse par mois",
+      "body": "La facture d'IA grimpait de **80 % par mois**, sur une trajectoire à *40 % du budget salaires* des équipes techniques.",
+      "evidence": "Our AI token spend was growing 80% MoM, and we were on a path to spend 40% of our R&D headcount budget on tokens.",
+      "source": {
+        "name": "Rippling",
+        "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Autant que 40 % de la paie",
+      "body": "Traduction du chiffre par TechCrunch : l'entreprise dépensait en IA autant que **40 % de tout ce qu'elle versait** aux salariés de cette division.",
+      "evidence": "Rippling was on track to burn 40% of its R&D headcount budget on AI tokens, meaning it was spending as much on tokens as 40% of all the compensation it paid employees in that unit.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et 90 % l'année suivante",
+      "body": "La prévision interne montait à **90 %** pour l'année d'après. Le directeur produit résume la réunion : *on n'y croyait pas.*",
+      "evidence": "We built a model to forecast costs and discovered that we were on a path to spend 40% of our R&D headcount budget on AI tokens. The following year, we’d approach 90%.",
+      "source": {
+        "name": "Rippling",
+        "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "50 000",
+      "unit": "dollars par mois, pour un seul ingénieur",
+      "body": "La dépense était très concentrée : **10 à 15 %** des salariés faisaient environ **60 %** du total.",
+      "evidence": "Roughly 10–15% of our employees were driving about 60% of total AI spend. One engineer was spending $50,000 a month.",
+      "source": {
+        "name": "Rippling",
+        "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Ceux qui dépensaient le plus produisaient le plus",
+      "caveat": "Le gain venait du démarrage, pas du montant dépensé ensuite",
+      "claimLabel": "Ce que tout le monde supposait",
+      "caveatLabel": "Ce que les données ont montré",
+      "evidence": "Engineers heavily using AI tools like Cursor were shipping more PRs, but the biggest productivity improvements came from initial adoption, not from spending more on frontier models.",
+      "source": {
+        "name": "Rippling",
+        "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un tableau de bord qui note chaque salarié",
+      "body": "Il relie la dépense d'IA de chacun à ce qu'il produit, et à la fréquence à laquelle ses collègues lui **font refaire son travail**.",
+      "evidence": "Which engineers have high AI spend, whose peers frequently ask them to redo work in code reviews?",
+      "source": {
+        "name": "Rippling",
+        "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et il est en vente",
+      "body": "L'outil est vendu aux autres entreprises. Il *relie la dépense d'IA de chaque salarié* à ce qu'il produit, ou à ce qu'il bâcle.",
+      "evidence": "One of the most interesting features is that it maps how much individual employees, teams, and roles are spending and if they are genuinely more productive, or generally producing more AI slop.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui utilise l'IA au travail",
+      "sub": "L'actu IA, vérifiée sur pièces."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Rippling",
+      "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+      "accessed": "2026-08-08"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
+      "accessed": "2026-08-08"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "L'IA a mangé 40 % du budget salaires",
+    "beats": [
+      {
+        "script": "50 000 dollars d'IA en un mois, pour un seul ingénieur. Sa boîte ne l'a vu qu'en ouvrant la facture. Tu vas voir pourquoi ça te regarde.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.rippling.com/blog/introducing-ai-spend-console"
+        }
+      },
+      {
+        "script": "Rippling, un éditeur de logiciels de ressources humaines, avait ouvert l'IA à tous ses salariés. Aucune limite, aucun plafond.",
+        "visual": {
+          "type": "photo",
+          "query": "open plan office",
+          "alt": "un plateau de bureaux presque vide",
+          "file": "media/2026-08-08-facture-ia-salaries/photo_1.jpg",
+          "credit": "Jadon Barnes xjadonx · CC0"
+        }
+      },
+      {
+        "script": "Mais en mars, le directeur financier pose un chiffre sur la table. La facture grimpait de 80 % par mois, vers 40 % du budget salaires.",
+        "visual": {
+          "type": "card",
+          "value": "40 %",
+          "label": "du budget salaires, avalés par l'IA"
+        }
+      },
+      {
+        "script": "Et l'année suivante, ils seraient montés à 90 %. Le directeur produit résume la réunion en une phrase : on n'y croyait pas.",
+        "visual": {
+          "type": "photo",
+          "query": "office meeting table",
+          "alt": "une réunion autour de tableaux de chiffres",
+          "file": "media/2026-08-08-facture-ia-salaries/photo_3.jpg",
+          "credit": "Startup Stock Photos · CC0"
+        }
+      },
+      {
+        "script": "Donc ils regardent qui dépense quoi. Et ça se resserre : 10 à 15 % des salariés faisaient 60 % de la facture. Un ingénieur, 50 000 dollars.",
+        "visual": {
+          "type": "card",
+          "value": "50 000 $",
+          "label": "par mois, pour un seul ingénieur"
+        }
+      },
+      {
+        "script": "Sauf que le plus gênant est ailleurs. Ceux qui dépensaient le plus ne produisaient pas plus. Le gain venait du démarrage, pas du montant.",
+        "visual": {
+          "type": "photo",
+          "query": "office worker laptop",
+          "alt": "les mains d'un salarié sur un ordinateur portable",
+          "file": "media/2026-08-08-facture-ia-salaries/photo_5.jpg",
+          "credit": "Kristin Hardwick · CC0"
+        }
+      },
+      {
+        "script": "Alors Rippling a construit un tableau de bord. Il note chaque salarié : ce que l'IA lui coûte, ce qu'il produit, et si ses collègues doivent refaire son travail.",
+        "visual": {
+          "type": "photo",
+          "query": "accountant calculator",
+          "alt": "un tableur ouvert à côté d'une calculatrice",
+          "file": "media/2026-08-08-facture-ia-salaries/photo_6.jpg",
+          "credit": "Wilfred Iven · CC0"
+        }
+      },
+      {
+        "script": "La facture est retombée à 15 %. Et ce tableau de bord, Rippling le vend aux autres entreprises. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "accountant calculator",
+          "alt": "un graphique imprimé posé sur un bureau",
+          "file": "media/2026-08-08-facture-ia-salaries/photo_7.jpg",
+          "credit": "Negative Space · CC0"
+        }
+      }
+    ]
+  }
+}

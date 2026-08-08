@@ -158,7 +158,18 @@ ENTRIES:
   fait la vraie seconde lecture. Mesure du meme jour pour le dossier
   OpenAI/Astra: techcrunch.com, cnbc.com, csoonline.com et theregister.com
   rendent 200; openai.com, theverge.com, arstechnica.com, axios.com et
-  zdnet.com rendent 403.
+  zdnet.com rendent 403. Ajout 08/08 (10h30), dossier Rippling:
+  rippling.com/blog rend 200 au fetch gate et se gate du PREMIER coup, 12
+  citations sur 12; sur une actu d'entreprise le blog de la boite est a la fois
+  le primaire et le recu le plus leger, ca se re-confirme. techcrunch.com rend
+  200 le meme jour. Bloquent: ign.com (403), 01net.it (403). PIEGE DE DATE,
+  nouveau et generalisable: le flux Simon Willison (et Hacker News) relaie des
+  liens vers des articles de N'IMPORTE QUEL age, et la date que feeds.mjs
+  affiche est celle du BILLET qui relaie, pas celle de l'article. "The
+  Tokenpocalypse" est arrive date du 07/08 et l'article 404media est du
+  24 JUIN. En prime 404media.co rend 200 mais coupe au paywall apres ~4
+  paragraphes (5 ko de texte aplati): les chiffres Accenture/Uber n'y sont pas
+  gatables. Lis la date DANS l'article avant de scorer un item Willison ou HN.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -242,6 +253,20 @@ ENTRIES:
   tokens(namedActors(...)), les deux exportes). Mots surs et utiles ici: audio,
   track, stream, platform, listen, recording, download. Remede applique:
   "audio player screen" + "as the track plays", accepte du premier coup.
+  Ajout 08/08 (10h30), LE PIEGE EN AMONT, qui explique la moitie des refus:
+  storyVocab est construit sur centralClaim + les citations d'EVIDENCE DU POST,
+  jamais sur l'article entier. Un mot bien present dans la source mais que tu
+  n'as cite nulle part n'existe pas pour le filtre. Dossier Rippling: TechCrunch
+  ecrit "dumping them into a paper shredder", mais cette phrase n'etait
+  l'evidence d'aucune diapo, donc un spec veo "a banknote across the feed slot
+  of a paper shredder" a ete refuse "shares no word with the sources" sur un
+  vocabulaire de 89 mots ou ni shredder, ni paper, ni cash ne figuraient. Deux
+  issues, et la premiere n'est pas toujours la bonne: soit la phrase merite
+  vraiment d'etre une evidence (cite-la), soit le beat veut une autre surface.
+  Ici c'etait la seconde: le shredder n'existe que dans la PUB de l'entreprise,
+  pas dans les faits rapportes, donc le gate refusait a juste titre une
+  metaphore. Imprime le vocabulaire ENTIER avant d'ecrire un spec, le message
+  n'en montre que 18 par ordre alphabetique.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -470,6 +495,20 @@ ENTRIES:
   musique: File:Shure_SM7.jpg, CC0, "The Midnite Wolf", 4032x3024 AVEC rotation
   EXIF (ffprobe annonce du paysage, ffmpeg decode en portrait, donc
   `crop=2268:4032:378:0,scale=1080:1920` passe direct).
+  Ajout 08/08 (10h30), TROISIEME occurrence du piege d'EPOQUE, desormais un
+  reflexe a avoir sur toute requete de bureau: "open plan office" met en tete
+  deux photos NOIR ET BLANC des annees 1940 (rangees de dactylos, salle de
+  dessin), vraies, bien licenciees, 0% de blanc, et inutilisables sur une actu
+  2026. Meme famille que le module CDC 7600 et la GeForce de 2006: seule la
+  planche-contact le voit. Valeurs sures mesurees ce jour-la, toutes
+  contemporaines et CC0: "Lone office worker (Unsplash)" (Jadon Barnes xjadonx,
+  plateau moderne presque vide), et cote stocksnap "Team Meeting" (Startup Stock
+  Photos), "Man Laptop" (Kristin Hardwick), "Accounting Finance" (Wilfred Iven,
+  tableur + calculatrice) et "Calculator Numbers" (Negative Space, graphique
+  imprime). ET pour retrouver le credit d'une image stocksnap: son id de CDN
+  (KSLK5TYFZI) ne se cherche PAS dans api.openverse.org, il rend 0 resultat.
+  Relance la requete D'ORIGINE avec &source=stocksnap et cherche l'id dans le
+  JSON: c'est le seul chemin qui rend creator + licence.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
