@@ -509,6 +509,26 @@ ENTRIES:
   (KSLK5TYFZI) ne se cherche PAS dans api.openverse.org, il rend 0 resultat.
   Relance la requete D'ORIGINE avec &source=stocksnap et cherche l'id dans le
   JSON: c'est le seul chemin qui rend creator + licence.
+  Ajout 08/08 (10h37, run B), LE PIEGE D'EPOQUE EST AUSSI DANS L'ECRAN, pas
+  seulement dans l'objet: "Accounting Finance" (Wilfred Iven, CC0), epinglee le
+  matin meme comme valeur sure, montre un logiciel de FACTURATION POLONAIS dont
+  l'ecran porte, LISIBLES une fois rendu en 9:16, les dates 03-11-2014 /
+  05-11-2014 / 02-04-2015 et le nom d'une vraie personne ("Dariusz Bankowski").
+  Meme famille que la plaquette Augmentin (marque + peremption 2012): une date
+  qui vieillit le Reel et un inconnu nomme, graves dans le sujet, sur une actu
+  2026 dont le script dit "tableau de bord" (et un logiciel de facturation n'est
+  pas un tableau de bord). Classement, licence, taille et filtre fond-blanc la
+  laissent passer. SEULE la frame RENDUE le montre: une vignette de planche-
+  contact a 420 px ne suffit pas, il faut lire le beat en pleine resolution.
+  Remplacante mesuree, gatee et rendue du premier coup: Commons "Analytics graphs
+  on a MacBook screen" (Luis Llerena, CC0, ORIGINAL 5472x3648, un graphe qui monte
+  + un camembert, aucun nom, aucune date), `crop=2052:3648:2100:0` puis
+  scale 1080:1920. Garde le bord du portable dans le cadre: le crop serre sur
+  l'ecran seul supprime la profondeur de champ et le beat se met a ressembler a
+  une seconde capture d'ecran a cote du recu. ET pour REGARDER un candidat
+  stocksnap: son CDN (cdn.stocksnap.io/img-thumbs/960w/<id>.jpg) rend du NON-JPEG
+  en curl (ffprobe: 0,0), donc passe par la page Openverse; les originaux Commons
+  se telechargent nus sans probleme.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
