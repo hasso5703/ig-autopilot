@@ -137,6 +137,28 @@ ENTRIES:
   ending in March 31" de TechCrunch: unite.ai ecrit "cyclones from 2023 through
   2025" la ou le primaire ecrit "from 2023 to 2024". Le primaire gagne (manuel),
   et le plus simple est de ne pas faire porter la fourchette au texte public.
+  Ajout 08/08 (06h30), dossier virus concus par IA: LE RECU PRIMAIRE QUAND
+  L'EDITEUR SCIENTIFIQUE BLOQUE, c'est pubmed.ncbi.nlm.nih.gov. Bloquent au
+  fetch gate: science.org (403), news.stanford.edu (403), betanews.com (403),
+  eurekalert.org (403), newscientist.com (403), biorxiv.org (429), nature.com
+  (fetch failed). Mais la fiche PubMed de l'article
+  (pubmed.ncbi.nlm.nih.gov/<pmid>/) rend 200 et porte L'ABSTRACT VERBATIM du
+  papier Science, avec la reference complete (revue, date, volume, doi) et les
+  affiliations: c'est le primaire, dans les mots des auteurs, et ses citations
+  sont passees VERIFIED du premier coup. La ligne "Comment in" donne en prime le
+  pmid du commentaire publie a cote (ici Inglesby/Hanke, "AI-designed viral
+  genomes"), soit le recu de la controverse. Pour trouver le pmid sans deviner:
+  pubmed.ncbi.nlm.nih.gov/?term=<titre du papier>, puis lire les /NNNNNNNN/ dans
+  le HTML. Sur une actu de PAPIER SCIENTIFIQUE, va a PubMed AVANT de chercher une
+  reprise presse. Repondent 200 et se gatent du premier coup ce jour-la:
+  thenextweb.com (re-confirme), uppermichiganssource.com (Gray TV, re-confirme),
+  press.asimov.com, techtimes.com. ATTENTION corroboration, meme piege que
+  Bloomberg le 07/08: TNW et Gray creditent tous les deux le New York Times
+  (injoignable), donc c'est press.asimov.com, qui lit le papier lui-meme, qui
+  fait la vraie seconde lecture. Mesure du meme jour pour le dossier
+  OpenAI/Astra: techcrunch.com, cnbc.com, csoonline.com et theregister.com
+  rendent 200; openai.com, theverge.com, arstechnica.com, axios.com et
+  zdnet.com rendent 403.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -367,6 +389,33 @@ ENTRIES:
   Commons haute resolution avant d'epingler. Regle generale utile: sur une
   catastrophe naturelle, l'imagerie satellite NOAA/CIRA est en domaine public
   et nomme souvent l'evenement exact que raconte le script.
+  Ajout 08/08 (06h30), DEUX PIEGES DE `photo` QU'AUCUN FILTRE NE VOIT, les deux
+  attrapes en REGARDANT la planche-contact, pas en lisant le classement.
+  (1) UNE ILLUSTRATION N'EST PAS UNE PHOTO: "bacteriophage" sort en 2e
+  "Bacteriophage T4 Infection" de DavidGoodsell, qui est une AQUARELLE
+  scientifique. Licence, taille et filtre fond-blanc la laissent passer, et un
+  beat `photo` doit etre documentaire. Ecarte a l'auteur/au titre: Goodsell,
+  openstax.org, "diagram", "cycle", "replication". Le bon candidat est
+  "Bacteriophage P2" (Mostafa Fatehi, CC BY, 2304x2944, vraie micrographie MET),
+  MAIS il porte une bande d'annotations gravee en bas ("100 nm", "HV=80kV",
+  "(c) Mostafa Fatehi") pile ou vont le karaoke et le credit du moteur:
+  `crop=1487:2644:408:0` la coupe et garde les 7 phages. (2) UNE PHOTO DE
+  PRODUIT GRAVE UNE MARQUE DANS TON SUJET: "antibiotic pills" met en tete (8.0,
+  1920x2560, deja en portrait) une plaquette Augmentin ou se lisent
+  "GlaxoSmithKline" et "EXP: 11 2012". Sur une actu qui ne parle ni de GSK ni de
+  2012, c'est une association fausse et une date qui vieillit le Reel; prends le
+  generique sans marque (rawpixel "fraddiction_antibiotic_capsule_care", CC0,
+  plaquettes colorees), en sachant que rawpixel plafonne a 1024 px. Re-confirme
+  aussi, et c'est la 3e fois: les ex aequo a 7.0 se reordonnent D'UN APPEL A
+  L'AUTRE ("escherichia coli microscope" a rendu la micrographie USDA en 3e puis
+  en 1re en 20 min). Donc un SCOUT a interet a telecharger, regarder en hstack,
+  recadrer en 9:16 et epingler file+credit: ca coute 0 $, ca supprime la derive
+  pour le run de publication 10 h plus tard, et c'est la seule facon de voir une
+  aquarelle ou une marque. Valeurs sures de ce dossier: "E coli at 10000x,
+  original" (Erbe/Pooley USDA, domaine public, 2598x1889, tres contraste) et
+  "US Navy 020913-N-3986D-001 Growing bacteria in a petri dish" (domaine public,
+  1500x2100, DEJA en portrait, et c'est un vrai VISAGE de technicien, rare sur
+  une histoire de labo).
   Ajout 03/08: ne "monte" JAMAIS a la main la resolution d'une image rawpixel.
   Openverse sert /editor_1024/<cle>.jpg (1024 px, propre); la MEME cle en
   /image_1300/ rend 1300 px avec le filigrane "rawpixel" en travers du cadre, et
