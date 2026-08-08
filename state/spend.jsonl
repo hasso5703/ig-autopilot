@@ -120,3 +120,4 @@
 {"at":"2026-08-07T19:48:21.321Z","slug":"2026-08-07-suno-chansons-marquees","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"51.6s Sadaltager","usd":0.0258}
 {"at":"2026-08-07T19:50:19.301Z","slug":"2026-08-07-suno-chansons-marquees","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
 {"at":"2026-08-07T19:59:04.163Z","slug":"2026-08-07-suno-chansons-marquees","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1273}
+{"at":"2026-08-08T10:45:19.290Z","slug":"2026-08-08-facture-ia-salaries","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"59.2s Sadaltager","usd":0.0296}
