@@ -1,0 +1,242 @@
+{
+  "slug": "2026-08-09-usine-puces-musk-gaz",
+  "centralClaim": "SpaceX will build its own natural gas-fired power plants to power the Terafab semiconductor factory it is building in Grimes County, Texas.",
+  "corroboration": [
+    {
+      "url": "https://www.kbtx.com/2026/08/06/spacex-confirms-terefab-project-is-done-deal-reps-meet-face-to-face-with-grimes-county-residents/",
+      "quote": "He also confirmed that SpaceX will build its own natural gas-fired power plants to power the facility, and said those plants will be the cleanest per megawatt natural gas facilities in the country."
+    },
+    {
+      "url": "https://www.kxxv.com/news/local-news/in-your-neighborhood/grimes-county/spacex-terafab-representatives-answer-questions-at-grimes-county-commissioners-court",
+      "quote": "The company will build its own natural gas-fired power plants to power the facility, meaning SpaceX will not draw from the ERCOT grid in a way that increases costs for other ratepayers."
+    }
+  ],
+  "sendTest": "Elon Musk construit une usine de puces géante à la campagne au Texas, avec ses propres centrales à gaz. 894 voisins ont signé une pétition.",
+  "caption": "À la campagne au Texas, Elon Musk va construire une usine de puces avec ses propres centrales à gaz.\n\nL'usine s'appelle Terafab, dans le comté de Grimes, à environ 45 miles au nord-ouest de Houston. La chaîne locale de Houston décrit une usine de 16.8 milliards de dollars qui emploiera plus de 3 000 personnes. Elon Musk a montré un projet de 100 millions de pieds carrés: le Pentagone en fait 6.5 millions. Les puces alimenteront les centres de données de SpaceX et de sa filiale xAI.\n\nLe détail qui n'a pas tenu dans la vidéo. SpaceX prévoit d'acheter pour 2.8 milliards de dollars de turbines à gaz sur les trois prochaines années. Et l'accord fiscal fixe son versement au comté de Grimes à 20 millions de dollars par an pendant 35 ans, soit 710 millions au total.\n\nÀ décharge, SpaceX affirme que ces centrales seront les plus propres du pays par mégawatt, qu'elles ne feront pas monter les factures d'électricité des autres et qu'elles n'assècheront pas la rivière Navasota. Son avocat corrige aussi un chiffre repris partout: l'abattement fiscal accordé par le comté est d'environ 78 pour cent, pas 100 pour cent.\n\nUne entreprise qui bâtit ses propres centrales pour son IA, ça devrait passer devant les habitants, oui ou non ?\n\nSources : kbtx.com, kxxv.com, abc13.com, techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #ElonMusk #SpaceX\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Terafab will be built in Grimes County, which is about 45 miles northwest of downtown Houston.",
+      "url": "https://techcrunch.com/2026/08/07/spacexs-terafab-will-rely-on-natural-gas-power-plants-not-tesla-solar-panels/"
+    },
+    {
+      "quote": "A $16.8 billion SpaceX factory is coming to Grimes County, and officials say it will employ more than 3,000 people.",
+      "url": "https://abc13.com/post/residents-quiet-grimes-county-community-express-concern-ahead-massive-spacex-facility-plans/19643413/"
+    },
+    {
+      "quote": "Trillionaire businessman and SpaceX CEO Elon Musk posted a video on X of a proposed 100 million-square-foot factory called Terafab. To put the size in perspective, the Pentagon is 6.5 million square feet inside.",
+      "url": "https://abc13.com/post/residents-quiet-grimes-county-community-express-concern-ahead-massive-spacex-facility-plans/19643413/"
+    },
+    {
+      "quote": "SpaceX has said it plans to buy $2.8 billion worth of gas turbines over the next three years.",
+      "url": "https://techcrunch.com/2026/08/07/spacexs-terafab-will-rely-on-natural-gas-power-plants-not-tesla-solar-panels/"
+    },
+    {
+      "quote": "Brannon said the actual abatement is approximately 78 percent, and that the agreement fixes SpaceX's payment to Grimes County at $20 million per year for 35 years, totaling $710 million.",
+      "url": "https://www.kbtx.com/2026/08/06/spacex-confirms-terefab-project-is-done-deal-reps-meet-face-to-face-with-grimes-county-residents/"
+    },
+    {
+      "quote": "SpaceX, which recently went public in an IPO that raised $87.5 billion, received a 100% tax abatement from the county in exchange for spending at least $5 billion by 2030 and creating at least 1,800 full-time jobs by 2035.",
+      "url": "https://techcrunch.com/2026/08/07/spacexs-terafab-will-rely-on-natural-gas-power-plants-not-tesla-solar-panels/"
+    },
+    {
+      "quote": "SpaceX committed that Terafab will not raise electric bills for ratepayers, will not deplete local water resources, and will not dry up the Navasota River.",
+      "url": "https://www.kbtx.com/2026/08/06/spacex-confirms-terefab-project-is-done-deal-reps-meet-face-to-face-with-grimes-county-residents/"
+    },
+    {
+      "quote": "The fab is intended to build chips for data centers that will be run by SpaceX and its xAI subsidiary.",
+      "url": "https://techcrunch.com/2026/08/07/spacexs-terafab-will-rely-on-natural-gas-power-plants-not-tesla-solar-panels/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Comté de Grimes, Texas",
+      "headline": "SpaceX construit ses *centrales à gaz* pour l'IA",
+      "hero": {
+        "value": "894",
+        "label": "signatures de voisins sur une pétition"
+      },
+      "swipe": "Les reçus, diapo par diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "894",
+      "unit": "signatures de voisins",
+      "body": "Les habitants du comté de Grimes ont demandé des **protections écrites** avant tout avantage fiscal.",
+      "evidence": "Bobbie Jo Swafford, director of community impact for Grimes County Citizens for Responsible Development, said the 894 signatures represent residents",
+      "source": {
+        "name": "KBTX",
+        "url": "https://www.kbtx.com/2026/08/06/grimes-county-residents-deliver-petition-demanding-protections-ahead-terafab-development/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'usine aura sa propre électricité",
+      "body": "SpaceX bâtira ses **centrales à gaz** sur place, et dit qu'elles seront les plus propres du pays par mégawatt.",
+      "evidence": "He also confirmed that SpaceX will build its own natural gas-fired power plants to power the facility, and said those plants will be the cleanest per megawatt natural gas facilities in the country.",
+      "source": {
+        "name": "KBTX",
+        "url": "https://www.kbtx.com/2026/08/06/spacex-confirms-terefab-project-is-done-deal-reps-meet-face-to-face-with-grimes-county-residents/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La taille du chantier",
+      "body": "Un projet de 100 millions de pieds carrés. Le Pentagone en fait 6.5 millions.",
+      "evidence": "Trillionaire businessman and SpaceX CEO Elon Musk posted a video on X of a proposed 100 million-square-foot factory called Terafab. To put the size in perspective, the Pentagon is 6.5 million square feet inside.",
+      "source": {
+        "name": "ABC13 Houston",
+        "url": "https://abc13.com/post/residents-quiet-grimes-county-community-express-concern-ahead-massive-spacex-facility-plans/19643413/",
+        "date": "2026-08-08"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Les voisins réclament 12 protections précises, sur l'eau, les routes et l'environnement.",
+      "caveat": "Les accords fiscaux sont déjà signés et actifs, et les fondations commencent dans les mois qui viennent.",
+      "claimLabel": "La pétition",
+      "caveatLabel": "La réponse en séance",
+      "evidence": "calls for 12 specific protections including independent legal counsel paid through the county, water and environmental safeguards, road repair requirements, emergency services funding, and clawback provisions if a developer fails to meet its commitments",
+      "source": {
+        "name": "KBTX",
+        "url": "https://www.kbtx.com/2026/08/06/grimes-county-residents-deliver-petition-demanding-protections-ahead-terafab-development/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "now with the jeti done, we are going to be moving nearly immediately to get going on the project. we need to get our civil work started. we need to start to get foundations in place. and we're going to get cracking",
+      "attribution": "Un représentant de Terafab, en séance publique",
+      "evidence": "now with the jeti done, we are going to be moving nearly immediately to get going on the project. we need to get our civil work started. we need to start to get foundations in place. and we're going to get cracking,\" trennell said.",
+      "source": {
+        "name": "KBTX",
+        "url": "https://www.kbtx.com/2026/08/06/spacex-confirms-terefab-project-is-done-deal-reps-meet-face-to-face-with-grimes-county-residents/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que le comté touchera",
+      "body": "L'accord fixe le versement de SpaceX au comté à **20 millions de dollars par an pendant 35 ans**, soit 710 millions au total.",
+      "evidence": "Brannon said the actual abatement is approximately 78 percent, and that the agreement fixes SpaceX's payment to Grimes County at $20 million per year for 35 years, totaling $710 million.",
+      "source": {
+        "name": "KBTX",
+        "url": "https://www.kbtx.com/2026/08/06/spacex-confirms-terefab-project-is-done-deal-reps-meet-face-to-face-with-grimes-county-residents/",
+        "date": "2026-08-05"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui habite à côté d'un projet industriel",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "SpaceX construit ses centrales à gaz pour l'IA",
+    "beats": [
+      {
+        "script": "Ils s'étaient installés là pour le calme. Aujourd'hui ils signent une pétition à cause de l'usine d'Elon Musk. Tu sais ce qui va l'alimenter ?",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a paper petition sheet covered in handwritten signatures",
+            "action": "a hand signing one more name along the bottom line, the sheet staying flat and fully in frame",
+            "setting": "on a plain wooden table in daylight",
+            "composition": "close-up on the paper"
+          }
+        }
+      },
+      {
+        "script": "Pas le réseau. SpaceX va construire ses propres centrales à gaz, sur le site.",
+        "visual": {
+          "type": "photo",
+          "query": "thomas c ferguson power plant texas",
+          "alt": "Une centrale électrique au gaz au Texas",
+          "file": "media/2026-08-09-usine-puces-musk-gaz/photo_1.jpg",
+          "credit": "Larry D. Moore · CC BY 4.0"
+        }
+      },
+      {
+        "script": "L'usine s'appelle Terafab, au Texas. 100 millions de pieds carrés. Le Pentagone en fait six millions et demi.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://abc13.com/post/residents-quiet-grimes-county-community-express-concern-ahead-massive-spacex-facility-plans/19643413/"
+        }
+      },
+      {
+        "script": "Elle fabriquera les puces des centres de données de SpaceX et de xAI, sa filiale d'IA. Et ça, ça boit du courant: deux virgule huit milliards de dollars de turbines à gaz en trois ans.",
+        "visual": {
+          "type": "photo",
+          "query": "decker creek power station",
+          "alt": "Une centrale électrique au gaz à Austin, au Texas",
+          "file": "media/2026-08-09-usine-puces-musk-gaz/photo_3.jpg",
+          "credit": "Larry D. Moore · CC BY 4.0"
+        }
+      },
+      {
+        "script": "Sauf que les voisins, eux, réclamaient des garanties. 894 d'entre eux ont signé une pétition.",
+        "visual": {
+          "type": "card",
+          "value": "894",
+          "label": "signatures de voisins sur une pétition"
+        }
+      },
+      {
+        "script": "Elle demande 12 protections précises: l'eau, les routes, l'environnement, et de l'argent rendu si les promesses ne sont pas tenues.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.kbtx.com/2026/08/06/grimes-county-residents-deliver-petition-demanding-protections-ahead-terafab-development/"
+        }
+      },
+      {
+        "script": "La réponse est tombée en réunion publique: les accords sont signés et actifs, les fondations démarrent dans les mois qui viennent. SpaceX promet les centrales à gaz les plus propres du pays.",
+        "visual": {
+          "type": "photo",
+          "query": "thomas c ferguson power plant texas 2024 c",
+          "alt": "Les cheminées d'une centrale au gaz au Texas",
+          "file": "media/2026-08-09-usine-puces-musk-gaz/photo_6.jpg",
+          "credit": "Larry D. Moore · CC BY 4.0"
+        }
+      },
+      {
+        "script": "Le comté touchera 20 millions de dollars par an pendant 35 ans. Et à Memphis, la filiale de Musk est poursuivie pour des turbines à gaz sans permis. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "card",
+          "value": "20 M$/an",
+          "label": "pendant 35 ans, ce que SpaceX versera au comté de Grimes"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "KBTX (Gray Television)",
+      "url": "https://www.kbtx.com/2026/08/06/spacex-confirms-terefab-project-is-done-deal-reps-meet-face-to-face-with-grimes-county-residents/",
+      "accessed": "2026-08-08"
+    },
+    {
+      "name": "KBTX (Gray Television)",
+      "url": "https://www.kbtx.com/2026/08/06/grimes-county-residents-deliver-petition-demanding-protections-ahead-terafab-development/",
+      "accessed": "2026-08-08"
+    },
+    {
+      "name": "25 News KXXV (Scripps)",
+      "url": "https://www.kxxv.com/news/local-news/in-your-neighborhood/grimes-county/spacex-terafab-representatives-answer-questions-at-grimes-county-commissioners-court",
+      "accessed": "2026-08-08"
+    },
+    {
+      "name": "ABC13 Houston (KTRK)",
+      "url": "https://abc13.com/post/residents-quiet-grimes-county-community-express-concern-ahead-massive-spacex-facility-plans/19643413/",
+      "accessed": "2026-08-08"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/07/spacexs-terafab-will-rely-on-natural-gas-power-plants-not-tesla-solar-panels/",
+      "accessed": "2026-08-08"
+    }
+  ]
+}
