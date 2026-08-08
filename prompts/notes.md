@@ -177,6 +177,28 @@ ENTRIES:
   recu le plus credible qui existe sur une actu de papier scientifique. Meme
   mesure sur thenextweb.com, capture propre et titre entier lisible, pas de mur
   de consentement. Les deux recus du Reel virus sont passes sans retouche.
+  Ajout 08/08 (19h30), dossier SpaceX/Terafab: sur une actu industrielle
+  locale americaine, la presse locale est joignable EN BLOC et c'est elle qui
+  porte les chiffres que le national resume mal. Rendent 200 au fetch gate et
+  se gatent du premier coup kbtx.com (Gray TV), kxxv.com (Scripps),
+  abc13.com (KTRK) et theeagle.com; techcrunch.com re-confirme (200). ET LE
+  PIEGE DE CORROBORATION DU JOUR, inverse de celui du 07/08: la depeche
+  techcrunch credite explicitement "according to a report from bloomberg"
+  (injoignable), donc c'est ELLE la source derivee; ce sont les deux stations
+  locales, qui avaient chacune leur reporter dans la salle du commissioners
+  court, qui font la vraie double lecture. Sur une reunion publique, cherche
+  les redactions qui y etaient physiquement avant de compter les domaines.
+  Elles se contredisent utilement: techcrunch ecrit "100% tax abatement" quand
+  l'avocat de SpaceX dit en seance "approximately 78 percent" ($20 M/an sur
+  35 ans, $710 M au total). Le primaire gagne et l'ecart vaut une diapo.
+  Attention aussi a l'orthographe du meme porte-parole selon la source
+  ("Riley Trettel" chez techcrunch, "Riley Trennell" chez kbtx): cite
+  l'entreprise, pas la personne, comme sur le dossier Samsung du 31/07.
+  Bloquent ce jour-la au fetch gate: optometrytimes.com (403),
+  genesisopenmodels.anl.gov (403), searchengineland.com (403), martech.org
+  (429), openai.com (403, re-confirme). venturebeat.com rend 429 sur ses pages
+  article pour le TROISIEME jour consecutif: quand tu planifies, traite-le
+  comme indisponible, pas comme un alea a reessayer.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -536,6 +558,24 @@ ENTRIES:
   stocksnap: son CDN (cdn.stocksnap.io/img-thumbs/960w/<id>.jpg) rend du NON-JPEG
   en curl (ffprobe: 0,0), donc passe par la page Openverse; les originaux Commons
   se telechargent nus sans probleme.
+  Ajout 08/08 (19h30), QUATRIEME piege d'epoque ET un type nouveau, dossier
+  centrales a gaz. (1) L'epoque, encore: "gas turbine power" met en tete TROIS
+  vues de la Rover JET 1 de 1950 exposee au Science Museum (CC0, 5472x3648,
+  0% de blanc) sur une actu de centrales electriques 2026. (2) LE TYPE
+  NOUVEAU, qu'aucun filtre ne voit: UNE CARTE N'EST PAS UNE PHOTO. "natural
+  gas power plant" met PREMIER (8.0, 8909x4958) "Natural gas power plants in
+  the United States", qui est un PNG de cartographie, et "semiconductor wafer
+  fab" met en tete "US Semiconductor Economy", une infographie. Licence,
+  taille et filtre fond-blanc les laissent passer; seule la planche-contact le
+  montre. Ecarte au titre les mots map, economy, statistics, chart, et
+  mefie-toi de tout .webp/.png de Commons. Valeurs sures mesurees, toutes
+  contemporaines, sans texte ni marque, deja recadrees en 9:16 et epinglees:
+  "thomas c ferguson power plant texas" rend TROIS angles distincts de la meme
+  vraie centrale texane (Larry D. Moore, CC BY 4.0, 3556x2000,
+  crop=1125:2000 centre sur les cheminees) et "decker creek power station" une
+  quatrieme (meme auteur, 2667x1500, crop=844:1500:911:0). Regle generale sur
+  une actu d'energie: cherche une centrale NOMMEE, jamais la categorie. La
+  requete generique rend une carte, le nom rend une photo.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -853,3 +893,20 @@ ENTRIES:
   generale: un echec de gate EN LOT (tous statuts identiques, tous domaines)
   se relance avant d'etre diagnostique; c'est un echec SELECTIF (une citation,
   un domaine) qui accuse vraiment le texte.
+  Ajout 08/08 (19h30), LA VIRGULE DECIMALE FRANCAISE NE MATCHE PAS LE POINT DE
+  LA SOURCE, mesure sur 3 chiffres d'un coup. Ecrit "16,8 milliards" / "6,5
+  millions" / "2,8 milliards" la ou les sources ecrivent "$16.8 billion" /
+  "6.5 million" / "$2.8 billion": le gate a repondu "figure(s) 168, 65, 28
+  appear in the caption but in no evidence quote". Il traite donc la virgule
+  comme un separateur de MILLIERS et la supprime (16,8 -> 168), alors que le
+  point de la source reste une frontiere. Le manuel dit "the gate matches
+  digits across separators"; c'est vrai des espaces et des virgules de
+  milliers, FAUX de la virgule decimale. Deux remedes, les deux gratuits:
+  dans la legende ecris le chiffre comme la source (16.8, 6.5, 2.8), ce que
+  le manuel demande deja ("never re-punctuate a decimal"); dans le SCRIPT
+  PARLE ecris-le en toutes lettres ("six millions et demi", "deux virgule
+  huit milliards"), ce qui supprime aussi le risque que la TTS lise "6.5" a
+  l'anglaise. Meme famille: un nom de media contenant un chiffre est lu comme
+  un chiffre ("ABC13" a declenche "figure 13 in no evidence quote"), et une
+  date en clair dans un `kicker` aussi ("6 aout 2026" -> figure 6). Ecris
+  "La chaine locale de Houston" et un kicker sans millesime.
