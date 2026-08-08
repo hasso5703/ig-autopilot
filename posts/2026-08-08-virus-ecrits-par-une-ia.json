@@ -1,0 +1,219 @@
+{
+  "slug": "2026-08-08-virus-ecrits-par-une-ia",
+  "centralClaim": "Researchers at Stanford University and the Arc Institute used genome language models to generate complete bacteriophage genomes from scratch, and experimental testing yielded 16 viable phages, reported on 6 August 2026 in the journal Science.",
+  "corroboration": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42561074/",
+      "quote": "We report the first generative design of complete bacteriophage genomes using genome language models."
+    },
+    {
+      "url": "https://thenextweb.com/news/the-governance-does-not-exist-ai-just-designed-16-viruses-from-scratch",
+      "quote": "Researchers at Stanford University and the Arc Institute reported the milestone on Thursday in the journal Science, in work detailed by The New York Times."
+    },
+    {
+      "url": "https://press.asimov.com/articles/ai-phages",
+      "quote": "But today, Arc Institute and Stanford University researchers have validated their designs in the real world, reporting the first viable genomes created using generative AI. They used fine-tuned versions of both Evo 1 and Evo 2 to create 16 bacteriophages modeled on ΦX174, a virus that infects E. coli bacteria."
+    }
+  ],
+  "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai.",
+  "caption": "Une IA a écrit de zéro le code génétique de 16 virus, et ils fonctionnent pour de vrai.\n\nUne équipe de Stanford et de l'Arc Institute a publié jeudi dans la revue Science la première conception complète de génomes de virus par une IA. La machine a produit environ 700 000 versions. 300 ont été fabriquées en laboratoire, 16 ont donné des virus viables. Ces virus n'attaquent que des bactéries.\n\nLe détail qui n'a pas tenu dans la vidéo. Mélangés en cocktail, ces virus viennent à bout de souches d'Escherichia coli devenues insensibles au virus naturel qui a servi de modèle. Les auteurs y voient une piste vers des traitements contre les bactéries que les antibiotiques ne tuent plus. Un microscope a aussi montré qu'un des virus créés utilise une protéine venue d'un virus très éloigné.\n\nÀ décharge, tout le monde n'est pas inquiet. Tom Ellis, de l'Imperial College London, rappelle que le virus qui a servi de modèle est le plus petit et le plus simple à fabriquer, et juge la menace très exagérée face au fait de modifier des agents pathogènes qui existent déjà. Les chercheurs ont aussi exclu de l'entraînement les virus qui infectent l'humain, les animaux et les plantes.\n\nUne IA capable d'écrire un virus, c'est une bonne ou une mauvaise nouvelle, selon toi ?\n\npubmed.ncbi.nlm.nih.gov · thenextweb.com · uppermichiganssource.com · press.asimov.com\n\n#IA #IntelligenceArtificielle #ActuIA #Biotech #Science\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Evo generated roughly 700,000 candidate genomes. The scientists narrowed these to about 300, built them in the lab, and dropped them into E. coli. Just 16 produced working viruses.",
+      "url": "https://thenextweb.com/news/the-governance-does-not-exist-ai-just-designed-16-viruses-from-scratch"
+    },
+    {
+      "quote": "Experimental testing yielded 16 phages with diverse fitness profiles in laboratory conditions.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42561074/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Science · Stanford et Arc Institute",
+      "headline": "Une IA a fabriqué *16 virus* qui marchent",
+      "hero": {
+        "value": "700 000",
+        "label": "versions écrites, 300 fabriquées en laboratoire"
+      },
+      "swipe": "Les reçus, en dessous"
+    },
+    {
+      "type": "stat",
+      "figure": "16",
+      "unit": "virus viables sur 300 fabriqués",
+      "body": "La machine a écrit **700 000 versions**. 300 ont été construites en laboratoire et lâchées dans des bactéries. *16 ont donné des virus qui fonctionnent.*",
+      "evidence": "Evo generated roughly 700,000 candidate genomes. The scientists narrowed these to about 300, built them in the lab, and dropped them into E. coli. Just 16 produced working viruses.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/the-governance-does-not-exist-ai-just-designed-16-viruses-from-scratch",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un ChatGPT du vivant",
+      "body": "Les modèles Evo 1 et Evo 2 travaillent sur du code génétique au lieu de mots. Tu leur donnes un bout de virus, *ils écrivent la suite*.",
+      "evidence": "Models called Evo 1 and Evo 2 work like ChatGPT for biology.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/the-governance-does-not-exist-ai-just-designed-16-viruses-from-scratch",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'ils ne peuvent pas atteindre",
+      "body": "Les chercheurs ont **retiré de l'entraînement** tout ce qui infecte l'humain, les animaux et les plantes. *Ces virus n'attaquent que des bactéries.*",
+      "evidence": "Researchers noted that they did not provide the model used with data about viruses that infect humans, and they also used safety measures to exclude similar viruses that infect other animals, plants and fungi.",
+      "source": {
+        "name": "Gray News",
+        "url": "https://www.uppermichiganssource.com/2026/08/06/scientists-have-created-new-viruses-using-ai-heres-how-they-did-it/",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le cocktail qui change tout",
+      "body": "Mélangés ensemble, ces virus viennent à bout de bactéries devenues **insensibles au virus naturel**. Les auteurs y voient *une piste vers de nouveaux traitements*.",
+      "evidence": "A cocktail of generated phages rapidly overcomes ΦX174-resistant Escherichia coli strains, demonstrating a path toward artificial intelligence-generated phage therapies against rapidly evolving bacterial pathogens.",
+      "source": {
+        "name": "Science",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42561074/",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "La capacité d'écrire des virus avec une IA existe désormais. La gouvernance pour l'encadrer sans danger, non.",
+      "attribution": "Tom Inglesby et Moritz Hanke, Johns Hopkins, dans Science",
+      "evidence": "“The ability to compose viral genomes using generative AI now exists,” they wrote, “the governance to safely steer it does not.”",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/the-governance-does-not-exist-ai-just-designed-16-viruses-from-scratch",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Une IA sait désormais écrire un génome de virus entier.",
+      "caveat": "Le virus qui a servi de modèle est le plus petit et le plus simple à fabriquer, et la menace est jugée très exagérée face au fait de modifier des agents pathogènes existants.",
+      "claimLabel": "Le risque",
+      "caveatLabel": "Tom Ellis, Imperial College London",
+      "evidence": "Tom Ellis of Imperial College London called ΦX174 “literally the smallest and easiest genome to make,” and told The Guardian the threat is “very overblown” next to simply altering existing pathogens.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/the-governance-does-not-exist-ai-just-designed-16-viruses-from-scratch",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui a déjà pris des antibiotiques",
+      "sub": "L'actu IA, vérifiée sur pièces."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Science (via PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42561074/",
+      "accessed": "2026-08-08"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/the-governance-does-not-exist-ai-just-designed-16-viruses-from-scratch",
+      "accessed": "2026-08-08"
+    },
+    {
+      "name": "Gray News",
+      "url": "https://www.uppermichiganssource.com/2026/08/06/scientists-have-created-new-viruses-using-ai-heres-how-they-did-it/",
+      "accessed": "2026-08-08"
+    },
+    {
+      "name": "Asimov Press",
+      "url": "https://press.asimov.com/articles/ai-phages",
+      "accessed": "2026-08-08"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Une IA a fabriqué 16 virus qui marchent",
+    "beats": [
+      {
+        "script": "Le code génétique de 16 virus, écrit de zéro par une machine. Ces virus n'existaient nulle part dans la nature. Maintenant, ils existent.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single clear glass laboratory tube half full of cloudy bacterial liquid",
+            "action": "one drop falling from above into the liquid, the tube standing upright and still full in frame",
+            "setting": "on a bright laboratory bench in daylight",
+            "composition": "extreme close-up, the tube filling the entire frame"
+          }
+        }
+      },
+      {
+        "script": "La machine s'appelle Evo 2. Derrière, une équipe de Stanford et de l'Arc Institute. Et tu sais ce qui inquiète ? Pas ce que ces virus font.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://thenextweb.com/news/the-governance-does-not-exist-ai-just-designed-16-viruses-from-scratch"
+        }
+      },
+      {
+        "script": "Rassure-toi: ces virus-là ne s'attaquent qu'à des bactéries. Les chercheurs ont retiré de l'entraînement tout ce qui infecte l'humain, les animaux, les plantes.",
+        "visual": {
+          "type": "photo",
+          "query": "escherichia coli microscope",
+          "alt": "Escherichia coli photographié au microscope électronique",
+          "file": "media/2026-08-08-virus-ecrits-par-une-ia/photo_2.jpg",
+          "credit": "Eric Erbe et Christopher Pooley, USDA · Domaine public"
+        }
+      },
+      {
+        "script": "La méthode, c'est un ChatGPT du vivant. Tu lui donnes un bout de code génétique, il écrit la suite. 700 000 versions, en tout.",
+        "visual": {
+          "type": "card",
+          "value": "700 000",
+          "label": "versions de virus écrites par la machine"
+        }
+      },
+      {
+        "script": "Sur ces 700 000, 300 ont été fabriqués pour de vrai et lâchés dans des bactéries. 16 seulement ont donné des virus qui fonctionnent.",
+        "visual": {
+          "type": "photo",
+          "query": "petri dish bacteria",
+          "alt": "Bactéries en culture dans une boîte de Petri",
+          "file": "media/2026-08-08-virus-ecrits-par-une-ia/photo_4.jpg",
+          "credit": "U.S. Navy · Domaine public"
+        }
+      },
+      {
+        "script": "Sauf que ces 16-là sont costauds. Mélangés ensemble, ils ont écrasé des bactéries devenues insensibles au virus naturel dont ils s'inspirent.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42561074/"
+        }
+      },
+      {
+        "script": "Et c'est là que ça devient utile pour toi: soigner les infections que les antibiotiques ne tuent plus. Un virus qui mange la bactérie à leur place.",
+        "visual": {
+          "type": "photo",
+          "query": "antibiotic pills",
+          "alt": "Des plaquettes de médicaments",
+          "file": "media/2026-08-08-virus-ecrits-par-une-ia/photo_6.jpg",
+          "credit": "rawpixel · CC0"
+        }
+      },
+      {
+        "script": "Sauf que deux spécialistes de Johns Hopkins écrivent, dans la revue Science: la capacité d'écrire des virus existe, la règle pour l'encadrer, non. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "bacteriophage",
+          "alt": "Un bactériophage vu au microscope électronique",
+          "file": "media/2026-08-08-virus-ecrits-par-une-ia/photo_7.jpg",
+          "credit": "Mostafa Fatehi · CC BY"
+        }
+      }
+    ]
+  }
+}

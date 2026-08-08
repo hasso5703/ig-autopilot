@@ -1,12 +1,12 @@
 {
-  "at": "2026-08-07T19:40:22.774Z",
-  "fresh": 364,
+  "at": "2026-08-08T06:39:41.645Z",
+  "fresh": 56,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1115,
-      "fresh": 8,
+      "fresh": 6,
       "windowHours": 96
     },
     {
@@ -47,8 +47,8 @@
     {
       "name": "arXiv cs.AI",
       "ok": true,
-      "fetched": 307,
-      "fresh": 307,
+      "fetched": 0,
+      "fresh": 0,
       "windowHours": 96
     },
     {
@@ -78,28 +78,28 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 5,
+      "fresh": 4,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 3,
+      "fresh": 2,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 6,
-      "fresh": 4,
+      "fetched": 8,
+      "fresh": 8,
       "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 5,
+      "fresh": 4,
       "windowHours": 36
     }
   ]
