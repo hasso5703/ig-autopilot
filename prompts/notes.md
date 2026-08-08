@@ -170,6 +170,13 @@ ENTRIES:
   24 JUIN. En prime 404media.co rend 200 mais coupe au paywall apres ~4
   paragraphes (5 ko de texte aplati): les chiffres Accenture/Uber n'y sont pas
   gatables. Lis la date DANS l'article avant de scorer un item Willison ou HN.
+  Ajout 08/08 (16h30): PubMed est aussi un EXCELLENT RECU, pas seulement un
+  primaire gatable. La fiche pubmed.ncbi.nlm.nih.gov/<pmid>/ se capture du
+  premier coup, sans banniere cookies, et le cadre 9:16 tient le titre du
+  papier, "Science. 2026.", les auteurs et le debut de l'abstract: c'est le
+  recu le plus credible qui existe sur une actu de papier scientifique. Meme
+  mesure sur thenextweb.com, capture propre et titre entier lisible, pas de mur
+  de consentement. Les deux recus du Reel virus sont passes sans retouche.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -572,7 +579,15 @@ ENTRIES:
   premiere taille qui depasse le cadre. Voix gemini-3.1-flash-tts-preview.
   Le prix par image est desormais calcule sur usageMetadata, pas sur une table:
   l'ancienne table se trompait de 40%. Reel normal ~$1,20-1,60. Proof: img_ab
-  et voice_ab du 31/07.
+  et voice_ab du 31/07. Ajout 08/08 (16h30), PRIX VEO MESURE: un clip de 8 s en
+  1080p a coute $0,96, pas les ~$0,60 de moyenne annonces sur les six premiers.
+  Budgete $1 pour un beat 0 anime, pas $0,60. En sens inverse, la ligne la moins
+  chere du budget est un SCOUT QUI EPINGLE: le Reel virus a coute $1,02 EN TOUT
+  (2 narrations $0,060 + veo $0,96) parce que ses 4 photos etaient deja
+  telechargees, recadrees et epinglees file+credit par le run de 06h30, et que
+  ses 2 recus et sa carte sont gratuits. Zero still generee achetee. Un scout qui
+  epingle supprime a la fois ~$0,50 de stills et la derive de classement
+  Openverse mesuree le 07/08.
 - 2026-07-31 · La voix et sa direction fixent le debit, donc la fenetre de mots.
   Une lecture chacune sur le script du jour (188 mots): 2.5-flash/Charon 3,36
   mots/s, 3.1-flash/Charon 3,26, Sadaltager 3,49, Puck 3,04, Rasalgethi 2,97
