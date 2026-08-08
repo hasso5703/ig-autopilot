@@ -214,10 +214,10 @@
         "script": "Alors Rippling a construit un tableau de bord. Il note chaque salarié : ce que l'IA lui coûte, ce qu'il produit, et si ses collègues doivent refaire son travail.",
         "visual": {
           "type": "photo",
-          "query": "accountant calculator",
-          "alt": "un tableur ouvert à côté d'une calculatrice",
-          "file": "media/2026-08-08-facture-ia-salaries/photo_6.jpg",
-          "credit": "Wilfred Iven · CC0"
+          "query": "analytics graph screen",
+          "alt": "un tableau de bord de graphiques sur l'écran d'un ordinateur portable",
+          "file": "media/2026-08-08-facture-ia-salaries/photo_6b.jpg",
+          "credit": "Luis Llerena · CC0"
         }
       },
       {
