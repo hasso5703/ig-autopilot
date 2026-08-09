@@ -214,6 +214,13 @@ ENTRIES:
   sous "update:", une confirmation d'Altman sur X que la sortie est retardee,
   que ni techcrunch ni unite.ai n'ont; sur une annonce de labo, lis le bas de
   page de the-decoder avant d'ecrire la chute.
+  Ajout 09/08 (10h30), dossier ChatGPT gratuit illimite: rendent 200 au fetch
+  gate et se gatent du premier coup (12/12) techcrunch.com, unite.ai,
+  macrumors.com et testingcatalog.com. Bloque: neowin.net (403). RAPPEL
+  macrumors: il SE GATE mais ne se CAPTURE PAS (mur Cloudflare, mesure 03/08),
+  donc il sert de source et de corroboration, jamais de recu. testingcatalog.com
+  est un petit site (peu d'iframes) et est le meilleur candidat recu de ce lot
+  sur le critere O(frames) du 06/08, a confirmer en moteur.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -521,6 +528,28 @@ ENTRIES:
   en haut du cadre, inutilisable en dernier beat; `crop=754:1340:610:60` donne
   un vrai portrait poitrine. Sur un beat qui doit finir sur un visage, recadre
   sur la tete, pas sur l'image.
+  Ajout 09/08 (10h30), DEUX PIEGES DE PLUS SUR LES REQUETES DE TELEPHONE, et le
+  premier est une famille nouvelle. (1) LE FAUX ASSUME: "person using
+  smartphone" met en tete "Headset computer with phone as mouse" (8.0, un
+  casque-ordinateur, pas un telephone) et sort en 8e "Abraham Lincoln using a
+  smartphone (anachronism)" a 7.0. Une image DELIBEREMENT fabriquee, bien
+  licenciee, 0% de blanc, qui passe licence, taille et filtre fond-blanc. Ecarte
+  au titre les mots anachronism, parody, mockup, concept, AI-generated. (2) LE
+  CADRE 9:16 COUPE LE SUJET DE L'HISTOIRE: sur une photo paysage de quelqu'un
+  qui tient un telephone, le telephone est au BORD du cadre, donc le crop 9:16
+  centre sur le visage le supprime. Les 3 premiers crops de ce dossier ont donne
+  trois personnes qui ne tenaient rien. Genere 2-3 valeurs de x et REGARDE en
+  hstack avant d'epingler: le sujet du beat, ce n'est pas la personne, c'est la
+  personne AVEC l'objet. (3) Deux requetes differentes peuvent rendre la MEME
+  seance photo: "screen time" et "smartphone use at railway station" sortent le
+  meme homme en chemise a carreaux (meme banque d'images), donc deux beats
+  auraient montre le meme visage. Valeurs sures mesurees, contemporaines, sans
+  marque ni date lisible, telephone bien dans le cadre: "Screen time" (Rawpixel,
+  CC0, 5000x3334, crop=1875:3334:1400:0), "Elderly woman standing next to a
+  window and looking at her phone" (Shixart1985, CC BY, 4912x7360 DEJA EN
+  PORTRAIT, crop=4140:7360:772:0, et une femme agee dit "tout le monde" mieux
+  qu'une photo de bureau) et "Woman sitting in a chair holding a cup looking at
+  a phone" (Shixart1985, CC BY, 5753x3835, crop=2157:3835:2100:0).
   Ajout 03/08: ne "monte" JAMAIS a la main la resolution d'une image rawpixel.
   Openverse sert /editor_1024/<cle>.jpg (1024 px, propre); la MEME cle en
   /image_1300/ rend 1300 px avec le filigrane "rawpixel" en travers du cadre, et

@@ -1,0 +1,135 @@
+{
+  "slug": "2026-08-09-chatgpt-gratuit-illimite",
+  "centralClaim": "OpenAI is removing the text-chat limits on free ChatGPT accounts, making GPT-5.6 Luna the default model for Free and Go users, with unlimited text chats arriving the week of 10 August 2026.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/",
+      "quote": "OpenAI is removing limits on text-based chats for all users on ChatGPT, which recently crossed the 1 billion weekly user mark, the company announced today."
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/",
+      "quote": "The company is letting free and Go users access unlimited text chats, with no text-based rate limits."
+    }
+  ],
+  "sendTest": "ChatGPT devient illimité pour les comptes gratuits cette semaine. Mais les 62 % d'erreurs en moins, c'est OpenAI qui les a mesurés lui-même.",
+  "caption": "ChatGPT gratuit passe en illimité sur les échanges écrits, à partir de la semaine du 10 août.\n\nLes comptes gratuits passent à un nouveau modèle par défaut, avec un bouton pour faire réfléchir ChatGPT plus longtemps sur les questions difficiles.\n\nMais illimité ne veut pas dire tout. Les fichiers, les images et la voix gardent leurs limites, et OpenAI se réserve le droit de couper en cas d'abus.\n\nEt le chiffre mis en avant, 62 % d'erreurs factuelles en moins que le modèle précédent, sort des tests internes d'OpenAI, sur des questions d'argent, de santé et de droit. Aucune évaluation indépendante ne l'a confirmé.\n\nTu ferais confiance à un chatbot pour une question de santé, oui ou non ?\n\nSources : techcrunch.com, unite.ai, macrumors.com, testingcatalog.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #OpenAI",
+  "captionEvidence": [
+    {
+      "quote": "Luna becomes the free and go default during the week of the announcement, with unlimited text chats and the think button following in the week of August 10, 2026.",
+      "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/"
+    },
+    {
+      "quote": "On reliability, OpenAI reports that in an internal evaluation of financial, medical, and legal prompts requiring factual detail, responses containing at least one factual error were about 62% less common with GPT-5.6 Luna and 68% less common with GPT-5.6 Sol than with GPT-5.5 Instant, the model Luna replaces as the free default.",
+      "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/"
+    },
+    {
+      "quote": "The unlimited access has defined edges. It applies to text chats; limits remain for file uploads, images, and other tools, and OpenAI notes the offering is subject to abuse guardrails.",
+      "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/"
+    },
+    {
+      "quote": "The figure comes from OpenAI's own testing, not an independent evaluation.",
+      "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "OpenAI · ChatGPT",
+      "headline": "ChatGPT gratuit passe en *illimité*",
+      "hero": { "value": "1 milliard", "label": "de personnes utilisent ChatGPT chaque semaine" },
+      "swipe": "Swipe pour les deux bords du mot illimité"
+    },
+    {
+      "type": "stat",
+      "figure": "62%",
+      "unit": "d'erreurs factuelles en moins",
+      "body": "Sur des questions d'argent, de santé et de droit. Mais ce sont **les tests internes d'OpenAI**, pas une évaluation indépendante.",
+      "evidence": "On reliability, OpenAI reports that in an internal evaluation of financial, medical, and legal prompts requiring factual detail, responses containing at least one factual error were about 62% less common with GPT-5.6 Luna and 68% less common with GPT-5.6 Sol than with GPT-5.5 Instant, the model Luna replaces as the free default.",
+      "source": { "name": "Unite.AI", "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/", "date": "2026-08-06" }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui change, concrètement",
+      "body": "Les comptes gratuits passent à *GPT-5.6 Luna*, le nouveau modèle par défaut, à la place de GPT-5.5. Ils gagnent aussi un bouton qui laisse ChatGPT réfléchir plus longtemps sur une question difficile.",
+      "evidence": "The new GPT-5.6 Luna model will power this experience and will be the default model for free and go users, replacing GPT-5.5.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/", "date": "2026-08-06" }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qui devient illimité",
+      "claim": "Les échanges écrits, sans limite de messages.",
+      "caveatLabel": "Ce qui reste limité",
+      "caveat": "Les fichiers, les images, la voix. Et OpenAI garde la main en cas d'abus.",
+      "evidence": "The unlimited access has defined edges. It applies to text chats; limits remain for file uploads, images, and other tools, and OpenAI notes the offering is subject to abuse guardrails.",
+      "source": { "name": "Unite.AI", "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/", "date": "2026-08-06" }
+    },
+    {
+      "type": "content",
+      "title": "Le chiffre vient du vendeur",
+      "body": "OpenAI a mesuré son propre modèle. *Aucune évaluation indépendante* n'a confirmé le résultat, et les questions testées sont celles où une erreur coûte cher.",
+      "evidence": "The figure comes from OpenAI's own testing, not an independent evaluation.",
+      "source": { "name": "Unite.AI", "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/", "date": "2026-08-06" }
+    },
+    {
+      "type": "content",
+      "title": "À quelle échelle ça se passe",
+      "body": "ChatGPT vient de dépasser *le milliard d'utilisateurs par semaine*. C'est à cette échelle que la limite de messages saute.",
+      "evidence": "OpenAI is removing limits on text-based chats for all users on ChatGPT, which recently crossed the 1 billion weekly user mark, the company announced today.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/", "date": "2026-08-06" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui utilise ChatGPT gratuitement",
+      "sub": "Une actu IA, expliquée simplement."
+    }
+  ],
+  "reel2": {
+    "mood": "steady",
+    "lang": "fr",
+    "title": "ChatGPT gratuit passe en illimité cette semaine",
+    "beats": [
+      {
+        "script": "Tu utilises ChatGPT sans payer ? À partir de cette semaine, tu peux lui écrire autant que tu veux. Plus aucune limite de messages.",
+        "visual": { "type": "photo", "query": "screen time smartphone", "alt": "Un homme consulte son téléphone dans un hall lumineux", "file": "media/2026-08-09-chatgpt-gratuit-illimite/photo_0.jpg", "credit": "Rawpixel · CC0" }
+      },
+      {
+        "script": "Et le mot illimité, il a des bords. Deux, exactement. Le deuxième est le plus embêtant.",
+        "visual": { "type": "screenshot", "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/" }
+      },
+      {
+        "script": "D'abord, ce qui change pour toi. Les comptes gratuits passent à un modèle plus récent, et ils gagnent un bouton pour faire réfléchir ChatGPT plus longtemps sur les questions difficiles.",
+        "visual": { "type": "photo", "query": "elderly woman window phone", "alt": "Une femme âgée regarde son téléphone près d'une fenêtre", "file": "media/2026-08-09-chatgpt-gratuit-illimite/photo_3.jpg", "credit": "Shixart1985 · CC BY" }
+      },
+      {
+        "script": "Et ça ne concerne pas trois passionnés. OpenAI dit qu'un milliard de personnes utilisent ChatGPT chaque semaine.",
+        "visual": { "type": "card", "value": "1 MILLIARD", "label": "de personnes utilisent ChatGPT chaque semaine" }
+      },
+      {
+        "script": "Premier bord : illimité veut dire les textes, et rien d'autre. Les fichiers, les images, la voix gardent leurs limites. Et OpenAI se réserve le droit de couper en cas d'abus.",
+        "visual": { "type": "screenshot", "url": "https://www.testingcatalog.com/openai-is-rolling-out-gpt-5-6-luna-to-free-chatgpt-users/" }
+      },
+      {
+        "script": "Deuxième bord, et c'est le plus gênant. OpenAI annonce que son nouveau modèle gratuit fait 62 % d'erreurs factuelles en moins que l'ancien.",
+        "visual": { "type": "card", "value": "62 %", "label": "d'erreurs factuelles en moins, mesurées par OpenAI" }
+      },
+      {
+        "script": "Sauf que ce chiffre vient des tests d'OpenAI, pas d'une évaluation indépendante. C'est l'entreprise qui corrige sa propre copie, sur des questions d'argent, de santé et de droit.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a printed evaluation report page filled with columns of numbers",
+          "action": "lying flat under a desk lamp",
+          "setting": "on a plain wooden table in daylight",
+          "composition": "extreme close-up, the page fills the entire frame" } }
+      },
+      {
+        "script": "Donc oui, parle-lui autant que tu veux. Mais sur ta santé ou ton argent, vérifie ailleurs. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "photo", "query": "woman cup phone chair", "alt": "Une femme regarde son téléphone en buvant un café", "file": "media/2026-08-09-chatgpt-gratuit-illimite/photo_7.jpg", "credit": "Shixart1985 · CC BY" }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/", "accessed": "2026-08-09" },
+    { "name": "Unite.AI", "url": "https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/", "accessed": "2026-08-09" },
+    { "name": "MacRumors", "url": "https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/", "accessed": "2026-08-09" },
+    { "name": "TestingCatalog", "url": "https://www.testingcatalog.com/openai-is-rolling-out-gpt-5-6-luna-to-free-chatgpt-users/", "accessed": "2026-08-09" }
+  ]
+}
