@@ -1,0 +1,136 @@
+{
+  "slug": "2026-08-09-openai-astra-cyber-critique",
+  "centralClaim": "OpenAI said on 7 August 2026 that preliminary internal evaluations of its unreleased model Astra were strong enough that it cannot rule out the Critical cybersecurity capability level of its own Preparedness Framework, and it has paused internal activities involving Astra that do not meet strengthened security controls.",
+  "sendTest": "OpenAI a mis en pause une partie du travail sur son prochain modèle: ses propres tests disent qu'il sait peut-être entrer seul dans des systèmes protégés.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/",
+      "quote": "our preliminary evaluations indicate strong enough performance that we cannot rule out Critical capability level at this time"
+    },
+    {
+      "url": "https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/",
+      "quote": "The results were strong enough that OpenAI \"cannot rule out critical capability level\" under its own preparedness framework."
+    }
+  ],
+  "caption": "OpenAI a freiné son prochain modèle après ses propres tests de cybersécurité.\n\nL'entreprise dit ne plus pouvoir exclure le niveau qu'elle appelle critique: un modèle capable de trouver et de fabriquer seul des failles inconnues dans des systèmes réputés très protégés. C'est la première fois qu'elle accole ce mot à l'un de ses propres modèles.\n\nCe que son propre règlement prévoit à ce niveau, c'est l'arrêt du développement. OpenAI parle, elle, de mettre en pause certaines activités internes, de renforcer ses contrôles, et de faire tester Astra par des agences publiques et des organisations de sécurité.\n\nÀ garder en tête: les évaluations sont préliminaires, c'est OpenAI qui teste OpenAI, et Astra n'est pas sorti. Le contexte, lui, est réel: en juillet, un autre modèle non sorti de l'entreprise était entré dans les systèmes de Hugging Face pendant un test interne.\n\nTransparence exemplaire ou coup de communication ? Dis-le en commentaire.\n\nSources: techcrunch.com, the-decoder.com, unite.ai\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Cybersécurité",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "OpenAI · Astra",
+      "headline": "OpenAI freine son IA, *trop douée* en piratage",
+      "hero": { "value": "CRITIQUE", "label": "le niveau de risque qu'OpenAI ne peut plus exclure" },
+      "swipe": "Les reçus, diapositive par diapositive"
+    },
+    {
+      "type": "content",
+      "title": "Ce que disent ses propres tests",
+      "body": "OpenAI dit que ses évaluations internes d'Astra sont **assez fortes** pour qu'elle ne puisse plus écarter le niveau qu'elle nomme *critique*.",
+      "evidence": "our preliminary evaluations indicate strong enough performance that we cannot rule out Critical capability level at this time",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/", "date": "2026-08-07" }
+    },
+    {
+      "type": "content",
+      "title": "Ce que critique veut dire",
+      "body": "Un modèle qui trouve et fabrique **seul** des failles inconnues, dans des systèmes réputés très protégés, sans aucune main humaine.",
+      "evidence": "when it can find and develop working zero-day exploits across all severity levels in many hardened, critical systems without human involvement",
+      "source": { "name": "The Decoder", "url": "https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/", "date": "2026-08-08" }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que le règlement prévoit",
+      "claim": "À ce niveau, le développement s'arrête tant que les garde-fous ne sont pas au niveau.",
+      "caveatLabel": "Ce qu'OpenAI fait",
+      "caveat": "Elle met en pause *certaines* activités internes et renforce ses contrôles. Pas un arrêt complet.",
+      "evidence": "So far, though, OpenAI is talking about pausing certain activities and ramping up testing, not a full development stop.",
+      "source": { "name": "The Decoder", "url": "https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/", "date": "2026-08-08" }
+    },
+    {
+      "type": "content",
+      "title": "Une première",
+      "body": "C'est la **première fois** qu'OpenAI accole ce mot à l'un de ses propres modèles.",
+      "evidence": "This is the first time OpenAI has flagged one of its own models as potentially reaching the highest cybersecurity risk level.",
+      "source": { "name": "The Decoder", "url": "https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/", "date": "2026-08-08" }
+    },
+    {
+      "type": "content",
+      "title": "Le doute, dit tout de suite",
+      "body": "Les évaluations sont **préliminaires**, l'analyse du modèle est encore en cours, et c'est OpenAI qui teste OpenAI.",
+      "evidence": "The evaluations are preliminary, and benchmarking and assessment of the model are still underway.",
+      "source": { "name": "Unite.AI", "url": "https://www.unite.ai/openai-says-upcoming-astra-model-may-cross-critical-cybersecurity-threshold/", "date": "2026-08-08" }
+    },
+    {
+      "type": "content",
+      "title": "Le contexte, lui, est réel",
+      "body": "En juillet, un autre modèle non sorti d'OpenAI était entré dans les systèmes de **Hugging Face** pendant un test interne.",
+      "evidence": "a different unreleased model breached hugging face's systems during internal testing",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/", "date": "2026-08-07" }
+    },
+    {
+      "type": "content",
+      "title": "La suite",
+      "body": "OpenAI dit travailler avec des **agences publiques** et des organisations de sécurité pour tester les capacités du modèle.",
+      "evidence": "OpenAI said it is working with relevant government agencies and \"select AI safety organizations\" to test the capabilities for this model.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/", "date": "2026-08-07" }
+    },
+    {
+      "type": "content",
+      "title": "Le patron l'a confirmé",
+      "body": "Sam Altman a dit publiquement que cette évaluation **retarde la sortie** du modèle.",
+      "evidence": "OpenAI CEO Sam Altman confirmed via X that the cybersecurity assessment will delay the launch.",
+      "source": { "name": "The Decoder", "url": "https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/", "date": "2026-08-08" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pense que l'IA est un jouet",
+      "sub": "Chaque diapositive porte sa source."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "OpenAI freine son IA, trop douée en piratage",
+    "beats": [
+      {
+        "script": "Il existe une intelligence artificielle que son propre fabricant vient d'arrêter de faire tourner librement. Elle s'appelle Astra, et c'est OpenAI qui la construit.",
+        "visual": { "type": "photo", "file": "media/2026-08-09-openai-astra-cyber-critique/photo_0.jpg", "credit": "Moses Cursor Ssebunya · CC0", "alt": "Baie réseau, panneaux de brassage et câblage" }
+      },
+      {
+        "script": "Et la raison n'est pas un bug, ni un vol de données. C'est ce qu'elle sait faire. Tu vois où ça va ?",
+        "visual": { "type": "screenshot", "url": "https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/" }
+      },
+      {
+        "script": "Ses tests internes montrent qu'elle pourrait trouver et fabriquer toute seule des failles inconnues, dans des systèmes réputés très protégés.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a terminal window filled with security evaluation output",
+          "action": "lines of output scrolling steadily upward",
+          "setting": "in a bright room in daylight",
+          "composition": "extreme close-up, the screen fills the entire frame" } }
+      },
+      {
+        "script": "OpenAI classe ce niveau de danger comme critique. C'est la première fois qu'elle accole ce mot à un de ses modèles.",
+        "visual": { "type": "card", "value": "CRITIQUE", "label": "le niveau de risque qu'OpenAI ne peut plus exclure" }
+      },
+      {
+        "script": "Sauf que son propre règlement dit qu'à ce niveau, on arrête le développement. Pas une partie. OpenAI, elle, met en pause certaines activités et renforce ses contrôles.",
+        "visual": { "type": "screenshot", "url": "https://www.unite.ai/openai-says-upcoming-astra-model-may-cross-critical-cybersecurity-threshold/" }
+      },
+      {
+        "script": "Et rien n'est prouvé. Les évaluations sont préliminaires, c'est OpenAI qui teste OpenAI, et le modèle n'est jamais sorti de chez elle.",
+        "visual": { "type": "card", "value": "PRÉLIMINAIRE", "label": "les évaluations d'OpenAI sur son propre modèle, en cours" }
+      },
+      {
+        "script": "Ce n'est pas sorti de nulle part. En juillet, un autre modèle non sorti d'OpenAI est entré dans les systèmes de Hugging Face pendant un test interne.",
+        "visual": { "type": "photo", "file": "media/2026-08-09-openai-astra-cyber-critique/photo_6.jpg", "credit": "Derrick Coetzee · CC0", "alt": "Rangée de baies de serveurs" }
+      },
+      {
+        "script": "Sam Altman, le patron d'OpenAI, a confirmé que ça retardait la sortie du modèle. Des agences publiques vont maintenant le tester. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "photo", "file": "media/2026-08-09-openai-astra-cyber-critique/photo_7.jpg", "credit": "Steve Jurvetson · CC BY", "alt": "Sam Altman, directeur général d'OpenAI" }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/", "accessed": "2026-08-09" },
+    { "name": "The Decoder", "url": "https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/", "accessed": "2026-08-09" },
+    { "name": "Unite.AI", "url": "https://www.unite.ai/openai-says-upcoming-astra-model-may-cross-critical-cybersecurity-threshold/", "accessed": "2026-08-09" }
+  ]
+}

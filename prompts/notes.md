@@ -199,6 +199,21 @@ ENTRIES:
   (429), openai.com (403, re-confirme). venturebeat.com rend 429 sur ses pages
   article pour le TROISIEME jour consecutif: quand tu planifies, traite-le
   comme indisponible, pas comme un alea a reessayer.
+  Ajout 09/08 (06h30), dossier OpenAI/Astra: rendent 200 au fetch gate et se
+  gatent du premier coup unite.ai, the-decoder.com et techcrunch.com (0 erreur
+  sur 12 citations). Bloquent: axios.com (403), technology.org (403),
+  openai.com (403, re-confirme), finance.yahoo.com (fetch failed). ET LE PIEGE
+  DE CORROBORATION, meme famille que Bloomberg le 07/08 mais dans le sens
+  inverse: ici l'exclu Axios est injoignable ET le primaire openai.com aussi,
+  donc TOUTES les reprises joignables reecrivent le meme billet OpenAI. Le
+  gate passe au vert sur 3 domaines et ca reste UNE annonce. La nuance qui la
+  rend quand meme publiable: le fait corrobore est "OpenAI a DIT x", et deux
+  redactions qui citent la meme declaration publique attestent bien qu'elle a
+  ete faite. Dis-le dans le rapport, ne lis pas le vert comme une enquete
+  independante. Bonus mesure le meme jour: the-decoder porte, en fin d'article
+  sous "update:", une confirmation d'Altman sur X que la sortie est retardee,
+  que ni techcrunch ni unite.ai n'ont; sur une annonce de labo, lis le bas de
+  page de the-decoder avant d'ecrire la chute.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -296,6 +311,16 @@ ENTRIES:
   pas dans les faits rapportes, donc le gate refusait a juste titre une
   metaphore. Imprime le vocabulaire ENTIER avant d'ecrire un spec, le message
   n'en montre que 18 par ordre alphabetique.
+  Ajout 09/08 (06h30), LE CAS OU AUCUN SPEC NE PEUT PASSER, et c'est une
+  information, pas un obstacle: sur une actu d'ANNONCE (evaluation, rapport,
+  reglement), storyVocab ne contient AUCUN nom physique. Dossier Astra, 86
+  mots, et pas un seul screen, server, cable, room, board, machine: seuls des
+  abstraits (capability, evaluation, framework, severity, development). Deux
+  specs image ont ete refuses de suite. Ne cherche pas un synonyme: le seul
+  spec qui est passe decrivait un ECRAN D'EVALUATION ("a terminal window
+  filled with security evaluation output"), parce que security et evaluation
+  sont les seuls concrets du lot. Reflexe: sur une actu d'annonce, prevois des
+  le depart photos + recus + `card`, et budgete UNE still au maximum.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -481,6 +506,21 @@ ENTRIES:
   "US Navy 020913-N-3986D-001 Growing bacteria in a petri dish" (domaine public,
   1500x2100, DEJA en portrait, et c'est un vrai VISAGE de technicien, rare sur
   une histoire de labo).
+  Ajout 09/08 (06h30): n'interroge PAS commons.wikimedia.org/w/api.php en
+  boucle depuis le conteneur, il rend "You are making too many requests to the
+  API" en texte brut (donc un JSON.parse qui explose, pas un 429 lisible).
+  Passe par `searchOpenverse`/`searchCommons` + `creditLine` de imagery.mjs,
+  qui sont exportes, et espace les appels; c'est le chemin qui rend deja
+  createur + licence. Valeurs sures mesurees ce jour-la, toutes contemporaines,
+  sans marque lisible ni date gravee, recadrees 9:16 et epinglees: "A messy
+  network server room showing wires, patch panels" (Moses Cursor Ssebunya, CC0,
+  1542x2048, DEJA en portrait, crop=1152:2048:195:0), "Front of server racks at
+  NERSC" (Derrick Coetzee, CC0, 4288x2848, crop=1602:2848:1343:0) et "Sam
+  Altman speaking at TED" (Steve Jurvetson, CC BY, 2184x2633). ATTENTION sur ce
+  dernier: le crop 9:16 plein cadre donne un PLAN ENTIER assis, visage minuscule
+  en haut du cadre, inutilisable en dernier beat; `crop=754:1340:610:60` donne
+  un vrai portrait poitrine. Sur un beat qui doit finir sur un visage, recadre
+  sur la tete, pas sur l'image.
   Ajout 03/08: ne "monte" JAMAIS a la main la resolution d'une image rawpixel.
   Openverse sert /editor_1024/<cle>.jpg (1024 px, propre); la MEME cle en
   /image_1300/ rend 1300 px avec le filigrane "rawpixel" en travers du cadre, et

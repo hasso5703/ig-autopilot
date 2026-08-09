@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-08T19:40:40.661Z",
-  "fresh": 45,
+  "at": "2026-08-09T06:38:30.047Z",
+  "fresh": 31,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 17,
+      "fresh": 9,
       "windowHours": 36
     },
     {
@@ -78,21 +78,21 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 3,
+      "fresh": 1,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 2,
+      "fresh": 0,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 7,
-      "fresh": 6,
+      "fetched": 4,
+      "fresh": 4,
       "windowHours": 36
     },
     {
