@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-09T16:55:35.904Z",
-  "fresh": 23,
+  "at": "2026-08-09T19:39:58.969Z",
+  "fresh": 24,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 10,
+      "fresh": 11,
       "windowHours": 36
     },
     {

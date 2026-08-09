@@ -1,0 +1,153 @@
+{
+  "slug": "2026-08-09-motif-anti-cameras",
+  "centralClaim": "Bill Swearingen's computer-generated patterns are scored against eleven production surveillance detection models, including the license plate and person detectors deployed on American streets, and defeat all of them.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/",
+      "quote": "perfect recipes for patterns that were able to defeat all of the 11 open-source detection algorithms he tested, including the software that powers flock license plate readers, axon body-worn cameras, and cameras running clearview ai."
+    },
+    {
+      "url": "https://norecognition.org/",
+      "quote": "scored against eleven production computer vision models, including the vehicle and person detector running on tens of thousands of american streets."
+    }
+  ],
+  "sendTest": "Un mec a créé un motif à imprimer sur un t-shirt qui empêche les caméras de surveillance de te repérer. Il l'a testé sur une voiture, ça a marché.",
+  "caption": "Un motif imprimé sur un t-shirt peut empêcher les caméras de surveillance de te repérer.\n\nBill Swearingen, un expert en sécurité informatique, a lancé 31 millions de tests pour fabriquer ces motifs. Ils battent les 11 logiciels de détection qu'il a testés, dont ceux des lecteurs de plaques et des caméras portées par la police. Vendredi, au DEF CON de Las Vegas, il a couvert une voiture avec l'un d'eux face à un lecteur de plaques. Elle n'a pas été repérée.\n\nLe détail qui n'a pas tenu dans la vidéo. Ses motifs n'empêchent pas la caméra de filmer. Ils brouillent sa capacité à identifier les objets, les gens ou les visages, donc aucune alerte ne se déclenche. Il garde ses motifs les plus efficaces hors du web pour que les fabricants de caméras ne les contrent pas, et prépare des t-shirts et des sweats à capuche.\n\nÀ décharge, et il le dit lui-même sur son propre site. Ses meilleurs chiffres sont obtenus en simulation, pas devant de vraies caméras, et aucun motif ne bat les onze modèles d'un seul coup.\n\nSe rendre invisible aux caméras de surveillance, c'est un droit ou un danger ?\n\ntechcrunch.com · sandbox.norecognition.org · defcon.org\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Surveillance #DEFCON",
+  "captionEvidence": [
+    {
+      "quote": "some 31 million tests later, swearingen says he can now produce patterns on-demand that, when applied to clothing and objects, prevent some of the most commonly deployed license plate readers and surveillance cameras from detecting whatever the pattern covers, from people to vehicles.",
+      "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/"
+    },
+    {
+      "quote": "perfect recipes for patterns that were able to defeat all of the 11 open-source detection algorithms he tested, including the software that powers flock license plate readers, axon body-worn cameras, and cameras running clearview ai.",
+      "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "noRecognition · Bill Swearingen",
+      "headline": "31 millions d'essais pour *disparaître* des caméras",
+      "hero": { "value": "31M", "label": "essais avant de trouver le bon motif" },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "31M",
+      "unit": "tests menés sur les motifs",
+      "body": "Au bout de ces essais, ses motifs **empêchent des lecteurs de plaques et des caméras de surveillance très répandus** de repérer ce que le motif recouvre.",
+      "evidence": "some 31 million tests later, swearingen says he can now produce patterns on-demand that, when applied to clothing and objects, prevent some of the most commonly deployed license plate readers and surveillance cameras from detecting whatever the pattern covers, from people to vehicles.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/", "date": "2026-08-09" }
+    },
+    {
+      "type": "content",
+      "title": "La caméra filme toujours",
+      "body": "Le motif ne coupe pas l'image. Il *brouille la capacité de la caméra à identifier* les objets, les gens ou les visages, donc aucune alerte ne part.",
+      "evidence": "do not block surveillance cameras from recording video footage. instead, they scramble the camera's ability to identify objects, people, or faces, so that the cameras do not trigger any detection alerts.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/", "date": "2026-08-09" }
+    },
+    {
+      "type": "content",
+      "title": "Onze logiciels battus",
+      "body": "Ses motifs battent les **11 logiciels de détection** qu'il a testés, dont ceux des lecteurs de plaques et des caméras portées par la police.",
+      "evidence": "perfect recipes for patterns that were able to defeat all of the 11 open-source detection algorithms he tested, including the software that powers flock license plate readers, axon body-worn cameras, and cameras running clearview ai.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/", "date": "2026-08-09" }
+    },
+    {
+      "type": "content",
+      "title": "La voiture, vendredi, à Las Vegas",
+      "body": "Premier test public au DEF CON. Il a *montré le motif imprimé sur un véhicule*, et la voiture est passée sans être repérée par un lecteur de plaques.",
+      "evidence": "in its first public test friday at the def con cybersecurity conference in las vegas, swearingen successfully demonstrated the pattern printed on a vehicle, proving that these patterns can be effective at defeating surveillance detection in the real world.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/", "date": "2026-08-09" }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qui est annoncé",
+      "claim": "Des motifs qui battent tous les modèles testés.",
+      "caveatLabel": "Ce que son propre site précise",
+      "caveat": "Les meilleurs chiffres sont obtenus en simulation, pas devant une vraie caméra, et aucun motif unique ne les bat tous d'un coup.",
+      "evidence": "digital, simulated print and camera, white-box. not a physical or real-camera result.",
+      "source": { "name": "noRecognition / DarkCogswell", "url": "https://sandbox.norecognition.org/research", "date": "2026-08-09" }
+    },
+    {
+      "type": "content",
+      "title": "Aucun motif ne les bat tous",
+      "body": "Son propre tableau de bord le dit noir sur blanc. *Un seul motif capable de battre les onze modèles à la fois n'a pas encore été démontré.*",
+      "evidence": "all eleven models now have a digital held-out defeat beyond a valid control (ten clean, p4 footprint-conditional). a single tile that defeats all eleven at once is still not demonstrated.",
+      "source": { "name": "noRecognition / DarkCogswell", "url": "https://sandbox.norecognition.org/research", "date": "2026-08-09" }
+    },
+    {
+      "type": "stat",
+      "figure": "117M",
+      "unit": "d'Américains déjà fichés",
+      "body": "Environ **un adulte sur trois** figure dans les réseaux de reconnaissance faciale de la police, sans avoir consenti ni même été prévenu.",
+      "evidence": "over 117 million americans are currently indexed in police facial recognition networks. that is roughly one in every three adults. most never consented, were never informed, and have no way to opt out.",
+      "source": { "name": "noRecognition / DarkCogswell", "url": "https://sandbox.norecognition.org/about", "date": "2026-08-09" }
+    },
+    {
+      "type": "content",
+      "title": "Il garde les meilleurs pour lui",
+      "body": "Il laisse ses motifs les plus efficaces *hors du web*, pour que les fabricants de caméras ne les contrent pas. La suite prévue tient dans des t-shirts et des sweats à capuche.",
+      "evidence": "keeping his strongest patterns off the internet to prevent the camera makers from defeating them, but that the work is not yet done.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/", "date": "2026-08-09" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui passe devant des caméras sans y penser",
+      "sub": "L'actu IA, avec les sources sur chaque affirmation."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "31 millions d'essais pour tromper les caméras",
+    "beats": [
+      {
+        "script": "Une caméra dans la rue ne se contente plus de te filmer: elle te reconnaît. Bill Swearingen a trouvé comment lui apprendre à ne plus te voir.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a large printed pattern covering the door panel of a parked vehicle",
+            "action": "a single hand sliding slowly from left to right across the printed pattern, the printed pattern still covering the whole panel",
+            "setting": "on a quiet street in bright daylight",
+            "composition": "close-up, the printed pattern fills most of the frame"
+          }
+        }
+      },
+      {
+        "script": "Son projet s'appelle noRecognition, et sa méthode tient dans un motif imprimé sur du tissu. La caméra filme toujours, mais elle ne te repère plus.",
+        "visual": { "type": "screenshot", "url": "https://sandbox.norecognition.org/about" }
+      },
+      {
+        "script": "Swearingen est expert en sécurité informatique. Il a lancé 31 millions de tests pour trouver les motifs qui trompent ces caméras.",
+        "visual": { "type": "card", "value": "31 millions", "label": "d'essais avant de trouver les bons motifs" }
+      },
+      {
+        "script": "Et il en a trouvé. Ses motifs battent les 11 logiciels de détection qu'il a testés, dont ceux des lecteurs de plaques d'immatriculation.",
+        "visual": { "type": "photo", "query": "license plate reader", "alt": "Un lecteur automatique de plaques d'immatriculation au bord d'une route" }
+      },
+      {
+        "script": "Vendredi, à Las Vegas, il a couvert une vieille Toyota avec son motif, face à un lecteur de plaques. Elle n'a pas été repérée.",
+        "visual": { "type": "screenshot", "url": "https://defcon.org/html/defcon-34/dc-34-speakers.html" }
+      },
+      {
+        "script": "Sauf que non. Ses meilleurs résultats viennent de simulations, pas de vraies caméras. Et aucun motif ne bat les onze d'un coup.",
+        "visual": { "type": "screenshot", "url": "https://sandbox.norecognition.org/research" }
+      },
+      {
+        "script": "Aux États-Unis, plus de 117 millions d'Américains sont déjà fichés dans les réseaux de reconnaissance faciale de la police. Environ un adulte sur trois.",
+        "visual": { "type": "photo", "query": "surveillance camera street", "alt": "Des caméras de surveillance fixées au-dessus d'une rue" }
+      },
+      {
+        "script": "Il garde ses meilleurs motifs secrets, pour que les fabricants de caméras ne les contrent pas. La suite, c'est des t-shirts. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "photo", "query": "cctv camera pole", "alt": "Une caméra de surveillance montée sur un mât" }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/09/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/", "accessed": "2026-08-09" },
+    { "name": "noRecognition / DarkCogswell (research)", "url": "https://sandbox.norecognition.org/research", "accessed": "2026-08-09" },
+    { "name": "noRecognition / DarkCogswell (about)", "url": "https://sandbox.norecognition.org/about", "accessed": "2026-08-09" },
+    { "name": "DEF CON 34 speakers", "url": "https://defcon.org/html/defcon-34/dc-34-speakers.html", "accessed": "2026-08-09" }
+  ]
+}
