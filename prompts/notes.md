@@ -221,6 +221,22 @@ ENTRIES:
   donc il sert de source et de corroboration, jamais de recu. testingcatalog.com
   est un petit site (peu d'iframes) et est le meilleur candidat recu de ce lot
   sur le critere O(frames) du 06/08, a confirmer en moteur.
+  Ajout 09/08 (19h30), dossier motif anti-cameras: rendent 200 au fetch gate
+  norecognition.org, sandbox.norecognition.org (/about et /research) et
+  defcon.org. Bloquent: startlandnews.com (403) et kickstarter.com (403), donc
+  la campagne de financement et le seul autre journal a avoir couvert le projet
+  sont ingatables. PIEGE DE CORROBORATION, encore, et la variante la plus dure:
+  le RESULTAT (la demo publique) n'est rapporte QUE par techcrunch, et le
+  "second domaine" est le site du chercheur lui-meme. Ca reste publiable (le
+  primaire atteste la recherche, la methode et le passage au DEF CON, et il
+  publie ses propres reserves), mais ne lis pas le vert comme deux redactions.
+  ET LA MECANIQUE DU GATE QUI COUTE DEUX ALLERS-RETOURS: le controle
+  "corroboration ... shares only N distinctive word(s)" est un POURCENTAGE du
+  vocabulaire du centralClaim, donc un centralClaim qui empile DEUX
+  affirmations (le resultat + la demo) fait chuter le score mecaniquement:
+  13% puis 21%, alors que la meme citation passait a 30% une fois le claim
+  ramene a UNE seule affirmation, ce que le manuel demande deja. Ecris une
+  phrase, une affirmation, avant de suspecter la source.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -940,7 +956,24 @@ ENTRIES:
   ecrit par une IA sur un compte dont la promesse est l'inverse; c'est en bas
   de carte et minuscule au rendu, mais si le beat cadre plus bas, prends
   unite.ai.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08.
+  Ajout 09/08 (19h30), DEUX PIEGES DE RECU, dont un TYPE NOUVEAU. (1) UNE PAGE
+  D'INDEX SE CAPTURE A UN ENDROIT ARBITRAIRE, ET LE RECU MONTRE ALORS LE MAUVAIS
+  SUJET: defcon.org/html/defcon-34/dc-34-speakers.html se gate (200) et se
+  capture proprement, mais la capture est tombee sur le resume d'une AUTRE
+  conference (un talk Apple Metal/macOS), avec le titre "DEF CON Abstract" en
+  tete, donc un recu parfaitement lisible, sans pub ni banniere, qui atteste
+  d'une histoire qui n'est pas la notre. Aucun controle automatique ne le voit,
+  seul le frame check l'attrape. Sur une page qui liste N elements (programme de
+  conference, index, sommaire, page de resultats), ne prends PAS de recu: prends
+  la page dediee, ou une autre surface. (2) LE RECU PEUT PORTER UN APPEL AU DON:
+  norecognition.org se capture du premier coup en ~20 s (petit site, critere
+  O(frames) du 06/08 confirme) mais son bandeau porte "LIVE NOW ON KICKSTARTER"
+  + un bouton "Back it now on Kickstarter". Un compte d'info n'a pas a graver un
+  bouton de financement dans un Reel: `crop=1290:545:0:255` garde le titre
+  "Clothing the cameras cannot see" et la phrase qui nomme le DEF CON, et coupe
+  les deux boutons. Meme reflexe que les bannieres cookies: REGARDE le
+  shot_N.png avant de construire.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
