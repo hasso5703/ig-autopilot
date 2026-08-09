@@ -328,6 +328,25 @@ ENTRIES:
   filled with security evaluation output"), parce que security et evaluation
   sont les seuls concrets du lot. Reflexe: sur une actu d'annonce, prevois des
   le depart photos + recus + `card`, et budgete UNE still au maximum.
+  Ajout 09/08 (16h30), LE MEME CAS RESOLU AUTREMENT, et ca repond aussi a la
+  question du beat 0 anime. Dossier ChatGPT gratuit illimite: storyVocab fait
+  86 mots et ne contient AUCUN objet physique (ni phone, ni smartphone, ni
+  screen, ni device; seulement button, upload, report, prompt, error). Donc
+  aucun spec veo d'ouverture n'etait possible, et ce n'est pas un jugement de
+  gout: sur une actu de CHANGEMENT DE REGLE PRODUIT (une limite qui saute, un
+  tarif, une disponibilite), il n'existe pas de moment filmable, exactement
+  comme la ligne "reglement qui entre en vigueur" du manuel. Imprime le
+  vocabulaire AVANT de debattre du beat 0, ca tranche en 10 s. Ce qui a pris le
+  beat 0 a la place: une vraie photo documentaire de quelqu'un avec son
+  telephone (rang 1 de la hierarchie, au-dessus d'un clip genere).
+  ET LA STILL DE DOCUMENT QUI NE RATE PAS: le manuel interdit la prose inventee
+  ("a page of a proof" est revenu couvert d'anglais illisible le 01/08). Demande
+  des COLONNES DE CHIFFRES et le piege disparait: spec "a printed evaluation
+  report page filled with columns of numbers" + "lying flat under a desk lamp" +
+  "extreme close-up, the page fills the entire frame" a rendu du premier coup
+  une page de tableaux numeriques nette, zero mot anglais, zero logo, zero date.
+  Les chiffres se lisent comme de la notation, la prose non: c'est la meme regle
+  que "formules, symboles ou code" mais avec une formulation qui marche.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -909,7 +928,19 @@ ENTRIES:
   coupe les deux et garde chapeau "ARTIFICIAL INTELLIGENCE" + titre + chapo +
   "BY <auteur>" + date. Le recadrage n'est pas cosmetique: la pub etait visible
   en plein cadre sur le rendu et passe tous les controles automatiques.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08.
+  Ajout 09/08 (16h30), DEUX RECUS LEGERS DE PLUS, mesures EN MOTEUR sur le
+  dossier ChatGPT gratuit, les deux propres DU PREMIER COUP et sans recadrage:
+  unite.ai (~1 min) rend rubrique + titre entier sur 3 lignes + signature + date
+  + chapo + image de tete, 0 pub, AUCUNE banniere cookies; testingcatalog.com
+  pareil et encore plus leger (le scout de 10h30 l'avait predit sur le critere
+  O(frames) du 06/08: petit site, peu d'iframes, et ca se confirme en moteur).
+  Sur une actu OpenAI, ces deux-la sont donc les recus a prendre, le primaire
+  openai.com etant 403. UN BEMOL A REGARDER, pas bloquant: la signature de
+  testingcatalog affiche "Erin | AI Agent", donc le recu montre un article
+  ecrit par une IA sur un compte dont la promesse est l'inverse; c'est en bas
+  de carte et minuscule au rendu, mais si le beat cadre plus bas, prends
+  unite.ai.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
