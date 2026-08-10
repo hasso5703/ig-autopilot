@@ -2267,3 +2267,101 @@ test("the daily spend breaker counts today only and refuses at the cap", async (
   assert.equal(spendRoom(entries, 0.4, { now, cap: 6 }).spent, 5.5, "yesterday's $4 must not count");
   assert.equal(spendRoom([], 1, { now, cap: 6 }).ok, true, "an empty ledger starts at zero");
 });
+
+// ---------------------------------------------------------------------------
+// The caption sizes and the countdown, 2026-08-10. Sizes and character caps
+// move together and neither may be raised alone (the 2026-07-29 near-ship:
+// "OPENAI A SUSPENDU L'ENTRAÎNEMENT" walked off both edges of the frame), so
+// the pairs are held here. The countdown counts the seconds actually in the
+// file, because a chrono that lies is worse than none on this account.
+// ---------------------------------------------------------------------------
+test("the karaoke styles carry the raised sizes and the platform-safe low band", async () => {
+  const { buildAss } = await import("../src/reel2.mjs");
+  const words = [{ w: "bonjour", s: 0, e: 0.5 }, { w: "le", s: 0.5, e: 0.7 }, { w: "monde", s: 0.7, e: 1.2 }];
+  const beats = [{ script: "bonjour le monde", visual: { type: "photo" } }];
+  const ass = buildAss(words, beats, [{ start: 0, end: 2 }], "FFB300", {});
+  assert.match(ass, /Style: K,OOM Caption,112,/, "main captions at 112");
+  // MarginV 350 is the fix for captions sitting inside Instagram's ~320px
+  // bottom UI strip — fine in the raw file, hidden on a phone.
+  assert.match(ass, /Style: KLOW,OOM Caption,88,[^\n]*,30,30,350,1/, "low band at 88px, 350 from the bottom");
+});
+
+test("the countdown emits one dialogue per second, honest about the file's real length", async () => {
+  const { buildAss } = await import("../src/reel2.mjs");
+  const words = [{ w: "bonjour", s: 0, e: 0.5 }];
+  const beats = [{ script: "bonjour", visual: { type: "photo" } }];
+  const opts = { endcard: { from: 57, dur: 3 }, countdown: true };
+  const ass = buildAss(words, beats, [{ start: 0, end: 0 }], "FFB300", opts);
+  const lines = ass.split("\n").filter((l) => l.includes(",COUNT,"));
+  assert.equal(lines.length, 60, "a 60.0s file counts 60 seconds");
+  assert.ok(lines[0].endsWith("}60"), "the first second shows 60");
+  assert.ok(lines.at(-1).endsWith("}1"), "the last second shows 1, reaching the cut at zero");
+  // A clamped 62s build says 62 — the countdown may not lie about the file.
+  const long = buildAss(words, beats, [{ start: 0, end: 0 }], "FFB300", { endcard: { from: 59, dur: 3 }, countdown: true });
+  assert.equal(long.split("\n").filter((l) => l.includes(",COUNT,")).length, 62);
+  // And the flag is a flag: off means no COUNT events and no style dependency.
+  const off = buildAss(words, beats, [{ start: 0, end: 0 }], "FFB300", { endcard: { from: 57, dur: 3 } });
+  assert.equal(off.split("\n").filter((l) => l.includes(",COUNT,")).length, 0);
+});
+
+test("the title ladder grew but the 52-character worst case still fits two lines", async () => {
+  const { titleFontSize } = await import("../src/reel2.mjs");
+  assert.equal(titleFontSize("Une IA a fabriqué 16 virus qui marchent"), 100, "a 39-char title takes the 100 rung (was 92)");
+  assert.equal(titleFontSize("Court"), 124, "a short title takes the biggest rung");
+  const worstCase = "x".repeat(52); // the gate's own ceiling for reel2.title
+  assert.equal(titleFontSize(worstCase), 74, "52 chars must land on the rung that holds 54, never one that holds 50");
+});
+
+// ---------------------------------------------------------------------------
+// The repo is the CDN and it was filling up: media/ at 529 MB after two weeks
+// (~19-30 MB a Reel, cloned by every container), metrics.jsonl at 709 KB and
+// 1,171 rows mostly repeating their neighbours. Meta copies the MP4 to its
+// own CDN at publish time and the SHA-pinned URL serves from git history
+// forever, so pruning the working tree cannot break a live post. What CAN
+// break is deleting a banked, unpublished Reel between its build and its
+// publish — so prunable() refuses any slug without a posted entry.
+// ---------------------------------------------------------------------------
+test("prune selects only heavy files of slugs published over the cutoff, never banked work", async () => {
+  const { prunable } = await import("../src/prune-media.mjs");
+  const now = new Date("2026-08-10T21:00:00Z");
+  const posted = [
+    { slug: "2026-07-30-old", at: "2026-07-30T17:00:00Z" },
+    { slug: "2026-08-09-fresh", at: "2026-08-09T17:00:00Z" },
+  ];
+  const dirs = {
+    "2026-07-30-old": ["reel.mp4", "voice2_raw.wav", "words.json", "align.key", "photo_1.jpg"],
+    "2026-08-09-fresh": ["reel.mp4"],
+    "2026-08-11-banked-not-published": ["reel.mp4", "veo_0.mp4"],
+  };
+  const plan = prunable(posted, dirs, { now, days: 7 });
+  assert.equal(plan.length, 1, "only the 11-day-old published slug qualifies");
+  assert.equal(plan[0].slug, "2026-07-30-old");
+  assert.deepEqual(plan[0].files, ["photo_1.jpg", "reel.mp4", "voice2_raw.wav"], "heavy files only — the json/key sidecars are analytic memory");
+});
+
+test("a slug republished recently ages from its newest publication", async () => {
+  const { prunable } = await import("../src/prune-media.mjs");
+  const now = new Date("2026-08-10T21:00:00Z");
+  const posted = [
+    { slug: "2026-07-27-story", at: "2026-07-27T17:00:00Z" },
+    { slug: "2026-07-27-story", at: "2026-08-09T17:00:00Z" }, // republished after the wipe
+  ];
+  assert.equal(prunable(posted, { "2026-07-27-story": ["reel.mp4"] }, { now, days: 7 }).length, 0);
+});
+
+test("metrics compaction keeps the fresh series whole and one reading per post per day after", async () => {
+  const { compactMetrics } = await import("../src/insights.mjs");
+  const now = new Date("2026-08-10T21:00:00Z");
+  const r = (mediaId, at) => ({ mediaId, at, insights: {} });
+  const rows = [
+    r("m1", "2026-08-01T06:00:00Z"), r("m1", "2026-08-01T10:00:00Z"), r("m1", "2026-08-01T19:00:00Z"), // old day: keep last only
+    r("m1", "2026-08-10T06:00:00Z"), r("m1", "2026-08-10T19:00:00Z"),                                   // fresh: keep all
+    r("m2", "2026-08-01T10:00:00Z"),
+  ];
+  const kept = compactMetrics(rows, { now });
+  assert.equal(kept.length, 4);
+  assert.ok(kept.some((x) => x.mediaId === "m1" && x.at === "2026-08-01T19:00:00Z"), "the day's last reading survives");
+  assert.ok(!kept.some((x) => x.at === "2026-08-01T06:00:00Z"), "the day's earlier readings go");
+  assert.ok(kept.some((x) => x.mediaId === "m2"), "every post keeps its trace");
+  assert.deepEqual(kept.map((x) => x.at), [...kept.map((x) => x.at)].sort(), "rewritten in timestamp order");
+});

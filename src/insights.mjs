@@ -315,6 +315,31 @@ export async function latestPerPost() {
 }
 
 /**
+ * The metrics ledger grows by one line per post per run — four runs a day over
+ * an ever-longer grid. Measured 2026-08-10: 709 KB and 1,171 rows after two
+ * weeks, re-read by every run and re-cloned by every container, with most
+ * rows saying what the adjacent rows say. A post's numbers move hourly on its
+ * first two days and daily after that, so the series keeps exactly that:
+ * every reading under 48h old, then the last reading per post per UTC day.
+ * Pure, so the suite can hold it; the CLI below rewrites the file. A
+ * concurrent run's append can resurrect some pruned lines through the
+ * union-merge — harmless, every reader takes newest-by-timestamp, and the
+ * next weekly compaction re-prunes.
+ */
+export function compactMetrics(rows, { now = new Date() } = {}) {
+  const fresh = [];
+  const byPostDay = new Map();
+  for (const r of rows || []) {
+    if (!r?.mediaId || !r?.at) continue;
+    if (now - new Date(r.at) < 48 * 3600000) { fresh.push(r); continue; }
+    const key = `${r.mediaId}:${String(r.at).slice(0, 10)}`;
+    const held = byPostDay.get(key);
+    if (!held || Date.parse(r.at) > Date.parse(held.at)) byPostDay.set(key, r);
+  }
+  return [...byPostDay.values(), ...fresh].sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
+}
+
+/**
  * Account readings, oldest first. Returns the newest plus the reading closest
  * to 7 days before it, which is what turns a follower count into a growth rate.
  */
@@ -352,6 +377,14 @@ if (process.argv[1] && process.argv[1].endsWith("insights.mjs")) {
     if (cmd === "latest") return latestPerPost();
     if (cmd === "account") return accountTrend();
     if (cmd === "collect") return collectAll();
+    if (cmd === "compact") {
+      const rows = existsSync(METRICS)
+        ? (await readFile(METRICS, "utf8")).split("\n").filter((l) => l.trim()).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean)
+        : [];
+      const kept = compactMetrics(rows);
+      await writeFile(METRICS, kept.map((r) => JSON.stringify(r)).join("\n") + (kept.length ? "\n" : ""));
+      return { before: rows.length, after: kept.length, dropped: rows.length - kept.length };
+    }
     throw new Error(`unknown command: ${cmd}`);
   };
   run().then(
