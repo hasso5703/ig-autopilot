@@ -241,7 +241,7 @@ So the day has one shape, and each slot knows its job:
 |---|---|
 | **06:30, 10:30** | **Scout — and the day now needs TWO.** Gather, verify, and leave **two** gate-clean post specs ready, each **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Two, because the day owes two Reels and a publish slot that arrives to an empty shelf is how a half-kept day starts. They must be **different subjects**, not one story wearing two headlines. The 06:30 scout banks the first, the 10:30 scout checks it is still fresh and banks the second. Publish nothing. Spend nothing on media. |
 | **16:30** | **Publish the day's first.** Check `node src/state.mjs today` first: `owedToday` is what the day still owes. Orphan check, re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **one Reel and nothing else**, then seed the first comment (step 10b). One per run is the ceiling, so this run stops after one even though the day owes another — bank the runner-up with `recordSeen` for 19:30. 16:30 UTC is 18h30 in Paris: inside the measured French engagement peak (18h–19h), the same anchor HugoDécrypte publishes into. Moved from 15:00 on 2026-07-29 (Hasan's call), which also keeps every slot clear of the account's daily quota-reset window. |
-| **19:30** | **Publish the day's second, and keep the vigil.** This slot is no longer conditional: since 2026-08-02 the day owes two Reels, so unless `owedToday` is already 0, **this run publishes**. Start with `node src/watch.mjs` and read its report (token days left, silence alarms, per-reel retention) — a token that dies unannounced takes the account offline for days. Then publish the second Reel; 21h30 Paris is the evening scroll, a real window, and a good story banked overnight is a story three other accounts will have run by morning. If the day has **no** Reel at all (the 16:30 run found nothing or died), this run still publishes only one — the ceiling is per run — and the report names the day as half kept. Publish nothing only when nothing gates at all. Whether you publish or not, do the vigil work: read what worked, and **reply to every comment worth replying to on recent posts (step 10b)** — reply speed while a post is still distributing is measured leverage. |
+| **19:30** | **Publish the day's second, and keep the vigil.** This slot is no longer conditional: since 2026-08-02 the day owes two Reels, so unless `owedToday` is already 0, **this run publishes**. Start with `node src/watch.mjs` and read its report (token days left, silence alarms, per-reel retention) — a token that dies unannounced takes the account offline for days. Then publish the second Reel; 21h30 Paris is the evening scroll, a real window, and a good story banked overnight is a story three other accounts will have run by morning. If the day has **no** Reel at all (the 16:30 run found nothing or died), this run still publishes only one — the ceiling is per run — and the report names the day as half kept. Publish nothing only when nothing gates at all. Whether you publish or not, do the vigil work: read what worked (`node src/learn.mjs` writes the digest), and **reply to every comment worth replying to on recent posts (step 10b)** — reply speed while a post is still distributing is measured leverage. **On Sundays, also do the weekly maintenance**: `node src/prune-media.mjs --live` (heavy files of Reels published over 7 days ago — Meta serves its own copy, git history keeps ours) and `node src/insights.mjs compact` (the metrics series), then land both with the run's normal landing. |
 
 A scout run that finds a story *bigger than anything the account has covered*
 still waits for the publish slot: a few hours of freshness cost less than a Reel
@@ -557,12 +557,15 @@ the first time at the gate:**
    at the current window**, and the gate refuses it above that. Treat it as a
    gift, not a constraint: a faster first sentence is what this whole section is
    trying to buy.
-2. **A veo clip costs about $0.60**, measured across the six this account has
-   bought. A Reel carrying one runs about **$1.80 to $2.20** instead of $1.20 to
-   $1.60, still under the $3 line that asks for an explanation. **Do not drop it
-   to save money.** The account has been buying $0.13 stills for beats nobody
-   stayed long enough to see; this is the cheapest attention in the pipeline,
-   not the most expensive picture.
+2. **A veo clip costs $0.40 to $0.96 depending on the buy** — Veo Fast is
+   $0.10/s at 720p and $0.12/s at 1080p, so 4s/$0.40, 6s/$0.60, and the default
+   8-second 1080p opener is **$0.96, measured 2026-08-08** (the earlier "$0.60
+   average" was a mix of shorter 720p clips; budget the opener at a dollar). A
+   Reel carrying one runs about **$1.50 to $2.60** depending on how much the
+   scouts pre-pinned, still under the $3 line that asks for an explanation.
+   **Do not drop it to save money.** The account has been buying $0.13 stills
+   for beats nobody stayed long enough to see; this is the cheapest attention
+   in the pipeline, not the most expensive picture.
 3. **Google's craft rules bind and are enforced** (`simplicityIssues`): one
    clear subject, close or medium framing, one simple deliberate motion, no
    crowds, no traffic, no rows of anything, no time-lapse. A malformed car is
@@ -1013,12 +1016,25 @@ different outlet. Do not second-guess it.
 ### 2b. Look at what has already worked
 ```bash
 node src/insights.mjs collect >/dev/null && node src/insights.mjs latest
+node src/learn.mjs
 ```
-**Collect first, then read.** There is no standalone watch any more; each run collects for itself and the 19:30 run makes the day's consolidated reading: the 15:06 run
+**Collect first, then read.** There is no standalone watch *slot* any more (the
+script `src/watch.mjs` still exists and the 19:30 run starts with it); each run
+collects for itself and the 19:30 run makes the day's consolidated reading: the 15:06 run
 read `[]` and reported honestly that it had no signal, half an hour before the
 watch wrote the first numbers this account has ever had. Collecting costs one
 API round trip and means you are looking at this afternoon rather than at
 yesterday.
+
+**Then read the lessons digest.** `node src/learn.mjs` (added 2026-08-10) joins
+every ledger the account keeps — posted, metrics, account, the specs — and
+prints the digest that used to be recomputed by hand when a run had time and
+skipped when it did not: top and bottom performers **with their sendTests side
+by side**, medians by opening surface, by theme and by publish hour, and which
+days actually gained followers. It writes `state/lessons.json` and it never
+throws. The floors below still govern — thin samples are labelled `(thin)` in
+the digest itself — but "what do our own numbers say" is now one command, so
+there is no excuse for scoring a story without having looked.
 
 Read **retention** first when it exists (the watch computes average watch time
 over real duration for every Reel with a recorded `durationS` — under 40% the
@@ -1097,11 +1113,26 @@ Rank the fresh items against `sources.json → scoring.weights`:
 
 | Signal | What you are judging |
 |---|---|
-| **recognition** (0.30) | Would someone who does not work in technology recognise the subject **and what happened to it**, from the hook alone, with nothing explained? This is the criterion the account was failing. |
-| **sendability** (0.30) | Not a feeling. Write the message someone would actually send with it. See below. |
-| **stakes** (0.20) | Name the person it lands on, in one sentence, without speculating. If you cannot, this is zero. |
+| **recognition** (0.25) | Would someone who does not work in technology recognise the subject **and what happened to it**, from the hook alone, with nothing explained? This is the criterion the account was failing. |
+| **sendability** (0.25) | Not a feeling. Write the message someone would actually send with it. See below. |
+| **proximite** (0.20) | Does it land on the **viewer's own life** — their body, their money, their phone, their job, their privacy — without inventing a single hypothetical? Test: could the hook truthfully contain *ton/ta/tes*? Score from the story as reported; the gate still owns every claim. |
+| **stakes** (0.15) | Name the person it lands on, in one sentence, without speculating. If you cannot, this is zero. |
 | **timeliness** (0.10) | Is this what people are already talking about **today**? A new account has to enter conversations that exist. This is the opposite of the old "novelty" and it points the other way. |
-| **sourceQuality** (0.10) | A lab's own announcement outranks coverage of it, provided the page can be fetched. |
+| **sourceQuality** (0.05) | A lab's own announcement outranks coverage of it, provided the page can be fetched. |
+
+**Why `proximite` exists (added 2026-08-10, measured, not felt).** Two weeks of
+the account's own numbers (`node src/learn.mjs`, `state/lessons.json`): the four
+best-viewed Reels — 1229, 1141, 982, 538 views against a median of 156 — are the
+AI-written viruses (your health), the MacBook memory squeeze (your next
+purchase), the anti-camera pattern (your privacy) and the AI bill against
+salaries (your pay). The institutional stories the account also ran — AI Act
+173, FCC 156, Congress 116, robotaxis 130 — sat at or under the median with the
+account's only zero-share records, **and every one of them was perfectly
+recognisable**. Recognition is necessary and not sufficient; what separated the
+account's own hits from its own flops is whether the viewer is IN the story.
+The follower ledger agrees: +5 on 08/08 and +4 on 09/08, the two hit days, out
+of +14 lifetime. If a later month's lessons contradict this, move the weights
+again — measured, in a commit that says so.
 
 **The vetoes. These are not weights, they are refusals.**
 
@@ -1262,7 +1293,7 @@ Do not write raw HTML; it is escaped and will appear literally on the slide.
   "slides": [
     { "type": "hook", "kicker": "24 July 2026 · Anthropic",
       "headline": "Same price. *Three times* the score.",
-      "hero": { "value": "$5", "label": "per million input tokens — unchanged" },
+      "hero": { "value": "$5", "label": "per million input tokens, unchanged" },
       "swipe": "Swipe for the receipts" },
 
     { "type": "stat", "figure": "$5", "unit": "per million input tokens",
@@ -1892,9 +1923,13 @@ Rules, and the gate enforces the hard ones:
   Read the strip left to right and ask one question: **is the subject still
   the same object, the same size, and still there in the last panel?** If it
   has shrunk, merged, vanished, doubled, or grown a limb, the clip is refused
-  — rebuy it with the action rewritten per the four rules above. $0.60 against
-  the one beat the whole audition rests on. **Say in the report that you read
-  the strip**, not that you looked at the frames.
+  — rebuy it with the action rewritten per the four rules above. Up to $0.96
+  against the one beat the whole audition rests on. **Say in the report that
+  you read the strip**, not that you looked at the frames. (Since 2026-08-10
+  the engine caches a bought clip beside a fingerprint of its exact prompt,
+  seconds and resolution — a rebuild for some other beat's problem reuses
+  this clip free; a REFUSED clip must be rebought with a CHANGED action,
+  which changes the fingerprint, so the cache can never resurrect it.)
 - **A `screenshot` beat is the receipt** — the source article's headline, the
   product's own page. Real, verifiable, ours because our browser took it. Use
   one whenever a real page carries the story. google.com itself is captcha'd
@@ -2149,7 +2184,16 @@ If a frame is merely *fine*, leave it. If a frame is one a stranger would
 scroll past, it is the whole Reel's ceiling, and $0.13 is the cheapest thing
 in this pipeline.
 
-**Cost discipline, and the model tier it now assumes.** On 2026-07-31 Hasan
+**What the frames look like since 2026-08-10 — the new normal, so nobody
+"fixes" it.** Every frame carries a translucent countdown top-right (60 down
+to 1, ending exactly at the cut; see `format.mjs COUNTDOWN` for the retention
+measurement plan before anyone flips it). The karaoke is one step bigger (112
+main band, 88 low band), the low band on receipt beats sits noticeably higher
+than before (MarginV 350 — the old 170 put it inside the strip Instagram's
+own UI covers on a phone), and the receipt card is 100px shorter so the
+raised band clears it. All four were verified frame-by-frame on a cached
+rebuild the day they landed. A frame check that flags "the countdown is
+new" or "the captions moved up" is describing the design, not a defect. On 2026-07-31 Hasan
 moved the standing order from *"the cheapest tier of everything"* to *"one tier
 up on video, images and voice, never the most expensive"*. The engine buys **Veo
 3.1 Fast** (1080p when the beat takes an 8-second clip, which is native for a
@@ -2158,13 +2202,18 @@ Banana 2 at 2K** for stills (1536x2752, so the Ken-Burns oversample is finally a
 downscale instead of a blow-up), and **Gemini 3.1 Flash TTS** for the voice.
 Deliberately not bought: Veo standard, Nano Banana Pro, Pro TTS.
 
-That puts a Reel with no moving beat at **about $1.20 to $1.60**, against
-roughly $0.60 before, and a Reel with the `veo` opener that has been the default
-since 2026-08-03 at **about $1.80 to $2.20** — a clip has measured $0.60 on
-average across the six bought so far. Over **$3**, say so in the report and say
-why. And do not "save money" by dropping a tier or by dropping the opener: the
-choices are in `genmedia.mjs` with the measurement that justified each one, a
-run that quietly reverts them is undoing a decision it did not make, and $0.60
+That puts a Reel with no moving beat at **about $0.30 to $1.60** (the low end
+is a day the scouts pre-pinned every photo — 2026-08-10's gym Reel built for
+$0.28), and a Reel with the `veo` opener that has been the default since
+2026-08-03 at **about $1.50 to $2.60** — the default 8-second 1080p clip has
+measured **$0.96** (2026-08-08; the earlier $0.60 average mixed in shorter
+720p buys). Over **$3**, say so in the report and say why; at **$6 in one UTC
+day the engine itself refuses to buy** (`genmedia.mjs`, the daily breaker —
+nothing legitimate reaches it, and if it trips, read today's receipts in
+`state/spend.jsonl` before overriding with `OOM_DAILY_SPEND_CAP`). And do not
+"save money" by dropping a tier or by dropping the opener: the choices are in
+`genmedia.mjs` with the measurement that justified each one, a run that
+quietly reverts them is undoing a decision it did not make, and a dollar
 against an audition you do not get twice is the best-value line in this budget.
 
 **Publish, exactly as before.** Commit and push the MP4 first — Meta fetches

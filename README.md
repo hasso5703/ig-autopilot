@@ -50,6 +50,8 @@ sources.json ─► gather ─► score ─► write the spec (claim + quoted se
 | `src/feeds.mjs` | dependency-free RSS/Atom reader over `sources.json` |
 | `src/imagery.mjs` | openly-licensed photographs, with their licence and author |
 | `src/insights.mjs`, `src/watch.mjs` | what the account's own posts actually did |
+| `src/learn.mjs` | **the experience loop** — every ledger joined into the digest a picking run reads |
+| `src/prune-media.mjs` | weekly: drop heavy media of Reels published >7 days (Meta serves its own copy) |
 | `src/engage.mjs` | seed the first comment, answer the real ones |
 | `posts/<slug>.json` | one post spec per story: claim, evidence, caption, `reel2` plan |
 | `media/<slug>/reel.mp4` | the published Reel — this URL is what Instagram fetches |
@@ -96,13 +98,17 @@ unverifiable, and unverifiable is not published.
 ```bash
 npm test                                           # the regression net; a red suite stops a run
 node src/state.mjs today                           # what the account owes today
+node src/learn.mjs                                 # what the account's own numbers say worked
 node src/validate.mjs posts/<slug>.json            # the gate, including the word window
-node src/reel2.mjs posts/<slug>.json media/<slug>  # build the Reel (about $1.50)
+node src/reel2.mjs posts/<slug>.json media/<slug>  # build the Reel (about $1.50; caches make rebuilds ~$0)
 node src/calibrate-voice.mjs posts/<slug>.json 3   # after any voice change, before the next run
 
 IG_ACCESS_TOKEN=… node src/publish.mjs whoami      # sanity check
 IG_ACCESS_TOKEN=… node src/publish.mjs quota       # posts used in the last 24h
 ```
+
+Paid calls stop at **$6 a day** (`genmedia.mjs`, `OOM_DAILY_SPEND_CAP` to
+override) — a circuit breaker against re-buy loops, four times a normal day.
 
 Landing is only ever `node src/land.mjs "message" [paths]`. Never
 `git checkout main`, never a hand `git push`, never force: the container's local

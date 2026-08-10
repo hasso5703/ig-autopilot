@@ -111,16 +111,19 @@
   ],
   "scoring": {
     "_comment": "Rewritten 2026-07-26 because the old rubric picked an NVIDIA simulation SDK over the launch of Opus 5. It rewarded 'novelty', which an LLM reads as obscurity, and 'magnitude', which a 5-hours-to-2-minutes speedup satisfies perfectly. Both pushed the account toward developer tooling nobody outside the industry can recognise. What replaces them is weighted on whether a stranger knows what the subject IS, and on an artefact rather than a feeling: the run has to write the actual message someone would send with the post, and the gate reads it.",
+    "_comment_2026_08_10": "proximite added, paid for with stakes and sourceQuality, on the account's own first two weeks of measurements (state/lessons.json): the four best-viewed Reels (1229, 1141, 982, 538 views) all land on the viewer's own life — their health (virus written by an AI), their next purchase (MacBook memory), their privacy (anti-camera pattern), their pay (AI bill vs salaries) — while the institutional stories (AI Act 173, FCC 156, Congress 116, robotaxis 130) sit at or under the 156 median with the account's only zero-share records. Recognition of the subject was necessary and not sufficient: every flop was recognisable too. What separated the account's own hits from its own flops is whether the viewer is IN the story. Read node src/learn.mjs before scoring; if a later month's lessons contradict this, the weights move again, measured, in a commit that says so.",
     "weights": {
-      "recognition": 0.3,
-      "sendability": 0.3,
-      "stakes": 0.2,
+      "recognition": 0.25,
+      "sendability": 0.25,
+      "proximite": 0.2,
+      "stakes": 0.15,
       "timeliness": 0.1,
-      "sourceQuality": 0.1
+      "sourceQuality": 0.05
     },
     "_criteria": {
       "recognition": "Would someone who does not work in technology recognise the subject AND what happened to it, from the hook alone, with nothing explained? NVIDIA is recognised; 'Isaac medical physics simulation framework' is not. This is the criterion the account was failing.",
       "sendability": "Not a feeling. Write the message someone would actually send with it, put it in the spec as `sendTest`, and read it back. If it needs a word like framework, SDK or inference, nobody sends it.",
+      "proximite": "Does it land on the VIEWER's own life — their body, their money, their phone, their job, their privacy — without a single hypothetical? 'An AI wrote 16 working viruses' scores; 'the Commission enforces transparency rules' does not, however large the institution. Test: can the hook contain 'ton/ta/tes' (your) truthfully? Score it from the story as reported, never by inventing a consequence the sources do not carry — the gate still owns every claim.",
       "stakes": "Name the person it lands on in one sentence, without speculating. If you cannot, this is zero and the story is probably not one.",
       "timeliness": "Is this what people are already talking about today? A new account has to enter conversations that exist, not invent new ones. This is the opposite of the old 'novelty'.",
       "sourceQuality": "A lab's own announcement outranks coverage of it, provided the page can actually be fetched."
