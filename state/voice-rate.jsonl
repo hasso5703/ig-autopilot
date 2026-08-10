@@ -49,3 +49,5 @@
 {"at":"2026-08-09T16:44:20.781Z","slug":"2026-08-09-chatgpt-gratuit-illimite","words":195,"seconds":59.48,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-1.2}
 {"at":"2026-08-09T19:52:07.504Z","slug":"2026-08-09-motif-anti-cameras","words":197,"seconds":56.84,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.5}
 {"at":"2026-08-10T16:44:52.951Z","slug":"2026-08-10-ia-reserve-cours-sport","words":194,"seconds":57.52,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.7}
+{"at":"2026-08-10T19:42:34.781Z","slug":"2026-08-10-amazon-centrale-gaz-texas","words":195,"seconds":61.52,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-1.2}
+{"at":"2026-08-10T19:43:11.307Z","slug":"2026-08-10-amazon-centrale-gaz-texas","words":195,"seconds":57.68,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-1}

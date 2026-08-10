@@ -186,7 +186,8 @@
             "action": "rolling forward slowly, dust drifting up behind the blade, the mound of brush staying piled in front of it",
             "setting": "on a flat empty plain of dry cleared ground in bright daylight",
             "composition": "low medium shot, the blade filling the lower half of the frame"
-          }
+          },
+          "file": "media/2026-08-10-amazon-centrale-gaz-texas/veo_0.mp4"
         }
       },
       {
@@ -201,7 +202,8 @@
         "script": "Amazon a confirmé avoir acheté le terrain, dans le comté de Pecos, au Texas. Et le chantier a déjà commencé: des images satellite montrent le terrain en train d'être déblayé.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the"
+          "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the",
+          "file": "media/2026-08-10-amazon-centrale-gaz-texas/shot_2.png"
         }
       },
       {
@@ -236,7 +238,7 @@
         "script": "À décharge, et c'est important: un permis n'est pas une facture. Les centrales rejettent rarement autant que ce que leur permis autorise.",
         "visual": {
           "type": "screenshot",
-          "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid"
+          "url": "https://newrepublic.com/post/214111/amazon-data-center-biggest-pollution-source-entire-country"
         }
       },
       {

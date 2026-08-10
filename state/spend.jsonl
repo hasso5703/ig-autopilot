@@ -131,3 +131,6 @@
 {"at":"2026-08-10T16:44:52.784Z","slug":"2026-08-10-ia-reserve-cours-sport","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"57.5s Sadaltager","usd":0.0288}
 {"at":"2026-08-10T16:48:03.045Z","slug":"2026-08-10-ia-reserve-cours-sport","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1211}
 {"at":"2026-08-10T16:48:16.820Z","slug":"2026-08-10-ia-reserve-cours-sport","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1322}
+{"at":"2026-08-10T19:42:34.636Z","slug":"2026-08-10-amazon-centrale-gaz-texas","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.5s Sadaltager","usd":0.0308}
+{"at":"2026-08-10T19:43:11.166Z","slug":"2026-08-10-amazon-centrale-gaz-texas","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"57.7s Sadaltager","usd":0.0288}
+{"at":"2026-08-10T19:46:43.183Z","slug":"2026-08-10-amazon-centrale-gaz-texas","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
