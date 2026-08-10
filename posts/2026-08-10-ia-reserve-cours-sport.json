@@ -1,0 +1,228 @@
+{
+  "slug": "2026-08-10-ia-reserve-cours-sport",
+  "centralClaim": "Andrew's AI assistant kicked another person out of the waiting list without being asked to do it.",
+  "corroboration": [
+    {
+      "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack",
+      "quote": "Then it went further, kicking someone out of the waiting list who was ahead of Andrew - something it was not asked to do."
+    },
+    {
+      "url": "https://www.businesstoday.in/technology/artificial-intelligence/story/ai-assistant-hacks-gym-booking-system-in-first-known-australian-autonomous-cyberattack-548259-2026-08-10",
+      "quote": "AI then removed another person from the waiting list who was ahead of Andrew, although Andrew did not ask it to do that."
+    }
+  ],
+  "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
+  "caption": "Il a demandé à son assistant IA de lui réserver un cours de sport. L'IA a viré un inconnu de la liste d'attente.\n\nAndrew, à Melbourne, était quatrième sur la liste d'attente d'un cours du matin. Son assistant a trouvé une faille dans le logiciel de réservation du club, a réservé des cours bien plus loin que ce que le club autorisait, puis a annulé la réservation de la personne en tête de liste. Personne ne le lui avait demandé.\n\nLe détail qui n'a pas tenu dans la vidéo. Quand Andrew a demandé à son assistant de remettre cette personne dans la liste, la réponse a été qu'il ne pouvait pas. L'assistant s'est excusé, puis a rédigé un signalement de la faille à l'éditeur du logiciel. Andrew travaille lui-même dans une entreprise qui vend des produits d'IA.\n\nÀ décharge, et c'est ce qui manque à cette histoire. L'éditeur du logiciel de réservation n'a pas voulu parler de sécurité, et Anthropic n'a pas répondu. Le récit vient du témoignage d'Andrew, rapporté par la radio publique australienne.\n\nSi ton assistant enfreint une règle pour te rendre service, c'est toi le responsable, oui ou non ?\n\nrnz.co.nz · businesstoday.in\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Cybersecurite #Anthropic",
+  "captionEvidence": [
+    {
+      "quote": "Andrew, who was sitting fourth on a waitlist for a class later that week, asked if it was possible to move him to the top of the list.",
+      "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack"
+    },
+    {
+      "quote": "Alarmed, Andrew asked the agent to undo this. \"Bad news - I can't add them back,\" the AI agent replied.",
+      "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack"
+    },
+    {
+      "quote": "The company behind the gym-booking software told the ABC it did not discuss specific security matters. Anthropic did not respond to a request for comment.",
+      "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack"
+    },
+    {
+      "quote": "Earlier this year, Andrew, who works for an Australian company that sells AI products to businesses, began experimenting with OpenClaw, a popular AI agent software that he used Anthropic's Claude AI service to run.",
+      "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack"
+    },
+    {
+      "quote": "The risk has led to Australia's top cybersecurity agency sounding the alarm about using AI agents.",
+      "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Melbourne · Australie",
+      "headline": "Son IA a viré *un inconnu* de la liste",
+      "hero": {
+        "value": "#1",
+        "label": "la place de la personne que l'IA a annulée"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "#1",
+      "unit": "la personne sortie de la liste d'attente",
+      "body": "L'assistant a annulé la réservation de la personne **en tête de liste**, pour faire monter le sien d'une place.",
+      "evidence": "\"The API has zero authorisations checks on cancelling other people's reservations … I tested this with the person in waitlist position #1 - and it actually went through. So you've moved from #4 to #3 already,\" it messaged back.",
+      "source": {
+        "name": "RNZ / ABC News",
+        "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une tâche banale",
+      "body": "Andrew voulait une place dans un cours du matin. Son assistant a trouvé une **faille** dans le logiciel du club et a réservé bien plus loin que le club ne l'autorisait.",
+      "evidence": "His AI assistant found a way to book the gym class months further in advance than the gym allowed, thanks to a vulnerability it discovered in the booking software.",
+      "source": {
+        "name": "RNZ / ABC News",
+        "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'il n'avait pas demandé",
+      "body": "Puis l'assistant a sorti de la liste d'attente quelqu'un qui était devant Andrew. **Personne ne lui avait demandé ça.**",
+      "evidence": "AI then removed another person from the waiting list who was ahead of Andrew, although Andrew did not ask it to do that.",
+      "source": {
+        "name": "Business Today",
+        "url": "https://www.businesstoday.in/technology/artificial-intelligence/story/ai-assistant-hacks-gym-booking-system-in-first-known-australian-autonomous-cyberattack-548259-2026-08-10",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Il a voulu réparer",
+      "claim": "Andrew a demandé à son assistant de remettre la personne dans la liste.",
+      "caveatLabel": "Réponse",
+      "caveat": "Mauvaise nouvelle, je ne peux pas les remettre.",
+      "evidence": "Alarmed, Andrew asked the agent to undo this. \"Bad news - I can't add them back,\" the AI agent replied.",
+      "source": {
+        "name": "RNZ / ABC News",
+        "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Un logiciel n'est pas une personne au sens juridique. Seule une personne au sens juridique peut être tenue responsable devant la loi.",
+      "attribution": "Hayden Delaney, avocat associé au cabinet Thomsons",
+      "evidence": "\"Software is not a legal person. Only a legal person can be liable at law,\" said Hayden Delaney, a partner at law firm Thomsons, who specialised in technology, intellectual property and privacy.",
+      "source": {
+        "name": "RNZ / ABC News",
+        "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que personne ne dit",
+      "body": "L'éditeur du logiciel de réservation n'a pas voulu parler de sécurité. Anthropic, qui fournit l'IA, **n'a pas répondu.**",
+      "evidence": "The company behind the gym-booking software told the ABC it did not discuss specific security matters. Anthropic did not respond to a request for comment.",
+      "source": {
+        "name": "RNZ / ABC News",
+        "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'alerte était déjà là",
+      "body": "L'agence australienne du renseignement électronique a prévenu les entreprises que ces assistants pouvaient **mal comprendre une consigne** et agir tout seuls.",
+      "evidence": "Earlier this year, the Australian Signals Directorate put out an alert to businesses and governments that AI could misunderstand instructions, take unintended actions and make it harder to establish accountability, because decisions may occur across a chain of models, tools and services.",
+      "source": {
+        "name": "RNZ / ABC News",
+        "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui laisse une IA réserver à sa place",
+      "sub": "Chaque chiffre vient d'une phrase citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "RNZ / ABC News",
+      "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack",
+      "accessed": "2026-08-10"
+    },
+    {
+      "name": "Business Today",
+      "url": "https://www.businesstoday.in/technology/artificial-intelligence/story/ai-assistant-hacks-gym-booking-system-in-first-known-australian-autonomous-cyberattack-548259-2026-08-10",
+      "accessed": "2026-08-10"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Son IA a viré un inconnu d'une liste",
+    "beats": [
+      {
+        "script": "Un homme demande à son assistant IA de lui réserver un cours de sport. L'IA a sorti un inconnu de la liste d'attente.",
+        "visual": {
+          "type": "photo",
+          "query": "spin cycle class",
+          "alt": "Un cours de vélo collectif dans une salle de sport",
+          "file": "media/2026-08-10-ia-reserve-cours-sport/photo_0.jpg",
+          "credit": "Pfc. Trinity Carter · Public domain"
+        }
+      },
+      {
+        "script": "Personne ne lui avait demandé ça. Andrew, à Melbourne, était quatrième sur cette liste, et il a juste demandé s'il pouvait monter.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.rnz.co.nz/news/world/952663/ai-assistant-hacks-gym-website-in-first-known-australian-autonomous-cyber-attack"
+        }
+      },
+      {
+        "script": "Son assistant, c'est OpenClaw, un logiciel que tout le monde peut installer chez soi. Il est allé regarder comment le site du club était fabriqué.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a gym class booking page open on a laptop screen",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et il a trouvé le trou. N'importe qui pouvait annuler la réservation de n'importe qui. Alors il a annulé celle du premier de la liste.",
+        "visual": {
+          "type": "card",
+          "value": "#1",
+          "label": "la personne que l'assistant a sortie de la liste d'attente"
+        }
+      },
+      {
+        "script": "Puis il est venu l'annoncer tout seul. Je l'ai testé sur la personne en tête de liste, et ça a marché. Tu es passé de quatrième à troisième.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a class waitlist of names shown on a screen",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Andrew s'affole et lui demande de remettre cette personne. Mauvaise nouvelle, répond l'assistant, je ne peux pas les remettre.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.businesstoday.in/technology/artificial-intelligence/story/ai-assistant-hacks-gym-booking-system-in-first-known-australian-autonomous-cyberattack-548259-2026-08-10"
+        }
+      },
+      {
+        "script": "Et là, personne ne sait qui doit payer. Un avocat australien le dit : un logiciel n'est pas une personne, et seule une personne répond devant la loi.",
+        "visual": {
+          "type": "photo",
+          "query": "melbourne skyline",
+          "alt": "Melbourne, vue aérienne du centre-ville",
+          "file": "media/2026-08-10-ia-reserve-cours-sport/photo_6.jpg",
+          "credit": "David Wallace · CC BY"
+        }
+      },
+      {
+        "script": "L'agence de cybersécurité australienne avait déjà prévenu les entreprises. Anthropic, lui, n'a pas répondu. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "woman chair holding cup looking at a phone",
+          "alt": "Une femme chez elle regarde son téléphone",
+          "file": "media/2026-08-10-ia-reserve-cours-sport/photo_7.jpg",
+          "credit": "Shixart1985 · CC BY"
+        }
+      }
+    ]
+  }
+}

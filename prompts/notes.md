@@ -251,6 +251,18 @@ ENTRIES:
   en parallele et reste illisible d'ici, donc toutes les reprises joignables
   (tnw, newrepublic) citent soit Cleanview soit le NYT, et le vert du gate
   n'atteste pas deux enquetes independantes.
+  Ajout 10/08 (10h30), dossier OpenClaw/salle de sport: abc.net.au rend 403 au
+  fetch gate ET est bloque dans WebFetch, donc une exclu de l'ABC australienne
+  est ingatable au primaire. Le contournement mesure, et il est excellent:
+  rnz.co.nz rend 200 et porte L'ARTICLE ENTIER de l'ABC, signature comprise
+  ("cam wilson and rhiannon hobbins for abc news"), donc toutes les citations
+  (14/14 VERIFIED du premier coup) se prennent la-bas, y compris les paroles de
+  l'agent et les experts. businesstoday.in rend 200 aussi mais ecrit "according
+  to an abc report". DONC, et c'est la meme famille que Bloomberg le 07/08 et le
+  NYT ce matin: RNZ n'est pas une seconde redaction, c'est de la SYNDICATION.
+  Deux domaines verts = UN seul reportage. Publiable en le disant ("rapporte
+  par la radio publique australienne"), jamais lu comme une corroboration.
+  Reflexe general: sur une actu australienne, cherche RNZ avant d'abandonner.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -377,6 +389,24 @@ ENTRIES:
   une page de tableaux numeriques nette, zero mot anglais, zero logo, zero date.
   Les chiffres se lisent comme de la notation, la prose non: c'est la meme regle
   que "formules, symboles ou code" mais avec une formulation qui marche.
+  Ajout 10/08 (10h30), DEUX FACONS DONT UN MOT "EVIDENT" DISPARAIT DU VOCABULAIRE,
+  dossier OpenClaw/salle de sport. (1) namedActors a mange "software" parce que
+  les citations portent "law firm Thomsons" et surtout "Software is not a legal
+  person" EN DEBUT DE PHRASE (majuscule = nom propre pour le detecteur). Sur une
+  histoire dont le sujet EST un logiciel, le mot "software" etait donc interdit
+  de spec: meme famille que "music" supprime par "Universal Music Group" le
+  07/08, mais declenche par une simple majuscule de debut de phrase, pas par une
+  vraie entite. (2) LE MOT COMPOSE NE SE DECOUPE PAS: les sources ecrivent
+  "waitlist", donc un spec disant "a waiting list of names" est refuse "shares no
+  word" alors que l'histoire ne parle que de ca ("waiting" et "list" sont deux
+  tokens, aucun n'est "waitlist", et "list" fait 4 lettres donc ne compterait pas
+  de toute facon). Le correctif a passe du premier coup: "a class waitlist of
+  names shown on a screen" (class + waitlist, tous deux dans le vocabulaire).
+  Re-confirme aussi le cas "aucun spec veo possible" du 09/08: sur ce dossier les
+  123 tokens ne contiennent AUCUN objet filmable (ni phone, ni screen, ni laptop,
+  ni door, ni machine; "gym" fait 3 lettres), seulement reservation, waitlist,
+  class, position, place. Imprime le vocabulaire ENTIER avant d'ecrire un spec ET
+  avant de debattre du beat 0, le message du gate n'en montre que 18.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -711,6 +741,35 @@ ENTRIES:
   lui le beat "raccordement au reseau"; les trois Ferguson n'en ont aucune et
   servent les beats "la centrale elle-meme". Aucune des quatre ne porte de
   marque lisible ni de date gravee.
+  Ajout 10/08 (10h30), UN PIEGE DE TELECHARGEMENT NOUVEAU, a connaitre avant de
+  soupconner une image cassee: upload.wikimedia.org LIMITE LE DEBIT sur les
+  ORIGINAUX quand l'UA est "Mozilla/5.0". Il rend alors une page HTML de 2 ko
+  ("Too many requests - please contact noc@wikimedia.org") ecrite dans ton
+  fichier .jpg, et ffprobe repond "No JPEG data found" / "0,0", ce qui ressemble
+  exactement a un original corrompu. Remede mesure: un UA descriptif
+  ("OrderOfMagnitudeBot/1.0 (contact: ...)") + 5 s d'attente, et le meme
+  original arrive entier (7,3 Mo). Meme famille que la limite de l'API
+  MediaWiki du 09/08, mais c'est l'hote de FICHIERS et ca frappe les originaux.
+  Verifie toujours `head -c 200` avant de conclure a une image morte.
+  Requetes mortes ou pieges mesures ce jour-la, dossier salle de sport:
+  "melbourne street" sort une rangee de maisons BRITANNIQUES (la rue s'appelle
+  Melbourne Street, homonyme, meme famille que Phu Quoc le 06/08) - il FAUT
+  "melbourne skyline" ou "melbourne australia"; "group fitness class" met en
+  tete TROIS statuettes en bronze d'Osiris a 8.0; "gym fitness class" sort le
+  piege d'epoque pour la 6e fois ("Business-men's class (1916)"); et le candidat
+  le plus NET du lot est inutilisable au recadrage, "US Navy ... spin cycle class
+  aboard the aircraft carrier USS Carl Vinson" (4288x2848) laisse lire "NAVY" sur
+  un short et "BLOODHOUNDS" sur un carenage d'avion, soit un hangar militaire sur
+  une actu de salle de sport de quartier (famille du blister Augmentin du 08/08).
+  Valeurs sures pinnees ce jour-la, regardees en planche-contact: "Ederle Gym
+  Spin Cycle Class Photo 2" (Pfc. Trinity Carter, domaine public, 1600x894,
+  crop=509:905:300:0, une silhouette unique sur un velo en lumiere orange/bleue,
+  zero texte lisible; l'original ne fait que 1600 px donc le 9:16 remonte en
+  x2,1, acceptable SEULEMENT parce que c'est une silhouette), "Melbourne skyline
+  on 14 September 2013" (David Wallace, CC BY, 5184x3456, crop=1944:3456:1600:0,
+  aerienne dense, l'aile de l'avion est hors cadre a ce x) et re-confirmation de
+  "Woman sitting in a chair holding a cup looking at a phone" (Shixart1985,
+  CC BY, crop=2157:3835:2100:0 du 09/08, telephone bien dans le cadre).
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
