@@ -134,3 +134,5 @@
 {"at":"2026-08-10T19:42:34.636Z","slug":"2026-08-10-amazon-centrale-gaz-texas","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.5s Sadaltager","usd":0.0308}
 {"at":"2026-08-10T19:43:11.166Z","slug":"2026-08-10-amazon-centrale-gaz-texas","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"57.7s Sadaltager","usd":0.0288}
 {"at":"2026-08-10T19:46:43.183Z","slug":"2026-08-10-amazon-centrale-gaz-texas","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-10T21:56:33.168Z","slug":"2026-08-10-meta-glimmer-ia-locale","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"54.8s Sadaltager","usd":0.0274}
+{"at":"2026-08-10T22:08:03.237Z","slug":"2026-08-10-meta-glimmer-ia-locale","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}

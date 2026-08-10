@@ -181,7 +181,9 @@
         "visual": {
           "type": "photo",
           "query": "mark zuckerberg",
-          "alt": "Mark Zuckerberg sur scène, en gros plan"
+          "alt": "Mark Zuckerberg sur scène, en gros plan",
+          "file": "media/2026-08-10-meta-glimmer-ia-locale/photo_2_pinned.jpg",
+          "credit": "Anthony Quintano · CC BY"
         }
       },
       {
