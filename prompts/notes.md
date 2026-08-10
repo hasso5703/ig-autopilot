@@ -263,6 +263,12 @@ ENTRIES:
   Deux domaines verts = UN seul reportage. Publiable en le disant ("rapporte
   par la radio publique australienne"), jamais lu comme une corroboration.
   Reflexe general: sur une actu australienne, cherche RNZ avant d'abandonner.
+  Ajout 10/08 (19h30): venturebeat.com rend 429 au fetch gate pour le QUATRIEME
+  jour consecutif (07, 08, 09 et 10/08). Ce n'est plus une limite de debit
+  passagere a reessayer: quand tu planifies, traite-le comme indisponible, et
+  n'ecris pas une histoire dont il est la SEULE source. Perdu ce soir pour cette
+  raison: l'exclu Stanford/Merck (37 000 agents en biotech virtuelle), remise en
+  revisit sans une ligne d'ecrite.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -1091,6 +1097,25 @@ ENTRIES:
   ni l'autre plomberie n'est retiree par les deux passes de consentement. Ce
   n'est pas bloquant (la preuve tient dans le haut) mais c'est laid: si le beat
   compte, `crop=1290:1500:0:0` garde en-tete + titre + chapo et coupe les deux.
+  Ajout 10/08 (19h30), UN RECU PEUT MONTRER UN AUTRE ARTICLE DU MEME SITE, et
+  c'est pire que la page d'index du 09/08 parce que l'URL est la BONNE.
+  thenextweb.com: le fetch Node de validate.mjs rend bien l'article Amazon (title
+  verifie, citations VERIFIED), et le navigateur a capture un TOUT AUTRE article
+  TNW ("OpenAI and four rivals just agreed on one standard for AI agents", date
+  du 6 aout), avec en-tete, chapo, date et boutons de partage, zero pub, zero
+  banniere. Le recu etait donc parfaitement propre et attestait une histoire qui
+  n'est pas la notre, sous une voix qui disait "un permis n'est pas une facture".
+  Aucun controle automatique ne le voit: le gate FETCH, il ne CAPTURE pas, et le
+  COMPLIANT ne lit rien. Seul le frame check l'attrape. Donc sur un recu, ne
+  verifie pas seulement que la carte est propre: LIS SON TITRE et compare-le a
+  ton histoire. Remplacant mesure le meme soir et meilleur recu que TNW
+  (il nomme Amazon, le Texas et le data center, et montre le logo sur le
+  batiment): newrepublic.com, masthead THE NEW REPUBLIC + titre entier + chapo +
+  signature + date, sans recadrage. MAIS famille O(frames) du 06/08: le PREMIER
+  essai est mort ("Target page, context or browser has been closed"), le second
+  essai automatique du moteur a reussi, ~5 min au total. Ne le declare pas mort
+  au premier echec. Il reste un petit onglet jaune "Most Recent Post" clippe
+  derriere le titre, cosmetique.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
