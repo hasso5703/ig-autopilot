@@ -155,3 +155,23 @@ export function wordWindow(rate = DEFAULT_RATE) {
   const max = Math.floor(SPEECH_S * rate * 1.08);
   return { min, max, target: Math.round(SPEECH_S * rate), rate };
 }
+
+/**
+ * The on-screen countdown, top-right, 60 → 1.
+ *
+ * Hasan's proposal, 2026-08-10, made testable: the série is named "L'actu IA
+ * en 60 secondes", the bio prints it, and until now nothing on screen showed
+ * it. The countdown is the format made visible — a viewer who lands mid-scroll
+ * sees the size of the ask immediately, and the thumbnail (thumb_offset 1.2s)
+ * carries a "59" in its corner.
+ *
+ * It is a flag, not a constant style choice, because its effect on retention
+ * is measurable and unknown: the account's own curve (2026-08-03) loses 75%
+ * of viewers in the first 3 seconds, and a visible "60" could read as a
+ * commitment ("only a minute, and it is already running") or as a cost
+ * ("a whole minute"). state/lessons.json now reads retention per post, so
+ * after a week of countdown Reels the comparison exists mechanically:
+ * `node src/learn.mjs`, retention before vs after the flag's first day.
+ * If the 7-day median retention drops, flip this off and say so in a report.
+ */
+export const COUNTDOWN = true;

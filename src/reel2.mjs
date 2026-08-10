@@ -51,6 +51,7 @@ import { acquireOne, creditLine } from "./imagery.mjs";
 import {
   TARGET_S, END_S, TAIL_S, SPEECH_S, TEMPO_MIN, TEMPO_MAX, RAW_MAX_S,
   BEATS_MIN, BEATS_MAX, TTS_TRIES, VEO_STRETCH_MAX, DEFAULT_RATE, medianRate, wordWindow,
+  COUNTDOWN,
 } from "./format.mjs";
 
 const run = promisify(execFile);
@@ -626,20 +627,36 @@ function assTime(t) {
  * they were hard to read on a phone, and a bigger face holds fewer characters —
  * the two numbers below move together and neither may be raised alone. The
  * chunker also drops from four words to three for the same reason; a shorter
- * caption is read faster, which is the point of having one. */
+ * caption is read faster, which is the point of having one.
+ *
+ * Raised again 2026-08-10 (Hasan: bigger captions) — sizes went 104→112 and
+ * 78→88, and the caps moved WITH them, scaled off the proven point rather
+ * than the 0.58 estimate: 18 chars at 104px shipped daily without a clipped
+ * frame, and the measured overflow ("about 24 characters" at 104, the
+ * 2026-07-29 near-ship) scales to ~22 at 112px, so 18 keeps its margin.
+ * The low band's 26-at-78 becomes 23-at-88 by the same arithmetic. Verified
+ * on rendered frames, not just arithmetic, before landing. */
 const KARAOKE_MAX_CHARS = 18;
-const KARAOKE_MAX_CHARS_LOW = 26;
+const KARAOKE_MAX_CHARS_LOW = 23;
 const KARAOKE_MAX_WORDS = 3;
 
 /** Uppercase Anton runs about 0.47em wide, so the frame's 952 usable pixels
  * hold roughly `952 / (0.47 * size)` characters on a line. The hook card is
  * allowed two lines and no more: three lines of display type is a poster, not
  * an audition frame. Sizes step down rather than scaling continuously so the
- * card keeps a recognisable weight from Reel to Reel. */
+ * card keeps a recognisable weight from Reel to Reel.
+ *
+ * The ladder moved up one notch on 2026-08-10 (Hasan: bigger on-screen text)
+ * — the fit function is what makes that safe: a title that no longer fits a
+ * rung at the new size simply takes the rung below, and the two-line ceiling
+ * holds either way. The fallback stays 74, because it is the only rung that
+ * holds the gate's 52-character worst case (74px holds 54 characters over
+ * two lines; 78px holds 50, and a title the gate accepted must never walk
+ * off the card). */
 export function titleFontSize(title) {
   const len = String(title || "").length;
   const fits = (size) => len <= Math.floor((952 / (0.47 * size)) * 2);
-  for (const size of [116, 104, 92, 82]) if (fits(size)) return size;
+  for (const size of [124, 112, 100, 88]) if (fits(size)) return size;
   return 74;
 }
 
@@ -662,8 +679,16 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
     "[Script Info]", `PlayResX: ${W}`, `PlayResY: ${H}`, "WrapStyle: 2", "",
     "[V4+ Styles]",
     "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
-    `Style: K,OOM Caption,104,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,8,4,2,60,60,560,1`,
-    `Style: KLOW,OOM Caption,78,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,7,4,2,30,30,170,1`,
+    // K sits at MarginV 560 — lower-middle, clear of both the receipt card art
+    // and the platform's bottom band. KLOW is the screenshot-beat band, and its
+    // MarginV moved 170 → 350 on 2026-08-10: at 170 the captions sat inside the
+    // ~320px strip Instagram covers with its own caption and actions UI, which
+    // is why they read as "too low" on a phone while looking fine in the raw
+    // file (Hasan, 2026-08-10). 350 clears the platform band; the receipt card
+    // it must also clear got 100px shorter in segmentFromScreenshot the same
+    // day, so the band still never touches the page it captions.
+    `Style: K,OOM Caption,112,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,8,4,2,60,60,560,1`,
+    `Style: KLOW,OOM Caption,88,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,0,0,1,7,4,2,30,30,350,1`,
     // BorderStyle 3 is an opaque box, not an outline, and it is the fix for the
     // worst frame this engine ever produced. On 2026-07-31 the hook card
     // "CLAUDE A PIÉGÉ 15 MACHINES BIEN RÉELLES" was set at 116px over a receipt
@@ -679,6 +704,12 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
     `Style: CARDLINE,OOM Caption,58,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,1,0,1,0,0,5,90,90,0,1`,
     `Style: ENDBIG,OOM Display Wide,104,&H00FFFFFF,&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,2,0,1,3,2,5,70,70,0,1`,
     `Style: ENDFOLLOW,OOM Caption,68,${accent},&H00FFFFFF,&H00101010,&H96000000,0,0,0,0,100,100,1,0,1,3,2,5,70,70,0,1`,
+    // The countdown corner: top-right, below the platform's camera icon
+    // (~110px) and above the title box (MarginV 300) and both receipt-card
+    // tops (y 230 and 320), so it never sits on anything that matters. Digits
+    // at 84px in the display face, slightly translucent so it reads as
+    // chrome, not as content.
+    `Style: COUNT,OOM Display,84,&H26FFFFFF,&H00FFFFFF,&H00101010,&H78000000,0,0,0,0,100,100,0,0,1,3,0,9,0,48,132,1`,
     "", "[Events]",
     "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
   ];
@@ -717,6 +748,20 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
     ];
     for (const [text, style, yFrac] of lines) {
       fixed.push(`Dialogue: 1,${t0},${t1},${style},,0,0,0,,{\\q2\\fad(160,0)\\pos(${W / 2},${Math.round(H * yFrac)})}${text}`);
+    }
+  }
+
+  /* The countdown, one Dialogue a second on its own layer, counting the
+   * seconds actually in the file — so a clamped 62-second build honestly says
+   * 62, because a chrono that lies is worse than none on an account whose
+   * whole promise is that nothing on screen is invented. It runs through the
+   * end-card to zero out exactly at the cut. See format.mjs COUNTDOWN for why
+   * this is a flag and how its effect on retention gets measured. */
+  if (opts.countdown && opts.endcard) {
+    const totalS = opts.endcard.from + opts.endcard.dur;
+    const n = Math.round(totalS);
+    for (let s = 0; s < n; s++) {
+      fixed.push(`Dialogue: 2,${assTime(s)},${assTime(Math.min(s + 1, totalS))},COUNT,,0,0,0,,{\\q2}${n - s}`);
     }
   }
   // WrapStyle 2 never wraps, so a chunk wider than the frame walks off both
@@ -1099,10 +1144,14 @@ export async function segmentFromImage(img, dur, outFile, extraFilters = []) {
  */
 async function segmentFromScreenshot(shot, dur, outFile) {
   // The card is CROPPED to a fixed height so its bottom edge is deterministic:
-  // 880x1250 at x=100,y~230 ends by ~1480, and the KLOW caption band at ~1690
-  // can never collide with it. The first live Reel proved the alternative —
-  // position the captions in a fixed place under a card of page-dependent
-  // height, and some page's headline will eventually sit exactly there.
+  // 880x1150 at x=100,y~230 ends by ~1380, and the KLOW caption band (top
+  // ~1460 since its MarginV moved to 350 on 2026-08-10) can never collide
+  // with it. The first live Reel proved the alternative — position the
+  // captions in a fixed place under a card of page-dependent height, and some
+  // page's headline will eventually sit exactly there. The card lost its
+  // bottom 100px when the band moved up; that strip is the least evidentiary
+  // part of a receipt — the 2026-08-10 businesstoday capture filled it with
+  // an empty grey ADVERTISEMENT slot — and the headline zone is untouched.
   //
   // Variant 1 is a push-in on the same receipt: the page is scaled wider and
   // cropped shorter, so the headline fills more of the frame. A receipt beat is
@@ -1112,7 +1161,7 @@ async function segmentFromScreenshot(shot, dur, outFile) {
   // keep the card's bottom edge well above the caption band.
   const shotAt = async (d, variant, out) => {
     const CARD_W = variant === 1 ? 1000 : 880;
-    const CARD_H = variant === 1 ? 1000 : 1250;
+    const CARD_H = variant === 1 ? 1000 : 1150;
     const x = variant === 1 ? 40 : 100;
     const y0 = variant === 1 ? 320 : 230;
     await ffmpeg([
@@ -1644,6 +1693,7 @@ export async function buildReel(postFile, mediaDir) {
   await writeFile(assFile, buildAss(words, plan.beats, ranges, accent, {
     title: plan.title,
     endcard: { from: beatsTotal, dur: endDur },
+    countdown: COUNTDOWN,
   }));
   const withSub = path.join(mediaDir, "reel2_sub.mp4");
   await ffmpeg([
