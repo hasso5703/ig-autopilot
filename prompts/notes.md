@@ -407,6 +407,20 @@ ENTRIES:
   ni door, ni machine; "gym" fait 3 lettres), seulement reservation, waitlist,
   class, position, place. Imprime le vocabulaire ENTIER avant d'ecrire un spec ET
   avant de debattre du beat 0, le message du gate n'en montre que 18.
+  Ajout 10/08 (16h30), LA STILL D'ECRAN QUI NE RATE PAS, et elle generalise la
+  "page de chiffres" du 09/08 au cas ou l'histoire se passe DANS un logiciel.
+  Une still generee decrivant une page d'interface ("a gym class booking page
+  open on a laptop screen") est la famille a prose inventee du 01/08: le modele
+  remplit l'ecran de faux anglais lisible. Les deux specs qui ont RENDU PROPRE du
+  premier coup, sur ce meme dossier: (1) "a laptop screen filled with the source
+  code of a class reservation page" -> un vrai ecran de code, du bruit qui se lit
+  comme de la notation, zero phrase anglaise lisible; (2) "a class waitlist
+  screen filled with a single column of position numbers" -> un panneau
+  "POSITION" avec la colonne 1 a 22, net, zero mot invente, ET une famille
+  visuelle differente de la premiere. Regle: sur une actu de logiciel, demande du
+  CODE ou des NUMEROS, jamais une interface. Bonus: ces deux surfaces ne se
+  ressemblent pas, ce qui repond aussi a "Alternate visual families" quand deux
+  beats doivent montrer un ecran.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -1063,7 +1077,21 @@ ENTRIES:
   "Clothing the cameras cannot see" et la phrase qui nomme le DEF CON, et coupe
   les deux boutons. Meme reflexe que les bannieres cookies: REGARDE le
   shot_N.png avant de construire.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08.
+  Ajout 10/08 (16h30), dossier salle de sport, deux recus mesures EN MOTEUR.
+  rnz.co.nz se capture PARFAITEMENT du premier coup et vite (petit site, critere
+  O(frames) du 06/08): en-tete RNZ, titre entier sur 4 lignes, "10 August 2026",
+  la signature "Cam Wilson and Rhiannon Hobbins for ABC News" ET la photo du
+  temoin, 0 pub, 0 banniere cookies, aucun recadrage. Bonus editorial: comme la
+  signature ABC est DANS le cadre, le recu atteste lui-meme la syndication, ce
+  qui est exactement ce qu'il faut montrer quand deux domaines verts ne sont
+  qu'un seul reportage. businesstoday.in se capture aussi du premier coup
+  (en-tete + fil d'Ariane + titre + chapo lisibles) MAIS garde un emplacement
+  publicitaire VIDE, un grand bloc gris marque "ADVERTISEMENT", qui occupe la
+  moitie basse de la carte, plus un bouton flottant WhatsApp a droite. Ni l'une
+  ni l'autre plomberie n'est retiree par les deux passes de consentement. Ce
+  n'est pas bloquant (la preuve tient dans le haut) mais c'est laid: si le beat
+  compte, `crop=1290:1500:0:0` garde en-tete + titre + chapo et coupe les deux.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
