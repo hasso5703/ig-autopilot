@@ -1,0 +1,248 @@
+{
+  "slug": "2026-08-10-amazon-centrale-gaz-texas",
+  "centralClaim": "A state permit allows the gas power plant Amazon is backing in Pecos County, Texas, to emit 33 million tons of carbon dioxide a year.",
+  "corroboration": [
+    {
+      "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the",
+      "quote": "In January, GW Ranch received a permit from the state of Texas allowing the gas power plant to emit 33 million tons of carbon dioxide into the atmosphere."
+    },
+    {
+      "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid",
+      "quote": "Permits allow the plant to release 33 million tons of carbon dioxide a year."
+    }
+  ],
+  "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays.",
+  "caption": "Amazon a acheté au Texas le terrain d'une centrale à gaz autorisée à rejeter plus de CO2 que n'importe quelle autre du pays.\n\nLe site, appelé GW Ranch, a reçu en janvier un permis de l'État du Texas l'autorisant à émettre 33 millions de tonnes de CO2 par an. La centrale la plus polluante en service aujourd'hui, une centrale à charbon d'Alabama, en rejette environ 16 millions. Amazon a confirmé avoir acheté le terrain, dans le comté de Pecos, et prévoit d'acheter l'électricité produite sur place par 35 turbines à gaz.\n\nLe détail qui n'a pas tenu dans la vidéo. La centrale ne sera pas raccordée au réseau électrique du Texas, au moins au début. Se raccorder au réseau impose des files d'attente, des négociations avec l'électricien et tout le cadre réglementaire qui va avec. Produire son électricité sur son propre terrain évite tout cela. Amazon précise aussi que le site utilisera une eau souterraine saumâtre, impropre à l'irrigation comme à la consommation.\n\nÀ décharge. Un permis n'est pas une facture: les centrales rejettent rarement le maximum autorisé. Amazon affirme rester engagée à effacer ses émissions d'ici 2040, et met en avant 10 gigawatts d'énergie décarbonée déjà installés au Texas.\n\nUne entreprise devrait-elle avoir le droit de bâtir sa propre centrale hors du réseau public, oui ou non ?\n\ndistilled.earth · thenextweb.com · newrepublic.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Amazon #Climat",
+  "captionEvidence": [
+    {
+      "quote": "In January, GW Ranch received a permit from the state of Texas allowing the gas power plant to emit 33 million tons of carbon dioxide into the atmosphere.",
+      "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the"
+    },
+    {
+      "quote": "For scale, the dirtiest power plant currently operating in America is the coal-fired James H. Miller Jr. plant in Quinton, Alabama, at around 16 million tons.",
+      "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid"
+    },
+    {
+      "quote": "The plant, known as GW Ranch and developed by Pacifico Energy, would run 35 gas turbines for a combined 7.65 gigawatts.",
+      "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid"
+    },
+    {
+      "quote": "Amazon said it remains committed to reaching net-zero carbon emissions by 2040 under the climate pledge.",
+      "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the"
+    },
+    {
+      "quote": "The company said it has enabled 10 GW of carbon-free energy across 40 projects in Texas to power its existing data center operations.",
+      "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the"
+    },
+    {
+      "quote": "If the project emitted that much CO2, it would be the largest single source of pollution in the United States",
+      "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the"
+    },
+    {
+      "quote": "Amazon said that its GW Ranch project will use non-potable, brackish groundwater",
+      "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the"
+    },
+    {
+      "quote": "Grid connection means queues, utility negotiations, and the regulatory apparatus that comes with being part of shared infrastructure.",
+      "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Comté de Pecos, Texas · Amazon",
+      "headline": "Une centrale à gaz *rien que* pour faire tourner une IA",
+      "hero": {
+        "value": "33 millions",
+        "label": "de tonnes de dioxyde de carbone par an, ce que le permis autorise"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "33M",
+      "unit": "tonnes de dioxyde de carbone par an",
+      "body": "Le permis délivré en janvier par l'État du Texas autorise la centrale à émettre **33 millions de tonnes** de dioxyde de carbone chaque année.",
+      "evidence": "In January, GW Ranch received a permit from the state of Texas allowing the gas power plant to emit 33 million tons of carbon dioxide into the atmosphere.",
+      "source": {
+        "name": "Distilled",
+        "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La pire centrale en service rejette moins",
+      "body": "La centrale la plus polluante des États-Unis aujourd'hui est une centrale à charbon d'Alabama, à *environ 16 millions* de tonnes.",
+      "evidence": "For scale, the dirtiest power plant currently operating in America is the coal-fired James H. Miller Jr. plant in Quinton, Alabama, at around 16 million tons.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid",
+        "date": "2026-08-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Amazon a acheté le terrain",
+      "body": "L'entreprise a confirmé avoir acquis le site du comté de Pecos, où elle veut bâtir un campus dédié à l'IA, alimenté par sa propre production au gaz.",
+      "evidence": "The company confirmed to Cleanview that it has acquired a site in Pecos County, Texas, where it plans to build an AI data center campus powered by on-site natural gas generation.",
+      "source": {
+        "name": "Distilled",
+        "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le chantier a déjà commencé",
+      "body": "Des images satellite montrent que le terrain est en train d'être *déblayé*, sur le site décrit dans les registres du permis.",
+      "evidence": "Cleanview reviewed satellite imagery to look for the project and discovered that land clearing had begun at the site described in GW Ranch's air permit records.",
+      "source": {
+        "name": "Distilled",
+        "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Amazon a cofondé le Climate Pledge, la promesse d'effacer ses émissions d'ici 2040.",
+      "caveat": "La centrale ne sera pas raccordée au réseau électrique, ce qui évite les files d'attente et le cadre réglementaire qui va avec.",
+      "claimLabel": "La promesse",
+      "caveatLabel": "Le montage",
+      "evidence": "Amazon co-founded the Climate Pledge, a voluntary commitment to eliminate its emissions by 2040.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid",
+        "date": "2026-08-09"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "The world looks different now than when we co-founded the climate pledge",
+      "attribution": "Margaret Callahan, porte-parole d'Amazon",
+      "evidence": "\"The world looks different now than when we co-founded the climate pledge,\" said Amazon spokeswoman Margaret Callahan, adding that \"our commitment hasn't changed.\"",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid",
+        "date": "2026-08-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un permis n'est pas une facture",
+      "body": "Les centrales rejettent rarement le maximum que leur permis autorise. C'est la réserve que pose la publication qui a sorti l'information.",
+      "evidence": "It's worth noting that companies rarely emit as much as their permits allow.",
+      "source": {
+        "name": "Distilled",
+        "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et ce n'est pas un cas isolé",
+      "body": "Près de **60 projets** de centrales privées pour centres de données ont été annoncés depuis le début de 2025.",
+      "evidence": "Data center developers have announced nearly 60 behind-the-meter gas power projects since the beginning of 2025 with a combined capacity of 90 GW, according to Cleanview's latest report.",
+      "source": {
+        "name": "Distilled",
+        "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the",
+        "date": "2026-08-07"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui paie une facture d'électricité",
+      "sub": "Chaque chiffre est copié d'une source citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Distilled",
+      "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the",
+      "accessed": "2026-08-10"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid",
+      "accessed": "2026-08-10"
+    },
+    {
+      "name": "The New Republic",
+      "url": "https://newrepublic.com/post/214111/amazon-data-center-biggest-pollution-source-entire-country",
+      "accessed": "2026-08-10"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Amazon: 33 millions de tonnes autorisées",
+    "beats": [
+      {
+        "script": "Le plus gros pollueur des États-Unis pourrait bientôt être une centrale à gaz. Elle ne servira qu'à une chose: faire tourner l'IA d'Amazon.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single yellow bulldozer blade pushing a mound of dry brush across bare cleared earth",
+            "action": "rolling forward slowly, dust drifting up behind the blade, the mound of brush staying piled in front of it",
+            "setting": "on a flat empty plain of dry cleared ground in bright daylight",
+            "composition": "low medium shot, the blade filling the lower half of the frame"
+          }
+        }
+      },
+      {
+        "script": "Son permis l'autorise à rejeter 33 millions de tonnes de dioxyde de carbone par an. Tu sais combien rejette la pire centrale du pays ? Environ 16 millions.",
+        "visual": {
+          "type": "card",
+          "value": "33 millions",
+          "label": "de tonnes de dioxyde de carbone par an, selon le permis"
+        }
+      },
+      {
+        "script": "Amazon a confirmé avoir acheté le terrain, dans le comté de Pecos, au Texas. Et le chantier a déjà commencé: des images satellite montrent le terrain en train d'être déblayé.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.distilled.earth/p/scoop-amazon-is-behind-one-of-the"
+        }
+      },
+      {
+        "script": "Mais le détail qui compte est ailleurs. Cette centrale ne sera pas raccordée au réseau électrique du Texas.",
+        "visual": {
+          "type": "photo",
+          "query": "thomas c ferguson power plant texas",
+          "alt": "Une centrale électrique au gaz au Texas"
+        }
+      },
+      {
+        "script": "Se brancher au réseau, ça veut dire des files d'attente, des négociations, des règles. Construire sa propre centrale, ça saute tout ça.",
+        "visual": {
+          "type": "photo",
+          "query": "decker creek power station",
+          "alt": "Une autre centrale électrique texane"
+        }
+      },
+      {
+        "script": "Sauf qu'Amazon a cofondé le Climate Pledge, la promesse d'effacer ses émissions d'ici 2040. Sa porte-parole répond que le monde a changé depuis.",
+        "visual": {
+          "type": "card",
+          "value": "2040",
+          "label": "l'année où Amazon promet d'avoir effacé ses émissions"
+        }
+      },
+      {
+        "script": "À décharge, et c'est important: un permis n'est pas une facture. Les centrales rejettent rarement autant que ce que leur permis autorise.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://thenextweb.com/news/amazons-new-texas-data-centre-could-become-americas-biggest-single-polluter-it-will-not-touch-the-grid"
+        }
+      },
+      {
+        "script": "Mais ce n'est pas un cas isolé. Depuis 2025, près de 60 projets de centrales privées ont été annoncés. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "power plant smokestacks texas",
+          "alt": "Les cheminées d'une centrale électrique"
+        }
+      }
+    ]
+  }
+}
