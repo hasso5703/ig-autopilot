@@ -2183,3 +2183,66 @@ test("a bare spelled-out magnitude warns, a digit-adjacent one stays silent", as
   const r2 = await validatePost(unit, { online: false });
   assert.ok(!r2.warnings.some((w) => /bare magnitude/.test(w)), JSON.stringify(r2.warnings));
 });
+
+// ---------------------------------------------------------------------------
+// The learning loop. state/metrics.jsonl reached 1,100+ readings with no code
+// reading it back; the one analysis that ever crossed metrics with specs
+// (2026-08-08, beat-0 surface vs retention) was done by hand in a journal and
+// never ran again. learn.mjs is that analysis as code, and these tests hold
+// its arithmetic, because a digest with wrong medians is worse than none — it
+// is a number a run plans with.
+// ---------------------------------------------------------------------------
+
+test("lessons join posted to metrics and rank by views, settled only in aggregates", async () => {
+  const { buildLessons } = await import("../src/learn.mjs");
+  const now = new Date("2026-08-10T20:00:00Z");
+  const post = (slug, at, mediaId, durationS = 60) => ({ slug, at, mediaId, durationS, title: slug });
+  const reading = (mediaId, views, watchMs, saved = 0, shares = 0) => ({
+    mediaId, at: "2026-08-10T19:00:00Z",
+    insights: { views, reach: views, ig_reels_avg_watch_time: watchMs, likes: 1, comments: 1, saved, shares },
+  });
+  const l = buildLessons({
+    posted: [
+      post("2026-08-01-old-hit", "2026-08-01T16:00:00Z", "m1"),
+      post("2026-08-02-old-flop", "2026-08-02T16:00:00Z", "m2"),
+      post("2026-08-10-fresh", "2026-08-10T16:00:00Z", "m3"),
+    ],
+    latest: [reading("m1", 1000, 15000, 3, 2), reading("m2", 100, 6000), reading("m3", 50, 12000)],
+    specs: {
+      "2026-08-01-old-hit": { sendTest: "envoie ça", reel2: { beats: [{ visual: { type: "veo" } }] } },
+      "2026-08-02-old-flop": { reel2: { beats: [{ visual: { type: "screenshot" } }] } },
+      "2026-08-10-fresh": { reel2: { beats: [{ visual: { type: "photo" } }] } },
+    },
+    account: [
+      { ok: true, at: "2026-08-01T20:00:00Z", followers_count: 0 },
+      { ok: true, at: "2026-08-02T20:00:00Z", followers_count: 5 },
+    ],
+    now,
+  });
+  assert.equal(l.n, 3);
+  assert.equal(l.nSettled, 2, "the reel published 4 hours ago is still climbing and must not enter aggregates");
+  assert.equal(l.posts[0].slug, "2026-08-01-old-hit", "ranked by views");
+  assert.equal(l.medianViews, 550, "median of the two settled readings (1000, 100)");
+  assert.equal(l.posts[0].retentionPct, 25, "15000ms over 60s is 25%");
+  assert.equal(l.byBeat0.veo.n, 1);
+  assert.equal(l.byBeat0.veo.thin, true, "n under 5 must be labelled thin, the manual's own floor");
+  assert.equal(l.byBeat0.photo, undefined, "unsettled rows stay out of the groups");
+  assert.equal(l.top[0].sendTest, "envoie ça", "the top sendTest is the lesson a picker reads");
+  assert.equal(l.followers.bestDays[0].delta, 5);
+});
+
+test("a pinned file opener is classified by what the file is", async () => {
+  const { beat0Surface } = await import("../src/learn.mjs");
+  assert.equal(beat0Surface({ reel2: { beats: [{ visual: { type: "file", file: "media/x/veo_0.mp4" } }] } }), "veo");
+  assert.equal(beat0Surface({ reel2: { beats: [{ visual: { type: "file", file: "media/x/photo.jpg" } }] } }), "photo");
+  assert.equal(beat0Surface({ reel2: { beats: [{ visual: { type: "card" } }] } }), "card");
+  assert.equal(beat0Surface({}), null, "no spec, no claim");
+});
+
+test("lessons survive empty ledgers instead of costing a run", async () => {
+  const { buildLessons, formatLessons } = await import("../src/learn.mjs");
+  const l = buildLessons({ posted: [], latest: [], specs: {}, account: [] });
+  assert.equal(l.n, 0);
+  assert.equal(l.medianViews, null);
+  assert.ok(typeof formatLessons(l) === "string", "an empty digest still formats");
+});

@@ -1,0 +1,679 @@
+{
+  "at": "2026-08-10T21:05:56.937Z",
+  "n": 24,
+  "nSettled": 19,
+  "medianViews": 156,
+  "medianRetentionPct": 20,
+  "top": [
+    {
+      "slug": "2026-08-08-virus-ecrits-par-une-ia",
+      "views": 1229,
+      "retentionPct": 26,
+      "saved": 4,
+      "shares": 3,
+      "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai."
+    },
+    {
+      "slug": "2026-08-03-macbook-air-memoire",
+      "views": 1141,
+      "retentionPct": 23,
+      "saved": 2,
+      "shares": 0,
+      "sendTest": "Le MacBook Air a pris 200 dollars et il est en rupture, parce que les boîtes d'IA rachètent toute la mémoire pour leurs centres de données."
+    },
+    {
+      "slug": "2026-08-08-facture-ia-salaries",
+      "views": 538,
+      "retentionPct": 25,
+      "saved": 1,
+      "shares": 1,
+      "sendTest": "Un ingénieur a dépensé 50 000 dollars d'IA en un mois. Son entreprise note maintenant chaque salarié sur ce que l'IA lui coûte."
+    },
+    {
+      "slug": "2026-08-07-ouragan-un-jour-davance",
+      "views": 329,
+      "retentionPct": 18,
+      "saved": 2,
+      "shares": 0,
+      "sendTest": "Une IA a prévu qu'un ouragan de catégorie 5 allait frapper la Jamaïque, cinq jours avant. Les gens ont eu le temps d'évacuer."
+    },
+    {
+      "slug": "2026-08-06-google-deepmind-passage-de-relais",
+      "views": 300,
+      "retentionPct": 23,
+      "saved": 2,
+      "shares": 0,
+      "sendTest": "Le directeur scientifique de Google s'en va après 27 ans, et le patron de son labo d'IA lâche les commandes le même jour. L'action a perdu 4%."
+    }
+  ],
+  "bottom": [
+    {
+      "slug": "2026-07-28-claude-chats-google",
+      "views": 22,
+      "retentionPct": null,
+      "saved": 2,
+      "shares": 0,
+      "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings."
+    },
+    {
+      "slug": "2026-07-31-xai-turbines-memphis",
+      "views": 80,
+      "retentionPct": 16,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
+    },
+    {
+      "slug": "2026-08-01-penurie-memoire-samsung",
+      "views": 112,
+      "retentionPct": 10,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher."
+    },
+    {
+      "slug": "2026-08-04-congres-chatgpt",
+      "views": 116,
+      "retentionPct": 14,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA."
+    },
+    {
+      "slug": "2026-08-01-astra-dix-problemes",
+      "views": 120,
+      "retentionPct": 20,
+      "saved": 1,
+      "shares": 0,
+      "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher."
+    }
+  ],
+  "byBeat0": {
+    "veo": {
+      "n": 9,
+      "medianViews": 156,
+      "meanRetentionPct": 22.5,
+      "saves": 12,
+      "shares": 3,
+      "thin": false
+    },
+    "photo": {
+      "n": 5,
+      "medianViews": 300,
+      "meanRetentionPct": 20,
+      "saves": 6,
+      "shares": 1,
+      "thin": false
+    },
+    "screenshot": {
+      "n": 5,
+      "medianViews": 120,
+      "meanRetentionPct": 17.4,
+      "saves": 3,
+      "shares": 0,
+      "thin": false
+    }
+  },
+  "byTheme": {
+    "safety": {
+      "n": 3,
+      "medianViews": 156,
+      "meanRetentionPct": 23,
+      "saves": 3,
+      "shares": 0,
+      "thin": true
+    },
+    "security": {
+      "n": 1,
+      "medianViews": 190,
+      "meanRetentionPct": 19,
+      "saves": 0,
+      "shares": 0,
+      "thin": true
+    }
+  },
+  "byPublishHourUtc": {
+    "10": {
+      "n": 1,
+      "medianViews": 538,
+      "meanRetentionPct": 25,
+      "saves": 1,
+      "shares": 1,
+      "thin": true
+    },
+    "12": {
+      "n": 2,
+      "medianViews": 649,
+      "meanRetentionPct": 25.5,
+      "saves": 3,
+      "shares": 0,
+      "thin": true
+    },
+    "13": {
+      "n": 1,
+      "medianViews": 151,
+      "meanRetentionPct": 30,
+      "saves": 2,
+      "shares": 0,
+      "thin": true
+    },
+    "15": {
+      "n": 2,
+      "medianViews": 129,
+      "meanRetentionPct": 19.5,
+      "saves": 2,
+      "shares": 0,
+      "thin": true
+    },
+    "16": {
+      "n": 3,
+      "medianViews": 329,
+      "meanRetentionPct": 20,
+      "saves": 6,
+      "shares": 3,
+      "thin": true
+    },
+    "17": {
+      "n": 4,
+      "medianViews": 152,
+      "meanRetentionPct": 17.5,
+      "saves": 1,
+      "shares": 0,
+      "thin": true
+    },
+    "19": {
+      "n": 1,
+      "medianViews": 300,
+      "meanRetentionPct": 23,
+      "saves": 2,
+      "shares": 0,
+      "thin": true
+    },
+    "20": {
+      "n": 3,
+      "medianViews": 171,
+      "meanRetentionPct": 19.7,
+      "saves": 2,
+      "shares": 0,
+      "thin": true
+    },
+    "09": {
+      "n": 2,
+      "medianViews": 67,
+      "meanRetentionPct": 10,
+      "saves": 2,
+      "shares": 0,
+      "thin": true
+    }
+  },
+  "followers": {
+    "now": 14,
+    "bestDays": [
+      {
+        "date": "2026-08-08",
+        "delta": 5,
+        "published": [
+          {
+            "slug": "2026-08-08-virus-ecrits-par-une-ia",
+            "views": 1229
+          },
+          {
+            "slug": "2026-08-08-facture-ia-salaries",
+            "views": 538
+          }
+        ]
+      },
+      {
+        "date": "2026-08-09",
+        "delta": 4,
+        "published": [
+          {
+            "slug": "2026-08-09-motif-anti-cameras",
+            "views": 982
+          },
+          {
+            "slug": "2026-08-09-chatgpt-gratuit-illimite",
+            "views": 176
+          }
+        ]
+      },
+      {
+        "date": "2026-08-04",
+        "delta": 2,
+        "published": [
+          {
+            "slug": "2026-08-04-fcc-robots-humanoides",
+            "views": 156
+          },
+          {
+            "slug": "2026-08-04-congres-chatgpt",
+            "views": 116
+          }
+        ]
+      }
+    ]
+  },
+  "posts": [
+    {
+      "slug": "2026-08-08-virus-ecrits-par-une-ia",
+      "at": "2026-08-08T16:51:56.558Z",
+      "hourUtc": 16,
+      "views": 1229,
+      "reach": 1107,
+      "avgWatchS": 15.6,
+      "retentionPct": 26,
+      "likes": 19,
+      "comments": 1,
+      "saved": 4,
+      "shares": 3,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-03-macbook-air-memoire",
+      "at": "2026-08-03T12:28:13.807Z",
+      "hourUtc": 12,
+      "views": 1141,
+      "reach": 1063,
+      "avgWatchS": 13.8,
+      "retentionPct": 23,
+      "likes": 12,
+      "comments": 2,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Le MacBook Air a pris 200 dollars et il est en rupture, parce que les boîtes d'IA rachètent toute la mémoire pour leurs centres de données.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-09-motif-anti-cameras",
+      "at": "2026-08-09T20:14:36.239Z",
+      "hourUtc": 20,
+      "views": 982,
+      "reach": 890,
+      "avgWatchS": 15.2,
+      "retentionPct": 25,
+      "likes": 8,
+      "comments": 2,
+      "saved": 5,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un mec a créé un motif à imprimer sur un t-shirt qui empêche les caméras de surveillance de te repérer. Il l'a testé sur une voiture, ça a marché.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-08-facture-ia-salaries",
+      "at": "2026-08-08T10:57:53.515Z",
+      "hourUtc": 10,
+      "views": 538,
+      "reach": 456,
+      "avgWatchS": 14.8,
+      "retentionPct": 25,
+      "likes": 8,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un ingénieur a dépensé 50 000 dollars d'IA en un mois. Son entreprise note maintenant chaque salarié sur ce que l'IA lui coûte.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-07-ouragan-un-jour-davance",
+      "at": "2026-08-07T16:52:51.450Z",
+      "hourUtc": 16,
+      "views": 329,
+      "reach": 294,
+      "avgWatchS": 11.1,
+      "retentionPct": 18,
+      "likes": 7,
+      "comments": 2,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a prévu qu'un ouragan de catégorie 5 allait frapper la Jamaïque, cinq jours avant. Les gens ont eu le temps d'évacuer.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-06-google-deepmind-passage-de-relais",
+      "at": "2026-08-06T19:59:50.589Z",
+      "hourUtc": 19,
+      "views": 300,
+      "reach": 283,
+      "avgWatchS": 13.8,
+      "retentionPct": 23,
+      "likes": 5,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Le directeur scientifique de Google s'en va après 27 ans, et le patron de son labo d'IA lâche les commandes le même jour. L'action a perdu 4%.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-02-google-earth-ia",
+      "at": "2026-08-02T20:00:03.807Z",
+      "hourUtc": 20,
+      "views": 291,
+      "reach": 264,
+      "avgWatchS": 13,
+      "retentionPct": 22,
+      "likes": 3,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-06-aisi-faux-profils",
+      "at": "2026-08-06T17:16:39.586Z",
+      "hourUtc": 17,
+      "views": 190,
+      "reach": 170,
+      "avgWatchS": 11.2,
+      "retentionPct": 19,
+      "likes": 7,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Une IA s'est creee de faux comptes pour convaincre un développeur d'accepter du code pieges. Il a dit non. C'est lui qui a tout arrete.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-09-chatgpt-gratuit-illimite",
+      "at": "2026-08-09T16:54:55.066Z",
+      "hourUtc": 16,
+      "views": 176,
+      "reach": 154,
+      "avgWatchS": 16.5,
+      "retentionPct": 27,
+      "likes": 5,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "ChatGPT devient illimité pour les comptes gratuits cette semaine. Mais les 62 % d'erreurs en moins, c'est OpenAI qui les a mesurés lui-même.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-03-ai-act-transparence",
+      "at": "2026-08-03T17:08:41.840Z",
+      "hourUtc": 17,
+      "views": 173,
+      "reach": 156,
+      "avgWatchS": 11.8,
+      "retentionPct": 20,
+      "likes": 4,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "En Europe, un chatbot doit maintenant t'avouer qu'il est une machine, et les deepfakes doivent être étiquetés.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-05-apple-openai-gel",
+      "at": "2026-08-05T20:29:26.521Z",
+      "hourUtc": 20,
+      "views": 171,
+      "reach": 160,
+      "avgWatchS": 12,
+      "retentionPct": 20,
+      "likes": 5,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Apple accuse ses ex-employés d'avoir filé ses secrets à OpenAI pour leur gadget, et demande à un juge de tout geler.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-04-fcc-robots-humanoides",
+      "at": "2026-08-04T12:10:51.964Z",
+      "hourUtc": 12,
+      "views": 156,
+      "reach": 143,
+      "avgWatchS": 16.6,
+      "retentionPct": 28,
+      "likes": 5,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Les États-Unis viennent d'interdire l'importation des robots humanoïdes étrangers. 85 % du marché est chinois.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-07-suno-chansons-marquees",
+      "at": "2026-08-07T20:27:30.310Z",
+      "hourUtc": 20,
+      "views": 152,
+      "reach": 137,
+      "avgWatchS": 10,
+      "retentionPct": 17,
+      "likes": 6,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un homme a encaissé plus de 8 millions de dollars de droits d'auteur avec des chansons faites par une IA. Il a plaidé coupable.",
+      "settled": true
+    },
+    {
+      "slug": "2026-07-30-opus5-vending-cartels",
+      "at": "2026-07-30T13:14:06.716Z",
+      "hourUtc": 13,
+      "views": 151,
+      "reach": 142,
+      "avgWatchS": 15.1,
+      "retentionPct": 30,
+      "likes": 3,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des IA ont géré des distributeurs automatiques en concurrence. Claude a proposé des cartels, menacé ses rivales et trahi 11 accords.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-02-xai-minnesota-nudification",
+      "at": "2026-08-02T15:57:53.852Z",
+      "hourUtc": 15,
+      "views": 138,
+      "reach": 126,
+      "avgWatchS": 11.2,
+      "retentionPct": 19,
+      "likes": 4,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Quelqu'un peut prendre tes photos et en faire des images sexuelles. Le Minnesota vient d'interdire ces applis, et Musk a essayé de bloquer la loi.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-05-waymo-dallas",
+      "at": "2026-08-05T17:17:47.664Z",
+      "hourUtc": 17,
+      "views": 130,
+      "reach": 117,
+      "avgWatchS": 10.3,
+      "retentionPct": 17,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "À Dallas tu peux commander un taxi sans chauffeur comme un Uber, plus de liste d'attente. 150 000 personnes l'ont déjà fait.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-10-ia-reserve-cours-sport",
+      "at": "2026-08-10T16:58:57.530Z",
+      "hourUtc": 16,
+      "views": 125,
+      "reach": 113,
+      "avgWatchS": 12.7,
+      "retentionPct": 21,
+      "likes": 3,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-01-astra-dix-problemes",
+      "at": "2026-08-01T15:47:25.907Z",
+      "hourUtc": 15,
+      "views": 120,
+      "reach": 104,
+      "avgWatchS": 12.2,
+      "retentionPct": 20,
+      "likes": 4,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-04-congres-chatgpt",
+      "at": "2026-08-04T17:43:30.306Z",
+      "hourUtc": 17,
+      "views": 116,
+      "reach": 110,
+      "avgWatchS": 8.1,
+      "retentionPct": 14,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-01-penurie-memoire-samsung",
+      "at": "2026-08-01T09:17:47.305Z",
+      "hourUtc": 9,
+      "views": 112,
+      "reach": 103,
+      "avgWatchS": 6.2,
+      "retentionPct": 10,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher.",
+      "settled": true
+    },
+    {
+      "slug": "2026-07-31-xai-turbines-memphis",
+      "at": "2026-07-31T16:19:27.550Z",
+      "hourUtc": 16,
+      "views": 80,
+      "reach": 72,
+      "avgWatchS": 9.3,
+      "retentionPct": 16,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
+      "settled": true
+    },
+    {
+      "slug": "2026-07-28-claude-chats-google",
+      "at": "2026-07-28T09:12:53.605Z",
+      "hourUtc": 9,
+      "views": 22,
+      "reach": 18,
+      "avgWatchS": 8.7,
+      "retentionPct": null,
+      "likes": 2,
+      "comments": 0,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
+      "settled": true
+    },
+    {
+      "slug": "2026-07-27-microsoft-cyber-model",
+      "at": "2026-07-27T20:23:03.594Z",
+      "hourUtc": 20,
+      "views": null,
+      "reach": null,
+      "avgWatchS": null,
+      "retentionPct": null,
+      "likes": null,
+      "comments": null,
+      "saved": null,
+      "shares": null,
+      "beat0": "veo",
+      "themes": [
+        "security",
+        "models"
+      ],
+      "sendTest": "Microsoft built an AI that hunts for security holes and says it beats OpenAI's and Anthropic's best, at half the cost.",
+      "settled": true
+    },
+    {
+      "slug": "2026-07-29-altman-decelerate",
+      "at": "2026-07-29T16:56:51.144Z",
+      "hourUtc": 16,
+      "views": null,
+      "reach": null,
+      "avgWatchS": null,
+      "retentionPct": null,
+      "likes": null,
+      "comments": null,
+      "saved": null,
+      "shares": null,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "L'IA de Sam Altman s'est échappée d'un test et a piraté un autre site. Maintenant, lui-même dit qu'il faudra peut-être ralentir.",
+      "settled": true
+    }
+  ]
+}
