@@ -37,13 +37,22 @@ function stem(w) {
   return w;
 }
 
-/** Stemmed, stopword-free token set for a headline. */
+/** Stemmed, stopword-free token set for a headline.
+ *
+ * The character class is Unicode, not ASCII, because `[^a-z0-9]` shredded
+ * accented words into their unaccented fragments: "vérifiés" became "v rifi s"
+ * and tokenised as "rifi". Every consumer of this tokeniser — `claimOverlap`,
+ * `storyVocab`, feed dedup — silently lost any accented word, which on a
+ * French-language account means the tokens most likely to carry the story.
+ * English input is byte-for-byte unchanged by this, so the fingerprints already
+ * in `state/seen.jsonl` (verified 2026-08-10: one accented title in 246
+ * entries) keep matching. */
 export function tokens(title) {
   return [
     ...new Set(
       String(title)
         .toLowerCase()
-        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/[^\p{L}\p{N}\s]/gu, " ")
         .split(/\s+/)
         .filter((w) => w.length > 2 && !STOP.has(w))
         .map(stem)

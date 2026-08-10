@@ -331,7 +331,8 @@ async function fetchPage(url, attempt = 0) {
         await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
         return fetchPage(url, attempt + 1);
       }
-      return { ok: false, error: `HTTP ${res.status}${attempt ? ` after ${attempt + 1} tries` : ""}` };
+      return (await fetchViaWayback(url)) ??
+        { ok: false, error: `HTTP ${res.status}${attempt ? ` after ${attempt + 1} tries` : ""}` };
     }
     return { ok: true, text: flatten(await res.text()) };
   } catch (e) {
@@ -340,9 +341,62 @@ async function fetchPage(url, attempt = 0) {
       await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
       return fetchPage(url, attempt + 1);
     }
-    return { ok: false, error: e.name === "AbortError" ? "timeout" : e.message };
+    return (await fetchViaWayback(url)) ??
+      { ok: false, error: e.name === "AbortError" ? "timeout" : e.message };
   } finally {
     clearTimeout(t);
+  }
+}
+
+/**
+ * When the origin refuses, ask the Internet Archive for its newest snapshot.
+ *
+ * The datacenter-IP blocklist in the notebook keeps growing, and it has real
+ * editorial cost: venturebeat.com answered 429 to the gate four days running
+ * (2026-08-07..10) and a story about 37,000 deployed agents stayed ungateable
+ * the whole time — not wrong, just unverifiable from this egress. A Wayback
+ * snapshot is a legitimate dated witness for "was this sentence published on
+ * this page": it is fetched, flattened and searched exactly like the origin,
+ * and every use is disclosed as VERIFIED_VIA_ARCHIVE plus a warning, because a
+ * snapshot can lag the live page and the report has to say which witness spoke.
+ *
+ * As of 2026-08-10 web.archive.org is NOT on this environment's egress
+ * allowlist (HTTP 403, x-block-reason: hostname_blocked), so this returns null
+ * on the first refusal and stays quiet for the rest of the process — today's
+ * behaviour, unchanged. The day `archive.org` + `web.archive.org` are added to
+ * the cloud environment's Allowed domains, the fallback starts working with no
+ * code change. Verify with:
+ *   node -e "fetch('https://archive.org/wayback/available?url=example.com').then(r=>console.log(r.status))"
+ */
+let waybackUnreachable = false;
+async function fetchViaWayback(url) {
+  if (waybackUnreachable) return null;
+  const get = async (u) => {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 25000);
+    try {
+      return await fetch(u, { headers: { "user-agent": UA }, signal: ctrl.signal, redirect: "follow" });
+    } finally {
+      clearTimeout(t);
+    }
+  };
+  try {
+    const av = await get(`https://archive.org/wayback/available?url=${encodeURIComponent(url)}`);
+    if (av.status === 403) { waybackUnreachable = true; return null; } // egress allowlist, not weather
+    if (!av.ok) return null;
+    const snap = (await av.json())?.archived_snapshots?.closest;
+    if (!snap?.available || !snap?.url) return null;
+    const res = await get(String(snap.url).replace(/^http:/, "https:"));
+    if (!res.ok) return null;
+    return {
+      ok: true,
+      text: flatten(await res.text()),
+      archive: { url: res.url, timestamp: String(snap.timestamp || "") },
+    };
+  } catch {
+    // Network-level refusal (proxy reset, DNS): same conclusion as the 403.
+    waybackUnreachable = true;
+    return null;
   }
 }
 
@@ -920,6 +974,38 @@ export async function validatePost(post, opts = {}) {
     if (FREQUENCY_CLAIM.test(String(b?.script || "")))
       err(`reel2 beat ${i + 1} speaks a publishing frequency. The end-card carries the promise, and it is the only surface that does, because it is the one that gets updated if the cadence changes.`);
   }
+  // The hook card is burned onto frame zero and the grid thumbnail — the
+  // most-seen text the account produces — and it was the one public surface
+  // this check never read.
+  if (post.reel2?.title && FREQUENCY_CLAIM.test(String(post.reel2.title)))
+    err("reel2.title promises a publishing frequency. The hook card is the most-seen surface of the post; the end-card carries the promise, and only the end-card.");
+
+  /*
+   * Numbers written as words are invisible to the digit gate.
+   *
+   * The gate reads digits; the account narrates in French, where "des milliards"
+   * and "la moitié" are numeric claims that contain no digit. Nothing mechanical
+   * can hold a spelled-out magnitude to a quote, so this warns rather than
+   * refuses — the writer re-reads the sentence against the evidence by hand.
+   * Only the unambiguous magnitude words are listed: bare "cent"/"mille" hit
+   * "pour cent" and prose too often to be a useful signal.
+   */
+  const SPELLED_MAGNITUDE = /\b(centaines?|milliers?|millions?|milliards?|moiti[ée]|doubl[ée]|tripl[ée]|quadrupl[ée])\b/gi;
+  const narrationAll = (post.reel2?.beats || []).map((b) => String(b?.script || "")).join(" ");
+  for (const [where, text] of [["the narration", narrationAll], ["the caption", post.caption ?? ""]]) {
+    const t = String(text);
+    const bare = new Set();
+    for (const m of t.matchAll(SPELLED_MAGNITUDE)) {
+      /* "30 millions" is fine: the 30 is already held to a quote and the word is
+       * its unit. The dangerous form is the BARE magnitude — "des millions",
+       * "la moitié", "a doublé" — a figure with no digit for the gate to hold.
+       * Measured on the 30 real specs: the digit-adjacency filter cuts the nag
+       * from 13 posts to the handful actually worth a re-read. */
+      if (!/\d/.test(t.slice(Math.max(0, m.index - 12), m.index))) bare.add(m[1]);
+    }
+    if (bare.size)
+      nag(`${where} spells out bare magnitude(s) with no adjacent digit: ${[...bare].join(", ")}. The digit gate cannot see a figure written in words — re-read each against its evidence quote before publishing.`);
+  }
 
   /*
    * The closing slide has one job and it is not signing off.
@@ -1045,6 +1131,18 @@ export async function validatePost(post, opts = {}) {
     ...capEv.flatMap((e) => numbers(e.quote ?? "")),
     ...(post.corroboration || []).flatMap((c) => numbers(c?.quote ?? "")),
   ]);
+
+  /* Everything that feeds the pool above must be fetchable. Content slides
+   * already require a source.url; hook and cta slides never carried evidence in
+   * any real spec (checked across all 30 on 2026-08-10), but the pool reads
+   * evidence from EVERY slide — so a quote invented on the hook slide, with no
+   * page to check it against, would have supported any digit in the post.
+   * Probed live before this check existed: `figure: "999999"` passed the gate
+   * on the strength of a fabricated hook `evidence` string. */
+  for (const [i, s] of slides.entries()) {
+    if ((s.type === "hook" || s.type === "cta") && s.evidence && !s.source?.url)
+      err(`slide ${i + 1} (${s.type}): carries evidence but no source.url — a quote with no fetchable page cannot be verified, and unverifiable quotes may not feed the digit pool`);
+  }
 
   /* The same corpus as prose, for the checks that are about words rather than
    * digits. Corroboration quotes belong here even though they carry no slide:
@@ -1399,19 +1497,44 @@ export async function validatePost(post, opts = {}) {
   const evidenceChecks = [];
   if (online) {
     const cache = new Map();
-    for (const [i, s] of contentSlides.entries()) {
+    /* Injectable for the test suite: the online path shipped for two weeks with
+     * zero test coverage because exercising it needed a live origin. A stub
+     * passed as `opts.fetchPageImpl` makes every branch below testable — the
+     * hook-slide hole fixed on 2026-08-10 was exactly the kind of bug those
+     * missing tests exist to catch. Production never passes it. */
+    const fetchImpl = opts.fetchPageImpl || fetchPage;
+    const getPage = async (url) => {
+      if (!cache.has(url)) cache.set(url, await fetchImpl(url));
+      return cache.get(url);
+    };
+    const archiveNoted = new Set();
+    const noteArchive = (page, url) => {
+      if (page?.archive && !archiveNoted.has(url)) {
+        archiveNoted.add(url);
+        nag(`${url}: the origin refused, so the quote was verified against a Wayback snapshot (${page.archive.timestamp || "undated"}). A snapshot is a dated witness, not the live page — say so in the report.`);
+      }
+    };
+    const verdict = (page) => (page.archive ? "VERIFIED_VIA_ARCHIVE" : "VERIFIED");
+
+    /* EVERY slide that carries evidence is fetched, hook and cta included.
+     * Until 2026-08-10 this loop read `contentSlides` while the digit pool
+     * (`allEvidence`) read evidence from every slide — so a fabricated quote
+     * placed on the hook slide fed digits into the pool without ever being
+     * checked against a page. The loop and the pool now cover the same set:
+     * what feeds the pool is what gets fetched. */
+    for (const [i, s] of slides.entries()) {
       if (!s.source?.url || !s.evidence) continue;
-      if (!cache.has(s.source.url)) cache.set(s.source.url, await fetchPage(s.source.url));
-      const page = cache.get(s.source.url);
-      const at = `content slide ${i + 1}`;
+      const page = await getPage(s.source.url);
+      const at = `slide ${i + 1} (${s.type})`;
 
       if (!page.ok) {
         evidenceChecks.push({ slide: i + 1, url: s.source.url, status: "UNVERIFIABLE", detail: page.error });
         if (!opts.allowUnverifiable) err(`${at}: source unreachable (${page.error}) — cannot verify the quote, refusing to publish`);
         continue;
       }
+      noteArchive(page, s.source.url);
       const found = page.text.includes(normQuote(s.evidence));
-      evidenceChecks.push({ slide: i + 1, url: s.source.url, status: found ? "VERIFIED" : "NOT_FOUND" });
+      evidenceChecks.push({ slide: i + 1, url: s.source.url, status: found ? verdict(page) : "NOT_FOUND" });
       if (!found)
         err(`${at}: the evidence quote does not appear on ${s.source.url} — either it was paraphrased or it was invented`);
     }
@@ -1420,34 +1543,47 @@ export async function validatePost(post, opts = {}) {
     // being on topic is worthless if the sentence was never written.
     for (const [i, c] of corr.entries()) {
       if (!c?.quote || !c?.url) continue;
-      if (!cache.has(c.url)) cache.set(c.url, await fetchPage(c.url));
-      const page = cache.get(c.url);
+      const page = await getPage(c.url);
       if (!page.ok) {
         evidenceChecks.push({ corroboration: i + 1, url: c.url, status: "UNVERIFIABLE", detail: page.error });
         if (!opts.allowUnverifiable) err(`corroboration[${i}]: source unreachable (${page.error}) — cannot verify the quote, refusing to publish`);
         continue;
       }
+      noteArchive(page, c.url);
       const found = page.text.includes(normQuote(c.quote));
-      evidenceChecks.push({ corroboration: i + 1, url: c.url, status: found ? "VERIFIED" : "NOT_FOUND" });
+      evidenceChecks.push({ corroboration: i + 1, url: c.url, status: found ? verdict(page) : "NOT_FOUND" });
       if (!found) err(`corroboration[${i}]: the quote does not appear on ${c.url} — either it was paraphrased or it was invented`);
     }
 
     for (const [i, e] of capEv.entries()) {
       if (!e?.quote || !e?.url) continue;
-      if (!cache.has(e.url)) cache.set(e.url, await fetchPage(e.url));
-      const page = cache.get(e.url);
+      const page = await getPage(e.url);
       if (!page.ok) {
         evidenceChecks.push({ caption: i + 1, url: e.url, status: "UNVERIFIABLE", detail: page.error });
         if (!opts.allowUnverifiable) err(`captionEvidence[${i}]: source unreachable (${page.error})`);
         continue;
       }
+      noteArchive(page, e.url);
       const found = page.text.includes(normQuote(e.quote));
-      evidenceChecks.push({ caption: i + 1, url: e.url, status: found ? "VERIFIED" : "NOT_FOUND" });
+      evidenceChecks.push({ caption: i + 1, url: e.url, status: found ? verdict(page) : "NOT_FOUND" });
       if (!found) err(`captionEvidence[${i}]: the quote does not appear on ${e.url}`);
     }
   }
 
-  return { ok: errors.length === 0, errors, warnings, evidenceChecks, slideCount: slides.length, domains: [...domains] };
+  /* `verifiedOnline` is the difference between "the gate ran" and "the gate
+   * went and looked". `--offline` and `--allow-unverifiable` both exist for
+   * good reasons and both disable the file's central promise; until now the
+   * returned object did not say so, and a report could print "gate PASSED"
+   * over quotes nobody fetched. */
+  return {
+    ok: errors.length === 0,
+    verifiedOnline: online === true && !opts.allowUnverifiable,
+    errors,
+    warnings,
+    evidenceChecks,
+    slideCount: slides.length,
+    domains: [...domains],
+  };
 }
 
 if (process.argv[1] && process.argv[1].endsWith("validate.mjs")) {
@@ -1497,6 +1633,10 @@ if (process.argv[1] && process.argv[1].endsWith("validate.mjs")) {
     fixture: process.argv.includes("--fixture"),
   });
   console.log(JSON.stringify(r, null, 2));
+  if (!r.verifiedOnline)
+    console.error("\nNOT VERIFIED ONLINE — quotes were NOT checked against their pages (" +
+      (process.argv.includes("--offline") ? "--offline" : "--allow-unverifiable") +
+      "). A pass in this mode is a structure check, not the gate's promise.");
   if (!r.ok) { console.error(`\nREJECTED — ${r.errors.length} error(s)`); process.exit(1); }
   console.error("\nPASSED");
 }

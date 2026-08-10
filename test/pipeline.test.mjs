@@ -2051,3 +2051,135 @@ test("recordSeen refuses a non-array instead of silently writing nothing", async
   // the legitimate empty case stays a no-op
   await recordSeen([]);
 });
+
+// ---------------------------------------------------------------------------
+// The online path, testable at last.
+//
+// The gate's central promise — "the cited page is fetched and the quote must
+// occur in it" — shipped on 2026-07-27 and ran for two weeks with zero test
+// coverage, because exercising it needed a live origin. `opts.fetchPageImpl`
+// is the seam: a stub that serves canned pages, so every branch of the online
+// loop is now held by the same net as everything else.
+// ---------------------------------------------------------------------------
+
+// Serve each goodPost() url a page that genuinely contains its quotes, the way
+// flatten() would deliver it: lowercased, whitespace collapsed.
+const stubPages = (extra = {}) => {
+  const p = goodPost();
+  const pageFor = (...quotes) => quotes.join(" ").replace(/\s+/g, " ").toLowerCase();
+  const pages = {
+    "https://techcrunch.com/a": pageFor(
+      p.corroboration[0].quote,
+      p.slides[1].evidence,
+      p.captionEvidence[0].quote
+    ),
+    "https://www.bangordailynews.com/b": pageFor(p.corroboration[1].quote, p.slides[2].evidence),
+    ...extra,
+  };
+  return async (url) => (url in pages
+    ? (typeof pages[url] === "string" ? { ok: true, text: pages[url] } : pages[url])
+    : { ok: false, error: "HTTP 404" });
+};
+
+test("an honest post passes the online gate against stubbed pages", async () => {
+  const r = await validatePost(goodPost(), { online: true, fetchPageImpl: stubPages() });
+  assert.deepEqual(r.errors, []);
+  assert.equal(r.ok, true);
+  assert.equal(r.verifiedOnline, true, "a full online pass must say so");
+  assert.ok(r.evidenceChecks.every((c) => c.status === "VERIFIED"), JSON.stringify(r.evidenceChecks));
+});
+
+// Probed live on 2026-08-10, before the fix: a fabricated `evidence` string on
+// the HOOK slide fed `figure: "999999"` into the digit pool and the online
+// loop never fetched it, because it only read content slides while the pool
+// read every slide. The loop and the pool must cover the same set.
+test("a fabricated quote on the hook slide is fetched and refused", async () => {
+  const p = goodPost();
+  p.slides[0] = {
+    ...p.slides[0],
+    hero: { value: "999999", label: "invented" },
+    evidence: "A sentence nobody ever published, with the figure 999999 in it.",
+    source: { url: "https://techcrunch.com/hoax", name: "TechCrunch", date: FRESH_DATE },
+  };
+  // Offline, the pool accepts the digits — that is the pool working as designed
+  // on evidence it has no way to check yet…
+  const offline = await validatePost(p, { online: false });
+  assert.ok(!hasErr(offline.errors, /999999/), "offline the fabricated digits are pooled, which is why the online fetch must cover the hook");
+  // …and online, the page is fetched like any other and the invention dies.
+  const hoaxPage = { "https://techcrunch.com/hoax": { ok: true, text: "an article about something else entirely." } };
+  const online = await validatePost(p, { online: true, fetchPageImpl: stubPages(hoaxPage) });
+  assert.ok(
+    hasErr(online.errors, /slide 1 \(hook\).*does not appear/),
+    `expected the hook quote to be checked, got: ${JSON.stringify(online.errors)}`
+  );
+});
+
+// The offline half of the same hole: evidence with no page at all can never be
+// fetched by anyone, so it may not exist on a hook or cta slide.
+test("hook evidence without a source.url is refused offline", async () => {
+  const p = goodPost();
+  p.slides[0] = { ...p.slides[0], evidence: "A quote with no page to check it against, figure 424242." };
+  assert.ok(hasErr(await errs(p), /slide 1 \(hook\).*no source\.url/));
+});
+
+test("an unreachable source still fails closed, and --allow-unverifiable still says NOT verified", async () => {
+  const p = goodPost();
+  const dead = async () => ({ ok: false, error: "HTTP 403" });
+  const strict = await validatePost(p, { online: true, fetchPageImpl: dead });
+  assert.ok(hasErr(strict.errors, /source unreachable/), "unverifiable must refuse by default");
+  const loose = await validatePost(p, { online: true, allowUnverifiable: true, fetchPageImpl: dead });
+  assert.ok(!hasErr(loose.errors, /source unreachable/), "allow-unverifiable downgrades the refusal");
+  assert.equal(loose.verifiedOnline, false, "but the result must not claim the quotes were verified");
+  const offline = await validatePost(p, { online: false });
+  assert.equal(offline.verifiedOnline, false, "offline is a structure check, not the promise");
+});
+
+// venturebeat.com answered 429 to the gate four days running (2026-08-07..10)
+// and a story stayed ungateable the whole time. A Wayback snapshot is a dated
+// witness: accepted, marked VERIFIED_VIA_ARCHIVE, and disclosed as a warning
+// so the report says which witness spoke.
+test("a quote verified via a Wayback snapshot passes, labelled and disclosed", async () => {
+  const p = goodPost();
+  const viaArchive = {
+    "https://techcrunch.com/a": {
+      ok: true,
+      text: [p.corroboration[0].quote, p.slides[1].evidence, p.captionEvidence[0].quote].join(" ").toLowerCase(),
+      archive: { url: "https://web.archive.org/web/20260809000000/https://techcrunch.com/a", timestamp: "20260809000000" },
+    },
+  };
+  const r = await validatePost(p, { online: true, fetchPageImpl: stubPages(viaArchive) });
+  assert.deepEqual(r.errors, []);
+  assert.ok(r.evidenceChecks.some((c) => c.status === "VERIFIED_VIA_ARCHIVE"), JSON.stringify(r.evidenceChecks));
+  assert.ok(r.warnings.some((w) => /wayback snapshot/i.test(w)), "an archive verification must be disclosed");
+});
+
+// The tokeniser was ASCII-only: "vérifiés" shredded to "v rifi s" and every
+// consumer — claimOverlap, storyVocab, feed dedup — silently lost the accented
+// words, which on a French-language account are the ones carrying the story.
+test("the tokeniser keeps accented words whole, and English output is unchanged", async () => {
+  assert.ok(tokens("vérifiés par l'équipe française").includes("vérifié"), tokens("vérifiés par l'équipe française").join(","));
+  assert.ok(!tokens("vérifiés par l'équipe française").includes("rifi"), "the shredded fragment must be gone");
+  // English titles must tokenise exactly as before, or every fingerprint in
+  // state/seen.jsonl silently stops matching its own story.
+  assert.deepEqual(tokens("OpenAI launches a new model, again"), ["again", "launch", "model", "openai"]);
+});
+
+// The hook card is the most-seen text the account produces, and it was the one
+// public surface the frequency check never read.
+test("a publishing frequency on the reel2 title card is refused", async () => {
+  const p = { ...goodPost(), reel2: { title: "Une actu IA chaque jour", beats: [] } };
+  assert.ok(hasErr(await errs(p), /reel2\.title promises a publishing frequency/));
+});
+
+// "des milliards" is a figure with no digit for the gate to hold; "30 millions"
+// is a checked digit wearing its unit. Only the bare form warns.
+test("a bare spelled-out magnitude warns, a digit-adjacent one stays silent", async () => {
+  const bare = goodPost();
+  bare.caption = "Une IA qui rapporte déjà des milliards, selon le rapport publié jeudi. AI-assisted.";
+  const r1 = await validatePost(bare, { online: false });
+  assert.ok(r1.warnings.some((w) => /bare magnitude/.test(w) && /milliards/.test(w)), JSON.stringify(r1.warnings));
+  const unit = goodPost();
+  unit.caption = "Un rapport chiffre le marché à 70 milliards, publié jeudi. AI-assisted.";
+  const r2 = await validatePost(unit, { online: false });
+  assert.ok(!r2.warnings.some((w) => /bare magnitude/.test(w)), JSON.stringify(r2.warnings));
+});
