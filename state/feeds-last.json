@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-10T19:39:07.443Z",
-  "fresh": 338,
+  "at": "2026-08-10T21:39:51.325Z",
+  "fresh": 342,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 18,
+      "fresh": 20,
       "windowHours": 36
     },
     {
@@ -78,14 +78,14 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 4,
+      "fresh": 5,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 3,
+      "fresh": 4,
       "windowHours": 36
     },
     {

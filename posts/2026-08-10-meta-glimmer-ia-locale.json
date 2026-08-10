@@ -1,0 +1,227 @@
+{
+  "slug": "2026-08-10-meta-glimmer-ia-locale",
+  "centralClaim": "Meta released Muse Glimmer, an open-weight model designed to power AI agents locally on consumer hardware.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+      "quote": "Meta on Monday released Muse Glimmer, an open-weight model designed to power AI agents locally on consumer hardware, providing the clearest picture yet of what CEO Mark Zuckerberg's vision of \"personal superintelligence\" could look like in practice."
+    },
+    {
+      "url": "https://huggingface.co/blog/muse-glimmer",
+      "quote": "Muse Glimmer, released today, is Meta's new multimodal model, especially designed for local agentic use cases."
+    }
+  ],
+  "sendTest": "Meta sort une IA que tu installes sur ton ordi: elle bosse pour toi même sans internet, et tes données restent chez toi.",
+  "caption": "Zuckerberg promet une super-intelligence « gratuite ou abordable » pour tous. Meta vient d'en lâcher un premier morceau.\n\nMeta a publié lundi Muse Glimmer, un modèle en accès libre conçu pour faire tourner un assistant directement sur un Mac ou un PC. Il comprend le texte et les images, il est entraîné dans plus de 100 langues, et il est pensé pour gérer ton agenda, écrire tes messages, ranger tes fichiers. Tout se passe sur ta machine au lieu d'être envoyé vers des serveurs, et il fonctionne avec ou sans connexion internet.\n\nLe même jour, Zuckerberg a publié une lettre de 6 500 mots: chacun aura, promet-il, un agent personnel qui travaille pour lui 24h sur 24, avec un accès gratuit ou abordable pour tous.\n\nLe détail qui compte. Le modèle le plus puissant de Meta, Muse Spark, reste fermé. Ce que Meta rend public, c'est le petit. La frontière entre les deux montre où l'entreprise place la limite entre l'IA qu'elle te laisse posséder et celle qu'elle garde sous son contrôle.\n\nTu installerais une IA qui lit tous tes fichiers sur ton ordinateur, oui ou non ?\n\ntechcrunch.com · huggingface.co\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Meta #Zuckerberg",
+  "captionEvidence": [
+    {
+      "quote": "It supports text and images, and was trained across more than 100 languages, the company said.",
+      "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/"
+    },
+    {
+      "quote": "On Monday, Mark Zuckerberg published a 6,500-word manifesto about personal AI, largely about the possibilities for the \"personal superintelligence\" systems Meta AI is building.",
+      "url": "https://techcrunch.com/2026/08/10/mark-zuckerbergs-ai-manifesto-is-exactly-why-people-dont-like-ai/"
+    },
+    {
+      "quote": "Zuckerberg went on to list the ways Meta's superintelligence can improve a person's life, from providing a capable personal agent that \"will work 24/7 on your behalf to improve your relationships, health, career, finances, home management, hobbies, and more\" to giving people access to tools needed to create a new business or advance scientific progress.",
+      "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "10 août 2026 · Meta",
+      "headline": "Zuckerberg promet une super-intelligence *pour tous*. Voici ce qu'il te donne.",
+      "hero": {
+        "value": "24/7",
+        "label": "l'agent personnel que sa lettre promet à chacun"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "6 500",
+      "unit": "mots, la lettre publiée lundi par Zuckerberg",
+      "body": "Un manifeste de **6 500 mots** sur la « super-intelligence personnelle », publié le jour où Meta lâche son modèle en accès libre.",
+      "evidence": "On Monday, Mark Zuckerberg published a 6,500-word manifesto about personal AI, largely about the possibilities for the \"personal superintelligence\" systems Meta AI is building.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/10/mark-zuckerbergs-ai-manifesto-is-exactly-why-people-dont-like-ai/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une IA installée chez toi",
+      "body": "Muse Glimmer fait tourner un assistant directement sur ta machine: tout se traite *sur ton appareil*, au lieu d'être envoyé vers des serveurs.",
+      "evidence": "By processing the information on a user's device instead of sending it to the cloud, Meta is laying the groundwork for a more privacy-sensitive personal agent.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Entraîné dans plus de 100 langues",
+      "body": "Le modèle comprend le texte et les images, et il est entraîné dans **plus de 100 langues**, selon Meta.",
+      "evidence": "It supports text and images, and was trained across more than 100 languages, the company said.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Avec ou sans internet",
+      "body": "Il est conçu pour rester *toujours actif* et fonctionner n'importe où, n'importe quand, avec ou sans connexion internet.",
+      "evidence": "Glimmer is also designed to be \"always-on\" and able to operate \"anywhere, anytime, with or without an internet connection.\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "will work 24/7 on your behalf to improve your relationships, health, career, finances, home management, hobbies, and more",
+      "attribution": "Mark Zuckerberg, dans sa lettre, à propos de l'agent personnel promis",
+      "evidence": "Zuckerberg went on to list the ways Meta's superintelligence can improve a person's life, from providing a capable personal agent that \"will work 24/7 on your behalf to improve your relationships, health, career, finances, home management, hobbies, and more\" to giving people access to tools needed to create a new business or advance scientific progress.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Distribuer largement la super-intelligence, avec un accès gratuit ou abordable pour tous.",
+      "caveat": "L'accès n'est pas la propriété: Meta distingue de plus en plus ce qu'elle publie de ce qu'elle garde sous son contrôle.",
+      "claimLabel": "La promesse",
+      "caveatLabel": "La réserve",
+      "evidence": "But access isn't the same as ownership. Zuckerberg's promise to distribute superintelligence widely comes as Meta is increasingly distinguishing between models it will release openly and those it will keep under its control.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le plus puissant reste fermé",
+      "body": "Muse Spark, le modèle le plus puissant de Meta, reste fermé. Le petit, Glimmer, peut être téléchargé et *tourner sur ta machine*.",
+      "evidence": "Muse Spark, its more powerful mode, remains closed-weight, while the smaller Glimmer can be downloaded, fine-tuned, and run on a user's hardware.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pensé pour ta machine",
+      "body": "Le modèle est publié en accès libre, pensé pour les usages *sur ton appareil*: assistants personnels, analyse de documents.",
+      "evidence": "It's intended for privacy-aware applications such as coding, document analysis, personal assistants, Claw- or Hermes-like setups.",
+      "source": {
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/blog/muse-glimmer",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui met toute sa vie dans son ordinateur",
+      "sub": "Chaque affirmation vient d'une source citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+      "accessed": "2026-08-10"
+    },
+    {
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/blog/muse-glimmer",
+      "accessed": "2026-08-10"
+    },
+    {
+      "name": "TechCrunch (analyse)",
+      "url": "https://techcrunch.com/2026/08/10/mark-zuckerbergs-ai-manifesto-is-exactly-why-people-dont-like-ai/",
+      "accessed": "2026-08-10"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "L'IA de Zuckerberg s'installe dans ton ordinateur",
+    "beats": [
+      {
+        "script": "Une IA qui travaille pour toi 24 heures sur 24, sur ton propre ordinateur. C'est la promesse de Mark Zuckerberg. Et il vient d'en lâcher un morceau.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "an internet connection cable plugged into a port",
+            "action": "being pulled slowly out of the port by a hand, the cable staying whole and visible in frame",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the port and cable filling the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Meta vient de publier Muse Glimmer: un modèle que n'importe qui peut télécharger. Mais attends de voir ce que Zuckerberg garde pour lui.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/"
+        }
+      },
+      {
+        "script": "Dans une lettre de 6 500 mots, il promet à chacun un agent personnel, gratuit ou presque, pour ta santé, ta carrière, ton argent.",
+        "visual": {
+          "type": "photo",
+          "query": "mark zuckerberg",
+          "alt": "Mark Zuckerberg sur scène, en gros plan"
+        }
+      },
+      {
+        "script": "Il comprend le texte et les images, il est entraîné dans plus de 100 langues. Et il gère ton agenda, tes messages, tes fichiers.",
+        "visual": {
+          "type": "card",
+          "value": "100",
+          "label": "langues comprises par le modèle, selon Meta"
+        }
+      },
+      {
+        "script": "L'argument de Meta, c'est ta vie privée: tout se passe sur ta machine, rien ne part vers des serveurs. Même sans internet, il tourne.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://huggingface.co/blog/muse-glimmer"
+        }
+      },
+      {
+        "script": "Sauf que l'accès, ce n'est pas la propriété. Le modèle le plus puissant, Muse Spark, reste fermé. On te laisse le petit.",
+        "visual": {
+          "type": "card",
+          "value": "Muse Spark",
+          "label": "le modèle le plus puissant de Meta reste fermé"
+        }
+      },
+      {
+        "script": "C'est ça, la vraie info: la frontière entre l'IA que Meta te laisse posséder, et celle qu'il garde sous son contrôle.",
+        "visual": {
+          "type": "photo",
+          "query": "mark zuckerberg f8 2018",
+          "alt": "Mark Zuckerberg pendant une présentation, plan plus large"
+        }
+      },
+      {
+        "script": "Et la réponse est déjà là: le jour même, la presse tech écrivait que ce manifeste est exactement pourquoi les gens n'aiment pas l'IA. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/08/10/mark-zuckerbergs-ai-manifesto-is-exactly-why-people-dont-like-ai/"
+        }
+      }
+    ]
+  }
+}

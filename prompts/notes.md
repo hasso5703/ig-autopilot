@@ -268,7 +268,12 @@ ENTRIES:
   passagere a reessayer: quand tu planifies, traite-le comme indisponible, et
   n'ecris pas une histoire dont il est la SEULE source. Perdu ce soir pour cette
   raison: l'exclu Stanford/Merck (37 000 agents en biotech virtuelle), remise en
-  revisit sans une ligne d'ecrite.
+  revisit sans une ligne d'ecrite. Ajout 10/08 (21h36): huggingface.co (pages
+  blog) rend 200 au fetch gate et se gate du premier coup (2 citations, dossier
+  Muse Glimmer); techcrunch.com re-confirme le meme soir. Et la syndication
+  ramaonhealthcare.com rend 200 mais TRONQUE au teaser (2 paragraphes puis
+  "Continue Reading" vers VentureBeat): inutilisable pour gater les chiffres
+  d'un article VB, contrairement a RNZ qui porte l'article ABC entier.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
