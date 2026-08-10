@@ -237,6 +237,20 @@ ENTRIES:
   13% puis 21%, alors que la meme citation passait a 30% une fois le claim
   ramene a UNE seule affirmation, ce que le manuel demande deja. Ecris une
   phrase, une affirmation, avant de suspecter la source.
+  Ajout 10/08 (06h30), dossier Amazon/Pecos: rendent 200 au fetch gate et se
+  gatent du premier coup distilled.earth (le Substack du cabinet Cleanview),
+  thenextweb.com (re-confirme) et newrepublic.com. Bloque: gvwire.com (403).
+  ET LE REFLEXE QUI TROUVE LE VRAI PRIMAIRE, meme famille que digitaldigging.org
+  le 02/08: la breve techcrunch credite explicitement "according to the new york
+  times" (injoignable), donc elle est DERIVEE; le scoop est le bulletin de
+  l'analyste, qui a lu les permis d'air de l'Etat, commande de l'imagerie
+  satellite et obtenu la confirmation de l'entreprise. Sur une actu
+  d'INFRASTRUCTURE ou d'ENERGIE, cherche le bulletin du cabinet d'analyse AVANT
+  la reprise presse: il est joignable, il est le primaire, et il porte les
+  chiffres que la breve resume. Nuance a dire dans le rapport: le NYT a enquete
+  en parallele et reste illisible d'ici, donc toutes les reprises joignables
+  (tnw, newrepublic) citent soit Cleanview soit le NYT, et le vert du gate
+  n'atteste pas deux enquetes independantes.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-07-31 · Le depot grossit de ~19 Mo par Reel publie (reel.mp4 commite pour
@@ -680,6 +694,23 @@ ENTRIES:
   quatrieme (meme auteur, 2667x1500, crop=844:1500:911:0). Regle generale sur
   une actu d'energie: cherche une centrale NOMMEE, jamais la categorie. La
   requete generique rend une carte, le nom rend une photo.
+  Ajout 10/08 (06h30), dossier centrale a gaz Amazon: la regle ci-dessus se
+  re-confirme, et voici QUATRE requetes mortes a ne pas retenter. "power plant
+  smokestacks texas" rend 0 candidat; "west texas desert landscape" sort les
+  Carlsbad Caverns (qui sont au Nouveau-Mexique) et des releves HAER des annees
+  1930; "pecos county texas" sort DEUX SERPENTS en tete a 8.0 (Trans-Pecos
+  Copperhead, Black-headed Snake); "bulldozer clearing land" rend les archives
+  du Queensland de 1950, 720 px, piege d'epoque pour la 5e fois. Il ne reste que
+  les centrales NOMMEES, et elles suffisent a 3 beats: "thomas c ferguson power
+  plant texas" (3 angles distincts, Larry D. Moore, CC BY, 3556x2000) et "decker
+  creek power station" (meme auteur, 2667x1500). Crops 9:16 mesures, regardes en
+  planche-contact et epingles file+credit ce jour-la: Ferguson B
+  crop=1125:2000:1215:0, Ferguson C crop=1125:2000:1465:0, Decker
+  crop=844:1500:778:0. DETAIL QUI CHOISIT LE BEAT: le cadre de Decker Creek
+  porte des LIGNES A HAUTE TENSION et un poste electrique en travers, donc c'est
+  lui le beat "raccordement au reseau"; les trois Ferguson n'en ont aucune et
+  servent les beats "la centrale elle-meme". Aucune des quatre ne porte de
+  marque lisible ni de date gravee.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /

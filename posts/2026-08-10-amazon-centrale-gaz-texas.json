@@ -209,7 +209,9 @@
         "visual": {
           "type": "photo",
           "query": "thomas c ferguson power plant texas",
-          "alt": "Une centrale électrique au gaz au Texas"
+          "alt": "Une centrale électrique au gaz au Texas",
+          "file": "media/2026-08-10-amazon-centrale-gaz-texas/photo_3.jpg",
+          "credit": "Larry D. Moore · CC BY"
         }
       },
       {
@@ -217,7 +219,9 @@
         "visual": {
           "type": "photo",
           "query": "decker creek power station",
-          "alt": "Une autre centrale électrique texane"
+          "alt": "Une autre centrale électrique texane",
+          "file": "media/2026-08-10-amazon-centrale-gaz-texas/photo_4.jpg",
+          "credit": "Larry D. Moore · CC BY"
         }
       },
       {
@@ -239,8 +243,10 @@
         "script": "Mais ce n'est pas un cas isolé. Depuis 2025, près de 60 projets de centrales privées ont été annoncés. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "power plant smokestacks texas",
-          "alt": "Les cheminées d'une centrale électrique"
+          "query": "thomas c ferguson power plant texas",
+          "alt": "Une centrale électrique au gaz au Texas, vue de loin",
+          "file": "media/2026-08-10-amazon-centrale-gaz-texas/photo_7.jpg",
+          "credit": "Larry D. Moore · CC BY"
         }
       }
     ]
