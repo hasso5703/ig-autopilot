@@ -32,9 +32,13 @@ WHAT TO DO WITH IT.
   routine.md needs NO re-paste — only a change to this loader itself does,
   which should now be rare. Update the SYNC line when you paste.
 
-LAST PASTED INTO THE LIVE ROUTINE: never — loader authored 2026-08-04,
-awaiting Hasan's first paste. Until then, runs arrive with the old summary
-prompt and routine.md's preamble handles the conflict.
+LAST PASTED INTO THE LIVE ROUTINE: 2026-08-05 — verified live 2026-08-10 by
+reading the stored trigger (`list_triggers`, trigger `oom-daily`,
+updated_at 2026-08-05T20:34Z): its prompt is byte-identical to the loader
+below the dashed line. Hasan pasted on 08-05 and this SYNC line was simply
+never updated; it spent five days claiming "never" while every run was
+already arriving through the loader. A wrong sync line is worse than none —
+if you verify again, write the date you verified.
 -->
 
 ---------------------------------------------------------------------------
