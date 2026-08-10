@@ -182,6 +182,54 @@ async function recordSpend(entry) {
 }
 
 /**
+ * The daily ceiling, in code for the first time.
+ *
+ * The manual's "$3 a Reel asks for an explanation" lived in prose, and nothing
+ * ever read state/spend.jsonl back before buying — the ledger was a receipt
+ * drawer, not a brake. A normal day is $1–2 across both Reels; the worst day so
+ * far was $4.45 (2026-07-31, the jitter hunt). Six dollars is therefore not a
+ * budget, it is a circuit breaker: nothing legitimate hits it, and the failure
+ * mode it exists for — a retry loop or a prompt loop quietly re-buying media —
+ * burns tens of dollars precisely because each item costs under one.
+ *
+ * The check reads the same ledger the receipts land in, so an in-flight run
+ * sees its own purchases immediately. Parallel runs only see each other after
+ * a land, which is fine for a breaker with 4x headroom. Override for a
+ * deliberately expensive day with OOM_DAILY_SPEND_CAP.
+ */
+export const DAILY_SPEND_CAP_USD = Number(process.env.OOM_DAILY_SPEND_CAP || 6);
+
+/** Pure so the suite can hold the arithmetic: entries + an estimate -> verdict. */
+export function spendRoom(entries, estUsd, { now = new Date(), cap = DAILY_SPEND_CAP_USD } = {}) {
+  const day = now.toISOString().slice(0, 10);
+  const spent = (entries || [])
+    .filter((e) => e && typeof e.usd === "number" && String(e.at || "").slice(0, 10) === day)
+    .reduce((a, e) => a + e.usd, 0);
+  return { spent: Number(spent.toFixed(4)), cap, ok: spent + estUsd <= cap };
+}
+
+async function assertSpendRoom(estUsd, what) {
+  let entries = [];
+  try {
+    entries = (await readFile(SPEND_FILE, "utf8"))
+      .split("\n")
+      .filter((l) => l.trim())
+      .map((l) => { try { return JSON.parse(l); } catch { return null; } });
+  } catch {
+    /* no ledger, no history: a fresh checkout starts at zero */
+  }
+  const room = spendRoom(entries, estUsd);
+  if (!room.ok) {
+    await journal(`SPEND CAP: refused ${what} (~$${estUsd}) — $${room.spent} already spent today, cap $${room.cap}`);
+    throw new Error(
+      `daily spend cap: $${room.spent} already spent today and ${what} would add ~$${estUsd} (cap $${room.cap}). ` +
+        `A normal day is $1–2, so something is re-buying. Read state/spend.jsonl for today's receipts; ` +
+        `override deliberately with OOM_DAILY_SPEND_CAP if this day is meant to be expensive.`
+    );
+  }
+}
+
+/**
  * The run journal: one line per event, appended to whatever file RUN_JOURNAL
  * points at, silently skipped when it points nowhere. It exists because a run
  * that dies on a usage limit takes its narration with it — the 27 July death
@@ -234,6 +282,8 @@ export async function genVideo({ prompt, imageFile, durationSeconds = 8, resolut
   if (![4, 6, 8].includes(durationSeconds)) throw new Error(`durationSeconds must be 4, 6 or 8, got ${durationSeconds}`);
   if (resolution === "1080p" && durationSeconds !== 8) throw new Error("1080p requires durationSeconds 8");
   const model = await pickVideoModel();
+  const usd = (PRICES.video[model]?.[resolution] ?? 0.4) * durationSeconds;
+  await assertSpendRoom(usd, `a ${durationSeconds}s ${resolution} veo clip`);
   const instance = { prompt };
   if (imageFile) {
     const mime = imageFile.endsWith(".png") ? "image/png" : "image/jpeg";
@@ -243,6 +293,15 @@ export async function genVideo({ prompt, imageFile, durationSeconds = 8, resolut
     instances: [instance],
     parameters: { aspectRatio, durationSeconds, resolution },
   });
+  /* Once the operation is submitted the money is committed on Google's side,
+   * whatever happens on ours. Both failure paths below used to throw before
+   * recordSpend ever ran, so a slow-but-billed clip or a failed download became
+   * an invisible charge — the ledger's whole promise is that it has no
+   * invisible charges. `video-orphan` lines carry the price of a clip that was
+   * (probably) produced and never used; the note says which way it was lost. */
+  const orphan = async (note) => {
+    await recordSpend({ slug, kind: "video-orphan", model, units: `${durationSeconds}s@${resolution}`, usd, note });
+  };
   const t0 = Date.now();
   let done = null;
   while (Date.now() - t0 < 8 * 60_000) {
@@ -250,17 +309,25 @@ export async function genVideo({ prompt, imageFile, durationSeconds = 8, resolut
     if (state.done) { done = state; break; }
     await new Promise((r) => setTimeout(r, 15_000));
   }
-  if (!done) throw new Error(`Veo operation still running after 8 minutes: ${op.name}`);
+  if (!done) {
+    await orphan("poll timed out after 8 minutes; the clip may still have been produced and billed");
+    throw new Error(`Veo operation still running after 8 minutes: ${op.name}`);
+  }
   if (done.error) throw new Error(`Veo refused: ${done.error.message || JSON.stringify(done.error).slice(0, 300)}`);
   const uri = done.response?.generateVideoResponse?.generatedSamples?.[0]?.video?.uri;
   if (!uri) throw new Error(`Veo finished with no video uri: ${JSON.stringify(done.response || {}).slice(0, 300)}`);
-  const res = await withRetry(async () => {
-    const r = await fetch(uri, { headers: { "x-goog-api-key": apiKey() } });
-    if (!r.ok) throw new Error(`video download -> HTTP ${r.status}`);
-    return Buffer.from(await r.arrayBuffer());
-  }, "veo download");
+  let res;
+  try {
+    res = await withRetry(async () => {
+      const r = await fetch(uri, { headers: { "x-goog-api-key": apiKey() } });
+      if (!r.ok) throw new Error(`video download -> HTTP ${r.status}`);
+      return Buffer.from(await r.arrayBuffer());
+    }, "veo download");
+  } catch (err) {
+    await orphan(`produced but the download failed (${describeError(err)})`);
+    throw err;
+  }
   await writeFile(outFile, res);
-  const usd = (PRICES.video[model]?.[resolution] ?? 0.4) * durationSeconds;
   await recordSpend({ slug, kind: "video", model, units: `${durationSeconds}s@${resolution}`, usd });
   return { file: outFile, model, usd, seconds: durationSeconds };
 }
@@ -283,6 +350,7 @@ function extractInlineImage(candidates) {
  * with pixels. Measured 2026-07-31; Lite cannot do 2K at all.
  */
 export async function genImage({ prompt, aspectRatio = "9:16", imageSize = IMAGE_SIZE, model = IMAGE_MODEL, outFile, slug = "" }) {
+  await assertSpendRoom(0.14, "a generated still");
   const imageConfig = { aspectRatio };
   if (imageSize && model !== "gemini-3.1-flash-lite-image") imageConfig.imageSize = imageSize;
   const out = await api(`models/${model}:generateContent`, {
@@ -308,6 +376,7 @@ export async function genImage({ prompt, aspectRatio = "9:16", imageSize = IMAGE
  * ceiling nobody has hit yet.
  */
 export async function genImagesBatch(items, { model = IMAGE_MODEL, timeoutMs = 10 * 60_000, slug = "" } = {}) {
+  await assertSpendRoom(0.07 * items.length, `a batch of ${items.length} still(s)`);
   const sized = model !== "gemini-3.1-flash-lite-image";
   const requests = items.map((it, i) => ({
     request: {
@@ -373,6 +442,7 @@ export async function genImagesBatch(items, { model = IMAGE_MODEL, timeoutMs = 1
  * file rather than estimated off the text.
  */
 export async function tts({ text, voice = "Fenrir", style = "Narrate as a sharp, energetic tech news voice. Fast paced, urgent, clear articulation, short pauses between paragraphs", outFile, slug = "" }) {
+  await assertSpendRoom(0.03, "a narration reading");
   // Direction and transcript are separated by a blank line, not by a colon:
   // that is the shape Google documents and the shape every rate measurement on
   // 2026-07-31 was taken with. The colon form used to glue the last word of the

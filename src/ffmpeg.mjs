@@ -35,8 +35,15 @@ export async function ffmpegPath() {
   );
 }
 
-/** Runs ffmpeg and throws with its stderr, which is where it says what it disliked. */
-export async function ffmpeg(args, { timeout = 240000 } = {}) {
+/** Runs ffmpeg and throws with its stderr, which is where it says what it disliked.
+ *
+ * The default window is 420s, not 240: a supersampled `zoompan` render measured
+ * +85s alone (2026-07-31), and three renders share the machine at once, so a
+ * long beat under contention brushed the old ceiling with nothing actually
+ * wrong. A timeout or an OOM kill gets ONE retry — those are weather on a
+ * shared container. A non-zero exit does not: a bad filter graph fails the
+ * same way every time, and retrying it just doubles the wait for the error. */
+export async function ffmpeg(args, { timeout = 420000, attempt = 1 } = {}) {
   const bin = await ffmpegPath();
   try {
     return await run(bin, ["-hide_banner", "-loglevel", "error", ...args], {
@@ -44,6 +51,11 @@ export async function ffmpeg(args, { timeout = 240000 } = {}) {
       maxBuffer: 32 * 1024 * 1024,
     });
   } catch (err) {
+    const killed = Boolean(err.killed || err.signal);
+    if (killed && attempt === 1) {
+      console.error(`ffmpeg ${err.signal || "killed"} after ${timeout / 1000}s — retrying once (contention, not a filter error)`);
+      return ffmpeg(args, { timeout, attempt: 2 });
+    }
     const detail = String(err.stderr || err.message).trim().split("\n").slice(-6).join("\n");
     throw new Error(`ffmpeg failed: ${args.join(" ")}\n${detail}`);
   }

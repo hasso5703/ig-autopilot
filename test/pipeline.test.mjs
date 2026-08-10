@@ -2246,3 +2246,24 @@ test("lessons survive empty ledgers instead of costing a run", async () => {
   assert.equal(l.medianViews, null);
   assert.ok(typeof formatLessons(l) === "string", "an empty digest still formats");
 });
+
+// ---------------------------------------------------------------------------
+// The spend ceiling. state/spend.jsonl was a receipt drawer, never a brake:
+// nothing read it back before buying, and the "$3 asks for an explanation"
+// rule lived in prose. The breaker exists for the failure mode where a retry
+// or prompt loop quietly re-buys media that costs under a dollar an item.
+// ---------------------------------------------------------------------------
+test("the daily spend breaker counts today only and refuses at the cap", async () => {
+  const { spendRoom } = await import("../src/genmedia.mjs");
+  const now = new Date("2026-08-10T20:00:00Z");
+  const entries = [
+    { at: "2026-08-10T06:00:00Z", usd: 3.0 },
+    { at: "2026-08-10T16:00:00Z", usd: 2.5 },
+    { at: "2026-08-09T16:00:00Z", usd: 4.0 }, // yesterday: not today's problem
+    { at: "2026-08-10T17:00:00Z" },           // malformed line: skipped, not fatal
+  ];
+  assert.equal(spendRoom(entries, 0.96, { now, cap: 6 }).ok, false, "5.50 + 0.96 breaks a $6 cap");
+  assert.equal(spendRoom(entries, 0.4, { now, cap: 6 }).ok, true, "5.50 + 0.40 still fits");
+  assert.equal(spendRoom(entries, 0.4, { now, cap: 6 }).spent, 5.5, "yesterday's $4 must not count");
+  assert.equal(spendRoom([], 1, { now, cap: 6 }).ok, true, "an empty ledger starts at zero");
+});

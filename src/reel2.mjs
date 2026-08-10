@@ -1482,34 +1482,43 @@ export async function buildReel(postFile, mediaDir) {
    * 34.3s at three. Five was only 17% faster than three and doubles the memory,
    * so three is the knee and the cap.
    */
-  const segFiles = [];
   const renders = [];
   const render = (i, fn) => { renders[i] = fn; };
   let veoAudio = null;
-  for (let i = 0; i < plan.beats.length; i++) {
-    const beat = plan.beats[i];
-    const dur = Number((bounds[i].t1 - bounds[i].t0).toFixed(2));
-    const seg = path.join(mediaDir, `seg2_${i}.mp4`);
-    const type = beat.visual?.type || "image";
-    if (type === "veo") {
-      const clip = beat.visual.file || path.join(mediaDir, `veo_${i}.mp4`);
-      if (!beat.visual.file) {
-        const prompt = beat.visual.prompt || veoPrompt({ ...beat.visual.spec, mood });
-        const issues = promptIssues(prompt, { forbidNames, authored: authoredText(beat.visual) });
-        if (issues.length) throw new Error(`veo prompt refused:\n  ${issues.join("\n  ")}`);
-        const durationSeconds = dur <= 4.2 ? 4 : dur <= 6.2 ? 6 : 8;
-        /* 1080p is native for this frame: a 9:16 clip at 720p is 720x1280 and
-           gets enlarged 1.5x to fill 1080x1920, which is visible on the one
-           beat the whole audition rests on. The API only allows 1080p at 8
-           seconds, so a shorter beat stays at 720p rather than buying seconds
-           it will not show. Veo Fast: $0.12/s at 1080p against $0.10 at 720p,
-           so native resolution costs 16 cents on a normal Reel. */
-        const resolution = beat.visual.resolution || (durationSeconds === 8 ? "1080p" : "720p");
-        await genVideo({ prompt, durationSeconds, resolution, outFile: clip, slug });
-      }
-      render(i, () => segmentFromVideo(clip, dur, seg));
-      if (!veoAudio) veoAudio = { file: clip, at: bounds[i].t0, dur };
-    } else if (type === "screenshot") {
+  const ctx = plan.beats.map((beat, i) => ({
+    i,
+    beat,
+    dur: Number((bounds[i].t1 - bounds[i].t0).toFixed(2)),
+    seg: path.join(mediaDir, `seg2_${i}.mp4`),
+    type: beat.visual?.type || "image",
+  }));
+  const segFiles = ctx.map((c) => c.seg);
+  const logBeat = async ({ i, beat, dur, type }) => {
+    console.log(`beat ${i}: ${type} ${dur}s — "${beat.script.split(/\s+/).slice(0, 6).join(" ")}…"`);
+    await journal(`beat ${i} acquired: ${type} ${dur}s`);
+  };
+  /* A rebuild must not pay to see the same picture again — the exact promise
+     `voiceCacheKey` already keeps for the narration, extended to the two paid
+     surfaces. The key hashes everything that decides the pixels (the prompt,
+     the seconds, the resolution); a script edit moves the beat durations and
+     the key with them, so there is no staleness to reason about. Before this,
+     `veo_0.mp4` could sit on disk while a rebuild bought it again: the 05/08
+     build that died at 13 minutes would have re-paid its whole bill. */
+  const mediaKey = (parts) => createHash("sha256").update(JSON.stringify(parts)).digest("hex").slice(0, 16);
+  const cachedOk = async (file, keyFile, key) => {
+    const held = (await readFile(keyFile, "utf8").catch(() => "")).trim();
+    if (held !== key) return false;
+    return access(file).then(() => true, () => false);
+  };
+
+  /* Pass A — everything free. The network surfaces (screenshots, photos) go
+     FIRST because they are the fragile ones: a Cloudflare wall on a receipt
+     page must kill the build while the bill is still $0, not after the veo
+     opener has been bought. Within the pass, beat order, so the journal still
+     reads like the Reel. */
+  for (const c of ctx) {
+    const { i, beat, dur, seg, type } = c;
+    if (type === "screenshot") {
       const shot = beat.visual.file || path.join(mediaDir, `shot_${i}.png`);
       if (!beat.visual.file) await screenshot(beat.visual.url, shot);
       render(i, () => segmentFromScreenshot(shot, dur, seg));
@@ -1533,18 +1542,63 @@ export async function buildReel(postFile, mediaDir) {
       const src = beat.visual.file;
       render(i, () => (/\.(mp4|mov|webm)$/i.test(src) ? segmentFromVideo(src, dur, seg) : segmentFromImage(src, dur, seg)));
     } else {
+      continue;
+    }
+    await logBeat(c);
+  }
+
+  /* Pass B — everything paid, in beat order, one at a time: a refused prompt
+     still stops the run before the next purchase, and the spend ledger still
+     reads in the order a human expects. */
+  for (const c of ctx) {
+    const { i, beat, dur, seg, type } = c;
+    if (type === "veo") {
+      const clip = beat.visual.file || path.join(mediaDir, `veo_${i}.mp4`);
+      if (!beat.visual.file) {
+        const prompt = beat.visual.prompt || veoPrompt({ ...beat.visual.spec, mood });
+        const issues = promptIssues(prompt, { forbidNames, authored: authoredText(beat.visual) });
+        if (issues.length) throw new Error(`veo prompt refused:\n  ${issues.join("\n  ")}`);
+        const durationSeconds = dur <= 4.2 ? 4 : dur <= 6.2 ? 6 : 8;
+        /* 1080p is native for this frame: a 9:16 clip at 720p is 720x1280 and
+           gets enlarged 1.5x to fill 1080x1920, which is visible on the one
+           beat the whole audition rests on. The API only allows 1080p at 8
+           seconds, so a shorter beat stays at 720p rather than buying seconds
+           it will not show. Veo Fast: $0.12/s at 1080p against $0.10 at 720p,
+           so native resolution costs 16 cents on a normal Reel. */
+        const resolution = beat.visual.resolution || (durationSeconds === 8 ? "1080p" : "720p");
+        const key = mediaKey(["veo", prompt, durationSeconds, resolution]);
+        const keyFile = path.join(mediaDir, `veo_${i}.key`);
+        if (await cachedOk(clip, keyFile, key)) {
+          console.log(`veo ${i}: reusing the clip already bought for this exact prompt — no purchase.`);
+          await journal(`veo ${i} reused from cache — no spend`);
+        } else {
+          await genVideo({ prompt, durationSeconds, resolution, outFile: clip, slug });
+          await writeFile(keyFile, key);
+        }
+      }
+      render(i, () => segmentFromVideo(clip, dur, seg));
+      if (!veoAudio) veoAudio = { file: clip, at: bounds[i].t0, dur };
+    } else if (type === "screenshot" || type === "photo" || type === "card" || type === "file") {
+      continue;
+    } else {
       const img = beat.visual?.file || path.join(mediaDir, `still_${i}.jpg`);
       if (!beat.visual?.file) {
         const prompt = beat.visual?.prompt || imagePrompt({ ...beat.visual?.spec, mood });
         const issues = promptIssues(prompt, { forbidNames, authored: authoredText(beat.visual) });
         if (issues.length) throw new Error(`image prompt refused:\n  ${issues.join("\n  ")}`);
-        await genImage({ prompt, outFile: img, slug });
+        const key = mediaKey(["image", prompt]);
+        const keyFile = path.join(mediaDir, `still_${i}.key`);
+        if (await cachedOk(img, keyFile, key)) {
+          console.log(`still ${i}: reusing the picture already bought for this exact prompt — no purchase.`);
+          await journal(`still ${i} reused from cache — no spend`);
+        } else {
+          await genImage({ prompt, outFile: img, slug });
+          await writeFile(keyFile, key);
+        }
       }
       render(i, () => segmentFromImage(img, dur, seg));
     }
-    segFiles.push(seg);
-    console.log(`beat ${i}: ${type} ${dur}s — "${beat.script.split(/\s+/).slice(0, 6).join(" ")}…"`);
-    await journal(`beat ${i} acquired: ${type} ${dur}s`);
+    await logBeat(c);
   }
 
   await renderAll(renders, plan.beats);
@@ -1558,9 +1612,25 @@ export async function buildReel(postFile, mediaDir) {
      if it is printed in the bio. */
   const beatsTotal = (await Promise.all(segFiles.map(async (f) => Number((await ffprobe(f)).format.duration))))
     .reduce((a, b) => a + b, 0);
-  const endDur = Number((TARGET_S - beatsTotal).toFixed(3));
-  if (endDur < 1.5)
-    throw new Error(`only ${endDur.toFixed(2)}s left for the end-card after ${beatsTotal.toFixed(2)}s of beats — the serial promise and the follow ask need ${END_S}s`);
+  let endDur = Number((TARGET_S - beatsTotal).toFixed(3));
+  if (endDur < 1.5) {
+    /* This used to throw — after every purchase had been made. It fired in
+       exactly the case the narration path promises to survive: a clamped
+       reading makes `total` overrun SPEECH_S, the beats absorb the overrun,
+       and TARGET_S minus the measured beats leaves nothing for the end-card.
+       The daily promise outranks the 60-second one (the TTS fallback above
+       says so in as many words), so the end-card takes what the assembly
+       actually left it and the file lands a few seconds long, flagged by the
+       existing duration note below. Killing a paid build over arithmetic the
+       build already chose to accept was the bug. */
+    const fallback = Number((videoTotal - beatsTotal).toFixed(3));
+    endDur = Math.max(1.5, fallback);
+    console.log(
+      `end-card squeeze: ${(TARGET_S - beatsTotal).toFixed(2)}s left of the ${TARGET_S}s budget after ` +
+        `${beatsTotal.toFixed(2)}s of beats — giving it ${endDur.toFixed(2)}s and letting the file run long. Say so in the report.`
+    );
+    await journal(`end-card squeezed to ${endDur.toFixed(2)}s (beats ${beatsTotal.toFixed(2)}s) — file will not be exactly ${TARGET_S}s`);
+  }
   const endSeg = path.join(mediaDir, `seg2_end.mp4`);
   await segmentEndcard(endDur, endSeg);
   segFiles.push(endSeg);
