@@ -107,9 +107,9 @@
       {
         "script": "Sauf qu'il n'était pas couché. L'IA de Google avait tout inventé, avec l'aplomb d'une vraie réponse. Et rater un coucher de soleil, c'est le moins grave.",
         "visual": { "type": "image", "spec": {
-          "subject": "the last orange light of a sunset fading over a dark horizon",
-          "setting": "an empty open sky at dusk",
-          "composition": "wide shot of the horizon" } }
+          "subject": "an orange sunset sky streaked with thin dark clouds",
+          "setting": "above a flat unbroken horizon line",
+          "composition": "the sky fills the entire frame" } }
       },
       {
         "script": "Parce que la même IA a fait bien pire à deux entreprises. Et cette fois, ça a fini devant un juge.",
@@ -118,18 +118,18 @@
       },
       {
         "script": "Elle a raconté que deux maisons d'édition étaient liées à des arnaques et à des pratiques douteuses. C'était faux: les articles qu'elle citait ne disaient rien de tel.",
-        "visual": { "type": "screenshot", "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/" }
+        "visual": { "type": "screenshot", "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/", "file": "media/2026-08-11-google-ia-repond-faux/shot_3.png" }
       },
       {
         "script": "Les deux sociétés ont écrit à Google pour faire retirer le mensonge. Des semaines après, l'IA le répétait encore.",
         "visual": { "type": "image", "spec": {
-          "subject": "a printed cease-and-desist letter lying on a plain desk",
+          "subject": "a folded paper letter lying face down on a plain desk, its blank back facing the camera",
           "setting": "under a desk lamp",
-          "composition": "extreme close-up, the letter fills the entire frame" } }
+          "composition": "extreme close-up, the blank folded letter fills the entire frame" } }
       },
       {
         "script": "Alors un tribunal allemand a tranché: Google est directement responsable de ce que son IA raconte.",
-        "visual": { "type": "screenshot", "url": "https://www.malwarebytes.com/blog/ai/2026/06/google-can-be-liable-for-false-ai-overviews-court-rules" }
+        "visual": { "type": "screenshot", "url": "https://www.malwarebytes.com/blog/ai/2026/06/google-can-be-liable-for-false-ai-overviews-court-rules", "file": "media/2026-08-11-google-ia-repond-faux/shot_5.png" }
       },
       {
         "script": "Google s'est défendu: il conseille déjà de vérifier les réponses de l'IA. Le tribunal a répondu que ça ne suffit pas à s'en laver les mains.",
