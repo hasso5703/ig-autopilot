@@ -1,0 +1,304 @@
+{
+  "slug": "2026-08-11-eclipse-solaire-yeux",
+  "centralClaim": "Looking at the sun can burn the retina.",
+  "corroboration": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11213101/",
+      "quote": "Looking at the sun can cause focal burns to the retina."
+    },
+    {
+      "url": "https://www.aao.org/eye-health/tips-prevention/solar-eclipse-eye-safety",
+      "quote": "Looking at the sun without the right eye protection - for even a short time - can damage your retina permanently."
+    }
+  ],
+  "sendTest": "Ce soir 90 % du soleil disparait au-dessus de la France. Si tu le regardes sans lunettes d'eclipse, tu peux te bruler la retine.",
+  "caption": "Ce soir, plus de 90 % du soleil disparaît au-dessus de la France. Ne le regarde jamais à l'œil nu.\n\nL'éclipse totale du 12 août 2026 traverse le Groenland, l'Islande, l'Espagne et un petit coin du Portugal. La France n'est pas sur cette bande. Chez nous le soleil sera occulté à plus de 90 %, vers 20h00 heure de Paris, très bas sur l'horizon ouest. Et hors de la bande de totalité, il n'existe aucun moment où l'on peut regarder le soleil sans filtre.\n\nCe que ça fait à l'œil. La lumière abîme la macula, le centre de la rétine, par une réaction chimique et non par la chaleur. Les patients décrivent une tache aveugle minuscule en plein centre de la vision. Dans une étude menée après une éclipse, la vitesse de lecture s'était effondrée dans 75 % des yeux.\n\nCe qui s'est passé en 1999. Après la dernière éclipse totale visible en Europe, 45 personnes se sont présentées aux urgences ophtalmologiques de Leicester. 20 avaient des symptômes, cinq une lésion visible de la rétine, et quatre avaient encore des symptômes sept mois plus tard. L'étude nationale britannique, elle, a recensé 70 cas et aucune perte de vue définitive à six mois.\n\nDonc non, ce n'est pas la cécité garantie. Mais les lunettes de soleil ne protègent pas, elles laissent passer bien trop de lumière. Il faut des lunettes d'éclipse à la norme ISO 12312-2. Sans filtre, la méthode sûre est la projection. Regarde l'ombre d'un arbre pendant l'éclipse, le sol sera couvert de petits croissants de soleil.\n\nTu sortiras regarder l'éclipse ce soir, oui ou non ?\n\nafastronomie.fr · eclipse.aas.org · aao.org · pubmed.ncbi.nlm.nih.gov · science.nasa.gov\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#Eclipse #Eclipse2026 #Astronomie #Sante #ActuIA",
+  "captionEvidence": [
+    {
+      "quote": "Partout en France, le soleil sera occulté à un niveau exceptionnel, dépassant les 90 % sur une grande partie du territoire.",
+      "url": "https://www.afastronomie.fr/eclipse-2026"
+    },
+    {
+      "quote": "Attention : comme le phénomène se produira vers 20h00 (heure de Paris), le soleil sera très bas sur l'horizon ouest.",
+      "url": "https://www.afastronomie.fr/eclipse-2026"
+    },
+    {
+      "quote": "On Aug. 12, 2026, a total solar eclipse will sweep across Greenland, Iceland, northern Russia, the Atlantic Ocean, Spain, and a small corner of Portugal.",
+      "url": "https://science.nasa.gov/eclipses/"
+    },
+    {
+      "quote": "Outside the path of totality, and throughout a partial or annular solar eclipse, there is no time when it is safe to look directly at the sun without using a special-purpose solar filter that conforms to the ISO 12312-2 international standard.",
+      "url": "https://eclipse.aas.org/eye-safety"
+    },
+    {
+      "quote": "Ordinary sunglasses, even very dark ones, are not safe for looking at the sun; they transmit far more sunlight than is safe for our eyes.",
+      "url": "https://eclipse.aas.org/eye-safety"
+    },
+    {
+      "quote": "Reading speed was reduced in 75% of eyes",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10414122/"
+    },
+    {
+      "quote": "45 patients attended, of whom 20 had visual symptoms and five had visible changes in the retina; four patients were still symptomatic after 7 months.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11213101/"
+    },
+    {
+      "quote": "There were 70 reported cases of visual loss.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11339579/"
+    },
+    {
+      "quote": "There have been no reported cases of continued visual loss or symptoms at 6 months.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11339579/"
+    },
+    {
+      "quote": "A solar eclipse was observed in Europe on 11 August 1999.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11760043/"
+    },
+    {
+      "quote": "or just look at the shadow of a leafy tree during a partial eclipse; you'll see the ground dappled with crescent-shaped suns projected by the tiny spaces between the leaves.",
+      "url": "https://eclipse.aas.org/eye-safety"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "France · éclipse solaire",
+      "headline": "90 % du soleil disparaît. Ne le regarde pas.",
+      "hero": {
+        "value": "90 %",
+        "label": "du soleil occulté au-dessus de la France"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "90 %",
+      "unit": "du soleil occulté en France",
+      "body": "Le soleil sera occulté à plus de **90 %** sur une grande partie du pays, tout en fin de journée.",
+      "evidence": "Partout en France, le soleil sera occulté à un niveau exceptionnel, dépassant les 90 % sur une grande partie du territoire.",
+      "source": {
+        "name": "Association Française d'Astronomie",
+        "url": "https://www.afastronomie.fr/eclipse-2026",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La France n'est pas sur la bande de totalité",
+      "body": "La totalité traverse le Groenland, l'Islande, l'Espagne et un coin du Portugal. *Pas la France.*",
+      "evidence": "On Aug. 12, 2026, a total solar eclipse will sweep across Greenland, Iceland, northern Russia, the Atlantic Ocean, Spain, and a small corner of Portugal.",
+      "source": {
+        "name": "NASA Science",
+        "url": "https://science.nasa.gov/eclipses/",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Hors totalité, aucun moment n'est sûr",
+      "body": "Pendant une éclipse partielle, il n'existe **aucun instant** où l'on peut regarder le soleil sans un filtre solaire certifié.",
+      "evidence": "Outside the path of totality, and throughout a partial or annular solar eclipse, there is no time when it is safe to look directly at the sun without using a special-purpose solar filter that conforms to the ISO 12312-2 international standard.",
+      "source": {
+        "name": "American Astronomical Society",
+        "url": "https://eclipse.aas.org/eye-safety",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce n'est pas de la chaleur, c'est de la chimie",
+      "body": "La lésion touche la **macula**, le centre de la rétine, et elle est déclenchée par une *réaction photochimique*.",
+      "evidence": "Solar retinopathy is a well-recognised clinical entity of macular damage caused by viewing the sun, induced by a photochemical process.",
+      "source": {
+        "name": "Eye (Michaelides et al.), via PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11339579/",
+        "date": "2001-04-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une tache aveugle minuscule, en plein centre",
+      "body": "Les patients décrivent de *minuscules taches aveugles centrales*, pile au milieu de la vision, et lisent mal.",
+      "evidence": "Patients with solar retinopathy often complain of minute central scotomas and are handicapped when reading.",
+      "source": {
+        "name": "Der Ophthalmologe (Ehrt et al.), via PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10414122/",
+        "date": "1999-05-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Leicester, après l'éclipse de 1999",
+      "body": "**45** personnes aux urgences ophtalmologiques. *20* avec des symptômes, cinq avec une lésion visible, quatre encore symptomatiques *7* mois après.",
+      "evidence": "45 patients attended, of whom 20 had visual symptoms and five had visible changes in the retina; four patients were still symptomatic after 7 months.",
+      "source": {
+        "name": "The Lancet (Wong et al.), via PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11213101/",
+        "date": "2001-01-20"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Une brûlure de la rétine, définitive",
+      "caveat": "70 cas recensés dans l'étude nationale britannique, et aucune perte de vue définitive à six mois",
+      "claimLabel": "Ce qu'on croit",
+      "caveatLabel": "Ce que l'étude a trouvé",
+      "evidence": "There were no recorded cases of permanent visual loss, which corroborates the previous evidence that visual morbidity is likely to be temporary.",
+      "source": {
+        "name": "Eye (Michaelides et al.), via PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11339579/",
+        "date": "2001-04-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les lunettes de soleil ne protègent pas",
+      "body": "Même très sombres, elles laissent passer **bien trop de lumière**. Il faut de vraies lunettes d'éclipse certifiées.",
+      "evidence": "Ordinary sunglasses, even very dark ones, are not safe for looking at the sun; they transmit far more sunlight than is safe for our eyes.",
+      "source": {
+        "name": "American Astronomical Society",
+        "url": "https://eclipse.aas.org/eye-safety",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui sortira voir l'éclipse ce soir",
+      "sub": "Chaque chiffre vient d'une source citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Association Française d'Astronomie",
+      "url": "https://www.afastronomie.fr/eclipse-2026",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "NASA Science, Eclipses",
+      "url": "https://science.nasa.gov/eclipses/",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "American Astronomical Society, eye safety",
+      "url": "https://eclipse.aas.org/eye-safety",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "American Academy of Ophthalmology",
+      "url": "https://www.aao.org/eye-health/tips-prevention/solar-eclipse-eye-safety",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "The Lancet, Eclipse burns (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11213101/",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "Eye, Eclipse retinopathy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11339579/",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "Der Ophthalmologe, microperimetry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10414122/",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "Graefes Arch Clin Exp Ophthalmol (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11760043/",
+      "accessed": "2026-08-11"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "90 % du soleil disparaît. Ne le regarde pas.",
+    "beats": [
+      {
+        "script": "Ce soir, plus de 90 % du soleil disparaît au-dessus de la France. Le regarder sans filtre peut te brûler la rétine.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a pair of dark cardboard eclipse glasses",
+            "action": "being lifted slowly upward toward the bright sky, the glasses staying whole and fully in frame",
+            "setting": "outdoors in bright daylight",
+            "composition": "close-up on the dark filter lenses"
+          }
+        }
+      },
+      {
+        "script": "Pas une image. Une vraie brûlure, au fond de l'œil. Tu sais ce qui se passe ?",
+        "visual": {
+          "type": "photo",
+          "file": "photo_nuevoleon.jpg",
+          "credit": "Mexiboi · CC BY",
+          "alt": "Le soleil en croissant pendant une éclipse partielle"
+        }
+      },
+      {
+        "script": "La lumière abîme la macula, le centre de ta rétine. Pas par la chaleur, par une réaction chimique.",
+        "visual": {
+          "type": "photo",
+          "file": "photo_fundus.jpg",
+          "credit": "Augenarztpraxis Dr. med. Stephan Kaut · CC0",
+          "alt": "Photographie du fond d'œil montrant la rétine"
+        }
+      },
+      {
+        "script": "Ce n'est pas le noir complet. C'est une tache aveugle minuscule, pile au milieu de ton regard.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10414122/"
+        }
+      },
+      {
+        "script": "Après une éclipse, la vitesse de lecture s'est effondrée dans 75 % des yeux suivis.",
+        "visual": {
+          "type": "card",
+          "value": "75 %",
+          "label": "des yeux lisaient moins vite après une éclipse"
+        }
+      },
+      {
+        "script": "Et c'est déjà arrivé ici. Le 11 août 1999, dernière éclipse totale en Europe : 45 personnes aux urgences à Leicester.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11213101/"
+        }
+      },
+      {
+        "script": "Mais voilà l'autre moitié. La plus grande étude, 70 cas, n'a trouvé aucune perte de vue définitive à six mois.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11339579/"
+        }
+      },
+      {
+        "script": "Sauf qu'à Leicester, quatre patients avaient encore des symptômes sept mois après. Pas la cécité garantie, mais pas rien.",
+        "visual": {
+          "type": "card",
+          "value": "7 mois",
+          "label": "quatre patients avaient encore des symptômes"
+        }
+      },
+      {
+        "script": "Les lunettes de soleil ne servent à rien : elles laissent passer bien trop de lumière. Il faut de vraies lunettes d'éclipse.",
+        "visual": {
+          "type": "photo",
+          "file": "photo_party.jpg",
+          "credit": "Infrogmation of New Orleans · CC BY",
+          "alt": "Une personne observe l'éclipse avec des lunettes d'éclipse"
+        }
+      },
+      {
+        "script": "La France n'est pas sur la bande de totalité : pas une seconde sans danger. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "file": "photo_corona.jpg",
+          "credit": "Brucewaters · CC BY",
+          "alt": "La couronne solaire pendant une éclipse totale"
+        }
+      }
+    ]
+  }
+}
