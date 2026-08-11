@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-11T10:41:01.983Z",
+  "at": "2026-08-11T16:43:48.481Z",
   "n": 26,
   "nSettled": 19,
   "medianViews": 156,
@@ -7,7 +7,7 @@
   "top": [
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
-      "views": 1231,
+      "views": 1232,
       "retentionPct": 26,
       "saved": 4,
       "shares": 3,
@@ -207,7 +207,7 @@
     }
   },
   "followers": {
-    "now": 15,
+    "now": 16,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -215,7 +215,7 @@
         "published": [
           {
             "slug": "2026-08-08-virus-ecrits-par-une-ia",
-            "views": 1231
+            "views": 1232
           },
           {
             "slug": "2026-08-08-facture-ia-salaries",
@@ -229,7 +229,7 @@
         "published": [
           {
             "slug": "2026-08-09-motif-anti-cameras",
-            "views": 1141
+            "views": 1143
           },
           {
             "slug": "2026-08-09-chatgpt-gratuit-illimite",
@@ -255,10 +255,29 @@
   },
   "posts": [
     {
+      "slug": "2026-08-10-amazon-centrale-gaz-texas",
+      "at": "2026-08-10T20:22:31.627Z",
+      "hourUtc": 20,
+      "views": 1324,
+      "reach": 1221,
+      "avgWatchS": 14.1,
+      "retentionPct": 23,
+      "likes": 9,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "infra"
+      ],
+      "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "at": "2026-08-08T16:51:56.558Z",
       "hourUtc": 16,
-      "views": 1231,
+      "views": 1232,
       "reach": 1107,
       "avgWatchS": 15.6,
       "retentionPct": 26,
@@ -270,6 +289,23 @@
       "themes": [],
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-09-motif-anti-cameras",
+      "at": "2026-08-09T20:14:36.239Z",
+      "hourUtc": 20,
+      "views": 1143,
+      "reach": 1038,
+      "avgWatchS": 15.1,
+      "retentionPct": 25,
+      "likes": 10,
+      "comments": 2,
+      "saved": 7,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un mec a créé un motif à imprimer sur un t-shirt qui empêche les caméras de surveillance de te repérer. Il l'a testé sur une voiture, ça a marché.",
+      "settled": false
     },
     {
       "slug": "2026-08-03-macbook-air-memoire",
@@ -287,42 +323,6 @@
       "themes": [],
       "sendTest": "Le MacBook Air a pris 200 dollars et il est en rupture, parce que les boîtes d'IA rachètent toute la mémoire pour leurs centres de données.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-09-motif-anti-cameras",
-      "at": "2026-08-09T20:14:36.239Z",
-      "hourUtc": 20,
-      "views": 1141,
-      "reach": 1034,
-      "avgWatchS": 15.1,
-      "retentionPct": 25,
-      "likes": 10,
-      "comments": 2,
-      "saved": 7,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un mec a créé un motif à imprimer sur un t-shirt qui empêche les caméras de surveillance de te repérer. Il l'a testé sur une voiture, ça a marché.",
-      "settled": false
-    },
-    {
-      "slug": "2026-08-10-amazon-centrale-gaz-texas",
-      "at": "2026-08-10T20:22:31.627Z",
-      "hourUtc": 20,
-      "views": 974,
-      "reach": 829,
-      "avgWatchS": 14.8,
-      "retentionPct": 25,
-      "likes": 9,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [
-        "infra"
-      ],
-      "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays.",
-      "settled": false
     },
     {
       "slug": "2026-08-08-facture-ia-salaries",
@@ -414,6 +414,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-10-meta-glimmer-ia-locale",
+      "at": "2026-08-10T23:02:26.507Z",
+      "hourUtc": 23,
+      "views": 188,
+      "reach": 159,
+      "avgWatchS": 32,
+      "retentionPct": 53,
+      "likes": 5,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Meta sort une IA que tu installes sur ton ordi: elle bosse pour toi même sans internet, et tes données restent chez toi.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
@@ -501,6 +518,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-10-ia-reserve-cours-sport",
+      "at": "2026-08-10T16:58:57.530Z",
+      "hourUtc": 16,
+      "views": 152,
+      "reach": 137,
+      "avgWatchS": 11.8,
+      "retentionPct": 20,
+      "likes": 3,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
+      "settled": false
+    },
+    {
       "slug": "2026-07-30-opus5-vending-cartels",
       "at": "2026-07-30T13:14:06.716Z",
       "hourUtc": 13,
@@ -516,42 +552,6 @@
       "themes": [],
       "sendTest": "Des IA ont géré des distributeurs automatiques en concurrence. Claude a proposé des cartels, menacé ses rivales et trahi 11 accords.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-10-ia-reserve-cours-sport",
-      "at": "2026-08-10T16:58:57.530Z",
-      "hourUtc": 16,
-      "views": 143,
-      "reach": 129,
-      "avgWatchS": 11.8,
-      "retentionPct": 20,
-      "likes": 3,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
-      "settled": false
-    },
-    {
-      "slug": "2026-08-10-meta-glimmer-ia-locale",
-      "at": "2026-08-10T23:02:26.507Z",
-      "hourUtc": 23,
-      "views": 141,
-      "reach": 124,
-      "avgWatchS": 12.4,
-      "retentionPct": 21,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Meta sort une IA que tu installes sur ton ordi: elle bosse pour toi même sans internet, et tes données restent chez toi.",
-      "settled": false
     },
     {
       "slug": "2026-08-02-xai-minnesota-nudification",

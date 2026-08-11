@@ -52,3 +52,6 @@
 {"at":"2026-08-10T19:42:34.781Z","slug":"2026-08-10-amazon-centrale-gaz-texas","words":195,"seconds":61.52,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-1.2}
 {"at":"2026-08-10T19:43:11.307Z","slug":"2026-08-10-amazon-centrale-gaz-texas","words":195,"seconds":57.68,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-1}
 {"at":"2026-08-10T21:56:33.360Z","slug":"2026-08-10-meta-glimmer-ia-locale","words":199,"seconds":54.8,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.1}
+{"at":"2026-08-11T16:43:57.223Z","slug":"2026-08-11-google-ia-repond-faux","words":198,"seconds":46.84,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-5.5}
+{"at":"2026-08-11T16:44:28.172Z","slug":"2026-08-11-google-ia-repond-faux","words":198,"seconds":49.68,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":false,"declineDb":-1.5}
+{"at":"2026-08-11T16:45:06.797Z","slug":"2026-08-11-google-ia-repond-faux","words":198,"seconds":54.48,"voice":"Sadaltager","lang":"fr","attempt":3,"accepted":true,"declineDb":0.9}
