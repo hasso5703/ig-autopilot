@@ -230,7 +230,7 @@
         "script": "Pas une image. Une vraie brûlure, au fond de l'œil. Tu sais ce qui se passe ?",
         "visual": {
           "type": "photo",
-          "file": "photo_nuevoleon.jpg",
+          "file": "media/2026-08-11-eclipse-solaire-yeux/photo_nuevoleon.jpg",
           "credit": "Mexiboi · CC BY",
           "alt": "Le soleil en croissant pendant une éclipse partielle"
         }
@@ -239,7 +239,7 @@
         "script": "La lumière abîme la macula, le centre de ta rétine. Pas par la chaleur, par une réaction chimique.",
         "visual": {
           "type": "photo",
-          "file": "photo_fundus.jpg",
+          "file": "media/2026-08-11-eclipse-solaire-yeux/photo_fundus.jpg",
           "credit": "Augenarztpraxis Dr. med. Stephan Kaut · CC0",
           "alt": "Photographie du fond d'œil montrant la rétine"
         }
@@ -248,7 +248,8 @@
         "script": "Ce n'est pas le noir complet. C'est une tache aveugle minuscule, pile au milieu de ton regard.",
         "visual": {
           "type": "screenshot",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/10414122/"
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10414122/",
+          "file": "media/2026-08-11-eclipse-solaire-yeux/shot_3.png"
         }
       },
       {
@@ -263,14 +264,16 @@
         "script": "Et c'est déjà arrivé ici. Le 11 août 1999, dernière éclipse totale en Europe : 45 personnes aux urgences à Leicester.",
         "visual": {
           "type": "screenshot",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11213101/"
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11213101/",
+          "file": "media/2026-08-11-eclipse-solaire-yeux/shot_5.png"
         }
       },
       {
         "script": "Mais voilà l'autre moitié. La plus grande étude, 70 cas, n'a trouvé aucune perte de vue définitive à six mois.",
         "visual": {
           "type": "screenshot",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11339579/"
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11339579/",
+          "file": "media/2026-08-11-eclipse-solaire-yeux/shot_6.png"
         }
       },
       {
@@ -285,7 +288,7 @@
         "script": "Les lunettes de soleil ne servent à rien : elles laissent passer bien trop de lumière. Il faut de vraies lunettes d'éclipse.",
         "visual": {
           "type": "photo",
-          "file": "photo_party.jpg",
+          "file": "media/2026-08-11-eclipse-solaire-yeux/photo_party.jpg",
           "credit": "Infrogmation of New Orleans · CC BY",
           "alt": "Une personne observe l'éclipse avec des lunettes d'éclipse"
         }
@@ -294,7 +297,7 @@
         "script": "La France n'est pas sur la bande de totalité : pas une seconde sans danger. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "file": "photo_corona.jpg",
+          "file": "media/2026-08-11-eclipse-solaire-yeux/photo_corona.jpg",
           "credit": "Brucewaters · CC BY",
           "alt": "La couronne solaire pendant une éclipse totale"
         }
