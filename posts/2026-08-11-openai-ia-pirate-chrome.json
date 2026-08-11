@@ -45,6 +45,10 @@
     {
       "quote": "access to both tiers runs through identity verification, account security requirements, monitoring, approved-use restrictions, and legal attestations, with separate application paths for individuals a",
       "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+    },
+    {
+      "quote": "hardware security keys become mandatory for all daybreak accounts on september 1, 2026.",
+      "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
     }
   ],
   "slides": [
@@ -201,14 +205,16 @@
         "script": "Et il ne fait pas que répondre à des questions gênantes. On l'a lâché sur des logiciels bien réels, pour voir ce qu'il trouvait.",
         "visual": {
           "type": "screenshot",
-          "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+          "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+          "file": "media/2026-08-11-openai-ia-pirate-chrome/shot_2.png"
         }
       },
       {
         "script": "Il a fouillé le cœur de Chrome, ton navigateur. Il y a trouvé deux failles secrètes que personne n'avait vues. Google a dû les corriger.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+          "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/",
+          "file": "media/2026-08-11-openai-ia-pirate-chrome/shot_3.png"
         }
       },
       {
@@ -216,7 +222,9 @@
         "visual": {
           "type": "photo",
           "query": "woman looking at phone",
-          "alt": "Une personne regarde son téléphone"
+          "alt": "Une personne regarde son téléphone",
+          "file": "media/2026-08-11-openai-ia-pirate-chrome/photo4_pinned.jpg",
+          "credit": "Shixart1985 · CC BY"
         }
       },
       {
@@ -230,17 +238,22 @@
       {
         "script": "Et l'outil est verrouillé: identité vérifiée, surveillance des usages, engagements légaux, et des clés de sécurité physiques bientôt obligatoires sur chaque compte.",
         "visual": {
-          "type": "photo",
-          "query": "usb security key",
-          "alt": "Une clé de sécurité matérielle"
+          "type": "image",
+          "spec": {
+            "subject": "a single black hardware security key lying on a dark desk",
+            "setting": "in a dim room, the soft glow of a screen in the background",
+            "composition": "extreme close-up, the key fills most of the frame"
+          }
         }
       },
       {
         "script": "Le vrai message est là. La course à l'IA qui attaque a commencé, et ceux qui la fabriquent vendront aussi le bouclier. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "computer server room",
-          "alt": "Une salle de serveurs informatiques"
+          "query": "messy network server room wires",
+          "alt": "Une salle de serveurs informatiques",
+          "file": "media/2026-08-11-openai-ia-pirate-chrome/photo7_pinned.jpg",
+          "credit": "Moses Cursor Ssebunya · CC0"
         }
       }
     ]
