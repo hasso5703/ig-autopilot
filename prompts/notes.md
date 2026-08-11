@@ -820,6 +820,19 @@ ENTRIES:
   aerienne dense, l'aile de l'avion est hors cadre a ce x) et re-confirmation de
   "Woman sitting in a chair holding a cup looking at a phone" (Shixart1985,
   CC BY, crop=2157:3835:2100:0 du 09/08, telephone bien dans le cadre).
+  Ajout 11/08 (19h30), dossier GPT-5.6-Cyber, deux mesures. (1) "usb security
+  key" est une requete MORTE: les 5 candidats sont des cut-outs a 39-90% de
+  quasi-blanc, le build meurt a l'acquisition. Remede rendu propre du premier
+  coup: still generee "a single black hardware security key lying on a dark
+  desk" + extreme close-up (objet sans marque, zero texte invente, la famille
+  "objet physique simple" ne declenche pas la prose inventee), APRES avoir mis
+  la phrase source "hardware security keys become mandatory..." en
+  captionEvidence pour que hardware+security entrent dans storyVocab. (2)
+  L'acquisition AUTO peut livrer une rawpixel FILIGRANEE: "woman looking at
+  phone" a rendu une image ~1300px couverte du filigrane rawpixel (famille du
+  03/08) ET un vieux telephone a boutons hors sujet; licence, taille et filtre
+  fond-blanc la laissent passer, seul le REGARD sur photo_N.jpg l'attrape.
+  Remede: pin des valeurs sures du 09/08 (Shixart1985), re-confirmees au rendu.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
