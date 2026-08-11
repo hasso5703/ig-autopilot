@@ -290,6 +290,20 @@ ENTRIES:
   primaire vert ne rachete pas un angle ingatable: garde revisit tant que VB ne
   revient pas ou qu'une 2e redaction ne porte pas la confirmation Merck.
   bioRxiv.org rend 429 (comme la fiche du papier). Proof: scout 10h30 11/08.
+  Ajout 11/08 (22h, dossier eclipse/retine, hors IA): rendent 200 au fetch gate et
+  se gatent du premier coup afastronomie.fr (le primaire francais: date, heure et
+  taux d'occultation en France), eclipse.aas.org/eye-safety (la reference mondiale
+  de securite oculaire, endossee par l'AAO), aao.org et science.nasa.gov/eclipses/.
+  Bloquent: timeanddate.com (403); science.nasa.gov/eclipses/future-eclipses/... rend
+  404 (l'index /eclipses/ porte quand meme la phrase de geometrie). SUR UNE ACTU DE
+  PAPIER CLINIQUE, PubMed se re-confirme, mais ATTENTION A L'EXTRACTION: sur une fiche
+  pubmed, `indexOf('abstract')` tombe sur le CHROME de l'interface (menus "format
+  abstract pubmed pmid", ~1400 caracteres de boutons) et pas sur le resume. L'ancre qui
+  marche est le DERNIER `format abstract pubmed pmid abstract` (lastIndexOf), ou
+  `lastIndexOf('doi:')` pour attraper titre + auteurs + revue. Et pour trouver les pmid
+  sans deviner: regex `/(\d{7,8})/"` sur le HTML BRUT de la page de recherche, le
+  flatten les supprime. Les 3 fiches PubMed se capturent aussi parfaitement en moteur
+  (titre, revue, abstract lisible, 0 pub, 0 banniere), ca re-confirme le 08/08.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
@@ -396,6 +410,21 @@ ENTRIES:
   pas dans les faits rapportes, donc le gate refusait a juste titre une
   metaphore. Imprime le vocabulaire ENTIER avant d'ecrire un spec, le message
   n'en montre que 18 par ordre alphabetique.
+  Ajout 11/08 (22h), LE PIEGE DE MAJUSCULE FRAPPE UN MOT CENTRAL, dossier eclipse:
+  "solar" est ABSENT de storyVocab alors que l'histoire ne parle que de ca, parce que
+  les citations portent "Solar retinopathy is a well-recognised..." EN DEBUT DE PHRASE
+  (majuscule = nom propre pour namedActors, exactement le cas "Software" du 10/08).
+  Donc un spec veo disant "solar filter" est a la fois inutile (le mot ne compte pas)
+  et RISQUE (le controle "le spec ne nomme personne du post" matche par mot). Mots surs
+  mesures sur ce dossier: eclipse, filter, retina, scotoma, sunlight, sunglass, macular,
+  totality. Remede applique: "close-up on the dark filter lenses", accepte du premier
+  coup avec 2 ancres (eclipse + filter). Imprime toujours le vocabulaire ENTIER d'abord.
+  ET UN CAS DE CHIFFRE NOUVEAU, meme famille que la virgule decimale du 08/08: un nombre
+  ECRIT EN TOUTES LETTRES DANS LA SOURCE n'est pas un chiffre pour le gate. Le Lancet
+  ecrit "four patients were still symptomatic after 7 months", donc une `card` de valeur
+  "4 sur 45" est refusee ("figure(s) 4 appear in no evidence quote") alors que 45 et 7
+  passent. Sur une carte, ancre-toi sur un chiffre que la source ecrit EN CHIFFRES:
+  "7 mois" + label "quatre patients avaient encore des symptomes" est passe du premier coup.
   Ajout 09/08 (06h30), LE CAS OU AUCUN SPEC NE PEUT PASSER, et c'est une
   information, pas un obstacle: sur une actu d'ANNONCE (evaluation, rapport,
   reglement), storyVocab ne contient AUCUN nom physique. Dossier Astra, 86
@@ -1159,6 +1188,14 @@ ENTRIES:
   essai automatique du moteur a reussi, ~5 min au total. Ne le declare pas mort
   au premier echec. Il reste un petit onglet jaune "Most Recent Post" clippe
   derriere le titre, cosmetique.
+  Ajout 11/08 (22h), LE PIN `file` EST RELATIF A LA RACINE DU DEPOT, PAS AU DOSSIER
+  media/: le moteur passe la valeur VERBATIM a ffmpeg, qui tourne depuis la racine. Un
+  pin "photo_x.jpg" tue donc le build au RENDU (apres la narration ET le veo) sur
+  "Error opening input file photo_x.jpg", alors que la sortie, elle, est prefixee par
+  media/<slug>/, ce qui rend le message trompeur. Ecris toujours
+  "media/<slug>/photo_x.jpg". Cout mesure: un build entier perdu, mais $0 au rebuild
+  (narration et veo re-servies par leur .key). Verifie tes pins en 5 s avant de lancer:
+  `grep '"file"' posts/<slug>.json` doit montrer des chemins commencant par media/.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
