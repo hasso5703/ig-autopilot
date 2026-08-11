@@ -144,3 +144,4 @@
 {"at":"2026-08-11T16:51:04.492Z","slug":"2026-08-11-google-ia-repond-faux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1248}
 {"at":"2026-08-11T16:58:16.280Z","slug":"2026-08-11-google-ia-repond-faux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1278}
 {"at":"2026-08-11T16:58:29.171Z","slug":"2026-08-11-google-ia-repond-faux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1275}
+{"at":"2026-08-11T19:45:02.325Z","slug":"2026-08-11-openai-ia-pirate-chrome","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"52.9s Sadaltager","usd":0.0264}
