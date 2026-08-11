@@ -12,7 +12,7 @@
     }
   ],
   "sendTest": "Toutes les IA refusent de t'aider à pirater. OpenAI vient d'en sortir une qui dit oui, et qui a déjà percé Chrome.",
-  "caption": "Toutes les IA refusent de t'aider à pirater. OpenAI vient d'en sortir une qui dit oui, et qui a déjà percé Chrome.\n\nOpenAI a lancé GPT-5.6-Cyber, un modèle entraîné pour ne presque jamais refuser une demande liée au piratage. Sur les requêtes que ses garde-fous bloquent d'habitude, il en accepte 95 %, contre 1.5 % pour la version normale. OpenAI dit s'en être servi pour fouiller le cœur de Chrome, ton navigateur, et y a trouvé deux failles inconnues que Google a dû corriger.\n\nLe détail qui n'a pas tenu dans la vidéo. Le même modèle aurait aussi trouvé cinq failles dans un système de téléphone très répandu, dont une qui laisse une simple application prendre le contrôle total de l'appareil. Toutes ces failles passent par une divulgation coordonnée avec les fabricants.\n\nÀ nuancer, et c'est important. Tous ces chiffres viennent d'OpenAI et de ses propres tests, qu'aucun évaluateur extérieur n'a encore répétés. Et l'outil est verrouillé: identité vérifiée, clés de sécurité obligatoires, réservé à des entreprises triées.\n\nUne IA entraînée à ne presque rien refuser sur le piratage, c'est un bouclier ou une arme ?\n\nthe-decoder.com · unite.ai · techcrunch.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Cybersecurite",
+  "caption": "Toutes les IA refusent de t'aider à pirater. OpenAI vient d'en sortir une qui dit oui, et qui a déjà percé Chrome.\n\nOpenAI a lancé GPT-5.6-Cyber, un modèle entraîné pour ne presque jamais refuser une demande liée au piratage. Sur les requêtes que ses garde-fous bloquent d'habitude, il en accepte 95 %, contre 1.5 % pour la version normale. OpenAI dit s'en être servi pour fouiller le cœur de Chrome, ton navigateur, et y a trouvé deux failles inconnues que Google a dû corriger.\n\nLe détail qui n'a pas tenu dans la vidéo. Le même modèle aurait aussi trouvé cinq failles dans un système de téléphone très répandu, dont une qui laisse une simple application prendre le contrôle total de l'appareil. Toutes ces failles passent par une divulgation coordonnée avec les fabricants.\n\nÀ nuancer, et c'est important. Tous ces chiffres viennent d'OpenAI et de ses propres tests, qu'aucun évaluateur extérieur n'a encore répétés. Et l'outil est verrouillé: identité vérifiée, surveillance des usages, engagements légaux, et des clés de sécurité physiques bientôt obligatoires.\n\nUne IA entraînée à ne presque rien refuser sur le piratage, c'est un bouclier ou une arme ?\n\nthe-decoder.com · unite.ai · techcrunch.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Cybersecurite",
   "captionEvidence": [
     {
       "quote": "gpt-5.6-cyber answers 95 percent of sensitive cybersecurity queries in an internal benchmark.",
@@ -141,7 +141,7 @@
     {
       "type": "content",
       "title": "Un accès verrouillé",
-      "body": "L'outil est réservé à des entreprises triées: *identité vérifiée*, contrôles de sécurité, déclarations légales.",
+      "body": "L'accès passe par *identité vérifiée*, contrôles de sécurité, surveillance et déclarations légales, pour les individus comme pour les entreprises.",
       "evidence": "access to both tiers runs through identity verification, account security requirements, monitoring, approved-use restrictions, and legal attestations, with separate application paths for individuals a",
       "source": {
         "name": "Unite.ai",
@@ -212,7 +212,7 @@
         }
       },
       {
-        "script": "Même chose sur un système de téléphone très répandu, où il a trouvé cinq failles. L'une laissait une simple appli prendre le contrôle total de l'appareil.",
+        "script": "Même chose sur un système de téléphone très répandu, où il a trouvé au moins cinq failles. L'une laissait une simple appli prendre le contrôle total de l'appareil.",
         "visual": {
           "type": "photo",
           "query": "woman looking at phone",
@@ -228,7 +228,7 @@
         }
       },
       {
-        "script": "Et l'outil est verrouillé: identité vérifiée, clés de sécurité obligatoires, réservé à des entreprises triées comme Accenture ou IBM.",
+        "script": "Et l'outil est verrouillé: identité vérifiée, surveillance des usages, engagements légaux, et des clés de sécurité physiques bientôt obligatoires sur chaque compte.",
         "visual": {
           "type": "photo",
           "query": "usb security key",

@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-11T16:43:48.481Z",
-  "n": 26,
-  "nSettled": 19,
-  "medianViews": 156,
+  "at": "2026-08-11T19:41:18.535Z",
+  "n": 27,
+  "nSettled": 20,
+  "medianViews": 164,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 5,
-      "medianViews": 300,
-      "meanRetentionPct": 19.8,
+      "n": 6,
+      "medianViews": 241,
+      "meanRetentionPct": 21.2,
       "saves": 6,
       "shares": 1,
       "thin": false
@@ -166,9 +166,9 @@
       "thin": true
     },
     "16": {
-      "n": 3,
-      "medianViews": 329,
-      "meanRetentionPct": 20,
+      "n": 4,
+      "medianViews": 255,
+      "meanRetentionPct": 22,
       "saves": 6,
       "shares": 3,
       "thin": true
@@ -258,11 +258,11 @@
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
       "at": "2026-08-10T20:22:31.627Z",
       "hourUtc": 20,
-      "views": 1324,
-      "reach": 1221,
+      "views": 1341,
+      "reach": 1238,
       "avgWatchS": 14.1,
       "retentionPct": 23,
-      "likes": 9,
+      "likes": 10,
       "comments": 1,
       "saved": 1,
       "shares": 1,
@@ -395,6 +395,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-10-meta-glimmer-ia-locale",
+      "at": "2026-08-10T23:02:26.507Z",
+      "hourUtc": 23,
+      "views": 191,
+      "reach": 163,
+      "avgWatchS": 31.3,
+      "retentionPct": 52,
+      "likes": 5,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Meta sort une IA que tu installes sur ton ordi: elle bosse pour toi même sans internet, et tes données restent chez toi.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-06-aisi-faux-profils",
       "at": "2026-08-06T17:16:39.586Z",
       "hourUtc": 17,
@@ -414,23 +431,6 @@
       "settled": true
     },
     {
-      "slug": "2026-08-10-meta-glimmer-ia-locale",
-      "at": "2026-08-10T23:02:26.507Z",
-      "hourUtc": 23,
-      "views": 188,
-      "reach": 159,
-      "avgWatchS": 32,
-      "retentionPct": 53,
-      "likes": 5,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Meta sort une IA que tu installes sur ton ordi: elle bosse pour toi même sans internet, et tes données restent chez toi.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
@@ -445,7 +445,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "ChatGPT devient illimité pour les comptes gratuits cette semaine. Mais les 62 % d'erreurs en moins, c'est OpenAI qui les a mesurés lui-même.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-03-ai-act-transparence",
@@ -656,6 +656,23 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-11-google-ia-repond-faux",
+      "at": "2026-08-11T17:04:15.847Z",
+      "hourUtc": 17,
+      "views": 76,
+      "reach": 59,
+      "avgWatchS": 9.6,
+      "retentionPct": 16,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un mec attendait le coucher du soleil, l'IA de Google lui a dit qu'il était déjà passé. Un tribunal a jugé Google responsable de ce que son IA raconte.",
+      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",
