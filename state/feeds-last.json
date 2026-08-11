@@ -1,12 +1,12 @@
 {
-  "at": "2026-08-10T21:39:51.325Z",
-  "fresh": 342,
+  "at": "2026-08-11T06:41:15.082Z",
+  "fresh": 804,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1121,
-      "fresh": 8,
+      "fetched": 1123,
+      "fresh": 10,
       "windowHours": 96
     },
     {
@@ -47,8 +47,8 @@
     {
       "name": "arXiv cs.AI",
       "ok": true,
-      "fetched": 295,
-      "fresh": 295,
+      "fetched": 753,
+      "fresh": 753,
       "windowHours": 96
     },
     {
@@ -78,7 +78,7 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 5,
+      "fresh": 6,
       "windowHours": 36
     },
     {
@@ -94,13 +94,13 @@
       "fetched": 0,
       "fresh": 0,
       "windowHours": 36,
-      "error": "HTTP 502 after 13 tries"
+      "error": "timeout"
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 4,
+      "fresh": 5,
       "windowHours": 36
     }
   ]

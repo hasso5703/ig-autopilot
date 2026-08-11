@@ -1200,3 +1200,21 @@ ENTRIES:
   un chiffre ("ABC13" a declenche "figure 13 in no evidence quote"), et une
   date en clair dans un `kicker` aussi ("6 aout 2026" -> figure 6). Ecris
   "La chaine locale de Houston" et un kicker sans millesime.
+  Ajout 11/08 (06h30), LE NOM DE MODELE PRONONCE EST VERIFIE SUR LA CASSE DES
+  CITATIONS DE CORROBORATION, pas sur l'evidence des diapos. versionedActors()
+  n'attrape "GPT-5.6" que sur du PascalCase (`[A-Z][A-Za-z]{2,}-\d`), et il ne
+  lit QUE les quotes de `corroboration` (claimActors), jamais captionEvidence ni
+  les evidences de diapos. Les pages ecrivent le modele en minuscules
+  ("gpt-5.6-cyber"), donc une quote copiee telle quelle du flatten ne contient
+  aucun acteur versionne, et un script qui dit "GPT-5.6-Cyber" se fait refuser
+  "names GPT-5.6, appears in no evidence quote". Remede gratuit, sans degat: mets
+  la MAJUSCULE au nom du modele DANS une quote de corroboration ("GPT-5.6-Cyber
+  answers 95 percent..."); ca se verifie quand meme (flatten minuscule les deux
+  cotes) ET ca nourrit claimActors. Et l'acteur du centralClaim doit etre nomme
+  dans les DEUX premiers beats: nommer OpenAI ne suffit pas si l'acteur detecte
+  est le modele. Enfin, le controle de corroboration exige >=45% de recouvrement
+  (CLAIM_OVERLAP_THIN=0.45) du vocabulaire du centralClaim par CHAQUE quote:
+  ecris un centralClaim COURT (une affirmation) dont les mots figurent dans les
+  deux quotes, sinon une quote vraie et sur-le-sujet est refusee a tort. Mesure:
+  gate openai-ia-pirate-chrome, 3 refus d'abord (veo "exploit" absent du vocab,
+  nom non capitalise, claim trop long a 3 mots partages), PASSED apres correctifs.

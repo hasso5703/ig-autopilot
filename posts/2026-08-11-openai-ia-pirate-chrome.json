@@ -1,0 +1,248 @@
+{
+  "slug": "2026-08-11-openai-ia-pirate-chrome",
+  "centralClaim": "GPT-5.6-Cyber answers sensitive cybersecurity requests that safeguards block.",
+  "corroboration": [
+    {
+      "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+      "quote": "GPT-5.6-Cyber answers 95 percent of sensitive cybersecurity queries in an internal benchmark."
+    },
+    {
+      "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/",
+      "quote": "GPT-5.6-Cyber completes 95.0% of requests, against 1.5% for GPT-5.6 sol under standard safeguards and 2.0% for GPT-5.6 sol under daybreak blue."
+    }
+  ],
+  "sendTest": "Toutes les IA refusent de t'aider à pirater. OpenAI vient d'en sortir une qui dit oui, et qui a déjà percé Chrome.",
+  "caption": "Toutes les IA refusent de t'aider à pirater. OpenAI vient d'en sortir une qui dit oui, et qui a déjà percé Chrome.\n\nOpenAI a lancé GPT-5.6-Cyber, un modèle entraîné pour ne presque jamais refuser une demande liée au piratage. Sur les requêtes que ses garde-fous bloquent d'habitude, il en accepte 95 %, contre 1.5 % pour la version normale. OpenAI dit s'en être servi pour fouiller le cœur de Chrome, ton navigateur, et y a trouvé deux failles inconnues que Google a dû corriger.\n\nLe détail qui n'a pas tenu dans la vidéo. Le même modèle aurait aussi trouvé cinq failles dans un système de téléphone très répandu, dont une qui laisse une simple application prendre le contrôle total de l'appareil. Toutes ces failles passent par une divulgation coordonnée avec les fabricants.\n\nÀ nuancer, et c'est important. Tous ces chiffres viennent d'OpenAI et de ses propres tests, qu'aucun évaluateur extérieur n'a encore répétés. Et l'outil est verrouillé: identité vérifiée, clés de sécurité obligatoires, réservé à des entreprises triées.\n\nUne IA entraînée à ne presque rien refuser sur le piratage, c'est un bouclier ou une arme ?\n\nthe-decoder.com · unite.ai · techcrunch.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Cybersecurite",
+  "captionEvidence": [
+    {
+      "quote": "gpt-5.6-cyber answers 95 percent of sensitive cybersecurity queries in an internal benchmark.",
+      "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+    },
+    {
+      "quote": "gpt-5.6-cyber completes 95.0% of requests, against 1.5% for gpt-5.6 sol under standard safeguards and 2.0% for gpt-5.6 sol under daybreak blue.",
+      "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+    },
+    {
+      "quote": "openai says it used gpt-5.6-cyber to investigate v8, the javascript engine inside chrome, and uncovered two previously unknown vulnerabilities that could be chained to corrupt memory and escape the v8 heap sandbox.",
+      "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+    },
+    {
+      "quote": "google fixed the flaws after coordinated disclosure and assigned them the cve-2026-15903 designation.",
+      "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+    },
+    {
+      "quote": "one of them is a chain of flaws that would let an app escalate its normally restricted access rights to full administrator privileges, taking control of the device.",
+      "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+    },
+    {
+      "quote": "at least five vulnerabilities in a popular mobile operating system including a privilege-escalation chain from an untrusted app, three critical vulnerabilities in a popular database including a remote path to code execut",
+      "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+    },
+    {
+      "quote": "all of these figures are vendor-reported, several on internal benchmarks that outside evaluators have not replicated.",
+      "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+    },
+    {
+      "quote": "access to both tiers runs through identity verification, account security requirements, monitoring, approved-use restrictions, and legal attestations, with separate application paths for individuals a",
+      "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "OpenAI · sécurité",
+      "headline": "Une IA faite pour *ne pas* refuser. Elle a percé Chrome.",
+      "hero": {
+        "value": "95 %",
+        "label": "des demandes de piratage acceptées, là où l'ancien modèle refusait presque tout"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "95 %",
+      "unit": "des demandes de piratage bloquées ailleurs, acceptées ici",
+      "body": "Contre **1.5 %** pour la version normale d'OpenAI. Le modèle est entraîné pour *ne presque jamais* refuser.",
+      "evidence": "gpt-5.6-cyber completes 95.0% of requests, against 1.5% for gpt-5.6 sol under standard safeguards and 2.0% for gpt-5.6 sol under daybreak blue.",
+      "source": {
+        "name": "Unite.ai",
+        "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un modèle qui refuse rarement",
+      "body": "GPT-5.6-Cyber répond aux demandes de sécurité que les autres modèles *bloquent par défaut*.",
+      "evidence": "the model rarely refuses security-related queries that other models block by default. gpt-5.6-cyber answers 95 percent of sensitive cybersecurity queries in an internal benchmark.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Entraîné à fabriquer des attaques",
+      "body": "Le modèle est *entraîné à refuser moins*, et à mieux trouver des failles et écrire des programmes d'attaque.",
+      "evidence": "trained to reduce refusals on advanced cybersecurity tasks and to improve on specialized work like finding zero-day vulnerabilities and developing exploit chains.",
+      "source": {
+        "name": "Unite.ai",
+        "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Deux failles trouvées dans Chrome",
+      "body": "OpenAI dit avoir lancé le modèle sur le cœur de Chrome et y avoir trouvé **deux** failles inconnues, capables de *corrompre la mémoire*.",
+      "evidence": "openai says it used gpt-5.6-cyber to investigate v8, the javascript engine inside chrome, and uncovered two previously unknown vulnerabilities that could be chained to corrupt memory and escape the v8 heap sandbox.",
+      "source": {
+        "name": "Unite.ai",
+        "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Google a dû corriger",
+      "body": "Les failles ont été signalées à Google, *corrigées*, et enregistrées sous une référence officielle.",
+      "evidence": "google fixed the flaws after coordinated disclosure and assigned them the cve-2026-15903 designation.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et cinq failles dans un téléphone",
+      "body": "Le modèle a aussi trouvé **cinq** failles dans un système de téléphone répandu. L'une laissait une appli *prendre le contrôle total* de l'appareil.",
+      "evidence": "one of them is a chain of flaws that would let an app escalate its normally restricted access rights to full administrator privileges, taking control of the device.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Un bond de capacité, prouvé sur de vrais logiciels.",
+      "caveat": "Tous les chiffres viennent d'OpenAI, sur ses propres tests, qu'aucun évaluateur extérieur n'a répétés.",
+      "claimLabel": "Ce qu'OpenAI montre",
+      "caveatLabel": "Ce qu'il faut savoir",
+      "evidence": "all of these figures are vendor-reported, several on internal benchmarks that outside evaluators have not replicated.",
+      "source": {
+        "name": "Unite.ai",
+        "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un accès verrouillé",
+      "body": "L'outil est réservé à des entreprises triées: *identité vérifiée*, contrôles de sécurité, déclarations légales.",
+      "evidence": "access to both tiers runs through identity verification, account security requirements, monitoring, approved-use restrictions, and legal attestations, with separate application paths for individuals a",
+      "source": {
+        "name": "Unite.ai",
+        "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/",
+        "date": "2026-08-10"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pense que l'IA refuse toujours",
+      "sub": "Chaque affirmation vient d'une source citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "Unite.ai",
+      "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/",
+      "accessed": "2026-08-11"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/",
+      "accessed": "2026-08-11"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "L'IA d'OpenAI a trouvé deux failles dans Chrome",
+    "beats": [
+      {
+        "script": "Demande à une IA de pirater un site, elle refuse. Elles sont toutes bridées. Sauf qu'OpenAI vient d'en sortir une, faite exprès pour dire oui.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single computer screen filled with lines of exploit code",
+            "action": "the lines of code scrolling steadily upward as an exploit runs, the screen staying full and lit throughout",
+            "setting": "on a plain desk in a dim room, the screen the only light",
+            "composition": "extreme close-up, the code fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Elle s'appelle GPT-5.6-Cyber, le modèle cyber d'OpenAI. Sur les demandes de piratage que les autres refusent, elle en accepte quatre-vingt-quinze pour cent.",
+        "visual": {
+          "type": "card",
+          "value": "95 %",
+          "label": "des demandes de piratage bloquées ailleurs, acceptées ici"
+        }
+      },
+      {
+        "script": "Et il ne fait pas que répondre à des questions gênantes. On l'a lâché sur des logiciels bien réels, pour voir ce qu'il trouvait.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+        }
+      },
+      {
+        "script": "Il a fouillé le cœur de Chrome, ton navigateur. Il y a trouvé deux failles secrètes que personne n'avait vues. Google a dû les corriger.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+        }
+      },
+      {
+        "script": "Même chose sur un système de téléphone très répandu, où il a trouvé cinq failles. L'une laissait une simple appli prendre le contrôle total de l'appareil.",
+        "visual": {
+          "type": "photo",
+          "query": "woman looking at phone",
+          "alt": "Une personne regarde son téléphone"
+        }
+      },
+      {
+        "script": "Mais attention, et c'est important. Tous ces chiffres viennent d'OpenAI elle-même, sur ses propres tests. Aucun évaluateur indépendant ne les a encore répétés.",
+        "visual": {
+          "type": "card",
+          "value": "Non vérifié",
+          "label": "aucun évaluateur extérieur n'a encore répété ces chiffres"
+        }
+      },
+      {
+        "script": "Et l'outil est verrouillé: identité vérifiée, clés de sécurité obligatoires, réservé à des entreprises triées comme Accenture ou IBM.",
+        "visual": {
+          "type": "photo",
+          "query": "usb security key",
+          "alt": "Une clé de sécurité matérielle"
+        }
+      },
+      {
+        "script": "Le vrai message est là. La course à l'IA qui attaque a commencé, et ceux qui la fabriquent vendront aussi le bouclier. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "computer server room",
+          "alt": "Une salle de serveurs informatiques"
+        }
+      }
+    ]
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "at": "2026-08-10T21:05:56.937Z",
-  "n": 24,
+  "at": "2026-08-11T06:42:44.169Z",
+  "n": 26,
   "nSettled": 19,
   "medianViews": 156,
   "medianRetentionPct": 20,
   "top": [
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
-      "views": 1229,
+      "views": 1231,
       "retentionPct": 26,
       "saved": 4,
       "shares": 3,
@@ -207,7 +207,7 @@
     }
   },
   "followers": {
-    "now": 14,
+    "now": 15,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -215,7 +215,7 @@
         "published": [
           {
             "slug": "2026-08-08-virus-ecrits-par-une-ia",
-            "views": 1229
+            "views": 1231
           },
           {
             "slug": "2026-08-08-facture-ia-salaries",
@@ -229,11 +229,11 @@
         "published": [
           {
             "slug": "2026-08-09-motif-anti-cameras",
-            "views": 982
+            "views": 1139
           },
           {
             "slug": "2026-08-09-chatgpt-gratuit-illimite",
-            "views": 176
+            "views": 179
           }
         ]
       },
@@ -258,7 +258,7 @@
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "at": "2026-08-08T16:51:56.558Z",
       "hourUtc": 16,
-      "views": 1229,
+      "views": 1231,
       "reach": 1107,
       "avgWatchS": 15.6,
       "retentionPct": 26,
@@ -292,13 +292,13 @@
       "slug": "2026-08-09-motif-anti-cameras",
       "at": "2026-08-09T20:14:36.239Z",
       "hourUtc": 20,
-      "views": 982,
-      "reach": 890,
-      "avgWatchS": 15.2,
+      "views": 1139,
+      "reach": 1033,
+      "avgWatchS": 15.1,
       "retentionPct": 25,
-      "likes": 8,
+      "likes": 10,
       "comments": 2,
-      "saved": 5,
+      "saved": 7,
       "shares": 0,
       "beat0": "veo",
       "themes": [],
@@ -321,6 +321,25 @@
       "themes": [],
       "sendTest": "Un ingénieur a dépensé 50 000 dollars d'IA en un mois. Son entreprise note maintenant chaque salarié sur ce que l'IA lui coûte.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-10-amazon-centrale-gaz-texas",
+      "at": "2026-08-10T20:22:31.627Z",
+      "hourUtc": 20,
+      "views": 454,
+      "reach": 373,
+      "avgWatchS": 15.3,
+      "retentionPct": 26,
+      "likes": 3,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "infra"
+      ],
+      "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays.",
+      "settled": false
     },
     {
       "slug": "2026-08-07-ouragan-un-jour-davance",
@@ -398,9 +417,9 @@
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
-      "views": 176,
-      "reach": 154,
-      "avgWatchS": 16.5,
+      "views": 179,
+      "reach": 156,
+      "avgWatchS": 16.2,
       "retentionPct": 27,
       "likes": 5,
       "comments": 1,
@@ -518,6 +537,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-10-ia-reserve-cours-sport",
+      "at": "2026-08-10T16:58:57.530Z",
+      "hourUtc": 16,
+      "views": 137,
+      "reach": 124,
+      "avgWatchS": 11.6,
+      "retentionPct": 19,
+      "likes": 3,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-05-waymo-dallas",
       "at": "2026-08-05T17:17:47.664Z",
       "hourUtc": 17,
@@ -535,22 +573,20 @@
       "settled": true
     },
     {
-      "slug": "2026-08-10-ia-reserve-cours-sport",
-      "at": "2026-08-10T16:58:57.530Z",
-      "hourUtc": 16,
-      "views": 125,
-      "reach": 113,
-      "avgWatchS": 12.7,
-      "retentionPct": 21,
-      "likes": 3,
+      "slug": "2026-08-10-meta-glimmer-ia-locale",
+      "at": "2026-08-10T23:02:26.507Z",
+      "hourUtc": 23,
+      "views": 128,
+      "reach": 116,
+      "avgWatchS": 10.7,
+      "retentionPct": 18,
+      "likes": 0,
       "comments": 1,
-      "saved": 1,
+      "saved": 0,
       "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Meta sort une IA que tu installes sur ton ordi: elle bosse pour toi même sans internet, et tes données restent chez toi.",
       "settled": false
     },
     {
