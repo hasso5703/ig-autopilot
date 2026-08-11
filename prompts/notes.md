@@ -274,6 +274,22 @@ ENTRIES:
   ramaonhealthcare.com rend 200 mais TRONQUE au teaser (2 paragraphes puis
   "Continue Reading" vers VentureBeat): inutilisable pour gater les chiffres
   d'un article VB, contrairement a RNZ qui porte l'article ABC entier.
+  Ajout 11/08 (10h30), dossier Google/AI Overviews: rendent 200 au fetch gate et
+  se gatent du premier coup thewalrus.ca (nouveau, l'essai "AI eats the web" du
+  10/08) et malwarebytes.com; the-decoder.com re-confirme (13/13 VERIFIED du
+  premier coup). Bloquent au fetch gate: searchengineland.com (403),
+  technology.org (403), loc.gov (403). Sur une actu de RESPONSABILITE d'une IA
+  (jugement, plainte), les blogs securite (malwarebytes) et the-decoder portent
+  la meme decision verbatim et sont une vraie double lecture. ET LE PIEGE
+  CORROBORATION DU JOUR, dossier Stanford/Virtual Biotech remis en revisit hier:
+  le PRIMAIRE est gatable, pubmed.ncbi.nlm.nih.gov/41808990 rend l'abstract
+  entier (55,984 essais, 37,000 agents, cible B7-H3 poumon), MAIS l'angle
+  vendeur (Merck a confirme le medicament, breakthrough FDA) est VentureBeat-only
+  et VB rend 429 pour le 5e jour d'affilee; il n'est PAS dans le primaire. Sur
+  les seuls faits gatables, c'est un preprint sans rien de deploye (veto 3). Un
+  primaire vert ne rachete pas un angle ingatable: garde revisit tant que VB ne
+  revient pas ou qu'une 2e redaction ne porte pas la confirmation Merck.
+  bioRxiv.org rend 429 (comme la fiche du papier). Proof: scout 10h30 11/08.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
