@@ -209,8 +209,8 @@ story is fine and the sentence is wrong. Rewrite the sentence, never the facts.
 
 ## What a run is, and why
 
-**Four runs a day. One Reel per run, at most two in a day, and the 16:30 run
-publishes the day's first.** The "one Reel per run" ceiling replaced
+**Four runs a day. One Reel per run, at most two in a day, and the two runs
+that publish are 10:30 and 16:30 UTC.** The "one Reel per run" ceiling replaced
 "one Reel per slot" on 2026-07-27; the daily count was opened from one to a
 capped two on 2026-08-01 (Hasan — see the ranked promises below for the bar
 the second has to clear). The reasons for restraint are measured, not
@@ -235,13 +235,42 @@ reason every Reel, first or second, has to be worth an audition:
   that is the sanctioned second lane for volume and hook A/B testing, and the
   reason to sprint to 1,000 rather than to two-a-day.
 
-So the day has one shape, and each slot knows its job:
+So the day has one shape, and each slot knows its job.
 
-| slot (UTC) | job |
-|---|---|
-| **06:30, 10:30** | **Scout — and the day now needs TWO.** Gather, verify, and leave **two** gate-clean post specs ready, each **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Two, because the day owes two Reels and a publish slot that arrives to an empty shelf is how a half-kept day starts. They must be **different subjects**, not one story wearing two headlines. The 06:30 scout banks the first, the 10:30 scout checks it is still fresh and banks the second. Publish nothing. Spend nothing on media. |
-| **16:30** | **Publish the day's first.** Check `node src/state.mjs today` first: `owedToday` is what the day still owes. Orphan check, re-check freshness, pick the strongest story standing (yours or a scout's), build with `reel2.mjs`, publish **one Reel and nothing else**, then seed the first comment (step 10b). One per run is the ceiling, so this run stops after one even though the day owes another — bank the runner-up with `recordSeen` for 19:30. 16:30 UTC is 18h30 in Paris: inside the measured French engagement peak (18h–19h), the same anchor HugoDécrypte publishes into. Moved from 15:00 on 2026-07-29 (Hasan's call), which also keeps every slot clear of the account's daily quota-reset window. |
-| **19:30** | **Publish the day's second, and keep the vigil.** This slot is no longer conditional: since 2026-08-02 the day owes two Reels, so unless `owedToday` is already 0, **this run publishes**. Start with `node src/watch.mjs` and read its report (token days left, silence alarms, per-reel retention) — a token that dies unannounced takes the account offline for days. Then publish the second Reel; 21h30 Paris is the evening scroll, a real window, and a good story banked overnight is a story three other accounts will have run by morning. If the day has **no** Reel at all (the 16:30 run found nothing or died), this run still publishes only one — the ceiling is per run — and the report names the day as half kept. Publish nothing only when nothing gates at all. Whether you publish or not, do the vigil work: read what worked (`node src/learn.mjs` writes the digest), and **reply to every comment worth replying to on recent posts (step 10b)** — reply speed while a post is still distributing is measured leverage. **On Sundays, also do the weekly maintenance**: `node src/prune-media.mjs --live` (heavy files of Reels published over 7 days ago — Meta serves its own copy, git history keeps ours) and `node src/insights.mjs compact` (the metrics series), then land both with the run's normal landing. |
+**The jobs were re-dealt on 2026-08-12 (Hasan: "les publications se font
+vraiment très tard, il faut les faire plus tôt"), and not one cron hour
+moved.** The four runs already fired at defensible times; the mistake was
+*which* of them published. The two publishing slots were the last two, so
+the measured landing times of the day's two Reels were **19h05 and 22h15
+Paris** — the second one into the hour the audience is putting the phone
+down, and on 2026-08-10 and 2026-08-11 a slipping evening run put a Reel out
+at **01h02 and 01h29 Paris**. Publishing is now the job of the two MIDDLE
+runs, so the same four fires land at **13h05 and 19h05 Paris**: the two
+windows French audiences actually scroll (lunch 12h–14h, strongest around
+13h; evening 18h–21h). The evening run keeps everything it did except the
+publishing, and becomes the day's catch-up.
+
+**The arithmetic that makes the mapping work, measured from the journals:** a
+run starts about 8 minutes after its cron fires (the app staggers launches),
+and a publish run needs about 25 more minutes to reach `media_publish`. So
+**a publish slot lands its Reel roughly 35 minutes after the hour on the
+cron** — 10:30 UTC → ~13h05 Paris, 16:30 UTC → ~19h05 Paris. Read the target
+as the *landing* time, never the fire time, and if a run is running late do
+not "make up time" by cutting the gate.
+
+| slot (UTC) | Paris (CEST) | job |
+|---|---|---|
+| **06:30** | 08h30 | **Scout — and the day needs TWO specs.** Gather, verify, and leave **two** gate-clean post specs ready, each **with its `reel2` plan**, recorded on `main`, `recordSeen` as `considered`. Two, because the day owes two Reels and a publish slot that arrives to an empty shelf is how a half-kept day starts. They must be **different subjects**, not one story wearing two headlines. This used to be split across two scouts; since 2026-08-12 the 10:30 slot publishes, so this run banks both — it has four hours and it spends nothing. If only one can be gated honestly, bank that one and say so: the 10:30 run's runner-up (below) is the second line of supply, not the first. Publish nothing. Spend nothing on media. |
+| **10:30** | 12h30 | **Publish the day's first — lands ~13h05 Paris, the lunch peak.** Check `node src/state.mjs today` first: `owedToday` is what the day still owes. Orphan check, re-check freshness, pick the strongest story standing (the scout's or yours), build with `reel2.mjs`, publish **one Reel and nothing else**, then seed the first comment (step 10b). One per run is the ceiling, so this run stops after one even though the day owes another — **bank the runner-up with `recordSeen` for 16:30**, which is now the shelf the second Reel usually comes off. This slot was a scout until 2026-08-12. |
+| **16:30** | 18h30 | **Publish the day's second — lands ~19h05 Paris, the evening peak.** Same procedure as 10:30, and the guard clears on its own: six hours after the first publish, against a two-hour minimum. 16:30 UTC is 18h30 in Paris, inside the measured French engagement peak (18h–19h), the same anchor HugoDécrypte publishes into; it is also the account's best-performing hour on its own numbers (n=4, the highest median views and every share the account has ever had). Moved from 15:00 on 2026-07-29 (Hasan's call), which also keeps every slot clear of the account's daily quota-reset window. It published the day's **first** Reel until 2026-08-12; it now publishes the second, at the same hour. |
+| **19:30** | 21h30 | **Vigil, and the day's last chance — publish only to keep the promise.** Start with `node src/watch.mjs` and read its report (token days left, silence alarms, per-reel retention) — a token that dies unannounced takes the account offline for days. Then: **if `owedToday` is 0, publish nothing** — the day is kept, and a third Reel at 22h15 Paris is exactly the landing time this schedule was rearranged to stop. **If `owedToday` is not 0, this run publishes**, because a Reel at 22h15 beats a half-kept day: work the `revisit` shelf and the banked candidates and try the strongest thing that can be honestly gated. One per run is still the ceiling, so a day that arrives here with zero Reels ends on one and the report names it half kept. Publishing or not, do the vigil work: read what worked (`node src/learn.mjs` writes the digest), and **reply to every comment worth replying to on recent posts (step 10b)** — reply speed while a post is still distributing is measured leverage, and this run now sits 8h30 after the day's first Reel and 2h30 after its second, which is the best reply window the schedule has ever had. **On Sundays, also do the weekly maintenance**: `node src/prune-media.mjs --live` (heavy files of Reels published over 7 days ago — Meta serves its own copy, git history keeps ours) and `node src/insights.mjs compact` (the metrics series), then land both with the run's normal landing. |
+
+**The cron is in UTC and Paris is not.** The hours above are CEST (UTC+2),
+which is what France is on until **2026-10-25**. From that Sunday Paris is
+UTC+1 and the same cron lands at 12h05 and 18h05 Paris — still inside both
+windows, so nothing breaks, but to hold the landing times exactly the stored
+cron becomes `30 7,11,17,20 * * *` and this table's UTC column shifts with
+it. Only Hasan can make that change; a run cannot edit the trigger.
 
 A scout run that finds a story *bigger than anything the account has covered*
 still waits for the publish slot: a few hours of freshness cost less than a Reel
@@ -296,8 +325,8 @@ order settles every conflict between them:
 3. **One Reel per RUN is the hard ceiling. A day carries two, and both are
    owed.** The per-run ceiling was set on 2026-07-27 and is mechanical: once a
    run has published, that run is finished publishing, whatever it finds next.
-   **So the day's two Reels are always the work of two runs** — normally 16:30
-   and 19:30.
+   **So the day's two Reels are always the work of two runs** — normally 10:30
+   and 16:30, with 19:30 as the catch-up when one of them comes home empty.
 
    Read those two halves as different kinds of rule, because they are:
 
@@ -333,8 +362,10 @@ order settles every conflict between them:
 
 So publishing nothing stopped being a free outcome, and publishing **one** is
 now the same kind of miss. The 19:30 run is the last chance to keep the day's
-promise: before conceding either Reel, work the `revisit` shelf and the scouts'
-banked candidates, and try the strongest thing that can be honestly gated.
+promise — that is the whole reason it stayed on the schedule when the
+publishing moved to 10:30 and 16:30: before conceding either Reel, work the
+`revisit` shelf and the banked candidates, and try the strongest thing that
+can be honestly gated.
 Concede only to a real wall — nothing gates, the media key is missing, the
 engine will not build — and when you concede, **say plainly in the report that
 the day was missed or half kept, and why**. A missed day that nobody names is
@@ -870,6 +901,17 @@ test -n "$GEMINI_API_KEY" && echo "GEMINI_API_KEY present" || echo "GEMINI_API_K
 npm test
 node src/state.mjs guard          # publish runs; scouts run `guard scout` instead
 ```
+
+**Before any of that, know which run you are — the UTC clock decides it, and
+the roles moved on 2026-08-12.** Round your start time down to the nearest
+slot: **06:30 → scout**, **10:30 → publish the day's first**, **16:30 →
+publish the day's second**, **19:30 → vigil, publishing only if `owedToday`
+is not 0**. The slot table above carries each job in full, and it is what
+tells you whether to run `guard` or `guard scout` on the line above. If your
+memory says the two morning slots scout and the two evening slots publish,
+that is the schedule as it stood until 2026-08-12 — this file wins. A run
+that scouts through the 10:30 slot costs the day a Reel at the best hour the
+schedule has.
 
 **The notebook (`prompts/notes.md`) is the runs' own memory**, and its rules
 live at the top of the file: at most 26 dated operational facts, and you may —

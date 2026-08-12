@@ -360,6 +360,33 @@ const OVERRIDE = "yes-i-want-a-second-post-today";
  * matters more now that two of the four slots publish rather than one.
  */
 export const SLOTS_UTC = [6, 10, 16, 19];
+/*
+ * The cron fires at half past, not on the hour: `30 6,10,16,19 * * *`. Only the
+ * printed warning uses this — `nextSlot` rounds to the hour, which is close
+ * enough for "is the next slot inside the gap" and wrong for a message a run
+ * reads and repeats in its report.
+ */
+export const SLOT_MINUTE = 30;
+
+/*
+ * Which of the four slots publish, re-dealt 2026-08-12 (Hasan's call).
+ *
+ * The hours did not move; the jobs did. Until 2026-08-12 the two publishing
+ * slots were the last two, 16:30 and 19:30, and the ledger says what that
+ * actually delivered: a median landing time of 19h05 Paris for the day's first
+ * Reel and 22h15 for its second, with two runs slipping to 01h02 and 01h29
+ * Paris on 08-10 and 08-11. The second Reel of every day was going out as the
+ * audience left. Publishing moved to the two middle slots — 10:30 lands ~13h05
+ * Paris (the French lunch peak) and 16:30 lands ~19h05 (the evening peak, and
+ * the account's own best-performing hour) — leaving 06:30 to scout and 19:30 to
+ * keep the vigil and publish only when the day is still owed a Reel.
+ *
+ * Nothing in the engine reads this yet; the manual's slot table is what a run
+ * follows. It is exported so the test can hold the two schedules — the cron's
+ * hours and the manual's jobs — against each other, which is the check that was
+ * missing when SLOTS_UTC sat stale at 15 for three days and nothing failed.
+ */
+export const PUBLISH_SLOTS_UTC = [10, 16];
 
 export function nextSlot(now = new Date()) {
   const h = now.getUTCHours() + now.getUTCMinutes() / 60;
@@ -750,7 +777,7 @@ if (process.argv[1] && process.argv[1].endsWith("state.mjs")) {
     const slot = nextSlot();
     if (slot.wouldEatIt)
       console.error(
-        `\nNOTE: the next scheduled slot is ${String(slot.slotUtc).padStart(2, "0")}:00 UTC, ${slot.hours}h away, which is inside the ${MIN_GAP_HOURS}h gap. ` +
+        `\nNOTE: the next scheduled slot is ${String(slot.slotUtc).padStart(2, "0")}:${SLOT_MINUTE} UTC, ${slot.hours}h away, which is inside the ${MIN_GAP_HOURS}h gap. ` +
           `If this run publishes, that slot will be blocked when it fires. Check \`state.mjs today\` for roomToday before you decide: ` +
           `if the day would still have room for another Reel afterwards, that slot losing its turn may cost the day one. Say so in your report.`
       );

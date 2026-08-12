@@ -2018,15 +2018,28 @@ test("the day owes TWO Reels, and one published does not satisfy the floor", asy
 // of the four slots publish, that warning is about whether the day's second
 // Reel fits outside the 2h gap, so the hours have to be the real ones.
 test("the scheduled slots match the manual, and two publish slots clear the gap", async () => {
-  const { SLOTS_UTC, MIN_GAP_HOURS, nextSlot } = await import("../src/state.mjs");
+  const { SLOTS_UTC, PUBLISH_SLOTS_UTC, MIN_GAP_HOURS, nextSlot } = await import("../src/state.mjs");
   assert.deepEqual(SLOTS_UTC, [6, 10, 16, 19], "06:30, 10:30, 16:30, 19:30 UTC (manual, slot table)");
 
-  // The two publish slots are 16:30 and 19:30. Three hours apart, so a day can
-  // carry its two owed Reels without either one tripping the spacing guard.
-  const publishSlots = [16, 19];
+  // Re-dealt 2026-08-12: publishing moved off the last two slots and onto the
+  // two middle ones, so the day's Reels land at ~13h05 and ~19h05 Paris instead
+  // of ~19h05 and ~22h15. Six hours apart, against a two-hour minimum, so a day
+  // carries both owed Reels without either one tripping the spacing guard.
+  assert.deepEqual(PUBLISH_SLOTS_UTC, [10, 16], "the day's two Reels go out at 10:30 and 16:30 UTC");
   assert.ok(
-    publishSlots[1] - publishSlots[0] >= MIN_GAP_HOURS,
+    PUBLISH_SLOTS_UTC.every((s) => SLOTS_UTC.includes(s)),
+    "a publish slot that is not a scheduled slot is a Reel nobody ever builds",
+  );
+  assert.ok(
+    PUBLISH_SLOTS_UTC[1] - PUBLISH_SLOTS_UTC[0] >= MIN_GAP_HOURS,
     "the two publish slots must be at least the minimum gap apart, or two a day is unreachable",
+  );
+
+  // 19:30 is the catch-up: it publishes only when the day is still owed a Reel,
+  // so it has to clear the gap against the 16:30 publish or it could never do it.
+  assert.ok(
+    SLOTS_UTC.at(-1) - PUBLISH_SLOTS_UTC.at(-1) >= MIN_GAP_HOURS,
+    "the vigil slot must clear the gap after the second publish, or the catch-up is unreachable",
   );
 
   // And the warning must point at the next slot, not at one that no longer runs.

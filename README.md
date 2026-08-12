@@ -34,6 +34,27 @@ sources.json ─► gather ─► score ─► write the spec (claim + quoted se
                       karaoke, mix, 60.0s)
 ```
 
+## The day
+
+Four runs, one cron (`30 6,10,16,19 * * *`, UTC). The hours have not moved
+since 2026-07-29; which run *publishes* was re-dealt on 2026-08-12, because a
+run lands its Reel about 35 minutes after its cron fires and the two
+publishing slots used to be the last two — so the day's second Reel was
+going out at 22h15 Paris, and twice past 01h.
+
+| UTC | Paris | run |
+|---|---|---|
+| 06:30 | 08h30 | scout — banks two gate-clean specs, spends nothing |
+| 10:30 | 12h30 | **publish** — lands ~13h05 Paris, the lunch peak |
+| 16:30 | 18h30 | **publish** — lands ~19h05 Paris, the evening peak |
+| 19:30 | 21h30 | vigil — metrics, replies, Sunday maintenance; publishes only if the day is still owed a Reel |
+
+`prompts/routine.md` carries each slot's job in full and is what a run
+follows. Paris is UTC+2 until 2026-10-25 and UTC+1 after; holding the same
+landing times through the winter means moving the cron to
+`30 7,11,17,20 * * *`, which only Hasan can do — the scheduler refuses agents
+on a routine created through the web API.
+
 ## Layout
 
 | Path | Role |
