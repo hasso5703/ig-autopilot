@@ -1,0 +1,168 @@
+{
+  "slug": "2026-08-12-montre-tension-google",
+  "centralClaim": "Google's Pixel Watch 5 tracks blood pressure trends and insulin resistance from the wrist, without a cuff and without a blood test.",
+  "corroboration": [
+    {
+      "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/",
+      "quote": "Our devices passively measure your pulse and motion patterns throughout the month to estimate your blood pressure trends without requiring a cuff or manual calibration."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/12/google-unveils-the-pixel-watch-5-with-a-smarter-gemini-and-advanced-health-monitoring/",
+      "quote": "The new smartwatch, which starts at $399, can track blood pressure patterns and insulin resistance, as well as deliver personalized help and better sleep tracking."
+    },
+    {
+      "url": "https://9to5google.com/2026/08/12/google-pixel-watch-5-hands-on/",
+      "quote": "Then there are blood pressure and insulin resistance trends over the course of a month."
+    }
+  ],
+  "sendTest": "Google a sorti une montre qui surveille ta tension sans brassard. Dans ses notes, elle dit qu'elle ne diagnostique rien.",
+  "caption": "Ta montre va bientôt surveiller ta tension sans brassard. Et Google écrit lui-même ce qu'elle ne peut pas faire.\n\nGoogle a présenté ce mercredi la Pixel Watch 5 et une série de fonctions santé appelée Health Guardian. La montre lit ton pouls et tes mouvements pendant tout le mois pour estimer tes tendances de tension, sans brassard et sans calibrage. Elle suit aussi la façon dont ton corps absorbe l'énergie de ce que tu manges, sans une seule goutte de sang. Google écrit qu'environ 40% des adultes ne se rendent pas compte que ces changements ont lieu chez eux.\n\nLe détail qui n'a pas tenu dans la vidéo. Le modèle derrière ces mesures a été pré-entraîné sur plus de mille milliards de minutes de données, venues de cinq millions d'utilisateurs volontaires. Les deux fonctions arrivent en septembre. La montre, elle, démarre à 399 dollars et sort le 20 août.\n\nÀ nuancer, et c'est écrit par Google. Ces mesures servent au bien-être et à l'information uniquement. Elles ne sont pas destinées à diagnostiquer, traiter, guérir ou prévenir la moindre maladie, et ce n'est pas un test de dépistage du diabète ni de l'hypertension. La détection d'urgence respiratoire, qui appelle les secours si ton oxygène chute, n'a pas été évaluée par l'agence américaine du médicament et ne fonctionne plus après trente minutes de sommeil.\n\nTu porterais une montre qui surveille ton corps en permanence, oui ou non ?\n\nblog.google · techcrunch.com · 9to5google.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Sante",
+  "captionEvidence": [
+    {
+      "quote": "roughly 40% of adults are unaware they're happening",
+      "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/"
+    },
+    {
+      "quote": "The 41mm version starts at $399, while the 44mm starts at $429. The smartwatch is available for preorder starting Wednesday and will be available on August 20.",
+      "url": "https://techcrunch.com/2026/08/12/google-unveils-the-pixel-watch-5-with-a-smarter-gemini-and-advanced-health-monitoring/"
+    },
+    {
+      "quote": "pretrained on over one trillion minutes of data from 5 million opted-in users",
+      "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "12 août 2026 · Google",
+      "headline": "Ta montre surveillera ta tension *sans brassard*",
+      "hero": { "value": "40 %", "label": "des adultes ne voient pas ces changements arriver" },
+      "swipe": "Les reçus, en dessous"
+    },
+    {
+      "type": "stat",
+      "figure": "40 %",
+      "unit": "des adultes",
+      "body": "Google écrit que ces changements passent inaperçus chez **environ 40 %** des adultes.",
+      "evidence": "And because these shifts happen quietly, roughly 40% of adults are unaware they're happening",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/", "date": "2026-08-12" }
+    },
+    {
+      "type": "content",
+      "title": "Ce que Google a présenté",
+      "body": "La *Pixel Watch 5*, avec un suivi de la forme et de la santé plus poussé.",
+      "evidence": "At its Made by Google event on Wednesday, Google unveiled the Pixel Watch 5 with a smarter Gemini experience, as well as advanced fitness and health monitoring.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/12/google-unveils-the-pixel-watch-5-with-a-smarter-gemini-and-advanced-health-monitoring/", "date": "2026-08-12" }
+    },
+    {
+      "type": "content",
+      "title": "Sans brassard",
+      "body": "L'appareil lit le pouls et les mouvements **pendant tout le mois** pour estimer les tendances de tension.",
+      "evidence": "Our devices passively measure your pulse and motion patterns throughout the month to estimate your blood pressure trends without requiring a cuff or manual calibration.",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/", "date": "2026-08-12" }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'elle suit vraiment",
+      "body": "La résistance à l'insuline change la façon dont ton corps **tire l'énergie de ce que tu manges**. Le suivi se fait sans une seule goutte de sang.",
+      "evidence": "Insulin resistance affects how efficiently your body absorbs energy from food.",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/", "date": "2026-08-12" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Suivre les signaux invisibles de ton corps, en continu, à ton poignet.",
+      "caveat": "Bien-être et information uniquement. Ni diagnostic, ni traitement, ni prévention d'une maladie.",
+      "claimLabel": "La promesse",
+      "caveatLabel": "Les notes de bas de page",
+      "evidence": "intended for general wellness and informational purposes only and not intended to diagnose, treat, cure, or prevent any medical condition, or substitute for professional medical advice",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/", "date": "2026-08-12" }
+    },
+    {
+      "type": "content",
+      "title": "Pas un dépistage",
+      "body": "Google précise que ce n'est *pas* un test de dépistage du diabète ni de l'hypertension.",
+      "evidence": "Insulin Resistance and Blood Pressure Trends are not a prescreener for diabetes and hypertension respectively",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/", "date": "2026-08-12" }
+    },
+    {
+      "type": "content",
+      "title": "Celle qui peut sauver",
+      "body": "Un algorithme repère une chute prolongée de l'oxygène et alerte *les secours*.",
+      "evidence": "Starting in the EU, Breathing Emergency Detection is an on-device AI algorithm that uses the heart rate sensor, accelerometer, and barometer to alert you and emergency services about a persistent drop in oxygen saturation.",
+      "source": { "name": "9to5Google", "url": "https://9to5google.com/2026/08/12/google-pixel-watch-5-hands-on/", "date": "2026-08-12" }
+    },
+    {
+      "type": "content",
+      "title": "Et ses limites",
+      "body": "Elle ne fonctionne plus **après 30 minutes de sommeil**, et n'a pas été évaluée par l'agence américaine du médicament.",
+      "evidence": "It may not catch every emergency and will not operate after 30 minutes of sleep.",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/", "date": "2026-08-12" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui porte une montre connectée",
+      "sub": "Chaque chiffre vient de la page citée en dessous."
+    }
+  ],
+  "sources": [
+    { "name": "Google", "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/", "accessed": "2026-08-12" },
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/12/google-unveils-the-pixel-watch-5-with-a-smarter-gemini-and-advanced-health-monitoring/", "accessed": "2026-08-12" },
+    { "name": "9to5Google", "url": "https://9to5google.com/2026/08/12/google-pixel-watch-5-hands-on/", "accessed": "2026-08-12" }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Ta montre surveillera ta tension sans brassard",
+    "beats": [
+      {
+        "script": "Six personnes sur dix ne voient pas leur tension monter. Google veut que ta montre la voie à leur place. Tu sais ce qui est écrit en dessous ?",
+        "visual": { "type": "veo", "spec": {
+          "subject": "a wrist with a small green sensor light glowing against the skin",
+          "action": "slowly rotating in place, the green sensor light staying whole and in frame",
+          "setting": "in a bright room in daylight",
+          "composition": "extreme close-up, the wrist fills the entire frame" } }
+      },
+      {
+        "script": "C'est sa nouvelle montre, la Pixel Watch 5. Et la réponse est écrite par Google, tout en bas de sa page.",
+        "visual": { "type": "screenshot", "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/" }
+      },
+      {
+        "script": "Elle lit ton pouls et tes mouvements tout le mois pour estimer ta tension. Pas de brassard, pas de calibrage.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a printed health report page filled with columns of numbers",
+          "setting": "lying flat under a desk lamp",
+          "composition": "extreme close-up, the page fills the entire frame" } }
+      },
+      {
+        "script": "Elle suit aussi comment ton corps absorbe l'énergie de ce que tu manges. Environ quarante pour cent des adultes ne remarquent pas que ça change.",
+        "visual": { "type": "card", "value": "40 %", "label": "des adultes ne voient pas ces changements arriver" }
+      },
+      {
+        "script": "Derrière, un modèle entraîné sur plus de mille milliards de minutes de données, venues de cinq millions de volontaires.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a laptop screen filled with a single column of heart rate numbers",
+          "setting": "in a bright room in daylight",
+          "composition": "extreme close-up, the screen fills the entire frame" } }
+      },
+      {
+        "script": "Sauf que, en bas de cette page, Google écrit que ces mesures servent au bien-être et à l'information. Elles ne peuvent ni diagnostiquer, ni traiter, ni prévenir aucune maladie.",
+        "visual": { "type": "screenshot", "url": "https://techcrunch.com/2026/08/12/google-unveils-the-pixel-watch-5-with-a-smarter-gemini-and-advanced-health-monitoring/" }
+      },
+      {
+        "script": "Ce n'est pas un test de dépistage du diabète ni de l'hypertension. Google le précise noir sur blanc.",
+        "visual": { "type": "card", "value": "Bien-être", "label": "l'usage que Google déclare pour ces mesures" }
+      },
+      {
+        "script": "Une fonction peut quand même sauver. Si ton oxygène s'effondre et que tu ne réponds plus, la montre appelle les secours toute seule.",
+        "visual": { "type": "photo", "query": "ambulance emergency", "alt": "Une ambulance de secours" }
+      },
+      {
+        "script": "Elle non plus n'a pas été évaluée par l'agence américaine du médicament, et elle s'arrête après trente minutes de sommeil. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a sleeping person's wrist resting on a pale bed sheet",
+          "setting": "in a dim bedroom at night",
+          "composition": "extreme close-up, the wrist fills the entire frame" } }
+      }
+    ]
+  }
+}

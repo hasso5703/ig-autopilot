@@ -1,12 +1,12 @@
 {
-  "at": "2026-08-12T10:48:34.438Z",
-  "fresh": 399,
+  "at": "2026-08-12T16:39:45.190Z",
+  "fresh": 410,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1124,
-      "fresh": 10,
+      "fetched": 1125,
+      "fresh": 11,
       "windowHours": 96
     },
     {
@@ -20,28 +20,28 @@
       "name": "Google DeepMind",
       "ok": true,
       "fetched": 100,
-      "fresh": 0,
+      "fresh": 1,
       "windowHours": 96
     },
     {
       "name": "Hugging Face Blog",
       "ok": true,
       "fetched": 839,
-      "fresh": 4,
+      "fresh": 6,
       "windowHours": 96
     },
     {
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 4,
+      "fresh": 5,
       "windowHours": 96
     },
     {
       "name": "Microsoft Research",
       "ok": true,
       "fetched": 10,
-      "fresh": 1,
+      "fresh": 2,
       "windowHours": 96
     },
     {
@@ -55,15 +55,15 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 19,
-      "windowHours": 20
+      "fresh": 20,
+      "windowHours": 36
     },
     {
       "name": "The Verge",
       "ok": false,
       "fetched": 0,
       "fresh": 0,
-      "windowHours": 20,
+      "windowHours": 36,
       "error": "HTTP 403 after 9 tries"
     },
     {
@@ -71,7 +71,7 @@
       "ok": false,
       "fetched": 0,
       "fresh": 0,
-      "windowHours": 20,
+      "windowHours": 36,
       "error": "HTTP 403 after 10 tries"
     },
     {
@@ -79,28 +79,28 @@
       "ok": true,
       "fetched": 7,
       "fresh": 7,
-      "windowHours": 20
+      "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 2,
-      "windowHours": 20
+      "fresh": 4,
+      "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 7,
-      "fresh": 3,
-      "windowHours": 20
+      "fetched": 5,
+      "fresh": 4,
+      "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 3,
-      "windowHours": 20
+      "fresh": 4,
+      "windowHours": 36
     }
   ]
 }
