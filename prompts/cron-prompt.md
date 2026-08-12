@@ -39,6 +39,15 @@ below the dashed line. Hasan pasted on 08-05 and this SYNC line was simply
 never updated; it spent five days claiming "never" while every run was
 already arriving through the loader. A wrong sync line is worse than none —
 if you verify again, write the date you verified.
+
+VERIFIED AGAIN 2026-08-12: Hasan pasted the live routine's stored prompt
+back into a session and it was diffed against the text below the dashed
+line — 48 lines, 0 differences. Same day, the publishing slots moved from
+16:30/19:30 to 10:30/16:30 and this file did not have to change at all,
+which is the loader design doing the one job it was built for: a schedule
+lives in `prompts/routine.md`, so re-dealing it costs a commit and not a
+re-paste. The only edit that would ever need one is an edit to the loader
+itself.
 -->
 
 ---------------------------------------------------------------------------
