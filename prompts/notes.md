@@ -318,6 +318,18 @@ ENTRIES:
   vient dans les deux cas des logs de la police, pas de deux enquetes. Sur une actu
   d'agence publique britannique, cherche la presse TECHNIQUE (silicon.co.uk) avant la
   presse sectorielle, elle est la seule a porter le bilan chiffre.
+  Ajout 12/08 (10h30): venturebeat.com rend 429 au fetch gate pour le SIXIEME jour
+  consecutif (07 au 12/08). L'entree du 10/08 disait "quatrieme", celle du 11/08
+  "5e": ce n'est plus une limite passagere, c'est l'etat du domaine depuis une
+  semaine. Ne planifie AUCUNE histoire dont il est la seule source (perdu ce jour-la:
+  l'exclu Grok Bot de SpaceXAI, mise en revisit sans une ligne d'ecrite, x.ai etant
+  403 depuis le 31/07). Rendent 200 le meme jour: techcrunch.com et
+  technologyreview.com. ET LE PIEGE BLOOMBERG SE RE-CONFIRME (07/08), dossier
+  Phia/cookie stuffing: techcrunch rend 200 et porte sa PROPRE declaration de
+  l'entreprise, mais l'affirmation porteuse (les fondatrices savaient depuis
+  decembre, Slacks fuites) est Bloomberg-only, et Puck est derive aussi. Un article
+  joignable qui contient une citation exclusive ne rend pas gatable l'affirmation
+  CENTRALE qu'il emprunte: lis QUI a rapporte quoi dans le corps avant de scorer.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
@@ -500,6 +512,23 @@ ENTRIES:
   CODE ou des NUMEROS, jamais une interface. Bonus: ces deux surfaces ne se
   ressemblent pas, ce qui repond aussi a "Alternate visual families" quand deux
   beats doivent montrer un ecran.
+  Ajout 12/08 (10h30), L'ACTION VEO LA PLUS SURE EST UNE ROTATION SUR PLACE, et elle
+  resout le cas "l'histoire n'a aucun moment filmable". Dossier reconnaissance
+  faciale: `subject` "a black dome camera on top of a tall metal pole" + `action`
+  "slowly rotating in place, the dome staying whole and in frame" + `composition`
+  "close-up from below" a rendu PROPRE du premier coup, $0,96, pellicule 8 vignettes
+  lue: meme objet, meme taille, present a la 8e, une seule rotation. Pourquoi c'est
+  generalisable: une rotation ne fait entrer le sujet dans RIEN (la famille a risque
+  du 03/08), elle n'a aucun etat final a atteindre, et "staying whole and in frame"
+  nomme en positif ce qui doit rester vrai (regle 3). En prime elle FABRIQUE l'action
+  non resolue que le manuel demande au beat 0 alors que l'histoire (un deploiement,
+  un reglement) ne contient aucun evenement: l'objectif finit par arriver face
+  camera, donc le spectateur reste pour voir ou ca regarde. Reflexe: sur une actu de
+  surveillance, de capteur ou de machine qui observe, filme l'objet qui TOURNE,
+  pas la scene. ECONOMIE MESUREE le meme jour: Reel entier a $0,99 (1 narration
+  $0,027 + veo $0,96, ZERO still achetee) parce que le scout de 06h30 avait
+  telecharge, recadre et epingle 4 photos Commons + 2 recus. Re-confirme le 08/08:
+  un scout qui epingle est la ligne la moins chere du budget.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
