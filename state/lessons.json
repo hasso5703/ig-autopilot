@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-11T19:41:18.535Z",
-  "n": 27,
-  "nSettled": 20,
-  "medianViews": 164,
+  "at": "2026-08-12T06:41:48.165Z",
+  "n": 29,
+  "nSettled": 21,
+  "medianViews": 171,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -12,6 +12,14 @@
       "saved": 4,
       "shares": 3,
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai."
+    },
+    {
+      "slug": "2026-08-09-motif-anti-cameras",
+      "views": 1143,
+      "retentionPct": 25,
+      "saved": 7,
+      "shares": 0,
+      "sendTest": "Un mec a créé un motif à imprimer sur un t-shirt qui empêche les caméras de surveillance de te repérer. Il l'a testé sur une voiture, ça a marché."
     },
     {
       "slug": "2026-08-03-macbook-air-memoire",
@@ -36,14 +44,6 @@
       "saved": 2,
       "shares": 0,
       "sendTest": "Une IA a prévu qu'un ouragan de catégorie 5 allait frapper la Jamaïque, cinq jours avant. Les gens ont eu le temps d'évacuer."
-    },
-    {
-      "slug": "2026-08-06-google-deepmind-passage-de-relais",
-      "views": 300,
-      "retentionPct": 23,
-      "saved": 2,
-      "shares": 0,
-      "sendTest": "Le directeur scientifique de Google s'en va après 27 ans, et le patron de son labo d'IA lâche les commandes le même jour. L'action a perdu 4%."
     }
   ],
   "bottom": [
@@ -90,10 +90,10 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 9,
-      "medianViews": 156,
-      "meanRetentionPct": 22.5,
-      "saves": 12,
+      "n": 10,
+      "medianViews": 164,
+      "meanRetentionPct": 22.8,
+      "saves": 19,
       "shares": 3,
       "thin": false
     },
@@ -190,10 +190,10 @@
       "thin": true
     },
     "20": {
-      "n": 3,
-      "medianViews": 171,
-      "meanRetentionPct": 19.7,
-      "saves": 2,
+      "n": 4,
+      "medianViews": 231,
+      "meanRetentionPct": 21,
+      "saves": 9,
       "shares": 0,
       "thin": true
     },
@@ -258,9 +258,9 @@
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
       "at": "2026-08-10T20:22:31.627Z",
       "hourUtc": 20,
-      "views": 1341,
-      "reach": 1238,
-      "avgWatchS": 14.1,
+      "views": 1365,
+      "reach": 1260,
+      "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 10,
       "comments": 1,
@@ -305,7 +305,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Un mec a créé un motif à imprimer sur un t-shirt qui empêche les caméras de surveillance de te repérer. Il l'a testé sur une voiture, ça a marché.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-03-macbook-air-memoire",
@@ -363,7 +363,7 @@
       "at": "2026-08-06T19:59:50.589Z",
       "hourUtc": 19,
       "views": 300,
-      "reach": 283,
+      "reach": 284,
       "avgWatchS": 13.7,
       "retentionPct": 23,
       "likes": 5,
@@ -395,13 +395,33 @@
       "settled": true
     },
     {
+      "slug": "2026-08-11-openai-ia-pirate-chrome",
+      "at": "2026-08-11T20:02:23.032Z",
+      "hourUtc": 20,
+      "views": 205,
+      "reach": 178,
+      "avgWatchS": 19.9,
+      "retentionPct": 33,
+      "likes": 4,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "security",
+        "models"
+      ],
+      "sendTest": "Toutes les IA refusent de t'aider à pirater. OpenAI vient d'en sortir une qui dit oui, et qui a déjà percé Chrome.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
       "at": "2026-08-10T23:02:26.507Z",
       "hourUtc": 23,
-      "views": 191,
-      "reach": 163,
-      "avgWatchS": 31.3,
-      "retentionPct": 52,
+      "views": 195,
+      "reach": 167,
+      "avgWatchS": 30.6,
+      "retentionPct": 51,
       "likes": 5,
       "comments": 1,
       "saved": 1,
@@ -482,6 +502,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-10-ia-reserve-cours-sport",
+      "at": "2026-08-10T16:58:57.530Z",
+      "hourUtc": 16,
+      "views": 159,
+      "reach": 143,
+      "avgWatchS": 12.3,
+      "retentionPct": 20,
+      "likes": 3,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-04-fcc-robots-humanoides",
       "at": "2026-08-04T12:10:51.964Z",
       "hourUtc": 12,
@@ -518,25 +557,6 @@
       "settled": true
     },
     {
-      "slug": "2026-08-10-ia-reserve-cours-sport",
-      "at": "2026-08-10T16:58:57.530Z",
-      "hourUtc": 16,
-      "views": 152,
-      "reach": 137,
-      "avgWatchS": 11.8,
-      "retentionPct": 20,
-      "likes": 3,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
-      "settled": false
-    },
-    {
       "slug": "2026-07-30-opus5-vending-cartels",
       "at": "2026-07-30T13:14:06.716Z",
       "hourUtc": 13,
@@ -571,6 +591,40 @@
       ],
       "sendTest": "Quelqu'un peut prendre tes photos et en faire des images sexuelles. Le Minnesota vient d'interdire ces applis, et Musk a essayé de bloquer la loi.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-11-google-ia-repond-faux",
+      "at": "2026-08-11T17:04:15.847Z",
+      "hourUtc": 17,
+      "views": 137,
+      "reach": 118,
+      "avgWatchS": 10,
+      "retentionPct": 17,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un mec attendait le coucher du soleil, l'IA de Google lui a dit qu'il était déjà passé. Un tribunal a jugé Google responsable de ce que son IA raconte.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-11-eclipse-solaire-yeux",
+      "at": "2026-08-11T23:29:51.020Z",
+      "hourUtc": 23,
+      "views": 134,
+      "reach": 118,
+      "avgWatchS": 54.4,
+      "retentionPct": 91,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Ce soir 90 % du soleil disparait au-dessus de la France. Si tu le regardes sans lunettes d'eclipse, tu peux te bruler la retine.",
+      "settled": false
     },
     {
       "slug": "2026-08-05-waymo-dallas",
@@ -656,23 +710,6 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-11-google-ia-repond-faux",
-      "at": "2026-08-11T17:04:15.847Z",
-      "hourUtc": 17,
-      "views": 76,
-      "reach": 59,
-      "avgWatchS": 9.6,
-      "retentionPct": 16,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un mec attendait le coucher du soleil, l'IA de Google lui a dit qu'il était déjà passé. Un tribunal a jugé Google responsable de ce que son IA raconte.",
-      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",

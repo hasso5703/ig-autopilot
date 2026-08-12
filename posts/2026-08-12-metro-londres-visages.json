@@ -1,0 +1,221 @@
+{
+  "slug": "2026-08-12-metro-londres-visages",
+  "centralClaim": "In total, scans of more than 530,000 faces at rail stations produced no matches and one false identification.",
+  "corroboration": [
+    {
+      "url": "https://www.silicon.co.uk/e-regulation/surveillance/live-facial-recognition-tube-631083/",
+      "quote": "From February to July, BTP deployed the tech 18 times at major London rail stations, scanning more than 530,000 faces, resulting in no accurate matches and one false positive."
+    },
+    {
+      "url": "https://www.techradar.com/tech/london-underground-is-trialing-live-face-scanning-from-today-as-privacy-groups-say-it-treats-the-public-like-suspects-heres-how-to-avoid-it",
+      "quote": "However, as the BBC points out, scans of some 530,000 faces across UK railway stations since February have resulted in zero matches, zero arrests, and one false identification."
+    }
+  ],
+  "caption": "Depuis mardi, une caméra compare ton visage à un fichier de police quand tu entres dans le métro de Londres.\n\nLa police des transports britannique a commencé mardi à scanner les visages des passagers à la station Victoria, avec un système de reconnaissance faciale en direct. Le dispositif tournait déjà dans les grandes gares depuis février: 18 déploiements, plus de 530 000 visages scannés, et au bout du compte aucune correspondance juste et un faux positif.\n\nLe détail qui n'a pas tenu dans la vidéo. Les transports londoniens ont publié une enquête sur le harcèlement. Sur 150 adolescentes de 13 à 16 ans interrogées, 116 disent avoir subi un comportement sexuel non désiré lors d'un trajet en transports au cours des 12 mois précédents, et 136 sur 150 disent avoir vu quelqu'un d'autre le subir. Interrogées sur ce qui les rassurerait, des femmes et des filles ont cité ces caméras.\n\nÀ nuancer. Big Brother Watch, l'association britannique de défense des libertés, parle d'une extension inquiétante et dystopique, qui traite le public comme des suspects. De son côté la police dit que les zones filmées sont signalées, qu'un autre chemin est prévu, et que les visages qui ne correspondent à personne sont effacés immédiatement.\n\nScanner les visages dans le métro, oui ou non ?\n\nsilicon.co.uk · techradar.com · railuk.com · railadvent.co.uk\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ReconnaissanceFaciale #Londres",
+  "captionEvidence": [
+    {
+      "url": "https://railuk.com/travel/british-transport-police-trialling-live-facial-recognition-at-transport-for-london-stations/",
+      "quote": "Seventy-seven percent (116/150) of 13- to 16-year-old girls surveyed said they had experienced unwanted sexual behaviour on a journey involving public transport during the previous 12 months"
+    },
+    {
+      "url": "https://railuk.com/travel/british-transport-police-trialling-live-facial-recognition-at-transport-for-london-stations/",
+      "quote": "while 91% (136/150) said they had witnessed someone else experience it"
+    },
+    {
+      "url": "https://railuk.com/travel/british-transport-police-trialling-live-facial-recognition-at-transport-for-london-stations/",
+      "quote": "When asked what would make them feel safer and more willing to use public transport, women and girls raised using LFR to identify offenders and alert police, which TfL has made a key priority for action."
+    },
+    {
+      "url": "https://www.techradar.com/tech/london-underground-is-trialing-live-face-scanning-from-today-as-privacy-groups-say-it-treats-the-public-like-suspects-heres-how-to-avoid-it",
+      "quote": "As for opting out of being surveilled, the police say the cameras will come with clear signage, and that \"alternative routes\" will be available too"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Reconnaissance faciale · Métro de Londres",
+      "headline": "530 000 visages scannés. *Zéro* arrestation.",
+      "hero": {
+        "value": "18",
+        "label": "sorties du système dans les gares, de février à juillet"
+      },
+      "swipe": "Les chiffres sont sur les diapositives"
+    },
+    {
+      "type": "stat",
+      "figure": "530000",
+      "unit": "visages scannés dans les gares",
+      "body": "Entre février et juillet, la police des transports a sorti le système **18 fois** dans les grandes gares de Londres. Aucune correspondance juste, et un faux positif.",
+      "evidence": "From February to July, BTP deployed the tech 18 times at major London rail stations, scanning more than 530,000 faces, resulting in no accurate matches and one false positive.",
+      "source": {
+        "name": "Silicon UK",
+        "url": "https://www.silicon.co.uk/e-regulation/surveillance/live-facial-recognition-tube-631083/",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Depuis mardi, c'est dans le métro",
+      "body": "La police des transports britannique déploie la reconnaissance faciale en direct à la station Victoria. C'est une extension d'un essai déjà en cours dans les gares.",
+      "evidence": "British Transport Police is to deploy live facial recognition in Victoria Underground station on Tuesday, in an expansion of ongoing trials of the controversial technology.",
+      "source": {
+        "name": "Silicon UK",
+        "url": "https://www.silicon.co.uk/e-regulation/surveillance/live-facial-recognition-tube-631083/",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que la machine fait de ton visage",
+      "body": "Les visages sont lus en direct et comparés à une liste. Ceux qui ne correspondent à personne sont effacés tout de suite, dit la police.",
+      "evidence": "While faces are scanned in real time, images of people who are not a match are not retained, so anyone not on the watchlist will have their image automatically and immediately deleted as they continue their journey.",
+      "source": {
+        "name": "Rail UK",
+        "url": "https://railuk.com/travel/british-transport-police-trialling-live-facial-recognition-at-transport-for-london-stations/",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi ils étendent quand même",
+      "body": "Les transports londoniens ont interrogé des adolescentes sur le harcèlement. Sur **150** filles de **13** à **16** ans, **116** disent avoir subi un comportement sexuel non désiré lors d'un trajet.",
+      "evidence": "Seventy-seven percent (116/150) of 13- to 16-year-old girls surveyed said they had experienced unwanted sexual behaviour on a journey involving public transport during the previous 12 months",
+      "source": {
+        "name": "Rail UK",
+        "url": "https://railuk.com/travel/british-transport-police-trialling-live-facial-recognition-at-transport-for-london-stations/",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Ça traite le public comme des suspects. C'est une extension *inquiétante et dystopique*.",
+      "attribution": "Big Brother Watch, association britannique de défense des libertés",
+      "evidence": "Big Brother Watch director Silkie Carlo suggests that the tech \"treats the public like suspects\" and is a \"disturbing and dystopian expansion\" of facial recognition systems.",
+      "source": {
+        "name": "TechRadar",
+        "url": "https://www.techradar.com/tech/london-underground-is-trialing-live-face-scanning-from-today-as-privacy-groups-say-it-treats-the-public-like-suspects-heres-how-to-avoid-it",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qui a été fait",
+      "claim": "**18** sorties du système dans les grandes gares de Londres, de février à juillet.",
+      "caveatLabel": "Ce que ça a donné",
+      "caveat": "Aucune correspondance juste, et un faux positif.",
+      "evidence": "From February to July, BTP deployed the tech 18 times at major London rail stations, scanning more than 530,000 faces, resulting in no accurate matches and one false positive.",
+      "source": {
+        "name": "Silicon UK",
+        "url": "https://www.silicon.co.uk/e-regulation/surveillance/live-facial-recognition-tube-631083/",
+        "date": "2026-08-11"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui prend le métro le matin",
+      "sub": "L'essentiel de l'actu IA, en français."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Silicon UK",
+      "url": "https://www.silicon.co.uk/e-regulation/surveillance/live-facial-recognition-tube-631083/",
+      "accessed": "2026-08-12"
+    },
+    {
+      "name": "TechRadar",
+      "url": "https://www.techradar.com/tech/london-underground-is-trialing-live-face-scanning-from-today-as-privacy-groups-say-it-treats-the-public-like-suspects-heres-how-to-avoid-it",
+      "accessed": "2026-08-12"
+    },
+    {
+      "name": "Rail UK",
+      "url": "https://railuk.com/travel/british-transport-police-trialling-live-facial-recognition-at-transport-for-london-stations/",
+      "accessed": "2026-08-12"
+    },
+    {
+      "name": "RailAdvent",
+      "url": "https://www.railadvent.co.uk/2026/08/facial-recognition-arrives-at-london-railway-stations-for-new-trial.html",
+      "accessed": "2026-08-12"
+    }
+  ],
+  "sendTest": "Le métro de Londres scanne les visages des passagers depuis mardi. 530 000 visages déjà scannés dans les gares, zéro arrestation.",
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "530 000 visages scannés. Zéro arrestation.",
+    "beats": [
+      {
+        "script": "Depuis mardi, à Londres, une caméra te scanne le visage quand tu entres dans le métro, et le compare en direct à une liste de la police.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a black dome camera on top of a tall metal pole",
+            "action": "slowly rotating in place, the dome staying whole and in frame",
+            "setting": "in the bright concourse of an empty station",
+            "composition": "close-up from below, the camera fills most of the frame"
+          }
+        }
+      },
+      {
+        "script": "Et ça tourne dans les gares de Londres depuis février. Tu sais combien de personnes cette machine a permis d'arrêter ?",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.railadvent.co.uk/2026/08/facial-recognition-arrives-at-london-railway-stations-for-new-trial.html",
+          "file": "media/2026-08-12-metro-londres-visages/shot_railadvent_crop.png"
+        }
+      },
+      {
+        "script": "Zéro. Entre février et juillet, 530 000 visages scannés, aucune correspondance juste, et une seule personne identifiée à tort.",
+        "visual": {
+          "type": "card",
+          "value": "530 000",
+          "label": "visages scannés, aucune correspondance juste"
+        }
+      },
+      {
+        "script": "Alors pourquoi étendre au métro ? Parce que sur 150 adolescentes interrogées par les transports londoniens, 116 disent avoir subi un geste sexuel non désiré dans les transports.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-12-metro-londres-visages/photo_clapham.jpg",
+          "credit": "Diliff · CC BY",
+          "alt": "Quai du métro de Londres avec des voyageurs"
+        }
+      },
+      {
+        "script": "Et quand on leur demande ce qui les rassurerait, ces caméras font partie des réponses. La police vise des personnes recherchées pour agression au couteau ou agression sexuelle.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-12-metro-londres-visages/photo_whitechapel.jpg",
+          "credit": "TheFrog001 · CC0",
+          "alt": "Quai de la station Whitechapel"
+        }
+      },
+      {
+        "script": "Sauf que Big Brother Watch, l'association britannique de défense des libertés, parle d'une extension inquiétante et dystopique, qui traite le public comme des suspects.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.silicon.co.uk/e-regulation/surveillance/live-facial-recognition-tube-631083/",
+          "file": "media/2026-08-12-metro-londres-visages/shot_silicon_bbw.png"
+        }
+      },
+      {
+        "script": "Les zones filmées sont signalées, et un autre chemin existe si tu ne veux pas passer. Les visages qui ne correspondent à personne sont effacés aussitôt.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-12-metro-londres-visages/photo_esc.jpg",
+          "credit": "Robert-brook · CC0",
+          "alt": "Escalators du métro de Londres"
+        }
+      },
+      {
+        "script": "L'essai dure quatre mois, et les caméras changent de station. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-12-metro-londres-visages/photo_victoria.jpg",
+          "credit": "surprise truck · CC BY",
+          "alt": "Facade de la gare de Londres Victoria"
+        }
+      }
+    ]
+  }
+}

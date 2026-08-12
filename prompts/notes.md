@@ -304,6 +304,20 @@ ENTRIES:
   sans deviner: regex `/(\d{7,8})/"` sur le HTML BRUT de la page de recherche, le
   flatten les supprime. Les 3 fiches PubMed se capturent aussi parfaitement en moteur
   (titre, revue, abstract lisible, 0 pub, 0 banniere), ca re-confirme le 08/08.
+  Ajout 12/08 (06h30), dossier reconnaissance faciale metro de Londres: rendent 200
+  au fetch gate et se gatent DU PREMIER COUP (18 verifications sur 18, 0 erreur)
+  silicon.co.uk, techradar.com, railuk.com et railadvent.co.uk; repondent 200 aussi
+  thamesgazette.com, yourharlow.com, uk.news.yahoo.com et bigbrotherwatch.org.uk.
+  Bloquent: btp.police.uk (403 sur la page de presse ET sur la page d'info LFR, donc
+  le PRIMAIRE d'une actu de police britannique est ingatable), standard.co.uk (403),
+  bbc.com (403, re-confirme). PIEGE DE CORROBORATION, famille du 07/08: railuk,
+  railadvent, thamesgazette et yourharlow republient tous le MEME communique TfL/BTP,
+  donc quatre domaines verts = un seul texte. Les deux vraies lectures sont
+  silicon.co.uk (qui lit les journaux de deploiement lui-meme) et techradar (qui les
+  credite explicitement a la BBC): le chiffre "530 000 visages, aucune correspondance"
+  vient dans les deux cas des logs de la police, pas de deux enquetes. Sur une actu
+  d'agence publique britannique, cherche la presse TECHNIQUE (silicon.co.uk) avant la
+  presse sectorielle, elle est la seule a porter le bilan chiffre.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
@@ -862,6 +876,24 @@ ENTRIES:
   03/08) ET un vieux telephone a boutons hors sujet; licence, taille et filtre
   fond-blanc la laissent passer, seul le REGARD sur photo_N.jpg l'attrape.
   Remede: pin des valeurs sures du 09/08 (Shixart1985), re-confirmees au rendu.
+  Ajout 12/08 (06h30), dossier metro de Londres, quatre valeurs sures telechargees,
+  regardees en planche-contact, recadrees 9:16 et epinglees file+credit (donc 0 $ de
+  still pour ce Reel): "london underground escalator" -> "Escalators on the London
+  Underground" (Robert-brook, CC0, 1536x2048 DEJA EN PORTRAIT, le meilleur 9:16 du
+  lot, crop=1152:2048:192:0); "london underground platform" -> Whitechapel
+  (TheFrog001, CC0, 4032x3024, quai moderne avec panneau de ligne lisible,
+  crop=1701:3024:1165:0); "london underground station" -> Clapham Common (Diliff,
+  CC BY, 1961x1225, de VRAIS voyageurs sur un quai, crop=689:1225:636:0, remonte en
+  x1,57 donc reserve-le a un beat qui n'est pas le 0); "victoria station london" ->
+  la facade de 2008 (surprise truck, CC BY, 1600x1202, l'enseigne "London Victoria
+  Station" est lisible, crop=675:1202:462:0). REQUETES MORTES OU PIEGEES ce jour-la:
+  "cctv camera" et "surveillance camera street" ne rendent que du hors-lieu et du
+  hors-epoque (magasin de Tel Aviv, Mumbai, Toronto, une camera sovietique, et des
+  cameras delabrees de Bristol avec un NUMERO DE TELEPHONE grave dans le cadre) --
+  sur une actu de surveillance, cherche le LIEU nomme, jamais l'objet "camera";
+  "silkie carlo" et "demis hassabis" restent a 0 candidat. api.openverse.org a rendu
+  503 deux fois de suite sur deux requetes avant de repartir seul, ca re-confirme
+  l'entree du 29/07: reessaie, ne debogue pas.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -1196,7 +1228,25 @@ ENTRIES:
   "media/<slug>/photo_x.jpg". Cout mesure: un build entier perdu, mais $0 au rebuild
   (narration et veo re-servies par leur .key). Verifie tes pins en 5 s avant de lancer:
   `grep '"file"' posts/<slug>.json` doit montrer des chemins commencant par media/.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08.
+  Ajout 12/08 (06h30), UN RECU PEUT S'OUVRIR EN PLEIN MILIEU DE L'ARTICLE, type
+  nouveau et different de la page d'index du 09/08: silicon.co.uk se capture
+  proprement (0 pub, 0 banniere cookies) mais la page s'ouvre DEJA DEFILEE dans le
+  corps du texte, titre et signature hors cadre. Le moteur ne remonte jamais en haut,
+  donc un recu silicon pris en moteur montrera toujours du corps de texte. Sur ce
+  dossier c'etait une CHANCE (le fragment porte a la fois "more than 530,000 faces,
+  resulting in no accurate matches" et la phrase Big Brother Watch), garde par
+  `crop=1290:2060:0:0` qui conserve le masthead Silicon et coupe le bloc "Subscribe"
+  du bas; il reste une ligne coupee en deux sous le masthead, cosmetique. Si tu veux
+  le TITRE d'un domaine qui fait ca, il faut le capturer hors moteur avec
+  `page.evaluate(() => window.scrollTo(0,0))` avant le screenshot puis epingler
+  `file` (c'est du travail de scout, ca coute 0 $). railadvent.co.uk se capture du
+  PREMIER coup, ~4 min, 1 frame au goto et 23 au tir: masthead, titre entier,
+  signature, "Last updated: 11th August, 2026" ET la photo de presse TfL du vrai mat
+  de cameras LFR; `crop=1290:2340:0:0` coupe le bloc "Discover more" et la cloche de
+  notification. techradar.com est de la famille O(frames) du 06/08 en PIRE: tue apres
+  20 min sans avoir ecrit un fichier (4 frames au goto pourtant). Traite-le comme une
+  source, jamais comme un recu.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
