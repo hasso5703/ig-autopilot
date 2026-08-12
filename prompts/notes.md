@@ -330,6 +330,24 @@ ENTRIES:
   decembre, Slacks fuites) est Bloomberg-only, et Puck est derive aussi. Un article
   joignable qui contient une citation exclusive ne rend pas gatable l'affirmation
   CENTRALE qu'il emprunte: lis QUI a rapporte quoi dans le corps avant de scorer.
+  Ajout 12/08 (16h30), dossier Pixel Watch 5: rendent 200 au fetch gate et se gatent
+  DU PREMIER COUP (13 verifications sur 13, 0 erreur) blog.google, techcrunch.com et
+  9to5google.com (nouveau). Bloquent le meme jour: cnet.com (403), theverge.com (403),
+  arstechnica.com (403), engadget.com (404 sur une URL devinee). ET LE REFLEXE QUI
+  TROUVE LE PRIMAIRE EN 30 SECONDES, generalisable a tout blog.google: les pages
+  d'index (/products/pixel/, /products-and-platforms/devices/pixel/) sont rendues en
+  JS et une extraction de liens n'en sort RIEN d'utile, mais le flux
+  <index>/rss/ rend 200 et porte les URL de toutes les annonces du jour, y compris
+  celles rangees sous une autre rubrique (le billet sante etait sous
+  /products/google-health/, pas sous /devices/pixel/). Va au RSS de la famille produit
+  avant de deviner une URL. CORRECTION du 06/08 sur la banniere cookies: le billet
+  blog.google s'est capture PARFAITEMENT en moteur, titre + chapo + date + "4 min read"
+  dans le cadre 9:16, zero banniere, zero recadrage. Le piege cookies vise aisi.gov.uk,
+  pas blog.google en general. techcrunch.com se capture proprement aussi (titre,
+  signature, date). Et sur une annonce produit, les notes de bas de page du primaire
+  valent l'article: c'est la que Google ecrit que ses mesures ne sont "not a prescreener
+  for diabetes and hypertension" et que la detection d'urgence "has not been cleared or
+  evaluated by the FDA". Le retournement du Reel etait entierement dans les footnotes.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
@@ -529,6 +547,28 @@ ENTRIES:
   $0,027 + veo $0,96, ZERO still achetee) parce que le scout de 06h30 avait
   telecharge, recadre et epingle 4 photos Commons + 2 recus. Re-confirme le 08/08:
   un scout qui epingle est la ligne la moins chere du budget.
+  Ajout 12/08 (16h30), LE PIEGE DE MAJUSCULE A SON CAS EXTREME: sur une actu de
+  FONCTION DE PRODUIT, le nom de la fonction est capitalise dans le primaire, donc
+  namedActors mange TOUT le sujet de l'histoire. Dossier Pixel Watch 5: les citations
+  portent "Blood Pressure Trends", "Insulin Resistance", "Breathing Emergency
+  Detection", donc blood, pressure, insulin, resistance, trend, breath, emergency ET
+  detection sont TOUS retires du vocabulaire; "watch" tombe aussi (Pixel Watch 5). Un
+  spec "a printed blood pressure chart" est refuse "shares no word with the sources"
+  sur une histoire qui ne parle que de tension. Ce n'est plus l'exception Solar/
+  Software/Music du 07 au 11/08, c'est la REGLE des que la boite a donne un nom
+  commercial a la chose: attends-toi a perdre le vocabulaire central, pas un mot
+  isole. Ce qui a survecu et a servi: sensor, pulse, wrist, oxygen, heart, sleep,
+  health, monitor, motion, saturation, smartwatch. Les 3 specs qui sont passes du
+  premier coup et ont RENDU PROPRE: veo "a wrist with a small green sensor light
+  glowing against the skin" + action "slowly rotating in place, the green sensor light
+  staying whole and in frame" (rotation re-confirmee 2e jour d'affilee, pellicule 8
+  vignettes: meme objet, meme taille, present a la 8e); still "a printed health report
+  page filled with columns of numbers" (recette du 09/08, "health" est l'ancre);
+  still "a laptop screen filled with A SINGLE COLUMN of heart rate numbers". La
+  premiere version disait "rows of" et a ete refusee comme scene a objets multiples,
+  la formule "a single column of" du 10/08 passe. Imprime le vocabulaire ENTIER en
+  10 s avant d'ecrire un spec: tokens(centralClaim + evidence) MOINS
+  tokens(namedActors(...)), namedActors est exporte par validate.mjs, pas state.mjs.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
