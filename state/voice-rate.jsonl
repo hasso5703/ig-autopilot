@@ -58,3 +58,4 @@
 {"at":"2026-08-11T19:45:02.466Z","slug":"2026-08-11-openai-ia-pirate-chrome","words":201,"seconds":52.88,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.2}
 {"at":"2026-08-11T23:14:28.526Z","slug":"2026-08-11-eclipse-solaire-yeux","words":196,"seconds":64.72,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-1.2}
 {"at":"2026-08-11T23:14:56.438Z","slug":"2026-08-11-eclipse-solaire-yeux","words":196,"seconds":51.88,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-4.6}
+{"at":"2026-08-12T10:50:20.486Z","slug":"2026-08-12-metro-londres-visages","words":199,"seconds":52.92,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":0.2}
