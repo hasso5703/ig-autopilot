@@ -147,6 +147,25 @@ export function retentionPct(avgWatchMs, durationS) {
   return Math.round((avgWatchMs / 1000 / durationS) * 100);
 }
 
+/**
+ * The one-line diagnosis printed beside a retention reading.
+ *
+ * It used to be a two-way branch on `> 100`, so every reading at or under 100
+ * was told it was "sous 40%" — including the account's first two readings ever
+ * to clear the bar (50% on 2026-08-10, 49% on 2026-08-11), which the 19:30
+ * vigil of 2026-08-12 read as failures. The floors are the manual's own: under
+ * 40% the hook or the shape inside the minute is the problem, over 60% the
+ * format is working. Between them there is nothing useful to say, so say
+ * nothing rather than say the wrong thing.
+ */
+export function retentionNote(pct) {
+  if (typeof pct !== "number" || !Number.isFinite(pct)) return "";
+  if (pct > 100) return " — au-delà de 100 ce sont des boucles comptées, pas un bug";
+  if (pct < 40) return " — sous 40% le hook ou la forme dans la minute est en cause";
+  if (pct > 60) return " — au-dessus de 60% le format marche, la distribution suivra";
+  return " — au-dessus du plancher de 40%";
+}
+
 const n = (v) => (v === null || v === undefined ? "-" : String(v));
 
 /** A report short enough to read on a phone without scrolling. */
@@ -193,9 +212,7 @@ export function format(report) {
   for (const p of posts) {
     L.push(`  ${p.slug}`);
     L.push(`    portée ${n(p.reach)} · partages ${n(p.shares)} · saves ${n(p.saved)} · vues ${n(p.views)} · abonnés gagnés ${n(p.follows)}`);
-    if (p.retention !== null) L.push(p.retention > 100
-      ? `    rétention ${p.retention}% (watch moyen ${n(p.avgWatchS)}s) — au-delà de 100 ce sont des boucles comptées, pas un bug`
-      : `    rétention ${p.retention}% (watch moyen ${n(p.avgWatchS)}s) — sous 40% le hook ou la longueur est en cause`);
+    if (p.retention !== null) L.push(`    rétention ${p.retention}% (watch moyen ${n(p.avgWatchS)}s)${retentionNote(p.retention)}`);
     if (p.error) L.push(`    stats indisponibles : ${p.error.message}`);
   }
 

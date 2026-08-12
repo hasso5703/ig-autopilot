@@ -1457,6 +1457,20 @@ test("retention is arithmetic in code, not a guess in a prompt", async () => {
   assert.equal(retentionPct(12000, 0), null);
 });
 
+// A reading the vigil is told to act on must not be labelled with the opposite
+// of what it says. The old branch was `pct > 100 ? loops : "sous 40%"`, so the
+// account's first two readings ever to clear the floor — 50% on 2026-08-10 and
+// 49% on 2026-08-11 — were both printed as failures of the hook.
+test("the retention note reads the number it is printed beside", async () => {
+  const { retentionNote } = await import("../src/watch.mjs");
+  assert.match(retentionNote(14), /sous 40%/, "under the floor, name the floor");
+  assert.doesNotMatch(retentionNote(50), /sous 40%/, "a reading above 40 is not a reading below it");
+  assert.doesNotMatch(retentionNote(49), /sous 40%/);
+  assert.match(retentionNote(65), /le format marche/, "over 60 the manual says the format is working");
+  assert.match(retentionNote(110), /boucles/, "past 100 it is loops, not a bug");
+  assert.equal(retentionNote(null), "", "no reading, no diagnosis");
+});
+
 test("the seed ledger closes the /comments blind spot", async () => {
   const { alreadySeeded } = await import("../src/engage.mjs");
   const rows = [{ kind: "comment", target: "111", id: "c1" }, { kind: "reply", target: "222", id: "c2" }];

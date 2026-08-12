@@ -158,7 +158,13 @@ async function listRecent() {
   if (!existsSync(file)) { console.log("nothing has ever been published"); return; }
   const posted = (await readFile(file, "utf8")).split("\n").filter(Boolean).map((l) => JSON.parse(l));
   const ledger = await readLedger();
-  for (const p of recentPublished(posted)) {
+  // Ten, not the default five. The 19:30 vigil is asked to answer comments on
+  // "recent posts", and since 2026-08-02 the account publishes two Reels a day:
+  // five posts is two and a half days, so a stranger who comments on the third
+  // day is invisible to the only command that looks. Measured 2026-08-12: the
+  // unanswered comment on 2026-08-09-motif-anti-cameras (the account's
+  // second-best post) sat six posts back and never appeared in this listing.
+  for (const p of recentPublished(posted, 10)) {
     console.log(`\n${p.slug}  (media ${p.mediaId})  ${p.permalink ?? ""}`);
     try {
       const r = await call("GET", `${p.mediaId}/comments`, {

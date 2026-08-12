@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-12T16:39:45.190Z",
-  "fresh": 410,
+  "at": "2026-08-12T19:45:03.943Z",
+  "fresh": 414,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -85,14 +85,14 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 4,
+      "fresh": 6,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 5,
-      "fresh": 4,
+      "fetched": 6,
+      "fresh": 6,
       "windowHours": 36
     },
     {
