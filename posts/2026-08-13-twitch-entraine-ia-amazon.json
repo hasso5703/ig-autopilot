@@ -224,9 +224,12 @@
       {
         "script": "Et Twitch n'est pas un cas isolé. Meta se sert déjà des contenus publics de ses plateformes. Si tes comptes Facebook et Instagram sont publics, c'est probablement déjà fait. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "photo",
-          "query": "elderly woman phone window",
-          "alt": "Une femme âgée regarde son téléphone près d'une fenêtre"
+          "type": "image",
+          "spec": {
+            "subject": "a single audio waveform glowing on a dark screen",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the waveform fills the entire frame"
+          }
         }
       }
     ]
