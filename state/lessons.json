@@ -1,10 +1,18 @@
 {
-  "at": "2026-08-12T19:40:45.306Z",
+  "at": "2026-08-13T06:45:14.996Z",
   "n": 31,
-  "nSettled": 22,
-  "medianViews": 165,
+  "nSettled": 24,
+  "medianViews": 172,
   "medianRetentionPct": 20,
   "top": [
+    {
+      "slug": "2026-08-10-amazon-centrale-gaz-texas",
+      "views": 1387,
+      "retentionPct": 23,
+      "saved": 1,
+      "shares": 1,
+      "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays."
+    },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "views": 1232,
@@ -36,14 +44,6 @@
       "saved": 1,
       "shares": 1,
       "sendTest": "Un ingénieur a dépensé 50 000 dollars d'IA en un mois. Son entreprise note maintenant chaque salarié sur ce que l'IA lui coûte."
-    },
-    {
-      "slug": "2026-08-07-ouragan-un-jour-davance",
-      "views": 329,
-      "retentionPct": 18,
-      "saved": 2,
-      "shares": 0,
-      "sendTest": "Une IA a prévu qu'un ouragan de catégorie 5 allait frapper la Jamaïque, cinq jours avant. Les gens ont eu le temps d'évacuer."
     }
   ],
   "bottom": [
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 10,
-      "medianViews": 164,
-      "meanRetentionPct": 22.8,
-      "saves": 19,
-      "shares": 3,
+      "n": 12,
+      "medianViews": 181,
+      "meanRetentionPct": 25.3,
+      "saves": 21,
+      "shares": 4,
       "thin": false
     },
     "photo": {
@@ -115,6 +115,14 @@
     }
   },
   "byTheme": {
+    "infra": {
+      "n": 1,
+      "medianViews": 1387,
+      "meanRetentionPct": 23,
+      "saves": 1,
+      "shares": 1,
+      "thin": true
+    },
     "safety": {
       "n": 3,
       "medianViews": 156,
@@ -190,10 +198,18 @@
       "thin": true
     },
     "20": {
-      "n": 4,
-      "medianViews": 231,
-      "meanRetentionPct": 21,
-      "saves": 9,
+      "n": 5,
+      "medianViews": 291,
+      "meanRetentionPct": 21.4,
+      "saves": 10,
+      "shares": 1,
+      "thin": false
+    },
+    "23": {
+      "n": 1,
+      "medianViews": 197,
+      "meanRetentionPct": 50,
+      "saves": 1,
       "shares": 0,
       "thin": true
     },
@@ -258,8 +274,8 @@
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
       "at": "2026-08-10T20:22:31.627Z",
       "hourUtc": 20,
-      "views": 1379,
-      "reach": 1276,
+      "views": 1387,
+      "reach": 1282,
       "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 10,
@@ -271,7 +287,7 @@
         "infra"
       ],
       "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
@@ -345,10 +361,10 @@
       "slug": "2026-08-11-openai-ia-pirate-chrome",
       "at": "2026-08-11T20:02:23.032Z",
       "hourUtc": 20,
-      "views": 350,
-      "reach": 300,
-      "avgWatchS": 16.8,
-      "retentionPct": 28,
+      "views": 408,
+      "reach": 359,
+      "avgWatchS": 16.1,
+      "retentionPct": 27,
       "likes": 4,
       "comments": 1,
       "saved": 3,
@@ -359,6 +375,23 @@
         "models"
       ],
       "sendTest": "Toutes les IA refusent de t'aider à pirater. OpenAI vient d'en sortir une qui dit oui, et qui a déjà percé Chrome.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-11-eclipse-solaire-yeux",
+      "at": "2026-08-11T23:29:51.020Z",
+      "hourUtc": 23,
+      "views": 377,
+      "reach": 349,
+      "avgWatchS": 25.5,
+      "retentionPct": 43,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Ce soir 90 % du soleil disparait au-dessus de la France. Si tu le regardes sans lunettes d'eclipse, tu peux te bruler la retine.",
       "settled": false
     },
     {
@@ -377,23 +410,6 @@
       "themes": [],
       "sendTest": "Une IA a prévu qu'un ouragan de catégorie 5 allait frapper la Jamaïque, cinq jours avant. Les gens ont eu le temps d'évacuer.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-11-eclipse-solaire-yeux",
-      "at": "2026-08-11T23:29:51.020Z",
-      "hourUtc": 23,
-      "views": 316,
-      "reach": 285,
-      "avgWatchS": 29.6,
-      "retentionPct": 49,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Ce soir 90 % du soleil disparait au-dessus de la France. Si tu le regardes sans lunettes d'eclipse, tu peux te bruler la retine.",
-      "settled": false
     },
     {
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
@@ -432,12 +448,29 @@
       "settled": true
     },
     {
+      "slug": "2026-08-12-metro-londres-visages",
+      "at": "2026-08-12T10:57:49.864Z",
+      "hourUtc": 10,
+      "views": 246,
+      "reach": 218,
+      "avgWatchS": 27.6,
+      "retentionPct": 46,
+      "likes": 2,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Le métro de Londres scanne les visages des passagers depuis mardi. 530 000 visages déjà scannés dans les gares, zéro arrestation.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
       "at": "2026-08-10T23:02:26.507Z",
       "hourUtc": 23,
-      "views": 195,
-      "reach": 167,
-      "avgWatchS": 30.3,
+      "views": 197,
+      "reach": 168,
+      "avgWatchS": 30.1,
       "retentionPct": 50,
       "likes": 5,
       "comments": 1,
@@ -446,7 +479,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Meta sort une IA que tu installes sur ton ordi: elle bosse pour toi même sans internet, et tes données restent chez toi.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-06-aisi-faux-profils",
@@ -483,23 +516,6 @@
       "themes": [],
       "sendTest": "ChatGPT devient illimité pour les comptes gratuits cette semaine. Mais les 62 % d'erreurs en moins, c'est OpenAI qui les a mesurés lui-même.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-12-metro-londres-visages",
-      "at": "2026-08-12T10:57:49.864Z",
-      "hourUtc": 10,
-      "views": 180,
-      "reach": 162,
-      "avgWatchS": 14.7,
-      "retentionPct": 25,
-      "likes": 2,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Le métro de Londres scanne les visages des passagers depuis mardi. 530 000 visages déjà scannés dans les gares, zéro arrestation.",
-      "settled": false
     },
     {
       "slug": "2026-08-03-ai-act-transparence",
@@ -611,9 +627,9 @@
       "slug": "2026-08-11-google-ia-repond-faux",
       "at": "2026-08-11T17:04:15.847Z",
       "hourUtc": 17,
-      "views": 147,
-      "reach": 128,
-      "avgWatchS": 10.2,
+      "views": 148,
+      "reach": 129,
+      "avgWatchS": 10.4,
       "retentionPct": 17,
       "likes": 2,
       "comments": 1,
@@ -661,6 +677,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-12-montre-tension-google",
+      "at": "2026-08-12T17:14:27.717Z",
+      "hourUtc": 17,
+      "views": 124,
+      "reach": 115,
+      "avgWatchS": 8.3,
+      "retentionPct": 14,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Google a sorti une montre qui surveille ta tension sans brassard. Dans ses notes, elle dit qu'elle ne diagnostique rien.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -693,23 +726,6 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-12-montre-tension-google",
-      "at": "2026-08-12T17:14:27.717Z",
-      "hourUtc": 17,
-      "views": 115,
-      "reach": 111,
-      "avgWatchS": 8.4,
-      "retentionPct": 14,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Google a sorti une montre qui surveille ta tension sans brassard. Dans ses notes, elle dit qu'elle ne diagnostique rien.",
-      "settled": false
     },
     {
       "slug": "2026-08-01-penurie-memoire-samsung",

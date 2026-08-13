@@ -1,0 +1,226 @@
+{
+  "slug": "2026-08-13-twitch-entraine-ia-amazon",
+  "centralClaim": "Twitch uses streamers' content to train Amazon's generative AI models by default.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
+      "quote": "the streaming platform twitch will now use creators' content to help train generative ai models for its parent company, amazon. this move has inspired swift and concentrated backlash from the twitch community, especially because creators are opted in to having their content used for this ai training by default."
+    },
+    {
+      "url": "https://www.engadget.com/2235647/twitch-streamers-can-now-refuse-to-let-amazon-train-its-gen-ai-models-on-their-content/",
+      "quote": "twitch has updated its account settings to let streamers opt out of letting amazon (twitch's parent) train generative ai models on their content."
+    }
+  ],
+  "sendTest": "Twitch entraîne l'IA d'Amazon avec les vidéos des streamers, activé par défaut. Le patron produit : si c'était sur demande, personne ne le ferait.",
+  "caption": "Tes directs, tes extraits et ton chat entraînent l'IA d'Amazon, et c'était activé sans te prévenir.\n\nTwitch, qui appartient à Amazon, s'est mis à utiliser le contenu des créateurs pour entraîner des modèles d'IA générative. L'option est active par défaut : il faut aller la couper soi-même. Interrogé en direct sur la raison, le directeur produit Mike Minton a répondu que si c'était sur demande, personne ne le ferait, donc que ce serait activé par défaut. Il parlait devant près de 3 000 utilisateurs en colère.\n\nLe détail qui n'a pas tenu dans la vidéo. Ce qui peut servir à l'entraînement, c'est tout ce qu'il y a sur la chaîne : les directs, les rediffusions, les extraits, les chats, les images et les textes. Pour Amazon, ces enregistrements valent cher : des milliers d'heures de son et d'image.\n\nComment couper. Réglages, onglet sécurité et confidentialité, tout en bas de la page, un bouton nommé training for generative ai. Attention : si tu écris dans le chat d'une autre personne, c'est son réglage à elle qui décide, pas le tien.\n\nEt Twitch n'est pas un cas isolé. Meta utilise déjà les contenus publics de ses plateformes pour entraîner ses propres modèles : si tes comptes Facebook et Instagram sont publics, tes données ont probablement déjà servi.\n\nActivé par défaut, c'est acceptable ou non ?\n\ntechcrunch.com · kotaku.com · engadget.com · pcgamer.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Twitch #Amazon",
+  "captionEvidence": [
+    {
+      "quote": "in a stream on the official twitch channel, twitch head of community mary kish and chief product officer mike minton addressed a live audience of nearly 3,000 aggrieved users, many of whom were posting anti-ai sentiments in the chat.",
+      "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/"
+    },
+    {
+      "quote": "this same faq page also makes it clear that every part of a twitch channel can be used for training amazon ai models. this includes streams, vods, clips, chats, pictures, and text on your channel.",
+      "url": "https://kotaku.com/twitch-is-now-using-your-content-to-train-amazon-ai-models-and-has-hidden-the-option-to-opt-out-2000723891"
+    },
+    {
+      "quote": "just go to the \"security and privacy\" tab in your twitch settings, then scroll down to the bottom where you'll see the \"training for generative ai\" toggle.",
+      "url": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/"
+    },
+    {
+      "quote": "meta, for example, uses public content from its platforms to train its own ai models, meaning that if your facebook and instagram accounts are public, then your data has probably already been used for meta's ai training.",
+      "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Twitch",
+      "headline": "Tes directs entraînent l'IA d'Amazon, *par défaut*",
+      "hero": {
+        "value": "3 000",
+        "label": "utilisateurs en colère écoutaient les dirigeants en direct"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "3 000",
+      "unit": "utilisateurs en colère, en direct",
+      "body": "C'est devant eux que les dirigeants de Twitch ont **justifié** le choix.",
+      "evidence": "in a stream on the official twitch channel, twitch head of community mary kish and chief product officer mike minton addressed a live audience of nearly 3,000 aggrieved users, many of whom were posting anti-ai sentiments in the chat.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
+        "date": "2026-08-12"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "if it was opt-in, nobody would opt-in. um, that's honestly the answer. so it's going to be on by default.",
+      "attribution": "Mike Minton, directeur produit de Twitch, en direct",
+      "evidence": "if it was opt-in, nobody would opt-in. um, that's honestly the answer. so it's going to be on by default.",
+      "source": {
+        "name": "Kotaku",
+        "url": "https://kotaku.com/twitch-is-now-using-your-content-to-train-amazon-ai-models-and-has-hidden-the-option-to-opt-out-2000723891",
+        "date": "2026-08-12"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Tout ce qu'il y a sur la chaîne",
+      "body": "Les directs, les rediffusions, les extraits, les chats, les images, les textes. *Tout* peut servir.",
+      "evidence": "this same faq page also makes it clear that every part of a twitch channel can be used for training amazon ai models. this includes streams, vods, clips, chats, pictures, and text on your channel.",
+      "source": {
+        "name": "Kotaku",
+        "url": "https://kotaku.com/twitch-is-now-using-your-content-to-train-amazon-ai-models-and-has-hidden-the-option-to-opt-out-2000723891",
+        "date": "2026-08-12"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi Amazon y tient",
+      "body": "Des **milliers d'heures** de son et d'image, déjà enregistrées, prêtes à nourrir des modèles.",
+      "evidence": "for amazon, these stream recordings are incredibly valuable, offering thousands of hours of audio and video content to help train ai models.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
+        "date": "2026-08-12"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Tu coupes l'option, et tu es tranquille.",
+      "caveat": "Pas dans le chat des autres. C'est le réglage de la personne qui reçoit qui décide.",
+      "claimLabel": "Ce qu'on croit",
+      "caveatLabel": "Ce que dit la page d'aide",
+      "evidence": "if you take part in another streamer's chat, their settings will dictate whether what you post there is used for genai training.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2235647/twitch-streamers-can-now-refuse-to-let-amazon-train-its-gen-ai-models-on-their-content/",
+        "date": "2026-08-12"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où se trouve le bouton",
+      "body": "Réglages, onglet sécurité et confidentialité, *tout en bas* de la page.",
+      "evidence": "just go to the \"security and privacy\" tab in your twitch settings, then scroll down to the bottom where you'll see the \"training for generative ai\" toggle.",
+      "source": {
+        "name": "PC Gamer",
+        "url": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/",
+        "date": "2026-08-12"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et ce n'est pas que Twitch",
+      "body": "Meta utilise déjà les contenus publics de ses plateformes. Si tes comptes sont publics, *c'est probablement déjà fait*.",
+      "evidence": "meta, for example, uses public content from its platforms to train its own ai models, meaning that if your facebook and instagram accounts are public, then your data has probably already been used for meta's ai training.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
+        "date": "2026-08-12"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui poste ses vidéos en ligne",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
+      "accessed": "2026-08-13"
+    },
+    {
+      "name": "Kotaku",
+      "url": "https://kotaku.com/twitch-is-now-using-your-content-to-train-amazon-ai-models-and-has-hidden-the-option-to-opt-out-2000723891",
+      "accessed": "2026-08-13"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/2235647/twitch-streamers-can-now-refuse-to-let-amazon-train-its-gen-ai-models-on-their-content/",
+      "accessed": "2026-08-13"
+    },
+    {
+      "name": "PC Gamer",
+      "url": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/",
+      "accessed": "2026-08-13"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Tes directs entraînent l'IA d'Amazon",
+    "beats": [
+      {
+        "script": "Si tu streames sur Twitch, tes vidéos servent maintenant à entraîner l'IA d'Amazon. Personne ne t'a demandé ton avis : c'était déjà activé sur ton compte.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a small red recording light glowing on a dark video camera",
+            "action": "slowly rotating in place, the recording light staying whole and in frame",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up from below"
+          }
+        }
+      },
+      {
+        "script": "Et le plus dingue, c'est la raison. Elle n'a pas fuité, elle n'a pas été devinée : le directeur produit de Twitch l'a dite lui-même, en direct, devant les streamers en colère.",
+        "visual": {
+          "type": "card",
+          "value": "3 000",
+          "label": "utilisateurs en colère écoutaient le direct"
+        }
+      },
+      {
+        "script": "Si c'était sur demande, personne ne le ferait. Voilà la réponse honnête. Donc ce sera activé par défaut. Ce sont ses mots à lui, en direct.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.engadget.com/2235647/twitch-streamers-can-now-refuse-to-let-amazon-train-its-gen-ai-models-on-their-content/"
+        }
+      },
+      {
+        "script": "Twitch appartient à Amazon. Et pour Amazon, ces enregistrements valent de l'or : des milliers d'heures de son et d'image, déjà là, prêtes à nourrir ses modèles.",
+        "visual": {
+          "type": "photo",
+          "query": "twitch streamer",
+          "alt": "Un streamer devant son écran"
+        }
+      },
+      {
+        "script": "Ce qui part dedans, c'est tout. Tes directs, tes rediffusions, tes extraits, ton chat, tes images, tes textes.",
+        "visual": {
+          "type": "card",
+          "value": "tout",
+          "label": "directs, rediffusions, extraits, chats, images, textes"
+        }
+      },
+      {
+        "script": "Et tu peux couper, sauf que ça ne te protège pas partout. Si tu écris dans le chat de quelqu'un qui n'a rien désactivé, ton message part quand même.",
+        "visual": {
+          "type": "photo",
+          "query": "keyboard typing",
+          "alt": "Des mains qui tapent un message au clavier"
+        }
+      },
+      {
+        "script": "Pour le couper vraiment, il faut ouvrir tes réglages, aller dans sécurité et confidentialité, et descendre tout en bas de la page.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/"
+        }
+      },
+      {
+        "script": "Et Twitch n'est pas un cas isolé. Meta se sert déjà des contenus publics de ses plateformes. Si tes comptes Facebook et Instagram sont publics, c'est probablement déjà fait. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "webcam",
+          "alt": "Une webcam posée sur un bureau"
+        }
+      }
+    ]
+  }
+}
