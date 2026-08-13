@@ -206,14 +206,19 @@
         "script": "Et tu peux couper, sauf que ça ne te protège pas partout. Si tu écris dans le chat de quelqu'un qui n'a rien désactivé, ton message part quand même.",
         "visual": {
           "type": "screenshot",
-          "url": "https://kotaku.com/twitch-is-now-using-your-content-to-train-amazon-ai-models-and-has-hidden-the-option-to-opt-out-2000723891"
+          "url": "https://kotaku.com/twitch-is-now-using-your-content-to-train-amazon-ai-models-and-has-hidden-the-option-to-opt-out-2000723891",
+          "file": "media/2026-08-13-twitch-entraine-ia-amazon/shot_5.png"
         }
       },
       {
         "script": "Pour le couper vraiment, il faut ouvrir tes réglages, aller dans sécurité et confidentialité, et descendre tout en bas de la page.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/"
+          "type": "image",
+          "spec": {
+            "subject": "a printed account settings page filled with a single column of numbers",
+            "setting": "lying flat under a desk lamp",
+            "composition": "extreme close-up, the page fills the entire frame"
+          }
         }
       },
       {
