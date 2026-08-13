@@ -1019,6 +1019,18 @@ ENTRIES:
   depuis Commons ce jour-la, et stocksnap ne sert que du 960 px (crop 9:16 -> x3, trop
   mou pour un visage). Consequence assumee: le Reel du jour est parti sans aucun visage
   humain. Un scout qui ne pin pas laisse une mine au run de publication.
+  Ajout 13/08 (16h30), LA MINE A EXPLOSE, et c'est la meme journee: le 2e spec banque le
+  matin portait TROIS beats photo, et les trois etaient injouables a 16h30. "keyboard
+  typing" est la requete morte mesuree a 10h30 (elle aurait tue le build a
+  l'acquisition); "writing papers" ne rend que du stocksnap 960 px (crop 9:16 -> x3);
+  et "woman podcast" met PREMIER a 8.0 un portrait Commons de particuliere sans aucun
+  rapport avec le sujet (Adela Cojab Moadeb, 1600x2133) -- famille du selfie
+  ReconNathan du matin, sauf que la requete ne nomme meme pas la plateforme.
+  commons.wikimedia.org/w/api.php a re-rendu 503 deux fois de suite (re-confirme le
+  12/08). Les trois beats ont ete convertis en veo (beat 0) + 2 stills generees, Reel
+  parti sans visage humain pour le 2e Reel d'affilee. REGLE POUR UN SCOUT: un beat
+  `photo` non epingle n'est pas un plan, c'est un pari; si upload.wikimedia etrangle,
+  banque des `card` et des recus a la place et dis-le dans le spec.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -1041,6 +1053,14 @@ ENTRIES:
   coute 2 minutes, un build refuse apres narration coute la fenetre de publication. Donc
   relance `validate.mjs window` et RECOMPTE les mots d'un spec herite avant de payer, meme
   quand il est PASSED: un spec gate-clean ecrit au plafond reste un spec a risque.
+  Ajout 13/08 (16h30), ET MEME A LA CIBLE LES RE-ROLLS ARRIVENT: 211 mots pour une
+  fenetre 197-225 (cible 209), donc 2 mots au-dessus de la cible, et il a quand meme
+  fallu TROIS lectures (3,27 puis 3,45 puis 3,49 mots/s) la ou le registre annoncait
+  3,756 sur 12 lectures. Cout $0,093 au lieu de $0,030, et ~2 min. Le moteur fait son
+  travail (il rachete tout seul jusqu'a 3) et le build est passe, mais budgete le temps:
+  un run de publication qui demarre a moins de 20 min de sa fenetre ne doit pas
+  supposer une lecture unique. Et ne reecris pas le script pour ca, c'est le des du
+  31/07, pas ta copie.
 - 2026-07-31 · `revisit` est le troisieme outcome de recordSeen: bonne
   histoire bloquee par le temps (pas encore corroboree, primaire
   injoignable), revient au bout de 6h au lieu de 36h. Ne mets `considered`
@@ -1396,7 +1416,20 @@ ENTRIES:
   capture-le en scout et pin-le; (2) apres avoir tue un build, REGARDE ce qui est sur le
   disque avant de reecrire le spec, le fichier peut arriver apres le kill (ici il a rendu
   au beat 6 son vrai recu au lieu d'une still generee).
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08.
+  Ajout 13/08 (16h30), DEUX RECUS MESURES EN MOTEUR sur le dossier filigrane Claude.
+  techtimes.com se capture PROPREMENT du premier coup, ~1,5 min, sans recadrage:
+  masthead TECH TIMES, fil d'Ariane, titre entier sur 4 lignes, chapo, signature et
+  date. C'est le recu leger a prendre sur ce genre d'actu. searchenginejournal.com se
+  capture vite AUSSI mais porte DEUX plomberies que les deux passes de consentement ne
+  retirent pas: un encart webinar plein cadre en HAUT ("JOIN US / The 3-Part GEO
+  Strategy... / Register Now" + une croix) ET un bandeau pub violet coince ENTRE le
+  masthead et le chapeau. Les deux etaient visibles en plein cadre au rendu.
+  `crop=1290:1600:0:1000` les coupe TOUS LES DEUX et garde le chapeau vert "SEJ · AI
+  Search" (qui identifie la source a lui seul), le titre entier, et surtout le bloc
+  "Highlights" dont les puces portent l'histoire ET sa nuance ("Marks can appear on
+  human writing that Claude only edited or translated"). Sur SEJ, ne garde donc PAS le
+  masthead: le recadrage qui commence sous la pub est meilleur recu que la page entiere.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
