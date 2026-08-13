@@ -153,9 +153,13 @@
       {
         "script": "Tout ce que Claude écrit pour toi porte maintenant une marque invisible. Claude, c'est l'IA d'Anthropic, et cette marque reste dans le texte même quand tu le copies-colles ailleurs.",
         "visual": {
-          "type": "photo",
-          "query": "keyboard typing",
-          "alt": "Des mains sur un clavier d'ordinateur"
+          "type": "veo",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of invisible watermark code",
+            "action": "the column of code scrolling slowly upward, the screen staying whole and in frame",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
         }
       },
       {
@@ -178,9 +182,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a laptop screen filled with a single column of invisible watermark code",
-            "setting": "in a bright room in daylight",
-            "composition": "extreme close-up, the screen fills the entire frame"
+            "subject": "a printed page filled with columns of watermark code",
+            "setting": "lying flat under a desk lamp",
+            "composition": "extreme close-up, the page fills the entire frame"
           }
         }
       },
@@ -202,17 +206,23 @@
       {
         "script": "Et dans l'autre sens, une marque détectée ne prouve pas que Claude a rédigé ton texte. Elle dit seulement qu'il a pu passer par là.",
         "visual": {
-          "type": "photo",
-          "query": "writing papers",
-          "alt": "Une personne qui écrit à la main sur des feuilles"
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of watermark detection scores",
+            "setting": "in a bright room in daylight",
+            "composition": "medium shot, the screen tilted away from the camera"
+          }
         }
       },
       {
         "script": "OpenAI avait le même projet et l'a abandonné en 2024. Son propre sondage disait que près de 30% des utilisateurs de ChatGPT s'en serviraient moins. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "photo",
-          "query": "woman podcast",
-          "alt": "Une personne devant un ordinateur portable"
+          "type": "image",
+          "spec": {
+            "subject": "a printed survey page filled with columns of percentages",
+            "setting": "lying on a dark table",
+            "composition": "extreme close-up, the page fills the entire frame"
+          }
         }
       }
     ]
