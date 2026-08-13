@@ -1004,6 +1004,21 @@ ENTRIES:
   l'hote de fichiers se depense en une poignee de requetes. Les 2 specs banques ce
   jour-la sont partis SANS pins pour cette raison, avec l'avertissement au run de
   publication de REGARDER photo_N.jpg.
+  Ajout 13/08 (10h30), LA REGLE QUI MANQUAIT CI-DESSUS, ET ELLE A COUTE DEUX BUILDS:
+  UNE VALEUR SURE DE CE CARNET QUI VIENT AVEC UN CROP N'EST SURE QUE PINNEE. Le moteur
+  acquiert l'image ENTIERE, jamais ton crop, donc "elderly woman phone window" (valeur
+  sure du 09/08, crop=4140:7360:772:0) est revenue a 50% de quasi-blanc sur SES DEUX URL
+  (original ET thumb 1920px) et a tue le build a l'acquisition: c'est la fenetre derriere
+  elle qui est blanche, et le crop du 09/08 existait precisement pour ca. Ne relis jamais
+  une valeur sure a crop comme une requete utilisable: telecharge et pin, ou change de
+  surface. REQUETE MORTE mesuree le meme jour: "keyboard typing", 5 candidats sur 5
+  refuses a 39-88% de quasi-blanc (tous stocksnap). ET L'ETRANGLEMENT upload.wikimedia
+  du 13/08 06h30 S'ETEND AUX THUMBS: avec l'UA descriptif, l'original ET
+  .../thumb/.../1920px-....jpg rendent tous deux la page "Wikimedia Error" de 2,2 ko,
+  non retablie en 10 min. Un run de publication ne peut donc PAS reparer un beat photo
+  depuis Commons ce jour-la, et stocksnap ne sert que du 960 px (crop 9:16 -> x3, trop
+  mou pour un visage). Consequence assumee: le Reel du jour est parti sans aucun visage
+  humain. Un scout qui ne pin pas laisse une mine au run de publication.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -1018,6 +1033,14 @@ ENTRIES:
   reecrire. Et epingle avec `file` tout ce qui est deja sur le disque
   (shot_N.png, photo_N.jpg) avant de relancer: le 2e build n'a rachete qu'une
   narration ($0,03) au lieu de toutes les images. Proof: run 15h 02/08.
+  Ajout 13/08 (10h30), LA CONTRE-EPREUVE, et elle vaut pour tout run de publication qui
+  herite d'un spec de scout: le spec banque faisait 219 mots pour une fenetre 194-222,
+  soit 3 mots sous le PLAFOND. Ramene a 205 (cible 206) avant le premier build, la
+  PREMIERE lecture est passee: 205 mots en 54,6 s (3,75 mots/s), atempo 0,983. A 219 la
+  meme lecture demandait ~1,05, et une lecture 5% plus lente tapait le clamp 1,12. Le trim
+  coute 2 minutes, un build refuse apres narration coute la fenetre de publication. Donc
+  relance `validate.mjs window` et RECOMPTE les mots d'un spec herite avant de payer, meme
+  quand il est PASSED: un spec gate-clean ecrit au plafond reste un spec a risque.
 - 2026-07-31 · `revisit` est le troisieme outcome de recordSeen: bonne
   histoire bloquee par le temps (pas encore corroboree, primaire
   injoignable), revient au bout de 6h au lieu de 36h. Ne mets `considered`
@@ -1356,7 +1379,24 @@ ENTRIES:
   notification. techradar.com est de la famille O(frames) du 06/08 en PIRE: tue apres
   20 min sans avoir ecrit un fichier (4 frames au goto pourtant). Traite-le comme une
   source, jamais comme un recu.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08.
+  Ajout 13/08 (10h30), TROIS RECUS MESURES EN MOTEUR sur le dossier Twitch/Amazon, et le
+  plus lent est le meilleur. engadget.com se capture en ~1 min mais porte en bas une PUB
+  FLOTTANTE (encart "Covered California" avec sa croix de fermeture), non retiree par les
+  deux passes de consentement: `crop=1290:2250:0:0` la coupe et garde masthead, fil
+  d'Ariane, titre entier, chapo, signature et date. kotaku.com se capture en ~2 min et
+  porte DEUX plomberies, un encart pub lateral et la banniere rose "About Cookies on this
+  Site": `crop=1290:1600:0:0` coupe les deux et garde masthead, titre entier, tags,
+  signature, date et le visuel Twitch. pcgamer.com est de la famille O(frames) du 06/08
+  mais NE MEURT PAS comme techradar: il n'avait rien ecrit a 24 min, j'ai tue le build, et
+  son shot_6.png etait sur le disque a ~28 min, PROPRE du premier coup et sans banniere
+  cookies (masthead, "Software > AI", titre entier qui porte la citation Minton, tag News,
+  signature, chapo). `crop=1290:2300:0:0` enleve la barre "Follow us / Newsletter" du bas;
+  il reste une ligne d'affiliation minuscule, cosmetique. DEUX LECONS: (1) ne declare pas
+  un recu pcgamer mort a 20 min, mais ne le mets pas dans un build que tu veux rapide,
+  capture-le en scout et pin-le; (2) apres avoir tue un build, REGARDE ce qui est sur le
+  disque avant de reecrire le spec, le fichier peut arriver apres le kill (ici il a rendu
+  au beat 6 son vrai recu au lieu d'une still generee).
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
