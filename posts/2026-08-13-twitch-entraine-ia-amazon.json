@@ -213,12 +213,9 @@
       {
         "script": "Pour le couper vraiment, il faut ouvrir tes réglages, aller dans sécurité et confidentialité, et descendre tout en bas de la page.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a printed account settings page filled with a single column of numbers",
-            "setting": "lying flat under a desk lamp",
-            "composition": "extreme close-up, the page fills the entire frame"
-          }
+          "type": "screenshot",
+          "url": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/",
+          "file": "media/2026-08-13-twitch-entraine-ia-amazon/shot_6.png"
         }
       },
       {
