@@ -168,7 +168,7 @@
         }
       },
       {
-        "script": "Et le plus dingue, c'est la raison. Elle n'a pas fuité, elle n'a pas été devinée : le directeur produit de Twitch l'a dite lui-même, en direct, devant les streamers en colère.",
+        "script": "Et le plus dingue, c'est la raison. Le directeur produit de Twitch l'a dite lui-même, en direct, devant les streamers en colère.",
         "visual": {
           "type": "card",
           "value": "3 000",
@@ -176,7 +176,7 @@
         }
       },
       {
-        "script": "Si c'était sur demande, personne ne le ferait. Voilà la réponse honnête. Donc ce sera activé par défaut. Ce sont ses mots à lui, en direct.",
+        "script": "Si c'était sur demande, personne ne le ferait. Voilà la réponse honnête. Donc ce sera activé par défaut. Ce sont ses mots.",
         "visual": {
           "type": "screenshot",
           "url": "https://www.engadget.com/2235647/twitch-streamers-can-now-refuse-to-let-amazon-train-its-gen-ai-models-on-their-content/"
