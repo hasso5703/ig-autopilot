@@ -1409,6 +1409,14 @@ ENTRIES:
   generale: un echec de gate EN LOT (tous statuts identiques, tous domaines)
   se relance avant d'etre diagnostique; c'est un echec SELECTIF (une citation,
   un domaine) qui accuse vraiment le texte.
+  Ajout 13/08 (06h30), LE DECLENCHEUR EST MAINTENANT CONNU ET REPRODUCTIBLE:
+  gater DEUX specs a la suite suffit. Les deux specs banques ce jour-la partagent
+  techcrunch.com; lances dos a dos dans la meme boucle ils sont revenus REJECTED
+  2 erreurs et REJECTED 6 erreurs, alors que chacun rendait PASSED 0 erreur seul,
+  et re-rendait PASSED apres 30 s de pause. Donc quand un run porte plusieurs
+  specs (un scout qui en banque deux, un run de publication qui re-gate avant de
+  construire), ESPACE les gates d'au moins 30 s au lieu de les enchainer, et ne
+  lis jamais un premier lot rouge comme un verdict sur le texte.
   Ajout 08/08 (19h30), LA VIRGULE DECIMALE FRANCAISE NE MATCHE PAS LE POINT DE
   LA SOURCE, mesure sur 3 chiffres d'un coup. Ecrit "16,8 milliards" / "6,5
   millions" / "2,8 milliards" la ou les sources ecrivent "$16.8 billion" /
