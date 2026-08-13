@@ -179,7 +179,8 @@
         "script": "Si c'était sur demande, personne ne le ferait. Voilà la réponse honnête. Donc ce sera activé par défaut. Ce sont ses mots.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.engadget.com/2235647/twitch-streamers-can-now-refuse-to-let-amazon-train-its-gen-ai-models-on-their-content/"
+          "url": "https://www.engadget.com/2235647/twitch-streamers-can-now-refuse-to-let-amazon-train-its-gen-ai-models-on-their-content/",
+          "file": "media/2026-08-13-twitch-entraine-ia-amazon/shot_2.png"
         }
       },
       {
@@ -204,9 +205,8 @@
       {
         "script": "Et tu peux couper, sauf que ça ne te protège pas partout. Si tu écris dans le chat de quelqu'un qui n'a rien désactivé, ton message part quand même.",
         "visual": {
-          "type": "photo",
-          "query": "keyboard typing",
-          "alt": "Des mains qui tapent un message au clavier"
+          "type": "screenshot",
+          "url": "https://kotaku.com/twitch-is-now-using-your-content-to-train-amazon-ai-models-and-has-hidden-the-option-to-opt-out-2000723891"
         }
       },
       {
