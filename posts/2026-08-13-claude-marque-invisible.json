@@ -154,6 +154,7 @@
         "script": "Tout ce que Claude écrit pour toi porte maintenant une marque invisible. Claude, c'est l'IA d'Anthropic, et cette marque reste dans le texte même quand tu le copies-colles ailleurs.",
         "visual": {
           "type": "veo",
+          "file": "media/2026-08-13-claude-marque-invisible/veo_0.mp4",
           "spec": {
             "subject": "a laptop screen filled with a single column of invisible watermark code",
             "action": "the column of code scrolling slowly upward, the screen staying whole and in frame",
@@ -174,6 +175,7 @@
         "script": "Anthropic l'écrit noir sur blanc. Quand un modèle Claude génère du texte, il tisse un filigrane imperceptible directement dedans. Tu ne le vois pas, et ça ne change ni le sens ni la qualité.",
         "visual": {
           "type": "screenshot",
+          "file": "media/2026-08-13-claude-marque-invisible/shot_2.png",
           "url": "https://www.techtimes.com/articles/323873/20260811/claude-now-watermarks-text-everywhere-mark-proves-processing-not-authorship.htm"
         }
       },
@@ -181,6 +183,7 @@
         "script": "Et le filigrane fait partie du texte. Donc il voyage avec lui quand tu le colles dans un devoir, un rapport, un mail.",
         "visual": {
           "type": "image",
+          "file": "media/2026-08-13-claude-marque-invisible/still_3.jpg",
           "spec": {
             "subject": "a printed page filled with columns of watermark code",
             "setting": "lying flat under a desk lamp",
@@ -200,6 +203,7 @@
         "script": "Sauf que. La marque peut atterrir sur du texte que tu as écrit toi-même. Anthropic le dit : une relecture, une traduction, un résumé suffisent.",
         "visual": {
           "type": "screenshot",
+          "file": "media/2026-08-13-claude-marque-invisible/shot_5_crop.png",
           "url": "https://www.searchenginejournal.com/anthropic-claude-watermarks-eu-ai-act-code/585355/"
         }
       },
@@ -210,7 +214,7 @@
           "spec": {
             "subject": "a laptop screen filled with a single column of watermark detection scores",
             "setting": "in a bright room in daylight",
-            "composition": "medium shot, the screen tilted away from the camera"
+            "composition": "extreme close-up, the screen fills the entire frame"
           }
         }
       },
@@ -218,6 +222,7 @@
         "script": "OpenAI avait le même projet et l'a abandonné en 2024. Son propre sondage disait que près de 30% des utilisateurs de ChatGPT s'en serviraient moins. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "image",
+          "file": "media/2026-08-13-claude-marque-invisible/still_7.jpg",
           "spec": {
             "subject": "a printed survey page filled with columns of percentages",
             "setting": "lying on a dark table",

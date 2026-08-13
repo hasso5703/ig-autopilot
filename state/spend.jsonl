@@ -161,3 +161,11 @@
 {"at":"2026-08-13T11:40:57.439Z","slug":"2026-08-13-twitch-entraine-ia-amazon","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
 {"at":"2026-08-13T11:41:11.321Z","slug":"2026-08-13-twitch-entraine-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1216}
 {"at":"2026-08-13T11:41:23.197Z","slug":"2026-08-13-twitch-entraine-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1289}
+{"at":"2026-08-13T16:50:26.184Z","slug":"2026-08-13-claude-marque-invisible","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"64.5s Sadaltager","usd":0.0323}
+{"at":"2026-08-13T16:50:58.436Z","slug":"2026-08-13-claude-marque-invisible","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.1s Sadaltager","usd":0.0306}
+{"at":"2026-08-13T16:51:28.034Z","slug":"2026-08-13-claude-marque-invisible","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"60.4s Sadaltager","usd":0.0302}
+{"at":"2026-08-13T16:58:07.720Z","slug":"2026-08-13-claude-marque-invisible","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-13T16:58:19.614Z","slug":"2026-08-13-claude-marque-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1333}
+{"at":"2026-08-13T16:58:30.670Z","slug":"2026-08-13-claude-marque-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1295}
+{"at":"2026-08-13T16:58:43.623Z","slug":"2026-08-13-claude-marque-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1379}
+{"at":"2026-08-13T17:03:36.209Z","slug":"2026-08-13-claude-marque-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1209}

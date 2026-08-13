@@ -61,3 +61,6 @@
 {"at":"2026-08-12T10:50:20.486Z","slug":"2026-08-12-metro-londres-visages","words":199,"seconds":52.92,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":0.2}
 {"at":"2026-08-12T16:50:38.965Z","slug":"2026-08-12-montre-tension-google","words":214,"seconds":53.8,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-1}
 {"at":"2026-08-13T10:44:17.596Z","slug":"2026-08-13-twitch-entraine-ia-amazon","words":205,"seconds":54.64,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.4}
+{"at":"2026-08-13T16:50:26.335Z","slug":"2026-08-13-claude-marque-invisible","words":211,"seconds":64.52,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-1.6}
+{"at":"2026-08-13T16:50:58.559Z","slug":"2026-08-13-claude-marque-invisible","words":211,"seconds":61.12,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":false,"declineDb":-1.7}
+{"at":"2026-08-13T16:51:28.171Z","slug":"2026-08-13-claude-marque-invisible","words":211,"seconds":60.44,"voice":"Sadaltager","lang":"fr","attempt":3,"accepted":true,"declineDb":1.7}
