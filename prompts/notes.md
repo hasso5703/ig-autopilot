@@ -348,6 +348,28 @@ ENTRIES:
   valent l'article: c'est la que Google ecrit que ses mesures ne sont "not a prescreener
   for diabetes and hypertension" et que la detection d'urgence "has not been cleared or
   evaluated by the FDA". Le retournement du Reel etait entierement dans les footnotes.
+  Ajout 13/08 (06h30), LE DOMAINE QUI REPOND 200 PUIS 403 AU HASARD, et c'est un
+  piege different du 403 franc: theregister.com a rendu 200 puis 403 sur QUATRE
+  fetchs gate consecutifs (3 x 403, 1 x 200, mesure directe), et son texte aplati
+  ne fait que 9,3 ko avec le corps entrecoupe de blocs promo. Un spec bati dessus
+  est donc passe PASSED, puis REJECTED "quote does not appear", puis UNVERIFIABLE
+  403, puis PASSED, sans qu'une ligne bouge. Ce n'est ni la toux reseau du 06/08
+  (elle frappe TOUS les domaines a la fois) ni une reecriture d'article: c'est UN
+  domaine qui limite le debit. Regle: si le MEME domaine alterne 200/403 sur des
+  relances espacees, ne le garde pas dans un spec que tu banques pour un run 3 h
+  plus tard, remplace-le. Purge faite ce jour-la, spec claude-marque-invisible
+  rebati sur techtimes. Rendent 200 et se gatent DU PREMIER COUP ce jour-la:
+  searchenginejournal.com, techtimes.com, kotaku.com (nouveaux), engadget.com et
+  pcgamer.com (re-confirmes), techcrunch.com (re-confirme). interestingengineering.com
+  rend 200 aussi. euronews.com est INSTABLE: 200 au premier fetch, puis "dns
+  resolution failure" 4 fois de suite, puis 503 sur sa page d'accueil. ET DEUX
+  PRIMAIRES INTROUVABLES, a savoir avant de perdre 20 min: anthropic.com/news rend
+  200 mais son index est rendu en JS et ne liste PAS l'annonce du jour, les trois
+  chemins RSS (/news/rss.xml, /rss.xml, /news/feed.xml) rendent 404, et
+  sitemap.xml (255 URL /news/) ne la porte pas non plus; help.twitch.tv est un
+  portail Salesforce qui rend "twitch help portal loading x sorry to interrupt css
+  error refresh" au fetch, donc la page d'aide Twitch est INGATABLE. Sur ces deux
+  dossiers le primaire n'existe pas d'ici: batis sur la presse et dis-le.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
@@ -963,6 +985,25 @@ ENTRIES:
   "silkie carlo" et "demis hassabis" restent a 0 candidat. api.openverse.org a rendu
   503 deux fois de suite sur deux requetes avant de repartir seul, ca re-confirme
   l'entree du 29/07: reessaie, ne debogue pas.
+  Ajout 13/08 (06h30), UNE FAMILLE DE PIEGE PHOTO NOUVELLE, LE SELFIE DE PARTICULIER:
+  "twitch streamer" met PREMIER a 8.0 "Twtitch Streamer ReconNathan" (Commons, CC0,
+  3072x4080 DEJA EN PORTRAIT, 0% de blanc) et c'est un SELFIE D'ADOLESCENT MASQUE
+  (cagoule noire) devant un mur de briques: rien du streaming dans le cadre, et un
+  particulier identifiable qu'un compte d'info n'a aucune raison de montrer. Licence,
+  taille, ratio et filtre fond-blanc le laissent passer, le classement le met en tete:
+  SEULE la planche-contact le voit. C'est une famille de plus que l'epoque (CDC 7600),
+  la marque (Augmentin), la carte (natural gas power plant) et l'illustration
+  (Goodsell). Reflexe: sur une actu de PLATEFORME, ne cherche pas "<plateforme>
+  <metier>", tu tombes sur les selfies que les gens ont televerses. Ecarte aussi
+  "webcam": le 1er candidat s'appelle "Webcam (Logitech c922)", donc la marque est
+  DANS le sujet (famille Augmentin). EXTENSION DE LA LIMITE upload.wikimedia du
+  10/08: l'UA descriptif ne suffit plus a lui seul. UN original telecharge, puis les
+  TROIS suivants ont rendu la page "Wikimedia Error" de 2 ko malgre 5 s puis 20 s
+  d'attente, et ca ne s'est pas retabli en 10 min. Donc un scout qui veut epingler
+  doit telecharger EN PREMIER, avant le reste du travail, pas a la fin: le budget de
+  l'hote de fichiers se depense en une poignee de requetes. Les 2 specs banques ce
+  jour-la sont partis SANS pins pour cette raison, avec l'avertissement au run de
+  publication de REGARDER photo_N.jpg.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /

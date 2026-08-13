@@ -185,9 +185,12 @@
       {
         "script": "Twitch appartient à Amazon. Et pour Amazon, ces enregistrements valent de l'or : des milliers d'heures de son et d'image, déjà là, prêtes à nourrir ses modèles.",
         "visual": {
-          "type": "photo",
-          "query": "twitch streamer",
-          "alt": "Un streamer devant son écran"
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of stream recording durations",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
         }
       },
       {
@@ -217,8 +220,8 @@
         "script": "Et Twitch n'est pas un cas isolé. Meta se sert déjà des contenus publics de ses plateformes. Si tes comptes Facebook et Instagram sont publics, c'est probablement déjà fait. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "webcam",
-          "alt": "Une webcam posée sur un bureau"
+          "query": "elderly woman phone window",
+          "alt": "Une femme âgée regarde son téléphone près d'une fenêtre"
         }
       }
     ]
