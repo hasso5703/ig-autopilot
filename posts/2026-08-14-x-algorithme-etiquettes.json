@@ -151,7 +151,7 @@
           "type": "veo",
           "spec": {
             "subject": "a laptop screen filled with a single column of visibility labels",
-            "action": "the column of labels scrolling slowly upward, the screen staying whole and in frame",
+            "action": "the column of labels sliding slowly downward, the screen staying whole and in frame",
             "setting": "in a bright room in daylight",
             "composition": "extreme close-up, the screen fills the entire frame"
           }
@@ -178,7 +178,7 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a laptop screen filled with a single column of visibility label codes",
+            "subject": "a laptop screen filled with the source code of a content policy file",
             "setting": "in a bright room in daylight",
             "composition": "extreme close-up, the screen fills the entire frame"
           }
@@ -208,7 +208,7 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a laptop screen filled with a single column of json label data",
+            "subject": "a laptop screen filled with a single column of account data in json",
             "setting": "in a bright room in daylight",
             "composition": "extreme close-up, the screen fills the entire frame"
           }
