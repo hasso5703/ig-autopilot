@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-14T10:45:54.731Z",
-  "n": 33,
-  "nSettled": 27,
-  "medianViews": 173,
-  "medianRetentionPct": 21,
+  "at": "2026-08-14T16:52:49.264Z",
+  "n": 34,
+  "nSettled": 28,
+  "medianViews": 177,
+  "medianRetentionPct": 22,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -23,7 +23,7 @@
     },
     {
       "slug": "2026-08-09-motif-anti-cameras",
-      "views": 1143,
+      "views": 1144,
       "retentionPct": 25,
       "saved": 7,
       "shares": 0,
@@ -90,10 +90,10 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 15,
-      "medianViews": 190,
-      "meanRetentionPct": 25.9,
-      "saves": 24,
+      "n": 16,
+      "medianViews": 194,
+      "meanRetentionPct": 26.7,
+      "saves": 26,
       "shares": 5,
       "thin": false
     },
@@ -150,10 +150,10 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 1,
-      "medianViews": 538,
-      "meanRetentionPct": 25,
-      "saves": 1,
+      "n": 2,
+      "medianViews": 458,
+      "meanRetentionPct": 32,
+      "saves": 3,
       "shares": 1,
       "thin": true
     },
@@ -199,7 +199,7 @@
     },
     "19": {
       "n": 1,
-      "medianViews": 300,
+      "medianViews": 301,
       "meanRetentionPct": 23,
       "saves": 2,
       "shares": 0,
@@ -253,7 +253,7 @@
         "published": [
           {
             "slug": "2026-08-09-motif-anti-cameras",
-            "views": 1143
+            "views": 1144
           },
           {
             "slug": "2026-08-09-chatgpt-gratuit-illimite",
@@ -318,8 +318,8 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1195,
-      "reach": 1069,
+      "views": 1201,
+      "reach": 1071,
       "avgWatchS": 16.9,
       "retentionPct": 28,
       "likes": 9,
@@ -335,8 +335,8 @@
       "slug": "2026-08-09-motif-anti-cameras",
       "at": "2026-08-09T20:14:36.239Z",
       "hourUtc": 20,
-      "views": 1143,
-      "reach": 1038,
+      "views": 1144,
+      "reach": 1039,
       "avgWatchS": 15.1,
       "retentionPct": 25,
       "likes": 10,
@@ -434,6 +434,23 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Le métro de Londres scanne les visages des passagers depuis mardi. 530 000 visages déjà scannés dans les gares, zéro arrestation.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-13-twitch-entraine-ia-amazon",
+      "at": "2026-08-13T11:47:37.020Z",
+      "hourUtc": 11,
+      "views": 345,
+      "reach": 321,
+      "avgWatchS": 10.4,
+      "retentionPct": 17,
+      "likes": 4,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Twitch entraîne l'IA d'Amazon avec les vidéos des streamers, activé par défaut. Le patron produit : si c'était sur demande, personne ne le ferait.",
       "settled": false
     },
     {
@@ -454,29 +471,12 @@
       "settled": true
     },
     {
-      "slug": "2026-08-13-twitch-entraine-ia-amazon",
-      "at": "2026-08-13T11:47:37.020Z",
-      "hourUtc": 11,
-      "views": 324,
-      "reach": 302,
-      "avgWatchS": 10.6,
-      "retentionPct": 18,
-      "likes": 4,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Twitch entraîne l'IA d'Amazon avec les vidéos des streamers, activé par défaut. Le patron produit : si c'était sur demande, personne ne le ferait.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
       "at": "2026-08-06T19:59:50.589Z",
       "hourUtc": 19,
-      "views": 300,
-      "reach": 284,
-      "avgWatchS": 13.7,
+      "views": 301,
+      "reach": 285,
+      "avgWatchS": 13.8,
       "retentionPct": 23,
       "likes": 5,
       "comments": 1,
@@ -700,6 +700,25 @@
       ],
       "sendTest": "Quelqu'un peut prendre tes photos et en faire des images sexuelles. Le Minnesota vient d'interdire ces applis, et Musk a essayé de bloquer la loi.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-14-x-algorithme-etiquettes",
+      "at": "2026-08-14T11:00:39.149Z",
+      "hourUtc": 11,
+      "views": 138,
+      "reach": 126,
+      "avgWatchS": 8,
+      "retentionPct": 13,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
+      "settled": false
     },
     {
       "slug": "2026-08-05-waymo-dallas",
