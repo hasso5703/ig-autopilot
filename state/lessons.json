@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-14T16:52:49.264Z",
-  "n": 34,
-  "nSettled": 28,
-  "medianViews": 177,
-  "medianRetentionPct": 22,
+  "at": "2026-08-14T19:40:57.825Z",
+  "n": 35,
+  "nSettled": 29,
+  "medianViews": 173,
+  "medianRetentionPct": 21,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 16,
-      "medianViews": 194,
-      "meanRetentionPct": 26.7,
+      "n": 17,
+      "medianViews": 190,
+      "meanRetentionPct": 25.9,
       "saves": 26,
       "shares": 5,
       "thin": false
@@ -190,9 +190,9 @@
       "thin": false
     },
     "17": {
-      "n": 5,
-      "medianViews": 148,
-      "meanRetentionPct": 17.2,
+      "n": 6,
+      "medianViews": 139,
+      "meanRetentionPct": 16.7,
       "saves": 1,
       "shares": 0,
       "thin": false
@@ -318,9 +318,9 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1201,
-      "reach": 1071,
-      "avgWatchS": 16.9,
+      "views": 1210,
+      "reach": 1083,
+      "avgWatchS": 16.8,
       "retentionPct": 28,
       "likes": 9,
       "comments": 1,
@@ -440,9 +440,9 @@
       "slug": "2026-08-13-twitch-entraine-ia-amazon",
       "at": "2026-08-13T11:47:37.020Z",
       "hourUtc": 11,
-      "views": 345,
-      "reach": 321,
-      "avgWatchS": 10.4,
+      "views": 350,
+      "reach": 329,
+      "avgWatchS": 10.3,
       "retentionPct": 17,
       "likes": 4,
       "comments": 1,
@@ -683,6 +683,42 @@
       "settled": true
     },
     {
+      "slug": "2026-08-14-x-algorithme-etiquettes",
+      "at": "2026-08-14T11:00:39.149Z",
+      "hourUtc": 11,
+      "views": 146,
+      "reach": 134,
+      "avgWatchS": 8.5,
+      "retentionPct": 14,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-14-trois-ia-guerre-serveur",
+      "at": "2026-08-14T17:05:09.595Z",
+      "hourUtc": 17,
+      "views": 146,
+      "reach": 129,
+      "avgWatchS": 10.9,
+      "retentionPct": 18,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-02-xai-minnesota-nudification",
       "at": "2026-08-02T15:57:53.852Z",
       "hourUtc": 15,
@@ -700,25 +736,6 @@
       ],
       "sendTest": "Quelqu'un peut prendre tes photos et en faire des images sexuelles. Le Minnesota vient d'interdire ces applis, et Musk a essayé de bloquer la loi.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-14-x-algorithme-etiquettes",
-      "at": "2026-08-14T11:00:39.149Z",
-      "hourUtc": 11,
-      "views": 138,
-      "reach": 126,
-      "avgWatchS": 8,
-      "retentionPct": 13,
-      "likes": 1,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
-      "settled": false
     },
     {
       "slug": "2026-08-05-waymo-dallas",
@@ -752,7 +769,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Google a sorti une montre qui surveille ta tension sans brassard. Dans ses notes, elle dit qu'elle ne diagnostique rien.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
