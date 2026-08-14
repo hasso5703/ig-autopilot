@@ -169,18 +169,18 @@
         "script": "C'est Anthropic qui a lancé l'expérience, sur son propre modèle, Claude. Et ce qu'elles font ensuite est plus étrange encore.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.anthropic.com/research/multiagent-systems"
+          "file": "media/2026-08-14-trois-ia-guerre-serveur/shot_tc_crop.png",
+          "url": "https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/"
         }
       },
       {
         "script": "Chacune croit que les autres la bloquent exprès. Alors elles se coupent les accès, et lancent des programmes qui traquent et tuent ceux des voisines, en boucle.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a laptop screen filled with a single column of process numbers",
-            "setting": "in a bright room in daylight",
-            "composition": "extreme close-up, the screen fills the entire frame"
-          }
+          "type": "photo",
+          "query": "messy network server room wires patch panels",
+          "file": "media/2026-08-14-trois-ia-guerre-serveur/photo_server.jpg",
+          "credit": "Moses Cursor Ssebunya · CC0",
+          "alt": "Un panneau de brassage et des serveurs, cables emmeles"
         }
       },
       {
@@ -188,9 +188,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a printed migration report page filled with columns of numbers",
-            "setting": "lying flat under a desk lamp",
-            "composition": "extreme close-up, the page fills the entire frame"
+            "subject": "a laptop screen filled with a single column of process numbers",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
           }
         }
       },
@@ -205,8 +205,12 @@
       {
         "script": "Sauf que. Dans beaucoup de cas, elles s'arrêtent toutes seules. Elles écrivent un message d'excuses dans le projet, nettoient leur code malveillant, et demandent qu'un humain intervienne.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/"
+          "type": "image",
+          "spec": {
+            "subject": "a printed migration report page filled with columns of numbers",
+            "setting": "lying flat under a desk lamp",
+            "composition": "extreme close-up, the page fills the entire frame"
+          }
         }
       },
       {

@@ -607,7 +607,13 @@ ENTRIES:
   spec a donne REJECTED 4 erreurs puis PASSED 0 erreur sur deux lancements
   consecutifs, toutes les erreurs sur des URL pcgamer. Une citation qui revient
   NOT_FOUND en lot sur un seul domaine est un reseau qui tousse, pas un article
-  reecrit: relance avant de rouvrir la page.
+  reecrit: relance avant de rouvrir la page. Ajout 14/08 (06h30), LE MEME REFLEXE
+  VAUT POUR LE FLUX: feeds.mjs a rendu "FAIL 0/0 <- HTTP 503 after 8 tries" sur le
+  flux TechCrunch a 06h50, et un fetch Node direct du MEME flux 3 min plus tard a
+  rendu 200 et 20 items. Un FAIL TechCrunch dans le rapport de feeds.mjs n'est donc
+  pas la panne du jour, c'est la meme toux: relance le flux a la main avant de
+  planifier sans lui. Ce jour-la il portait LES DEUX histoires banquees, et le
+  rapport de collecte disait qu'il etait mort.
 - 2026-07-28 · Outlets edit articles after publication: TechCrunch changed
   "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
   Re-run validate.mjs on any stored spec before building from it; re-copy the
@@ -1031,6 +1037,21 @@ ENTRIES:
   parti sans visage humain pour le 2e Reel d'affilee. REGLE POUR UN SCOUT: un beat
   `photo` non epingle n'est pas un plan, c'est un pari; si upload.wikimedia etrangle,
   banque des `card` et des recus a la place et dis-le dans le spec.
+  Ajout 14/08 (06h30), NUANCE SUR L'ETRANGLEMENT upload.wikimedia: il ne frappe PAS
+  toujours les thumbs. L'ORIGINAL (Elon_Musk_2021.jpg) a rendu la page d'erreur de
+  2,2 ko des la PREMIERE requete du run, avec l'UA descriptif et aucun telechargement
+  anterieur, et le chemin /thumb/.../1280px-....jpg a rendu l'image entiere (273 ko,
+  1280x1708) dans la seconde qui a suivi. Avant de renoncer a un beat photo Commons,
+  essaie donc le thumb: le 13/08 les deux etaient etrangles, le 14/08 seul l'original
+  l'etait. Valeurs sures epinglees ce jour-la, regardees en planche-contact: "Elon
+  Musk 2021" (Ministerio Das Comunicacoes, CC BY 2.0, original 1531x2043, thumb
+  1280x1708), `crop=800:1422:240:0` donne un vrai portrait serre, contemporain, zero
+  texte, zero date, ET coupe le logo Tesla du pull qui est plus bas dans le cadre
+  (famille Augmentin du 08/08, evitee par le recadrage et pas par la chance); et
+  "A messy network server room showing wires, patch panels" (Moses Cursor Ssebunya,
+  CC0, pd.w.org 1542x2048 DEJA EN PORTRAIT, `crop=1152:2048:195:0`), un vrai panneau
+  de brassage, utile des qu'une histoire parle de machines partagees. pd.w.org n'est
+  pas etrangle et sert du 1542 px: c'est la porte de sortie quand Commons ferme.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -1429,7 +1450,26 @@ ENTRIES:
   "Highlights" dont les puces portent l'histoire ET sa nuance ("Marks can appear on
   human writing that Claude only edited or translated"). Sur SEJ, ne garde donc PAS le
   masthead: le recadrage qui commence sous la pub est meilleur recu que la page entiere.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08.
+  Ajout 14/08 (06h30), DEUX MESURES, ET LA PREMIERE EST UN PIEGE NEUF.
+  (1) anthropic.com/research/<slug> SE GATE VERT ET CAPTURE UNE AUTRE PAGE. Le
+  dossier turf war s'est gate 19/19 VERIFIED sur ce primaire, et le navigateur a
+  rendu DEUX FOIS de suite, a l'octet pres, la page "U.S. K-12 Data Processing
+  Agreement" (une page juridique de pied de site): titre net, zero pub, zero
+  banniere cookies, donc un recu parfaitement propre qui atteste une histoire qui
+  n'est pas la notre. Meme famille que thenextweb le 10/08, en pire: l'URL est la
+  BONNE et c'est le primaire. Sur une actu Anthropic, anthropic.com est une source,
+  jamais un recu. (2) NE LANCE JAMAIS DEUX CAPTURES EN PARALLELE dans ce conteneur:
+  engadget et techcrunch lances ensemble n'avaient rien ecrit apres 30 min, et
+  engadget relance SEUL a rendu en 5 min 34 (2 frames au goto), unite.ai seul en
+  24 s (1 frame). Les deux navigateurs se privent l'un l'autre; un scout qui veut
+  epingler plusieurs recus les fait a la queue leu leu. Recus mesures ce jour-la:
+  engadget.com propre du premier coup, `crop=1290:2293:0:0` enleve le filigrane
+  "AD" du bas et garde masthead + fil d'Ariane + titre entier + chapo + signature +
+  date + la photo; unite.ai propre en 24 s MAIS sa signature affiche "By Jonas
+  Reeve, Cognitive AI & AGI, AI Research Agent" (meme bemol que testingcatalog le
+  09/08, un article ecrit par une IA grave dans le recu d'un compte qui promet
+  l'inverse) et il date l'article du 12/08 alors que la recherche est du 13/08.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un

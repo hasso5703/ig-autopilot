@@ -169,7 +169,8 @@
         "script": "Et dans tes réglages arrive une page appelée Sous le capot. Tu télécharges un fichier, et il montre les étiquettes posées sur ton compte.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/"
+          "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/",
+          "file": "media/2026-08-14-x-algorithme-etiquettes/shot_2_crop.png"
         }
       },
       {
