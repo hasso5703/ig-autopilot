@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-14T06:51:31.230Z",
+  "at": "2026-08-14T10:45:54.731Z",
   "n": 33,
   "nSettled": 27,
   "medianViews": 173,
@@ -15,7 +15,7 @@
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
-      "views": 1232,
+      "views": 1233,
       "retentionPct": 26,
       "saved": 4,
       "shares": 3,
@@ -231,7 +231,7 @@
     }
   },
   "followers": {
-    "now": 16,
+    "now": 17,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -239,7 +239,7 @@
         "published": [
           {
             "slug": "2026-08-08-virus-ecrits-par-une-ia",
-            "views": 1232
+            "views": 1233
           },
           {
             "slug": "2026-08-08-facture-ia-salaries",
@@ -301,8 +301,8 @@
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "at": "2026-08-08T16:51:56.558Z",
       "hourUtc": 16,
-      "views": 1232,
-      "reach": 1107,
+      "views": 1233,
+      "reach": 1108,
       "avgWatchS": 15.6,
       "retentionPct": 26,
       "likes": 19,
@@ -313,6 +313,23 @@
       "themes": [],
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-13-claude-marque-invisible",
+      "at": "2026-08-13T17:16:15.024Z",
+      "hourUtc": 17,
+      "views": 1195,
+      "reach": 1069,
+      "avgWatchS": 16.9,
+      "retentionPct": 28,
+      "likes": 9,
+      "comments": 1,
+      "saved": 4,
+      "shares": 7,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
+      "settled": false
     },
     {
       "slug": "2026-08-09-motif-anti-cameras",
@@ -347,23 +364,6 @@
       "themes": [],
       "sendTest": "Le MacBook Air a pris 200 dollars et il est en rupture, parce que les boîtes d'IA rachètent toute la mémoire pour leurs centres de données.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-13-claude-marque-invisible",
-      "at": "2026-08-13T17:16:15.024Z",
-      "hourUtc": 17,
-      "views": 1120,
-      "reach": 982,
-      "avgWatchS": 17,
-      "retentionPct": 28,
-      "likes": 9,
-      "comments": 1,
-      "saved": 3,
-      "shares": 7,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
-      "settled": false
     },
     {
       "slug": "2026-08-08-facture-ia-salaries",
@@ -454,6 +454,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-13-twitch-entraine-ia-amazon",
+      "at": "2026-08-13T11:47:37.020Z",
+      "hourUtc": 11,
+      "views": 324,
+      "reach": 302,
+      "avgWatchS": 10.6,
+      "retentionPct": 18,
+      "likes": 4,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Twitch entraîne l'IA d'Amazon avec les vidéos des streamers, activé par défaut. Le patron produit : si c'était sur demande, personne ne le ferait.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
       "at": "2026-08-06T19:59:50.589Z",
       "hourUtc": 19,
@@ -469,23 +486,6 @@
       "themes": [],
       "sendTest": "Le directeur scientifique de Google s'en va après 27 ans, et le patron de son labo d'IA lâche les commandes le même jour. L'action a perdu 4%.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-13-twitch-entraine-ia-amazon",
-      "at": "2026-08-13T11:47:37.020Z",
-      "hourUtc": 11,
-      "views": 292,
-      "reach": 265,
-      "avgWatchS": 10.3,
-      "retentionPct": 17,
-      "likes": 4,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Twitch entraîne l'IA d'Amazon avec les vidéos des streamers, activé par défaut. Le patron produit : si c'était sur demande, personne ne le ferait.",
-      "settled": false
     },
     {
       "slug": "2026-08-02-google-earth-ia",
