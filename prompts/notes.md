@@ -591,6 +591,25 @@ ENTRIES:
   la formule "a single column of" du 10/08 passe. Imprime le vocabulaire ENTIER en
   10 s avant d'ecrire un spec: tokens(centralClaim + evidence) MOINS
   tokens(namedActors(...)), namedActors est exporte par validate.mjs, pas state.mjs.
+  Ajout 14/08 (16h30), FAMILLE DE PIEGE NEUVE, LE MOT TECHNIQUE QUI A UN SENS COURANT
+  PLUS GROS, et elle est plus dangereuse que toutes les precedentes parce qu'elle
+  passe TOUS les controles: gate vert, promptIssues vide, simplicityIssues vide,
+  vocabulaire ancre. Dossier trois IA / turf war: le spec "a printed MIGRATION report
+  page filled with columns of numbers" (l'histoire parle de migrer un backend Python
+  vers un autre langage) a rendu une page titree "MIGRATION REPORT 2023-2024" avec les
+  colonnes ORIGIN / DESTIN / AGE et les valeurs SYR, TUR, EUR: un tableau de MIGRATION
+  HUMAINE, refugies syriens vers la Turquie et l'Europe, lisible en plein cadre pendant
+  8,2 s sur une actu d'agents logiciels. Le modele d'image ne connait pas ton contexte,
+  il prend le sens majoritaire du mot. Rien ne le voit sauf le REGARD sur still_N.jpg.
+  Mots de cette famille a ne jamais mettre dans un spec sans y penser deux fois:
+  migration, deportation, asylum, execution, termination, kill, raid, strike, invasion,
+  attack, casualty, victim, refugee, native. Remede applique, $0,13 et un rebuild a
+  cout nul (narration + veo + 2 stills re-servies par leur .key): "a printed PROCESS LOG
+  page filled with columns of numbers" a rendu du premier coup des feuilles de releve
+  a colonnes TIMESTAMP / VALUE / STATUS, zero prose inventee, zero date qui vieillit.
+  Regle: quand le mot central de ton spec est un terme de metier, demande-toi ce que
+  Google Images en ferait, et prefere le mot le plus betement informatique (process,
+  log, script, code, terminal). Proof: run 16h30 14/08, still_5 refuse puis rachete.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
