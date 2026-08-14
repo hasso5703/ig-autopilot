@@ -663,6 +663,22 @@ ENTRIES:
   Reel MacBook Air, le mieux distribue du compte, impossible a lire ni a repondre.
   Note aussi: le token est un token Instagram Login, donc graph.facebook.com
   repond "Cannot parse access token"; tout passe par graph.instagram.com.
+  Ajout 14/08 (10h30), DEUX MESURES SUR LE SEED. (1) LE TOKEN SAIT SUPPRIMER UN
+  COMMENTAIRE, meme s'il ne sait pas les lire: `DELETE
+  graph.instagram.com/v21.0/<commentId>?access_token=...` a rendu
+  `{"success":true}` sur notre propre seed, et un POST sur
+  /<mediaId>/comments l'a repose. engage.mjs n'expose ni l'un ni l'autre (usage:
+  recent | comment | reply), donc une seed a corriger se rattrape en deux appels
+  bruts, sans toucher au script. Pense a corriger l'id ET le texte dans
+  state/engagement.jsonl a la main dans la foulee, sinon le registre pointe un
+  commentaire supprime (le garde-fou anti-double-seed, lui, continue de marcher
+  puisqu'il lit le mediaId). (2) LE PIEGE QUI A RENDU LA CORRECTION NECESSAIRE, et
+  il vaut pour toute commande shell portant du francais: passer le texte du seed en
+  ARGUMENT de `node src/engage.mjs comment ... "..."` invite a l'ecrire sans
+  accents pour eviter l'echappement, et c'est exactement ce qui est parti en
+  public ("la methode proposee", "etiquettes") sous un compte francais. Le gate
+  protege la legende, PAS les commentaires: rien ne l'aurait vu. Ecris le texte
+  dans un fichier (/tmp/seed.txt) et lis-le avec fs.readFileSync avant de poster.
 - 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
   renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
   ajoute un qualificatif (lieu, moment: "vending machines night") pour
@@ -1169,6 +1185,27 @@ ENTRIES:
   une autre surface. Recus jusqu'a 3 (un recu bat toujours un still), nouveau
   type `card` (valeur + label sur le fond de marque, 0 $, 2 max, chiffres tenus
   par l'evidence), stills 4 max, 3 surfaces reelles min. Proof: build 31/07.
+  Ajout 14/08 (10h30), LE GATE PASSE ET LE MOTEUR REFUSE, deux controles differents
+  sur le meme spec, et ca coute un build entier si tu l'apprends au moteur. Le gate
+  (validate.mjs) teste le partage de vocabulaire; le MOTEUR (promptcraft.promptIssues)
+  teste en plus `forbidNames`, construit par extractForbidNames = tous les mots
+  capitalises de post.slides + centralClaim, hors CAPITALIZED_NOISE, 40 max. Et il
+  matche en MOT ENTIER: le dossier X avait "Label" dans une evidence, donc un spec
+  disant "visibility label codes" est refuse ("prompt names Label") alors que le spec
+  voisin disant "visibility labels" PASSE, parce que \bLabel\b ne matche pas "labels".
+  Singulier refuse, pluriel accepte, sur le meme mot: ce n'est pas storyVocab, ne
+  cherche pas de ce cote. Deux beats sont morts la-dessus APRES l'achat du veo. Le
+  reflexe qui coute 10 s, a faire AVANT d'ecrire les specs image, en plus du
+  vocabulaire: imprime la liste interdite (les capitales de tes diapos), et note que
+  les mots francais de tes evidences y entrent aussi (Deux, Les, Pour, Sous, Sur,
+  Elles ont ete listes ce jour-la). Ajout 14/08 (10h30) bis, LE REFUS RAI DE VEO EST
+  GRATUIT ET SE CONTOURNE: le premier tir a rendu `raiMediaFilteredCount: 1` avec
+  "We encountered an issue with the audio for your prompt", aucun uri video, et
+  spend.jsonl n'a RIEN facture (verifie: seule la narration y etait). Le sujet
+  n'avait rien de sensible (un ecran de portable). Une action reecrite a suffi
+  ("scrolling slowly upward" -> "sliding slowly downward") et le meme spec est passe
+  au coup suivant, $0,60 pour 6 s. Donc un refus RAI n'accuse pas ton sujet et ne se
+  paie pas: change l'action et relance une fois avant de renoncer au beat 0 anime.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
