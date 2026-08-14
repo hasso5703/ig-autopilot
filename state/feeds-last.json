@@ -1,12 +1,12 @@
 {
-  "at": "2026-08-13T19:42:36.728Z",
-  "fresh": 386,
+  "at": "2026-08-14T06:50:38.380Z",
+  "fresh": 358,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1129,
-      "fresh": 15,
+      "fresh": 12,
       "windowHours": 96
     },
     {
@@ -27,7 +27,7 @@
       "name": "Hugging Face Blog",
       "ok": true,
       "fetched": 841,
-      "fresh": 8,
+      "fresh": 7,
       "windowHours": 96
     },
     {
@@ -47,16 +47,17 @@
     {
       "name": "arXiv cs.AI",
       "ok": true,
-      "fetched": 306,
-      "fresh": 306,
+      "fetched": 299,
+      "fresh": 299,
       "windowHours": 96
     },
     {
       "name": "TechCrunch",
-      "ok": true,
-      "fetched": 20,
-      "fresh": 20,
-      "windowHours": 36
+      "ok": false,
+      "fetched": 0,
+      "fresh": 0,
+      "windowHours": 36,
+      "error": "HTTP 503 after 8 tries"
     },
     {
       "name": "The Verge",
@@ -78,28 +79,28 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 7,
+      "fresh": 5,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 9,
+      "fresh": 7,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 5,
-      "fresh": 5,
+      "fetched": 9,
+      "fresh": 9,
       "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 3,
+      "fresh": 6,
       "windowHours": 36
     }
   ]

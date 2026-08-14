@@ -1,0 +1,240 @@
+{
+  "slug": "2026-08-14-x-algorithme-etiquettes",
+  "centralClaim": "X now lets users download the visibility labels applied to their account and posts.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/",
+      "quote": "the file will show if any labels have been applied to their account or posts over the past calendar month."
+    },
+    {
+      "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/",
+      "quote": "people who have access to the tool can download data associated with their account and dig through it to find information \"visibility-limiting labels\" affecting their posts."
+    }
+  ],
+  "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
+  "caption": "X te dit enfin si tes publications sont bridées par son algorithme.\n\nX a rendu public le code de son fil Pour toi, celui que tu vois en ouvrant l'application. Le tout est dix à quinze fois plus gros que ce qui avait déjà été publié. Et dans les réglages arrive une page appelée Sous le capot : tu télécharges un fichier, et il montre les étiquettes posées sur ton compte et tes publications au cours du mois écoulé.\n\nLe détail qui n'a pas tenu dans la vidéo. Sur l'exemple diffusé, deux publications d'un même compte portaient chacune une étiquette pour contenu sensible, et se retrouvaient cachées aux personnes qui ne suivaient pas le compte et aux mineurs. Le code publié liste aussi des étiquettes pour le spam, la violence, l'usurpation d'identité et les propos haineux.\n\nÀ nuancer. Le fichier ne donne rien publication par publication : c'est un résumé du mois. À l'ouverture, il ressemble surtout à un paquet de code, et la méthode proposée pour le lire quand on n'est pas technicien est de le coller dans une IA. L'outil n'est ouvert qu'à un groupe de test, des comptes d'au moins un an.\n\nEt ce n'est pas tout le code. Musk avait dit que chaque ligne de code touchant le système X serait publiée et auditée par des tiers. La publicité n'y est pas, ni les systèmes qui utilisent Grok pour deviner si une publication enfreint une règle.\n\nUn réseau social doit-il montrer à chacun comment il le classe, oui ou non ?\n\ntechcrunch.com · engadget.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #X #Algorithme",
+  "captionEvidence": [
+    {
+      "quote": "the company is making the source code for the \"for you\" timeline, the default feed you see when you open the app, available on github under the apache v2 license.",
+      "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/"
+    },
+    {
+      "quote": "this also makes the codebase roughly 10 to 15 times larger than it was before.",
+      "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/"
+    },
+    {
+      "quote": "non-technical users can take advantage of this information by dropping it into an llm of their choice, pointing the ai at x's github repo, and asking for an interpretation.",
+      "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/"
+    },
+    {
+      "quote": "the company notes this tool will initially be available to a test group of accounts at least a year old as a pilot, before rolling out more broadly.",
+      "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/"
+    },
+    {
+      "quote": "however, a few systems are not included in this release, like those that use grok to predict whether a post could be violating a rule.",
+      "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/"
+    },
+    {
+      "quote": "the github repo lists numerous labels related to different types of nsfw posts as well as those for spam, violence, impersonation and hateful conduct.",
+      "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/"
+    },
+    {
+      "quote": "x also hasn't released the underlying code that deals with ads and other systems outside of its \"for you\" timelines.",
+      "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "X",
+      "headline": "Deux étiquettes, et ses posts étaient *cachés*",
+      "hero": {
+        "value": "un fichier",
+        "label": "les étiquettes du mois, sur ton compte et tes posts"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "10",
+      "unit": "à 15 fois plus de code publié",
+      "body": "X a rendu public le code de son fil *Pour toi*, celui qui s'ouvre quand tu lances l'application.",
+      "evidence": "this also makes the codebase roughly 10 to 15 times larger than it was before.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une page dans tes réglages",
+      "body": "Elle s'appelle *Sous le capot*. Tu télécharges un fichier, et il montre **les étiquettes** posées sur ton compte et tes publications.",
+      "evidence": "a new transparency tool is rolling out to an \"under the hood\" page in the app's settings, which will let users who have posted 10 or more times over the past month download their aggregate stats as a json file.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que ça donne en vrai",
+      "body": "Sur l'exemple diffusé, deux publications portaient une étiquette pour contenu sensible. Elles étaient **cachées** aux gens qui ne suivaient pas le compte.",
+      "evidence": "look closely, and you can see that two of the account's posts were hit with two separate \"nsfw\" labels that resulted in those posts being hidden from non-followers and underage users.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'étiquette qui réduit un post au profil",
+      "body": "Aucune étiquette politique n'apparaît. Mais une étiquette *intégrité civique* limite la visibilité d'une publication au seul profil de son auteur.",
+      "evidence": "there do not appear to be any labels related to political content, though there is a \"civic integrity\" flag that restricts a post's visibility to its author's profile only.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Tu vas voir ce qui est arrivé à chacune de tes publications.",
+      "caveat": "Le fichier ne donne rien publication par publication. C'est un résumé du mois.",
+      "claimLabel": "Ce qu'on va comprendre",
+      "caveatLabel": "Ce que le fichier fait",
+      "evidence": "downloading data via \"under the hood\" doesn't provide stats on a per-post basis.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "every line of code touching the x system will be open source and third-party audited",
+      "attribution": "Elon Musk, cité par Engadget",
+      "evidence": "elon musk recently said that \"every line of code touching the x system will be open source and third-party audited\" sometime in august. the company's latest release doesn't exactly accomplish that.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "content",
+      "title": "À l'ouverture, c'est un paquet de code",
+      "body": "Le fichier ressemble à du code. Pour le lire sans être technicien, la méthode proposée est de *le coller dans une IA*.",
+      "evidence": "in the video, the download results in a .json file that at first glance might look like a bunch of code.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pense que X cache ses posts",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Deux étiquettes, et ses posts étaient cachés sur X",
+    "beats": [
+      {
+        "script": "Tu postes sur X et personne ne te voit. Depuis jeudi, tu peux enfin savoir si c'est l'algorithme qui t'a mis en sourdine.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of visibility labels",
+            "action": "the column of labels scrolling slowly upward, the screen staying whole and in frame",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "X a rendu public le code de son fil Pour toi, celui qui s'ouvre quand tu lances l'application. Dix à quinze fois plus gros qu'avant.",
+        "visual": {
+          "type": "card",
+          "value": "10 à 15",
+          "label": "fois plus de code publié qu'auparavant"
+        }
+      },
+      {
+        "script": "Et dans tes réglages arrive une page appelée Sous le capot. Tu télécharges un fichier, et il montre les étiquettes posées sur ton compte.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/"
+        }
+      },
+      {
+        "script": "Sur l'exemple diffusé, deux publications portaient une étiquette pour contenu sensible. Elles étaient cachées aux gens qui ne suivaient pas le compte.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of visibility label codes",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Le code liste aussi le spam, la violence, l'usurpation d'identité, les propos haineux. Et une étiquette qui limite ta publication à ton seul profil.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed transparency report page filled with columns of numbers",
+            "setting": "lying flat under a desk lamp",
+            "composition": "extreme close-up, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Sauf que. Le fichier ne dit rien publication par publication. C'est un résumé du mois, et à l'ouverture, ça ressemble à un paquet de code.",
+        "visual": {
+          "type": "card",
+          "value": "un mois",
+          "label": "un résumé, jamais le détail publication par publication"
+        }
+      },
+      {
+        "script": "Et si tu n'y comprends rien, la méthode proposée est de coller ce fichier dans une IA. Pour l'instant c'est un test, réservé aux comptes d'au moins un an.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of json label data",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Musk avait dit que chaque ligne de code du système X serait publiée et auditée. Ce n'est pas le cas: la publicité reste fermée. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "elon musk",
+          "file": "media/2026-08-14-x-algorithme-etiquettes/photo_musk.jpg",
+          "credit": "Ministério Das Comunicações · CC BY 2.0",
+          "alt": "Portrait d'Elon Musk"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/",
+      "accessed": "2026-08-14"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/2236672/x-is-testing-a-tool-that-will-let-users-see-if-their-posts-have-been-shadowbanned/",
+      "accessed": "2026-08-14"
+    }
+  ]
+}

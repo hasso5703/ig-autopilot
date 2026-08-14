@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-13T19:41:07.999Z",
+  "at": "2026-08-14T06:51:31.230Z",
   "n": 33,
-  "nSettled": 25,
-  "medianViews": 171,
-  "medianRetentionPct": 20,
+  "nSettled": 27,
+  "medianViews": 173,
+  "medianRetentionPct": 21,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 13,
-      "medianViews": 171,
-      "meanRetentionPct": 24.6,
-      "saves": 21,
-      "shares": 4,
+      "n": 15,
+      "medianViews": 190,
+      "meanRetentionPct": 25.9,
+      "saves": 24,
+      "shares": 5,
       "thin": false
     },
     "photo": {
@@ -123,19 +123,27 @@
       "shares": 1,
       "thin": true
     },
+    "security": {
+      "n": 3,
+      "medianViews": 190,
+      "meanRetentionPct": 22,
+      "saves": 4,
+      "shares": 0,
+      "thin": true
+    },
+    "models": {
+      "n": 1,
+      "medianViews": 415,
+      "meanRetentionPct": 27,
+      "saves": 3,
+      "shares": 0,
+      "thin": true
+    },
     "safety": {
       "n": 3,
       "medianViews": 156,
       "meanRetentionPct": 23,
       "saves": 3,
-      "shares": 0,
-      "thin": true
-    },
-    "security": {
-      "n": 2,
-      "medianViews": 175,
-      "meanRetentionPct": 19.5,
-      "saves": 1,
       "shares": 0,
       "thin": true
     }
@@ -198,19 +206,19 @@
       "thin": true
     },
     "20": {
-      "n": 5,
-      "medianViews": 291,
-      "meanRetentionPct": 21.4,
-      "saves": 10,
+      "n": 6,
+      "medianViews": 353,
+      "meanRetentionPct": 22.3,
+      "saves": 13,
       "shares": 1,
       "thin": false
     },
     "23": {
-      "n": 1,
-      "medianViews": 197,
-      "meanRetentionPct": 50,
+      "n": 2,
+      "medianViews": 296,
+      "meanRetentionPct": 45,
       "saves": 1,
-      "shares": 0,
+      "shares": 1,
       "thin": true
     },
     "09": {
@@ -341,6 +349,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-13-claude-marque-invisible",
+      "at": "2026-08-13T17:16:15.024Z",
+      "hourUtc": 17,
+      "views": 1120,
+      "reach": 982,
+      "avgWatchS": 17,
+      "retentionPct": 28,
+      "likes": 9,
+      "comments": 1,
+      "saved": 3,
+      "shares": 7,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-08-facture-ia-salaries",
       "at": "2026-08-08T10:57:53.515Z",
       "hourUtc": 10,
@@ -375,7 +400,7 @@
         "models"
       ],
       "sendTest": "Toutes les IA refusent de t'aider à pirater. OpenAI vient d'en sortir une qui dit oui, et qui a déjà percé Chrome.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-11-eclipse-solaire-yeux",
@@ -392,16 +417,16 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Ce soir 90 % du soleil disparait au-dessus de la France. Si tu le regardes sans lunettes d'eclipse, tu peux te bruler la retine.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-12-metro-londres-visages",
       "at": "2026-08-12T10:57:49.864Z",
       "hourUtc": 10,
-      "views": 366,
-      "reach": 329,
-      "avgWatchS": 23.8,
-      "retentionPct": 40,
+      "views": 378,
+      "reach": 342,
+      "avgWatchS": 23.4,
+      "retentionPct": 39,
       "likes": 2,
       "comments": 1,
       "saved": 2,
@@ -446,6 +471,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-13-twitch-entraine-ia-amazon",
+      "at": "2026-08-13T11:47:37.020Z",
+      "hourUtc": 11,
+      "views": 292,
+      "reach": 265,
+      "avgWatchS": 10.3,
+      "retentionPct": 17,
+      "likes": 4,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Twitch entraîne l'IA d'Amazon avec les vidéos des streamers, activé par défaut. Le patron produit : si c'était sur demande, personne ne le ferait.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-02-google-earth-ia",
       "at": "2026-08-02T20:00:03.807Z",
       "hourUtc": 20,
@@ -463,23 +505,6 @@
       ],
       "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-13-twitch-entraine-ia-amazon",
-      "at": "2026-08-13T11:47:37.020Z",
-      "hourUtc": 11,
-      "views": 248,
-      "reach": 229,
-      "avgWatchS": 10.2,
-      "retentionPct": 17,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Twitch entraîne l'IA d'Amazon avec les vidéos des streamers, activé par défaut. Le patron produit : si c'était sur demande, personne ne le ferait.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -675,23 +700,6 @@
       ],
       "sendTest": "Quelqu'un peut prendre tes photos et en faire des images sexuelles. Le Minnesota vient d'interdire ces applis, et Musk a essayé de bloquer la loi.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-13-claude-marque-invisible",
-      "at": "2026-08-13T17:16:15.024Z",
-      "hourUtc": 17,
-      "views": 136,
-      "reach": 118,
-      "avgWatchS": 13.3,
-      "retentionPct": 22,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
-      "settled": false
     },
     {
       "slug": "2026-08-05-waymo-dallas",
