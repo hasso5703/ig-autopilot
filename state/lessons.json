@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-15T16:40:36.381Z",
-  "n": 36,
-  "nSettled": 30,
-  "medianViews": 177,
-  "medianRetentionPct": 20,
+  "at": "2026-08-15T19:40:35.710Z",
+  "n": 37,
+  "nSettled": 31,
+  "medianViews": 181,
+  "medianRetentionPct": 21,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -22,8 +22,16 @@
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai."
     },
     {
+      "slug": "2026-08-13-claude-marque-invisible",
+      "views": 1224,
+      "retentionPct": 28,
+      "saved": 4,
+      "shares": 7,
+      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même."
+    },
+    {
       "slug": "2026-08-09-motif-anti-cameras",
-      "views": 1144,
+      "views": 1146,
       "retentionPct": 25,
       "saved": 7,
       "shares": 0,
@@ -36,14 +44,6 @@
       "saved": 2,
       "shares": 0,
       "sendTest": "Le MacBook Air a pris 200 dollars et il est en rupture, parce que les boîtes d'IA rachètent toute la mémoire pour leurs centres de données."
-    },
-    {
-      "slug": "2026-08-08-facture-ia-salaries",
-      "views": 538,
-      "retentionPct": 25,
-      "saved": 1,
-      "shares": 1,
-      "sendTest": "Un ingénieur a dépensé 50 000 dollars d'IA en un mois. Son entreprise note maintenant chaque salarié sur ce que l'IA lui coûte."
     }
   ],
   "bottom": [
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 18,
-      "medianViews": 194,
-      "meanRetentionPct": 25.4,
-      "saves": 27,
-      "shares": 6,
+      "n": 19,
+      "medianViews": 197,
+      "meanRetentionPct": 25.6,
+      "saves": 31,
+      "shares": 13,
       "thin": false
     },
     "photo": {
@@ -198,11 +198,11 @@
       "thin": false
     },
     "17": {
-      "n": 6,
-      "medianViews": 139,
-      "meanRetentionPct": 16.7,
-      "saves": 1,
-      "shares": 0,
+      "n": 7,
+      "medianViews": 148,
+      "meanRetentionPct": 18.3,
+      "saves": 5,
+      "shares": 7,
       "thin": false
     },
     "19": {
@@ -261,7 +261,7 @@
         "published": [
           {
             "slug": "2026-08-09-motif-anti-cameras",
-            "views": 1144
+            "views": 1146
           },
           {
             "slug": "2026-08-09-chatgpt-gratuit-illimite",
@@ -337,13 +337,30 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-15-camions-sans-chauffeur",
+      "at": "2026-08-15T11:01:21.605Z",
+      "hourUtc": 11,
+      "views": 1221,
+      "reach": 1093,
+      "avgWatchS": 12.8,
+      "retentionPct": 21,
+      "likes": 14,
+      "comments": 1,
+      "saved": 0,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
       "settled": false
     },
     {
       "slug": "2026-08-09-motif-anti-cameras",
       "at": "2026-08-09T20:14:36.239Z",
       "hourUtc": 20,
-      "views": 1144,
+      "views": 1146,
       "reach": 1039,
       "avgWatchS": 15.1,
       "retentionPct": 25,
@@ -374,29 +391,12 @@
       "settled": true
     },
     {
-      "slug": "2026-08-15-camions-sans-chauffeur",
-      "at": "2026-08-15T11:01:21.605Z",
-      "hourUtc": 11,
-      "views": 889,
-      "reach": 773,
-      "avgWatchS": 13.6,
-      "retentionPct": 23,
-      "likes": 11,
-      "comments": 1,
-      "saved": 0,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-14-trois-ia-guerre-serveur",
       "at": "2026-08-14T17:05:09.595Z",
       "hourUtc": 17,
-      "views": 665,
-      "reach": 589,
-      "avgWatchS": 16.3,
+      "views": 668,
+      "reach": 593,
+      "avgWatchS": 16.4,
       "retentionPct": 27,
       "likes": 10,
       "comments": 1,
@@ -588,9 +588,9 @@
       "slug": "2026-08-14-x-algorithme-etiquettes",
       "at": "2026-08-14T11:00:39.149Z",
       "hourUtc": 11,
-      "views": 185,
-      "reach": 170,
-      "avgWatchS": 8,
+      "views": 190,
+      "reach": 174,
+      "avgWatchS": 7.9,
       "retentionPct": 13,
       "likes": 2,
       "comments": 1,
@@ -761,6 +761,23 @@
       ],
       "sendTest": "Quelqu'un peut prendre tes photos et en faire des images sexuelles. Le Minnesota vient d'interdire ces applis, et Musk a essayé de bloquer la loi.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-15-google-retire-filigrane",
+      "at": "2026-08-15T17:01:47.885Z",
+      "hourUtc": 17,
+      "views": 132,
+      "reach": 120,
+      "avgWatchS": 11.6,
+      "retentionPct": 19,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Google va laisser enlever le petit logo qui disait qu'une image était faite par IA. Sauf en Europe, où la loi oblige à le garder.",
+      "settled": false
     },
     {
       "slug": "2026-08-05-waymo-dallas",
