@@ -1,0 +1,142 @@
+{
+  "slug": "2026-08-15-camions-sans-chauffeur",
+  "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
+  "centralClaim": "California has granted Kodiak a permit to test autonomous trucks on public roads.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/14/self-driving-trucks-are-officially-testing-on-california-highways/",
+      "quote": "aurora innovation and kodiak ai, two companies developing self-driving trucks, have received permits from the california department of motor vehicles to test their autonomous vehicle technology on public roads."
+    },
+    {
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-receives-permit-for-autonomous-truck-testing-in-california",
+      "quote": "kodiak ai inc. is receiving a drivered testing permit under the california department of motor vehicles' newly expanded autonomous vehicle tester (avt) program."
+    }
+  ],
+  "caption": "La Californie laisse rouler les premiers camions autonomes sur ses routes, et les routiers attaquent en justice.\n\nLe 28 avril, l'État a levé l'interdiction qui empêchait les véhicules de plus de 10 000 livres de rouler sans conducteur sur les routes publiques. Le premier permis a été délivré le 13 août à Kodiak, qui teste déjà quelques camions.\n\nUn conducteur de sécurité doit rester au volant. Ce permis n'est que la première étape d'un parcours qui mène aux essais sans personne à bord, puis au déploiement sans personne à bord.\n\nLa semaine dernière, le syndicat Teamsters de Californie a attaqué l'administration qui délivre ces permis, en l'accusant d'avoir contourné les lois qui l'obligeaient à étudier et à rendre publiques les conséquences économiques. La plainte lui reproche aussi de ne pas avoir examiné les risques pour les automobilistes.\n\nTu roulerais à côté d'un camion qui se conduit seul, oui ou non ?\n\nSources : techcrunch.com, thetrucker.com, automotiveworld.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Californie #Transport",
+  "captionEvidence": [
+    {
+      "quote": "those rules, approved april 28, lifted a ban on driverless vehicles weighing over 10,000 pounds from testing on public roads and provided a regulatory path for companies to test, and eventually deploy, autonomous heavy-duty vehicles.",
+      "url": "https://techcrunch.com/2026/08/14/self-driving-trucks-are-officially-testing-on-california-highways/"
+    },
+    {
+      "quote": "kodiak obtained a permit under the state's new regulations on aug. 13. this permit allows kodiak to operate in california with a safety driver behind the wheel.",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-receives-permit-for-autonomous-truck-testing-in-california"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Californie · camions autonomes",
+      "headline": "La Californie ouvre ses routes aux camions *autonomes*",
+      "hero": { "value": "13", "label": "le jour d'août où le premier permis est tombé" },
+      "swipe": "Les sources sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "10 000",
+      "unit": "livres, le poids qui bloquait tout",
+      "body": "Au-dessus de ce poids, un véhicule **n'avait pas le droit** de rouler sans conducteur sur les routes publiques. L'interdiction est tombée le 28 avril.",
+      "evidence": "those rules, approved april 28, lifted a ban on driverless vehicles weighing over 10,000 pounds from testing on public roads and provided a regulatory path for companies to test, and eventually deploy, autonomous heavy-duty vehicles.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/14/self-driving-trucks-are-officially-testing-on-california-highways/", "date": "2026-08-14" }
+    },
+    {
+      "type": "content",
+      "title": "Le premier permis",
+      "body": "Il est daté du 13 août. Il autorise l'entreprise à rouler en Californie **avec un conducteur de sécurité au volant**.",
+      "evidence": "kodiak obtained a permit under the state's new regulations on aug. 13. this permit allows kodiak to operate in california with a safety driver behind the wheel.",
+      "source": { "name": "TheTrucker", "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-receives-permit-for-autonomous-truck-testing-in-california", "date": "2026-08-14" }
+    },
+    {
+      "type": "content",
+      "title": "Ce que le permis prépare",
+      "body": "C'est la **première marche** d'un escalier : essais avec conducteur, puis essais sans personne, puis exploitation sans personne.",
+      "evidence": "the permit marks the first step in the dmv's phased permitting approach, which progresses from drivered testing to driver-out testing and, ultimately, driver-out deployment.",
+      "source": { "name": "TheTrucker", "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-receives-permit-for-autonomous-truck-testing-in-california", "date": "2026-08-14" }
+    },
+    {
+      "type": "quote",
+      "body": "Les règles californiennes sur les véhicules autonomes sont un déblocage majeur pour le transport de marchandises.",
+      "attribution": "Don Burnette, fondateur et patron de Kodiak",
+      "evidence": "in a statement, don burnette, founder and chief executive of kodiak, said: \"california's comprehensive autonomous vehicle regulations are a major unlock for freight innovation. this permit allows us to begin the first phase of scaling autonomous trucking coast-to-coast, while ensuring appropriate safety oversight from california regulators.",
+      "source": { "name": "AutomotiveWorld", "url": "https://www.automotiveworld.com/news/california-grants-kodiak-ai-autonomous-trucking-permit/", "date": "2026-08-14" }
+    },
+    {
+      "type": "contrast",
+      "claim": "L'entreprise promet des emplois et des routes plus sûres.",
+      "claimLabel": "Ce que dit le constructeur",
+      "caveat": "Le syndicat des routiers attaque l'administration qui a signé.",
+      "caveatLabel": "Ce que dit le syndicat",
+      "evidence": "last week, teamsters california sued the state's dmv, alleging that the agency circumvented laws requiring it to study and publicly disclose the possible economic impacts of allowing self-driving trucks on public roads.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/14/self-driving-trucks-are-officially-testing-on-california-highways/", "date": "2026-08-14" }
+    },
+    {
+      "type": "content",
+      "title": "Le second reproche",
+      "body": "La plainte accuse aussi l'administration d'avoir **négligé les risques** pour les automobilistes.",
+      "evidence": "the lawsuit, filed in the state's superior court in alameda county, also accused the dmv of failing to consider the safety risks to motorists.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/14/self-driving-trucks-are-officially-testing-on-california-highways/", "date": "2026-08-14" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui passe sa vie sur l'autoroute",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "sources": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/14/self-driving-trucks-are-officially-testing-on-california-highways/", "accessed": "2026-08-15" },
+    { "name": "TheTrucker", "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-receives-permit-for-autonomous-truck-testing-in-california", "accessed": "2026-08-15" },
+    { "name": "AutomotiveWorld", "url": "https://www.automotiveworld.com/news/california-grants-kodiak-ai-autonomous-trucking-permit/", "accessed": "2026-08-15" }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "La Californie ouvre ses routes aux camions autonomes",
+    "beats": [
+      {
+        "script": "La Californie vient d'autoriser des camions qui se conduisent tout seuls sur ses routes publiques. Le premier permis est allé à Kodiak. Et les routiers attaquent l'État.",
+        "visual": { "type": "veo", "spec": {
+          "subject": "a single heavy truck seen from behind on an empty lane",
+          "action": "driving steadily away from the camera, the whole truck staying in frame",
+          "setting": "in bright daylight",
+          "composition": "medium shot from directly behind" } }
+      },
+      {
+        "script": "En justice. Tout est parti d'une date : le 28 avril, la Californie a levé l'interdiction qui visait les véhicules les plus lourds.",
+        "visual": { "type": "card", "value": "28 AVRIL", "label": "le jour où la Californie a levé l'interdiction" }
+      },
+      {
+        "script": "Un humain reste quand même assis au volant, c'est la condition. Le premier permis est tombé le 13 août, pour une entreprise californienne qui construit ces camions.",
+        "visual": { "type": "photo", "file": "media/2026-08-15-camions-sans-chauffeur/pin_camion_capteurs.jpg", "credit": "Oregon Department of Transportation · CC BY", "alt": "Une cabine de camion surmontée de capteurs" }
+      },
+      {
+        "script": "Mais ce permis n'est que la première marche. Ensuite viennent les essais sans personne à bord, puis le déploiement sans personne à bord.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a printed permit document page filled with columns of numbers",
+          "setting": "lying flat under a desk lamp",
+          "composition": "extreme close-up, the page fills the entire frame" } }
+      },
+      {
+        "script": "Le patron de Kodiak parle d'un déblocage majeur pour le transport de marchandises, et remercie le gouverneur de Californie. Il promet des emplois et des routes plus sûres.",
+        "visual": { "type": "screenshot", "url": "https://www.automotiveworld.com/news/california-grants-kodiak-ai-autonomous-trucking-permit/" }
+      },
+      {
+        "script": "Sauf que les routiers ne l'entendent pas comme ça. La semaine dernière, leur syndicat a attaqué en justice l'administration qui a signé ce permis.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a large truck wheel resting on asphalt",
+          "setting": "in bright daylight",
+          "composition": "extreme close-up, the wheel fills the entire frame" } }
+      },
+      {
+        "script": "Ils l'accusent d'avoir contourné la loi. Étudier et rendre publiques les conséquences économiques de ces camions sur les routes publiques, ça n'a jamais été fait.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a laptop screen filled with a single column of safety report numbers",
+          "setting": "in a bright room in daylight",
+          "composition": "extreme close-up, the screen fills the entire frame" } }
+      },
+      {
+        "script": "Et la plainte ajoute autre chose. L'administration n'aurait pas non plus regardé le risque pour les automobilistes. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": { "type": "photo", "file": "media/2026-08-15-camions-sans-chauffeur/pin_autoroute_californie.jpg", "credit": "Tony Webster · CC BY", "alt": "Une autoroute californienne et son panneau de direction" }
+      }
+    ]
+  }
+}
