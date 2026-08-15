@@ -180,3 +180,11 @@
 {"at":"2026-08-14T16:56:19.747Z","slug":"2026-08-14-trois-ia-guerre-serveur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1302}
 {"at":"2026-08-14T16:56:34.110Z","slug":"2026-08-14-trois-ia-guerre-serveur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1295}
 {"at":"2026-08-14T16:58:54.969Z","slug":"2026-08-14-trois-ia-guerre-serveur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1328}
+{"at":"2026-08-15T10:44:17.621Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"62.6s Sadaltager","usd":0.0313}
+{"at":"2026-08-15T10:44:47.836Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.4s Sadaltager","usd":0.0307}
+{"at":"2026-08-15T10:45:15.102Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"55.7s Sadaltager","usd":0.0279}
+{"at":"2026-08-15T10:50:06.058Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-15T10:50:19.871Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.13}
+{"at":"2026-08-15T10:50:31.316Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1295}
+{"at":"2026-08-15T10:50:44.520Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1238}
+{"at":"2026-08-15T10:57:25.190Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1295}
