@@ -1286,6 +1286,28 @@ ENTRIES:
   zero texte lisible. Regle: si l'objet de ton spec porte une marque dans la vraie
   vie, cadre la piece qui n'en porte pas. Rien ne le voit sauf le REGARD sur la
   frame. Proof: run 10h30 15/08, still_5 refuse puis rachete.
+  Ajout 15/08 (16h30), LE MOT QUI RAMENE LA PROSE INVENTEE EST "NAMES", et il
+  precise la recette du 10/08 au lieu de la contredire. Le spec "a laptop screen
+  filled with a single column of transparency setting NAMES" a rendu un ecran de
+  lignes bidon lisibles en plein cadre pendant 6 s: *XXXXXXX*, *YYYYY, ZZZZZZ ZZZ,
+  AAAAA AAAAA, BBBBBBB B... soit du texte de remplissage alphabetique, famille
+  "page de preuve" du 01/08. La recette du 10/08 marche parce qu'elle demande des
+  NUMBERS ("a single column of position numbers"), pas parce qu'elle demande une
+  colonne: des que le mot final du spec designe du LANGAGE (names, labels, titles,
+  settings, options, menu), le modele ecrit des mots, et il les invente. Remede
+  mesure, $0,13 et rebuild a cout nul (narration + veo + recu + still 7 re-servis
+  par leur .key): "a laptop screen filled with the SOURCE CODE of an image metadata
+  reader" a rendu du premier coup un vrai editeur colore (generic_metadata_reader,
+  parse_header, read_tags), ca se lit comme de la notation et pas une phrase
+  anglaise. Regle: dans un spec d'ecran, le dernier mot doit etre code, numbers,
+  log ou timestamps, jamais names. ET UNE ACTION VEO SURE DE PLUS, a cote de la
+  rotation du 12/08: "tilting slowly so the light sweeps across the watermark, the
+  image staying whole and in frame" a rendu propre du premier coup, $0,96,
+  pellicule 8 vignettes lue (meme objet, meme taille, present a la 8e). Comme la
+  rotation elle n'a aucun etat final et ne fait entrer le sujet dans rien, et en
+  prime le balayage de lumiere FABRIQUE l'action non resolue quand l'histoire
+  (un reglage produit qui change) ne contient aucun evenement filmable.
+  Proof: run 16h30 15/08, still_3 refuse puis rachete.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
@@ -1594,7 +1616,15 @@ ENTRIES:
   verifie pas seulement qu'il est propre). Sur une actu industrielle ou automobile,
   c'est le recu a prendre avant la presse tech generaliste, qui est de la famille
   O(frames) du 06/08.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08.
+  Ajout 15/08 (16h30), engadget.com SANS RECADRAGE cette fois: la capture est
+  sortie propre du premier coup en ~4,5 min (masthead engadget, fil "News > AI",
+  titre entier sur 4 lignes, chapo, signature, date, photo), zero pub flottante,
+  zero banniere. Le filigrane "AD" du 14/08 et l'encart "Covered California" du
+  13/08 n'y etaient pas: la plomberie d'engadget est VARIABLE d'un jour a l'autre,
+  donc ne pin pas le crop=1290:2293:0:0 par reflexe, REGARDE le shot_N.png d'abord,
+  un recadrage inutile coupe le chapo. Et il passe le controle du 10/08: le titre
+  affiche EST l'histoire.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
