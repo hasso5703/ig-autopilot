@@ -1271,6 +1271,21 @@ ENTRIES:
   spec veo, en plus du vocabulaire et de la liste interdite: passe tes candidats
   dans `veoPrompt` + `simplicityIssues` en local (les deux sont exportes par
   promptcraft.mjs), quatre variantes se testent en une commande et sans reseau.
+  Ajout 15/08 (10h30), LA MARQUE REELLE APPARAIT AUSSI DANS UNE STILL GENEREE, et
+  toutes les entrees "marque" de ce carnet (Augmentin 08/08, Embark 15/08, Logitech
+  13/08) parlaient de `photo`: c'est donc une famille de plus, et elle passe TOUS les
+  controles (gate vert, promptIssues vide, simplicityIssues vide, vocabulaire ancre).
+  Le spec "a large truck wheel resting on asphalt" + extreme close-up a rendu un
+  pneu ou se lisent en grand MICHELIN (deux fois) et LT 315/80 R22.5, sur une actu
+  ou Michelin n'existe pas. Le modele d'image met une vraie marque des que l'objet
+  demande est un produit de grande consommation qui en porte une (pneu, telephone,
+  portable, electromenager, chaussure). Remede mesure, $0,13 et rebuild a cout nul
+  (narration + veo + 2 stills re-servies par leur .key): demander le SOUS-ORGANE qui
+  exclut la surface de marque, "a truck wheel hub and its metal bolts" + "extreme
+  close-up, the hub fills the entire frame" a rendu du premier coup un moyeu net,
+  zero texte lisible. Regle: si l'objet de ton spec porte une marque dans la vraie
+  vie, cadre la piece qui n'en porte pas. Rien ne le voit sauf le REGARD sur la
+  frame. Proof: run 10h30 15/08, still_5 refuse puis rachete.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
@@ -1571,7 +1586,15 @@ ENTRIES:
   Reeve, Cognitive AI & AGI, AI Research Agent" (meme bemol que testingcatalog le
   09/08, un article ecrit par une IA grave dans le recu d'un compte qui promet
   l'inverse) et il date l'article du 12/08 alors que la recherche est du 13/08.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08.
+  Ajout 15/08 (10h30), UN RECU LEGER DE PLUS, mesure EN MOTEUR: automotiveworld.com
+  se capture PROPREMENT du premier coup et vite, sans recadrage: fil d'Ariane, titre
+  entier sur 4 lignes, chapo, date, et le debut du corps. 0 pub, 0 banniere cookies,
+  et surtout le titre affiche EST l'histoire ("California grants Kodiak AI autonomous
+  trucking permit"), donc il passe le controle du 10/08 (lis le titre du recu, ne
+  verifie pas seulement qu'il est propre). Sur une actu industrielle ou automobile,
+  c'est le recu a prendre avant la presse tech generaliste, qui est de la famille
+  O(frames) du 06/08.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
