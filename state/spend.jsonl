@@ -188,3 +188,8 @@
 {"at":"2026-08-15T10:50:31.316Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1295}
 {"at":"2026-08-15T10:50:44.520Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1238}
 {"at":"2026-08-15T10:57:25.190Z","slug":"2026-08-15-camions-sans-chauffeur","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1295}
+{"at":"2026-08-15T16:44:07.876Z","slug":"2026-08-15-google-retire-filigrane","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"56.0s Sadaltager","usd":0.028}
+{"at":"2026-08-15T16:51:39.911Z","slug":"2026-08-15-google-retire-filigrane","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-15T16:51:52.303Z","slug":"2026-08-15-google-retire-filigrane","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1316}
+{"at":"2026-08-15T16:52:05.389Z","slug":"2026-08-15-google-retire-filigrane","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1319}
+{"at":"2026-08-15T16:56:20.379Z","slug":"2026-08-15-google-retire-filigrane","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1301}

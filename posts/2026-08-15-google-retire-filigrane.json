@@ -105,12 +105,12 @@
       },
       {
         "script": "Google l'a annoncé vendredi. Un bouton dans les réglages, et la marque visible s'en va des images, des vidéos et même des musiques que tu génères.",
-        "visual": { "type": "screenshot", "url": "https://www.engadget.com/2237340/google-will-now-allow-users-to-remove-visible-watermarks-from-ai-content/" }
+        "visual": { "type": "screenshot", "url": "https://www.engadget.com/2237340/google-will-now-allow-users-to-remove-visible-watermarks-from-ai-content/", "file": "media/2026-08-15-google-retire-filigrane/shot_2.png" }
       },
       {
         "script": "Le responsable de Gemini chez Google l'écrit noir sur blanc. On cherche un équilibre entre le contrôle créatif et la sécurité.",
         "visual": { "type": "image", "spec": {
-          "subject": "a laptop screen filled with a single column of transparency setting names",
+          "subject": "a laptop screen filled with the source code of an image metadata reader",
           "setting": "in a bright room in daylight",
           "composition": "extreme close-up, the screen fills the entire frame" } }
       },
