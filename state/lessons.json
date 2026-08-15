@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-14T19:40:57.825Z",
+  "at": "2026-08-15T07:06:14.421Z",
   "n": 35,
   "nSettled": 29,
   "medianViews": 173,
@@ -231,7 +231,7 @@
     }
   },
   "followers": {
-    "now": 17,
+    "now": 19,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -318,8 +318,8 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1210,
-      "reach": 1083,
+      "views": 1215,
+      "reach": 1086,
       "avgWatchS": 16.8,
       "retentionPct": 28,
       "likes": 9,
@@ -383,6 +383,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-14-trois-ia-guerre-serveur",
+      "at": "2026-08-14T17:05:09.595Z",
+      "hourUtc": 17,
+      "views": 495,
+      "reach": 425,
+      "avgWatchS": 16.2,
+      "retentionPct": 27,
+      "likes": 7,
+      "comments": 1,
+      "saved": 3,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-11-openai-ia-pirate-chrome",
       "at": "2026-08-11T20:02:23.032Z",
       "hourUtc": 20,
@@ -440,9 +457,9 @@
       "slug": "2026-08-13-twitch-entraine-ia-amazon",
       "at": "2026-08-13T11:47:37.020Z",
       "hourUtc": 11,
-      "views": 350,
-      "reach": 329,
-      "avgWatchS": 10.3,
+      "views": 351,
+      "reach": 330,
+      "avgWatchS": 10.2,
       "retentionPct": 17,
       "likes": 4,
       "comments": 1,
@@ -594,6 +611,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-14-x-algorithme-etiquettes",
+      "at": "2026-08-14T11:00:39.149Z",
+      "hourUtc": 11,
+      "views": 163,
+      "reach": 151,
+      "avgWatchS": 8.2,
+      "retentionPct": 14,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-ia-reserve-cours-sport",
       "at": "2026-08-10T16:58:57.530Z",
       "hourUtc": 16,
@@ -681,42 +717,6 @@
       "themes": [],
       "sendTest": "Un mec attendait le coucher du soleil, l'IA de Google lui a dit qu'il était déjà passé. Un tribunal a jugé Google responsable de ce que son IA raconte.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-14-x-algorithme-etiquettes",
-      "at": "2026-08-14T11:00:39.149Z",
-      "hourUtc": 11,
-      "views": 146,
-      "reach": 134,
-      "avgWatchS": 8.5,
-      "retentionPct": 14,
-      "likes": 1,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
-      "settled": false
-    },
-    {
-      "slug": "2026-08-14-trois-ia-guerre-serveur",
-      "at": "2026-08-14T17:05:09.595Z",
-      "hourUtc": 17,
-      "views": 146,
-      "reach": 129,
-      "avgWatchS": 10.9,
-      "retentionPct": 18,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
-      "settled": false
     },
     {
       "slug": "2026-08-02-xai-minnesota-nudification",

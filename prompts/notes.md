@@ -370,6 +370,22 @@ ENTRIES:
   portail Salesforce qui rend "twitch help portal loading x sorry to interrupt css
   error refresh" au fetch, donc la page d'aide Twitch est INGATABLE. Sur ces deux
   dossiers le primaire n'existe pas d'ici: batis sur la presse et dis-le.
+  Ajout 15/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  pcworld.com, thetrucker.com et automotiveworld.com (trois nouveaux);
+  engadget.com et techcrunch.com re-confirment. Repondent 200 aussi dmv.ca.gov et
+  kodiak.ai. CORRECTION de la note du 31/07: digitaltrends.com rend maintenant 403
+  au fetch gate, il ne se gate plus. DEUX PIEGES DE CORROBORATION le meme matin.
+  (1) Dossier Google/filigrane: techcrunch, engadget et pcworld reecrivent tous le
+  MEME post X de Josh Woodward (x.com est 403), donc trois domaines verts = UNE
+  annonce, famille du 09/08. Ce qui sauve le dossier: pcworld a ESSAYE la fonction
+  ("i tried it myself... landed without a gemini logo watermark"), seule
+  verification independante du lot. Sur une annonce faite d'abord sur X, cherche
+  la redaction qui a teste, pas la troisieme reprise. (2) Dossier camions Kodiak:
+  thetrucker et automotiveworld reecrivent le meme communique et portent la MEME
+  citation Burnette, mais PAS avec la meme phrase d'introduction, donc la citation
+  copiee chez l'un revient NOT_FOUND chez l'autre (mesure: 1 erreur de gate).
+  Recopie toujours depuis le domaine que tu cites, meme quand deux articles
+  semblent identiques.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
@@ -1087,6 +1103,25 @@ ENTRIES:
   CC0, pd.w.org 1542x2048 DEJA EN PORTRAIT, `crop=1152:2048:195:0`), un vrai panneau
   de brassage, utile des qu'une histoire parle de machines partagees. pd.w.org n'est
   pas etrangle et sert du 1542 px: c'est la porte de sortie quand Commons ferme.
+  Ajout 15/08 (06h30), dossier camions autonomes. REQUETES MORTES OU PIEGEES:
+  "freight truck california" met en tete un booster de navette spatiale puis quatre
+  trains graffites; "truck driver cab" ne rend que des archives NARA des annees
+  1970 (piege d'epoque, 8e occurrence); "semi truck highway" rend du rawpixel
+  australien (plafond 1024 px) et un camion-citerne de Hong Kong. CE QUI MARCHE:
+  "autonomous truck" -> "Autonomous truck cab on display" (Oregon Department of
+  Transportation, CC BY, 4032x3024), une VRAIE cabine surmontee de son rack de
+  capteurs. PIEGE DE MARQUE DEDANS, famille Augmentin du 08/08: la portiere porte
+  "Embark Trucks Inc." et un numero US DOT parfaitement lisibles, soit une
+  entreprise qui n'est PAS dans l'histoire, et le crop 9:16 plein cadre les garde.
+  `crop=816:1450:1330:0` ne garde que le rack de capteurs et le haut de la cabine,
+  zero marque lisible, et c'est en prime le meilleur cadrage editorial. Et
+  "california freeway traffic" -> "LA Traffic - I-210 I-5 Interchange" (Tony
+  Webster, CC BY, 2400x1600), panneau "Palmdale Lancaster" lisible,
+  `crop=810:1440:780:0` coupe la plaque d'immatriculation lisible du bas.
+  MESURE UTILE SUR L'ETRANGLEMENT: upload.wikimedia.org a servi SIX originaux
+  d'affilee ce matin (jusqu'a 13 Mo) avec l'UA descriptif et 5 s d'espacement, sans
+  une seule page d'erreur. La fermeture du 13/08 n'est donc pas un etat permanent:
+  teste avant de renoncer a epingler, mais telecharge toujours EN PREMIER.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -1225,6 +1260,17 @@ ENTRIES:
   ("scrolling slowly upward" -> "sliding slowly downward") et le meme spec est passe
   au coup suivant, $0,60 pour 6 s. Donc un refus RAI n'accuse pas ton sujet et ne se
   paie pas: change l'action et relance une fois avant de renoncer au beat 0 anime.
+  Ajout 15/08 (06h30), UN MOT QUE simplicityIssues REFUSE A LUI SEUL, et il n'est
+  dans aucune liste du manuel: "highway". Le spec "a single heavy truck on an empty
+  highway lane" est refuse "describes a many-moving-objects scene (highway)" alors
+  que l'adjectif dit explicitement que la voie est VIDE et que le sujet est UN
+  camion. Le mot seul suffit, l'adjectif ne le rachete pas. Remede accepte du
+  premier coup: garder le sujet et sortir le decor ("a single heavy truck seen from
+  behind on an empty lane" + setting "in bright daylight"). Sur une actu de route,
+  ecris la VOIE, jamais l'autoroute. Et le reflexe qui coute 10 s avant d'ecrire un
+  spec veo, en plus du vocabulaire et de la liste interdite: passe tes candidats
+  dans `veoPrompt` + `simplicityIssues` en local (les deux sont exportes par
+  promptcraft.mjs), quatre variantes se testent en une commande et sans reseau.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
