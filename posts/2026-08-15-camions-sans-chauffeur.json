@@ -90,10 +90,10 @@
   "reel2": {
     "mood": "tension",
     "lang": "fr",
-    "title": "La Californie ouvre ses routes aux camions autonomes",
+    "title": "Les camions autonomes roulent en Californie",
     "beats": [
       {
-        "script": "La Californie vient d'autoriser des camions qui se conduisent tout seuls sur ses routes publiques. Le premier permis est allé à Kodiak. Et les routiers attaquent l'État.",
+        "script": "Le camion que tu doubles sur l'autoroute, c'est peut-être lui qui conduit, pas l'humain assis dedans. La Californie vient de l'autoriser. Tu sais qui attaque l'État ?",
         "visual": { "type": "veo", "spec": {
           "subject": "a single heavy truck seen from behind on an empty lane",
           "action": "driving steadily away from the camera, the whole truck staying in frame",
@@ -101,11 +101,11 @@
           "composition": "medium shot from directly behind" } }
       },
       {
-        "script": "En justice. Tout est parti d'une date : le 28 avril, la Californie a levé l'interdiction qui visait les véhicules les plus lourds.",
+        "script": "Les routiers. Leur propre syndicat. Mais reprenons au 28 avril : ce jour-là, la Californie a levé l'interdiction qui visait les véhicules les plus lourds.",
         "visual": { "type": "card", "value": "28 AVRIL", "label": "le jour où la Californie a levé l'interdiction" }
       },
       {
-        "script": "Un humain reste quand même assis au volant, c'est la condition. Le premier permis est tombé le 13 août, pour une entreprise californienne qui construit ces camions.",
+        "script": "Un humain reste quand même assis au volant, c'est la condition. Le premier permis est tombé le 13 août, pour Kodiak, un constructeur californien de ces camions.",
         "visual": { "type": "photo", "file": "media/2026-08-15-camions-sans-chauffeur/pin_camion_capteurs.jpg", "credit": "Oregon Department of Transportation · CC BY", "alt": "Une cabine de camion surmontée de capteurs" }
       },
       {
