@@ -92,18 +92,19 @@
     "title": "Google laisse retirer le logo IA de ses images",
     "beats": [
       {
-        "script": "Tu vas bientôt croiser des images fabriquées par une intelligence artificielle sans rien qui te le dise. Le petit logo de Google dans le coin de l'image, celui qui te prévenait, devient optionnel.",
-        "visual": { "type": "photo", "file": "media/2026-08-15-google-retire-filigrane/pin_femme_tasse_telephone.jpg", "credit": "Shixart1985 · CC BY", "alt": "Une femme assise regarde son téléphone" }
+        "script": "Tu vas bientôt croiser des images fabriquées par une intelligence artificielle sans rien qui te le dise. Le petit logo Google qui te prévenait devient optionnel.",
+        "visual": { "type": "veo", "spec": {
+          "subject": "a printed image with a small bright watermark in its lower corner",
+          "action": "tilting slowly so the light sweeps across the watermark, the image staying whole and in frame",
+          "setting": "on a dark table in daylight",
+          "composition": "extreme close-up, the corner of the image fills the frame" } }
       },
       {
         "script": "Et le plus intéressant, c'est l'endroit où ce logo ne disparaîtra pas. Tu sais lequel ?",
-        "visual": { "type": "image", "spec": {
-          "subject": "a printed photograph with a small bright watermark in its lower corner",
-          "setting": "lying flat on a dark table in daylight",
-          "composition": "extreme close-up, the photograph fills the entire frame" } }
+        "visual": { "type": "photo", "file": "media/2026-08-15-google-retire-filigrane/pin_femme_tasse_telephone.jpg", "credit": "Shixart1985 · CC BY", "alt": "Une femme assise regarde son téléphone" }
       },
       {
-        "script": "Google l'a annoncé vendredi. Un bouton dans les réglages, et la marque visible s'en va des images, des vidéos et même des musiques.",
+        "script": "Google l'a annoncé vendredi. Un bouton dans les réglages, et la marque visible s'en va des images, des vidéos et même des musiques que tu génères.",
         "visual": { "type": "screenshot", "url": "https://www.engadget.com/2237340/google-will-now-allow-users-to-remove-visible-watermarks-from-ai-content/" }
       },
       {
@@ -118,7 +119,7 @@
         "visual": { "type": "card", "value": "L'EUROPE", "label": "la loi y oblige à garder la marque visible" }
       },
       {
-        "script": "Donc chez toi, l'image reste marquée. Mais les images que tu croises viennent du monde entier, et là, plus rien à l'oeil nu.",
+        "script": "Donc chez toi, l'image reste marquée. Mais les images que tu croises sur ton téléphone viennent du monde entier, et là, plus rien à l'oeil nu.",
         "visual": { "type": "photo", "file": "media/2026-08-15-google-retire-filigrane/pin_femme_fenetre_telephone.jpg", "credit": "Shixart1985 · CC BY", "alt": "Une femme regarde son téléphone devant une fenêtre" }
       },
       {

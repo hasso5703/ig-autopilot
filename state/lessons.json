@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-15T10:39:52.432Z",
-  "n": 35,
-  "nSettled": 29,
-  "medianViews": 173,
-  "medianRetentionPct": 21,
+  "at": "2026-08-15T16:40:36.381Z",
+  "n": 36,
+  "nSettled": 30,
+  "medianViews": 177,
+  "medianRetentionPct": 20,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 17,
-      "medianViews": 190,
-      "meanRetentionPct": 25.9,
-      "saves": 26,
-      "shares": 5,
+      "n": 18,
+      "medianViews": 194,
+      "meanRetentionPct": 25.4,
+      "saves": 27,
+      "shares": 6,
       "thin": false
     },
     "photo": {
@@ -154,6 +154,14 @@
       "medianViews": 458,
       "meanRetentionPct": 32,
       "saves": 3,
+      "shares": 1,
+      "thin": true
+    },
+    "11": {
+      "n": 1,
+      "medianViews": 353,
+      "meanRetentionPct": 17,
+      "saves": 1,
       "shares": 1,
       "thin": true
     },
@@ -318,9 +326,9 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1220,
-      "reach": 1090,
-      "avgWatchS": 16.8,
+      "views": 1224,
+      "reach": 1091,
+      "avgWatchS": 16.7,
       "retentionPct": 28,
       "likes": 9,
       "comments": 1,
@@ -366,17 +374,34 @@
       "settled": true
     },
     {
+      "slug": "2026-08-15-camions-sans-chauffeur",
+      "at": "2026-08-15T11:01:21.605Z",
+      "hourUtc": 11,
+      "views": 889,
+      "reach": 773,
+      "avgWatchS": 13.6,
+      "retentionPct": 23,
+      "likes": 11,
+      "comments": 1,
+      "saved": 0,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-14-trois-ia-guerre-serveur",
       "at": "2026-08-14T17:05:09.595Z",
       "hourUtc": 17,
-      "views": 582,
-      "reach": 511,
-      "avgWatchS": 16.1,
+      "views": 665,
+      "reach": 589,
+      "avgWatchS": 16.3,
       "retentionPct": 27,
-      "likes": 7,
+      "likes": 10,
       "comments": 1,
-      "saved": 3,
-      "shares": 0,
+      "saved": 4,
+      "shares": 1,
       "beat0": "veo",
       "themes": [],
       "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
@@ -425,7 +450,7 @@
       "hourUtc": 23,
       "views": 395,
       "reach": 365,
-      "avgWatchS": 24.2,
+      "avgWatchS": 24.1,
       "retentionPct": 40,
       "likes": 3,
       "comments": 1,
@@ -442,7 +467,7 @@
       "hourUtc": 10,
       "views": 378,
       "reach": 342,
-      "avgWatchS": 23.4,
+      "avgWatchS": 23.3,
       "retentionPct": 39,
       "likes": 2,
       "comments": 1,
@@ -468,7 +493,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Twitch entraîne l'IA d'Amazon avec les vidéos des streamers, activé par défaut. Le patron produit : si c'était sur demande, personne ne le ferait.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-07-ouragan-un-jour-davance",
@@ -529,7 +554,7 @@
       "hourUtc": 23,
       "views": 197,
       "reach": 168,
-      "avgWatchS": 30.1,
+      "avgWatchS": 30,
       "retentionPct": 50,
       "likes": 5,
       "comments": 1,
@@ -560,6 +585,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-14-x-algorithme-etiquettes",
+      "at": "2026-08-14T11:00:39.149Z",
+      "hourUtc": 11,
+      "views": 185,
+      "reach": 170,
+      "avgWatchS": 8,
+      "retentionPct": 13,
+      "likes": 2,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
@@ -575,25 +619,6 @@
       "themes": [],
       "sendTest": "ChatGPT devient illimité pour les comptes gratuits cette semaine. Mais les 62 % d'erreurs en moins, c'est OpenAI qui les a mesurés lui-même.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-14-x-algorithme-etiquettes",
-      "at": "2026-08-14T11:00:39.149Z",
-      "hourUtc": 11,
-      "views": 179,
-      "reach": 163,
-      "avgWatchS": 8.2,
-      "retentionPct": 14,
-      "likes": 1,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
-      "settled": false
     },
     {
       "slug": "2026-08-03-ai-act-transparence",
@@ -707,7 +732,7 @@
       "hourUtc": 17,
       "views": 148,
       "reach": 129,
-      "avgWatchS": 10.4,
+      "avgWatchS": 10.3,
       "retentionPct": 17,
       "likes": 2,
       "comments": 1,
@@ -758,9 +783,9 @@
       "slug": "2026-08-12-montre-tension-google",
       "at": "2026-08-12T17:14:27.717Z",
       "hourUtc": 17,
-      "views": 128,
-      "reach": 119,
-      "avgWatchS": 8.5,
+      "views": 129,
+      "reach": 120,
+      "avgWatchS": 8.4,
       "retentionPct": 14,
       "likes": 1,
       "comments": 1,
