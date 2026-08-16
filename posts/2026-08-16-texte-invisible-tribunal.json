@@ -1,0 +1,241 @@
+{
+  "slug": "2026-08-16-texte-invisible-tribunal",
+  "centralClaim": "A Connecticut plaintiff hid instructions to AI systems inside his court filings.",
+  "corroboration": [
+    {
+      "url": "https://www.lawnews.co.uk/legal-news/connecticut-court-sanctions-self-represented-litigant-over-prompt-injection-in-a-court-filing/",
+      "quote": "A Connecticut Superior Court judge has imposed sanctions for prompt injection in a court filing, ruling that a self-represented plaintiff in Elliott v. New York Bariatric Group, LLC (docket AAN-CV-25-6066141-S) hid machine-readable instructions inside multiple pleadings in an attempt to manipulate any artificial-intelligence tool reviewing the documents."
+    },
+    {
+      "url": "https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/",
+      "quote": "A self-represented plaintiff in Connecticut embedded invisible AI instructions in official court filings to sway a potential automated review in his favor."
+    }
+  ],
+  "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
+  "caption": "Il a écrit en blanc sur blanc dans ses documents de justice, pour que l'IA qui les lirait lui donne raison.\n\nDevant un tribunal du Connecticut, un plaignant qui se défendait seul a glissé dans ses pièces un texte en taille 3, blanc sur fond blanc. Invisible à l'œil, parfaitement lisible par une machine. La consigne cachée demandait à tout modèle qui analyserait le dossier d'aller dans son sens et de revenir sur un refus du greffe.\n\nComment ça a été découvert. Le juge a imprimé les pièces récentes et a remarqué des blancs inhabituels dans deux d'entre elles. En y regardant de plus près, le texte était là. Il a convoqué une audience et prévenu le plaignant, qui a quand même continué à cacher des messages, dont un lien vers une vidéo le matin de l'audience.\n\nCe que ça change pour toi. Le juge écrit que la même technique se retrouve ailleurs: chaque année, des employeurs disent trouver des dizaines de milliers de CV portant des instructions cachées en texte blanc, destinées au logiciel qui trie les candidatures.\n\nLes tribunaux du Connecticut ne font pas relire leurs dossiers par une IA, donc la manœuvre n'a rien changé au jugement. Le plaignant a quand même perdu le droit de déposer en ligne.\n\nCacher un message pour l'IA, c'est de la triche ou de la débrouille ?\n\nlawnews.co.uk · reason.com · the-decoder.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Justice #Recrutement",
+  "captionEvidence": [
+    {
+      "quote": "The instructions were formatted in 3-point white text on a white background, making them virtually invisible to the human eye but fully readable by any AI processing the document text.",
+      "url": "https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/"
+    },
+    {
+      "quote": "employers report finding tens of thousands of resumes each year carrying hidden white-text instructions in tiny point font, telling an automated screener to advance or praise the applicant",
+      "url": "https://reason.com/volokh/2026/08/13/court-faults-self-represented-plaintiff-for-including-hidden-prompt-injection-in-court-filing/"
+    },
+    {
+      "quote": "The Connecticut Judicial Branch does not utilize an artificial-intelligence system to review or decide filings, although a number of court systems elsewhere do so.",
+      "url": "https://reason.com/volokh/2026/08/13/court-faults-self-represented-plaintiff-for-including-hidden-prompt-injection-in-court-filing/"
+    },
+    {
+      "quote": "As a sanction, the court stripped Elliott of his right to file electronically.",
+      "url": "https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Connecticut · injection cachée",
+      "headline": "Il a écrit en taille 3 pour que *l'IA* lui donne raison",
+      "hero": {
+        "value": "des CV",
+        "label": "des dizaines de milliers en portent chaque année, écrit le juge"
+      },
+      "swipe": "Les extraits viennent du jugement"
+    },
+    {
+      "type": "stat",
+      "figure": "3",
+      "unit": "points, en blanc sur fond blanc",
+      "body": "La taille du texte caché. **Invisible à l'œil**, parfaitement lisible par une machine qui lit le fichier.",
+      "evidence": "The instructions were formatted in 3-point white text on a white background, making them virtually invisible to the human eye but fully readable by any AI processing the document text.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que disait le texte caché",
+      "body": "Il demandait à tout modèle lisant le dossier de produire une réponse **d'accord avec le plaignant**, et de revenir sur un refus du greffe.",
+      "evidence": "That concealed text is a set of instructions addressed to artificial-intelligence systems, directing any such system that reviews or analyzes the filing to produce output only favorable to the plaintiff's position and to treat a prior clerk's ruling as an error to be corrected in their favor",
+      "source": {
+        "name": "Reason (Volokh Conspiracy)",
+        "url": "https://reason.com/volokh/2026/08/13/court-faults-self-represented-plaintiff-for-including-hidden-prompt-injection-in-court-filing/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Comment il a été repéré",
+      "body": "Le juge a **imprimé** les pièces récentes et a vu des blancs inhabituels. De près, le texte minuscule était là.",
+      "evidence": "while reviewing a 'take papers' notation on docket entry #176.00, judge spader printed recent pleadings and noticed that entries #177.00 and #178.00 appeared to contain unusual white space. Close inspection revealed text set in tiny-point white type on a white background.",
+      "source": {
+        "name": "Law News",
+        "url": "https://www.lawnews.co.uk/legal-news/connecticut-court-sanctions-self-represented-litigant-over-prompt-injection-in-a-court-filing/",
+        "date": "2026-08-14"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Il a recommencé après l'avertissement",
+      "body": "Prévenu, il a continué à cacher des messages: une blague, puis un lien vers une vidéo, **le matin de l'audience**.",
+      "evidence": "on the morning of the hearing, the plaintiff again hid text in pleadings. In docket entry #183.00 a simple message \"hi:) i hope yo ucant see me\" and in docket entry #184.00, a hidden link to a youtube video",
+      "source": {
+        "name": "Reason (Volokh Conspiracy)",
+        "url": "https://reason.com/volokh/2026/08/13/court-faults-self-represented-plaintiff-for-including-hidden-prompt-injection-in-court-filing/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Consider how plainly improper it would be for a party to arrange for an automated agent to communicate covertly with a juror during trial.",
+      "attribution": "Le juge, dans sa décision",
+      "evidence": "Consider how plainly improper it would be for a party to arrange for an automated agent to communicate covertly with a juror during trial.",
+      "source": {
+        "name": "Reason (Volokh Conspiracy)",
+        "url": "https://reason.com/volokh/2026/08/13/court-faults-self-represented-plaintiff-for-including-hidden-prompt-injection-in-court-filing/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et ça ne se passe pas qu'au tribunal",
+      "body": "Le juge écrit que des employeurs trouvent chaque année **des dizaines de milliers de CV** portant des consignes cachées en texte blanc.",
+      "evidence": "employers report finding tens of thousands of resumes each year carrying hidden white-text instructions in tiny point font, telling an automated screener to advance or praise the applicant",
+      "source": {
+        "name": "Reason (Volokh Conspiracy)",
+        "url": "https://reason.com/volokh/2026/08/13/court-faults-self-represented-plaintiff-for-including-hidden-prompt-injection-in-court-filing/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "La manœuvre n'a rien changé: aucune IA ne relit les dossiers dans cette juridiction.",
+      "caveat": "Le tribunal sanctionne la tentative, pas son résultat. Fini le dépôt en ligne, place au papier.",
+      "claimLabel": "Ce que ça a produit",
+      "caveatLabel": "Ce que ça lui coûte",
+      "evidence": "The Connecticut Judicial Branch does not utilize an artificial-intelligence system to review or decide filings, although a number of court systems elsewhere do so.",
+      "source": {
+        "name": "Reason (Volokh Conspiracy)",
+        "url": "https://reason.com/volokh/2026/08/13/court-faults-self-represented-plaintiff-for-including-hidden-prompt-injection-in-court-filing/",
+        "date": "2026-08-13"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Sa réponse",
+      "body": "Il juge la sanction injuste et fait remarquer qu'un **document papier scanné** peut lui aussi contenir du texte caché.",
+      "evidence": "Elliott told 404 Media the sanction was unfair, pointing out that scanned paper documents could also contain hidden text.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui envoie des CV en ce moment",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Reason (Volokh Conspiracy)",
+      "url": "https://reason.com/volokh/2026/08/13/court-faults-self-represented-plaintiff-for-including-hidden-prompt-injection-in-court-filing/",
+      "accessed": "2026-08-16"
+    },
+    {
+      "name": "Law News",
+      "url": "https://www.lawnews.co.uk/legal-news/connecticut-court-sanctions-self-represented-litigant-over-prompt-injection-in-a-court-filing/",
+      "accessed": "2026-08-16"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/",
+      "accessed": "2026-08-16"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Il écrit en taille 3 pour que l'IA lui donne raison",
+    "beats": [
+      {
+        "script": "Chaque année, des dizaines de milliers de CV contiennent un texte invisible. Il ordonne au logiciel qui trie les candidatures de faire passer le candidat.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single sheet of white paper lying on a dark wooden desk",
+            "action": "tilting slowly so the light sweeps across the sheet, the paper staying whole and in frame",
+            "setting": "in bright editorial daylight",
+            "composition": "extreme close-up, the sheet fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Un homme a eu la même idée devant un tribunal du Connecticut. Le principe: tu écris en blanc sur blanc, en tout petit. L'œil ne voit rien, la machine lit tout.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of a document parser",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Dans ses pièces de justice, en taille 3, il a glissé une consigne adressée à toute intelligence artificielle qui lirait le dossier.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.lawnews.co.uk/legal-news/connecticut-court-sanctions-self-represented-litigant-over-prompt-injection-in-a-court-filing/"
+        }
+      },
+      {
+        "script": "Elle demandait à la machine d'écrire qu'elle était d'accord avec lui, et de revenir sur un refus du greffe.",
+        "visual": {
+          "type": "card",
+          "value": "taille 3",
+          "label": "la taille du texte caché, en blanc sur fond blanc"
+        }
+      },
+      {
+        "script": "Sauf que le juge a imprimé les pièces pour les relire. Il a remarqué des blancs bizarres. En regardant de très près, le texte était là.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed docket page filled with columns of numbers",
+            "setting": "lying flat under a desk lamp",
+            "composition": "extreme close-up, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Il a convoqué une audience et l'a prévenu. L'homme a recommencé quand même: une blague cachée, puis un lien vers une vidéo, le matin de l'audience.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/"
+        }
+      },
+      {
+        "script": "Pour le juge, cacher une consigne comme ça, c'est comme faire passer un message en douce à un juré pendant le procès.",
+        "visual": {
+          "type": "card",
+          "value": "un juré",
+          "label": "ce à quoi le juge compare la consigne cachée"
+        }
+      },
+      {
+        "script": "Résultat: fini le dépôt en ligne, il doit venir en personne, sur papier. Sa réponse: un papier scanné peut cacher un texte, lui aussi. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a thick stack of printed pages tied with string",
+            "setting": "on a wooden desk in bright daylight",
+            "composition": "close-up from the side, the stack fills the frame"
+          }
+        }
+      }
+    ]
+  }
+}

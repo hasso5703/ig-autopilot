@@ -386,6 +386,28 @@ ENTRIES:
   copiee chez l'un revient NOT_FOUND chez l'autre (mesure: 1 erreur de gate).
   Recopie toujours depuis le domaine que tu cites, meme quand deux articles
   semblent identiques.
+  Ajout 16/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  arxiv.org (/abs/ ET /html/), reason.com/volokh, lawnews.co.uk (nouveaux), et
+  the-decoder.com re-confirme (0 erreur sur 25 verifications, deux dossiers).
+  Repondent 200 aussi tomshardware.com, 404media.co, wccftech.com, itdaily.com,
+  techjournal.org, mezha.net, ua.news, npr.org et techdirt.com. Bloquent:
+  washingtonpost.com (503, re-confirme), help.openai.com (403, donc les notes de
+  version ChatGPT sont ingatables), windowsreport.com (403), cryptobriefing.com
+  (403), abovethelaw.com (403), pbxscience.com (406), harrisbeachmurtha.com (202
+  sans corps). venturebeat.com rend 429 pour le SEPTIEME jour d'affilee (07 au
+  16/08): l'entree du 12/08 disait "sixieme", c'est desormais l'etat permanent du
+  domaine. Perdu ce matin pour cette raison: l'angle "les modeles sont les plus
+  surs d'eux quand ils ont tort", mis en revisit sans une ligne d'ecrite.
+  LE PIEGE ARXIV, neuf et couteux: la page /abs/<id> ne porte QUE le resume, donc
+  toute phrase du CORPS (chiffres, exemples, notes) copiee depuis /html/<id>vN
+  revient NOT_FOUND si tu cites /abs/. Deux citations mortes la-dessus. Cite
+  /html/<id>vN des que la phrase n'est pas dans le resume. Et le /abs/ rend le
+  LaTeX BRUT: "$>$ 25\\%" s'aplatit en " > > 25%", donc n'englobe jamais une
+  formule dans une citation, choisis un empan sans math.
+  ET LE PIEGE DE DATE, famille du 08/08 (Willison): cbc.ca rend 200 sur un article
+  "ai generated books amazon" qui a l'air parfait pour le dossier du jour et qui
+  date de SEPTEMBRE 2024. Lis la date DANS l'article avant de le compter comme
+  corroboration, un moteur de recherche ne la donne pas.
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
@@ -1122,6 +1144,27 @@ ENTRIES:
   d'affilee ce matin (jusqu'a 13 Mo) avec l'UA descriptif et 5 s d'espacement, sans
   une seule page d'erreur. La fermeture du 13/08 n'est donc pas un etat permanent:
   teste avant de renoncer a epingler, mais telecharge toujours EN PREMIER.
+  Ajout 16/08 (06h30), dossier livres IA. L'ETRANGLEMENT upload.wikimedia FRAPPE
+  DES LA PREMIERE REQUETE DU RUN (page d'erreur de 2,2 ko sur l'original
+  Stripped_paperback.jpg, UA descriptif, aucun telechargement anterieur) et le
+  chemin /thumb/.../1280px-....jpg a rendu l'image entiere dans la seconde:
+  re-confirme le 14/08, essaie TOUJOURS le thumb avant de renoncer. pd.w.org n'est
+  jamais etrangle. VALEUR SURE EPINGLEE, regardee en planche-contact, recadree et
+  posee dans le spec (donc 0 $ de still sur ce beat): "bookshop shelves" ->
+  "Bookshop in Rome" (Elisa Scagnetti, CC0, pd.w.org, 1536x2048 DEJA EN PORTRAIT,
+  crop=1152:2048:192:0), une vraie librairie independante avec son enseigne
+  BOOKSHOP, des livres en rayon et une personne dedans, zero marque genante, zero
+  date gravee: excellent DERNIER beat sur une actu d'edition. REQUETES MORTES OU
+  PIEGEES le meme matin: "resume paper" ne rend que des affiches et reliures du
+  19e siecle (piege d'epoque, 9e occurrence) alors que l'histoire parle de CV;
+  "paperback books" met en tete "Stripped paperback", une vraie photo de livre sans
+  couverture, mais en PAYSAGE 1280x960, et le crop 9:16 (540 px) coupe le livre en
+  deux et remonte en x2 - une valeur sure de carnet n'existe qu'avec son crop, ca
+  re-confirme le 13/08. Et un TYPE NOUVEAU de piege d'identite, sur un LIEU cette
+  fois et pas sur une personne: "courthouse connecticut" rend le Fairfield County
+  Courthouse, vrai, bien licencie, contemporain, et ce n'est PAS le tribunal du
+  dossier (Ansonia/Milford). Montrer le mauvais palais de justice est la meme faute
+  que nommer la mauvaise personne, et aucun filtre ne la voit: beat abandonne.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -1720,3 +1763,19 @@ ENTRIES:
   deux quotes, sinon une quote vraie et sur-le-sujet est refusee a tort. Mesure:
   gate openai-ia-pirate-chrome, 3 refus d'abord (veo "exploit" absent du vocab,
   nom non capitalise, claim trop long a 3 mots partages), PASSED apres correctifs.
+  Ajout 16/08 (06h30), DEUX REFUS DE GATE QUI N'ACCUSENT NI TA SOURCE NI TON TEXTE.
+  (1) FAUX POSITIF DE CADENCE, meme famille que l'accent "tres" du 07/08: le
+  controle "promises a publishing frequency" matche le mot QUOTIDIEN. Une diapo et
+  une legende disant "croises avec les ventes quotidiennes" (des ventes jour par
+  jour, aucune promesse de publication) ont declenche deux erreurs bloquantes.
+  Contournement gratuit et sans degat editorial: "les releves de ventes". Mefie-toi
+  aussi de hebdomadaire, mensuel, chaque jour.
+  (2) LE `figure` D'UNE DIAPO stat EST TENU PAR DEUX CONTROLES QUI SE CONTREDISENT,
+  et le remede n'est pas evident. Plafond de 6 CARACTERES ("$643,000" fait 8 et est
+  refuse "renders clipped"), mais le raccourci naturel "$643k" est refuse LUI AUSSI
+  parce que le gate normalise la citation "$643,000" en 643000 et que le jeton 643
+  n'y matche plus. Ecrire le chiffre comme la source ne suffit donc pas quand la
+  source est longue. Remede applique, passe du premier coup: mettre dans `figure`
+  un AUTRE numeral vrai et court de la meme phrase ("80,431" exemplaires) et
+  laisser le montant en dollars dans le `body`. Regle: choisis le chiffre de la
+  diapo stat sur sa LONGUEUR, pas sur son importance.

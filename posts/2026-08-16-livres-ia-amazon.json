@@ -1,0 +1,244 @@
+{
+  "slug": "2026-08-16-livres-ia-amazon",
+  "centralClaim": "On Amazon, revenue per book fell even for books with no detected AI text.",
+  "corroboration": [
+    {
+      "url": "https://arxiv.org/abs/2607.20349",
+      "quote": "The market therefore added selling books faster than it added revenue, and revenue per selling book fell across most genres. Books with no AI text lose the most ground in genres with high AI diffusion, and most of all where Kindle Unlimited availability is high."
+    },
+    {
+      "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+      "quote": "Looking only at books with no detected AI text, revenue fell in seven of eight genres."
+    }
+  ],
+  "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
+  "caption": "Un livre vendu sur Amazon a rapporté 643 000 dollars, et une IA en a écrit une partie. Rien sur la page ne te le disait.\n\nDes chercheurs ont passé au détecteur 14 419 livres autopubliés vendus sur Amazon entre janvier 2023 et mars 2026, puis les ont croisés avec les relevés de ventes. Les livres contenant une part importante de texte écrit par une IA (plus de 25 % du texte) représentent 20 % du catalogue étudié. Le plus rentable d'entre eux a rapporté 643,000 dollars sur 80,431 exemplaires vendus.\n\nCe qui n'a pas tenu dans la vidéo. Ces livres ne restent pas au fond du classement: la part des nouvelles entrées dans le top 25 contenant une part importante de texte écrit par une IA est passée de presque zéro à 31 %. Et un même auteur, sous 21 pseudonymes, aurait sorti plus de 200 romans sentimentaux en un an.\n\nÀ nuancer, et c'est important. Le classement vient d'un détecteur, pas d'un aveu des auteurs. Et les chercheurs écrivent eux-mêmes que leurs comparaisons sont observationnelles, pas une preuve de causalité. L'article est encore en relecture.\n\nAmazon oblige les auteurs à déclarer l'usage de l'IA, mais ne transmet pas cette information aux acheteurs. Tu voudrais le savoir avant d'acheter, oui ou non ?\n\narxiv.org · the-decoder.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Amazon #Livres",
+  "captionEvidence": [
+    {
+      "quote": "The researchers analyzed 14,419 randomly selected self-published e-books released between January 2023 and March 2026.",
+      "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/"
+    },
+    {
+      "quote": "Books were sorted into three bands based on the share of text flagged as AI-generated: none, light (up to 25 percent), and substantial (over 25 percent).",
+      "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/"
+    },
+    {
+      "quote": "The single highest-grossing book with substantial AI content brought in $643,000 on 80,431 copies sold.",
+      "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/"
+    },
+    {
+      "quote": "The share of new top 25 entries with substantial AI content rose from near zero to 31 percent over the study period.",
+      "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/"
+    },
+    {
+      "quote": "reportedly released more than 200 romance novels across 21 pen names in a single year and sold roughly 50,000 copies",
+      "url": "https://arxiv.org/html/2607.20349v3"
+    },
+    {
+      "quote": "Books with substantial AI content make up 20 percent of the catalog but account for only 12.1 percent of sales and 11.3 percent of revenue.",
+      "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Amazon · livres autopubliés",
+      "headline": "Le livre s'est vendu. *L'auteur* n'existe pas vraiment.",
+      "hero": {
+        "value": "$643,000",
+        "label": "pour le livre le plus rentable écrit en partie par une IA"
+      },
+      "swipe": "Les chiffres viennent de l'étude"
+    },
+    {
+      "type": "stat",
+      "figure": "80,431",
+      "unit": "exemplaires vendus",
+      "body": "Le livre **le plus rentable** écrit en partie par une IA a rapporté $643,000.",
+      "evidence": "The single highest-grossing book with substantial AI content brought in $643,000 on 80,431 copies sold.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui a été mesuré",
+      "body": "14,419 livres autopubliés vendus sur Amazon, passés au détecteur **texte entier**, puis croisés avec les relevés de ventes.",
+      "evidence": "The researchers analyzed 14,419 randomly selected self-published e-books released between January 2023 and March 2026.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "20%",
+      "unit": "du catalogue étudié",
+      "body": "Part des livres où le détecteur trouve une part importante de texte écrit par une IA. Ils font **12.1 %** des ventes.",
+      "evidence": "Books with substantial AI content make up 20 percent of the catalog but account for only 12.1 percent of sales and 11.3 percent of revenue.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ils montent jusqu'en tête",
+      "body": "La part des nouvelles entrées dans le top 25 contenant une part importante de texte écrit par une IA est passée de presque zéro à **31 %**.",
+      "evidence": "The share of new top 25 entries with substantial AI content rose from near zero to 31 percent over the study period.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Plus de livres, pas plus d'argent",
+      "body": "Le marché a ajouté des livres qui se vendent **plus vite** qu'il n'a ajouté de revenus, donc chaque livre rapporte moins.",
+      "evidence": "The market therefore added selling books faster than it added revenue, and revenue per selling book fell across most genres. Books with no AI text lose the most ground in genres with high AI diffusion, and most of all where Kindle Unlimited availability is high.",
+      "source": {
+        "name": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20349",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Les revenus baissent aussi pour les livres sans aucune trace d'IA, dans sept genres sur huit.",
+      "caveat": "Les chercheurs écrivent que leurs comparaisons sont observationnelles, pas une preuve de causalité.",
+      "claimLabel": "Ce que trouve l'étude",
+      "caveatLabel": "Ce qu'elle ne prouve pas",
+      "evidence": "Looking only at books with no detected AI text, revenue fell in seven of eight genres. That rules out the explanation that the average is dropping simply because poorly selling AI books are padding the catalog. The authors call this effect \"dilution\" but stress that their comparisons are observational and associational, not experimental proof of causation.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un seul auteur, 21 pseudonymes",
+      "body": "Plus de **200 romans sentimentaux** en un an, environ 50,000 exemplaires vendus, selon le rapport cité par les chercheurs.",
+      "evidence": "reportedly released more than 200 romance novels across 21 pen names in a single year and sold roughly 50,000 copies",
+      "source": {
+        "name": "arXiv",
+        "url": "https://arxiv.org/html/2607.20349v3",
+        "date": "2026-08-03"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et toi, tu ne le sais pas",
+      "body": "Les auteurs doivent déclarer l'usage de l'IA à Amazon. **Amazon ne transmet pas cette information aux acheteurs.**",
+      "evidence": "Authors must disclose AI involvement when publishing through Kindle Direct Publishing, but Amazon doesn't pass that information along to customers.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui achète ses romans sur Amazon",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "arXiv",
+      "url": "https://arxiv.org/abs/2607.20349",
+      "accessed": "2026-08-16"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+      "accessed": "2026-08-16"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Amazon ne te dit pas si une IA a écrit ce livre",
+    "beats": [
+      {
+        "script": "Sur Amazon, un livre dont une IA a écrit une partie du texte a rapporté 643 000 dollars. 80 431 exemplaires vendus.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single thick paperback novel with a plain unmarked cover, standing upright on a dark wooden table",
+            "action": "slowly rotating in place, the novel staying whole and in frame",
+            "setting": "in bright editorial daylight",
+            "composition": "extreme close-up, the novel fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et il n'est pas tout seul. Des chercheurs ont passé 14 419 livres vendus sur Amazon au détecteur, texte entier. Tu veux savoir combien en contiennent ?",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/"
+        }
+      },
+      {
+        "script": "20 % du catalogue étudié. Et ce ne sont pas des pages de spam: ce sont des livres qui se vendent vraiment.",
+        "visual": {
+          "type": "card",
+          "value": "20%",
+          "label": "du catalogue étudié, plus de 25 % du texte écrit par une IA"
+        }
+      },
+      {
+        "script": "Tu te dis que ça se voit, et que personne ne les achète. Sauf que non. Ils sont montés jusqu'en tête des ventes.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed revenue report page filled with columns of numbers",
+            "setting": "lying flat under a desk lamp",
+            "composition": "extreme close-up, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "31 % des nouvelles entrées dans le top 25 sont désormais des livres où le détecteur trouve une part importante de texte écrit par une IA.",
+        "visual": {
+          "type": "card",
+          "value": "31%",
+          "label": "des nouvelles entrées dans le top 25 des ventes"
+        }
+      },
+      {
+        "script": "Et voilà le vrai problème. Il y a beaucoup plus de livres en vente qu'avant, mais pas plus d'argent pour les payer. Donc chaque livre rapporte moins.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://arxiv.org/abs/2607.20349"
+        }
+      },
+      {
+        "script": "Même les livres où le détecteur n'a trouvé aucune trace d'IA: leurs revenus ont baissé dans sept genres sur huit. Les chercheurs préviennent quand même que ça montre un lien, pas une cause.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of revenue numbers",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Amazon oblige les auteurs à déclarer l'IA. Mais il ne transmet pas l'info aux acheteurs. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "bookshop shelves",
+          "alt": "Une librairie indépendante, ses livres en rayon sur la rue",
+          "file": "media/2026-08-16-livres-ia-amazon/photo_bookshop.jpg",
+          "credit": "Elisa Scagnetti · CC0"
+        }
+      }
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-15T19:40:35.710Z",
+  "at": "2026-08-16T06:40:53.749Z",
   "n": 37,
   "nSettled": 31,
-  "medianViews": 181,
+  "medianViews": 182,
   "medianRetentionPct": 21,
   "top": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
-      "views": 1233,
+      "views": 1234,
       "retentionPct": 26,
       "saved": 4,
       "shares": 3,
@@ -31,7 +31,7 @@
     },
     {
       "slug": "2026-08-09-motif-anti-cameras",
-      "views": 1146,
+      "views": 1147,
       "retentionPct": 25,
       "saved": 7,
       "shares": 0,
@@ -39,7 +39,7 @@
     },
     {
       "slug": "2026-08-03-macbook-air-memoire",
-      "views": 1141,
+      "views": 1142,
       "retentionPct": 23,
       "saved": 2,
       "shares": 0,
@@ -49,7 +49,7 @@
   "bottom": [
     {
       "slug": "2026-07-28-claude-chats-google",
-      "views": 22,
+      "views": 23,
       "retentionPct": null,
       "saved": 2,
       "shares": 0,
@@ -57,23 +57,23 @@
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
-      "views": 80,
-      "retentionPct": 16,
+      "views": 81,
+      "retentionPct": 15,
       "saved": 0,
       "shares": 0,
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
     },
     {
       "slug": "2026-08-01-penurie-memoire-samsung",
-      "views": 112,
-      "retentionPct": 10,
+      "views": 114,
+      "retentionPct": 11,
       "saved": 0,
-      "shares": 0,
+      "shares": 1,
       "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher."
     },
     {
       "slug": "2026-08-04-congres-chatgpt",
-      "views": 116,
+      "views": 117,
       "retentionPct": 13,
       "saved": 0,
       "shares": 0,
@@ -81,7 +81,7 @@
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
-      "views": 120,
+      "views": 122,
       "retentionPct": 20,
       "saved": 1,
       "shares": 0,
@@ -99,7 +99,7 @@
     },
     "photo": {
       "n": 7,
-      "medianViews": 181,
+      "medianViews": 182,
       "meanRetentionPct": 21,
       "saves": 7,
       "shares": 1,
@@ -107,10 +107,10 @@
     },
     "screenshot": {
       "n": 5,
-      "medianViews": 120,
+      "medianViews": 122,
       "meanRetentionPct": 17.4,
       "saves": 3,
-      "shares": 0,
+      "shares": 2,
       "thin": false
     }
   },
@@ -125,7 +125,7 @@
     },
     "security": {
       "n": 3,
-      "medianViews": 190,
+      "medianViews": 191,
       "meanRetentionPct": 22,
       "saves": 4,
       "shares": 0,
@@ -141,17 +141,17 @@
     },
     "safety": {
       "n": 3,
-      "medianViews": 156,
+      "medianViews": 157,
       "meanRetentionPct": 23,
       "saves": 3,
-      "shares": 0,
+      "shares": 1,
       "thin": true
     }
   },
   "byPublishHourUtc": {
     "10": {
       "n": 2,
-      "medianViews": 458,
+      "medianViews": 459,
       "meanRetentionPct": 32,
       "saves": 3,
       "shares": 1,
@@ -167,7 +167,7 @@
     },
     "12": {
       "n": 2,
-      "medianViews": 649,
+      "medianViews": 650,
       "meanRetentionPct": 25.5,
       "saves": 3,
       "shares": 0,
@@ -175,7 +175,7 @@
     },
     "13": {
       "n": 1,
-      "medianViews": 151,
+      "medianViews": 152,
       "meanRetentionPct": 30,
       "saves": 2,
       "shares": 0,
@@ -183,7 +183,7 @@
     },
     "15": {
       "n": 2,
-      "medianViews": 129,
+      "medianViews": 131,
       "meanRetentionPct": 19.5,
       "saves": 2,
       "shares": 0,
@@ -191,8 +191,8 @@
     },
     "16": {
       "n": 5,
-      "medianViews": 181,
-      "meanRetentionPct": 21.6,
+      "medianViews": 182,
+      "meanRetentionPct": 21.4,
       "saves": 7,
       "shares": 3,
       "thin": false
@@ -207,7 +207,7 @@
     },
     "19": {
       "n": 1,
-      "medianViews": 301,
+      "medianViews": 302,
       "meanRetentionPct": 23,
       "saves": 2,
       "shares": 0,
@@ -215,10 +215,10 @@
     },
     "20": {
       "n": 6,
-      "medianViews": 353,
+      "medianViews": 354,
       "meanRetentionPct": 22.3,
       "saves": 13,
-      "shares": 1,
+      "shares": 2,
       "thin": false
     },
     "23": {
@@ -231,15 +231,15 @@
     },
     "09": {
       "n": 2,
-      "medianViews": 67,
-      "meanRetentionPct": 10,
+      "medianViews": 69,
+      "meanRetentionPct": 11,
       "saves": 2,
-      "shares": 0,
+      "shares": 1,
       "thin": true
     }
   },
   "followers": {
-    "now": 19,
+    "now": 20,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -247,11 +247,11 @@
         "published": [
           {
             "slug": "2026-08-08-virus-ecrits-par-une-ia",
-            "views": 1233
+            "views": 1234
           },
           {
             "slug": "2026-08-08-facture-ia-salaries",
-            "views": 538
+            "views": 539
           }
         ]
       },
@@ -261,11 +261,11 @@
         "published": [
           {
             "slug": "2026-08-09-motif-anti-cameras",
-            "views": 1146
+            "views": 1147
           },
           {
             "slug": "2026-08-09-chatgpt-gratuit-illimite",
-            "views": 181
+            "views": 182
           }
         ]
       },
@@ -275,11 +275,11 @@
         "published": [
           {
             "slug": "2026-08-04-fcc-robots-humanoides",
-            "views": 156
+            "views": 157
           },
           {
             "slug": "2026-08-04-congres-chatgpt",
-            "views": 116
+            "views": 117
           }
         ]
       }
@@ -306,10 +306,27 @@
       "settled": true
     },
     {
+      "slug": "2026-08-15-camions-sans-chauffeur",
+      "at": "2026-08-15T11:01:21.605Z",
+      "hourUtc": 11,
+      "views": 1239,
+      "reach": 1108,
+      "avgWatchS": 12.7,
+      "retentionPct": 21,
+      "likes": 14,
+      "comments": 1,
+      "saved": 0,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "at": "2026-08-08T16:51:56.558Z",
       "hourUtc": 16,
-      "views": 1233,
+      "views": 1234,
       "reach": 1108,
       "avgWatchS": 15.6,
       "retentionPct": 26,
@@ -340,27 +357,10 @@
       "settled": true
     },
     {
-      "slug": "2026-08-15-camions-sans-chauffeur",
-      "at": "2026-08-15T11:01:21.605Z",
-      "hourUtc": 11,
-      "views": 1221,
-      "reach": 1093,
-      "avgWatchS": 12.8,
-      "retentionPct": 21,
-      "likes": 14,
-      "comments": 1,
-      "saved": 0,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-09-motif-anti-cameras",
       "at": "2026-08-09T20:14:36.239Z",
       "hourUtc": 20,
-      "views": 1146,
+      "views": 1147,
       "reach": 1039,
       "avgWatchS": 15.1,
       "retentionPct": 25,
@@ -377,8 +377,8 @@
       "slug": "2026-08-03-macbook-air-memoire",
       "at": "2026-08-03T12:28:13.807Z",
       "hourUtc": 12,
-      "views": 1141,
-      "reach": 1063,
+      "views": 1142,
+      "reach": 1064,
       "avgWatchS": 13.8,
       "retentionPct": 23,
       "likes": 12,
@@ -394,9 +394,9 @@
       "slug": "2026-08-14-trois-ia-guerre-serveur",
       "at": "2026-08-14T17:05:09.595Z",
       "hourUtc": 17,
-      "views": 668,
-      "reach": 593,
-      "avgWatchS": 16.4,
+      "views": 685,
+      "reach": 603,
+      "avgWatchS": 16.2,
       "retentionPct": 27,
       "likes": 10,
       "comments": 1,
@@ -408,12 +408,29 @@
       "settled": false
     },
     {
+      "slug": "2026-08-15-google-retire-filigrane",
+      "at": "2026-08-15T17:01:47.885Z",
+      "hourUtc": 17,
+      "views": 545,
+      "reach": 480,
+      "avgWatchS": 14.2,
+      "retentionPct": 24,
+      "likes": 5,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Google va laisser enlever le petit logo qui disait qu'une image était faite par IA. Sauf en Europe, où la loi oblige à le garder.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-08-facture-ia-salaries",
       "at": "2026-08-08T10:57:53.515Z",
       "hourUtc": 10,
-      "views": 538,
+      "views": 539,
       "reach": 456,
-      "avgWatchS": 14.8,
+      "avgWatchS": 14.9,
       "retentionPct": 25,
       "likes": 8,
       "comments": 1,
@@ -499,8 +516,8 @@
       "slug": "2026-08-07-ouragan-un-jour-davance",
       "at": "2026-08-07T16:52:51.450Z",
       "hourUtc": 16,
-      "views": 329,
-      "reach": 294,
+      "views": 330,
+      "reach": 295,
       "avgWatchS": 11.1,
       "retentionPct": 18,
       "likes": 7,
@@ -516,8 +533,8 @@
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
       "at": "2026-08-06T19:59:50.589Z",
       "hourUtc": 19,
-      "views": 301,
-      "reach": 285,
+      "views": 302,
+      "reach": 286,
       "avgWatchS": 13.8,
       "retentionPct": 23,
       "likes": 5,
@@ -533,14 +550,14 @@
       "slug": "2026-08-02-google-earth-ia",
       "at": "2026-08-02T20:00:03.807Z",
       "hourUtc": 20,
-      "views": 291,
-      "reach": 264,
+      "views": 292,
+      "reach": 263,
       "avgWatchS": 13,
       "retentionPct": 22,
       "likes": 3,
       "comments": 1,
       "saved": 1,
-      "shares": 0,
+      "shares": 1,
       "beat0": "screenshot",
       "themes": [
         "safety"
@@ -566,12 +583,31 @@
       "settled": true
     },
     {
+      "slug": "2026-08-14-x-algorithme-etiquettes",
+      "at": "2026-08-14T11:00:39.149Z",
+      "hourUtc": 11,
+      "views": 194,
+      "reach": 177,
+      "avgWatchS": 8.1,
+      "retentionPct": 14,
+      "likes": 2,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-06-aisi-faux-profils",
       "at": "2026-08-06T17:16:39.586Z",
       "hourUtc": 17,
-      "views": 190,
-      "reach": 170,
-      "avgWatchS": 11.2,
+      "views": 191,
+      "reach": 171,
+      "avgWatchS": 11.1,
       "retentionPct": 19,
       "likes": 7,
       "comments": 1,
@@ -585,31 +621,12 @@
       "settled": true
     },
     {
-      "slug": "2026-08-14-x-algorithme-etiquettes",
-      "at": "2026-08-14T11:00:39.149Z",
-      "hourUtc": 11,
-      "views": 190,
-      "reach": 174,
-      "avgWatchS": 7.9,
-      "retentionPct": 13,
-      "likes": 2,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
-      "views": 181,
-      "reach": 157,
-      "avgWatchS": 16.5,
+      "views": 182,
+      "reach": 158,
+      "avgWatchS": 16.6,
       "retentionPct": 28,
       "likes": 5,
       "comments": 1,
@@ -624,9 +641,9 @@
       "slug": "2026-08-03-ai-act-transparence",
       "at": "2026-08-03T17:08:41.840Z",
       "hourUtc": 17,
-      "views": 173,
-      "reach": 156,
-      "avgWatchS": 11.8,
+      "views": 174,
+      "reach": 157,
+      "avgWatchS": 11.7,
       "retentionPct": 20,
       "likes": 4,
       "comments": 1,
@@ -641,9 +658,9 @@
       "slug": "2026-08-05-apple-openai-gel",
       "at": "2026-08-05T20:29:26.521Z",
       "hourUtc": 20,
-      "views": 171,
-      "reach": 160,
-      "avgWatchS": 12,
+      "views": 172,
+      "reach": 161,
+      "avgWatchS": 11.9,
       "retentionPct": 20,
       "likes": 5,
       "comments": 1,
@@ -658,8 +675,8 @@
       "slug": "2026-08-10-ia-reserve-cours-sport",
       "at": "2026-08-10T16:58:57.530Z",
       "hourUtc": 16,
-      "views": 159,
-      "reach": 143,
+      "views": 160,
+      "reach": 144,
       "avgWatchS": 12.1,
       "retentionPct": 20,
       "likes": 3,
@@ -677,9 +694,9 @@
       "slug": "2026-08-04-fcc-robots-humanoides",
       "at": "2026-08-04T12:10:51.964Z",
       "hourUtc": 12,
-      "views": 156,
+      "views": 157,
       "reach": 143,
-      "avgWatchS": 16.6,
+      "avgWatchS": 16.7,
       "retentionPct": 28,
       "likes": 5,
       "comments": 1,
@@ -696,8 +713,8 @@
       "slug": "2026-08-07-suno-chansons-marquees",
       "at": "2026-08-07T20:27:30.310Z",
       "hourUtc": 20,
-      "views": 152,
-      "reach": 137,
+      "views": 153,
+      "reach": 138,
       "avgWatchS": 10,
       "retentionPct": 17,
       "likes": 6,
@@ -713,9 +730,9 @@
       "slug": "2026-07-30-opus5-vending-cartels",
       "at": "2026-07-30T13:14:06.716Z",
       "hourUtc": 13,
-      "views": 151,
-      "reach": 142,
-      "avgWatchS": 15.1,
+      "views": 152,
+      "reach": 143,
+      "avgWatchS": 15,
       "retentionPct": 30,
       "likes": 3,
       "comments": 1,
@@ -747,9 +764,9 @@
       "slug": "2026-08-02-xai-minnesota-nudification",
       "at": "2026-08-02T15:57:53.852Z",
       "hourUtc": 15,
-      "views": 138,
-      "reach": 126,
-      "avgWatchS": 11.2,
+      "views": 139,
+      "reach": 127,
+      "avgWatchS": 11.1,
       "retentionPct": 19,
       "likes": 4,
       "comments": 1,
@@ -763,28 +780,11 @@
       "settled": true
     },
     {
-      "slug": "2026-08-15-google-retire-filigrane",
-      "at": "2026-08-15T17:01:47.885Z",
-      "hourUtc": 17,
-      "views": 132,
-      "reach": 120,
-      "avgWatchS": 11.6,
-      "retentionPct": 19,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Google va laisser enlever le petit logo qui disait qu'une image était faite par IA. Sauf en Europe, où la loi oblige à le garder.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-05-waymo-dallas",
       "at": "2026-08-05T17:17:47.664Z",
       "hourUtc": 17,
-      "views": 130,
-      "reach": 117,
+      "views": 131,
+      "reach": 118,
       "avgWatchS": 10.3,
       "retentionPct": 17,
       "likes": 3,
@@ -817,9 +817,9 @@
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
-      "views": 120,
-      "reach": 104,
-      "avgWatchS": 12.2,
+      "views": 122,
+      "reach": 105,
+      "avgWatchS": 12.1,
       "retentionPct": 20,
       "likes": 4,
       "comments": 1,
@@ -834,9 +834,9 @@
       "slug": "2026-08-04-congres-chatgpt",
       "at": "2026-08-04T17:43:30.306Z",
       "hourUtc": 17,
-      "views": 116,
-      "reach": 110,
-      "avgWatchS": 8.1,
+      "views": 117,
+      "reach": 111,
+      "avgWatchS": 8,
       "retentionPct": 13,
       "likes": 3,
       "comments": 1,
@@ -851,14 +851,14 @@
       "slug": "2026-08-01-penurie-memoire-samsung",
       "at": "2026-08-01T09:17:47.305Z",
       "hourUtc": 9,
-      "views": 112,
-      "reach": 103,
-      "avgWatchS": 6.2,
-      "retentionPct": 10,
+      "views": 114,
+      "reach": 104,
+      "avgWatchS": 6.9,
+      "retentionPct": 11,
       "likes": 3,
       "comments": 1,
       "saved": 0,
-      "shares": 0,
+      "shares": 1,
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher.",
@@ -868,10 +868,10 @@
       "slug": "2026-07-31-xai-turbines-memphis",
       "at": "2026-07-31T16:19:27.550Z",
       "hourUtc": 16,
-      "views": 80,
-      "reach": 72,
-      "avgWatchS": 9.3,
-      "retentionPct": 16,
+      "views": 81,
+      "reach": 73,
+      "avgWatchS": 9.2,
+      "retentionPct": 15,
       "likes": 3,
       "comments": 1,
       "saved": 0,
@@ -885,9 +885,9 @@
       "slug": "2026-07-28-claude-chats-google",
       "at": "2026-07-28T09:12:53.605Z",
       "hourUtc": 9,
-      "views": 22,
-      "reach": 18,
-      "avgWatchS": 8.7,
+      "views": 23,
+      "reach": 19,
+      "avgWatchS": 8.6,
       "retentionPct": null,
       "likes": 2,
       "comments": 0,
