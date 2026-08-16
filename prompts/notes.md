@@ -648,6 +648,29 @@ ENTRIES:
   Regle: quand le mot central de ton spec est un terme de metier, demande-toi ce que
   Google Images en ferait, et prefere le mot le plus betement informatique (process,
   log, script, code, terminal). Proof: run 16h30 14/08, still_5 refuse puis rachete.
+  Ajout 16/08 (10h30), DEUX RENDUS RATES SUR LE MEME BEAT, dossier livres IA, et le
+  second est un piege d'EPOQUE DANS UNE STILL GENEREE (toutes les entrees "epoque" de
+  ce carnet parlaient de `photo`). (1) "a laptop screen filled with a single column of
+  REVENUE numbers" a rendu un tableur Excel dont la colonne A est remplie de
+  MARQUES DE REMPLISSAGE ("--.0-..", "--,---.--") sur ~15 lignes, avec un en-tete
+  invente "Generic Revenue": ce n'est pas la prose inventee du 01/08, c'est pire, ca
+  a l'air CASSE. La recette du 10/08 ("a single column of ... numbers") ne suffit donc
+  pas sur un ecran quand le mot central est un terme COMPTABLE: revenue/sales/budget
+  appellent une appli tableur, et un tableur genere se remplit de cellules vides.
+  (2) Corrige en "a printed revenue LEDGER page filled with columns of numbers": vrais
+  chiffres manuscrits, mais un registre ANCIEN jauni, ecrit a la main, avec la date
+  "14.11.23" repetee sur ~40 lignes, sur une actu 2026 d'edition numerique. Le mot
+  "ledger" porte l'anciennete a lui seul. (3) CE QUI PASSE, et c'est le mot du 09/08
+  inchange: "a printed revenue REPORT page filled with columns of numbers" a rendu du
+  premier coup un etat imprime moderne, chiffres et pourcentages reels (dont un -8%),
+  en-tetes Q1/Q2/Q3, zero prose, zero marque, AUCUN millesime. Regle: sur un chiffre
+  d'argent, ecris "report page", jamais "ledger" (epoque) ni un ECRAN (cellules vides),
+  et fais varier la LUMIERE et l'ANGLE plutot que le mot pour distinguer deux stills de
+  document (still_3 lampe de bureau oblique / still_6 lumiere du jour vue de dessus:
+  deux familles visuelles distinctes avec le meme sujet). Cout de la lecon: $0,385 pour
+  un beat, 3 achats. Le rebuild, lui, est gratuit si tu EPINGLES les recus avec `file`
+  (chemin depuis la racine): les 2 captures, le veo, la narration et still_3 ont ete
+  reservis, seul still_6 a ete rachete. Proof: run 10h30 16/08, still_6 refuse 2 fois.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -1667,7 +1690,23 @@ ENTRIES:
   donc ne pin pas le crop=1290:2293:0:0 par reflexe, REGARDE le shot_N.png d'abord,
   un recadrage inutile coupe le chapo. Et il passe le controle du 10/08: le titre
   affiche EST l'histoire.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08.
+  Ajout 16/08 (10h30), DEUX RECUS LEGERS MESURES EN MOTEUR, dossier livres IA, les deux
+  PROPRES DU PREMIER COUP et sans recadrage. arxiv.org/abs/<id> se capture en ~1 min et
+  c'est un excellent recu sur une actu de PAPIER: bandeau arXiv, fil "Computer Science >
+  Computation and Language", l'identifiant, la date de soumission ET de revision, le
+  titre entier, les quatre auteurs, et le resume en entier dans le cadre 9:16, plus la
+  ligne "Comments: Working Paper Under Review" qui atteste toute seule la nuance du
+  script. Zero pub, zero banniere cookies. Il complete l'entree du 16/08 06h30 (qui ne
+  parlait que du gate): /abs se GATE et se CAPTURE, la ou PubMed etait jusqu'ici le seul
+  recu sur un papier. the-decoder.com se capture aussi du premier coup (~2 min): titre
+  entier sur 3 lignes, signature, date, et surtout son encadre "Topics" dont les puces
+  portent l'affirmation centrale ("Revenue per book is falling even for titles with no
+  detected AI text"), donc le recu prouve l'histoire et pas seulement la source. Les deux
+  passent le controle du 10/08 (le titre affiche EST l'histoire). Bemol a savoir: l'image
+  de tete de the-decoder porte la mention "Nano Banana Pro prompted by THE DECODER", donc
+  sur une actu de contenu genere par IA le recu montre une illustration elle-meme generee;
+  minuscule au rendu, mais lis-le avant de cadrer plus bas.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
