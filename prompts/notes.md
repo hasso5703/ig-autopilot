@@ -701,7 +701,16 @@ ENTRIES:
   rendu 200 et 20 items. Un FAIL TechCrunch dans le rapport de feeds.mjs n'est donc
   pas la panne du jour, c'est la meme toux: relance le flux a la main avant de
   planifier sans lui. Ce jour-la il portait LES DEUX histoires banquees, et le
-  rapport de collecte disait qu'il etait mort.
+  rapport de collecte disait qu'il etait mort. Ajout 16/08 (19h30), MEME TOUX SUR
+  UN AUTRE FLUX, donc ce n'est pas une specialite TechCrunch: feeds.mjs a rendu
+  "FAIL 0/0 <- HTTP 502 after 13 tries" sur hnrss.org/frontpage?points=250, et un
+  fetch Node direct du MEME flux 3 min plus tard a rendu 200, 4266 octets, 5 items.
+  Treize tentatives echouees puis un succes immediat a la main: le nombre de
+  reessais dans le rapport ne prouve pas que le flux est mort. Relance a la main
+  TOUT flux marque FAIL avant de planifier sans lui (The Verge et Ars Technica
+  restent, eux, des 403 permanents, entree du 28/07). Ce soir-la les 5 items HN ne
+  portaient aucune actu IA publiable, donc le run n'a rien perdu, mais la mesure
+  vaut pour le prochain.
 - 2026-07-28 · Outlets edit articles after publication: TechCrunch changed
   "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
   Re-run validate.mjs on any stored spec before building from it; re-copy the

@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-16T16:41:25.310Z",
-  "n": 38,
-  "nSettled": 32,
-  "medianViews": 187,
-  "medianRetentionPct": 20,
+  "at": "2026-08-16T19:40:59.497Z",
+  "n": 39,
+  "nSettled": 33,
+  "medianViews": 191,
+  "medianRetentionPct": 21,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -23,7 +23,7 @@
     },
     {
       "slug": "2026-08-13-claude-marque-invisible",
-      "views": 1224,
+      "views": 1225,
       "retentionPct": 28,
       "saved": 4,
       "shares": 7,
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 20,
-      "medianViews": 196,
-      "meanRetentionPct": 24.9,
-      "saves": 32,
-      "shares": 14,
+      "n": 21,
+      "medianViews": 197,
+      "meanRetentionPct": 25,
+      "saves": 36,
+      "shares": 15,
       "thin": false
     },
     "photo": {
@@ -198,11 +198,11 @@
       "thin": false
     },
     "17": {
-      "n": 7,
-      "medianViews": 148,
-      "meanRetentionPct": 18,
-      "saves": 5,
-      "shares": 7,
+      "n": 8,
+      "medianViews": 161,
+      "meanRetentionPct": 19.1,
+      "saves": 9,
+      "shares": 8,
       "thin": false
     },
     "19": {
@@ -309,9 +309,9 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1254,
-      "reach": 1117,
-      "avgWatchS": 12.8,
+      "views": 1259,
+      "reach": 1124,
+      "avgWatchS": 12.7,
       "retentionPct": 21,
       "likes": 14,
       "comments": 1,
@@ -343,7 +343,7 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1224,
+      "views": 1225,
       "reach": 1091,
       "avgWatchS": 16.7,
       "retentionPct": 28,
@@ -360,8 +360,8 @@
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
-      "views": 1151,
-      "reach": 1033,
+      "views": 1153,
+      "reach": 1036,
       "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 7,
@@ -413,7 +413,7 @@
       "hourUtc": 17,
       "views": 686,
       "reach": 604,
-      "avgWatchS": 16.2,
+      "avgWatchS": 16.1,
       "retentionPct": 27,
       "likes": 10,
       "comments": 1,
@@ -422,7 +422,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-08-facture-ia-salaries",
@@ -547,6 +547,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-16-livres-ia-amazon",
+      "at": "2026-08-16T10:59:40.165Z",
+      "hourUtc": 10,
+      "views": 300,
+      "reach": 275,
+      "avgWatchS": 8.6,
+      "retentionPct": 14,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-02-google-earth-ia",
       "at": "2026-08-02T20:00:03.807Z",
       "hourUtc": 20,
@@ -564,23 +581,6 @@
       ],
       "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-16-livres-ia-amazon",
-      "at": "2026-08-16T10:59:40.165Z",
-      "hourUtc": 10,
-      "views": 262,
-      "reach": 241,
-      "avgWatchS": 9,
-      "retentionPct": 15,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -880,6 +880,25 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-16-texte-invisible-tribunal",
+      "at": "2026-08-16T17:04:56.695Z",
+      "hourUtc": 17,
+      "views": 113,
+      "reach": 110,
+      "avgWatchS": 9.8,
+      "retentionPct": 16,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
+      "settled": false
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
