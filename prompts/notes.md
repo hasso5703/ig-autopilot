@@ -408,6 +408,14 @@ ENTRIES:
   "ai generated books amazon" qui a l'air parfait pour le dossier du jour et qui
   date de SEPTEMBRE 2024. Lis la date DANS l'article avant de le compter comme
   corroboration, un moteur de recherche ne la donne pas.
+  Ajout 16/08 (16h30), dossier texte invisible/tribunal: lawnews.co.uk et
+  reason.com/volokh se re-gatent du PREMIER coup en re-gate de publication
+  (15 verifications sur 15, 0 erreur, 3 domaines avec the-decoder). Sur une actu
+  de DECISION DE JUSTICE americaine, reason.com/volokh est le meilleur primaire
+  joignable d'ici: le billet Volokh cite le jugement par paragraphes entiers, donc
+  il porte les citations que la presse resume (le texte cache, le comparatif du
+  juge avec un jure, le chiffre des CV), la ou lawnews.co.uk porte le resume et le
+  numero de role. Les deux se capturent aussi (voir l'entree recus).
 - 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
   source article or product page, never a search page. Proof: run 27/07.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
@@ -1374,6 +1382,31 @@ ENTRIES:
   prime le balayage de lumiere FABRIQUE l'action non resolue quand l'histoire
   (un reglage produit qui change) ne contient aucun evenement filmable.
   Proof: run 16h30 15/08, still_3 refuse puis rachete.
+  Ajout 16/08 (16h30), LE PIRE CAS DE forbidNames, ET IL TUE LA FORMULE QUE LE
+  MANUEL LUI-MEME RECOMMANDE: le mot interdit peut etre un mot anglais BANAL, et
+  il matche DANS un compose a trait d'union. Dossier texte invisible: une evidence
+  de diapo commence par "Close inspection revealed text set in tiny-point white
+  type", donc extractForbidNames retient "Close" (majuscule de debut de phrase,
+  famille Solar/Software/Music), et `\bClose\b` matche "close" dans "close-up".
+  Or "extreme close-up, the X fills the entire frame" est la formule que routine.md
+  imprime en remede du piege "la table au lieu de l'histoire": les QUATRE specs
+  image/veo du spec la portaient, donc le build est mort au beat 0 sur
+  "prompt names Close". Zero dollar perdu (le refus tombe AVANT l'achat veo, seule
+  la narration etait payee, et elle est re-servie par sa .key au rebuild), mais un
+  build entier et ~8 min. Remedes mesures, acceptes du premier coup et rendus
+  propres: "macro framing, the sheet fills the entire frame" et "seen from the side,
+  the stack fills the frame" - garde toujours la moitie "the X fills the entire
+  frame", c'est elle qui fait le cadrage serre. REFLEXE, 10 s, a faire AVANT
+  d'ecrire un seul spec, en plus du vocabulaire: imprime la liste interdite, elle
+  est exportee. `node --input-type=module -e "import fs from 'fs';import
+  {extractForbidNames} from './src/reel2.mjs';console.log(extractForbidNames(
+  JSON.parse(fs.readFileSync('posts/<slug>.json','utf8'))).join(', '))"`. Sur ce
+  dossier elle rendait 19 mots dont Close, Law, News, Media, Reason, Invisible,
+  Comment, Consider, Les, Fini: des mots que personne ne lit comme des noms
+  propres et qu'on ecrit sans y penser dans un spec. Et les 4 candidats corriges
+  se testent hors reseau et gratuitement d'un coup via veoPrompt/imagePrompt +
+  promptIssues({forbidNames}) + simplicityIssues (tous exportes), ce qui evite le
+  deuxieme aller-retour. Proof: run 16h30 16/08, build 1 refuse, build 2 COMPLIANT.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
@@ -1706,7 +1739,20 @@ ENTRIES:
   de tete de the-decoder porte la mention "Nano Banana Pro prompted by THE DECODER", donc
   sur une actu de contenu genere par IA le recu montre une illustration elle-meme generee;
   minuscule au rendu, mais lis-le avant de cadrer plus bas.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08.
+  Ajout 16/08 (16h30), UN RECU LEGER NEUF, mesure EN MOTEUR: lawnews.co.uk se
+  capture PROPREMENT du premier coup et vite (petit site, critere O(frames) du
+  06/08), sans recadrage: chapeau orange "LEGAL NEWS", titre entier sur 4 lignes,
+  signature, date, "5 Mins Read" et le chapo qui porte l'affirmation centrale ET le
+  numero de role. 0 pub, 0 banniere cookies, et le titre affiche EST l'histoire
+  (controle du 10/08). Sur une actu juridique c'est le recu a prendre. UN BEMOL
+  COSMETIQUE A CONNAITRE, famille du bemol the-decoder de ce matin: son image de
+  tete est une photo de stock ou se lit "DIVORCE DECREE" sur le document tenu par
+  l'avocat, alors que le dossier n'a rien d'un divorce; c'est petit, c'est l'artwork
+  du site, et le recadrer couterait le titre (qui est POSE sur cette image), donc on
+  le garde en le sachant. the-decoder.com re-confirme le matin: propre du premier
+  coup, titre entier + signature + date, et son image de tete generee porte toujours
+  sa mention "Nano Banana Pro prompted by THE DECODER".
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
