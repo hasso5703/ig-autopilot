@@ -194,3 +194,8 @@
 {"at":"2026-08-15T16:52:05.389Z","slug":"2026-08-15-google-retire-filigrane","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1319}
 {"at":"2026-08-15T16:56:20.379Z","slug":"2026-08-15-google-retire-filigrane","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1301}
 {"at":"2026-08-16T10:42:02.187Z","slug":"2026-08-16-livres-ia-amazon","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"51.7s Sadaltager","usd":0.0258}
+{"at":"2026-08-16T10:47:38.405Z","slug":"2026-08-16-livres-ia-amazon","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-16T10:47:51.479Z","slug":"2026-08-16-livres-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1325}
+{"at":"2026-08-16T10:48:03.093Z","slug":"2026-08-16-livres-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1279}
+{"at":"2026-08-16T10:52:20.361Z","slug":"2026-08-16-livres-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.135}
+{"at":"2026-08-16T10:54:19.035Z","slug":"2026-08-16-livres-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1223}

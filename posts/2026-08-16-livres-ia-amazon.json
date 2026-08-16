@@ -181,7 +181,8 @@
         "script": "Et il n'est pas tout seul. Des chercheurs ont passé 14 419 livres vendus sur Amazon au détecteur, texte entier. Tu veux savoir combien en contiennent ?",
         "visual": {
           "type": "screenshot",
-          "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/"
+          "url": "https://the-decoder.com/ai-generated-books-are-flooding-amazon-and-tanking-sales-for-human-authors/",
+          "file": "media/2026-08-16-livres-ia-amazon/shot_1.png"
         }
       },
       {
@@ -215,7 +216,8 @@
         "script": "Et voilà le vrai problème. Il y a beaucoup plus de livres en vente qu'avant, mais pas plus d'argent pour les payer. Donc chaque livre rapporte moins.",
         "visual": {
           "type": "screenshot",
-          "url": "https://arxiv.org/abs/2607.20349"
+          "url": "https://arxiv.org/abs/2607.20349",
+          "file": "media/2026-08-16-livres-ia-amazon/shot_5.png"
         }
       },
       {
@@ -223,9 +225,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a laptop screen filled with a single column of revenue numbers",
-            "setting": "in a bright room in daylight",
-            "composition": "extreme close-up, the screen fills the entire frame"
+            "subject": "a printed revenue report page filled with columns of numbers",
+            "setting": "on a plain pale surface in bright daylight",
+            "composition": "extreme close-up seen from above, the page fills the entire frame"
           }
         }
       },
