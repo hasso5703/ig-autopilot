@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-16T10:39:56.840Z",
-  "n": 37,
-  "nSettled": 31,
-  "medianViews": 182,
-  "medianRetentionPct": 21,
+  "at": "2026-08-16T16:41:25.310Z",
+  "n": 38,
+  "nSettled": 32,
+  "medianViews": 187,
+  "medianRetentionPct": 20,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -64,20 +64,20 @@
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
     },
     {
-      "slug": "2026-08-01-penurie-memoire-samsung",
-      "views": 114,
-      "retentionPct": 11,
-      "saved": 0,
-      "shares": 1,
-      "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher."
-    },
-    {
       "slug": "2026-08-04-congres-chatgpt",
       "views": 117,
       "retentionPct": 13,
       "saved": 0,
       "shares": 0,
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA."
+    },
+    {
+      "slug": "2026-08-01-penurie-memoire-samsung",
+      "views": 117,
+      "retentionPct": 11,
+      "saved": 0,
+      "shares": 1,
+      "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher."
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 19,
-      "medianViews": 197,
-      "meanRetentionPct": 25.5,
-      "saves": 31,
-      "shares": 13,
+      "n": 20,
+      "medianViews": 196,
+      "meanRetentionPct": 24.9,
+      "saves": 32,
+      "shares": 14,
       "thin": false
     },
     "photo": {
@@ -132,11 +132,11 @@
       "thin": true
     },
     "models": {
-      "n": 1,
-      "medianViews": 415,
-      "meanRetentionPct": 27,
-      "saves": 3,
-      "shares": 0,
+      "n": 2,
+      "medianViews": 305,
+      "meanRetentionPct": 20.5,
+      "saves": 4,
+      "shares": 1,
       "thin": true
     },
     "safety": {
@@ -158,11 +158,11 @@
       "thin": true
     },
     "11": {
-      "n": 1,
-      "medianViews": 353,
-      "meanRetentionPct": 17,
-      "saves": 1,
-      "shares": 1,
+      "n": 2,
+      "medianViews": 274,
+      "meanRetentionPct": 15.5,
+      "saves": 2,
+      "shares": 2,
       "thin": true
     },
     "12": {
@@ -215,7 +215,7 @@
     },
     "20": {
       "n": 6,
-      "medianViews": 354,
+      "medianViews": 355,
       "meanRetentionPct": 22.3,
       "saves": 13,
       "shares": 2,
@@ -231,7 +231,7 @@
     },
     "09": {
       "n": 2,
-      "medianViews": 69,
+      "medianViews": 70,
       "meanRetentionPct": 11,
       "saves": 2,
       "shares": 1,
@@ -309,9 +309,9 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1246,
-      "reach": 1114,
-      "avgWatchS": 12.7,
+      "views": 1254,
+      "reach": 1117,
+      "avgWatchS": 12.8,
       "retentionPct": 21,
       "likes": 14,
       "comments": 1,
@@ -357,6 +357,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-15-google-retire-filigrane",
+      "at": "2026-08-15T17:01:47.885Z",
+      "hourUtc": 17,
+      "views": 1151,
+      "reach": 1033,
+      "avgWatchS": 14.8,
+      "retentionPct": 25,
+      "likes": 7,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Google va laisser enlever le petit logo qui disait qu'une image était faite par IA. Sauf en Europe, où la loi oblige à le garder.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-09-motif-anti-cameras",
       "at": "2026-08-09T20:14:36.239Z",
       "hourUtc": 20,
@@ -391,28 +408,11 @@
       "settled": true
     },
     {
-      "slug": "2026-08-15-google-retire-filigrane",
-      "at": "2026-08-15T17:01:47.885Z",
-      "hourUtc": 17,
-      "views": 1047,
-      "reach": 906,
-      "avgWatchS": 14.4,
-      "retentionPct": 24,
-      "likes": 7,
-      "comments": 1,
-      "saved": 2,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Google va laisser enlever le petit logo qui disait qu'une image était faite par IA. Sauf en Europe, où la loi oblige à le garder.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-14-trois-ia-guerre-serveur",
       "at": "2026-08-14T17:05:09.595Z",
       "hourUtc": 17,
-      "views": 685,
-      "reach": 603,
+      "views": 686,
+      "reach": 604,
       "avgWatchS": 16.2,
       "retentionPct": 27,
       "likes": 10,
@@ -550,8 +550,8 @@
       "slug": "2026-08-02-google-earth-ia",
       "at": "2026-08-02T20:00:03.807Z",
       "hourUtc": 20,
-      "views": 292,
-      "reach": 263,
+      "views": 294,
+      "reach": 264,
       "avgWatchS": 13,
       "retentionPct": 22,
       "likes": 3,
@@ -564,6 +564,23 @@
       ],
       "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-16-livres-ia-amazon",
+      "at": "2026-08-16T10:59:40.165Z",
+      "hourUtc": 10,
+      "views": 262,
+      "reach": 241,
+      "avgWatchS": 9,
+      "retentionPct": 15,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
+      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -599,7 +616,7 @@
         "models"
       ],
       "sendTest": "X te dit enfin si l'algorithme a caché tes publications. Tu télécharges un fichier et tu vois les étiquettes posées sur ton compte.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-06-aisi-faux-profils",
@@ -800,8 +817,8 @@
       "slug": "2026-08-12-montre-tension-google",
       "at": "2026-08-12T17:14:27.717Z",
       "hourUtc": 17,
-      "views": 129,
-      "reach": 120,
+      "views": 130,
+      "reach": 121,
       "avgWatchS": 8.3,
       "retentionPct": 14,
       "likes": 1,
@@ -831,6 +848,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-01-penurie-memoire-samsung",
+      "at": "2026-08-01T09:17:47.305Z",
+      "hourUtc": 9,
+      "views": 117,
+      "reach": 105,
+      "avgWatchS": 6.8,
+      "retentionPct": 11,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 1,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-04-congres-chatgpt",
       "at": "2026-08-04T17:43:30.306Z",
       "hourUtc": 17,
@@ -845,23 +879,6 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
-      "settled": true
-    },
-    {
-      "slug": "2026-08-01-penurie-memoire-samsung",
-      "at": "2026-08-01T09:17:47.305Z",
-      "hourUtc": 9,
-      "views": 114,
-      "reach": 104,
-      "avgWatchS": 6.8,
-      "retentionPct": 11,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 1,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher.",
       "settled": true
     },
     {

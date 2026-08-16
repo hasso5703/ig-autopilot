@@ -199,3 +199,8 @@
 {"at":"2026-08-16T10:48:03.093Z","slug":"2026-08-16-livres-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1279}
 {"at":"2026-08-16T10:52:20.361Z","slug":"2026-08-16-livres-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.135}
 {"at":"2026-08-16T10:54:19.035Z","slug":"2026-08-16-livres-ia-amazon","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1223}
+{"at":"2026-08-16T16:41:48.524Z","slug":"2026-08-16-texte-invisible-tribunal","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"52.0s Sadaltager","usd":0.026}
+{"at":"2026-08-16T16:58:44.869Z","slug":"2026-08-16-texte-invisible-tribunal","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-16T16:58:57.803Z","slug":"2026-08-16-texte-invisible-tribunal","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1275}
+{"at":"2026-08-16T16:59:10.535Z","slug":"2026-08-16-texte-invisible-tribunal","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.125}
+{"at":"2026-08-16T16:59:23.940Z","slug":"2026-08-16-texte-invisible-tribunal","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1205}

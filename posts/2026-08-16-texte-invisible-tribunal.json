@@ -169,7 +169,7 @@
             "subject": "a single sheet of white paper lying on a dark wooden desk",
             "action": "tilting slowly so the light sweeps across the sheet, the paper staying whole and in frame",
             "setting": "in bright editorial daylight",
-            "composition": "extreme close-up, the sheet fills the entire frame"
+            "composition": "macro framing, the sheet fills the entire frame"
           }
         }
       },
@@ -180,7 +180,7 @@
           "spec": {
             "subject": "a laptop screen filled with the source code of a document parser",
             "setting": "in a bright room in daylight",
-            "composition": "extreme close-up, the screen fills the entire frame"
+            "composition": "macro framing, the screen fills the entire frame"
           }
         }
       },
@@ -206,7 +206,7 @@
           "spec": {
             "subject": "a printed docket page filled with columns of numbers",
             "setting": "lying flat under a desk lamp",
-            "composition": "extreme close-up, the page fills the entire frame"
+            "composition": "macro framing, the page fills the entire frame"
           }
         }
       },
@@ -232,7 +232,7 @@
           "spec": {
             "subject": "a thick stack of printed pages tied with string",
             "setting": "on a wooden desk in bright daylight",
-            "composition": "close-up from the side, the stack fills the frame"
+            "composition": "seen from the side, the stack fills the frame"
           }
         }
       }
