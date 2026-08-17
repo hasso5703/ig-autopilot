@@ -437,6 +437,21 @@ ENTRIES:
   avec son propre reporter. Sur une actu americaine, les stations publiques
   locales en .org sont presque toujours du NPR reempaquete: compte les
   redactions, pas les domaines.
+  Ajout 17/08 (19h30), veille: rendent 200 au fetch gate simonwillison.net,
+  technologyreview.com (26 ko aplati sur un long reportage, re-confirme),
+  techcrunch.com et flyzipline.com. Bloquent: uber.com/newsroom (406, NOUVEAU,
+  donc la salle de presse d'Uber est ingatable) et theverge.com (403,
+  re-confirme). venturebeat.com rend 429 pour le HUITIEME jour d'affilee. Cote
+  flux, Hacker News rend 502 apres 13 essais (nouveau, en plus des 403
+  permanents de The Verge et Ars Technica). PRECISION SUR LE PAYWALL 404media,
+  l'entree du 08/08 disait "~4 paragraphes (5 ko)": mesure ce soir a 2,1 ko
+  aplati, coupe apres le chapo et la seule phrase de methode. Ces deux phrases
+  la sont gatables, rien d'autre. ET LE CONTOURNEMENT QUI N'EN EST PAS UN: le
+  link-blog simonwillison.net rend 200 et porte un bloc CITE VERBATIM du
+  paragraphe paywalle (ici les 1 000 livres, l'AirTag, Biblio, le site VGT3),
+  donc la phrase se gate chez lui. Mais il credite explicitement 404 Media:
+  c'est de la citation, pas une seconde redaction, famille RNZ du 10/08. Sers-
+  t'en pour gater une phrase, jamais pour compter un second domaine.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not

@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-17T16:43:01.546Z",
-  "n": 40,
-  "nSettled": 34,
-  "medianViews": 193,
-  "medianRetentionPct": 21,
+  "at": "2026-08-17T19:41:08.962Z",
+  "n": 41,
+  "nSettled": 35,
+  "medianViews": 194,
+  "medianRetentionPct": 22,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -15,7 +15,7 @@
     },
     {
       "slug": "2026-08-15-camions-sans-chauffeur",
-      "views": 1289,
+      "views": 1290,
       "retentionPct": 21,
       "saved": 0,
       "shares": 3,
@@ -38,12 +38,12 @@
       "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même."
     },
     {
-      "slug": "2026-08-09-motif-anti-cameras",
-      "views": 1147,
+      "slug": "2026-08-15-google-retire-filigrane",
+      "views": 1166,
       "retentionPct": 25,
-      "saved": 7,
+      "saved": 2,
       "shares": 0,
-      "sendTest": "Un mec a créé un motif à imprimer sur un t-shirt qui empêche les caméras de surveillance de te repérer. Il l'a testé sur une voiture, ça a marché."
+      "sendTest": "Google va laisser enlever le petit logo qui disait qu'une image était faite par IA. Sauf en Europe, où la loi oblige à le garder."
     }
   ],
   "bottom": [
@@ -66,7 +66,7 @@
     {
       "slug": "2026-08-04-congres-chatgpt",
       "views": 117,
-      "retentionPct": 0,
+      "retentionPct": 13,
       "saved": 0,
       "shares": 0,
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA."
@@ -90,17 +90,17 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 22,
-      "medianViews": 275,
+      "n": 23,
+      "medianViews": 353,
       "meanRetentionPct": 24.8,
-      "saves": 36,
+      "saves": 38,
       "shares": 18,
       "thin": false
     },
     "photo": {
       "n": 7,
       "medianViews": 182,
-      "meanRetentionPct": 16.4,
+      "meanRetentionPct": 20.9,
       "saves": 7,
       "shares": 1,
       "thin": false
@@ -192,16 +192,16 @@
     "16": {
       "n": 5,
       "medianViews": 182,
-      "meanRetentionPct": 17.8,
+      "meanRetentionPct": 21.4,
       "saves": 7,
       "shares": 3,
       "thin": false
     },
     "17": {
-      "n": 8,
-      "medianViews": 162,
-      "meanRetentionPct": 17.5,
-      "saves": 9,
+      "n": 9,
+      "medianViews": 175,
+      "meanRetentionPct": 19.8,
+      "saves": 11,
       "shares": 8,
       "thin": false
     },
@@ -309,7 +309,7 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1289,
+      "views": 1290,
       "reach": 1157,
       "avgWatchS": 12.8,
       "retentionPct": 21,
@@ -360,8 +360,8 @@
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
-      "views": 1165,
-      "reach": 1041,
+      "views": 1166,
+      "reach": 1043,
       "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 7,
@@ -371,7 +371,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Google va laisser enlever le petit logo qui disait qu'une image était faite par IA. Sauf en Europe, où la loi oblige à le garder.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-09-motif-anti-cameras",
@@ -445,8 +445,8 @@
       "slug": "2026-08-16-livres-ia-amazon",
       "at": "2026-08-16T10:59:40.165Z",
       "hourUtc": 10,
-      "views": 474,
-      "reach": 445,
+      "views": 475,
+      "reach": 446,
       "avgWatchS": 9.2,
       "retentionPct": 15,
       "likes": 1,
@@ -554,8 +554,8 @@
       "hourUtc": 16,
       "views": 330,
       "reach": 295,
-      "avgWatchS": 0,
-      "retentionPct": 0,
+      "avgWatchS": 11.1,
+      "retentionPct": 18,
       "likes": 7,
       "comments": 2,
       "saved": 2,
@@ -871,9 +871,9 @@
       "at": "2026-08-17T11:00:29.055Z",
       "hourUtc": 11,
       "views": 121,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
+      "reach": 110,
+      "avgWatchS": 4.1,
+      "retentionPct": 7,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -906,8 +906,8 @@
       "hourUtc": 17,
       "views": 117,
       "reach": 111,
-      "avgWatchS": 0,
-      "retentionPct": 0,
+      "avgWatchS": 8,
+      "retentionPct": 13,
       "likes": 3,
       "comments": 1,
       "saved": 0,
@@ -916,6 +916,23 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-17-filtre-biologique-anthropic",
+      "at": "2026-08-17T17:08:43.569Z",
+      "hourUtc": 17,
+      "views": 117,
+      "reach": 112,
+      "avgWatchS": 11.8,
+      "retentionPct": 20,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 2,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Le filtre censé empêcher une IA d'aider à fabriquer une arme biologique est resté éteint onze mois. 133 millions de conversations sont passées par là.",
+      "settled": false
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
