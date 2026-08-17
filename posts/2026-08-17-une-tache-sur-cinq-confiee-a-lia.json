@@ -1,0 +1,240 @@
+{
+  "slug": "2026-08-17-une-tache-sur-cinq-confiee-a-lia",
+  "sendTest": "Un salarié sur cinq a déjà confié à une IA une tâche qu'un collègue faisait avant. Et une tâche sur six prend maintenant plus de temps qu'avant.",
+  "centralClaim": "One in five employed US adults now delegates a work task to AI.",
+  "corroboration": [
+    {
+      "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai",
+      "quote": "One in five employed adults now delegates some tasks to AI rather than humans. 20% of respondents say AI now handles at least one task that was previously handed off to a coworker or contractor."
+    },
+    {
+      "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/",
+      "quote": "A representative survey by Epoch AI and Ipsos found that 20 percent of employed Americans now delegate at least one work task to AI that was previously handled by coworkers or outside contractors."
+    }
+  ],
+  "caption": "Un salarié américain sur cinq a déjà confié à une IA une tâche qu'un collègue faisait avant.\n\nC'est le résultat d'une enquête Epoch AI et Ipsos, menée sur 1 106 salariés américains du 10 au 19 juillet 2026. L'IA est la plus présente là où on conçoit des logiciels (57%) et où on analyse des données (46%).\n\nElle fait rarement toute la tâche. Elle va au bout dans 10% des cas dans le logiciel, et sous les 7% partout ailleurs.\n\nLe chiffre dont personne ne parle : une tâche assistée par IA sur six prend maintenant plus de temps qu'avant. Et ce qui sort de la machine repart presque tel quel, 66% des réponses sont utilisées sans changement ou avec de petites retouches.\n\nEpoch AI le dit clairement : une tâche qui bascule vers la machine, ce n'est pas encore un poste supprimé.\n\nTu relirais une réponse d'IA avant de l'envoyer à ton chef, oui ou non ?\n\nepoch.ai · the-decoder.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Travail #Emploi",
+  "captionEvidence": [
+    {
+      "quote": "One in five employed adults now delegates some tasks to AI rather than humans. 20% of respondents say AI now handles at least one task that was previously handed off to a coworker or contractor.",
+      "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai"
+    },
+    {
+      "quote": "The survey was fielded July 10-19, 2026, and includes 1,106 employed US adults.",
+      "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai"
+    },
+    {
+      "quote": "The technology sees the most use in software development (57 percent) and data analysis (46 percent), though mostly as partial support.",
+      "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/"
+    },
+    {
+      "quote": "Full or near-full task completion by AI hits 10 percent only in software development and stays below 7 percent for everything else.",
+      "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/"
+    },
+    {
+      "quote": "66 percent of AI output gets used unchanged or with only minor tweaks.",
+      "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Enquête Epoch AI et Ipsos",
+      "headline": "20% des salariés confient déjà une tâche à une IA, *plus à un collègue*",
+      "hero": {
+        "value": "66%",
+        "label": "des réponses de l'IA repartent sans changement"
+      },
+      "swipe": "Les sources sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "20%",
+      "unit": "des salariés américains interrogés",
+      "body": "L'IA s'occupe désormais d'au moins une tâche *qui partait avant à un collègue* ou à un prestataire.",
+      "evidence": "One in five employed adults now delegates some tasks to AI rather than humans. 20% of respondents say AI now handles at least one task that was previously handed off to a coworker or contractor.",
+      "source": {
+        "name": "Epoch AI",
+        "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où elle s'installe le plus",
+      "body": "**57%** chez ceux qui conçoivent des logiciels, 46% chez ceux qui analysent des données. Le plus souvent en appui, pas à la place.",
+      "evidence": "The technology sees the most use in software development (57 percent) and data analysis (46 percent), though mostly as partial support.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/",
+        "date": "2026-08-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Elle fait rarement tout",
+      "body": "Elle va au bout de la tâche dans **10% des cas** dans le logiciel, et sous les 7% partout ailleurs.",
+      "evidence": "Full or near-full task completion by AI hits 10 percent only in software development and stays below 7 percent for everything else.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/",
+        "date": "2026-08-16"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Quand l'IA fait le gros du travail, les gens disent gagner du temps dans 53% des cas.",
+      "caveat": "Mais une tâche assistée sur six prend maintenant plus de temps qu'avant.",
+      "claimLabel": "Ce qu'on retient",
+      "caveatLabel": "Ce qu'on oublie",
+      "evidence": "When AI handles most of the work, employees report saving time in 53 percent of cases. But one in six AI-assisted tasks actually takes longer than before.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/",
+        "date": "2026-08-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le partage",
+      "body": "Les gens disent gagner du temps sur **53%** des tâches quand la machine fait le gros du travail, contre 37% quand elle n'aide qu'un peu.",
+      "evidence": "AI rarely performs most or all of a task, but workers save time more often when it does. Workers report saving time on 37% of tasks where AI assists with part of the work. When AI performs most or all of the task, workers report saving time on 53% of tasks.",
+      "source": {
+        "name": "Epoch AI",
+        "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et on relit à peine",
+      "body": "**66%** des réponses de l'IA sont utilisées sans changement ou avec de simples retouches.",
+      "evidence": "66 percent of AI output gets used unchanged or with only minor tweaks.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/",
+        "date": "2026-08-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Comment c'est mesuré",
+      "body": "Enquête menée sur **1 106 salariés américains**, du 10 au 19 juillet 2026, sur un panel recruté par tirage d'adresses.",
+      "evidence": "The survey was fielded July 10-19, 2026, and includes 1,106 employed US adults.",
+      "source": {
+        "name": "Epoch AI",
+        "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que ça ne dit pas",
+      "body": "Les auteurs préviennent : une tâche qui bascule vers la machine *n'est pas encore* un poste supprimé.",
+      "evidence": "Although we are seeing task-level substitution, this does not necessarily equal full worker displacement.",
+      "source": {
+        "name": "Epoch AI",
+        "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai",
+        "date": "2026-08-06"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui travaille avec une IA",
+      "sub": "Chaque chiffre vient d'une phrase citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Epoch AI",
+      "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai",
+      "accessed": "2026-08-17"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/",
+      "accessed": "2026-08-17"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "20% des salariés ont un collègue en moins",
+    "beats": [
+      {
+        "script": "Une tâche que ton collègue faisait avant, c'est une IA qui la fait maintenant. Pas dans dix ans. Déjà, pour un salarié américain sur cinq.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single printed survey report page filled with columns of numbers",
+            "action": "tilting slowly so the light sweeps across the page, the page staying whole and in frame",
+            "setting": "on a plain table in bright editorial daylight",
+            "composition": "macro framing, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "C'est une enquête d'Epoch AI et de l'institut Ipsos, menée sur 1 106 salariés américains. Tu sais ce qu'elle dit d'autre ?",
+        "visual": {
+          "type": "card",
+          "value": "1 106",
+          "label": "salariés américains interrogés en juillet"
+        }
+      },
+      {
+        "script": "Là où l'IA s'installe le plus, c'est la conception de logiciels, 57%. Puis l'analyse de données, 46%. Le plus souvent en appui, pas à la place du salarié.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of a data analysis script",
+            "setting": "in a dim room lit only by the screen",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Parce qu'elle fait rarement toute la tâche. Elle va au bout dans 10% des cas dans le logiciel, et sous les 7% partout ailleurs.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed output report page filled with columns of numbers",
+            "setting": "lying flat under a desk lamp at night",
+            "composition": "seen from above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et voilà le chiffre que personne ne met en avant. Une tâche assistée par une IA sur six prend maintenant plus de temps qu'avant.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/"
+        }
+      },
+      {
+        "script": "Quand la machine fait le gros du travail, les gens disent gagner du temps dans 53% des cas. Quand elle n'aide qu'un peu, ça tombe à 37%.",
+        "visual": {
+          "type": "card",
+          "value": "53%",
+          "label": "des tâches où la machine fait le gros du travail"
+        }
+      },
+      {
+        "script": "Et ce qui sort, on le garde presque tel quel. 66% des réponses sont utilisées sans changement, ou avec de simples retouches.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed survey page filled with a single column of checkboxes",
+            "setting": "lying flat in bright daylight",
+            "composition": "seen from the side, the page fills the frame"
+          }
+        }
+      },
+      {
+        "script": "Les auteurs préviennent qu'une tâche qui bascule, ce n'est pas encore un poste supprimé. Mais c'est mesuré, et c'est déjà là. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai"
+        }
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-16T19:40:59.497Z",
+  "at": "2026-08-17T06:52:32.474Z",
   "n": 39,
   "nSettled": 33,
   "medianViews": 191,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 20,
+    "now": 21,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -309,8 +309,8 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1259,
-      "reach": 1124,
+      "views": 1270,
+      "reach": 1133,
       "avgWatchS": 12.7,
       "retentionPct": 21,
       "likes": 14,
@@ -360,8 +360,8 @@
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
-      "views": 1153,
-      "reach": 1036,
+      "views": 1154,
+      "reach": 1038,
       "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 7,
@@ -479,6 +479,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-16-livres-ia-amazon",
+      "at": "2026-08-16T10:59:40.165Z",
+      "hourUtc": 10,
+      "views": 386,
+      "reach": 360,
+      "avgWatchS": 8.8,
+      "retentionPct": 15,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-12-metro-londres-visages",
       "at": "2026-08-12T10:57:49.864Z",
       "hourUtc": 10,
@@ -547,23 +564,6 @@
       "settled": true
     },
     {
-      "slug": "2026-08-16-livres-ia-amazon",
-      "at": "2026-08-16T10:59:40.165Z",
-      "hourUtc": 10,
-      "views": 300,
-      "reach": 275,
-      "avgWatchS": 8.6,
-      "retentionPct": 14,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-02-google-earth-ia",
       "at": "2026-08-02T20:00:03.807Z",
       "hourUtc": 20,
@@ -581,6 +581,25 @@
       ],
       "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-16-texte-invisible-tribunal",
+      "at": "2026-08-16T17:04:56.695Z",
+      "hourUtc": 17,
+      "views": 228,
+      "reach": 211,
+      "avgWatchS": 41.8,
+      "retentionPct": 70,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
+      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -880,25 +899,6 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-16-texte-invisible-tribunal",
-      "at": "2026-08-16T17:04:56.695Z",
-      "hourUtc": 17,
-      "views": 113,
-      "reach": 110,
-      "avgWatchS": 9.8,
-      "retentionPct": 16,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
-      "settled": false
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",

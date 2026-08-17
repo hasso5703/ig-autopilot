@@ -416,8 +416,44 @@ ENTRIES:
   il porte les citations que la presse resume (le texte cache, le comparatif du
   juge avec un jure, le chiffre des CV), la ou lawnews.co.uk porte le resume et le
   numero de role. Les deux se capturent aussi (voir l'entree recus).
-- 2026-07-28 · google.com search pages reCAPTCHA this egress. Screenshot the
-  source article or product page, never a search page. Proof: run 27/07.
+  Ajout 17/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 24 verifications, deux dossiers) epoch.ai/publications,
+  thenextweb.com et sixthtone.com (nouveaux), the-decoder.com re-confirme pour
+  la troisieme journee. Repondent 200 aussi npr.org (re-confirme),
+  deepmind.google/blog, engadget.com et techcrunch.com. Bloquent, re-confirmes:
+  theverge.com et arstechnica.com (403 au flux, permanents depuis le 28/07).
+  LE REFLEXE QUI TROUVE UN PRIMAIRE GOOGLE, generalise depuis blog.google
+  (12/08): deepmind.google/blog est rendu en JS et son HTML ne liste que 2 ou 3
+  billets, mais **deepmind.google/blog/rss.xml** rend 200 et porte toutes les
+  annonces recentes avec leurs URL. La regle "va au RSS de la famille produit"
+  vaut donc aussi pour DeepMind. (deepmind.google/rss.xml rend 404, c'est bien
+  /blog/rss.xml.) Sur une actu de labo, l'article de presse ne lie pas toujours
+  le primaire: engadget ne portait AUCUN lien vers deepmind.google.
+  Ajout 17/08 (06h30), OU TROUVER UNE CORROBORATION QUI N'EN EST PAS: sur le
+  dossier tribunaux chinois, une recherche rend cinq domaines (kpbs.org,
+  krwg.org, kgou.org, iowapublicradio.org, wfdd.org) qui sont TOUS la
+  syndication NPR mot pour mot, famille RNZ du 10/08. La vraie seconde lecture
+  etait sixthtone.com, qui couvrait une AUTRE affaire (Hangzhou, 260 000 yuans)
+  avec son propre reporter. Sur une actu americaine, les stations publiques
+  locales en .org sont presque toujours du NPR reempaquete: compte les
+  redactions, pas les domaines.
+- 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
+  cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
+  `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
+  news, it is an archive piece with a date on it"); entre 2 et 4 jours il ne
+  fait qu'avertir. Mesure du 17/08: DEUX histoires entierement recherchees,
+  ecrites et sourcees sont mortes la-dessus apres coup, la langue des signes
+  SL2T de Google DeepMind (annonce du 12/08, 5,3 jours) et les tribunaux
+  chinois sur les licenciements dus a l'IA (NPR du 10/08 + Sixth Tone de mai).
+  Le contournement N'EST PAS de dater une diapo a la louche: c'est de trouver
+  une reprise du jour qui porte l'histoire, ou de changer d'histoire. Attention
+  au calcul, il se fait a l'heure pres depuis minuit UTC de la date citee: un
+  article date du 13/08 vaut deja 4,3 jours le 17/08 au matin et ne sauve rien.
+  REFLEXE DE SCOUT, 10 secondes, AVANT de lire le moindre article: verifie que
+  l'histoire a une source datee des 3 derniers jours, sinon ne l'ouvre pas. Un
+  dimanche pauvre pousse justement a repecher du 5 aout, et c'est exactement ce
+  que ce controle existe pour arreter. Proof: gate du scout 06h30 17/08, deux
+  specs perdus, deux reecrits sur des sujets du 15 et du 16/08.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
   10/08, rebuild verifie image par image, suite 120/120). NOUVELLES COMMANDES:
   `node src/learn.mjs` a l'etape 2b (le digest des lecons, ne throw jamais);
@@ -682,9 +718,6 @@ ENTRIES:
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
-- 2026-07-28 · Set RUN_JOURNAL=reports/journal/<UTC-date>-<slot>.md at step 0;
-  the engine appends spend/beat/verdict lines itself. Commit the journal
-  before every purchase and publish, so a quota death leaves the receipts.
 - 2026-07-28 · techcrunch.com and prnewswire.com answer 503 to the session's
   WebFetch tool but 200 to curl with a browser UA. Read articles via curl.
   Correction 30/07: validate.mjs's own Node fetch can ALSO 503 techcrunch.com
@@ -1205,6 +1238,34 @@ ENTRIES:
   Courthouse, vrai, bien licencie, contemporain, et ce n'est PAS le tribunal du
   dossier (Ansonia/Milford). Montrer le mauvais palais de justice est la meme faute
   que nommer la mauvaise personne, et aucun filtre ne la voit: beat abandonne.
+  Ajout 17/08 (06h30), dossier langue des signes. L'ETRANGLEMENT
+  upload.wikimedia frappe DES LES PREMIERES REQUETES du run (2 originaux sur 3
+  rendus en page d'erreur de 4 ko, UA descriptif, aucun telechargement
+  anterieur) et le chemin /thumb/.../1280px-....jpg a rendu les deux images
+  entieres dans la seconde: c'est la TROISIEME confirmation apres le 14/08 et
+  le 16/08, essaie toujours le thumb, ne renonce jamais au premier echec.
+  VALEURS SURES telechargees, regardees en planche-contact et recadrees 9:16
+  (le post a ete abandonne sur la fraicheur et les fichiers supprimes, mais les
+  crops ci-dessous sont reproductibles en 2 minutes): "Ghanaian sign language for 'school'" (Martin attakee, CC0, thumb
+  1280x720, crop=405:720:520:0, un homme qui signe devant un tableau, vrai
+  visage, contemporain) et "Sign language, 2014 (01)" (daveynin, CC BY, thumb
+  1280x853, crop=480:853:16:0, une femme qui signe a une table, excellent
+  visage). Les deux ne font que 1280 de large, donc le 9:16 remonte en x2,2 a
+  x2,7: bon pour un beat milieu, pas pour un beat 0. REQUETES PIEGEES le meme
+  matin: "american sign language" met en tete "American Sign Language
+  Interpreter" (3456x2304, la meilleure resolution du lot) qui est une FOULE de
+  supporters des Steelers avec une pancarte "TERRIBLE TOILETS" et un maillot
+  "75" lisibles, famille Augmentin du 08/08 doublee d'une scene a objets
+  multiples; "sign language" sort en 3e "Relationships between the manual
+  alphabets", qui est un DIAGRAMME .png (famille Goodsell du 08/08); "deaf
+  communication" sort "Blind Deaf (1904)", piege d'epoque, 10e occurrence.
+  ET UNE VALEUR ANTI-SURE A CONNAITRE, famille "la table au lieu de
+  l'histoire": rawpixel "View woman working laptop desk" (1024 px, CC0), qui
+  sort en tete sur toute requete de bureau, est un flat-lay vu de dessus avec
+  plante, bougie, tasse de cafe et lampe en laiton autour du portable. Licence,
+  taille et filtre fond-blanc la laissent passer et c'est exactement l'image
+  que routine.md dit de racheter. Sur une actu de travail de bureau, il n'y a
+  pas de photo libre utilisable ici: prends une `card` ou un recu.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -1416,6 +1477,21 @@ ENTRIES:
   se testent hors reseau et gratuitement d'un coup via veoPrompt/imagePrompt +
   promptIssues({forbidNames}) + simplicityIssues (tous exportes), ce qui evite le
   deuxieme aller-retour. Proof: run 16h30 16/08, build 1 refuse, build 2 COMPLIANT.
+  Ajout 17/08 (06h30), UN MOT DE PLUS QUE simplicityIssues REFUSE A LUI SEUL,
+  meme famille que "highway" (15/08): **"traffic"**. Le spec "a laptop screen
+  filled with the source code of a traffic logging service" est refuse
+  "describes a many-moving-objects scene (traffic)" alors que le sujet est UN
+  ecran et qu'il s'agit de trafic RESEAU, pas de voitures; le controle ne lit
+  que le mot. Remede accepte du premier coup: "a request logging service". Sur
+  une actu d'infrastructure ou de reseau, ecris requete ou journal, jamais
+  trafic. Et le test hors reseau recommande le 15/08 se re-confirme comme le
+  meilleur usage de 10 secondes d'un scout: veoPrompt/imagePrompt +
+  promptIssues + simplicityIssues ont attrape ce refus AVANT le gate, donc sans
+  aller-retour reseau ni build. Mesure aussi ce matin, cote ANCRAGE: sur une
+  actu d'ENQUETE ou de RAPPORT, storyVocab ne contient aucun objet filmable
+  (cas du 09/08), et les seuls mots surs sont les noms du DOCUMENT lui-meme,
+  report, survey, output, screening, logging, vendor, access. Les 8 specs
+  image/veo des deux posts banques ce jour-la sont tous ancres la-dessus.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
@@ -1873,3 +1949,20 @@ ENTRIES:
   un AUTRE numeral vrai et court de la meme phrase ("80,431" exemplaires) et
   laisser le montant en dollars dans le `body`. Regle: choisis le chiffre de la
   diapo stat sur sa LONGUEUR, pas sur son importance.
+  Ajout 17/08 (06h30), TROISIEME FAUX POSITIF DE CADENCE, apres "quotidien"
+  (16/08) et l'accent "tres" (07/08): le controle matche **"tous les matins"**.
+  Une diapo cta disant "Envoie ca a quelqu'un qui bosse avec une IA tous les
+  matins" (une description de la vie du lecteur, aucune promesse de
+  publication) est refusee "promises a publishing frequency". Contournement
+  gratuit et sans degat: coupe le complement de temps. Mefie-toi de tous les
+  soirs, chaque semaine, tous les jours dans une cta ou une legende.
+  Ajout 17/08 (06h30), LE HERO QUI REPETE LE TITRE EST UN WARNING, pas une
+  erreur, mais il vaut le coup d'oeil: "the hero value 20% already appears in
+  the headline. The hero carries the comparison the headline does not". Choisis
+  donc le chiffre du hero APRES avoir ecrit le titre, et prends-en un autre.
+  ET LE PIEGE DE CHIFFRE PARLE LE PLUS FACILE A MANQUER: un chiffre du SCRIPT
+  doit etre dans une citation d'evidence, et une citation qui porte 53% ne
+  porte pas forcement 37%. Le beat disant "53% ... contre 37%" a ete refuse
+  parce que la citation the-decoder choisie ne contenait que 53. Remede: une
+  diapo de plus portant la phrase Epoch qui porte LES DEUX. Quand un beat
+  oppose deux pourcentages, cite la phrase source qui les contient tous les deux.

@@ -1,0 +1,236 @@
+{
+  "slug": "2026-08-17-filtre-biologique-anthropic",
+  "sendTest": "Le filtre censé empêcher une IA d'aider à fabriquer une arme biologique est resté éteint onze mois. 133 millions de conversations sont passées par là.",
+  "centralClaim": "Anthropic's blocking biological classifiers were inactive for eleven months.",
+  "corroboration": [
+    {
+      "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+      "quote": "Anthropic runs blocking classifiers that are meant to stop a model helping anyone build a biological weapon. Anthropic first deployed models carrying those safeguards in May 2025. From then until April 2026, the classifiers did not run on any traffic through its human feedback platforms."
+    },
+    {
+      "url": "https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/",
+      "quote": "Anthropic's blocking biological classifiers were inactive from May 2025 through April 2026. These filters are designed to prevent AI models from being used to extract dangerous knowledge about chemical or biological weapons."
+    }
+  ],
+  "caption": "Le filtre censé empêcher une IA d'aider à fabriquer une arme biologique est resté éteint pendant onze mois.\n\nC'est dans le rapport de risque publié par Anthropic le 14 août. De mai 2025 à avril 2026, ses classificateurs bloquants n'ont tourné sur aucun trafic passant par ses plateformes de retour humain. Environ 50 000 personnes y avaient accès, pour près de 133 millions d'échanges. Elles étaient vérifiées par des sous-traitants, pas par Anthropic.\n\nLe détail qui fait mal est mécanique : le réglage qui coupait le blocage coupait aussi l'enregistrement. Le trafic signalé n'était transmis à aucun contrôle.\n\nAnthropic a fait relire la période par un de ses modèles. 1 197 transcriptions sont ressorties à risque élevé, dont 757 venaient de ses propres équipes. Après lecture humaine, aucun usage clairement inquiétant.\n\nEt la phrase la plus lourde du rapport est la sienne : cette découverte lui fait penser qu'il existe d'autres problèmes du même genre qu'elle ne connaît pas.\n\nUn labo qui corrige son propre rapport de sécurité, ça te rassure ou ça t'inquiète ?\n\nthenextweb.com · the-decoder.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Sécurité",
+  "captionEvidence": [
+    {
+      "quote": "Anthropic runs blocking classifiers that are meant to stop a model helping anyone build a biological weapon. Anthropic first deployed models carrying those safeguards in May 2025. From then until April 2026, the classifiers did not run on any traffic through its human feedback platforms.",
+      "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap"
+    },
+    {
+      "quote": "roughly 50,000 people had that access, and they generated around 133 million exchanges. Outside vendors vetted them, not Anthropic.",
+      "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap"
+    },
+    {
+      "quote": "It flagged 1,197 transcripts as high risk. Of those, 757 came from Anthropic's own teams on the same infrastructure. All but 62 of the rest came from deliberate red-teaming exercises.",
+      "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap"
+    },
+    {
+      "quote": "anthropic published the risk report on 14 august, covering the period to 15 july.",
+      "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Rapport de risque Anthropic",
+      "headline": "Anthropic a laissé son filtre *anti-arme biologique* éteint onze mois",
+      "hero": {
+        "value": "133 millions",
+        "label": "d'échanges passés sans ce filtre"
+      },
+      "swipe": "Les sources sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "133",
+      "unit": "millions d'échanges sans le filtre",
+      "body": "Environ **50 000 personnes** y avaient accès. Elles étaient vérifiées par des sous-traitants, *pas par Anthropic*.",
+      "evidence": "roughly 50,000 people had that access, and they generated around 133 million exchanges. Outside vendors vetted them, not Anthropic.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que ce filtre bloque",
+      "body": "Il doit empêcher un modèle d'aider quelqu'un à fabriquer une **arme biologique**. De mai 2025 à avril 2026, il n'a tourné sur aucun trafic des plateformes de retour humain.",
+      "evidence": "Anthropic runs blocking classifiers that are meant to stop a model helping anyone build a biological weapon. Anthropic first deployed models carrying those safeguards in May 2025. From then until April 2026, the classifiers did not run on any traffic through its human feedback platforms.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Qui étaient ces gens",
+      "body": "Des personnes recrutées par des sous-traitants, dont les procédures de vérification étaient **souvent insuffisantes**, selon Anthropic.",
+      "evidence": "According to Anthropic, these individuals were vetted only by external vendors whose screening processes were often insufficient. Anthropic says its internal investigation turned up no evidence of actual misuse.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/",
+        "date": "2026-08-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le vrai problème est mécanique",
+      "body": "Un réglage prévu pour un usage interne coupait le blocage, et il coupait aussi *l'enregistrement*.",
+      "evidence": "A flag meant only for internal use switched off the blocking behaviour, and it switched off the logging as well.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que la relecture a donné",
+      "body": "**1 197 transcriptions** classées à risque élevé, dont 757 venant des équipes maison. Sur le reste, tout sauf 62 venait d'exercices d'attaque volontaires.",
+      "evidence": "It flagged 1,197 transcripts as high risk. Of those, 757 came from Anthropic's own teams on the same infrastructure. All but 62 of the rest came from deliberate red-teaming exercises.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Aucun usage clairement inquiétant trouvé par les équipes qui ont relu.",
+      "caveat": "Mais la découverte laisse penser qu'il existe d'autres problèmes du même genre, inconnus.",
+      "claimLabel": "Ce qui rassure",
+      "caveatLabel": "Ce qui reste",
+      "evidence": "leads us to believe that there is an increased likelihood of other, similar issues unknown to us",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une deuxième faille au même endroit",
+      "body": "Des sous-traitants ont exploité un défaut pour obtenir une **clé d'accès**, et se sont servis de modèles hors de leur mission.",
+      "evidence": "Anthropic confirmed that a few contractors at data-labelling vendors had exploited a flaw to obtain an API key. They used models outside their assigned work.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le rapport précédent est corrigé",
+      "body": "Le risque publié en février était *très faible*. Il est réévalué à **faible**, parce que ces plateformes n'avaient pas été comptées comme une surface à risque.",
+      "evidence": "so anthropic has gone back and changed its own homework. it now assesses the risk its models posed in february as low. at the time it published very low.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui trouve que l'IA est bien surveillée",
+      "sub": "Chaque chiffre vient d'une phrase citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+      "accessed": "2026-08-17"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/",
+      "accessed": "2026-08-17"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "133 millions de conversations sans filtre",
+    "beats": [
+      {
+        "script": "Pendant onze mois, le filtre censé empêcher une IA d'aider à fabriquer une arme biologique était éteint. Chez Anthropic. Et personne ne l'a vu.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single printed risk report page filled with columns of numbers",
+            "action": "tilting slowly so the light sweeps across the page, the page staying whole and in frame",
+            "setting": "on a plain table in bright editorial daylight",
+            "composition": "macro framing, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "133 millions de conversations sont passées par là sans être filtrées, et sans être enregistrées. Tu sais qui les tenait ?",
+        "visual": {
+          "type": "card",
+          "value": "133 millions",
+          "label": "d'échanges passés sans le filtre"
+        }
+      },
+      {
+        "script": "Environ 50 000 personnes, recrutées par des sous-traitants pour entraîner les modèles. Ce sont ces sous-traitants qui les vérifiaient, pas Anthropic.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap"
+        }
+      },
+      {
+        "script": "Et beaucoup d'entre eux, écrit le rapport, n'avaient pas de quoi arrêter même les profils les plus évidents. Une note ajoute qu'un malveillant aurait sans doute pu se faire embaucher là.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed screening checklist page filled with a single column of checkboxes",
+            "setting": "lying flat under a desk lamp at night",
+            "composition": "seen from above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Mais le vrai problème est mécanique. Le réglage qui coupait le blocage coupait aussi la trace. Le trafic signalé n'était transmis à aucun contrôle.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of a request logging service",
+            "setting": "in a dim room lit only by the screen",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Anthropic a fait relire toutes ces conversations par un de ses modèles. 1 197 transcriptions sont ressorties à risque élevé. Des humains les ont lues : aucun usage clairement inquiétant.",
+        "visual": {
+          "type": "card",
+          "value": "1 197",
+          "label": "transcriptions classées à risque élevé"
+        }
+      },
+      {
+        "script": "Il y a eu une deuxième faille au même endroit. Des sous-traitants ont récupéré une clé d'accès et se sont servis d'un modèle qui ne leur était pas destiné.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed vendor access log page filled with columns of numbers",
+            "setting": "lying flat in bright daylight",
+            "composition": "seen from the side, the page fills the frame"
+          }
+        }
+      },
+      {
+        "script": "Et la maison l'écrit elle-même : cette découverte lui fait penser qu'il existe d'autres problèmes du même genre qu'elle ignore. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/"
+        }
+      }
+    ]
+  }
+}
