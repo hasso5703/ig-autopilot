@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-17T06:52:32.474Z",
+  "at": "2026-08-17T10:42:39.328Z",
   "n": 39,
   "nSettled": 33,
   "medianViews": 191,
@@ -309,14 +309,14 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1270,
-      "reach": 1133,
-      "avgWatchS": 12.7,
+      "views": 1279,
+      "reach": 1147,
+      "avgWatchS": 12.8,
       "retentionPct": 21,
       "likes": 14,
       "comments": 1,
       "saved": 0,
-      "shares": 1,
+      "shares": 3,
       "beat0": "veo",
       "themes": [],
       "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
@@ -360,7 +360,7 @@
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
-      "views": 1154,
+      "views": 1157,
       "reach": 1038,
       "avgWatchS": 14.8,
       "retentionPct": 25,
@@ -442,6 +442,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-16-livres-ia-amazon",
+      "at": "2026-08-16T10:59:40.165Z",
+      "hourUtc": 10,
+      "views": 428,
+      "reach": 403,
+      "avgWatchS": 8.8,
+      "retentionPct": 15,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-11-openai-ia-pirate-chrome",
       "at": "2026-08-11T20:02:23.032Z",
       "hourUtc": 20,
@@ -477,23 +494,6 @@
       "themes": [],
       "sendTest": "Ce soir 90 % du soleil disparait au-dessus de la France. Si tu le regardes sans lunettes d'eclipse, tu peux te bruler la retine.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-16-livres-ia-amazon",
-      "at": "2026-08-16T10:59:40.165Z",
-      "hourUtc": 10,
-      "views": 386,
-      "reach": 360,
-      "avgWatchS": 8.8,
-      "retentionPct": 15,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
-      "settled": false
     },
     {
       "slug": "2026-08-12-metro-londres-visages",
@@ -564,6 +564,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-16-texte-invisible-tribunal",
+      "at": "2026-08-16T17:04:56.695Z",
+      "hourUtc": 17,
+      "views": 301,
+      "reach": 270,
+      "avgWatchS": 36.7,
+      "retentionPct": 61,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-02-google-earth-ia",
       "at": "2026-08-02T20:00:03.807Z",
       "hourUtc": 20,
@@ -581,25 +600,6 @@
       ],
       "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-16-texte-invisible-tribunal",
-      "at": "2026-08-16T17:04:56.695Z",
-      "hourUtc": 17,
-      "views": 228,
-      "reach": 211,
-      "avgWatchS": 41.8,
-      "retentionPct": 70,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",

@@ -166,9 +166,9 @@
           "type": "veo",
           "spec": {
             "subject": "a single printed survey report page filled with columns of numbers",
-            "action": "tilting slowly so the light sweeps across the page, the page staying whole and in frame",
-            "setting": "on a plain table in bright editorial daylight",
-            "composition": "macro framing, the page fills the entire frame"
+            "action": "slowly rotating in place on the table, the columns of numbers staying sharp and in frame",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
           }
         }
       },
@@ -206,7 +206,8 @@
         "script": "Et voilà le chiffre que personne ne met en avant. Une tâche assistée par une IA sur six prend maintenant plus de temps qu'avant.",
         "visual": {
           "type": "screenshot",
-          "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/"
+          "url": "https://the-decoder.com/one-in-five-us-workers-now-delegates-tasks-to-ai-instead-of-colleagues-survey-finds/",
+          "file": "media/2026-08-17-une-tache-sur-cinq-confiee-a-lia/shot_4.png"
         }
       },
       {
@@ -232,7 +233,8 @@
         "script": "Les auteurs préviennent qu'une tâche qui bascule, ce n'est pas encore un poste supprimé. Mais c'est mesuré, et c'est déjà là. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "screenshot",
-          "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai"
+          "url": "https://epoch.ai/publications/one-in-five-workers-delegate-work-to-ai",
+          "file": "media/2026-08-17-une-tache-sur-cinq-confiee-a-lia/shot_7.png"
         }
       }
     ]
