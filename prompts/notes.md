@@ -715,6 +715,24 @@ ENTRIES:
   un beat, 3 achats. Le rebuild, lui, est gratuit si tu EPINGLES les recus avec `file`
   (chemin depuis la racine): les 2 captures, le veo, la narration et still_3 ont ete
   reservis, seul still_6 a ete rachete. Proof: run 10h30 16/08, still_6 refuse 2 fois.
+  Ajout 17/08 (10h30), LE BALAYAGE DE LUMIERE DU 15/08 BRULE UN SUJET COUVERT DE TEXTE,
+  et c'est une CORRECTION de cette recette, pas un cas nouveau. Le spec veo "a single
+  printed survey report page filled with columns of numbers" + action "tilting slowly so
+  the light sweeps across the page, the page staying whole and in frame" + setting
+  "bright editorial daylight" a rendu une pellicule ou la page se DELAVE en un aplat
+  blanc sans relief des la 6e vignette: les colonnes de chiffres ont disparu, et les
+  chiffres des premieres vignettes etaient EN MIROIR par-dessus. La formule marchait le
+  15/08 sur un filigrane parce que l'objet etait LISSE; sur une feuille couverte de
+  texte, le balayage crame la seule chose qui portait l'information. Clip REFUSE a la
+  pellicule, $0,60. Remede rendu PROPRE du premier coup, meme sujet, $0,60: action
+  "slowly rotating in place on the table, the columns of numbers staying sharp and in
+  frame" + setting "on a plain table in soft even daylight" + composition "seen from
+  directly above, the page fills the entire frame". La rotation du 12/08 se re-confirme
+  une TROISIEME fois, et deux mots font le travail: "soft even daylight" (jamais bright
+  des que le sujet porte du texte) et "seen from directly above" (la face de la page ne
+  peut pas sortir du cadre). Regle: sur un sujet PORTEUR DE TEXTE, ne demande jamais un
+  balayage de lumiere, demande une rotation vue de dessus. Proof: run 10h30 17/08,
+  veo_0 refuse a la pellicule puis rachete, build 2 COMPLIANT.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -1837,6 +1855,21 @@ ENTRIES:
   le garde en le sachant. the-decoder.com re-confirme le matin: propre du premier
   coup, titre entier + signature + date, et son image de tete generee porte toujours
   sa mention "Nano Banana Pro prompted by THE DECODER".
+  Ajout 17/08 (10h30), UN RECU QUI PORTE LA PREUVE DU CHIFFRE PRONONCE, mesure EN
+  MOTEUR: epoch.ai/publications se capture PROPREMENT du premier coup, sans recadrage,
+  et le cadre 9:16 tient le masthead EPOCH AI, l'etiquette "Report", la date
+  "Aug. 6, 2026", le titre entier sur 3 lignes ET LE RESUME EN ENTIER, dont la phrase
+  "We surveyed 1,106 employed US adults about how they use AI for ten work tasks".
+  0 pub, 0 banniere cookies, et le titre affiche EST l'histoire (controle du 10/08).
+  C'est donc le meilleur recu disponible sur une actu d'ENQUETE ou de RAPPORT, au meme
+  titre que PubMed sur un papier (08/08) et arxiv /abs (16/08): il ne montre pas
+  seulement la source, il porte la phrase qui autorise le chiffre. Complete l'entree du
+  17/08 06h30, qui ne mesurait que le gate. ET LA MESURE DE TEMPS QUI COMPTE POUR UN
+  REBUILD: un beat `screenshot` accepte un pin `file` (reel2.mjs l.1571 lit
+  `beat.visual.file` AVANT d'appeler screenshot) et le moteur saute alors la capture
+  TOUT EN GARDANT la carte-recu, donc un rebuild declenche par un seul beat rate ne
+  re-attend pas les deux recus. Les captures ne portent pas de .key, contrairement aux
+  stills et au veo: sans pin elles sont refaites a chaque build. Proof: run 10h30 17/08.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
