@@ -1,21 +1,29 @@
 {
-  "at": "2026-08-17T10:42:39.328Z",
-  "n": 39,
-  "nSettled": 33,
-  "medianViews": 191,
+  "at": "2026-08-17T16:43:01.546Z",
+  "n": 40,
+  "nSettled": 34,
+  "medianViews": 193,
   "medianRetentionPct": 21,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
-      "views": 1387,
+      "views": 1388,
       "retentionPct": 23,
       "saved": 1,
       "shares": 1,
       "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays."
     },
     {
+      "slug": "2026-08-15-camions-sans-chauffeur",
+      "views": 1289,
+      "retentionPct": 21,
+      "saved": 0,
+      "shares": 3,
+      "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice."
+    },
+    {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
-      "views": 1234,
+      "views": 1237,
       "retentionPct": 26,
       "saved": 4,
       "shares": 3,
@@ -36,14 +44,6 @@
       "saved": 7,
       "shares": 0,
       "sendTest": "Un mec a créé un motif à imprimer sur un t-shirt qui empêche les caméras de surveillance de te repérer. Il l'a testé sur une voiture, ça a marché."
-    },
-    {
-      "slug": "2026-08-03-macbook-air-memoire",
-      "views": 1142,
-      "retentionPct": 23,
-      "saved": 2,
-      "shares": 0,
-      "sendTest": "Le MacBook Air a pris 200 dollars et il est en rupture, parce que les boîtes d'IA rachètent toute la mémoire pour leurs centres de données."
     }
   ],
   "bottom": [
@@ -66,7 +66,7 @@
     {
       "slug": "2026-08-04-congres-chatgpt",
       "views": 117,
-      "retentionPct": 13,
+      "retentionPct": 0,
       "saved": 0,
       "shares": 0,
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA."
@@ -90,17 +90,17 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 21,
-      "medianViews": 197,
-      "meanRetentionPct": 25,
+      "n": 22,
+      "medianViews": 275,
+      "meanRetentionPct": 24.8,
       "saves": 36,
-      "shares": 15,
+      "shares": 18,
       "thin": false
     },
     "photo": {
       "n": 7,
       "medianViews": 182,
-      "meanRetentionPct": 20.9,
+      "meanRetentionPct": 16.4,
       "saves": 7,
       "shares": 1,
       "thin": false
@@ -117,7 +117,7 @@
   "byTheme": {
     "infra": {
       "n": 1,
-      "medianViews": 1387,
+      "medianViews": 1388,
       "meanRetentionPct": 23,
       "saves": 1,
       "shares": 1,
@@ -151,23 +151,23 @@
   "byPublishHourUtc": {
     "10": {
       "n": 2,
-      "medianViews": 459,
+      "medianViews": 461,
       "meanRetentionPct": 32,
       "saves": 3,
       "shares": 1,
       "thin": true
     },
     "11": {
-      "n": 2,
-      "medianViews": 274,
-      "meanRetentionPct": 15.5,
+      "n": 3,
+      "medianViews": 353,
+      "meanRetentionPct": 17.3,
       "saves": 2,
-      "shares": 2,
+      "shares": 5,
       "thin": true
     },
     "12": {
       "n": 2,
-      "medianViews": 650,
+      "medianViews": 651,
       "meanRetentionPct": 25.5,
       "saves": 3,
       "shares": 0,
@@ -192,22 +192,22 @@
     "16": {
       "n": 5,
       "medianViews": 182,
-      "meanRetentionPct": 21.4,
+      "meanRetentionPct": 17.8,
       "saves": 7,
       "shares": 3,
       "thin": false
     },
     "17": {
       "n": 8,
-      "medianViews": 161,
-      "meanRetentionPct": 19.1,
+      "medianViews": 162,
+      "meanRetentionPct": 17.5,
       "saves": 9,
       "shares": 8,
       "thin": false
     },
     "19": {
       "n": 1,
-      "medianViews": 302,
+      "medianViews": 304,
       "meanRetentionPct": 23,
       "saves": 2,
       "shares": 0,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 21,
+    "now": 22,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -247,11 +247,11 @@
         "published": [
           {
             "slug": "2026-08-08-virus-ecrits-par-une-ia",
-            "views": 1234
+            "views": 1237
           },
           {
             "slug": "2026-08-08-facture-ia-salaries",
-            "views": 539
+            "views": 540
           }
         ]
       },
@@ -290,8 +290,8 @@
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
       "at": "2026-08-10T20:22:31.627Z",
       "hourUtc": 20,
-      "views": 1387,
-      "reach": 1282,
+      "views": 1388,
+      "reach": 1283,
       "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 10,
@@ -309,8 +309,8 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1279,
-      "reach": 1147,
+      "views": 1289,
+      "reach": 1157,
       "avgWatchS": 12.8,
       "retentionPct": 21,
       "likes": 14,
@@ -320,14 +320,14 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "at": "2026-08-08T16:51:56.558Z",
       "hourUtc": 16,
-      "views": 1234,
-      "reach": 1108,
+      "views": 1237,
+      "reach": 1110,
       "avgWatchS": 15.6,
       "retentionPct": 26,
       "likes": 19,
@@ -360,8 +360,8 @@
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
-      "views": 1157,
-      "reach": 1038,
+      "views": 1165,
+      "reach": 1041,
       "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 7,
@@ -394,8 +394,8 @@
       "slug": "2026-08-03-macbook-air-memoire",
       "at": "2026-08-03T12:28:13.807Z",
       "hourUtc": 12,
-      "views": 1142,
-      "reach": 1064,
+      "views": 1144,
+      "reach": 1065,
       "avgWatchS": 13.8,
       "retentionPct": 23,
       "likes": 12,
@@ -428,8 +428,8 @@
       "slug": "2026-08-08-facture-ia-salaries",
       "at": "2026-08-08T10:57:53.515Z",
       "hourUtc": 10,
-      "views": 539,
-      "reach": 456,
+      "views": 540,
+      "reach": 457,
       "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 8,
@@ -445,9 +445,9 @@
       "slug": "2026-08-16-livres-ia-amazon",
       "at": "2026-08-16T10:59:40.165Z",
       "hourUtc": 10,
-      "views": 428,
-      "reach": 403,
-      "avgWatchS": 8.8,
+      "views": 474,
+      "reach": 445,
+      "avgWatchS": 9.2,
       "retentionPct": 15,
       "likes": 1,
       "comments": 1,
@@ -496,12 +496,31 @@
       "settled": true
     },
     {
+      "slug": "2026-08-16-texte-invisible-tribunal",
+      "at": "2026-08-16T17:04:56.695Z",
+      "hourUtc": 17,
+      "views": 386,
+      "reach": 361,
+      "avgWatchS": 31.6,
+      "retentionPct": 53,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-12-metro-londres-visages",
       "at": "2026-08-12T10:57:49.864Z",
       "hourUtc": 10,
-      "views": 378,
+      "views": 381,
       "reach": 342,
-      "avgWatchS": 23.3,
+      "avgWatchS": 23.2,
       "retentionPct": 39,
       "likes": 2,
       "comments": 1,
@@ -535,8 +554,8 @@
       "hourUtc": 16,
       "views": 330,
       "reach": 295,
-      "avgWatchS": 11.1,
-      "retentionPct": 18,
+      "avgWatchS": 0,
+      "retentionPct": 0,
       "likes": 7,
       "comments": 2,
       "saved": 2,
@@ -550,9 +569,9 @@
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
       "at": "2026-08-06T19:59:50.589Z",
       "hourUtc": 19,
-      "views": 302,
-      "reach": 286,
-      "avgWatchS": 13.8,
+      "views": 304,
+      "reach": 287,
+      "avgWatchS": 13.7,
       "retentionPct": 23,
       "likes": 5,
       "comments": 1,
@@ -562,25 +581,6 @@
       "themes": [],
       "sendTest": "Le directeur scientifique de Google s'en va après 27 ans, et le patron de son labo d'IA lâche les commandes le même jour. L'action a perdu 4%.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-16-texte-invisible-tribunal",
-      "at": "2026-08-16T17:04:56.695Z",
-      "hourUtc": 17,
-      "views": 301,
-      "reach": 270,
-      "avgWatchS": 36.7,
-      "retentionPct": 61,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
-      "settled": false
     },
     {
       "slug": "2026-08-02-google-earth-ia",
@@ -677,9 +677,9 @@
       "slug": "2026-08-03-ai-act-transparence",
       "at": "2026-08-03T17:08:41.840Z",
       "hourUtc": 17,
-      "views": 174,
-      "reach": 157,
-      "avgWatchS": 11.7,
+      "views": 175,
+      "reach": 158,
+      "avgWatchS": 11.6,
       "retentionPct": 19,
       "likes": 4,
       "comments": 1,
@@ -867,6 +867,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-17-une-tache-sur-cinq-confiee-a-lia",
+      "at": "2026-08-17T11:00:29.055Z",
+      "hourUtc": 11,
+      "views": 121,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un salarié sur cinq a déjà confié à une IA une tâche qu'un collègue faisait avant. Et une tâche sur six prend maintenant plus de temps qu'avant.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-penurie-memoire-samsung",
       "at": "2026-08-01T09:17:47.305Z",
       "hourUtc": 9,
@@ -889,8 +906,8 @@
       "hourUtc": 17,
       "views": 117,
       "reach": 111,
-      "avgWatchS": 8,
-      "retentionPct": 13,
+      "avgWatchS": 0,
+      "retentionPct": 0,
       "likes": 3,
       "comments": 1,
       "saved": 0,

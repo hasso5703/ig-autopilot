@@ -161,10 +161,11 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a single printed risk report page filled with columns of numbers",
-            "action": "slowly rotating in place on the table, the columns of numbers staying sharp and in frame",
-            "setting": "on a plain table in soft even daylight",
-            "composition": "seen from directly above, the page fills the entire frame"
+            "subject": "a laptop screen filled with a single column of flagged transcript numbers",
+            "action": "the column of numbers sliding slowly downward, the screen staying whole and in frame",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "the screen fills the entire frame",
+            "camera": "locked-off static shot, no camera movement, no zoom"
           }
         }
       },
@@ -180,7 +181,8 @@
         "script": "Environ 50 000 personnes, recrutées par des sous-traitants pour entraîner les modèles. Ce sont ces sous-traitants qui les vérifiaient, pas Anthropic.",
         "visual": {
           "type": "screenshot",
-          "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap"
+          "url": "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap",
+          "file": "media/2026-08-17-filtre-biologique-anthropic/shot_2.png"
         }
       },
       {
@@ -188,10 +190,11 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a printed screening checklist page filled with a single column of checkboxes",
+            "subject": "a printed screening report page filled with columns of numbers",
             "setting": "lying flat under a desk lamp at night",
-            "composition": "seen from above, the page fills the entire frame"
-          }
+            "composition": "seen from directly above, the page fills the entire frame"
+          },
+          "file": "media/2026-08-17-filtre-biologique-anthropic/still_3.jpg"
         }
       },
       {
@@ -202,7 +205,8 @@
             "subject": "a laptop screen filled with the source code of a request logging service",
             "setting": "in a dim room lit only by the screen",
             "composition": "macro framing, the screen fills the entire frame"
-          }
+          },
+          "file": "media/2026-08-17-filtre-biologique-anthropic/still_4.jpg"
         }
       },
       {
@@ -218,17 +222,19 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a printed vendor access log page filled with columns of numbers",
+            "subject": "a printed vendor access report page filled with columns of numbers",
             "setting": "lying flat in bright daylight",
             "composition": "seen from the side, the page fills the frame"
-          }
+          },
+          "file": "media/2026-08-17-filtre-biologique-anthropic/still_6.jpg"
         }
       },
       {
         "script": "Et la maison l'écrit elle-même : cette découverte lui fait penser qu'il existe d'autres problèmes du même genre qu'elle ignore. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "screenshot",
-          "url": "https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/"
+          "url": "https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/",
+          "file": "media/2026-08-17-filtre-biologique-anthropic/shot_7.png"
         }
       }
     ]

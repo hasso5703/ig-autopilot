@@ -73,3 +73,5 @@
 {"at":"2026-08-16T10:42:02.316Z","slug":"2026-08-16-livres-ia-amazon","words":205,"seconds":51.68,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.3}
 {"at":"2026-08-16T16:41:48.655Z","slug":"2026-08-16-texte-invisible-tribunal","words":205,"seconds":52,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.5}
 {"at":"2026-08-17T10:43:03.266Z","slug":"2026-08-17-une-tache-sur-cinq-confiee-a-lia","words":203,"seconds":60.48,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-1.4}
+{"at":"2026-08-17T16:43:00.039Z","slug":"2026-08-17-filtre-biologique-anthropic","words":200,"seconds":61.88,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":1}
+{"at":"2026-08-17T16:43:26.074Z","slug":"2026-08-17-filtre-biologique-anthropic","words":200,"seconds":52.4,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":0.6}

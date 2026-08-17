@@ -210,3 +210,13 @@
 {"at":"2026-08-17T10:49:18.994Z","slug":"2026-08-17-une-tache-sur-cinq-confiee-a-lia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1309}
 {"at":"2026-08-17T10:49:31.575Z","slug":"2026-08-17-une-tache-sur-cinq-confiee-a-lia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1279}
 {"at":"2026-08-17T10:55:17.495Z","slug":"2026-08-17-une-tache-sur-cinq-confiee-a-lia","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
+{"at":"2026-08-17T16:42:59.908Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.9s Sadaltager","usd":0.0309}
+{"at":"2026-08-17T16:43:25.950Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"52.4s Sadaltager","usd":0.0262}
+{"at":"2026-08-17T16:51:17.945Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-17T16:51:34.877Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1252}
+{"at":"2026-08-17T16:51:48.005Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1297}
+{"at":"2026-08-17T16:52:01.056Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1195}
+{"at":"2026-08-17T16:58:09.366Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-17T16:58:22.176Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1295}
+{"at":"2026-08-17T16:58:35.121Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1273}
+{"at":"2026-08-17T17:03:32.293Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
