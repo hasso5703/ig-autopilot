@@ -12,7 +12,7 @@
       "quote": "Anthropic's blocking biological classifiers were inactive from May 2025 through April 2026. These filters are designed to prevent AI models from being used to extract dangerous knowledge about chemical or biological weapons."
     }
   ],
-  "caption": "Le filtre censé empêcher une IA d'aider à fabriquer une arme biologique est resté éteint pendant onze mois.\n\nC'est dans le rapport de risque publié par Anthropic le 14 août. De mai 2025 à avril 2026, ses classificateurs bloquants n'ont tourné sur aucun trafic passant par ses plateformes de retour humain. Environ 50 000 personnes y avaient accès, pour près de 133 millions d'échanges. Elles étaient vérifiées par des sous-traitants, pas par Anthropic.\n\nLe détail qui fait mal est mécanique : le réglage qui coupait le blocage coupait aussi l'enregistrement. Le trafic signalé n'était transmis à aucun contrôle.\n\nAnthropic a fait relire la période par un de ses modèles. 1 197 transcriptions sont ressorties à risque élevé, dont 757 venaient de ses propres équipes. Après lecture humaine, aucun usage clairement inquiétant.\n\nEt la phrase la plus lourde du rapport est la sienne : cette découverte lui fait penser qu'il existe d'autres problèmes du même genre qu'elle ne connaît pas.\n\nUn labo qui corrige son propre rapport de sécurité, ça te rassure ou ça t'inquiète ?\n\nthenextweb.com · the-decoder.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Sécurité",
+  "caption": "Le filtre censé empêcher une IA d'aider à fabriquer une arme biologique est resté éteint pendant onze mois.\n\nC'est dans le rapport de risque publié par Anthropic le 14 août. De mai 2025 à avril 2026, ses classificateurs bloquants n'ont tourné sur aucun trafic passant par ses plateformes de retour humain. Environ 50 000 personnes y avaient accès, pour près de 133 millions d'échanges. Elles étaient vérifiées par des sous-traitants, pas par Anthropic.\n\nLe détail qui fait mal est mécanique : le réglage qui coupait le blocage coupait aussi l'enregistrement. Il ne reste donc aucune trace de ce qui est passé.\n\nAnthropic a fait relire la période par un de ses modèles. 1 197 transcriptions sont ressorties à risque élevé, dont 757 venaient de ses propres équipes. Après lecture humaine, aucun usage clairement inquiétant.\n\nEt la phrase la plus lourde du rapport est la sienne : cette découverte lui fait penser qu'il existe d'autres problèmes du même genre qu'elle ne connaît pas.\n\nUn labo qui corrige son propre rapport de sécurité, ça te rassure ou ça t'inquiète ?\n\nthenextweb.com · the-decoder.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Sécurité",
   "captionEvidence": [
     {
       "quote": "Anthropic runs blocking classifiers that are meant to stop a model helping anyone build a biological weapon. Anthropic first deployed models carrying those safeguards in May 2025. From then until April 2026, the classifiers did not run on any traffic through its human feedback platforms.",
@@ -162,9 +162,9 @@
           "type": "veo",
           "spec": {
             "subject": "a single printed risk report page filled with columns of numbers",
-            "action": "tilting slowly so the light sweeps across the page, the page staying whole and in frame",
-            "setting": "on a plain table in bright editorial daylight",
-            "composition": "macro framing, the page fills the entire frame"
+            "action": "slowly rotating in place on the table, the columns of numbers staying sharp and in frame",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
           }
         }
       },
@@ -184,7 +184,7 @@
         }
       },
       {
-        "script": "Et beaucoup d'entre eux, écrit le rapport, n'avaient pas de quoi arrêter même les profils les plus évidents. Une note ajoute qu'un malveillant aurait sans doute pu se faire embaucher là.",
+        "script": "Et leurs procédures de vérification étaient souvent insuffisantes. C'est Anthropic qui l'écrit, noir sur blanc, dans son propre rapport.",
         "visual": {
           "type": "image",
           "spec": {
@@ -195,7 +195,7 @@
         }
       },
       {
-        "script": "Mais le vrai problème est mécanique. Le réglage qui coupait le blocage coupait aussi la trace. Le trafic signalé n'était transmis à aucun contrôle.",
+        "script": "Mais le vrai problème est mécanique. Le réglage qui coupait le blocage coupait aussi l'enregistrement. Donc il ne reste aucune trace de ce qui est passé.",
         "visual": {
           "type": "image",
           "spec": {
