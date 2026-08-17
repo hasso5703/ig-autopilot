@@ -1,11 +1,11 @@
 {
-  "at": "2026-08-17T06:46:15.659Z",
-  "fresh": 289,
+  "at": "2026-08-17T17:09:47.839Z",
+  "fresh": 303,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1129,
+      "fetched": 1132,
       "fresh": 3,
       "windowHours": 96
     },
@@ -20,7 +20,7 @@
       "name": "Google DeepMind",
       "ok": true,
       "fetched": 100,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 6,
+      "fresh": 12,
       "windowHours": 36
     },
     {
@@ -78,29 +78,28 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 3,
+      "fresh": 5,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 0,
+      "fresh": 3,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
-      "ok": false,
-      "fetched": 0,
-      "fresh": 0,
-      "windowHours": 36,
-      "error": "timeout"
+      "ok": true,
+      "fetched": 3,
+      "fresh": 3,
+      "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 3,
+      "fresh": 4,
       "windowHours": 36
     }
   ]

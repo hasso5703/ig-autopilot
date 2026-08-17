@@ -733,6 +733,46 @@ ENTRIES:
   peut pas sortir du cadre). Regle: sur un sujet PORTEUR DE TEXTE, ne demande jamais un
   balayage de lumiere, demande une rotation vue de dessus. Proof: run 10h30 17/08,
   veo_0 refuse a la pellicule puis rachete, build 2 COMPLIANT.
+  CORRECTION 17/08 (16h30), ET ELLE COUTE $2,88: LA ROTATION VUE DE DESSUS NE SAUVE PAS
+  UNE FEUILLE, ne la generalise pas depuis le matin. Meme dossier de document (page de
+  rapport imprimee), DEUX pellicules refusees d'affilee, DEUX modes de defaillance
+  DIFFERENTS. (1) "slowly rotating in place, the columns of numbers staying sharp":
+  la page GONFLE et deborde du cadre, delavee en blanc des la 5e vignette. Cause
+  trouvee et c'est un FAIT NOUVEAU ET GENERALISABLE: veoPrompt injecte la camera de
+  l'humeur, et `tension` porte "slow dolly-in". Un dolly-in + un sujet qui remplit deja
+  le cadre = un sujet qui sort du cadre, quel que soit ce que dit `action`. LE REMEDE
+  EST UN CHAMP DE SPEC QUE PERSONNE N'AVAIT UTILISE: `camera` est accepte par
+  veoPrompt et REMPLACE la camera de l'humeur. "locked-off static shot, no camera
+  movement, no zoom" a supprime le gonflement du premier coup. Pense-y sur tout beat 0
+  ou le sujet remplit le cadre. (2) Le gonflement corrige, la MEME rotation a fait
+  BOUILLONNER la feuille: elle se gondole, se plie et se delite en bouillie illisible
+  des la 4e vignette, les colonnes disparaissent. Une feuille de papier est un objet
+  MOU: Veo lui invente une physique de tissu des qu'elle tourne. Aucune formulation de
+  `action` n'a rattrape ca. (3) CE QUI EST PASSE DU PREMIER COUP, et c'est la vraie
+  lecon: ABANDONNE LE PAPIER, PRENDS UN OBJET RIGIDE ET METS LE MOUVEMENT DANS SES
+  PIXELS. subject "a laptop screen filled with a single column of flagged transcript
+  numbers" + action "the column of numbers sliding slowly downward, the screen staying
+  whole and in frame" + camera "locked-off static shot, no camera movement, no zoom" +
+  setting "on a plain desk in soft even daylight": pellicule 8 vignettes lue, meme
+  objet, meme taille, present a la 8e, zero deformation, et les lignes qui passent au
+  ROUGE en defilant fabriquent l'action non resolue que le manuel demande. Un ecran ne
+  peut ni se gondoler ni se delaver, et le texte minuscule se lit comme de la notation.
+  Regle: sur une actu de RAPPORT ou d'ANNONCE (aucun moment filmable), le beat 0 sur
+  est un ECRAN RIGIDE dont le CONTENU bouge, jamais un document qu'on manipule.
+  Proof: run 16h30 17/08, 3 achats veo a $0,96, pellicules 1 et 2 refusees, 3 acceptee.
+  Ajout 17/08 (16h30), DEUX MOTS DE PLUS QUI RATENT UNE STILL, meme famille que
+  "ledger" (16/08) et "names" (15/08). (1) "LOG" ramene un REGISTRE MANUSCRIT: le spec
+  "a printed vendor access LOG page filled with columns of numbers" a rendu un cahier
+  jauni, ecrit a la main, avec des symboles de livre sterling, sur une actu 2026 -
+  exactement le piege d'epoque de "ledger". "report page" a la place a rendu du premier
+  coup un etat imprime moderne. Le mot sur reste REPORT, quelle que soit la tentation.
+  (2) "CHECKBOXES" ramene l'ecriture inventee: "a printed screening checklist page
+  filled with a single column of CHECKBOXES" a rendu des cases cochees accompagnees de
+  gribouillis manuscrits qui imitent une ecriture etrangere illisible. La regle du
+  15/08 disait "jamais un mot qui designe du LANGAGE (names, labels, titles)"; ajoute
+  checkbox, checklist et form: des qu'une case attend une etiquette, le modele ecrit
+  a cote. "a printed screening report page filled with columns of numbers" est passe.
+  Cout des deux: $0,26 et un rebuild. Proof: run 16h30 17/08, still_3 et still_6.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -1352,6 +1392,16 @@ ENTRIES:
   ses 2 recus et sa carte sont gratuits. Zero still generee achetee. Un scout qui
   epingle supprime a la fois ~$0,50 de stills et la derive de classement
   Openverse mesuree le 07/08.
+  Ajout 17/08 (16h30), LE PLAFOND JOURNALIER SE TOUCHE VITE QUAND UN BEAT 0 RESISTE:
+  un Reel dont la pellicule refuse deux clips coute $3,57 a lui seul (3 x $0,96 de veo
+  + 2 narrations + 5 stills), et la journee a fini a $5,19 sur un coupe-circuit a $6.
+  Donc le 2e Reel d'une journee qui a deja achete un veo n'a de la place que pour UN
+  seul rachat d'opener avant que genmedia refuse. Reflexe si ta 1re pellicule est
+  refusee: lis `state/spend.jsonl` du jour AVANT de racheter, et si la marge est sous
+  ~$2, change de SURFACE (recu, photo, card) plutot que de retenter le meme clip. Le
+  rebuild lui-meme reste gratuit tant que tu epingles avec `file` tout ce qui est deja
+  achete (ce jour-la: narration, alignement, 2 recus et 3 stills re-servis, seul le veo
+  paye). Proof: run 16h30 17/08.
 - 2026-07-31 · La voix et sa direction fixent le debit, donc la fenetre de mots.
   Une lecture chacune sur le script du jour (188 mots): 2.5-flash/Charon 3,36
   mots/s, 3.1-flash/Charon 3,26, Sadaltager 3,49, Puck 3,04, Rasalgethi 2,97
