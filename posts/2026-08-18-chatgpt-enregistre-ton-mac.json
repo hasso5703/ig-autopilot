@@ -162,7 +162,8 @@
         "script": "OpenAI vient de sortir ça sur Mac. Ça s'appelle Computer History, et ça doit permettre à ChatGPT d'apprendre comment tu travailles. Tu sais où ça atterrit ?",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/"
+          "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/",
+          "file": "media/2026-08-18-chatgpt-enregistre-ton-mac/shot_1.png"
         }
       },
       {
@@ -172,7 +173,7 @@
           "spec": {
             "subject": "a black keyboard with its keys lit from the side",
             "setting": "on a plain desk in soft even daylight",
-            "composition": "macro framing, the keys fill the entire frame"
+            "composition": "macro framing, four keys fill the entire frame"
           }
         }
       },
@@ -218,7 +219,8 @@
         "script": "Et le plus étrange : en Europe, en Suisse et au Royaume-Uni, tu n'y as pas droit. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "screenshot",
-          "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/"
+          "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/",
+          "file": "media/2026-08-18-chatgpt-enregistre-ton-mac/shot_7.png"
         }
       }
     ]

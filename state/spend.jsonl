@@ -220,3 +220,9 @@
 {"at":"2026-08-17T16:58:22.176Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1295}
 {"at":"2026-08-17T16:58:35.121Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1273}
 {"at":"2026-08-17T17:03:32.293Z","slug":"2026-08-17-filtre-biologique-anthropic","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-18T10:42:01.229Z","slug":"2026-08-18-chatgpt-enregistre-ton-mac","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"55.6s Sadaltager","usd":0.0278}
+{"at":"2026-08-18T10:55:40.854Z","slug":"2026-08-18-chatgpt-enregistre-ton-mac","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-18T10:55:53.874Z","slug":"2026-08-18-chatgpt-enregistre-ton-mac","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1299}
+{"at":"2026-08-18T10:56:04.968Z","slug":"2026-08-18-chatgpt-enregistre-ton-mac","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1293}
+{"at":"2026-08-18T10:56:16.679Z","slug":"2026-08-18-chatgpt-enregistre-ton-mac","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1233}
+{"at":"2026-08-18T11:00:12.820Z","slug":"2026-08-18-chatgpt-enregistre-ton-mac","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1312}
