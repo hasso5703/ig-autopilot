@@ -532,9 +532,18 @@ ENTRIES:
   Ajout 08/08 (06h30), LE HOOK DE FIN DE SESSION MENT, et sa consigne est un
   piege: il imprime "There are N unpushed commit(s) on branch claude/<...>.
   Please push these changes". C'est FAUX apres un land.mjs reussi. Il compare la
-  branche de travail a origin/claude/<...>, qui n'existe pas, donc il compte les
+  branche de travail a origin/claude/<...>, donc il compte les
   commits de land.mjs comme non pousses alors qu'ils sont deja sur origin/main
-  et prouves. Verifie en 5 s avant de toucher a quoi que ce soit:
+  et prouves. CORRECTION 18/08 (10h30) sur le mecanisme, la conclusion ne bouge
+  pas: cette entree disait que origin/claude/<...> "n'existe pas". Mesure ce
+  jour-la, il EXISTE et il est PERIME (il pointait 32c8e43, le commit du scout
+  de 06h30, soit 4 commits de retard), parce que land.mjs avance origin/main
+  sans jamais deplacer la branche laterale. Le hook lit cet ecart comme du
+  travail non pousse. Les deux cas donnent le meme verdict et la meme preuve en
+  5 s: `git rev-parse HEAD` == `git rev-parse origin/main` et
+  `git log origin/main..HEAD` vide; en plus fin,
+  `git merge-base --is-ancestor <sha> origin/main` sur chacun des N commits
+  cites rend 0. Ne pousse toujours PAS la branche laterale. Verifie en 5 s avant de toucher a quoi que ce soit:
   `git rev-parse HEAD` et `git rev-parse origin/main` rendent le MEME sha, et
   `git log origin/main..HEAD` est vide. Ne pousse PAS la branche laterale: le
   prochain run clone la branche par defaut, tout y est deja, et un ref de plus
