@@ -468,6 +468,13 @@ ENTRIES:
   fin de l'article: c'est la que techrepublic ecrit l'indisponibilite en
   Espace economique europeen, Suisse et Royaume-Uni, qui est la chute du Reel
   pour un public francais.
+  Ajout 18/08 (10h30), meme dossier passe en publication: techrepublic.com et
+  dataconomy.com se re-gatent du PREMIER coup en re-gate de publication (14
+  verifications sur 14, 0 erreur, 2 fois de suite a 20 min d'intervalle). Les
+  DEUX se capturent aussi proprement du premier coup et sans recadrage (voir
+  l'entree recus). Sur une actu de FONCTION PRODUIT OpenAI, ce couple est donc
+  autosuffisant: le primaire (help.openai.com) reste 403 depuis le 16/08 et on
+  n'en a pas besoin.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1607,6 +1614,23 @@ ENTRIES:
   de tes diapos, pas de tes specs. Le test hors reseau du 15/08 (veoPrompt +
   promptIssues + simplicityIssues sur les 4 candidats) l'a attrape en 10 s,
   avant le gate et avant tout achat.
+  Ajout 18/08 (10h30), LE CLAVIER GENERE EST UN CLAVIER WINDOWS, variante neuve
+  de la famille "marque reelle dans une still" (Michelin 15/08, Augmentin
+  08/08): le spec "a black keyboard with its keys lit from the side" + "macro
+  framing, the keys fill the entire frame" a rendu un clavier PC dont les
+  touches win, ctrl et alt sont LISIBLES au rendu 1080x1920, sur une actu qui ne
+  parle que de macOS et dont la carte-titre dit "TON MAC". Le modele prend le
+  clavier majoritaire, exactement comme il grave une vraie marque sur un pneu.
+  Gate vert, promptIssues vide, simplicityIssues vide: SEUL le regard sur la
+  frame RENDUE l'attrape. Remede mesure, $0,13 et rebuild a cout nul (narration,
+  alignement, veo et 2 stills re-servis par leur .key, 2 recus epingles avec
+  `file`): garder le sujet et RESSERRER le cadre pour sortir la rangee de
+  modificateurs. "macro framing, four keys fill the entire frame" a rendu du
+  premier coup quatre touches de la rangee de repos (A S D F), zero touche
+  specifique a un OS, zero marque, et une image plus forte que la large. Regle:
+  des qu'un objet existe en version Windows/Apple/Android et que ton histoire
+  nomme UNE des plateformes, cadre la piece qui ne tranche pas. Proof: run
+  10h30 18/08, still_2 refuse puis rachete.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
@@ -1967,6 +1991,20 @@ ENTRIES:
   TOUT EN GARDANT la carte-recu, donc un rebuild declenche par un seul beat rate ne
   re-attend pas les deux recus. Les captures ne portent pas de .key, contrairement aux
   stills et au veo: sans pin elles sont refaites a chaque build. Proof: run 10h30 17/08.
+  Ajout 18/08 (10h30), DEUX RECUS LEGERS NEUFS, mesures EN MOTEUR, les deux PROPRES DU
+  PREMIER COUP et sans recadrage. techrepublic.com: masthead, fil "ARTIFICIAL
+  INTELLIGENCE", titre entier sur 4 lignes ET la legende de l'image de tete ("Your Mac
+  activity can now become ChatGPT memory"), 0 pub, 0 banniere cookies; seul bemol
+  cosmetique, le logo TechRepublic sort en image cassee (texte alt) mais reste lisible.
+  dataconomy.com est LE MEILLEUR du lot et rejoint epoch.ai (17/08), PubMed (08/08) et
+  arxiv /abs (16/08) dans la categorie "recu qui porte la preuve, pas seulement la
+  source": le cadre 9:16 tient titre + chapo + signature + date "August 17, 2026" ET les
+  deux paragraphes de corps qui portent l'affirmation centrale verbatim ("logs user
+  activity into searchable memories stored as unencrypted plain-text files"). Les deux
+  passent le controle du 10/08, le titre affiche EST l'histoire. ET LE PIN QUI FAIT
+  GAGNER 2 MIN, re-confirmation directe du 17/08: sur le rebuild, les beats 1 et 7
+  epingles avec `file` ont rendu INSTANTANEMENT, aucune re-capture, carte-recu intacte.
+  Sur un rebuild declenche par une seule still ratee, epingle TOUJOURS les captures.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
