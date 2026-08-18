@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-18T10:40:18.250Z",
-  "n": 41,
-  "nSettled": 35,
-  "medianViews": 194,
-  "medianRetentionPct": 22,
+  "at": "2026-08-18T16:48:12.338Z",
+  "n": 42,
+  "nSettled": 36,
+  "medianViews": 196,
+  "medianRetentionPct": 21,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -15,7 +15,7 @@
     },
     {
       "slug": "2026-08-15-camions-sans-chauffeur",
-      "views": 1293,
+      "views": 1294,
       "retentionPct": 21,
       "saved": 0,
       "shares": 3,
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 23,
-      "medianViews": 353,
-      "meanRetentionPct": 24.8,
+      "n": 24,
+      "medianViews": 367,
+      "meanRetentionPct": 24.4,
       "saves": 38,
       "shares": 18,
       "thin": false
@@ -150,9 +150,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 2,
-      "medianViews": 461,
-      "meanRetentionPct": 32,
+      "n": 3,
+      "medianViews": 476,
+      "meanRetentionPct": 26.7,
       "saves": 3,
       "shares": 1,
       "thin": true
@@ -309,8 +309,8 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1293,
-      "reach": 1157,
+      "views": 1294,
+      "reach": 1159,
       "avgWatchS": 12.8,
       "retentionPct": 21,
       "likes": 14,
@@ -456,7 +456,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-11-openai-ia-pirate-chrome",
@@ -605,10 +605,10 @@
       "slug": "2026-08-17-filtre-biologique-anthropic",
       "at": "2026-08-17T17:08:43.569Z",
       "hourUtc": 17,
-      "views": 260,
-      "reach": 243,
-      "avgWatchS": 13.2,
-      "retentionPct": 22,
+      "views": 284,
+      "reach": 262,
+      "avgWatchS": 12.7,
+      "retentionPct": 21,
       "likes": 1,
       "comments": 1,
       "saved": 0,
@@ -723,6 +723,25 @@
       "themes": [],
       "sendTest": "Apple accuse ses ex-employés d'avoir filé ses secrets à OpenAI pour leur gadget, et demande à un juge de tout geler.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-18-chatgpt-enregistre-ton-mac",
+      "at": "2026-08-18T11:03:39.395Z",
+      "hourUtc": 11,
+      "views": 172,
+      "reach": 155,
+      "avgWatchS": 9.3,
+      "retentionPct": 15,
+      "likes": 3,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "ChatGPT peut maintenant enregistrer chaque clic et chaque touche que tu tapes sur ton Mac. Et il garde ça en clair sur ton disque.",
+      "settled": false
     },
     {
       "slug": "2026-08-10-ia-reserve-cours-sport",
@@ -870,8 +889,8 @@
       "slug": "2026-08-17-une-tache-sur-cinq-confiee-a-lia",
       "at": "2026-08-17T11:00:29.055Z",
       "hourUtc": 11,
-      "views": 127,
-      "reach": 112,
+      "views": 128,
+      "reach": 113,
       "avgWatchS": 4.1,
       "retentionPct": 7,
       "likes": 0,
