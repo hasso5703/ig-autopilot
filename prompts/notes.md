@@ -452,6 +452,22 @@ ENTRIES:
   donc la phrase se gate chez lui. Mais il credite explicitement 404 Media:
   c'est de la citation, pas une seconde redaction, famille RNZ du 10/08. Sers-
   t'en pour gater une phrase, jamais pour compter un second domaine.
+  Ajout 18/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 27 verifications, deux dossiers) techrepublic.com,
+  dataconomy.com et aftermath.site (trois nouveaux); technologyreview.com
+  re-confirme. Repondent 200 aussi cultofmac.com, malwarebytes.com,
+  techdirt.com, getcoai.com, wiz.io, responsiblestatecraft.org et
+  librarian.net. Bloquent: cybernews.com (403), alternativeto.net (403),
+  help.openai.com (403, re-confirme le 16/08, donc les pages d'aide OpenAI
+  restent ingatables), axios.com (403, re-confirme); mikekalil.com rend 202
+  sans corps, 9to5mac et macrumors rendent 404 sur des URL devinees.
+  REFLEXE SUR UNE ACTU DE FONCTION PRODUIT dont le primaire est une page
+  d'aide OpenAI ou un post X: la presse pro (techrepublic) porte les mises en
+  garde que les reprises grand public coupent, ici le stockage EN CLAIR des
+  fichiers de memoire et l'avertissement d'injection d'instructions. Et lis la
+  fin de l'article: c'est la que techrepublic ecrit l'indisponibilite en
+  Espace economique europeen, Suisse et Royaume-Uni, qui est la chute du Reel
+  pour un public francais.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1575,6 +1591,22 @@ ENTRIES:
   (cas du 09/08), et les seuls mots surs sont les noms du DOCUMENT lui-meme,
   report, survey, output, screening, logging, vendor, access. Les 8 specs
   image/veo des deux posts banques ce jour-la sont tous ancres la-dessus.
+  Ajout 18/08 (06h30), LE MOT INTERDIT QUI VIENT DU MOTEUR ET PAS DE TON SPEC,
+  et c'est la pire variante de forbidNames parce qu'aucun mot de ton spec n'est
+  en cause: le gabarit de lumiere des humeurs contient "soft even daylight
+  through large WINDOWS". Donc des qu'une diapo ecrit "Windows" avec sa
+  majuscule (ici "Windows Recall" sur une actu de vie privee),
+  extractForbidNames retient Windows et promptIssues refuse LES QUATRE beats
+  image/veo du post d'un coup, sur un mot que veoPrompt/imagePrompt injectent
+  eux-memes. Mesure: 4 refus sur 4, "prompt names Windows". Remede gratuit,
+  applique avant le gate: ecrire la marque autrement dans la diapo ("Recall,
+  chez Microsoft"), le script parle et la legende peuvent garder le nom (ils
+  n'alimentent pas forbidNames). Meme famille que "Close" le 16/08, sauf que
+  la reecriture ne peut PAS se faire cote spec. Regle: les mots du gabarit
+  (windows, daylight, desk, screen, frame, lens) sont a bannir des MAJUSCULES
+  de tes diapos, pas de tes specs. Le test hors reseau du 15/08 (veoPrompt +
+  promptIssues + simplicityIssues sur les 4 candidats) l'a attrape en 10 s,
+  avant le gate et avant tout achat.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
@@ -2064,3 +2096,16 @@ ENTRIES:
   parce que la citation the-decoder choisie ne contenait que 53. Remede: une
   diapo de plus portant la phrase Epoch qui porte LES DEUX. Quand un beat
   oppose deux pourcentages, cite la phrase source qui les contient tous les deux.
+  Ajout 18/08 (06h30), LE STEMMER NE MATCHE PAS ceased AVEC cease, et ca fait
+  chuter le controle de corroboration sur une citation qui porte pourtant
+  l'affirmation mot pour mot. Dossier robot Moxie: centralClaim ecrit "ceased
+  to function", la citation MIT porte "would cease operations", et claimOverlap
+  a rendu 33% (thin, sous CLAIM_OVERLAP_THIN=0.45) en ne partageant que
+  embodi, moxie, robot. Meme famille que "spheres"/"sphere" du 01/08. Deux
+  remedes mesures, tous deux gratuits: allonger la citation d'UNE phrase
+  contigue (elle apportait "children", 33% -> 44%, toujours refuse), et
+  surtout ECRIRE LE CLAIM AVEC LE VERBE DE TES SOURCES ("will cease to
+  function", 70% et 60% sur les deux citations). Ce n'est pas ajuster la
+  phrase a la mesure: c'est ecrire le claim dans le vocabulaire de ce que les
+  sources disent vraiment. Teste-le hors reseau en 5 s, claimOverlap est
+  exporte par validate.mjs: `claimOverlap(claim, quote)` rend shared + ratio.

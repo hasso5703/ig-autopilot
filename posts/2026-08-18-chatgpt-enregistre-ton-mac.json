@@ -1,0 +1,226 @@
+{
+  "slug": "2026-08-18-chatgpt-enregistre-ton-mac",
+  "sendTest": "ChatGPT peut maintenant enregistrer chaque clic et chaque touche que tu tapes sur ton Mac. Et il garde ça en clair sur ton disque.",
+  "centralClaim": "OpenAI's Computer History records Mac activity into local memory files for ChatGPT.",
+  "corroboration": [
+    {
+      "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/",
+      "quote": "openai has rolled out computer history, a new opt-in feature for the chatgpt desktop app on macos that records activity across permitted apps and websites, turning it into a searchable timeline and local memories for chatgpt and codex."
+    },
+    {
+      "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/",
+      "quote": "openai has launched computer history for the chatgpt macos app, an opt-in feature that logs user activity into searchable memories stored as unencrypted plain-text files."
+    }
+  ],
+  "caption": "ChatGPT peut désormais enregistrer chaque clic et chaque touche que tu tapes sur ton Mac.\n\nOpenAI a lancé Computer History, une option à activer soi-même dans l'application ChatGPT pour macOS. Elle transforme ton activité en frise consultable et en fiches de mémoire posées sur ta propre machine. Elle enregistre les clics, les frappes, les raccourcis clavier et les changements d'application, sans capture d'écran ni son.\n\nLe détail qui coince : ces fiches de mémoire sont en texte clair et ne sont pas chiffrées. OpenAI écrit qu'un autre programme tournant sous le même compte macOS peut potentiellement y accéder. Les fichiers d'événements bruts, eux, restent 48 heures sur le Mac avant d'être effacés.\n\nOpenAI signale un second risque, l'injection d'instructions : une consigne malveillante cachée dans un site ou une application peut se glisser dans ce que lit ChatGPT.\n\nL'option est désactivée par défaut, réservée aux comptes Pro, Business et Enterprise, et indisponible dans l'Espace économique européen, en Suisse et au Royaume-Uni. Microsoft avait essuyé les mêmes critiques en 2024 avec Recall, qui reposait sur des captures d'écran.\n\nTu l'activerais sur ta machine, oui ou non ?\n\ntechrepublic.com · dataconomy.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #OpenAI",
+  "captionEvidence": [
+    {
+      "quote": "temporary event files remain on the mac for up to 48 hours before deletion after processing, while generated memory files remain locally until the user removes them.",
+      "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/"
+    },
+    {
+      "quote": "the feature has drawn comparisons with microsoft's windows recall, which faced privacy criticism in 2024 over its use of screenshots.",
+      "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/"
+    },
+    {
+      "quote": "the feature records clicks, keystrokes, keyboard shortcuts and app switches, and is available only to pro, business and enterprise users on macos.",
+      "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/"
+    },
+    {
+      "quote": "it is off by default and currently unavailable in the european economic area, switzerland and the united kingdom.",
+      "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "OpenAI · ChatGPT sur Mac",
+      "headline": "ChatGPT peut enregistrer *chaque clic* et chaque touche sur ton Mac",
+      "hero": {
+        "value": "48 h",
+        "label": "les fichiers d'événements bruts restent sur ta machine"
+      },
+      "swipe": "Les sources sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "48",
+      "unit": "heures avant effacement des fichiers bruts",
+      "body": "Les fiches de mémoire, elles, **restent** sur la machine jusqu'à ce que tu les supprimes.",
+      "evidence": "temporary event files remain on the mac for up to 48 hours before deletion after processing, while generated memory files remain locally until the user removes them.",
+      "source": {
+        "name": "TechRepublic",
+        "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que la fonction enregistre",
+      "body": "Les clics, les frappes, les raccourcis clavier et les changements d'application. Elle est réservée aux comptes *Pro, Business et Enterprise*.",
+      "evidence": "the feature records clicks, keystrokes, keyboard shortcuts and app switches, and is available only to pro, business and enterprise users on macos.",
+      "source": {
+        "name": "Dataconomy",
+        "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'OpenAI en dit",
+      "body": "La fonction doit permettre à ChatGPT d'**apprendre de tout ce que tu fais** sur ta machine, pour finir les tâches commencées et proposer des automatisations.",
+      "evidence": "it lets chatgpt learn from everything you do on your computer, so it can better understand how you work, finish tasks that you're in the middle of, and suggest skills and automations based on how you use your computer.",
+      "source": {
+        "name": "Dataconomy",
+        "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le stockage en texte clair",
+      "body": "Les fiches de mémoire ne sont **pas chiffrées**. Un autre programme tournant sous le même compte macOS peut potentiellement les lire.",
+      "evidence": "but the local storage comes with an important caveat: openai says the memory files are plain-text and are not encrypted by computer history. other programs running under the same macos user account may potentially access them.",
+      "source": {
+        "name": "TechRepublic",
+        "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le second risque, signalé par la maison",
+      "body": "Une consigne malveillante posée sur un site ou dans une application peut entrer dans *ce que lit* ChatGPT.",
+      "evidence": "openai also warns that the feature increases the risk of prompt injection because malicious instructions on websites or inside applications could enter the context available to chatgpt or codex.",
+      "source": {
+        "name": "TechRepublic",
+        "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Désactivée par défaut, applications choisies une par une, navigation privée exclue.",
+      "caveat": "Mais indisponible dans l'Espace économique européen, en Suisse et au Royaume-Uni.",
+      "claimLabel": "Les garde-fous",
+      "caveatLabel": "Là où tu ne l'auras pas",
+      "evidence": "it is off by default and currently unavailable in the european economic area, switzerland and the united kingdom.",
+      "source": {
+        "name": "TechRepublic",
+        "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le précédent Microsoft",
+      "body": "Recall, chez Microsoft, avait pris les mêmes critiques en 2024, avec des captures d'écran. Cette fois, ce sont les **événements** qui sont enregistrés.",
+      "evidence": "the feature has drawn comparisons with microsoft's windows recall, which faced privacy criticism in 2024 over its use of screenshots. computer history differs by requiring users to opt in and by relying on structured interaction data instead of screen captures.",
+      "source": {
+        "name": "Dataconomy",
+        "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui travaille avec ChatGPT ouvert",
+      "sub": "Chaque chiffre vient d'une phrase citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechRepublic",
+      "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/",
+      "accessed": "2026-08-18"
+    },
+    {
+      "name": "Dataconomy",
+      "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/",
+      "accessed": "2026-08-18"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "ChatGPT peut enregistrer chaque clic sur ton Mac",
+    "beats": [
+      {
+        "script": "Ton ordinateur peut maintenant garder la trace de tout ce que tu fais dessus. Chaque clic, chaque touche que tu tapes. Et c'est ChatGPT qui s'en souvient.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of activity timestamps",
+            "action": "the column of timestamps sliding slowly downward, the screen staying whole and in frame",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "the screen fills the entire frame",
+            "camera": "locked-off static shot, no camera movement, no zoom"
+          }
+        }
+      },
+      {
+        "script": "OpenAI vient de sortir ça sur Mac. Ça s'appelle Computer History, et ça doit permettre à ChatGPT d'apprendre comment tu travailles. Tu sais où ça atterrit ?",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.techrepublic.com/article/ews-openai-computer-history-chatgpt-mac-activity/"
+        }
+      },
+      {
+        "script": "Sur ton disque. Tes clics, tes frappes, tes raccourcis, tes changements d'application deviennent une frise à fouiller, et des fiches de mémoire posées chez toi.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a black keyboard with its keys lit from the side",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the keys fill the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Sauf que ces fiches sont en texte clair. Pas chiffrées. Et OpenAI écrit lui-même qu'un autre programme de ta machine peut aller les lire.",
+        "visual": {
+          "type": "card",
+          "value": "texte clair",
+          "label": "les fiches de mémoire ne sont pas chiffrées"
+        }
+      },
+      {
+        "script": "Donc un logiciel malveillant déjà installé chez toi n'a même pas besoin de casser ChatGPT. Il lui suffit d'ouvrir le fichier posé à côté.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed privacy report page filled with columns of numbers",
+            "setting": "lying flat under a desk lamp at night",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Les enregistrements bruts, eux, restent 48 heures sur le Mac avant d'être effacés. Les fiches de mémoire, elles, restent jusqu'à ce que tu les supprimes toi-même.",
+        "visual": {
+          "type": "card",
+          "value": "48 heures",
+          "label": "avant effacement des fichiers d'événements bruts"
+        }
+      },
+      {
+        "script": "Alors oui, c'est désactivé par défaut, tu choisis les applications, la navigation privée est exclue. Microsoft avait pris les mêmes critiques en 2024 avec Recall.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a dark switched-off screen standing on a plain desk",
+            "setting": "in soft even daylight",
+            "composition": "seen from the side, the screen fills the frame"
+          }
+        }
+      },
+      {
+        "script": "Et le plus étrange : en Europe, en Suisse et au Royaume-Uni, tu n'y as pas droit. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://dataconomy.com/2026/08/17/openai-chatgpt-mac-memory-feature/"
+        }
+      }
+    ]
+  }
+}

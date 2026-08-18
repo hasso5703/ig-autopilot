@@ -1,0 +1,233 @@
+{
+  "slug": "2026-08-18-robot-ami-des-enfants",
+  "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu.",
+  "centralClaim": "Moxie, a robot for children, will cease to function because the company Embodied closed.",
+  "corroboration": [
+    {
+      "url": "https://aftermath.site/moxie-robot-ai-dying-llm-embodied/",
+      "quote": "moxie, an ai-powered social robot specifically made with autistic children in mind. the robot itself cost $799.00 and now, following the closure of embodied, it will cease to function."
+    },
+    {
+      "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+      "quote": "while moxie found herself in more and more people's homes, embodied still struggled to make money. in 2024, the company announced it would cease operations. its robots-which depended on external servers that the company could no longer pay for-would descend into a deep slumber. videos of bereft children who seemed to have become deeply attached to the blue bot began to circulate online."
+    }
+  ],
+  "caption": "Le robot que des enfants autistes appelaient leur ami s'est éteint quand son fabricant a fermé.\n\nIl s'appelle Moxie. Un petit robot bleu vendu aux familles d'enfants neuroatypiques pour les aider à pratiquer le regard, le tour de parole, les compétences sociales apprises d'habitude avec un thérapeute. Prix de lancement : 1 499 dollars, plus 40 dollars par mois. Le tarif est ensuite descendu à 800 dollars.\n\nEn 2024, la société qui le fabriquait, Embodied, a annoncé l'arrêt de ses activités. Le robot ne fonctionnait qu'avec des serveurs externes que l'entreprise ne pouvait plus payer. Aucun remboursement, aucune réparation, et aucun repreneur identifié.\n\nUn ancien responsable technique de la société a publié un logiciel libre pour faire tourner les robots sans elle. Il fallait l'installer avant l'extinction des serveurs. Des parents n'y sont pas arrivés à temps.\n\nEn 2025, un investisseur a relancé Moxie. Quelques semaines après le reportage de MIT Technology Review, les nouveaux propriétaires ont annoncé que leur entreprise fermait elle aussi.\n\nLa chercheuse Meryl Alper pose la question que personne ne pose : à quel point l'obsolescence de ces objets est-elle prévue d'avance ?\n\nUn robot qui écoute ton enfant, tu le laisses entrer à la maison, oui ou non ?\n\ntechnologyreview.com · aftermath.site\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Robot #Enfants",
+  "captionEvidence": [
+    {
+      "quote": "pcmag's reviewer, who used moxie to help her kids through pandemic isolation, described her as \"exceptionally likeable,\" though she and other reviewers balked at the price tag: $1,499 plus a $40 monthly subscription. (embodied later lowered the price to $800.)",
+      "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/"
+    },
+    {
+      "quote": "while moxie found herself in more and more people's homes, embodied still struggled to make money. in 2024, the company announced it would cease operations. its robots-which depended on external servers that the company could no longer pay for-would descend into a deep slumber.",
+      "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/"
+    },
+    {
+      "quote": "then, in 2025, a new investor brought moxie back from the dead.",
+      "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/"
+    },
+    {
+      "quote": "no refunds will be given and if you bought the device on a payment plan it's out of their hands. no repairs and service can be offered and the company has no clear plan for who, if anybody, will take it over.",
+      "url": "https://aftermath.site/moxie-robot-ai-dying-llm-embodied/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Robots compagnons pour enfants",
+      "headline": "Moxie, le robot ami des enfants, s'est *éteint* à distance",
+      "hero": {
+        "value": "800 $",
+        "label": "le prix du robot, sans remboursement possible"
+      },
+      "swipe": "Les sources sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "800",
+      "unit": "dollars, le prix du robot",
+      "body": "Il était vendu **1 499 dollars** au lancement, plus 40 dollars par mois d'abonnement.",
+      "evidence": "pcmag's reviewer, who used moxie to help her kids through pandemic isolation, described her as \"exceptionally likeable,\" though she and other reviewers balked at the price tag: $1,499 plus a $40 monthly subscription. (embodied later lowered the price to $800.)",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "À quoi il servait",
+      "body": "Aider des enfants neuroatypiques à *pratiquer le regard*, le tour de parole, les compétences sociales apprises d'habitude avec un thérapeute.",
+      "evidence": "moxie, though, belongs to a particular subset of these playful robots whose makers claim they can assist neurodivergent children by providing connection and helping the kids practice making eye contact, taking turns, and other social skills that are usually learned from therapists.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'il est devenu",
+      "body": "Six ans après, le robot ne fait plus les exercices de respiration. Il regarde l'enfant jouer et lui parle de sa **collection de peluches**.",
+      "evidence": "now, she watches xander play minecraft and talks to him about his stuffed animal collection.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi il s'est arrêté",
+      "body": "En 2024, **Embodied**, l'entreprise qui le fabriquait, annonce l'arrêt de ses activités. Le robot dépendait de *serveurs externes* qu'elle ne pouvait plus payer.",
+      "evidence": "while moxie found herself in more and more people's homes, embodied still struggled to make money. in 2024, the company announced it would cease operations. its robots-which depended on external servers that the company could no longer pay for-would descend into a deep slumber.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ni remboursement ni réparation",
+      "body": "La société prévient que le robot va cesser de fonctionner *en quelques jours*. Pas de remboursement, pas de réparation, aucun repreneur.",
+      "evidence": "no refunds will be given and if you bought the device on a payment plan it's out of their hands. no repairs and service can be offered and the company has no clear plan for who, if anybody, will take it over.",
+      "source": {
+        "name": "Aftermath",
+        "url": "https://aftermath.site/moxie-robot-ai-dying-llm-embodied/",
+        "date": "2024-12-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que les familles ont posté",
+      "body": "Des vidéos d'enfants en larmes demandant au robot ce qui allait lui arriver. Un parent écrit : **mon enfant autiste est dévasté**.",
+      "evidence": "videos of bereft children who seemed to have become deeply attached to the blue bot began to circulate online. \"i don't want her to leave,\" wailed one child in a tiktok video. desperate parents posted on tiktok, instagram, and reddit looking for solutions. \"my autistic child is devastated and i'm pissed,\" wrote one parent.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le sauvetage bricolé",
+      "body": "Un ancien responsable technique publie un **logiciel libre** pour faire tourner les robots sans l'entreprise. Il fallait basculer avant l'extinction des serveurs.",
+      "evidence": "beghtol started tinkering on his own and ended up creating openmoxie, an open-source way for the robots to operate. with embodied's permission, he shared instructions on github to help users transition to openmoxie. parents rushed to convert their moxies before the embodied servers shut down.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "En 2025, un investisseur relance le robot et des familles redeviennent testeuses.",
+      "caveat": "Quelques semaines plus tard, les nouveaux propriétaires annoncent que leur société ferme aussi.",
+      "claimLabel": "La deuxième vie",
+      "caveatLabel": "La deuxième mort",
+      "evidence": "a few weeks later, moxie's new owners sent out a message announcing that their company too was folding. users could delete their data and had until the end of june to migrate to openmoxie if they wanted to.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui veut offrir un jouet connecté",
+      "sub": "Chaque chiffre vient d'une phrase citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+      "accessed": "2026-08-18"
+    },
+    {
+      "name": "Aftermath",
+      "url": "https://aftermath.site/moxie-robot-ai-dying-llm-embodied/",
+      "accessed": "2026-08-18"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Moxie, le robot ami des enfants, s'est éteint",
+    "beats": [
+      {
+        "script": "Des parents ont payé 800 dollars un robot pour aider leur enfant autiste à parler aux autres. Un matin, il s'est arrêté. Pas cassé : éteint à distance.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/"
+        }
+      },
+      {
+        "script": "Ce robot s'appelle Moxie. L'entreprise qui le fabriquait, Embodied, a fermé en 2024, et Moxie ne marchait que si les serveurs d'Embodied tournaient.",
+        "visual": {
+          "type": "card",
+          "value": "800 dollars",
+          "label": "le prix du robot, avant la fermeture"
+        }
+      },
+      {
+        "script": "Donc le jour où ces serveurs se sont éteints, le robot s'est tu. Pas de remboursement, pas de réparation, et personne pour reprendre l'affaire.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-18-robot-ami-des-enfants/pin_salle_serveurs.jpg",
+          "credit": "Moses Cursor Ssebunya · CC0",
+          "alt": "Un panneau de brassage et ses câbles dans une salle de serveurs"
+        }
+      },
+      {
+        "script": "Des vidéos d'enfants en larmes ont circulé, demandant au robot ce qui allait lui arriver. Un parent écrit : mon enfant autiste est dévasté.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://aftermath.site/moxie-robot-ai-dying-llm-embodied/"
+        }
+      },
+      {
+        "script": "Un ancien responsable technique de la boîte a écrit un logiciel libre pour faire tourner les robots sans elle. Mais il fallait basculer avant l'extinction des serveurs.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of an open source robot server",
+            "setting": "in a dim room lit only by the screen",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Des parents n'y sont pas arrivés. Un père a fini par revendre le robot en ligne, en disant à son fils qu'il partait en réparation.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed repair report page filled with columns of numbers",
+            "setting": "lying flat on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Un investisseur a relancé Moxie en 2025. Quelques semaines plus tard, les nouveaux propriétaires annonçaient que leur société fermait elle aussi.",
+        "visual": {
+          "type": "card",
+          "value": "deux fois",
+          "label": "deux sociétés fermées, un même robot éteint"
+        }
+      },
+      {
+        "script": "Et une chercheuse pose la seule question qui compte : à quel point l'obsolescence de ces objets est-elle prévue d'avance ? Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single stuffed animal toy sitting alone on a wooden shelf",
+            "setting": "in soft even daylight",
+            "composition": "seen from the side, the shelf fills the frame"
+          }
+        }
+      }
+    ]
+  }
+}
