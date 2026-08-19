@@ -1,0 +1,223 @@
+{
+  "slug": "2026-08-19-pub-dans-chatgpt",
+  "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
+  "centralClaim": "OpenAI told European ChatGPT users that ads will begin appearing on the free and Go plans later this month.",
+  "corroboration": [
+    {
+      "url": "https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/",
+      "quote": "OpenAI today told European ChatGPT users that advertising will begin appearing on the free and go plans later this month, and that its privacy policy is being updated to describe how those ads are selected, measured and controlled."
+    },
+    {
+      "url": "https://www.trendingtopics.eu/ads-coming-to-chatgpt-free-and-go-in-europe-later-this-month/",
+      "quote": "The core of the notice: ads may start appearing on the free and go plans \"later this month\". OpenAI does not name a specific date. The plus, pro, enterprise, business and education plans remain ad-free."
+    },
+    {
+      "url": "https://digiday.com/marketing/openai-builds-offerings-on-consent-as-it-expands-chatgpt-ads-to-europe/",
+      "quote": "OpenAI detailed how it will process user data across the region once ads go live later this month in a new european union privacy policy, posted on friday (august 14)."
+    }
+  ],
+  "caption": "ChatGPT va commencer à te montrer de la pub ce mois-ci, si tu utilises la version gratuite en Europe.\n\nOpenAI a prévenu par courriel ses utilisateurs de l'Espace économique européen et de la Suisse : la publicité arrive sur la formule gratuite et sur la formule Go. Les offres Plus, Pro, entreprise, business et éducation restent sans publicité. La formule Go est facturée €7.99 par mois.\n\nComment la pub est choisie. Au lancement, elle n'est pas personnalisée. OpenAI dit s'appuyer sur le sujet de la conversation en cours, une localisation générale et le type d'appareil. Les anciennes discussions et la mémoire sont exclues de cette première sélection. La publicité s'affiche sous la fin de la réponse, avec la mention sponsorisé, séparée du texte.\n\nCe qui est moins repris ailleurs. Refuser la personnalisation ne supprime pas la publicité : ceux qui ne consentent pas en voient quand même, choisies sur la conversation en cours et une localisation approximative. OpenAI écrit de son côté que la publicité n'influence pas les réponses de ChatGPT.\n\nClara Westbrook, responsable de la protection des données chez Arbor Law, pointe le vrai risque : comme cela ne concerne que les formules de base, des gens se sentiront poussés vers un abonnement payant pour éviter la pub.\n\nTu paierais pour ne pas avoir de pub dans ChatGPT, oui ou non ?\n\nppc.land · digiday.com · trendingtopics.eu\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #OpenAI",
+  "captionEvidence": [
+    {
+      "quote": "so ads are coming to the free tier - but also to the low-cost paid \"go\" plan at €7.99 per month.",
+      "url": "https://www.trendingtopics.eu/ads-coming-to-chatgpt-free-and-go-in-europe-later-this-month/"
+    },
+    {
+      "quote": "that distinction could leave some users feeling like they have to pay to avoid ads altogether, said clara westbrook, head of data privacy at arbor law.",
+      "url": "https://digiday.com/marketing/openai-builds-offerings-on-consent-as-it-expands-chatgpt-ads-to-europe/"
+    },
+    {
+      "quote": "users who don't consent to personalized ads will still see ads. instead, openai will use contextual information to decide which ads to show them, with targeting narrowed to the live conversation and a rough location while chat history and memory are left out.",
+      "url": "https://digiday.com/marketing/openai-builds-offerings-on-consent-as-it-expands-chatgpt-ads-to-europe/"
+    },
+    {
+      "quote": "the sender is openai ireland limited, based in dublin, which under the eu privacy policy acts as the controller for processing the personal data of users in the eea and switzerland.",
+      "url": "https://www.trendingtopics.eu/ads-coming-to-chatgpt-free-and-go-in-europe-later-this-month/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Publicité dans les assistants",
+      "headline": "La pub arrive dans *ChatGPT* gratuit, en Europe",
+      "hero": {
+        "value": "€7.99",
+        "label": "par mois, la formule Go, qui aura des pubs elle aussi"
+      },
+      "swipe": "Les sources sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "€7.99",
+      "unit": "par mois, la formule Go",
+      "body": "Elle prend la publicité elle aussi. Les offres **Plus, Pro, entreprise et éducation** restent sans pub.",
+      "evidence": "so ads are coming to the free tier - but also to the low-cost paid \"go\" plan at €7.99 per month.",
+      "source": {
+        "name": "Trending Topics",
+        "url": "https://www.trendingtopics.eu/ads-coming-to-chatgpt-free-and-go-in-europe-later-this-month/",
+        "date": "2026-08-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui change",
+      "body": "La publicité arrive sur les comptes *gratuits* et sur la formule Go, en Europe, **ce mois-ci**.",
+      "evidence": "openai today told european chatgpt users that advertising will begin appearing on the free and go plans later this month, and that its privacy policy is being updated to describe how those ads are selected, measured and controlled.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui choisit la pub",
+      "body": "Le sujet de la conversation en cours, une **localisation générale** et le type d'appareil. Les anciennes discussions et la mémoire sont *exclues* au départ.",
+      "evidence": "the signals named are the current topic of the chatgpt conversation and limited contextual information such as general location and device type. past chats and memories are excluded from that initial selection process.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où elle s'affiche",
+      "body": "Sous la fin de la réponse, avec la mention *sponsorisé*, séparée du texte de l'assistant.",
+      "evidence": "the placement is fixed: ads can appear below the end of a response, labelled as sponsored and visually separated from the answer.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Le consentement est demandé avant toute publicité personnalisée.",
+      "caveat": "Refuser ne supprime pas la publicité, elle est alors choisie sur la conversation en cours.",
+      "claimLabel": "Ce qui est mis en avant",
+      "caveatLabel": "Ce que dit la politique",
+      "evidence": "users who don't consent to personalized ads will still see ads. instead, openai will use contextual information to decide which ads to show them, with targeting narrowed to the live conversation and a rough location while chat history and memory are left out.",
+      "source": {
+        "name": "Digiday",
+        "url": "https://digiday.com/marketing/openai-builds-offerings-on-consent-as-it-expands-chatgpt-ads-to-europe/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Cela ne concerne que les formules de base, qui sont gratuites, et des gens pourraient se sentir poussés vers un abonnement payant pour éviter la publicité.",
+      "attribution": "Clara Westbrook, responsable de la protection des données, Arbor Law",
+      "evidence": "i think the fact it only applies to users on the more basic plans, which are free, could effectively result in users feeling pressured to go onto a paid plan to avoid ads if they do not wish their data to be used for the service of ads, personalised [sic] or otherwise,\" she said.",
+      "source": {
+        "name": "Digiday",
+        "url": "https://digiday.com/marketing/openai-builds-offerings-on-consent-as-it-expands-chatgpt-ads-to-europe/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La ligne d'OpenAI",
+      "body": "L'entreprise répète que la publicité *n'influence pas* les réponses, et que les annonceurs n'ont accès ni aux discussions ni à la mémoire.",
+      "evidence": "ads do not influence the answers chatgpt gives you,\" and that ads are clearly labeled and visually separated from responses. advertisers, the notice adds, have no access to chats, chat history, memories or personal details.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/",
+        "date": "2026-08-15"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui utilise ChatGPT gratuitement",
+      "sub": "Chaque chiffre vient d'une phrase citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "PPC Land",
+      "url": "https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/",
+      "accessed": "2026-08-19"
+    },
+    {
+      "name": "Digiday",
+      "url": "https://digiday.com/marketing/openai-builds-offerings-on-consent-as-it-expands-chatgpt-ads-to-europe/",
+      "accessed": "2026-08-19"
+    },
+    {
+      "name": "Trending Topics",
+      "url": "https://www.trendingtopics.eu/ads-coming-to-chatgpt-free-and-go-in-europe-later-this-month/",
+      "accessed": "2026-08-19"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "La pub arrive dans ChatGPT gratuit, en Europe",
+    "beats": [
+      {
+        "script": "Ce mois-ci, ChatGPT va commencer à te montrer de la pub. OpenAI l'a annoncé à ses utilisateurs européens, et ça concerne tous les comptes gratuits.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-19-pub-dans-chatgpt/pin_homme_telephone.jpg",
+          "credit": "Rawpixel · CC0",
+          "alt": "Un homme qui regarde son téléphone dans la rue"
+        }
+      },
+      {
+        "script": "Et tu sais ce qui va décider de la pub que tu vois ? Le sujet de la conversation que tu es en train d'avoir avec la machine.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/"
+        }
+      },
+      {
+        "script": "La formule payante la moins chère prend la pub elle aussi. Seules les offres au-dessus, Plus, Pro, entreprise et éducation, restent sans publicité.",
+        "visual": {
+          "type": "card",
+          "value": "€7.99",
+          "label": "par mois, la formule Go, qui aura des pubs elle aussi"
+        }
+      },
+      {
+        "script": "Au départ, rien n'est personnalisé. OpenAI dit se servir du sujet de ton échange, de ta localisation générale et de ton type d'appareil.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-19-pub-dans-chatgpt/pin_femme_tasse.jpg",
+          "credit": "Shixart1985 · CC BY",
+          "alt": "Une femme assise avec une tasse qui regarde son téléphone"
+        }
+      },
+      {
+        "script": "Sauf que refuser ne te sort pas de la pub. Ceux qui ne consentent pas à la personnalisation en voient quand même, choisies sur la conversation en cours.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://digiday.com/marketing/openai-builds-offerings-on-consent-as-it-expands-chatgpt-ads-to-europe/"
+        }
+      },
+      {
+        "script": "L'annonce s'affiche sous la fin de la réponse, avec la mention sponsorisé. Et OpenAI écrit noir sur blanc que la pub n'influence pas ce que la machine te répond.",
+        "visual": {
+          "type": "card",
+          "value": "SPONSORISÉ",
+          "label": "la mention affichée sous la réponse, séparée du texte"
+        }
+      },
+      {
+        "script": "Une juriste, Clara Westbrook, pointe le vrai risque : ça ne touche que les formules de base, donc les gens se sentiront poussés à payer.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.trendingtopics.eu/ads-coming-to-chatgpt-free-and-go-in-europe-later-this-month/"
+        }
+      },
+      {
+        "script": "Six mois après les États-Unis, c'est au tour de l'Europe. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-19-pub-dans-chatgpt/pin_femme_agee.jpg",
+          "credit": "Shixart1985 · CC BY",
+          "alt": "Une femme âgée qui regarde son téléphone près d'une fenêtre"
+        }
+      }
+    ]
+  }
+}

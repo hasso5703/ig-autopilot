@@ -1,0 +1,245 @@
+{
+  "slug": "2026-08-19-avions-trainees",
+  "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
+  "centralClaim": "A UK consortium has launched Operation Blue Skies, the world's first oceanic airspace-scale trial aimed at reducing the climate impact of aviation contrails.",
+  "corroboration": [
+    {
+      "url": "https://www.nats.aero/news/operation-blue-skies-takes-off-landmark-oceanic-airspace-trial-to-test-ai-driven-contrail-avoidance/",
+      "quote": "a uk-based consortium comprising google, the uk department for transport, the met office, nats, contrails.org, imperial college london, and the university of cambridge has launched operation blue skies, backed by the uk government as the world's first oceanic airspace-scale trial, aimed at reducing the climate impact of aviation contrails."
+    },
+    {
+      "url": "https://www.greenairnews.com/?p=9438",
+      "quote": "starting this coming northern hemisphere winter, a uk-based consortium is to conduct the world's first oceanic airspace-scale trial over a 30-month period, aimed at reducing the climate impact of aviation contrails."
+    },
+    {
+      "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
+      "quote": "a uk-based consortium will conduct the world's first airspace trial aimed at reducing condensation trails - known as contrails - that could greatly reduce aviation's global warming impact."
+    }
+  ],
+  "caption": "Les traînées blanches derrière les avions pèsent environ un tiers de l'impact climatique de l'aviation.\n\nCe sont des nuages de glace: la vapeur d'eau des réacteurs se condense autour des particules de suie et forme un nuage fin qui peut durer et retenir la chaleur. Un consortium britannique lance Operation Blue Skies, présenté comme le premier essai à l'échelle d'un espace aérien océanique entier. Il réunit Google, le ministère britannique des Transports, le Met Office, le contrôle aérien NATS, Contrails.org, Imperial College London et l'université de Cambridge.\n\nComment ça marche. Des modèles d'intelligence artificielle prévoient où les traînées durables vont se former, à partir d'images satellite et de données de vol. Les contrôleurs aériens demandent alors de petits changements d'altitude, dans le cadre des opérations normales. La zone d'essai est l'espace océanique de Shanwick, la moitié est du couloir nord-atlantique, qui porte à elle seule environ 5% du réchauffement mondial dû aux traînées.\n\nCe qui n'a pas tenu dans la vidéo. Environ 10 000 vols traversent cette zone par an pendant les heures d'essai, et seule une petite partie sera déviée. Les manoeuvres auront lieu sur deux hivers, avec environ 20 à 40 jours de test par hiver, aux heures de faible trafic. Le programme coûte £5 million sur 30 mois, dont £2.65 million du ministère des Transports, et Google y participe gratuitement.\n\nÀ nuancer: rien n'est prouvé. Le directeur de Contrails.org dit lui-même que l'étape suivante est de démontrer que ces outils fonctionnent de façon fiable en conditions réelles.\n\nTu accepterais que ton vol change d'altitude pour le climat, oui ou non ?\n\nblog.google · nats.aero · greenairnews.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Climat",
+  "captionEvidence": [
+    {
+      "quote": "when you look up at a clear sky and see thin white lines trailing behind airplanes, you're looking at condensation trails, or \"contrails.\" these are clouds created when water vapor condenses around soot particles in jet exhaust. while they may seem harmless, these warming contrails account for roughly one third of aviation's total climate impact.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/"
+    },
+    {
+      "quote": "operation blue skies will operate within the eastern half of the north atlantic corridor, shanwick airspace, which accounts for approximately 5% of global contrail warming.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/"
+    },
+    {
+      "quote": "around 10,000 flights, originating from hundreds of cities, will pass through shanwick airspace during trial hours each year and a small percentage of these flights that would otherwise pass through contrail-sensitive airspace will be slightly deviated, preventing them from forming strongly warming contrails.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/"
+    },
+    {
+      "quote": "trial manoeuvres will take place primarily during winter testing windows in 2026-2027 and 2027-2028, with approximately 20 to 40 test days per winter. testing will be conducted during periods of lower air traffic.",
+      "url": "https://www.nats.aero/news/operation-blue-skies-takes-off-landmark-oceanic-airspace-trial-to-test-ai-driven-contrail-avoidance/"
+    },
+    {
+      "quote": "operation blue skies is a £5 million, 30-month programme, partly funded by £2.65 million from the department for transport.",
+      "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance"
+    },
+    {
+      "quote": "google uk is participating on a pro-bono basis, contributing £1.4 million in-kind through ai research expertise, engineering time, and high-performance computing infrastructure to advance open climate science.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/"
+    },
+    {
+      "quote": "the next critical step is to prove these tools work reliably in real operations, leading to real, verified reductions in contrail warming.",
+      "url": "https://www.greenairnews.com/?p=9438"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Aviation et climat",
+      "headline": "Google va faire dévier des vols *atlantiques*",
+      "hero": {
+        "value": "5%",
+        "label": "du réchauffement mondial dû aux traînées vient de cette zone"
+      },
+      "swipe": "Les sources sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "5%",
+      "unit": "du réchauffement mondial dû aux traînées",
+      "body": "C'est ce que pèse la zone d'essai à elle seule: la **moitié est** du couloir nord-atlantique.",
+      "evidence": "operation blue skies will operate within the eastern half of the north atlantic corridor, shanwick airspace, which accounts for approximately 5% of global contrail warming.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que sont ces traînées",
+      "body": "Des nuages de glace, formés quand la vapeur d'eau se condense autour des suies des réacteurs. Elles pèsent environ *un tiers* de l'impact climatique de l'aviation.",
+      "evidence": "when you look up at a clear sky and see thin white lines trailing behind airplanes, you're looking at condensation trails, or \"contrails.\" these are clouds created when water vapor condenses around soot particles in jet exhaust. while they may seem harmless, these warming contrails account for roughly one third of aviation's total climate impact.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui est lancé",
+      "body": "Un consortium britannique lance *Operation Blue Skies*, présenté comme le **premier essai** à l'échelle d'un espace aérien océanique entier.",
+      "evidence": "a uk-based consortium comprising google, the uk department for transport, the met office, nats, contrails.org, imperial college london, and the university of cambridge has launched operation blue skies, backed by the uk government as the world's first oceanic airspace-scale trial, aimed at reducing the climate impact of aviation contrails.",
+      "source": {
+        "name": "NATS",
+        "url": "https://www.nats.aero/news/operation-blue-skies-takes-off-landmark-oceanic-airspace-trial-to-test-ai-driven-contrail-avoidance/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Comment ça marche",
+      "body": "Des modèles prévoient où les traînées se forment. Les contrôleurs aériens demandent alors de *petits changements d'altitude*, dans les opérations normales.",
+      "evidence": "the trials will focus on minor altitude adjustments within standard flight operations, coordinated through established and standard air traffic control (atc) communication channels.",
+      "source": {
+        "name": "NATS",
+        "url": "https://www.nats.aero/news/operation-blue-skies-takes-off-landmark-oceanic-airspace-trial-to-test-ai-driven-contrail-avoidance/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Environ 10 000 vols traversent cette zone par an pendant les heures d'essai.",
+      "caveat": "Seule une petite partie sera déviée, celle qui allait droit dans les zones sensibles.",
+      "claimLabel": "Les vols concernés",
+      "caveatLabel": "Ce qui bouge vraiment",
+      "evidence": "around 10,000 flights, originating from hundreds of cities, will pass through shanwick airspace during trial hours each year and a small percentage of these flights that would otherwise pass through contrail-sensitive airspace will be slightly deviated, preventing them from forming strongly warming contrails.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que ça coûte",
+      "body": "£5 million sur 30 mois, dont £2.65 million du **ministère britannique des Transports**.",
+      "evidence": "operation blue skies is a £5 million, 30-month programme, partly funded by £2.65 million from the department for transport.",
+      "source": {
+        "name": "University of Cambridge",
+        "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "L'étape suivante, la plus critique, est de prouver que ces outils fonctionnent de façon fiable en conditions réelles.",
+      "attribution": "Marc Shapiro, directeur exécutif de Contrails.org",
+      "evidence": "the next critical step is to prove these tools work reliably in real operations, leading to real, verified reductions in contrail warming.",
+      "source": {
+        "name": "GreenAir News",
+        "url": "https://www.greenairnews.com/?p=9438",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui prend l'avion cet hiver",
+      "sub": "Chaque chiffre vient d'une phrase citée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/",
+      "accessed": "2026-08-19"
+    },
+    {
+      "name": "NATS",
+      "url": "https://www.nats.aero/news/operation-blue-skies-takes-off-landmark-oceanic-airspace-trial-to-test-ai-driven-contrail-avoidance/",
+      "accessed": "2026-08-19"
+    },
+    {
+      "name": "GreenAir News",
+      "url": "https://www.greenairnews.com/?p=9438",
+      "accessed": "2026-08-19"
+    },
+    {
+      "name": "University of Cambridge",
+      "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
+      "accessed": "2026-08-19"
+    }
+  ],
+  "reel2": {
+    "mood": "wonder",
+    "lang": "fr",
+    "title": "Google va faire dévier des vols atlantiques",
+    "beats": [
+      {
+        "script": "Tu as déjà vu ces traînées blanches derrière les avions. Elles pèsent à elles seules environ un tiers de l'impact de l'aviation sur le climat.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single airplane high in a clear sky with a thin white trail behind it",
+            "action": "moving slowly across the sky, the thin white trail growing longer behind it, the airplane staying whole and in frame",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "in a clear open sky",
+            "composition": "a low-angle wide shot",
+            "ambient": "faint high-altitude wind"
+          }
+        }
+      },
+      {
+        "script": "Et cet hiver, au-dessus de l'Atlantique Nord, on va essayer de les éviter. Google et le gouvernement britannique lancent un essai baptisé Operation Blue Skies.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/"
+        }
+      },
+      {
+        "script": "Pourquoi là ? Parce que cette moitié est de l'Atlantique porte à elle seule 5% du réchauffement mondial provoqué par ces traînées.",
+        "visual": {
+          "type": "card",
+          "value": "5%",
+          "label": "du réchauffement mondial dû aux traînées vient de cette zone"
+        }
+      },
+      {
+        "script": "Le principe est simple. Une IA prévoit où les traînées vont se former, et les contrôleurs aériens font changer légèrement d'altitude les avions concernés.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-19-avions-trainees/pin_tour_controle.jpg",
+          "credit": "Djflem · CC0",
+          "alt": "Une tour de contrôle aérien"
+        }
+      },
+      {
+        "script": "Environ 10 000 vols traversent cette zone par an pendant les heures d'essai. Seuls quelques-uns seront déviés, ceux qui allaient droit dans les zones sensibles.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.nats.aero/news/operation-blue-skies-takes-off-landmark-oceanic-airspace-trial-to-test-ai-driven-contrail-avoidance/"
+        }
+      },
+      {
+        "script": "Vingt à quarante jours de test par hiver, aux heures creuses, sur deux hivers. Ce sont de petits ajustements d'altitude, dans les opérations normales.",
+        "visual": {
+          "type": "card",
+          "value": "20 à 40",
+          "label": "jours de test par hiver, aux heures de faible affluence"
+        }
+      },
+      {
+        "script": "Sauf que personne n'a encore prouvé que ça marche en vrai. Le directeur de Contrails.org le dit lui-même : l'étape suivante, c'est de le prouver en conditions réelles.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.greenairnews.com/?p=9438"
+        }
+      },
+      {
+        "script": "Cinq millions de livres, trente mois d'essais, et deux universités britanniques chargées de vérifier les résultats. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-19-avions-trainees/pin_trainee_ciel.jpg",
+          "credit": "Sylwia Botev · CC BY",
+          "alt": "Une traînée blanche traversant un ciel bleu au-dessus des arbres"
+        }
+      }
+    ]
+  }
+}
