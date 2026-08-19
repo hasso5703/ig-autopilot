@@ -1,0 +1,240 @@
+{
+  "slug": "2026-08-20-jeunes-emplois-ia",
+  "centralClaim": "71% of Americans think AI will lead to fewer jobs.",
+  "corroboration": [
+    {
+      "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+      "quote": "In our new survey, 71% of adults think AI will lead to fewer jobs in the United States over the next two decades, up from 64% in 2024."
+    },
+    {
+      "url": "https://www.techspot.com/news/113545-young-americans-growing-increasingly-wary-ai.html",
+      "quote": "In the latest survey, which was conducted June 22-28 of this year, 71% of Americans said they believe AI will lead to fewer jobs for humans over the next 20 years."
+    }
+  ],
+  "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
+  "caption": "71% des Américains pensent maintenant que l'IA va supprimer des emplois.\n\nC'est le résultat d'une enquête du Pew Research Center menée du 22 au 28 juin 2026 auprès de 3 488 adultes américains. Il y a deux ans, ils étaient 64% à le penser. Ceux qui pensent l'inverse, que l'IA va créer des emplois, sont 5%.\n\nCe qui a changé cette année. Ce sont les plus jeunes qui basculent. 73% des moins de 30 ans le disent désormais, contre 61% il y a deux ans. Ils sont maintenant aussi convaincus que les 30 à 64 ans.\n\nEt ça dépasse la question du travail. Pour la première fois, une majorité des moins de 30 ans, 55%, se dit plus inquiète qu'enthousiaste face à l'IA. Sur l'ensemble des adultes américains, ils ne sont plus que 9% à se dire plus enthousiastes qu'inquiets, contre près d'un sur cinq en 2021.\n\nÀ nuancer, et c'est important. Ce sont des Américains, pas des Français, et c'est une enquête déclarative: on demande aux gens ce qu'ils croient, pas ce qui se passe sur leur lieu de travail.\n\nL'IA va supprimer des emplois ou en créer, à ton avis ?\n\npewresearch.org · thehill.com · techspot.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Emploi #Travail",
+  "captionEvidence": [
+    {
+      "quote": "In our new survey, 71% of adults think AI will lead to fewer jobs in the United States over the next two decades, up from 64% in 2024. Few (5%) say AI will lead to more jobs.",
+      "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/"
+    },
+    {
+      "quote": "We surveyed 3,488 U.S. adults from June 22 to 28, 2026.",
+      "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/"
+    },
+    {
+      "quote": "For example, 73% of adults under 30 now say AI will lead to fewer jobs, up from 61% two years ago.",
+      "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/"
+    },
+    {
+      "quote": "The youngest adults are now just as likely as those ages 30 to 64 to hold this view.",
+      "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/"
+    },
+    {
+      "quote": "For the first time, a majority of adults under 30 (55%) now say they're more concerned than excited about AI.",
+      "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/"
+    },
+    {
+      "quote": "Another 9% are more excited than concerned and 37% say they're equally excited and concerned, according to a Pew Research Center survey conducted June 22-28, 2026.",
+      "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/"
+    },
+    {
+      "quote": "Only nine percent of those polled in 2026 said they were more excited than concerned over what AI brings to the table. Back in 2021, nearly one in five",
+      "url": "https://www.techspot.com/news/113545-young-americans-growing-increasingly-wary-ai.html"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Pew Research Center",
+      "headline": "71% pensent que l'IA va *supprimer* des emplois",
+      "hero": { "value": "5%", "label": "pensent qu'elle va en créer" },
+      "swipe": "Les chiffres, un par un"
+    },
+    {
+      "type": "stat",
+      "figure": "71%",
+      "unit": "des adultes américains",
+      "body": "Ils pensent que l'IA va **supprimer des emplois** aux États-Unis. Il y a deux ans, ils étaient 64%.",
+      "evidence": "In our new survey, 71% of adults think AI will lead to fewer jobs in the United States over the next two decades, up from 64% in 2024.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce sont les plus jeunes qui basculent",
+      "body": "73% des moins de 30 ans le disent maintenant. Il y a deux ans, ils n'étaient que 61%.",
+      "evidence": "For example, 73% of adults under 30 now say AI will lead to fewer jobs, up from 61% two years ago.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ils ont rattrapé leurs parents",
+      "body": "Les plus jeunes sont désormais *aussi convaincus* de ça que les 30 à 64 ans.",
+      "evidence": "The youngest adults are now just as likely as those ages 30 to 64 to hold this view.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et ça dépasse la question du travail",
+      "body": "Pour la première fois, une **majorité** des moins de 30 ans, 55%, se dit plus inquiète qu'enthousiaste face à l'IA.",
+      "evidence": "For the first time, a majority of adults under 30 (55%) now say they're more concerned than excited about AI.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'inquiétude grimpe depuis 2021",
+      "body": "52% des Américains se disent plus inquiets qu'enthousiastes face à l'IA. En 2021, ils étaient 37%.",
+      "evidence": "Today, 52% of Americans say they are more concerned than excited about the increased use of AI in daily life - up from 37% in 2021.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'enthousiasme a fondu",
+      "body": "Sur l'ensemble des adultes américains, 9% se disent plus enthousiastes qu'inquiets.",
+      "evidence": "Another 9% are more excited than concerned and 37% say they're equally excited and concerned, according to a Pew Research Center survey conducted June 22-28, 2026.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "71% pensent que l'IA va supprimer des emplois",
+      "claimLabel": "Ce que pense la majorité",
+      "caveat": "5% pensent qu'elle va en créer",
+      "caveatLabel": "Ce que pense le reste",
+      "evidence": "In our new survey, 71% of adults think AI will lead to fewer jobs in the United States over the next two decades, up from 64% in 2024. Few (5%) say AI will lead to more jobs.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "date": "2026-08-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Lu de la même façon ailleurs",
+      "body": "La presse américaine relève le même chiffre: 71 pour cent des personnes interrogées.",
+      "evidence": "Pew Research added that 71 percent of respondents believe AI will take Americans",
+      "source": {
+        "name": "The Hill",
+        "url": "https://thehill.com/policy/technology/6038294-ai-concerns-job-displacement/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui a moins de 30 ans",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    { "name": "Pew Research Center", "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/", "accessed": "2026-08-19" },
+    { "name": "The Hill", "url": "https://thehill.com/policy/technology/6038294-ai-concerns-job-displacement/", "accessed": "2026-08-19" },
+    { "name": "TechSpot", "url": "https://www.techspot.com/news/113545-young-americans-growing-increasingly-wary-ai.html", "accessed": "2026-08-19" }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "71% pensent que l'IA supprimera des emplois",
+    "beats": [
+      {
+        "script": "71% des Américains pensent que l'intelligence artificielle va supprimer des emplois. Il y a deux ans, ils étaient 64%. Et le basculement vient d'une génération qu'on n'attendait pas.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of survey percentage numbers",
+            "action": "the column of numbers sliding slowly downward, the screen staying whole and in frame",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "on a plain desk in soft even daylight"
+          }
+        }
+      },
+      {
+        "script": "Tu sais qui bascule en ce moment ? Les moins de 30 ans.",
+        "visual": { "type": "card", "value": "30 ANS", "label": "l'âge où l'inquiétude grimpe encore" }
+      },
+      {
+        "script": "73% d'entre eux disent maintenant que l'IA va supprimer des emplois. Il y a seulement deux ans, ils n'étaient que 61%.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/"
+        }
+      },
+      {
+        "script": "Autrement dit, les moins de 30 ans sont désormais aussi convaincus de ça que les 30 à 64 ans.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed survey report page filled with columns of numbers",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et ce n'est pas que le travail. Pour la première fois, une majorité des moins de 30 ans, 55%, se dit plus inquiète qu'enthousiaste face à l'IA.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://thehill.com/policy/technology/6038294-ai-concerns-job-displacement/"
+        }
+      },
+      {
+        "script": "Et sur l'ensemble des adultes américains, 52% se disent plus inquiets qu'enthousiastes. En 2021, ils étaient 37%.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of a survey response reader",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Ceux qui se disent plus enthousiastes qu'inquiets ne sont plus que 9% des adultes américains.",
+        "visual": { "type": "card", "value": "9%", "label": "plus enthousiastes qu'inquiets, tous âges confondus" }
+      },
+      {
+        "script": "À nuancer, et c'est important. Ce sont des Américains, pas des Français. Et c'est une enquête déclarative: on demande aux gens ce qu'ils croient, pas ce qui se passe vraiment sur leur lieu de travail.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed survey questionnaire page filled with columns of numbers",
+            "setting": "lying flat under a desk lamp",
+            "composition": "macro framing, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et ceux qui pensent que l'IA va créer des emplois ? Ils sont 5%. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "photo",
+          "query": "screen time",
+          "file": "media/2026-08-20-jeunes-emplois-ia/photo_8.jpg",
+          "credit": "Rawpixel · CC0",
+          "alt": "Un homme regarde son téléphone, de profil, dans un lieu public"
+        }
+      }
+    ]
+  }
+}

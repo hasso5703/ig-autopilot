@@ -506,6 +506,29 @@ ENTRIES:
   genere, 0 veo) ne paie QUE la narration. Les deux lectures TTS du meme script
   dans le meme build sont sorties a 4.35 puis 3.77 mots/s, la premiere refusee
   hors bande de stretch: budgete toujours 2 achats TTS, pas 1.
+  Ajout 19/08 (19h30), dossier sondage Pew: rendent 200 au fetch gate et se
+  gatent DU PREMIER COUP (0 erreur sur 17 verifications) pewresearch.org,
+  thehill.com et techspot.com (trois nouveaux). venturebeat.com rend 429 pour le
+  NEUVIEME jour d'affilee (07 au 19/08): l'entree du 16/08 disait "septieme",
+  c'est l'etat permanent du domaine, ne planifie rien dessus (perdu ce soir pour
+  cette raison: "85% des entreprises brulees par une erreur d'IA coupent les
+  humains qui verifient", mis en revisit sans une ligne d'ecrite). ET LE DOMAINE
+  QUI ALTERNE, famille theregister du 13/08: forbes.com a rendu 200 puis 403 sur
+  deux fetchs espaces de quelques minutes, sur la MEME url. Ne le banque pas dans
+  un spec destine a un run 15 h plus tard. SUR UN SONDAGE, LE PRIMAIRE EST LE
+  MEILLEUR ET IL EST JOIGNABLE: la fiche pewresearch.org porte le texte ET les
+  tableaux de donnees, donc toutes les citations chiffrees s'y prennent, la ou la
+  reprise presse n'en porte qu'une ou deux. Mais ATTENTION, piege propre a Pew:
+  les series par age n'existent QUE dans les tableaux ("2021 31 34 41 43"), pas
+  en prose, donc une comparaison historique par tranche d'age n'est PAS gatable
+  comme phrase. Reste sur les phrases que Pew ecrit vraiment ("the youngest
+  adults are now just as likely as those ages 30 to 64"). Piege de contraction
+  re-confirme (01/08): Pew ecrit "they're", deux citations recopiees en "they
+  are" sont revenues MISS avant le gate, attrapees hors reseau en 10 s avec
+  flatten. ET L'ETRANGLEMENT upload.wikimedia SE RE-CONFIRME LE LENDEMAIN de
+  l'entree du 19/08 06h30: l'original Screen_time.jpg a rendu la page d'erreur de
+  2,2 ko des la premiere requete du run, et le thumb /1280px- a servi l'image
+  entiere (194 ko, 1280x854) apres ~20 s de pause. Descends directement a 1280.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
