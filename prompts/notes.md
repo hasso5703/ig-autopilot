@@ -2072,6 +2072,20 @@ ENTRIES:
   GAGNER 2 MIN, re-confirmation directe du 17/08: sur le rebuild, les beats 1 et 7
   epingles avec `file` ont rendu INSTANTANEMENT, aucune re-capture, carte-recu intacte.
   Sur un rebuild declenche par une seule still ratee, epingle TOUJOURS les captures.
+  Ajout 19/08 (16h30), dossier Operation Blue Skies. greenairnews.com/?p=9438 SE GATE
+  VERT (fetch Node 200, citations VERIFIED) MAIS LA CAPTURE REND UN 404 plein cadre
+  ("404 Not Found / The resource requested could not be found on this server"): meme
+  famille que macrumors (03/08) et cnbc (04/08), gate et capture sont deux chemins
+  reseau differents. Cause mesuree: c'est un shortlink WordPress (?p=ID) qui est SON
+  PROPRE canonical (aucun permalink joli, /?page_id=ID rend 200 mais pas la meme page),
+  et la navigation navigateur via route.fulfill rend 404 la ou le fetch Node rend 200.
+  Sur un domaine dont l'URL est un ?p=ID, teste la capture en scout (replay du ctx.route
+  + proxy, cf. 06/08) AVANT de le mettre en beat screenshot, ou prends une autre surface.
+  Remplacant mesure et excellent sur ce dossier: cam.ac.uk/research/news/... se capture
+  PROPREMENT du premier coup (Menu + titre entier "Operation Blue Skies takes off:
+  landmark trial to test AI-driven contrail avoidance" + une vraie photo d'avion+trainee),
+  0 pub, 0 banniere, titre = histoire (controle du 10/08). greenair reste une SOURCE
+  gatable dans la legende, jamais un recu.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
