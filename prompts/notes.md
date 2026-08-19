@@ -475,6 +475,25 @@ ENTRIES:
   l'entree recus). Sur une actu de FONCTION PRODUIT OpenAI, ce couple est donc
   autosuffisant: le primaire (help.openai.com) reste 403 depuis le 16/08 et on
   n'en a pas besoin.
+  Ajout 19/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 31 verifications, deux dossiers) ppc.land, digiday.com,
+  trendingtopics.eu (dossier pub ChatGPT) et nats.aero, cam.ac.uk,
+  greenairnews.com (dossier trainees de condensation); blog.google et
+  techcrunch.com re-confirment. Repondent 200 aussi skift.com (mais paywalle
+  apres ~6 paragraphes), techxplore.com et responsiblestatecraft.org.
+  openai.com re-confirme 403. LE REFLEXE SUR UNE ACTU DE REGLE OU DE POLITIQUE
+  OPENAI, quand le primaire est 403 et que l'annonce est arrivee par COURRIEL
+  aux utilisateurs: la presse specialisee publicite lit l'e-mail et la politique
+  de confidentialite ligne a ligne. ppc.land en fait un rapport de 12 min qui
+  cite le courriel verbatim (heure d'envoi, adresse du responsable de
+  traitement, phrases entre guillemets), et digiday apporte la seule lecture
+  INDEPENDANTE du lot (une juriste externe, sa propre analyse du fondement
+  juridique RGPD). Les autres reprises (trendingtopics, relevantaudience,
+  smalk) reecrivent le meme courriel: trois domaines verts = une annonce, dis-le
+  dans le rapport. ET LA TOUX DU JOUR, famille du 06/08: blog.google a rendu UNE
+  fois "503 server error ... service error -27" (112 octets aplatis) sur une URL
+  qui avait rendu 200/340 ko trois minutes plus tot, puis 200 vingt secondes
+  apres. Un 503 isole sur un domaine qui marchait n'est pas un blocage.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1371,6 +1390,33 @@ ENTRIES:
   taille et filtre fond-blanc la laissent passer et c'est exactement l'image
   que routine.md dit de racheter. Sur une actu de travail de bureau, il n'y a
   pas de photo libre utilisable ici: prends une `card` ou un recu.
+  Ajout 19/08 (06h30), L'ETRANGLEMENT upload.wikimedia SE DESCEND EN TAILLE, et
+  ca precise les entrees des 14, 16 et 17/08 qui disaient "essaie le thumb": sur
+  5 telechargements, 2 originaux ont rendu la page d'erreur de 2 ko des les
+  premieres requetes du run, ET le thumb /2560px- a rendu la MEME erreur pour
+  les deux; c'est le thumb /1280px-, apres 20 a 25 s de pause, qui a servi les
+  images entieres. Le thumb n'est donc pas une porte de sortie a n'importe
+  quelle taille: descends a 1280 avant de renoncer a un beat photo. VALEURS
+  SURES telechargees, regardees en planche-contact, recadrees 9:16 et epinglees
+  file+credit ce matin (donc 0 $ de still sur deux Reels): "Screen time"
+  (Rawpixel, CC0) existe sur Commons en 5000x3334, il n'est PAS plafonne a
+  1024 px comme la copie du CDN rawpixel (nuance a l'entree du 03/08),
+  crop=1875:3334:1400:0 garde l'homme ET son telephone; "Osuchow - aircraft
+  contrails" (Sylwia Botev, CC BY, thumb 1280x960, crop=540:960:370:0), une
+  vraie trainee dans un ciel bleu, zero texte, zero marque; "Newark Airport
+  Control Tower 01" (Djflem, CC0, thumb 1280x1707, crop=960:1707:160:0), vraie
+  tour de controle contemporaine. REQUETES PIEGEES le meme matin, aucun filtre
+  ne les voit: "air traffic control centre" met PREMIER a 8.0
+  "KLAirTraffcontr" (CC0, 3264x2448) qui est une PHOTO DE RUE devant un
+  batiment, pas une salle de controle (famille de la carte du 08/08: le
+  classement recompense le titre, pas le contenu); "contrails sunset" met
+  premier "Contrails Sunset - 2011" (CC0), de vraies trainees au coucher de
+  soleil mais avec une AUTOROUTE americaine et ses panneaux sur tout le tiers
+  bas, inutilisable en 9:16 sans perdre la resolution. Et le piege du cadrage du
+  09/08 se re-confirme dans l'autre sens: recentrer "Woman sitting in a chair
+  holding a cup looking at a phone" a x=1500 pour mieux cadrer le visage SUPPRIME
+  le telephone du cadre; garde le x=2100 mesure, le sujet du beat c'est la
+  personne AVEC l'objet.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
