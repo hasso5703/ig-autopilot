@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-19T10:41:23.616Z",
+  "at": "2026-08-19T16:45:01.897Z",
   "n": 43,
-  "nSettled": 37,
-  "medianViews": 197,
-  "medianRetentionPct": 22,
+  "nSettled": 38,
+  "medianViews": 196,
+  "medianRetentionPct": 21,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 25,
-      "medianViews": 381,
-      "meanRetentionPct": 25.6,
+      "n": 26,
+      "medianViews": 367,
+      "meanRetentionPct": 24.8,
       "saves": 38,
       "shares": 18,
       "thin": false
@@ -158,9 +158,9 @@
       "thin": true
     },
     "11": {
-      "n": 3,
-      "medianViews": 353,
-      "meanRetentionPct": 17.3,
+      "n": 4,
+      "medianViews": 274,
+      "meanRetentionPct": 14.8,
       "saves": 2,
       "shares": 5,
       "thin": true
@@ -900,7 +900,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Un salarié sur cinq a déjà confié à une IA une tâche qu'un collègue faisait avant. Et une tâche sur six prend maintenant plus de temps qu'avant.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",

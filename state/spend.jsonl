@@ -232,3 +232,5 @@
 {"at":"2026-08-18T17:00:46.697Z","slug":"2026-08-18-robot-ami-des-enfants","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1307}
 {"at":"2026-08-19T10:41:23.830Z","slug":"2026-08-19-pub-dans-chatgpt","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"47.6s Sadaltager","usd":0.0238}
 {"at":"2026-08-19T10:41:52.184Z","slug":"2026-08-19-pub-dans-chatgpt","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"55.0s Sadaltager","usd":0.0275}
+{"at":"2026-08-19T16:45:23.593Z","slug":"2026-08-19-avions-trainees","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.0s Sadaltager","usd":0.0305}
+{"at":"2026-08-19T16:49:18.635Z","slug":"2026-08-19-avions-trainees","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}

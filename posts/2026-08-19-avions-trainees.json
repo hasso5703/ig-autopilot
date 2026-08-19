@@ -189,7 +189,8 @@
         "script": "Et cet hiver, au-dessus de l'Atlantique Nord, on va essayer de les éviter. Google et le gouvernement britannique lancent un essai baptisé Operation Blue Skies.",
         "visual": {
           "type": "screenshot",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/"
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/",
+          "file": "media/2026-08-19-avions-trainees/shot_1.png"
         }
       },
       {
@@ -213,7 +214,8 @@
         "script": "Environ 10 000 vols traversent cette zone par an pendant les heures d'essai. Seuls quelques-uns seront déviés, ceux qui allaient droit dans les zones sensibles.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.nats.aero/news/operation-blue-skies-takes-off-landmark-oceanic-airspace-trial-to-test-ai-driven-contrail-avoidance/"
+          "url": "https://www.nats.aero/news/operation-blue-skies-takes-off-landmark-oceanic-airspace-trial-to-test-ai-driven-contrail-avoidance/",
+          "file": "media/2026-08-19-avions-trainees/shot_4.png"
         }
       },
       {
@@ -228,7 +230,7 @@
         "script": "Sauf que personne n'a encore prouvé que ça marche en vrai. Le directeur de Contrails.org le dit lui-même : l'étape suivante, c'est de le prouver en conditions réelles.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.greenairnews.com/?p=9438"
+          "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance"
         }
       },
       {
