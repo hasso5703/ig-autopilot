@@ -77,3 +77,5 @@
 {"at":"2026-08-17T16:43:26.074Z","slug":"2026-08-17-filtre-biologique-anthropic","words":200,"seconds":52.4,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":0.6}
 {"at":"2026-08-18T10:42:01.354Z","slug":"2026-08-18-chatgpt-enregistre-ton-mac","words":205,"seconds":55.56,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":1.1}
 {"at":"2026-08-18T16:47:58.255Z","slug":"2026-08-18-robot-ami-des-enfants","words":203,"seconds":57.76,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.3}
+{"at":"2026-08-19T10:41:23.967Z","slug":"2026-08-19-pub-dans-chatgpt","words":207,"seconds":47.64,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":0.7}
+{"at":"2026-08-19T10:41:52.317Z","slug":"2026-08-19-pub-dans-chatgpt","words":207,"seconds":54.96,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-2.2}

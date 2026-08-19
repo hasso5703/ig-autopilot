@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-19T07:03:25.103Z",
+  "at": "2026-08-19T10:41:23.616Z",
   "n": 43,
   "nSettled": 37,
   "medianViews": 197,
@@ -566,6 +566,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-18-chatgpt-enregistre-ton-mac",
+      "at": "2026-08-18T11:03:39.395Z",
+      "hourUtc": 11,
+      "views": 320,
+      "reach": 300,
+      "avgWatchS": 9,
+      "retentionPct": 15,
+      "likes": 3,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "ChatGPT peut maintenant enregistrer chaque clic et chaque touche que tu tapes sur ton Mac. Et il garde ça en clair sur ton disque.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
       "at": "2026-08-06T19:59:50.589Z",
       "hourUtc": 19,
@@ -597,25 +616,6 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Le filtre censé empêcher une IA d'aider à fabriquer une arme biologique est resté éteint onze mois. 133 millions de conversations sont passées par là.",
-      "settled": false
-    },
-    {
-      "slug": "2026-08-18-chatgpt-enregistre-ton-mac",
-      "at": "2026-08-18T11:03:39.395Z",
-      "hourUtc": 11,
-      "views": 296,
-      "reach": 277,
-      "avgWatchS": 9.1,
-      "retentionPct": 15,
-      "likes": 3,
-      "comments": 1,
-      "saved": 2,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "ChatGPT peut maintenant enregistrer chaque clic et chaque touche que tu tapes sur ton Mac. Et il garde ça en clair sur ton disque.",
       "settled": false
     },
     {
