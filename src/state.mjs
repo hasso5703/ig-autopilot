@@ -260,6 +260,16 @@ export async function recordSeen(entries) {
   await appendFile(SEEN, lines.join("\n") + "\n", "utf8");
 }
 
+/**
+ * True when a permalink is present but stops before its shortcode, so it points
+ * at Instagram's index instead of at the post. Empty is not a fault: a record
+ * may legitimately carry no permalink at all.
+ */
+export const shortcodeless = (permalink) => {
+  const p = String(permalink ?? "").trim();
+  return p !== "" && !/\/(reel|p|tv)\/[A-Za-z0-9_-]+/.test(p);
+};
+
 export async function recordPosted(entry) {
   /*
    * Refuse a record that cannot recognise its own story.
@@ -279,6 +289,30 @@ export async function recordPosted(entry) {
       "recordPosted: `title` is required — the fingerprint and tokens are derived from it, and without them this story is invisible to filterFresh and can be republished as new. Pass { slug, mediaId, permalink, url, title, source }."
     );
   if (!String(entry.url || "").trim()) throw new Error("recordPosted: `url` is required (the story's source page)");
+
+  /*
+   * Say so — loudly, without refusing — when the permalink carries no shortcode.
+   *
+   * On 2026-08-19 the 16:30 run recorded "https://www.instagram.com/reel/" for a
+   * Reel whose real permalink was ".../reel/DcOr2W3FE_4/". The mediaId was right,
+   * so nothing downstream broke (`isReel` falls back to `durationS`, and the
+   * watch and engage reports key on the mediaId), but every report that prints
+   * that record now prints a link to nowhere. The cause is almost always a
+   * template literal written inside a DOUBLE-QUOTED shell string, where the
+   * shell expands `${shortcode}` to nothing before node ever sees it — the same
+   * family as the quoting trap in the notebook's 06/08 entry.
+   *
+   * This warns and writes anyway rather than throwing, on purpose. recordPosted
+   * runs in the minute after the post goes live; a throw here would leave the
+   * account with a published Reel it has no memory of, which is the worst
+   * failure this account has. A run that reads its own output catches this while
+   * it can still say so in the report; the ledger is append-only, so nothing can
+   * repair the line afterwards.
+   */
+  if (shortcodeless(entry.permalink))
+    console.warn(
+      `recordPosted: WARNING — the permalink "${String(entry.permalink).trim()}" carries no shortcode, so it points at nothing. The record is written anyway (the mediaId is what the reports key on). This is usually a \${...} eaten by a double-quoted shell string: read the real permalink back with \`node src/publish.mjs recent\` and put it in your report.`
+    );
 
   await mkdir(DIR, { recursive: true });
   const line = JSON.stringify({

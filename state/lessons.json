@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-19T16:45:01.897Z",
-  "n": 43,
-  "nSettled": 38,
-  "medianViews": 196,
+  "at": "2026-08-19T19:40:48.929Z",
+  "n": 45,
+  "nSettled": 39,
+  "medianViews": 197,
   "medianRetentionPct": 21,
   "top": [
     {
@@ -15,11 +15,19 @@
     },
     {
       "slug": "2026-08-15-camions-sans-chauffeur",
-      "views": 1294,
+      "views": 1295,
       "retentionPct": 21,
       "saved": 0,
       "shares": 3,
       "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice."
+    },
+    {
+      "slug": "2026-08-13-claude-marque-invisible",
+      "views": 1248,
+      "retentionPct": 29,
+      "saved": 4,
+      "shares": 8,
+      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même."
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
@@ -28,14 +36,6 @@
       "saved": 4,
       "shares": 3,
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai."
-    },
-    {
-      "slug": "2026-08-13-claude-marque-invisible",
-      "views": 1225,
-      "retentionPct": 28,
-      "saved": 4,
-      "shares": 7,
-      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même."
     },
     {
       "slug": "2026-08-15-google-retire-filigrane",
@@ -90,17 +90,17 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 26,
-      "medianViews": 367,
-      "meanRetentionPct": 24.8,
+      "n": 27,
+      "medianViews": 353,
+      "meanRetentionPct": 24.7,
       "saves": 38,
-      "shares": 18,
+      "shares": 21,
       "thin": false
     },
     "photo": {
       "n": 7,
       "medianViews": 182,
-      "meanRetentionPct": 20.9,
+      "meanRetentionPct": 20.7,
       "saves": 7,
       "shares": 1,
       "thin": false
@@ -192,17 +192,17 @@
     "16": {
       "n": 5,
       "medianViews": 182,
-      "meanRetentionPct": 21.4,
+      "meanRetentionPct": 21.2,
       "saves": 7,
       "shares": 3,
       "thin": false
     },
     "17": {
-      "n": 10,
-      "medianViews": 183,
-      "meanRetentionPct": 23,
+      "n": 11,
+      "medianViews": 191,
+      "meanRetentionPct": 22.9,
       "saves": 11,
-      "shares": 8,
+      "shares": 11,
       "thin": false
     },
     "19": {
@@ -216,7 +216,7 @@
     "20": {
       "n": 6,
       "medianViews": 355,
-      "meanRetentionPct": 22.3,
+      "meanRetentionPct": 22.2,
       "saves": 13,
       "shares": 2,
       "thin": false
@@ -224,7 +224,7 @@
     "23": {
       "n": 2,
       "medianViews": 296,
-      "meanRetentionPct": 45,
+      "meanRetentionPct": 44.5,
       "saves": 1,
       "shares": 1,
       "thin": true
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 22,
+    "now": 25,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -270,15 +270,15 @@
         ]
       },
       {
-        "date": "2026-08-04",
-        "delta": 2,
+        "date": "2026-08-19",
+        "delta": 3,
         "published": [
           {
-            "slug": "2026-08-04-fcc-robots-humanoides",
-            "views": 157
+            "slug": "2026-08-19-avions-trainees",
+            "views": 118
           },
           {
-            "slug": "2026-08-04-congres-chatgpt",
+            "slug": "2026-08-19-pub-dans-chatgpt",
             "views": 117
           }
         ]
@@ -309,7 +309,7 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1294,
+      "views": 1295,
       "reach": 1159,
       "avgWatchS": 12.8,
       "retentionPct": 21,
@@ -320,6 +320,23 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-13-claude-marque-invisible",
+      "at": "2026-08-13T17:16:15.024Z",
+      "hourUtc": 17,
+      "views": 1248,
+      "reach": 1114,
+      "avgWatchS": 17.2,
+      "retentionPct": 29,
+      "likes": 9,
+      "comments": 1,
+      "saved": 4,
+      "shares": 8,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
       "settled": true
     },
     {
@@ -337,23 +354,6 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai.",
-      "settled": true
-    },
-    {
-      "slug": "2026-08-13-claude-marque-invisible",
-      "at": "2026-08-13T17:16:15.024Z",
-      "hourUtc": 17,
-      "views": 1225,
-      "reach": 1091,
-      "avgWatchS": 16.7,
-      "retentionPct": 28,
-      "likes": 9,
-      "comments": 1,
-      "saved": 4,
-      "shares": 7,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
       "settled": true
     },
     {
@@ -484,7 +484,7 @@
       "hourUtc": 23,
       "views": 395,
       "reach": 365,
-      "avgWatchS": 24.1,
+      "avgWatchS": 24,
       "retentionPct": 40,
       "likes": 3,
       "comments": 1,
@@ -532,6 +532,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-18-chatgpt-enregistre-ton-mac",
+      "at": "2026-08-18T11:03:39.395Z",
+      "hourUtc": 11,
+      "views": 354,
+      "reach": 333,
+      "avgWatchS": 9,
+      "retentionPct": 15,
+      "likes": 3,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "ChatGPT peut maintenant enregistrer chaque clic et chaque touche que tu tapes sur ton Mac. Et il garde ça en clair sur ton disque.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-13-twitch-entraine-ia-amazon",
       "at": "2026-08-13T11:47:37.020Z",
       "hourUtc": 11,
@@ -554,7 +573,7 @@
       "hourUtc": 16,
       "views": 330,
       "reach": 295,
-      "avgWatchS": 11.1,
+      "avgWatchS": 11,
       "retentionPct": 18,
       "likes": 7,
       "comments": 2,
@@ -564,25 +583,6 @@
       "themes": [],
       "sendTest": "Une IA a prévu qu'un ouragan de catégorie 5 allait frapper la Jamaïque, cinq jours avant. Les gens ont eu le temps d'évacuer.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-18-chatgpt-enregistre-ton-mac",
-      "at": "2026-08-18T11:03:39.395Z",
-      "hourUtc": 11,
-      "views": 320,
-      "reach": 300,
-      "avgWatchS": 9,
-      "retentionPct": 15,
-      "likes": 3,
-      "comments": 1,
-      "saved": 2,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "ChatGPT peut maintenant enregistrer chaque clic et chaque touche que tu tapes sur ton Mac. Et il garde ça en clair sur ton disque.",
-      "settled": false
     },
     {
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
@@ -616,7 +616,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Le filtre censé empêcher une IA d'aider à fabriquer une arme biologique est resté éteint onze mois. 133 millions de conversations sont passées par là.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-02-google-earth-ia",
@@ -624,7 +624,7 @@
       "hourUtc": 20,
       "views": 294,
       "reach": 264,
-      "avgWatchS": 13,
+      "avgWatchS": 12.9,
       "retentionPct": 22,
       "likes": 3,
       "comments": 1,
@@ -643,8 +643,8 @@
       "hourUtc": 23,
       "views": 197,
       "reach": 168,
-      "avgWatchS": 29.8,
-      "retentionPct": 50,
+      "avgWatchS": 29.7,
+      "retentionPct": 49,
       "likes": 5,
       "comments": 1,
       "saved": 1,
@@ -679,7 +679,7 @@
       "hourUtc": 17,
       "views": 191,
       "reach": 171,
-      "avgWatchS": 11.1,
+      "avgWatchS": 11,
       "retentionPct": 18,
       "likes": 7,
       "comments": 1,
@@ -699,7 +699,7 @@
       "views": 182,
       "reach": 158,
       "avgWatchS": 16.5,
-      "retentionPct": 28,
+      "retentionPct": 27,
       "likes": 5,
       "comments": 1,
       "saved": 0,
@@ -768,7 +768,7 @@
       "hourUtc": 12,
       "views": 157,
       "reach": 143,
-      "avgWatchS": 16.6,
+      "avgWatchS": 16.5,
       "retentionPct": 28,
       "likes": 5,
       "comments": 1,
@@ -788,7 +788,7 @@
       "views": 153,
       "reach": 138,
       "avgWatchS": 9.9,
-      "retentionPct": 17,
+      "retentionPct": 16,
       "likes": 6,
       "comments": 1,
       "saved": 1,
@@ -804,7 +804,7 @@
       "hourUtc": 13,
       "views": 152,
       "reach": 143,
-      "avgWatchS": 15,
+      "avgWatchS": 14.9,
       "retentionPct": 30,
       "likes": 3,
       "comments": 1,
@@ -821,7 +821,7 @@
       "hourUtc": 17,
       "views": 148,
       "reach": 129,
-      "avgWatchS": 10.3,
+      "avgWatchS": 10.2,
       "retentionPct": 17,
       "likes": 2,
       "comments": 1,
@@ -838,7 +838,7 @@
       "hourUtc": 15,
       "views": 139,
       "reach": 127,
-      "avgWatchS": 11.1,
+      "avgWatchS": 11,
       "retentionPct": 18,
       "likes": 4,
       "comments": 1,
@@ -857,7 +857,7 @@
       "hourUtc": 17,
       "views": 131,
       "reach": 118,
-      "avgWatchS": 10.2,
+      "avgWatchS": 10.1,
       "retentionPct": 17,
       "likes": 3,
       "comments": 1,
@@ -874,7 +874,7 @@
       "hourUtc": 17,
       "views": 130,
       "reach": 121,
-      "avgWatchS": 8.3,
+      "avgWatchS": 8.2,
       "retentionPct": 14,
       "likes": 1,
       "comments": 1,
@@ -891,7 +891,7 @@
       "hourUtc": 11,
       "views": 130,
       "reach": 114,
-      "avgWatchS": 4.1,
+      "avgWatchS": 4.2,
       "retentionPct": 7,
       "likes": 0,
       "comments": 1,
@@ -920,6 +920,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-19-avions-trainees",
+      "at": "2026-08-19T17:07:45.947Z",
+      "hourUtc": 17,
+      "views": 118,
+      "reach": 111,
+      "avgWatchS": 7.9,
+      "retentionPct": 13,
+      "likes": 2,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-penurie-memoire-samsung",
       "at": "2026-08-01T09:17:47.305Z",
       "hourUtc": 9,
@@ -942,7 +961,7 @@
       "hourUtc": 17,
       "views": 117,
       "reach": 111,
-      "avgWatchS": 8,
+      "avgWatchS": 7.9,
       "retentionPct": 13,
       "likes": 3,
       "comments": 1,
@@ -952,6 +971,23 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-19-pub-dans-chatgpt",
+      "at": "2026-08-19T10:54:09.002Z",
+      "hourUtc": 10,
+      "views": 117,
+      "reach": 106,
+      "avgWatchS": 6.9,
+      "retentionPct": 11,
+      "likes": 2,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
+      "settled": false
     },
     {
       "slug": "2026-08-18-robot-ami-des-enfants",
@@ -976,7 +1012,7 @@
       "hourUtc": 16,
       "views": 81,
       "reach": 73,
-      "avgWatchS": 9.2,
+      "avgWatchS": 9.1,
       "retentionPct": 15,
       "likes": 3,
       "comments": 1,
@@ -993,7 +1029,7 @@
       "hourUtc": 9,
       "views": 23,
       "reach": 19,
-      "avgWatchS": 8.9,
+      "avgWatchS": 9.1,
       "retentionPct": null,
       "likes": 2,
       "comments": 0,

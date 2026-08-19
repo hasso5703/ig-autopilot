@@ -13,7 +13,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 
 import { validatePost, claimOverlap, hookIssues, imageIssues } from "../src/validate.mjs";
-import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted, themesOf } from "../src/state.mjs";
+import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted, themesOf, shortcodeless } from "../src/state.mjs";
 import { shorten, splitFigure, buildTimeline, totalDuration, applyNarrationTiming } from "../src/reel-template.mjs";
 import { queryLadder, scoreCandidate, creditLine, servedSize } from "../src/imagery.mjs";
 import { complianceIssues } from "../src/reel.mjs";
@@ -650,6 +650,28 @@ test("a posted record that cannot recognise its own story is refused", async () 
   await assert.rejects(() => recordPosted({ slug: "x", mediaId: "1", url: "https://a.com/x" }), /`title` is required/);
   await assert.rejects(() => recordPosted({ slug: "x", mediaId: "1", title: "T" }), /`url` is required/);
   await assert.rejects(() => recordPosted({ mediaId: "1", title: "T", url: "https://a.com/x" }), /`slug` is required/);
+});
+
+// ---------------------------------------------------------------------------
+// 2026-08-19: the 16:30 run recorded "https://www.instagram.com/reel/" for a
+// Reel whose real permalink was ".../reel/DcOr2W3FE_4/". The mediaId was right,
+// so nothing broke — but every report that prints that record prints a link to
+// nowhere, and the cause was a `${...}` eaten by a double-quoted shell string.
+// recordPosted warns and writes anyway: a throw there would leave the account
+// with a published Reel it has no memory of, which is worse than a dead link.
+// ---------------------------------------------------------------------------
+test("a permalink that stops before its shortcode is spotted, and an absent one is not a fault", () => {
+  assert.equal(shortcodeless("https://www.instagram.com/reel/"), true);
+  assert.equal(shortcodeless("https://www.instagram.com/reel"), true);
+  assert.equal(shortcodeless("https://www.instagram.com/p/"), true);
+  assert.equal(shortcodeless("https://www.instagram.com/reel/DcOr2W3FE_4/"), false);
+  assert.equal(shortcodeless("https://www.instagram.com/p/DcOBHwXgo4d/"), false);
+  // An underscore and a hyphen are both legal in a shortcode.
+  assert.equal(shortcodeless("https://www.instagram.com/reel/Dc-Or2W_3FE/"), false);
+  // No permalink at all is legitimate: nothing to warn about.
+  assert.equal(shortcodeless(null), false);
+  assert.equal(shortcodeless(undefined), false);
+  assert.equal(shortcodeless("  "), false);
 });
 
 // ---------------------------------------------------------------------------
