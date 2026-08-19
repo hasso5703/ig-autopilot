@@ -494,6 +494,18 @@ ENTRIES:
   fois "503 server error ... service error -27" (112 octets aplatis) sur une URL
   qui avait rendu 200/340 ko trois minutes plus tot, puis 200 vingt secondes
   apres. Un 503 isole sur un domaine qui marchait n'est pas un blocage.
+  Ajout 19/08 (10h30), meme dossier passe en publication: ppc.land,
+  trendingtopics.eu et digiday.com se re-gatent du PREMIER coup en re-gate de
+  publication (0 erreur, 2 fois a 4 h d'intervalle) et LES TROIS SE CAPTURENT
+  proprement du premier coup, sans mur de consentement ni recadrage: titre,
+  signature et date lisibles dans le cadre 9:16. Bonus mesure: la capture
+  trendingtopics porte la PHOTO de Sam Altman (World Economic Forum) dans son
+  chapo, donc un recu peut livrer le visage du dirigeant sans depenser un beat
+  photo. ET LE REEL LE MOINS CHER JAMAIS CONSTRUIT, $0.0513 au total: quand un
+  scout a pre-epingle les photos, un plan 100% photo+screenshot+card (0 still
+  genere, 0 veo) ne paie QUE la narration. Les deux lectures TTS du meme script
+  dans le meme build sont sorties a 4.35 puis 3.77 mots/s, la premiere refusee
+  hors bande de stretch: budgete toujours 2 achats TTS, pas 1.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
