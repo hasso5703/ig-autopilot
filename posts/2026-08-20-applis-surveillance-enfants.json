@@ -12,7 +12,7 @@
       "quote": "a new baseline for safety: bark analyzed a record 11.1 billion messages and files in 2025. this massive dataset provides the industry's most accurate look at the evolving risks facing children today."
     }
   ],
-  "caption": "Des applis lisent les messages des enfants et alertent les parents. Souvent pour rien.\n\nBark est l'appli de surveillance la plus utilisée aux États-Unis. Elle dit avoir scanné 11 milliards de messages envoyés ou reçus par 7.5 millions d'enfants en 2025. Son programme scolaire gratuit couvre plus de 3 700 districts, soit environ un enfant sur dix aux États-Unis.\n\nCe qui n'a pas tenu dans la vidéo. MIT Technology Review a épluché plus de 600 000 avis laissés sur ces applis. Près d'un enfant surveillé sur cinq dit s'être senti épié. Environ un sur dix dit que la surveillance a cassé la confiance avec ses parents, et un sur douze décrit de l'anxiété ou de la détresse.\n\nCes applis marchent parfois. Le FBI a remercié Bark pour des menaces d'attaque en milieu scolaire. Son concurrent Gaggle dit avoir sauvé plus de 1 000 vies en une année scolaire.\n\nÀ nuancer, et c'est le coeur du sujet: aucune appli du marché n'a publié d'essai contrôlé montrant qu'elle réduit les dégâts. Et ce sont des chiffres américains, pas français.\n\nCe que proposent les chercheurs: rendre les plateformes elles-mêmes responsables. Cette approche du devoir de vigilance avance au Royaume-Uni, en Australie et dans plusieurs États américains.\n\nTu lirais les messages de ton enfant, oui ou non ?\n\ntechnologyreview.com · prnewswire.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Enfants #Surveillance",
+  "caption": "Des applis lisent les messages des enfants et alertent les parents. Souvent pour rien.\n\nBark est l'appli de surveillance la plus utilisée aux États-Unis. Elle dit avoir scanné 11 milliards de messages envoyés ou reçus par 7.5 millions d'enfants en 2025. Son programme scolaire gratuit couvre plus de 3 700 districts, soit environ un enfant sur dix aux États-Unis.\n\nCe qui n'a pas tenu dans la vidéo. MIT Technology Review a épluché plus de 600 000 avis laissés sur ces applis. Près d'un enfant surveillé sur cinq dit s'être senti épié. Environ un sur dix dit que la surveillance a cassé la confiance avec ses parents, et un sur douze décrit de l'anxiété ou de la détresse.\n\nCes applis marchent parfois. Le FBI a remercié Bark pour des menaces d'attaque en milieu scolaire. Son concurrent Gaggle dit avoir sauvé plus de 1 000 vies en une année scolaire.\n\nÀ nuancer, et c'est le coeur du sujet: l'autrice n'a trouvé aucune appli du marché ayant publié un essai contrôlé montrant qu'elle réduit les dégâts. Et ce sont des chiffres américains, pas français.\n\nCe que proposent les chercheurs: rendre les plateformes elles-mêmes responsables. Cette approche du devoir de vigilance avance au Royaume-Uni, en Australie et dans plusieurs États américains.\n\nTu lirais les messages de ton enfant, oui ou non ?\n\ntechnologyreview.com · prnewswire.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Enfants #Surveillance",
   "captionEvidence": [
     {
       "quote": "bark technologies, the current leader among content-monitoring apps, says it scanned 11 billion messages to or from 7.5 million children in the us in 2025. its free school program is in more than 3,700 districts, covering about one in 10 kids in the us.",
@@ -126,7 +126,7 @@
       "claimLabel": "La promesse",
       "claim": "Garder les enfants en sécurité.",
       "caveatLabel": "Ce qui manque",
-      "caveat": "Aucune appli du marché n'a publié d'essai contrôlé montrant qu'elle réduit les dégâts.",
+      "caveat": "L'autrice n'a trouvé aucune appli du marché ayant publié un essai contrôlé montrant qu'elle réduit les dégâts.",
       "evidence": "above all else, it's not clear how well these apps fulfill their core promise of keeping kids safer. no commercial monitoring app has produced a controlled trial that i was able to find showing that it reduces harm.",
       "source": {
         "name": "MIT Technology Review",
@@ -189,7 +189,7 @@
         }
       },
       {
-        "script": "Un mal de tête ? Contenu médical préoccupant. Et sur un téléphone de test, un mot de passe est devenu un scénario de piégeage.",
+        "script": "Un mal de tête ? Contenu médical préoccupant. Sur un téléphone de test, un mot de passe est devenu un scénario de piégeage.",
         "visual": {
           "type": "card",
           "value": "MAL DE TÊTE",
@@ -215,7 +215,7 @@
         }
       },
       {
-        "script": "Ces applis sauvent aussi des vies. Un concurrent de Bark, Gaggle, dit avoir sauvé plus de 1000 vies en une seule année scolaire.",
+        "script": "Ces applis sauvent aussi des vies. Gaggle, un concurrent, dit avoir sauvé plus de 1000 vies en une année scolaire.",
         "visual": {
           "type": "image",
           "spec": {
@@ -226,7 +226,7 @@
         }
       },
       {
-        "script": "Mais aucune n'a jamais publié d'essai contrôlé montrant qu'elle réduit les dégâts. Et les enfants surveillés, eux, sont clairs.",
+        "script": "Mais l'autrice n'a trouvé aucune appli ayant publié un essai contrôlé prouvant qu'elle réduit les dégâts. Et les enfants surveillés, eux, sont clairs.",
         "visual": {
           "type": "screenshot",
           "url": "https://www.prnewswire.com/news-releases/barks-2025-annual-report-record-11-1b-data-points-reveal-big-tech-is-leaving-kids-unprotected-302689872.html"
