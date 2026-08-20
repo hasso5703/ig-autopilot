@@ -238,3 +238,8 @@
 {"at":"2026-08-20T10:55:08.312Z","slug":"2026-08-20-applis-surveillance-enfants","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
 {"at":"2026-08-20T10:55:19.800Z","slug":"2026-08-20-applis-surveillance-enfants","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1292}
 {"at":"2026-08-20T11:04:14.672Z","slug":"2026-08-20-applis-surveillance-enfants","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1313}
+{"at":"2026-08-20T16:41:05.826Z","slug":"2026-08-20-jeunes-emplois-ia","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"54.6s Sadaltager","usd":0.0273}
+{"at":"2026-08-20T16:47:08.039Z","slug":"2026-08-20-jeunes-emplois-ia","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-20T16:47:19.866Z","slug":"2026-08-20-jeunes-emplois-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1273}
+{"at":"2026-08-20T16:47:32.478Z","slug":"2026-08-20-jeunes-emplois-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1265}
+{"at":"2026-08-20T16:47:45.493Z","slug":"2026-08-20-jeunes-emplois-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1307}
