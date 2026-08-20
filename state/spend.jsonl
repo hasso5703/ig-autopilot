@@ -234,3 +234,7 @@
 {"at":"2026-08-19T10:41:52.184Z","slug":"2026-08-19-pub-dans-chatgpt","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"55.0s Sadaltager","usd":0.0275}
 {"at":"2026-08-19T16:45:23.593Z","slug":"2026-08-19-avions-trainees","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.0s Sadaltager","usd":0.0305}
 {"at":"2026-08-19T16:49:18.635Z","slug":"2026-08-19-avions-trainees","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
+{"at":"2026-08-20T10:44:35.047Z","slug":"2026-08-20-applis-surveillance-enfants","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"59.2s Sadaltager","usd":0.0296}
+{"at":"2026-08-20T10:55:08.312Z","slug":"2026-08-20-applis-surveillance-enfants","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-20T10:55:19.800Z","slug":"2026-08-20-applis-surveillance-enfants","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1292}
+{"at":"2026-08-20T11:04:14.672Z","slug":"2026-08-20-applis-surveillance-enfants","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1313}
