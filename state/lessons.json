@@ -1,7 +1,7 @@
 {
-  "at": "2026-08-20T06:40:27.833Z",
-  "n": 45,
-  "nSettled": 39,
+  "at": "2026-08-20T19:40:31.122Z",
+  "n": 47,
+  "nSettled": 41,
   "medianViews": 197,
   "medianRetentionPct": 21,
   "top": [
@@ -64,6 +64,14 @@
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
     },
     {
+      "slug": "2026-08-18-robot-ami-des-enfants",
+      "views": 113,
+      "retentionPct": 13,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu."
+    },
+    {
       "slug": "2026-08-04-congres-chatgpt",
       "views": 117,
       "retentionPct": 13,
@@ -78,22 +86,14 @@
       "saved": 0,
       "shares": 1,
       "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher."
-    },
-    {
-      "slug": "2026-08-01-astra-dix-problemes",
-      "views": 122,
-      "retentionPct": 20,
-      "saved": 1,
-      "shares": 0,
-      "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher."
     }
   ],
   "byBeat0": {
     "veo": {
-      "n": 27,
-      "medianViews": 353,
-      "meanRetentionPct": 24.7,
-      "saves": 38,
+      "n": 28,
+      "medianViews": 356,
+      "meanRetentionPct": 24.3,
+      "saves": 40,
       "shares": 21,
       "thin": false
     },
@@ -106,9 +106,9 @@
       "thin": false
     },
     "screenshot": {
-      "n": 5,
-      "medianViews": 122,
-      "meanRetentionPct": 17.2,
+      "n": 6,
+      "medianViews": 120,
+      "meanRetentionPct": 16.5,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -132,10 +132,10 @@
       "thin": true
     },
     "models": {
-      "n": 2,
-      "medianViews": 305,
-      "meanRetentionPct": 20.5,
-      "saves": 4,
+      "n": 3,
+      "medianViews": 358,
+      "meanRetentionPct": 18.7,
+      "saves": 6,
       "shares": 1,
       "thin": true
     },
@@ -158,12 +158,12 @@
       "thin": true
     },
     "11": {
-      "n": 4,
-      "medianViews": 274,
+      "n": 5,
+      "medianViews": 353,
       "meanRetentionPct": 14.8,
-      "saves": 2,
+      "saves": 4,
       "shares": 5,
-      "thin": true
+      "thin": false
     },
     "12": {
       "n": 2,
@@ -198,9 +198,9 @@
       "thin": false
     },
     "17": {
-      "n": 11,
-      "medianViews": 191,
-      "meanRetentionPct": 22.9,
+      "n": 12,
+      "medianViews": 183,
+      "meanRetentionPct": 22.1,
       "saves": 11,
       "shares": 11,
       "thin": false
@@ -275,11 +275,11 @@
         "published": [
           {
             "slug": "2026-08-19-avions-trainees",
-            "views": 186
+            "views": 270
           },
           {
             "slug": "2026-08-19-pub-dans-chatgpt",
-            "views": 124
+            "views": 128
           }
         ]
       }
@@ -548,7 +548,7 @@
         "models"
       ],
       "sendTest": "ChatGPT peut maintenant enregistrer chaque clic et chaque touche que tu tapes sur ton Mac. Et il garde ça en clair sur ton disque.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-13-twitch-entraine-ia-amazon",
@@ -638,6 +638,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-19-avions-trainees",
+      "at": "2026-08-19T17:07:45.947Z",
+      "hourUtc": 17,
+      "views": 270,
+      "reach": 251,
+      "avgWatchS": 9.6,
+      "retentionPct": 16,
+      "likes": 2,
+      "comments": 1,
+      "saved": 3,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
       "at": "2026-08-10T23:02:26.507Z",
       "hourUtc": 23,
@@ -691,25 +710,6 @@
       ],
       "sendTest": "Une IA s'est creee de faux comptes pour convaincre un développeur d'accepter du code pieges. Il a dit non. C'est lui qui a tout arrete.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-19-avions-trainees",
-      "at": "2026-08-19T17:07:45.947Z",
-      "hourUtc": 17,
-      "views": 186,
-      "reach": 171,
-      "avgWatchS": 9.5,
-      "retentionPct": 16,
-      "likes": 2,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
-      "settled": false
     },
     {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
@@ -925,9 +925,9 @@
       "slug": "2026-08-19-pub-dans-chatgpt",
       "at": "2026-08-19T10:54:09.002Z",
       "hourUtc": 10,
-      "views": 124,
-      "reach": 112,
-      "avgWatchS": 7,
+      "views": 128,
+      "reach": 117,
+      "avgWatchS": 7.3,
       "retentionPct": 12,
       "likes": 2,
       "comments": 1,
@@ -1004,6 +1004,40 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-20-applis-surveillance-enfants",
+      "at": "2026-08-20T11:09:22.243Z",
+      "hourUtc": 11,
+      "views": 109,
+      "reach": 110,
+      "avgWatchS": 7,
+      "retentionPct": 12,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-20-jeunes-emplois-ia",
+      "at": "2026-08-20T17:03:49.087Z",
+      "hourUtc": 17,
+      "views": 88,
+      "reach": 73,
+      "avgWatchS": 7.6,
+      "retentionPct": 13,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
       "settled": false
     },
     {
