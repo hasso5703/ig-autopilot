@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-19T19:40:48.929Z",
+  "at": "2026-08-20T06:40:27.833Z",
   "n": 45,
   "nSettled": 39,
   "medianViews": 197,
@@ -275,11 +275,11 @@
         "published": [
           {
             "slug": "2026-08-19-avions-trainees",
-            "views": 118
+            "views": 186
           },
           {
             "slug": "2026-08-19-pub-dans-chatgpt",
-            "views": 117
+            "views": 124
           }
         ]
       }
@@ -535,9 +535,9 @@
       "slug": "2026-08-18-chatgpt-enregistre-ton-mac",
       "at": "2026-08-18T11:03:39.395Z",
       "hourUtc": 11,
-      "views": 354,
-      "reach": 333,
-      "avgWatchS": 9,
+      "views": 358,
+      "reach": 337,
+      "avgWatchS": 9.1,
       "retentionPct": 15,
       "likes": 3,
       "comments": 1,
@@ -691,6 +691,25 @@
       ],
       "sendTest": "Une IA s'est creee de faux comptes pour convaincre un développeur d'accepter du code pieges. Il a dit non. C'est lui qui a tout arrete.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-19-avions-trainees",
+      "at": "2026-08-19T17:07:45.947Z",
+      "hourUtc": 17,
+      "views": 186,
+      "reach": 171,
+      "avgWatchS": 9.5,
+      "retentionPct": 16,
+      "likes": 2,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
+      "settled": false
     },
     {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
@@ -903,6 +922,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-19-pub-dans-chatgpt",
+      "at": "2026-08-19T10:54:09.002Z",
+      "hourUtc": 10,
+      "views": 124,
+      "reach": 112,
+      "avgWatchS": 7,
+      "retentionPct": 12,
+      "likes": 2,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -918,25 +954,6 @@
       "themes": [],
       "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-19-avions-trainees",
-      "at": "2026-08-19T17:07:45.947Z",
-      "hourUtc": 17,
-      "views": 118,
-      "reach": 111,
-      "avgWatchS": 7.9,
-      "retentionPct": 13,
-      "likes": 2,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
-      "settled": false
     },
     {
       "slug": "2026-08-01-penurie-memoire-samsung",
@@ -971,23 +988,6 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-19-pub-dans-chatgpt",
-      "at": "2026-08-19T10:54:09.002Z",
-      "hourUtc": 10,
-      "views": 117,
-      "reach": 106,
-      "avgWatchS": 6.9,
-      "retentionPct": 11,
-      "likes": 2,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
-      "settled": false
     },
     {
       "slug": "2026-08-18-robot-ami-des-enfants",

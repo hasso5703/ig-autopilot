@@ -1,0 +1,258 @@
+{
+  "slug": "2026-08-20-applis-surveillance-enfants",
+  "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
+  "centralClaim": "Bark scanned 11 billion messages from children in 2025.",
+  "corroboration": [
+    {
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+      "quote": "bark technologies, the current leader among content-monitoring apps, says it scanned 11 billion messages to or from 7.5 million children in the us in 2025."
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/barks-2025-annual-report-record-11-1b-data-points-reveal-big-tech-is-leaving-kids-unprotected-302689872.html",
+      "quote": "a new baseline for safety: bark analyzed a record 11.1 billion messages and files in 2025. this massive dataset provides the industry's most accurate look at the evolving risks facing children today."
+    }
+  ],
+  "caption": "Des applis lisent les messages des enfants et alertent les parents. Souvent pour rien.\n\nBark est l'appli de surveillance la plus utilisée aux États-Unis. Elle dit avoir scanné 11 milliards de messages envoyés ou reçus par 7.5 millions d'enfants en 2025. Son programme scolaire gratuit couvre plus de 3 700 districts, soit environ un enfant sur dix aux États-Unis.\n\nCe qui n'a pas tenu dans la vidéo. MIT Technology Review a épluché plus de 600 000 avis laissés sur ces applis. Près d'un enfant surveillé sur cinq dit s'être senti épié. Environ un sur dix dit que la surveillance a cassé la confiance avec ses parents, et un sur douze décrit de l'anxiété ou de la détresse.\n\nCes applis marchent parfois. Le FBI a remercié Bark pour des menaces d'attaque en milieu scolaire. Son concurrent Gaggle dit avoir sauvé plus de 1 000 vies en une année scolaire.\n\nÀ nuancer, et c'est le coeur du sujet: aucune appli du marché n'a publié d'essai contrôlé montrant qu'elle réduit les dégâts. Et ce sont des chiffres américains, pas français.\n\nCe que proposent les chercheurs: rendre les plateformes elles-mêmes responsables. Cette approche du devoir de vigilance avance au Royaume-Uni, en Australie et dans plusieurs États américains.\n\nTu lirais les messages de ton enfant, oui ou non ?\n\ntechnologyreview.com · prnewswire.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Enfants #Surveillance",
+  "captionEvidence": [
+    {
+      "quote": "bark technologies, the current leader among content-monitoring apps, says it scanned 11 billion messages to or from 7.5 million children in the us in 2025. its free school program is in more than 3,700 districts, covering about one in 10 kids in the us.",
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
+    },
+    {
+      "quote": "to get a read on how digital surveillance affects young people, i scraped more than 600,000 reviews of the leading apps and talked to kids, parents, and people who were monitored as children and are now grown.",
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
+    },
+    {
+      "quote": "nearly one in five kids noted feeling watched or stripped of privacy. about one in 10 said monitoring broke their trust in their parents; one in 12 described anxiety or distress.",
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
+    },
+    {
+      "quote": "gaggle, a school-monitoring competitor, makes a similar claim in its own annual report, crediting its software with saving over 1,000 lives in the 2024-'25 school year.",
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
+    },
+    {
+      "quote": "titania jordan, bark's chief marketing officer, told me the fbi has thanked the company on multiple occasions for bringing credible school-shooting threats to its attention.",
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
+    },
+    {
+      "quote": "above all else, it's not clear how well these apps fulfill their core promise of keeping kids safer. no commercial monitoring app has produced a controlled trial that i was able to find showing that it reduces harm.",
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
+    },
+    {
+      "quote": "this \"duty of care\" approach is now advancing in the uk, australia, and a number of us states.",
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "19 août 2026 · MIT Technology Review",
+      "headline": "Une appli a lu *11 milliards* de messages d'enfants",
+      "hero": {
+        "value": "7.5 millions",
+        "label": "d'enfants dont les messages ont été scannés"
+      },
+      "swipe": "Les reçus, diapo par diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "11",
+      "unit": "milliards de messages d'enfants scannés en 2025",
+      "body": "Bark, l'appli de surveillance la plus utilisée, dit les avoir scannés sur les comptes de **7.5 millions d'enfants** aux États-Unis.",
+      "evidence": "bark technologies, the current leader among content-monitoring apps, says it scanned 11 billion messages to or from 7.5 million children in the us in 2025. its free school program is in more than 3,700 districts, covering about one in 10 kids in the us.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le chiffre vient de l'entreprise",
+      "body": "Bark l'écrit dans son propre communiqué: **11.1 milliards** de messages et de fichiers analysés en 2025.",
+      "evidence": "a new baseline for safety: bark analyzed a record 11.1 billion messages and files in 2025. this massive dataset provides the industry's most accurate look at the evolving risks facing children today.",
+      "source": {
+        "name": "Bark Technologies",
+        "url": "https://www.prnewswire.com/news-releases/barks-2025-annual-report-record-11-1b-data-points-reveal-big-tech-is-leaving-kids-unprotected-302689872.html",
+        "date": "2026-02-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que l'appli signale",
+      "body": "Deux gamins qui en traitent un troisième d'ennuyeux. L'appli a classé ça en *harcèlement*.",
+      "evidence": "it flagged two kids calling a third one annoying as bullying.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un téléphone de test",
+      "body": "L'autrice a installé Bark sur un téléphone configuré comme celui d'un enfant de **10 ans**. L'appli a fabriqué un scénario de piégeage à partir d'un mot de passe rangé dans les notes.",
+      "evidence": "when i ran bark on a test phone set up as a 10-year-old's, it manufactured a grooming scenario out of a random password i saved in the notes app.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le cas qui résume tout",
+      "body": "Une fille de **11 ans**, autiste, écrit à sa meilleure amie qu'un chien d'assistance l'aiderait peut-être. Son école utilise Bark: l'appli alerte le directeur, ses parents et ceux de son amie.",
+      "evidence": "s., an 11-year-old on the autism spectrum, recalls messaging her best friend at school about whether a service dog might help with her meltdowns or keep her from harming herself. the school used bark, which alerted the principal, s.'s parents, and her friend's parents, citing content involving",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ces applis sauvent aussi des vies",
+      "body": "Le concurrent Gaggle dit avoir sauvé plus de **1 000** vies en une année scolaire, dans son propre rapport annuel.",
+      "evidence": "gaggle, a school-monitoring competitor, makes a similar claim in its own annual report, crediting its software with saving over 1,000 lives in the 2024-'25 school year.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "La promesse",
+      "claim": "Garder les enfants en sécurité.",
+      "caveatLabel": "Ce qui manque",
+      "caveat": "Aucune appli du marché n'a publié d'essai contrôlé montrant qu'elle réduit les dégâts.",
+      "evidence": "above all else, it's not clear how well these apps fulfill their core promise of keeping kids safer. no commercial monitoring app has produced a controlled trial that i was able to find showing that it reduces harm.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que disent les enfants surveillés",
+      "body": "Près d'un sur cinq dit s'être senti épié. Environ un sur dix dit que ça a **cassé la confiance** avec ses parents.",
+      "evidence": "nearly one in five kids noted feeling watched or stripped of privacy. about one in 10 said monitoring broke their trust in their parents; one in 12 described anxiety or distress.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *un parent* qui hésite à installer une de ces applis",
+      "sub": "Chaque chiffre vient d'une page citée sur la diapo."
+    }
+  ],
+  "sources": [
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
+      "accessed": "2026-08-20"
+    },
+    {
+      "name": "Bark Technologies",
+      "url": "https://www.prnewswire.com/news-releases/barks-2025-annual-report-record-11-1b-data-points-reveal-big-tech-is-leaving-kids-unprotected-302689872.html",
+      "accessed": "2026-08-20"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Une appli a lu 11 milliards de messages d'enfants",
+    "beats": [
+      {
+        "script": "Une appli lit chaque message que ton enfant envoie. L'an dernier, elle en a analysé 11 milliards. Tu sais ce qu'elle signale ?",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a phone screen filled with a single column of flagged message numbers",
+            "action": "the column of numbers sliding slowly downward, the screen staying whole and in frame",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "seen from directly above, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Des bêtises. Bark, l'appli de surveillance la plus utilisée, a signalé deux gamins qui en traitaient un troisième d'ennuyeux. Verdict: harcèlement.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
+        }
+      },
+      {
+        "script": "Un mal de tête ? Contenu médical préoccupant. Et sur un téléphone de test, un mot de passe est devenu un scénario de piégeage.",
+        "visual": {
+          "type": "card",
+          "value": "MAL DE TÊTE",
+          "label": "signalé par l'appli comme contenu médical préoccupant"
+        }
+      },
+      {
+        "script": "Sauf que ça ne fait rire personne. Une fille de 11 ans, autiste, écrit à son amie qu'un chien d'assistance l'aiderait. L'appli alerte l'école et les deux familles.",
+        "visual": {
+          "type": "photo",
+          "query": "service dog",
+          "alt": "Un chien d'assistance en gilet rouge, couché, qui regarde l'objectif",
+          "file": "media/2026-08-20-applis-surveillance-enfants/photo_service_dog.jpg",
+          "credit": "Eden Aviv · CC0"
+        }
+      },
+      {
+        "script": "Les parents de la copine ont coupé le contact. Plus d'un an après, les deux filles ne se parlent toujours pas.",
+        "visual": {
+          "type": "card",
+          "value": "UN AN APRÈS",
+          "label": "les deux filles ne se parlent toujours pas"
+        }
+      },
+      {
+        "script": "Ces applis sauvent aussi des vies. Un concurrent de Bark, Gaggle, dit avoir sauvé plus de 1000 vies en une seule année scolaire.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed school safety report page filled with columns of numbers",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Mais aucune n'a jamais publié d'essai contrôlé montrant qu'elle réduit les dégâts. Et les enfants surveillés, eux, sont clairs.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.prnewswire.com/news-releases/barks-2025-annual-report-record-11-1b-data-points-reveal-big-tech-is-leaving-kids-unprotected-302689872.html"
+        }
+      },
+      {
+        "script": "Sur 600000 avis épluchés par MIT Technology Review, près d'un enfant sur cinq s'est senti épié. Environ un sur dix dit que ça a cassé la confiance avec ses parents.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of review numbers",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Pam Wisniewski, chercheuse, résume ce que ces applis disent aux enfants: on ne te fait pas confiance. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "child using smartphone",
+          "alt": "Le visage d'un enfant éclairé par l'écran de son téléphone",
+          "file": "media/2026-08-20-applis-surveillance-enfants/photo_child_phone.jpg",
+          "credit": "Andi Graf · CC0"
+        }
+      }
+    ]
+  }
+}

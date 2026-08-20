@@ -529,6 +529,24 @@ ENTRIES:
   l'entree du 19/08 06h30: l'original Screen_time.jpg a rendu la page d'erreur de
   2,2 ko des la premiere requete du run, et le thumb /1280px- a servi l'image
   entiere (194 ko, 1280x854) apres ~20 s de pause. Descends directement a 1280.
+  Ajout 20/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 20 verifications) technologyreview.com (re-confirme) et
+  prnewswire.com (NOUVEAU, et il CORRIGE l'entree du 28/07 qui ne le connaissait
+  qu'en 503 sous WebFetch: le fetch Node rend 200 et 17 ko aplatis). REFLEXE SUR
+  UN CHIFFRE D'ENTREPRISE: quand le site de la boite rend son rapport annuel en
+  JS ou le formule autrement (bark.us/annual-report-2025/ rend 200 mais ecrit
+  "11.1 billion activities"), c'est le COMMUNIQUE prnewswire qui porte la phrase
+  gatable ("bark analyzed a record 11.1 billion messages and files in 2025") ET
+  la citation du PDG. Repond 200 aussi bark.us. Bloque: cdt.org (403 Cloudflare,
+  NOUVEAU). Cote flux, Hacker News rend 502 pour la deuxieme journee (13 essais
+  dans feeds.mjs PUIS un fetch Node a la main, 150 octets): la relance manuelle
+  du 16/08 ne le ressuscite pas cette fois, il est vraiment mort ce matin. ET LE
+  TELECHARGEMENT COMMONS, qui precise l'entree du 19/08: `curl -A "Mozilla/5.0"`
+  a rendu la page d'etranglement de 2 010 octets sur DEUX thumbs (1620px et
+  2560px), et un fetch Node avec un UA de navigateur COMPLET plus
+  `referer: https://commons.wikimedia.org/` a rendu les deux thumbs 1280px du
+  premier coup (593 ko et 193 ko). Ce n'est donc pas qu'une affaire de taille:
+  ajoute le referer et l'UA complet avant de conclure a l'etranglement.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -874,6 +892,21 @@ ENTRIES:
   checkbox, checklist et form: des qu'une case attend une etiquette, le modele ecrit
   a cote. "a printed screening report page filled with columns of numbers" est passe.
   Cout des deux: $0,26 et un rebuild. Proof: run 16h30 17/08, still_3 et still_6.
+  Ajout 20/08 (06h30), LA VIRGULE DECIMALE FRANCAISE TUE UN CHIFFRE VRAI, et
+  c'est la variante inverse du nombre en toutes lettres du 11/08. Le gate
+  normalise les separateurs de MILLIERS dans les deux sens (3 700 matche
+  "3,700", 600 000 matche "600,000", 1 000 matche "1,000", mesure 3 fois sur le
+  meme post), mais PAS la virgule DECIMALE: "7,5 millions" ecrit en face du
+  "7.5 million" de la source revient `figure(s) 75 appear in the body but not in
+  the evidence quote`, et "11,1 milliards" en face de "11.1 billion" revient
+  `111`. Le manuel dit deja "ne re-ponctue jamais une decimale"; ce qui manquait
+  est la SIGNATURE: un nombre COLLE (75, 111) introuvable tel quel dans la
+  source, et on perd dix minutes a relire la page en cherchant une coquille qui
+  n'existe pas. Ecris la decimale comme la source l'ecrit, point compris, meme
+  en francais. ET LE PLAFOND DE `figure`, mesure le meme matin: 6 caracteres au
+  maximum sur une diapo stat, donc "11 milliards" (12) est refuse; mets le
+  numeral nu dans `figure` et le mot de grandeur dans `unit`.
+  Proof: gate 06h30 20/08, 5 erreurs au premier passage, 0 au second.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
