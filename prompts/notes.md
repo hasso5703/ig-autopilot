@@ -2284,3 +2284,26 @@ ENTRIES:
   phrase a la mesure: c'est ecrire le claim dans le vocabulaire de ce que les
   sources disent vraiment. Teste-le hors reseau en 5 s, claimOverlap est
   exporte par validate.mjs: `claimOverlap(claim, quote)` rend shared + ratio.
+- 2026-08-20 · DEUX PIEGES MECANIQUES DU CHEMIN DE PUBLICATION, mesures le meme
+  run, chacun coute un cycle entier. (1) LE GATE VERT NE PROTEGE PAS DU REFUS
+  D'IMAGE EN COURS DE BUILD: `promptIssues` (promptcraft.mjs) refuse un `spec`
+  dont le texte anglais contient, en mot entier, N'IMPORTE QUEL nom de
+  `extractForbidNames(post)` , et cette liste contient les tokens des NOMS DE
+  SOURCES, pas seulement les entreprises de l'histoire. Mesure: le spec du beat
+  7 disait "a column of review numbers" et le build est mort sur
+  `prompt names "Review"`, parce que la source est "MIT Technology Review". La
+  liste du jour valait: MIT | Technology | Review | Une | Les | Bark | Unis |
+  Technologies | Deux | Son | Ces | Gaggle | Label | Garder | Environ | Envoie |
+  Chaque. Attention aux mots anglais courants qui y dorment ("son", "label",
+  "review", "technology"). Le reflexe qui coute 10 s AVANT de lancer reel2:
+  `node --input-type=module -e "import {extractForbidNames} from
+  './src/reel2.mjs'; ..."` et relis tes specs contre la liste. Le refus arrive
+  APRES l'achat du veo et des stills precedents ($1.09 deja depense ce jour-la),
+  mais les .key sauvent tout au rebuild: veo, narration et alignement sont
+  ressortis du cache, seul le still rebati a ete rachete ($0.1313).
+  (2) `node src/publish-reel.mjs url <slug>` IMPRIME L'URL ENTRE GUILLEMETS
+  (sortie JSON). Un `URL=$(... | tail -1)` passe tel quel dans IG_REEL_URL fait
+  echouer le dry-run sur `Failed to parse URL from "https://..."`, ce qui
+  ressemble a un probleme reseau et n'en est pas. Nettoie: `| tr -d '"' | xargs`,
+  puis verifie en 1 s que le SHA est servi:
+  `curl -sS -o /dev/null -w "%{http_code}\n" -r 0-1024 "$URL"` (206 attendu).
