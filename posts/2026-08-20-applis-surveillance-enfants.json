@@ -169,7 +169,7 @@
     "title": "Une appli a lu 11 milliards de messages d'enfants",
     "beats": [
       {
-        "script": "Une appli lit chaque message que ton enfant envoie. L'an dernier, elle en a analysé 11 milliards. Tu sais ce qu'elle signale ?",
+        "script": "Une appli lit chaque message que ton enfant envoie. L'an dernier, Bark en a analysé 11 milliards. Tu sais ce que ces applis signalent ?",
         "visual": {
           "type": "veo",
           "spec": {
@@ -182,14 +182,14 @@
         }
       },
       {
-        "script": "Des bêtises. Bark, l'appli de surveillance la plus utilisée, a signalé deux gamins qui en traitaient un troisième d'ennuyeux. Verdict: harcèlement.",
+        "script": "Des bêtises. Deux gamins traitent un troisième d'ennuyeux ? Une de ces applis a classé ça en harcèlement. Un enfant se plaint d'un mal de tête ?",
         "visual": {
           "type": "screenshot",
           "url": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/"
         }
       },
       {
-        "script": "Un mal de tête ? Contenu médical préoccupant. Sur un téléphone de test, un mot de passe est devenu un scénario de piégeage.",
+        "script": "Contenu médical préoccupant. Et sur un téléphone de test, Bark a transformé un mot de passe en scénario de piégeage.",
         "visual": {
           "type": "card",
           "value": "MAL DE TÊTE",
@@ -210,7 +210,7 @@
         "script": "Les parents de la copine ont coupé le contact. Plus d'un an après, les deux filles ne se parlent toujours pas.",
         "visual": {
           "type": "card",
-          "value": "UN AN APRÈS",
+          "value": "PLUS D'UN AN",
           "label": "les deux filles ne se parlent toujours pas"
         }
       },
