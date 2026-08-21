@@ -547,6 +547,25 @@ ENTRIES:
   `referer: https://commons.wikimedia.org/` a rendu les deux thumbs 1280px du
   premier coup (593 ko et 193 ko). Ce n'est donc pas qu'une affaire de taille:
   ajoute le referer et l'UA complet avant de conclure a l'etranglement.
+  Ajout 21/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 27 verifications, deux dossiers) cisa.gov/news-events/
+  cybersecurity-advisories/<aaNN-NNNa> (NOUVEAU, et c'est un primaire de premier
+  ordre: l'avis conjoint NSA/CISA/FBI/DOE/EPA porte le texte entier, mitigations
+  et notes comprises, donc les phrases qui autorisent les chiffres y sont) et
+  cyberscoop.com (NOUVEAU); pewresearch.org et techcrunch.com re-confirment.
+  Repondent 200 aussi helpnetsecurity.com, techtimes.com et bandt.com.au.
+  REFLEXE POUR TROUVER L'URL D'UN AVIS CISA, 30 s: l'index
+  /news-events/cybersecurity-advisories rend 200 et porte les liens
+  /news-events/cybersecurity-advisories/aaNN-NNNa; la presse ne lie pas toujours
+  l'avis. ATTENTION CORROBORATION sur un avis d'agence, famille du 09/08:
+  techcrunch et cyberscoop lisent le MEME document public, donc deux domaines
+  verts n'attestent que "les agences ont dit x". Ce qui rend le dossier
+  publiable quand meme, et qu'il faut dire dans le rapport: chacun a son propre
+  reportage a cote (une source incident-response chez techcrunch, Michael Garcia
+  + Frenos + la reponse ecrite de Siemens chez cyberscoop). Cote flux ce matin:
+  The Verge et Ars Technica 403 (permanents), et Hacker News a rendu timeout
+  dans feeds.mjs puis 200 / 10,3 ko au fetch Node 3 min plus tard, meme toux que
+  le 14/08 et le 16/08: relance a la main tout flux marque FAIL.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1485,6 +1504,35 @@ ENTRIES:
   holding a cup looking at a phone" a x=1500 pour mieux cadrer le visage SUPPRIME
   le telephone du cadre; garde le x=2100 mesure, le sujet du beat c'est la
   personne AVEC l'objet.
+  Ajout 21/08 (06h30), QUATRE REQUETES PHOTO PIEGEES ET DEUX VALEURS SURES,
+  dossier eau potable, tous les pieges attrapes a la planche-contact et par
+  AUCUN filtre. (1) "programmable logic controller" ne rend qu'UN candidat et il
+  porte DEUX defauts a la fois: des gilets haute visibilite ou se lit "FIVE STAR
+  ELECTRIC" (marque absente de l'histoire, famille Augmentin du 08/08) ET un
+  horodatage grave "7/31/2018" en bas a droite (famille epoque). (2) "kitchen
+  faucet" met en tete deux photos de SHOWROOM, etiquettes de prix visibles et
+  plaque "MOEN" lisible: pas de robinet de cuisine reel atteignable ici. (3)
+  "water tower rural" rend de vrais chateaux d'eau contemporains mais
+  l'inscription "MID-DAKOTA RWS" est lisible en grand, et montrer un reseau
+  d'eau NOMME qui n'a PAS ete attaque sur une actu de piratage est la faute du
+  mauvais tribunal du 16/08: beat abandonne, remplace par une `card`. (4)
+  "screen time" sort en 2e position a 8.0 une CARTE de l'empire Maurya (famille
+  carte du 08/08), donc meme une valeur sure de ce carnet se pin, jamais se
+  relance a l'aveugle. VALEURS SURES telechargees, regardees et epinglees
+  file+credit ce matin: "Water Treatment Plant in Parkin, Arkansas"
+  (Brandonrush, CC0, thumb 1920x1280, crop=720:1280:225:0), un batiment ou se
+  lit PARKIN WATER PLANT, vraie station rurale dans un Etat que le script
+  nomme, zero marque, zero date gravee; et "Water flowing from drinking water
+  tap" (Mateusz Konieczny, CC0, thumb 1920x1920, crop=1080:1920:600:0), main +
+  robinet + eau qui coule, excellent dernier beat. Re-confirmes au rendu:
+  "Screen time" (Rawpixel, CC0, thumb 1920x1280, crop=720:1280:537:0, le
+  telephone reste dans le cadre) et "A messy network server room" (Moses Cursor
+  Ssebunya, CC0, pd.w.org 1542x2048, crop=1152:2048:195:0). ET LA TAILLE DE
+  THUMB, qui precise le 19/08: /2560px- a rendu la page "Wikimedia Error" de
+  2 009 octets en HTTP 400 sur Screen_time.jpg, alors que /1920px- a rendu
+  382 ko sur la MEME image 20 s plus tard et servait deux autres originaux dans
+  la meme minute. Ce n'est donc pas un etranglement passager mais la rendition
+  2560 qui echoue: demande 1920, jamais 2560.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -2284,6 +2332,23 @@ ENTRIES:
   phrase a la mesure: c'est ecrire le claim dans le vocabulaire de ce que les
   sources disent vraiment. Teste-le hors reseau en 5 s, claimOverlap est
   exporte par validate.mjs: `claimOverlap(claim, quote)` rend shared + ratio.
+  Ajout 21/08 (06h30), LE PIEGE DE CITATION LE MOINS EVIDENT, ET IL A COUTE LA
+  MOITIE DES ERREURS DU PREMIER PASSAGE: DEUX PHRASES VRAIES DE LA MEME PAGE,
+  COLLEES DANS UNE SEULE `evidence`, REVIENNENT NOT_FOUND. Le gate cherche une
+  SOUS-CHAINE, donc les phrases doivent etre CONTIGUES ET DANS L'ORDRE DE LA
+  PAGE. Mesure: 3 des 6 erreurs du premier gate venaient de la, dont un cas ou
+  les deux phrases existaient bien sur la page mais dans l'ordre INVERSE
+  ("of all the pages in this sample, 10%..." avant "these dots represent a
+  random sample of 10,000..."). Variante plus vicieuse du meme piege: la
+  citation s'arrete sur une ponctuation DIFFERENTE de celle de la source
+  (ecrit "...was first released." la ou la page ecrit "...was first released,
+  and continued as..."), NOT_FOUND immediat sur une citation par ailleurs
+  exacte au caractere pres. Le reflexe qui supprime l'aller-retour: imprime le
+  VOISINAGE exact avec le flatten du gate (`const i=t.indexOf(ancre);
+  t.slice(i,i+420)`) et copie depuis la, puis teste TOUTES tes citations hors
+  reseau en une seule commande avant le premier gate. Fait ce matin: les 13
+  citations pre-testees sont passees VERIFIED du premier coup, les 3 non
+  testees sont exactement celles qui ont echoue.
 - 2026-08-20 · DEUX PIEGES MECANIQUES DU CHEMIN DE PUBLICATION, mesures le meme
   run, chacun coute un cycle entier. (1) LE GATE VERT NE PROTEGE PAS DU REFUS
   D'IMAGE EN COURS DE BUILD: `promptIssues` (promptcraft.mjs) refuse un `spec`

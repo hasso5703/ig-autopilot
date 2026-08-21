@@ -1,0 +1,259 @@
+{
+  "slug": "2026-08-21-ia-code-eau-potable",
+  "centralClaim": "Threat actors are using AI to generate exploitation scripts against Siemens S7 series programmable logic controllers.",
+  "corroboration": [
+    {
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
+      "quote": "Threat actors are using AI assistance to generate exploitation scripts using publicly available information on these Siemens S7 series PLCs for initial access, credential access, denial of service, and other objectives."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/20/us-says-hackers-are-targeting-vulnerable-water-systems-with-the-help-of-ai/",
+      "quote": "The agencies said the hackers are using AI to generate exploit scripts that rely on publicly available information to find and exploit vulnerable programmable logic controllers that are running out-of-date software or are otherwise poorly secured."
+    }
+  ],
+  "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
+  "caption": "Des pirates font écrire par une IA le code qui attaque les stations d'eau américaines.\n\nL'alerte a été publiée le 19 août par la NSA, l'agence de cybersécurité CISA, le FBI, le département de l'Énergie et l'agence de l'environnement. Elle vise les automates Siemens de la série S7, ces boîtiers qui pilotent des machines physiques dans l'énergie, l'eau, l'industrie et l'agriculture.\n\nCe que disent les agences, mot pour mot. Les attaquants utilisent des programmes d'attaque générés par IA, maquillés en outils de surveillance légitimes. Et l'alerte précise que cette méthode réduit fortement le niveau technique et le temps nécessaires pour fabriquer ces outils. Sa formule: ce n'est pas un risque théorique, c'est une menace active.\n\nLe détail qui n'est pas dans la vidéo. Les attaquants ne cherchent pas au hasard: ils passent par des services de scan d'Internet pour repérer les automates laissés accessibles en ligne avec un logiciel périmé. Des intrusions ont été signalées dans des installations d'eau du Minnesota, du Michigan, de l'Arkansas, de la Géorgie et du New Jersey.\n\nÀ nuancer. Siemens répond que l'alerte ne décrit aucune nouvelle faille dans ses automates, mais des installations mal configurées. Et c'est bien le noeud: le conseil des agences reste le même depuis longtemps, débrancher ces boîtiers d'Internet.\n\nFaut-il interdire de brancher ces automates sur Internet, oui ou non ?\n\ncisa.gov · techcrunch.com · cyberscoop.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Cybersecurite #Eau",
+  "captionEvidence": [
+    {
+      "quote": "Defending against an active threat to Siemens S7 series PLCs release date August 19, 2026",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a"
+    },
+    {
+      "quote": "The National Security Agency (NSA), Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Department of Energy (DOE), and Environmental Protection Agency (EPA)-hereafter referred to as the authoring agencies-are releasing this cybersecurity advisory",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a"
+    },
+    {
+      "quote": "The threat actors are conducting reconnaissance and capability development against U.S.-based Siemens PLC installations using AI-generated exploitation scripts disguised as legitimate monitoring tools.",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a"
+    },
+    {
+      "quote": "The actors leverage internet scanning services to find internet-exposed PLCs running outdated software or that are otherwise poorly protected.",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a"
+    },
+    {
+      "quote": "Officials across the U.S. have reported intrusions at water facilities in Minnesota and Michigan, as well as Arkansas, Georgia, and New Jersey.",
+      "url": "https://techcrunch.com/2026/08/20/us-says-hackers-are-targeting-vulnerable-water-systems-with-the-help-of-ai/"
+    },
+    {
+      "quote": "This advisory does not describe new vulnerabilities within the S7 series programmable logic controllers (PLC). Instead, this reflects threat actors employing new techniques to exploit potential misconfigurations",
+      "url": "https://cyberscoop.com/hackers-use-ai-target-siemens-plcs-critical-infrastructure/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "NSA, CISA, FBI, DOE, EPA",
+      "headline": "Une IA écrit le code qui attaque l'*eau potable*",
+      "hero": {
+        "value": "S7",
+        "label": "la famille de boîtiers Siemens visée"
+      },
+      "swipe": "Ce que dit l'alerte"
+    },
+    {
+      "type": "stat",
+      "figure": "S7",
+      "unit": "la série de boîtiers Siemens visée",
+      "body": "Les agences américaines de sécurité visent une famille précise d'automates industriels: la série S7 de Siemens, celle qui pilote des machines physiques.",
+      "evidence": "Threat actors are using AI assistance to generate exploitation scripts using publicly available information on these Siemens S7 series PLCs for initial access, credential access, denial of service, and other objectives.",
+      "source": {
+        "name": "CISA",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Des programmes d'attaque déguisés",
+      "body": "Les attaquants préparent leurs attaques avec des programmes **générés par IA**, maquillés en outils de surveillance légitimes.",
+      "evidence": "The threat actors are conducting reconnaissance and capability development against U.S.-based Siemens PLC installations using AI-generated exploitation scripts disguised as legitimate monitoring tools.",
+      "source": {
+        "name": "CISA",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La phrase qui change tout",
+      "body": "L'alerte écrit que cette méthode **réduit fortement** le niveau technique et le temps nécessaires pour fabriquer un outil d'attaque qui fonctionne.",
+      "evidence": "Note: using AI to generate exploitation scripts represents an evolution in threat actor capabilities, dramatically reducing the technical expertise and time required to develop working ICS exploitation scripts and malicious tools.",
+      "source": {
+        "name": "CISA",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ils scannent, ils ne cherchent pas",
+      "body": "Les attaquants passent par des services de scan d'Internet pour repérer les automates laissés en ligne avec un logiciel périmé.",
+      "evidence": "The actors leverage internet scanning services to find internet-exposed PLCs running outdated software or that are otherwise poorly protected.",
+      "source": {
+        "name": "CISA",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce n'est pas une hypothèse",
+      "body": "Des intrusions ont été signalées dans des installations d'eau du Minnesota, du Michigan, de l'Arkansas, de la Géorgie et du New Jersey.",
+      "evidence": "Officials across the U.S. have reported intrusions at water facilities in Minnesota and Michigan, as well as Arkansas, Georgia, and New Jersey.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/20/us-says-hackers-are-targeting-vulnerable-water-systems-with-the-help-of-ai/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "L'alerte",
+      "claim": "Une menace active vise les automates de la série S7.",
+      "caveatLabel": "La réponse de Siemens",
+      "caveat": "Aucune faille nouvelle dans les automates. Ce sont des installations mal configurées.",
+      "evidence": "This advisory does not describe new vulnerabilities within the S7 series programmable logic controllers (PLC). Instead, this reflects threat actors employing new techniques to exploit potential misconfigurations",
+      "source": {
+        "name": "CyberScoop",
+        "url": "https://cyberscoop.com/hackers-use-ai-target-siemens-plcs-critical-infrastructure/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "It is the first alert I have seen where CISA is saying in a CSA that a malicious actor is using AI scripts to target OT systems",
+      "attribution": "Michael Garcia, ancien responsable de la CISA",
+      "evidence": "It is the first alert I have seen where CISA is saying in a CSA that a malicious actor is using AI scripts to target OT systems",
+      "source": {
+        "name": "CyberScoop",
+        "url": "https://cyberscoop.com/hackers-use-ai-target-siemens-plcs-critical-infrastructure/",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les petites communes d'abord",
+      "body": "Les agences reconnaissent que les communes rurales sont souvent les plus touchées, parce que leurs réseaux couvrent d'immenses zones.",
+      "evidence": "CISA has long warned owners of critical infrastructure to keep these devices disconnected from the internet, and officials have acknowledged that rural communities are often the most affected because these systems service large geographic areas.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/20/us-says-hackers-are-targeting-vulnerable-water-systems-with-the-help-of-ai/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui bosse dans un service technique",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "CISA",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
+      "accessed": "2026-08-21"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/20/us-says-hackers-are-targeting-vulnerable-water-systems-with-the-help-of-ai/",
+      "accessed": "2026-08-21"
+    },
+    {
+      "name": "CyberScoop",
+      "url": "https://cyberscoop.com/hackers-use-ai-target-siemens-plcs-critical-infrastructure/",
+      "accessed": "2026-08-21"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Une IA écrit le code qui attaque l'eau potable",
+    "beats": [
+      {
+        "script": "Le FBI et la NSA préviennent : des pirates font écrire par une IA le code qui attaque les stations d'eau potable.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single grey industrial controller box with one small indicator light",
+            "action": "the small indicator light slowly blinking, the box staying whole and in frame",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "inside a metal cabinet in soft even daylight",
+            "composition": "macro framing, the box fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "La cible, ce sont des boîtiers Siemens. Et la phrase qui fait peur n'est pas là. Elle est plus loin dans l'alerte.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a"
+        }
+      },
+      {
+        "script": "L'IA réduit énormément le niveau technique et le temps nécessaires pour fabriquer ces outils d'attaque. Traduction : la barrière vient de tomber d'un cran.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of an industrial controller scanner",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Ces boîtiers gris pilotent des machines physiques : l'énergie, l'eau, l'industrie, l'agriculture. Et les agences disent que les pirates les visent tous.",
+        "visual": {
+          "type": "card",
+          "value": "AUTOMATES",
+          "label": "les boîtiers qui pilotent l'eau, l'énergie, les usines"
+        }
+      },
+      {
+        "script": "Comment les pirates les trouvent ? Ils scannent Internet. Les boîtiers laissés en ligne, avec un vieux logiciel, sortent tout seuls de la liste.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of controller scan result numbers",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from the side, the screen fills the frame"
+          }
+        }
+      },
+      {
+        "script": "Et ce n'est pas théorique : des intrusions ont été signalées dans des installations d'eau du Minnesota, du Michigan, de l'Arkansas, de la Géorgie et du New Jersey.",
+        "visual": {
+          "type": "photo",
+          "query": "water treatment plant",
+          "file": "media/2026-08-21-ia-code-eau-potable/photo_5.jpg",
+          "credit": "Brandonrush · CC0",
+          "alt": "La station de traitement de l'eau de Parkin, en Arkansas"
+        }
+      },
+      {
+        "script": "Siemens répond que ce ne sont pas de nouvelles failles, mais des installations mal configurées. Et l'agence répète le même conseil depuis des années : débranchez-les d'Internet.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://cyberscoop.com/hackers-use-ai-target-siemens-plcs-critical-infrastructure/"
+        }
+      },
+      {
+        "script": "Et les plus touchées sont souvent les communes rurales, parce que leurs réseaux d'eau couvrent d'immenses zones géographiques.",
+        "visual": {
+          "type": "card",
+          "value": "RURALES",
+          "label": "les communes les plus touchées, selon les responsables"
+        }
+      },
+      {
+        "script": "Un ancien responsable de l'agence dit n'avoir jamais vu ça écrit dans une alerte. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "drinking water tap",
+          "file": "media/2026-08-21-ia-code-eau-potable/photo_8.jpg",
+          "credit": "Mateusz Konieczny · CC0",
+          "alt": "De l'eau qui coule d'un robinet public"
+        }
+      }
+    ]
+  }
+}

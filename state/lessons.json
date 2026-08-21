@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-20T19:40:31.122Z",
+  "at": "2026-08-21T06:41:07.779Z",
   "n": 47,
   "nSettled": 41,
   "medianViews": 197,
@@ -275,7 +275,7 @@
         "published": [
           {
             "slug": "2026-08-19-avions-trainees",
-            "views": 270
+            "views": 285
           },
           {
             "slug": "2026-08-19-pub-dans-chatgpt",
@@ -641,10 +641,10 @@
       "slug": "2026-08-19-avions-trainees",
       "at": "2026-08-19T17:07:45.947Z",
       "hourUtc": 17,
-      "views": 270,
-      "reach": 251,
-      "avgWatchS": 9.6,
-      "retentionPct": 16,
+      "views": 285,
+      "reach": 261,
+      "avgWatchS": 51.9,
+      "retentionPct": 86,
       "likes": 2,
       "comments": 1,
       "saved": 3,
@@ -956,6 +956,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-20-jeunes-emplois-ia",
+      "at": "2026-08-20T17:03:49.087Z",
+      "hourUtc": 17,
+      "views": 121,
+      "reach": 111,
+      "avgWatchS": 6.9,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-penurie-memoire-samsung",
       "at": "2026-08-01T09:17:47.305Z",
       "hourUtc": 9,
@@ -990,6 +1007,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-20-applis-surveillance-enfants",
+      "at": "2026-08-20T11:09:22.243Z",
+      "hourUtc": 11,
+      "views": 117,
+      "reach": 114,
+      "avgWatchS": 6.7,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-18-robot-ami-des-enfants",
       "at": "2026-08-18T17:06:46.056Z",
       "hourUtc": 17,
@@ -1005,40 +1039,6 @@
       "themes": [],
       "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-20-applis-surveillance-enfants",
-      "at": "2026-08-20T11:09:22.243Z",
-      "hourUtc": 11,
-      "views": 109,
-      "reach": 110,
-      "avgWatchS": 7,
-      "retentionPct": 12,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
-      "settled": false
-    },
-    {
-      "slug": "2026-08-20-jeunes-emplois-ia",
-      "at": "2026-08-20T17:03:49.087Z",
-      "hourUtc": 17,
-      "views": 88,
-      "reach": 73,
-      "avgWatchS": 7.6,
-      "retentionPct": 13,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
-      "settled": false
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",

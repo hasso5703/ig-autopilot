@@ -1,0 +1,243 @@
+{
+  "slug": "2026-08-21-web-ecrit-par-ia",
+  "centralClaim": "Signs of AI authorship can be found in over one-third of webpages published after ChatGPT was released.",
+  "corroboration": [
+    {
+      "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+      "quote": "In the July 2026 snapshot, signs of AI authorship can be found in over one-third of pages published after ChatGPT was released."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/",
+      "quote": "Over one-third of web pages published after the release of ChatGPT show signs of being written by AI, according to a new study from Pew Research released on Thursday."
+    }
+  ],
+  "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
+  "caption": "Une page web sur trois publiée depuis ChatGPT porte les marques d'une écriture par IA.\n\nLe Pew Research Center a passé près d'un demi-million de pages web anglophones, collectées entre janvier 2021 et juillet 2026, dans un détecteur appelé Open Pangram. Sur l'ensemble des pages du relevé de juillet, 10% portent des marques nettes d'écriture par IA. Sur les seules pages publiées après la sortie de ChatGPT, c'est plus d'une sur trois.\n\nLes tics que le rapport mesure. Par rapport à 2023, les longs tirets apparaissent deux fois plus souvent, la virgule avant le dernier élément d'une liste progresse de 63%, et la tournure comparative du type ce n'est pas seulement ceci, c'est cela a presque triplé.\n\nLe détail qui n'est pas dans la vidéo. L'écart se creuse selon le type de site: environ une page sur dix en .com, contre 4.6% en .org et autour de 1% en .edu et en .gov.\n\nÀ nuancer, et le rapport le dit lui-même: les détecteurs se trompent dans les deux sens, et un long tiret ou une virgule de liste ne prouvent rien à eux seuls. Ce sont aussi des pages en anglais, pas en français.\n\nTu crois savoir reconnaître un texte écrit par une IA, oui ou non ?\n\npewresearch.org · techcrunch.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #Web",
+  "captionEvidence": [
+    {
+      "quote": "The data for this essay comes from common crawl web archive snapshots collected between January 2021 and July 2026.",
+      "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+    },
+    {
+      "quote": "Of all the pages in this sample, 10% show significant signs of AI authorship.",
+      "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+    },
+    {
+      "quote": "Comparing the internet of today to a snapshot from 2023: em dashes appear about twice as frequently. Oxford commas see a 63% increase.",
+      "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+    },
+    {
+      "quote": "about double the share on .org domains (4.6%), and 10 times the rate on .edu or .gov domains (both around 1%)",
+      "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+    },
+    {
+      "quote": "We then ran the text of those pages through an AI detection tool called Open Pangram to see how many of them were likely written or substantially edited by AI.",
+      "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+    },
+    {
+      "quote": "We used the Common Crawl web archive to collect almost half a million English-language webpages from the past five years",
+      "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Pew Research Center",
+      "headline": "Depuis ChatGPT, une page web sur trois porte les tics d'une *IA*",
+      "hero": {
+        "value": "10%",
+        "label": "de toutes les pages du relevé de juillet"
+      },
+      "swipe": "Les tics, un par un"
+    },
+    {
+      "type": "stat",
+      "figure": "10%",
+      "unit": "des pages web analysées en juillet",
+      "body": "Sur un relevé de pages tirées au hasard, une sur dix porte des marques nettes d'écriture par IA. La courbe monte depuis 2022.",
+      "evidence": "Of all the pages in this sample, 10% show significant signs of AI authorship. This is part of an upward trend that began in late 2022, when ChatGPT was first released, and continued as other AI chatbots such as Claude and Gemini followed.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le premier tic est un trait",
+      "body": "Par rapport à 2023, les longs tirets au milieu des phrases apparaissent **deux fois plus souvent**. La virgule avant le dernier élément d'une liste progresse de 63%.",
+      "evidence": "Comparing the internet of today to a snapshot from 2023: em dashes appear about twice as frequently. Oxford commas see a 63% increase.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le deuxième est une manie",
+      "body": "Les modèles énumèrent les choses **par trois** plus souvent que les humains. Et la tournure comparative du type ce n'est pas seulement ceci, c'est cela a presque triplé.",
+      "evidence": "more likely than human authors to list items in threes and to use oxford commas in lists. And as more ai-generated content appears online, these and other ai \"tells\" have become more common across webpages.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La tournure qui a presque triplé",
+      "body": "La comparaison en deux temps, celle qui oppose une chose banale à une chose plus grande, est le tic qui progresse le plus vite.",
+      "evidence": "using \"negative parallelism\" to structure a comparison (\"it's not just x, it's y\") has nearly tripled",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Le repère",
+      "claim": "Des tics de langage trahissent une écriture par IA.",
+      "caveatLabel": "Ce que dit le rapport",
+      "caveat": "Les détecteurs se trompent dans les deux sens, et un tiret ne prouve rien tout seul.",
+      "evidence": "they sometimes misclassify individual documents that were written by humans as including signs of AI authorship, and vice versa.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce n'est pas partout pareil",
+      "body": "Environ une page sur dix en point com. **10 fois moins** sur les sites d'université et de l'État.",
+      "evidence": "In samples from 2026, around one-in-ten pages with a .com domain show signs of AI authorship - about double the share on .org domains (4.6%), and 10 times the rate on .edu or .gov domains (both around 1%).",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Des machines qui lisent des machines",
+      "body": "Le rapport arrive juste après un relevé où le passage des robots sur le web a dépassé celui des humains.",
+      "evidence": "It also arrives shortly after internet infrastructure provider Cloudflare reported that bot web traffic had overtaken human web traffic - a milestone that was reached sooner than the company had estimated.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui lit beaucoup en ligne",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Pew Research Center",
+      "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+      "accessed": "2026-08-21"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/",
+      "accessed": "2026-08-21"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Une page web sur trois porte les tics d'une IA",
+    "beats": [
+      {
+        "script": "Une page web sur trois publiée depuis ChatGPT a été écrite, ou largement retouchée, par une IA. Et ça se repère.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of webpage detection scores",
+            "action": "the column of numbers sliding slowly downward, the screen staying whole and in frame",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "C'est le Pew Research Center qui a compté. Presque un demi-million de pages web aspirées sur cinq ans, passées dans un détecteur.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+        }
+      },
+      {
+        "script": "Sur tout le web, une page sur dix. Mais sur les pages nées après ChatGPT, une sur trois. La courbe monte depuis 2022.",
+        "visual": {
+          "type": "card",
+          "value": "10%",
+          "label": "des pages du relevé de juillet, tous âges confondus"
+        }
+      },
+      {
+        "script": "Alors comment on la repère ? Premier tic : ces longs traits plantés au milieu des phrases. Deux fois plus fréquents qu'en 2023.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of a webpage authorship scanner",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Deuxième tic : tout énumérer par trois. Troisième : cette tournure, ce n'est pas juste un détail, c'est un signal. Elle a presque triplé.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed detection report page filled with columns of numbers",
+            "setting": "lying flat on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Sauf que non, un tiret ne prouve rien tout seul. Le Pew le dit lui-même : ses détecteurs se trompent, dans les deux sens.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.pewresearch.org/data-labs/2026/08/20/methodology-ai-content/"
+        }
+      },
+      {
+        "script": "Et ce n'est pas partout pareil : une page sur dix en point com, dix fois moins sur les sites d'université et de l'État.",
+        "visual": {
+          "type": "card",
+          "value": "1 SUR 10",
+          "label": "des pages en point com, dix fois plus que sur un site public"
+        }
+      },
+      {
+        "script": "Pendant ce temps, le passage des robots sur le web a dépassé celui des humains. Ces pages sont lues par des machines, et écrites par d'autres machines.",
+        "visual": {
+          "type": "photo",
+          "query": "network server room",
+          "file": "media/2026-08-21-web-ecrit-par-ia/photo_7.jpg",
+          "credit": "Moses Cursor Ssebunya · CC0",
+          "alt": "Une salle de serveurs avec ses baies et ses câbles"
+        }
+      },
+      {
+        "script": "Dernier détail : l'outil qui a repéré tout ça est lui-même une intelligence artificielle. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "screen time",
+          "file": "media/2026-08-21-web-ecrit-par-ia/photo_8.jpg",
+          "credit": "Rawpixel · CC0",
+          "alt": "Un homme regarde l'écran de son téléphone"
+        }
+      }
+    ]
+  }
+}
