@@ -247,3 +247,7 @@
 {"at":"2026-08-21T10:44:26.241Z","slug":"2026-08-21-web-ecrit-par-ia","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
 {"at":"2026-08-21T10:44:37.832Z","slug":"2026-08-21-web-ecrit-par-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1283}
 {"at":"2026-08-21T10:44:48.764Z","slug":"2026-08-21-web-ecrit-par-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1201}
+{"at":"2026-08-21T16:44:19.190Z","slug":"2026-08-21-ia-code-eau-potable","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"54.8s Sadaltager","usd":0.0274}
+{"at":"2026-08-21T16:46:16.859Z","slug":"2026-08-21-ia-code-eau-potable","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
+{"at":"2026-08-21T16:46:32.469Z","slug":"2026-08-21-ia-code-eau-potable","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.119}
+{"at":"2026-08-21T16:46:46.961Z","slug":"2026-08-21-ia-code-eau-potable","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1292}
