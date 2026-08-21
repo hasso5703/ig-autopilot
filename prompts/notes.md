@@ -577,6 +577,43 @@ ENTRIES:
   titre affiche EST l'histoire, et le build n'a attendu aucun reseau de capture:
   COMPLIANT en 3 min 40 apres la narration. Un scout qui capture hors moteur et
   epingle supprime donc la moitie lente du build, pas seulement la derive.
+  Ajout 21/08 (19h30), LE PIEGE LE PLUS DANGEREUX MESURE JUSQU'ICI, techcrunch.com
+  EN RECU: le domaine se gate parfaitement au fetch Node (200, article entier),
+  mais sa page MOBILE, donc exactement le contexte de screenshotOnce (UA iPhone,
+  430x932), REDIRIGE LA PAGE ENTIERE vers loadway.best, une fausse alerte McAfee
+  "Scanning your device / Threat Detected!". Reproduit DEUX fois a 10 min
+  d'intervalle, 30 s au goto, frames=1, et ni les deux passes de consentement ni
+  le strip des overlays fixes n'y peuvent quoi que ce soit: ce n'est pas une
+  banniere posee sur l'article, c'est une autre page. Un beat `screenshot` sur
+  techcrunch peut donc publier une pub d'arnaque en plein Reel, et le fichier
+  sortira COMPLIANT. Verifie `page.url()` apres le goto, ou prends un autre recu.
+  MESURES DU MEME SOIR: gizmodo.com se gate (200, et il porte la reponse d'Oura
+  que techcrunch n'a pas) mais NE SE CAPTURE PAS, la page meurt pendant la passe
+  de consentement ("target page, context or browser has been closed"), deux fois:
+  famille macrumors du 09/08, source oui, recu jamais. ppc.land se recapture
+  propre du premier coup (masthead, titre entier, signature, date, chapo qui
+  porte le claim central), mais en 232 s et 17 frames: famille O(frames) du
+  06/08, il SURVIT, prevois 4 min et ne coupe pas a 240 s. ouraring.com rend 200
+  et son texte aplati porte les affirmations attaquees ("99%heart rate accuracy
+  r2 compared to ecg21 95%sleep staging accuracy compared to clinical sleep
+  lab") - note l'absence d'espace entre le chiffre et le mot suivant apres
+  flatten, recopie-la telle quelle; les URL produit sont sous /store/rings/<slug>
+  et se lisent dans le HTML de la page d'accueil (les chemins devines /product/
+  rendent 404). En revanche il ne fait PAS un recu: la capture rend le hero
+  anime ("Built to blend in / Shop Now") et un scroll vers le texte
+  "sleep staging accuracy" ne l'atteint pas. Bloque au fetch gate: nhtsa.gov
+  (403 sur /?nhtsaId=... ET sur /vehicle-safety), donc le primaire d'une enquete
+  de securite routiere americaine est ingatable. Openverse a rendu 503 deux fois
+  vers 20h puis remarche 20 min apres (toux, pas blocage); Commons repondait
+  pendant ce temps.
+  Ajout 21/08 (19h30), DEUX PIEGES D'OUTILLAGE QUI COUTENT 15 MIN CHACUN.
+  (1) Une capture tuee par `timeout` laisse des process chrome vivants, et le
+  LANCEMENT SUIVANT se bloque indefiniment sans afficher une seule ligne:
+  `pkill -f chrome-linux/chrome` avant de reessayer, et compte 4 min de marge.
+  (2) Ne pipe JAMAIS le script de capture dans `tail`: quand `timeout` tue le
+  process, le tampon du pipe est perdu et tu ne vois RIEN, ce qui fait
+  diagnostiquer un blocage au lancement alors qu'il est ailleurs. Redirige vers
+  un fichier (`> log 2>&1`) et lis-le apres.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -700,6 +737,24 @@ ENTRIES:
   gate: `node -e "import('./src/state.mjs').then(m=>console.log(m.tokens('...')))"`.
   Proof: gate 10h 01/08, beat "identical spheres packed" refuse, "a dense sphere
   packing" accepte.
+  Ajout 21/08 (19h30), LE VOCABULAIRE DISPONIBLE DEPEND DE LA CASSE DE TES
+  CITATIONS, et ca surprend: `storyVocab` retire les NOMS PROPRES, reperes par
+  les majuscules dans centralClaim + evidence. Donc une citation qui recopie une
+  accroche publicitaire en Title Case ("95% Sleep Staging Accuracy Compared to
+  clinical sleep lab") transforme sleep, accuracy, ring et stag en noms propres
+  et les SUPPRIME du vocabulaire: un beat "a phone screen showing a simple sleep
+  graph" a ete refuse pour "ne partage aucun mot avec les sources" sur un dossier
+  ou le mot sommeil est partout. Remede: vise un nom commun que la source ecrit
+  en minuscules (finger, sensor, brain, clinical, night, patient, measure), et
+  liste-les avant d'ecrire les specs, en 10 s:
+  `node --input-type=module -e "import {tokens} from './src/state.mjs'; import {namedActors} from './src/validate.mjs'; ..."` ou plus simplement lis la liste
+  que le message d'erreur du gate imprime. ET LE COROLLAIRE, sur les noms
+  versionnes: le controle "la narration nomme X, absent des citations" fait un
+  `includes` SENSIBLE A LA CASSE sur l'evidence, alors que la verification en
+  ligne de la citation, elle, passe tout en minuscules. Une citation recopiee
+  depuis le texte aplati (donc en minuscules) revient VERIFIED et fait quand meme
+  echouer "Oura Ring 5". Recopie les citations avec la casse de la PAGE, pas
+  celle du flatten.
   Ajout 03/08 (11h): DANS UN SPEC VEO, `action` EST UN MOUVEMENT, JAMAIS UNE
   DESTINATION. Ecrit "is pressed down into its slot on a laptop board until it
   lies flat": Veo a interpole vers l'etat final et la barrette a ete AVALEE par

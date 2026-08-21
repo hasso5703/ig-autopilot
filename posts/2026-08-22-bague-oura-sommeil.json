@@ -1,0 +1,255 @@
+{
+  "slug": "2026-08-22-bague-oura-sommeil",
+  "centralClaim": "A proposed class action alleges Oura's smart ring cannot determine sleep stages and relies on AI-generated estimates instead.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/21/oura-faces-lawsuit-accusing-it-of-misleading-consumers-about-sleep-tracking-accuracy/",
+      "quote": "alleges that Oura rings are unable to measure any of the physiological signals needed to assess sleep quality or determine sleep stages, and that they instead rely on AI-generated estimates"
+    },
+    {
+      "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+      "quote": "a california buyer filed a proposed class action against smart ring maker oura in federal court in san francisco on august 20, 2026, arguing that the company's advertised sleep staging accuracy figures cannot be produced by a device with no brain or eye sensors."
+    }
+  ],
+  "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
+  "caption": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne peut pas le mesurer.\n\nUn recours collectif a été déposé le 20 août 2026 devant le tribunal fédéral de San Francisco, par le cabinet Clarkson, au nom d'une acheteuse californienne. Il vise Oura Inc. et Oura Health Oy.\n\nCe que dit la plainte. Sur la page de vente du Oura Ring 5, la marque affiche 95% de justesse sur les phases de sommeil, face à un laboratoire du sommeil. Un billet de blog plus ancien parle de 79% d'accord avec l'examen de référence. Or la bague ne porte ni capteur de l'activité du cerveau ni capteur des mouvements des yeux. La plainte en conclut que ce que la bague produit est une estimation calculée.\n\nLe détail qui n'est pas dans la vidéo. Une étude publiée dans Nature le 19 mars 2025, sur 45 nuits et 45 patients, a relevé 53.18% de justesse sur le classement des stades. Les bagues sous-estimaient le sommeil léger de 13.84 minutes et surestimaient le sommeil paradoxal de 31.56 minutes.\n\nLa réponse d'Oura. L'entreprise conteste les accusations et dit qu'elle se défendra. Elle rappelle que sa bague n'est pas un dispositif médical, et affirme que ses phases de sommeil ont été validées par plusieurs études face à l'examen de référence.\n\nÀ nuancer, et c'est important: rien n'est jugé. C'est une plainte, pas une décision de justice.\n\nTu crois ce que ta bague ou ta montre te dit sur ton sommeil, oui ou non ?\n\ntechcrunch.com · ppc.land · gizmodo.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Sommeil #Oura",
+  "captionEvidence": [
+    {
+      "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+      "quote": "a california buyer filed a proposed class action against smart ring maker oura in federal court in san francisco on august 20, 2026, arguing that the company's advertised sleep staging accuracy figures cannot be produced by a device with no brain or eye sensors."
+    },
+    {
+      "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+      "quote": "The headline figure is a percentage displayed on the Oura Ring 5 product page: \"95% Sleep Staging Accuracy Compared to clinical sleep lab.\" An earlier company blog post, dated November 16, 2022, is cited for a different number, \"79% agreement with gold-standard polysomnography (PSG) for classifying the four stages of sleep (wake, light, deep, and rapid eye movement (REM) sleep).\""
+    },
+    {
+      "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+      "quote": "a study published in nature on march 19, 2025 gathered data across 45 nights from 45 patients wearing oura rings. according to the complaint's summary, the rings underestimated light sleep by 13.84 minutes and deep sleep by 5.98 minutes while overestimating rem sleep by 31.56 minutes, producing overall stage classification accuracy of 53.18%."
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "21 août 2026 · Oura",
+      "headline": "Oura promet *95%* de justesse sur ton sommeil",
+      "hero": {
+        "value": "53.18%",
+        "label": "la justesse relevée par une étude publiée dans Nature"
+      },
+      "swipe": "Ce que dit la plainte"
+    },
+    {
+      "type": "stat",
+      "figure": "95%",
+      "unit": "de justesse annoncée sur les phases de sommeil",
+      "body": "C'est le chiffre affiché sur la page de vente du Oura Ring 5, comparé à un **laboratoire du sommeil**. Un billet plus ancien parlait de 79%.",
+      "evidence": "The headline figure is a percentage displayed on the Oura Ring 5 product page: \"95% Sleep Staging Accuracy Compared to clinical sleep lab.\" An earlier company blog post, dated November 16, 2022, is cited for a different number, \"79% agreement with gold-standard polysomnography (PSG) for classifying the four stages of sleep (wake, light, deep, and rapid eye movement (REM) sleep).\"",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le chiffre est bien sur la page de vente",
+      "body": "Sur sa propre page produit, la marque affiche **95%** de justesse sur les phases de sommeil, et 99% sur le rythme cardiaque.",
+      "evidence": "rebuilt for greater accuracy highly precise sensors adapt to your body - delivering personal health data, day and night. 99%heart rate accuracy r2 compared to ecg21 95%sleep staging accuracy compared to clinical sleep lab",
+      "source": {
+        "name": "Oura",
+        "url": "https://ouraring.com/store/rings/oura-ring-5",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'il y a vraiment dans la bague",
+      "body": "La plainte recopie la liste des capteurs publiée par la marque: des **lumières** rouges et vertes, un capteur de température, un capteur de mouvement. Ni cerveau, ni yeux.",
+      "evidence": "the complaint reproduces the sensor list published on the oura product pages: red and infrared leds for blood oxygen, green and infrared leds alternating for heart rate, heart rate variability and respiration rate, a digital temperature sensor, and an accelerometer.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une estimation, pas une mesure",
+      "body": "Selon la plainte, la bague **ne peut pas** mesurer les signaux qui servent à déterminer les phases de sommeil. Ce qu'elle donne est une estimation produite par une IA.",
+      "evidence": "alleges that Oura rings are unable to measure any of the physiological signals needed to assess sleep quality or determine sleep stages, and that they instead rely on AI-generated estimates",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/21/oura-faces-lawsuit-accusing-it-of-misleading-consumers-about-sleep-tracking-accuracy/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que dit la page de vente",
+      "claim": "95% de justesse sur les phases de sommeil, et 79% d'accord avec l'examen de référence.",
+      "caveatLabel": "Ce qu'a relevé une étude",
+      "caveat": "53.18% de justesse sur le classement des stades, sur une bague sans capteur du cerveau ni des yeux.",
+      "evidence": "the core allegation is that advertised sleep staging accuracy figures of 79% and 95% cannot be substantiated by a finger-worn device containing no eeg, eog, emg or ecg sensors, and that peer-reviewed testing put overall stage classification at 53.18%.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La phrase que la marque écrit elle-même",
+      "body": "Dans sa propre documentation technique, l'entreprise écrit que porter sa bague **n'est pas** la même chose qu'un examen du sommeil, parce qu'elle ne mesure ni l'activité électrique du cerveau ni les mouvements des yeux.",
+      "evidence": "it is a quotation from oura's own technical content, in which the company states that using an oura ring \"is not the same as a psg (as it does not measure electrical brain activity or eye movements).\"",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Nous contestons les accusations et nous nous défendrons devant la juridiction compétente.",
+      "attribution": "Oura, dans un communiqué à Gizmodo",
+      "evidence": "we dispute the allegations and will defend against them in the appropriate legal forum.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/proposed-oura-lawsuit-highlights-wearables-health-limitations-2000801638",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Combien de gens ça concerne",
+      "body": "La plainte compte plus de **5.5 millions** de bagues vendues, dont près de 3 millions pour la seule année 2025.",
+      "evidence": "the company reached a valuation of approximately $11 billion after a series e round in 2025, with more than 5.5 million rings sold and revenue reported above $1 billion in 2025. nearly 3 million rings were sold in 2025 alone.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui regarde son score de sommeil au réveil",
+      "sub": "L'actu IA, vérifiée ligne par ligne."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/21/oura-faces-lawsuit-accusing-it-of-misleading-consumers-about-sleep-tracking-accuracy/",
+      "accessed": "2026-08-21"
+    },
+    {
+      "name": "PPC Land",
+      "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+      "accessed": "2026-08-21"
+    },
+    {
+      "name": "Gizmodo",
+      "url": "https://gizmodo.com/proposed-oura-lawsuit-highlights-wearables-health-limitations-2000801638",
+      "accessed": "2026-08-21"
+    },
+    {
+      "name": "Oura",
+      "url": "https://ouraring.com/store/rings/oura-ring-5",
+      "accessed": "2026-08-21"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Oura promet 95%. Une étude mesure 53.18%.",
+    "beats": [
+      {
+        "script": "Ta bague Oura te dit au réveil comment tu as dormi. Un procès déposé cette semaine dit qu'elle ne peut pas le savoir.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a smooth metal smart ring standing upright, small green sensor lights glowing on its inner surface",
+            "action": "turning slowly on the spot, the ring staying whole and fully in frame the entire time",
+            "setting": "against a plain uncluttered background",
+            "composition": "extreme close-up, the ring fills the frame"
+          }
+        }
+      },
+      {
+        "script": "Parce que ce chiffre n'est pas une mesure. C'est une estimation calculée par une IA.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a small screen showing one large percentage figure",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "La page de vente du Oura Ring 5 promet 95% de justesse sur les phases de sommeil, face à un laboratoire du sommeil.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://ppc.land/oura-sued-over-95-sleep-staging-accuracy-claim-in-ads/",
+          "file": "media/2026-08-22-bague-oura-sommeil/shot_2.png"
+        }
+      },
+      {
+        "script": "Sauf que dans une bague, il n'y a ni capteur du cerveau, ni capteur des yeux. Des petites lumières, un capteur de température, un capteur de mouvement.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "the inner surface of a plain metal band with small green sensor lights",
+            "setting": "on a plain surface in daylight",
+            "composition": "macro framing, seen from directly above"
+          }
+        }
+      },
+      {
+        "script": "Une étude publiée dans Nature, sur 45 patients, a relevé 53.18% de justesse sur le classement des stades. La plainte, elle, parle d'un pile ou face.",
+        "visual": {
+          "type": "card",
+          "value": "53.18%",
+          "label": "de justesse relevée sur le classement des stades du sommeil"
+        }
+      },
+      {
+        "script": "Et l'entreprise l'écrit elle-même dans sa documentation. Sa bague ne mesure ni l'activité électrique du cerveau, ni les mouvements des yeux. Ça, ça demande des électrodes.",
+        "visual": {
+          "type": "photo",
+          "query": "electroencephalography",
+          "alt": "Un casque à électrodes posé sur la tête d'un volontaire, pendant un enregistrement de l'activité du cerveau"
+        }
+      },
+      {
+        "script": "Oura conteste tout et dit qu'elle se défendra. Selon la marque, ses phases de sommeil ont été validées par plusieurs études.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed chart showing a stepped line graph of one night",
+            "setting": "on a white clinical surface in daylight",
+            "composition": "close-up on the chart"
+          }
+        }
+      },
+      {
+        "script": "Et ça touche du monde. La plainte compte plus de 5.5 millions de bagues vendues, dont près de 3 millions rien qu'en 2025.",
+        "visual": {
+          "type": "card",
+          "value": "5.5 M",
+          "label": "de bagues vendues, dont près de 3 millions en 2025"
+        }
+      },
+      {
+        "script": "Rien n'est jugé, ce sont des accusations. Mais demain matin, quand ta bague t'annonce une mauvaise nuit, rappelle-toi que personne ne t'a mesuré. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a bare hand wearing a plain metal band on one finger, resting on a bedsheet",
+            "setting": "in a bright room in daylight",
+            "composition": "close-up on the hand"
+          }
+        }
+      }
+    ]
+  }
+}

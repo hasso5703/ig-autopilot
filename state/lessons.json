@@ -1,7 +1,7 @@
 {
-  "at": "2026-08-21T10:40:00.709Z",
-  "n": 47,
-  "nSettled": 41,
+  "at": "2026-08-21T19:40:32.641Z",
+  "n": 49,
+  "nSettled": 43,
   "medianViews": 197,
   "medianRetentionPct": 21,
   "top": [
@@ -39,7 +39,7 @@
     },
     {
       "slug": "2026-08-15-google-retire-filigrane",
-      "views": 1166,
+      "views": 1167,
       "retentionPct": 25,
       "saved": 2,
       "shares": 0,
@@ -90,19 +90,19 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 28,
-      "medianViews": 356,
-      "meanRetentionPct": 24.3,
-      "saves": 40,
+      "n": 29,
+      "medianViews": 353,
+      "meanRetentionPct": 26.5,
+      "saves": 43,
       "shares": 21,
       "thin": false
     },
     "photo": {
-      "n": 7,
-      "medianViews": 182,
-      "meanRetentionPct": 20.7,
-      "saves": 7,
-      "shares": 1,
+      "n": 8,
+      "medianViews": 179,
+      "meanRetentionPct": 19.6,
+      "saves": 8,
+      "shares": 2,
       "thin": false
     },
     "screenshot": {
@@ -132,10 +132,10 @@
       "thin": true
     },
     "models": {
-      "n": 3,
-      "medianViews": 358,
-      "meanRetentionPct": 18.7,
-      "saves": 6,
+      "n": 4,
+      "medianViews": 322,
+      "meanRetentionPct": 35.5,
+      "saves": 9,
       "shares": 1,
       "thin": true
     },
@@ -150,11 +150,11 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 3,
-      "medianViews": 476,
-      "meanRetentionPct": 26.7,
-      "saves": 3,
-      "shares": 1,
+      "n": 4,
+      "medianViews": 429,
+      "meanRetentionPct": 23,
+      "saves": 4,
+      "shares": 2,
       "thin": true
     },
     "11": {
@@ -198,10 +198,10 @@
       "thin": false
     },
     "17": {
-      "n": 12,
-      "medianViews": 183,
-      "meanRetentionPct": 22.1,
-      "saves": 11,
+      "n": 13,
+      "medianViews": 191,
+      "meanRetentionPct": 27,
+      "saves": 14,
       "shares": 11,
       "thin": false
     },
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 25,
+    "now": 26,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -275,7 +275,7 @@
         "published": [
           {
             "slug": "2026-08-19-avions-trainees",
-            "views": 285
+            "views": 286
           },
           {
             "slug": "2026-08-19-pub-dans-chatgpt",
@@ -360,8 +360,8 @@
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
-      "views": 1166,
-      "reach": 1043,
+      "views": 1167,
+      "reach": 1044,
       "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 7,
@@ -641,9 +641,9 @@
       "slug": "2026-08-19-avions-trainees",
       "at": "2026-08-19T17:07:45.947Z",
       "hourUtc": 17,
-      "views": 285,
-      "reach": 261,
-      "avgWatchS": 51.9,
+      "views": 286,
+      "reach": 262,
+      "avgWatchS": 51.7,
       "retentionPct": 86,
       "likes": 2,
       "comments": 1,
@@ -654,7 +654,7 @@
         "models"
       ],
       "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -835,6 +835,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-21-web-ecrit-par-ia",
+      "at": "2026-08-21T10:50:01.289Z",
+      "hourUtc": 10,
+      "views": 151,
+      "reach": 128,
+      "avgWatchS": 11.4,
+      "retentionPct": 19,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-11-google-ia-repond-faux",
       "at": "2026-08-11T17:04:15.847Z",
       "hourUtc": 17,
@@ -936,6 +955,40 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-21-ia-code-eau-potable",
+      "at": "2026-08-21T16:52:34.830Z",
+      "hourUtc": 16,
+      "views": 125,
+      "reach": 111,
+      "avgWatchS": 9.7,
+      "retentionPct": 16,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-20-jeunes-emplois-ia",
+      "at": "2026-08-20T17:03:49.087Z",
+      "hourUtc": 17,
+      "views": 123,
+      "reach": 115,
+      "avgWatchS": 6.9,
+      "retentionPct": 12,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
       "settled": false
     },
     {
@@ -956,20 +1009,20 @@
       "settled": true
     },
     {
-      "slug": "2026-08-20-jeunes-emplois-ia",
-      "at": "2026-08-20T17:03:49.087Z",
-      "hourUtc": 17,
-      "views": 122,
-      "reach": 114,
-      "avgWatchS": 7,
-      "retentionPct": 12,
+      "slug": "2026-08-20-applis-surveillance-enfants",
+      "at": "2026-08-20T11:09:22.243Z",
+      "hourUtc": 11,
+      "views": 119,
+      "reach": 116,
+      "avgWatchS": 6.7,
+      "retentionPct": 11,
       "likes": 0,
       "comments": 1,
       "saved": 0,
       "shares": 0,
       "beat0": "veo",
       "themes": [],
-      "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
+      "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
       "settled": false
     },
     {
@@ -1005,23 +1058,6 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-20-applis-surveillance-enfants",
-      "at": "2026-08-20T11:09:22.243Z",
-      "hourUtc": 11,
-      "views": 117,
-      "reach": 114,
-      "avgWatchS": 6.7,
-      "retentionPct": 11,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
-      "settled": false
     },
     {
       "slug": "2026-08-18-robot-ami-des-enfants",
