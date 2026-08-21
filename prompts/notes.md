@@ -587,6 +587,11 @@ ENTRIES:
   banniere posee sur l'article, c'est une autre page. Un beat `screenshot` sur
   techcrunch peut donc publier une pub d'arnaque en plein Reel, et le fichier
   sortira COMPLIANT. Verifie `page.url()` apres le goto, ou prends un autre recu.
+  ET C'EST NEUF: le recu techcrunch du Reel du 14/08 (media/2026-08-14-trois-ia-
+  guerre-serveur/shot_tc_crop.png, encore sur disque) montre l'article propre,
+  titre, signature et chapo. Donc entre le 14 et le 21/08 la regie mobile de
+  techcrunch s'est mise a rediriger. Traite tout recu techcrunch comme un tirage
+  au sort tant que ca n'a pas ete remesure.
   MESURES DU MEME SOIR: gizmodo.com se gate (200, et il porte la reponse d'Oura
   que techcrunch n'a pas) mais NE SE CAPTURE PAS, la page meurt pendant la passe
   de consentement ("target page, context or browser has been closed"), deux fois:
