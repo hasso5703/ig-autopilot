@@ -170,7 +170,7 @@
     "title": "Une IA écrit le code qui attaque l'eau potable",
     "beats": [
       {
-        "script": "Une IA écrit le code qui attaque les stations d'eau potable. Ce n'est pas un scénario : c'est le FBI et la NSA qui le disent.",
+        "script": "Des pirates visent des stations d'eau potable, et le FBI dit qu'ils se font aider par une IA. Tu vois le problème.",
         "visual": {
           "type": "veo",
           "spec": {
@@ -183,7 +183,7 @@
         }
       },
       {
-        "script": "La cible, ce sont des boîtiers Siemens. Et la phrase qui fait peur n'est pas là. Elle est plus loin dans l'alerte.",
+        "script": "La cible, ce sont des boîtiers Siemens de la série S7. Et la phrase qui fait vraiment peur est plus loin dans l'alerte.",
         "visual": {
           "type": "screenshot",
           "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
