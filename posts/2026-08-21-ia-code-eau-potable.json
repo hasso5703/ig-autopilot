@@ -170,7 +170,7 @@
     "title": "Une IA écrit le code qui attaque l'eau potable",
     "beats": [
       {
-        "script": "Le FBI et la NSA préviennent : des pirates font écrire par une IA le code qui attaque les stations d'eau potable.",
+        "script": "Une IA écrit le code qui attaque les stations d'eau potable. Ce n'est pas un scénario : c'est le FBI et la NSA qui le disent.",
         "visual": {
           "type": "veo",
           "spec": {
@@ -186,7 +186,8 @@
         "script": "La cible, ce sont des boîtiers Siemens. Et la phrase qui fait peur n'est pas là. Elle est plus loin dans l'alerte.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a"
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
+          "file": "media/2026-08-21-ia-code-eau-potable/shot_1.png"
         }
       },
       {
@@ -201,7 +202,7 @@
         }
       },
       {
-        "script": "Ces boîtiers gris pilotent des machines physiques : l'énergie, l'eau, l'industrie, l'agriculture. Et les agences disent que les pirates les visent tous.",
+        "script": "Ces boîtiers gris pilotent des machines bien réelles : l'électricité, l'eau que tu bois, les usines, les fermes.",
         "visual": {
           "type": "card",
           "value": "AUTOMATES",
@@ -209,7 +210,7 @@
         }
       },
       {
-        "script": "Comment les pirates les trouvent ? Ils scannent Internet. Les boîtiers laissés en ligne, avec un vieux logiciel, sortent tout seuls de la liste.",
+        "script": "Comment ils les trouvent ? Ils scannent Internet, comme tu ferais une recherche. Les boîtiers laissés en ligne avec un vieux logiciel sortent tout seuls.",
         "visual": {
           "type": "image",
           "spec": {
@@ -233,7 +234,8 @@
         "script": "Siemens répond que ce ne sont pas de nouvelles failles, mais des installations mal configurées. Et l'agence répète le même conseil depuis des années : débranchez-les d'Internet.",
         "visual": {
           "type": "screenshot",
-          "url": "https://cyberscoop.com/hackers-use-ai-target-siemens-plcs-critical-infrastructure/"
+          "url": "https://cyberscoop.com/hackers-use-ai-target-siemens-plcs-critical-infrastructure/",
+          "file": "media/2026-08-21-ia-code-eau-potable/shot_6.png"
         }
       },
       {

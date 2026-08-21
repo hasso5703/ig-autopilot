@@ -154,7 +154,7 @@
     "title": "Une page web sur trois porte les tics d'une IA",
     "beats": [
       {
-        "script": "Une page web sur trois publiée depuis ChatGPT a été écrite, ou largement retouchée, par une IA. Et ça se repère.",
+        "script": "Une page web sur trois publiée depuis ChatGPT a été écrite, ou largement retouchée, par une IA. Et tu peux la repérer.",
         "visual": {
           "type": "veo",
           "spec": {
@@ -167,14 +167,15 @@
         }
       },
       {
-        "script": "C'est le Pew Research Center qui a compté. Presque un demi-million de pages web aspirées sur cinq ans, passées dans un détecteur.",
+        "script": "Le Pew Research Center a compté : presque un demi-million de pages web sur cinq ans, passées dans un détecteur.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/"
+          "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+          "file": "media/2026-08-21-web-ecrit-par-ia/shot_1.png"
         }
       },
       {
-        "script": "Sur tout le web, une page sur dix. Mais sur les pages nées après ChatGPT, une sur trois. La courbe monte depuis 2022.",
+        "script": "Sur tout le web, une page sur dix. Mais si tu ne gardes que les pages nées après ChatGPT, c'est une sur trois.",
         "visual": {
           "type": "card",
           "value": "10%",
@@ -182,7 +183,7 @@
         }
       },
       {
-        "script": "Alors comment on la repère ? Premier tic : ces longs traits plantés au milieu des phrases. Deux fois plus fréquents qu'en 2023.",
+        "script": "Alors comment tu la repères ? Premier tic : ces longs traits plantés au milieu des phrases. Deux fois plus fréquents qu'en 2023.",
         "visual": {
           "type": "image",
           "spec": {
@@ -207,11 +208,12 @@
         "script": "Sauf que non, un tiret ne prouve rien tout seul. Le Pew le dit lui-même : ses détecteurs se trompent, dans les deux sens.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.pewresearch.org/data-labs/2026/08/20/methodology-ai-content/"
+          "url": "https://www.pewresearch.org/data-labs/2026/08/20/methodology-ai-content/",
+          "file": "media/2026-08-21-web-ecrit-par-ia/shot_5.png"
         }
       },
       {
-        "script": "Et ce n'est pas partout pareil : une page sur dix en point com, dix fois moins sur les sites d'université et de l'État.",
+        "script": "Et selon l'endroit où tu lis, ce n'est pas pareil : une page sur dix en point com, dix fois moins sur les sites d'université et de l'État.",
         "visual": {
           "type": "card",
           "value": "1 SUR 10",
@@ -219,7 +221,7 @@
         }
       },
       {
-        "script": "Pendant ce temps, le passage des robots sur le web a dépassé celui des humains. Ces pages sont lues par des machines, et écrites par d'autres machines.",
+        "script": "Et pendant ce temps, le passage des robots sur le web a dépassé celui des humains. Des machines qui lisent des pages écrites par d'autres machines.",
         "visual": {
           "type": "photo",
           "query": "network server room",

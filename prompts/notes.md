@@ -640,6 +640,32 @@ ENTRIES:
   prochain run clone la branche par defaut, tout y est deja, et un ref de plus
   vers des commits deja dans main ne sauve rien (voir le 30/07). Meme traitement
   que le hook "Unverified": une ligne dans le rapport, et on passe.
+  Ajout 21/08 (06h30), QUATRE RECUS MESURES PAR LE SCOUT, HORS MOTEUR, ET
+  EPINGLES: le replica de screenshotOnce (meme contexte 430x932 dSF3, meme
+  `ctx.route` fulfill par fetch Node, meme `proxy`, memes deux passes de
+  consentement) tourne tres bien depuis le scratchpad A CONDITION d'importer
+  playwright par chemin ABSOLU (`/home/user/ig-autopilot/node_modules/playwright/
+  index.mjs`): l'ESM resout depuis le fichier importateur, pas depuis le cwd, donc
+  un script pose hors du depot rend ERR_MODULE_NOT_FOUND. Chromium est a
+  /opt/pw-browsers/chromium-1194/chrome-linux/chrome. Mesures du matin, une
+  capture a la fois (regle du 14/08): cisa.gov/news-events/cybersecurity-advisories/
+  <alerte> NOUVEAU, propre du PREMIER coup en 65 s, 3 frames au goto, zero pub,
+  zero banniere cookies, aucun recadrage: sceau CISA, "CYBERSECURITY ADVISORY",
+  titre entier, "Release Date", "Alert Code" ET le debut de l'executive summary
+  dans le cadre 9:16. pewresearch.org (data-labs et /methodology/) NOUVEAU,
+  propres du premier coup en 35 s et 39 s, 1 SEULE frame au goto, et ils
+  rejoignent epoch.ai (17/08), PubMed (08/08) et arxiv /abs (16/08) dans la
+  categorie "recu qui porte la preuve": le cadre tient le titre, les cinq
+  auteurs, la date ET les phrases chiffrees ("a random sample of 10,000
+  webpages", "490,000 pages", "an AI detection tool called Open Pangram").
+  cyberscoop.com NOUVEAU, propre aussi mais 7 frames au goto et 132 s (famille
+  O(frames) du 06/08, il SURVIT): masthead, rubrique THREATS, titre entier,
+  chapo, signature, date ET une photo d'automate en armoire; il garde en bas un
+  bandeau promo "Get our latest cybersecurity news first on Google / CLICK
+  HERE!" que les deux passes ne retirent pas, `crop=1290:2293:0:0` le coupe. Les
+  QUATRE passent le controle du 10/08 (le titre affiche EST l'histoire). Cout
+  total: 4 min et 0 $, et les quatre sont epingles avec `file`, donc le run de
+  publication ne capture plus rien (mecanique du 17/08).
 - 2026-08-01 · Le filtre "l'image montre quelque chose de l'histoire" compare
   des mots RACINISES (state.mjs tokens/stem), et la racine casse au pluriel:
   "spheres" donne "spher", "sphere" donne "sphere", donc un spec au pluriel ne
