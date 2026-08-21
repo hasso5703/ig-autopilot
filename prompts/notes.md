@@ -566,6 +566,17 @@ ENTRIES:
   The Verge et Ars Technica 403 (permanents), et Hacker News a rendu timeout
   dans feeds.mjs puis 200 / 10,3 ko au fetch Node 3 min plus tard, meme toux que
   le 14/08 et le 16/08: relance a la main tout flux marque FAIL.
+  Ajout 21/08 (16h30), CONTRE-EPREUVE A 9 H D'INTERVALLE SUR LE MEME DOSSIER:
+  cisa.gov/news-events/cybersecurity-advisories/aa26-231a, techcrunch.com et
+  cyberscoop.com se re-gatent du PREMIER coup en re-gate de publication (16
+  verifications sur 16, 0 erreur), 9 h apres le gate du scout. ET LES DEUX RECUS
+  EPINGLES HORS MOTEUR PAR LE SCOUT ONT TENU EN MOTEUR SANS UNE SEULE RECAPTURE:
+  le replica de screenshotOnce mesure le matin (entree du 21/08 06h30) donne donc
+  bien le fichier final, crop compris (crop=1290:2293:0:0 sur cyberscoop, qui
+  coupe son bandeau promo Google). Les deux passent le controle du 10/08, le
+  titre affiche EST l'histoire, et le build n'a attendu aucun reseau de capture:
+  COMPLIANT en 3 min 40 apres la narration. Un scout qui capture hors moteur et
+  epingle supprime donc la moitie lente du build, pas seulement la derive.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1640,6 +1651,19 @@ ENTRIES:
   ses 2 recus et sa carte sont gratuits. Zero still generee achetee. Un scout qui
   epingle supprime a la fois ~$0,50 de stills et la derive de classement
   Openverse mesuree le 07/08.
+  Ajout 21/08 (16h30), LE NOMBRE DE MOTS DU BEAT 0 DECIDE LA RESOLUTION ET LE PRIX
+  DU CLIP, et personne ne l'avait mesure des deux cotes le meme jour. Le moteur
+  achete 4, 6 ou 8 s pour tenir la duree du beat, et le 1080p n'arrive QU'A 8 s
+  (entree du 31/07). Or la duree du beat 0 est sa part des mots. Mesure des DEUX
+  Reels du 21/08, meme fenetre: beat 0 de 26 mots sur 214 -> 6,22 s -> clip 8 s
+  1080p a $0,96; beat 0 de 22 mots sur 209 -> 5,58 s -> clip 6 s 720p a $0,60,
+  donc agrandi 1,5x pour remplir le 1080x1920. Raccourcir l'attaque economise
+  $0,36 ET fait tomber en 720p le seul beat sur lequel se joue toute l'audition.
+  Le seuil est a 6 s de beat, soit environ 24 mots sur 210 a la fenetre actuelle:
+  si tu veux le 1080p natif, ecris le beat 0 au-dessus, en restant sous les ~8,6 s
+  ou la derniere image gele. A l'oeil, l'agrandissement ne se voit pas sur un
+  sujet macro peu texture (ici un boitier gris sur fond sombre); ne compte pas
+  dessus sur un plan detaille. Proof: journaux 10h30 et 16h30 du 21/08.
   Ajout 17/08 (16h30), LE PLAFOND JOURNALIER SE TOUCHE VITE QUAND UN BEAT 0 RESISTE:
   un Reel dont la pellicule refuse deux clips coute $3,57 a lui seul (3 x $0,96 de veo
   + 2 narrations + 5 stills), et la journee a fini a $5,19 sur un coupe-circuit a $6.
