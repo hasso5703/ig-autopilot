@@ -609,6 +609,19 @@ ENTRIES:
   Lance reel2.mjs en arriere-plan (run_in_background). Un build tue apres les
   achats ne perd rien: epingle tout ce qui est sur disque avec `file` et
   relance dans le MEME dossier, le rebuild du 05/08 a coute $0.
+  Ajout 21/08 (10h30), CE QUE LE SCOUT QUI EPINGLE FAIT GAGNER EN TEMPS, et
+  c'est la moitie de l'economie que les entrees du 08/08 et du 12/08 ne
+  comptaient qu'en dollars: un build A FROID (npm install, ffmpeg, venv Whisper
+  compris) dont les 4 recus/photos etaient DEJA epingles par le scout a rendu
+  COMPLIANT en ~5 min, et le run entier a publie 12 min apres son demarrage
+  (10h37 -> 10h49 UTC), 19 min apres le cron. Le manuel table sur ~25 min
+  jusqu'a media_publish et un atterrissage a +35 min: c'est le budget d'un run
+  qui CAPTURE ses recus (famille O(frames) du 06/08, ou un seul recu de presse
+  coute 8 a 12 min). Zero capture = zero attente reseau imprevisible. Mesure du
+  meme build: la venv Whisper ne coute plus 2 min mais 21 s pour le modele
+  large-v3-turbo (l'entree ci-dessus disait 2 min + 140 Mo). Consequence de
+  planification: un run de publication qui herite d'un spec entierement epingle
+  peut viser sa fenetre a 15 min pres; un run qui doit capturer ne le peut pas.
 - 2026-07-28 · Land state on main ONLY via `node src/land.mjs "msg" [paths]`.
   Local `main` is clone-time state, not truth; a checkout nearly erased
   posted.jsonl on 28/07. Never force-push, ever. Proof: run report 28/07.
