@@ -180,9 +180,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a small screen showing one large percentage figure",
-            "setting": "in a bright room in daylight",
-            "composition": "extreme close-up, the screen fills the entire frame"
+            "subject": "a laptop screen filled with a single column of heart rate numbers",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
           }
         }
       },

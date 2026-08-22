@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-22T10:55:11.900Z",
+  "at": "2026-08-22T16:42:01.422Z",
   "n": 50,
-  "nSettled": 43,
-  "medianViews": 197,
-  "medianRetentionPct": 21,
+  "nSettled": 44,
+  "medianViews": 196,
+  "medianRetentionPct": 20,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -23,7 +23,7 @@
     },
     {
       "slug": "2026-08-13-claude-marque-invisible",
-      "views": 1248,
+      "views": 1249,
       "retentionPct": 29,
       "saved": 4,
       "shares": 8,
@@ -31,7 +31,7 @@
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
-      "views": 1238,
+      "views": 1239,
       "retentionPct": 26,
       "saved": 4,
       "shares": 3,
@@ -39,7 +39,7 @@
     },
     {
       "slug": "2026-08-15-google-retire-filigrane",
-      "views": 1167,
+      "views": 1168,
       "retentionPct": 25,
       "saved": 2,
       "shares": 0,
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 29,
-      "medianViews": 353,
-      "meanRetentionPct": 26.5,
+      "n": 30,
+      "medianViews": 325,
+      "meanRetentionPct": 26,
       "saves": 43,
       "shares": 21,
       "thin": false
@@ -100,7 +100,7 @@
     "photo": {
       "n": 8,
       "medianViews": 179,
-      "meanRetentionPct": 19.8,
+      "meanRetentionPct": 19.9,
       "saves": 8,
       "shares": 2,
       "thin": false
@@ -158,9 +158,9 @@
       "thin": true
     },
     "11": {
-      "n": 5,
-      "medianViews": 353,
-      "meanRetentionPct": 14.8,
+      "n": 6,
+      "medianViews": 274,
+      "meanRetentionPct": 14.5,
       "saves": 4,
       "shares": 5,
       "thin": false
@@ -192,7 +192,7 @@
     "16": {
       "n": 5,
       "medianViews": 183,
-      "meanRetentionPct": 21.2,
+      "meanRetentionPct": 21.4,
       "saves": 7,
       "shares": 3,
       "thin": false
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 29,
+    "now": 31,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -247,11 +247,21 @@
         "published": [
           {
             "slug": "2026-08-08-virus-ecrits-par-une-ia",
-            "views": 1238
+            "views": 1239
           },
           {
             "slug": "2026-08-08-facture-ia-salaries",
             "views": 540
+          }
+        ]
+      },
+      {
+        "date": "2026-08-22",
+        "delta": 5,
+        "published": [
+          {
+            "slug": "2026-08-22-peau-humaine-vivante",
+            "views": 128
           }
         ]
       },
@@ -266,20 +276,6 @@
           {
             "slug": "2026-08-09-chatgpt-gratuit-illimite",
             "views": 183
-          }
-        ]
-      },
-      {
-        "date": "2026-08-19",
-        "delta": 3,
-        "published": [
-          {
-            "slug": "2026-08-19-avions-trainees",
-            "views": 288
-          },
-          {
-            "slug": "2026-08-19-pub-dans-chatgpt",
-            "views": 131
           }
         ]
       }
@@ -326,9 +322,9 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1248,
-      "reach": 1114,
-      "avgWatchS": 17.2,
+      "views": 1249,
+      "reach": 1115,
+      "avgWatchS": 17.1,
       "retentionPct": 29,
       "likes": 9,
       "comments": 1,
@@ -343,8 +339,8 @@
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "at": "2026-08-08T16:51:56.558Z",
       "hourUtc": 16,
-      "views": 1238,
-      "reach": 1110,
+      "views": 1239,
+      "reach": 1112,
       "avgWatchS": 15.6,
       "retentionPct": 26,
       "likes": 19,
@@ -360,8 +356,8 @@
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
-      "views": 1167,
-      "reach": 1044,
+      "views": 1168,
+      "reach": 1046,
       "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 7,
@@ -408,6 +404,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-21-ia-code-eau-potable",
+      "at": "2026-08-21T16:52:34.830Z",
+      "hourUtc": 16,
+      "views": 771,
+      "reach": 667,
+      "avgWatchS": 14.3,
+      "retentionPct": 24,
+      "likes": 6,
+      "comments": 1,
+      "saved": 11,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-14-trois-ia-guerre-serveur",
       "at": "2026-08-14T17:05:09.595Z",
       "hourUtc": 17,
@@ -425,6 +438,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-21-web-ecrit-par-ia",
+      "at": "2026-08-21T10:50:01.289Z",
+      "hourUtc": 10,
+      "views": 639,
+      "reach": 581,
+      "avgWatchS": 14,
+      "retentionPct": 23,
+      "likes": 5,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-08-facture-ia-salaries",
       "at": "2026-08-08T10:57:53.515Z",
       "hourUtc": 10,
@@ -440,25 +472,6 @@
       "themes": [],
       "sendTest": "Un ingénieur a dépensé 50 000 dollars d'IA en un mois. Son entreprise note maintenant chaque salarié sur ce que l'IA lui coûte.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-21-web-ecrit-par-ia",
-      "at": "2026-08-21T10:50:01.289Z",
-      "hourUtc": 10,
-      "views": 535,
-      "reach": 472,
-      "avgWatchS": 14.2,
-      "retentionPct": 24,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
-      "settled": false
     },
     {
       "slug": "2026-08-16-livres-ia-amazon",
@@ -532,23 +545,6 @@
       ],
       "sendTest": "Un type a caché un message en blanc sur blanc dans ses documents de justice, pour que l'IA lui donne raison. Le juge l'a vu.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-21-ia-code-eau-potable",
-      "at": "2026-08-21T16:52:34.830Z",
-      "hourUtc": 16,
-      "views": 385,
-      "reach": 327,
-      "avgWatchS": 12.5,
-      "retentionPct": 21,
-      "likes": 3,
-      "comments": 1,
-      "saved": 7,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
-      "settled": false
     },
     {
       "slug": "2026-08-12-metro-londres-visages",
@@ -752,9 +748,9 @@
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
       "views": 183,
-      "reach": 158,
-      "avgWatchS": 16.5,
-      "retentionPct": 27,
+      "reach": 159,
+      "avgWatchS": 16.6,
+      "retentionPct": 28,
       "likes": 5,
       "comments": 1,
       "saved": 0,
@@ -874,8 +870,8 @@
       "slug": "2026-08-11-google-ia-repond-faux",
       "at": "2026-08-11T17:04:15.847Z",
       "hourUtc": 17,
-      "views": 148,
-      "reach": 129,
+      "views": 149,
+      "reach": 130,
       "avgWatchS": 10.2,
       "retentionPct": 17,
       "likes": 2,
@@ -975,6 +971,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-22-peau-humaine-vivante",
+      "at": "2026-08-22T10:54:08.736Z",
+      "hourUtc": 10,
+      "views": 128,
+      "reach": 119,
+      "avgWatchS": 7,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 2,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-20-jeunes-emplois-ia",
       "at": "2026-08-20T17:03:49.087Z",
       "hourUtc": 17,
@@ -1023,7 +1036,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-01-penurie-memoire-samsung",
@@ -1109,23 +1122,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-22-peau-humaine-vivante",
-      "at": "2026-08-22T10:54:08.736Z",
-      "hourUtc": 10,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
