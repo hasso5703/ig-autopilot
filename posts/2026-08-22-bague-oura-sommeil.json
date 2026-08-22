@@ -167,10 +167,11 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a smooth metal smart ring standing upright, small green sensor lights glowing on its inner surface",
-            "action": "turning slowly on the spot, the ring staying whole and fully in frame the entire time",
+            "subject": "a smooth metal band standing upright, small green sensor lights glowing on its inner surface",
+            "action": "turning slowly on the spot, the band staying whole and fully in frame the entire time",
             "setting": "against a plain uncluttered background",
-            "composition": "extreme close-up, the ring fills the frame"
+            "composition": "extreme close-up, the band fills the frame",
+            "camera": "locked-off static shot, no camera movement, no zoom"
           }
         }
       },

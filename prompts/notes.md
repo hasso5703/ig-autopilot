@@ -1928,6 +1928,22 @@ ENTRIES:
   de tes diapos, pas de tes specs. Le test hors reseau du 15/08 (veoPrompt +
   promptIssues + simplicityIssues sur les 4 candidats) l'a attrape en 10 s,
   avant le gate et avant tout achat.
+  Ajout 22/08 (06h30), LE CONTROLE HORS RESEAU SE FAIT AUSSI SUR UN SPEC HERITE,
+  et c'est la variante qui coute le plus cher parce que personne ne pense a le
+  refaire. Le spec Oura banque la veille etait PASSED au gate, et son beat 0 veo
+  ("a smooth metal smart ring") serait mort en moteur sur `prompt names "Ring"`:
+  les citations portent "Oura Ring 5", donc Ring est dans extractForbidNames
+  (famille Pixel Watch du 12/08, mais sur le mot MEME du sujet). Le refus tombe
+  avant tout achat, donc $0, mais c'est un build entier et ~8 min pris sur la
+  fenetre de publication. Remede gratuit: le nom generique que le reste du spec
+  utilisait deja ("a smooth metal band"), accepte du premier coup. ET LE SECOND
+  DEFAUT TROUVE DANS LE MEME BEAT, regle du 17/08 16h30 non appliquee: humeur
+  `tension` + "extreme close-up, the X fills the frame" = dolly-in sur un sujet
+  qui remplit deja le cadre, donc gonflement hors cadre. Ajoute
+  `camera: "locked-off static shot, no camera movement, no zoom"`. REGLE POUR UN
+  SCOUT: passe veoPrompt/imagePrompt + promptIssues + simplicityIssues sur TOUS
+  les specs de la journee, y compris ceux qu'un run precedent a banques, ca coute
+  10 s et ca ne se voit ni au gate ni a l'oeil.
   Ajout 18/08 (10h30), LE CLAVIER GENERE EST UN CLAVIER WINDOWS, variante neuve
   de la famille "marque reelle dans une still" (Michelin 15/08, Augmentin
   08/08): le spec "a black keyboard with its keys lit from the side" + "macro
