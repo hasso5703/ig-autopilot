@@ -1072,7 +1072,25 @@ ENTRIES:
   BORD RIGIDE qui le tient dans le cadre (boite de Petri, cadre, boitier). La
   rotation sur place se re-confirme pour la QUATRIEME fois (12/08, 17/08 x2,
   22/08). Proof: run 10h30 22/08, veo_0 accepte du premier coup.
-- 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
+  Ajout 22/08 (16h30), LA STILL QUI INVENTE UN CHIFFRE, ET C'EST LA PIRE DE LA
+  FAMILLE "prose inventee" (01/08) PARCE QUE LE COMPTE PROMET QUE CHAQUE CHIFFRE
+  EST CITE. Le spec "a small screen showing one large percentage figure" a rendu
+  un panneau mural affichant **84%** en enorme, plein cadre pendant 3,7 s, sur
+  une actu dont tous les pourcentages reels sont 95, 79 et 53.18. Gate vert
+  (percentage et figure sont dans storyVocab), promptIssues vide,
+  simplicityIssues vide, COMPLIANT: SEUL le regard sur la frame l'attrape, et un
+  spectateur lit 84% comme un chiffre de l'histoire. REGLE: ne demande JAMAIS a
+  une still un chiffre ISOLE (a percentage figure, a large number, a score, a
+  rating) - le modele en invente un et il a l'air d'une affirmation. La recette
+  du 10/08 reste la bonne et elle marche parce qu'une COLONNE se lit comme de la
+  notation, pas comme un titre: remede accepte et rendu propre du premier coup,
+  "a laptop screen filled with a single column of heart rate numbers" + "on a
+  plain desk in soft even daylight" + "macro framing, the screen fills the entire
+  frame" (colonne 114...144, zero pourcentage, zero prose). Cout $0,1289 et un
+  rebuild gratuit (narration, alignement, veo et les 3 autres stills re-servis
+  par leur .key). Un chiffre sur une `card` vient de l'evidence; un chiffre dans
+  une still generee ne vient de nulle part. Proof: run 16h30 22/08, still_1
+  refuse puis rachete.
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
 - 2026-07-28 · techcrunch.com and prnewswire.com answer 503 to the session's
@@ -1760,6 +1778,13 @@ ENTRIES:
   ou la derniere image gele. A l'oeil, l'agrandissement ne se voit pas sur un
   sujet macro peu texture (ici un boitier gris sur fond sombre); ne compte pas
   dessus sur un plan detaille. Proof: journaux 10h30 et 16h30 du 21/08.
+  CONTRE-EPREUVE 22/08 (16h30), le seuil tient: beat 0 de 23 mots sur 210 ->
+  5,2 s -> clip 6 s 720p a $0,60. Donc ~24 mots sur 210 est bien la bascule, et
+  a 23 on la rate d'un mot. Sujet macro peu texture (une bague metallique sur
+  fond uni), l'agrandissement 1,5x ne se voit pas a l'oeil sur la frame rendue,
+  ca re-confirme la nuance du 21/08. Si tu heritez d'un spec de scout et que le
+  beat 0 est a 22-24 mots, sache que tu choisis la resolution du seul plan sur
+  lequel se joue l'audition: +2 mots coutent $0,36 et achetent le 1080p natif.
   Ajout 17/08 (16h30), LE PLAFOND JOURNALIER SE TOUCHE VITE QUAND UN BEAT 0 RESISTE:
   un Reel dont la pellicule refuse deux clips coute $3,57 a lui seul (3 x $0,96 de veo
   + 2 narrations + 5 stills), et la journee a fini a $5,19 sur un coupe-circuit a $6.
