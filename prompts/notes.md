@@ -1056,6 +1056,22 @@ ENTRIES:
   maximum sur une diapo stat, donc "11 milliards" (12) est refuse; mets le
   numeral nu dans `figure` et le mot de grandeur dans `unit`.
   Proof: gate 06h30 20/08, 5 erreurs au premier passage, 0 au second.
+  Ajout 22/08 (10h30), LA ROTATION SURVIT A UN SUJET MOU S'IL EST DANS UN
+  CONTENANT RIGIDE, et ca precise le "ABANDONNE LE PAPIER" du 17/08 16h30 au
+  lieu de le contredire. Ce qui avait bouilli ce jour-la etait une feuille NUE
+  posee sur une table: Veo lui inventait une physique de tissu des qu'elle
+  tournait. Mesure de ce matin, dossier peau vivante, PREMIER coup, $0,96,
+  pellicule 8 vignettes lue: subject "a small round piece of pale human tissue
+  resting in a shallow glass dish of clear liquid" + action "turning slowly on
+  the spot, the piece of tissue staying whole and fully in frame the entire
+  time" + camera "locked-off static shot, no camera movement, no zoom" +
+  composition "macro framing, the dish fills the entire frame". Meme objet, meme
+  taille, present a la 8e vignette, zero deformation; le liquide ondule, ce qui
+  est la bonne physique et fabrique en prime l'action non resolue. La regle
+  utile n'est donc pas "jamais de sujet mou" mais: un sujet mou a besoin d'un
+  BORD RIGIDE qui le tient dans le cadre (boite de Petri, cadre, boitier). La
+  rotation sur place se re-confirme pour la QUATRIEME fois (12/08, 17/08 x2,
+  22/08). Proof: run 10h30 22/08, veo_0 accepte du premier coup.
 - 2026-07-28 · Start every publish run with `node src/publish.mjs recent` vs
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
@@ -2365,6 +2381,12 @@ ENTRIES:
   recupere masthead + titre + chapo dans les 1686 px, sans recadrage. Sur un
   article de presse le scroll au h1 reste le bon comportement (le titre est sous
   le chrome); c'est sur les pages produit/vitrine qu'il coute la source.
+  CONTRE-EPREUVE AU RENDU, 22/08 (10h30): les DEUX recus outerbio epingles le
+  matin par le scout (scrollTo(0,0) hors moteur) sortent du Reel fini avec le
+  masthead "OUTER-BIO" LISIBLE dans le cadre, mesure sur les frames a 9,5 s et
+  20 s. Le remede du scout tient donc jusqu'au fichier publie, et pas seulement
+  jusqu'au png: sur une page vitrine, capturer hors moteur et epingler est le
+  seul chemin qui garde l'identite de la source a l'ecran.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
@@ -2547,3 +2569,15 @@ ENTRIES:
   ressemble a un probleme reseau et n'en est pas. Nettoie: `| tr -d '"' | xargs`,
   puis verifie en 1 s que le SHA est servi:
   `curl -sS -o /dev/null -w "%{http_code}\n" -r 0-1024 "$URL"` (206 attendu).
+  (3) Ajout 22/08 (10h30), LE PIEGE QUI FRAPPE AU PIRE MOMENT, entre le Reel
+  publie et le record landed: `recordPosted` EXIGE `title`, et aussi `url` et
+  `source`, pas seulement { slug, mediaId, permalink, durationS }. L'etape 10 du
+  manuel ne cite que `durationS`, donc on ecrit l'appel de memoire et il JETTE
+  ("`title` is required - the fingerprint and tokens are derived from it") une
+  fois le post deja en ligne. Rien n'est perdu (l'appel est atomique, il suffit
+  de le relancer complet) mais c'est un aller-retour pendant la seule minute ou
+  le compte porte un post que le registre ne connait pas. Copie la forme depuis
+  `tail -1 state/posted.jsonl` AVANT de publier: { slug, mediaId, permalink,
+  url, title, source, reel:true, sources:[...], durationS }. Le `title` est le
+  titre ANGLAIS de la source, c'est lui qui fabrique le fingerprint qui empeche
+  filterFresh de reproposer l'histoire. Proof: run 10h30 22/08.

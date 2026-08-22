@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-22T06:41:29.716Z",
-  "n": 49,
+  "at": "2026-08-22T10:55:11.900Z",
+  "n": 50,
   "nSettled": 43,
   "medianViews": 197,
   "medianRetentionPct": 21,
@@ -31,7 +31,7 @@
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
-      "views": 1237,
+      "views": 1238,
       "retentionPct": 26,
       "saved": 4,
       "shares": 3,
@@ -191,7 +191,7 @@
     },
     "16": {
       "n": 5,
-      "medianViews": 182,
+      "medianViews": 183,
       "meanRetentionPct": 21.2,
       "saves": 7,
       "shares": 3,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 28,
+    "now": 29,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -247,7 +247,7 @@
         "published": [
           {
             "slug": "2026-08-08-virus-ecrits-par-une-ia",
-            "views": 1237
+            "views": 1238
           },
           {
             "slug": "2026-08-08-facture-ia-salaries",
@@ -265,7 +265,7 @@
           },
           {
             "slug": "2026-08-09-chatgpt-gratuit-illimite",
-            "views": 182
+            "views": 183
           }
         ]
       },
@@ -343,7 +343,7 @@
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "at": "2026-08-08T16:51:56.558Z",
       "hourUtc": 16,
-      "views": 1237,
+      "views": 1238,
       "reach": 1110,
       "avgWatchS": 15.6,
       "retentionPct": 26,
@@ -442,6 +442,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-21-web-ecrit-par-ia",
+      "at": "2026-08-21T10:50:01.289Z",
+      "hourUtc": 10,
+      "views": 535,
+      "reach": 472,
+      "avgWatchS": 14.2,
+      "retentionPct": 24,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-16-livres-ia-amazon",
       "at": "2026-08-16T10:59:40.165Z",
       "hourUtc": 10,
@@ -515,22 +534,20 @@
       "settled": true
     },
     {
-      "slug": "2026-08-21-web-ecrit-par-ia",
-      "at": "2026-08-21T10:50:01.289Z",
-      "hourUtc": 10,
-      "views": 386,
-      "reach": 316,
-      "avgWatchS": 13.9,
-      "retentionPct": 23,
-      "likes": 2,
+      "slug": "2026-08-21-ia-code-eau-potable",
+      "at": "2026-08-21T16:52:34.830Z",
+      "hourUtc": 16,
+      "views": 385,
+      "reach": 327,
+      "avgWatchS": 12.5,
+      "retentionPct": 21,
+      "likes": 3,
       "comments": 1,
-      "saved": 0,
+      "saved": 7,
       "shares": 0,
       "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
+      "themes": [],
+      "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
       "settled": false
     },
     {
@@ -676,23 +693,6 @@
       "settled": true
     },
     {
-      "slug": "2026-08-21-ia-code-eau-potable",
-      "at": "2026-08-21T16:52:34.830Z",
-      "hourUtc": 16,
-      "views": 203,
-      "reach": 172,
-      "avgWatchS": 9.2,
-      "retentionPct": 15,
-      "likes": 3,
-      "comments": 1,
-      "saved": 2,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
       "at": "2026-08-10T23:02:26.507Z",
       "hourUtc": 23,
@@ -751,7 +751,7 @@
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
-      "views": 182,
+      "views": 183,
       "reach": 158,
       "avgWatchS": 16.5,
       "retentionPct": 27,
@@ -1109,6 +1109,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-22-peau-humaine-vivante",
+      "at": "2026-08-22T10:54:08.736Z",
+      "hourUtc": 10,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
