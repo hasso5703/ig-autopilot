@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-22T16:42:01.422Z",
-  "n": 50,
-  "nSettled": 44,
-  "medianViews": 196,
+  "at": "2026-08-22T19:39:52.160Z",
+  "n": 51,
+  "nSettled": 45,
+  "medianViews": 194,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 30,
-      "medianViews": 325,
-      "meanRetentionPct": 26,
+      "n": 31,
+      "medianViews": 296,
+      "meanRetentionPct": 25.6,
       "saves": 43,
       "shares": 21,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": false
     },
     "17": {
-      "n": 13,
-      "medianViews": 191,
-      "meanRetentionPct": 27,
+      "n": 14,
+      "medianViews": 183,
+      "meanRetentionPct": 25.9,
       "saves": 14,
       "shares": 11,
       "thin": false
@@ -262,6 +262,10 @@
           {
             "slug": "2026-08-22-peau-humaine-vivante",
             "views": 128
+          },
+          {
+            "slug": "2026-08-22-bague-oura-sommeil",
+            "views": 117
           }
         ]
       },
@@ -407,10 +411,10 @@
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
-      "views": 771,
-      "reach": 667,
-      "avgWatchS": 14.3,
-      "retentionPct": 24,
+      "views": 855,
+      "reach": 740,
+      "avgWatchS": 14.1,
+      "retentionPct": 23,
       "likes": 6,
       "comments": 1,
       "saved": 11,
@@ -441,13 +445,13 @@
       "slug": "2026-08-21-web-ecrit-par-ia",
       "at": "2026-08-21T10:50:01.289Z",
       "hourUtc": 10,
-      "views": 639,
-      "reach": 581,
-      "avgWatchS": 14,
+      "views": 675,
+      "reach": 609,
+      "avgWatchS": 14.1,
       "retentionPct": 23,
-      "likes": 5,
+      "likes": 6,
       "comments": 1,
-      "saved": 0,
+      "saved": 1,
       "shares": 0,
       "beat0": "veo",
       "themes": [
@@ -1002,7 +1006,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
@@ -1071,6 +1075,25 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-22-bague-oura-sommeil",
+      "at": "2026-08-22T16:55:58.251Z",
+      "hourUtc": 16,
+      "views": 117,
+      "reach": 108,
+      "avgWatchS": 10.9,
+      "retentionPct": 18,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
+      "settled": false
     },
     {
       "slug": "2026-08-18-robot-ami-des-enfants",
