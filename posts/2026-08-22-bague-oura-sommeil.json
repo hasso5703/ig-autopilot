@@ -175,7 +175,7 @@
         }
       },
       {
-        "script": "Parce que ce chiffre n'est pas une mesure. C'est une estimation calculée par une IA.",
+        "script": "Parce que ce chiffre n'est pas une mesure. C'est une estimation faite par une IA.",
         "visual": {
           "type": "image",
           "spec": {
@@ -194,7 +194,7 @@
         }
       },
       {
-        "script": "Sauf que dans une bague, il n'y a ni capteur du cerveau, ni capteur des yeux. Des petites lumières, un capteur de température, un capteur de mouvement.",
+        "script": "Sauf que dans une bague, il n'y a ni capteur du cerveau, ni capteur des yeux. Des lumières, un capteur de température, un capteur de mouvement.",
         "visual": {
           "type": "image",
           "spec": {
@@ -217,11 +217,13 @@
         "visual": {
           "type": "photo",
           "query": "electroencephalography",
+          "file": "media/2026-08-22-bague-oura-sommeil/photo_5.jpg",
+          "credit": "Flexagoon · CC0",
           "alt": "Un casque à électrodes posé sur la tête d'un volontaire, pendant un enregistrement de l'activité du cerveau"
         }
       },
       {
-        "script": "Oura conteste tout et dit qu'elle se défendra. Selon la marque, ses phases de sommeil ont été validées par plusieurs études.",
+        "script": "Oura conteste tout et dit qu'elle se défendra. Selon la marque, ses phases de sommeil ont été validées.",
         "visual": {
           "type": "image",
           "spec": {
@@ -232,7 +234,7 @@
         }
       },
       {
-        "script": "Et ça touche du monde. La plainte compte plus de 5.5 millions de bagues vendues, dont près de 3 millions rien qu'en 2025.",
+        "script": "Et ça touche du monde: plus de 5.5 millions de bagues vendues, dont près de 3 millions rien qu'en 2025.",
         "visual": {
           "type": "card",
           "value": "5.5 M",
@@ -240,7 +242,7 @@
         }
       },
       {
-        "script": "Rien n'est jugé, ce sont des accusations. Mais demain matin, quand ta bague t'annonce une mauvaise nuit, rappelle-toi que personne ne t'a mesuré. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Rien n'est jugé: ce sont des accusations. Mais demain matin, quand ta bague t'annonce une mauvaise nuit, rappelle-toi que personne ne t'a mesuré. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "image",
           "spec": {

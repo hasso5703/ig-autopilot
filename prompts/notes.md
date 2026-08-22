@@ -611,6 +611,26 @@ ENTRIES:
   de securite routiere americaine est ingatable. Openverse a rendu 503 deux fois
   vers 20h puis remarche 20 min apres (toux, pas blocage); Commons repondait
   pendant ce temps.
+  Ajout 22/08 (06h30), dossier Outer Bio: outerbio.com rend 200 au fetch gate et
+  se gate DU PREMIER COUP sur ses quatre chemins (/, /technology, /data-and-ai,
+  /tissue-supply-chain), 12 verifications sur 12, 0 erreur, en meme temps que
+  techcrunch.com (re-confirme, 200). MAIS IL S'ETRANGLE VITE, et la signature
+  trompe: apres une dizaine de fetchs rapproches il rend 503 avec un corps aplati
+  de 582 OCTETS, donc la citation revient MISS et on croit avoir mal recopie. Il
+  repart tout seul en ~2 min. Sur un petit site d'entreprise, espace les fetchs et
+  relance avant de suspecter ta citation (famille de la toux du 06/08, mais causee
+  par TOI). REFLEXE RE-CONFIRME sur une actu d'entreprise: le site de la boite est
+  a la fois le primaire, le recu le plus leger ET le recu qui porte la preuve
+  (categorie epoch.ai 17/08): /data-and-ai affiche "rapid compound screening made
+  possible by machine learning" et "750m compounds screened annually" dans le
+  cadre, /tissue-supply-chain affiche le titre et le debut du texte de don de
+  tissu. Les deux se capturent en ~52 s, 1 SEULE frame au goto, zero pub, zero
+  banniere cookies, aucun recadrage. ATTENTION CORROBORATION, et c'est la limite
+  du dossier: TechCrunch a interviewe l'entreprise et le site est l'entreprise,
+  donc deux domaines verts attestent "l'entreprise dit x", pas deux lectures
+  independantes; le prepint bioRxiv lie en haut de outerbio.com est le seul
+  artefact exterieur et biorxiv rend 429 (07 au 22/08). Dis-le dans le rapport et
+  attribue dans le script.
   Ajout 21/08 (19h30), DEUX PIEGES D'OUTILLAGE QUI COUTENT 15 MIN CHACUN.
   (1) Une capture tuee par `timeout` laisse des process chrome vivants, et le
   LANCEMENT SUIVANT se bloque indefiniment sans afficher une seule ligne:
@@ -2313,7 +2333,23 @@ ENTRIES:
   landmark trial to test AI-driven contrail avoidance" + une vraie photo d'avion+trainee),
   0 pub, 0 banniere, titre = histoire (controle du 10/08). greenair reste une SOURCE
   gatable dans la legende, jamais un recu.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08.
+  Ajout 22/08 (06h30), LE BUDGET REEL D'UN RECU, mesure dans le code et pas a
+  l'oeil, et ca change comment on recadre: segmentFromScreenshot met la capture a
+  880 px de large PUIS la coupe a 1150 px de haut. Une capture 1290x2796 est donc
+  reduite d'un facteur 0,682, et LA CARTE NE MONTRE QUE SES ~1686 PREMIERS
+  PIXELS. Tout ce qui est plus bas n'existe pas pour le spectateur. Donc ne juge
+  pas un recu sur le 9:16 (2293 px) ni sur la capture entiere: regarde
+  `crop=1290:1686:0:0` avant d'epingler, c'est exactement le cadre. ET LE
+  COROLLAIRE QUI SAUVE L'IDENTITE DE LA SOURCE: screenshotOnce finit par
+  `h1.scrollIntoView({block:'start'}) + scrollBy(0,-96)`, et sur un site vitrine
+  dont le h1 est deja pres du haut, ce scroll passe SOUS le logo. Mesure du jour
+  sur outerbio.com/data-and-ai: la capture moteur commence a "Data & AI", masthead
+  hors cadre, donc un recu propre qui ne dit pas de qui il est. Un scout qui
+  capture hors moteur remplace ces deux lignes par `window.scrollTo(0,0)` et
+  recupere masthead + titre + chapo dans les 1686 px, sans recadrage. Sur un
+  article de presse le scroll au h1 reste le bon comportement (le titre est sous
+  le chrome); c'est sur les pages produit/vitrine qu'il coute la source.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un

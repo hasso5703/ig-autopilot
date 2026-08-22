@@ -1,0 +1,264 @@
+{
+  "slug": "2026-08-22-peau-humaine-vivante",
+  "centralClaim": "Outer Bio keeps human skin tissue alive for weeks.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+      "quote": "Outer Biosciences' system meanwhile keeps tissue alive for up to a month"
+    },
+    {
+      "url": "https://outerbio.com/",
+      "quote": "we pair machine learning with full-thickness human skin that stays alive for weeks"
+    }
+  ],
+  "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
+  "caption": "Ta prochaine crème sera mise au point sur de la peau humaine gardée vivante un mois.\n\nOuter Bio, une société américaine cofondée par Michael Polansky, récupère de la peau qui serait jetée après une opération, surtout de la chirurgie esthétique, et la maintient en vie hors du corps. Le standard du secteur tient environ une semaine. Chez eux, la page technique affiche 30 jours et plus.\n\nCe que fait l'IA. Un modèle prédit quelles molécules jamais testées devraient agir sur une fonction précise de la peau. Ces molécules sont ensuite posées sur le tissu vivant. Le résultat, bon ou mauvais, retourne dans le modèle et améliore la prédiction suivante. L'entreprise dit passer au crible environ 750 millions de molécules par an.\n\nLe détail qui n'est pas dans la vidéo. Avant l'IA, cette approche sortait quelques pistes en 18 mois. Aujourd'hui, un nouveau candidat toutes les six semaines, et six pistes en cours. Quatre d'entre elles devraient aller jusqu'à la commercialisation. Outer Bio ne vendra pas de crème: elle vend l'ingrédient à des marques de beauté ou de pharmacie, qui le mettront dans leurs propres produits, sous leur propre nom.\n\nÀ nuancer, et c'est le point important. Tout cela vient de l'entreprise elle-même, dans un entretien à TechCrunch. Au bout de 30 jours, ce tissu ressemble beaucoup à celui du premier jour, mais il n'est pas identique. Et il s'agit d'ingrédients cosmétiques, pas de médicaments.\n\nTu accepterais que ta crème soit mise au point sur de la peau humaine donnée, oui ou non ?\n\ntechcrunch.com · outerbio.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Peau #Beaute",
+  "captionEvidence": [
+    {
+      "url": "https://outerbio.com/technology",
+      "quote": "ex vivo tissue lifespan days 1 10 20 30 conventional ex vivo skin: ~1 week outer bio: 30+ days"
+    },
+    {
+      "url": "https://outerbio.com/data-and-ai",
+      "quote": "Our foundation model can computationally pre-screen approximately 750 million compounds a year, increasing speed and efficiency of novel active compounds discovery."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+      "quote": "That phase produced a couple of leads over about 18 months, but with AI layered in, the company is now generating a new candidate roughly every six weeks, with six leads currently active in its pipeline"
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+      "quote": "in plainer English, that means that 30-day-old tissue cared for by the company looks a lot like day-one tissue, but it isn't fully indistinguishable from it"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Outer Bio · biotechnologie",
+      "headline": "Outer Bio garde de la peau humaine *vivante* hors du corps",
+      "hero": {
+        "value": "30",
+        "label": "jours de survie du tissu, contre environ une semaine ailleurs"
+      },
+      "swipe": "Ce que fait l'IA dessus"
+    },
+    {
+      "type": "stat",
+      "figure": "30",
+      "unit": "jours de peau humaine vivante",
+      "body": "La page technique de l'entreprise place le standard du secteur à **environ une semaine**, et le sien à trente jours et plus.",
+      "evidence": "ex vivo tissue lifespan days 1 10 20 30 conventional ex vivo skin: ~1 week outer bio: 30+ days",
+      "source": {
+        "name": "Outer Bio",
+        "url": "https://outerbio.com/technology",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi ils en sont là",
+      "body": "Les substituts habituels, animaux et **cultures de cellules**, remplacent mal un vrai organe humain. Alors l'entreprise récupère de la peau qui serait jetée après une opération.",
+      "evidence": "the proxies scientists rely on instead - animal models, simplified cell cultures, lab-grown organoids - are poor stand-ins for how a real human organ behaves. so outer biosciences took a different approach. instead of engineering a synthetic organ, the company sources human skin that would otherwise be discarded after surgery",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La boucle que fait l'IA",
+      "body": "Le modèle prédit quelles molécules jamais testées devraient agir sur la peau. On les pose sur le tissu vivant. **Le résultat revient dans le modèle**, juste ou faux.",
+      "evidence": "An AI model predicts which untested chemicals are likely to have a beneficial effect on a specific skin function. Those chemicals get run through the living-tissue system. Then the results, whether the prediction was right or wrong, get fed back into the model, improving the next round of guesses.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "750",
+      "unit": "millions de molécules triées par an",
+      "body": "C'est ce que l'entreprise annonce sur sa propre page: son modèle **pré-trie** ce volume de composés chaque douze mois.",
+      "evidence": "Our foundation model can computationally pre-screen approximately 750 million compounds a year, increasing speed and efficiency of novel active compounds discovery.",
+      "source": {
+        "name": "Outer Bio",
+        "url": "https://outerbio.com/data-and-ai",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que ça a changé sur le rythme",
+      "body": "Avant l'IA, cette approche sortait quelques pistes en **18 mois**. Depuis, un nouveau candidat environ toutes les six semaines, et six pistes en cours.",
+      "evidence": "That phase produced a couple of leads over about 18 months, but with AI layered in, the company is now generating a new candidate roughly every six weeks, with six leads currently active in its pipeline",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'échelle du terrain de jeu",
+      "body": "Aux États-Unis, dans les produits de peau vendus sans ordonnance, seuls **120 à 130** ingrédients actifs sont autorisés. Avec les ingrédients cosmétiques documentés, on approche 200.",
+      "evidence": "only about 120 to 130 active ingredients are approved. Add cosmetic ingredients backed by actual research, says Polansky, and that number is closer to 200.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que dit l'entreprise",
+      "claim": "Au bout de trente jours, le tissu garde l'architecture et les programmes moléculaires du premier jour.",
+      "caveatLabel": "Ce que ça veut dire en clair",
+      "caveat": "Il ressemble beaucoup à celui du premier jour. Il n'est pas identique pour autant.",
+      "evidence": "in plainer English, that means that 30-day-old tissue cared for by the company looks a lot like day-one tissue, but it isn't fully indistinguishable from it",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où ça finit",
+      "body": "Quatre des six pistes en cours devraient aller jusqu'à la vente. L'entreprise **ne fera pas de crème**: elle vend l'ingrédient à des marques qui le mettent sous leur propre nom.",
+      "evidence": "Already, four of Outer Biosciences' six current leads look likely to reach commercialization, Polansky says.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui achète des crèmes",
+      "sub": "Ce que l'IA change dans la vraie vie."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+      "accessed": "2026-08-22"
+    },
+    {
+      "name": "Outer Bio",
+      "url": "https://outerbio.com/",
+      "accessed": "2026-08-22"
+    },
+    {
+      "name": "Outer Bio",
+      "url": "https://outerbio.com/technology",
+      "accessed": "2026-08-22"
+    },
+    {
+      "name": "Outer Bio",
+      "url": "https://outerbio.com/data-and-ai",
+      "accessed": "2026-08-22"
+    },
+    {
+      "name": "Outer Bio",
+      "url": "https://outerbio.com/tissue-supply-chain",
+      "accessed": "2026-08-22"
+    }
+  ],
+  "reel2": {
+    "mood": "steady",
+    "lang": "fr",
+    "title": "Cette peau humaine est vivante depuis 30 jours",
+    "beats": [
+      {
+        "script": "Ta prochaine crème sera testée sur de la peau humaine encore vivante. Une société américaine, Outer Bio, la garde en vie un mois entier, hors du corps.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a small round piece of pale human tissue resting in a shallow glass dish of clear liquid",
+            "action": "turning slowly on the spot, the piece of tissue staying whole and fully in frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "on a plain uncluttered bench",
+            "composition": "macro framing, the dish fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et ce n'est plus un chimiste qui choisit quoi mettre dessus. C'est une IA. Tu sais pourquoi ?",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://outerbio.com/data-and-ai",
+          "file": "media/2026-08-22-peau-humaine-vivante/shot_1.png"
+        }
+      },
+      {
+        "script": "Parce qu'on n'a pas le droit de tester un produit sur toi pendant des semaines. Donc on teste sur des animaux et des cellules.",
+        "visual": {
+          "type": "photo",
+          "query": "well cell culture plates",
+          "file": "media/2026-08-22-peau-humaine-vivante/photo_2.jpg",
+          "credit": "Diane A. Reid (Photographer) · Public domain",
+          "alt": "Des plaques de culture cellulaire à puits multiples, posées sur une paillasse de laboratoire"
+        }
+      },
+      {
+        "script": "Sauf que ça ne réagit pas comme de la vraie peau. Alors Outer Bio récupère la peau jetée après une chirurgie, et la maintient vivante.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://outerbio.com/tissue-supply-chain",
+          "file": "media/2026-08-22-peau-humaine-vivante/shot_3.png"
+        }
+      },
+      {
+        "script": "Son IA trie environ 750 millions de molécules par an. Les meilleures finissent sur cette peau, et le résultat revient nourrir l'IA.",
+        "visual": {
+          "type": "card",
+          "value": "750 M",
+          "label": "de composés pré-triés par le modèle en une année"
+        }
+      },
+      {
+        "script": "Avant l'IA, ils sortaient quelques pistes en 18 mois. Maintenant, une nouvelle toutes les six semaines.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of compound screening numbers",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Aux États-Unis, dans les produits de peau vendus sans ordonnance, seuls 120 à 130 ingrédients actifs sont autorisés.",
+        "visual": {
+          "type": "card",
+          "value": "120 à 130",
+          "label": "ingrédients actifs autorisés, sans ordonnance, aux États-Unis"
+        }
+      },
+      {
+        "script": "Sauf que tout ça, c'est l'entreprise qui le raconte. Au bout de trente jours, cette peau ressemble beaucoup au premier jour, sans être identique.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed compound screening report page filled with columns of numbers",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Quatre de leurs six candidats devraient finir dans des produits. Mais Outer Bio vend l'ingrédient à des marques: tu ne sauras jamais lequel tu achètes. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "person applies cream skin jar",
+          "file": "media/2026-08-22-peau-humaine-vivante/photo_8.jpg",
+          "credit": "Shixart1985 · CC BY",
+          "alt": "Une main qui prend de la crème dans un pot, en gros plan"
+        }
+      }
+    ]
+  }
+}

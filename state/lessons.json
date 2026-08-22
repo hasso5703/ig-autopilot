@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-21T19:40:32.641Z",
+  "at": "2026-08-22T06:41:29.716Z",
   "n": 49,
   "nSettled": 43,
   "medianViews": 197,
@@ -65,7 +65,7 @@
     },
     {
       "slug": "2026-08-18-robot-ami-des-enfants",
-      "views": 113,
+      "views": 116,
       "retentionPct": 13,
       "saved": 0,
       "shares": 0,
@@ -100,7 +100,7 @@
     "photo": {
       "n": 8,
       "medianViews": 179,
-      "meanRetentionPct": 19.6,
+      "meanRetentionPct": 19.8,
       "saves": 8,
       "shares": 2,
       "thin": false
@@ -133,7 +133,7 @@
     },
     "models": {
       "n": 4,
-      "medianViews": 322,
+      "medianViews": 323,
       "meanRetentionPct": 35.5,
       "saves": 9,
       "shares": 1,
@@ -152,7 +152,7 @@
     "10": {
       "n": 4,
       "medianViews": 429,
-      "meanRetentionPct": 23,
+      "meanRetentionPct": 23.3,
       "saves": 4,
       "shares": 2,
       "thin": true
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 26,
+    "now": 28,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -275,11 +275,11 @@
         "published": [
           {
             "slug": "2026-08-19-avions-trainees",
-            "views": 286
+            "views": 288
           },
           {
             "slug": "2026-08-19-pub-dans-chatgpt",
-            "views": 128
+            "views": 131
           }
         ]
       }
@@ -515,6 +515,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-21-web-ecrit-par-ia",
+      "at": "2026-08-21T10:50:01.289Z",
+      "hourUtc": 10,
+      "views": 386,
+      "reach": 316,
+      "avgWatchS": 13.9,
+      "retentionPct": 23,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-12-metro-londres-visages",
       "at": "2026-08-12T10:57:49.864Z",
       "hourUtc": 10,
@@ -641,9 +660,9 @@
       "slug": "2026-08-19-avions-trainees",
       "at": "2026-08-19T17:07:45.947Z",
       "hourUtc": 17,
-      "views": 286,
-      "reach": 262,
-      "avgWatchS": 51.7,
+      "views": 288,
+      "reach": 263,
+      "avgWatchS": 51.6,
       "retentionPct": 86,
       "likes": 2,
       "comments": 1,
@@ -655,6 +674,23 @@
       ],
       "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-21-ia-code-eau-potable",
+      "at": "2026-08-21T16:52:34.830Z",
+      "hourUtc": 16,
+      "views": 203,
+      "reach": 172,
+      "avgWatchS": 9.2,
+      "retentionPct": 15,
+      "likes": 3,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
+      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -835,25 +871,6 @@
       "settled": true
     },
     {
-      "slug": "2026-08-21-web-ecrit-par-ia",
-      "at": "2026-08-21T10:50:01.289Z",
-      "hourUtc": 10,
-      "views": 151,
-      "reach": 128,
-      "avgWatchS": 11.4,
-      "retentionPct": 19,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-11-google-ia-repond-faux",
       "at": "2026-08-11T17:04:15.847Z",
       "hourUtc": 17,
@@ -907,6 +924,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-19-pub-dans-chatgpt",
+      "at": "2026-08-19T10:54:09.002Z",
+      "hourUtc": 10,
+      "views": 131,
+      "reach": 118,
+      "avgWatchS": 7.9,
+      "retentionPct": 13,
+      "likes": 2,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-12-montre-tension-google",
       "at": "2026-08-12T17:14:27.717Z",
       "hourUtc": 17,
@@ -941,46 +975,12 @@
       "settled": true
     },
     {
-      "slug": "2026-08-19-pub-dans-chatgpt",
-      "at": "2026-08-19T10:54:09.002Z",
-      "hourUtc": 10,
-      "views": 128,
-      "reach": 117,
-      "avgWatchS": 7.3,
-      "retentionPct": 12,
-      "likes": 2,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
-      "settled": true
-    },
-    {
-      "slug": "2026-08-21-ia-code-eau-potable",
-      "at": "2026-08-21T16:52:34.830Z",
-      "hourUtc": 16,
-      "views": 125,
-      "reach": 111,
-      "avgWatchS": 9.7,
-      "retentionPct": 16,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-20-jeunes-emplois-ia",
       "at": "2026-08-20T17:03:49.087Z",
       "hourUtc": 17,
-      "views": 123,
-      "reach": 115,
-      "avgWatchS": 6.9,
+      "views": 126,
+      "reach": 117,
+      "avgWatchS": 7.1,
       "retentionPct": 12,
       "likes": 0,
       "comments": 1,
@@ -1012,10 +1012,10 @@
       "slug": "2026-08-20-applis-surveillance-enfants",
       "at": "2026-08-20T11:09:22.243Z",
       "hourUtc": 11,
-      "views": 119,
-      "reach": 116,
-      "avgWatchS": 6.7,
-      "retentionPct": 11,
+      "views": 122,
+      "reach": 117,
+      "avgWatchS": 7.6,
+      "retentionPct": 13,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -1063,9 +1063,9 @@
       "slug": "2026-08-18-robot-ami-des-enfants",
       "at": "2026-08-18T17:06:46.056Z",
       "hourUtc": 17,
-      "views": 113,
-      "reach": 109,
-      "avgWatchS": 7.6,
+      "views": 116,
+      "reach": 110,
+      "avgWatchS": 7.8,
       "retentionPct": 13,
       "likes": 1,
       "comments": 1,
