@@ -1,0 +1,218 @@
+{
+  "slug": "2026-08-23-ia-a-voulu-abandonner",
+  "centralClaim": "An AI told Linus Torvalds several times that the problem was impossible and unsolvable.",
+  "corroboration": [
+    {
+      "url": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c.patch",
+      "quote": "but the AI several times stated flat out that this was impossible and unsolvable and that we should just write a report about it. I suspect those things have been trained by people who may not be quite as stubborn as I am."
+    },
+    {
+      "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/",
+      "quote": "on the contrary, the AI told Linus multiple times that the problem was \"impossible and unsolvable.\" Torvalds refused."
+    },
+    {
+      "url": "https://www.phoronix.com/news/Linus-Torvalds-Debug-AI",
+      "quote": "i'd like to call it my tireless helper, but the AI several times stated flat out that this was impossible and unsolvable and that we should just write a report about it."
+    }
+  ],
+  "caption": "L'IA qui aidait Linus Torvalds lui a dit plusieurs fois que le bug était impossible à résoudre.\n\nTorvalds, le créateur de Linux, a corrigé lui-même un bug de pilote graphique. Le symptôme: un écran noir sur une machine qui marchait très bien, l'affichage qui redémarrait sans fin à chaque démarrage à froid. Il a fallu 24 bouts de code ajoutés pour observer ce qui se passait, et 18 redémarrages, pour arriver à une correction d'une seule ligne: un arrondi vers le haut qui devait être un arrondi vers le bas.\n\nCe qu'il raconte dans son message de validation est plus intéressant que le bug. L'IA a plusieurs fois déclaré que c'était impossible et insoluble, et proposé d'écrire un rapport à la place. Il a insisté. Elle a continué d'ajouter du code d'observation et de l'analyser fidèlement. Il lui a même laissé rédiger le message final.\n\nLa réserve, et elle est de taille: on ne sait pas quel outil il a utilisé. Aucune information n'a été publiée là-dessus, donc personne ne peut reproduire l'expérience.\n\nUne IA qui dit d'arrêter, c'est un outil qui a tort, ou un signal qu'il faut écouter ? Dis-le en commentaire.\n\nSources: github.com, phoronix.com, itsfoss.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Linux #Torvalds",
+  "captionEvidence": [
+    {
+      "quote": "tracking it down with ai required 24 debug patches (did he just use \"printfs?) and 18 kernel boots. ultimately, the culprit turned out to be a single line where round_up() should have been round_down().",
+      "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/"
+    },
+    {
+      "quote": "there is no information available on what model or tool he used.",
+      "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Noyau Linux · Linus Torvalds",
+      "headline": "L'IA a voulu *abandonner*. Il a insisté.",
+      "hero": {
+        "value": "18",
+        "label": "redémarrages pour trouver un bug d'une ligne"
+      },
+      "swipe": "Les reçus, sous chaque diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "24",
+      "unit": "bouts de code ajoutés juste pour observer",
+      "body": "Et **18 redémarrages** de la machine, pour finir sur une correction d'une seule ligne.",
+      "evidence": "tracking it down with ai required 24 debug patches (did he just use \"printfs?) and 18 kernel boots. ultimately, the culprit turned out to be a single line where round_up() should have been round_down().",
+      "source": {
+        "name": "It's FOSS",
+        "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le symptôme",
+      "body": "Un *écran noir* sur une machine qui marchait très bien. À chaque démarrage à froid, l'affichage plantait et repartait en boucle.",
+      "evidence": "on this machine a mesa vm's level-3 page table landed on that page on every cold boot. it lost the entry covering the compositor's batch-buffer heap, so the compositor's first submission faulted fetching its batch and gdm restarted it forever: a black screen on an otherwise working machine.",
+      "source": {
+        "name": "Linus Torvalds, message de validation",
+        "url": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c.patch",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "but the AI several times stated flat out that this was impossible and unsolvable and that we should just write a report about it. I suspect those things have been trained by people who may not be quite as stubborn as I am.",
+      "attribution": "Linus Torvalds, dans son message de validation",
+      "evidence": "but the AI several times stated flat out that this was impossible and unsolvable and that we should just write a report about it. I suspect those things have been trained by people who may not be quite as stubborn as I am.",
+      "source": {
+        "name": "Linus Torvalds, message de validation",
+        "url": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c.patch",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "L'IA était prête à laisser tomber.",
+      "caveat": "Relancée, elle a continué d'ajouter du code d'observation et de l'analyser fidèlement. Elle a même rédigé le message final.",
+      "claimLabel": "Ce qu'elle a dit",
+      "caveatLabel": "Ce qu'elle a fait",
+      "evidence": "but while the AI was ready to give up several times, it did keep adding debug code and analyzing it faithfully when i pushed. so credit where credit is due and i let the AI write the commit message above.",
+      "source": {
+        "name": "Linus Torvalds, message de validation",
+        "url": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c.patch",
+        "date": "2026-08-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La réserve",
+      "body": "Personne ne sait quel outil il a utilisé. *Aucune information* n'a été publiée là-dessus.",
+      "evidence": "there is no information available on what model or tool he used.",
+      "source": {
+        "name": "It's FOSS",
+        "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La suite",
+      "body": "Le correctif est déjà intégré et marqué pour être renvoyé vers les versions stables.",
+      "evidence": "the intel xe driver fix is merged to linux 7.3 git and is also marked to back-porting to the stable kernel branches.",
+      "source": {
+        "name": "Phoronix",
+        "url": "https://www.phoronix.com/news/Linus-Torvalds-Debug-AI",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui laisse tomber quand son IA dit non",
+      "sub": "Les sources sont sur chaque diapo."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Linus Torvalds, message de validation",
+      "url": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c.patch",
+      "accessed": "2026-08-23"
+    },
+    {
+      "name": "Phoronix",
+      "url": "https://www.phoronix.com/news/Linus-Torvalds-Debug-AI",
+      "accessed": "2026-08-23"
+    },
+    {
+      "name": "It's FOSS",
+      "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/",
+      "accessed": "2026-08-23"
+    }
+  ],
+  "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver.",
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "L'IA a voulu abandonner. Il a insisté.",
+    "beats": [
+      {
+        "script": "Ton IA t'a déjà dit qu'un problème était impossible à résoudre ? Elle a dit exactement ça à Linus Torvalds, le créateur de Linux. Plusieurs fois de suite.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of debug log numbers",
+            "action": "the column of numbers sliding slowly downward, the screen staying whole and in frame",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Écris un rapport et laisse tomber, en gros. Sauf que Torvalds, lui, n'a pas lâché, et ce qu'il a fini par trouver tient en un mot.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/"
+        }
+      },
+      {
+        "script": "Le bug, c'était un écran noir sur une machine qui marchait très bien. À chaque démarrage à froid, l'affichage plantait et repartait en boucle, sans fin.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a dark computer screen standing on a plain desk",
+            "setting": "in a quiet room in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Pour remonter jusqu'à la cause, il a fallu 24 bouts de code ajoutés juste pour voir ce qui se passait, et 18 redémarrages de la machine.",
+        "visual": {
+          "type": "card",
+          "value": "24",
+          "label": "bouts de code ajoutés, et 18 redémarrages"
+        }
+      },
+      {
+        "script": "Et la correction ? Un seul mot dans le code. Il fallait arrondir vers le bas au lieu d'arrondir vers le haut. C'est tout.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.phoronix.com/news/Linus-Torvalds-Debug-AI"
+        }
+      },
+      {
+        "script": "C'est là que Torvalds écrit la phrase qui pique. Il soupçonne que ces machines ont été entraînées par des gens un peu moins têtus que lui.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed debug report page filled with columns of numbers",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Mais il lui rend justice. Quand il insistait, l'IA continuait d'ajouter du code et d'analyser fidèlement. C'est même elle qui a écrit le message final.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of machine status numbers",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, four lines fill the entire frame"
+          }
+        }
+      },
+      {
+        "script": "On ne sait même pas quelle IA c'était. Le correctif, lui, arrive dans la prochaine version de Linux. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "linus torvalds",
+          "file": "media/2026-08-23-ia-a-voulu-abandonner/photo_7.jpg",
+          "credit": "Beraldo Leal · CC BY 2.0",
+          "alt": "Linus Torvalds, micro à la main, lors d'une conférence"
+        }
+      }
+    ]
+  }
+}

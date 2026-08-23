@@ -1,0 +1,216 @@
+{
+  "slug": "2026-08-23-harvard-avatars-profs",
+  "centralClaim": "Harvard Business School founders get their pitch feedback from AI modeled on its instructors.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+      "quote": "As Harvard Business School seeks to expand its reach, it's leaning on AI avatars to provide individual feedback. These avatars were created by a startup called HeyGen and are included in the eight-week, $699 HBS Foundry bootcamp for entrepreneurs. The program offers live sessions with instructors every week, but the AI avatars are the ones providing feedback during practice pitches and board meetings."
+    },
+    {
+      "url": "https://www.hbs.edu/foundry",
+      "quote": "Speed from idea to a pressure-tested first pitch in four to eight weeks Preparation prepare for in-person programming (e.g., before or after NSF I-Corps), pitching, and other high-stakes situations Mentorship personalized AI mentorship modeled on Harvard Business School faculty"
+    }
+  ],
+  "caption": "699 dollars pour une formation Harvard, et c'est un avatar en IA du prof qui écoute ton projet.\n\nHarvard Business School a ouvert une formation de huit semaines pour créateurs d'entreprise. Il y a de vraies séances en direct avec de vrais enseignants. Mais quand tu présentes ton projet ou que tu passes un faux conseil d'administration, ce sont des avatars en IA, fabriqués par une entreprise appelée HeyGen, qui te font les retours.\n\nUne journaliste du New York Times, Sarah Kessler, a essayé. Elle a présenté son idée, Uber pour les bananes, à la copie numérique d'un investisseur bien réel, Jeff Bussgang. Les deux versions ont trouvé l'idée moyenne, mais elle a noté que la copie gardait un sourire figé pendant sa présentation. Bussgang reconnaît que sa copie numérique est un peu flippante, et ajoute que ses élèves adorent.\n\nLe détail qui étonne: la directrice du projet, Katharina Rings, imaginait au départ un simple robot de discussion. Après un essai, les élèves en ont demandé une version plus encadrée.\n\nLa réserve: le prix et le nom du fournisseur viennent du reportage du New York Times, que Harvard ne confirme nulle part sur son site.\n\nUn cours où l'IA te répond à la place du prof, ça vaut 699 dollars, oui ou non ? Dis-le en commentaire.\n\nSources: techcrunch.com, hbs.edu, hbsfoundry.org\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Harvard #Education",
+  "captionEvidence": [
+    {
+      "quote": "These avatars were created by a startup called HeyGen and are included in the eight-week, $699 HBS Foundry bootcamp for entrepreneurs.",
+      "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/"
+    },
+    {
+      "quote": "New York Times reporter Sarah Kessler actually tried this out herself by pitching an AI-generated copy of Flybridge Capital co-founder Jeff Bussgang. Apparently, both the real Bussgang and his simulacra were unimpressed by her plan to build \"Uber for bananas,\" but Kessler said the virtual version offered a noticeably frozen smile during her pitch.",
+      "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/"
+    },
+    {
+      "quote": "Project director Katharina Rings said she initially envisioned the AI component as something closer to a chatbot. However, after HBS released a trial version, students said they wanted a more guided experience.",
+      "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Harvard Business School · Foundry",
+      "headline": "Le prof qui écoute ton projet est une *IA*",
+      "hero": {
+        "value": "$699",
+        "label": "la formation, retours faits par des avatars"
+      },
+      "swipe": "Les reçus, sous chaque diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "$699",
+      "unit": "la formation de huit semaines",
+      "body": "Les séances en direct sont assurées par de vrais enseignants. Les retours, eux, viennent d'**avatars en IA**.",
+      "evidence": "These avatars were created by a startup called HeyGen and are included in the eight-week, $699 HBS Foundry bootcamp for entrepreneurs. The program offers live sessions with instructors every week, but the AI avatars are the ones providing feedback during practice pitches and board meetings.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que Harvard en dit",
+      "body": "L'école décrit un accompagnement par IA *calqué sur ses propres enseignants*, en plus des séances avec de vrais experts.",
+      "evidence": "Speed from idea to a pressure-tested first pitch in four to eight weeks Preparation prepare for in-person programming (e.g., before or after NSF I-Corps), pitching, and other high-stakes situations Mentorship personalized AI mentorship modeled on Harvard Business School faculty",
+      "source": {
+        "name": "Harvard Business School",
+        "url": "https://www.hbs.edu/foundry",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "À quoi ça sert",
+      "body": "Répéter son argumentaire, ses appels de vente et ses conseils d'administration face à une IA, *autant de fois qu'il faut*.",
+      "evidence": "Rehearse your investor pitches, sales calls, and board meetings with private AIs built to challenge and sharpen you.",
+      "source": {
+        "name": "Foundry, Harvard Business School",
+        "url": "https://hbsfoundry.org/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le test grandeur nature",
+      "body": "Une journaliste a présenté *Uber pour les bananes* à la copie numérique d'un investisseur. Les deux versions n'ont pas été convaincues.",
+      "evidence": "New York Times reporter Sarah Kessler actually tried this out herself by pitching an AI-generated copy of Flybridge Capital co-founder Jeff Bussgang. Apparently, both the real Bussgang and his simulacra were unimpressed by her plan to build \"Uber for bananas,\" but Kessler said the virtual version offered a noticeably frozen smile during her pitch.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "La directrice du projet imaginait un simple robot de discussion.",
+      "caveat": "Après un essai, les élèves ont réclamé une version plus encadrée.",
+      "claimLabel": "Ce qui était prévu",
+      "caveatLabel": "Ce qu'ils ont demandé",
+      "evidence": "Project director Katharina Rings said she initially envisioned the AI component as something closer to a chatbot. However, after HBS released a trial version, students said they wanted a more guided experience.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "my students love it",
+      "attribution": "Jeff Bussgang, dont la copie numérique donne les retours",
+      "evidence": "As for Bussgang, he acknowledged his digital copy is a little \"creepy,\" but he said, \"my students love it.\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui paie une formation en ligne",
+      "sub": "Les sources sont sur chaque diapo."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+      "accessed": "2026-08-23"
+    },
+    {
+      "name": "Harvard Business School",
+      "url": "https://www.hbs.edu/foundry",
+      "accessed": "2026-08-23"
+    },
+    {
+      "name": "Foundry, Harvard Business School",
+      "url": "https://hbsfoundry.org/",
+      "accessed": "2026-08-23"
+    }
+  ],
+  "sendTest": "Harvard vend une formation à 699 dollars où c'est une copie en IA du prof qui écoute ton projet et te répond.",
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Harvard te fait répéter devant une IA",
+    "beats": [
+      {
+        "script": "Tu paies 699 dollars pour une formation Harvard. Et le prof qui écoute ton projet et qui te répond, c'est une copie de lui, en IA.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of feedback session timestamps",
+            "action": "the column of timestamps sliding slowly downward, the screen staying whole and in frame",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et le plus troublant, ce n'est pas le prix. C'est ce qu'une journaliste du New York Times a vu en face d'elle.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed feedback report page filled with columns of numbers",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Harvard Business School vient d'ouvrir une formation de huit semaines pour créateurs d'entreprise. Il y a bien des séances en direct, avec de vrais enseignants.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://hbsfoundry.org/"
+        }
+      },
+      {
+        "script": "Mais quand tu présentes ton projet, ou que tu passes un faux conseil d'administration, c'est l'avatar en IA qui te fait les retours. Pas l'humain.",
+        "visual": {
+          "type": "card",
+          "value": "699 $",
+          "label": "la formation, et c'est l'IA qui répond"
+        }
+      },
+      {
+        "script": "Sarah Kessler, du New York Times, a présenté son idée à la copie numérique de Jeff Bussgang, un investisseur bien réel. Son idée : Uber, mais pour les bananes.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.hbs.edu/foundry"
+        }
+      },
+      {
+        "script": "Les deux, le vrai et la copie, ont trouvé l'idée moyenne. Sauf que la copie, elle, gardait un sourire figé pendant toute la présentation.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of student session numbers",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, four lines fill the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et la réaction des élèves surprend. La directrice du projet imaginait un simple robot de discussion. Après l'essai, les élèves en ont demandé un plus encadré.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed program report page filled with columns of numbers",
+            "setting": "on a plain table under a desk lamp",
+            "composition": "seen from the side, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Bussgang, lui, reconnaît que sa copie est un peu flippante. Mais il ajoute : mes élèves adorent ça. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "harvard business school baker library",
+          "alt": "Le campus de la Harvard Business School"
+        }
+      }
+    ]
+  }
+}
