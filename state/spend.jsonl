@@ -269,3 +269,10 @@
 {"at":"2026-08-23T10:47:51.900Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1325}
 {"at":"2026-08-23T10:48:05.795Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1302}
 {"at":"2026-08-23T10:51:23.380Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1283}
+{"at":"2026-08-23T16:41:57.150Z","slug":"2026-08-23-harvard-avatars-profs","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"46.6s Sadaltager","usd":0.0233}
+{"at":"2026-08-23T16:42:26.464Z","slug":"2026-08-23-harvard-avatars-profs","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"61.7s Sadaltager","usd":0.0309}
+{"at":"2026-08-23T16:42:50.611Z","slug":"2026-08-23-harvard-avatars-profs","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"50.3s Sadaltager","usd":0.0252}
+{"at":"2026-08-23T16:45:47.160Z","slug":"2026-08-23-harvard-avatars-profs","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-23T16:46:02.347Z","slug":"2026-08-23-harvard-avatars-profs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1318}
+{"at":"2026-08-23T16:46:15.865Z","slug":"2026-08-23-harvard-avatars-profs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1265}
+{"at":"2026-08-23T16:46:30.161Z","slug":"2026-08-23-harvard-avatars-profs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1332}

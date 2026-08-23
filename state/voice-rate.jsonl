@@ -87,3 +87,6 @@
 {"at":"2026-08-22T10:41:09.400Z","slug":"2026-08-22-peau-humaine-vivante","words":209,"seconds":57.28,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.6}
 {"at":"2026-08-22T16:41:58.488Z","slug":"2026-08-22-bague-oura-sommeil","words":210,"seconds":54,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.2}
 {"at":"2026-08-23T10:44:43.884Z","slug":"2026-08-23-ia-a-voulu-abandonner","words":209,"seconds":56,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-1.7}
+{"at":"2026-08-23T16:41:57.288Z","slug":"2026-08-23-harvard-avatars-profs","words":205,"seconds":46.64,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-0.7}
+{"at":"2026-08-23T16:42:26.611Z","slug":"2026-08-23-harvard-avatars-profs","words":205,"seconds":61.72,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":false,"declineDb":-6.8}
+{"at":"2026-08-23T16:42:50.751Z","slug":"2026-08-23-harvard-avatars-profs","words":205,"seconds":50.32,"voice":"Sadaltager","lang":"fr","attempt":3,"accepted":true,"declineDb":-1.9}
