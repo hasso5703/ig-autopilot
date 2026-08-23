@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-23T16:40:26.209Z",
-  "n": 52,
-  "nSettled": 46,
-  "medianViews": 196,
-  "medianRetentionPct": 20,
+  "at": "2026-08-23T19:40:22.775Z",
+  "n": 53,
+  "nSettled": 47,
+  "medianViews": 197,
+  "medianRetentionPct": 21,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -90,10 +90,10 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 32,
-      "medianViews": 327,
-      "meanRetentionPct": 25.4,
-      "saves": 44,
+      "n": 33,
+      "medianViews": 354,
+      "meanRetentionPct": 25.3,
+      "saves": 55,
       "shares": 21,
       "thin": false
     },
@@ -190,10 +190,10 @@
       "thin": true
     },
     "16": {
-      "n": 5,
-      "medianViews": 183,
-      "meanRetentionPct": 21.4,
-      "saves": 7,
+      "n": 6,
+      "medianViews": 257,
+      "meanRetentionPct": 21.7,
+      "saves": 18,
       "shares": 3,
       "thin": false
     },
@@ -247,7 +247,11 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1173
+            "views": 1374
+          },
+          {
+            "slug": "2026-08-23-harvard-avatars-profs",
+            "views": 88
           }
         ]
       },
@@ -271,7 +275,7 @@
         "published": [
           {
             "slug": "2026-08-22-bague-oura-sommeil",
-            "views": 158
+            "views": 161
           },
           {
             "slug": "2026-08-22-peau-humaine-vivante",
@@ -300,6 +304,23 @@
       ],
       "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-23-ia-a-voulu-abandonner",
+      "at": "2026-08-23T10:55:51.192Z",
+      "hourUtc": 10,
+      "views": 1374,
+      "reach": 1214,
+      "avgWatchS": 23.5,
+      "retentionPct": 39,
+      "likes": 18,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver.",
+      "settled": false
     },
     {
       "slug": "2026-08-15-camions-sans-chauffeur",
@@ -351,23 +372,6 @@
       "themes": [],
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-23-ia-a-voulu-abandonner",
-      "at": "2026-08-23T10:55:51.192Z",
-      "hourUtc": 10,
-      "views": 1173,
-      "reach": 1031,
-      "avgWatchS": 23.7,
-      "retentionPct": 39,
-      "likes": 14,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver.",
-      "settled": false
     },
     {
       "slug": "2026-08-15-google-retire-filigrane",
@@ -424,8 +428,8 @@
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
-      "views": 1061,
-      "reach": 937,
+      "views": 1063,
+      "reach": 939,
       "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 6,
@@ -435,7 +439,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-21-web-ecrit-par-ia",
@@ -812,6 +816,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-22-bague-oura-sommeil",
+      "at": "2026-08-22T16:55:58.251Z",
+      "hourUtc": 16,
+      "views": 161,
+      "reach": 147,
+      "avgWatchS": 10.5,
+      "retentionPct": 17,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-ia-reserve-cours-sport",
       "at": "2026-08-10T16:58:57.530Z",
       "hourUtc": 16,
@@ -829,25 +852,6 @@
       ],
       "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-22-bague-oura-sommeil",
-      "at": "2026-08-22T16:55:58.251Z",
-      "hourUtc": 16,
-      "views": 158,
-      "reach": 144,
-      "avgWatchS": 10.6,
-      "retentionPct": 18,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
-      "settled": false
     },
     {
       "slug": "2026-08-04-fcc-robots-humanoides",
@@ -1124,6 +1128,23 @@
       "themes": [],
       "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-23-harvard-avatars-profs",
+      "at": "2026-08-23T16:55:23.876Z",
+      "hourUtc": 16,
+      "views": 88,
+      "reach": 81,
+      "avgWatchS": 5.5,
+      "retentionPct": 9,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Harvard vend une formation à 699 dollars où c'est une copie en IA du prof qui écoute ton projet et te répond.",
+      "settled": false
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
