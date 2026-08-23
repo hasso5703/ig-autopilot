@@ -262,3 +262,10 @@
 {"at":"2026-08-22T16:44:55.176Z","slug":"2026-08-22-bague-oura-sommeil","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1318}
 {"at":"2026-08-22T16:45:09.181Z","slug":"2026-08-22-bague-oura-sommeil","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.129}
 {"at":"2026-08-22T16:50:42.390Z","slug":"2026-08-22-bague-oura-sommeil","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1289}
+{"at":"2026-08-23T10:44:43.755Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"56.0s Sadaltager","usd":0.028}
+{"at":"2026-08-23T10:47:09.360Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-23T10:47:23.098Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1265}
+{"at":"2026-08-23T10:47:37.540Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1319}
+{"at":"2026-08-23T10:47:51.900Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1325}
+{"at":"2026-08-23T10:48:05.795Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1302}
+{"at":"2026-08-23T10:51:23.380Z","slug":"2026-08-23-ia-a-voulu-abandonner","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1283}
