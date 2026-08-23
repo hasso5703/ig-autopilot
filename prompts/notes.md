@@ -1784,6 +1784,16 @@ ENTRIES:
   un run de publication qui demarre a moins de 20 min de sa fenetre ne doit pas
   supposer une lecture unique. Et ne reecris pas le script pour ca, c'est le des du
   31/07, pas ta copie.
+  CONTRE-EPREUVE 23/08 (16h30), LES TROIS LECTURES SONT LE CAS NORMAL, PAS LE PIRE
+  CAS, et le des tombe des DEUX cotes: 205 mots pour une fenetre 196-224 (cible
+  207), donc 2 mots SOUS la cible, et il a encore fallu TROIS lectures. Mais la
+  dispersion est l'inverse du 13/08: 4,40 puis 3,32 puis 4,07 mots/s la ou le
+  registre annonce 3,731 sur 12 lectures, donc la premiere lecture etait TROP
+  RAPIDE (atempo 0,839, sous le plancher 0,90) et la deuxieme trop lente (1,110,
+  a un cheveu du plafond 1,12). Ecrire a la cible ne protege donc pas du re-roll,
+  ca protege du REFUS: les trois atempos demandes tenaient dans [0,84 ; 1,11] et
+  la 3e est passee. Cout $0,079 au lieu de $0,023, ~2 min. Budgete 3 achats TTS
+  et 2 min sur toute fenetre de publication, meme sur un spec ecrit a la cible.
 - 2026-07-31 · `revisit` est le troisieme outcome de recordSeen: bonne
   histoire bloquee par le temps (pas encore corroboree, primaire
   injoignable), revient au bout de 6h au lieu de 36h. Ne mets `considered`
@@ -2501,6 +2511,27 @@ ENTRIES:
   comme ca: un texte DOUBLE dans le texte aplati ("hot seathot seat", "your path
   to successsuccess") est la signature d'un titre anime, donc d'un recu qui
   sortira tronque. Cherche ce doublement AVANT de capturer.
+  Ajout 23/08 (16h30), LE RECU QUI MONTRE LE VISAGE D'UN AUTRE HOMME QUE CELUI
+  QUE TA VOIX NOMME, et c'est une famille NEUVE, plus dangereuse que le mauvais
+  tribunal du 16/08 parce que le recu est PARFAIT: bon domaine, bonne URL, bon
+  titre, zero pub, zero banniere, le titre affiche EST l'histoire (controle du
+  10/08), donc il passe tous les controles, y compris celui-la. Mesure sur
+  hbs.edu/foundry/bootcamps/startup-bootcamp: sa photo de tete est le
+  PROFESSEUR REZA SATCHU (verifie a l'attribut alt, "Professor Reza Satchu on
+  The Founder Mindset"), et le karaoke du beat qui prononce "Jeff Bussgang"
+  tombe pile dessus. Un spectateur colle le nom entendu au visage vu: c'est une
+  attribution fausse, publique et nommee, fabriquee par le MONTAGE et pas par
+  une phrase, exactement la faute du 31/07 (Mythos 5 / Opus 4.7). Le controle
+  du 10/08 ne suffit donc plus: sur un recu qui porte un VISAGE et un beat qui
+  prononce un NOM, LIS LES alt DES IMAGES avant de publier, en 10 s et sans
+  navigateur: `const imgs=[...h.matchAll(/<img[^>]*>/gi)].filter(s=>/alt=/i
+  .test(s))` sur le HTML du fetch Node. Remede applique, gratuit et rebuild a
+  $0 (narration, alignement, veo et les 3 stills re-servis par leur .key, les
+  deux recus epingles avec `file`): `crop=1290:1330:0:0` coupe la photo et garde
+  ecusson Harvard, masthead, rubrique Foundry, "Do you have what it takes?", le
+  titre "Startup Bootcamp", le chapo et le bouton "Apply Now". Regle generale:
+  une page vitrine d'ecole ou d'entreprise met en tete la photo d'UN de ses
+  intervenants, jamais forcement celui dont parle ton script.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
