@@ -152,7 +152,8 @@
         "script": "Écris un rapport et laisse tomber, en gros. Sauf que Torvalds, lui, n'a pas lâché, et ce qu'il a fini par trouver tient en un mot.",
         "visual": {
           "type": "screenshot",
-          "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/"
+          "url": "https://itsfoss.com/news/torvalds-used-ai-fix-kernel-bug/",
+          "file": "media/2026-08-23-ia-a-voulu-abandonner/shot_1.png"
         }
       },
       {
@@ -177,8 +178,12 @@
       {
         "script": "Et la correction ? Un seul mot dans le code. Il fallait arrondir vers le bas au lieu d'arrondir vers le haut. C'est tout.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.phoronix.com/news/Linus-Torvalds-Debug-AI"
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of a rounding helper",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
         }
       },
       {

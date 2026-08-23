@@ -639,6 +639,31 @@ ENTRIES:
   process, le tampon du pipe est perdu et tu ne vois RIEN, ce qui fait
   diagnostiquer un blocage au lancement alors qu'il est ailleurs. Redirige vers
   un fichier (`> log 2>&1`) et lis-le apres.
+  Ajout 23/08 (06h30), dossier Torvalds. LE PRIMAIRE D'UNE ACTU NOYAU LINUX EST
+  INGATABLE CHEZ KERNEL.ORG ET GATABLE CHEZ GITHUB. lore.kernel.org et
+  git.kernel.org rendent HTTP 200 avec un corps de 1 541 octets qui est une
+  page de defi Anubis ("making sure you're not a bot", preuve de travail
+  javascript): un 200 qui ne contient pas une ligne du commit, donc le piege
+  inverse du 03/08 dans l'autre sens, c'est la TAILLE qui trahit, pas le code.
+  Le miroir `github.com/<owner>/<repo>/commit/<sha>.patch` rend 200 et porte le
+  message de commit ENTIER (en-tetes From/Date/Subject compris) et s'est gate du
+  PREMIER coup, 12 verifications sur 12. CORRIGE donc la note du 01/08 qui
+  disait github.com intercepte en 403: c'est vrai des pages HTML (voir l'entree
+  recus), faux du chemin .patch au fetch Node. Sur une actu de code, va au
+  .patch, jamais a kernel.org. Rendent 200 et se gatent du premier coup le meme
+  matin: itsfoss.com (NOUVEAU) et phoronix.com/news/<slug> (NOUVEAU). ATTENTION
+  phoronix: la page d'ACCUEIL phoronix.com rend 403 et ses pages article rendent
+  200, donc un 403 sur la racine d'un domaine ne dit RIEN de ses articles,
+  teste l'URL que tu vas citer. Bloque: xda-developers.com (502).
+  Rendent 200 et se gatent du premier coup aussi hbs.edu (/foundry et
+  /foundry/bootcamps/...) et hbsfoundry.org. ATTENTION CORROBORATION sur les
+  deux dossiers du jour, famille du 09/08: cote Torvalds, phoronix et itsfoss
+  lisent le MEME commit (itsfoss ecrit "source: phoronix" en bas), donc trois
+  domaines verts attestent "Torvalds a ecrit x", ce qui suffit puisque le
+  primaire EST sa parole; cote Harvard, techcrunch resume un reportage du New
+  York Times (injoignable) et les deux autres domaines sont Harvard elle-meme,
+  donc le prix de 699 $ et le nom du fournisseur ne sont confirmes NULLE PART
+  ailleurs que dans le NYT. Dis-le dans le rapport et attribue dans le script.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1697,6 +1722,38 @@ ENTRIES:
   382 ko sur la MEME image 20 s plus tard et servait deux autres originaux dans
   la meme minute. Ce n'est donc pas un etranglement passager mais la rendition
   2560 qui echoue: demande 1920, jamais 2560.
+  Ajout 23/08 (06h30), UNE FAMILLE DE PIEGE PHOTO NEUVE, LA CAPTURE VIDEO AVEC
+  SON INTERFACE GRAVEE, et elle sort PREMIERE. "linus torvalds" met en tete
+  (3012x1691, wikimedia) "Linus Torvalds in Conversation with Dirk Hohndel 2025",
+  qui est une image extraite d'un lecteur video: le texte "Click and drag to make
+  a selection." est INCRUSTE en plein milieu du cadre, et on y voit DEUX hommes
+  assis, donc l'identite est ambigue en prime. Licence, taille, date et filtre
+  fond-blanc la laissent passer; SEULE la planche-contact le voit. Ecarte au
+  titre "in conversation with", "interview", "livestream", "keynote video", et
+  regarde toujours: une capture d'ecran de video porte l'interface de l'outil.
+  Le 2e candidat "Linus Torvalds at DebConf14" (3264x2448) est le piege d'epoque
+  pour la 12e fois, avec "DebConf14 Portland ... August 23rd - 31st 2014" ET un
+  logo Intel lisibles en grand. VALEUR SURE telechargee, regardee, recadree et
+  epinglee ce matin: "Linus Torvalds - Linuxcon2011" (Beraldo Leal, CC BY 2.0),
+  thumb 1280x1912 DEJA EN PORTRAIT, `crop=1074:1912:130:0` puis scale 1080:1920,
+  soit du NATIF (x1,005) sur un vrai visage net, micro a la main, zero texte,
+  zero marque, zero millesime dans le cadre. Il est de 2011 et rien ne le date a
+  l'image: sur un visage, l'age de la photo ne se voit pas, c'est la SIGNALETIQUE
+  autour qui trahit. Deuxieme valeur sure, dossier Harvard: "harvard business
+  school baker library" met PREMIER a 8.0 un scan de manuel de photographie du
+  19e siecle (epoque, 13e fois, et hors sujet complet), mais le 3e candidat
+  pd.w.org "The entrance of the Harvard Business School at Cambridge" (Hari
+  Shanker R, CC0, 2048x1368) porte le PANNEAU "HARVARD BUSINESS SCHOOL" avec son
+  ecusson en plein cadre: `crop=769:1368:700:0` puis scale 1080:1920. Sur une
+  actu d'ecole ou d'institution, cherche le PANNEAU du campus, il nomme le sujet
+  a l'image sans qu'aucune voix ait a le faire. creditLine() a rendu "" sur les
+  DEUX (upload.wikimedia et pd.w.org): le createur se lit sur
+  `api.openverse.org/v1/images/?q=<titre>&source=wordpress` (champ creator) et,
+  cote Commons, sur `commons.wikimedia.org/w/api.php?action=query&prop=imageinfo
+  &iiprop=extmetadata&titles=File:<nom>` (extmetadata.Artist + LicenseShortName).
+  Ne publie jamais un credit devine. upload.wikimedia a servi 4 fichiers
+  d'affilee ce matin (UA de navigateur complet + referer commons, 6 s d'ecart)
+  sans une seule page d'erreur.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -2412,6 +2469,38 @@ ENTRIES:
   20 s. Le remede du scout tient donc jusqu'au fichier publie, et pas seulement
   jusqu'au png: sur une page vitrine, capturer hors moteur et epingler est le
   seul chemin qui garde l'identite de la source a l'ecran.
+  Ajout 23/08 (06h30), QUATRE RECUS MESURES HORS MOTEUR, DONT DEUX REFUS, et le
+  premier refus est une famille NEUVE. (1) UN DOMAINE PEUT SE GATER ET SE
+  CAPTURER SANS SA FEUILLE DE STYLE: phoronix.com/news/<slug> rend 200 au fetch
+  gate et se capture en 303 s (3 frames, aucune erreur, aucun mur), mais la
+  carte sort en HTML BRUT, liens bleus soulignes, police a empattements, image
+  cassee: le CSS ne survit pas au chemin route.fulfill. Le titre est juste, le
+  texte est juste, et un spectateur lit une page cassee. Ce n'est ni macrumors
+  (mur) ni greenairnews (404): c'est une capture qui REUSSIT et qui est
+  inutilisable. Regarde le rendu, pas le code de retour. (2) github.com en HTML
+  est intercepte par le proxy de session: la capture du commit rend le JSON
+  `{"message":"GitHub access to this repository is not enabled for this
+  session..."}` en plein cadre. Donc sur une actu de code: .patch se GATE
+  (entree blocages), la page ne se CAPTURE PAS, et il faut un autre recu.
+  (3) itsfoss.com se capture PROPREMENT en 242 s (3 frames), masthead IT'S FOSS,
+  titre entier qui EST l'histoire (controle du 10/08), chapo qui porte le chiffre
+  du script, signature et date. UN BEMOL A RECADRER: un bandeau sponsor "warp -
+  The intelligent terminal / Download FREE" survit aux deux passes de
+  consentement ET au CSS anti-pub, et il tombe DANS les 1686 px visibles;
+  `crop=1290:1150:0:0` garde masthead + titre + chapo + signature + date et le
+  coupe. (4) hbs.edu se capture en 24 s, 1 SEULE frame, ZERO pub, ZERO banniere,
+  AUCUN recadrage, sur ses deux pages: /foundry (ecusson Harvard, titre statique,
+  chapo qui porte l'affirmation) et /foundry/bootcamps/startup-bootcamp (fond
+  noir, titre geant, une vraie photo d'intervenant), donc deux recus de FAMILLES
+  VISUELLES differentes sur le meme domaine. Le mode `top` (window.scrollTo(0,0)
+  au lieu du scroll au h1) est bien ce qu'il faut sur ces pages vitrines, ca
+  re-confirme le 22/08. EN REVANCHE hbsfoundry.org, capture propre en 22 s, est
+  REFUSE pour une raison neuve: son titre est une ANIMATION DE MACHINE A ECRIRE
+  et la capture l'attrape en plein milieu d'un mot, curseur compris ("The
+  AI-Native Bootcamp for A|"). Le flatten le disait deja et personne ne le lit
+  comme ca: un texte DOUBLE dans le texte aplati ("hot seathot seat", "your path
+  to successsuccess") est la signature d'un titre anime, donc d'un recu qui
+  sortira tronque. Cherche ce doublement AVANT de capturer.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
@@ -2571,6 +2660,34 @@ ENTRIES:
   reseau en une seule commande avant le premier gate. Fait ce matin: les 13
   citations pre-testees sont passees VERIFIED du premier coup, les 3 non
   testees sont exactement celles qui ont echoue.
+  Ajout 23/08 (06h30), QUATRIEME FAUX POSITIF DE LA FAMILLE "quotidien" (16/08)
+  et "tous les matins" (17/08), cette fois sur les GRANDEURS: le controle des
+  magnitudes ecrites en toutes lettres matche le NOM COMMUN francais "double".
+  Une legende disant "son double est un peu flippant" (le sosie numerique d'un
+  homme, aucune multiplication) a declenche "the caption spells out bare
+  magnitude(s) with no adjacent digit: double". Ce n'est qu'un warning, pas une
+  erreur, mais il vaut le contournement gratuit et sans degat: "sa copie
+  numerique". Mefie-toi aussi de triple, moitie, quart dans leur sens non
+  numerique.
+  Ajout 23/08 (06h30), LE PIRE forbidNames MESURE JUSQU'ICI VIENT DES ONGLETS
+  D'UNE PAGE, pas d'un nom de produit, et il a banni le mot CENTRAL du dossier.
+  hbsfoundry.org rend ses etiquettes d'onglets dans le fil du texte, donc une
+  citation contigue prise autour de la phrase utile ramasse "Pitch Sales Board
+  Meeting" en Title Case, et extractForbidNames a retenu Pitch, Sales, Board,
+  Meeting ET Test. Resultat sur une actu ou tout le monde PITCHE: les quatre
+  specs image/veo ont ete refuses d'un coup ("prompt names Pitch", "prompt names
+  Meeting"). Meme famille que "Close" (16/08) et Pixel Watch (12/08), sauf que
+  la cause n'est ni une phrase ni une marque, c'est du CHROME D'INTERFACE aspire
+  par une citation trop longue. Remede gratuit, applique avant le gate: arrete
+  la citation AVANT la rafale d'etiquettes (elle portait deja l'affirmation), et
+  ancre les specs sur un mot que personne ne capitalise, ici "feedback" et
+  "session". Regle: quand une citation contient trois noms courts en Title Case
+  a la suite, ce n'est pas de la prose, c'est un menu: coupe-la.
+  ET LE REFLEXE QUI A TOUT ATTRAPE POUR $0 CE MATIN, sur les DEUX specs: passer
+  veoPrompt/imagePrompt + promptIssues + simplicityIssues + extractForbidNames en
+  local AVANT le premier gate. Les deux specs sont ensuite passes PASSED, 0
+  erreur, 0 warning, DU PREMIER COUP, et aucun build n'a eu a mourir pour
+  l'apprendre (le refus serait tombe apres l'achat du veo, cf. 20/08).
 - 2026-08-20 · DEUX PIEGES MECANIQUES DU CHEMIN DE PUBLICATION, mesures le meme
   run, chacun coute un cycle entier. (1) LE GATE VERT NE PROTEGE PAS DU REFUS
   D'IMAGE EN COURS DE BUILD: `promptIssues` (promptcraft.mjs) refuse un `spec`

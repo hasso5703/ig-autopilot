@@ -163,7 +163,8 @@
         "script": "Harvard Business School vient d'ouvrir une formation de huit semaines pour créateurs d'entreprise. Il y a bien des séances en direct, avec de vrais enseignants.",
         "visual": {
           "type": "screenshot",
-          "url": "https://hbsfoundry.org/"
+          "url": "https://www.hbs.edu/foundry",
+          "file": "media/2026-08-23-harvard-avatars-profs/shot_2.png"
         }
       },
       {
@@ -178,7 +179,8 @@
         "script": "Sarah Kessler, du New York Times, a présenté son idée à la copie numérique de Jeff Bussgang, un investisseur bien réel. Son idée : Uber, mais pour les bananes.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.hbs.edu/foundry"
+          "url": "https://www.hbs.edu/foundry/bootcamps/startup-bootcamp",
+          "file": "media/2026-08-23-harvard-avatars-profs/shot_4.png"
         }
       },
       {
@@ -207,8 +209,10 @@
         "script": "Bussgang, lui, reconnaît que sa copie est un peu flippante. Mais il ajoute : mes élèves adorent ça. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "harvard business school baker library",
-          "alt": "Le campus de la Harvard Business School"
+          "query": "harvard business school entrance",
+          "file": "media/2026-08-23-harvard-avatars-profs/photo_7.jpg",
+          "credit": "Hari Shanker R · CC0",
+          "alt": "Le panneau Harvard Business School à l'entrée du campus"
         }
       }
     ]
