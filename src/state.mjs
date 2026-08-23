@@ -185,7 +185,14 @@ export const stillBlocks = (r, now = Date.now()) => {
 
 export async function filterFresh(items) {
   const { posted, seen } = await loadState();
-  const history = [...posted, ...seen].filter(stillBlocks);
+  // Call it with one argument. Handing the predicate to an array method bare
+  // passes the ARRAY INDEX as its `now` parameter, so every shelf life used to
+  // be measured against 0, 1, 2... and
+  // `now - at < ttl` was true for every record ever written: nothing has expired
+  // since the shelf was built. Measured 2026-08-23: 274 of 464 records were
+  // blocking that should have aged out, which is the whole `considered` and
+  // `revisit` shelf the manual banks stories on.
+  const history = [...posted, ...seen].filter((r) => stillBlocks(r));
   const urls = new Set(history.map((r) => canonical(r.url)).filter(Boolean));
   // Older records may predate token storage; recover them from the title.
   const knownTokens = history.map((r) => r.tokens ?? tokens(r.title ?? "")).filter((t) => t.length);

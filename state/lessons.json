@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-22T19:39:52.160Z",
+  "at": "2026-08-23T06:40:23.546Z",
   "n": 51,
   "nSettled": 45,
   "medianViews": 194,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 31,
+    "now": 32,
     "bestDays": [
       {
         "date": "2026-08-08",
@@ -260,12 +260,12 @@
         "delta": 5,
         "published": [
           {
-            "slug": "2026-08-22-peau-humaine-vivante",
-            "views": 128
+            "slug": "2026-08-22-bague-oura-sommeil",
+            "views": 149
           },
           {
-            "slug": "2026-08-22-bague-oura-sommeil",
-            "views": 117
+            "slug": "2026-08-22-peau-humaine-vivante",
+            "views": 133
           }
         ]
       },
@@ -411,9 +411,9 @@
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
-      "views": 855,
-      "reach": 740,
-      "avgWatchS": 14.1,
+      "views": 1056,
+      "reach": 931,
+      "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 6,
       "comments": 1,
@@ -422,6 +422,25 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-21-web-ecrit-par-ia",
+      "at": "2026-08-21T10:50:01.289Z",
+      "hourUtc": 10,
+      "views": 702,
+      "reach": 636,
+      "avgWatchS": 13.9,
+      "retentionPct": 23,
+      "likes": 6,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
       "settled": false
     },
     {
@@ -440,25 +459,6 @@
       "themes": [],
       "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-21-web-ecrit-par-ia",
-      "at": "2026-08-21T10:50:01.289Z",
-      "hourUtc": 10,
-      "views": 675,
-      "reach": 609,
-      "avgWatchS": 14.1,
-      "retentionPct": 23,
-      "likes": 6,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
-      "settled": false
     },
     {
       "slug": "2026-08-08-facture-ia-salaries",
@@ -888,6 +888,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-22-bague-oura-sommeil",
+      "at": "2026-08-22T16:55:58.251Z",
+      "hourUtc": 16,
+      "views": 149,
+      "reach": 136,
+      "avgWatchS": 10.8,
+      "retentionPct": 18,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-02-xai-minnesota-nudification",
       "at": "2026-08-02T15:57:53.852Z",
       "hourUtc": 15,
@@ -905,6 +924,23 @@
       ],
       "sendTest": "Quelqu'un peut prendre tes photos et en faire des images sexuelles. Le Minnesota vient d'interdire ces applis, et Musk a essayé de bloquer la loi.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-22-peau-humaine-vivante",
+      "at": "2026-08-22T10:54:08.736Z",
+      "hourUtc": 10,
+      "views": 133,
+      "reach": 124,
+      "avgWatchS": 7.1,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 2,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
+      "settled": false
     },
     {
       "slug": "2026-08-05-waymo-dallas",
@@ -975,29 +1011,12 @@
       "settled": true
     },
     {
-      "slug": "2026-08-22-peau-humaine-vivante",
-      "at": "2026-08-22T10:54:08.736Z",
-      "hourUtc": 10,
-      "views": 128,
-      "reach": 119,
-      "avgWatchS": 7,
-      "retentionPct": 12,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 2,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-20-jeunes-emplois-ia",
       "at": "2026-08-20T17:03:49.087Z",
       "hourUtc": 17,
-      "views": 126,
-      "reach": 117,
-      "avgWatchS": 7.1,
+      "views": 127,
+      "reach": 118,
+      "avgWatchS": 7,
       "retentionPct": 12,
       "likes": 0,
       "comments": 1,
@@ -1006,6 +1025,23 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-20-applis-surveillance-enfants",
+      "at": "2026-08-20T11:09:22.243Z",
+      "hourUtc": 11,
+      "views": 123,
+      "reach": 118,
+      "avgWatchS": 7.5,
+      "retentionPct": 13,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
       "settled": true
     },
     {
@@ -1023,23 +1059,6 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
-      "settled": true
-    },
-    {
-      "slug": "2026-08-20-applis-surveillance-enfants",
-      "at": "2026-08-20T11:09:22.243Z",
-      "hourUtc": 11,
-      "views": 122,
-      "reach": 117,
-      "avgWatchS": 7.6,
-      "retentionPct": 13,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
       "settled": true
     },
     {
@@ -1075,25 +1094,6 @@
       "themes": [],
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-22-bague-oura-sommeil",
-      "at": "2026-08-22T16:55:58.251Z",
-      "hourUtc": 16,
-      "views": 117,
-      "reach": 108,
-      "avgWatchS": 10.9,
-      "retentionPct": 18,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
-      "settled": false
     },
     {
       "slug": "2026-08-18-robot-ami-des-enfants",

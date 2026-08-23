@@ -1775,6 +1775,39 @@ test("a story blocked on corroboration comes back in one news cycle, not two day
   assert.equal(stillBlocks({ at: "not a date", outcome: "revisit" }, now), true, "an unparseable date fails closed");
 });
 
+// Incident 2026-08-23: the rule above was correct and the CALL SITE was not.
+// `filterFresh` did `[...posted, ...seen].filter(stillBlocks)`, and Array.filter
+// hands its callback (element, INDEX, array) — so `now` was 0, 1, 2..., every
+// `now - at` was hugely negative, and every record blocked forever. Measured
+// that morning: 274 of 464 records were still blocking that should have aged
+// out, i.e. the entire `considered` and `revisit` shelf the manual banks
+// stories on. The test above passed throughout, because it called the
+// predicate directly and never the way the code called it.
+test("the shelf life is measured against the clock, not the array index", async () => {
+  const { stillBlocks } = await import("../src/state.mjs");
+  const { readFile } = await import("node:fs/promises");
+  const now = Date.parse("2026-08-23T07:00:00Z");
+  const at = (h) => new Date(now - h * 3600000).toISOString();
+  const rows = [
+    { slug: "aged-out-considered", at: at(40), outcome: "considered" },
+    { slug: "aged-out-revisit", at: at(8), outcome: "revisit" },
+    { slug: "still-warm", at: at(2), outcome: "revisit" },
+  ];
+
+  const kept = rows.filter((r) => stillBlocks(r, now)).map((r) => r.slug);
+  assert.deepEqual(kept, ["still-warm"], "only the record inside its own shelf life still blocks");
+
+  // The hazard itself, pinned so nobody reintroduces it: passed bare, the
+  // predicate reads the index as the clock and keeps everything.
+  assert.equal(rows.filter(stillBlocks).length, rows.length, "the bare form blocks every record ever written");
+
+  const source = await readFile(new URL("../src/state.mjs", import.meta.url), "utf8");
+  assert.ok(
+    !/\.(?:filter|map|some|every|find)\(stillBlocks\)/.test(source),
+    "stillBlocks must be called with one argument, never handed bare to an array method",
+  );
+});
+
 test("the latest record is found by timestamp, not by file position", async () => {
   const { latestBy } = await import("../src/state.mjs");
   const rows = [
