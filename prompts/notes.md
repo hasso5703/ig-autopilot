@@ -2723,3 +2723,29 @@ ENTRIES:
   url, title, source, reel:true, sources:[...], durationS }. Le `title` est le
   titre ANGLAIS de la source, c'est lui qui fabrique le fingerprint qui empeche
   filterFresh de reproposer l'histoire. Proof: run 10h30 22/08.
+
+- 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
+  QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
+  promettait le cache que pour le clip veo. Mesure ce midi, rebuild dans le
+  MEME `media/<slug>` apres n'avoir change QUE le `spec` du beat 2: narration
+  reutilisee ("no purchase"), alignement Whisper reutilise, clip veo reutilise,
+  stills 4, 5 et 6 reutilises, et SEUL le still 2 rachete a $0.1283. Donc
+  refuser une image au controle des frames coute un still, jamais un Reel:
+  n'hesite pas, et ne vide surtout pas le repertoire entre deux essais.
+  ET LE PIEGE DE PROMPT QUI A CAUSE CE RACHAT, generalisable a Nano Banana:
+  "a dark computer screen" ne rend PAS un ecran eteint, il rend une interface
+  en THEME SOMBRE, ici un moniteur allume plein de graphiques et de code, sur
+  un beat dont le script dit "un ecran noir". Le modele lit "dark" comme un
+  style, pas comme un etat. La formulation qui marche du premier coup:
+  "a computer monitor whose screen is completely black and empty, showing
+  nothing at all". Regle generale: pour un objet ETEINT, VIDE ou ABSENT, decris
+  l'etat en toutes lettres et au positif ("completely black and empty, showing
+  nothing"), jamais par un adjectif d'ambiance. Meme famille que la regle 3 du
+  manuel sur veo (dire ce qui doit rester vrai dans la derniere image).
+  Se gatent du PREMIER coup ce jour-la, deux fois a 4 h d'intervalle (scout
+  06h30 puis re-gate de publication, 12 verifications sur 12, 0 erreur):
+  github.com/torvalds/linux/commit/<sha>.patch (le primaire, c'est le message
+  de validation de Torvalds lui-meme), itsfoss.com et phoronix.com. itsfoss se
+  CAPTURE aussi parfaitement en recu (titre, chapo, signature, date dans le
+  cadre 9:16, zero banniere) avec crop=1290:1150:0:0; phoronix reste refuse en
+  capture (sort sans CSS), il ne sert que de source.
