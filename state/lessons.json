@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-23T10:40:20.668Z",
-  "n": 51,
-  "nSettled": 45,
-  "medianViews": 195,
+  "at": "2026-08-23T16:40:26.209Z",
+  "n": 52,
+  "nSettled": 46,
+  "medianViews": 196,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -23,7 +23,7 @@
     },
     {
       "slug": "2026-08-13-claude-marque-invisible",
-      "views": 1250,
+      "views": 1251,
       "retentionPct": 29,
       "saved": 4,
       "shares": 8,
@@ -90,10 +90,10 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 31,
-      "medianViews": 297,
-      "meanRetentionPct": 25.5,
-      "saves": 43,
+      "n": 32,
+      "medianViews": 327,
+      "meanRetentionPct": 25.4,
+      "saves": 44,
       "shares": 21,
       "thin": false
     },
@@ -123,20 +123,20 @@
       "shares": 1,
       "thin": true
     },
+    "models": {
+      "n": 5,
+      "medianViews": 359,
+      "meanRetentionPct": 32.8,
+      "saves": 10,
+      "shares": 1,
+      "thin": false
+    },
     "security": {
       "n": 3,
       "medianViews": 191,
       "meanRetentionPct": 21.7,
       "saves": 4,
       "shares": 0,
-      "thin": true
-    },
-    "models": {
-      "n": 4,
-      "medianViews": 324,
-      "meanRetentionPct": 35.3,
-      "saves": 9,
-      "shares": 1,
       "thin": true
     },
     "safety": {
@@ -150,12 +150,12 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 4,
-      "medianViews": 429,
+      "n": 5,
+      "medianViews": 477,
       "meanRetentionPct": 23,
-      "saves": 4,
+      "saves": 5,
       "shares": 2,
-      "thin": true
+      "thin": false
     },
     "11": {
       "n": 6,
@@ -200,7 +200,7 @@
     "17": {
       "n": 14,
       "medianViews": 183,
-      "meanRetentionPct": 25.9,
+      "meanRetentionPct": 26,
       "saves": 14,
       "shares": 11,
       "thin": false
@@ -239,8 +239,18 @@
     }
   },
   "followers": {
-    "now": 33,
+    "now": 38,
     "bestDays": [
+      {
+        "date": "2026-08-23",
+        "delta": 7,
+        "published": [
+          {
+            "slug": "2026-08-23-ia-a-voulu-abandonner",
+            "views": 1173
+          }
+        ]
+      },
       {
         "date": "2026-08-08",
         "delta": 5,
@@ -261,25 +271,11 @@
         "published": [
           {
             "slug": "2026-08-22-bague-oura-sommeil",
-            "views": 154
+            "views": 158
           },
           {
             "slug": "2026-08-22-peau-humaine-vivante",
-            "views": 137
-          }
-        ]
-      },
-      {
-        "date": "2026-08-09",
-        "delta": 4,
-        "published": [
-          {
-            "slug": "2026-08-09-motif-anti-cameras",
-            "views": 1147
-          },
-          {
-            "slug": "2026-08-09-chatgpt-gratuit-illimite",
-            "views": 183
+            "views": 139
           }
         ]
       }
@@ -326,8 +322,8 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1250,
-      "reach": 1117,
+      "views": 1251,
+      "reach": 1119,
       "avgWatchS": 17.1,
       "retentionPct": 29,
       "likes": 9,
@@ -355,6 +351,23 @@
       "themes": [],
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-23-ia-a-voulu-abandonner",
+      "at": "2026-08-23T10:55:51.192Z",
+      "hourUtc": 10,
+      "views": 1173,
+      "reach": 1031,
+      "avgWatchS": 23.7,
+      "retentionPct": 39,
+      "likes": 14,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver.",
+      "settled": false
     },
     {
       "slug": "2026-08-15-google-retire-filigrane",
@@ -411,9 +424,9 @@
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
-      "views": 1058,
-      "reach": 934,
-      "avgWatchS": 14,
+      "views": 1061,
+      "reach": 937,
+      "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 6,
       "comments": 1,
@@ -428,9 +441,9 @@
       "slug": "2026-08-21-web-ecrit-par-ia",
       "at": "2026-08-21T10:50:01.289Z",
       "hourUtc": 10,
-      "views": 704,
-      "reach": 638,
-      "avgWatchS": 14,
+      "views": 706,
+      "reach": 640,
+      "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 6,
       "comments": 1,
@@ -441,7 +454,7 @@
         "models"
       ],
       "sendTest": "Une page web sur trois publiée depuis ChatGPT est écrite ou retouchée par une IA. Et il y a des tics pour le repérer.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-14-trois-ia-guerre-serveur",
@@ -498,8 +511,8 @@
       "slug": "2026-08-11-openai-ia-pirate-chrome",
       "at": "2026-08-11T20:02:23.032Z",
       "hourUtc": 20,
-      "views": 415,
-      "reach": 368,
+      "views": 416,
+      "reach": 369,
       "avgWatchS": 16,
       "retentionPct": 27,
       "likes": 4,
@@ -554,8 +567,8 @@
       "slug": "2026-08-12-metro-londres-visages",
       "at": "2026-08-12T10:57:49.864Z",
       "hourUtc": 10,
-      "views": 381,
-      "reach": 342,
+      "views": 382,
+      "reach": 343,
       "avgWatchS": 23.2,
       "retentionPct": 39,
       "likes": 2,
@@ -641,10 +654,10 @@
       "slug": "2026-08-17-filtre-biologique-anthropic",
       "at": "2026-08-17T17:08:43.569Z",
       "hourUtc": 17,
-      "views": 297,
-      "reach": 276,
-      "avgWatchS": 12.9,
-      "retentionPct": 21,
+      "views": 300,
+      "reach": 277,
+      "avgWatchS": 13,
+      "retentionPct": 22,
       "likes": 1,
       "comments": 1,
       "saved": 0,
@@ -818,6 +831,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-22-bague-oura-sommeil",
+      "at": "2026-08-22T16:55:58.251Z",
+      "hourUtc": 16,
+      "views": 158,
+      "reach": 144,
+      "avgWatchS": 10.6,
+      "retentionPct": 18,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-04-fcc-robots-humanoides",
       "at": "2026-08-04T12:10:51.964Z",
       "hourUtc": 12,
@@ -835,25 +867,6 @@
       ],
       "sendTest": "Les États-Unis viennent d'interdire l'importation des robots humanoïdes étrangers. 85 % du marché est chinois.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-22-bague-oura-sommeil",
-      "at": "2026-08-22T16:55:58.251Z",
-      "hourUtc": 16,
-      "views": 154,
-      "reach": 140,
-      "avgWatchS": 10.7,
-      "retentionPct": 18,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
-      "settled": false
     },
     {
       "slug": "2026-08-07-suno-chansons-marquees",
@@ -929,9 +942,9 @@
       "slug": "2026-08-22-peau-humaine-vivante",
       "at": "2026-08-22T10:54:08.736Z",
       "hourUtc": 10,
-      "views": 137,
-      "reach": 127,
-      "avgWatchS": 7.1,
+      "views": 139,
+      "reach": 129,
+      "avgWatchS": 7,
       "retentionPct": 12,
       "likes": 1,
       "comments": 1,
