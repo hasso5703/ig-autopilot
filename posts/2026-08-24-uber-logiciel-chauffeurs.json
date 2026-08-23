@@ -1,0 +1,218 @@
+{
+  "slug": "2026-08-24-uber-logiciel-chauffeurs",
+  "centralClaim": "Uber was fined 825 million euros because software deactivated driver accounts without human involvement.",
+  "corroboration": [
+    {
+      "url": "https://ppc.land/dutch-regulator-fines-uber-825-million-euros-over-automated-driver-blocking/",
+      "quote": "The Autoriteit Persoonsgegevens imposed a fine of 824,990,000 euros on Uber on 21 August 2026, finding that the company let software decide, without any human involvement, when a driver stopped earning."
+    },
+    {
+      "url": "https://thenextweb.com/news/uber-dutch-gdpr-fine-825m-automated-driver-suspensions",
+      "quote": "The Dutch data protection authority has decided to fine Uber 825 million euros for deactivating driver accounts by software without telling the drivers properly."
+    }
+  ],
+  "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
+  "caption": "Un logiciel coupait le compte des chauffeurs, et plus personne ne gagnait sa vie du jour au lendemain.\n\nL'autorité néerlandaise de protection des données inflige 825 millions d'euros à Uber. C'est la deuxième sanction la plus lourde jamais prononcée en Europe sur les données personnelles.\n\nCe que dit la décision. Des systèmes suivaient la conduite et les notes laissées par les clients. Quand un soupçon de fraude ou une note jugée trop basse sortait, le compte du chauffeur tombait automatiquement, sans qu'un humain regarde. L'autorité reproche aussi à Uber de ne pas avoir assez expliqué aux chauffeurs comment ces décisions étaient prises.\n\nLe détail qui n'est pas dans la vidéo. L'affaire ne vient pas des Pays-Bas. 171 chauffeurs français ont raconté leur situation à la Ligue des droits de l'Homme, qui a porté plainte auprès de la CNIL. Le siège européen d'Uber étant aux Pays-Bas, c'est l'autorité néerlandaise qui a mené l'enquête.\n\nLa réponse d'Uber. L'entreprise conteste et fait appel. Elle dit que la plupart des suspensions sont courtes, qu'aucune coupure définitive n'a lieu sans relecture humaine, et que les mauvaises notes ont coûté leur compte à 126 chauffeurs en Europe en 2021.\n\nÀ nuancer, et c'est important: rien n'est jugé. La procédure d'appel est en cours, et l'autorité dit qu'Uber a depuis arrêté.\n\nUn logiciel a le droit de te couper tes revenus tout seul, oui ou non ? Dis-le en commentaire.\n\nppc.land · thenextweb.com · techcrunch.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Uber #Chauffeurs",
+  "captionEvidence": [
+    {
+      "quote": "The Dutch data protection authority has decided to fine Uber €825mn, or about $966mn, for shutting down driver accounts by automated systems without telling the drivers properly. It is the second-largest penalty ever issued under the General Data Protection Regulation.",
+      "url": "https://thenextweb.com/news/uber-dutch-gdpr-fine-825m-automated-driver-suspensions"
+    },
+    {
+      "quote": "171 French drivers reported their situation to the Ligue des droits de l'homme, a French human rights organisation.",
+      "url": "https://ppc.land/dutch-regulator-fines-uber-825-million-euros-over-automated-driver-blocking/"
+    },
+    {
+      "quote": "It said low customer ratings cost 126 drivers their accounts across Europe in 2021.",
+      "url": "https://thenextweb.com/news/uber-dutch-gdpr-fine-825m-automated-driver-suspensions"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Pays-Bas · Uber",
+      "headline": "Un logiciel coupait les comptes. *825 millions* d'amende pour Uber.",
+      "hero": {
+        "value": "171",
+        "label": "chauffeurs français à l'origine de la plainte"
+      },
+      "swipe": "Regarde ce que le logiciel surveillait"
+    },
+    {
+      "type": "stat",
+      "figure": "825",
+      "unit": "millions d'euros d'amende",
+      "body": "La deuxième sanction la plus lourde jamais prononcée en Europe sur les **données personnelles**.",
+      "evidence": "The Dutch data protection authority has decided to fine Uber €825mn, or about $966mn, for shutting down driver accounts by automated systems without telling the drivers properly. It is the second-largest penalty ever issued under the General Data Protection Regulation.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/uber-dutch-gdpr-fine-825m-automated-driver-suspensions",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que le logiciel surveillait",
+      "body": "La conduite et les notes laissées par les clients. Un soupçon de fraude ou une note jugée trop basse, et le compte du chauffeur *tombait tout seul*.",
+      "evidence": "Uber deployed systems that tracked driving behaviour and customer ratings, and when those systems flagged a suspicion of fraud or a rating judged too low, the affected driver's account was deactivated automatically.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/dutch-regulator-fines-uber-825-million-euros-over-automated-driver-blocking/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Un ordinateur ne devrait pas prendre seul des décisions qui ont des conséquences aussi lourdes.",
+      "attribution": "Monique Verdier, vice-présidente de l'autorité néerlandaise de protection des données",
+      "evidence": "In a statement, deputy chair Monique Verdier said that the company had \"committed serious infringements.\" \"A computer should not make decisions on its own that have [such] major consequences,\" Verdier said.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/23/uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions/",
+        "date": "2026-08-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'affaire part de France",
+      "body": "171 chauffeurs ont raconté leur situation à la Ligue des droits de l'Homme, qui a porté plainte auprès de la *CNIL*.",
+      "evidence": "171 French drivers reported their situation to the Ligue des droits de l'homme, a French human rights organisation. The LDH then lodged a complaint with the French data protection regulator, the CNIL, acting on the drivers' behalf.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/dutch-regulator-fines-uber-825-million-euros-over-automated-driver-blocking/",
+        "date": "2026-08-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le chiffre avancé par Uber",
+      "body": "Les mauvaises notes ont coûté leur compte à **126 chauffeurs** en Europe en 2021, selon l'entreprise.",
+      "evidence": "It said low customer ratings cost 126 drivers their accounts across Europe in 2021.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/uber-dutch-gdpr-fine-825m-automated-driver-suspensions",
+        "date": "2026-08-21"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Le compte tombait sans qu'un humain regarde, et sans prévenir.",
+      "caveat": "Les suspensions sont brèves, aucune coupure définitive sans relecture humaine, et un recours existe.",
+      "claimLabel": "L'autorité néerlandaise",
+      "caveatLabel": "Uber, qui fait appel",
+      "evidence": "Uber, however, argued that most driver suspensions are brief, that no permanent deactivations take place without human review, and that drivers have the ability to appeal.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/23/uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions/",
+        "date": "2026-08-23"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui roule pour une appli",
+      "sub": "L'actualité de l'intelligence artificielle, en français."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Uber: 825 millions d'amende à cause d'un logiciel",
+    "beats": [
+      {
+        "script": "Tu conduis pour Uber, un matin ton compte est coupé. Pas par un chef, par un logiciel. Ça vient de coûter 825 millions à Uber.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a computer screen filled with a single column of driver account numbers",
+            "action": "the column of numbers sliding slowly downward, the screen staying whole and in frame",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "on a plain desk in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et le plus dingue, c'est d'où part cette histoire: de chauffeurs français qui se sont fait couper, et qui n'ont pas lâché.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed driver complaints report page filled with columns of numbers",
+            "setting": "on a plain table in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "L'autorité néerlandaise de protection des données reproche à Uber d'avoir laissé un logiciel décider, sans aucun humain dans la boucle, du moment où un chauffeur arrête de gagner sa vie.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://ppc.land/dutch-regulator-fines-uber-825-million-euros-over-automated-driver-blocking/",
+          "file": "media/2026-08-24-uber-logiciel-chauffeurs/shot_2.png"
+        }
+      },
+      {
+        "script": "L'amende tombe à 825 millions d'euros. C'est la deuxième plus lourde jamais prononcée en Europe pour une affaire de données personnelles.",
+        "visual": {
+          "type": "card",
+          "value": "825 M€",
+          "label": "millions d'euros d'amende pour Uber"
+        }
+      },
+      {
+        "script": "Le logiciel surveillait la conduite et les notes laissées par les clients. Un soupçon de fraude, une note jugée trop basse, et le compte sautait tout seul.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of customer rating numbers",
+            "setting": "on a plain desk under an angled desk lamp",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "La vice-présidente de l'autorité le dit sans détour: un ordinateur ne devrait pas prendre seul des décisions qui ont des conséquences aussi lourdes pour toi.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "an empty driver seat inside a parked car",
+            "setting": "in soft even daylight",
+            "composition": "the seat fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Uber conteste et fait appel. L'entreprise dit que les suspensions sont courtes, et que les mauvaises notes ont coûté leur compte à 126 chauffeurs en Europe en 2021.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://thenextweb.com/news/uber-dutch-gdpr-fine-825m-automated-driver-suspensions",
+          "file": "media/2026-08-24-uber-logiciel-chauffeurs/shot_6.png"
+        }
+      },
+      {
+        "script": "Tout est parti de 171 chauffeurs français qui ont raconté leur histoire. Rien n'est jugé, l'appel est en cours. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "card",
+          "value": "171",
+          "label": "chauffeurs français à l'origine de la plainte"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "PPC Land",
+      "url": "https://ppc.land/dutch-regulator-fines-uber-825-million-euros-over-automated-driver-blocking/",
+      "accessed": "2026-08-23"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/uber-dutch-gdpr-fine-825m-automated-driver-suspensions",
+      "accessed": "2026-08-23"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/23/uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions/",
+      "accessed": "2026-08-23"
+    }
+  ]
+}

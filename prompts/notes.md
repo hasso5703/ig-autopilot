@@ -639,6 +639,16 @@ ENTRIES:
   process, le tampon du pipe est perdu et tu ne vois RIEN, ce qui fait
   diagnostiquer un blocage au lancement alors qu'il est ailleurs. Redirige vers
   un fichier (`> log 2>&1`) et lis-le apres.
+  CORRECTION 23/08 (19h30) au (1) ci-dessus, et elle est vicieuse parce que le
+  remede se retourne contre toi: `pkill -f chrome-linux/chrome` TUE LE SHELL QUI
+  LE LANCE. Le motif est cherche dans les lignes de commande entieres, et le
+  shell appelant porte la commande elle-meme, donc il se tue en premier: exit
+  144, aucune sortie, rien d'execute apres. Le fichier deja ecrit survit et le
+  `cd` du shell precedent reste en place, ce qui fait ensuite echouer des chemins
+  relatifs. Ecris `pkill -f 'chrome-linux/[c]hrome'` (la classe de caracteres
+  empeche le motif de se matcher lui-meme), ou regarde d'abord avec
+  `pgrep -fa chrome`. Et travaille en chemins ABSOLUS des qu'un run a fait un
+  `cd`.
   Ajout 23/08 (06h30), dossier Torvalds. LE PRIMAIRE D'UNE ACTU NOYAU LINUX EST
   INGATABLE CHEZ KERNEL.ORG ET GATABLE CHEZ GITHUB. lore.kernel.org et
   git.kernel.org rendent HTTP 200 avec un corps de 1 541 octets qui est une
@@ -664,6 +674,23 @@ ENTRIES:
   York Times (injoignable) et les deux autres domaines sont Harvard elle-meme,
   donc le prix de 699 $ et le nom du fournisseur ne sont confirmes NULLE PART
   ailleurs que dans le NYT. Dis-le dans le rapport et attribue dans le script.
+  Ajout 23/08 (19h30), dossier amende Uber: rendent 200 au fetch gate et se
+  gatent DU PREMIER COUP ppc.land (re-confirme le 19/08) et thenextweb.com
+  (re-confirme); techcrunch.com re-confirme aussi. Repond 200 implicator.ai
+  (non gate). Bloquent au fetch gate: autoriteitpersoonsgegevens.nl (403 sur
+  /en, /en/current ET /actueel, donc le PRIMAIRE d'une decision de l'autorite
+  neerlandaise de protection des donnees est INGATABLE d'ici) et nltimes.nl
+  (403). ATTENTION CORROBORATION, famille Bloomberg du 07/08: techcrunch et
+  thenextweb creditent TOUS LES DEUX l'exclu Reuters (injoignable), donc le
+  chiffre de l'amende est un seul rapport habille de plusieurs domaines. Ce qui
+  sauve le dossier: ppc.land lit la decision de l'AP elle-meme (trois phrases de
+  Verdier, le calcul du pourcentage du chiffre d'affaires, la liste des quatre
+  amendes) et techcrunch porte son propre reportage a cote (interview de
+  Paul-Olivier Dehaye). ET LA DIVERGENCE A NE PAS FAIRE PORTER AU TEXTE PUBLIC,
+  a chercher sur toute reprise d'exclu: ppc ecrit "between 2018 and 2022" la ou
+  thenextweb ecrit "between 2020 and 2022", et ppc compte QUATRE amendes de l'AP
+  quand techcrunch ecrit "the third fine". N'ecris ni les annees ni le rang dans
+  le script: les deux sources sont vertes au gate et se contredisent quand meme.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -2532,6 +2559,22 @@ ENTRIES:
   titre "Startup Bootcamp", le chapo et le bouton "Apply Now". Regle generale:
   une page vitrine d'ecole ou d'entreprise met en tete la photo d'UN de ses
   intervenants, jamais forcement celui dont parle ton script.
+  Ajout 23/08 (19h30), DEUX RECUS EPINGLES HORS MOTEUR PAR UN RUN DE VEILLE, ET
+  L'UN CORRIGE LE 10/08. thenextweb.com se capture PROPREMENT du premier coup en
+  38 s, 3 frames, ZERO pub, ZERO banniere, AUCUN recadrage: masthead TNW,
+  rubrique LEGAL, titre entier sur 4 lignes ET le chapo qui porte l'affirmation
+  centrale verbatim, le tout dans les 1686 px visibles (mesure du 22/08). Le
+  10/08 disait que TNW avait capture un TOUT AUTRE article: cette fois
+  `page.url()` apres le goto ET le alt de l'image de tete etaient les bons, donc
+  TNW n'est pas un domaine a fuir, c'est un domaine a VERIFIER (url + alt, 10 s).
+  Detail a connaitre: son h1 revient VIDE a page.evaluate (le titre est rendu
+  hors <h1>), donc le scroll au h1 ne bouge pas, et c'est tres bien puisque la
+  page s'ouvre deja sur le titre. ppc.land re-confirme le 19/08: propre du
+  premier coup, 234 s et 17 frames (famille O(frames), il SURVIT, ne le declare
+  pas mort avant 4 min), masthead PPC LAND, illustration de tete, tag News, titre
+  entier et chapo, aucun recadrage. Les deux passent le controle du 10/08 (le
+  titre affiche EST l'histoire) et celui du 23/08 16h30 (aucun visage dans le
+  cadre, seules les vignettes de signature de l'auteur).
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
