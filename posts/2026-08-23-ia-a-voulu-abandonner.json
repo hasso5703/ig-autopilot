@@ -202,9 +202,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a laptop screen filled with a single column of machine status numbers",
+            "subject": "a laptop screen filled with lines of added debug code, each added line marked in green",
             "setting": "on a plain desk in soft even daylight",
-            "composition": "macro framing, four lines fill the entire frame"
+            "composition": "the screen seen at a low angle from the side, filling the entire frame"
           }
         }
       },
