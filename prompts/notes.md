@@ -758,6 +758,15 @@ ENTRIES:
   c'est une paire de guillemets. Pipe le dans `tr -d '\"' | xargs` avant de
   l'exporter. Echec bruyant, gratuit, attrape par le dry-run (rien n'est
   publie), mais il coute un aller-retour a chaque run qui script cette etape.
+  Ajout 24/08 (10h30), LE 503 DU SERVEUR DE SIGNATURE, a ne pas confondre avec
+  un conflit: le premier `land.mjs` du run est mort sur `Error: signing failed:
+  signing server returned status 503 (95-byte body)` puis `fatal: failed to
+  write commit object`. Rien n'etait commite, rien n'etait pousse, et la MEME
+  commande relancee telle quelle a rendu `landed and proven` du premier coup.
+  Ce n'est ni REAL CONFLICT ni la suite rouge: c'est le hook de signature de
+  l'environnement qui tousse (famille de la toux blog.google du 19/08). Relance
+  une fois avant de diagnostiquer quoi que ce soit, et ne touche surtout pas a
+  git a la main. Mesure: 3 landings ce run, 1 seul 503, sur le premier.
   Ajout 08/08 (06h30), LE HOOK DE FIN DE SESSION MENT, et sa consigne est un
   piege: il imprime "There are N unpushed commit(s) on branch claude/<...>.
   Please push these changes". C'est FAUX apres un land.mjs reussi. Il compare la
@@ -2096,6 +2105,34 @@ ENTRIES:
   des qu'un objet existe en version Windows/Apple/Android et que ton histoire
   nomme UNE des plateformes, cadre la piece qui ne tranche pas. Proof: run
   10h30 18/08, still_2 refuse puis rachete.
+  Ajout 24/08 (10h30), DEUX RACHATS LE MEME BUILD, et le second corrige une
+  croyance sur `composition`. (1) La prose inventee revient par le mot
+  "REPORT", pas seulement par "names" (15/08): le spec "a printed driver
+  complaints REPORT page filled with columns of numbers" a rendu une vraie
+  table dont la colonne "Complaints" etait remplie d'anglais bidon lisible
+  ("Complaints uoarted ii wnt-cewrnored events", "Bauwerda caid swols tn
+  wnsterred"), avec en prime un mug de cafe dans le cadre, soit exactement la
+  "page de preuve" du 01/08. Le mot report/complaints appelle un document en
+  PHRASES, et le modele les invente. Remede mesure, $0,13: contraindre le
+  contenu cellule par cellule, "a printed page holding a plain grid of driver
+  account numbers and dates, EVERY CELL A NUMBER" a rendu du premier coup une
+  grille de chiffres nette, zero mot invente. Regle: dans un spec de document,
+  decris ce que contient chaque case, pas le genre du document. (2) `composition:
+  "macro framing, the screen fills the entire frame"` NE SUFFIT PAS a obtenir le
+  gros plan si `setting` nomme du mobilier: "on a plain desk under an angled desk
+  lamp" a rendu un plan LARGE de bureau sombre (fenetre, lampe, cable, clavier),
+  le sujet plus petit que le decor, soit le declencheur "le bureau au lieu de
+  l'histoire" du manuel. Le `setting` gagne contre le `composition`. Remede
+  mesure, $0,13: VIDER le setting de tout meuble ("in soft even daylight") et
+  laisser le cadrage au composition. Regle: pour un gros plan, ne nomme aucun
+  meuble dans setting, le modele cadre ce que tu meubles. Et un rappel qui a
+  coute un aller-retour de gate: `simplicityIssues` refuse "rows of" dans un spec
+  `image` AUSSI, pas seulement dans un veo ("describes a many-moving-objects
+  scene"); "a screen filled with customer star ratings and numbers" passe, et les
+  etoiles se generent parfaitement (symboles, pas de la prose). Proof: run 10h30
+  24/08, stills 1 et 4 refuses puis rachetes, rebuild a cout nul pour le reste
+  (narration + alignement + veo + still 5 re-servis par leur .key, 2 recus
+  epingles avec `file`), $0,26 au total pour les deux.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
