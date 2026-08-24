@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-24T06:49:59.937Z",
+  "at": "2026-08-24T10:41:58.491Z",
   "n": 53,
   "nSettled": 47,
   "medianViews": 197,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 39,
+    "now": 40,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -247,11 +247,11 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1529
+            "views": 1593
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
-            "views": 132
+            "views": 136
           }
         ]
       },
@@ -290,9 +290,9 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1529,
-      "reach": 1372,
-      "avgWatchS": 23.8,
+      "views": 1593,
+      "reach": 1426,
+      "avgWatchS": 24,
       "retentionPct": 40,
       "likes": 20,
       "comments": 1,
@@ -428,8 +428,8 @@
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
-      "views": 1063,
-      "reach": 939,
+      "views": 1065,
+      "reach": 940,
       "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 6,
@@ -821,7 +821,7 @@
       "hourUtc": 16,
       "views": 165,
       "reach": 151,
-      "avgWatchS": 10.7,
+      "avgWatchS": 10.6,
       "retentionPct": 18,
       "likes": 0,
       "comments": 1,
@@ -960,6 +960,23 @@
       "settled": false
     },
     {
+      "slug": "2026-08-23-harvard-avatars-profs",
+      "at": "2026-08-23T16:55:23.876Z",
+      "hourUtc": 16,
+      "views": 136,
+      "reach": 126,
+      "avgWatchS": 5.4,
+      "retentionPct": 9,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Harvard vend une formation à 699 dollars où c'est une copie en IA du prof qui écoute ton projet et te répond.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-19-pub-dans-chatgpt",
       "at": "2026-08-19T10:54:09.002Z",
       "hourUtc": 10,
@@ -975,23 +992,6 @@
       "themes": [],
       "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-23-harvard-avatars-profs",
-      "at": "2026-08-23T16:55:23.876Z",
-      "hourUtc": 16,
-      "views": 132,
-      "reach": 124,
-      "avgWatchS": 5,
-      "retentionPct": 8,
-      "likes": 1,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Harvard vend une formation à 699 dollars où c'est une copie en IA du prof qui écoute ton projet et te répond.",
-      "settled": false
     },
     {
       "slug": "2026-08-05-waymo-dallas",

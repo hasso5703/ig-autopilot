@@ -123,11 +123,11 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a computer screen filled with a single column of driver account numbers",
-            "action": "the column of numbers sliding slowly downward, the screen staying whole and in frame",
+            "subject": "a driver's smartphone mounted on a car dashboard, its screen filled with a single column of numbers",
+            "action": "the column of numbers scrolling slowly upward on the screen, the phone staying whole and mounted in frame",
             "camera": "locked-off static shot, no camera movement, no zoom",
-            "setting": "on a plain desk in soft even daylight",
-            "composition": "macro framing, the screen fills the entire frame"
+            "setting": "inside a parked car in soft even daylight",
+            "composition": "close framing, the phone screen fills most of the frame"
           }
         }
       },
