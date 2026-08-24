@@ -691,6 +691,23 @@ ENTRIES:
   thenextweb ecrit "between 2020 and 2022", et ppc compte QUATRE amendes de l'AP
   quand techcrunch ecrit "the third fine". N'ecris ni les annees ni le rang dans
   le script: les deux sources sont vertes au gate et se contredisent quand meme.
+  Ajout 24/08 (16h30), dossier enfants/IA: rendent 200 au fetch gate et se gatent
+  DU PREMIER COUP (16 verifications sur 16, 0 erreur) technologyreview.com
+  (re-confirme) et arxiv.org/abs/ (re-confirme). ET LES DEUX SE CAPTURENT
+  PARFAITEMENT EN MOTEUR, sans mur de consentement ni recadrage: la fiche
+  arxiv /abs/ tient dans le cadre 9:16 le logo arXiv, l'identifiant, la date de
+  soumission, le titre, la liste ENTIERE des auteurs ET les 8 premieres lignes du
+  resume, donc le recu AFFICHE la phrase qui porte le centralClaim, lisible.
+  C'est le meilleur recu qui existe sur une actu de papier, au meme titre que
+  PubMed (08/08). technologyreview.com se capture aussi propre (titre, chapo,
+  signature, date). SUR UNE ACTU DE SCIENCE COGNITIVE OU DE PAPIER NLP, le couple
+  technologyreview + arxiv/abs est autosuffisant. NUANCE DE CORROBORATION a dire
+  dans le rapport, famille du 07/08: ce ne sont pas deux redactions, le reportage
+  MIT TR interviewe les AUTEURS du papier arxiv. Ca reste une vraie double lecture
+  (le papier est publie en actes de conference, anterieur de 16 mois au reportage)
+  mais pas deux enquetes independantes. ET LE PIEGE ARXIV DU 16/08 A L'ENVERS: ici
+  la phrase voulue EST dans le resume, donc /abs/ suffit ET se capture; des que la
+  phrase vient du corps il faut /html/<id>vN, qui ne porte pas la fiche.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -2834,6 +2851,27 @@ ENTRIES:
   url, title, source, reel:true, sources:[...], durationS }. Le `title` est le
   titre ANGLAIS de la source, c'est lui qui fabrique le fingerprint qui empeche
   filterFresh de reproposer l'histoire. Proof: run 10h30 22/08.
+  (4) Ajout 24/08 (16h30), LE VENV WHISPER PEUT RESTER A MOITIE CONSTRUIT, et le
+  moteur ne repare pas tout seul: sur conteneur froid le bootstrap pip est mort
+  sur un `ReadTimeout` de files.pythonhosted.org, et les DEUX builds suivants
+  sont morts instantanement sur `ModuleNotFoundError: No module named
+  'faster_whisper'`: le moteur voit le venv existant et ne relance JAMAIS le
+  bootstrap. Ce n'est pas un echec reseau a reessayer, c'est un venv casse.
+  Remede, 40 s: `/root/.cache/oom-whisper/bin/pip install --retries 5 --timeout
+  120 faster-whisper`, puis relance reel2 dans le MEME repertoire (la narration
+  deja achetee ressort du cache, $0 perdu). Le modele large-v3-turbo se
+  retelecharge ensuite en 29 s (~1,6 Go).
+  (5) Ajout 24/08 (16h30), LE PERMALINK N'ARRIVE PAS PAR LE GRAPH: un
+  `fetch graph.facebook.com/v21.0/<mediaId>?fields=permalink` rend un corps SANS
+  `permalink` juste apres la publication, donc `recordPosted` ecrit
+  `"permalink":""` et le registre perd le lien du post. `node src/publish.mjs
+  recent` l'a, lui, immediatement. Lis le permalink LA, avant d'appeler
+  recordPosted. ET SURTOUT, si tu l'as deja ecrit vide: NE RE-APPELLE PAS
+  recordPosted pour corriger. `reelsToday` (state.mjs:696) compte les LIGNES du
+  jour, pas les slugs distincts, donc une deuxieme ligne pour le meme slug fait
+  croire au jour qu'il porte 3 Reels, casse `owedToday`/`roomToday` et arme le
+  plafond quotidien contre un fantome. Corrige le champ SUR PLACE dans la
+  derniere ligne de posted.jsonl, apres avoir verifie que c'est bien la tienne.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
