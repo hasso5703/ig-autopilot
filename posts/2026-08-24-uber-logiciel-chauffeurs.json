@@ -136,9 +136,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a printed driver complaints report page filled with columns of numbers",
-            "setting": "on a plain table in soft even daylight",
-            "composition": "seen from directly above, the page fills the entire frame"
+            "subject": "a printed page holding a plain grid of driver account numbers and dates, every cell a number",
+            "setting": "in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame edge to edge, nothing else in view"
           }
         }
       },
@@ -163,9 +163,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a laptop screen filled with a single column of customer rating numbers",
-            "setting": "on a plain desk under an angled desk lamp",
-            "composition": "macro framing, the screen fills the entire frame"
+            "subject": "a screen filled with customer star ratings and numbers",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up, the screen fills the entire frame edge to edge, nothing else in view"
           }
         }
       },
