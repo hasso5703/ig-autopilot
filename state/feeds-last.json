@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-24T10:41:08.321Z",
-  "fresh": 306,
+  "at": "2026-08-24T16:39:58.594Z",
+  "fresh": 316,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -34,14 +34,14 @@
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 1,
+      "fresh": 3,
       "windowHours": 96
     },
     {
       "name": "Microsoft Research",
       "ok": true,
       "fetched": 10,
-      "fresh": 1,
+      "fresh": 0,
       "windowHours": 96
     },
     {
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 7,
+      "fresh": 11,
       "windowHours": 36
     },
     {
@@ -78,14 +78,14 @@
       "name": "VentureBeat",
       "ok": true,
       "fetched": 7,
-      "fresh": 1,
+      "fresh": 3,
       "windowHours": 36
     },
     {
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 1,
+      "fresh": 3,
       "windowHours": 36
     },
     {
@@ -100,7 +100,7 @@
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 2,
+      "fresh": 3,
       "windowHours": 36
     }
   ]

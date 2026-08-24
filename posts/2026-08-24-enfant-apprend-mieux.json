@@ -1,0 +1,205 @@
+{
+  "slug": "2026-08-24-enfant-apprend-mieux",
+  "centralClaim": "Large language models need vastly more data than children to learn language.",
+  "corroboration": [
+    {
+      "url": "https://arxiv.org/abs/2504.08165",
+      "quote": "children can acquire language from less than 100 million words of input. large language models are far less data-efficient: they typically require 3 or 4 orders of magnitude more data and still do not perform as well as humans on many evaluations."
+    },
+    {
+      "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/",
+      "quote": "llms need vastly more data than children to learn language."
+    }
+  ],
+  "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait.",
+  "caption": "Ton enfant a appris à parler avec cent mille fois moins de mots qu'une IA, et personne ne sait comment.\n\nUn préado qui grandit dans une maison où on parle beaucoup a entendu environ 100 millions de mots. Ça lui a suffi pour maîtriser sa langue. Une IA, elle, avale cent mille fois plus de mots qu'une personne n'en entendra pour apprendre sa langue maternelle. Les scientifiques appellent ce trou l'écart d'efficacité en données, et ils n'ont pas d'explication.\n\nCe que dit la recherche. Depuis quatre ans, une compétition appelée BabyLM demande à des chercheurs d'entraîner des modèles sur 100 millions de mots seulement. En 2024, le gagnant, GPT-BERT, a battu Llama 2 70B de Meta, entraîné sur environ 15 000 fois plus, sur un des tests de la compétition.\n\nLe détail qui n'est pas dans la vidéo. Pour savoir ce que vit vraiment un bébé, une équipe de Stanford a équipé trois bébés d'une caméra sur la tête, deux heures par semaine, de six mois à deux ans et demi. À Princeton, une autre équipe a enregistré les mille premiers jours de 17 enfants, douze heures par jour.\n\nÀ nuancer, et c'est important. Ces petits modèles ne sont pas au niveau des grands: beaucoup ne savent pas produire de texte du tout. Et les grands laboratoires ne se précipitent pas. Meta, Google DeepMind et OpenAI ont refusé l'interview.\n\nUn enfant de deux ans apprend mieux qu'une IA, oui ou non ? Dis-le en commentaire.\n\ntechnologyreview.com · arxiv.org\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #Enfants",
+  "captionEvidence": [
+    {
+      "quote": "a preteen raised in a linguistically rich home may have heard something in the vicinity of 100 million words.",
+      "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/"
+    },
+    {
+      "quote": "the 2024 champ, gpt-bert, is a transformer trained partly to predict the next token in a sequence, like modern llms",
+      "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/"
+    },
+    {
+      "quote": "impressively, when gpt-bert was pretrained on about 100 million words, it was able to beat the performance of meta's llama 2 70b-an llm pretrained roughly 15,000 times that amount-on one of the babylm benchmarks.",
+      "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/"
+    },
+    {
+      "quote": "uri hasson, a neuroscientist and psychologist at princeton, spent the last five years on a project to record the first 1,000 days of 17 children's lives.",
+      "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/"
+    },
+    {
+      "quote": "neither meta, google deepmind, openai, nor flapping airplanes agreed to an interview.",
+      "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "24 août 2026 · MIT Technology Review",
+      "headline": "Un enfant apprend *mieux* qu'une IA",
+      "hero": { "value": "100 millions", "label": "de mots suffisent à un enfant" },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "100M",
+      "unit": "de mots suffisent à un enfant",
+      "body": "C'est ce qu'un enfant entend avant de maîtriser sa langue. Une IA en réclame **bien davantage**, et elle ne fait toujours pas aussi bien que nous.",
+      "evidence": "children can acquire language from less than 100 million words of input. large language models are far less data-efficient: they typically require 3 or 4 orders of magnitude more data and still do not perform as well as humans on many evaluations.",
+      "source": { "name": "BabyLM Challenge findings", "url": "https://arxiv.org/abs/2504.08165", "date": "2025-04-10" }
+    },
+    {
+      "type": "content",
+      "title": "L'écart",
+      "body": "Une IA avale *cent mille fois* plus de mots qu'une personne n'en entend pour apprendre à parler.",
+      "evidence": "an llm can easily churn through a hundred thousand times more words than a person will experience in the process of mastering their mother tongue",
+      "source": { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/", "date": "2026-08-24" }
+    },
+    {
+      "type": "content",
+      "title": "Un mystère qui a un nom",
+      "body": "Personne ne sait comment un bébé y arrive. Les scientifiques appellent ce trou *l'écart d'efficacité en données*, et c'est devenu un défi pour ceux qui construisent les IA.",
+      "evidence": "this yawning divide between children and machines is called the data efficiency gap. and it raises a tantalizing question for cognitive scientists and a challenge for the architects of ai models: how is it that kids can still outperform the most linguistically sophisticated machines ever built?",
+      "source": { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/", "date": "2026-08-24" }
+    },
+    {
+      "type": "quote",
+      "body": "his signature argument was, essentially, that language cannot be learned on the basis purely of statistics",
+      "attribution": "Richard Futrell, linguiste, sur l'argument de Noam Chomsky",
+      "evidence": "his signature argument was, essentially, that language cannot be learned on the basis purely of statistics,\" says richard futrell, a linguist and cognitive scientist at the university of california, irvine.",
+      "source": { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/", "date": "2026-08-24" }
+    },
+    {
+      "type": "content",
+      "title": "Des caméras sur la tête des bébés",
+      "body": "Une équipe de Stanford a filmé la vie de **trois bébés**, deux heures par semaine, pour voir le monde comme eux.",
+      "evidence": "so he and four colleagues recruited three babies-all the children of psychologist mothers who knew what they were getting themselves into-to don headcams for science. the project, called saycam, recorded two hours a week of each child's life between six months and two and a half years of age.",
+      "source": { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/", "date": "2026-08-24" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Un petit modèle nourri de 100 millions de mots a battu Llama 2 70B de Meta sur un test.",
+      "caveat": "Ce modèle géant avait avalé environ 15 000 fois plus de mots.",
+      "claimLabel": "Le résultat",
+      "caveatLabel": "L'écart de moyens",
+      "evidence": "impressively, when gpt-bert was pretrained on about 100 million words, it was able to beat the performance of meta's llama 2 70b-an llm pretrained roughly 15,000 times that amount-on one of the babylm benchmarks.",
+      "source": { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/", "date": "2026-08-24" }
+    },
+    {
+      "type": "content",
+      "title": "La réserve",
+      "body": "Ces petits modèles restent loin des grands. *Beaucoup ne savent pas écrire un texte*, et le meilleur d'entre eux paraîtrait pataud à côté d'un produit commercial.",
+      "evidence": "still, babylm models are not on the same level as llms. many can't produce text at all, and even gpt-bert would seem clunky next to a modern commercial model.",
+      "source": { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/", "date": "2026-08-24" }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi ça presse",
+      "body": "Il n'y a qu'un internet à lire. Le puits de données faciles à trouver pourrait être **à sec dès les années 2030**.",
+      "evidence": "only so much internet to train on, and eventually-perhaps as early as the 2030s-the well of easily available data could run dry.",
+      "source": { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/", "date": "2026-08-24" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui vient d'avoir un enfant",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "reel2": {
+    "mood": "wonder",
+    "lang": "fr",
+    "title": "Un enfant apprend mieux que ChatGPT",
+    "beats": [
+      {
+        "script": "Ton enfant a appris à parler tout seul, dans ton salon, en un an. Une IA comme ChatGPT, elle, avale cent mille fois plus de mots.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a small child's hand resting on an open picture book",
+            "action": "turning one page, the page lifting and arcing slowly over, the book staying open and whole on the rug",
+            "setting": "on a rug in a bright living room in daylight",
+            "composition": "extreme close-up, the open book filling the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et personne ne sait comment il fait. Les scientifiques ont même un nom pour ce trou entre l'enfant et la machine.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/"
+        }
+      },
+      {
+        "script": "Un préado qui grandit dans une maison où on parle beaucoup a entendu environ cent millions de mots. Et ça lui a suffi.",
+        "visual": {
+          "type": "card",
+          "value": "100 millions",
+          "label": "de mots entendus. Et ça suffit à un enfant."
+        }
+      },
+      {
+        "script": "Dans les années cinquante, Noam Chomsky affirmait qu'une langue ne peut pas s'apprendre à partir de statistiques. Les IA lui ont donné tort, mais avec des moyens démesurés.",
+        "visual": {
+          "type": "photo",
+          "query": "noam chomsky",
+          "alt": "Le linguiste Noam Chomsky"
+        }
+      },
+      {
+        "script": "Alors pour comprendre, des chercheurs de Stanford ont posé une caméra sur la tête de trois bébés, deux heures par semaine, pendant deux ans.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a small lightweight camera mounted on a soft fabric child's headband",
+            "setting": "lying on a rug in a bright living room in daylight",
+            "composition": "close-up, the headband filling most of the frame"
+          }
+        }
+      },
+      {
+        "script": "Et là, ça devient intéressant. Un petit modèle nourri de cent millions de mots a battu un modèle géant de Meta sur un test de grammaire.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://arxiv.org/abs/2504.08165"
+        }
+      },
+      {
+        "script": "Sauf que non, ce n'est pas gagné. Beaucoup de ces petits modèles ne savent pas écrire un texte du tout.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a young child's scribbled crayon drawing on a sheet of paper",
+            "setting": "on a table in a bright room in daylight",
+            "composition": "close-up, the sheet of paper filling the frame"
+          }
+        }
+      },
+      {
+        "script": "Et le temps presse, parce qu'il n'y a qu'un internet à lire. Le puits de données faciles pourrait être à sec dès les années deux mille trente.",
+        "visual": {
+          "type": "card",
+          "value": "2030",
+          "label": "le puits de données faciles pourrait être à sec"
+        }
+      },
+      {
+        "script": "Meta, Google DeepMind et OpenAI ont tous refusé de répondre aux questions. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a stack of children's storybooks",
+            "setting": "on a rug in a bright living room in daylight",
+            "composition": "close-up on the stack"
+          }
+        }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/", "accessed": "2026-08-24" },
+    { "name": "BabyLM Challenge findings (arXiv)", "url": "https://arxiv.org/abs/2504.08165", "accessed": "2026-08-24" }
+  ]
+}
