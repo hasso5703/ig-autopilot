@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-23T19:40:22.775Z",
+  "at": "2026-08-24T06:49:59.937Z",
   "n": 53,
   "nSettled": 47,
   "medianViews": 197,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 38,
+    "now": 39,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -247,11 +247,11 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1374
+            "views": 1529
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
-            "views": 88
+            "views": 132
           }
         ]
       },
@@ -275,7 +275,7 @@
         "published": [
           {
             "slug": "2026-08-22-bague-oura-sommeil",
-            "views": 161
+            "views": 165
           },
           {
             "slug": "2026-08-22-peau-humaine-vivante",
@@ -286,6 +286,23 @@
     ]
   },
   "posts": [
+    {
+      "slug": "2026-08-23-ia-a-voulu-abandonner",
+      "at": "2026-08-23T10:55:51.192Z",
+      "hourUtc": 10,
+      "views": 1529,
+      "reach": 1372,
+      "avgWatchS": 23.8,
+      "retentionPct": 40,
+      "likes": 20,
+      "comments": 1,
+      "saved": 2,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver.",
+      "settled": false
+    },
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
       "at": "2026-08-10T20:22:31.627Z",
@@ -304,23 +321,6 @@
       ],
       "sendTest": "Amazon s'offre une centrale à gaz pour son IA. Le permis l'autorise à polluer plus que la pire centrale à charbon du pays.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-23-ia-a-voulu-abandonner",
-      "at": "2026-08-23T10:55:51.192Z",
-      "hourUtc": 10,
-      "views": 1374,
-      "reach": 1214,
-      "avgWatchS": 23.5,
-      "retentionPct": 39,
-      "likes": 18,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver.",
-      "settled": false
     },
     {
       "slug": "2026-08-15-camions-sans-chauffeur",
@@ -552,9 +552,9 @@
       "slug": "2026-08-16-texte-invisible-tribunal",
       "at": "2026-08-16T17:04:56.695Z",
       "hourUtc": 17,
-      "views": 389,
-      "reach": 363,
-      "avgWatchS": 31.3,
+      "views": 390,
+      "reach": 365,
+      "avgWatchS": 31.2,
       "retentionPct": 52,
       "likes": 1,
       "comments": 1,
@@ -819,10 +819,10 @@
       "slug": "2026-08-22-bague-oura-sommeil",
       "at": "2026-08-22T16:55:58.251Z",
       "hourUtc": 16,
-      "views": 161,
-      "reach": 147,
-      "avgWatchS": 10.5,
-      "retentionPct": 17,
+      "views": 165,
+      "reach": 151,
+      "avgWatchS": 10.7,
+      "retentionPct": 18,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -977,6 +977,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-23-harvard-avatars-profs",
+      "at": "2026-08-23T16:55:23.876Z",
+      "hourUtc": 16,
+      "views": 132,
+      "reach": 124,
+      "avgWatchS": 5,
+      "retentionPct": 8,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Harvard vend une formation à 699 dollars où c'est une copie en IA du prof qui écoute ton projet et te répond.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-05-waymo-dallas",
       "at": "2026-08-05T17:17:47.664Z",
       "hourUtc": 17,
@@ -1128,23 +1145,6 @@
       "themes": [],
       "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-23-harvard-avatars-profs",
-      "at": "2026-08-23T16:55:23.876Z",
-      "hourUtc": 16,
-      "views": 88,
-      "reach": 81,
-      "avgWatchS": 5.5,
-      "retentionPct": 9,
-      "likes": 1,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Harvard vend une formation à 699 dollars où c'est une copie en IA du prof qui écoute ton projet et te répond.",
-      "settled": false
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
