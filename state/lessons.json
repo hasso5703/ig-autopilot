@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-24T10:41:58.491Z",
-  "n": 53,
-  "nSettled": 47,
-  "medianViews": 197,
-  "medianRetentionPct": 21,
+  "at": "2026-08-24T17:03:53.542Z",
+  "n": 54,
+  "nSettled": 49,
+  "medianViews": 195,
+  "medianRetentionPct": 20,
   "top": [
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 33,
-      "medianViews": 354,
-      "meanRetentionPct": 25.3,
+      "n": 35,
+      "medianViews": 300,
+      "meanRetentionPct": 24.7,
       "saves": 55,
-      "shares": 21,
+      "shares": 23,
       "thin": false
     },
     "photo": {
@@ -140,21 +140,21 @@
       "thin": true
     },
     "safety": {
-      "n": 4,
-      "medianViews": 226,
-      "meanRetentionPct": 30,
+      "n": 5,
+      "medianViews": 165,
+      "meanRetentionPct": 27.6,
       "saves": 3,
       "shares": 1,
-      "thin": true
+      "thin": false
     }
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 5,
-      "medianViews": 477,
-      "meanRetentionPct": 23,
+      "n": 6,
+      "medianViews": 430,
+      "meanRetentionPct": 21.2,
       "saves": 5,
-      "shares": 2,
+      "shares": 4,
       "thin": false
     },
     "11": {
@@ -190,9 +190,9 @@
       "thin": true
     },
     "16": {
-      "n": 6,
-      "medianViews": 257,
-      "meanRetentionPct": 21.7,
+      "n": 7,
+      "medianViews": 183,
+      "meanRetentionPct": 21.1,
       "saves": 18,
       "shares": 3,
       "thin": false
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 40,
+    "now": 41,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -247,11 +247,11 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1593
+            "views": 1678
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
-            "views": 136
+            "views": 137
           }
         ]
       },
@@ -290,11 +290,11 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1593,
-      "reach": 1426,
-      "avgWatchS": 24,
+      "views": 1678,
+      "reach": 1497,
+      "avgWatchS": 23.9,
       "retentionPct": 40,
-      "likes": 20,
+      "likes": 22,
       "comments": 1,
       "saved": 2,
       "shares": 1,
@@ -428,8 +428,8 @@
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
-      "views": 1065,
-      "reach": 940,
+      "views": 1066,
+      "reach": 942,
       "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 6,
@@ -440,6 +440,25 @@
       "themes": [],
       "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-24-uber-logiciel-chauffeurs",
+      "at": "2026-08-24T10:59:24.031Z",
+      "hourUtc": 10,
+      "views": 729,
+      "reach": 653,
+      "avgWatchS": 17,
+      "retentionPct": 28,
+      "likes": 6,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
+      "settled": false
     },
     {
       "slug": "2026-08-21-web-ecrit-par-ia",
@@ -832,7 +851,7 @@
         "safety"
       ],
       "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-10-ia-reserve-cours-sport",
@@ -957,14 +976,14 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-23-harvard-avatars-profs",
       "at": "2026-08-23T16:55:23.876Z",
       "hourUtc": 16,
-      "views": 136,
-      "reach": 126,
+      "views": 137,
+      "reach": 127,
       "avgWatchS": 5.4,
       "retentionPct": 9,
       "likes": 1,

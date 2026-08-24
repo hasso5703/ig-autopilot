@@ -283,3 +283,8 @@
 {"at":"2026-08-24T10:49:51.353Z","slug":"2026-08-24-uber-logiciel-chauffeurs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1283}
 {"at":"2026-08-24T10:54:31.775Z","slug":"2026-08-24-uber-logiciel-chauffeurs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1286}
 {"at":"2026-08-24T10:54:46.091Z","slug":"2026-08-24-uber-logiciel-chauffeurs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1316}
+{"at":"2026-08-24T16:51:46.107Z","slug":"2026-08-24-enfant-apprend-mieux","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"59.2s Sadaltager","usd":0.0296}
+{"at":"2026-08-24T17:02:09.672Z","slug":"2026-08-24-enfant-apprend-mieux","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-24T17:02:23.380Z","slug":"2026-08-24-enfant-apprend-mieux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1278}
+{"at":"2026-08-24T17:02:37.738Z","slug":"2026-08-24-enfant-apprend-mieux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1292}
+{"at":"2026-08-24T17:02:54.415Z","slug":"2026-08-24-enfant-apprend-mieux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1301}
