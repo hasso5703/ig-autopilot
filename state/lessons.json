@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-24T17:03:53.542Z",
-  "n": 54,
+  "at": "2026-08-24T19:42:05.552Z",
+  "n": 55,
   "nSettled": 49,
   "medianViews": 195,
   "medianRetentionPct": 20,
@@ -141,7 +141,7 @@
     },
     "safety": {
       "n": 5,
-      "medianViews": 165,
+      "medianViews": 166,
       "meanRetentionPct": 27.6,
       "saves": 3,
       "shares": 1,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 41,
+    "now": 40,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -247,11 +247,11 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1678
+            "views": 1701
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
-            "views": 137
+            "views": 138
           }
         ]
       },
@@ -275,11 +275,11 @@
         "published": [
           {
             "slug": "2026-08-22-bague-oura-sommeil",
-            "views": 165
+            "views": 166
           },
           {
             "slug": "2026-08-22-peau-humaine-vivante",
-            "views": 139
+            "views": 140
           }
         ]
       }
@@ -290,8 +290,8 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1678,
-      "reach": 1497,
+      "views": 1701,
+      "reach": 1526,
       "avgWatchS": 23.9,
       "retentionPct": 40,
       "likes": 22,
@@ -445,8 +445,8 @@
       "slug": "2026-08-24-uber-logiciel-chauffeurs",
       "at": "2026-08-24T10:59:24.031Z",
       "hourUtc": 10,
-      "views": 729,
-      "reach": 653,
+      "views": 873,
+      "reach": 792,
       "avgWatchS": 17,
       "retentionPct": 28,
       "likes": 6,
@@ -464,8 +464,8 @@
       "slug": "2026-08-21-web-ecrit-par-ia",
       "at": "2026-08-21T10:50:01.289Z",
       "hourUtc": 10,
-      "views": 706,
-      "reach": 640,
+      "views": 707,
+      "reach": 641,
       "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 6,
@@ -838,8 +838,8 @@
       "slug": "2026-08-22-bague-oura-sommeil",
       "at": "2026-08-22T16:55:58.251Z",
       "hourUtc": 16,
-      "views": 165,
-      "reach": 151,
+      "views": 166,
+      "reach": 152,
       "avgWatchS": 10.6,
       "retentionPct": 18,
       "likes": 0,
@@ -943,6 +943,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-22-peau-humaine-vivante",
+      "at": "2026-08-22T10:54:08.736Z",
+      "hourUtc": 10,
+      "views": 140,
+      "reach": 130,
+      "avgWatchS": 6.9,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 2,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-02-xai-minnesota-nudification",
       "at": "2026-08-02T15:57:53.852Z",
       "hourUtc": 15,
@@ -962,28 +979,11 @@
       "settled": true
     },
     {
-      "slug": "2026-08-22-peau-humaine-vivante",
-      "at": "2026-08-22T10:54:08.736Z",
-      "hourUtc": 10,
-      "views": 139,
-      "reach": 129,
-      "avgWatchS": 7,
-      "retentionPct": 12,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 2,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
-      "settled": true
-    },
-    {
       "slug": "2026-08-23-harvard-avatars-profs",
       "at": "2026-08-23T16:55:23.876Z",
       "hourUtc": 16,
-      "views": 137,
-      "reach": 127,
+      "views": 138,
+      "reach": 128,
       "avgWatchS": 5.4,
       "retentionPct": 9,
       "likes": 1,
@@ -1181,6 +1181,23 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-24-enfant-apprend-mieux",
+      "at": "2026-08-24T17:08:53.955Z",
+      "hourUtc": 17,
+      "views": 60,
+      "reach": 51,
+      "avgWatchS": 5.3,
+      "retentionPct": 9,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait.",
+      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",

@@ -708,6 +708,24 @@ ENTRIES:
   mais pas deux enquetes independantes. ET LE PIEGE ARXIV DU 16/08 A L'ENVERS: ici
   la phrase voulue EST dans le resume, donc /abs/ suffit ET se capture; des que la
   phrase vient du corps il faut /html/<id>vN, qui ne porte pas la fiche.
+  Ajout 24/08 (19h30), LES CONDITIONS GENERALES D'UNE BOITE SONT UN PRIMAIRE
+  GATABLE, et c'est le reflexe a avoir sur toute actu du genre "ce que cette appli
+  a le droit de faire de tes donnees": instinct.co/terms rend 200 au fetch gate
+  (46 ko aplatis) et porte la phrase de licence VERBATIM ("you grant us a
+  nonexclusive, royalty-free, transferable, sub-licensable, worldwide, perpetual
+  and irrevocable license to access, use, host, cache, store, ... and modify any
+  materials to provide, operate, develop, train, fine-tune..."), et
+  instinct.co/privacy-policy rend 200 aussi (16 ko). Donc la depeche presse fait
+  le reportage et le contrat fait la preuve: deux domaines, et le second est
+  irrefutable puisque c'est l'entreprise qui l'ecrit. ATTENTION a ne pas etendre
+  cette corroboration aux INCIDENTS racontes dans l'article (ici quatre
+  temoignages dates des 21-22/08): eux sont TechCrunch-only, leurs sources sont
+  des posts x.com (403 depuis le 31/07), et le contrat n'en atteste aucun.
+  Corrobore les TERMES avec les termes, et dis dans le rapport que les incidents
+  reposent sur une seule redaction. Mesures du meme soir: xusheng.dev rend 200
+  (21 ko aplatis), et une URL /terms-of-service devinee rend 200 avec 8 OCTETS
+  aplatis, soit une page vide qui n'est pas un 404 - lis la taille aplatie, pas
+  le code (famille du defi Anubis de kernel.org, 23/08).
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1196,7 +1214,14 @@ ENTRIES:
   TOUT flux marque FAIL avant de planifier sans lui (The Verge et Ars Technica
   restent, eux, des 403 permanents, entree du 28/07). Ce soir-la les 5 items HN ne
   portaient aucune actu IA publiable, donc le run n'a rien perdu, mais la mesure
-  vaut pour le prochain.
+  vaut pour le prochain. Ajout 24/08 (19h30), ET LA MEME REGLE VAUT CONTRE LA
+  LIGNE "COLLECTE" DE watch.mjs, ce que personne n'avait note: le rapport de
+  veille a imprime "muets : The Verge, Ars Technica, Hacker News (250+ points)"
+  et feeds.mjs, lance TROIS MINUTES plus tard dans le meme run, a rendu HN
+  "ok 6/6". La liste des muets du watch est un instantane de la DERNIERE
+  collecte enregistree, pas un verdict sur le flux: ne renonce jamais a un flux
+  parce que le watch le dit muet, relance-le. The Verge et Ars restent, eux, des
+  403 permanents (28/07), et le watch a raison sur eux.
 - 2026-07-28 · Outlets edit articles after publication: TechCrunch changed
   "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
   Re-run validate.mjs on any stored spec before building from it; re-copy the
