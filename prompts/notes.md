@@ -1204,6 +1204,39 @@ ENTRIES:
   par leur .key). Un chiffre sur une `card` vient de l'evidence; un chiffre dans
   une still generee ne vient de nulle part. Proof: run 16h30 22/08, still_1
   refuse puis rachete.
+  Ajout 25/08 (10h30), LA RECETTE "COLONNE = NOTATION" NE S'ETEND PAS AUX PRIX,
+  et c'est la nuance qui a failli publier 300 chiffres inventes. Le spec "a
+  printed page holding a plain grid of product price numbers, every cell a
+  number" a rendu une page de ~30 lignes x 10 colonnes de prix parfaitement
+  lisibles (14.99, 29.50, 112.00, 73.95...), plein cadre 6,2 s, sur une actu
+  dont les seuls prix reels sont 49.99, 79.99, 109.99, 149.99, 84.99 et 799.99.
+  Gate vert, promptIssues vide, COMPLIANT: seul le regard sur la frame l'attrape.
+  Un rythme cardiaque en colonne (10/08) se lit comme de la notation parce qu'il
+  n'a ni unite ni decimale; UN PRIX EST UNE AFFIRMATION, il porte le $ et les
+  centimes, et un spectateur lit la grille comme le tarif d'Amazon. REGLE, qui
+  elargit celle du 22/08: pas de chiffre isole, ET pas de TABLEAU de chiffres
+  qui portent une unite (prix, montants, tarifs, factures). Meme run, la
+  variante papier du meme piege: "a single printed price ticket lying flat"
+  rend une soupe de glyphes (@&%$XX#, XOXOOXO, 8888 0000 88) qui se lit comme
+  un graphisme corrompu, sur la CHUTE en plus. La famille "document imprime
+  porteur de texte" (page de prix, ticket, facture, etiquette, bon) n'a AUCUNE
+  variante sure: ne la demande pas, prends une vraie photo de l'objet. Remede
+  gratuit et meilleur ce jour-la: les deux stills remplacees par des `photo`
+  reelles (plaquette de silicium Openverse pour la mémoire, et bookend sur la
+  vraie photo Echo Dot deja epinglee), donc 0 $ de rachat et 7 surfaces reelles
+  sur 9 au lieu de 5. Proof: run 10h30 25/08, beats 4 et 8 refuses au controle
+  des frames puis remplaces, spend inchange a $1.3753.
+  Ajout 25/08 (10h30), PHOTO D'UN PRODUIT GRAND PUBLIC, LES DEUX ECHECS
+  SYMETRIQUES: "kindle paperwhite" a fait echouer TOUS les candidats sur le
+  filtre near-white (31% et 57% de blanc: ce sont des detourages sur fond blanc,
+  la famille du 30/07), et "kindle e-reader" a rendu 200 mais une liseuse posee
+  a cote d'une tasse et d'une paire de lunettes, soit exactement "le bureau a la
+  place de l'histoire" du manuel, refusee au controle des frames. Sur un produit
+  grand public, les index ouverts n'ont souvent QUE ces deux familles (fiche
+  produit detouree / scene de vie), aucune des deux publiable: teste la requete
+  avec `imagery.mjs candidates` ET regarde la frame, et si les deux echouent,
+  reutilise une photo deja epinglee du meme objet en `file` plutot que de
+  generer. Proof: meme run, beat 8.
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
 - 2026-07-28 · techcrunch.com and prnewswire.com answer 503 to the session's
