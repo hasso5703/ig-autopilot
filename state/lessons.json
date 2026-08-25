@@ -1,10 +1,18 @@
 {
-  "at": "2026-08-25T06:44:02.046Z",
-  "n": 55,
-  "nSettled": 49,
+  "at": "2026-08-25T17:00:04.765Z",
+  "n": 57,
+  "nSettled": 51,
   "medianViews": 195,
   "medianRetentionPct": 20,
   "top": [
+    {
+      "slug": "2026-08-23-ia-a-voulu-abandonner",
+      "views": 1797,
+      "retentionPct": 40,
+      "saved": 2,
+      "shares": 1,
+      "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver."
+    },
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
       "views": 1388,
@@ -36,14 +44,6 @@
       "saved": 4,
       "shares": 3,
       "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai."
-    },
-    {
-      "slug": "2026-08-15-google-retire-filigrane",
-      "views": 1169,
-      "retentionPct": 25,
-      "saved": 2,
-      "shares": 0,
-      "sendTest": "Google va laisser enlever le petit logo qui disait qu'une image était faite par IA. Sauf en Europe, où la loi oblige à le garder."
     }
   ],
   "bottom": [
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 35,
+      "n": 37,
       "medianViews": 300,
       "meanRetentionPct": 24.7,
-      "saves": 55,
-      "shares": 23,
+      "saves": 58,
+      "shares": 24,
       "thin": false
     },
     "photo": {
@@ -150,11 +150,11 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 6,
-      "medianViews": 430,
-      "meanRetentionPct": 21.2,
-      "saves": 5,
-      "shares": 4,
+      "n": 7,
+      "medianViews": 477,
+      "meanRetentionPct": 23.9,
+      "saves": 7,
+      "shares": 5,
       "thin": false
     },
     "11": {
@@ -190,10 +190,10 @@
       "thin": true
     },
     "16": {
-      "n": 7,
-      "medianViews": 183,
-      "meanRetentionPct": 21.1,
-      "saves": 18,
+      "n": 8,
+      "medianViews": 175,
+      "meanRetentionPct": 19.6,
+      "saves": 19,
       "shares": 3,
       "thin": false
     },
@@ -247,7 +247,7 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1766
+            "views": 1797
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
@@ -290,9 +290,9 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1766,
-      "reach": 1593,
-      "avgWatchS": 24,
+      "views": 1797,
+      "reach": 1612,
+      "avgWatchS": 24.1,
       "retentionPct": 40,
       "likes": 23,
       "comments": 1,
@@ -301,7 +301,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -355,6 +355,25 @@
       "themes": [],
       "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-24-uber-logiciel-chauffeurs",
+      "at": "2026-08-24T10:59:24.031Z",
+      "hourUtc": 10,
+      "views": 1251,
+      "reach": 1126,
+      "avgWatchS": 16.7,
+      "retentionPct": 28,
+      "likes": 9,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
+      "settled": false
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
@@ -425,30 +444,11 @@
       "settled": true
     },
     {
-      "slug": "2026-08-24-uber-logiciel-chauffeurs",
-      "at": "2026-08-24T10:59:24.031Z",
-      "hourUtc": 10,
-      "views": 1142,
-      "reach": 1033,
-      "avgWatchS": 17,
-      "retentionPct": 28,
-      "likes": 7,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
       "views": 1066,
-      "reach": 942,
+      "reach": 943,
       "avgWatchS": 13.9,
       "retentionPct": 23,
       "likes": 6,
@@ -993,7 +993,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Harvard vend une formation à 699 dollars où c'est une copie en IA du prof qui écoute ton projet et te répond.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-19-pub-dans-chatgpt",
@@ -1079,6 +1079,23 @@
       "themes": [],
       "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-25-amazon-prix-materiel",
+      "at": "2026-08-25T10:57:53.630Z",
+      "hourUtc": 10,
+      "views": 125,
+      "reach": 117,
+      "avgWatchS": 6.4,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Amazon a augmenté ses enceintes et ses liseuses de 60% en une nuit, parce que l'IA a vidé le stock mondial de mémoire.",
+      "settled": false
     },
     {
       "slug": "2026-08-20-applis-surveillance-enfants",
@@ -1169,9 +1186,9 @@
       "slug": "2026-08-24-enfant-apprend-mieux",
       "at": "2026-08-24T17:08:53.955Z",
       "hourUtc": 17,
-      "views": 113,
-      "reach": 104,
-      "avgWatchS": 5.1,
+      "views": 114,
+      "reach": 105,
+      "avgWatchS": 5,
       "retentionPct": 8,
       "likes": 0,
       "comments": 1,
@@ -1215,6 +1232,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-25-paint-numero-invisible",
+      "at": "2026-08-25T16:57:24.419Z",
+      "hourUtc": 16,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
