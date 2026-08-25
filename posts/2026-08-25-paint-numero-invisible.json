@@ -114,11 +114,11 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "an extreme macro view of a bright computer screen where the individual colour pixels are visible",
-            "action": "the pixels slowly brightening one after another across the screen, the screen staying whole and in frame",
+            "subject": "a computer screen on a desk where a colourful generated image is appearing on a plain white background",
+            "action": "the colourful image fading in gradually from the middle of the white background, the whole screen staying still and fully inside the frame the entire time",
             "setting": "in soft even daylight",
-            "camera": "locked-off static shot, no camera movement, no zoom",
-            "composition": "macro framing, the pixels fill the entire frame"
+            "camera": "locked-off static shot, no camera movement, no pan, no zoom",
+            "composition": "medium close-up, the screen fills most of the frame"
           }
         }
       },
