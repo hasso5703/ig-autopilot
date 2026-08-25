@@ -743,6 +743,22 @@ ENTRIES:
   domaines reecrivent un seul communique, les trois ont ici chacun leur propre
   declaration d'entreprise ou leur propre lecture: c'est une vraie triple
   lecture, et ca se dit dans le rapport dans ce sens-la aussi.
+  Ajout 25/08 (16h30), NUANCE SUR theregister.com, le domaine qui alternait
+  200/403 (13/08): il a tenu 6 h ce jour-la sans une seule alternance. Un spec
+  banque par le scout de 10h30 s'est re-gate DU PREMIER COUP a 16h40 (14
+  verifications sur 14, 0 erreur, deux passes a 20 min d'intervalle), plus un
+  fetch a la main derriere. La regle du 13/08 (ne pas banquer un spec bati sur
+  un domaine qui alterne) reste bonne, mais elle ne condamne pas theregister en
+  permanence: teste-le, il peut etre stable une journee entiere. ET LE PIEGE DE
+  VERIFICATION A LA MAIN, qui a failli me faire croire que la source avait perdu
+  ses phrases: un aplatissement maison
+  `replace(/<[^>]+>/g,' ').replace(/\s+/g,' ')` NE DECODE PAS LES ENTITES, et
+  theregister colle un `&nbsp;` en plein milieu d'une phrase ("Anthropic
+  disclosed &nbsp; earlier this month"). Deux citations pourtant presentes sont
+  revenues MISSING sur ce test, alors que le gate les avait validees dix minutes
+  plus tot. Quand tu controles une citation hors gate, cherche un empan COURT ou
+  un nombre ("190 ai providers"), jamais la phrase entiere, et ne conclus jamais
+  a une source cassee sur la foi de ton propre flatten. Proof: run 16h30 25/08.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -2255,6 +2271,28 @@ ENTRIES:
   24/08, stills 1 et 4 refuses puis rachetes, rebuild a cout nul pour le reste
   (narration + alignement + veo + still 5 re-servis par leur .key, 2 recus
   epingles avec `file`), $0,26 au total pour les deux.
+  Ajout 25/08 (16h30), LE SUJET VEO ABSTRAIT N'A PAS DE PERMANENCE, et ca coute
+  $0,96. Un beat 0 dont le sujet est une TEXTURE ou une MATIERE (ici "an extreme
+  macro view of a bright computer screen where the individual colour pixels are
+  visible", action "the pixels slowly brightening one after another") a rendu un
+  clip ou l'ecran SORT DU CADRE aux panneaux 3 a 7 du filmstrip: fond noir et
+  moire arc-en-ciel abstraite, puis retour de la grille au 8e. Les regles 1 a 4
+  du manuel etaient pourtant respectees (motion, une seule etape, "the screen
+  staying whole and in frame"): elles ne suffisent pas quand le sujet n'est pas
+  un OBJET. Un macro de pixels/de lumiere/de grain n'a aucune silhouette a
+  conserver, donc le modele derive vers du motif abstrait, soit exactement le
+  wallpaper que l'ouverture doit eviter. REMEDE MESURE, vert du premier coup au
+  rachat: remets l'abstrait DANS un objet ordinaire entier et donne le mouvement
+  a ce qui apparait dessus. "a computer screen on a desk where a colourful
+  generated image is appearing on a plain white background" + action "the
+  colourful image fading in gradually from the middle of the white background,
+  the whole screen staying still and fully inside the frame the entire time" a
+  donne 8 panneaux avec le meme moniteur, meme taille, meme place, l'image qui
+  se forme du centre vers les bords. Regle: si tu ne peux pas dessiner la
+  SILHOUETTE de ton sujet, ce n'est pas un sujet veo, c'est un fond. Le cache
+  n'a pas ressuscite le refus (l'action changee change l'empreinte, conforme au
+  manuel). Proof: run 16h30 25/08, veo_0 refuse puis rachete, rebuild a cout nul
+  pour tout le reste (narration + alignement + 3 stills re-servis).
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
