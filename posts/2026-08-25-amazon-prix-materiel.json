@@ -144,9 +144,12 @@
       {
         "script": "Prends l'Echo Dot, la petite enceinte ronde d'Amazon, la moins chère du catalogue. Elle a pris soixante pour cent en une nuit.",
         "visual": {
-          "type": "card",
-          "value": "60%",
-          "label": "de plus sur l'enceinte la moins chère du catalogue"
+          "type": "photo",
+          "query": "smart speaker",
+          "alt": "Une enceinte connectée Echo Dot posée sur une surface claire",
+          "file": "media/2026-08-25-amazon-prix-materiel/photo_2.jpg",
+          "credit": "Smart Home Perfected · CC BY 2.0",
+          "note": "Vraie photo d'Echo Dot, 3e génération; la hausse porte sur la 5e. Le script ne nomme aucune génération, donc rien ne se contredit à l'image. Aucun logo, aucun texte, aucun millésime dans le cadre."
         }
       },
       {
