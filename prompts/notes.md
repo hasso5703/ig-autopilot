@@ -759,6 +759,24 @@ ENTRIES:
   plus tot. Quand tu controles une citation hors gate, cherche un empan COURT ou
   un nombre ("190 ai providers"), jamais la phrase entiere, et ne conclus jamais
   a une source cassee sur la foi de ton propre flatten. Proof: run 16h30 25/08.
+  Ajout 25/08 (19h30), dossier Waymo/Munich: rendent 200 au fetch gate et se
+  gatent DU PREMIER COUP waymo.com/blog (le primaire) et cnbc.com; thenextweb.com
+  re-confirme (13 verifications sur 13 apres correction, 3 domaines). Bloquent au
+  fetch gate: electrive.com (403), dw.com (403), theverge.com (403, re-confirme).
+  heise.de rend 200 mais son index /news/ est rendu en JS et n'expose qu'UN lien:
+  joignable, pas enumerable. ET LE PIEGE QUI INVERSE LE REFLEXE RSS (12/08
+  blog.google, 17/08 deepmind): sur waymo.com c'est l'inverse exact. L'index HTML
+  waymo.com/blog/ porte les URL du jour en clair (/blog/2026/08/waymo-in-munich),
+  tandis que waymo.com/blog/rss.xml rend 200 et 385 ko de billets blogspot de
+  2020-2021, aucun recent: le flux est un PIEGE PERIME, pas un raccourci. Va a
+  l'index HTML sur waymo.com, et verifie toujours une date dans le flux avant de
+  t'y fier. PIEGE DE CITATION thenextweb, meme famille que le "they're" de Pew
+  (19/08): TNW compose ses citations detachees en guillemets typographiques AVEC
+  UNE ESPACE A L'INTERIEUR (`" Our goal ... here, "` une fois aplati), donc une
+  citation recopiee en englobant la narration qui suit ("...here, " Hirte said,
+  in the same statement...") revient NOT_FOUND. Prends l'empan STRICTEMENT
+  INTERIEUR aux guillemets, sans les guillemets ni ce qui les entoure. Proof:
+  1 erreur de gate ce soir, verte au coup suivant.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not

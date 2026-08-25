@@ -1,0 +1,150 @@
+{
+  "slug": "2026-08-26-waymo-munich-europe",
+  "centralClaim": "Waymo is laying the groundwork for a fully autonomous ride-hailing service in Munich, Germany.",
+  "corroboration": [
+    {
+      "url": "https://thenextweb.com/news/waymo-munich-germany-autonomous-ride-hailing-2027",
+      "quote": "Waymo has announced it is laying the groundwork for autonomous ride-hailing in Munich, starting with high-definition mapping and manual driving in the coming weeks."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/25/waymo-robotaxis-are-headed-to-munich/",
+      "quote": "Waymo said Tuesday it plans to launch a robotaxi service in Munich, months after the Alphabet-owned autonomous vehicle company set up an entity in Germany."
+    }
+  ],
+  "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
+  "caption": "Les taxis sans chauffeur arrivent dans l'Union européenne, et c'est une entreprise américaine qui les apporte.\n\nWaymo, la filiale de voitures sans chauffeur d'Alphabet, prépare un service de taxis autonomes à Munich. Dans les prochaines semaines, ses voitures rouleront dans la ville conduites à la main, pour cartographier les rues. Viendront ensuite les essais avec un spécialiste derrière le volant. Le service ouvert au public est visé pour la fin 2027. L'entreprise revendique plus de 20 millions de trajets et transporte déjà des passagers dans 11 villes américaines.\n\nLe détail qui n'est pas dans la vidéo. Munich serait la troisième ville de Waymo hors des États-Unis, après Londres et Tokyo. Et c'est l'Allemagne qui a écrit, en 2021, le premier cadre au monde pour faire rouler commercialement des voitures sans chauffeur. Aucune entreprise allemande ne s'en est servie pour exploiter une flotte sans chauffeur à grande échelle.\n\nÀ nuancer, et c'est important. Rien ne roule encore sans chauffeur à Munich. Waymo doit cartographier, tester, puis obtenir les autorisations allemandes, et l'annonce porte sur une intention, pas sur un service ouvert.\n\nUn taxi sans personne au volant, tu montes, oui ou non ? Dis-le en commentaire.\n\nwaymo.com · cnbc.com · thenextweb.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Waymo #VoitureAutonome",
+  "captionEvidence": [
+    {
+      "quote": "This validation period will ensure the Waymo Driver adapts seamlessly to Munich's distinct driving conditions before we aim to open commercial ride-hailing to the public towards the end of 2027.",
+      "url": "https://waymo.com/blog/2026/08/waymo-in-munich"
+    },
+    {
+      "quote": "With over 20 million trips completed and hundreds of thousands of commercial rides served each week, we are now bringing our fully autonomous driving technology to one of the world's premier hubs for automotive engineering and urban mobility.",
+      "url": "https://waymo.com/blog/2026/08/waymo-in-munich"
+    },
+    {
+      "quote": "The company currently operates in 11 U.S. cities, and is working to expand to 19 others, according to its website.",
+      "url": "https://www.cnbc.com/2026/08/25/waymo-robotaxi-germany-2027.html"
+    },
+    {
+      "quote": "Germany passed the world's first framework for commercialising Level 4 vehicles in 2021, and no German company has used it to run a driverless commercial fleet at scale.",
+      "url": "https://thenextweb.com/news/waymo-munich-germany-autonomous-ride-hailing-2027"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "25 août 2026 · Waymo",
+      "headline": "Des taxis sans chauffeur à Munich, et *personne au volant*",
+      "hero": { "value": "2027", "label": "l'ouverture au public visée à Munich" },
+      "swipe": "Les reçus en dessous"
+    },
+    {
+      "type": "stat",
+      "figure": "20",
+      "unit": "millions de trajets déjà effectués",
+      "body": "Et **des centaines de milliers** de courses commerciales chaque semaine, avant même d'arriver en Europe.",
+      "evidence": "With over 20 million trips completed and hundreds of thousands of commercial rides served each week, we are now bringing our fully autonomous driving technology to one of the world's premier hubs for automotive engineering and urban mobility.",
+      "source": { "name": "Waymo", "url": "https://waymo.com/blog/2026/08/waymo-in-munich", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "Munich d'abord, et pas tout de suite",
+      "body": "Les voitures rouleront d'abord **conduites à la main** pour cartographier les rues. Le service ouvert au public est visé pour la fin 2027.",
+      "evidence": "This validation period will ensure the Waymo Driver adapts seamlessly to Munich's distinct driving conditions before we aim to open commercial ride-hailing to the public towards the end of 2027.",
+      "source": { "name": "Waymo", "url": "https://waymo.com/blog/2026/08/waymo-in-munich", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "11 villes, toutes américaines",
+      "body": "Waymo transporte des passagers dans 11 villes aux États-Unis. Munich serait sa **troisième ville hors des États-Unis**.",
+      "evidence": "The company currently operates in 11 U.S. cities, and is working to expand to 19 others, according to its website.",
+      "source": { "name": "CNBC", "url": "https://www.cnbc.com/2026/08/25/waymo-robotaxi-germany-2027.html", "date": "2026-08-25" }
+    },
+    {
+      "type": "contrast",
+      "claim": "L'Allemagne a écrit en 2021 le premier cadre au monde pour faire rouler commercialement des voitures sans chauffeur.",
+      "caveat": "Aucune entreprise allemande ne s'en est servie pour exploiter une flotte sans chauffeur à grande échelle.",
+      "claimLabel": "La loi",
+      "caveatLabel": "L'usage",
+      "evidence": "Germany passed the world's first framework for commercialising Level 4 vehicles in 2021, and no German company has used it to run a driverless commercial fleet at scale.",
+      "source": { "name": "The Next Web", "url": "https://thenextweb.com/news/waymo-munich-germany-autonomous-ride-hailing-2027", "date": "2026-08-25" }
+    },
+    {
+      "type": "quote",
+      "body": "Our goal must be to ensure that we in Europe not only use these technologies but also develop and operate them here.",
+      "attribution": "Christian Hirte, secrétaire d'État au ministère fédéral allemand des Transports",
+      "evidence": "Our goal must be to ensure that we in Europe not only use these technologies but also develop and operate them here",
+      "source": { "name": "The Next Web", "url": "https://thenextweb.com/news/waymo-munich-germany-autonomous-ride-hailing-2027", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "Le concurrent local est une navette",
+      "body": "Volkswagen met des **ID. Buzz sans chauffeur** à Hambourg, pendant que Waymo prépare Munich.",
+      "evidence": "Volkswagen's MOIA is putting autonomous ID. Buzz vehicles into Hamburg, while Wayve is on an Uber waitlist in London and Verne runs a commercial service in Zagreb.",
+      "source": { "name": "The Next Web", "url": "https://thenextweb.com/news/waymo-munich-germany-autonomous-ride-hailing-2027", "date": "2026-08-25" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui ne monterait jamais dans une voiture sans chauffeur",
+      "sub": "L'actu IA, en une minute."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Des taxis sans chauffeur à Munich, fin 2027",
+    "beats": [
+      {
+        "script": "En Europe, tu vas bientôt monter dans un taxi où il n'y a personne au volant. Première ville concernée : Munich, en Allemagne.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single autonomous vehicle",
+            "action": "turning slowly around a street corner, the whole vehicle staying in frame",
+            "setting": "on a quiet European city street in bright daylight",
+            "composition": "medium side shot at street level"
+          }
+        }
+      },
+      {
+        "script": "C'est Waymo, l'entreprise de voitures sans chauffeur d'Alphabet, la maison mère de Google. Sauf que le plus gênant, ce n'est pas le taxi.",
+        "visual": { "type": "screenshot", "url": "https://waymo.com/blog/2026/08/waymo-in-munich" }
+      },
+      {
+        "script": "Waymo a déjà fait plus de 20 millions de trajets et transporte des passagers dans 11 villes américaines. Munich serait sa troisième ville hors des États-Unis.",
+        "visual": { "type": "card", "value": "20 millions", "label": "de trajets déjà effectués, dans 11 villes américaines" }
+      },
+      {
+        "script": "Mais rien ne commence demain. Dans les prochaines semaines, ses voitures rouleront dans Munich conduites à la main, pour cartographier les rues.",
+        "visual": { "type": "photo", "query": "waymo self driving car", "alt": "Une voiture autonome Waymo dans une rue" }
+      },
+      {
+        "script": "Ensuite viendront les essais, avec un spécialiste derrière le volant. Le service ouvert à tous, lui, est visé pour la fin 2027.",
+        "visual": { "type": "card", "value": "fin 2027", "label": "l'ouverture au public visée à Munich" }
+      },
+      {
+        "script": "Et voilà le détail qui change tout. C'est l'Allemagne qui a écrit, en 2021, le premier cadre au monde pour faire rouler commercialement des voitures sans chauffeur.",
+        "visual": { "type": "screenshot", "url": "https://thenextweb.com/news/waymo-munich-germany-autonomous-ride-hailing-2027" }
+      },
+      {
+        "script": "Sauf qu'aucune entreprise allemande ne s'en est servie à grande échelle. Le concurrent local, c'est une navette : Volkswagen met des ID. Buzz sans chauffeur à Hambourg.",
+        "visual": { "type": "photo", "query": "volkswagen id buzz", "alt": "Un Volkswagen ID. Buzz" }
+      },
+      {
+        "script": "Le secrétaire d'État allemand aux Transports a salué Waymo. Puis il a ajouté : en Europe, on ne doit pas seulement utiliser ces technologies, il faut les développer et les exploiter ici.",
+        "visual": { "type": "photo", "query": "christian hirte", "alt": "Christian Hirte, secrétaire d'État aux Transports" }
+      },
+      {
+        "script": "Il disait ça en accueillant une entreprise américaine. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "photo", "query": "tekedra mawakana", "alt": "Tekedra Mawakana, co-directrice générale de Waymo" }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "Waymo", "url": "https://waymo.com/blog/2026/08/waymo-in-munich", "accessed": "2026-08-25" },
+    { "name": "CNBC", "url": "https://www.cnbc.com/2026/08/25/waymo-robotaxi-germany-2027.html", "accessed": "2026-08-25" },
+    { "name": "The Next Web", "url": "https://thenextweb.com/news/waymo-munich-germany-autonomous-ride-hailing-2027", "accessed": "2026-08-25" },
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/25/waymo-robotaxis-are-headed-to-munich/", "accessed": "2026-08-25" }
+  ]
+}

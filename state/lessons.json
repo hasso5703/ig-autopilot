@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-25T17:00:04.765Z",
+  "at": "2026-08-25T19:42:46.752Z",
   "n": 57,
   "nSettled": 51,
   "medianViews": 195,
@@ -340,6 +340,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-24-uber-logiciel-chauffeurs",
+      "at": "2026-08-24T10:59:24.031Z",
+      "hourUtc": 10,
+      "views": 1255,
+      "reach": 1129,
+      "avgWatchS": 16.7,
+      "retentionPct": 28,
+      "likes": 9,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
@@ -355,25 +374,6 @@
       "themes": [],
       "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-24-uber-logiciel-chauffeurs",
-      "at": "2026-08-24T10:59:24.031Z",
-      "hourUtc": 10,
-      "views": 1251,
-      "reach": 1126,
-      "avgWatchS": 16.7,
-      "retentionPct": 28,
-      "likes": 9,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
-      "settled": false
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
@@ -926,6 +926,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-25-paint-numero-invisible",
+      "at": "2026-08-25T16:57:24.419Z",
+      "hourUtc": 16,
+      "views": 151,
+      "reach": 132,
+      "avgWatchS": 10.3,
+      "retentionPct": 17,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-11-google-ia-repond-faux",
       "at": "2026-08-11T17:04:15.847Z",
       "hourUtc": 17,
@@ -1232,23 +1249,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-25-paint-numero-invisible",
-      "at": "2026-08-25T16:57:24.419Z",
-      "hourUtc": 16,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
