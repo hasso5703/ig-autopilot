@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-24T19:42:05.552Z",
+  "at": "2026-08-25T06:44:02.046Z",
   "n": 55,
   "nSettled": 49,
   "medianViews": 195,
@@ -247,7 +247,7 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1701
+            "views": 1766
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
@@ -290,11 +290,11 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1701,
-      "reach": 1526,
-      "avgWatchS": 23.9,
+      "views": 1766,
+      "reach": 1593,
+      "avgWatchS": 24,
       "retentionPct": 40,
-      "likes": 22,
+      "likes": 23,
       "comments": 1,
       "saved": 2,
       "shares": 1,
@@ -425,6 +425,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-24-uber-logiciel-chauffeurs",
+      "at": "2026-08-24T10:59:24.031Z",
+      "hourUtc": 10,
+      "views": 1142,
+      "reach": 1033,
+      "avgWatchS": 17,
+      "retentionPct": 28,
+      "likes": 7,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
@@ -440,25 +459,6 @@
       "themes": [],
       "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-24-uber-logiciel-chauffeurs",
-      "at": "2026-08-24T10:59:24.031Z",
-      "hourUtc": 10,
-      "views": 873,
-      "reach": 792,
-      "avgWatchS": 17,
-      "retentionPct": 28,
-      "likes": 6,
-      "comments": 1,
-      "saved": 1,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
-      "settled": false
     },
     {
       "slug": "2026-08-21-web-ecrit-par-ia",
@@ -1166,6 +1166,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-24-enfant-apprend-mieux",
+      "at": "2026-08-24T17:08:53.955Z",
+      "hourUtc": 17,
+      "views": 113,
+      "reach": 104,
+      "avgWatchS": 5.1,
+      "retentionPct": 8,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait.",
+      "settled": false
+    },
+    {
       "slug": "2026-07-31-xai-turbines-memphis",
       "at": "2026-07-31T16:19:27.550Z",
       "hourUtc": 16,
@@ -1181,23 +1198,6 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-24-enfant-apprend-mieux",
-      "at": "2026-08-24T17:08:53.955Z",
-      "hourUtc": 17,
-      "views": 60,
-      "reach": 51,
-      "avgWatchS": 5.3,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait.",
-      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",

@@ -1,0 +1,206 @@
+{
+  "slug": "2026-08-25-paint-numero-invisible",
+  "centralClaim": "Microsoft Paint and Photos embed a server-issued GUID into the pixels of locally generated AI images.",
+  "corroboration": [
+    {
+      "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+      "quote": "reverse engineering reveals how paint and photos embed a server-issued guid into the pixels of locally generated ai images."
+    },
+    {
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034",
+      "quote": "microsoft paint and photos embed a server-issued guid as an invisible watermark in locally generated ai images"
+    }
+  ],
+  "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
+  "caption": "Chaque image que l'IA de Paint fabrique sur ton PC repart avec un numéro invisible qui remonte à ta demande.\n\nUn chercheur en rétro-ingénierie, Xusheng Li, a démonté l'application. Avant même de fabriquer l'image, Paint envoie ta demande à un serveur de Microsoft pour la modérer. Le serveur renvoie un identifiant unique, et cet identifiant est écrit dans les pixels de l'image, en 16 octets qu'aucun œil ne peut voir. Le réglage qui ajoute un logo visible ne contrôle pas celui-là.\n\nLe détail qui n'est pas dans la vidéo. Paint transmet aussi l'identifiant de ta demande précédente à chaque nouvelle requête de modération, ce qui permet de relier explicitement tes créations les unes aux autres. Et sur les PC équipés pour l'IA, l'image est bien fabriquée en local, mais la modération de la demande reste à distance.\n\nÀ nuancer, et c'est important. Rien ne prouve que Microsoft s'en serve pour identifier qui que ce soit. Le chercheur écrit seulement que l'entreprise pourrait, en théorie, retrouver un auteur si elle relie chaque demande à la personne qui l'a envoyée. Microsoft n'a pas répondu aux questions du Register.\n\nUn numéro invisible dans tes images, ça te dérange, oui ou non ? Dis-le en commentaire.\n\nxusheng.dev · theregister.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Microsoft #ViePrivee",
+  "captionEvidence": [
+    {
+      "quote": "paint also sends the previous promptgenerationid as lastpromptgenerationid with its next moderation request, allowing successive requests to be linked explicitly.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034"
+    },
+    {
+      "quote": "if microsoft associates each prompt with the user who sent it, then the company could in theory identify users by referring to the watermark in an image.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034"
+    },
+    {
+      "quote": "microsoft did not immediately respond to a request for comment.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034"
+    },
+    {
+      "quote": "the two apps send the prompt to a remote server for moderation the server returns a guid along with the moderated prompt the guid is embedded into the locally generated image as an invisible watermark a separate visible-watermark setting does not control this invisible watermark on copilot+ pcs, image generation is local but prompt moderation remains remote",
+      "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "xusheng.dev · The Register",
+      "headline": "Paint cache un *numéro unique* dans tes images IA",
+      "hero": { "value": "16", "label": "octets écrits dans les pixels, invisibles à l'oeil" },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "16",
+      "unit": "octets glissés dans les pixels",
+      "body": "Un identifiant unique, *invisible à l'oeil nu*, et il ne ressemble en rien au petit logo que le réglage visible ajoute dans un coin.",
+      "evidence": "li notes that the invisible guid watermark - a 16-byte integer - is distinct from the visible watermark option that microsoft provides to users of its paint software and microsoft 365 ai features.",
+      "source": { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "L'image est locale, le numéro ne l'est pas",
+      "body": "Les deux applications concernées sont **Paint** et **Photos**. Ta demande part vers un serveur pour être modérée, le serveur renvoie un identifiant, et cet identifiant *finit dans les pixels*.",
+      "evidence": "the two apps send the prompt to a remote server for moderation the server returns a guid along with the moderated prompt the guid is embedded into the locally generated image as an invisible watermark a separate visible-watermark setting does not control this invisible watermark on copilot+ pcs, image generation is local but prompt moderation remains remote",
+      "source": { "name": "Xusheng Li", "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/", "date": "2026-08-24" }
+    },
+    {
+      "type": "quote",
+      "body": "your prompt is sent to microsoft for moderation, and the returned guid is encoded into the pixels.",
+      "attribution": "Xusheng Li, le chercheur qui a démonté l'application",
+      "evidence": "\"your prompt is sent to microsoft for moderation, and the returned guid is encoded into the pixels.\"",
+      "source": { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034", "date": "2026-08-25" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Les règles européennes de transparence demandent seulement d'indiquer qu'un contenu a été fait avec une IA.",
+      "caveat": "L'entreprise est allée au-delà du minimum: un identifiant unique, lié à la demande qui a créé l'image.",
+      "claimLabel": "Ce que la règle exige",
+      "caveatLabel": "Ce qui est écrit dans l'image",
+      "evidence": "redmond, as one of the founders of the coalition for content provenance and authenticity (c2pa), has chosen to embed ai-assisted images in paint and photos with a globally unique identifier (guid) linked to the prompt that created the image.",
+      "source": { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "Les demandes se relient entre elles",
+      "body": "À chaque nouvelle demande de modération, l'application transmet aussi *l'identifiant de la précédente*. Les créations d'une même personne peuvent donc être rattachées les unes aux autres.",
+      "evidence": "paint also sends the previous promptgenerationid as lastpromptgenerationid with its next moderation request, allowing successive requests to be linked explicitly.",
+      "source": { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "Le risque, dit au conditionnel",
+      "body": "Si chaque demande est reliée à la personne qui l'a envoyée, l'entreprise **pourrait en théorie** retrouver l'auteur d'une image à partir de sa marque.",
+      "evidence": "if microsoft associates each prompt with the user who sent it, then the company could in theory identify users by referring to the watermark in an image.",
+      "source": { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "Le précédent",
+      "body": "Les fabricants d'imprimantes laser ont fait exactement ça il y a longtemps. Quand ça s'est su, *les défenseurs de la vie privée s'en sont alarmés*.",
+      "evidence": "long ago, manufacturers of laser printers implemented this sort of tracking and the practice alarmed privacy advocates when it came to light.",
+      "source": { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui n'a pas été dit",
+      "body": "La page d'aide parle bien de filtrage à distance et de certificats de contenu. Elle n'explique pas que ce certificat contient *un numéro lié à ta demande*.",
+      "evidence": "what the page does not explain is that the c2pa manifest contains a guid identifying the invisible pixel watermark, or that paint's local generation path receives its watermark guid from remote prompt moderation.",
+      "source": { "name": "Xusheng Li", "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/", "date": "2026-08-24" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui fabrique des images avec une IA",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Paint cache un numéro dans tes images IA",
+    "beats": [
+      {
+        "script": "Tu fabriques une image avec l'intelligence artificielle de Paint, sur ton propre ordinateur. Elle ressort avec un numéro caché dans ses pixels, invisible à l'oeil nu.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "an extreme macro view of a bright computer screen where the individual colour pixels are visible",
+            "action": "the pixels slowly brightening one after another across the screen, the screen staying whole and in frame",
+            "setting": "in soft even daylight",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "macro framing, the pixels fill the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et ce numéro, ce n'est pas ton ordinateur qui l'a fabriqué. C'est un serveur de Microsoft. Tu sais pourquoi ?",
+        "visual": {
+          "type": "photo",
+          "query": "messy network server room",
+          "alt": "Un panneau de brassage et ses câbles dans une salle serveur",
+          "file": "media/2026-08-25-paint-numero-invisible/photo_1.jpg",
+          "credit": "Moses Cursor Ssebunya · CC0 1.0"
+        }
+      },
+      {
+        "script": "Parce qu'avant de fabriquer l'image, Paint et Photos envoient ta demande à un serveur pour la modérer. Le serveur renvoie un identifiant unique.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+          "file": "media/2026-08-25-paint-numero-invisible/shot_2.png"
+        }
+      },
+      {
+        "script": "Et cet identifiant est écrit directement dans les pixels de l'image. 16 octets, glissés dans les couleurs. Rien ne se voit.",
+        "visual": {
+          "type": "card",
+          "value": "16 octets",
+          "label": "écrits dans les pixels, invisibles à l'oeil nu"
+        }
+      },
+      {
+        "script": "Et là, ça devient gênant. Si Microsoft relie chaque demande à la personne qui l'a envoyée, l'entreprise pourrait, en théorie, retrouver l'auteur d'une image.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a computer screen filled with a single column of long unique identifier codes",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et il y a pire. L'application transmet aussi l'identifiant de ta demande précédente, ce qui permet de relier tes créations les unes aux autres.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034",
+          "file": "media/2026-08-25-paint-numero-invisible/shot_5.png"
+        }
+      },
+      {
+        "script": "Tout ça part d'une bonne intention. Les règles européennes de transparence demandent d'indiquer qu'un contenu a été fabriqué avec une IA.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed page holding a plain grid of long identifier codes, every cell a code",
+            "setting": "in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Sauf que la règle s'arrête là. Microsoft, lui, y a ajouté un numéro unique, lié à la demande qui a créé l'image, sans le dire clairement.",
+        "visual": {
+          "type": "card",
+          "value": "Rien de plus",
+          "label": "ce que la règle européenne exige. Microsoft en a mis plus."
+        }
+      },
+      {
+        "script": "Ce n'est pas une première: les fabricants d'imprimantes laser faisaient déjà ça, et ça avait alarmé les défenseurs de la vie privée. Abonne-toi pour l'actu IA de demain.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single sheet of plain white paper resting in the output tray of a laser printer",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the sheet of paper fills the entire frame"
+          }
+        }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "Xusheng Li", "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/", "accessed": "2026-08-25" },
+    { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/25/microsoft-ai-watermarks-in-paint-and-photos-are-linked-to-user-ids-researcher-finds/5292034", "accessed": "2026-08-25" }
+  ]
+}

@@ -726,6 +726,23 @@ ENTRIES:
   (21 ko aplatis), et une URL /terms-of-service devinee rend 200 avec 8 OCTETS
   aplatis, soit une page vide qui n'est pas un 404 - lis la taille aplatie, pas
   le code (famille du defi Anubis de kernel.org, 23/08).
+  Ajout 25/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 24 verifications, deux dossiers) fortune.com, implicator.ai et
+  theregister.com; xusheng.dev se re-confirme. Repondent 200 aussi tomsguide.com
+  et gadgetreview.com. venturebeat.com rend 429 pour le DIXIEME jour consecutif
+  (07 au 25/08); perdu ce matin pour cette raison le dossier Claude Tag / agent
+  Slack, mis en revisit sans une ligne d'ecrite. NUANCE SUR theregister ET SUR
+  L'ENTREE DU 13/08 qui le disait alternant 200/403 au hasard: il a rendu 200
+  QUATRE fois d'affilee ce matin (2 fetchs gate espaces + 2 captures). Son
+  alternance n'est donc pas un etat permanent du domaine: teste-le avant de le
+  rayer d'un spec que tu banques. REFLEXE SUR UNE ACTU DE PRIX GRAND PUBLIC: la
+  depeche techcrunch n'est qu'une breve, le SCOOP est ailleurs (ici fortune.com
+  du 21/08, qui a releve toute la grille tarifaire produit par produit) et
+  l'ANALYSE encore ailleurs (implicator.ai, qui relie la hausse au capex IA et
+  va chercher l'estimation JPMorgan). Contrairement aux dossiers ou trois
+  domaines reecrivent un seul communique, les trois ont ici chacun leur propre
+  declaration d'entreprise ou leur propre lecture: c'est une vraie triple
+  lecture, et ca se dit dans le rapport dans ce sens-la aussi.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1832,6 +1849,36 @@ ENTRIES:
   Ne publie jamais un credit devine. upload.wikimedia a servi 4 fichiers
   d'affilee ce matin (UA de navigateur complet + referer commons, 6 s d'ecart)
   sans une seule page d'erreur.
+  Ajout 25/08 (06h30), UNE FAMILLE DE PIEGE PHOTO NEUVE, LA MARQUE D'UN MEDIA
+  DANS LE DECOR DE SCENE, et elle sort en tete: "andy jassy" met PREMIER (6.0,
+  4032x3024) "Andy Jassy in 2016", qui est un plan large de conference ou
+  "WSJ.D LIVE" est ecrit DEUX FOIS en enorme derriere lui, visage minuscule.
+  Ce n'est ni l'epoque (CDC 7600) ni la marque d'un produit (Augmentin): c'est
+  le logo d'une AUTRE REDACTION grave dans le cadre d'un compte d'info, et
+  aucun recadrage 9:16 ne l'enleve puisqu'il occupe tout le fond. Ecarte au
+  titre et a l'oeil les photos de scene de conference nommee (LIVE, Summit,
+  Forum, Code, Disrupt). Le 2e candidat "Andy Jassy in 2010" (JD Lasica,
+  CC BY 2.0) est le bon: vrai portrait poitrine, visage net, zero texte, zero
+  marque; thumb 1920px, `crop=717:1275:550:0` (x=300 et x=800 coupent le
+  visage, mesures en planche-contact). Son genou reste dans le bas du cadre,
+  flou et sombre, sans importance sous la bande karaoke. VALEUR SURE EXCELLENTE
+  du meme matin: "tim cook" -> "Tim Cook (2017, cropped)" (Austin Community
+  College, CC BY 2.0), thumb 1920x2497 DEJA EN PORTRAIT, `crop=1404:2497:258:0`
+  puis scale 1080:1920, soit un DOWNSCALE (x0,77) sur un vrai visage net au
+  pupitre, zero texte lisible, zero millesime. Ecarte en revanche les "Visit of
+  Tim Cook to the European Commission": DEUX hommes dans le cadre, donc
+  identite ambigue (famille du 23/08). ET TROIS REQUETES MORTES OU PIEGEES sur
+  un objet pourtant banal, l'imprimante: "office printer" rend 0 candidat;
+  "printer" met PREMIER (8.0) un "Game Boy Printer", puis une imprimante 3D,
+  puis "Kodak LED Printer" (marque dans le titre ET dans le cadre); "printer
+  office desk" sort du Xerox marque, un bureau de poste de 1912 (piege
+  d'epoque, 14e occurrence) et un flat-lay de bureau; "laser printer" ne rend
+  que "Row of HP laser printers" (marque + objets multiples) et des photos
+  d'ENTRAILLES d'imprimante demontee sur un etabli, illisibles comme sujet.
+  Sur une actu qui evoque les imprimantes, il n'y a pas de photo utilisable
+  ici: prends une still generee ou une `card`. upload.wikimedia et pd.w.org ont
+  servi 7 fichiers d'affilee ce matin (UA de navigateur complet + referer
+  commons, 6 s d'ecart) sans une seule page d'erreur.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -2654,6 +2701,37 @@ ENTRIES:
   entier et chapo, aucun recadrage. Les deux passent le controle du 10/08 (le
   titre affiche EST l'histoire) et celui du 23/08 16h30 (aucun visage dans le
   cadre, seules les vignettes de signature de l'auteur).
+  Ajout 25/08 (06h30), LA VARIANTE LA PLUS DANGEREUSE DE LA FAMILLE macrumors
+  (03/08) / cnbc (04/08) / greenairnews (19/08), ET C'EST fortune.com: le
+  domaine se gate PARFAITEMENT au fetch Node (200, 472 ko, toutes citations
+  VERIFIED) et le navigateur recoit LA PAGE D'ERREUR MAISON DE FORTUNE, "Our
+  systems need a quick pivot / We're addressing the issue and hope to have it
+  fixed soon", avec le masthead FORTUNE en haut, zero pub, zero banniere
+  cookies, 2 frames, 23 s. C'est pire qu'un mur Cloudflare ou qu'un 404 nu: le
+  recu est PROPRE et il est BRANDE AU BON NOM, donc il passe le controle du
+  10/08 si tu ne verifies que l'identite de la source; il faut lire le TITRE.
+  La relance a, elle, PENDU au-dela de 10 min (tuee, aucun fichier ecrit): le
+  domaine n'est meme pas regulier dans son echec. Regle: fortune.com est une
+  SOURCE, jamais un recu. Et la regle generale en sort renforcee: le scout qui
+  epingle est le SEUL a pouvoir attraper ca, parce que le gate FETCH, le moteur
+  CAPTURE, et COMPLIANT ne lit rien.
+  RECUS NEUFS MESURES LE MEME MATIN, hors moteur, a la queue leu leu (regle du
+  14/08). xusheng.dev: PROPRE DU PREMIER COUP en 24 s, 1 SEULE frame, aucun
+  recadrage, et il rejoint la categorie "recu qui porte la preuve" (PubMed
+  08/08, arxiv /abs 16/08, epoch.ai 17/08, dataconomy 18/08), le cadre des
+  1686 px visibles tenant le masthead, le titre entier ET le chapo qui porte le
+  centralClaim mot pour mot. implicator.ai: PROPRE DU PREMIER COUP aussi, sans
+  recadrage, mais en 182 s et 12 frames (famille O(frames) du 06/08, il SURVIT,
+  ne le declare pas mort avant 4 min), masthead IMPLICATOR.ai + baseline,
+  rubrique AI NEWS, titre entier et chapo chiffre. theregister.com: ~170 s et
+  11 frames, mais IL FAUT LE MODE `top` (window.scrollTo(0,0)) - au scroll au
+  h1 le masthead rouge passe HORS CADRE et le recu ne dit plus de qui il est
+  (famille outerbio du 22/08); en mode top on a masthead + rubrique + titre +
+  sous-titre + signature + date dans les 1686 px. BEMOL theregister a connaitre
+  avant de s'en etonner au frame check: la ligne de credit de sa photo de tete
+  ("Copyright (c) 2026 New Africa/Shutterstock. No use without permission.")
+  SURVIT au strip de l'image et s'affiche entre le masthead et le titre; aucun
+  recadrage rectangulaire ne l'enleve sans perdre le masthead ou le titre.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe

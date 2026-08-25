@@ -1,0 +1,217 @@
+{
+  "slug": "2026-08-25-amazon-prix-materiel",
+  "centralClaim": "Amazon overnight raised the price of its base Echo Dot from $49.99 to $79.99.",
+  "corroboration": [
+    {
+      "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/",
+      "quote": "the company overnight raised prices across its hardware product line, according to a review by fortune. this includes raising the cost of its base echo dot from $49.99 to $79.99 and its echo show 11 from $219.99 to $249.99."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/24/amazon-hikes-hardware-prices-by-60-percent-blaming-memory-shortage/",
+      "quote": "one egregious example that's been cited is that of the echo dot, one of amazon's cheapest smart speakers, the price of which jumped 60% overnight, from $49.99 to $79.99."
+    }
+  ],
+  "sendTest": "Amazon a augmenté ses enceintes et ses liseuses de 60% en une nuit, parce que l'IA a vidé le stock mondial de mémoire.",
+  "caption": "Ton enceinte connectée a pris 60% en une nuit, et c'est la course à l'IA qui a vidé le stock de mémoire.\n\nCe week-end, Amazon a relevé les prix de presque tout son matériel, sans la moindre annonce. L'Echo Dot, la petite enceinte ronde d'entrée de gamme, est passée de 49.99 à 79.99 dollars. Le Kindle de 16 gigaoctets de 109.99 à 149.99. La clé Fire TV Stick 4K Max de 59.99 à 84.99. Le boîtier eero Pro 7 de 699.99 à 799.99. Seules les caméras et sonnettes Ring ont été épargnées.\n\nLa raison, l'entreprise la donne elle-même: l'industrie de l'électronique grand public fait face à de fortes hausses des coûts de la mémoire et du stockage, et elle les a absorbées aussi longtemps qu'elle a pu.\n\nLe détail qui n'est pas dans la vidéo. Quatre semaines avant ces hausses, le patron d'Amazon Andy Jassy annonçait aux investisseurs 220 milliards de dollars d'investissement pour 2026, contre 200 prévus, en citant justement le coût de la mémoire, pour équiper les centres de données qui font tourner l'IA. JPMorgan estime que le prix de cette mémoire aura grimpé de plus de 400% entre début 2024 et fin 2026.\n\nÀ nuancer. Amazon promet de continuer à faire des promotions dans l'année, et aucune entreprise n'a créé cette pénurie toute seule: Apple, Microsoft, Dell, HP, Lenovo et Asus ont fait la même chose.\n\nTu repousses ton prochain achat de matériel, oui ou non ? Dis-le en commentaire.\n\nfortune.com · techcrunch.com · implicator.ai\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Amazon #Apple",
+  "captionEvidence": [
+    {
+      "quote": "this includes raising the cost of its base echo dot from $49.99 to $79.99 and its echo show 11 from $219.99 to $249.99. it also raised its 16-gigabyte kindle from $109.99 to $149.99 and its 16-gigabyte kindle paperwhite from $159.99 to $199.99. its fire tv stick hd model increased from $34.99 to $39.99, and its fire tv stick 4k max went from $59.99 to $84.99. the amazon eero 7 wireless mesh networking system increased from $349.99 to $399.99, and the eero pro 7 rose from $699.99 to $799.99.",
+      "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/"
+    },
+    {
+      "quote": "notably, amazon did not increase prices for its ring products.",
+      "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/"
+    },
+    {
+      "quote": "in late july 2026, amazon chief executive andy jassy told investors the company's 2026 capital spending would reach $220 billion, up from a previous estimate of $200 billion, with higher memory costs driving the revision.",
+      "url": "https://www.implicator.ai/amazon-device-prices-60-percent-memory-costs/"
+    },
+    {
+      "quote": "jpmorgan global research estimated in august 2026 that dram costs would rise more than 400% from the start of 2024 through the end of 2026, and that some consumer devices could become as much as 40% more expensive.",
+      "url": "https://www.implicator.ai/amazon-device-prices-60-percent-memory-costs/"
+    },
+    {
+      "quote": "the company also said that it would continue to offer occasional promotions to customers over the course of the next year.",
+      "url": "https://techcrunch.com/2026/08/24/amazon-hikes-hardware-prices-by-60-percent-blaming-memory-shortage/"
+    },
+    {
+      "quote": "dell, hp, lenovo, and asus have also raised prices or reduced the amount of memory in their products.",
+      "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Fortune · implicator.ai",
+      "headline": "Tes appareils ont pris *60%* en une nuit",
+      "hero": { "value": "79.99", "label": "dollars pour l'enceinte qui en valait 49.99" },
+      "swipe": "Les reçus sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "60%",
+      "unit": "de plus, du jour au lendemain",
+      "body": "L'**Echo Dot**, la petite enceinte ronde d'Amazon, est passée de *49.99 à 79.99 dollars*, sans aucune annonce.",
+      "evidence": "one egregious example that's been cited is that of the echo dot, one of amazon's cheapest smart speakers, the price of which jumped 60% overnight, from $49.99 to $79.99.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/24/amazon-hikes-hardware-prices-by-60-percent-blaming-memory-shortage/", "date": "2026-08-24" }
+    },
+    {
+      "type": "content",
+      "title": "Tout le matériel y passe",
+      "body": "Enceintes, liseuses, clés télé, boîtiers wifi. La liseuse de 16 gigaoctets grimpe de *109.99 à 149.99 dollars*. Seules les caméras et sonnettes de la gamme Ring sont épargnées.",
+      "evidence": "this includes raising the cost of its base echo dot from $49.99 to $79.99 and its echo show 11 from $219.99 to $249.99. it also raised its 16-gigabyte kindle from $109.99 to $149.99 and its 16-gigabyte kindle paperwhite from $159.99 to $199.99. its fire tv stick hd model increased from $34.99 to $39.99, and its fire tv stick 4k max went from $59.99 to $84.99. the amazon eero 7 wireless mesh networking system increased from $349.99 to $399.99, and the eero pro 7 rose from $699.99 to $799.99.",
+      "source": { "name": "Fortune", "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/", "date": "2026-08-21" }
+    },
+    {
+      "type": "quote",
+      "body": "the consumer electronics industry is facing significant increases in memory and storage component costs. after absorbing these increases for as long as we could, we recently adjusted pricing across our product lines.",
+      "attribution": "Une porte-parole d'Amazon, citée par Fortune",
+      "evidence": "an amazon spokeswoman, who confirmed the price increases, said in a statement that the consumer electronics industry is \"facing significant increases in memory and storage component costs. after absorbing these increases for as long as we could, we recently adjusted pricing across our product lines.\"",
+      "source": { "name": "Fortune", "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/", "date": "2026-08-21" }
+    },
+    {
+      "type": "content",
+      "title": "D'où vient la pénurie",
+      "body": "Le manque de puces mémoire vient de la *demande immense de calcul pour l'IA*. Les entreprises répercutent la note sur leurs clients.",
+      "evidence": "companies big and small have been increasing prices due to a memory chip shortage brought on by immense demand for ai compute.",
+      "source": { "name": "Fortune", "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/", "date": "2026-08-21" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Amazon fait payer la pénurie de mémoire à ses clients.",
+      "caveat": "Quatre semaines plus tôt, le groupe portait son investissement 2026 à 220 milliards de dollars, contre 200 prévus, pour acheter les mêmes puces.",
+      "claimLabel": "Ce que tu paies",
+      "caveatLabel": "Ce que le groupe achète",
+      "evidence": "in late july 2026, amazon chief executive andy jassy told investors the company's 2026 capital spending would reach $220 billion, up from a previous estimate of $200 billion, with higher memory costs driving the revision.",
+      "source": { "name": "implicator.ai", "url": "https://www.implicator.ai/amazon-device-prices-60-percent-memory-costs/", "date": "2026-08-24" }
+    },
+    {
+      "type": "content",
+      "title": "Le goulot d'étranglement",
+      "body": "Il part d'une plaquette de silicium réservée à la mémoire pour l'IA et finit sur **l'étiquette d'une enceinte connectée**.",
+      "evidence": "the common bottleneck now runs from a silicon wafer allocated to ai memory to the new price of a smart speaker.",
+      "source": { "name": "implicator.ai", "url": "https://www.implicator.ai/amazon-device-prices-60-percent-memory-costs/", "date": "2026-08-24" }
+    },
+    {
+      "type": "content",
+      "title": "Personne n'y échappe",
+      "body": "Apple a relevé les prix de ses Mac et de ses iPad. Tim Cook a parlé d'une *crue centennale* sur le prix de la mémoire.",
+      "evidence": "in june, apple was forced to raise prices for its macs and ipads to account for the increased cost of memory chips. chief executive tim cook characterized the move as a \"100-year flood on memory pricing.\"",
+      "source": { "name": "Fortune", "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/", "date": "2026-08-21" }
+    },
+    {
+      "type": "content",
+      "title": "Jusqu'à quand",
+      "body": "La pénurie devrait durer *tout au long de 2027*. Les prix ne se calmeraient qu'en **2028**.",
+      "evidence": "the ram shortage is expected to continue throughout 2027 before prices potentially crest and stabilize in 2028.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/24/amazon-hikes-hardware-prices-by-60-percent-blaming-memory-shortage/", "date": "2026-08-24" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui allait s'acheter une enceinte",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Tes appareils Amazon coûtent 60% de plus",
+    "beats": [
+      {
+        "script": "Tes appareils Amazon viennent d'augmenter jusqu'à soixante pour cent. En une nuit, ce week-end, sans aucune annonce. Les enceintes, les liseuses, les boîtiers télé, les box wifi.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a small round smart speaker covered in plain grey fabric mesh",
+            "action": "turning slowly on the spot, the speaker staying whole and fully in frame the entire time",
+            "setting": "on a plain surface in soft even daylight",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "macro framing, the speaker fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Tu sais pourquoi ? Une pénurie mondiale de puces mémoire, provoquée par la demande immense de calcul pour l'IA.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single dark memory module lying flat on a plain surface",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the module fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Prends l'Echo Dot, la petite enceinte ronde d'Amazon, la moins chère du catalogue. Elle a pris soixante pour cent en une nuit.",
+        "visual": {
+          "type": "card",
+          "value": "60%",
+          "label": "de plus sur l'enceinte la moins chère du catalogue"
+        }
+      },
+      {
+        "script": "Et ce n'est pas qu'elle. Les liseuses, les clés télé, les boîtiers wifi, tout y est passé. Seules les caméras Ring sont épargnées.",
+        "visual": {
+          "type": "card",
+          "value": "149.99 $",
+          "label": "le Kindle 16 Go, contre 109.99 dollars avant"
+        }
+      },
+      {
+        "script": "Amazon confirme. Sa réponse: l'industrie subit de fortes hausses sur la mémoire, et le groupe les a absorbées aussi longtemps qu'il a pu.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed page holding a plain grid of product price numbers, every cell a number",
+            "setting": "in soft even daylight",
+            "composition": "seen from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Sauf que voilà. Quatre semaines plus tôt, Andy Jassy annonçait 220 milliards de dollars d'investissement, pour acheter exactement les mêmes puces.",
+        "visual": {
+          "type": "photo",
+          "query": "andy jassy",
+          "alt": "Andy Jassy, le patron d'Amazon",
+          "file": "media/2026-08-25-amazon-prix-materiel/photo_5.jpg",
+          "credit": "JD Lasica · CC BY 2.0"
+        }
+      },
+      {
+        "script": "Le goulot d'étranglement part d'une plaquette de silicium réservée à l'IA et finit sur l'étiquette de ton enceinte.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.implicator.ai/amazon-device-prices-60-percent-memory-costs/",
+          "file": "media/2026-08-25-amazon-prix-materiel/shot_6.png"
+        }
+      },
+      {
+        "script": "Et personne n'y échappe. Apple a relevé ses Mac et ses iPad en juin. Tim Cook a parlé d'une crue centennale sur le prix de la mémoire.",
+        "visual": {
+          "type": "photo",
+          "query": "tim cook",
+          "alt": "Tim Cook, le patron d'Apple",
+          "file": "media/2026-08-25-amazon-prix-materiel/photo_7.jpg",
+          "credit": "Austin Community College · CC BY 2.0"
+        }
+      },
+      {
+        "script": "Et ce n'est pas fini: la pénurie devrait durer tout 2027, et les prix ne se calmeraient qu'en 2028. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed price ticket lying flat on a plain surface",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the price ticket fills the entire frame"
+          }
+        }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "Fortune", "url": "https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/", "accessed": "2026-08-25" },
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/24/amazon-hikes-hardware-prices-by-60-percent-blaming-memory-shortage/", "accessed": "2026-08-25" },
+    { "name": "implicator.ai", "url": "https://www.implicator.ai/amazon-device-prices-60-percent-memory-costs/", "accessed": "2026-08-25" }
+  ]
+}
