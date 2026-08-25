@@ -163,12 +163,9 @@
       {
         "script": "Amazon confirme. Sa réponse: l'industrie subit de fortes hausses sur la mémoire, et le groupe les a absorbées aussi longtemps qu'il a pu.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a printed page holding a plain grid of product price numbers, every cell a number",
-            "setting": "in soft even daylight",
-            "composition": "seen from directly above, the page fills the entire frame"
-          }
+          "type": "photo",
+          "query": "silicon wafer",
+          "alt": "Une plaquette de silicium, le matériau dont sont faites les puces mémoire"
         }
       },
       {
@@ -202,12 +199,12 @@
       {
         "script": "Et ce n'est pas fini: la pénurie devrait durer tout 2027, et les prix ne se calmeraient qu'en 2028. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single printed price ticket lying flat on a plain surface",
-            "setting": "in soft even daylight",
-            "composition": "macro framing, the price ticket fills the entire frame"
-          }
+          "type": "photo",
+          "query": "smart speaker",
+          "alt": "L'enceinte connectée Echo Dot, l'appareil dont le prix a bondi de 60%",
+          "file": "media/2026-08-25-amazon-prix-materiel/photo_2.jpg",
+          "credit": "Smart Home Perfected · CC BY 2.0",
+          "note": "Bookend volontaire: le Reel ouvre sur l'enceinte qui tourne (veo) et se ferme sur la vraie photo du meme objet, 6 beats plus loin. Le cadrage Ken-Burns differe (8.68s contre 5.86s). Remplace une photo Kindle refusee au controle des frames: liseuse posee a cote d'une tasse et de lunettes, soit exactement le 'bureau a la place de l'histoire' du manuel."
         }
       }
     ]

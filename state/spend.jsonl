@@ -288,3 +288,8 @@
 {"at":"2026-08-24T17:02:23.380Z","slug":"2026-08-24-enfant-apprend-mieux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1278}
 {"at":"2026-08-24T17:02:37.738Z","slug":"2026-08-24-enfant-apprend-mieux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1292}
 {"at":"2026-08-24T17:02:54.415Z","slug":"2026-08-24-enfant-apprend-mieux","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1301}
+{"at":"2026-08-25T10:42:58.290Z","slug":"2026-08-25-amazon-prix-materiel","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"57.5s Sadaltager","usd":0.0287}
+{"at":"2026-08-25T10:45:38.395Z","slug":"2026-08-25-amazon-prix-materiel","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-25T10:45:53.202Z","slug":"2026-08-25-amazon-prix-materiel","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1273}
+{"at":"2026-08-25T10:46:08.758Z","slug":"2026-08-25-amazon-prix-materiel","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1319}
+{"at":"2026-08-25T10:46:22.500Z","slug":"2026-08-25-amazon-prix-materiel","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1274}
