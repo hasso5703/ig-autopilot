@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-26T06:48:02.622Z",
+  "at": "2026-08-26T10:39:47.259Z",
   "n": 57,
   "nSettled": 51,
   "medianViews": 195,
@@ -691,6 +691,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-25-paint-numero-invisible",
+      "at": "2026-08-25T16:57:24.419Z",
+      "hourUtc": 16,
+      "views": 299,
+      "reach": 262,
+      "avgWatchS": 14.1,
+      "retentionPct": 24,
+      "likes": 4,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-02-google-earth-ia",
       "at": "2026-08-02T20:00:03.807Z",
       "hourUtc": 20,
@@ -727,23 +744,6 @@
       ],
       "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-25-paint-numero-invisible",
-      "at": "2026-08-25T16:57:24.419Z",
-      "hourUtc": 16,
-      "views": 268,
-      "reach": 239,
-      "avgWatchS": 12.5,
-      "retentionPct": 21,
-      "likes": 4,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
