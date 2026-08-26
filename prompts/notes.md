@@ -2372,6 +2372,39 @@ ENTRIES:
   n'a pas ressuscite le refus (l'action changee change l'empreinte, conforme au
   manuel). Proof: run 16h30 25/08, veo_0 refuse puis rachete, rebuild a cout nul
   pour tout le reste (narration + alignement + 3 stills re-servis).
+  Ajout 26/08 (10h30), SUITE DIRECTE: mettre l'abstrait dans un objet entier
+  suffit pour la PERMANENCE et ne suffit pas pour l'AUDITION. Un beat 0 veo
+  "a computer monitor filled with a single column of plain accuracy numbers" +
+  composition "macro framing, the monitor fills the entire frame" a rendu 8
+  panneaux parfaits (moniteur entier, meme taille, meme place: la regle du
+  25/08 marche) et une frame zero INUTILISABLE: le modele lit un ecran rempli
+  de chiffres comme un TERMINAL SOMBRE, donc fond noir + colonne de chiffres
+  blancs, soit exactement le defaut des TROIS COUCHES DE TEXTE que le manuel
+  reproche au screenshot en beat 0 (carte-titre + karaoke + mur de caracteres),
+  et les chiffres sortent malformes a la lecture ("0.4.304", deux points
+  decimaux). Le "Every visible surface and screen is clean... free of readable
+  lettering" que promptcraft ajoute ne l'empeche pas: des chiffres ne sont pas
+  du lettering. REMEDE MESURE, vert du premier coup au rachat ($0.60): dis la
+  couleur du FOND de l'ecran et recule le cadre. "a computer monitor on a desk
+  showing a single narrow column of small dark numbers on a plain white
+  background" + composition "medium framing, the whole monitor fills most of
+  the frame" a rendu une piece claire, un ecran BLANC, la colonne petite et
+  grise qui glisse vers le bas, et la carte-titre (bande noire, type blanche)
+  se detache enfin. Regle generale: sur un beat 0 veo qui montre un ecran,
+  choisis la couleur de fond a la place du modele (famille du "dark computer
+  screen" du 23/08 lu comme un theme), et garde le macro pour les beats du
+  milieu, jamais sous la carte-titre. Proof: run 10h30 26/08, veo_0 refuse au
+  filmstrip+frame puis rachete, rebuild a cout nul pour tout le reste.
+  Ajout 26/08 (10h30), RE-CONFIRMATION DU VENV WHISPER A MOITIE CONSTRUIT
+  (entree du 24/08, point 4): conteneur froid, meme mort exacte sur
+  `ReadTimeoutError files.pythonhosted.org` pendant le bootstrap pip, au
+  PREMIER build du run. Le remede documente marche tel quel et coute 70 s:
+  `/root/.cache/oom-whisper/bin/pip install --retries 5 --timeout 120
+  faster-whisper`, puis relance reel2 dans le MEME repertoire. La narration
+  deja achetee ($0.0298) est ressortie du cache, $0 perdu, et large-v3-turbo
+  s'est retelecharge en 34 s. Ce n'est donc pas un alea rare: sur conteneur
+  froid, attends-toi a payer ce detour une fois par run, et ne diagnostique
+  rien d'autre avant de l'avoir applique.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
