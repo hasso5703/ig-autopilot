@@ -1290,6 +1290,27 @@ ENTRIES:
   avec `imagery.mjs candidates` ET regarde la frame, et si les deux echouent,
   reutilise une photo deja epinglee du meme objet en `file` plutot que de
   generer. Proof: meme run, beat 8.
+  Ajout 26/08 (16h30), LE BEAT 0 VEO SUR UNE VOITURE, la famille que le manuel
+  dit la plus risquee ("un malformed car suffit a faire rayer le compte"), REND
+  PROPRE DU PREMIER COUP AVEC UN TRAVELLING LATERAL VERROUILLE. Dossier Waymo:
+  subject "a single autonomous vehicle" + action "turning slowly around a street
+  corner, the whole vehicle staying whole and fully in frame the entire time" +
+  camera "locked-off static shot, no camera movement, no zoom" + setting "on a
+  quiet empty European city street in soft even daylight" + composition "medium
+  side shot from the pavement". Pellicule 8 vignettes lue: meme objet, meme
+  taille, present a la 8e, zero deformation, carrosserie et roues coherentes,
+  $0,60 (clip de 6 s, le moteur achete a la duree du beat). DEUX FAITS A
+  RETENIR. (1) LE `camera` EXPLICITE EST CE QUI SAUVE LE PLAN, re-confirmation
+  directe du 17/08 16h30: l'humeur `tension` injecte "slow dolly-in", et un
+  dolly-in sur un vehicule qui traverse deja le cadre est la recette du sujet
+  qui gonfle et sort. Sur tout beat 0 dont le sujet SE DEPLACE, ecris `camera`,
+  ne laisse pas l'humeur decider. (2) VEO N'A PAS HONORE LE VIRAGE: il a rendu
+  un passage lateral rectiligne devant une facade fixe, pas une rotation a
+  l'angle. La simplification est coherente (le sujet reste entier, l'action
+  reste non resolue) donc le plan est accepte, mais ne compte pas sur une
+  trajectoire complexe: ce qui est fiable sur un vehicule, c'est qu'il TRAVERSE
+  le cadre devant un fond immobile. Ecris l'action de facon que la version
+  simplifiee reste vraie. Proof: run 16h30 26/08, veo_0 accepte du premier coup.
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
 - 2026-07-28 · techcrunch.com and prnewswire.com answer 503 to the session's
@@ -2118,6 +2139,20 @@ ENTRIES:
   un debit hors fenetre n'accuse PAS le script: le moteur rachete une lecture
   (jusqu'a 3, ~$0,025 piece) avant de refuser. Ne reecris le script que si les
   trois lectures echouent.
+  Ajout 26/08 (16h30), PREMIER CAS MESURE OU LES TROIS LECTURES ECHOUENT, et la
+  cause n'est pas la malchance, c'est OU TU ECRIS DANS LA FENETRE. Script de 214
+  mots (fenetre 193-221, cible 205, ledger 3,69 mots/s sur 12 lectures): les
+  trois lectures sont sorties a 3,39 / 3,17 / 3,39, soit le groupe le plus LENT
+  des 101 lectures du registre, et le moteur a clampe le stretch a 1,120 pour un
+  fichier de 60,7 s. Cout: 3 achats TTS ($0,097) au lieu d'un, et ~90 s. La
+  mecanique a comprendre une fois: la fenetre est calculee sur la MOYENNE du
+  registre, donc ecrire au PLAFOND (221) ne laisse aucune marge quand la lecture
+  du jour tombe sous la moyenne, alors qu'ecrire a la CIBLE en laisse des deux
+  cotes. Regle: vise le `target` que `validate.mjs window` imprime, jamais le
+  `max`; a 214 mots on est deja a +9 de la cible et c'est ce qui a coute les
+  trois lectures. Le Reel part quand meme (le manuel l'autorise, 60,7 s), donc
+  ce n'est pas un blocage, c'est une depense evitable. Proof: build 16h30 26/08,
+  state/voice-rate.jsonl 3 lignes accepted:false.
 - 2026-07-31 · Whisper: modele large-v3-turbo int8, beam_size=1, 1,6 Go
   telecharges par ensureWhisper AVANT la transcription. Le 01/08 la transcription
   longue a derive sur le conteneur du run de 8h: 179 tokens pour 209 mots, 69%
