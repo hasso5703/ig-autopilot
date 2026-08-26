@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-26T16:42:41.498Z",
-  "n": 58,
-  "nSettled": 52,
-  "medianViews": 196,
+  "at": "2026-08-26T19:41:05.775Z",
+  "n": 59,
+  "nSettled": 53,
+  "medianViews": 195,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -64,6 +64,14 @@
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
     },
     {
+      "slug": "2026-08-24-enfant-apprend-mieux",
+      "views": 114,
+      "retentionPct": 8,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait."
+    },
+    {
       "slug": "2026-08-18-robot-ami-des-enfants",
       "views": 117,
       "retentionPct": 13,
@@ -78,21 +86,13 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA."
-    },
-    {
-      "slug": "2026-08-01-penurie-memoire-samsung",
-      "views": 117,
-      "retentionPct": 11,
-      "saved": 0,
-      "shares": 1,
-      "sendTest": "Samsung dit que la pénurie de mémoire va empirer jusqu'en 2028. C'est pour ça que ton prochain téléphone et ton prochain ordi coûtent plus cher."
     }
   ],
   "byBeat0": {
     "veo": {
-      "n": 38,
-      "medianViews": 327,
-      "meanRetentionPct": 24.8,
+      "n": 39,
+      "medianViews": 300,
+      "meanRetentionPct": 24.3,
       "saves": 59,
       "shares": 25,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": false
     },
     "17": {
-      "n": 14,
-      "medianViews": 183,
-      "meanRetentionPct": 26,
+      "n": 15,
+      "medianViews": 175,
+      "meanRetentionPct": 24.8,
       "saves": 14,
       "shares": 11,
       "thin": false
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 42,
+    "now": 41,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -626,9 +626,9 @@
       "slug": "2026-08-25-paint-numero-invisible",
       "at": "2026-08-25T16:57:24.419Z",
       "hourUtc": 16,
-      "views": 355,
-      "reach": 317,
-      "avgWatchS": 15.1,
+      "views": 359,
+      "reach": 320,
+      "avgWatchS": 15,
       "retentionPct": 25,
       "likes": 4,
       "comments": 1,
@@ -1135,10 +1135,10 @@
       "slug": "2026-08-26-ia-verifie-infos",
       "at": "2026-08-26T10:54:31.013Z",
       "hourUtc": 10,
-      "views": 123,
+      "views": 124,
       "reach": 108,
-      "avgWatchS": 9.8,
-      "retentionPct": 16,
+      "avgWatchS": 10,
+      "retentionPct": 17,
       "likes": 1,
       "comments": 1,
       "saved": 0,
@@ -1164,6 +1164,23 @@
       "themes": [],
       "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-26-waymo-munich-europe",
+      "at": "2026-08-26T16:51:27.707Z",
+      "hourUtc": 16,
+      "views": 119,
+      "reach": 112,
+      "avgWatchS": 7.6,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
+      "settled": false
     },
     {
       "slug": "2026-08-01-penurie-memoire-samsung",
@@ -1231,7 +1248,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
