@@ -128,9 +128,10 @@
           "type": "veo",
           "spec": {
             "subject": "a single autonomous vehicle",
-            "action": "turning slowly around a street corner, the whole vehicle staying in frame",
-            "setting": "on a quiet European city street in bright daylight",
-            "composition": "medium side shot from the pavement"
+            "action": "turning slowly around a street corner, the whole vehicle staying whole and fully in frame the entire time",
+            "setting": "on a quiet empty European city street in soft even daylight",
+            "composition": "medium side shot from the pavement",
+            "camera": "locked-off static shot, no camera movement, no zoom"
           }
         }
       },
