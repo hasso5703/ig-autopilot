@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-26T10:39:47.259Z",
-  "n": 57,
-  "nSettled": 51,
-  "medianViews": 195,
+  "at": "2026-08-26T16:42:41.498Z",
+  "n": 58,
+  "nSettled": 52,
+  "medianViews": 196,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -30,20 +30,20 @@
       "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice."
     },
     {
+      "slug": "2026-08-24-uber-logiciel-chauffeurs",
+      "views": 1261,
+      "retentionPct": 28,
+      "saved": 1,
+      "shares": 1,
+      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende."
+    },
+    {
       "slug": "2026-08-13-claude-marque-invisible",
       "views": 1251,
       "retentionPct": 29,
       "saved": 4,
       "shares": 8,
       "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même."
-    },
-    {
-      "slug": "2026-08-08-virus-ecrits-par-une-ia",
-      "views": 1239,
-      "retentionPct": 26,
-      "saved": 4,
-      "shares": 3,
-      "sendTest": "Des chercheurs ont demandé à une IA d'inventer des virus. Elle en a écrit 700 000. Ils en ont fabriqué 300, et 16 fonctionnent pour de vrai."
     }
   ],
   "bottom": [
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 37,
-      "medianViews": 300,
-      "meanRetentionPct": 24.7,
-      "saves": 58,
-      "shares": 24,
+      "n": 38,
+      "medianViews": 327,
+      "meanRetentionPct": 24.8,
+      "saves": 59,
+      "shares": 25,
       "thin": false
     },
     "photo": {
@@ -123,6 +123,14 @@
       "shares": 1,
       "thin": true
     },
+    "safety": {
+      "n": 6,
+      "medianViews": 230,
+      "meanRetentionPct": 27.5,
+      "saves": 4,
+      "shares": 2,
+      "thin": false
+    },
     "models": {
       "n": 5,
       "medianViews": 359,
@@ -138,23 +146,15 @@
       "saves": 4,
       "shares": 0,
       "thin": true
-    },
-    "safety": {
-      "n": 5,
-      "medianViews": 166,
-      "meanRetentionPct": 27.6,
-      "saves": 3,
-      "shares": 1,
-      "thin": false
     }
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 7,
-      "medianViews": 477,
-      "meanRetentionPct": 23.9,
-      "saves": 7,
-      "shares": 5,
+      "n": 8,
+      "medianViews": 509,
+      "meanRetentionPct": 24.4,
+      "saves": 8,
+      "shares": 6,
       "thin": false
     },
     "11": {
@@ -192,7 +192,7 @@
     "16": {
       "n": 8,
       "medianViews": 175,
-      "meanRetentionPct": 19.6,
+      "meanRetentionPct": 19.5,
       "saves": 19,
       "shares": 3,
       "thin": false
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 40,
+    "now": 42,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -356,7 +356,7 @@
         "safety"
       ],
       "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-13-claude-marque-invisible",
@@ -396,9 +396,9 @@
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
-      "views": 1169,
-      "reach": 1046,
-      "avgWatchS": 14.7,
+      "views": 1170,
+      "reach": 1048,
+      "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 7,
       "comments": 1,
@@ -623,6 +623,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-25-paint-numero-invisible",
+      "at": "2026-08-25T16:57:24.419Z",
+      "hourUtc": 16,
+      "views": 355,
+      "reach": 317,
+      "avgWatchS": 15.1,
+      "retentionPct": 25,
+      "likes": 4,
+      "comments": 1,
+      "saved": 1,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-13-twitch-entraine-ia-amazon",
       "at": "2026-08-13T11:47:37.020Z",
       "hourUtc": 11,
@@ -689,23 +706,6 @@
       "themes": [],
       "sendTest": "Le filtre censé empêcher une IA d'aider à fabriquer une arme biologique est resté éteint onze mois. 133 millions de conversations sont passées par là.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-25-paint-numero-invisible",
-      "at": "2026-08-25T16:57:24.419Z",
-      "hourUtc": 16,
-      "views": 299,
-      "reach": 262,
-      "avgWatchS": 14.1,
-      "retentionPct": 24,
-      "likes": 4,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
-      "settled": false
     },
     {
       "slug": "2026-08-02-google-earth-ia",
@@ -857,8 +857,8 @@
       "hourUtc": 16,
       "views": 166,
       "reach": 152,
-      "avgWatchS": 10.6,
-      "retentionPct": 18,
+      "avgWatchS": 10.5,
+      "retentionPct": 17,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -965,7 +965,7 @@
       "hourUtc": 10,
       "views": 140,
       "reach": 130,
-      "avgWatchS": 6.9,
+      "avgWatchS": 7,
       "retentionPct": 12,
       "likes": 1,
       "comments": 1,
@@ -1000,7 +1000,7 @@
       "at": "2026-08-23T16:55:23.876Z",
       "hourUtc": 16,
       "views": 138,
-      "reach": 128,
+      "reach": 129,
       "avgWatchS": 5.4,
       "retentionPct": 9,
       "likes": 1,
@@ -1132,6 +1132,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-26-ia-verifie-infos",
+      "at": "2026-08-26T10:54:31.013Z",
+      "hourUtc": 10,
+      "views": 123,
+      "reach": 108,
+      "avgWatchS": 9.8,
+      "retentionPct": 16,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Tu demandes a une IA si une info est vraie ? Au bout d'un mois, tu reperes les faux 15% moins bien que toi tout seul avant.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -1205,7 +1222,7 @@
       "hourUtc": 17,
       "views": 114,
       "reach": 105,
-      "avgWatchS": 5,
+      "avgWatchS": 5.1,
       "retentionPct": 8,
       "likes": 0,
       "comments": 1,
