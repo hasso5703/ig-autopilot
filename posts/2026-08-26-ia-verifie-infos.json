@@ -151,11 +151,11 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a computer monitor filled with a single column of plain accuracy numbers",
-            "action": "the column of numbers sliding slowly downward, the monitor staying whole and fully in frame the entire time",
+            "subject": "a computer monitor on a desk showing a single narrow column of small dark numbers on a plain white background",
+            "action": "the column of numbers sliding slowly downward, the monitor staying whole, the same size and fully inside the frame the entire time",
             "camera": "locked-off static shot, no camera movement, no zoom",
-            "setting": "in soft even daylight",
-            "composition": "macro framing, the monitor fills the entire frame"
+            "setting": "in a bright room in daylight",
+            "composition": "medium framing, the whole monitor fills most of the frame"
           }
         }
       },

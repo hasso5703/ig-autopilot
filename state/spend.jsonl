@@ -300,3 +300,7 @@
 {"at":"2026-08-25T16:47:16.104Z","slug":"2026-08-25-paint-numero-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1231}
 {"at":"2026-08-25T16:47:30.158Z","slug":"2026-08-25-paint-numero-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1262}
 {"at":"2026-08-25T16:51:49.680Z","slug":"2026-08-25-paint-numero-invisible","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-26T10:42:33.705Z","slug":"2026-08-26-ia-verifie-infos","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"59.6s Sadaltager","usd":0.0298}
+{"at":"2026-08-26T10:45:16.523Z","slug":"2026-08-26-ia-verifie-infos","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
+{"at":"2026-08-26T10:45:30.700Z","slug":"2026-08-26-ia-verifie-infos","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1287}
+{"at":"2026-08-26T10:50:14.208Z","slug":"2026-08-26-ia-verifie-infos","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}

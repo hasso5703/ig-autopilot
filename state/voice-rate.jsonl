@@ -95,3 +95,4 @@
 {"at":"2026-08-25T10:42:58.421Z","slug":"2026-08-25-amazon-prix-materiel","words":209,"seconds":57.48,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.2}
 {"at":"2026-08-25T16:43:31.560Z","slug":"2026-08-25-paint-numero-invisible","words":213,"seconds":62.68,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-1.2}
 {"at":"2026-08-25T16:43:58.644Z","slug":"2026-08-25-paint-numero-invisible","words":213,"seconds":55,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-2}
+{"at":"2026-08-26T10:42:33.856Z","slug":"2026-08-26-ia-verifie-infos","words":212,"seconds":59.56,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-0.7}
