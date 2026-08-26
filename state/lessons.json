@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-25T19:42:46.752Z",
+  "at": "2026-08-26T06:48:02.622Z",
   "n": 57,
   "nSettled": 51,
   "medianViews": 195,
@@ -7,7 +7,7 @@
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
-      "views": 1797,
+      "views": 1800,
       "retentionPct": 40,
       "saved": 2,
       "shares": 1,
@@ -247,7 +247,7 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1797
+            "views": 1800
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
@@ -290,7 +290,7 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1797,
+      "views": 1800,
       "reach": 1612,
       "avgWatchS": 24.1,
       "retentionPct": 40,
@@ -343,8 +343,8 @@
       "slug": "2026-08-24-uber-logiciel-chauffeurs",
       "at": "2026-08-24T10:59:24.031Z",
       "hourUtc": 10,
-      "views": 1255,
-      "reach": 1129,
+      "views": 1261,
+      "reach": 1136,
       "avgWatchS": 16.7,
       "retentionPct": 28,
       "likes": 9,
@@ -729,6 +729,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-25-paint-numero-invisible",
+      "at": "2026-08-25T16:57:24.419Z",
+      "hourUtc": 16,
+      "views": 268,
+      "reach": 239,
+      "avgWatchS": 12.5,
+      "retentionPct": 21,
+      "likes": 4,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
       "at": "2026-08-10T23:02:26.507Z",
       "hourUtc": 23,
@@ -924,23 +941,6 @@
       "themes": [],
       "sendTest": "Des IA ont géré des distributeurs automatiques en concurrence. Claude a proposé des cartels, menacé ses rivales et trahi 11 accords.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-25-paint-numero-invisible",
-      "at": "2026-08-25T16:57:24.419Z",
-      "hourUtc": 16,
-      "views": 151,
-      "reach": 132,
-      "avgWatchS": 10.3,
-      "retentionPct": 17,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
-      "settled": false
     },
     {
       "slug": "2026-08-11-google-ia-repond-faux",

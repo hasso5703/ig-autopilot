@@ -777,6 +777,25 @@ ENTRIES:
   in the same statement...") revient NOT_FOUND. Prends l'empan STRICTEMENT
   INTERIEUR aux guillemets, sans les guillemets ni ce qui les entoure. Proof:
   1 erreur de gate ce soir, verte au coup suivant.
+  Ajout 26/08 (06h30), dossier MIT Media Lab: rendent 200 au fetch gate et se
+  gatent DU PREMIER COUP (14 verifications sur 14, 0 erreur) news.mit.edu
+  (NOUVEAU), technologyreview.com et arxiv.org/abs (re-confirmes). Bloquent au
+  fetch gate: dl.acm.org et doi.org (403, donc un papier CHI/ACM n'est PAS
+  gatable au primaire), fastcompany.com (403), cryptobriefing.com (403,
+  re-confirme). Repond 200 techxplore.com MAIS il ecrit "by massachusetts
+  institute of technology" + "provided by massachusetts institute of
+  technology": c'est de la SYNDICATION du communique, famille RNZ du 10/08, pas
+  une seconde lecture. REFLEXE QUAND L'EDITEUR ACADEMIQUE BLOQUE, meme famille
+  que PubMed (08/08): la fiche techxplore porte le DOI en clair, et le DOI mene
+  au preprint arXiv des memes auteurs, qui lui se gate ET se capture. Cherche le
+  preprint par auteur: `export.arxiv.org/api/query?search_query=au:"<nom>"+AND+
+  abs:"<mot>"`. ET LA NUANCE DE CORROBORATION LA PLUS SERREE MESUREE JUSQU'ICI:
+  sur une actu de papier academique, le primaire (arXiv), le communique
+  (news.mit.edu) et le magazine (technologyreview.com) peuvent etre TROIS
+  domaines verts et UNE SEULE INSTITUTION, ici le MIT du debut a la fin (les
+  auteurs, leur newsroom, leur magazine d'anciens). Le gate passe au vert, et
+  ca n'atteste que "les chercheurs ont mesure x". Publiable en attribuant dans
+  le script ("une etude du MIT Media Lab"), jamais lu comme trois lectures.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1946,6 +1965,36 @@ ENTRIES:
   ici: prends une still generee ou une `card`. upload.wikimedia et pd.w.org ont
   servi 7 fichiers d'affilee ce matin (UA de navigateur complet + referer
   commons, 6 s d'ecart) sans une seule page d'erreur.
+  Ajout 26/08 (06h30), QUATRE REQUETES PIEGEES SUR SIX, dont la pire est une
+  requete qui NOMME EXACTEMENT le sujet de l'histoire. (1) "waymo self driving
+  car" met PREMIER a 8.0 "Googleplex protest, 20170130-2.jpg", une MANIFESTATION
+  devant le Googleplex: aucune voiture autonome dans le cadre, sur la seule
+  requete du dossier qui nomme l'entreprise ET l'objet. Un beat photo non epingle
+  aurait publie une manif. Les vraies sont en 3e et 4e ("Waymo self-driving car in
+  Tempe", zombieite, CC BY 2.0, 5184x3888, thumb 1920, `crop=810:1440:250:0`, le
+  logo WAYMO et le lidar de toit lisibles). (2) "pattie maes" met en tete une
+  DESOTO DE 1921 puis un recensement d'Alabama (piege d'epoque, 15e occurrence),
+  et la bonne est en 3e: "Dubai Future Forum 2024 - Pattie Maes" (Andrew Lih, CC0,
+  2138x3207 DEJA EN PORTRAIT, thumb 1280, `crop=1080:1920:100:0`), vrai portrait
+  net, le lettrage arabe du fond est flou et illisible; a x=200 il commence a se
+  lire, garde x=100. (3) "anku rani" rend la cour du Maharaja Ranjit Singh: sur un
+  doctorant, il n'y a AUCUNE photo libre, ne cherche pas. (4) "tekedra mawakana"
+  met en tete trois vues d'une meme scene "Strictly VC": la -03 montre DEUX femmes
+  avec la banniere "Lightspeed" lisible en grand (famille du fond de scene
+  d'une autre marque, 25/08, doublee de l'identite ambigue du 23/08), mais la -01
+  de la MEME serie ne montre QU'ELLE, micro en main, zero texte lisible
+  (TechCrunch, CC BY 2.0, thumb 1920x1282, `crop=720:1280:811:0`). Regle: quand
+  une seance photo sort en plusieurs numeros, regarde-les TOUS, un seul cadrage
+  peut etre publiable. Note que le credit grave sera "TechCrunch", soit le nom
+  d'une autre redaction, ce qui est une attribution normale et pas la faute du
+  25/08. VALEURS SURES RE-CONFIRMEES ce matin: "Screen time" (Rawpixel, CC0,
+  thumb 1920x1280, `crop=720:1280:537:0`, l'homme ET son telephone dans le cadre)
+  et, nouvelles, "Volkswagen ID. Buzz 1X7A626 in Munich" (AuHaidhausen, CC BY 4.0,
+  thumb 1920x1167, `crop=656:1167:620:0`, qui coupe la plaque d'immatriculation
+  lisible) et "Hirte, Christian-0221" (Foto-AG Gymnasium Melle, CC BY 3.0, thumb
+  1280x1924 DEJA EN PORTRAIT, `crop=1080:1920:100:0`, portrait officiel sur fond
+  gris). upload.wikimedia a servi 8 fichiers d'affilee (UA de navigateur complet
+  + referer commons, 6 s d'ecart) sans une seule page d'erreur.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -2244,6 +2293,18 @@ ENTRIES:
   SCOUT: passe veoPrompt/imagePrompt + promptIssues + simplicityIssues sur TOUS
   les specs de la journee, y compris ceux qu'un run precedent a banques, ca coute
   10 s et ca ne se voit ni au gate ni a l'oeil.
+  CONTRE-EPREUVE 26/08 (06h30), ET ELLE A SAUVE UN BUILD A LA MEILLEURE HEURE DE
+  LA JOURNEE: le spec Waymo banque la veille etait PASSED au gate, et son beat 0
+  veo serait mort en moteur sur `prompt names "Level"` parce que sa `composition`
+  disait "medium side shot AT STREET LEVEL" et que les citations portent "Level 4"
+  (le cadre juridique allemand). Le mot fautif n'etait donc ni le sujet, ni
+  l'action, ni une marque: c'est un mot de cadrage parfaitement anodin, dans le
+  champ auquel personne ne pense, famille de "Close" (16/08) mais un cran plus
+  vicieux puisque `composition` se recopie d'un spec a l'autre sans etre relu.
+  Remede gratuit, accepte du premier coup: "medium side shot from the pavement".
+  Le refus serait tombe AVANT l'achat veo (donc $0) mais coutait ~8 min sur une
+  fenetre de publication de 13h05 Paris. Regle: passe promptIssues sur TOUS les
+  champs de spec d'un spec herite, `camera` et `composition` compris.
   Ajout 18/08 (10h30), LE CLAVIER GENERE EST UN CLAVIER WINDOWS, variante neuve
   de la famille "marque reelle dans une still" (Michelin 15/08, Augmentin
   08/08): le spec "a black keyboard with its keys lit from the side" + "macro
@@ -2821,7 +2882,30 @@ ENTRIES:
   ("Copyright (c) 2026 New Africa/Shutterstock. No use without permission.")
   SURVIT au strip de l'image et s'affiche entre le masthead et le titre; aucun
   recadrage rectangulaire ne l'enleve sans perdre le masthead ou le titre.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08.
+  Ajout 26/08 (06h30), CINQ RECUS EPINGLES HORS MOTEUR PAR LE SCOUT, a la queue
+  leu leu (regle du 14/08), et le plus important est un REFUS. (1) waymo.com/blog
+  RE-CONFIRME LE PIEGE DU 05/08 sur le chemin /blog/AAAA/MM/<slug> et pas
+  seulement sur /shorts/: la capture (140 s, 1 frame) s'ouvre sur le masthead du
+  blog et les 1686 px visibles (mesure du 22/08) ne portent QUE de la plomberie,
+  "Waypoint / The official Waymo blog / Topic / Search blog / Back", zero titre.
+  Un recu 100% chrome qui passe tous les controles automatiques. Le crop mesure
+  ce matin, et il est meilleur que la page entiere: `crop=1290:1250:0:1420` garde
+  le bloc hero (wordmark WAYMO + "Waymo in Munich" sur une vraie voiture devant le
+  Siegestor), le titre entier "Servus Munchen: Waymo is Coming to Germany" ET la
+  date. Sur waymo.com, ne pin JAMAIS la capture brute. (2) news.mit.edu NOUVEAU,
+  PROPRE du premier coup en 22 s, 1 SEULE frame, aucun recadrage, et il rejoint la
+  categorie "recu qui porte la preuve" (PubMed 08/08, arxiv /abs 16/08, epoch.ai
+  17/08, dataconomy 18/08, xusheng 25/08): masthead MIT News, titre entier, le
+  chapo qui porte l'affirmation centrale, la signature "MIT Media Lab" ET la date.
+  (3) arxiv.org/abs re-confirme (24 s, 1 frame): le cadre tient le titre entier,
+  LES CINQ AUTEURS et l'abstract jusqu'a la phrase chiffree. (4) technologyreview
+  .com propre sans recadrage MAIS en 224 s et famille O(frames) du 06/08, alors
+  qu'il se gate en une seconde: c'est exactement le recu qu'un scout doit epingler
+  et qu'un run de publication ne doit pas attendre. (5) thenextweb.com re-confirme
+  le 23/08: propre en 38 s, 2 frames, aucun recadrage, et `page.url()` + les alt
+  etaient les bons (le piege du 10/08 ne s'est pas represente). Cout total: 7 min,
+  0 $, et les deux Reels du jour n'ont plus une seule capture a faire.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08, scout 06h30 26/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un

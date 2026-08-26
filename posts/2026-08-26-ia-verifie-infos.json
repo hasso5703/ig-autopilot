@@ -1,0 +1,235 @@
+{
+  "slug": "2026-08-26-ia-verifie-infos",
+  "centralClaim": "Participants' unassisted performance at detecting fake news declined by 15 percentage points in week four compared to before the study started.",
+  "corroboration": [
+    {
+      "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+      "quote": "however, the study showed that a new wrinkle emerged when the AI was no longer present: by week four, participants' unassisted performance on new news items declined by 15 percentage points compared to before the study started."
+    },
+    {
+      "url": "https://www.technologyreview.com/2026/08/25/1140958/your-brain-on-ai/",
+      "quote": "participants who evaluated paired news headlines and images over the course of four weeks were initially 21% percent more accurate at telling fake news from real when aided by a chatbot-but by week four, they'd become 15% worse at identifying fake news without AI than they were before"
+    }
+  ],
+  "sendTest": "Tu demandes a une IA si une info est vraie ? Au bout d'un mois, tu reperes les faux 15% moins bien que toi tout seul avant.",
+  "caption": "Vérifier une info avec une IA te rend plus juste sur le moment, et moins bon un mois plus tard.\n\nLe MIT Media Lab a suivi 67 personnes pendant quatre semaines. À chaque séance, un titre d'actualité et sa photo, et une seule question: vrai ou faux ? Avec l'IA à côté d'eux, les participants étaient 21% plus justes. Sans elle, à la quatrième semaine, ils tombaient 15 points sous leur niveau de départ.\n\nLe détail qui n'est pas dans la vidéo. Un cinquième des participants ont été classés comme des dépendants: ils sont passés d'un examen actif à une acceptation passive de ce que disait l'IA. Et un quart de l'ensemble déclaraient se sentir meilleurs alors que leurs résultats baissaient.\n\nCe qui marche quand même. Les IA qui posent des questions, plutôt que de donner directement la réponse, laissent les gens plus autonomes ensuite. Les auteurs parlent d'un entraîneur plutôt que d'une béquille.\n\nÀ nuancer. L'étude porte sur 67 personnes et une cinquantaine d'articles vérifiés, et les auteurs le disent eux-mêmes. Le travail a été présenté à la conférence CHI 2026.\n\nTu ferais confiance à une IA pour trier le vrai du faux, oui ou non ? Dis-le en commentaire.\n\narxiv.org · news.mit.edu · technologyreview.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #FakeNews #MIT",
+  "captionEvidence": [
+    {
+      "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+      "quote": "in the new media lab study, which tracked 67 people over four weeks as they evaluated news headline-image pairs, participants were 21 percent more accurate in detecting fake news when assisted by an AI chatbot during a session"
+    },
+    {
+      "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+      "quote": "however, the study showed that a new wrinkle emerged when the AI was no longer present: by week four, participants' unassisted performance on new news items declined by 15 percentage points compared to before the study started."
+    },
+    {
+      "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+      "quote": "the paper, which danry and rani presented at the 2026 CHI conference on human factors in computing systems, was co-authored by assistant professor paul pu liang, senior research scientist andrew lippman, and senior author pattie maes"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "MIT Media Lab",
+      "headline": "Un mois avec l'IA. *15 points* de justesse en moins.",
+      "hero": {
+        "value": "67",
+        "label": "personnes suivies pendant quatre semaines"
+      },
+      "swipe": "Les chiffres sont plus bas"
+    },
+    {
+      "type": "stat",
+      "figure": "15",
+      "unit": "points de justesse perdus, sans l'IA, à la quatrième semaine",
+      "body": "Les participants repéraient les fausses infos **moins bien qu'avant l'étude**.",
+      "evidence": "however, the study showed that a new wrinkle emerged when the AI was no longer present: by week four, participants' unassisted performance on new news items declined by 15 percentage points compared to before the study started.",
+      "source": {
+        "name": "MIT News",
+        "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+        "date": "2026-06-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que l'étude a vraiment fait",
+      "body": "**67 personnes**, un mois. À chaque séance, un titre d'actualité avec sa photo, et une question: vrai ou faux ?",
+      "evidence": "we conducted a month-long study where 67 participants classified news headline-image pairs as real or fake, discussed their assessments with an AI system, followed by an unassisted evaluation of unseen news items to measure accuracy before, during, and after AI assistance.",
+      "source": {
+        "name": "arXiv",
+        "url": "https://arxiv.org/abs/2510.01537",
+        "date": "2026-03-13"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Avec l'IA",
+      "claim": "*21%* plus justes pendant la séance.",
+      "caveatLabel": "Sans elle, un mois après",
+      "caveat": "*15%* moins bons qu'au premier jour.",
+      "evidence": "participants who evaluated paired news headlines and images over the course of four weeks were initially 21% percent more accurate at telling fake news from real when aided by a chatbot-but by week four, they'd become 15% worse at identifying fake news without AI than they were before",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/25/1140958/your-brain-on-ai/",
+        "date": "2026-08-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ils baissaient et se croyaient meilleurs",
+      "body": "**Un quart** des participants déclaraient se sentir plus performants, pendant que leurs résultats descendaient.",
+      "evidence": "(roughly a quarter of all participants actually reported feeling that they were getting better at detection, even as their performance declined.)",
+      "source": {
+        "name": "MIT News",
+        "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+        "date": "2026-06-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un mécanisme déjà connu",
+      "body": "Les chercheurs parlent de *paradoxe de la dépendance*. Des médecins équipés d'une IA repéraient moins bien les cancers sans elle.",
+      "evidence": "this phenomenon, which is often referred to as the \"AI dependency paradox,\" has been observed in a wide range of knowledge domains, like the 2025 study that found that doctors who used AI got worse at detecting cancer on their own.",
+      "source": {
+        "name": "MIT News",
+        "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+        "date": "2026-06-09"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "users get excited about these 'magical' LLMs, but forget that they're just statistical models that predict the next 'token' in a sequence",
+      "attribution": "Anku Rani, co-lead author, MIT Media Lab",
+      "evidence": "users get excited about these 'magical' LLMs, but forget that they're just statistical models that predict the next 'token' in a sequence [of letters/words],\" says MIT media arts and sciences (mas) phd student anku rani, co-lead author of a new paper about the research",
+      "source": {
+        "name": "MIT News",
+        "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+        "date": "2026-06-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui change tout",
+      "body": "Une IA qui **pose des questions** laisse les gens plus autonomes. Une IA qui **donne la réponse** installe la dépendance.",
+      "evidence": "AIs that 'tell' by providing direct answers are more likely to foster reliance, while those that 'ask' via socratic questioning are better at engaging someone to actually learn how to discern the truth on their own,\" says danry.",
+      "source": {
+        "name": "MIT News",
+        "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+        "date": "2026-06-09"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui demande à une IA si une info est vraie",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "arXiv",
+      "url": "https://arxiv.org/abs/2510.01537",
+      "accessed": "2026-08-26"
+    },
+    {
+      "name": "MIT News",
+      "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+      "accessed": "2026-08-26"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/08/25/1140958/your-brain-on-ai/",
+      "accessed": "2026-08-26"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Un mois avec l'IA: 15% moins bon face aux faux",
+    "beats": [
+      {
+        "script": "Tu demandes à une IA si une info est vraie ou fausse. Fais ça pendant un mois, et tu t'en sors moins bien tout seul. Tu sais pourquoi ?",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a computer monitor filled with a single column of plain accuracy numbers",
+            "action": "the column of numbers sliding slowly downward, the monitor staying whole and fully in frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the monitor fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "C'est une étude du MIT Media Lab. Et le plus troublant n'est pas le résultat. C'est ce que les gens croyaient.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://news.mit.edu/2026/consequences-of-relying-on-ai-for-accurate-news-0609",
+          "file": "media/2026-08-26-ia-verifie-infos/shot_1.png"
+        }
+      },
+      {
+        "script": "67 personnes, quatre semaines. À chaque fois un titre d'actu avec sa photo, et une question: vrai ou faux ?",
+        "visual": {
+          "type": "card",
+          "value": "67",
+          "label": "personnes suivies pendant quatre semaines"
+        }
+      },
+      {
+        "script": "Avec l'IA à côté d'eux, ils sont 21% plus justes. Donc l'IA marche. Sauf que l'étude ne s'arrête pas là.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://arxiv.org/abs/2510.01537",
+          "file": "media/2026-08-26-ia-verifie-infos/shot_3.png"
+        }
+      },
+      {
+        "script": "Au bout de quatre semaines, on leur retire l'IA. Et là, tout seuls, ils repèrent les faux 15% moins bien qu'au départ.",
+        "visual": {
+          "type": "card",
+          "value": "15%",
+          "label": "de justesse en moins, seuls, à la quatrième semaine"
+        }
+      },
+      {
+        "script": "Et le pire: un quart d'entre eux avaient l'impression de s'améliorer. Ils baissaient, et ils se croyaient meilleurs.",
+        "visual": {
+          "type": "photo",
+          "query": "screen time",
+          "file": "media/2026-08-26-ia-verifie-infos/photo_5.jpg",
+          "credit": "Rawpixel · CC0",
+          "alt": "Un homme regarde son téléphone dans la rue"
+        }
+      },
+      {
+        "script": "Les chercheurs appellent ça le paradoxe de la dépendance à l'IA. On l'a vu chez des médecins qui repéraient moins bien les cancers.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/08/25/1140958/your-brain-on-ai/",
+          "file": "media/2026-08-26-ia-verifie-infos/shot_6.png"
+        }
+      },
+      {
+        "script": "Anku Rani, co-autrice, le dit franchement: on prend ces modèles pour de la magie, alors qu'ils ne font que prédire la suite.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with the source code of a statistical text model",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Une IA qui pose des questions te fait progresser. Une IA qui donne la réponse te rend dépendant. C'est la conclusion de Pattie Maes et son équipe. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "pattie maes",
+          "file": "media/2026-08-26-ia-verifie-infos/photo_8.jpg",
+          "credit": "Andrew Lih · CC0",
+          "alt": "Pattie Maes, chercheuse au MIT Media Lab"
+        }
+      }
+    ]
+  }
+}
