@@ -1,0 +1,262 @@
+{
+  "slug": "2026-08-27-instagram-ados-minuit",
+  "centralClaim": "Meta agreed to a default two-hour daily time limit on its apps for teenagers.",
+  "corroboration": [
+    {
+      "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children",
+      "quote": "Meta has agreed to implement a two-hour cumulative, daily time limit across its apps for users aged 13 to 17 that only parents can change."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/26/metas-18b-child-safety-deal-hinges-on-age-verification-tech-that-doesnt-work-well/",
+      "quote": "Under the settlement's terms, Meta has proposed a list of design changes, including a default two-hour daily screen-time limit for app use, plus prompts that appear every 15 minutes to \"encourage intentional use.\""
+    }
+  ],
+  "sendTest": "Instagram va se couper tout seul a minuit pour les ados, et se limiter a deux heures par jour. Reste a savoir qui est un ado.",
+  "caption": "Instagram et Facebook vont se couper tout seuls à minuit pour les ados, et se limiter à deux heures par jour.\n\nMeta a signé un accord avec 52 procureurs généraux américains et paie 18 milliards de dollars pour solder une plainte de 29 États, qui l'accusaient d'avoir conçu ses applis pour rendre les enfants accros. L'entreprise ne reconnaît aucune faute. Les règles s'appliquent par défaut aux comptes de 13 à 17 ans: deux heures par jour cumulées sur les deux applis, blocage la nuit, notifications coupées pendant les heures de cours, nombre de likes masqué.\n\nLe détail qui n'est pas dans la vidéo. Les ados pourront aussi choisir un fil qui n'est pas trié par recommandations automatiques, et couper le lancement automatique des vidéos. Et Meta ne paiera qu'une partie de la somme tout de suite: le reste dépend de l'adoption des mêmes règles par TikTok et YouTube.\n\nLà où ça coince, et c'est le coeur du sujet. Tout repose sur la capacité à reconnaître un ado. Aujourd'hui ça passe par un scan du visage, une pièce d'identité, ou l'analyse du comportement. Une chercheuse de l'université de Syracuse le dit sans détour: ces technologies ont largement échoué jusqu'ici.\n\nÀ nuancer. L'accord doit encore être validé par la justice, et tous les experts ne sont pas pessimistes: un juriste interrogé estime qu'on peut vérifier un âge sans conserver les données personnelles.\n\nMontrer ton visage pour prouver ton âge, tu accepterais, oui ou non ? Dis-le en commentaire.\n\nabout.fb.com · cnn.com · techcrunch.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Instagram #Meta",
+  "captionEvidence": [
+    {
+      "quote": "today, we are announcing an agreement with a bipartisan group of 52 attorneys general across US states, territories, and the District of Columbia",
+      "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+    },
+    {
+      "quote": "Meta reached an $18 billion settlement on Wednesday over a lawsuit brought by 29 U.S. states concerning children's safety.",
+      "url": "https://techcrunch.com/2026/08/26/metas-18b-child-safety-deal-hinges-on-age-verification-tech-that-doesnt-work-well/"
+    },
+    {
+      "quote": "Meta has agreed to implement a two-hour cumulative, daily time limit across its apps for users aged 13 to 17 that only parents can change.",
+      "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children"
+    },
+    {
+      "quote": "The company will also implement a default \"night mode,\" blocking access to the apps from midnight to 6 am for teens, and a \"school mode,\" designed to reduce the number of notifications teens receive during school hours.",
+      "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children"
+    },
+    {
+      "quote": "And it will give teens the option to turn off autoplay and choose a feed not based on algorithmic recommendations as their default.",
+      "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children"
+    },
+    {
+      "quote": "Meta said it will pay out 70% of the settlement fund to the states in annual installments over the next decade - the remaining 30% will be paid only if YouTube and TikTok agree to make payments to the states and similar changes to their apps.",
+      "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children"
+    },
+    {
+      "quote": "Companies now typically verify age through biometric scans (like a selfie), government ID checks, or analysis of behavioral patterns, and each comes with its own flaws.",
+      "url": "https://techcrunch.com/2026/08/26/metas-18b-child-safety-deal-hinges-on-age-verification-tech-that-doesnt-work-well/"
+    },
+    {
+      "quote": "Meta did not admit wrongdoing as part of the settlement.",
+      "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children"
+    },
+    {
+      "quote": "there are ways you can verify someone's age, create a token that would signal that this particular IP is associated with someone who's below the age of 13, below the age of 16, whatever it is, but discard the personal information",
+      "url": "https://techcrunch.com/2026/08/26/metas-18b-child-safety-deal-hinges-on-age-verification-tech-that-doesnt-work-well/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "26 août · Meta et 52 procureurs généraux",
+      "headline": "Instagram se coupera *à minuit* pour les ados",
+      "hero": {
+        "value": "18",
+        "label": "milliards de dollars, et des règles pour dix ans"
+      },
+      "swipe": "Les reçus en dessous"
+    },
+    {
+      "type": "stat",
+      "figure": "18",
+      "unit": "milliards de dollars payés par Meta",
+      "body": "Pour solder une plainte de **29 États américains** qui accusaient l'entreprise d'avoir conçu ses applis pour rendre les enfants accros.",
+      "evidence": "Meta reached an $18 billion settlement on Wednesday over a lawsuit brought by 29 U.S. states concerning children's safety.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/26/metas-18b-child-safety-deal-hinges-on-age-verification-tech-that-doesnt-work-well/",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Deux heures par jour, et les parents seuls décident",
+      "body": "La limite est **cumulée sur Facebook et Instagram**, pour les comptes de 13 à 17 ans.",
+      "evidence": "Meta has agreed to implement a two-hour cumulative, daily time limit across its apps for users aged 13 to 17 that only parents can change.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La nuit, l'école, et les likes",
+      "body": "Applis **bloquées de minuit à six heures**, notifications réduites pendant les heures de cours, nombre de likes masqué.",
+      "evidence": "The company will also implement a default \"night mode,\" blocking access to the apps from midnight to 6 am for teens, and a \"school mode,\" designed to reduce the number of notifications teens receive during school hours.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le fil trié par la machine devient optionnel",
+      "body": "Les ados pourront choisir un fil **qui ne repose pas sur les recommandations automatiques**, et couper le lancement automatique des vidéos.",
+      "evidence": "And it will give teens the option to turn off autoplay and choose a feed not based on algorithmic recommendations as their default.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Sur le papier, ces règles sont les plus détaillées jamais acceptées par une grande plateforme.",
+      "caveat": "Elles reposent toutes sur une technologie capable de distinguer un enfant d'un adulte, et elle a largement échoué.",
+      "claimLabel": "Ce qui est promis",
+      "caveatLabel": "Ce sur quoi ça repose",
+      "evidence": "The design changes that were proposed in the settlement seem great on paper, but they are all reliant upon successful, effective, and unbiased age verification technology,\" Dr. Ingber said.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/26/metas-18b-child-safety-deal-hinges-on-age-verification-tech-that-doesnt-work-well/",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "A breach of ID scans or facial biometric data tied to minors creates the risk of identity theft, and unlike a password, a leaked face or fingerprint can't be changed.",
+      "attribution": "TechCrunch, sur les risques de la vérification d'âge",
+      "evidence": "A breach of ID scans or facial biometric data tied to minors creates the risk of identity theft, and unlike a password, a leaked face or fingerprint can't be changed.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/26/metas-18b-child-safety-deal-hinges-on-age-verification-tech-that-doesnt-work-well/",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Meta appelle TikTok et YouTube à suivre",
+      "body": "L'entreprise dit que ces protections ne seront **vraiment efficaces** que si ses concurrents adoptent les mêmes mesures.",
+      "evidence": "These protections will only be truly effective if we work with our peers - TikTok and YouTube - to put the same measures in place.",
+      "source": {
+        "name": "Meta",
+        "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* dont l'enfant est sur Instagram",
+      "sub": "L'actu IA, en une minute."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Instagram se coupera à minuit pour les ados",
+    "beats": [
+      {
+        "script": "Si tu as entre 13 et 17 ans, Instagram et Facebook vont se couper tout seuls à minuit. Et te limiter à deux heures par jour.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single phone lying flat on a table, its screen brightly lit",
+            "action": "its lit screen dimming steadily toward black, the phone staying whole and fully in frame the entire time",
+            "setting": "in a dark bedroom in soft even light",
+            "composition": "extreme close-up, the phone fills the entire frame",
+            "camera": "locked-off static shot, no camera movement, no zoom"
+          }
+        }
+      },
+      {
+        "script": "Sauf que pour appliquer ça, il faut d'abord savoir qui est un ado. Et c'est là que tout se complique.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single selfie camera lens on the front of a phone",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the lens fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "D'abord, ce que Meta a accepté. Un accord avec 52 procureurs généraux américains, et des règles qui tiennent dix ans.",
+        "visual": {
+          "type": "photo",
+          "query": "mark zuckerberg",
+          "alt": "Mark Zuckerberg, directeur general de Meta"
+        }
+      },
+      {
+        "script": "18 milliards de dollars, pour solder une plainte de 29 États qui accusaient l'entreprise de rendre les enfants accros.",
+        "visual": {
+          "type": "card",
+          "value": "18",
+          "label": "milliards de dollars, et aucune faute reconnue"
+        }
+      },
+      {
+        "script": "Deux heures par jour maximum, cumulées sur les deux applis. Blocage de minuit à six heures. Notifications coupées pendant les heures de cours.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+        }
+      },
+      {
+        "script": "Et le nombre de likes disparaît de leurs publications. Ils pourront même couper le fil trié par recommandations automatiques.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single phone screen filled with small square photos",
+            "setting": "on a plain table in bright even daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Tout ça s'applique par défaut aux comptes de 13 à 17 ans. Encore faut-il savoir lesquels le sont vraiment.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children"
+        }
+      },
+      {
+        "script": "Parce qu'aujourd'hui, deviner ton âge, ça passe par un scan de ton visage, une pièce d'identité, ou l'analyse de ton comportement. Et une chercheuse est catégorique: ces technologies ont largement échoué.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single identity card lying on a plain table",
+            "setting": "in a bright room in daylight",
+            "composition": "close-up from above, the card centred and whole"
+          }
+        }
+      },
+      {
+        "script": "Et le vrai risque est là. Un mot de passe volé, ça se change. Ton visage, non. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single fingerprint pressed onto a clean glass surface",
+            "setting": "in a bright room in daylight",
+            "composition": "extreme close-up, the fingerprint fills the entire frame"
+          }
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Meta",
+      "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/",
+      "accessed": "2026-08-27"
+    },
+    {
+      "name": "CNN",
+      "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children",
+      "accessed": "2026-08-27"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/26/metas-18b-child-safety-deal-hinges-on-age-verification-tech-that-doesnt-work-well/",
+      "accessed": "2026-08-27"
+    }
+  ]
+}
