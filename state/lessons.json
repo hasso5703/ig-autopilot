@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-27T06:41:48.077Z",
+  "at": "2026-08-27T10:39:50.721Z",
   "n": 59,
   "nSettled": 53,
   "medianViews": 195,
@@ -7,7 +7,7 @@
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
-      "views": 1800,
+      "views": 1801,
       "retentionPct": 40,
       "saved": 2,
       "shares": 1,
@@ -247,7 +247,7 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1800
+            "views": 1801
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
@@ -290,7 +290,7 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1800,
+      "views": 1801,
       "reach": 1612,
       "avgWatchS": 24.1,
       "retentionPct": 40,
@@ -1149,6 +1149,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-26-waymo-munich-europe",
+      "at": "2026-08-26T16:51:27.707Z",
+      "hourUtc": 16,
+      "views": 123,
+      "reach": 117,
+      "avgWatchS": 7.4,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -1164,23 +1181,6 @@
       "themes": [],
       "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-26-waymo-munich-europe",
-      "at": "2026-08-26T16:51:27.707Z",
-      "hourUtc": 16,
-      "views": 122,
-      "reach": 116,
-      "avgWatchS": 7.4,
-      "retentionPct": 12,
-      "likes": 1,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
-      "settled": false
     },
     {
       "slug": "2026-08-01-penurie-memoire-samsung",
