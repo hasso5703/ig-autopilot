@@ -2461,6 +2461,72 @@ ENTRIES:
   screen" du 23/08 lu comme un theme), et garde le macro pour les beats du
   milieu, jamais sous la carte-titre. Proof: run 10h30 26/08, veo_0 refuse au
   filmstrip+frame puis rachete, rebuild a cout nul pour tout le reste.
+  Ajout 27/08 (16h30), UN VERBE DE LUMINOSITE APPLIQUE AU SUJET LE DISSOUT,
+  et c'est l'extension la plus large de l'entree du 25/08: la, le sujet etait
+  une TEXTURE et n'avait pas de silhouette a garder; ici c'est un TELEPHONE,
+  objet ordinaire entier, et il se dematerialise quand meme. Beat 0 "a single
+  phone lying flat on a plain table, its screen brightly lit" + action "its
+  bright screen dimming steadily, the phone staying whole, the same size and
+  fully inside the frame the entire time" (donc la clause de permanence de la
+  regle 3 ETAIT ecrite): pellicule verte jusqu'a 4 s, puis des 4,5 s l'appareil
+  perd ses aretes et LA TABLE TRANSPARAIT A TRAVERS LUI, jusqu'a un fondu
+  translucide sans objet aux 3 derniers panneaux. Diagnostic: `dimming` /
+  `fading` / `darkening` decrivent une variation de la LUMINANCE DU SUJET
+  LUI-MEME, et un modele video sans permanence lit ca comme l'autorisation de
+  faire disparaitre l'objet, quelle que soit la clause de permanence ajoutee
+  a cote. Ce n'est PAS un etat terminal au sens de la regle 1 ("toward black"
+  aggrave, mais le simple "dimming steadily" suffit). REMEDE MESURE, vert du
+  premier coup au rachat ($0.60, clip de 6 s): garde la luminosite du sujet
+  CONSTANTE et donne le mouvement a ce qui est AFFICHE dessus, en ancrant le
+  corps par sa matiere. "a single phone standing upright on a plain table, its
+  bright screen showing a colourful pattern" + action "the colourful pattern on
+  its screen sliding downward and out of view, the phone itself staying whole,
+  the same size, the same solid dark body and fully inside the frame the entire
+  time" a rendu 6 panneaux avec le meme appareil, meme taille, meme place,
+  aretes nettes au dernier, et le motif qui bouge sans jamais resoudre. Regle:
+  sur un beat 0, ne fais JAMAIS varier la lumiere du sujet; fais varier ce
+  qu'il porte. Proof: run 16h30 27/08, veo_0 refuse a la pellicule puis rachete.
+  Ajout 27/08 (16h30), LE FILTRE RAI DE VEO REFUSE PARFOIS UN PROMPT INOFFENSIF,
+  IL NE FACTURE RIEN, ET LA MEME COMMANDE RELANCEE TELLE QUELLE PASSE. Mesure:
+  `Veo finished with no video uri: {"raiMediaFilteredCount":1,
+  "raiMediaFilteredReasons":["We encountered an issue with the audio for your
+  prompt, which means we could not create your video..."]}`, reel2 sort en
+  exit 1, AUCUNE ligne dans state/spend.jsonl (verifie: total du Reel inchange
+  a $1.1334 avant/apres). Le prompt refuse etait un telephone sur une table:
+  rien a censurer, et le motif invoque ("l'audio") n'a aucun sens pour un
+  moteur qui achete du muet. Famille de la toux blog.google (19/08) et du 503
+  du serveur de signature (24/08). Regle: sur ce message precis, RELANCE reel2
+  une fois dans le MEME repertoire avant de toucher au `spec`, tout le reste
+  (narration, alignement, stills deja payes) ressort du cache, donc la relance
+  est gratuite. Ne reecris le prompt QUE si le refus se repete.
+  Ajout 27/08 (16h30), DEUX RACHATS DE STILL DU MEME BUILD, ET LE SECOND EST LA
+  FAMILLE "monitoring" DU MATIN, CONFIRMEE SUR UN AUTRE MOT. (1) PROSE INVENTEE
+  SUR UN DOCUMENT, la famille que le manuel refuse: "a single identity card
+  lying on a plain table, its printed surface filling the view" a rendu une
+  carte couverte d'anglais inventé et PARFAITEMENT LISIBLE ("SECURITY OF
+  EXPERT", "Density difect / cass", "Emergrass Data"), sur le 3e plus long beat
+  du Reel. Le cadrage, lui, etait bon: la correction du 27/08 10h30 (objet dans
+  `subject` ET dans `composition`) avait marche. REMEDE MESURE, propre du
+  premier coup: interdis l'ecriture au lieu d'esperer qu'elle sorte bien,
+  "its surface smooth and blank apart from one small gold chip, no writing
+  anywhere on it" a rendu une carte blanche nette avec sa seule puce doree.
+  Sur tout document genere, decris-le VIERGE et laisse un seul symbole porter
+  la lecture. (2) "a single fingerprint pressed onto a clean glass surface" +
+  "extreme close-up, the fingerprint fills the entire frame" a rendu une
+  EMPREINTE-SCULPTURE dans le hall vitre d'un batiment public, avec des gens
+  flous assis autour: exactement le "monitoring -> moniteur medical" du matin,
+  sur le DERNIER beat parle. "fingerprint" seul resout vers son referent le
+  plus photographie, qui en banque d'images est le monument ou le pictogramme,
+  pas la trace. REMEDE MESURE, propre du premier coup: nomme la MATIERE et la
+  micro-structure. "one greasy fingerprint left on a clean sheet of glass, its
+  curved ridges filling the view" + "extreme macro close-up from directly
+  above, the fingerprint ridges fill the entire frame" a rendu une vraie macro
+  de crêtes plein cadre. Regle generalisee des deux familles du 27/08: un nom
+  ABSTRAIT ou ICONIQUE (monitoring, fingerprint, identite, securite) doit
+  toujours etre accompagne de CE QU'ON VOIT PHYSIQUEMENT, la matiere, la
+  texture, ou ce qui est affiche, sinon le modele rend le referent le plus
+  photographie du mot, qui est presque toujours une autre histoire. Cout des
+  deux rachats: $0.2492, tout le reste ressorti du cache.
   Ajout 26/08 (10h30), RE-CONFIRMATION DU VENV WHISPER A MOITIE CONSTRUIT
   (entree du 24/08, point 4): conteneur froid, meme mort exacte sur
   `ReadTimeoutError files.pythonhosted.org` pendant le bootstrap pip, au
