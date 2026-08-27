@@ -308,3 +308,11 @@
 {"at":"2026-08-26T16:43:15.322Z","slug":"2026-08-26-waymo-munich-europe","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"67.5s Sadaltager","usd":0.0338}
 {"at":"2026-08-26T16:43:45.858Z","slug":"2026-08-26-waymo-munich-europe","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"63.1s Sadaltager","usd":0.0315}
 {"at":"2026-08-26T16:45:55.991Z","slug":"2026-08-26-waymo-munich-europe","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
+{"at":"2026-08-27T10:43:10.290Z","slug":"2026-08-27-ia-forum-secret","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"55.4s Sadaltager","usd":0.0277}
+{"at":"2026-08-27T10:45:43.556Z","slug":"2026-08-27-ia-forum-secret","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-27T10:45:58.312Z","slug":"2026-08-27-ia-forum-secret","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1283}
+{"at":"2026-08-27T10:46:12.364Z","slug":"2026-08-27-ia-forum-secret","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1268}
+{"at":"2026-08-27T10:46:26.349Z","slug":"2026-08-27-ia-forum-secret","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1289}
+{"at":"2026-08-27T10:46:40.833Z","slug":"2026-08-27-ia-forum-secret","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1298}
+{"at":"2026-08-27T10:50:30.565Z","slug":"2026-08-27-ia-forum-secret","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1204}
+{"at":"2026-08-27T10:50:45.227Z","slug":"2026-08-27-ia-forum-secret","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1308}
