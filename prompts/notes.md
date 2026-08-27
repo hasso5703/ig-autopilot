@@ -939,7 +939,21 @@ ENTRIES:
   en minuscules (finger, sensor, brain, clinical, night, patient, measure), et
   liste-les avant d'ecrire les specs, en 10 s:
   `node --input-type=module -e "import {tokens} from './src/state.mjs'; import {namedActors} from './src/validate.mjs'; ..."` ou plus simplement lis la liste
-  que le message d'erreur du gate imprime. ET LE COROLLAIRE, sur les noms
+  que le message d'erreur du gate imprime. Ajout 27/08 (06h30), LA PRECISION QUI
+  M'A COUTE UN ALLER-RETOUR DE GATE SUR 4 BEATS D'UN COUP: `storyVocab` est bati
+  sur TES CITATIONS D'EVIDENCE, pas sur les pages sources. Un spec "a single
+  sealed metal container" a ete refuse sur un dossier ou la page METR ecrit
+  pourtant "hack out of their container", parce que cette phrase-la n'etait dans
+  aucune de mes evidences. Donc sur une actu 100% NUMERIQUE (pas d'objet
+  physique dans l'histoire), choisis les sujets de stills DANS le texte de tes
+  citations, pas dans ton souvenir de l'article: ici messages, board,
+  transcript, files, internet, screen, monitoring, assessment, selfie,
+  fingerprint. ET LE PIEGE INVERSE, celui que le commentaire du code annonce et
+  que personne ne verifie: mon beat 0 veo passait sur le mot "another" (venu de
+  "one another"), donc sur un CONNECTEUR et pas sur un sujet. Le gate etait vert
+  et l'image ne montrait toujours rien de l'histoire. Apres avoir passe le gate,
+  relis quel mot a fait le match: si c'est another/before/across/about, ton
+  image est encore du mobilier. ET LE COROLLAIRE, sur les noms
   versionnes: le controle "la narration nomme X, absent des citations" fait un
   `includes` SENSIBLE A LA CASSE sur l'evidence, alors que la verification en
   ligne de la citation, elle, passe tout en minuscules. Une citation recopiee
@@ -2950,6 +2964,23 @@ ENTRIES:
   ("Copyright (c) 2026 New Africa/Shutterstock. No use without permission.")
   SURVIT au strip de l'image et s'affiche entre le masthead et le titre; aucun
   recadrage rectangulaire ne l'enleve sans perdre le masthead ou le titre.
+  Ajout 27/08 (06h30), GATE: rendent 200 au fetch gate et se gatent DU PREMIER
+  COUP (0 erreur sur 32 verifications, deux dossiers) metr.org/blog (NOUVEAU, et
+  c'est un primaire de premier ordre sur un incident de labo: l'enquete
+  tierce-partie porte le texte entier, chiffres et limites compris) et
+  about.fb.com/news (NOUVEAU, la salle de presse Meta); cnn.com,
+  technologyreview.com et techcrunch.com re-confirment. Repondent 200 aussi
+  mturk.com, nbcnews.com, wsaw.com, metr.org et redwoodresearch.org.
+  openai.com re-confirme 403 (l'annonce du jour y est, donc ingatable au
+  primaire, comme depuis le 26/07). LE REFLEXE QUI TROUVE UN PRIMAIRE META EN
+  30 s, meme famille que le RSS blog.google (12/08) et deepmind (17/08):
+  about.fb.com/news/ (l'index) rend 200 et son HTML porte en clair toutes les
+  URL /news/AAAA/MM/<slug>/, la ou l'URL devinee depuis le sujet rend 404. ET LA
+  NUANCE DE CORROBORATION A DIRE DANS LE RAPPORT sur un dossier d'incident IA:
+  techcrunch et technologyreview lisent le MEME rapport OpenAI, mais METR a mene
+  son enquete INDEPENDANTE (elle ecrit noir sur blanc n'avoir pris aucun
+  paiement d'OpenAI), donc c'est elle, et pas le nombre de domaines, qui fait la
+  seconde lecture reelle.
   Ajout 26/08 (06h30), CINQ RECUS EPINGLES HORS MOTEUR PAR LE SCOUT, a la queue
   leu leu (regle du 14/08), et le plus important est un REFUS. (1) waymo.com/blog
   RE-CONFIRME LE PIEGE DU 05/08 sur le chemin /blog/AAAA/MM/<slug> et pas
@@ -2973,7 +3004,43 @@ ENTRIES:
   le 23/08: propre en 38 s, 2 frames, aucun recadrage, et `page.url()` + les alt
   etaient les bons (le piege du 10/08 ne s'est pas represente). Cout total: 7 min,
   0 $, et les deux Reels du jour n'ont plus une seule capture a faire.
-  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08, scout 06h30 26/08.
+  Ajout 27/08 (06h30), QUATRE RECUS MESURES HORS MOTEUR, DONT UN REFUS QUI EST LA
+  VARIANTE LA PLUS SILENCIEUSE DE LA FAMILLE (macrumors 03/08, cnbc 04/08,
+  greenairnews 19/08, fortune 25/08). (1) cnn.com SE GATE PARFAITEMENT (fetch
+  Node 200, 14 ko aplatis, toutes citations VERIFIED) ET SE CAPTURE ENTIEREMENT
+  BLANC: page blanche pure, 14 845 octets de PNG contre 275 ko pour une vraie
+  capture, `page.url()` correct, `h1` VIDE, 1 frame, 22 s. Reproduit DEUX fois.
+  Ce n'est ni un mur, ni un 404, ni une page d'erreur brandee: il n'y a
+  strictement RIEN, donc aucun controle de titre ne l'attrape, seul le poids du
+  fichier ou l'oeil le voit. Regle: cnn.com est une SOURCE, jamais un recu, et
+  au moindre doute mesure `ls -la` sur le png (sous ~30 ko = page vide).
+  (2) metr.org/blog/<slug>: PROPRE en 26 s, 2 frames, et il rejoint la categorie
+  "recu qui porte la preuve" (PubMed 08/08, arxiv 16/08, epoch.ai 17/08,
+  dataconomy 18/08, xusheng 25/08, news.mit.edu 26/08). ATTENTION, son titre
+  d'article n'est PAS dans un h1: le scroll au h1 tombe sur le titre de SECTION
+  "Core takeaways about this incident" et ajoute un #fragment a l'url. C'est une
+  CHANCE ici, les 1686 px visibles (mesure du 22/08) tenant le masthead METR ET
+  la phrase qui autorise tous les chiffres du script ("~1200 agents sent >70,000
+  messages and files on an unsanctioned message board, and ~700 attacked Hugging
+  Face"). Reste une ligne coupee sous le masthead, cosmetique. (3) about.fb.com/
+  news/<slug>: PROPRE en 25 s, 1 frame, aucun recadrage, et il N'A PAS besoin du
+  mode `top` contrairement aux autres pages vitrines d'entreprise (waymo 26/08,
+  outerbio 22/08): wordmark Meta, "Back to Newsroom", etiquette META, titre
+  entier, date. Sur une actu Meta, la salle de presse est donc a la fois primaire
+  gatable et meilleur recu. (4) wsaw.com (Gray TV) PROPRE mais en 278 s et
+  90 frames (famille O(frames) du 06/08, tres lourd): masthead WSAW-TV, titre
+  entier, signature "The Associated Press", date et chapo chiffre. Deux bemols
+  avant de s'en servir: c'est de la SYNDICATION AP (famille RNZ 10/08, NPR
+  17/08), donc jamais un second domaine de corroboration; et son SLUG D'URL dit
+  "17-billion" la ou le titre affiche "$18 billion" (titre corrige apres coup),
+  donc lis le h1, jamais l'url. technologyreview.com re-confirme le 26/08:
+  propre, aucun recadrage, masthead + rubrique + titre + chapo + signature +
+  date, mais 325 s et 39 frames, c'est LE recu qu'un scout epingle et qu'un run
+  de publication ne doit jamais attendre. OUTIL: `node scout-capture.mjs <url>
+  <out> [top]` (pose ce jour-la) replique screenshotOnce a l'identique et
+  imprime `page.url()`, le h1 et les alt des images en cadre, soit les trois
+  controles du 10/08, du 14/08 et du 23/08 en une commande.
+  Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08, scout 06h30 26/08, scout 06h30 27/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
   par du balisage (NOx en <sub>), une entite nommee non decodee (&rsquo;), un
