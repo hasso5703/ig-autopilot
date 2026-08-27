@@ -197,7 +197,8 @@
         "script": "Deux heures par jour maximum, cumulées sur les deux applis. Blocage de minuit à six heures. Notifications coupées pendant les heures de cours.",
         "visual": {
           "type": "screenshot",
-          "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+          "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/",
+          "file": "media/2026-08-27-instagram-ados-minuit/shot_4.png"
         }
       },
       {
@@ -214,8 +215,9 @@
       {
         "script": "Tout ça s'applique par défaut aux comptes de 13 à 17 ans. Encore faut-il savoir lesquels le sont vraiment.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children"
+          "type": "card",
+          "value": "13 à 17",
+          "label": "l'âge des comptes bridés par défaut"
         }
       },
       {
