@@ -158,8 +158,8 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a single phone lying flat on a plain table, its screen brightly lit",
-            "action": "its bright screen dimming steadily, the phone staying whole, the same size and fully inside the frame the entire time",
+            "subject": "a single phone standing upright on a plain table, its bright screen showing a colourful pattern",
+            "action": "the colourful pattern on its screen sliding downward and out of view, the phone itself staying whole, the same size, the same solid dark body and fully inside the frame the entire time",
             "setting": "in a bright room in soft even daylight",
             "composition": "medium framing, the whole phone fills most of the frame",
             "camera": "locked-off static shot, no camera movement, no zoom"
@@ -225,7 +225,7 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a single identity card lying on a plain table, its printed surface filling the view",
+            "subject": "a single plastic identity card lying on a plain table, its surface smooth and blank apart from one small gold chip, no writing anywhere on it",
             "setting": "in a bright room in daylight",
             "composition": "extreme close-up from directly above, the identity card fills the entire frame"
           }
@@ -236,9 +236,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a single fingerprint pressed onto a clean glass surface",
-            "setting": "in a bright room in daylight",
-            "composition": "extreme close-up, the fingerprint fills the entire frame"
+            "subject": "one greasy fingerprint left on a clean sheet of glass, its curved ridges filling the view",
+            "setting": "on a plain table in a bright room in daylight",
+            "composition": "extreme macro close-up from directly above, the fingerprint ridges fill the entire frame"
           }
         }
       }
