@@ -852,6 +852,23 @@ ENTRIES:
   large-v3-turbo (l'entree ci-dessus disait 2 min + 140 Mo). Consequence de
   planification: un run de publication qui herite d'un spec entierement epingle
   peut viser sa fenetre a 15 min pres; un run qui doit capturer ne le peut pas.
+  Ajout 27/08 (10h30), DEUX PIEGES D'OUTILLAGE QUI COUTENT CHACUN UN ALLER-
+  RETOUR. (1) LE REPERTOIRE COURANT DE L'OUTIL BASH PERSISTE ENTRE LES APPELS,
+  et la commande de controle des frames du manuel (etape 10) commence
+  justement par `cd media/<slug>`: tout appel suivant se resout alors depuis
+  media/<slug>, donc `echo ... >> "$RUN_JOURNAL"` meurt sur "No such file or
+  directory" et `node src/...` ne trouve plus rien. Ce n'est pas le journal qui
+  a disparu. Remede: mets TOUJOURS les blocs de frames et de filmstrip dans un
+  sous-shell, `( cd media/<slug> && for t in ...; done )`, le cwd revient tout
+  seul. (2) NE PIPE PAS reel2.mjs DANS `tail` EN ARRIERE-PLAN: `node
+  src/reel2.mjs ... | tail -80` ne rend RIEN avant la sortie du process, donc
+  le fichier de sortie reste vide pendant les 6 minutes du build et un Monitor
+  arme dessus ne voit aucune ligne `spend:` ni aucune `beat N:`. Redirige vers
+  un fichier (`> /tmp/build.log 2>&1`) et grep dedans, ou laisse la sortie
+  entiere. Ce qui suit un build reellement observable: spend.jsonl et les
+  fichiers du dossier media sont, eux, ecrits au fil de l'eau et suffisent a
+  suivre l'avancement (voice2.wav -> align.json/words.json -> veo_0.mp4 ->
+  still_N.jpg -> reel.mp4).
 - 2026-07-28 · Land state on main ONLY via `node src/land.mjs "msg" [paths]`.
   Local `main` is clone-time state, not truth; a checkout nearly erased
   posted.jsonl on 28/07. Never force-push, ever. Proof: run report 28/07.
@@ -3309,3 +3326,27 @@ ENTRIES:
   CAPTURE aussi parfaitement en recu (titre, chapo, signature, date dans le
   cadre 9:16, zero banniere) avec crop=1290:1150:0:0; phoronix reste refuse en
   capture (sort sans CSS), il ne sert que de source.
+  Ajout 27/08 (10h30), MEME FAMILLE QUE "dark computer screen", ET CELUI-LA
+  SORT CARREMENT D'UNE AUTRE HISTOIRE: "a single monitoring screen showing one
+  steady graph" a rendu un MONITEUR MEDICAL DE CHEVET, bras articule compris,
+  avec "bpm" et "mmHg" LISIBLES et un trace de signes vitaux, sur le dernier
+  beat parle d'un dossier de securite informatique. Le mot "monitoring" (comme
+  "monitor") resout vers son referent photographique le plus courant, qui en
+  banque d'images est l'hopital: ce n'est pas une image ratee, c'est une image
+  reussie d'un autre sujet, donc une metaphore que le gate ne peut pas voir
+  (le spec partageait bien du vocabulaire avec les sources). La formulation qui
+  a marche DU PREMIER COUP au rachat: "a single computer monitoring screen
+  filled with lines of code and timestamps, one line marked in red" - le
+  moteur a rendu un vrai ecran de logs (timestamps, GET /api/v1/data, une
+  ligne rouge CRITICAL_ERROR). Regle generale: un nom de FONCTION abstraite
+  (monitoring, scoring, tracking, reporting) doit toujours etre accompagne de
+  CE QU'ON VOIT A L'ECRAN (des lignes de code, des horodatages, des colonnes),
+  sinon le modele choisit le decor le plus photographie du mot. Meme rachat a
+  $0.13, tout le reste ressorti du cache. Deuxieme refus du meme controle ce
+  jour-la, classique celui-la: "a single printed assessment lying open on a
+  plain table" + "close-up from above" a rendu une table et une chaise plus
+  grandes que le document (le "bureau au lieu de l'histoire" du manuel);
+  "its pages filling the view" + "extreme close-up from directly above, the
+  open pages fill the entire frame" corrige du premier coup. Quand tu veux
+  qu'un objet DOMINE, mets-le dans le `subject` ET dans la `composition`, le
+  seul "close-up" ne suffit pas.
