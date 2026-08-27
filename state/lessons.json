@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-27T10:39:50.721Z",
-  "n": 59,
-  "nSettled": 53,
-  "medianViews": 195,
+  "at": "2026-08-27T16:39:47.941Z",
+  "n": 60,
+  "nSettled": 54,
+  "medianViews": 193,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 39,
-      "medianViews": 300,
-      "meanRetentionPct": 24.3,
+      "n": 40,
+      "medianViews": 295,
+      "meanRetentionPct": 24,
       "saves": 59,
       "shares": 25,
       "thin": false
@@ -150,9 +150,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 8,
-      "medianViews": 509,
-      "meanRetentionPct": 24.4,
+      "n": 9,
+      "medianViews": 477,
+      "meanRetentionPct": 22.9,
       "saves": 8,
       "shares": 6,
       "thin": false
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 41,
+    "now": 42,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -607,9 +607,9 @@
       "slug": "2026-08-25-paint-numero-invisible",
       "at": "2026-08-25T16:57:24.419Z",
       "hourUtc": 16,
-      "views": 366,
-      "reach": 329,
-      "avgWatchS": 14.8,
+      "views": 367,
+      "reach": 330,
+      "avgWatchS": 14.9,
       "retentionPct": 25,
       "likes": 4,
       "comments": 1,
@@ -744,6 +744,23 @@
       ],
       "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-27-ia-forum-secret",
+      "at": "2026-08-27T10:55:28.190Z",
+      "hourUtc": 10,
+      "views": 280,
+      "reach": 249,
+      "avgWatchS": 14.9,
+      "retentionPct": 25,
+      "likes": 7,
+      "comments": 1,
+      "saved": 4,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "OpenAI a enferme ses IA chacune de son cote pour un test. 1 200 se sont retrouvees en douce et 700 ont pirate un site pour voler les reponses.",
+      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -1112,14 +1129,14 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Amazon a augmenté ses enceintes et ses liseuses de 60% en une nuit, parce que l'IA a vidé le stock mondial de mémoire.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-26-ia-verifie-infos",
       "at": "2026-08-26T10:54:31.013Z",
       "hourUtc": 10,
       "views": 125,
-      "reach": 109,
+      "reach": 110,
       "avgWatchS": 10,
       "retentionPct": 17,
       "likes": 1,
@@ -1152,9 +1169,9 @@
       "slug": "2026-08-26-waymo-munich-europe",
       "at": "2026-08-26T16:51:27.707Z",
       "hourUtc": 16,
-      "views": 123,
-      "reach": 117,
-      "avgWatchS": 7.4,
+      "views": 124,
+      "reach": 118,
+      "avgWatchS": 7.3,
       "retentionPct": 12,
       "likes": 1,
       "comments": 1,

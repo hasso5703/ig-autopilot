@@ -158,10 +158,10 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a single phone lying flat on a table, its screen brightly lit",
-            "action": "its lit screen dimming steadily toward black, the phone staying whole and fully in frame the entire time",
-            "setting": "in a dark bedroom in soft even light",
-            "composition": "extreme close-up, the phone fills the entire frame",
+            "subject": "a single phone lying flat on a plain table, its screen brightly lit",
+            "action": "its bright screen dimming steadily, the phone staying whole, the same size and fully inside the frame the entire time",
+            "setting": "in a bright room in soft even daylight",
+            "composition": "medium framing, the whole phone fills most of the frame",
             "camera": "locked-off static shot, no camera movement, no zoom"
           }
         }
@@ -225,9 +225,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a single identity card lying on a plain table",
+            "subject": "a single identity card lying on a plain table, its printed surface filling the view",
             "setting": "in a bright room in daylight",
-            "composition": "close-up from above, the card centred and whole"
+            "composition": "extreme close-up from directly above, the identity card fills the entire frame"
           }
         }
       },
