@@ -1,0 +1,181 @@
+{
+  "slug": "2026-08-29-mail-texte-invisible",
+  "centralClaim": "Invisible text hidden inside an email made an AI email summarizer report a false invoice deadline and omit a name, in all ten injected runs, with no signal to the reader.",
+  "corroboration": [
+    {
+      "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html",
+      "quote": "During each pass through the injected email, the summary output reported an invoice deadline of September 3, 2026, instead of the actual August 21, 2026, and omitted the name"
+    },
+    {
+      "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer",
+      "quote": "The important finding is that the injected email summaries did not carry information from both the presented text and the injected text. The reader of the summary has not been given any signal that the information is fabricated, or the email has contradicting information."
+    }
+  ],
+  "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
+  "caption": "Ton assistant peut te résumer un mail en te mentant, et rien à l'écran ne te prévient.\n\nDes chercheurs de Forcepoint ont glissé dans un mail un bloc de texte mis en forme pour être invisible: taille de police zéro, blanc sur blanc. Le lecteur ne voit rien. Le résumé automatique, lui, lit tout et obéit. Sur les 10 essais avec le mail piégé, les 10 résumés ont annoncé une échéance de facture au 3 septembre 2026 au lieu du 21 août 2026, et ont effacé le nom Diego Siciliani, présent dans le message.\n\nLe détail qui n'est pas dans la vidéo. Le mail affichait 537 caractères. 1 009 sont partis vers le modèle, dont 472 de texte caché. Les instructions n'étaient même pas un contournement sophistiqué: du français courant demandant au résumeur de traiter un faux corps de message comme la version qui fait foi, et de ne pas mentionner la consigne.\n\nÀ nuancer, et c'est important. C'est une expérience de laboratoire, un seul message, un seul modèle, dans une chaîne montée sans aucune protection, ce que les chercheurs écrivent noir sur blanc. Ce n'est pas un incident constaté chez des utilisateurs. Et la reprise que nous citons vient du même travail: une seule équipe, deux sites.\n\nTu ferais confiance à un résumé automatique de tes mails, oui ou non ? Dis-le en commentaire.\n\ncsoonline.com · forcepoint.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Cybersecurite #Mail",
+  "captionEvidence": [
+    {
+      "quote": "During each pass through the injected email, the summary output reported an invoice deadline of September 3, 2026, instead of the actual August 21, 2026, and omitted the name",
+      "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html"
+    },
+    {
+      "quote": "The researchers ran the clean and injected emails through the vulnerable setup 10 times each, with the success criteria defined in advance.",
+      "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html"
+    },
+    {
+      "quote": "Nearly half of what is passed to the summarizer is hidden from the user: 537 characters displayed, 1,009 sent to the model, with 472 characters as injection text.",
+      "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer"
+    },
+    {
+      "quote": "This is a simple test with only one message, using one model, and a single run of ten trials each for the benign and injected emails.",
+      "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "27 août 2026 · Forcepoint X-Labs",
+      "headline": "472 caractères invisibles, et le résumé *ment*",
+      "hero": { "value": "10", "label": "essais avec le mail piégé, 10 résumés faux" },
+      "swipe": "Les preuves, diapo par diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "472",
+      "unit": "caractères invisibles ajoutés au mail",
+      "body": "Le lecteur voit **537 caractères**. Le modèle en reçoit *1 009*.",
+      "evidence": "Nearly half of what is passed to the summarizer is hidden from the user: 537 characters displayed, 1,009 sent to the model, with 472 characters as injection text.",
+      "source": { "name": "Forcepoint X-Labs", "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "Le texte est là, mais personne ne le voit",
+      "body": "Le bloc caché est mis en forme en *taille zéro*, en blanc sur blanc. Il reste **intact** dans le message envoyé au résumeur.",
+      "evidence": "This made it invisible to the reader in Outlook, but present in the HTML that was sent to the vulnerable summarizer.",
+      "source": { "name": "Forcepoint X-Labs", "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer", "date": "2026-08-25" }
+    },
+    {
+      "type": "content",
+      "title": "Le résumé change la date et efface un nom",
+      "body": "Échéance annoncée le *3 septembre 2026*. La vraie date du mail était le **21 août 2026**. Le nom Diego Siciliani disparaît.",
+      "evidence": "During each pass through the injected email, the summary output reported an invoice deadline of September 3, 2026, instead of the actual August 21, 2026, and omitted the name",
+      "source": { "name": "CSO Online", "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html", "date": "2026-08-27" }
+    },
+    {
+      "type": "stat",
+      "figure": "10",
+      "unit": "essais sur 10, tous piégés",
+      "body": "Les critères de réussite avaient été **fixés à l'avance**, avant les essais.",
+      "evidence": "The researchers ran the clean and injected emails through the vulnerable setup 10 times each, with the success criteria defined in advance.",
+      "source": { "name": "CSO Online", "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html", "date": "2026-08-27" }
+    },
+    {
+      "type": "content",
+      "title": "Rien ne prévient le lecteur",
+      "body": "Aucun résumé piégé ne mentionne la consigne cachée. Le lecteur n'a *aucun signal* que l'information a été fabriquée.",
+      "evidence": "The reader of the summary has not been given any signal that the information is fabricated, or the email has contradicting information.",
+      "source": { "name": "Forcepoint X-Labs", "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer", "date": "2026-08-25" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Les 10 essais piégés ont tous produit un résumé faux.",
+      "caveat": "C'est un laboratoire: un seul message, un seul modèle, et une chaîne montée *sans aucune protection*.",
+      "claimLabel": "Le résultat",
+      "caveatLabel": "Ce que ça ne montre pas",
+      "evidence": "This is a simple test with only one message, using one model, and a single run of ten trials each for the benign and injected emails.",
+      "source": { "name": "Forcepoint X-Labs", "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer", "date": "2026-08-25" }
+    },
+    {
+      "type": "quote",
+      "body": "The attack is not against Outlook, any named summarizers, or the model used to drive the summarizer",
+      "attribution": "Ben Gibney, chercheur chez Forcepoint",
+      "evidence": "The attack is not against Outlook, any named summarizers, or the model used to drive the summarizer",
+      "source": { "name": "CSO Online", "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html", "date": "2026-08-27" }
+    },
+    {
+      "type": "content",
+      "title": "La parade existe déjà",
+      "body": "Ne transmettre au modèle que le texte *réellement affiché*, repérer les mises en forme qui cachent, et **recouper** le résumé avec le message d'origine.",
+      "evidence": "To protect against such prompt injections, Forcepoint recommends extracting only content visible to the user, detecting hidden or suspicious HTML/CSS styling, separating email headers from the body, treating email content as untrusted data, and validating AI-generated summaries against the original source.",
+      "source": { "name": "CSO Online", "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html", "date": "2026-08-27" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui laisse l'IA lire ses mails",
+      "sub": "L'actu IA, avec la source sous chaque affirmation."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "472 caractères invisibles font mentir ton IA",
+    "beats": [
+      {
+        "script": "Ton assistant te résume un mail, et il te ment. Pas une faute: un mensonge écrit par quelqu'un d'autre, dans un texte que tu ne peux pas voir.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a computer screen filled with the text of a single email message",
+            "action": "one extra sentence slowly fading into view between two paragraphs, the screen staying whole and fully in frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "extreme close-up, the screen fills the entire frame",
+            "setting": "in soft even daylight"
+          }
+        }
+      },
+      {
+        "script": "Des chercheurs ont glissé 472 caractères invisibles dans un mail tout à fait banal. Blanc sur blanc, taille zéro. Toi, tu ne vois rien.",
+        "visual": { "type": "card", "value": "472", "label": "caractères invisibles glissés dans le mail" }
+      },
+      {
+        "script": "Mais l'IA qui résume ton courrier, elle, lit tout. Sur 537 caractères affichés, 1 009 sont partis dans la machine.",
+        "visual": { "type": "screenshot", "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer", "file": "media/2026-08-29-mail-texte-invisible/shot_2.png" }
+      },
+      {
+        "script": "Et là, ça dérape. Le résumé annonce une facture à payer le 3 septembre. La vraie date, celle du mail, c'était le 21 août.",
+        "visual": { "type": "card", "value": "3 septembre", "label": "la date annoncée par le résumé, au lieu du 21 août" }
+      },
+      {
+        "script": "Le nom de la personne à contacter a disparu du résumé. Et rien, absolument rien, ne prévient que le texte a été trafiqué.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed invoice, its pages filling the view, with a wide blank white gap where a name should be",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly above, the open pages fill the entire frame"
+          }
+        }
+      },
+      {
+        "script": "10 essais avec le mail piégé, 10 résumés faux. Zéro avec le mail propre. Les critères de réussite avaient été fixés à l'avance.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single sheet of paper covered in printed test results, its page filling the view",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly above, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Sauf que. C'est un labo, un seul mail, un seul modèle, et une chaîne montée sans aucune protection. Les chercheurs l'écrivent eux-mêmes.",
+        "visual": { "type": "screenshot", "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html", "file": "media/2026-08-29-mail-texte-invisible/shot_6.png" }
+      },
+      {
+        "script": "Mais ces balises invisibles, les escrocs les utilisent déjà pour tromper ton œil. Là, c'est ton IA qu'ils visent. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a computer screen showing a short summary of an email, the words filling the frame",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up, the screen fills the entire frame"
+          }
+        }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "CSO Online", "url": "https://www.csoonline.com/article/4214814/ai-can-be-made-to-read-an-email-much-differently-than-you-do.html", "accessed": "2026-08-28" },
+    { "name": "Forcepoint X-Labs", "url": "https://www.forcepoint.com/blog/x-labs/html-payload-hijacks-email-summarizer", "accessed": "2026-08-28" }
+  ]
+}
