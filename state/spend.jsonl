@@ -331,3 +331,9 @@
 {"at":"2026-08-28T16:55:18.004Z","slug":"2026-08-28-google-reserve-voyage","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.127}
 {"at":"2026-08-28T16:55:32.259Z","slug":"2026-08-28-google-reserve-voyage","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.128}
 {"at":"2026-08-28T16:55:48.932Z","slug":"2026-08-28-google-reserve-voyage","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1324}
+{"at":"2026-08-28T17:16:23.838Z","slug":"2026-08-28-flock-plaques-voiture","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"53.5s Sadaltager","usd":0.0267}
+{"at":"2026-08-28T17:20:45.587Z","slug":"2026-08-28-flock-plaques-voiture","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-28T17:20:58.560Z","slug":"2026-08-28-flock-plaques-voiture","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1267}
+{"at":"2026-08-28T17:21:15.004Z","slug":"2026-08-28-flock-plaques-voiture","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1303}
+{"at":"2026-08-28T17:21:28.319Z","slug":"2026-08-28-flock-plaques-voiture","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1294}
+{"at":"2026-08-28T17:26:45.815Z","slug":"2026-08-28-flock-plaques-voiture","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1291}

@@ -103,3 +103,4 @@
 {"at":"2026-08-27T16:42:54.868Z","slug":"2026-08-27-instagram-ados-minuit","words":204,"seconds":54.72,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.3}
 {"at":"2026-08-28T16:51:16.463Z","slug":"2026-08-28-google-reserve-voyage","words":200,"seconds":47.68,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-0.8}
 {"at":"2026-08-28T16:51:43.701Z","slug":"2026-08-28-google-reserve-voyage","words":200,"seconds":52.6,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-0.5}
+{"at":"2026-08-28T17:16:24.020Z","slug":"2026-08-28-flock-plaques-voiture","words":199,"seconds":53.48,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.4}
