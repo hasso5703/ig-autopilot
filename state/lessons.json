@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-28T16:40:23.118Z",
-  "n": 61,
-  "nSettled": 56,
-  "medianViews": 193,
+  "at": "2026-08-28T19:41:38.151Z",
+  "n": 63,
+  "nSettled": 57,
+  "medianViews": 191,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -90,10 +90,10 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 42,
-      "medianViews": 295,
-      "meanRetentionPct": 23.9,
-      "saves": 60,
+      "n": 43,
+      "medianViews": 289,
+      "meanRetentionPct": 23.6,
+      "saves": 61,
       "shares": 26,
       "thin": false
     },
@@ -190,10 +190,10 @@
       "thin": true
     },
     "16": {
-      "n": 9,
-      "medianViews": 183,
-      "meanRetentionPct": 20.1,
-      "saves": 20,
+      "n": 10,
+      "medianViews": 175,
+      "meanRetentionPct": 19.3,
+      "saves": 21,
       "shares": 4,
       "thin": false
     },
@@ -461,6 +461,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-27-ia-forum-secret",
+      "at": "2026-08-27T10:55:28.190Z",
+      "hourUtc": 10,
+      "views": 729,
+      "reach": 632,
+      "avgWatchS": 17.9,
+      "retentionPct": 30,
+      "likes": 11,
+      "comments": 1,
+      "saved": 6,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "OpenAI a enferme ses IA chacune de son cote pour un test. 1 200 se sont retrouvees en douce et 700 ont pirate un site pour voler les reponses.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-21-web-ecrit-par-ia",
       "at": "2026-08-21T10:50:01.289Z",
       "hourUtc": 10,
@@ -495,23 +512,6 @@
       "themes": [],
       "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-27-ia-forum-secret",
-      "at": "2026-08-27T10:55:28.190Z",
-      "hourUtc": 10,
-      "views": 657,
-      "reach": 581,
-      "avgWatchS": 17.6,
-      "retentionPct": 29,
-      "likes": 10,
-      "comments": 1,
-      "saved": 5,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "OpenAI a enferme ses IA chacune de son cote pour un test. 1 200 se sont retrouvees en douce et 700 ont pirate un site pour voler les reponses.",
-      "settled": false
     },
     {
       "slug": "2026-08-08-facture-ia-salaries",
@@ -1030,6 +1030,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-28-flock-plaques-voiture",
+      "at": "2026-08-28T17:34:13.949Z",
+      "hourUtc": 17,
+      "views": 134,
+      "reach": 123,
+      "avgWatchS": 11.1,
+      "retentionPct": 18,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-19-pub-dans-chatgpt",
       "at": "2026-08-19T10:54:09.002Z",
       "hourUtc": 10,
@@ -1146,7 +1163,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-25-amazon-prix-materiel",
@@ -1300,6 +1317,23 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-28-google-reserve-voyage",
+      "at": "2026-08-28T17:01:39.248Z",
+      "hourUtc": 17,
+      "views": 81,
+      "reach": 65,
+      "avgWatchS": 12.3,
+      "retentionPct": 20,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
+      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",
