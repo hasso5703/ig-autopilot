@@ -796,6 +796,19 @@ ENTRIES:
   auteurs, leur newsroom, leur magazine d'anciens). Le gate passe au vert, et
   ca n'atteste que "les chercheurs ont mesure x". Publiable en attribuant dans
   le script ("une etude du MIT Media Lab"), jamais lu comme trois lectures.
+  Ajout 28/08 (17h30), dossier Flock/plaques: cfpublic.org (Central Florida Public
+  Media) rend 200 au fetch gate, se gate DU PREMIER COUP et SE CAPTURE
+  parfaitement, NOUVEAU et excellent: titre entier ("DeSantis says license plate
+  readers are 'out of control.'"), signature, "Published August 26, 2026", zero
+  mur de consentement, zero pub, aucun recadrage, et en prime une photo de
+  camera Flock dans le cadre. Sur une actu de POLITIQUE LOCALE americaine, la
+  station publique locale porte les citations du gouverneur mot pour mot ET la
+  reponse ecrite de l'entreprise, la ou la depeche nationale resume. ATTENTION,
+  ce n'est PAS de la syndication NPR (famille du 17/08): l'article est signe
+  d'une reporter maison. Verifie la signature avant de classer un .org public
+  comme du NPR reempaquete. Meme run: techcrunch.com rend 200 et se gate, mais
+  je ne l'ai pas pris en recu (entree du 21/08, redirection mobile vers une
+  fausse alerte McAfee, non remesuree).
   Ajout 28/08 (16h30): blog.google se re-gate ET se recapture PARFAITEMENT
   (re-confirme le 12/08, 3e fois): titre, date "Aug 27, 2026", "4 min read",
   signature ET un chapo qui porte le claim central en toutes lettres, dans le
@@ -1356,6 +1369,25 @@ ENTRIES:
   trajectoire complexe: ce qui est fiable sur un vehicule, c'est qu'il TRAVERSE
   le cadre devant un fond immobile. Ecris l'action de facon que la version
   simplifiee reste vraie. Proof: run 16h30 26/08, veo_0 accepte du premier coup.
+  Ajout 28/08 (17h30), LE MOT "CAMERA" TOUT SEUL RAMENE UN REFLEX, PAS UNE
+  CAMERA DE SURVEILLANCE, famille du 14/08 ("migration") et elle passe TOUS les
+  controles: gate vert, promptIssues vide, simplicityIssues vide, vocabulaire
+  ancre sur camera. Le spec "a single black camera housing seen from below
+  against a plain sky" a rendu un APPAREIL PHOTO PROFESSIONNEL sur trepied, vu
+  de dos, boitier et molettes lisibles, sur une actu de surveillance policiere.
+  Le modele prend le sens majoritaire du mot. SEUL le regard sur la frame
+  l'attrape. Remede mesure, $0,129 et rebuild a cout nul (narration,
+  alignement, veo et 2 stills re-servis par leur .key): ecrire les DEUX mots,
+  "a single black SURVEILLANCE camera fixed to a brick wall" + composition
+  "macro framing, the surveillance camera fills the entire frame", rendu propre
+  du premier coup, un vrai dome mural. Le beat 0 veo du meme Reel disait deja
+  "surveillance camera" et n'avait, lui, jamais rate. Regle: dans un spec, ne
+  laisse jamais "camera" seul, colle-lui toujours "surveillance".
+  ET UNE PRECISION SUR L'EPINGLAGE D'UN RECU: epingler une capture deja prise
+  avec {"type":"file"} la fait compter comme une STILL et plus comme une
+  surface reelle, donc le gate refuse "only 2 beat(s) show something real - the
+  floor is 3". Un recu se laisse en `screenshot` (il se recapture, ~7 s ici),
+  l'epinglage `file` est pour les PHOTOS. Mesure: run 17h30 28/08.
   Ajout 28/08 (16h30), NE RECONSTRUIS PAS storyVocab A LA MAIN, LIS LA LISTE QUE
   LE GATE IMPRIME. Les entrees ci-dessus donnent la formule locale
   tokens(centralClaim+evidence) MOINS tokens(namedActors(...)). Mesure de ce
