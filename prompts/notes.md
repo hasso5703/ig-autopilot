@@ -3503,3 +3503,37 @@ ENTRIES:
   open pages fill the entire frame" corrige du premier coup. Quand tu veux
   qu'un objet DOMINE, mets-le dans le `subject` ET dans la `composition`, le
   seul "close-up" ne suffit pas.
+  Ajout 28/08 (19h30), LE COUT D'UNE CAPTURE N'EST PAS LE MEME PARTOUT, ET UN
+  RECU LENT PEUT MANGER DIX MINUTES DE BUILD: mesure ce soir avec
+  scout-capture.mjs, forcepoint.com/blog/x-labs sort en 26 s / 3 frames, recu
+  parfait (logo, date, h1, auteur dans le cadre 9:16); csoonline.com sort le
+  MEME recu propre (masthead CSO, h1, date, chapo) mais en 601 s / 152 frames,
+  la page ne se stabilise jamais (pubs animees). Ce n'est pas un echec, c'est
+  un cout: rien dans le log ne previent, la capture rend juste la main dix
+  minutes plus tard, en plein milieu d'un run de publication. REFLEXE DE
+  SCOUT: capture le recu toi-meme et epingle-le avec
+  `"visual": { "type":"screenshot", "url":"...", "file":"media/<slug>/shot_<i>.png" }`
+  (reel2.mjs:1571, si `file` est present il ne recapture pas), le fichier est
+  commite avec le spec et le run de publication ne paie plus rien. Attention a
+  l'index: `i` est celui du beat. Et regarde la capture: celle de csoonline
+  porte une illustration de robot en costume en dessous du chapo, exactement
+  l'esthetique que le compte refuse, donc verifie ou tombe le cadrage 9:16
+  avant de la garder.
+  ET LE PIEGE DU MEME SOIR, LE PIRE DE TOUS PARCE QU'IL SORT `"ok": true`:
+  npr.org DERIVE VERS UN AUTRE ARTICLE. Capture demandee sur
+  npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal (le meme
+  URL rend 200 et l'article Anthropic correct en curl, et se gate sans
+  probleme), capture rendue apres 197 s / 61 frames avec
+  `landedUrl` = npr.org/2026/08/28/g-s1-140309/us-iran-middle-east-oil-
+  pipelines-hormuz et `h1` = "U.S. says pipelines will make Strait of Hormuz
+  irrelevant", plus deux alts sur des champs petroliers irakiens. La page NPR
+  continue de naviguer toute seule pendant que le navigateur attend qu'elle se
+  stabilise. Un run de publication aurait colle sous une histoire Anthropic le
+  recu d'un dossier petrolier, et le gate ne peut pas le voir: il lit les
+  citations, pas les pixels. C'est exactement pour ca que scout-capture.mjs
+  imprime `landedUrl` et les alts. LIS CES DEUX CHAMPS, un `ok: true` ne dit
+  rien. npr.org reste une excellente SOURCE (citations VERIFIED du premier
+  coup, y compris la depeche AP), simplement pas un recu. Sur une decision de
+  justice sans recu joignable, le beat veut une PHOTO documentaire du visage
+  central (commons: "Pete Hegseth Official Portrait", pdm, 1600x2070, score
+  8.0) plutot qu'un marteau de juge, que le manuel interdit comme metaphore.

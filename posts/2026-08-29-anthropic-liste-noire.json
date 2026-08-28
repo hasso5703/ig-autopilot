@@ -124,7 +124,7 @@
       },
       {
         "script": "En février, Donald Trump et son ministre de la Défense la classent risque pour la chaîne d'approvisionnement. Traduction: toutes les agences fédérales doivent couper.",
-        "visual": { "type": "screenshot", "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal" }
+        "visual": { "type": "photo", "query": "Pete Hegseth" }
       },
       {
         "script": "Le patron d'Anthropic, Dario Amodei, n'a pas reculé. Et pendant ce temps, OpenAI signait son propre accord avec le Pentagone, quelques heures plus tard.",
