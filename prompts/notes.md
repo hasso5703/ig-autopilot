@@ -3537,3 +3537,10 @@ ENTRIES:
   justice sans recu joignable, le beat veut une PHOTO documentaire du visage
   central (commons: "Pete Hegseth Official Portrait", pdm, 1600x2070, score
   8.0) plutot qu'un marteau de juge, que le manuel interdit comme metaphore.
+  Meme soir, techcrunch.com se capture CORRECTEMENT (landedUrl et h1 justes,
+  titre + signature + date + les deux paragraphes qui portent la citation dans
+  le cadre) mais en 694 s / 162 frames. Donc a ce jour, un seul des trois
+  grands sites de presse teste ici sort un recu en moins d'une minute
+  (forcepoint 26 s); csoonline 601 s, techcrunch 694 s, npr derive. Un run de
+  publication qui laisse deux beats `screenshot` sans `file` paie vingt
+  minutes de navigateur: le scout capture et epingle, toujours.
