@@ -796,6 +796,20 @@ ENTRIES:
   auteurs, leur newsroom, leur magazine d'anciens). Le gate passe au vert, et
   ca n'atteste que "les chercheurs ont mesure x". Publiable en attribuant dans
   le script ("une etude du MIT Media Lab"), jamais lu comme trois lectures.
+  Ajout 28/08 (16h30): blog.google se re-gate ET se recapture PARFAITEMENT
+  (re-confirme le 12/08, 3e fois): titre, date "Aug 27, 2026", "4 min read",
+  signature ET un chapo qui porte le claim central en toutes lettres, dans le
+  cadre 9:16, zero banniere, zero recadrage. Sur une actu produit Google c'est
+  le recu le plus fort qui existe. techcrunch.com se gate aussi (200) mais je
+  ne l'ai PAS pris en recu, entree du 21/08 (redirection mobile vers une fausse
+  alerte McAfee) non remesuree. washingtonpost.com rend 503 au fetch gate
+  (re-confirme le 16/08): une EXCLU WaPo est donc ingatable, et toutes ses
+  reprises sont derivees. Perdu ce soir pour cette raison le sondage YouGov sur
+  les lecteurs de plaques Flock (46% contre / 38% pour, 120 000 lecteurs), la
+  meilleure histoire du lot, mise en revisit sans une ligne d'ecrite: TechCrunch
+  etait le SEUL domaine joignable et il credite le Post. Le reflexe qui coute
+  30 s et sauve une heure: sur une depeche qui dit "shared exclusively with X",
+  fetch X AVANT de scorer l'histoire.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1342,6 +1356,31 @@ ENTRIES:
   trajectoire complexe: ce qui est fiable sur un vehicule, c'est qu'il TRAVERSE
   le cadre devant un fond immobile. Ecris l'action de facon que la version
   simplifiee reste vraie. Proof: run 16h30 26/08, veo_0 accepte du premier coup.
+  Ajout 28/08 (16h30), NE RECONSTRUIS PAS storyVocab A LA MAIN, LIS LA LISTE QUE
+  LE GATE IMPRIME. Les entrees ci-dessus donnent la formule locale
+  tokens(centralClaim+evidence) MOINS tokens(namedActors(...)). Mesure de ce
+  soir: cette formule est PLUS LARGE que celle du gate. Elle m'a rendu 48 mots
+  dont airlin, flight, hotel, available, describe, choice, international; le
+  gate refusait deja airlin (mange par "American Airlines"/"LATAM Airlines"),
+  flight ("Flight price tracking" en debut de phrase), hotel ("Hotel booking..."),
+  available ("Available in all supported..."). Un beat 0 veo bati sur "a single
+  airline cabin window" est donc parti au gate et a ete refuse "shares no word
+  with the sources" alors que mon controle local le disait ancre. La liste
+  FIABLE est celle du message d'erreur du gate (18 mots, ordre alphabetique):
+  fais un premier passage de gate expres pour la lire. La reconstruction locale
+  coute le meme aller-retour ET donne une fausse assurance.
+  Ajout 28/08 bis, LE GLOBE QUI TOURNE, recette pour une actu de DISPONIBILITE
+  MONDIALE (service ouvert dans N pays, deploiement, exclusion geographique),
+  famille "aucun moment filmable" du 09/08: subject "a single world globe on a
+  plain stand" + action "turning slowly in place, the globe staying whole and
+  fully in frame the entire time" + camera "locked-off static shot, no camera
+  movement, no zoom" + composition "macro framing, the globe fills the entire
+  frame". Accepte du premier coup, $0,96, pellicule 8 vignettes lue: meme objet,
+  meme taille, present a la 8e, zero deformation, et AUCUNE etiquette de pays
+  lisible (donc pas la prose inventee qu'une carte aurait ramenee). Il s'ancre
+  sur "world", presque toujours disponible via "around the world", et il depeint
+  litteralement la phrase source. La rotation sur place se re-confirme pour la
+  CINQUIEME fois (12/08, 17/08 x2, 22/08, 28/08). Proof: run 16h30 28/08.
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
 - 2026-07-28 · techcrunch.com and prnewswire.com answer 503 to the session's
@@ -2047,6 +2086,22 @@ ENTRIES:
   1280x1924 DEJA EN PORTRAIT, `crop=1080:1920:100:0`, portrait officiel sur fond
   gris). upload.wikimedia a servi 8 fichiers d'affilee (UA de navigateur complet
   + referer commons, 6 s d'ecart) sans une seule page d'erreur.
+  Ajout 28/08 (16h30), LE TITRE QUI DECRIT L'OBJET ET LA PHOTO QUI MONTRE LA
+  SALLE, famille du 19/08 (KLAirTraffcontr) mais sur une requete qu'on croit
+  sure: "airport departure board" met PREMIER a 8.0 "GIB departures" (Commons,
+  CC0, 3648x2736, 0% de blanc) et ce n'est PAS un tableau d'affichage, c'est une
+  SALLE D'EMBARQUEMENT BONDEE de Gibraltar, une trentaine de personnes assises,
+  enseigne "Duty Free Centre" lisible, et un tirage qui a visiblement quinze ans
+  (piege d'epoque, 16e occurrence). Trois defauts d'un coup, licence/taille/
+  filtre fond-blanc laissent tout passer, SEULE la planche-contact le voit. Le
+  mot "departures" du titre designe le LIEU, pas l'objet. Regle: sur un objet
+  d'affichage (tableau, panneau, ecran public), la requete ramene la salle qui
+  le contient; regarde avant de planifier le beat. Remede applique ce soir, 0 $:
+  revenir a une valeur sure deja mesuree, "Screen time" (Rawpixel, CC0, Commons
+  thumb 1920x1280, crop=720:1280:537:0), re-confirmee au rendu pour la 4e fois,
+  homme + telephone dans le cadre, zero marque, zero date. Note d'URL: le chemin
+  /thumb/ de Screen_time.jpg est sous /6/68/, pas /9/9a/ (un hash devine rend un
+  404 de 1,9 ko): passe toujours par `imagery.mjs candidates` pour l'URL exacte.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
