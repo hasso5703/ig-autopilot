@@ -325,3 +325,9 @@
 {"at":"2026-08-27T16:51:40.405Z","slug":"2026-08-27-instagram-ados-minuit","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
 {"at":"2026-08-27T16:51:54.095Z","slug":"2026-08-27-instagram-ados-minuit","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1294}
 {"at":"2026-08-27T16:52:07.199Z","slug":"2026-08-27-instagram-ados-minuit","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1198}
+{"at":"2026-08-28T16:51:16.297Z","slug":"2026-08-28-google-reserve-voyage","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"47.7s Sadaltager","usd":0.0238}
+{"at":"2026-08-28T16:51:43.521Z","slug":"2026-08-28-google-reserve-voyage","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"52.6s Sadaltager","usd":0.0263}
+{"at":"2026-08-28T16:55:03.832Z","slug":"2026-08-28-google-reserve-voyage","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-28T16:55:18.004Z","slug":"2026-08-28-google-reserve-voyage","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.127}
+{"at":"2026-08-28T16:55:32.259Z","slug":"2026-08-28-google-reserve-voyage","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.128}
+{"at":"2026-08-28T16:55:48.932Z","slug":"2026-08-28-google-reserve-voyage","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1324}

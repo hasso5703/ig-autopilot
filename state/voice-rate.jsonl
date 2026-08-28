@@ -101,3 +101,5 @@
 {"at":"2026-08-26T16:43:45.998Z","slug":"2026-08-26-waymo-munich-europe","words":214,"seconds":63.08,"voice":"Sadaltager","lang":"fr","attempt":3,"accepted":false,"declineDb":-4.2}
 {"at":"2026-08-27T10:43:10.426Z","slug":"2026-08-27-ia-forum-secret","words":197,"seconds":55.36,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-3.5}
 {"at":"2026-08-27T16:42:54.868Z","slug":"2026-08-27-instagram-ados-minuit","words":204,"seconds":54.72,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.3}
+{"at":"2026-08-28T16:51:16.463Z","slug":"2026-08-28-google-reserve-voyage","words":200,"seconds":47.68,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-0.8}
+{"at":"2026-08-28T16:51:43.701Z","slug":"2026-08-28-google-reserve-voyage","words":200,"seconds":52.6,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-0.5}
