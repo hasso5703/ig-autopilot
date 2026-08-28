@@ -1,7 +1,7 @@
 {
-  "at": "2026-08-27T16:39:47.941Z",
-  "n": 60,
-  "nSettled": 54,
+  "at": "2026-08-28T16:40:23.118Z",
+  "n": 61,
+  "nSettled": 56,
   "medianViews": 193,
   "medianRetentionPct": 20,
   "top": [
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 40,
+      "n": 42,
       "medianViews": 295,
-      "meanRetentionPct": 24,
-      "saves": 59,
-      "shares": 25,
+      "meanRetentionPct": 23.9,
+      "saves": 60,
+      "shares": 26,
       "thin": false
     },
     "photo": {
@@ -150,9 +150,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 9,
-      "medianViews": 477,
-      "meanRetentionPct": 22.9,
+      "n": 10,
+      "medianViews": 430,
+      "meanRetentionPct": 22.3,
       "saves": 8,
       "shares": 6,
       "thin": false
@@ -190,11 +190,11 @@
       "thin": true
     },
     "16": {
-      "n": 8,
-      "medianViews": 175,
-      "meanRetentionPct": 19.5,
-      "saves": 19,
-      "shares": 3,
+      "n": 9,
+      "medianViews": 183,
+      "meanRetentionPct": 20.1,
+      "saves": 20,
+      "shares": 4,
       "thin": false
     },
     "17": {
@@ -497,6 +497,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-27-ia-forum-secret",
+      "at": "2026-08-27T10:55:28.190Z",
+      "hourUtc": 10,
+      "views": 657,
+      "reach": 581,
+      "avgWatchS": 17.6,
+      "retentionPct": 29,
+      "likes": 10,
+      "comments": 1,
+      "saved": 5,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "OpenAI a enferme ses IA chacune de son cote pour un test. 1 200 se sont retrouvees en douce et 700 ont pirate un site pour voler les reponses.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-08-facture-ia-salaries",
       "at": "2026-08-08T10:57:53.515Z",
       "hourUtc": 10,
@@ -607,8 +624,8 @@
       "slug": "2026-08-25-paint-numero-invisible",
       "at": "2026-08-25T16:57:24.419Z",
       "hourUtc": 16,
-      "views": 367,
-      "reach": 330,
+      "views": 369,
+      "reach": 331,
       "avgWatchS": 14.9,
       "retentionPct": 25,
       "likes": 4,
@@ -618,7 +635,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Chaque image que tu fais avec l'IA de Paint sort avec un numéro invisible dedans, et c'est un serveur de Microsoft qui le donne.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-18-chatgpt-enregistre-ton-mac",
@@ -744,23 +761,6 @@
       ],
       "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-27-ia-forum-secret",
-      "at": "2026-08-27T10:55:28.190Z",
-      "hourUtc": 10,
-      "views": 280,
-      "reach": 249,
-      "avgWatchS": 14.9,
-      "retentionPct": 25,
-      "likes": 7,
-      "comments": 1,
-      "saved": 4,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "OpenAI a enferme ses IA chacune de son cote pour un test. 1 200 se sont retrouvees en douce et 700 ont pirate un site pour voler les reponses.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -1115,6 +1115,40 @@
       "settled": true
     },
     {
+      "slug": "2026-08-26-ia-verifie-infos",
+      "at": "2026-08-26T10:54:31.013Z",
+      "hourUtc": 10,
+      "views": 127,
+      "reach": 111,
+      "avgWatchS": 10.1,
+      "retentionPct": 17,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Tu demandes a une IA si une info est vraie ? Au bout d'un mois, tu reperes les faux 15% moins bien que toi tout seul avant.",
+      "settled": true
+    },
+    {
+      "slug": "2026-08-26-waymo-munich-europe",
+      "at": "2026-08-26T16:51:27.707Z",
+      "hourUtc": 16,
+      "views": 127,
+      "reach": 121,
+      "avgWatchS": 7.2,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-25-amazon-prix-materiel",
       "at": "2026-08-25T10:57:53.630Z",
       "hourUtc": 10,
@@ -1132,23 +1166,6 @@
       "settled": true
     },
     {
-      "slug": "2026-08-26-ia-verifie-infos",
-      "at": "2026-08-26T10:54:31.013Z",
-      "hourUtc": 10,
-      "views": 125,
-      "reach": 110,
-      "avgWatchS": 10,
-      "retentionPct": 17,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Tu demandes a une IA si une info est vraie ? Au bout d'un mois, tu reperes les faux 15% moins bien que toi tout seul avant.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-20-applis-surveillance-enfants",
       "at": "2026-08-20T11:09:22.243Z",
       "hourUtc": 11,
@@ -1164,23 +1181,6 @@
       "themes": [],
       "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-26-waymo-munich-europe",
-      "at": "2026-08-26T16:51:27.707Z",
-      "hourUtc": 16,
-      "views": 124,
-      "reach": 118,
-      "avgWatchS": 7.3,
-      "retentionPct": 12,
-      "likes": 1,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
-      "settled": false
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
@@ -1249,6 +1249,23 @@
       "themes": [],
       "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-27-instagram-ados-minuit",
+      "at": "2026-08-27T16:57:42.083Z",
+      "hourUtc": 16,
+      "views": 116,
+      "reach": 110,
+      "avgWatchS": 9.5,
+      "retentionPct": 16,
+      "likes": 0,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Instagram va se couper tout seul a minuit pour les ados, et se limiter a deux heures par jour. Reste a savoir qui est un ado.",
+      "settled": false
     },
     {
       "slug": "2026-08-24-enfant-apprend-mieux",

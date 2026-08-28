@@ -1,0 +1,149 @@
+{
+  "slug": "2026-08-28-google-reserve-voyage",
+  "centralClaim": "Google has brought flight price tracking into AI Mode in more than 180 countries and territories.",
+  "corroboration": [
+    {
+      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "quote": "Flight price tracking in AI Mode is now available in more than 180 countries and territories around the world."
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/27/googles-ai-mode-can-now-track-flight-prices-help-book-hotels-and-more/",
+      "quote": "Flight price tracking in AI Mode is now available in more than 180 countries."
+    }
+  ],
+  "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
+  "caption": "Google surveille le prix de ton billet d'avion dans plus de 180 pays. Sauf si tu vis en Europe.\n\nGoogle a ajouté le suivi des prix de vols à son mode conversationnel dans la recherche. Tu décris ton trajet, l'outil affiche les prix de plus de 300 compagnies et sites de voyage partenaires, et tu peux lui demander de surveiller ce prix. Tu reçois ensuite un courriel quand il bouge. L'entreprise annonce la fonction dans plus de 180 pays et territoires.\n\nLe détail qui n'est pas dans la vidéo. C'est écrit en note de bas de page, sous l'annonce: la fonction est disponible partout, en excluant les pays et territoires de l'Espace économique européen. Pour l'affichage du prix en points ou en miles, la note précise que certaines fonctions montrées ne seront pas disponibles là non plus.\n\nCe qui arrive quand même par ici. Google indique ajouter dans les prochaines semaines le support d'Accor, de Flying Blue, de Hyatt, de LATAM Airlines et du groupe Lufthansa, soit des programmes de fidélité bien européens.\n\nÀ nuancer, et c'est important. La réservation d'hôtel démarre aux États-Unis en anglais. Et quand tu réserves, c'est l'hôtel ou la plateforme qui agit comme vendeur et qui gère le service client, pas Google.\n\nLaisser une IA réserver ton voyage, tu le ferais, oui ou non ? Dis-le en commentaire.\n\nblog.google · techcrunch.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Voyage",
+  "captionEvidence": [
+    {
+      "quote": "Flight price tracking in AI Mode is now available in more than 180 countries and territories around the world.",
+      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/"
+    },
+    {
+      "quote": "Describe where and when you want to fly and AI Mode will show you the best options available with the latest prices from more than 300 partner airlines and travel sites.",
+      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "27 août 2026 · Google",
+      "headline": "Google traque le prix de ton vol. *Pas en Europe.*",
+      "hero": { "value": "180", "label": "pays où la fonction arrive, sauf chez toi" },
+      "swipe": "Les sources sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "180",
+      "unit": "pays et territoires",
+      "body": "Le suivi du prix des vols entre dans le mode conversationnel de la recherche.",
+      "evidence": "Flight price tracking in AI Mode is now available in more than 180 countries and territories around the world.",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/", "date": "2026-08-27" }
+    },
+    {
+      "type": "content",
+      "title": "Ce que ça fait",
+      "body": "Tu décris ton trajet, et l'outil affiche les prix de plus de 300 compagnies et sites de voyage partenaires.",
+      "evidence": "Describe where and when you want to fly and AI Mode will show you the best options available with the latest prices from more than 300 partner airlines and travel sites.",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/", "date": "2026-08-27" }
+    },
+    {
+      "type": "content",
+      "title": "Puis il te prévient",
+      "body": "Tu reçois un **courriel** quand le prix change pour la destination et les dates que tu lui as données.",
+      "evidence": "get an email if prices change for the destination and dates you have in mind",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/", "date": "2026-08-27" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Disponible dans plus de 180 pays et territoires.",
+      "caveat": "En excluant l'Espace économique européen.",
+      "claimLabel": "L'annonce",
+      "caveatLabel": "La note de bas de page",
+      "evidence": "Available in all supported AI Mode locations and languages, excluding EEA countries and territories.",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/", "date": "2026-08-27" }
+    },
+    {
+      "type": "content",
+      "title": "L'hôtel aussi",
+      "body": "La réservation d'hôtel commence aux États-Unis, en anglais.",
+      "evidence": "Hotel booking in AI Mode has started rolling out in the U.S. in English and will be available over the coming weeks with offerings from Booking.com, Choice Hotels International, Expedia, Hilton, Hotels.com, IHG Hotels & Resorts, Marriott International, Priceline, Trip.com, and Wyndham Hotels & Resorts.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/27/googles-ai-mode-can-now-track-flight-prices-help-book-hotels-and-more/", "date": "2026-08-27" }
+    },
+    {
+      "type": "content",
+      "title": "Et si ça se passe mal",
+      "body": "C'est l'hôtel ou la plateforme qui encaisse et qui gère le service client.",
+      "evidence": "When you book hotels through AI Mode, the hotel or booking platform will act as the merchant of record and handle any customer service.",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/", "date": "2026-08-27" }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui arrive par ici",
+      "body": "Des programmes de fidélité européens sont annoncés pour les prochaines semaines.",
+      "evidence": "add support for Accor, Flying Blue, Hyatt, LATAM Airlines, and Lufthansa Group.",
+      "source": { "name": "Google", "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/", "date": "2026-08-27" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *celui* qui réserve toujours les billets",
+      "sub": "L'actu de l'intelligence artificielle, vérifiée."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Google traque ton vol. Pas en Europe.",
+    "beats": [
+      {
+        "script": "Google va surveiller le prix de ton billet d'avion à ta place, dans plus de 180 pays. Sauf que toi, en Europe, tu n'y as pas droit.",
+        "visual": { "type": "veo", "spec": {
+          "subject": "a single world globe on a plain stand",
+          "action": "turning slowly in place, the globe staying whole and fully in frame the entire time",
+          "camera": "locked-off static shot, no camera movement, no zoom",
+          "composition": "macro framing, the globe fills the entire frame",
+          "setting": "in soft even daylight" } }
+      },
+      {
+        "script": "Et le plus gênant n'est pas la fonction. C'est l'endroit où Google écrit qui n'y a pas droit.",
+        "visual": { "type": "card", "value": "180 pays", "label": "annoncés. L'Europe est écartée en note de bas de page" }
+      },
+      {
+        "script": "Tu lui décris ton trajet, et il t'affiche les prix de plus de 300 compagnies aériennes et sites de voyage partenaires. Puis tu lui demandes de surveiller.",
+        "visual": { "type": "screenshot", "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/" }
+      },
+      {
+        "script": "À partir de là, il t'envoie un courriel dès que le prix bouge, pour ta destination et tes dates. Toi, tu ne fais plus rien.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a plain phone screen showing one large closed email envelope symbol",
+          "setting": "in soft even daylight",
+          "composition": "macro framing, the screen fills the entire frame" } }
+      },
+      {
+        "script": "Sauf que la fonction est annoncée partout, en excluant les pays et territoires de l'Espace économique européen. Donc la France. C'est écrit en note, tout en bas.",
+        "visual": { "type": "card", "value": "L'Europe", "label": "écartée en note de bas de page de l'annonce" }
+      },
+      {
+        "script": "Pour l'hôtel, c'est encore plus net. La réservation démarre aux États-Unis, en anglais, et arrive plus tard chez les grandes plateformes de voyage.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a single travel suitcase standing upright on a plain floor",
+          "setting": "in soft even daylight",
+          "composition": "macro framing, the suitcase fills the entire frame" } }
+      },
+      {
+        "script": "Et si ça se passe mal ? Google le dit lui-même: c'est l'hôtel ou la plateforme qui gère le service client. Pas lui.",
+        "visual": { "type": "image", "spec": {
+          "subject": "a laptop screen filled with a single column of customer service ticket numbers",
+          "setting": "in soft even daylight",
+          "composition": "macro framing, the screen fills the entire frame" } }
+      },
+      {
+        "script": "Et pour l'Europe, Google annonce quand même l'arrivée d'Accor, de Flying Blue et du groupe Lufthansa dans les prochaines semaines. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "photo", "query": "screen time", "file": "media/2026-08-28-google-reserve-voyage/photo_phone.jpg", "credit": "Rawpixel · CC0", "alt": "un homme regarde son téléphone" }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "Google", "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/", "accessed": "2026-08-28" },
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/27/googles-ai-mode-can-now-track-flight-prices-help-book-hotels-and-more/", "accessed": "2026-08-28" }
+  ]
+}
