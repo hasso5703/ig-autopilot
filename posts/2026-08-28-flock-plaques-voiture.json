@@ -1,0 +1,236 @@
+{
+  "slug": "2026-08-28-flock-plaques-voiture",
+  "centralClaim": "Flock surveillance cameras face growing criticism over privacy.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/",
+      "quote": "which resulted in dozens of U.S. communities rejecting Flock’s cameras or canceling their contracts amid privacy concerns."
+    },
+    {
+      "url": "https://www.cfpublic.org/politics/2026-08-26/desantis-says-license-plate-readers-are-out-of-control",
+      "quote": "But the cameras have faced criticism from some as an invasion of privacy and a system of mass surveillance."
+    }
+  ],
+  "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
+  "caption": "Des caméras lisent la plaque de ta voiture et gardent la trace de tes trajets. Aux États-Unis, l'opinion a basculé.\n\nUn sondage YouGov mené auprès de 20 000 personnes aux États-Unis donne 46% d'opposants à ces caméras près de chez eux, contre 38% de partisans. C'est un renversement: l'an dernier, la majorité des sondés y était favorable. L'entreprise Flock exploite plus de 120 000 lecteurs de plaques à travers le pays, capables de suivre les déplacements des véhicules.\n\nLe détail qui n'est pas dans la vidéo. Le sondage indique aussi que davantage de personnes interrogées estiment que cette surveillance ne les rendrait pas plus en sécurité. Et un site appelé DeFlock cartographie les caméras du pays, avec des bénévoles qui font le relevé.\n\nCe qui a fait basculer l'opinion. Des signalements de policiers ayant détourné ces caméras, qui ont conduit des dizaines de communes américaines à les refuser ou à résilier leur contrat.\n\nÀ nuancer, et c'est important. La police rappelle que ces systèmes servent à retrouver des véhicules volés, des personnes recherchées et des enfants disparus. Flock répond que toute recherche dans son système exige un motif renseigné, à chaque fois. Le sondage central est une exclusivité du Washington Post, que nous n'avons pas pu lire directement.\n\nDes caméras qui enregistrent tous tes trajets, tu acceptes, oui ou non ? Dis-le en commentaire.\n\ntechcrunch.com · cfpublic.org\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ViePrivee #Surveillance",
+  "captionEvidence": [
+    {
+      "quote": "46% of respondents opposed the company’s surveillance cameras in their communities, while 38% supported them.",
+      "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/"
+    },
+    {
+      "quote": "a new YouGov survey of 20,000 people across the U.S.",
+      "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/"
+    },
+    {
+      "quote": "Flock is one of the more visible surveillance companies, operating more than 120,000 license plate readers across the U.S. that can track the whereabouts of vehicles.",
+      "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "28 août 2026 · sondage YouGov",
+      "headline": "Les caméras lisent ta plaque. *L'opinion a basculé.*",
+      "hero": {
+        "value": "120 000",
+        "label": "lecteurs de plaques en service aux États-Unis"
+      },
+      "swipe": "Les sources sont sur chaque diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "46%",
+      "unit": "d'opposants, contre 38% de partisans",
+      "body": "Le sondage porte sur des caméras installées près de chez les gens.",
+      "evidence": "46% of respondents opposed the company’s surveillance cameras in their communities, while 38% supported them.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/",
+        "date": "2026-08-28"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Cette année, les opposants sont majoritaires.",
+      "caveat": "L'an dernier, la majorité y était favorable.",
+      "claimLabel": "2026",
+      "caveatLabel": "2025",
+      "evidence": "This is a reversal from last year, when the majority of survey respondents said they were in favor.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/",
+        "date": "2026-08-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'échelle",
+      "body": "Plus de **120 000** lecteurs de plaques en service, capables de suivre les déplacements des véhicules.",
+      "evidence": "Flock is one of the more visible surveillance companies, operating more than 120,000 license plate readers across the U.S. that can track the whereabouts of vehicles.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/",
+        "date": "2026-08-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La suite",
+      "body": "Le patron de l'entreprise a réclamé un compromis, après une hausse du vandalisme visant ces caméras.",
+      "evidence": "between surveillance and privacy, following a rise in vandalism targeting Flock cameras.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/",
+        "date": "2026-08-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui a fait basculer",
+      "body": "Des communes ont refusé ces caméras ou résilié leur contrat, après des signalements de policiers qui les avaient détournées.",
+      "evidence": "which resulted in dozens of U.S. communities rejecting Flock’s cameras or canceling their contracts amid privacy concerns.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/",
+        "date": "2026-08-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un gouverneur s'en mêle",
+      "body": "Ron DeSantis s'en prend à ces lecteurs de plaques, qui reposent sur une technologie d'intelligence artificielle.",
+      "evidence": "Governor Ron DeSantis is railing against license plate readers, like Flock cameras, that use AI technology to conduct surveys in support of law enforcement.",
+      "source": {
+        "name": "Central Florida Public Media",
+        "url": "https://www.cfpublic.org/politics/2026-08-26/desantis-says-license-plate-readers-are-out-of-control",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "when an agency conducts a search in the Flock system, whether only on their own cameras or on shared cameras",
+      "attribution": "Flock, dans sa réponse aux inquiétudes sur la vie privée",
+      "evidence": "when an agency conducts a search in the Flock system, whether only on their own cameras or on shared cameras",
+      "source": {
+        "name": "Central Florida Public Media",
+        "url": "https://www.cfpublic.org/politics/2026-08-26/desantis-says-license-plate-readers-are-out-of-control",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que la police en dit",
+      "body": "Ces systèmes servent à retrouver des véhicules volés, des personnes recherchées et des enfants disparus.",
+      "evidence": "finding stolen vehicles, wanted persons, missing and or endangered children or adults, and persons who have committed serious and violent crimes.",
+      "source": {
+        "name": "Central Florida Public Media",
+        "url": "https://www.cfpublic.org/politics/2026-08-26/desantis-says-license-plate-readers-are-out-of-control",
+        "date": "2026-08-26"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui roule beaucoup",
+      "sub": "L'actu de l'intelligence artificielle, vérifiée."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/28/more-americans-oppose-police-license-plate-cameras-than-support-them-survey/",
+      "accessed": "2026-08-28"
+    },
+    {
+      "name": "Central Florida Public Media",
+      "url": "https://www.cfpublic.org/politics/2026-08-26/desantis-says-license-plate-readers-are-out-of-control",
+      "accessed": "2026-08-28"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "120 000 caméras lisent ta plaque. Ça bascule.",
+    "beats": [
+      {
+        "script": "Une caméra lit la plaque de ta voiture et note où tu vas. Plus de 120 000 aux États-Unis. Et pour la première fois, les Américains sont contre.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single black surveillance camera on top of a tall metal pole",
+            "action": "slowly rotating in place, the camera staying whole and fully in frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "close-up from below",
+            "setting": "in soft even daylight"
+          }
+        }
+      },
+      {
+        "script": "Et le plus intéressant n'est pas le chiffre. C'est ce qui a fait basculer les gens.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a laptop screen filled with a single column of camera identifier numbers",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Un sondage mené aux États-Unis donne 46% de gens contre ces caméras près de chez eux, et 38% pour. L'an dernier, la majorité était favorable.",
+        "visual": {
+          "type": "card",
+          "value": "46 %",
+          "label": "contre ces caméras près de chez eux, 38 % pour"
+        }
+      },
+      {
+        "script": "Ces caméras appartiennent à une entreprise, Flock. Elle en exploite plus de 120 000, capables de suivre les déplacements des véhicules.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a printed survey report page filled with columns of numbers",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Ce qui a tout changé: des signalements de policiers qui détournaient ces caméras. Depuis, des dizaines de communes les ont refusées ou ont résilié leur contrat.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single black camera housing seen from below against a plain sky",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the camera housing fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et ce n'est pas qu'un camp politique. Le gouverneur de Floride s'en prend lui aussi à ces lecteurs de plaques, qui marchent à l'intelligence artificielle.",
+        "visual": {
+          "type": "photo",
+          "query": "ron desantis official photo",
+          "file": "media/2026-08-28-flock-plaques-voiture/photo_desantis.jpg",
+          "credit": "Domaine public · Commons",
+          "alt": "portrait officiel de Ron DeSantis"
+        }
+      },
+      {
+        "script": "L'entreprise répond que toute recherche dans son système est encadrée. Et la police rappelle que ça sert à retrouver des véhicules volés et des enfants disparus.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.cfpublic.org/politics/2026-08-26/desantis-says-license-plate-readers-are-out-of-control"
+        }
+      },
+      {
+        "script": "Et la semaine dernière, le patron de Flock a réclamé un compromis entre surveillance et vie privée, après une hausse du vandalisme. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "card",
+          "value": "120 000",
+          "label": "lecteurs de plaques en service aux États-Unis"
+        }
+      }
+    ]
+  }
+}
