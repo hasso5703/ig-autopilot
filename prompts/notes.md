@@ -2153,6 +2153,22 @@ ENTRIES:
   homme + telephone dans le cadre, zero marque, zero date. Note d'URL: le chemin
   /thumb/ de Screen_time.jpg est sous /6/68/, pas /9/9a/ (un hash devine rend un
   404 de 1,9 ko): passe toujours par `imagery.mjs candidates` pour l'URL exacte.
+  Ajout 29/08 (16h30), DEUX PIEGES DE REQUETE PHOTO SUR LE MEME BUILD. (1) LE
+  NOM SEUL D'UN RESPONSABLE RAMENE LA SALLE, PAS LE VISAGE: query "Pete Hegseth"
+  a rendu "Pete Hegseth, Dan Caine, and Bryn MacDonnell participate in a hearing
+  with the Senate Appropriations Committee" (CC BY), plan LARGE d'une salle
+  d'audition, trente dos de tetes, aucun visage reconnaissable, sur un beat qui
+  nomme le ministre: du mobilier. Remede du premier coup, ajouter "Official
+  Portrait" ("Pete Hegseth Official Portrait" -> Commons pdm 1537x1993, score
+  8.0, portrait officiel cadre poitrine, impeccable en 9:16). Regle: pour un
+  responsable public, demande TOUJOURS le portrait officiel, jamais le nom seul.
+  (2) DARIO AMODEI EST INEXPLOITABLE EN `photo` ET CA TUE LE BUILD: les DIX
+  candidats Commons (serie TechCrunch Disrupt 2023 + Takaichi 2025) sont TOUS
+  refuses par le filtre de marque, 30 a 62% de quasi-blanc (fond de scene
+  surexpose), aucun portrait officiel n'existe. Le build meurt sur "every
+  candidate for Dario Amodei failed" apres la narration (cache, $0 perdu) et
+  avant les achats. Sur une histoire Anthropic, prends le visage de l'autre
+  partie (Hegseth, Trump) ou un still.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -3599,3 +3615,21 @@ ENTRIES:
   issue": c'est transitoire et cote Google, pas un probleme de prompt. Relance
   dans le MEME repertoire, la narration et l'alignement ressortent du cache
   ($0 perdu), seul le clip est achete.
+  Ajout 29/08 (16h30), LE REMEDE 'placeholder' DU MATIN A DEUX EFFETS DE BORD,
+  chacun un rachat a $0.13. (1) "its text reduced to plain soft grey placeholder
+  lines" sur un document a rendu de GROSSES BARRES VERTICALES pleine page: ca lit
+  comme un code-barres, pas comme un document, et c'etait la derniere image avant
+  la carte de fin. Le modele choisit l'orientation tout seul. Ecris "its body text
+  rendered as fine horizontal grey lines rather than readable words" ET impose la
+  page unique ("a single printed ... document", "the single page fills the entire
+  frame"): rendu du premier coup un vrai document de tribunal, tampon FILED,
+  cachet rouge, "vs.", corps en lignes grises. (2) "nothing written on it at all"
+  sur un cheque en blanc a supprime AUSSI les libelles imprimes: un rectangle
+  blanc a guilloches, meconnaissable. Un objet VIDE garde son mobilier imprime,
+  il n'est pas nu. Formulation qui marche: "its printed labels and ruled payment
+  lines clearly visible, the amount box and payee line left completely empty"
+  (PAY TO THE ORDER OF, THE SUM OF, DOLLARS CENTS, SIGNATURE, tout vide). REGLE
+  GENERALE, a cote de celle du 23/08: pour un objet vide, decris ce qui RESTE
+  visible, pas seulement ce qui est absent. En VIDEO le meme durcissement a marche
+  du premier coup (pile de papiers, lignes grises, zero charabia lisible,
+  filmstrip 6 panneaux propre, sujet entier au dernier panneau): $0.60 le clip 6 s.
