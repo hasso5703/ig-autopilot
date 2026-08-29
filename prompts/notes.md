@@ -840,6 +840,25 @@ ENTRIES:
   dimanche pauvre pousse justement a repecher du 5 aout, et c'est exactement ce
   que ce controle existe pour arreter. Proof: gate du scout 06h30 17/08, deux
   specs perdus, deux reecrits sur des sujets du 15 et du 16/08.
+  Ajout 29/08 (06h30), LE MOT DE TEMPS RELATIF EST LA FAUTE QUE PERSONNE NE
+  VOIT, et elle vit dans les specs MIS EN BANQUE: un spec ecrit le soir pour
+  etre publie le lendemain est relu par un moteur qui ne connait pas la date.
+  Mesure ce matin sur 2026-08-29-anthropic-liste-noire, banque la veille a
+  20h05: le beat 0 disait "Hier soir, un juge a dit stop" alors que
+  l'ordonnance de la juge Lin est de JEUDI soir 27/08 (TechCrunch: "ruled on
+  Thursday evening", NPR: "issued a written order Thursday night"). Ecrit le
+  28 au soir "hier soir" etait deja faux, et publie le 29 il l'etait deux fois.
+  Le gate NE PEUT PAS le voir: "hier" ne porte aucun chiffre, aucun nom de
+  produit, et la citation d'evidence de la diapo ne contient pas le jour. Meme
+  famille que "en fevrier" dans le meme spec, exact mais adosse a une citation
+  TechCrunch qui ne dit que "Earlier this year" (la phrase qui porte fevrier
+  est chez NPR, diapo ajoutee ce matin). REFLEXE, 20 s, sur tout spec qu'on
+  banque ET sur tout spec qu'on herite: grep -i "hier\|demain\|ce matin\|ce
+  soir\|cette semaine\|aujourd'hui\|lundi\|mardi\|mercredi\|jeudi\|vendredi\|
+  samedi\|dimanche" sur le JSON, et pour chaque touche exige une phrase source
+  qui la porte. Un jour de semaine cite ("jeudi soir") est verifiable et
+  survit au report; un mot relatif ("hier") pourrit des que le spec dort une
+  nuit. Ecris toujours le jour, jamais le relatif.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
   10/08, rebuild verifie image par image, suite 120/120). NOUVELLES COMMANDES:
   `node src/learn.mjs` a l'etape 2b (le digest des lecons, ne throw jamais);

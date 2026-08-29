@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-28T19:41:38.151Z",
+  "at": "2026-08-29T06:41:57.201Z",
   "n": 63,
   "nSettled": 57,
   "medianViews": 191,
@@ -125,8 +125,8 @@
     },
     "safety": {
       "n": 6,
-      "medianViews": 230,
-      "meanRetentionPct": 27.5,
+      "medianViews": 231,
+      "meanRetentionPct": 27.7,
       "saves": 4,
       "shares": 2,
       "thin": false
@@ -191,8 +191,8 @@
     },
     "16": {
       "n": 10,
-      "medianViews": 175,
-      "meanRetentionPct": 19.3,
+      "medianViews": 176,
+      "meanRetentionPct": 19.4,
       "saves": 21,
       "shares": 4,
       "thin": false
@@ -275,11 +275,11 @@
         "published": [
           {
             "slug": "2026-08-22-bague-oura-sommeil",
-            "views": 166
+            "views": 168
           },
           {
             "slug": "2026-08-22-peau-humaine-vivante",
-            "views": 140
+            "views": 142
           }
         ]
       }
@@ -464,9 +464,9 @@
       "slug": "2026-08-27-ia-forum-secret",
       "at": "2026-08-27T10:55:28.190Z",
       "hourUtc": 10,
-      "views": 729,
-      "reach": 632,
-      "avgWatchS": 17.9,
+      "views": 796,
+      "reach": 710,
+      "avgWatchS": 18.1,
       "retentionPct": 30,
       "likes": 11,
       "comments": 1,
@@ -872,10 +872,10 @@
       "slug": "2026-08-22-bague-oura-sommeil",
       "at": "2026-08-22T16:55:58.251Z",
       "hourUtc": 16,
-      "views": 166,
-      "reach": 152,
-      "avgWatchS": 10.5,
-      "retentionPct": 17,
+      "views": 168,
+      "reach": 153,
+      "avgWatchS": 10.8,
+      "retentionPct": 18,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -905,6 +905,23 @@
       ],
       "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-28-flock-plaques-voiture",
+      "at": "2026-08-28T17:34:13.949Z",
+      "hourUtc": 17,
+      "views": 160,
+      "reach": 150,
+      "avgWatchS": 12.1,
+      "retentionPct": 20,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
+      "settled": false
     },
     {
       "slug": "2026-08-04-fcc-robots-humanoides",
@@ -980,9 +997,9 @@
       "slug": "2026-08-22-peau-humaine-vivante",
       "at": "2026-08-22T10:54:08.736Z",
       "hourUtc": 10,
-      "views": 140,
-      "reach": 130,
-      "avgWatchS": 7,
+      "views": 142,
+      "reach": 131,
+      "avgWatchS": 7.3,
       "retentionPct": 12,
       "likes": 1,
       "comments": 1,
@@ -1028,23 +1045,6 @@
       "themes": [],
       "sendTest": "Harvard vend une formation à 699 dollars où c'est une copie en IA du prof qui écoute ton projet et te répond.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-28-flock-plaques-voiture",
-      "at": "2026-08-28T17:34:13.949Z",
-      "hourUtc": 17,
-      "views": 134,
-      "reach": 123,
-      "avgWatchS": 11.1,
-      "retentionPct": 18,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
-      "settled": false
     },
     {
       "slug": "2026-08-19-pub-dans-chatgpt",
@@ -1166,6 +1166,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-28-google-reserve-voyage",
+      "at": "2026-08-28T17:01:39.248Z",
+      "hourUtc": 17,
+      "views": 126,
+      "reach": 110,
+      "avgWatchS": 10.6,
+      "retentionPct": 18,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-25-amazon-prix-materiel",
       "at": "2026-08-25T10:57:53.630Z",
       "hourUtc": 10,
@@ -1215,6 +1232,23 @@
       "themes": [],
       "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-27-instagram-ados-minuit",
+      "at": "2026-08-27T16:57:42.083Z",
+      "hourUtc": 16,
+      "views": 118,
+      "reach": 111,
+      "avgWatchS": 9.5,
+      "retentionPct": 16,
+      "likes": 0,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Instagram va se couper tout seul a minuit pour les ados, et se limiter a deux heures par jour. Reste a savoir qui est un ado.",
+      "settled": false
     },
     {
       "slug": "2026-08-01-penurie-memoire-samsung",
@@ -1268,23 +1302,6 @@
       "settled": true
     },
     {
-      "slug": "2026-08-27-instagram-ados-minuit",
-      "at": "2026-08-27T16:57:42.083Z",
-      "hourUtc": 16,
-      "views": 116,
-      "reach": 110,
-      "avgWatchS": 9.5,
-      "retentionPct": 16,
-      "likes": 0,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Instagram va se couper tout seul a minuit pour les ados, et se limiter a deux heures par jour. Reste a savoir qui est un ado.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-24-enfant-apprend-mieux",
       "at": "2026-08-24T17:08:53.955Z",
       "hourUtc": 17,
@@ -1317,23 +1334,6 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-28-google-reserve-voyage",
-      "at": "2026-08-28T17:01:39.248Z",
-      "hourUtc": 17,
-      "views": 81,
-      "reach": 65,
-      "avgWatchS": 12.3,
-      "retentionPct": 20,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
-      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",

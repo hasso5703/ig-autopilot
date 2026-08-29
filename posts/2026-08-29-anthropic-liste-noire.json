@@ -32,7 +32,10 @@
       "type": "hook",
       "kicker": "28 août 2026 · Tribunal fédéral de Californie",
       "headline": "Bannir Anthropic était *illégal*, écrit la juge",
-      "hero": { "value": "59", "label": "pages d'ordonnance, rendues jeudi soir" },
+      "hero": {
+        "value": "59",
+        "label": "pages d'ordonnance, rendues jeudi soir"
+      },
       "swipe": "Les preuves, diapo par diapo"
     },
     {
@@ -41,42 +44,77 @@
       "unit": "pages d'ordonnance",
       "body": "La juge écrit que ni la Constitution ni le texte invoqué par le gouvernement n'autorisaient de telles sanctions.",
       "evidence": "In the 59-page ruling, Lin, an appointee of former President Joe Biden, wrote that neither the Constitution nor the federal statute the government invoked allows them to",
-      "source": { "name": "NPR", "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal", "date": "2026-08-28" }
+      "source": {
+        "name": "NPR",
+        "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal",
+        "date": "2026-08-28"
+      }
     },
     {
       "type": "content",
       "title": "Ce qu'Anthropic a refusé",
       "body": "Pas d'*armes entièrement autonomes*, pas de **surveillance de masse** des citoyens américains. C'est de là que vient tout le litige.",
       "evidence": "The dispute stemmed from Anthropic setting hard lines on certain safety guardrails that would allow the Pentagon to use its models for fully autonomous weapons and mass surveillance of American citizens.",
-      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/", "date": "2026-08-28" }
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+        "date": "2026-08-28"
+      }
     },
     {
       "type": "content",
       "title": "La sanction: toutes les agences coupent",
       "body": "Trump et son secrétaire à la Défense ont ordonné à *toutes les agences fédérales*, même hors défense, de cesser de travailler avec l'entreprise.",
       "evidence": "Earlier this year, Hegseth and President Donald Trump labeled Anthropic a supply-chain risk and ordered all federal agencies, even those outside of defense, to stop working with the Claude maker.",
-      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/", "date": "2026-08-28" }
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+        "date": "2026-08-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le point de départ: février",
+      "body": "Le conflit éclate en *février*: Trump et son secrétaire à la Défense accusent l'entreprise de mettre en danger la sécurité nationale.",
+      "evidence": "The dispute between the AI company and the government broke out in February when President Donald Trump and Defense Secretary Pete Hegseth accused Anthropic of endangering national security and designated the company a supply chain risk.",
+      "source": {
+        "name": "NPR",
+        "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal",
+        "date": "2026-08-28"
+      }
     },
     {
       "type": "content",
       "title": "Le motif retenu par la juge",
       "body": "Faire un **exemple public** de l'entreprise pour son *arrogance*, et non la crainte réelle d'un sabotage.",
       "evidence": "Lin wrote that the government's actions \"were based on a desire to make a public example out of Anthropic for its 'arrogance' in criticizing the government, not based on any articulable basis to believe that Anthropic would actually sabotage its model.\"",
-      "source": { "name": "NPR", "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal", "date": "2026-08-28" }
+      "source": {
+        "name": "NPR",
+        "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal",
+        "date": "2026-08-28"
+      }
     },
     {
       "type": "quote",
       "body": "The empty invocation of national security is not a blank check to punish and retaliate against government critics",
       "attribution": "Rita Lin, juge fédérale, dans son ordonnance",
       "evidence": "\"The empty invocation of national security is not a blank check to punish and retaliate against government critics,\" she added.",
-      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/", "date": "2026-08-28" }
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+        "date": "2026-08-28"
+      }
     },
     {
       "type": "content",
       "title": "Pendant ce temps, chez le concurrent",
       "body": "*Quelques heures* après la sanction, OpenAI signait son propre accord de travail avec le Pentagone.",
       "evidence": "Anthropic's primary tech industry rival, ChatGPT maker OpenAI, made its own deal to work with the Pentagon just hours after the government punished Anthropic for its stance.",
-      "source": { "name": "NPR", "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal", "date": "2026-08-28" }
+      "source": {
+        "name": "NPR",
+        "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal",
+        "date": "2026-08-28"
+      }
     },
     {
       "type": "contrast",
@@ -85,7 +123,11 @@
       "claimLabel": "La décision",
       "caveatLabel": "Ce qui n'est pas fini",
       "evidence": "Anthropic has also filed a separate and narrower case that is still pending in the federal appeals court in Washington, D.C.",
-      "source": { "name": "NPR", "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal", "date": "2026-08-28" }
+      "source": {
+        "name": "NPR",
+        "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal",
+        "date": "2026-08-28"
+      }
     },
     {
       "type": "cta",
@@ -99,7 +141,7 @@
     "title": "Bannir Anthropic était illégal, tranche un juge",
     "beats": [
       {
-        "script": "Une entreprise a refusé que son IA serve à surveiller les Américains. L'État l'a mise sur liste noire. Hier soir, un juge a dit stop.",
+        "script": "Une entreprise a refusé que son IA serve à surveiller les Américains. L'État l'a mise sur liste noire. Et un juge vient de dire stop.",
         "visual": {
           "type": "veo",
           "spec": {
@@ -124,7 +166,10 @@
       },
       {
         "script": "En février, Donald Trump et son ministre de la Défense la classent risque pour la chaîne d'approvisionnement. Traduction: toutes les agences fédérales doivent couper.",
-        "visual": { "type": "photo", "query": "Pete Hegseth" }
+        "visual": {
+          "type": "photo",
+          "query": "Pete Hegseth"
+        }
       },
       {
         "script": "Le patron d'Anthropic, Dario Amodei, n'a pas reculé. Et pendant ce temps, OpenAI signait son propre accord avec le Pentagone, quelques heures plus tard.",
@@ -139,11 +184,19 @@
       },
       {
         "script": "Jeudi soir, la juge fédérale Rita Lin rend son ordonnance, 59 pages. Sa conclusion: les mesures prises contre Anthropic étaient illégales et sans le moindre fondement.",
-        "visual": { "type": "card", "value": "59", "label": "pages d'ordonnance, rendues jeudi soir" }
+        "visual": {
+          "type": "card",
+          "value": "59",
+          "label": "pages d'ordonnance, rendues jeudi soir"
+        }
       },
       {
         "script": "Elle écrit que le gouvernement voulait surtout faire un exemple public, pour punir l'arrogance de l'entreprise qui l'avait critiqué, pas parce qu'il craignait vraiment un sabotage.",
-        "visual": { "type": "screenshot", "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/", "file": "media/2026-08-29-anthropic-liste-noire/shot_5.png" }
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+          "file": "media/2026-08-29-anthropic-liste-noire/shot_5.png"
+        }
       },
       {
         "script": "Sa phrase la plus dure: invoquer la sécurité nationale n'est pas un chèque en blanc pour punir ceux qui critiquent le gouvernement.",
@@ -170,7 +223,15 @@
     ]
   },
   "sources": [
-    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/", "accessed": "2026-08-28" },
-    { "name": "NPR", "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal", "accessed": "2026-08-28" }
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+      "accessed": "2026-08-28"
+    },
+    {
+      "name": "NPR",
+      "url": "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal",
+      "accessed": "2026-08-28"
+    }
   ]
 }
