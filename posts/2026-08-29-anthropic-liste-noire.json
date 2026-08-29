@@ -168,15 +168,19 @@
         "script": "En février, Donald Trump et son ministre de la Défense la classent risque pour la chaîne d'approvisionnement. Traduction: toutes les agences fédérales doivent couper.",
         "visual": {
           "type": "photo",
-          "query": "Pete Hegseth"
+          "query": "Pete Hegseth Official Portrait",
+          "alt": "Pete Hegseth, secretaire a la Defense"
         }
       },
       {
         "script": "Le patron d'Anthropic, Dario Amodei, n'a pas reculé. Et pendant ce temps, OpenAI signait son propre accord avec le Pentagone, quelques heures plus tard.",
         "visual": {
-          "type": "photo",
-          "query": "Dario Amodei",
-          "alt": "Dario Amodei, le patron d'Anthropic"
+          "type": "image",
+          "spec": {
+            "subject": "two printed contracts lying side by side, one signed in dark ink and one left blank, their text reduced to plain soft grey placeholder lines rather than readable words",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly above, the two pages fill the entire frame"
+          }
         }
       },
       {
@@ -200,9 +204,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a blank cheque lying on a plain surface, its paper filling the view",
+            "subject": "a blank bank cheque lying flat on a plain pale grey desktop, its printed labels and ruled payment lines clearly visible, the amount box and payee line left completely empty",
             "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly above, the paper fills the entire frame"
+            "composition": "extreme close-up from directly above, the cheque fills the entire frame"
           }
         }
       },
@@ -211,9 +215,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a printed appeal document, its text reduced to plain soft grey placeholder lines rather than readable words, its top corner marked in red, its pages filling the view",
+            "subject": "a single printed court appeal document lying flat, its body text rendered as fine horizontal grey lines rather than readable words, its top corner marked in red",
             "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly above, the open pages fill the entire frame"
+            "composition": "extreme close-up from directly above, the single page fills the entire frame"
           }
         }
       }

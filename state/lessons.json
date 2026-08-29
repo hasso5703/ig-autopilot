@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-29T11:06:56.330Z",
+  "at": "2026-08-29T16:43:38.227Z",
   "n": 64,
   "nSettled": 58,
   "medianViews": 193,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 42,
+    "now": 43,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -763,6 +763,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-29-mail-texte-invisible",
+      "at": "2026-08-29T11:05:11.655Z",
+      "hourUtc": 11,
+      "views": 243,
+      "reach": 208,
+      "avgWatchS": 13.5,
+      "retentionPct": 23,
+      "likes": 5,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
       "at": "2026-08-10T23:02:26.507Z",
       "hourUtc": 23,
@@ -799,6 +816,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-28-flock-plaques-voiture",
+      "at": "2026-08-28T17:34:13.949Z",
+      "hourUtc": 17,
+      "views": 195,
+      "reach": 181,
+      "avgWatchS": 12.1,
+      "retentionPct": 20,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-06-aisi-faux-profils",
       "at": "2026-08-06T17:16:39.586Z",
       "hourUtc": 17,
@@ -833,23 +867,6 @@
       "themes": [],
       "sendTest": "ChatGPT devient illimité pour les comptes gratuits cette semaine. Mais les 62 % d'erreurs en moins, c'est OpenAI qui les a mesurés lui-même.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-28-flock-plaques-voiture",
-      "at": "2026-08-28T17:34:13.949Z",
-      "hourUtc": 17,
-      "views": 183,
-      "reach": 172,
-      "avgWatchS": 12.3,
-      "retentionPct": 20,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
-      "settled": false
     },
     {
       "slug": "2026-08-03-ai-act-transparence",
@@ -1132,6 +1149,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-28-google-reserve-voyage",
+      "at": "2026-08-28T17:01:39.248Z",
+      "hourUtc": 17,
+      "views": 128,
+      "reach": 112,
+      "avgWatchS": 10.4,
+      "retentionPct": 17,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-26-ia-verifie-infos",
       "at": "2026-08-26T10:54:31.013Z",
       "hourUtc": 10,
@@ -1164,23 +1198,6 @@
       "themes": [],
       "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-28-google-reserve-voyage",
-      "at": "2026-08-28T17:01:39.248Z",
-      "hourUtc": 17,
-      "views": 126,
-      "reach": 110,
-      "avgWatchS": 10.6,
-      "retentionPct": 18,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
-      "settled": false
     },
     {
       "slug": "2026-08-25-amazon-prix-materiel",
@@ -1351,23 +1368,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-29-mail-texte-invisible",
-      "at": "2026-08-29T11:05:11.655Z",
-      "hourUtc": 11,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

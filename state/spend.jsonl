@@ -345,3 +345,12 @@
 {"at":"2026-08-29T10:49:38.201Z","slug":"2026-08-29-mail-texte-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1293}
 {"at":"2026-08-29T10:56:07.496Z","slug":"2026-08-29-mail-texte-invisible","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
 {"at":"2026-08-29T11:00:33.252Z","slug":"2026-08-29-mail-texte-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.129}
+{"at":"2026-08-29T16:43:27.279Z","slug":"2026-08-29-anthropic-liste-noire","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"57.0s Sadaltager","usd":0.0285}
+{"at":"2026-08-29T16:46:02.328Z","slug":"2026-08-29-anthropic-liste-noire","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
+{"at":"2026-08-29T16:46:15.694Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.123}
+{"at":"2026-08-29T16:46:28.998Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1275}
+{"at":"2026-08-29T16:46:41.804Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1231}
+{"at":"2026-08-29T16:46:55.456Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1245}
+{"at":"2026-08-29T16:50:17.112Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1259}
+{"at":"2026-08-29T16:50:30.333Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1208}
+{"at":"2026-08-29T16:52:49.453Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1351}
