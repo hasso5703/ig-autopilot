@@ -145,7 +145,7 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a thick stack of printed court papers",
+            "subject": "a thick stack of printed court papers, their text reduced to plain soft grey placeholder lines rather than readable words",
             "action": "the top sheet slowly lifting and turning over, the stack staying whole and fully in frame the entire time",
             "camera": "locked-off static shot, no camera movement, no zoom",
             "composition": "extreme close-up from directly above, the papers fill the entire frame",
@@ -158,7 +158,7 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a printed safety policy document with one paragraph underlined in red, its page filling the view",
+            "subject": "a printed safety policy document, its text reduced to plain soft grey placeholder lines rather than readable words, one passage marked in red, its page filling the view",
             "setting": "in soft even daylight",
             "composition": "extreme close-up from directly above, the page fills the entire frame"
           }
@@ -174,12 +174,9 @@
       {
         "script": "Le patron d'Anthropic, Dario Amodei, n'a pas reculé. Et pendant ce temps, OpenAI signait son propre accord avec le Pentagone, quelques heures plus tard.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "two printed contracts lying side by side, one signed and one left blank",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly above, the two pages fill the entire frame"
-          }
+          "type": "photo",
+          "query": "Dario Amodei",
+          "alt": "Dario Amodei, le patron d'Anthropic"
         }
       },
       {
@@ -214,7 +211,7 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a printed appeal document, its pages filling the view, the top corner marked in red",
+            "subject": "a printed appeal document, its text reduced to plain soft grey placeholder lines rather than readable words, its top corner marked in red, its pages filling the view",
             "setting": "in soft even daylight",
             "composition": "extreme close-up from directly above, the open pages fill the entire frame"
           }
