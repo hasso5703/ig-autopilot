@@ -3563,3 +3563,39 @@ ENTRIES:
   (forcepoint 26 s); csoonline 601 s, techcrunch 694 s, npr derive. Un run de
   publication qui laisse deux beats `screenshot` sans `file` paie vingt
   minutes de navigateur: le scout capture et epingle, toujours.
+  Ajout 29/08 (10h30), LA PROSE EST LE PIRE SUJET QU'ON PUISSE DEMANDER, EN
+  VIDEO COMME EN STILL, et ca a coute un rachat veo a $0.96 sur la frame zero.
+  Mesure du jour, histoire du resume de mail pirate. (1) VEO: le spec disait
+  "a computer screen filled with the text of a single email message" + "one
+  extra sentence slowly fading into view". Rendu: un iMac (logo Apple dans le
+  cadre, donc le bureau plus le decor) couvert de faux anglais PARFAITEMENT
+  LISIBLE ("Nooomt Ury Eonneing", "Thomt men dengebect tiny wmetestaloent ngod
+  toun?"). Le filmstrip etait pourtant bon sur la question du manuel (meme
+  objet, meme taille, present au 8e panneau): un clip peut passer le controle
+  de MOTION et rester a racheter pour son CONTENU. Le remede qui a marche du
+  premier coup: demander le SOURCE du mail au lieu du mail, "a computer screen
+  filled with email source markup, coloured tags and attributes on a plain
+  light background" - le charabia sort alors en notation (crochets, balises,
+  tokens colores), ce que le manuel promet du code, et le modele a meme fait
+  apparaitre une ligne surlignee en rouge, soit exactement le beat. (2) STILL,
+  meme famille, $0.13: "a computer screen showing a short summary of an email,
+  the words filling the frame" a rendu un telephone dans un CAFE (passants,
+  tasses) avec "JFDHG KLAJSND" en lettres de 100px. Remede du premier coup:
+  "its message text reduced to plain soft grey placeholder bars rather than
+  readable words" + "a screen-only view with no room, no desk and no people".
+  REGLE GENERALE: quand un beat doit montrer du TEXTE, ne demande jamais du
+  texte a lire. Demande de la notation (balises, code, horodatages, colonnes
+  de chiffres) ou des barres de remplacement explicites. Un document imprime
+  reste sur, lui: la facture et la feuille de resultats du meme Reel sont
+  sorties avec des mots anglais COHERENTS ("BILL TO", "Amount Due") et des
+  colonnes de chiffres, aucun charabia - c'est l'anglais courant genere en
+  PARAGRAPHES qui casse, pas les libelles courts.
+  ET LE PIEGE DE GATE QUI VA AVEC, 30 s perdues: `simplicityIssues`
+  (promptcraft.mjs:158) refuse la chaine "line of" en mot entier, donc
+  "one additional line of markup slowly fading" est REJETE comme scene a
+  objets multiples. "lines of" passe (le regex vise `rows? of|line of`).
+  Ecris "one extra markup line slowly fading". Meme piege pour "row of".
+  Enfin, VEO REND PARFOIS "Video generation failed due to an internal server
+  issue": c'est transitoire et cote Google, pas un probleme de prompt. Relance
+  dans le MEME repertoire, la narration et l'alignement ressortent du cache
+  ($0 perdu), seul le clip est achete.

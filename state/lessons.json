@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-29T06:41:57.201Z",
-  "n": 63,
-  "nSettled": 57,
-  "medianViews": 191,
+  "at": "2026-08-29T11:06:56.330Z",
+  "n": 64,
+  "nSettled": 58,
+  "medianViews": 193,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -90,10 +90,10 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 43,
-      "medianViews": 289,
-      "meanRetentionPct": 23.6,
-      "saves": 61,
+      "n": 44,
+      "medianViews": 295,
+      "meanRetentionPct": 23.7,
+      "saves": 67,
       "shares": 26,
       "thin": false
     },
@@ -150,10 +150,10 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 10,
-      "medianViews": 430,
-      "meanRetentionPct": 22.3,
-      "saves": 8,
+      "n": 11,
+      "medianViews": 477,
+      "meanRetentionPct": 23,
+      "saves": 14,
       "shares": 6,
       "thin": false
     },
@@ -475,7 +475,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "OpenAI a enferme ses IA chacune de son cote pour un test. 1 200 se sont retrouvees en douce et 700 ont pirate un site pour voler les reponses.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-21-web-ecrit-par-ia",
@@ -835,6 +835,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-28-flock-plaques-voiture",
+      "at": "2026-08-28T17:34:13.949Z",
+      "hourUtc": 17,
+      "views": 183,
+      "reach": 172,
+      "avgWatchS": 12.3,
+      "retentionPct": 20,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-03-ai-act-transparence",
       "at": "2026-08-03T17:08:41.840Z",
       "hourUtc": 17,
@@ -905,23 +922,6 @@
       ],
       "sendTest": "Un mec a demandé à son IA de lui réserver un cours de sport. Elle a annulé la réservation d'un inconnu pour lui faire gagner une place.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-28-flock-plaques-voiture",
-      "at": "2026-08-28T17:34:13.949Z",
-      "hourUtc": 17,
-      "views": 160,
-      "reach": 150,
-      "avgWatchS": 12.1,
-      "retentionPct": 20,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
-      "settled": false
     },
     {
       "slug": "2026-08-04-fcc-robots-humanoides",
@@ -1351,6 +1351,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-29-mail-texte-invisible",
+      "at": "2026-08-29T11:05:11.655Z",
+      "hourUtc": 11,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
