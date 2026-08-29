@@ -337,3 +337,11 @@
 {"at":"2026-08-28T17:21:15.004Z","slug":"2026-08-28-flock-plaques-voiture","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1303}
 {"at":"2026-08-28T17:21:28.319Z","slug":"2026-08-28-flock-plaques-voiture","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1294}
 {"at":"2026-08-28T17:26:45.815Z","slug":"2026-08-28-flock-plaques-voiture","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1291}
+{"at":"2026-08-29T10:44:27.139Z","slug":"2026-08-29-mail-texte-invisible","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"62.2s Sadaltager","usd":0.0311}
+{"at":"2026-08-29T10:44:55.289Z","slug":"2026-08-29-mail-texte-invisible","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"59.3s Sadaltager","usd":0.0296}
+{"at":"2026-08-29T10:48:56.182Z","slug":"2026-08-29-mail-texte-invisible","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-29T10:49:10.572Z","slug":"2026-08-29-mail-texte-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1273}
+{"at":"2026-08-29T10:49:24.116Z","slug":"2026-08-29-mail-texte-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1228}
+{"at":"2026-08-29T10:49:38.201Z","slug":"2026-08-29-mail-texte-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1293}
+{"at":"2026-08-29T10:56:07.496Z","slug":"2026-08-29-mail-texte-invisible","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-29T11:00:33.252Z","slug":"2026-08-29-mail-texte-invisible","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.129}

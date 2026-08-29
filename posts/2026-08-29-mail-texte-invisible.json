@@ -119,10 +119,10 @@
         "visual": {
           "type": "veo",
           "spec": {
-            "subject": "a computer screen filled with the text of a single email message",
-            "action": "one extra sentence slowly fading into view between two paragraphs, the screen staying whole and fully in frame the entire time",
+            "subject": "a computer screen filled with email source markup, coloured tags and attributes on a plain light background",
+            "action": "one extra markup line slowly fading into view among the text already there, the screen staying whole and fully in frame the entire time",
             "camera": "locked-off static shot, no camera movement, no zoom",
-            "composition": "extreme close-up, the screen fills the entire frame",
+            "composition": "extreme close-up, the markup fills the entire frame edge to edge, a desk-free view with no room and no furniture visible",
             "setting": "in soft even daylight"
           }
         }
@@ -170,9 +170,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a computer screen showing a short summary of an email, the words filling the frame",
+            "subject": "a computer screen showing an email application, its message text reduced to plain soft grey placeholder bars rather than readable words",
             "setting": "in soft even daylight",
-            "composition": "extreme close-up, the screen fills the entire frame"
+            "composition": "extreme close-up straight on, the screen fills the entire frame edge to edge, a screen-only view with no room, no desk and no people"
           }
         }
       }
