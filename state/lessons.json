@@ -1,7 +1,7 @@
 {
-  "at": "2026-08-30T16:40:47.452Z",
-  "n": 66,
-  "nSettled": 59,
+  "at": "2026-08-30T19:42:25.543Z",
+  "n": 67,
+  "nSettled": 61,
   "medianViews": 191,
   "medianRetentionPct": 20,
   "top": [
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 45,
-      "medianViews": 289,
-      "meanRetentionPct": 23.5,
+      "n": 47,
+      "medianViews": 207,
+      "meanRetentionPct": 23.3,
       "saves": 67,
       "shares": 26,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": false
     },
     "17": {
-      "n": 15,
+      "n": 17,
       "medianViews": 175,
-      "meanRetentionPct": 24.8,
+      "meanRetentionPct": 24.1,
       "saves": 14,
       "shares": 11,
       "thin": false
@@ -396,9 +396,9 @@
       "slug": "2026-08-29-mail-texte-invisible",
       "at": "2026-08-29T11:05:11.655Z",
       "hourUtc": 11,
-      "views": 1201,
-      "reach": 1071,
-      "avgWatchS": 16.5,
+      "views": 1211,
+      "reach": 1086,
+      "avgWatchS": 16.4,
       "retentionPct": 27,
       "likes": 10,
       "comments": 1,
@@ -794,15 +794,15 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-29-anthropic-liste-noire",
       "at": "2026-08-29T16:57:13.193Z",
       "hourUtc": 16,
-      "views": 204,
-      "reach": 192,
-      "avgWatchS": 11.3,
+      "views": 206,
+      "reach": 195,
+      "avgWatchS": 11.4,
       "retentionPct": 19,
       "likes": 3,
       "comments": 1,
@@ -1030,6 +1030,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-30-openai-coupe-cursor-musk",
+      "at": "2026-08-30T16:50:41.169Z",
+      "hourUtc": 16,
+      "views": 147,
+      "reach": 108,
+      "avgWatchS": 10.7,
+      "retentionPct": 18,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-22-peau-humaine-vivante",
       "at": "2026-08-22T10:54:08.736Z",
       "hourUtc": 10,
@@ -1165,7 +1182,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-20-jeunes-emplois-ia",
