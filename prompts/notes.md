@@ -1059,6 +1059,34 @@ ENTRIES:
   contract lines sliding slowly downward"), ce qui est en prime plus fidele a
   l'histoire (OpenAI resilie un CONTRAT). Reflexe: sur une actu d'outil de
   developpement, n'ancre jamais sur code/coding, ancre sur le document.
+  Ajout 30/08 (10h30), L'ANCRE PEUT ETRE UN HOMONYME ET LE GATE NE VOIT PAS LA
+  DIFFERENCE, famille du connecteur "another" du 27/08 mais plus dure a
+  reperer parce que le mot est un vrai nom commun du sujet. Le beat 0 veo du
+  dossier Sony/Warner ("a single black vinyl record turning on a plain
+  turntable") est passe sur **record**, et record n'entre dans storyVocab que
+  par la citation "settling that case for a record-setting $1.5 billion",
+  donc par l'ADJECTIF anglais, pas par le disque. Le gate etait vert et
+  n'attestait rien du sujet. Ici l'image etait quand meme dans l'histoire (des
+  chansons, des editeurs de musique) et elle a rendu propre, mais le controle
+  d'apres-gate n'est plus seulement "est-ce que le mot qui a matche est un
+  connecteur": c'est "est-ce que ce mot veut dire dans mon spec ce qu'il veut
+  dire dans la phrase source". Doubles sens deja croises sur ce seul dossier:
+  record, ring, paper, tiger, eye. Imprime le vocabulaire ET relis la citation
+  d'ou vient ton ancre. Proof: run 10h30 30/08.
+  Ajout 30/08 (10h30), SIXIEME CONFIRMATION DE LA ROTATION SUR PLACE (12/08,
+  17/08 x2, 22/08, 28/08), et une recette de beat 0 pour toute actu de MUSIQUE
+  ou de droits d'auteur musicaux: subject "a single black vinyl record turning
+  on a plain turntable" + action "turning slowly in place, the record staying
+  whole, the same size and fully inside the frame the entire time" + camera
+  "locked-off static shot, no camera movement, no zoom" + composition "macro
+  framing, the record fills most of the frame" + setting "in soft even
+  daylight". Accepte DU PREMIER COUP, $0,96 (clip 8 s 1080p, beat de 25 mots
+  donc au-dessus du seuil des ~24 mots du 21/08), pellicule 8 vignettes lue:
+  meme objet, meme taille, present a la 8e, l'etiquette blanche tourne
+  visiblement, zero deformation. Le disque est un objet RIGIDE et l'aiguille
+  fabrique le hors-champ de l'action non resolue. Note que le rendu est sorti
+  SOMBRE malgre "soft even daylight" (un disque noir reste noir): ce n'est pas
+  un defaut, la carte-titre blanche sur bande noire s'y detache tres bien.
   Ajout 03/08 (11h): DANS UN SPEC VEO, `action` EST UN MOUVEMENT, JAMAIS UNE
   DESTINATION. Ecrit "is pressed down into its slot on a laptop board until it
   lies flat": Veo a interpole vers l'etat final et la barrette a ete AVALEE par
