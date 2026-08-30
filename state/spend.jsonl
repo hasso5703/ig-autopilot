@@ -354,3 +354,7 @@
 {"at":"2026-08-29T16:50:17.112Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1259}
 {"at":"2026-08-29T16:50:30.333Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1208}
 {"at":"2026-08-29T16:52:49.453Z","slug":"2026-08-29-anthropic-liste-noire","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1351}
+{"at":"2026-08-30T10:44:15.348Z","slug":"2026-08-30-sony-warner-anthropic","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"50.6s Sadaltager","usd":0.0253}
+{"at":"2026-08-30T10:46:53.156Z","slug":"2026-08-30-sony-warner-anthropic","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-30T10:47:06.225Z","slug":"2026-08-30-sony-warner-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1251}
+{"at":"2026-08-30T10:47:19.828Z","slug":"2026-08-30-sony-warner-anthropic","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1278}

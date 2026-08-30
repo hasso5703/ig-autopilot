@@ -107,3 +107,4 @@
 {"at":"2026-08-29T10:44:27.308Z","slug":"2026-08-29-mail-texte-invisible","words":194,"seconds":62.2,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":false,"declineDb":-2.1}
 {"at":"2026-08-29T10:44:55.448Z","slug":"2026-08-29-mail-texte-invisible","words":194,"seconds":59.28,"voice":"Sadaltager","lang":"fr","attempt":2,"accepted":true,"declineDb":-1.4}
 {"at":"2026-08-29T16:43:27.418Z","slug":"2026-08-29-anthropic-liste-noire","words":197,"seconds":57.04,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.2}
+{"at":"2026-08-30T10:44:15.521Z","slug":"2026-08-30-sony-warner-anthropic","words":196,"seconds":50.64,"voice":"Sadaltager","lang":"fr","attempt":1,"accepted":true,"declineDb":-2.1}
