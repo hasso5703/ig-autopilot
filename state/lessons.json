@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-29T19:41:58.915Z",
+  "at": "2026-08-30T06:40:42.751Z",
   "n": 65,
   "nSettled": 59,
   "medianViews": 191,
@@ -31,7 +31,7 @@
     },
     {
       "slug": "2026-08-24-uber-logiciel-chauffeurs",
-      "views": 1261,
+      "views": 1265,
       "retentionPct": 28,
       "saved": 1,
       "shares": 1,
@@ -343,9 +343,9 @@
       "slug": "2026-08-24-uber-logiciel-chauffeurs",
       "at": "2026-08-24T10:59:24.031Z",
       "hourUtc": 10,
-      "views": 1261,
+      "views": 1265,
       "reach": 1136,
-      "avgWatchS": 16.7,
+      "avgWatchS": 16.8,
       "retentionPct": 28,
       "likes": 9,
       "comments": 1,
@@ -461,6 +461,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-29-mail-texte-invisible",
+      "at": "2026-08-29T11:05:11.655Z",
+      "hourUtc": 11,
+      "views": 987,
+      "reach": 889,
+      "avgWatchS": 15.7,
+      "retentionPct": 26,
+      "likes": 10,
+      "comments": 1,
+      "saved": 2,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-27-ia-forum-secret",
       "at": "2026-08-27T10:55:28.190Z",
       "hourUtc": 10,
@@ -529,23 +546,6 @@
       "themes": [],
       "sendTest": "Un ingénieur a dépensé 50 000 dollars d'IA en un mois. Son entreprise note maintenant chaque salarié sur ce que l'IA lui coûte.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-29-mail-texte-invisible",
-      "at": "2026-08-29T11:05:11.655Z",
-      "hourUtc": 11,
-      "views": 494,
-      "reach": 441,
-      "avgWatchS": 14.4,
-      "retentionPct": 24,
-      "likes": 8,
-      "comments": 1,
-      "saved": 0,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
-      "settled": false
     },
     {
       "slug": "2026-08-16-livres-ia-amazon",
@@ -783,9 +783,9 @@
       "slug": "2026-08-28-flock-plaques-voiture",
       "at": "2026-08-28T17:34:13.949Z",
       "hourUtc": 17,
-      "views": 199,
-      "reach": 185,
-      "avgWatchS": 11.9,
+      "views": 207,
+      "reach": 194,
+      "avgWatchS": 11.8,
       "retentionPct": 20,
       "likes": 1,
       "comments": 1,
@@ -920,6 +920,25 @@
       ],
       "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-29-anthropic-liste-noire",
+      "at": "2026-08-29T16:57:13.193Z",
+      "hourUtc": 16,
+      "views": 165,
+      "reach": 155,
+      "avgWatchS": 11.6,
+      "retentionPct": 19,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Anthropic a refusé que son IA serve à surveiller les Américains et à armer des drones. L'État l'a bannie. Un juge vient de dire que c'était illégal.",
+      "settled": false
     },
     {
       "slug": "2026-08-10-ia-reserve-cours-sport",
@@ -1132,6 +1151,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-28-google-reserve-voyage",
+      "at": "2026-08-28T17:01:39.248Z",
+      "hourUtc": 17,
+      "views": 130,
+      "reach": 113,
+      "avgWatchS": 10.2,
+      "retentionPct": 17,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-20-jeunes-emplois-ia",
       "at": "2026-08-20T17:03:49.087Z",
       "hourUtc": 17,
@@ -1147,42 +1183,6 @@
       "themes": [],
       "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-28-google-reserve-voyage",
-      "at": "2026-08-28T17:01:39.248Z",
-      "hourUtc": 17,
-      "views": 128,
-      "reach": 112,
-      "avgWatchS": 10.3,
-      "retentionPct": 17,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Google peut maintenant surveiller le prix de ton vol et reserver ton hotel tout seul. Mais pas en Europe: on est exclus.",
-      "settled": false
-    },
-    {
-      "slug": "2026-08-29-anthropic-liste-noire",
-      "at": "2026-08-29T16:57:13.193Z",
-      "hourUtc": 16,
-      "views": 128,
-      "reach": 119,
-      "avgWatchS": 11,
-      "retentionPct": 18,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Anthropic a refusé que son IA serve à surveiller les Américains et à armer des drones. L'État l'a bannie. Un juge vient de dire que c'était illégal.",
-      "settled": false
     },
     {
       "slug": "2026-08-26-ia-verifie-infos",

@@ -823,6 +823,25 @@ ENTRIES:
   etait le SEUL domaine joignable et il credite le Post. Le reflexe qui coute
   30 s et sauve une heure: sur une depeche qui dit "shared exclusively with X",
   fetch X AVANT de scorer l'histoire.
+  Ajout 30/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 28 verifications, deux dossiers) musicbusinessworldwide.com
+  (NOUVEAU) et gizmodo.com; cnbc.com, engadget.com, the-decoder.com et
+  techcrunch.com re-confirment. SUR UNE ACTU DE L'INDUSTRIE MUSICALE, le
+  primaire joignable est MBW: c'est lui qui OBTIENT la plainte ("the complaint
+  - obtained by mbw"), il en cite des paragraphes entiers (titres de chansons,
+  montants par oeuvre, dates de torrent, citations internes descellees), la ou
+  techcrunch n'en fait qu'une breve de 4 paragraphes. Cherche le titre de
+  presse SECTORIELLE avant la presse tech sur un dossier musique, cinema ou
+  edition. ATTENTION CORROBORATION, famille du 07/08: techcrunch, engadget et
+  gizmodo creditent TOUS les trois MBW pour le texte de la plainte, donc trois
+  domaines verts = un seul document lu par plusieurs redactions. Ca reste
+  publiable (une plainte est une piece publique et chacun la lit), mais dis-le
+  dans le rapport. Deuxieme dossier du jour, OpenAI/Cursor: le primaire
+  openai.com est 403 (re-confirme depuis le 26/07), et cnbc porte son propre
+  reportage a cote (le post X de Musk, le montant du rachat lu dans les
+  documents financiers) pendant que the-decoder porte le sien (la citation
+  Sottiaux, le precedent Windsurf): la vraie double lecture est la, pas dans le
+  nombre de domaines.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1023,6 +1042,23 @@ ENTRIES:
   depuis le texte aplati (donc en minuscules) revient VERIFIED et fait quand meme
   echouer "Oura Ring 5". Recopie les citations avec la casse de la PAGE, pas
   celle du flatten.
+  Ajout 30/08 (06h30), LE MOT D'ANCRAGE LE PLUS EVIDENT D'UNE ACTU D'OUTIL IA
+  EST INVISIBLE AU FILTRE, et c'est le cas "racine trop courte" du 01/08 sur le
+  mot qu'on ecrira le plus souvent: **"coding"**. Les sources ecrivent "the AI
+  coding tool", "the AI coding startup", "the coding tool Windsurf", donc le
+  mot est partout dans l'histoire ET dans mes citations - mais sa racine est
+  "code", 4 lettres, donc il ne compte JAMAIS. Deux specs (le beat 0 veo et la
+  still de chute) refuses d'un coup "shares no word with the sources" sur un
+  dossier ou tout le monde code. Meme famille que "packed"/"pack" (01/08), sauf
+  que la, le mot semble long. Mots surs mesures sur ce dossier (annonce
+  d'entreprise, aucun objet physique dans l'histoire, cas du 09/08): contract,
+  model, filing, financial, extension, announcement, acquisition, technology,
+  service, billion. Remede accepte du premier coup, deux fois: remplacer
+  l'ecran "de code" par un ecran "de contrat" ("a computer monitor showing the
+  plain grey lines of a contract page on a white background", action "the grey
+  contract lines sliding slowly downward"), ce qui est en prime plus fidele a
+  l'histoire (OpenAI resilie un CONTRAT). Reflexe: sur une actu d'outil de
+  developpement, n'ancre jamais sur code/coding, ancre sur le document.
   Ajout 03/08 (11h): DANS UN SPEC VEO, `action` EST UN MOUVEMENT, JAMAIS UNE
   DESTINATION. Ecrit "is pressed down into its slot on a laptop board until it
   lies flat": Veo a interpole vers l'etat final et la barrette a ete AVALEE par
@@ -2169,6 +2205,30 @@ ENTRIES:
   candidate for Dario Amodei failed" apres la narration (cache, $0 perdu) et
   avant les achats. Sur une histoire Anthropic, prends le visage de l'autre
   partie (Hegseth, Trump) ou un still.
+  Ajout 30/08 (06h30), DEUX VISAGES QUE TOUT LE MONDE VA REDEMANDER, ET LEURS
+  DEUX PIEGES: le moteur prend le PREMIER candidat, et sur ces deux requetes le
+  premier est mauvais. (1) "elon musk 2021" met PREMIER a 7.0 "Mohammad Al
+  Gergawi and Elon Musk at WGS 2019", DEUX hommes dans le cadre donc identite
+  ambigue (famille du 23/08): un beat photo non epingle aurait attribue le
+  visage du mauvais homme a la voix qui dit "Musk". Le bon est le 2e, "Elon
+  Musk 2021" (Ministerio Das Comunicacoes, CC BY), thumb 1280x1708,
+  `crop=800:1422:240:0` puis scale 1080:1920, vrai portrait serre, zero texte,
+  zero marque, zero millesime a l'image. (2) "sam altman" met PREMIER "Sam
+  Altman CropEdit James Tamim" (1998x1999), donc un CARRE: le 9:16 y coupe. La
+  valeur sure reste "Sam Altman speaking at TED" (Steve Jurvetson, CC BY) du
+  09/08, et voici son crop pour le THUMB 1920 (l'entree du 09/08 donnait celui
+  de l'original 2184): thumb 1920x2315, `crop=663:1178:536:53` puis scale
+  1080:1920 rend un vrai portrait poitrine net; le 9:16 plein cadre
+  (`crop=1302:2315:309:0`) rend, lui, le plan assis en entier AVEC des
+  chaussures de marque lisibles (famille Augmentin du 08/08). Deux autres
+  valeurs sures epinglees le meme matin, regardees en planche-contact:
+  "Bookshop in Rome" (Elisa Scagnetti, CC0, pd.w.org 1536x2048,
+  `crop=1152:2048:192:0`, re-confirme le 16/08, l'enseigne BOOKSHOP est dans le
+  cadre) et "Vinyl collection at a record store (Unsplash)" (Mr Cup / Fabien
+  Barral iammrcup, CC0, thumb 1920x1275, `crop=717:1275:600:0`), des bacs de
+  disques chauds, zero texte lisible, zero marque - utile des qu'une histoire
+  parle de chansons. upload.wikimedia a servi 6 fichiers d'affilee (UA de
+  navigateur complet + referer commons, 6 s d'ecart) sans une page d'erreur.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -3245,6 +3305,33 @@ ENTRIES:
   <out> [top]` (pose ce jour-la) replique screenshotOnce a l'identique et
   imprime `page.url()`, le h1 et les alt des images en cadre, soit les trois
   controles du 10/08, du 14/08 et du 23/08 en une commande.
+  Ajout 30/08 (06h30), TROIS RECUS MESURES HORS MOTEUR, a la queue leu leu.
+  (1) musicbusinessworldwide.com NOUVEAU, PROPRE du premier coup en 255 s /
+  23 frames, aucun recadrage, zero pub, zero banniere cookies: masthead MBW,
+  titre ENTIER en capitales (c'est l'histoire, controle du 10/08),
+  "AUGUST 29, 2026" et "BY TIM INGHAM" dans les 1686 px visibles (mesure du
+  22/08). Il rejoint la categorie "recu qui porte la preuve" puisque le titre
+  contient deja la citation de la plainte. Une barre de partage ("97 SHARES" +
+  4 boutons) s'intercale entre le titre et la date: elle est dans le cadre, ce
+  n'est pas de la pub, on la garde. (2) engadget.com PROPRE du premier coup et
+  SANS recadrage (masthead, fil "News > AI", titre entier, chapo qui porte le
+  claim, signature, date) - la plomberie variable du 15/08 se re-confirme, il
+  n'y avait ni filigrane AD ni encart ce jour-la. MAIS 333 s et 361 FRAMES,
+  soit le plus lourd jamais mesure ici (famille O(frames) du 06/08, il SURVIT):
+  c'est exactement le recu qu'un scout epingle et qu'un run de publication ne
+  doit jamais attendre. (3) the-decoder.com se recapture propre (169 s /
+  106 frames) MAIS IL LUI FAUT LE MODE `top`, precision qui manquait a l'entree
+  du 16/08: au scroll au h1 la capture commence SOUS le masthead et le recu ne
+  dit plus de qui il est (famille outerbio 22/08, theregister 25/08); en mode
+  top (175 s / 83 frames) on a le logo "the decoder", le titre entier, la
+  signature et la date, ET la mention "Nano Banana Pro prompted by THE DECODER"
+  de son image de tete tombe alors HORS des 1686 px visibles, ce qui resout au
+  passage le bemol du 16/08. Sur the-decoder, capture toujours en `top`.
+  ET UN PIEGE DE LECTURE, pas de capture, qui fait perdre 2 minutes: relue en
+  vignette a 430 px, la police condensee de MBW et celle d'engadget donnent
+  l'illusion que le titre ecrit "ANTROPIC" sans H. Recadre la ligne en PLEINE
+  resolution (`crop=1290:180:0:<y>`) avant de conclure a une coquille de la
+  source: les deux ecrivaient bien "ANTHROPIC".
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08, scout 06h30 26/08, scout 06h30 27/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe

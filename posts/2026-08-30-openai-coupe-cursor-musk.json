@@ -1,0 +1,229 @@
+{
+  "slug": "2026-08-30-openai-coupe-cursor-musk",
+  "centralClaim": "OpenAI is ending Cursor's access to its models after Elon Musk's SpaceX acquired the company.",
+  "corroboration": [
+    {
+      "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+      "quote": "OpenAI announced late Friday that it is ending developers' access to its models on Cursor, following the acquisition of the AI coding startup by Elon Musk's SpaceX earlier this month."
+    },
+    {
+      "url": "https://the-decoder.com/openai-cuts-off-cursor-after-spacex-acquisition-citing-musks-history-of-breaking-contracts/",
+      "quote": "OpenAI is ending its contract with the AI coding tool Cursor after SpaceX acquired the company, saying that Elon Musk's companies have repeatedly broken contracts."
+    }
+  ],
+  "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
+  "caption": "L'entreprise d'Elon Musk a payé 60 milliards pour une appli de code. OpenAI vient de lui couper l'accès.\n\nCursor est l'outil que beaucoup de développeurs utilisent pour écrire du code avec une IA. SpaceX en a bouclé le rachat le 14 août, pour 60 milliards de dollars, d'après les documents financiers. Vendredi soir, OpenAI a annoncé qu'elle mettait fin à l'accès de Cursor à ses modèles, avec une date de coupure au 12 novembre 2026.\n\nLe motif, écrit noir sur blanc. OpenAI dit ne pas pouvoir être sûre que SpaceX respectera ses conditions d'utilisation, au vu de son expérience avec les entreprises d'Elon Musk qui violent des contrats.\n\nLe détail qui n'est pas dans la vidéo. Le patron de Cursor, Michael Truell, répond que les modèles d'OpenAI ne servent qu'environ 5% du trafic de ses utilisateurs. Musk, lui, a réagi sur son réseau social en disant qu'il s'en fichait complètement, et en traitant les dirigeants d'OpenAI de gens en qui on ne peut pas avoir confiance.\n\nÀ nuancer, et c'est important. Ce n'est pas la fin de l'outil: ceux qui ont leur propre clé chez OpenAI pourront continuer. Et le procédé n'a rien d'inédit, Anthropic avait fait la même chose à un concurrent en juin 2025.\n\nUn fournisseur d'IA a le droit de choisir à qui il vend, oui ou non ? Dis-le en commentaire.\n\ncnbc.com · the-decoder.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #ElonMusk",
+  "captionEvidence": [
+    {
+      "quote": "SpaceX completed its $60 billion acquisition of Cursor on Aug. 14, according to financial filings.",
+      "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html"
+    },
+    {
+      "quote": "In their announcement, OpenAI said, \"We are making this choice because we cannot be confident that SpaceX will use our technology within our terms of service, based on our experience with Elon Musk's companies violating contracts.\" Its \"proposed shutoff date\" for OpenAI models via Cursor is Nov. 12, 2026.",
+      "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html"
+    },
+    {
+      "quote": "Cursor CEO Michael Truell said, in a post on the SpaceX-owned social network X Friday night: \"OpenAI models serve about 5% of Cursor user traffic, and we're speaking with the OpenAI team to resolve this.",
+      "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html"
+    },
+    {
+      "quote": "In June 2025, Anthropic blocked the coding tool Windsurf from accessing its Claude models after reports surfaced that OpenAI wanted to acquire Windsurf.",
+      "url": "https://the-decoder.com/openai-cuts-off-cursor-after-spacex-acquisition-citing-musks-history-of-breaking-contracts/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Annonce d'OpenAI, vendredi soir",
+      "headline": "OpenAI débranche l'appli rachetée par *Musk*",
+      "hero": {
+        "value": "60",
+        "label": "milliards de dollars payés par SpaceX pour Cursor"
+      },
+      "swipe": "Les preuves, diapo par diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "60",
+      "unit": "milliards de dollars pour Cursor",
+      "body": "Le rachat a été bouclé le **14 août**, d'après les documents financiers déposés.",
+      "evidence": "SpaceX completed its $60 billion acquisition of Cursor on Aug. 14, according to financial filings.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui est coupé, et quand",
+      "body": "OpenAI met fin à l'accès des développeurs à ses modèles sur *Cursor*. Date de coupure annoncée: le **12 novembre 2026**.",
+      "evidence": "In their announcement, OpenAI said, \"We are making this choice because we cannot be confident that SpaceX will use our technology within our terms of service, based on our experience with Elon Musk's companies violating contracts.\" Its \"proposed shutoff date\" for OpenAI models via Cursor is Nov. 12, 2026.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "We are making this choice because we cannot be confident that SpaceX will use our technology within our terms of service, based on our experience with Elon Musk's companies violating contracts",
+      "attribution": "OpenAI, dans son annonce",
+      "evidence": "In their announcement, OpenAI said, \"We are making this choice because we cannot be confident that SpaceX will use our technology within our terms of service, based on our experience with Elon Musk's companies violating contracts.\"",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La réponse du patron de Cursor",
+      "body": "Michael Truell répond que les modèles d'OpenAI ne servent qu'environ *5%* du trafic de ses utilisateurs, et que les deux équipes se parlent.",
+      "evidence": "Cursor CEO Michael Truell said, in a post on the SpaceX-owned social network X Friday night: \"OpenAI models serve about 5% of Cursor user traffic, and we're speaking with the OpenAI team to resolve this.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La réponse de Musk",
+      "body": "Sur son réseau social, il écrit qu'il *s'en fiche complètement*, et traite les dirigeants d'OpenAI de gens **en qui on ne peut pas avoir confiance**.",
+      "evidence": "In a post on X on Saturday, Musk wrote, \"I couldn't care less. Scam Altman and Greg Stockman are utterly untrustworthy,\" used an expletive to describe them, then repeated his claim that they \"stole an open source nonprofit.\"",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le procédé n'a rien d'inédit",
+      "body": "En *juin 2025*, Anthropic avait coupé l'accès à ses modèles à un autre outil de code, après des informations sur un rachat par OpenAI.",
+      "evidence": "In June 2025, Anthropic blocked the coding tool Windsurf from accessing its Claude models after reports surfaced that OpenAI wanted to acquire Windsurf.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-cuts-off-cursor-after-spacex-acquisition-citing-musks-history-of-breaking-contracts/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "OpenAI arrête de fournir ses modèles à l'outil, et ne lui donnera aucun modèle plus récent.",
+      "caveat": "Ceux qui ont *leur propre clé* chez OpenAI pourront continuer à s'en servir.",
+      "claimLabel": "La coupure",
+      "caveatLabel": "Ce qui reste possible",
+      "evidence": "Users who access GPT models through Cursor will still be able to use their own OpenAI API keys, and OpenAI will continue to provide access through its IDE extensions for Cursor.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-cuts-off-cursor-after-spacex-acquisition-citing-musks-history-of-breaking-contracts/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui suit la guerre entre ces deux-là",
+      "sub": "L'actu IA, avec la source sous chaque affirmation."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "OpenAI débranche l'appli rachetée par Musk",
+    "beats": [
+      {
+        "script": "L'entreprise d'Elon Musk a payé 60 milliards de dollars pour une appli de code. Et OpenAI vient de lui couper l'accès à ses modèles.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a computer monitor showing the plain grey lines of a contract page on a white background",
+            "action": "the grey contract lines sliding slowly downward, the whole monitor staying whole, the same size and fully inside the frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "medium framing, the whole monitor fills most of the frame",
+            "setting": "in soft even daylight"
+          }
+        }
+      },
+      {
+        "script": "Et le motif invoqué n'est pas commercial. Tu vas voir ce qu'OpenAI écrit noir sur blanc.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed contract page, its body text rendered as fine horizontal grey lines rather than readable words, one clause marked in red",
+            "setting": "in soft even daylight",
+            "composition": "extreme macro framing from directly above, the single page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "L'appli s'appelle Cursor, un outil pour écrire du code avec une IA. SpaceX en a bouclé le rachat le 14 août.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/openai-cuts-off-cursor-after-spacex-acquisition-citing-musks-history-of-breaking-contracts/",
+          "file": "media/2026-08-30-openai-coupe-cursor-musk/shot_2.png"
+        }
+      },
+      {
+        "script": "OpenAI dit qu'elle ne peut pas être sûre que SpaceX respectera ses conditions d'utilisation, vu son expérience avec les entreprises d'Elon Musk qui violent des contrats.",
+        "visual": {
+          "type": "photo",
+          "query": "sam altman",
+          "alt": "Sam Altman, patron d'OpenAI",
+          "file": "media/2026-08-30-openai-coupe-cursor-musk/photo_3.jpg",
+          "credit": "Steve Jurvetson · CC BY"
+        }
+      },
+      {
+        "script": "La coupure est prévue pour le 12 novembre. Et OpenAI précise qu'elle ne fournira plus aucun nouveau modèle d'ici là.",
+        "visual": {
+          "type": "card",
+          "value": "12 novembre",
+          "label": "date de coupure annoncée par OpenAI"
+        }
+      },
+      {
+        "script": "Le patron de Cursor répond que les modèles d'OpenAI ne servent qu'environ 5% du trafic de ses utilisateurs, et que les deux équipes se parlent.",
+        "visual": {
+          "type": "card",
+          "value": "5%",
+          "label": "part du trafic servie par les modèles d'OpenAI"
+        }
+      },
+      {
+        "script": "Musk, lui, a répondu sur son réseau social qu'il s'en fichait complètement, et a traité les dirigeants d'OpenAI de gens en qui on ne peut pas avoir confiance.",
+        "visual": {
+          "type": "photo",
+          "query": "elon musk 2021",
+          "alt": "Elon Musk, patron de SpaceX",
+          "file": "media/2026-08-30-openai-coupe-cursor-musk/photo_6.jpg",
+          "credit": "Ministério Das Comunicações · CC BY"
+        }
+      },
+      {
+        "script": "Et ce n'est pas nouveau. En juin 2025, Anthropic avait déjà coupé un autre outil de code. Le robinet est devenu une arme. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed contract page, its body text rendered as fine horizontal grey lines rather than readable words, one long red diagonal mark drawn across it",
+            "setting": "under a low warm light",
+            "composition": "seen from the side, the single page fills the frame"
+          }
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+      "accessed": "2026-08-30"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/openai-cuts-off-cursor-after-spacex-acquisition-citing-musks-history-of-breaking-contracts/",
+      "accessed": "2026-08-30"
+    }
+  ]
+}

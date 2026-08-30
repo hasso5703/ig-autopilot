@@ -1,0 +1,241 @@
+{
+  "slug": "2026-08-30-sony-warner-anthropic",
+  "centralClaim": "Sony Music Publishing and Warner Chappell have sued Anthropic over a brazen campaign of illegally torrenting, scraping and downloading copyrighted works to train Claude.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+      "quote": "Sony Music Publishing, Warner Chappell and numerous other music publishers have sued Anthropic and co-founders Dario Amodei and Benjamin Mann, alleging the AI lab conducted a \"brazen campaign of illegally torrenting, scraping, and downloading copyrighted works.\""
+    },
+    {
+      "url": "https://www.engadget.com/2246997/sony-warner-sue-anthropic-for-blatant-violation-of-copyright-law/",
+      "quote": "Sony Music Publishing and Warner Chappell Music filed the complaint, which can be seen in full thanks to Music Business Worldwide, on Friday and said that Anthropic was responsible for a \"brazen campaign of illegally torrenting, scraping and downloading copyrighted works on a massive scale\" for the sake of training its Claude AI models."
+    }
+  ],
+  "sendTest": "Sony et Warner attaquent Anthropic: ils disent que Claude a avalé Eye of the Tiger et All I Want for Christmas. 150 000 dollars reclames par chanson.",
+  "caption": "Sony et Warner accusent Anthropic d'avoir pillé leurs chansons pour entraîner Claude.\n\nLes deux plus gros éditeurs musicaux du monde ont déposé vendredi une plainte devant le tribunal fédéral de Californie du Nord. Ils y décrivent une campagne de téléchargement illégal à grande échelle, et réclament jusqu'à 150,000 dollars par oeuvre, plus 25,000 dollars pour chaque mention de copyright retirée. La plainte vise aussi les deux fondateurs de l'entreprise, Dario Amodei et Benjamin Mann, à titre personnel.\n\nLes chansons citées dans le texte. Ain't No Mountain High Enough, All I Want for Christmas Is You, Eye of the Tiger, Here Comes Santa Claus, Paper Rings.\n\nLe détail qui n'est pas dans la vidéo. D'après la plainte, en juin 2021 Benjamin Mann a téléchargé au moins cinq millions de livres piratés, et des salariés en ont pris deux millions de plus en juillet 2022. Les éditeurs ajoutent que les protections mises en place après un premier procès se contournent en reformulant simplement la demande.\n\nÀ nuancer, et c'est important. Ce sont des accusations, pas des faits établis: aucune décision n'a été rendue. Anthropic répond qu'elle conteste les affirmations des éditeurs et se défendra au tribunal. Et l'entreprise a déjà versé 1.5 milliard de dollars à des auteurs de livres dans une affaire voisine.\n\nUne IA doit payer pour apprendre sur les oeuvres des autres, oui ou non ? Dis-le en commentaire.\n\ntechcrunch.com · engadget.com · musicbusinessworldwide.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Musique",
+  "captionEvidence": [
+    {
+      "quote": "Sony and Warner are seeking statutory damages of up to $150,000 per work willfully infringed, plus up to $25,000 for each alleged removal of copyright management information.",
+      "url": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/"
+    },
+    {
+      "quote": "in June 2021, Mann used BitTorrent to download at least five million pirated books from Library Genesis, and that Anthropic employees torrented at least two million more from Pirate Library Mirror in July 2022.",
+      "url": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/"
+    },
+    {
+      "quote": "Anthropic ended up settling that case for a record-setting $1.5 billion.",
+      "url": "https://www.engadget.com/2246997/sony-warner-sue-anthropic-for-blatant-violation-of-copyright-law/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Californie · Cour fédérale du district Nord",
+      "headline": "Sony et Warner accusent *Anthropic* d'avoir pillé leurs chansons",
+      "hero": {
+        "value": "150 000",
+        "label": "dollars réclamés par oeuvre piratée"
+      },
+      "swipe": "Les preuves, diapo par diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "25 000",
+      "unit": "dollars par mention de copyright retirée",
+      "body": "Et jusqu'à **150,000 dollars** par oeuvre piratée. La plainte parle de *milliers et de milliers* de compositions.",
+      "evidence": "The two music publishers are seeking a jury trial, but also up to $150,000 for each infringed work and $25,000 for each instance of Anthropic removing copyright management information. That could amount to billions in damages, considering the complaint alleges that \"thousands upon thousands of music publishers' copyrighted musical compositions,\" were illegally harvested to train Claude models.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2246997/sony-warner-sue-anthropic-for-blatant-violation-of-copyright-law/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les chansons nommées dans la plainte",
+      "body": "Ain't No Mountain High Enough, All I Want for Christmas Is You, *Eye of the Tiger*, Here Comes Santa Claus, Paper Rings.",
+      "evidence": "among the innumerable copyrighted works Defendants illegally harvested to fuel Claude are thousands upon thousands of Music Publishers' copyrighted musical compositions, including such beloved songs as \"Ain't No Mountain High Enough,\" \"All I Want for Christmas Is You,\" \"Eye of the Tiger,\" \"Here Comes Santa Claus,\" and \"Paper Rings.\"",
+      "source": {
+        "name": "Music Business Worldwide",
+        "url": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Deux fondateurs visés à titre personnel",
+      "body": "La plainte ne vise pas que l'entreprise. Elle nomme aussi *Dario Amodei* et **Benjamin Mann** comme défendeurs.",
+      "evidence": "Sony Music Publishing, Warner Chappell and numerous other music publishers have sued Anthropic and co-founders Dario Amodei and Benjamin Mann, alleging the AI lab conducted a \"brazen campaign of illegally torrenting, scraping, and downloading copyrighted works.\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "D'où viennent les fichiers, selon la plainte",
+      "body": "En *juin 2021*, un fondateur télécharge au moins cinq millions de livres piratés. Des salariés en prennent deux millions de plus en **juillet 2022**.",
+      "evidence": "in June 2021, Mann used BitTorrent to download at least five million pirated books from Library Genesis, and that Anthropic employees torrented at least two million more from Pirate Library Mirror in July 2022.",
+      "source": {
+        "name": "Music Business Worldwide",
+        "url": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le reproche qui fait mal",
+      "body": "Les éditeurs affirment que *Claude* ressort leurs paroles mot pour mot, et que les protections ajoutées après un premier procès se contournent **en reformulant la demande**.",
+      "evidence": "The publishers further allege that Claude reproduces their lyrics verbatim in outputs, and that guardrails added after earlier litigation (from UMG/Concord/ABKCO) are \"easily circumventable by simply 're-prompting'\" the model.",
+      "source": {
+        "name": "Music Business Worldwide",
+        "url": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "We disagree with the publishers' claims and we intend to defend ourselves robustly in court",
+      "attribution": "Un porte-parole d'Anthropic, à TechCrunch",
+      "evidence": "We disagree with the publishers' claims and we intend to defend ourselves robustly in court,\" an Anthropic spokesperson wrote in an emailed statement sent to TechCrunch.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "L'entreprise a déjà versé 1.5 milliard de dollars à des auteurs de livres pour la même méthode.",
+      "caveat": "Rien n'est jugé ici: ce sont des *accusations*, et l'entreprise annonce qu'elle se défendra.",
+      "claimLabel": "Le précédent",
+      "caveatLabel": "Ce qui reste à prouver",
+      "evidence": "Anthropic ended up settling that case for a record-setting $1.5 billion.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2246997/sony-warner-sue-anthropic-for-blatant-violation-of-copyright-law/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les trois grands sont désormais tous en procès",
+      "body": "Avec cette plainte, les branches édition des *trois majors* de la musique attaquent toutes la même entreprise.",
+      "evidence": "With Sony Music Publishing and Warner Chappell Music launching their own suit as plaintiffs, the publishing arms of all three major music companies are now litigating against the Claude maker.",
+      "source": {
+        "name": "Music Business Worldwide",
+        "url": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui écoute de la musique en boucle",
+      "sub": "L'actu IA, avec la source sous chaque affirmation."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Sony et Warner veulent 150 000 dollars par chanson",
+    "beats": [
+      {
+        "script": "Eye of the Tiger. All I Want for Christmas. Paper Rings. Sony et Warner accusent Anthropic d'avoir avalé ces chansons pour entraîner son IA, Claude.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single black vinyl record turning on a plain turntable",
+            "action": "turning slowly in place, the record staying whole, the same size and fully inside the frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "macro framing, the record fills most of the frame",
+            "setting": "in soft even daylight"
+          }
+        }
+      },
+      {
+        "script": "Et ils ne demandent pas des excuses. Tu vas voir ce qu'ils réclament, chanson par chanson.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed copyright claim page, its body text rendered as fine horizontal grey lines rather than readable words, one passage marked in red",
+            "setting": "in soft even daylight",
+            "composition": "extreme macro framing from directly above, the single page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "La plainte a été déposée vendredi en Californie. Elle vise Anthropic, mais aussi ses deux fondateurs, Dario Amodei et Benjamin Mann, personnellement.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/",
+          "file": "media/2026-08-30-sony-warner-anthropic/shot_2.png"
+        }
+      },
+      {
+        "script": "Les éditeurs réclament jusqu'à 150 000 dollars par oeuvre. Et la plainte parle de milliers et de milliers de compositions. Donc ça se compte en milliards.",
+        "visual": {
+          "type": "card",
+          "value": "150 000",
+          "label": "dollars réclamés par oeuvre piratée"
+        }
+      },
+      {
+        "script": "Selon la plainte, en juin 2021, Benjamin Mann a téléchargé au moins cinq millions de livres piratés. Les salariés en ont pris deux millions de plus en juillet 2022.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a computer monitor filled with lines of download log code and timestamps, one line marked in red, on a plain white background",
+            "setting": "in soft even daylight",
+            "composition": "medium framing, the whole monitor fills most of the frame"
+          }
+        }
+      },
+      {
+        "script": "Mais l'accusation qui fait mal est ailleurs. Les éditeurs disent que Claude ressort leurs paroles mot pour mot, et que les garde-fous sautent si tu redemandes.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.engadget.com/2246997/sony-warner-sue-anthropic-for-blatant-violation-of-copyright-law/",
+          "file": "media/2026-08-30-sony-warner-anthropic/shot_5.png"
+        }
+      },
+      {
+        "script": "Anthropic a déjà payé un milliard et demi de dollars à des auteurs de livres, pour exactement la même méthode.",
+        "visual": {
+          "type": "photo",
+          "query": "bookshop shelves",
+          "alt": "rayonnages d'une librairie",
+          "file": "media/2026-08-30-sony-warner-anthropic/photo_6.jpg",
+          "credit": "Elisa Scagnetti · CC0"
+        }
+      },
+      {
+        "script": "L'entreprise répond qu'elle conteste et se défendra au tribunal. Sauf que les trois plus grands éditeurs de musique du monde l'attaquent maintenant. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "vinyl records shop",
+          "alt": "bacs de disques vinyle dans un magasin",
+          "file": "media/2026-08-30-sony-warner-anthropic/photo_7.jpg",
+          "credit": "Mr Cup / Fabien Barral iammrcup · CC0"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+      "accessed": "2026-08-30"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/2246997/sony-warner-sue-anthropic-for-blatant-violation-of-copyright-law/",
+      "accessed": "2026-08-30"
+    },
+    {
+      "name": "Music Business Worldwide",
+      "url": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/",
+      "accessed": "2026-08-30"
+    }
+  ]
+}
