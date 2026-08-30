@@ -910,6 +910,22 @@ ENTRIES:
   egress (probe 10/08); s'active seul si Hasan l'allowliste. VISUEL: le
   compte a rebours et les sous-titres agrandis/remontes sont le design,
   pas un defaut (section frames du manuel).
+  Ajout 30/08 (19h30), LE TABLEAU "BY PUBLISH HOUR" DE learn.mjs EST UN PIEGE DE
+  COMPOSITION, ET RIEN NE LE MARQUE (thin). Mesure du soir sur lessons.json: il
+  donne 10h n=11 mediane 477 vues contre 17h n=17 mediane 175, ce qui se lit
+  comme "le creneau de l'apres-midi vaut trois fois moins" et pousserait a
+  toucher au deuxieme Reel du jour. Apparie DANS LA MEME JOURNEE, sur les 26
+  jours a deux Reels reglees, l'ecart disparait: mediane du 1er 193, mediane du
+  2e 191, et c'est le SECOND Reel qui fait le plus de vues 16 jours sur 26 (10
+  sur 17 depuis le 12/08). La cause est la composition des paniers, pas l'heure:
+  le panier 10h ne contient QUE des posts posterieurs au 12/08, personne ne
+  publiait le matin avant, et il porte les gros succes du compte, alors que les
+  paniers 16h et 17h melangent les deux regimes. Les vues ont une queue lourde,
+  donc une mediane sur n=11 bouge avec deux outliers. Un panier NON marque
+  (thin) n'est donc pas pour autant un panier comparable: avant de conclure quoi
+  que ce soit d'une ligne BY PUBLISH HOUR, reapparie a la journee. Controle sans
+  achat: lire state/lessons.json, grouper posts par at.slice(0,10), garder les
+  jours a deux entrees settled, comparer 1er contre 2e.
 - 2026-07-28 · Cold container costs: npm install ~40s, ffmpeg install ~40s,
   Whisper venv bootstrap ~2min + 140MB model, first Kokoro-free run. Budget
   them before the story work, not during. Proof: journals 27-28/07.
