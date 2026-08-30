@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-30T10:40:51.032Z",
-  "fresh": 25,
+  "at": "2026-08-30T16:39:50.408Z",
+  "fresh": 21,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -90,10 +90,11 @@
     },
     {
       "name": "Hacker News (250+ points)",
-      "ok": true,
-      "fetched": 7,
-      "fresh": 4,
-      "windowHours": 36
+      "ok": false,
+      "fetched": 0,
+      "fresh": 0,
+      "windowHours": 36,
+      "error": "HTTP 502 after 13 tries"
     },
     {
       "name": "Simon Willison",
