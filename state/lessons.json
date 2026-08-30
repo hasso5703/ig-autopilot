@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-30T06:40:42.751Z",
+  "at": "2026-08-30T10:41:45.307Z",
   "n": 65,
   "nSettled": 59,
   "medianViews": 191,
@@ -410,6 +410,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-29-mail-texte-invisible",
+      "at": "2026-08-29T11:05:11.655Z",
+      "hourUtc": 11,
+      "views": 1149,
+      "reach": 1023,
+      "avgWatchS": 16.3,
+      "retentionPct": 27,
+      "likes": 10,
+      "comments": 1,
+      "saved": 4,
+      "shares": 1,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-09-motif-anti-cameras",
       "at": "2026-08-09T20:14:36.239Z",
       "hourUtc": 20,
@@ -459,23 +476,6 @@
       "themes": [],
       "sendTest": "Des pirates font écrire par une IA le code qui attaque les stations d'eau. Le FBI dit que ce n'est pas théorique.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-29-mail-texte-invisible",
-      "at": "2026-08-29T11:05:11.655Z",
-      "hourUtc": 11,
-      "views": 987,
-      "reach": 889,
-      "avgWatchS": 15.7,
-      "retentionPct": 26,
-      "likes": 10,
-      "comments": 1,
-      "saved": 2,
-      "shares": 1,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
-      "settled": false
     },
     {
       "slug": "2026-08-27-ia-forum-secret",
@@ -833,6 +833,25 @@
       "settled": true
     },
     {
+      "slug": "2026-08-29-anthropic-liste-noire",
+      "at": "2026-08-29T16:57:13.193Z",
+      "hourUtc": 16,
+      "views": 193,
+      "reach": 181,
+      "avgWatchS": 11.3,
+      "retentionPct": 19,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Anthropic a refusé que son IA serve à surveiller les Américains et à armer des drones. L'État l'a bannie. Un juge vient de dire que c'était illégal.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-06-aisi-faux-profils",
       "at": "2026-08-06T17:16:39.586Z",
       "hourUtc": 17,
@@ -920,25 +939,6 @@
       ],
       "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-29-anthropic-liste-noire",
-      "at": "2026-08-29T16:57:13.193Z",
-      "hourUtc": 16,
-      "views": 165,
-      "reach": 155,
-      "avgWatchS": 11.6,
-      "retentionPct": 19,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Anthropic a refusé que son IA serve à surveiller les Américains et à armer des drones. L'État l'a bannie. Un juge vient de dire que c'était illégal.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-ia-reserve-cours-sport",
