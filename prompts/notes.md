@@ -631,6 +631,21 @@ ENTRIES:
   independantes; le prepint bioRxiv lie en haut de outerbio.com est le seul
   artefact exterieur et biorxiv rend 429 (07 au 22/08). Dis-le dans le rapport et
   attribue dans le script.
+  Ajout 30/08 (16h30), CE QUE COUTE VRAIMENT UN RUN DE PUBLICATION QUAND LE SPEC
+  EST DEJA EPINGLE, mesure de bout en bout: 12 MINUTES entre le premier `date -u`
+  et le `media_publish` (16h38 -> 16h50 UTC), CONTENEUR FROID COMPRIS (npm
+  install, ffmpeg, venv Whisper bootstrap + large-v3-turbo en 21 s). Le spec
+  venait du scout de 06h30, re-gate par le run de 10h30 et laisse en banque avec
+  son recu et ses deux photos deja sur disque. Aucune capture reseau pendant le
+  build. L'entree du 21/08 16h30 disait "le scout supprime la moitie lente du
+  build": voila le chiffre. Consequence de planification: un run de 16h30 qui
+  herite d'un spec epingle a largement le temps de relire le carnet et les frames
+  AVANT de lancer, et un run qui doit encore capturer ses recus n'a pas ce temps.
+  Meme jour: cnbc.com et the-decoder.com se re-gatent DU PREMIER COUP en re-gate
+  de publication 9 h apres le gate du scout (12 verifications sur 12, 0 erreur,
+  0 warning, verifiedOnline true), et le recu the-decoder epingle hors moteur par
+  le scout a tenu en moteur sans une seule recapture (masthead, h1 = l'histoire,
+  signature, date "Aug 29, 2026" dans le cadre 9:16).
   Ajout 21/08 (19h30), DEUX PIEGES D'OUTILLAGE QUI COUTENT 15 MIN CHACUN.
   (1) Une capture tuee par `timeout` laisse des process chrome vivants, et le
   LANCEMENT SUIVANT se bloque indefiniment sans afficher une seule ligne:
@@ -3748,3 +3763,19 @@ ENTRIES:
   visible, pas seulement ce qui est absent. En VIDEO le meme durcissement a marche
   du premier coup (pile de papiers, lignes grises, zero charabia lisible,
   filmstrip 6 panneaux propre, sujet entier au dernier panneau): $0.60 le clip 6 s.
+  Ajout 30/08 (16h30), LA RECETTE "LIGNES GRISES" TIENT AUSSI EN VEO SUR UN ECRAN,
+  et c'est la troisieme confirmation d'affilee: beat 0 = "a computer monitor
+  showing the plain grey lines of a contract page on a white background" +
+  action "the grey contract lines sliding slowly downward, the whole monitor
+  staying whole, the same size and fully inside the frame the entire time".
+  Rendu du PREMIER coup, $0.96 le clip 8 s / 1080p: zero charabia lisible,
+  filmstrip 8 panneaux propre, moniteur meme objet / meme taille / present au 8e.
+  Les deux stills du meme Reel ("its body text rendered as fine horizontal grey
+  lines rather than readable words" + "the single page fills the entire frame")
+  sont sortis du premier coup eux aussi, avec pour seul texte lisible un libelle
+  court imprime par le modele ("PAGE 1 OF 3"), ce qui re-confirme l'entree du
+  29/08: les LIBELLES COURTS survivent, c'est l'anglais en paragraphes qui casse.
+  Ce qui a fait marcher le veo du premier coup est la clause de permanence de la
+  regle 3 du manuel ecrite DANS l'action ("staying whole, the same size and fully
+  inside the frame"), pas dans le subject: mets-la la, elle y est lue comme une
+  contrainte de mouvement.
