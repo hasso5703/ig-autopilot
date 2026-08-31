@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-31T16:41:19.721Z",
-  "n": 68,
-  "nSettled": 62,
-  "medianViews": 193,
+  "at": "2026-08-31T19:41:49.738Z",
+  "n": 69,
+  "nSettled": 63,
+  "medianViews": 195,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 48,
-      "medianViews": 248,
-      "meanRetentionPct": 23.4,
+      "n": 49,
+      "medianViews": 228,
+      "meanRetentionPct": 23.3,
       "saves": 71,
       "shares": 27,
       "thin": false
@@ -124,9 +124,9 @@
       "thin": true
     },
     "safety": {
-      "n": 6,
-      "medianViews": 231,
-      "meanRetentionPct": 27.3,
+      "n": 7,
+      "medianViews": 228,
+      "meanRetentionPct": 26.3,
       "saves": 4,
       "shares": 2,
       "thin": false
@@ -190,9 +190,9 @@
       "thin": true
     },
     "16": {
-      "n": 11,
-      "medianViews": 168,
-      "meanRetentionPct": 19.1,
+      "n": 12,
+      "medianViews": 176,
+      "meanRetentionPct": 19.2,
       "saves": 21,
       "shares": 4,
       "thin": false
@@ -761,6 +761,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-30-openai-coupe-cursor-musk",
+      "at": "2026-08-30T16:50:41.169Z",
+      "hourUtc": 16,
+      "views": 292,
+      "reach": 246,
+      "avgWatchS": 13.3,
+      "retentionPct": 22,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-19-avions-trainees",
       "at": "2026-08-19T17:07:45.947Z",
       "hourUtc": 17,
@@ -780,23 +797,6 @@
       "settled": true
     },
     {
-      "slug": "2026-08-30-openai-coupe-cursor-musk",
-      "at": "2026-08-30T16:50:41.169Z",
-      "hourUtc": 16,
-      "views": 281,
-      "reach": 238,
-      "avgWatchS": 13.4,
-      "retentionPct": 22,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-29-anthropic-liste-noire",
       "at": "2026-08-29T16:57:13.193Z",
       "hourUtc": 16,
@@ -813,7 +813,7 @@
         "safety"
       ],
       "sendTest": "Anthropic a refusé que son IA serve à surveiller les Américains et à armer des drones. L'État l'a bannie. Un juge vient de dire que c'était illégal.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-28-flock-plaques-voiture",
@@ -1117,6 +1117,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-31-robotaxi-freinage-blessures",
+      "at": "2026-08-31T10:52:52.409Z",
+      "hourUtc": 10,
+      "views": 132,
+      "reach": 128,
+      "avgWatchS": 7.3,
+      "retentionPct": 12,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des voitures sans chauffeur freinent si fort qu'elles blessent la personne assise dedans. Un homme est resté 157 jours en arrêt.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-05-waymo-dallas",
       "at": "2026-08-05T17:17:47.664Z",
       "hourUtc": 17,
@@ -1149,23 +1166,6 @@
       "themes": [],
       "sendTest": "Un salarié sur cinq a déjà confié à une IA une tâche qu'un collègue faisait avant. Et une tâche sur six prend maintenant plus de temps qu'avant.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-31-robotaxi-freinage-blessures",
-      "at": "2026-08-31T10:52:52.409Z",
-      "hourUtc": 10,
-      "views": 131,
-      "reach": 125,
-      "avgWatchS": 7.4,
-      "retentionPct": 12,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Des voitures sans chauffeur freinent si fort qu'elles blessent la personne assise dedans. Un homme est resté 157 jours en arrêt.",
-      "settled": false
     },
     {
       "slug": "2026-08-12-montre-tension-google",
@@ -1404,6 +1404,23 @@
       "themes": [],
       "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-31-chine-series-ia-acteurs",
+      "at": "2026-08-31T16:56:59.944Z",
+      "hourUtc": 16,
+      "views": 104,
+      "reach": 93,
+      "avgWatchS": 7.2,
+      "retentionPct": 12,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "En Chine, 95% des mini-séries sont déjà fabriquées par une IA. Des acteurs doivent donner leur visage à la machine avant d'être virés.",
+      "settled": false
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
