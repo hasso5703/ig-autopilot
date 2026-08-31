@@ -367,3 +367,10 @@
 {"at":"2026-08-31T10:47:04.524Z","slug":"2026-08-31-robotaxi-freinage-blessures","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1261}
 {"at":"2026-08-31T10:47:18.091Z","slug":"2026-08-31-robotaxi-freinage-blessures","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1291}
 {"at":"2026-08-31T10:47:32.699Z","slug":"2026-08-31-robotaxi-freinage-blessures","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1311}
+{"at":"2026-08-31T16:42:57.735Z","slug":"2026-08-31-chine-series-ia-acteurs","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"53.2s Sadaltager","usd":0.0266}
+{"at":"2026-08-31T16:46:27.282Z","slug":"2026-08-31-chine-series-ia-acteurs","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-31T16:46:41.423Z","slug":"2026-08-31-chine-series-ia-acteurs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1272}
+{"at":"2026-08-31T16:46:56.559Z","slug":"2026-08-31-chine-series-ia-acteurs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1285}
+{"at":"2026-08-31T16:47:11.986Z","slug":"2026-08-31-chine-series-ia-acteurs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1311}
+{"at":"2026-08-31T16:47:27.216Z","slug":"2026-08-31-chine-series-ia-acteurs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1283}
+{"at":"2026-08-31T16:51:52.374Z","slug":"2026-08-31-chine-series-ia-acteurs","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1337}
