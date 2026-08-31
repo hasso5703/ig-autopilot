@@ -3930,3 +3930,31 @@ ENTRIES:
   regle 3 du manuel ecrite DANS l'action ("staying whole, the same size and fully
   inside the frame"), pas dans le subject: mets-la la, elle y est lue comme une
   contrainte de mouvement.
+  Ajout 31/08 (16h30), LA LIMITE DE LA RECETTE "LIGNES GRISES": UN FORMULAIRE
+  N'EST PAS UN DOCUMENT. Meme spec que le 29-30/08 ("its body text rendered as
+  fine horizontal grey lines rather than readable words" + "the single page fills
+  the entire frame") mais sur "a single printed production schedule page": rendu
+  refuse au controle des frames, parce qu'un PLANNING est un formulaire et qu'un
+  formulaire n'a pas un corps de texte, il a des DIZAINES de micro-libelles de
+  champs. Le modele les a tous inventes en charabia ("Dateane:", "Coben:",
+  "Suornit:", "Ecola #") et a double l'en-tete ("DAILY PRODUCTION SCHEDULE" aux
+  lettres deformees). La regle du 29/08 (les libelles courts survivent) tient
+  pour DEUX OU TROIS libelles ("BILL TO", "PAGE 1 OF 3"), pas pour trente. DONC:
+  la recette lignes grises ne vaut que pour une page de PROSE (contrat,
+  ordonnance, lettre, facture). Devant un formulaire, un planning, un tableau de
+  bord ou une fiche a champs, change de sujet plutot que de durcir le prompt.
+  LE REMPLACEMENT QUI A MARCHE DU PREMIER COUP, $0.1337, tout le reste ressorti
+  du cache (narration, alignement, veo, 3 stills): demander une INTERFACE
+  LOGICIELLE au lieu d'un imprime, "a single computer monitor whose screen is
+  filled with stacked coloured video clip bars and timestamps" +
+  "extreme close-up from directly in front, the screen fills the entire frame".
+  Rendu: un vrai plan de montage video (barres de clips, timecode 00:15:30:12,
+  vignettes), zero charabia, parce que tout le texte y est de la NOTATION. Une UI
+  est le sujet le plus sur de la famille "il faut montrer du texte", devant le
+  document imprime. Attention: dis "stacked", jamais "rows of"/"line of"
+  (simplicityIssues, entree du 29/08). Meme run, beat 0 veo du PREMIER coup avec
+  la recette de glissement du 30/08 transposee a un telephone: "a single small
+  vertical video screen ... showing one colourful picture" + action "the
+  colourful picture on the screen sliding slowly upward and out of view, the
+  screen itself staying whole, the same size and fully inside the frame the
+  entire time". Quatrieme confirmation d'affilee, pellicule 8 panneaux propre.
