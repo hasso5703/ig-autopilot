@@ -1,8 +1,8 @@
 {
-  "at": "2026-08-31T10:41:37.551Z",
-  "n": 67,
-  "nSettled": 61,
-  "medianViews": 191,
+  "at": "2026-08-31T16:41:19.721Z",
+  "n": 68,
+  "nSettled": 62,
+  "medianViews": 193,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -39,7 +39,7 @@
     },
     {
       "slug": "2026-08-13-claude-marque-invisible",
-      "views": 1254,
+      "views": 1255,
       "retentionPct": 29,
       "saved": 4,
       "shares": 8,
@@ -90,11 +90,11 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 47,
-      "medianViews": 207,
-      "meanRetentionPct": 23.3,
-      "saves": 67,
-      "shares": 26,
+      "n": 48,
+      "medianViews": 248,
+      "meanRetentionPct": 23.4,
+      "saves": 71,
+      "shares": 27,
       "thin": false
     },
     "photo": {
@@ -158,11 +158,11 @@
       "thin": false
     },
     "11": {
-      "n": 6,
-      "medianViews": 275,
-      "meanRetentionPct": 14.2,
-      "saves": 4,
-      "shares": 5,
+      "n": 7,
+      "medianViews": 354,
+      "meanRetentionPct": 16,
+      "saves": 8,
+      "shares": 6,
       "thin": false
     },
     "12": {
@@ -362,8 +362,8 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1254,
-      "reach": 1121,
+      "views": 1255,
+      "reach": 1122,
       "avgWatchS": 17.2,
       "retentionPct": 29,
       "likes": 9,
@@ -396,7 +396,7 @@
       "slug": "2026-08-29-mail-texte-invisible",
       "at": "2026-08-29T11:05:11.655Z",
       "hourUtc": 11,
-      "views": 1228,
+      "views": 1229,
       "reach": 1102,
       "avgWatchS": 16.5,
       "retentionPct": 27,
@@ -407,7 +407,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-15-google-retire-filigrane",
@@ -783,11 +783,11 @@
       "slug": "2026-08-30-openai-coupe-cursor-musk",
       "at": "2026-08-30T16:50:41.169Z",
       "hourUtc": 16,
-      "views": 249,
-      "reach": 208,
-      "avgWatchS": 13.2,
+      "views": 281,
+      "reach": 238,
+      "avgWatchS": 13.4,
       "retentionPct": 22,
-      "likes": 0,
+      "likes": 1,
       "comments": 1,
       "saved": 0,
       "shares": 0,
@@ -800,8 +800,8 @@
       "slug": "2026-08-29-anthropic-liste-noire",
       "at": "2026-08-29T16:57:13.193Z",
       "hourUtc": 16,
-      "views": 227,
-      "reach": 215,
+      "views": 228,
+      "reach": 216,
       "avgWatchS": 11.9,
       "retentionPct": 20,
       "likes": 4,
@@ -1149,6 +1149,23 @@
       "themes": [],
       "sendTest": "Un salarié sur cinq a déjà confié à une IA une tâche qu'un collègue faisait avant. Et une tâche sur six prend maintenant plus de temps qu'avant.",
       "settled": true
+    },
+    {
+      "slug": "2026-08-31-robotaxi-freinage-blessures",
+      "at": "2026-08-31T10:52:52.409Z",
+      "hourUtc": 10,
+      "views": 131,
+      "reach": 125,
+      "avgWatchS": 7.4,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des voitures sans chauffeur freinent si fort qu'elles blessent la personne assise dedans. Un homme est resté 157 jours en arrêt.",
+      "settled": false
     },
     {
       "slug": "2026-08-12-montre-tension-google",
