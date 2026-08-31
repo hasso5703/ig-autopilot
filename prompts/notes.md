@@ -3487,10 +3487,17 @@ ENTRIES:
   et au scroll au h1 le MASTHEAD passe hors cadre: les 1686 px ne montrent que
   la carte verte, la rubrique TRANSPORTATION, le titre entier, la signature Sean
   O'Kane et la date, sans le mot TechCrunch nulle part (famille outerbio 22/08 /
-  theregister 25/08 / the-decoder 30/08). Sur techcrunch, capture en mode `top`.
-  La regle se durcit d'un cran: les gros sites de presse mesures ici demandent
-  presque tous le mode `top`, la ou les petits (sixthtone, forcepoint) sortent
-  bons au scroll au h1. Cout total: 19 min et 0 $, et les deux Reels du jour
+  theregister 25/08 / the-decoder 30/08). ET LE MODE `top` NE LE REPARE PAS,
+  contre-epreuve faite le meme matin sur la MEME url (780 s / 450 frames): en
+  `top` on recupere bien le logo TC en haut, mais la PHOTO DE TETE occupe alors
+  toute la suite des 1686 px visibles et le TITRE tombe SOUS le cadre. Le recu
+  montrerait une jolie voiture Waymo et pas une phrase. Aucun des deux cadrages
+  ne tient masthead ET titre: sur techcrunch, garde le scroll au h1 (le titre
+  est la preuve, controle du 10/08) et laisse l'identite de la source a la
+  signature et a la legende. La regle "les gros sites veulent le mode top"
+  (outerbio, theregister, the-decoder) n'est donc PAS generale: c'est la
+  hauteur de la photo de tete qui decide, et ca se teste en une capture.
+  Cout total des quatre captures: 32 min et 0 $, et les deux Reels du jour
   n'ont plus une seule capture a faire. Proof: scout 06h30 31/08.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08, scout 06h30 26/08, scout 06h30 27/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et

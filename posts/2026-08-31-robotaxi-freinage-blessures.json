@@ -166,10 +166,11 @@
         }
       },
       {
-        "script": "C'était un Waymo, à Phoenix. Et le plus gênant n'est pas ce freinage. C'est le nombre de fois où ça s'est reproduit.",
+        "script": "C'était un Waymo, à Phoenix. Et tu sais ce qui est le plus gênant ? Pas ce freinage, mais le nombre de fois où ça recommence.",
         "visual": {
           "type": "screenshot",
-          "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/"
+          "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+          "file": "media/2026-08-31-robotaxi-freinage-blessures/shot_1.png"
         }
       },
       {
@@ -211,7 +212,7 @@
         }
       },
       {
-        "script": "Zoox répond que ces freinages sont parfois inévitables. Waymo dit que la sécurité de ses passagers est primordiale. Les sous-traitants, eux, disent que ça arrivait encore en juillet.",
+        "script": "Zoox répond que ces freinages sont parfois inévitables. Waymo parle de sécurité primordiale. Les sous-traitants, eux, disent que ça arrivait encore en juillet.",
         "visual": {
           "type": "photo",
           "file": "media/2026-08-31-robotaxi-freinage-blessures/photo_6.jpg",
