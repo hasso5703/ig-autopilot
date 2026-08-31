@@ -362,3 +362,8 @@
 {"at":"2026-08-30T16:45:09.439Z","slug":"2026-08-30-openai-coupe-cursor-musk","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
 {"at":"2026-08-30T16:45:22.745Z","slug":"2026-08-30-openai-coupe-cursor-musk","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1264}
 {"at":"2026-08-30T16:45:36.115Z","slug":"2026-08-30-openai-coupe-cursor-musk","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.128}
+{"at":"2026-08-31T10:43:43.101Z","slug":"2026-08-31-robotaxi-freinage-blessures","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"56.9s Sadaltager","usd":0.0284}
+{"at":"2026-08-31T10:46:52.142Z","slug":"2026-08-31-robotaxi-freinage-blessures","kind":"video","model":"veo-3.1-fast-generate-preview","units":"8s@1080p","usd":0.96}
+{"at":"2026-08-31T10:47:04.524Z","slug":"2026-08-31-robotaxi-freinage-blessures","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1261}
+{"at":"2026-08-31T10:47:18.091Z","slug":"2026-08-31-robotaxi-freinage-blessures","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1291}
+{"at":"2026-08-31T10:47:32.699Z","slug":"2026-08-31-robotaxi-freinage-blessures","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1311}
