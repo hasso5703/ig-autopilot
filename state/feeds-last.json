@@ -1,12 +1,12 @@
 {
-  "at": "2026-08-31T06:42:47.326Z",
-  "fresh": 22,
+  "at": "2026-08-31T10:40:27.581Z",
+  "fresh": 21,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1157,
-      "fresh": 3,
+      "fresh": 2,
       "windowHours": 96
     },
     {
