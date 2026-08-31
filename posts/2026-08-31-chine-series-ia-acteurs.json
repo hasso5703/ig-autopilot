@@ -1,0 +1,242 @@
+{
+  "slug": "2026-08-31-chine-series-ia-acteurs",
+  "sendTest": "En Chine, 95% des mini-séries sont déjà fabriquées par une IA. Des acteurs doivent donner leur visage à la machine avant d'être virés.",
+  "centralClaim": "More than 95% of the 128,000 ultrashort dramas released in China in the first quarter of 2026 were AI-generated.",
+  "corroboration": [
+    {
+      "url": "https://www.sixthtone.com/news/1018902",
+      "quote": "More than 95% of the 128,000 ultrashort dramas released in the first quarter of 2026 were AI-generated, according to the China Netcasting Services Association (CNSA)."
+    },
+    {
+      "url": "https://the-decoder.com/ai-generated-videos-are-already-displacing-actors-and-livestreamers-across-chinas-entertainment-industry/",
+      "quote": "In Q1 2026, about 128,000 short dramas were published in China, three times the total for all of 2025. Ninety-five percent were AI-generated, according to the China Netcasting Services Association."
+    }
+  ],
+  "caption": "En Chine, 95% des mini-séries diffusées au premier trimestre ont été fabriquées par une intelligence artificielle.\n\n128 000 séries en trois mois, trois fois le total de toute l'année précédente. Dans un studio de Zhengzhou, la production est tombée de 200 séries par mois à une trentaine, les effectifs à plein temps de plus de 500 personnes à environ 200, et la cantine a fermé. Un acteur raconte que son revenu mensuel est passé d'environ 20 000 yuans à 5 000.\n\nLe détail qui fait le plus mal: certains comédiens doivent d'abord confier leur voix et leur visage à des outils d'IA, avant d'être remerciés.\n\nÀ garder en tête: le chiffre de 95% vient de l'association chinoise du secteur, pas d'un décompte indépendant, et la production tournée avec de vrais acteurs est repartie au deuxième trimestre.\n\nUne série faite par une machine, tu la regardes quand même, oui ou non ?\n\nSources: sixthtone.com, the-decoder.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Chine #Cinema",
+  "captionEvidence": [
+    {
+      "quote": "More than 95% of the 128,000 ultrashort dramas released in the first quarter of 2026 were AI-generated, according to the China Netcasting Services Association (CNSA).",
+      "url": "https://www.sixthtone.com/news/1018902"
+    },
+    {
+      "quote": "output had plunged from as many as 200 ultrashort dramas a month to around 30. Its full-time workforce had fallen from more than 500 employees at its 2025 peak to around 200. More than 20,000 costumes had been moved to a nearby building as an AI studio took over their former space. Even the canteen was closed.",
+      "url": "https://www.sixthtone.com/news/1018902"
+    },
+    {
+      "quote": "Luo says his monthly income fell from around 20,000 yuan during the boom to roughly 5,000 yuan. In the first three months after the Spring Festival, he worked just 20 days in total.",
+      "url": "https://www.sixthtone.com/news/1018902"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Chine · les mini-séries pour téléphone",
+      "headline": "En Chine, *95%* des mini-séries sont faites par une IA",
+      "hero": {
+        "value": "128 000",
+        "label": "séries sorties en un seul trimestre"
+      },
+      "swipe": "Le chiffre vient de l'association du secteur"
+    },
+    {
+      "type": "stat",
+      "figure": "95%",
+      "unit": "des mini-séries diffusées en Chine",
+      "body": "Sur **128 000** séries sorties au premier trimestre. *Trois fois* le total de toute l'année précédente.",
+      "evidence": "In Q1 2026, about 128,000 short dramas were published in China, three times the total for all of 2025. Ninety-five percent were AI-generated, according to the China Netcasting Services Association.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-videos-are-already-displacing-actors-and-livestreamers-across-chinas-entertainment-industry/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Qui a compté",
+      "body": "L'association chinoise des services de diffusion en ligne, sur les séries sorties au **premier trimestre**.",
+      "evidence": "More than 95% of the 128,000 ultrashort dramas released in the first quarter of 2026 were AI-generated, according to the China Netcasting Services Association (CNSA).",
+      "source": {
+        "name": "Sixth Tone",
+        "url": "https://www.sixthtone.com/news/1018902",
+        "date": "2026-08-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un studio qui se vide",
+      "body": "De **200** séries par mois à environ **30**. Les effectifs passent de plus de **500** personnes à **200**. La cantine a fermé.",
+      "evidence": "output had plunged from as many as 200 ultrashort dramas a month to around 30. Its full-time workforce had fallen from more than 500 employees at its 2025 peak to around 200. More than 20,000 costumes had been moved to a nearby building as an AI studio took over their former space. Even the canteen was closed.",
+      "source": {
+        "name": "Sixth Tone",
+        "url": "https://www.sixthtone.com/news/1018902",
+        "date": "2026-08-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les voitures du patron",
+      "body": "Le studio avait acheté trois voitures de luxe pour servir d'accessoires. Il les a *toutes revendues*.",
+      "evidence": "Zhoutu sold all three for a combined 4.5 million yuan ($650,000).",
+      "source": {
+        "name": "Sixth Tone",
+        "url": "https://www.sixthtone.com/news/1018902",
+        "date": "2026-08-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que ça fait à un acteur",
+      "body": "Son revenu mensuel tombe d'environ **20 000** yuans à **5 000**. En trois mois, il a travaillé **20** jours.",
+      "evidence": "Luo says his monthly income fell from around 20,000 yuan during the boom to roughly 5,000 yuan. In the first three months after the Spring Festival, he worked just 20 days in total.",
+      "source": {
+        "name": "Sixth Tone",
+        "url": "https://www.sixthtone.com/news/1018902",
+        "date": "2026-08-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Donner son visage, puis partir",
+      "body": "Des comédiens sont poussés à verser leur voix et leur image dans des outils d'IA *avant d'être licenciés*.",
+      "evidence": "Some performers are being forced to \"distil\" their voice and likeness into AI tools before getting fired.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-videos-are-already-displacing-actors-and-livestreamers-across-chinas-entertainment-industry/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi ça ne s'arrêtera pas",
+      "body": "Une minute de vidéo faite par IA coûte **90** à **120** dollars, environ dix pour cent d'un tournage avec de vrais acteurs.",
+      "evidence": "One minute of AI video now costs just $90 to $120, about ten percent of what production with human actors used to cost",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-generated-videos-are-already-displacing-actors-and-livestreamers-across-chinas-entertainment-industry/",
+        "date": "2026-08-29"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "I don't like AI, but I was forced to use it",
+      "attribution": "Chen Hao, directeur technique dans un studio d'IA, à Sixth Tone",
+      "evidence": "I don't like AI, but I was forced to use it",
+      "source": {
+        "name": "Sixth Tone",
+        "url": "https://www.sixthtone.com/news/1018935",
+        "date": "2026-08-25"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pense que l'IA ne touchera pas son métier",
+      "sub": "L'actu IA, vérifiée, en une minute."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Sixth Tone",
+      "url": "https://www.sixthtone.com/news/1018902",
+      "accessed": "2026-08-31"
+    },
+    {
+      "name": "Sixth Tone",
+      "url": "https://www.sixthtone.com/news/1018935",
+      "accessed": "2026-08-31"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/ai-generated-videos-are-already-displacing-actors-and-livestreamers-across-chinas-entertainment-industry/",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "95% des mini-séries chinoises sont faites par IA",
+    "beats": [
+      {
+        "script": "Les petites séries que tu vois passer en boucle, en Chine, 95% sont maintenant fabriquées par une IA. Et les acteurs, eux, sont rentrés chez eux.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single small vertical video screen standing upright on a plain surface, showing one colourful picture on a light background",
+            "action": "the colourful picture on the screen sliding slowly upward and out of view, the screen itself staying whole, the same size and fully inside the frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "medium framing, the whole screen fills most of the frame",
+            "setting": "in soft even daylight",
+            "ambient": "a quiet empty room, faint air movement"
+          }
+        }
+      },
+      {
+        "script": "128 000 séries en trois mois, trois fois plus que toute l'année d'avant. Mais le vrai choc n'est pas dans ce chiffre.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.sixthtone.com/news/1018902",
+          "file": "media/2026-08-31-chine-series-ia-acteurs/shot_1.png"
+        }
+      },
+      {
+        "script": "Un studio tournait 200 séries par mois. Il en fait 30. Ses patrons avaient acheté trois voitures de luxe comme accessoires. Ils les ont revendues.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single metal rail holding hanging costumes in a bare empty storage space",
+            "setting": "in soft even daylight",
+            "composition": "medium framing, the rail of costumes fills most of the frame"
+          }
+        }
+      },
+      {
+        "script": "Un acteur qui gagnait 20 000 yuans par mois n'en gagne plus que 5 000. En trois mois, il a travaillé 20 jours en tout.",
+        "visual": {
+          "type": "card",
+          "value": "5 000 yuans",
+          "label": "par mois, contre 20 000 avant l'IA"
+        }
+      },
+      {
+        "script": "Et il y a pire. Des comédiens doivent d'abord confier leur voix et leur visage à la machine. Ensuite, on les remercie.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/ai-generated-videos-are-already-displacing-actors-and-livestreamers-across-chinas-entertainment-industry/",
+          "file": "media/2026-08-31-chine-series-ia-acteurs/shot_4.png"
+        }
+      },
+      {
+        "script": "Dans ce studio, les effectifs sont passés de plus de 500 personnes à 200. 20 000 costumes ont déménagé pour laisser la place. La cantine a fermé.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single closed metal serving counter inside an empty canteen",
+            "setting": "in soft even daylight",
+            "composition": "medium framing, the closed counter fills most of the frame"
+          }
+        }
+      },
+      {
+        "script": "Un technicien du secteur le dit sans détour: il n'aime pas cette technologie, mais on l'a forcé à s'en servir quand même.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed production schedule page, its body text rendered as fine horizontal grey lines rather than readable words",
+            "setting": "in soft even daylight",
+            "composition": "seen from directly above, the single page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Une minute de vidéo faite par IA coûte 90 à 120 dollars. Environ dix pour cent d'un tournage avec de vrais acteurs. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single empty chair standing on a bare film studio floor",
+            "setting": "in soft even daylight",
+            "composition": "medium framing, the empty chair fills most of the frame"
+          }
+        }
+      }
+    ]
+  }
+}

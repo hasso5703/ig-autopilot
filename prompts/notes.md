@@ -857,6 +857,26 @@ ENTRIES:
   documents financiers) pendant que the-decoder porte le sien (la citation
   Sottiaux, le precedent Windsurf): la vraie double lecture est la, pas dans le
   nombre de domaines.
+  Ajout 31/08 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 26 verifications, deux dossiers) sixthtone.com/news/<id>
+  (NOUVEAU) et gizmodo.com (NOUVEAU au gate); techcrunch.com et the-decoder.com
+  re-confirment. Repond 200 aussi motorbiscuit.com (ferme de contenu, ne le
+  compte jamais comme une redaction). Bloquent, tous deux NEUFS et tous deux
+  porteurs du primaire d'une histoire du jour: **glassdoor.com/blog (403)** et
+  **ft.com (403)**. Consequence de planification, famille Bloomberg du 07/08: le
+  rapport Glassdoor sur l'IA au travail et le dossier FT sur les mini-series
+  chinoises n'ont AUCUN primaire joignable d'ici, donc toute reprise est
+  derivee. Le dossier chinois reste publiable parce que sixthtone a son PROPRE
+  reportage de terrain a cote du chiffre CNSA (deux volets signes He Qitong,
+  visite de studio, salaires d'acteurs, patron qui revend ses voitures); le
+  dossier Glassdoor n'a que des reecritures ET ses chiffres divergent d'une
+  reprise a l'autre (43% de positif chez the-decoder, 53% de negatif ailleurs),
+  mis en revisit sans une ligne d'ecrite. Ce qui sauve un dossier dont le
+  primaire bloque n'est jamais un troisieme domaine, c'est une redaction qui a
+  vu quelque chose elle-meme. REFLEXE SUR UNE ACTU CHINOISE: sixthtone.com est
+  joignable, signe ses articles, et publie en series de deux volets qui se
+  lient l'un l'autre (les URL voisines /news/1018902 et /news/1018935 se lisent
+  dans le HTML de chacune): un seul fetch donne les deux moities du dossier.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1527,6 +1547,22 @@ ENTRIES:
   sur "world", presque toujours disponible via "around the world", et il depeint
   litteralement la phrase source. La rotation sur place se re-confirme pour la
   CINQUIEME fois (12/08, 17/08 x2, 22/08, 28/08). Proof: run 16h30 28/08.
+  Ajout 31/08 (06h30), CORRECTION DE LA CONSIGNE "ECRIS LES SUJETS DE SPEC AU
+  SINGULIER" DE CETTE ENTREE: elle est FAUSSE des que le mot n'existe qu'au
+  pluriel dans tes citations. Mesure: `tokens('costume')` rend "costume",
+  `tokens('costumes')` rend "costum". La source ecrit "more than 20,000
+  costumes", donc storyVocab porte "costum" et un spec disant "a single empty
+  costume" est refuse "shares no word with the sources" sur un dossier ou les
+  costumes sont l'image centrale. Le 01/08 avait mesure l'inverse exact
+  ("spheres" -> "spher" ne matchait pas la source au singulier) et en avait tire
+  une regle de forme; la vraie regle est **ecris le mot dans la FORME que tes
+  citations emploient**, singulier ou pluriel, et verifie-le en 5 s:
+  `node --input-type=module -e "import {tokens} from './src/state.mjs';
+  console.log(tokens('costume'), tokens('costumes'))"`. Le controle qui tranche
+  sans aller-retour reseau, a faire avant le premier gate: recalculer les ancres
+  beat par beat sur tokens(subject+action+setting) INTER storyVocab, les deux
+  fonctions etant exportees. Ce matin il a rendu "NONE" sur 3 beats sur 5 avant
+  le gate. Proof: scout 06h30 31/08, dossier mini-series chinoises.
   posted.jsonl: a dead run may have published without recording. An unrecorded
   post republished as new is the account's worst failure. Proof: 27/07 death.
 - 2026-07-28 · techcrunch.com and prnewswire.com answer 503 to the session's
@@ -2288,6 +2324,30 @@ ENTRIES:
   disques chauds, zero texte lisible, zero marque - utile des qu'une histoire
   parle de chansons. upload.wikimedia a servi 6 fichiers d'affilee (UA de
   navigateur complet + referer commons, 6 s d'ecart) sans une page d'erreur.
+  Ajout 31/08 (06h30), LES DEUX ROBOTAXIS SONT DISPONIBLES EN VRAIES PHOTOS, et
+  c'est rare: sur une actu de voiture autonome, n'achete pas de still. "waymo
+  self driving car tempe" met en tete la valeur sure du 26/08 (zombieite,
+  CC BY 2.0, original 5184x3888), et le crop du carnet tient tel quel sur le
+  thumb 1920: `crop=810:1440:250:0` puis scale 1080:1920 rend un monospace
+  Waymo entier, le mot WAYMO et le lidar de toit lisibles, zero visage, zero
+  date, zero autre marque. Telecharge, recadre, regarde et epingle en 2 min,
+  $0. NOUVEAU du meme matin: "zoox robotaxi" rend QUATRE photos distinctes du
+  vrai vehicule Zoox ("Zoox Autonomous Robotaxi - San Francisco May 2025",
+  numerotees 1, 4, 5, 6, CC BY, 5476x3636 a 6108x4076), donc de quoi servir
+  plusieurs beats sans reprendre la meme image. ATTENTION AU CONTRESENS, et il
+  est propre a ce dossier: les blessures declarees a l'OSHA sont arrivees dans
+  des TOYOTA HIGHLANDER modifiees, pas dans la nacelle Zoox sans volant. Mettre
+  la nacelle sous une phrase qui parle du conducteur projete en avant fabrique
+  une accusation fausse par le montage, famille Mythos 5 / Opus 4.7 du 31/07.
+  Une vraie photo du bon fabricant peut montrer le mauvais objet. REQUETES
+  MORTES OU PIEGEES le meme matin, dossier cinema: "film studio lighting" met en
+  tete un appareil Leica (marque dans le titre ET dans le cadre, famille
+  Augmentin) puis des projecteurs des studios Gainsborough des annees 1940
+  (piege d'epoque, 17e occurrence); "costume rail wardrobe" ne rend que des
+  LETTRES MANUSCRITES DE 1849; "empty film set" ne rend rien d'exploitable.
+  Sur une actu de tournage il n'y a donc pas de photo libre utilisable ici:
+  prends des recus et des stills, comme le dit deja l'entree "quand rien de
+  reel n'existe".
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -2778,6 +2838,21 @@ ENTRIES:
   s'est retelecharge en 34 s. Ce n'est donc pas un alea rare: sur conteneur
   froid, attends-toi a payer ce detour une fois par run, et ne diagnostique
   rien d'autre avant de l'avoir applique.
+  Ajout 31/08 (06h30), TROISIEME MOT INTERDIT QUI VIENT DU GABARIT DU MOTEUR ET
+  PAS DE TON SPEC, apres "Windows" (18/08) et la camera d'humeur (17/08), et
+  celui-la vient du SON: `veoPrompt` ajoute toujours `Ambient sound: quiet room
+  tone` (promptcraft.mjs l.75). Donc des qu'une source s'appelle **Sixth Tone**,
+  extractForbidNames retient "Tone" et promptIssues refuse le beat 0 veo sur
+  `prompt names "Tone"` - un mot que ton spec n'ecrit nulle part et que tu ne
+  peux pas reecrire cote spec, exactement comme "Windows". Contrairement a
+  "Windows", il n'y a PAS besoin de toucher aux diapos: `ambient` est un champ
+  de spec accepte par veoPrompt et il REMPLACE la valeur par defaut. Remede
+  gratuit, accepte du premier coup: `ambient: "a quiet empty room, faint air
+  movement"`. Les champs de spec qui ecrasent un gabarit sont donc trois
+  (`camera`, `ambient`, `composition`): quand un mot interdit vient du moteur,
+  cherche d'abord s'il existe un champ qui le remplace. Attrape hors reseau, $0,
+  avant le premier gate, par le controle du 15/08 (veoPrompt + promptIssues +
+  simplicityIssues sur tous les specs). Proof: scout 06h30 31/08.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
@@ -3391,6 +3466,32 @@ ENTRIES:
   l'illusion que le titre ecrit "ANTROPIC" sans H. Recadre la ligne en PLEINE
   resolution (`crop=1290:180:0:<y>`) avant de conclure a une coquille de la
   source: les deux ecrivaient bien "ANTHROPIC".
+  Ajout 31/08 (06h30), TROIS RECUS MESURES HORS MOTEUR, a la queue leu leu, dont
+  un NEUF et excellent. (1) **sixthtone.com/news/<id> NOUVEAU**: PROPRE du
+  premier coup en 81 s / 8 frames, aucun recadrage, zero pub, zero banniere
+  cookies. Les 1686 px visibles (mesure du 22/08) tiennent le masthead
+  SIXTH TONE, la rubrique FEATURES, le titre ENTIER sur trois lignes (qui EST
+  l'histoire, controle du 10/08) et le debut du chapo, et sa photo de tete est
+  une vraie camera de tournage sur un plateau, donc le recu porte aussi le
+  sujet. Deux details a ne pas lire comme des defauts: `h1` revient VIDE a
+  page.evaluate (titre rendu hors <h1>, famille TNW du 23/08) et la page s'ouvre
+  quand meme sur le titre; et altsInFrame revient en CHINOIS ("封面" = couverture).
+  (2) the-decoder.com re-confirme le 30/08 et son mode `top` est bien
+  obligatoire: 184 s / 213 frames, propre, aucun recadrage, logo "the decoder",
+  tag Short News, titre entier, signature Matthias Bastian ET la date
+  "Aug 29, 2026" dans le cadre, donc le recu prouve lui-meme sa fraicheur.
+  (3) techcrunch.com: **le piege du 21/08 (redirection mobile vers la fausse
+  alerte McAfee loadway.best) NE S'EST PAS REPRODUIT**, deuxieme mesure
+  consecutive apres le 28/08, `landedUrl` et `h1` justes et l'alt de la photo de
+  tete conforme au sujet. Mais il coute 880 s / 115 frames, le plus cher du lot,
+  et au scroll au h1 le MASTHEAD passe hors cadre: les 1686 px ne montrent que
+  la carte verte, la rubrique TRANSPORTATION, le titre entier, la signature Sean
+  O'Kane et la date, sans le mot TechCrunch nulle part (famille outerbio 22/08 /
+  theregister 25/08 / the-decoder 30/08). Sur techcrunch, capture en mode `top`.
+  La regle se durcit d'un cran: les gros sites de presse mesures ici demandent
+  presque tous le mode `top`, la ou les petits (sixthtone, forcepoint) sortent
+  bons au scroll au h1. Cout total: 19 min et 0 $, et les deux Reels du jour
+  n'ont plus une seule capture a faire. Proof: scout 06h30 31/08.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08, scout 06h30 26/08, scout 06h30 27/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe

@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-30T19:42:25.543Z",
+  "at": "2026-08-31T06:43:52.093Z",
   "n": 67,
   "nSettled": 61,
   "medianViews": 191,
@@ -239,7 +239,7 @@
     }
   },
   "followers": {
-    "now": 43,
+    "now": 44,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -396,9 +396,9 @@
       "slug": "2026-08-29-mail-texte-invisible",
       "at": "2026-08-29T11:05:11.655Z",
       "hourUtc": 11,
-      "views": 1211,
-      "reach": 1086,
-      "avgWatchS": 16.4,
+      "views": 1227,
+      "reach": 1100,
+      "avgWatchS": 16.5,
       "retentionPct": 27,
       "likes": 10,
       "comments": 1,
@@ -780,6 +780,42 @@
       "settled": true
     },
     {
+      "slug": "2026-08-30-openai-coupe-cursor-musk",
+      "at": "2026-08-30T16:50:41.169Z",
+      "hourUtc": 16,
+      "views": 228,
+      "reach": 189,
+      "avgWatchS": 13.6,
+      "retentionPct": 23,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
+      "settled": false
+    },
+    {
+      "slug": "2026-08-29-anthropic-liste-noire",
+      "at": "2026-08-29T16:57:13.193Z",
+      "hourUtc": 16,
+      "views": 227,
+      "reach": 215,
+      "avgWatchS": 11.9,
+      "retentionPct": 20,
+      "likes": 4,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Anthropic a refusé que son IA serve à surveiller les Américains et à armer des drones. L'État l'a bannie. Un juge vient de dire que c'était illégal.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-28-flock-plaques-voiture",
       "at": "2026-08-28T17:34:13.949Z",
       "hourUtc": 17,
@@ -795,25 +831,6 @@
       "themes": [],
       "sendTest": "Des caméras lisent la plaque de chaque voiture et gardent la trace de tes trajets. Pour la première fois les Américains sont contre.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-29-anthropic-liste-noire",
-      "at": "2026-08-29T16:57:13.193Z",
-      "hourUtc": 16,
-      "views": 206,
-      "reach": 195,
-      "avgWatchS": 11.4,
-      "retentionPct": 19,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Anthropic a refusé que son IA serve à surveiller les Américains et à armer des drones. L'État l'a bannie. Un juge vient de dire que c'était illégal.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -1028,23 +1045,6 @@
       "themes": [],
       "sendTest": "Un mec attendait le coucher du soleil, l'IA de Google lui a dit qu'il était déjà passé. Un tribunal a jugé Google responsable de ce que son IA raconte.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-30-openai-coupe-cursor-musk",
-      "at": "2026-08-30T16:50:41.169Z",
-      "hourUtc": 16,
-      "views": 147,
-      "reach": 108,
-      "avgWatchS": 10.7,
-      "retentionPct": 18,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
-      "settled": false
     },
     {
       "slug": "2026-08-22-peau-humaine-vivante",

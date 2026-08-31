@@ -1,0 +1,235 @@
+{
+  "slug": "2026-08-31-robotaxi-freinage-blessures",
+  "sendTest": "Des voitures sans chauffeur freinent si fort qu'elles blessent la personne assise dedans. Un homme est resté 157 jours en arrêt.",
+  "centralClaim": "Waymo and Zoox test drivers were injured by hard braking from the autonomous vehicles.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+      "quote": "Test drivers for Waymo and Zoox sustained more than two dozen injuries in 2024 and 2025 from hard braking or other sudden movements made by the autonomous vehicles, according to a TechCrunch review of data submitted to the Occupational Safety and Health Administration."
+    },
+    {
+      "url": "https://gizmodo.com/waymo-zoox-vehicles-still-causing-injuries-to-test-drivers-report-2000804773",
+      "quote": "a concerning report shows a consistent trend of injuries to humans in Waymo and Zoox test vehicles. Occupational Safety and Health Administration data shows upwards of 20 injuries reported by Alphabet's Waymo and Amazon-owned Zoox, according to a report from TechCrunch. Many of the injuries reported to OSHA involved hard braking or quick directional changes on the street"
+    }
+  ],
+  "caption": "Une voiture sans chauffeur pile sans raison, et la personne assise au volant reste 157 jours en arrêt de travail.\n\nDes journalistes ont lu les déclarations d'accidents du travail transmises à l'agence fédérale américaine de sécurité au travail. On y trouve 16 blessures du côté de Waymo, huit du côté de Zoox, toutes causées par un logiciel qui freine ou braque tout seul. Entorses, douleurs au dos, coups du lapin.\n\nLe cas le plus lourd est à Los Angeles: des enfants jouaient sur la chaussée, la voiture s'est arrêtée si brutalement que le conducteur de test est resté 175 jours sans pouvoir travailler.\n\nCe qu'il faut garder en tête: ces chiffres existent seulement parce que ces deux entreprises se déclarent comme des services de taxi, ce qui les oblige à publier. Les autres constructeurs n'apparaissent pas dans les données.\n\nUne voiture qui pile trop souvent, c'est plus sûr ou moins sûr ? Dis-le en commentaire.\n\nSources: techcrunch.com, gizmodo.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Waymo #VoitureAutonome",
+  "captionEvidence": [
+    {
+      "quote": "a test driver in Phoenix wound up having to spend 157 days away from work after their vehicle",
+      "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/"
+    },
+    {
+      "quote": "reported 16 injuries tied to Waymo depot locations in three cities that were caused by the autonomous software braking hard or swerving suddenly",
+      "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/"
+    },
+    {
+      "quote": "The Waymo robotaxi stopped hard enough that the worker spent 175 days away from their job.",
+      "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Waymo et Zoox · sécurité au travail",
+      "headline": "Un Waymo pile sans raison, *157 jours* d'arrêt",
+      "hero": {
+        "value": "175",
+        "label": "jours sans travailler pour un autre conducteur de test"
+      },
+      "swipe": "Les chiffres viennent des déclarations officielles"
+    },
+    {
+      "type": "stat",
+      "figure": "157",
+      "unit": "jours d'arrêt de travail",
+      "body": "Un conducteur de test à *Phoenix*, après un freinage brutal de la voiture qu'il surveillait.",
+      "evidence": "a test driver in Phoenix wound up having to spend 157 days away from work after their vehicle",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+        "date": "2026-08-27"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Sans raison apparente",
+      "body": "Plusieurs rapports d'accident notent que le freinage est arrivé **sans aucun obstacle** devant la voiture.",
+      "evidence": "At least two other injury reports specifically mention that the hard braking happened for no apparent reason.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+        "date": "2026-08-27"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le décompte",
+      "body": "**16** blessures déclarées côté Waymo, huit côté Zoox, causées par le logiciel qui freine fort ou braque d'un coup.",
+      "evidence": "reported 16 injuries tied to Waymo depot locations in three cities that were caused by the autonomous software braking hard or swerving suddenly. Zoox reported as many as eight worker injuries linked to hard braking.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+        "date": "2026-08-27"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Quand le pilotage se coupe",
+      "body": "À **45** miles à l'heure, la voiture peut couper son pilotage d'un coup, et le corps part en avant.",
+      "evidence": "You could be going 45 miles per hour and the car will enact a nogo",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+        "date": "2026-08-27"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le cas le plus lourd",
+      "body": "Des enfants jouaient sur la chaussée. L'arrêt a été si violent que le salarié est resté **175 jours** sans travailler.",
+      "evidence": "The Waymo robotaxi stopped hard enough that the worker spent 175 days away from their job.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+        "date": "2026-08-27"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que sont ces voitures",
+      "body": "Des tout-terrains de série, équipés d'un *groupe de capteurs* sur le toit pour tester le logiciel de conduite.",
+      "evidence": "things like Toyota Highlanders modified to accommodate the group of sensors needed to test the AV software",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/waymo-zoox-vehicles-still-causing-injuries-to-test-drivers-report-2000804773",
+        "date": "2026-08-30"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "The safety of our riders, road users, and team is of paramount importance",
+      "attribution": "Waymo, à TechCrunch",
+      "evidence": "The safety of our riders, road users, and team is of paramount importance",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+        "date": "2026-08-27"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que dit Zoox",
+      "claim": "Ces freinages sont parfois inévitables, et ne représentent qu'une petite part de la distance parcourue.",
+      "caveatLabel": "Ce que disent les sous-traitants",
+      "caveat": "Les voitures freinaient encore d'un coup en juillet, et des salariés continuent de se blesser.",
+      "evidence": "were still braking hard and abruptly as recently as July. Three of those contractors said workers are still getting hurt.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+        "date": "2026-08-27"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui monte dans une voiture sans chauffeur",
+      "sub": "L'actu IA, vérifiée, en une minute."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/",
+      "accessed": "2026-08-31"
+    },
+    {
+      "name": "Gizmodo",
+      "url": "https://gizmodo.com/waymo-zoox-vehicles-still-causing-injuries-to-test-drivers-report-2000804773",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Un Waymo pile sans raison, 157 jours d'arrêt",
+    "beats": [
+      {
+        "script": "Une voiture sans chauffeur a pilé d'un coup, sans rien devant elle. Et l'homme assis au volant est resté 157 jours en arrêt de travail.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single black sensor unit mounted on the roof of a parked car",
+            "action": "turning slowly in place, the sensor unit staying whole, the same size and fully inside the frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "macro framing, the sensor unit fills most of the frame",
+            "setting": "under a plain open sky in soft even daylight"
+          }
+        }
+      },
+      {
+        "script": "C'était un Waymo, à Phoenix. Et le plus gênant n'est pas ce freinage. C'est le nombre de fois où ça s'est reproduit.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/08/27/sprains-pain-and-whiplash-waymo-and-zoox-test-drivers-are-getting-hurt-as-robotaxis-scale/"
+        }
+      },
+      {
+        "script": "Des journalistes ont lu les déclarations d'accidents du travail. 16 blessures chez Waymo, huit chez Zoox, causées par le logiciel qui freine ou braque tout seul.",
+        "visual": {
+          "type": "card",
+          "value": "16",
+          "label": "blessures chez Waymo, huit de plus chez Zoox"
+        }
+      },
+      {
+        "script": "Entorses, douleurs au dos, coups du lapin. Et dans plusieurs rapports, la même phrase revient: il n'y avait aucun obstacle devant la voiture.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed injury report page, its body text rendered as fine horizontal grey lines rather than readable words",
+            "setting": "in soft even daylight",
+            "composition": "seen from directly above, the single page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Le pire cas, à Los Angeles: des enfants jouaient sur la chaussée. La voiture a stoppé si fort que le salarié est resté 175 jours sans travailler.",
+        "visual": {
+          "type": "card",
+          "value": "175 jours",
+          "label": "sans travailler, après un seul arrêt brutal"
+        }
+      },
+      {
+        "script": "Et ça continue. À 45 miles à l'heure, le système peut se couper d'un seul coup, et tu pars en avant, au milieu de la circulation.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single steering wheel seen head on inside a stationary vehicle",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the steering wheel fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Zoox répond que ces freinages sont parfois inévitables. Waymo dit que la sécurité de ses passagers est primordiale. Les sous-traitants, eux, disent que ça arrivait encore en juillet.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-08-31-robotaxi-freinage-blessures/photo_6.jpg",
+          "credit": "zombieite · CC BY 2.0",
+          "alt": "Une voiture autonome Waymo garée, capteurs sur le toit"
+        }
+      },
+      {
+        "script": "Ces blessures ne sont visibles que parce que ces deux boîtes ont l'obligation de les publier. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single empty driver seat inside a plain vehicle",
+            "setting": "in soft even daylight",
+            "composition": "macro framing, the empty driver seat fills the entire frame"
+          }
+        }
+      }
+    ]
+  }
+}
