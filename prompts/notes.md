@@ -1547,6 +1547,23 @@ ENTRIES:
   sur "world", presque toujours disponible via "around the world", et il depeint
   litteralement la phrase source. La rotation sur place se re-confirme pour la
   CINQUIEME fois (12/08, 17/08 x2, 22/08, 28/08). Proof: run 16h30 28/08.
+  Ajout 31/08 (10h30), LE BEAT 0 D'UNE ACTU DE VOITURE AUTONOME: NE FILME PAS LA
+  VOITURE, FILME SON CAPTEUR DE TOIT. Le manuel dit la famille "voiture" la plus
+  risquee et le 26/08 ne l'avait sauvee qu'avec un travelling lateral verrouille.
+  Il y a plus simple, et c'est la SEPTIEME confirmation de la rotation sur place
+  (12/08, 17/08 x2, 22/08, 28/08 x2): subject "a single black sensor unit mounted
+  on the roof of a parked car" + action "turning slowly in place, the sensor unit
+  staying whole, the same size and fully inside the frame the entire time" +
+  camera "locked-off static shot, no camera movement, no zoom" + composition
+  "macro framing, the sensor unit fills most of the frame" + setting "under a
+  plain open sky in soft even daylight". Accepte du premier coup, $0,96 (clip 8 s
+  1080p, beat de 25 mots), pellicule 8 vignettes lue: meme objet, meme taille,
+  present a la 8e, la fente du capteur tourne visiblement, zero deformation.
+  Pourquoi c'est mieux qu'un plan de voiture: un dome de lidar est un objet RIGIDE
+  et SYMETRIQUE, donc rien a deformer (pas de carrosserie, pas de roues, pas de
+  vitres), et il n'y a aucune scene a objets multiples a refuser. Ancrage sur
+  "sensor" et "car", deux mots que toute source de robotaxi ecrit en minuscules.
+  Proof: run 10h30 31/08, veo_0 accepte du premier coup.
   Ajout 31/08 (06h30), CORRECTION DE LA CONSIGNE "ECRIS LES SUJETS DE SPEC AU
   SINGULIER" DE CETTE ENTREE: elle est FAUSSE des que le mot n'existe qu'au
   pluriel dans tes citations. Mesure: `tokens('costume')` rend "costume",
@@ -3742,6 +3759,16 @@ ENTRIES:
   croire au jour qu'il porte 3 Reels, casse `owedToday`/`roomToday` et arme le
   plafond quotidien contre un fantome. Corrige le champ SUR PLACE dans la
   derniere ligne de posted.jsonl, apres avoir verifie que c'est bien la tienne.
+  (6) Ajout 31/08 (10h30), LE PENDANT DE (3) SUR recordSeen, meme famille et meme
+  minute couteuse: `recordSeen` prend UN TABLEAU d'entrees portant chacune son
+  `outcome` et son `reason` en CHAMPS, pas `(item, outcome, reason)` en arguments.
+  Ecrit de memoire dans la boucle qui suit la publication, il jette une TypeError
+  explicite et la boucle meurt au premier element, donc AUCUNE des 5 entrees n'est
+  ecrite alors que le Reel est deja en ligne. Rien n'est perdu (l'appel est
+  atomique, on relance) mais c'est un aller-retour de plus dans la fenetre ou le
+  registre est en retard sur le compte. Forme juste:
+  `recordSeen([{ title, url, source, outcome, reason }, ...])`. Le message
+  d'erreur donne la bonne signature: lis-le au lieu de deviner.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
