@@ -218,7 +218,7 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a single wide computer screen filled with stacked coloured picture thumbnails of generated content",
+            "subject": "a single wide computer screen filled with an even grid of plain coloured squares of generated content, no writing anywhere on the screen",
             "setting": "in soft even daylight",
             "composition": "medium framing from directly in front, the screen fills most of the frame"
           }
@@ -235,12 +235,11 @@
       {
         "script": "Donc la prochaine fois qu'un profil te paraît trop parfait, regarde la mention sous son nom. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single small vertical phone screen showing one profile page, a portrait picture at the top and a short printed badge beside the name",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
-          }
+          "type": "photo",
+          "query": "woman holding cup looking at phone",
+          "file": "media/2026-09-01-instagram-faux-profils-ia/photo_8.jpg",
+          "credit": "Shixart1985 · CC BY",
+          "alt": "Une femme assise regarde son telephone, une tasse a la main"
         }
       }
     ]

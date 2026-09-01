@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-01T10:41:04.424Z",
-  "n": 69,
-  "nSettled": 63,
-  "medianViews": 195,
+  "at": "2026-09-01T16:41:28.729Z",
+  "n": 70,
+  "nSettled": 64,
+  "medianViews": 193,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -72,27 +72,27 @@
       "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait."
     },
     {
+      "slug": "2026-08-30-sony-warner-anthropic",
+      "views": 117,
+      "retentionPct": 18,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Sony et Warner attaquent Anthropic: ils disent que Claude a avalé Eye of the Tiger et All I Want for Christmas. 150 000 dollars reclames par chanson."
+    },
+    {
       "slug": "2026-08-18-robot-ami-des-enfants",
       "views": 117,
       "retentionPct": 13,
       "saved": 0,
       "shares": 0,
       "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu."
-    },
-    {
-      "slug": "2026-08-04-congres-chatgpt",
-      "views": 117,
-      "retentionPct": 13,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Le Congrès américain a payé ChatGPT 798 fois en un an, pendant qu'il décide comment encadrer l'IA."
     }
   ],
   "byBeat0": {
     "veo": {
-      "n": 49,
-      "medianViews": 228,
-      "meanRetentionPct": 23.3,
+      "n": 50,
+      "medianViews": 218,
+      "meanRetentionPct": 23.2,
       "saves": 71,
       "shares": 27,
       "thin": false
@@ -150,9 +150,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 11,
-      "medianViews": 477,
-      "meanRetentionPct": 23,
+      "n": 12,
+      "medianViews": 430,
+      "meanRetentionPct": 22.6,
       "saves": 14,
       "shares": 6,
       "thin": false
@@ -160,7 +160,7 @@
     "11": {
       "n": 7,
       "medianViews": 354,
-      "meanRetentionPct": 16,
+      "meanRetentionPct": 16.1,
       "saves": 8,
       "shares": 6,
       "thin": false
@@ -399,7 +399,7 @@
       "views": 1229,
       "reach": 1102,
       "avgWatchS": 16.5,
-      "retentionPct": 27,
+      "retentionPct": 28,
       "likes": 10,
       "comments": 1,
       "saved": 4,
@@ -624,9 +624,9 @@
       "slug": "2026-08-12-metro-londres-visages",
       "at": "2026-08-12T10:57:49.864Z",
       "hourUtc": 10,
-      "views": 382,
+      "views": 383,
       "reach": 343,
-      "avgWatchS": 23.2,
+      "avgWatchS": 23.1,
       "retentionPct": 39,
       "likes": 2,
       "comments": 1,
@@ -713,7 +713,7 @@
       "hourUtc": 16,
       "views": 308,
       "reach": 262,
-      "avgWatchS": 13.2,
+      "avgWatchS": 13.1,
       "retentionPct": 22,
       "likes": 1,
       "comments": 1,
@@ -1103,9 +1103,9 @@
       "slug": "2026-08-31-robotaxi-freinage-blessures",
       "at": "2026-08-31T10:52:52.409Z",
       "hourUtc": 10,
-      "views": 134,
-      "reach": 130,
-      "avgWatchS": 7.2,
+      "views": 137,
+      "reach": 133,
+      "avgWatchS": 7,
       "retentionPct": 12,
       "likes": 2,
       "comments": 1,
@@ -1386,7 +1386,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Sony et Warner attaquent Anthropic: ils disent que Claude a avalé Eye of the Tiger et All I Want for Christmas. 150 000 dollars reclames par chanson.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-24-enfant-apprend-mieux",
@@ -1438,6 +1438,25 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-01-chatgpt-pub-milliard",
+      "at": "2026-09-01T10:56:19.693Z",
+      "hourUtc": 10,
+      "views": 70,
+      "reach": 59,
+      "avgWatchS": 8,
+      "retentionPct": 13,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "La pub s'affiche dans les réponses de ChatGPT, en France aussi. Gratuit et Go la voient, Plus et Pro non.",
+      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",
