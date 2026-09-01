@@ -218,9 +218,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a single wide computer screen filled with an even grid of plain coloured squares of generated content, no writing anywhere on the screen",
-            "setting": "in soft even daylight",
-            "composition": "medium framing from directly in front, the screen fills most of the frame"
+            "subject": "a single computer screen filled with an even grid of plain coloured squares of generated content, no writing anywhere on the screen",
+            "setting": "in soft even daylight, nothing else visible around the screen",
+            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
           }
         }
       },

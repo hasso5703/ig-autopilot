@@ -381,3 +381,9 @@
 {"at":"2026-09-01T10:46:43.708Z","slug":"2026-09-01-chatgpt-pub-milliard","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1286}
 {"at":"2026-09-01T10:46:58.000Z","slug":"2026-09-01-chatgpt-pub-milliard","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1292}
 {"at":"2026-09-01T10:52:52.600Z","slug":"2026-09-01-chatgpt-pub-milliard","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1266}
+{"at":"2026-09-01T16:45:42.132Z","slug":"2026-09-01-instagram-faux-profils-ia","kind":"tts","model":"gemini-3.1-flash-tts-preview","units":"60.0s Sadaltager","usd":0.03}
+{"at":"2026-09-01T16:50:10.568Z","slug":"2026-09-01-instagram-faux-profils-ia","kind":"video","model":"veo-3.1-fast-generate-preview","units":"6s@720p","usd":0.6}
+{"at":"2026-09-01T16:50:26.692Z","slug":"2026-09-01-instagram-faux-profils-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1304}
+{"at":"2026-09-01T16:50:39.921Z","slug":"2026-09-01-instagram-faux-profils-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1199}
+{"at":"2026-09-01T16:50:58.176Z","slug":"2026-09-01-instagram-faux-profils-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1254}
+{"at":"2026-09-01T16:54:20.675Z","slug":"2026-09-01-instagram-faux-profils-ia","kind":"image","model":"gemini-3.1-flash-image","units":"9:16 2K","usd":0.1284}
