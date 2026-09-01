@@ -1,0 +1,267 @@
+{
+  "slug": "2026-09-01-chatgpt-pub-milliard",
+  "sendTest": "La pub s'affiche dans les réponses de ChatGPT, en France aussi. Gratuit et Go la voient, Plus et Pro non.",
+  "centralClaim": "OpenAI's advertising business inside ChatGPT has hit a $1 billion annualized revenue run rate, about 200 days after it launched.",
+  "corroboration": [
+    {
+      "url": "https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html",
+      "quote": "OpenAI on Monday announced that its advertising business has hit $1 billion in annualized revenue run rate"
+    },
+    {
+      "url": "https://siliconangle.com/2026/08/31/openai-says-its-ad-business-has-already-hit-1b-in-annualized-revenue/",
+      "quote": "OpenAI Group PBC today sought to justify its controversial decision to start running ads in ChatGPT several months ago, saying its new advertising business has now crossed the $1 billion annualized revenue run rate mark."
+    }
+  ],
+  "caption": "La pub s'affiche à l'intérieur des réponses de ChatGPT, et la France fait partie des pays concernés.\n\nOpenAI a annoncé lundi que sa publicité tourne à un rythme d'un milliard de dollars par an. Ce commerce a environ 200 jours. En Europe, ces pubs sont montrées uniquement aux comptes gratuits et à l'offre Go: les abonnements Plus, Pro et Entreprise restent sans publicité. Les offres qui les affichent représentent la très grande majorité du milliard de personnes qui utilisent ChatGPT chaque semaine.\n\nLe détail qui change tout: elles ne s'affichent pas à côté de la réponse, mais directement dedans, dans le texte que le modèle écrit.\n\nCe que le communiqué ne met pas en avant: au deuxième trimestre, la perte d'exploitation d'OpenAI a grimpé à 12.3 milliards de dollars.\n\nÀ garder en tête: OpenAI affirme que ces pubs sont clairement identifiées, qu'elles n'influencent pas les réponses et que les annonceurs n'ont pas accès aux conversations privées. Aucun tiers ne l'a vérifié.\n\nUne IA gratuite qui te montre des pubs, tu continues à l'utiliser, oui ou non ?\n\nSources: openai.com, cnbc.com, siliconangle.com, seroundtable.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #OpenAI",
+  "captionEvidence": [
+    {
+      "quote": "OpenAI on Monday announced that its advertising business has hit $1 billion in annualized revenue run rate",
+      "url": "https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html"
+    },
+    {
+      "quote": "OpenAI said Monday that its ad business, which is roughly 200 days old, builds on its existing revenue engines like its enterprise offerings, consumer subscriptions and usage-based application programming interfaces.",
+      "url": "https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html"
+    },
+    {
+      "quote": "These ads in Europe will be shown only to users on the free and go plans. Plus, Pro, and Enterprise subscriptions will remain ad-free.",
+      "url": "https://www.seroundtable.com/chatgpt-ads-europe-41902.html"
+    },
+    {
+      "quote": "Ads within the chatbot appear for OpenAI's Go subscribers and its free tier, which makes up the vast majority of its 1 billion weekly active users.",
+      "url": "https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html"
+    },
+    {
+      "quote": "The ads appear for ChatGPT Go subscribers and free-tier users directly within the model's responses to questions and prompts.",
+      "url": "https://siliconangle.com/2026/08/31/openai-says-its-ad-business-has-already-hit-1b-in-annualized-revenue/"
+    },
+    {
+      "quote": "OpenAI, in contrast, saw its operating loss grow to $12.3 billion.",
+      "url": "https://siliconangle.com/2026/08/31/openai-says-its-ad-business-has-already-hit-1b-in-annualized-revenue/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "31 août 2026 · OpenAI",
+      "headline": "La pub est entrée dans les réponses de *ChatGPT*",
+      "hero": {
+        "value": "1 milliard",
+        "label": "de dollars par an, 200 jours après le lancement"
+      },
+      "swipe": "Le chiffre vient d'OpenAI"
+    },
+    {
+      "type": "stat",
+      "figure": "$1",
+      "unit": "milliard de dollars par an",
+      "body": "Le rythme annualisé du chiffre d'affaires publicitaire d'OpenAI, *annoncé lundi*.",
+      "evidence": "OpenAI on Monday announced that its advertising business has hit $1 billion in annualized revenue run rate",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'âge de ce commerce",
+      "body": "Environ **200 jours**. Il s'ajoute aux abonnements et aux offres pour les entreprises.",
+      "evidence": "OpenAI said Monday that its ad business, which is roughly 200 days old, builds on its existing revenue engines like its enterprise offerings, consumer subscriptions and usage-based application programming interfaces.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où en Europe",
+      "body": "**31** pays européens, dont la *France*, l'Allemagne, l'Espagne et l'Italie.",
+      "evidence": "OpenAI announced it is expanding its ChatGPT Ads service and product to 31 European countries. These countries include Germany, France, Spain, Italy, Sweden, Norway, Denmark, the Netherlands, and Austria.",
+      "source": {
+        "name": "Search Engine Roundtable",
+        "url": "https://www.seroundtable.com/chatgpt-ads-europe-41902.html",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Qui les voit, qui ne les voit pas",
+      "body": "En Europe: la version gratuite et l'offre Go. Plus, Pro et Entreprise restent *sans publicité*.",
+      "evidence": "These ads in Europe will be shown only to users on the free and go plans. Plus, Pro, and Enterprise subscriptions will remain ad-free.",
+      "source": {
+        "name": "Search Engine Roundtable",
+        "url": "https://www.seroundtable.com/chatgpt-ads-europe-41902.html",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Combien de monde",
+      "body": "Ces deux offres représentent la très grande majorité du *milliard* de personnes qui utilisent ChatGPT chaque semaine.",
+      "evidence": "Ads within the chatbot appear for OpenAI's Go subscribers and its free tier, which makes up the vast majority of its 1 billion weekly active users.",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où elles s'affichent",
+      "body": "Pas à côté de la réponse. *Dedans*, dans le texte que le modèle écrit.",
+      "evidence": "The ads appear for ChatGPT Go subscribers and free-tier users directly within the model's responses to questions and prompts.",
+      "source": {
+        "name": "SiliconANGLE",
+        "url": "https://siliconangle.com/2026/08/31/openai-says-its-ad-business-has-already-hit-1b-in-annualized-revenue/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'OpenAI promet",
+      "body": "Des pubs *clairement identifiées*, sans influence sur les réponses, et pas d'accès des annonceurs aux conversations privées.",
+      "evidence": "The company reiterated once more that its ads are all clearly labeled and do not have any influence on ChatGPT's outputs.",
+      "source": {
+        "name": "SiliconANGLE",
+        "url": "https://siliconangle.com/2026/08/31/openai-says-its-ad-business-has-already-hit-1b-in-annualized-revenue/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Le communiqué",
+      "claim": "Un commerce qui décolle et un modèle économique *diversifié*.",
+      "caveatLabel": "Le trimestre",
+      "caveat": "Une perte d'exploitation montée à **12.3 milliards** de dollars.",
+      "evidence": "OpenAI, in contrast, saw its operating loss grow to $12.3 billion.",
+      "source": {
+        "name": "SiliconANGLE",
+        "url": "https://siliconangle.com/2026/08/31/openai-says-its-ad-business-has-already-hit-1b-in-annualized-revenue/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pose ses questions à ChatGPT",
+      "sub": "L'actu IA, vérifiée, en une minute."
+    }
+  ],
+  "sources": [
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+      "accessed": "2026-09-01"
+    },
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html",
+      "accessed": "2026-09-01"
+    },
+    {
+      "name": "SiliconANGLE",
+      "url": "https://siliconangle.com/2026/08/31/openai-says-its-ad-business-has-already-hit-1b-in-annualized-revenue/",
+      "accessed": "2026-09-01"
+    },
+    {
+      "name": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/chatgpt-ads-europe-41902.html",
+      "accessed": "2026-09-01"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "1 milliard de dollars de pub dans ChatGPT",
+    "beats": [
+      {
+        "script": "Tu poses une question à ChatGPT, et la réponse contient une pub. Elles sont arrivées dans 31 pays européens, dont la France.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single small vertical phone screen standing upright on a plain light surface, showing a plain conversation with its message text rendered as fine horizontal grey lines rather than readable words",
+            "action": "one small bright coloured advertising bar sliding slowly upward into the middle of the grey lines, the phone screen staying whole, the same size and fully inside the frame the entire time",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et tu sais combien ça rapporte déjà ? En 200 jours, un rythme d'un milliard de dollars par an.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+          "file": "media/2026-09-01-chatgpt-pub-milliard/shot_1.png"
+        }
+      },
+      {
+        "script": "Ces pubs ne s'affichent pas à côté de la réponse. Elles sont dedans, dans le texte que la machine t'écrit.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single wide computer screen showing a plain conversation, its message text rendered as fine horizontal grey lines rather than readable words, with one short bright coloured advertising bar among them",
+            "setting": "in soft even daylight",
+            "composition": "medium framing from slightly above, the whole screen and its stand inside the frame"
+          }
+        }
+      },
+      {
+        "script": "Et tout le monde ne les voit pas. En Europe, elles sont montrées à la version gratuite et à l'offre Go.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.seroundtable.com/chatgpt-ads-europe-41902.html",
+          "file": "media/2026-09-01-chatgpt-pub-milliard/shot_3.png"
+        }
+      },
+      {
+        "script": "Les abonnements Plus, Pro et Entreprise, eux, restent sans publicité. Autrement dit: si tu paies plus cher, tu ne la vois pas.",
+        "visual": {
+          "type": "card",
+          "value": "Sans pub",
+          "label": "les abonnements Plus, Pro et Entreprise en Europe"
+        }
+      },
+      {
+        "script": "OpenAI jure que ces pubs sont clairement identifiées, qu'elles n'influencent pas ses réponses, et que les annonceurs n'ont pas accès à tes conversations privées.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single small printed advertising card lying flat on a plain light surface, its two short printed words clearly visible",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly above, the printed card fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et ça touche du monde: la très grande majorité du milliard de personnes qui utilisent ChatGPT chaque semaine est sur ces deux offres.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single wide computer screen filled with stacked coloured advertising bars and short timestamps",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Et si OpenAI accélère comme ça, c'est qu'elle perd de l'argent: au deuxième trimestre, sa perte d'exploitation a grimpé à 12.3 milliards de dollars.",
+        "visual": {
+          "type": "card",
+          "value": "12.3 Md$",
+          "label": "de perte d'exploitation sur un seul trimestre"
+        }
+      },
+      {
+        "script": "Donc la version gratuite reste gratuite. Simplement, pendant que tu t'en sers, elle te vend aussi quelque chose. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single small printed price card standing on a plain light surface, its two short printed words clearly visible",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly in front, the printed card fills the entire frame"
+          }
+        }
+      }
+    ]
+  }
+}

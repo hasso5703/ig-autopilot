@@ -877,6 +877,40 @@ ENTRIES:
   joignable, signe ses articles, et publie en series de deux volets qui se
   lient l'un l'autre (les URL voisines /news/1018902 et /news/1018935 se lisent
   dans le HTML de chacune): un seul fetch donne les deux moities du dossier.
+  Ajout 01/09 (06h30), UN GATE VERT NE PROMET PAS UN RECU, ET C'EST UN QUATRIEME
+  CHEMIN RESEAU (famille du piege inverse cnbc du 03/08, mais dans l'autre sens).
+  Mesure du matin, dossier pub dans ChatGPT: cnbc.com rend 200 / 920 ko au fetch
+  gate et passe TOUTES ses citations VERIFIED du premier coup, mais sa CAPTURE
+  rend une page Akamai "Access Denied" en 29 s, avec `"ok": true` et
+  `landedUrl` juste. Meme run, siliconangle.com se gate du premier coup et sa
+  capture sort une PUB DELL pleine page plus le pied de page,
+  `h1` = "A message from John Furrier, co-founder of SiliconANGLE:". Deux
+  domaines verts au gate, zero recu utilisable, et les deux disent `ok: true`.
+  ET LA DECOUVERTE QUI RENVERSE UNE CONTRAINTE DE PLANIFICATION TENUE DEPUIS LE
+  26/07: openai.com rend toujours 403 au fetch gate (donc toujours INGATABLE au
+  primaire) MAIS SE CAPTURE PARFAITEMENT, 52 s / 6 frames, h1 juste, zero mur de
+  consentement. Le recu tient dans le cadre 9:16 le logo, la date, le titre, le
+  chapo qui porte le claim central en toutes lettres ET le bouton "Start
+  advertising in ChatGPT". Donc sur une annonce OpenAI, la bonne repartition est:
+  les CITATIONS chez les reprises joignables, le RECU chez le primaire. Un seul
+  defaut, la plomberie du 10/08: un lecteur video casse ("Player error" +
+  "Send Error Log"/"Reload Player") vers y=1270 sur 2796; `crop=1290:1240:0:0`
+  garde tout ce qui compte et le coupe. A tester sur les autres primaires
+  reputes bloques (anthropic.com se gate deja, x.ai, ft.com, bloomberg.com).
+  NOUVEAU ET EXCELLENT: seroundtable.com se gate ET se capture du premier coup
+  (115 s), titre entier, date, signature Barry Schwartz, zero banniere; sur une
+  actu de REGIE PUBLICITAIRE il porte la liste des pays et le detail des offres
+  (ici "these ads in europe will be shown only to users on the free and go
+  plans. plus, pro, and enterprise subscriptions will remain ad-free") que la
+  presse generaliste coupe, et c'est ce detail qui fait l'angle grand public.
+  Se capturent aussi proprement ce matin: engadget.com (275 s / 155 frames, et
+  les captures produit de Meta sont DANS le cadre) et techcrunch.com (210 s /
+  88 frames, h1 juste, aucune redirection McAfee: l'entree du 21/08 ne s'est
+  pas reproduite). REFLEXE DE SCOUT, il coute 2 min et sauve un build: capture
+  et EPINGLE (`"file"`) chaque beat `screenshot` AVANT de banquer le spec, et
+  lis `h1` et `landedUrl`. Un run de publication qui decouvre a l'achat que ses
+  deux recus sont morts n'a plus assez de surfaces reelles pour le plancher de
+  trois. Proof: run scout 06h30 01/09, 4 captures, 2 refusees, spec A refait.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -985,6 +1019,18 @@ ENTRIES:
   fichiers du dossier media sont, eux, ecrits au fil de l'eau et suffisent a
   suivre l'avancement (voice2.wav -> align.json/words.json -> veo_0.mp4 ->
   still_N.jpg -> reel.mp4).
+  Ajout 01/09 (06h30), (3) LE JOURNAL SE DEDOUBLE A CHAQUE HEURE RONDE, et
+  personne ne le voit avant `git status`: l'etat du shell ne survit PAS entre
+  deux appels de l'outil Bash, donc la ligne du manuel
+  `export RUN_JOURNAL="reports/journal/$(date -u +%F)-$(date -u +%H)h.md"`
+  doit etre reecrite dans chaque commande -- et elle recalcule `%H`. Un run
+  demarre a 06h40 ecrit donc dans -06h.md puis, des 07h00, dans un -07h.md tout
+  neuf: l'enregistreur de vol du run est coupe en deux, et le second fichier n'a
+  ni en-tete ni les etapes precedentes. Mesure de ce matin, 2 fichiers pour un
+  seul run. Remede: fige l'heure de DEMARRAGE une fois et recopie la constante
+  (`RUN_JOURNAL=reports/journal/2026-09-01-06h.md`) dans chaque appel, plutot
+  que de re-evaluer `date`. Si ca arrive quand meme, `cat le-07h >> le-06h` puis
+  `rm` avant de lander: un run, un fichier.
 - 2026-07-28 · Land state on main ONLY via `node src/land.mjs "msg" [paths]`.
   Local `main` is clone-time state, not truth; a checkout nearly erased
   posted.jsonl on 28/07. Never force-push, ever. Proof: run report 28/07.

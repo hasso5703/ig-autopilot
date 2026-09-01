@@ -1,0 +1,248 @@
+{
+  "slug": "2026-09-01-instagram-faux-profils-ia",
+  "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA.",
+  "centralClaim": "Instagram will reduce the reach of accounts that feature AI-generated people without disclosing it with its new label.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+      "quote": "Instagram announced Monday that it's changing how it labels AI-generated profiles and will start limiting the reach of accounts that feature AI-generated people without saying so."
+    },
+    {
+      "url": "https://www.engadget.com/2246914/instagram-will-demote-ai-generated-influencers-if-they-dont-clearly-label-their-account/",
+      "quote": "The app is now requiring such accounts to use a new \"AI-generated profile\" label that identifies it as featuring AI rather than a \"real human.\" Accounts that don't use the label will have their reach reduced, the company said."
+    }
+  ],
+  "caption": "Le médecin qui te vend des compléments sur les réseaux n'existe peut-être pas, et Instagram vient d'agir.\n\nLa plateforme a annoncé lundi qu'un compte mettant en avant une personne générée par IA doit désormais porter un libellé \"profil généré par IA\". Les comptes qui ne le portent pas verront leur portée réduite. L'ancien libellé, \"créateur IA\", était un fourre-tout facultatif.\n\nCe que ça ne vise pas: retoucher une photo, soigner une légende ou fabriquer un visuel ne demande aucun libellé.\n\nPourquoi maintenant. Le New York Times a rapporté en juillet avoir trouvé des centaines de médecins, guérisseurs et personnalités du bien-être générés par IA qui faisaient la promotion de compléments alimentaires. Une enquête de Wired a montré un réseau de faux influenceurs qui poussait une application de rencontres, Goose, certains allant jusqu'au message privé.\n\nÀ garder en tête: Meta encourage par ailleurs ses propres utilisateurs à fabriquer des contenus générés par IA, et a fait très peu pour les freiner. Un compte puni à tort pourra faire appel depuis son tableau de bord de statut.\n\nUn profil qui te plaît mais qui est généré par IA, tu continues à le suivre, oui ou non ?\n\nSources: techcrunch.com, engadget.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Instagram #Meta",
+  "captionEvidence": [
+    {
+      "quote": "Instagram announced Monday that it's changing how it labels AI-generated profiles and will start limiting the reach of accounts that feature AI-generated people without saying so.",
+      "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/"
+    },
+    {
+      "quote": "The New York Times reported in July it found hundreds of AI-generated doctors, healers, and wellness personalities on social media promoting supplements or making health claims to users.",
+      "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/"
+    },
+    {
+      "quote": "For instance, earlier this year, the gay dating app Goose became the subject of a Wired investigation after a network of apparently AI-generated male influencers promoted the app on Instagram.",
+      "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/"
+    },
+    {
+      "quote": "Creators who think they have been wrongfully penalized for this will have the option to appeal via Instagram's Account Status dashboard.",
+      "url": "https://www.engadget.com/2246914/instagram-will-demote-ai-generated-influencers-if-they-dont-clearly-label-their-account/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "31 août 2026 · Instagram",
+      "headline": "*Instagram* sanctionne le faux médecin qui te vend des compléments",
+      "hero": {
+        "value": "profil généré par IA",
+        "label": "le libellé désormais obligatoire sur ces comptes"
+      },
+      "swipe": "Annoncé lundi par la plateforme"
+    },
+    {
+      "type": "content",
+      "title": "La nouvelle règle",
+      "body": "Un compte qui met en avant une personne générée par IA *doit le dire*. Sinon, sa portée est réduite.",
+      "evidence": "Instagram announced Monday that it's changing how it labels AI-generated profiles and will start limiting the reach of accounts that feature AI-generated people without saying so.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le libellé change de nom",
+      "body": "Créateur IA devient *profil généré par IA*, pour que la mention soit plus claire.",
+      "evidence": "The platform says it's renaming its existing \"AI creator\" label to \"AI-generated profile,\" which Instagram says should make the disclosure easier to understand.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui n'est pas visé",
+      "body": "Retoucher une photo, soigner une légende, fabriquer un visuel: *aucun libellé* demandé.",
+      "evidence": "Instagram says people who use AI to edit photos, polish captions, create graphics, or make other creative tweaks don't need to use the AI-generated profile label.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "We've heard from our community that they don't like coming across a profile that seems human, only to find out later that the person featured is AI-generated",
+      "attribution": "Un porte-parole d'Instagram",
+      "evidence": "\"We've heard from our community that they don't like coming across a profile that seems human, only to find out later that the person featured is AI-generated,\" an Instagram spokesperson said.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2246914/instagram-will-demote-ai-generated-influencers-if-they-dont-clearly-label-their-account/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les faux soignants",
+      "body": "Des *centaines* de médecins, guérisseurs et personnalités du bien-être générés par IA, qui vendaient des compléments alimentaires.",
+      "evidence": "The New York Times reported in July it found hundreds of AI-generated doctors, healers, and wellness personalities on social media promoting supplements or making health claims to users.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le réseau de faux influenceurs",
+      "body": "Une application de rencontres, *Goose*, poussée par des influenceurs générés par IA. Certains écrivaient en message privé.",
+      "evidence": "For instance, earlier this year, the gay dating app Goose became the subject of a Wired investigation after a network of apparently AI-generated male influencers promoted the app on Instagram.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "La règle",
+      "claim": "Les comptes qui cachent leur IA perdent de la *portée*.",
+      "caveatLabel": "La maison",
+      "caveat": "Meta pousse ses propres utilisateurs à en fabriquer et a très peu freiné.",
+      "evidence": "But Meta, which often encourages users to make their own slop, has done very little to discourage AI content.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2246914/instagram-will-demote-ai-generated-influencers-if-they-dont-clearly-label-their-account/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et si c'est une erreur",
+      "body": "Un compte puni à tort peut *faire appel* depuis son tableau de bord de statut.",
+      "evidence": "Creators who think they have been wrongfully penalized for this will have the option to appeal via Instagram's Account Status dashboard.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2246914/instagram-will-demote-ai-generated-influencers-if-they-dont-clearly-label-their-account/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui suit un compte trop parfait",
+      "sub": "L'actu IA, vérifiée, en une minute."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+      "accessed": "2026-09-01"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/2246914/instagram-will-demote-ai-generated-influencers-if-they-dont-clearly-label-their-account/",
+      "accessed": "2026-09-01"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Instagram sanctionne les faux profils générés par IA",
+    "beats": [
+      {
+        "script": "Le médecin qui te conseille des compléments sur les réseaux n'existe peut-être pas. Et Instagram vient de changer ses règles. Tu sais pourquoi ?",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a single open supplement bottle standing upright on a plain light surface",
+            "action": "one white capsule rolling slowly out of the open neck and coming to rest beside it, the bottle staying whole, the same size and fully inside the frame the entire time",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly in front, the bottle fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Depuis lundi, un compte qui met en avant une personne générée par IA doit le dire. S'il ne le dit pas, sa portée sera réduite.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+          "file": "media/2026-09-01-instagram-faux-profils-ia/shot_1.png"
+        }
+      },
+      {
+        "script": "Le libellé s'appelle maintenant profil généré par IA. Avant, c'était créateur IA, et c'était surtout une mention fourre-tout.",
+        "visual": {
+          "type": "card",
+          "value": "Profil IA",
+          "label": "la mention désormais imposée à ces comptes"
+        }
+      },
+      {
+        "script": "En juillet, le New York Times a trouvé des centaines de médecins, guérisseurs et personnalités du bien-être générés par IA, qui vendaient des compléments alimentaires.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single white doctor coat hanging alone on a plain wall hook",
+            "setting": "in soft even daylight",
+            "composition": "medium framing, the coat fills most of the frame"
+          }
+        }
+      },
+      {
+        "script": "Et une application de rencontres, Goose, a été poussée par tout un réseau de faux influenceurs. Certains allaient parler aux gens en message privé.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.engadget.com/2246914/instagram-will-demote-ai-generated-influencers-if-they-dont-clearly-label-their-account/",
+          "file": "media/2026-09-01-instagram-faux-profils-ia/shot_4.png"
+        }
+      },
+      {
+        "script": "Attention, ça ne vise pas toute l'IA. Retoucher une photo, soigner une légende, fabriquer un visuel: là, tu n'as rien à déclarer.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed photo lying flat on a plain light surface, one corner slightly lifted",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly above, the printed photo fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Un journaliste spécialisé le résume ainsi: la maison encourage ses propres utilisateurs à fabriquer des images par IA, et n'a presque rien fait pour les freiner.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single wide computer screen filled with stacked coloured picture thumbnails of generated content",
+            "setting": "in soft even daylight",
+            "composition": "medium framing from directly in front, the screen fills most of the frame"
+          }
+        }
+      },
+      {
+        "script": "Et si un compte estime avoir été puni à tort, il pourra faire appel depuis son tableau de bord de statut.",
+        "visual": {
+          "type": "card",
+          "value": "Appel",
+          "label": "possible depuis le tableau de bord de statut du compte"
+        }
+      },
+      {
+        "script": "Donc la prochaine fois qu'un profil te paraît trop parfait, regarde la mention sous son nom. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single small vertical phone screen showing one profile page, a portrait picture at the top and a short printed badge beside the name",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
+          }
+        }
+      }
+    ]
+  }
+}

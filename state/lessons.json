@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-31T19:41:49.738Z",
+  "at": "2026-09-01T06:42:58.792Z",
   "n": 69,
   "nSettled": 63,
   "medianViews": 195,
@@ -708,6 +708,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-30-openai-coupe-cursor-musk",
+      "at": "2026-08-30T16:50:41.169Z",
+      "hourUtc": 16,
+      "views": 308,
+      "reach": 262,
+      "avgWatchS": 13.2,
+      "retentionPct": 22,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
       "at": "2026-08-06T19:59:50.589Z",
       "hourUtc": 19,
@@ -759,23 +776,6 @@
       ],
       "sendTest": "Google a mis un bouton dans Google Earth pour dessiner ce que tu veux sur les vraies cartes satellite. Retiré en un jour.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-30-openai-coupe-cursor-musk",
-      "at": "2026-08-30T16:50:41.169Z",
-      "hourUtc": 16,
-      "views": 292,
-      "reach": 246,
-      "avgWatchS": 13.3,
-      "retentionPct": 22,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
-      "settled": false
     },
     {
       "slug": "2026-08-19-avions-trainees",
@@ -1100,6 +1100,23 @@
       "settled": true
     },
     {
+      "slug": "2026-08-31-robotaxi-freinage-blessures",
+      "at": "2026-08-31T10:52:52.409Z",
+      "hourUtc": 10,
+      "views": 134,
+      "reach": 130,
+      "avgWatchS": 7.2,
+      "retentionPct": 12,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des voitures sans chauffeur freinent si fort qu'elles blessent la personne assise dedans. Un homme est resté 157 jours en arrêt.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-19-pub-dans-chatgpt",
       "at": "2026-08-19T10:54:09.002Z",
       "hourUtc": 10,
@@ -1115,23 +1132,6 @@
       "themes": [],
       "sendTest": "ChatGPT va afficher de la pub aux comptes gratuits en Europe ce mois-ci, choisie sur le sujet de ta conversation.",
       "settled": true
-    },
-    {
-      "slug": "2026-08-31-robotaxi-freinage-blessures",
-      "at": "2026-08-31T10:52:52.409Z",
-      "hourUtc": 10,
-      "views": 132,
-      "reach": 128,
-      "avgWatchS": 7.3,
-      "retentionPct": 12,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [],
-      "sendTest": "Des voitures sans chauffeur freinent si fort qu'elles blessent la personne assise dedans. Un homme est resté 157 jours en arrêt.",
-      "settled": false
     },
     {
       "slug": "2026-08-05-waymo-dallas",
@@ -1409,10 +1409,10 @@
       "slug": "2026-08-31-chine-series-ia-acteurs",
       "at": "2026-08-31T16:56:59.944Z",
       "hourUtc": 16,
-      "views": 104,
-      "reach": 93,
-      "avgWatchS": 7.2,
-      "retentionPct": 12,
+      "views": 111,
+      "reach": 107,
+      "avgWatchS": 6.7,
+      "retentionPct": 11,
       "likes": 2,
       "comments": 1,
       "saved": 0,
