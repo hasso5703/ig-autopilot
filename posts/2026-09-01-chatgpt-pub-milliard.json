@@ -226,9 +226,9 @@
         "visual": {
           "type": "image",
           "spec": {
-            "subject": "a single small printed advertising card lying flat on a plain light surface, its two short printed words clearly visible",
+            "subject": "a single phone lying flat on a plain table, its screen showing a plain conversation with the message text rendered as fine horizontal grey lines rather than readable words, and one small plain grey advertising block among them",
             "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly above, the printed card fills the entire frame"
+            "composition": "extreme close-up from directly above, the phone screen fills the entire frame"
           }
         }
       },
@@ -254,12 +254,11 @@
       {
         "script": "Donc la version gratuite reste gratuite. Simplement, pendant que tu t'en sers, elle te vend aussi quelque chose. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single small printed price card standing on a plain light surface, its two short printed words clearly visible",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly in front, the printed card fills the entire frame"
-          }
+          "type": "photo",
+          "query": "screen time",
+          "file": "media/2026-09-01-chatgpt-pub-milliard/photo_8.jpg",
+          "credit": "Rawpixel · CC0",
+          "alt": "Un homme regarde son telephone dans la rue"
         }
       }
     ]
