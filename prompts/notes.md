@@ -2916,6 +2916,45 @@ ENTRIES:
   cherche d'abord s'il existe un champ qui le remplace. Attrape hors reseau, $0,
   avant le premier gate, par le controle du 15/08 (veoPrompt + promptIssues +
   simplicityIssues sur tous les specs). Proof: scout 06h30 31/08.
+  Ajout 01/09 (10h30), LE SPEC QUI COMMANDE LUI-MEME LA PROSE INVENTEE, et c'est
+  la variante que 15 entrees de cette famille n'avaient pas nommee: toutes
+  parlaient d'un mot qui APPELLE du texte (report, ledger, names, checkbox,
+  log). Ici le spec DEMANDE le texte en toutes lettres. Deux stills banquees par
+  le scout portaient "its two short printed words clearly visible" (une carte
+  publicitaire, une carte de prix): rendues, elles affichent **"NOW. HERE."** et
+  **"NOW DUE"** en gros caracteres lisibles plein cadre, 6,8 s et 10,4 s, la
+  seconde en DERNIER beat. Gate vert, promptIssues vide, simplicityIssues vide,
+  COMPLIANT: seul le regard sur la frame l'attrape. "NOW DUE" affirme en prime
+  une facture que l'histoire ne contient pas. REGLE: ne demande JAMAIS a une
+  still des mots visibles, meme deux, meme courts - "printed words", "a label",
+  "a short caption", "its title readable" sont la meme commande que la prose du
+  01/08. Et relis les specs HERITES d'un scout avec ce grep avant de payer:
+  `grep -o "words\|label\|caption\|title\|text" sur les visual.spec`.
+  LE REMEDE QUI A MARCHE DU PREMIER COUP SUR UNE ACTU DE CONVERSATION (chatbot,
+  messagerie, assistant), et c'est une recette reutilisable a cote de "colonne
+  de chiffres" (10/08): decris le texte comme une TEXTURE, pas comme du contenu.
+  `subject: "a single phone lying flat on a plain table, its screen showing a
+  plain conversation with the message text rendered as fine horizontal grey
+  lines rather than readable words, and one small plain grey advertising block
+  among them"` + `setting: "in soft even daylight"` (vide de tout meuble, regle
+  du 24/08) + `composition: "extreme close-up from directly above, the phone
+  screen fills the entire frame"`: rendu des bulles de messages remplies de
+  lignes grises, ZERO mot, et l'image reste dans l'histoire. La meme formule
+  tenait deja le beat 0 veo du meme Reel (telephone debout, barre de pub qui
+  monte dans les lignes grises), accepte du premier coup, pellicule 8 vignettes
+  lue: meme objet, meme taille, present a la 8e - re-confirmation du 17/08
+  ("un ecran RIGIDE dont le CONTENU bouge") avec une translation verticale a la
+  place de la rotation. Cout de la lecon: $0,2586 jetes (les deux stries a mots)
+  + $0,1266 de rachat, rebuild a cout nul pour tout le reste (narration,
+  alignement, veo, stills 2 et 6 re-servis par leur .key, 2 recus epingles).
+  ET LE MEILLEUR RACHAT N'ETAIT PAS UNE STILL: le beat de chute est passe a une
+  `photo` reelle deja documentee dans ce carnet, "Screen time" (Rawpixel, CC0,
+  thumb 1920x1280, crop=720:1280:537:0, 5e re-confirmation), telechargee et
+  epinglee file+credit en 2 min pour $0. Le Reel finit donc sur un vrai visage
+  et compte 4 surfaces reelles au lieu de 3. Reflexe: quand une still de fin est
+  refusee au controle des frames, regarde d'abord si une valeur sure du carnet
+  fait l'affaire - c'est gratuit et c'est plus haut dans la hierarchie.
+  Proof: run 10h30 01/09, stills 5 et 8 refusees puis remplacees.
 - 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
   corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
   zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
