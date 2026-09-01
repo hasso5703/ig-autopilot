@@ -2863,6 +2863,19 @@ ENTRIES:
   une fois dans le MEME repertoire avant de toucher au `spec`, tout le reste
   (narration, alignement, stills deja payes) ressort du cache, donc la relance
   est gratuite. Ne reecris le prompt QUE si le refus se repete.
+  Ajout 01/09 (16h30), DEUXIEME MESSAGE DE REFUS VEO, MEME REMEDE, ET IL N'A
+  RIEN A VOIR AVEC LE PROMPT: `Veo refused: This model is currently
+  experiencing high demand. Spikes in demand are usually temporary. Please try
+  again later.` Reel2 sort en exit 1 APRES avoir paye la narration ($0,03) et
+  l'alignement. AUCUNE ligne video dans state/spend.jsonl (verifie: la seule
+  ligne video du run est le rachat de la relance, $0,60). Relance immediate de
+  la MEME commande dans le MEME repertoire: narration et clock ressortent du
+  cache ("reusing the reading already bought"), le clip passe du premier coup,
+  cout de l'incident $0. Donc sur un refus veo, la question n'est jamais
+  "faut-il reecrire le spec" avant d'avoir relance une fois: deux motifs
+  distincts (filtre RAI 27/08, saturation 01/09) ont le meme remede, et
+  attendre ne sert a rien non plus (relance 3 minutes apres, servie).
+  Proof: run 16h30 01/09, journal + spend.jsonl.
   Ajout 27/08 (16h30), DEUX RACHATS DE STILL DU MEME BUILD, ET LE SECOND EST LA
   FAMILLE "monitoring" DU MATIN, CONFIRMEE SUR UN AUTRE MOT. (1) PROSE INVENTEE
   SUR UN DOCUMENT, la famille que le manuel refuse: "a single identity card
