@@ -911,6 +911,24 @@ ENTRIES:
   lis `h1` et `landedUrl`. Un run de publication qui decouvre a l'achat que ses
   deux recus sont morts n'a plus assez de surfaces reelles pour le plancher de
   trois. Proof: run scout 06h30 01/09, 4 captures, 2 refusees, spec A refait.
+  Ajout 01/09 (19h30), LA PRESSE SANTE EST UN MUR ET C'EST NEUF: sur le dossier
+  ChatGPT Health / Epic (la meilleure histoire du soir, 325 millions de
+  patients), rendent 403 au fetch gate beckershospitalreview.com,
+  fiercehealthcare.com, healthcareitnews.com et cryptobriefing.com
+  (re-confirme le 16/08); artificialintelligence-news.com rend 202 sans corps
+  (famille mikekalil du 18/08). Rendent 200: techcrunch.com (le SEUL newsroom
+  joignable sur ce dossier), techtarget.com (/patientengagement/) et
+  iatrox.com, qui est un blog d'editeur, pas une redaction. Consequence de
+  planification: quand une annonce OpenAI touche la SANTE, la corroboration
+  n'est pas seulement en retard, la moitie des redactions qui la couvrent
+  d'habitude sont bloquees d'ici. Teste beckers et fierce AVANT d'ecrire, et
+  compte sur techtarget comme second domaine plutot que sur la presse
+  hospitaliere. Meme soir, dossier Alexa "Update Me When": aboutamazon.com
+  (/news/retail/ et /news/devices/) et engadget.com rendent 200 au fetch gate,
+  mais AUCUN des deux ne porte la fonction annoncee le jour meme, donc un
+  primaire joignable n'est pas un primaire qui a publie. Les deux dossiers
+  sont partis en `revisit`, ce qui re-confirme l'entree du 06/08: une annonce
+  d'apres-midi n'a souvent pas de second domaine avant le lendemain matin.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not

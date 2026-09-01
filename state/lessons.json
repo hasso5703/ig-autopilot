@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-01T16:41:28.729Z",
-  "n": 70,
-  "nSettled": 64,
-  "medianViews": 193,
+  "at": "2026-09-01T19:41:25.856Z",
+  "n": 71,
+  "nSettled": 65,
+  "medianViews": 195,
   "medianRetentionPct": 20,
   "top": [
     {
@@ -90,8 +90,8 @@
   ],
   "byBeat0": {
     "veo": {
-      "n": 50,
-      "medianViews": 218,
+      "n": 51,
+      "medianViews": 228,
       "meanRetentionPct": 23.2,
       "saves": 71,
       "shares": 27,
@@ -190,9 +190,9 @@
       "thin": true
     },
     "16": {
-      "n": 12,
-      "medianViews": 176,
-      "meanRetentionPct": 19.2,
+      "n": 13,
+      "medianViews": 183,
+      "meanRetentionPct": 19.4,
       "saves": 21,
       "shares": 4,
       "thin": false
@@ -722,7 +722,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "L'entreprise d'Elon Musk paie 60 milliards pour une appli de code, et OpenAI lui coupe l'acces a ses modeles deux semaines apres. Musk: je m'en fous.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-06-google-deepmind-passage-de-relais",
@@ -1103,7 +1103,7 @@
       "slug": "2026-08-31-robotaxi-freinage-blessures",
       "at": "2026-08-31T10:52:52.409Z",
       "hourUtc": 10,
-      "views": 137,
+      "views": 138,
       "reach": 133,
       "avgWatchS": 7,
       "retentionPct": 12,
@@ -1443,10 +1443,10 @@
       "slug": "2026-09-01-chatgpt-pub-milliard",
       "at": "2026-09-01T10:56:19.693Z",
       "hourUtc": 10,
-      "views": 70,
-      "reach": 59,
-      "avgWatchS": 8,
-      "retentionPct": 13,
+      "views": 81,
+      "reach": 71,
+      "avgWatchS": 6.9,
+      "retentionPct": 12,
       "likes": 1,
       "comments": 1,
       "saved": 0,
@@ -1474,6 +1474,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-01-instagram-faux-profils-ia",
+      "at": "2026-09-01T16:59:31.288Z",
+      "hourUtc": 16,
+      "views": 21,
+      "reach": 14,
+      "avgWatchS": 11.3,
+      "retentionPct": 19,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [],
+      "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
