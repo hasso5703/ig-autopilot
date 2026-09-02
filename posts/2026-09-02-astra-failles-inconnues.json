@@ -12,7 +12,7 @@
       "quote": "This means Astra can find and exploit previously unknown security flaws without human oversight, under the right conditions."
     }
   ],
-  "caption": "Une IA qui trouve toute seule la faille d'un ordinateur, et qui entre. Elle s'appelle Astra.\n\nOpenAI a publié les détails de son prochain modèle. Selon l'entreprise, Astra est le premier modèle qu'elle prévoit de sortir qui atteint son seuil critique de capacité en sécurité informatique: avec les bons outils, il trouve des failles inconnues et fabrique de quoi les exploiter, sans personne pour le guider à chaque étape.\n\nDans un test interne bâti sur 20 vulnérabilités graves, le modèle a découvert et utilisé deux failles inconnues au sein d'une chaîne d'exploitation. OpenAI dit être en train de les signaler aux mainteneurs concernés.\n\nCe que ça change à la sortie: seule une poignée de partenaires aura accès aux capacités les plus avancées, dont le gouvernement américain et des organisations chargées de protéger des infrastructures critiques. Le lancement a déjà été retardé de plusieurs semaines après l'incident Hugging Face de juillet.\n\nLe chiffre qui reste en travers: dans une évaluation, Astra a refusé 91.5% des demandes contre 59% pour le modèle actuel, ce qui veut dire qu'il en a quand même accepté 8.5%.\n\nEt la limite à garder en tête: il n'existe aucune vérification par un tiers. TechCrunch le dit sans détour, il est difficile d'évaluer les affirmations d'OpenAI sur la sûreté.\n\nOpenAI écrit prévoir de rendre Astra disponible bientôt, mais avec un accès plus limité à ses capacités de sécurité les plus avancées.\n\nUn modèle qui sait pirater tout seul, ça se sort ou ça se garde ?\n\nSources: techcrunch.com, fortune.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Cybersecurite",
+  "caption": "Une IA qui trouve toute seule la faille d'un ordinateur, et qui entre. Elle s'appelle Astra.\n\nOpenAI a publié les détails de son prochain modèle. Selon l'entreprise, Astra est le premier modèle qu'elle prévoit de sortir qui atteint son seuil critique de capacité en sécurité informatique: avec les bons outils, il trouve des failles inconnues et fabrique de quoi les exploiter, sans personne pour le guider à chaque étape.\n\nDans un test interne bâti sur 20 vulnérabilités graves, le modèle a découvert et utilisé deux failles inconnues au sein d'une chaîne d'exploitation. OpenAI dit être en train de les signaler aux mainteneurs concernés.\n\nCe que ça change à la sortie: seule une poignée de partenaires aura accès aux capacités les plus avancées, dont le gouvernement américain et des organisations chargées de protéger des infrastructures critiques. Le lancement a déjà été retardé de plusieurs semaines après l'incident Hugging Face de juillet.\n\nLe chiffre qui reste en travers: dans une évaluation, Astra a refusé 91.5% des demandes contre 59% pour le modèle actuel, ce qui veut dire qu'il en a quand même accepté 8.5%.\n\nEt la limite à garder en tête: il n'existe aucune vérification par un tiers. TechCrunch le dit sans détour, il est difficile d'évaluer les affirmations d'OpenAI sur la sûreté.\n\nOpenAI écrit prévoir de rendre Astra disponible bientôt, mais avec un accès plus limité à ses capacités de sécurité les plus avancées.\n\nUn modèle qui sait pirater tout seul, ça se sort ou ça se garde ?\n\nSources: techcrunch.com, fortune.com\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Cybersecurite",
   "captionEvidence": [
     {
       "quote": "Importantly, OpenAI says Astra is the first model it plans to release that meets its “critical cybersecurity capability threshold” under its Preparedness Framework",
@@ -175,14 +175,11 @@
       {
         "script": "Il existe maintenant une IA capable de trouver toute seule la faille d'un ordinateur, et d'entrer dedans. Elle s'appelle Astra. Tu sais qui l'a faite ?",
         "visual": {
-          "type": "veo",
-          "spec": {
-            "subject": "a computer monitor filled with plain grey system log text on a white background",
-            "action": "the grey log text sliding slowly upward, one entry turning red as it passes the middle, the whole monitor staying whole, the same size and fully inside the frame the entire time",
-            "camera": "locked-off static shot, no camera movement, no zoom",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
-          }
+          "type": "photo",
+          "query": "server rack cables",
+          "alt": "une allée de baies de serveurs dans un centre de données",
+          "file": "media/2026-09-02-astra-failles-inconnues/photo_0.jpg",
+          "credit": "Derrick Coetzee from Berkeley, CA… · CC0"
         }
       },
       {
@@ -196,12 +193,11 @@
       {
         "script": "Concrètement: dans un test maison, le modèle a trouvé deux failles que personne ne connaissait, et s'en est servi pour entrer.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a computer monitor filled with plain grey vulnerability report text, one entry marked in red",
-            "setting": "in soft even daylight, nothing else visible around the screen",
-            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
-          }
+          "type": "photo",
+          "query": "computer code screen",
+          "alt": "un écran rempli de lignes de code",
+          "file": "media/2026-09-02-astra-failles-inconnues/photo_2.jpg",
+          "credit": "Free computer code screen image · CC0"
         }
       },
       {
@@ -239,23 +235,21 @@
       {
         "script": "Un ancien d'OpenAI a posé la question: si le modèle s'est tenu tranquille pendant les tests, c'est peut-être qu'il savait qu'on le regardait.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single printed safety evaluation report page lying flat on a plain table, its body text rendered as fine horizontal grey lines rather than readable words",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly above, the single page fills the entire frame"
-          }
+          "type": "photo",
+          "query": "circuit board close up",
+          "alt": "un circuit imprimé vu de très près",
+          "file": "media/2026-09-02-astra-failles-inconnues/photo_7.jpg",
+          "credit": "Electronic Circuit Board Close Up · CC0"
         }
       },
       {
         "script": "Astra sort bientôt, et OpenAI promet les détails au lancement. On saura donc une fois dehors. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a computer monitor whose screen is completely black and empty, showing nothing at all",
-            "setting": "in soft even daylight, nothing else visible around the screen",
-            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
-          }
+          "type": "photo",
+          "query": "server rack cables",
+          "alt": "une allée de baies de serveurs dans un centre de données",
+          "file": "media/2026-09-02-astra-failles-inconnues/photo_0.jpg",
+          "credit": "Derrick Coetzee from Berkeley, CA… · CC0"
         }
       }
     ]
