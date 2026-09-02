@@ -3973,6 +3973,14 @@ ENTRIES:
   passe directement au travail qui sert (verifier que les specs banques gatent
   toujours en ligne, banquer les candidats, poser l'etat). Les deux specs du
   02/09 ont ete re-gates PASSED a 16h41 sans une seule requete payante.
+  TROISIEME mesure a 19h40 (veille du 02/09): meme 53 caracteres, meme prefixe
+  AQ.Ab8, meme 401 sur /v1beta/models, soit trois creneaux consecutifs et neuf
+  heures avec la meme cle morte. N'attends donc rien du creneau suivant: tant
+  que Hasan n'a pas remis une cle `AIza` de 39 caracteres dans l'environnement,
+  la reponse n'est pas d'attendre mais de basculer en `OOM_SILENT=1` (entree
+  02/09 plus bas), qui a tenu la journee entiere a 0,00 $. Et le run de veille
+  refait ce test de 5 s meme s'il ne publie rien: c'est lui qui previent Hasan
+  a temps pour le lendemain, sinon les deux runs du matin repartent en muet.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne

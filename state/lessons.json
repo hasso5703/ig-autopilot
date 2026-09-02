@@ -1,13 +1,13 @@
 {
-  "at": "2026-09-02T10:42:21.572Z",
-  "n": 71,
-  "nSettled": 65,
-  "medianViews": 195,
+  "at": "2026-09-02T19:40:41.460Z",
+  "n": 73,
+  "nSettled": 67,
+  "medianViews": 191,
   "medianRetentionPct": 20,
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
-      "views": 1801,
+      "views": 1805,
       "retentionPct": 40,
       "saved": 2,
       "shares": 1,
@@ -23,7 +23,7 @@
     },
     {
       "slug": "2026-08-15-camions-sans-chauffeur",
-      "views": 1296,
+      "views": 1297,
       "retentionPct": 21,
       "saved": 0,
       "shares": 3,
@@ -64,6 +64,14 @@
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
     },
     {
+      "slug": "2026-08-31-chine-series-ia-acteurs",
+      "views": 111,
+      "retentionPct": 11,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "En Chine, 95% des mini-séries sont déjà fabriquées par une IA. Des acteurs doivent donner leur visage à la machine avant d'être virés."
+    },
+    {
       "slug": "2026-08-24-enfant-apprend-mieux",
       "views": 114,
       "retentionPct": 8,
@@ -78,21 +86,13 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "Sony et Warner attaquent Anthropic: ils disent que Claude a avalé Eye of the Tiger et All I Want for Christmas. 150 000 dollars reclames par chanson."
-    },
-    {
-      "slug": "2026-08-18-robot-ami-des-enfants",
-      "views": 117,
-      "retentionPct": 13,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Des enfants autistes parlaient chaque soir à un petit robot bleu. La boîte a fermé, les serveurs se sont éteints, et le robot s'est tu."
     }
   ],
   "byBeat0": {
     "veo": {
-      "n": 51,
-      "medianViews": 228,
-      "meanRetentionPct": 23.2,
+      "n": 53,
+      "medianViews": 207,
+      "meanRetentionPct": 22.8,
       "saves": 71,
       "shares": 27,
       "thin": false
@@ -150,9 +150,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 12,
-      "medianViews": 430,
-      "meanRetentionPct": 22.6,
+      "n": 13,
+      "medianViews": 383,
+      "meanRetentionPct": 21.8,
       "saves": 14,
       "shares": 6,
       "thin": false
@@ -160,7 +160,7 @@
     "11": {
       "n": 7,
       "medianViews": 354,
-      "meanRetentionPct": 16.1,
+      "meanRetentionPct": 16,
       "saves": 8,
       "shares": 6,
       "thin": false
@@ -190,9 +190,9 @@
       "thin": true
     },
     "16": {
-      "n": 13,
-      "medianViews": 183,
-      "meanRetentionPct": 19.4,
+      "n": 14,
+      "medianViews": 176,
+      "meanRetentionPct": 18.8,
       "saves": 21,
       "shares": 4,
       "thin": false
@@ -247,7 +247,7 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1801
+            "views": 1805
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
@@ -290,8 +290,8 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1801,
-      "reach": 1612,
+      "views": 1805,
+      "reach": 1615,
       "avgWatchS": 24.1,
       "retentionPct": 40,
       "likes": 23,
@@ -326,8 +326,8 @@
       "slug": "2026-08-15-camions-sans-chauffeur",
       "at": "2026-08-15T11:01:21.605Z",
       "hourUtc": 11,
-      "views": 1296,
-      "reach": 1161,
+      "views": 1297,
+      "reach": 1162,
       "avgWatchS": 12.7,
       "retentionPct": 21,
       "likes": 14,
@@ -396,10 +396,10 @@
       "slug": "2026-08-29-mail-texte-invisible",
       "at": "2026-08-29T11:05:11.655Z",
       "hourUtc": 11,
-      "views": 1229,
+      "views": 1230,
       "reach": 1102,
       "avgWatchS": 16.5,
-      "retentionPct": 28,
+      "retentionPct": 27,
       "likes": 10,
       "comments": 1,
       "saved": 4,
@@ -1114,7 +1114,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Des voitures sans chauffeur freinent si fort qu'elles blessent la personne assise dedans. Un homme est resté 157 jours en arrêt.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-19-pub-dans-chatgpt",
@@ -1389,6 +1389,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-01-chatgpt-pub-milliard",
+      "at": "2026-09-01T10:56:19.693Z",
+      "hourUtc": 10,
+      "views": 115,
+      "reach": 105,
+      "avgWatchS": 6.5,
+      "retentionPct": 11,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "veo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "La pub s'affiche dans les réponses de ChatGPT, en France aussi. Gratuit et Go la voient, Plus et Pro non.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-24-enfant-apprend-mieux",
       "at": "2026-08-24T17:08:53.955Z",
       "hourUtc": 17,
@@ -1420,33 +1439,14 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "En Chine, 95% des mini-séries sont déjà fabriquées par une IA. Des acteurs doivent donner leur visage à la machine avant d'être virés.",
-      "settled": false
-    },
-    {
-      "slug": "2026-09-01-chatgpt-pub-milliard",
-      "at": "2026-09-01T10:56:19.693Z",
-      "hourUtc": 10,
-      "views": 108,
-      "reach": 98,
-      "avgWatchS": 6.9,
-      "retentionPct": 12,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "veo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "La pub s'affiche dans les réponses de ChatGPT, en France aussi. Gratuit et Go la voient, Plus et Pro non.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-01-instagram-faux-profils-ia",
       "at": "2026-09-01T16:59:31.288Z",
       "hourUtc": 16,
-      "views": 91,
-      "reach": 76,
+      "views": 95,
+      "reach": 80,
       "avgWatchS": 7.4,
       "retentionPct": 12,
       "likes": 0,
@@ -1474,6 +1474,40 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-02-astra-failles-inconnues",
+      "at": "2026-09-02T17:30:10.156Z",
+      "hourUtc": 17,
+      "views": 47,
+      "reach": 37,
+      "avgWatchS": 6.7,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "OpenAI dit que son prochain modèle, Astra, trouve tout seul des failles que personne ne connaît et s'en sert pour entrer. Il ne sera pas donné à tout le monde.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-02-chatgpt-dossier-medical",
+      "at": "2026-09-02T17:25:09.248Z",
+      "hourUtc": 17,
+      "views": 33,
+      "reach": 27,
+      "avgWatchS": 5.9,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
+      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",
