@@ -1724,11 +1724,6 @@ ENTRIES:
   "UK" to "U.K." mid-day and a morning-gated candidate went NOT_FOUND by 19h.
   Re-run validate.mjs on any stored spec before building from it; re-copy the
   quote verbatim from the live page. Proof: 19h journal 28/07.
-- 2026-07-28 · The 27/07 Microsoft carousel was deleted from the account
-  (mediaId 17884181772455155 returns "does not exist"; only the day's Reel
-  remains). Its posted.jsonl entry is intentional memory that still blocks
-  re-coverage; never reconcile or delete it. insights.mjs reporting ok:false
-  for that id is normal. Proof: publish.mjs recent + insights, 19h 28/07.
 - 2026-07-29 · Photo beats (16h): l'API Openverse peut répondre 503 quelques
   minutes (curl direct répondait 200 pendant que le build échouait; réessayer,
   pas déboguer). Le filtre fond-blanc rejette presque toutes les photos de
@@ -4167,3 +4162,31 @@ ENTRIES:
   colourful picture on the screen sliding slowly upward and out of view, the
   screen itself staying whole, the same size and fully inside the frame the
   entire time". Quatrieme confirmation d'affilee, pellicule 8 panneaux propre.
+
+- 2026-09-02 · (16h30, Hasan en direct) LE MODE SILENCIEUX, ET LE BUG DE
+  KARAOKE QU'IL A REVELE. Quand la cle media est morte, TOUT est mort: la voix
+  passe par le meme GEMINI_API_KEY que les stills et le veo (genmedia.mjs), donc
+  "publier sans generer d'images" veut dire publier SANS VOIX. Le jeton
+  ephemere AQ.Ab8 est refuse partout, y compris sur l'API Live (le WebSocket
+  s'OUVRE puis se ferme en 1008 "unregistered callers": une poignee de main TCP
+  n'est pas une authentification, ne conclus rien d'un `OPEN`). Ce qui reste
+  gratuit et suffit a faire un Reel: `screenshot` (Chromium local, plafond 3),
+  `photo` (Openverse/Commons), `card` (typo maison, plafond 2), la musique, le
+  karaoke et la carte de fin. D'ou `OOM_SILENT=1 node src/reel2.mjs ...`
+  (reel2.mjs): pas d'achat TTS, pas de passe Whisper, l'horloge des mots est
+  derivee du budget de parole (silentWordClock, meme fenetre de mots que le
+  gate), la piste voix est un vrai silence et loudnorm remonte le lit musical.
+  Mesure: deux Reels 60,0 s COMPLIANT construits pour 0,00 $ en ~4 min chacun.
+  DEUX PIEGES: (1) le moteur COUPE le karaoke sur un beat `card` (pour ne pas
+  empiler trois textes) - en mode silencieux ca donne 7 a 11 s sans un mot a
+  l'ecran, donc SILENT reactive le karaoke sur les cartes; (2) le karaoke
+  supprimait les points ET LES VIRGULES A L'INTERIEUR DU MOT: "99.1%" etait
+  grave "991%", "12.3 milliards" -> "123 milliards". Invisible depuis toujours
+  parce que les cartes etaient muettes, mais ca vivait aussi sur les autres
+  beats. Corrige (on ne retire que les bords du token) + test de non-regression
+  (124 tests). Pour les photos: l'index Openverse repond mal aux requetes
+  medicales ou de bureau (filtre near-white, et des hors-sujet complets: un
+  musee radar pour "operating room", le Capitole pour "courthouse", du rawpixel
+  filigrane pour "server room dark"). Regarde CHAQUE photo avant de la fixer,
+  compte 3 a 4 requetes pour 1 photo utilisable, et prefere les sujets denses
+  (bloc operatoire, baie de serveurs, circuit imprime, ecran de code).
