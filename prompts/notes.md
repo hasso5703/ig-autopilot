@@ -929,6 +929,47 @@ ENTRIES:
   primaire joignable n'est pas un primaire qui a publie. Les deux dossiers
   sont partis en `revisit`, ce qui re-confirme l'entree du 06/08: une annonce
   d'apres-midi n'a souvent pas de second domaine avant le lendemain matin.
+  Ajout 02/09 (06h30), LE SITE DE L'EDITEUR EST UN PRIMAIRE GATABLE POUR LE
+  CHIFFRE QU'UNE DEPECHE LUI EMPRUNTE, et ca vaut sur tout dossier "X se
+  branche sur le logiciel Y": epic.com/about rend 200 au fetch gate (2,3 ko
+  aplatis) et porte "More than 325 million patients have a current electronic
+  record in Epic.", donc le chiffre que techcrunch avance et que pymnts lui
+  re-credite ("according to the report") est atteste par l'entreprise
+  elle-meme. Reflexe: quand une depeche cite la taille d'un fournisseur,
+  fetch la page /about du fournisseur avant de traiter le chiffre comme
+  mono-source. Rendent 200 et se gatent DU PREMIER COUP le meme matin (0
+  erreur sur 37 verifications, deux dossiers): techcrunch.com, fortune.com,
+  unite.ai et epic.com/about. Bloquent: openai.com (403, re-confirme),
+  axios.com (403, re-confirme), gbhackers.com (202 sans corps, famille
+  mikekalil du 18/08). ATTENTION unite.ai: sa signature est un AGENT ("Aria
+  Bloom ... AI-generated journalist ... Articles authored by Aria Bloom are
+  AI-generated"), donc c'est une reecriture du billet de la newsroom, jamais
+  une seconde redaction; excellent pour gater une phrase (il porte les 4 363
+  notations et les partenaires de lancement que techcrunch coupe), inutile
+  pour compter deux lectures. pymnts.com rend 200 mais coupe a un formulaire
+  apres le chapo et credite techcrunch pour le chiffre porteur.
+  Ajout 02/09 (06h30), CE QUE VOIT VRAIMENT UN BEAT `screenshot`, et ca change
+  le choix du recu: segmentFromScreenshot (reel2.mjs:1145) fait
+  `scale=880:-1` puis `crop=880:1150:0:0`, donc SEUL LE HAUT DE LA CAPTURE EST
+  MONTRE, soit les 1686 premiers pixels d'une capture 1290 de large. Mesure du
+  matin: epic.com/about se capture parfaitement (23 s, 1 frame, zero banniere)
+  mais sa phrase "More than 325 million patients..." est a y=2560, donc
+  INVISIBLE dans le Reel; recu abandonne. Avant d'epingler un recu, regarde ou
+  tombe la phrase que tu veux montrer: au-dela de ~1700 px elle n'existe pas
+  pour le spectateur. Corollaire utile: techcrunch place titre + signature +
+  date sous 1100 px, openai.com place logo + date + titre + chapo sous 1300 px,
+  fortune place masthead + rubrique + titre + signature + date sous 1100 px.
+  Ajout 02/09 (06h30), fortune.com SE CAPTURE TRES BIEN MAIS SON `h1` MENT:
+  1095 s / 159 frames (famille O(frames) du 06/08, il survit), et le champ
+  imprime par scout-capture rend `h1` = "Trending" parce que le bandeau des
+  articles tendance porte le premier h1 du DOM. Le recu lui-meme est parfait
+  (masthead FORTUNE, "AI · OPENAI", titre entier, signature Emily Forlini,
+  "September 1, 2026, 4:00 PM ET", photo Altman). Donc sur fortune, `h1` n'est
+  PAS le controle: c'est `landedUrl` qui compte, et l'oeil. Meme matin,
+  openai.com se re-confirme en recu (68 s / 6 frames et 38 s / 4 frames, h1
+  justes, zero mur de consentement) alors qu'il reste 403 au gate, et
+  techcrunch se capture propre en 736 s / 120 frames. Budget mesure d'un scout
+  qui epingle 4 recus: ~32 min de navigateur, 0 $.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -1705,6 +1746,26 @@ ENTRIES:
   image ne retranscrit plus rien. Verifie a la ligne "alignment: reusing the
   clock already measured for this reading".
   Proof: journal 16h 29/07; cache prouvé de bout en bout le 31/07; correction 01/08.
+  Ajout 02/09 (06h30), LA JOURNEE OU AUCUNE PHOTO N'EST ACQUERABLE, et il faut
+  la reperer AVANT d'ecrire un beat `photo`: api.openverse.org a rendu 500,
+  504 et des timeouts a repetition tout le matin (7 requetes, 1 seule servie),
+  et les candidats Commons qui restaient sont tous tombes sur le filtre
+  fond-blanc. Mesure: "doctor patient" -> 5 candidats refuses a 65-80% de
+  quasi-blanc (des decoupes stock sur fond blanc), "medical record file",
+  "patient consultation doctor", "doctor patient hospital room" -> idem ou
+  504. Seul "doctor examining patient" a rendu une vraie photo, et c'etait une
+  consultation en clinique rurale africaine: correcte en droit, hors-sujet sur
+  un dossier de dossiers medicaux americains, donc refusee a l'oeil. DEUX
+  CONSEQUENCES. (1) Le vocabulaire medical generique est le pire cas du filtre
+  fond-blanc (la banque d'images medicale est faite de decoupes sur blanc);
+  vise un LIEU ou une SCENE, pas un metier. (2) Quand Openverse tousse, un
+  scout ne doit banquer AUCUN beat `photo` non epingle: acquireOne jette et le
+  build meurt. Les deux specs du jour sont partis sans une seule photo (veo +
+  recus + cards + stills), ce qui reste dans les regles (plancher de 3
+  surfaces reelles, plafond de 4 stills) et coute zero attente reseau au run
+  de publication. Verification qui coute 60 s avant d'ecrire les beats:
+  `node src/imagery.mjs candidates "<requete>"` PUIS un acquireOne reel, car
+  `candidates` liste des images que le filtre refusera ensuite.
 - 2026-07-29 · Une rétention >100% dans watch.mjs n'est pas un bug d'unité:
   ig_reels_avg_watch_time compte les boucles (mesuré 160386 ms de watch moyen
   sur un Reel de 51 s, total exactement 2x la moyenne, portée 0). Sous ~50 de

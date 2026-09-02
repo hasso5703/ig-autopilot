@@ -1,0 +1,275 @@
+{
+  "slug": "2026-09-02-chatgpt-dossier-medical",
+  "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
+  "centralClaim": "OpenAI is integrating ChatGPT with Epic's electronic health record system so clinicians can import patient data and ask the AI questions about it.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+      "quote": "OpenAI said today that it is integrating ChatGPT Health with Epic’s electronic health record (EHR) system, which holds data for over 325 million patients"
+    },
+    {
+      "url": "https://www.unite.ai/openai-connects-epic-health-records-and-public-data-to-chatgpt/",
+      "quote": "OpenAI said on September 1, 2026 that healthcare organizations can now connect their Epic electronic health record environments to ChatGPT for Healthcare"
+    }
+  ],
+  "caption": "Ton médecin peut désormais demander à ChatGPT de lire ton dossier médical.\n\nOpenAI a branché ChatGPT sur Epic, le logiciel de dossiers médicaux qui garde les données de plus de 325 millions de patients. Un clinicien peut y récupérer les comptes rendus de rendez-vous, les résultats de laboratoire, les médicaments et les courriers des spécialistes, puis poser ses questions à l'IA.\n\nLe détail qui rassure un peu: l'accès est en lecture seule, l'IA ne réécrit rien dans le dossier. Dans certains hôpitaux, ChatGPT sera même intégré directement dans le logiciel, sans quitter la fiche du patient.\n\nLe chiffre que l'entreprise met en avant: sur 4 363 évaluations, des médecins ont jugé 99.1% des réponses sûres, sur 27 usages cliniques. C'est OpenAI qui a commandé et publié cette mesure.\n\nLe contexte, lui, est moins tranquille. Quelques jours avant l'annonce, un pasteur de Floride a poursuivi l'entreprise pour une recommandation qui a failli lui coûter la vie. En mai, des proches d'un utilisateur avaient déjà porté plainte pour un conseil lié à un dosage. OpenAI maintient que l'IA ne convient ni au diagnostic ni au traitement.\n\nTon dossier médical lu par une IA, avec ton médecin à côté: tu dis oui ou non ?\n\nSources: techcrunch.com, unite.ai, epic.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #OpenAI",
+  "captionEvidence": [
+    {
+      "quote": "OpenAI said today that it is integrating ChatGPT Health with Epic’s electronic health record (EHR) system, which holds data for over 325 million patients",
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/"
+    },
+    {
+      "quote": "With ChatGPT, clinicians can now access information like appointment notes, laboratory results, medications, and specialist documentation and summarize them easily.",
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/"
+    },
+    {
+      "quote": "The company specified that the integration allows only read-only access to health records, and AI doesn’t write anything back.",
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/"
+    },
+    {
+      "quote": "OpenAI said that in some deployments, clinicians can directly access ChatGPT for getting pre-visit review and building clinical timelines without leaving a patient chart.",
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/"
+    },
+    {
+      "quote": "Across 4,363 ratings, physicians rated 99.1% of responses as safe across all use cases, the company reported.",
+      "url": "https://www.unite.ai/openai-connects-epic-health-records-and-public-data-to-chatgpt/"
+    },
+    {
+      "quote": "To assess performance with connected EHR context, OpenAI said physicians evaluated responses across 27 clinical use cases, including pre-visit review, clinical timelines, medication review, and handoff summaries.",
+      "url": "https://www.unite.ai/openai-connects-epic-health-records-and-public-data-to-chatgpt/"
+    },
+    {
+      "quote": "A few days before this rollout, a Florida-based pastor sued the company, alleging that ChatGPT gave him a near-fatal recommendation",
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/"
+    },
+    {
+      "quote": "The company was also sued in May by family members of a user who blamed ChatGPT for giving wrongful advice related to dosage",
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/"
+    },
+    {
+      "quote": "Despite many deep integrations with medical systems, the company has maintained that AI is not suitable for diagnosis or treatment.",
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "1 septembre 2026 · OpenAI",
+      "headline": "*ChatGPT* peut maintenant lire ton dossier médical",
+      "hero": {
+        "value": "325 millions",
+        "label": "de patients ont un dossier dans Epic"
+      },
+      "swipe": "Annoncé par OpenAI le 1 septembre"
+    },
+    {
+      "type": "stat",
+      "figure": "325M",
+      "unit": "de dossiers de patients chez Epic",
+      "body": "Epic est le logiciel de dossiers médicaux branché sur ChatGPT. Il garde les données de plus de *325 millions* de patients.",
+      "evidence": "OpenAI said today that it is integrating ChatGPT Health with Epic’s electronic health record (EHR) system, which holds data for over 325 million patients",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le chiffre, chez Epic",
+      "body": "Le fabricant l'écrit lui-même: *plus de 325 millions* de patients ont un dossier électronique en cours chez lui.",
+      "evidence": "More than 325 million patients have a current electronic record in Epic.",
+      "source": {
+        "name": "Epic",
+        "url": "https://www.epic.com/about/",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que l'IA va lire",
+      "body": "Comptes rendus de rendez-vous, résultats de laboratoire, médicaments, courriers de spécialistes. *Et elle résume.*",
+      "evidence": "With ChatGPT, clinicians can now access information like appointment notes, laboratory results, medications, and specialist documentation and summarize them easily.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Dans le logiciel de l'hôpital",
+      "body": "Dans certains déploiements, ChatGPT est *directement dans la fiche du patient*, sans en sortir.",
+      "evidence": "OpenAI said that in some deployments, clinicians can directly access ChatGPT for getting pre-visit review and building clinical timelines without leaving a patient chart.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Le garde-fou",
+      "claim": "L'accès est en *lecture seule*. L'IA ne réécrit rien dans le dossier.",
+      "caveatLabel": "La note",
+      "caveat": "Sur 4 363 évaluations, des médecins ont jugé 99.1% des réponses sûres. La mesure est celle d'OpenAI.",
+      "evidence": "Across 4,363 ratings, physicians rated 99.1% of responses as safe across all use cases, the company reported.",
+      "source": {
+        "name": "Unite.AI",
+        "url": "https://www.unite.ai/openai-connects-epic-health-records-and-public-data-to-chatgpt/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La lecture seule",
+      "body": "L'intégration n'autorise *que la lecture*. L'IA n'écrit rien en retour dans le dossier.",
+      "evidence": "The company specified that the integration allows only read-only access to health records, and AI doesn’t write anything back.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le contexte judiciaire",
+      "body": "Quelques jours avant, un pasteur de Floride a poursuivi l'entreprise pour une recommandation qui a *failli le tuer*.",
+      "evidence": "A few days before this rollout, a Florida-based pastor sued the company, alleging that ChatGPT gave him a near-fatal recommendation",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que l'entreprise répète",
+      "body": "Malgré ces intégrations profondes, elle maintient que l'IA *ne convient ni au diagnostic ni au traitement*.",
+      "evidence": "Despite many deep integrations with medical systems, the company has maintained that AI is not suitable for diagnosis or treatment.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui a un dossier médical quelque part",
+      "sub": "L'actu IA, vérifiée, en une minute."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+      "accessed": "2026-09-02"
+    },
+    {
+      "name": "Unite.AI",
+      "url": "https://www.unite.ai/openai-connects-epic-health-records-and-public-data-to-chatgpt/",
+      "accessed": "2026-09-02"
+    },
+    {
+      "name": "Epic",
+      "url": "https://www.epic.com/about/",
+      "accessed": "2026-09-02"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Ton dossier médical entre dans ChatGPT",
+    "beats": [
+      {
+        "script": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical en entier. Pas un extrait, le dossier. Tu sais qui vient d'ouvrir la porte ?",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a computer monitor showing the plain grey lines of a patient record page on a white background",
+            "action": "the grey record lines sliding slowly downward, the whole monitor staying whole, the same size and fully inside the frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "C'est OpenAI, et c'est elle qui l'annonce. Son partenaire s'appelle Epic: le logiciel de dossiers médicaux des hôpitaux.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/",
+          "file": "media/2026-09-02-chatgpt-dossier-medical/shot_1.png"
+        }
+      },
+      {
+        "script": "Le médecin pose sa question, et l'IA va lire à sa place: comptes rendus, résultats de laboratoire, médicaments, courriers des spécialistes.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single plain white medication box standing upright on a plain table",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly in front, the box fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Epic, ça pèse combien de gens ? Plus de 325 millions de patients ont un dossier électronique en cours dans Epic.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+          "file": "media/2026-09-02-chatgpt-dossier-medical/shot_3.png"
+        }
+      },
+      {
+        "script": "Alors oui, il y a un garde-fou: l'accès est en lecture seule. L'IA lit ton dossier, mais elle n'écrit rien dedans.",
+        "visual": {
+          "type": "card",
+          "value": "Lecture",
+          "label": "seule: l'IA lit le dossier, elle n'y écrit rien"
+        }
+      },
+      {
+        "script": "Et dans certains hôpitaux, ChatGPT sera posé directement sur la fiche du patient. Le médecin n'a plus à en sortir.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed patient report page lying flat on a plain table, its body text rendered as fine horizontal grey lines rather than readable words",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly above, the single page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "OpenAI a fait noter l'IA par des médecins. Sur 4 363 évaluations, 99.1% des réponses ont été jugées sûres. C'est OpenAI qui compte.",
+        "visual": {
+          "type": "card",
+          "value": "99.1%",
+          "label": "des réponses jugées sûres, sur 4 363 évaluations"
+        }
+      },
+      {
+        "script": "Sauf que quelques jours avant, un pasteur de Floride a poursuivi OpenAI. Il dit que ChatGPT lui a donné un conseil qui a failli le tuer.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single printed recommendation letter lying on a plain desk, its body text rendered as fine horizontal grey lines rather than readable words",
+            "setting": "lit from the side by a desk lamp",
+            "composition": "extreme close-up from a low angle, the single page fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Donc ce n'est plus toi qui interroges ChatGPT sur ta santé. C'est ton médecin, ton dossier ouvert. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a single white medical wristband lying flat on a plain table",
+            "setting": "in soft even daylight",
+            "composition": "extreme close-up from directly above, the wristband fills the entire frame"
+          }
+        }
+      }
+    ]
+  }
+}
