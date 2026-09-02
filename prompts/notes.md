@@ -3969,6 +3969,15 @@ ENTRIES:
   remettre la cle dans les variables d'environnement. Le reste du run reste utile
   (specs gate-clean, recus epingles): ils attendent sur disque le run suivant.
   Proof: run 10h30 du 02/09, dernier achat reussi 01/09 16h54, 0 $ depense.
+  LA CLE NE SE REPARE PAS TOUTE SEULE ENTRE DEUX CRENEAUX: re-mesuree a 16h40
+  le 02/09, meme longueur 53, meme prefixe AQ.Ab8, meme 401 sur
+  /v1beta/models, six heures apres le premier constat. Un jeton ephemere expire
+  ne se renouvelle pas depuis le conteneur: il n'y a rien a attendre et rien a
+  reessayer, donc le run de publication suivant fait le test de 5 s en premier,
+  ne gate ni ne recherche rien pour un Reel qu'il ne pourra pas construire, et
+  passe directement au travail qui sert (verifier que les specs banques gatent
+  toujours en ligne, banquer les candidats, poser l'etat). Les deux specs du
+  02/09 ont ete re-gates PASSED a 16h41 sans une seule requete payante.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne

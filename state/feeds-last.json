@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-02T10:41:42.597Z",
-  "fresh": 503,
+  "at": "2026-09-02T16:40:44.794Z",
+  "fresh": 505,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -13,21 +13,21 @@
       "name": "Google AI",
       "ok": true,
       "fetched": 20,
-      "fresh": 2,
+      "fresh": 3,
       "windowHours": 96
     },
     {
       "name": "Google DeepMind",
       "ok": true,
       "fetched": 100,
-      "fresh": 1,
+      "fresh": 3,
       "windowHours": 96
     },
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "fetched": 854,
-      "fresh": 2,
+      "fetched": 855,
+      "fresh": 3,
       "windowHours": 96
     },
     {
@@ -85,14 +85,14 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 4,
+      "fresh": 6,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 6,
-      "fresh": 6,
+      "fetched": 2,
+      "fresh": 2,
       "windowHours": 36
     },
     {
