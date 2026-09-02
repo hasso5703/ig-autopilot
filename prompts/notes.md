@@ -3946,6 +3946,29 @@ ENTRIES:
   registre est en retard sur le compte. Forme juste:
   `recordSeen([{ title, url, source, outcome, reason }, ...])`. Le message
   d'erreur donne la bonne signature: lis-le au lieu de deviner.
+  (7) Ajout 02/09 (10h30), LA CLE MEDIA PEUT ETRE PRESENTE ET MORTE, et l'etape 0
+  du manuel ne teste que sa PRESENCE: `test -n "$GEMINI_API_KEY"` a dit "present"
+  au scout de 06h30 comme a ce run, et le premier achat (la narration) est mort en
+  HTTP 401 UNAUTHENTICATED / ACCESS_TOKEN_TYPE_UNSUPPORTED. Ni un bug du code ni
+  un probleme de transport: genmedia.mjs envoie bien `x-goog-api-key`
+  (genmedia.mjs:156), et les TROIS modes rendent le meme 401 (en-tete
+  x-goog-api-key, `?key=`, `Authorization: Bearer`). LA FORME DE LA CLE SUFFIT A
+  DIAGNOSTIQUER EN 2 SECONDES: une cle AI Studio valide commence par `AIza` et
+  fait 39 caracteres; celle de ce matin commencait par `AQ.Ab8` sur 53
+  caracteres, ce qui est un JETON EPHEMERE Google (Live API, ~30 min de vie),
+  pas une cle API. Aucune autre variable Google dans l'environnement (`env |
+  grep -i gemini\|google` ne rend que GEMINI_API_KEY), donc aucun repli. Le
+  REFLEXE, 5 s, AVANT d'ecrire ou de gater quoi que ce soit dans un run de
+  publication (le build coute 6 min et meurt sur le premier achat):
+  `node -e "const k=process.env.GEMINI_API_KEY||'';console.log(k.length,k.slice(0,4))"`
+  puis, si le doute persiste, `curl -s -o /dev/null -w "%{http_code}\n" -H
+  "x-goog-api-key: $GEMINI_API_KEY"
+  "https://generativelanguage.googleapis.com/v1beta/models"` (200 attendu, gratuit,
+  pas de generation). Un 401 ici = rien ne se publiera aujourd'hui, c'est le
+  constat de tete du rapport et ca se remonte a Hasan tout de suite: seul lui peut
+  remettre la cle dans les variables d'environnement. Le reste du run reste utile
+  (specs gate-clean, recus epingles): ils attendent sur disque le run suivant.
+  Proof: run 10h30 du 02/09, dernier achat reussi 01/09 16h54, 0 $ depense.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
