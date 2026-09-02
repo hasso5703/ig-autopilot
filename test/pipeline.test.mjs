@@ -2447,3 +2447,23 @@ test("metrics compaction keeps the fresh series whole and one reading per post p
   assert.ok(kept.some((x) => x.mediaId === "m2"), "every post keeps its trace");
   assert.deepEqual(kept.map((x) => x.at), [...kept.map((x) => x.at)].sort(), "rewritten in timestamp order");
 });
+
+test("reel2 karaoke: a decimal survives the caption, sentence punctuation does not", async () => {
+  const { buildAss } = await import("../src/reel2.mjs");
+  // The karaoke used to strip every "." and "," inside the token, so the one
+  // surface a viewer reads printed "991%" under a card that said "99.1%", and
+  // "12.3 milliards" as "123 milliards". A figure on screen is a claim.
+  const words = [
+    { w: "Sur", s: 0.0, e: 0.2 }, { w: "4", s: 0.2, e: 0.4 }, { w: "363", s: 0.4, e: 0.7 },
+    { w: "évaluations,", s: 0.7, e: 1.1 }, { w: "99.1%", s: 1.1, e: 1.5 },
+    { w: "des", s: 1.5, e: 1.7 }, { w: "réponses", s: 1.7, e: 2.1 }, { w: "jugées", s: 2.1, e: 2.4 },
+    { w: "sûres.", s: 2.4, e: 2.8 },
+  ];
+  const beats = [{ script: "Sur 4 363 évaluations, 99.1% des réponses jugées sûres.", visual: { type: "image" } }];
+  const ranges = [{ start: 0, end: 8 }];
+  const ass = buildAss(words, beats, ranges, "FFB300");
+  assert.ok(ass.includes("99.1%"), "the decimal is burned as the source writes it");
+  assert.ok(!/\b991%/.test(ass), "the decimal point is never dropped from inside a figure");
+  assert.ok(/ÉVALUATIONS(?!,)/.test(ass), "a trailing comma is still dropped");
+  assert.ok(/SÛRES(?!\.)/.test(ass), "a trailing full stop is still dropped");
+});

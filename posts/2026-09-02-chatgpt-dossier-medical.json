@@ -184,14 +184,11 @@
       {
         "script": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical en entier. Pas un extrait, le dossier. Tu sais qui vient d'ouvrir la porte ?",
         "visual": {
-          "type": "veo",
-          "spec": {
-            "subject": "a computer monitor showing the plain grey lines of a patient record page on a white background",
-            "action": "the grey record lines sliding slowly downward, the whole monitor staying whole, the same size and fully inside the frame the entire time",
-            "camera": "locked-off static shot, no camera movement, no zoom",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly in front, the screen fills the entire frame"
-          }
+          "type": "photo",
+          "query": "surgery operating theatre",
+          "alt": "des mains gantées en pleine opération chirurgicale",
+          "file": "media/2026-09-02-chatgpt-dossier-medical/photo_0.jpg",
+          "credit": "Medical surgery, healthcare photo · CC0"
         }
       },
       {
@@ -205,12 +202,11 @@
       {
         "script": "Le médecin pose sa question, et l'IA va lire à sa place: comptes rendus, résultats de laboratoire, médicaments, courriers des spécialistes.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single plain white medication box standing upright on a plain table",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly in front, the box fills the entire frame"
-          }
+          "type": "photo",
+          "query": "laboratory test tubes",
+          "alt": "un tube de prélèvement tenu par une main gantée",
+          "file": "media/2026-09-02-chatgpt-dossier-medical/photo_2.jpg",
+          "credit": "Lab tube · CC0"
         }
       },
       {
@@ -224,24 +220,12 @@
       {
         "script": "Alors oui, il y a un garde-fou: l'accès est en lecture seule. L'IA lit ton dossier, mais elle n'écrit rien dedans.",
         "visual": {
-          "type": "card",
-          "value": "Lecture",
-          "label": "seule: l'IA lit le dossier, elle n'y écrit rien"
+          "type": "screenshot",
+          "url": "https://www.unite.ai/openai-connects-epic-health-records-and-public-data-to-chatgpt/"
         }
       },
       {
-        "script": "Et dans certains hôpitaux, ChatGPT sera posé directement sur la fiche du patient. Le médecin n'a plus à en sortir.",
-        "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single printed patient report page lying flat on a plain table, its body text rendered as fine horizontal grey lines rather than readable words",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly above, the single page fills the entire frame"
-          }
-        }
-      },
-      {
-        "script": "OpenAI a fait noter l'IA par des médecins. Sur 4 363 évaluations, 99.1% des réponses ont été jugées sûres. C'est OpenAI qui compte.",
+        "script": "Et dans certains hôpitaux, ChatGPT sera posé directement sur la fiche du patient. Le médecin n'a plus à en sortir. OpenAI a fait noter l'IA par des médecins. Sur 4 363 évaluations, 99.1% des réponses ont été jugées sûres. C'est OpenAI qui compte.",
         "visual": {
           "type": "card",
           "value": "99.1%",
@@ -251,23 +235,19 @@
       {
         "script": "Sauf que quelques jours avant, un pasteur de Floride a poursuivi OpenAI. Il dit que ChatGPT lui a donné un conseil qui a failli le tuer.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single printed recommendation letter lying on a plain desk, its body text rendered as fine horizontal grey lines rather than readable words",
-            "setting": "lit from the side by a desk lamp",
-            "composition": "extreme close-up from a low angle, the single page fills the entire frame"
-          }
+          "type": "card",
+          "value": "Un pasteur",
+          "label": "poursuit OpenAI après un conseil de ChatGPT"
         }
       },
       {
         "script": "Donc ce n'est plus toi qui interroges ChatGPT sur ta santé. C'est ton médecin, ton dossier ouvert. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "image",
-          "spec": {
-            "subject": "a single white medical wristband lying flat on a plain table",
-            "setting": "in soft even daylight",
-            "composition": "extreme close-up from directly above, the wristband fills the entire frame"
-          }
+          "type": "photo",
+          "query": "surgery operating theatre",
+          "alt": "des mains gantées en pleine opération chirurgicale",
+          "file": "media/2026-09-02-chatgpt-dossier-medical/photo_0.jpg",
+          "credit": "Medical surgery, healthcare photo · CC0"
         }
       }
     ]

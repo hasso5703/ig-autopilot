@@ -572,6 +572,50 @@ export function anchorToScript(heard, scriptWords, { floor = ALIGN_FLOOR } = {})
 
 /* ------------------------------ the beats -------------------------------- */
 
+/* ---------------------- the silent build (no TTS) ------------------------
+ *
+ * Added 2026-09-02, live, on Hasan's instruction, because the media key died
+ * and two publishing slots had already been lost to it. Every paid surface on
+ * this account comes through one key: the voice, the stills and the clip. With
+ * it dead the choice is not "a cheaper Reel", it is a Reel with no narration at
+ * all — so the words move from the ear to the eye. The karaoke was already
+ * built for the 85% who watch on mute; here it carries the whole story, over
+ * receipts, real credited photographs and typographic cards, with the mood bed
+ * as the only sound.
+ *
+ * Nothing about the format's arithmetic changes: the same word window, the same
+ * 55.6s of "speech", the same 3s end-card, the same 60-second file. What would
+ * normally be measured off the voice is derived from the word counts instead,
+ * which is exactly what the gate's window already assumes. This path buys
+ * nothing, so it can never be the reason a build costs money, and it is opt-in
+ * (OOM_SILENT=1): a run with a working key never reaches it.
+ */
+const SILENT = process.env.OOM_SILENT === "1";
+
+/** The clock a silent build reads instead of Whisper's.
+ *
+ * Words are spread evenly over the speech budget at the voice's own measured
+ * pace, with a short breath between beats so a picture is not cut on the last
+ * syllable. Same shape as the aligner's output: { w, s, e }. */
+export function silentWordClock(beats, budget, { pause = 0.32 } = {}) {
+  const per = beats.map((b) => String(b.script).trim().split(/\s+/).filter(Boolean));
+  const n = per.reduce((a, w) => a + w.length, 0);
+  if (!n) throw new Error("silent clock: the beats carry no words");
+  const pauses = pause * Math.max(0, beats.length - 1);
+  const dt = (budget - pauses) / n;
+  if (dt <= 0.08) throw new Error(`silent clock: ${n} words do not fit in ${budget}s`);
+  const out = [];
+  let t = 0;
+  per.forEach((ws, bi) => {
+    for (const w of ws) {
+      out.push({ w, s: Number(t.toFixed(3)), e: Number((t + dt * 0.94).toFixed(3)) });
+      t += dt;
+    }
+    if (bi < per.length - 1) t += pause;
+  });
+  return out;
+}
+
 function beatWordRanges(beats) {
   const ranges = [];
   let start = 0;
@@ -674,7 +718,12 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
    * three blocks of text saying the same thing — the card printed "141 006 /
    * sessions d'évaluation relues" and the caption underneath read "SESSIONS
    * RELUES". The voice still speaks; the screen shows one thing. */
-  const cardWords = wordsOfBeats((b) => b.visual?.type === "card");
+  /* A SILENT build has no voice to say the sentence the card is illustrating,
+     so silencing the karaoke there would leave the beat with no words at all —
+     seven to eleven seconds of a figure and nothing else. The stacking this
+     guards against is the lesser evil; in a silent build the karaoke IS the
+     story. */
+  const cardWords = SILENT ? new Set() : wordsOfBeats((b) => b.visual?.type === "card");
   const head = [
     "[Script Info]", `PlayResX: ${W}`, `PlayResY: ${H}`, "WrapStyle: 2", "",
     "[V4+ Styles]",
@@ -798,7 +847,15 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
     const style = lowBeats.has(ch[0].i) ? "KLOW" : "K";
     const parts = ch.map(({ word }) => {
       const cs = Math.max(4, Math.round((word.e - word.s) * 100));
-      return `{\\k${cs}}` + word.w.toUpperCase().replace(/[,.]/g, "");
+      /* Sentence punctuation is dropped so the karaoke reads as speech, not as
+         a transcript. It used to be dropped EVERYWHERE in the token, which
+         quietly rewrote every decimal the account has ever spoken: "99.1%"
+         was burned onto the frame as "991%" and "12.3 milliards" as "123
+         milliards" (measured 2026-09-02, on the card beats of the first
+         silent build — invisible until then because the karaoke is normally
+         silenced over a card). A figure on screen is a claim, and this one
+         was multiplying claims by ten. Strip only the edges of the token. */
+      return `{\\k${cs}}` + word.w.toUpperCase().replace(/^[,.]+|[,.]+$/g, "");
     });
     return `Dialogue: 0,${assTime(ch[0].word.s)},${assTime(ch.at(-1).word.e + 0.06)},${style},,0,0,0,,${parts.join(" ")}`;
   });
@@ -1426,7 +1483,20 @@ export async function buildReel(postFile, mediaDir) {
    */
   const voiceKey = voiceCacheKey({ narration, voice: voiceName, lang, style: lang === "fr" ? frStyle : "" });
   const voiceKeyFile = path.join(mediaDir, "voice2_raw.key");
-  if ((await readFile(voiceKeyFile, "utf8").catch(() => "")).trim() === voiceKey) {
+  if (SILENT) {
+    /* No reading is bought and none is faked: the track is real silence, and
+       the words are timed on the same budget a reading would have been
+       stretched onto. */
+    voice = { file: rawWav, seconds: SPEECH_S, usd: 0 };
+    tempo = 1;
+    rate = scriptWords.length / SPEECH_S;
+    console.log(
+      `voice: SILENT build — nothing bought. ${scriptWords.length} words timed at ${rate.toFixed(2)} w/s ` +
+        `over ${SPEECH_S}s; the karaoke carries the story.`
+    );
+    await journal(`silent build: no narration bought, ${scriptWords.length} words timed at ${rate.toFixed(2)} w/s`);
+  }
+  if (!SILENT && (await readFile(voiceKeyFile, "utf8").catch(() => "")).trim() === voiceKey) {
     const probed = await ffprobe(rawWav).then((p) => Number(p.format.duration)).catch(() => 0);
     const t = probed / SPEECH_S;
     if (probed > 0 && t >= TEMPO_MIN && t <= TEMPO_MAX && probed <= RAW_MAX_S) {
@@ -1486,18 +1556,23 @@ export async function buildReel(postFile, mediaDir) {
      one being used, and only when it is inside the stretch range — a clamped
      reading is a compromise this build settled for, never a thing to hand to
      the next one. */
-  if (tempo >= TEMPO_MIN && tempo <= TEMPO_MAX) await writeFile(voiceKeyFile, voiceKey);
-  else await rm(voiceKeyFile, { force: true }).catch(() => {});
+  if (!SILENT && tempo >= TEMPO_MIN && tempo <= TEMPO_MAX) await writeFile(voiceKeyFile, voiceKey);
+  else if (!SILENT) await rm(voiceKeyFile, { force: true }).catch(() => {});
 
   const timedWav = path.join(mediaDir, "voice2.wav");
-  await ffmpeg(["-y", "-i", rawWav, "-filter:a", `atempo=${tempo.toFixed(6)}`, "-ar", "48000", timedWav]);
-  await journal(`voice ${scriptWords.length} words ${voice.seconds.toFixed(1)}s raw (${rate.toFixed(2)} w/s), atempo ${tempo.toFixed(3)} → ${SPEECH_S}s`);
+  if (SILENT)
+    await ffmpeg(["-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", String(SPEECH_S), timedWav]);
+  else await ffmpeg(["-y", "-i", rawWav, "-filter:a", `atempo=${tempo.toFixed(6)}`, "-ar", "48000", timedWav]);
+  if (!SILENT)
+    await journal(`voice ${scriptWords.length} words ${voice.seconds.toFixed(1)}s raw (${rate.toFixed(2)} w/s), atempo ${tempo.toFixed(3)} → ${SPEECH_S}s`);
 
   /* 2 — the clock, read off the corrected voice so the karaoke matches what
      actually plays. The last beat runs to the end-card rather than to its own
      last word plus a pad: that is what makes the file exactly TARGET_S long
      however the reading came out. */
-  const words = await alignWords(timedWav, scriptWords, mediaDir, lang, `${voiceKey}:${tempo.toFixed(6)}`);
+  const words = SILENT
+    ? silentWordClock(plan.beats, SPEECH_S)
+    : await alignWords(timedWav, scriptWords, mediaDir, lang, `${voiceKey}:${tempo.toFixed(6)}`);
   const ranges = beatWordRanges(plan.beats);
   /* Normally this is exactly TARGET_S - END_S, because the stretch put the
      narration on SPEECH_S. It differs only when the stretch had to be clamped
