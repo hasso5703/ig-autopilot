@@ -150,8 +150,8 @@
         "script": "Uber vient de supprimer 3 300 postes. Un salarié sur dix. Et l'entreprise met plus de 10 milliards de dollars dans les voitures sans chauffeur.",
         "visual": {
           "type": "photo",
-          "query": "dara khosrowshahi",
-          "alt": "Dara Khosrowshahi, le directeur général d'Uber"
+          "query": "taxi city street night",
+          "alt": "un taxi en mouvement dans une rue de ville, la nuit"
         }
       },
       {
@@ -173,8 +173,8 @@
         "script": "Lui, il accuse sa propre entreprise: trop d'étages de management, trop de coordination, des responsabilités éclatées. Une complexité bâtie pendant la croissance, devenue un frein aux décisions.",
         "visual": {
           "type": "photo",
-          "query": "steering wheel",
-          "alt": "le volant d'une voiture en gros plan"
+          "query": "corporate office tower",
+          "alt": "des salaries traversent le hall d un immeuble de bureaux le soir"
         }
       },
       {
@@ -196,8 +196,8 @@
         "script": "Un analyste actionnaire le dit sans détour: une flotte autonome ne demande pas le même type de salariés qu'une flotte de chauffeurs. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "uber ceo",
-          "alt": "Dara Khosrowshahi lors d'une conférence"
+          "query": "waymo self driving car",
+          "alt": "une voiture autonome Waymo, portiere ouverte, dans une rue"
         }
       }
     ]

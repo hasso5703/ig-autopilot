@@ -155,7 +155,7 @@
         "script": "Et tout ça tient à un détail minuscule: la petite lumière blanche sur la branche. Elle s'allume quand la caméra tourne, et c'est le seul truc qui prévient les gens autour de toi.",
         "visual": {
           "type": "screenshot",
-          "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/"
+          "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses"
         }
       },
       {
@@ -192,8 +192,9 @@
       {
         "script": "Alex Himel, chez Meta, parle lui-même d'un jeu du chat et de la souris. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses"
+          "type": "card",
+          "value": "Alex Himel",
+          "label": "chez Meta: un jeu du chat et de la souris"
         }
       }
     ]
