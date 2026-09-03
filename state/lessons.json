@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-03T10:47:21.217Z",
-  "n": 73,
-  "nSettled": 67,
-  "medianViews": 191,
-  "medianRetentionPct": 20,
+  "at": "2026-09-03T17:05:32.546Z",
+  "n": 75,
+  "nSettled": 69,
+  "medianViews": 183,
+  "medianRetentionPct": 19,
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -64,6 +64,14 @@
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
     },
     {
+      "slug": "2026-09-01-instagram-faux-profils-ia",
+      "views": 95,
+      "retentionPct": 12,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA."
+    },
+    {
       "slug": "2026-08-31-chine-series-ia-acteurs",
       "views": 111,
       "retentionPct": 11,
@@ -78,21 +86,13 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait."
-    },
-    {
-      "slug": "2026-08-30-sony-warner-anthropic",
-      "views": 117,
-      "retentionPct": 18,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Sony et Warner attaquent Anthropic: ils disent que Claude a avalé Eye of the Tiger et All I Want for Christmas. 150 000 dollars reclames par chanson."
     }
   ],
   "byBeat0": {
     "veo": {
-      "n": 53,
-      "medianViews": 207,
-      "meanRetentionPct": 22.7,
+      "n": 55,
+      "medianViews": 197,
+      "meanRetentionPct": 22.3,
       "saves": 71,
       "shares": 27,
       "thin": false
@@ -146,13 +146,21 @@
       "saves": 4,
       "shares": 0,
       "thin": true
+    },
+    "money": {
+      "n": 1,
+      "medianViews": 115,
+      "meanRetentionPct": 11,
+      "saves": 0,
+      "shares": 0,
+      "thin": true
     }
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 13,
-      "medianViews": 383,
-      "meanRetentionPct": 21.8,
+      "n": 14,
+      "medianViews": 263,
+      "meanRetentionPct": 21,
       "saves": 14,
       "shares": 6,
       "thin": false
@@ -190,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 14,
-      "medianViews": 176,
-      "meanRetentionPct": 18.8,
+      "n": 15,
+      "medianViews": 168,
+      "meanRetentionPct": 18.3,
       "saves": 21,
       "shares": 4,
       "thin": false
@@ -621,6 +629,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-02-astra-failles-inconnues",
+      "at": "2026-09-02T17:30:10.156Z",
+      "hourUtc": 17,
+      "views": 384,
+      "reach": 358,
+      "avgWatchS": 8,
+      "retentionPct": 13,
+      "likes": 2,
+      "comments": 1,
+      "saved": 3,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "OpenAI dit que son prochain modèle, Astra, trouve tout seul des failles que personne ne connaît et s'en sert pour entrer. Il ne sera pas donné à tout le monde.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-12-metro-londres-visages",
       "at": "2026-08-12T10:57:49.864Z",
       "hourUtc": 10,
@@ -706,23 +731,6 @@
       "themes": [],
       "sendTest": "Une IA a prévu qu'un ouragan de catégorie 5 allait frapper la Jamaïque, cinq jours avant. Les gens ont eu le temps d'évacuer.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-02-astra-failles-inconnues",
-      "at": "2026-09-02T17:30:10.156Z",
-      "hourUtc": 17,
-      "views": 329,
-      "reach": 304,
-      "avgWatchS": 8,
-      "retentionPct": 13,
-      "likes": 2,
-      "comments": 1,
-      "saved": 3,
-      "shares": 1,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "OpenAI dit que son prochain modèle, Astra, trouve tout seul des failles que personne ne connaît et s'en sert pour entrer. Il ne sera pas donné à tout le monde.",
-      "settled": false
     },
     {
       "slug": "2026-08-30-openai-coupe-cursor-musk",
@@ -1081,6 +1089,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-02-chatgpt-dossier-medical",
+      "at": "2026-09-02T17:25:09.248Z",
+      "hourUtc": 17,
+      "views": 140,
+      "reach": 126,
+      "avgWatchS": 7.1,
+      "retentionPct": 12,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-02-xai-minnesota-nudification",
       "at": "2026-08-02T15:57:53.852Z",
       "hourUtc": 15,
@@ -1234,23 +1259,6 @@
       "themes": [],
       "sendTest": "71% des Américains pensent que l'IA va supprimer des emplois. Et chez les moins de 30 ans, c'est 73%.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-02-chatgpt-dossier-medical",
-      "at": "2026-09-02T17:25:09.248Z",
-      "hourUtc": 17,
-      "views": 128,
-      "reach": 114,
-      "avgWatchS": 7.6,
-      "retentionPct": 13,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
-      "settled": false
     },
     {
       "slug": "2026-08-26-ia-verifie-infos",
@@ -1439,7 +1447,7 @@
         "money"
       ],
       "sendTest": "La pub s'affiche dans les réponses de ChatGPT, en France aussi. Gratuit et Go la voient, Plus et Pro non.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-24-enfant-apprend-mieux",
@@ -1480,7 +1488,7 @@
       "at": "2026-09-01T16:59:31.288Z",
       "hourUtc": 16,
       "views": 95,
-      "reach": 80,
+      "reach": 81,
       "avgWatchS": 7.4,
       "retentionPct": 12,
       "likes": 0,
@@ -1490,7 +1498,7 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
@@ -1510,6 +1518,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
+      "at": "2026-09-03T11:44:37.874Z",
+      "hourUtc": 11,
+      "views": 59,
+      "reach": 54,
+      "avgWatchS": 6.4,
+      "retentionPct": 11,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA.",
+      "settled": false
+    },
+    {
       "slug": "2026-07-28-claude-chats-google",
       "at": "2026-07-28T09:12:53.605Z",
       "hourUtc": 9,
@@ -1525,6 +1550,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
+      "at": "2026-09-03T17:02:42.594Z",
+      "hourUtc": 17,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
