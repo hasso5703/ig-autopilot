@@ -12,7 +12,7 @@
       "quote": "Thousands of Meta's AI glasses no longer have functioning cameras after the company detected people tampering with the recording indicator lights."
     }
   ],
-  "caption": "Meta a coupé la caméra de milliers de ses lunettes connectées, parce que la lumière d'enregistrement avait été trafiquée.\n\nSur ces lunettes, une petite lumière blanche s'allume quand la caméra filme. C'est le seul signal pour les gens autour. Une mise à jour détecte maintenant si cette lumière est couverte ou détruite, et coupe la caméra. Alex Himel, chez Meta, dit que moins de 0.1% des utilisateurs ont été pris. Sur les volumes en jeu, ça met le nombre de fautifs dans les milliers.\n\nLe détail qui n'est pas dans la vidéo. Tout le monde ne perd pas sa caméra pour toujours. Si la lumière a été percée, la fonction ne remarchera jamais. Si elle avait seulement été recouverte d'un autocollant, la caméra revient dès que l'autocollant part. Ceux qui perdent la caméra gardent une paire d'écouteurs Bluetooth hors de prix.\n\nÀ nuancer, et c'est important. L'ampleur de l'opération vient d'un entretien accordé par Meta à un seul média, Semafor, repris ensuite ailleurs. Aucun chiffre exact de matériel bloqué n'a été publié. Et sur les forums, plusieurs réponses affirment qu'il reste possible de filmer sans la lumière.\n\nTu accepterais de croiser ces lunettes dans un bar, oui ou non ? Dis-le en commentaire.\n\nsemafor.com · petapixel.com · yahoo.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Meta #ViePrivee",
+  "caption": "Meta a coupé la caméra de milliers de ses lunettes connectées, parce que la lumière d'enregistrement avait été trafiquée.\n\nSur ces lunettes, une petite lumière blanche s'allume quand la caméra filme. C'est le seul signal pour les gens autour. Une mise à jour détecte maintenant si cette lumière est couverte ou détruite, et coupe la caméra. Alex Himel, chez Meta, dit que moins de 0.1% des utilisateurs ont été pris. Sur les volumes en jeu, ça met le nombre de fautifs dans les milliers.\n\nLe détail qui n'est pas dans la vidéo. Tout le monde ne perd pas sa caméra pour toujours. Si la lumière a été percée, la fonction ne remarchera jamais. Si elle avait seulement été recouverte d'un autocollant, la caméra revient dès que l'autocollant part. Ceux qui perdent la caméra gardent une paire d'écouteurs Bluetooth hors de prix.\n\nÀ nuancer, et c'est important. L'ampleur de l'opération vient d'un entretien accordé par Meta à un seul média, Semafor, repris ensuite ailleurs. Aucun chiffre exact de matériel bloqué n'a été publié. Et sur les forums, plusieurs réponses affirment qu'il reste possible de filmer sans la lumière.\n\nTu accepterais de croiser ces lunettes dans un bar, oui ou non ? Dis-le en commentaire.\n\nsemafor.com · petapixel.com · yahoo.com\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Meta #ViePrivee",
   "captionEvidence": [
     {
       "quote": "Himel tells Semafor that less than 0.1% of users have been caught altering the camera record system, which would put the number of suspect users in the thousands",
@@ -147,8 +147,8 @@
         "script": "Quelqu'un peut te filmer dans la rue avec ses lunettes connectées, sans même que tu le voies. Meta vient de couper la caméra de milliers d'entre elles.",
         "visual": {
           "type": "photo",
-          "query": "smart glasses",
-          "alt": "une paire de lunettes connectées photographiée de près"
+          "query": "crowd filming phones",
+          "alt": "une foule dans un lieu public, un téléphone levé pour filmer les gens"
         }
       },
       {
@@ -170,8 +170,8 @@
         "script": "Sur le nombre de lunettes vendues, ça fait quand même des milliers de personnes concernées. Et surtout, il y avait un trou béant dans le système de Meta.",
         "visual": {
           "type": "photo",
-          "query": "camera lens",
-          "alt": "l'objectif d'un appareil photo en gros plan"
+          "query": "subway passengers",
+          "alt": "des passagers dans le métro, dans un lieu public"
         }
       },
       {
@@ -185,8 +185,8 @@
         "script": "Et il y a une nuance. Autocollant retiré, la caméra revient. Lumière percée, c'est définitif: il te reste des écouteurs Bluetooth hors de prix. Des clubs commencent d'ailleurs à les refuser à l'entrée.",
         "visual": {
           "type": "photo",
-          "query": "black eyeglasses frame",
-          "alt": "une monture de lunettes noire photographiée sur fond clair"
+          "query": "nightclub entrance",
+          "alt": "l'entrée d'un club, avec son comptoir d'accueil"
         }
       },
       {

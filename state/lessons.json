@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-03T06:40:57.031Z",
+  "at": "2026-09-03T10:47:21.217Z",
   "n": 73,
   "nSettled": 67,
   "medianViews": 191,
@@ -708,6 +708,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-02-astra-failles-inconnues",
+      "at": "2026-09-02T17:30:10.156Z",
+      "hourUtc": 17,
+      "views": 329,
+      "reach": 304,
+      "avgWatchS": 8,
+      "retentionPct": 13,
+      "likes": 2,
+      "comments": 1,
+      "saved": 3,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "OpenAI dit que son prochain modèle, Astra, trouve tout seul des failles que personne ne connaît et s'en sert pour entrer. Il ne sera pas donné à tout le monde.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-30-openai-coupe-cursor-musk",
       "at": "2026-08-30T16:50:41.169Z",
       "hourUtc": 16,
@@ -795,23 +812,6 @@
       ],
       "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-02-astra-failles-inconnues",
-      "at": "2026-09-02T17:30:10.156Z",
-      "hourUtc": 17,
-      "views": 277,
-      "reach": 257,
-      "avgWatchS": 7.9,
-      "retentionPct": 13,
-      "likes": 2,
-      "comments": 1,
-      "saved": 3,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "OpenAI dit que son prochain modèle, Astra, trouve tout seul des failles que personne ne connaît et s'en sert pour entrer. Il ne sera pas donné à tout le monde.",
-      "settled": false
     },
     {
       "slug": "2026-08-29-anthropic-liste-noire",
@@ -1236,6 +1236,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-02-chatgpt-dossier-medical",
+      "at": "2026-09-02T17:25:09.248Z",
+      "hourUtc": 17,
+      "views": 128,
+      "reach": 114,
+      "avgWatchS": 7.6,
+      "retentionPct": 13,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-26-ia-verifie-infos",
       "at": "2026-08-26T10:54:31.013Z",
       "hourUtc": 10,
@@ -1273,8 +1290,8 @@
       "slug": "2026-08-25-amazon-prix-materiel",
       "at": "2026-08-25T10:57:53.630Z",
       "hourUtc": 10,
-      "views": 125,
-      "reach": 117,
+      "views": 126,
+      "reach": 118,
       "avgWatchS": 6.3,
       "retentionPct": 11,
       "likes": 1,
@@ -1404,23 +1421,6 @@
       "themes": [],
       "sendTest": "Sony et Warner attaquent Anthropic: ils disent que Claude a avalé Eye of the Tiger et All I Want for Christmas. 150 000 dollars reclames par chanson.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-02-chatgpt-dossier-medical",
-      "at": "2026-09-02T17:25:09.248Z",
-      "hourUtc": 17,
-      "views": 116,
-      "reach": 104,
-      "avgWatchS": 6.3,
-      "retentionPct": 11,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
-      "settled": false
     },
     {
       "slug": "2026-09-01-chatgpt-pub-milliard",

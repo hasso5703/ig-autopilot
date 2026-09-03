@@ -4217,3 +4217,23 @@ ENTRIES:
   filigrane pour "server room dark"). Regarde CHAQUE photo avant de la fixer,
   compte 3 a 4 requetes pour 1 photo utilisable, et prefere les sujets denses
   (bloc operatoire, baie de serveurs, circuit imprime, ecran de code).
+  Ajout 03/09 (10h30), MESURE SUR UN PRODUIT GRAND PUBLIC: aucune photo du
+  sujet lui-meme n'etait acquerable pour les lunettes Ray-Ban Meta. Les 4
+  clichés Commons existants sont des plans produit sur fond blanc, rejetes a
+  47, 52, 61 et 64% de near-white; "smart glasses", "ray-ban meta glasses",
+  "black eyeglasses frame", "glasses temple hinge", "led light macro",
+  "indicator lamp" echouent tous. Ce qui passe le filtre renvoie souvent le
+  DECOR et pas l'histoire ("camera lens" -> un boitier Fuji sur un etui,
+  "eyeglasses macro" -> des lunettes posees sur un MacBook, "eyeglasses on
+  wooden table" -> une table): le filtre near-white ne protege pas du
+  hors-sujet, l'oeil si. Reflexe qui a marche: quand l'OBJET est
+  inacquerable, prends le LIEU ou la SCENE que l'article decrit
+  ("crowd filming phones", "subway passengers", "nightclub entrance" ->
+  3 photos reelles, denses, differentes) plutot que de forcer l'objet. 11
+  requetes testees pour 3 photos: prevois 15 minutes. Et pour tester vite
+  sans build: `acquireOne({type:'photo',query,alt},{dir,name})` importe de
+  imagery.mjs, en boucle sur une liste, puis Read sur chaque jpg.
+  ATTENTION VISAGE: une photo d'une personne IDENTIFIABLE portant le produit
+  ("Youna Kang in Ray-Ban Meta Glasses", acquerable) est un piege sur une
+  histoire de tricheurs: sous le beat 0 elle accuse quelqu'un qui n'a rien
+  fait. Sur une histoire d'abus, ne montre pas un visage identifiable.
