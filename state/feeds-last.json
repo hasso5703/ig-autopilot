@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-03T06:39:52.913Z",
-  "fresh": 349,
+  "at": "2026-09-03T16:40:44.424Z",
+  "fresh": 356,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -20,21 +20,21 @@
       "name": "Google DeepMind",
       "ok": true,
       "fetched": 100,
-      "fresh": 3,
+      "fresh": 4,
       "windowHours": 96
     },
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "fetched": 855,
-      "fresh": 3,
+      "fetched": 859,
+      "fresh": 7,
       "windowHours": 96
     },
     {
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 1,
+      "fresh": 4,
       "windowHours": 96
     },
     {
@@ -85,21 +85,21 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 3,
+      "fresh": 5,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
       "fetched": 7,
-      "fresh": 7,
+      "fresh": 6,
       "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 5,
+      "fresh": 3,
       "windowHours": 36
     }
   ]

@@ -147,15 +147,17 @@
         "script": "Quelqu'un peut te filmer dans la rue avec ses lunettes connectées, sans même que tu le voies. Meta vient de couper la caméra de milliers d'entre elles.",
         "visual": {
           "type": "photo",
-          "query": "crowd filming phones",
-          "alt": "une foule dans un lieu public, un téléphone levé pour filmer les gens"
+          "file": "media/2026-09-03-meta-lunettes-camera-coupee-silencieux/pin_lunettes.jpg",
+          "credit": "CCadio · CC BY 4.0",
+          "alt": "une paire de lunettes connectées Ray-Ban Meta posée devant son étui"
         }
       },
       {
         "script": "Et tout ça tient à un détail minuscule: la petite lumière blanche sur la branche. Elle s'allume quand la caméra tourne, et c'est le seul truc qui prévient les gens autour de toi.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses"
+          "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses",
+          "file": "media/2026-09-03-meta-lunettes-camera-coupee-silencieux/shot_1.png"
         }
       },
       {
@@ -170,23 +172,27 @@
         "script": "Sur le nombre de lunettes vendues, ça fait quand même des milliers de personnes concernées. Et surtout, il y avait un trou béant dans le système de Meta.",
         "visual": {
           "type": "photo",
-          "query": "subway passengers",
-          "alt": "des passagers dans le métro, dans un lieu public"
+          "file": "media/2026-09-03-meta-lunettes-camera-coupee-silencieux/pin_rue.jpg",
+          "credit": "Phillip Pessar · CC BY 4.0",
+          "alt": "un carrefour de Miami avec des piétons qui traversent"
         }
       },
       {
         "script": "La caméra refusait de démarrer si la lumière était cachée. Donc ils lançaient d'abord l'enregistrement, et cachaient la lumière quelques secondes après. Maintenant, la caméra s'arrête en pleine capture.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://tech.yahoo.com/ai/meta-ai/articles/meta-bricked-cameras-thousands-ai-025949295.html"
+          "type": "photo",
+          "file": "media/2026-09-03-meta-lunettes-camera-coupee-silencieux/pin_metro.jpg",
+          "credit": "TheFrog001 · CC0",
+          "alt": "un quai de métro londonien, un lieu public"
         }
       },
       {
         "script": "Et il y a une nuance. Autocollant retiré, la caméra revient. Lumière percée, c'est définitif: il te reste des écouteurs Bluetooth hors de prix. Des clubs commencent d'ailleurs à les refuser à l'entrée.",
         "visual": {
           "type": "photo",
-          "query": "nightclub entrance",
-          "alt": "l'entrée d'un club, avec son comptoir d'accueil"
+          "file": "media/2026-09-03-meta-lunettes-camera-coupee-silencieux/pin_pub.jpg",
+          "credit": "Whispyhistory · CC0",
+          "alt": "le comptoir en bois d'un pub britannique"
         }
       },
       {
