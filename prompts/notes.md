@@ -981,6 +981,19 @@ ENTRIES:
   justes, zero mur de consentement) alors qu'il reste 403 au gate, et
   techcrunch se capture propre en 736 s / 120 frames. Budget mesure d'un scout
   qui epingle 4 recus: ~32 min de navigateur, 0 $.
+  Ajout 03/09 (10h30), CE BUDGET EST AUSSI CELUI D'UN RUN DE PUBLICATION, et
+  c'est lui qui decide de l'heure de parution: petapixel.com a tenu le
+  navigateur >25 min sur UN recu (goto ok, puis plus rien; renderer a 60% CPU,
+  meme famille O(frames) que ci-dessus) et a coute le creneau du midi. Mesures
+  du meme run, de bout en bout: spokesman.com + techcrunch.com = 2 recus en
+  ~7 min, build silencieux complet (7 beats, 3 photos, 2 recus, 2 cartes)
+  ~9 min. REGLE PRATIQUE POUR UN RUN QUI PUBLIE: 2 recus, pas 3, et seulement
+  des domaines deja mesures; si une capture depasse ~6 min, tue le build et
+  echange le recu contre une carte ou une photo -- il n'y a pas de cache de
+  capture (shot_N.png est repris SEULEMENT si tu passes `"file"`), donc chaque
+  reconstruction repaie chaque recu. Un scout, lui, a 4 h: c'est lui qui doit
+  epingler les recus lents (`scout-capture`) pour que le run de midi n'ait
+  plus qu'a assembler.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES

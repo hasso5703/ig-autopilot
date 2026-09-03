@@ -13,7 +13,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 
 import { validatePost, claimOverlap, hookIssues, imageIssues } from "../src/validate.mjs";
-import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted, themesOf, shortcodeless } from "../src/state.mjs";
+import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted, themesOf, shortcodeless, alreadyRecorded } from "../src/state.mjs";
 import { shorten, splitFigure, buildTimeline, totalDuration, applyNarrationTiming } from "../src/reel-template.mjs";
 import { queryLadder, scoreCandidate, creditLine, servedSize } from "../src/imagery.mjs";
 import { complianceIssues } from "../src/reel.mjs";
@@ -650,6 +650,31 @@ test("a posted record that cannot recognise its own story is refused", async () 
   await assert.rejects(() => recordPosted({ slug: "x", mediaId: "1", url: "https://a.com/x" }), /`title` is required/);
   await assert.rejects(() => recordPosted({ slug: "x", mediaId: "1", title: "T" }), /`url` is required/);
   await assert.rejects(() => recordPosted({ mediaId: "1", title: "T", url: "https://a.com/x" }), /`slug` is required/);
+});
+
+// ---------------------------------------------------------------------------
+// 2026-09-03: the 10:30 run called recordPosted, the line was written, and then
+// the caller's own console.log threw on the undefined return. The run read that
+// as "the record did not happen" and called it again: one Reel, two lines. That
+// is not cosmetic — `today` counts lines, so the day reported reelsToday=2 with
+// one Reel on the grid, owedToday fell to 0, and the 16:30 slot would have
+// concluded the day was full and published nothing. The append is idempotent on
+// the mediaId now, so a retry after a crash stays safe.
+// ---------------------------------------------------------------------------
+test("one published media makes one record, however many times it is recorded", () => {
+  const ledger = [
+    { mediaId: "18576057907069559", slug: "a" },
+    { mediaId: "17998410221809872", slug: "b" },
+  ];
+  assert.equal(alreadyRecorded(ledger, "18576057907069559"), true);
+  assert.equal(alreadyRecorded(ledger, " 18576057907069559 "), true);
+  assert.equal(alreadyRecorded(ledger, "18999999999999999"), false);
+  // The old carousel records carry no mediaId. Matching those to each other
+  // would silence a real second post, so an empty id is never a duplicate.
+  assert.equal(alreadyRecorded([{ slug: "old" }, { mediaId: "" }], ""), false);
+  assert.equal(alreadyRecorded([{ slug: "old" }], undefined), false);
+  assert.equal(alreadyRecorded([], "1"), false);
+  assert.equal(alreadyRecorded(undefined, "1"), false);
 });
 
 // ---------------------------------------------------------------------------

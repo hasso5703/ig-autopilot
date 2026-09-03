@@ -277,6 +277,20 @@ export const shortcodeless = (permalink) => {
   return p !== "" && !/\/(reel|p|tv)\/[A-Za-z0-9_-]+/.test(p);
 };
 
+/**
+ * Is this media already in the posted ledger?
+ *
+ * Pulled out of recordPosted so the guard can be tested without writing to the
+ * real append-only ledger. An empty or missing mediaId is never "already
+ * recorded": the older carousel records carry none, and matching them all to
+ * each other would silence a genuine second post.
+ */
+export function alreadyRecorded(records, mediaId) {
+  const id = String(mediaId ?? "").trim();
+  if (!id) return false;
+  return (records ?? []).some((r) => String(r?.mediaId ?? "").trim() === id);
+}
+
 export async function recordPosted(entry) {
   /*
    * Refuse a record that cannot recognise its own story.
@@ -322,6 +336,35 @@ export async function recordPosted(entry) {
     );
 
   await mkdir(DIR, { recursive: true });
+
+  /*
+   * One published media, one record — however many times this is called.
+   *
+   * On 2026-09-03 the 10:30 run called recordPosted, the call wrote its line
+   * and then the *caller's* own `console.log` threw on an undefined return.
+   * The run read that as "the record did not happen" and called it again, so
+   * one Reel produced two lines. Nothing downstream reads the ledger by
+   * mediaId: `today` counts lines, so the day instantly reported reelsToday=2
+   * with one Reel on the grid, `owedToday` fell to 0, and the 16:30 slot would
+   * have concluded the day was complete and published nothing. The duplicate
+   * had to be removed by hand from an append-only ledger, which is the one
+   * repair this project never wants to make.
+   *
+   * So the append is idempotent on the mediaId. A retry after a crash is the
+   * normal reason to call twice and it must stay safe; a genuinely different
+   * post always carries a different mediaId.
+   */
+  const already = String(entry.mediaId ?? "").trim();
+  if (already) {
+    const seen = await readJsonl(POSTED);
+    if (alreadyRecorded(seen, already)) {
+      console.warn(
+        `recordPosted: media ${already} is already in the ledger — not appending a second line. One published media, one record: a duplicate would make \`state.mjs today\` count a Reel that does not exist and tell the next slot the day is already full.`
+      );
+      return;
+    }
+  }
+
   const line = JSON.stringify({
     at: new Date().toISOString(),
     slug: entry.slug,
