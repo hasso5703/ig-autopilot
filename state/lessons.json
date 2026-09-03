@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-02T19:40:41.460Z",
+  "at": "2026-09-03T06:40:57.031Z",
   "n": 73,
   "nSettled": 67,
   "medianViews": 191,
@@ -7,7 +7,7 @@
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
-      "views": 1805,
+      "views": 1808,
       "retentionPct": 40,
       "saved": 2,
       "shares": 1,
@@ -92,7 +92,7 @@
     "veo": {
       "n": 53,
       "medianViews": 207,
-      "meanRetentionPct": 22.8,
+      "meanRetentionPct": 22.7,
       "saves": 71,
       "shares": 27,
       "thin": false
@@ -216,7 +216,7 @@
     "20": {
       "n": 6,
       "medianViews": 355,
-      "meanRetentionPct": 22,
+      "meanRetentionPct": 21.8,
       "saves": 13,
       "shares": 2,
       "thin": false
@@ -247,7 +247,7 @@
         "published": [
           {
             "slug": "2026-08-23-ia-a-voulu-abandonner",
-            "views": 1805
+            "views": 1808
           },
           {
             "slug": "2026-08-23-harvard-avatars-profs",
@@ -290,8 +290,8 @@
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
-      "views": 1805,
-      "reach": 1615,
+      "views": 1808,
+      "reach": 1619,
       "avgWatchS": 24.1,
       "retentionPct": 40,
       "likes": 23,
@@ -430,9 +430,9 @@
       "slug": "2026-08-09-motif-anti-cameras",
       "at": "2026-08-09T20:14:36.239Z",
       "hourUtc": 20,
-      "views": 1147,
+      "views": 1148,
       "reach": 1039,
-      "avgWatchS": 15.1,
+      "avgWatchS": 15,
       "retentionPct": 25,
       "likes": 10,
       "comments": 2,
@@ -797,6 +797,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-02-astra-failles-inconnues",
+      "at": "2026-09-02T17:30:10.156Z",
+      "hourUtc": 17,
+      "views": 277,
+      "reach": 257,
+      "avgWatchS": 7.9,
+      "retentionPct": 13,
+      "likes": 2,
+      "comments": 1,
+      "saved": 3,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "OpenAI dit que son prochain modèle, Astra, trouve tout seul des failles que personne ne connaît et s'en sert pour entrer. Il ne sera pas donné à tout le monde.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-29-anthropic-liste-noire",
       "at": "2026-08-29T16:57:13.193Z",
       "hourUtc": 16,
@@ -925,10 +942,10 @@
       "slug": "2026-08-05-apple-openai-gel",
       "at": "2026-08-05T20:29:26.521Z",
       "hourUtc": 20,
-      "views": 172,
+      "views": 173,
       "reach": 161,
       "avgWatchS": 11.7,
-      "retentionPct": 20,
+      "retentionPct": 19,
       "likes": 5,
       "comments": 1,
       "saved": 0,
@@ -1389,6 +1406,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-02-chatgpt-dossier-medical",
+      "at": "2026-09-02T17:25:09.248Z",
+      "hourUtc": 17,
+      "views": 116,
+      "reach": 104,
+      "avgWatchS": 6.3,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-01-chatgpt-pub-milliard",
       "at": "2026-09-01T10:56:19.693Z",
       "hourUtc": 10,
@@ -1474,40 +1508,6 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-02-astra-failles-inconnues",
-      "at": "2026-09-02T17:30:10.156Z",
-      "hourUtc": 17,
-      "views": 47,
-      "reach": 37,
-      "avgWatchS": 6.7,
-      "retentionPct": 11,
-      "likes": 0,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "OpenAI dit que son prochain modèle, Astra, trouve tout seul des failles que personne ne connaît et s'en sert pour entrer. Il ne sera pas donné à tout le monde.",
-      "settled": false
-    },
-    {
-      "slug": "2026-09-02-chatgpt-dossier-medical",
-      "at": "2026-09-02T17:25:09.248Z",
-      "hourUtc": 17,
-      "views": 33,
-      "reach": 27,
-      "avgWatchS": 5.9,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
-      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",

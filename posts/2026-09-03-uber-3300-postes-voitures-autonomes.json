@@ -1,0 +1,224 @@
+{
+  "slug": "2026-09-03-uber-3300-postes-voitures-autonomes",
+  "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA.",
+  "centralClaim": "Uber is cutting about 3,300 jobs, flattening its management layers to reduce organizational complexity, and investing more in its robotaxi business.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/02/uber-is-laying-off-10-of-staff-or-3300-people/",
+      "quote": "Uber is laying off about 3,300 people, or about 10% of its global headcount, in a bid to cut management layers and invest more in its ridesharing, delivery, and robotaxi divisions."
+    },
+    {
+      "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/",
+      "quote": "The cuts will flatten management layers, reducing organizational complexity that was built during a period of ​rapid growth but is now proving a hurdle to decision-making, CEO Dara Khosrowshahi said in a note to employees on Wednesday."
+    }
+  ],
+  "caption": "Uber supprime 3 300 postes, un salarié sur dix, et met plus de 10 milliards dans les voitures sans chauffeur.\n\nDara Khosrowshahi a annoncé la coupe mercredi dans un mail interne. Les postes situés à sept niveaux ou plus sous le patron baissent de 20%, les équipes d'une ou deux personnes sont réduites, et le télétravail passe sous 1% des effectifs. C'est la plus grosse réduction chez Uber depuis la pandémie.\n\nLe détail qui n'est pas dans la vidéo. Contrairement à beaucoup de patrons de la tech, Khosrowshahi n'a pas mis ces licenciements sur le dos de l'IA. Il accuse la complexité de sa propre entreprise. Sur la même période, le site qui recense les plans sociaux de la tech compte plus de 123 000 postes supprimés dans près de 390 entreprises.\n\nÀ nuancer, et c'est important. Rien ne dit que ces 3 300 postes sont remplacés par des machines. Ce qui est écrit, c'est où va l'argent économisé: les courses, la livraison et les robots-taxis. Uber prévoit d'y mettre plus de 10 milliards de dollars, pendant que Waymo étend ses services sans passer par son application.\n\nUn patron qui coupe 10% de ses effectifs doit-il dire si l'IA y est pour quelque chose, oui ou non ? Dis-le en commentaire.\n\ntechcrunch.com · spokesman.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Uber #Emploi",
+  "captionEvidence": [
+    {
+      "quote": "Uber is laying off about 3,300 people, or about 10% of its global headcount, in a bid to cut management layers and invest more in its ridesharing, delivery, and robotaxi divisions.",
+      "url": "https://techcrunch.com/2026/09/02/uber-is-laying-off-10-of-staff-or-3300-people/"
+    },
+    {
+      "quote": "The company announced the changes in an internal email sent by CEO Dara Khosrowshahi and published online Wednesday.",
+      "url": "https://techcrunch.com/2026/09/02/uber-is-laying-off-10-of-staff-or-3300-people/"
+    },
+    {
+      "quote": "Remote jobs at the company are going away, too, with Uber only allowing less than 1% of its staff to work remotely.",
+      "url": "https://techcrunch.com/2026/09/02/uber-is-laying-off-10-of-staff-or-3300-people/"
+    },
+    {
+      "quote": "Unlike several tech executives, Khosrowshahi did not blame the cuts on AI even as a push ⁠to adopt the technology and the efficiencies it can unlock have driven large cuts in the industry this year, with tracking website ‌layoffs.fyi putting the overall number at over 123,000 across nearly 390 ​companies.",
+      "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/"
+    },
+    {
+      "quote": "As part of Wednesday’s overhaul, Uber will reduce the number of employees positioned seven or more reporting layers below the CEO ⁠by 20% and cut the number of teams with only one or two direct",
+      "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/"
+    },
+    {
+      "quote": "To defend its position, Uber plans to put more ​than $10 billion into robotaxis in the coming ⁠years, ​backing the companies developing autonomous-driving systems and positioning itself as a go-to marketplace for driverless rides.",
+      "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/"
+    },
+    {
+      "quote": "Waymo, the biggest U.S. robotaxi operator, which runs its cars ‌through Uber’s app in Austin and Atlanta. Waymo ‌has also been expanding into new markets without Uber, while rivals such as Tesla double down on robotaxis, feeding fears that a growing fleet of driverless cars could erode Uber’s lucrative role as the ⁠middleman between vehicles and riders.",
+      "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Uber · Emploi",
+      "headline": "Uber supprime *3 300* postes, un salarié sur dix",
+      "hero": {
+        "value": "10 milliards $",
+        "label": "mis dans les robots-taxis dans les années qui viennent"
+      },
+      "swipe": "Les phrases sources, une par une"
+    },
+    {
+      "type": "stat",
+      "figure": "3 300",
+      "unit": "postes supprimés, un salarié sur dix",
+      "body": "La plus grosse coupe chez Uber depuis la pandémie, pendant que les **voitures sans chauffeur** grignotent son métier.",
+      "evidence": "Uber Technologies will lay off about 3,300 employees, or 10% of staff, in its largest cuts since the COVID-19 pandemic, to better navigate the rise of robotaxis encroaching on its ride-hailing business.",
+      "source": {
+        "name": "Reuters via The Spokesman-Review",
+        "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le patron refuse de dire que c'est l'IA",
+      "body": "Contrairement à beaucoup de dirigeants de la tech cette année, il ne met pas la coupe sur le dos de l'*intelligence artificielle*.",
+      "evidence": "Unlike several tech executives, Khosrowshahi did not blame the cuts on AI even as a push ⁠to adopt the technology and the efficiencies it can unlock have driven large cuts in the industry this year, with tracking website ‌layoffs.fyi putting the overall number at over 123,000 across nearly 390 ​companies.",
+      "source": {
+        "name": "Reuters via The Spokesman-Review",
+        "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'il accuse à la place",
+      "body": "Trop d'étages de management, une complexité bâtie pendant la croissance rapide, devenue un **frein aux décisions**.",
+      "evidence": "The cuts will flatten management layers, reducing organizational complexity that was built during a period of ​rapid growth but is now proving a hurdle to decision-making, CEO Dara Khosrowshahi said in a note to employees on Wednesday.",
+      "source": {
+        "name": "Reuters via The Spokesman-Review",
+        "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où la hache tombe vraiment",
+      "body": "Les postes à sept niveaux ou plus sous le patron baissent de *20%*. Les équipes d'une ou deux personnes sont réduites.",
+      "evidence": "As part of Wednesday’s overhaul, Uber will reduce the number of employees positioned seven or more reporting layers below the CEO ⁠by 20% and cut the number of teams with only one or two direct",
+      "source": {
+        "name": "Reuters via The Spokesman-Review",
+        "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qui est supprimé",
+      "claim": "3 300 postes, et le télétravail réservé à moins de 1% des salariés.",
+      "caveatLabel": "Ce qui est financé",
+      "caveat": "Plus de 10 milliards de dollars mis dans les robots-taxis dans les années qui viennent.",
+      "evidence": "To defend its position, Uber plans to put more ​than $10 billion into robotaxis in the coming ⁠years, ​backing the companies developing autonomous-driving systems and positioning itself as a go-to marketplace for driverless rides.",
+      "source": {
+        "name": "Reuters via The Spokesman-Review",
+        "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "there is a different type of employee needed to scale that business than one built around human drivers",
+      "attribution": "Adam Ballantyne, analyste chez Cambiar Investors, actionnaire d'Uber",
+      "evidence": "As AV tech and relationships grow and expand - there is a different type of employee needed to scale that business than one built around human drivers and all the cost ⁠to serve entailed with that, including management layers,” said Adam Ballantyne, analyst at Uber shareholder Cambiar Investors.",
+      "source": {
+        "name": "Reuters via The Spokesman-Review",
+        "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui commande souvent des courses",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/02/uber-is-laying-off-10-of-staff-or-3300-people/",
+      "accessed": "2026-09-03"
+    },
+    {
+      "name": "Reuters via The Spokesman-Review",
+      "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/",
+      "accessed": "2026-09-03"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Uber supprime 3 300 postes, un sur dix",
+    "beats": [
+      {
+        "script": "Uber vient de supprimer 3 300 postes. Un salarié sur dix. Et l'entreprise met plus de 10 milliards de dollars dans les voitures sans chauffeur.",
+        "visual": {
+          "type": "veo",
+          "spec": {
+            "subject": "a computer monitor showing the plain grey lines of an internal email page on a white background",
+            "action": "the grey email lines sliding slowly downward, the monitor staying whole, the same size and fully inside the frame the entire time",
+            "camera": "locked-off static shot, no camera movement, no zoom",
+            "composition": "the screen fills the entire frame",
+            "setting": "in soft even daylight"
+          }
+        }
+      },
+      {
+        "script": "Tu vas te dire: encore l'IA qui remplace des gens. Sauf que le patron d'Uber, lui, refuse de dire ça. Et c'est bien plus intéressant que ça.",
+        "visual": {
+          "type": "photo",
+          "query": "dara khosrowshahi",
+          "alt": "Dara Khosrowshahi, le directeur général d'Uber"
+        }
+      },
+      {
+        "script": "Dara Khosrowshahi n'a pas mis ces licenciements sur le dos de l'intelligence artificielle, contrairement à beaucoup de patrons de la tech cette année. Et pourtant.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.spokesman.com/stories/2026/sep/02/uber-to-lay-off-10-of-staff-in-biggest-cuts-since-/"
+        }
+      },
+      {
+        "script": "Et il y en a eu beaucoup: plus de 123 000 postes supprimés dans la tech cette année, dans près de 390 entreprises.",
+        "visual": {
+          "type": "card",
+          "value": "123 000",
+          "label": "postes supprimés dans la tech cette année"
+        }
+      },
+      {
+        "script": "Lui, il accuse sa propre entreprise: trop d'étages de management, trop de coordination, des responsabilités éclatées. Alors il coupe dans les niveaux.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "a computer screen showing a plain grey company management chart, small boxes connected by thin lines",
+            "setting": "in soft even daylight",
+            "composition": "close-up, the screen fills the entire frame"
+          }
+        }
+      },
+      {
+        "script": "Concrètement, les postes situés à sept niveaux ou plus sous le patron sont réduits de 20%. Le télétravail, lui, disparaît presque.",
+        "visual": {
+          "type": "card",
+          "value": "SEPT NIVEAUX",
+          "label": "sous le patron: c'est là que ça coupe"
+        }
+      },
+      {
+        "script": "Mais regarde où va l'argent. Les économies partent dans les courses, la livraison et les robots-taxis. Uber a peur d'être doublé par les voitures autonomes.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/02/uber-is-laying-off-10-of-staff-or-3300-people/"
+        }
+      },
+      {
+        "script": "Un analyste actionnaire le dit sans détour: une flotte autonome ne demande pas le même type de salariés qu'une flotte de chauffeurs. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "image",
+          "spec": {
+            "subject": "an empty driver seat in a car with the steering wheel in front of it",
+            "setting": "in soft even daylight",
+            "composition": "close-up from the passenger side, the seat fills most of the frame"
+          }
+        }
+      }
+    ]
+  }
+}

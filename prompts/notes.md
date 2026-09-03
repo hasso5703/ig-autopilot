@@ -40,7 +40,18 @@ ENTRIES:
   citation verbatim de l'appel que le primaire ne publie pas. Attention, elle
   peut l'attribuer a des personnes differentes (meme phrase donnee a Daniel Oh
   par PC Gamer et a Jaejune Kim par Digital Trends): cite l'entreprise, pas la
-  personne, tant qu'un transcript n'a pas tranche. Ajout 01/08 (10h): quand le
+  personne, tant qu'un transcript n'a pas tranche. Ajout 03/08bis, mesure du
+  03/09 (06h30): repondent 200 ET se gatent du premier coup semafor.com,
+  petapixel.com, tech.yahoo.com, spokesman.com, americanbazaaronline.com,
+  sjvsun.com, trellner.com (12 citations sur 12). Bloquent depuis cet egress:
+  reuters.com, theguardian.com, apnews.com, qz.com (Cloudflare "Just a
+  moment..."), gvwire.com. ET LE CAS A PART, parce que ce n'est PAS un blocage:
+  finance.yahoo.com repond 200 en curl mais le fetch de Node -- donc
+  validate.mjs -- meurt sur `UND_ERR_HEADERS_OVERFLOW` (en-tetes trop gros).
+  Une source qu'on lit tres bien en curl peut donc etre INGATABLE: teste toute
+  URL finance.yahoo.com avec le fetch de Node avant d'ecrire un spec dessus.
+  tech.yahoo.com, lui, passe sans probleme, ce n'est pas "yahoo" qui bloque.
+  Ajout 01/08 (10h): quand le
   primaire est un billet openai.com (403), deux contournements mesures joignables
   en 200 et gates du premier coup: raw.githubusercontent.com (le README d'un
   depot openai/... porte le contenu de l'annonce, github.com et api.github.com
@@ -970,6 +981,29 @@ ENTRIES:
   justes, zero mur de consentement) alors qu'il reste 403 au gate, et
   techcrunch se capture propre en 736 s / 120 frames. Budget mesure d'un scout
   qui epingle 4 recus: ~32 min de navigateur, 0 $.
+- 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
+  aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
+  le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
+  CARACTERES DE LARGEUR NULLE. La copie Reuters servie par spokesman.com porte
+  des U+200B/U+2060/U+200C au milieu des phrases ("d'un period de ​rapid
+  growth", "plus ​than $10 billion", "‌layofffs.fyi"): une citation RETAPEE a la
+  main revient NOT_FOUND alors que la phrase est bien sur la page. Remede
+  systematique quand une citation d'un fil evidemment present echoue: ne la
+  retape pas, EXTRAIS-la du texte aplati (fetch + strip des balises + slice
+  entre deux ancres) et ecris le JSON par script. Vaut pour toute reprise de fil
+  (Reuters, AFP) chez un quotidien local. (2) `versionedActors` PREND "COVID-19"
+  POUR L'ACTEUR DE LA CLAIM. Le controle "les deux premiers beats doivent nommer
+  l'acteur" lit UNIQUEMENT post.corroboration, et tout token nom+chiffre y passe
+  pour un produit versionne. Le lead d'agence sur les licenciements Uber dit "in
+  its largest cuts since the COVID-19 pandemic": le gate a exige que le beat 1 ou
+  2 dise "COVID-19". Meme famille attendue sur GPT-5, Windows 11, Section 230,
+  Article 50. Remede mesure, sans toucher au gate: choisir pour la corroboration
+  une phrase de la MEME page sans token nom+chiffre, puis reecrire centralClaim
+  pour garder le recouvrement de vocabulaire haut (ici "flattening its management
+  layers to reduce organizational complexity" a fait passer une phrase qui
+  echouait a 3 mots distinctifs). La phrase avec COVID reste utilisable en
+  `evidence` de diapo: ce controle-la ne lit pas les diapos. Preuve: gate du
+  03/09, spec uber-3300-postes.
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -2531,21 +2565,6 @@ ENTRIES:
   que sur ce qui a perdu la comparaison. Et le hook "Unverified" de GitHub:
   une ligne dans le rapport, rien d'autre, jamais d'amend ni de commit
   correctif sur une branche laterale (voir routine.md, When things go wrong).
-- 2026-07-31 · Le format 60 s est tenu par le code, plus par un comptage de
-  mots. src/format.mjs porte tous les nombres (7 a 10 beats, plafond 4 stills,
-  plancher 3 surfaces reelles, fenetre de mots calculee sur SPEECH_S et sur le
-  debit reel de la voix, journalise dans state/voice-rate.jsonl). reel2 etire la
-  narration a l'atempo et coupe le fichier a 60,0 s exactement; un script hors
-  fenetre arrete le build juste apres la narration (~$0,012 depense, aucune
-  image achetee) et donne le nombre de mots a ecrire. Ne recopie jamais un
-  nombre de mots de memoire: lance validate.mjs et ecris a la fenetre imprimee.
-  Un still qui tient plus de 5,2 s est recadre une fois, gratuitement. La duree
-  d'un beat est sa part des mots: sous 6 mots l'image clignote (refuse), et un
-  beat `veo` au-dela de ~8,6 s ne peut pas etre montre, car le plus long clip Veo
-  fait 8 s et le moteur ne peut que le ralentir un peu avant que la derniere
-  image ne gele. Les deux builds du 31/07 ont gele ~0,3 s: mesure sur le fichier,
-  89% de mouvement en moins sur les dernieres images. Proof: suite verte 79/79 et
-  gate en ligne PASSED sur le spec du 31/07.
 - 2026-07-31 · Paliers de modeles (consigne Hasan: un cran au-dessus, jamais le
   plus cher). Veo 3.1 Fast, 1080p des que le beat prend 8 s (natif pour
   1080x1920; le 720p etait agrandi 1,5x). Images gemini-3.1-flash-image en 2K:
