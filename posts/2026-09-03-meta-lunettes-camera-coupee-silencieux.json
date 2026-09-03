@@ -1,0 +1,201 @@
+{
+  "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
+  "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
+  "centralClaim": "Meta has disabled the camera on thousands of its smart glasses after detecting that the light which shows the camera is recording had been covered or destroyed.",
+  "corroboration": [
+    {
+      "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses",
+      "quote": "Meta has disabled the photo- and video-taking abilities for thousands of its Glasses users after detecting they had tampered with the light that discloses that the device’s camera is on."
+    },
+    {
+      "url": "https://tech.yahoo.com/ai/meta-ai/articles/meta-bricked-cameras-thousands-ai-025949295.html",
+      "quote": "Thousands of Meta's AI glasses no longer have functioning cameras after the company detected people tampering with the recording indicator lights."
+    }
+  ],
+  "caption": "Meta a coupé la caméra de milliers de ses lunettes connectées, parce que la lumière d'enregistrement avait été trafiquée.\n\nSur ces lunettes, une petite lumière blanche s'allume quand la caméra filme. C'est le seul signal pour les gens autour. Une mise à jour détecte maintenant si cette lumière est couverte ou détruite, et coupe la caméra. Alex Himel, chez Meta, dit que moins de 0.1% des utilisateurs ont été pris. Sur les volumes en jeu, ça met le nombre de fautifs dans les milliers.\n\nLe détail qui n'est pas dans la vidéo. Tout le monde ne perd pas sa caméra pour toujours. Si la lumière a été percée, la fonction ne remarchera jamais. Si elle avait seulement été recouverte d'un autocollant, la caméra revient dès que l'autocollant part. Ceux qui perdent la caméra gardent une paire d'écouteurs Bluetooth hors de prix.\n\nÀ nuancer, et c'est important. L'ampleur de l'opération vient d'un entretien accordé par Meta à un seul média, Semafor, repris ensuite ailleurs. Aucun chiffre exact de matériel bloqué n'a été publié. Et sur les forums, plusieurs réponses affirment qu'il reste possible de filmer sans la lumière.\n\nTu accepterais de croiser ces lunettes dans un bar, oui ou non ? Dis-le en commentaire.\n\nsemafor.com · petapixel.com · yahoo.com\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Meta #ViePrivee",
+  "captionEvidence": [
+    {
+      "quote": "Himel tells Semafor that less than 0.1% of users have been caught altering the camera record system, which would put the number of suspect users in the thousands",
+      "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/"
+    },
+    {
+      "quote": "Meta says that less than .1% of all glasses were being tampered with (and have now had their cameras permanently disabled).",
+      "url": "https://tech.yahoo.com/ai/meta-ai/articles/meta-bricked-cameras-thousands-ai-025949295.html"
+    },
+    {
+      "quote": "Those individuals won’t be able to use the camera on their glasses, leaving them with a pair of expensive Bluetooth headphones.",
+      "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses"
+    },
+    {
+      "quote": "If you drilled out your LED light, your camera function will never work again.",
+      "url": "https://tech.yahoo.com/ai/meta-ai/articles/meta-bricked-cameras-thousands-ai-025949295.html"
+    },
+    {
+      "quote": "The Redditor was rounded on in the comments for being creepy, but at least a few replies suggested that it is still possible to record without the light.",
+      "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Meta · Lunettes connectées",
+      "headline": "Meta coupe la caméra de *milliers* de ses lunettes",
+      "hero": {
+        "value": "0.1%",
+        "label": "des utilisateurs pris à trafiquer la lumière"
+      },
+      "swipe": "Les phrases sources, une par une"
+    },
+    {
+      "type": "stat",
+      "figure": "0.1%",
+      "unit": "des utilisateurs pris à trafiquer la lumière",
+      "body": "Meta ne publie pas de chiffre exact. Ça met le nombre de fautifs **dans les milliers**, sur les volumes vendus.",
+      "evidence": "Himel tells Semafor that less than 0.1% of users have been caught altering the camera record system, which would put the number of suspect users in the thousands",
+      "source": {
+        "name": "PetaPixel",
+        "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La lumière est le seul avertissement",
+      "body": "Une petite lumière blanche s'allume quand la caméra filme. C'est *tout* ce qui prévient les gens autour. Certains ont trouvé comment la cacher.",
+      "evidence": "A blinking white LED light is supposed to let others know that the smart spectacles are recording, but some users have found a way to conceal it.",
+      "source": {
+        "name": "PetaPixel",
+        "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le trou que la mise à jour ferme",
+      "body": "La caméra refusait déjà de démarrer si la lumière était bloquée. Alors certains lançaient l'enregistrement, **puis** masquaient la lumière.",
+      "evidence": "The camera won’t start recording if the LED is blocked, but some people try to bypass this by starting a recording and then covering it up,",
+      "source": {
+        "name": "PetaPixel",
+        "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Lumière percée",
+      "claim": "La fonction photo et vidéo ne remarchera *jamais* sur ces lunettes.",
+      "caveatLabel": "Lumière juste recouverte",
+      "caveat": "La caméra revient dès que l'autocollant est retiré.",
+      "evidence": "If you drilled out your LED light, your camera function will never work again. However, if you had been using the popular method of just covering it with a sticker; the camera will work again once you remove the sticker.",
+      "source": {
+        "name": "Business Insider",
+        "url": "https://tech.yahoo.com/ai/meta-ai/articles/meta-bricked-cameras-thousands-ai-025949295.html",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "It’s been a little bit of a cat and mouse game",
+      "attribution": "Alex Himel, chez Meta, à Semafor",
+      "evidence": "“It’s been a little bit of a cat and mouse game,” Himel said, adding that “I don’t think we’ll ever be done… There’s always new ways to get around the safeguards that are in place.",
+      "source": {
+        "name": "Semafor",
+        "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les lieux commencent à refuser",
+      "body": "Un club new-yorkais a menacé de bannir quiconque entre avec. Une chaîne de pubs britanniques l'a déjà fait.",
+      "evidence": "last week, a trendy New York nightclub threatened to permanently ban anyone trying to enter with the glasses, and even a budget-friendly chain of pubs in the U.K. has banned them.",
+      "source": {
+        "name": "PetaPixel",
+        "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui porte des lunettes connectées",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Semafor",
+      "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses",
+      "accessed": "2026-09-03"
+    },
+    {
+      "name": "PetaPixel",
+      "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/",
+      "accessed": "2026-09-03"
+    },
+    {
+      "name": "Business Insider",
+      "url": "https://tech.yahoo.com/ai/meta-ai/articles/meta-bricked-cameras-thousands-ai-025949295.html",
+      "accessed": "2026-09-03"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Meta a coupé la caméra de ces lunettes",
+    "beats": [
+      {
+        "script": "Quelqu'un peut te filmer dans la rue avec ses lunettes connectées, sans même que tu le voies. Meta vient de couper la caméra de milliers d'entre elles.",
+        "visual": {
+          "type": "photo",
+          "query": "smart glasses",
+          "alt": "une paire de lunettes connectées photographiée de près"
+        }
+      },
+      {
+        "script": "Et tout ça tient à un détail minuscule: la petite lumière blanche sur la branche. Elle s'allume quand la caméra tourne, et c'est le seul truc qui prévient les gens autour de toi.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://petapixel.com/2026/09/01/meta-claims-to-have-bricked-thousands-of-smart-glasses/"
+        }
+      },
+      {
+        "script": "Alors certains l'ont recouverte avec un autocollant, et d'autres l'ont carrément percée. Meta dit que moins de 0.1% des utilisateurs ont été pris.",
+        "visual": {
+          "type": "card",
+          "value": "0.1%",
+          "label": "des utilisateurs pris à trafiquer la lumière"
+        }
+      },
+      {
+        "script": "Sur le nombre de lunettes vendues, ça fait quand même des milliers de personnes concernées. Et surtout, il y avait un trou béant dans le système de Meta.",
+        "visual": {
+          "type": "photo",
+          "query": "camera lens",
+          "alt": "l'objectif d'un appareil photo en gros plan"
+        }
+      },
+      {
+        "script": "La caméra refusait de démarrer si la lumière était cachée. Donc ils lançaient d'abord l'enregistrement, et cachaient la lumière quelques secondes après. Maintenant, la caméra s'arrête en pleine capture.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://tech.yahoo.com/ai/meta-ai/articles/meta-bricked-cameras-thousands-ai-025949295.html"
+        }
+      },
+      {
+        "script": "Et il y a une nuance. Autocollant retiré, la caméra revient. Lumière percée, c'est définitif: il te reste des écouteurs Bluetooth hors de prix. Des clubs commencent d'ailleurs à les refuser à l'entrée.",
+        "visual": {
+          "type": "photo",
+          "query": "black eyeglasses frame",
+          "alt": "une monture de lunettes noire photographiée sur fond clair"
+        }
+      },
+      {
+        "script": "Alex Himel, chez Meta, parle lui-même d'un jeu du chat et de la souris. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.semafor.com/article/09/01/2026/meta-disables-cameras-on-thousands-of-tampered-smart-glasses"
+        }
+      }
+    ]
+  }
+}
