@@ -994,6 +994,21 @@ ENTRIES:
   reconstruction repaie chaque recu. Un scout, lui, a 4 h: c'est lui qui doit
   epingler les recus lents (`scout-capture`) pour que le run de midi n'ait
   plus qu'a assembler.
+  Ajout 03/09 (16h30), DEUX RECUS MESURES SUR LE MEME BUILD ET ILS SONT AUX DEUX
+  BOUTS DE L'ECHELLE. semafor.com est un EXCELLENT recu, mesure a ~2 min: le
+  cadre 9:16 tient le masthead SEMAFOR, "Exclusive /", le titre entier, la
+  signature avec photo du reporter et "Updated Sep 1, 2026", zero mur de
+  consentement, zero pub, aucun recadrage. tech.yahoo.com, lui, SE GATE tres
+  bien (il porte les citations Business Insider) mais NE SE CAPTURE PAS: le
+  renderer a tourne 8 MINUTES a 100% de CPU sans jamais ecrire shot_4.png,
+  famille O(frames) du 06/08 mais sans survie. Build tue a la regle des 6 min
+  ci-dessus, beat echange contre une photo, rebuild complet en ~2 min parce que
+  le recu semafor etait epingle en `file`. PRECISION UTILE SUR L'EPINGLAGE, qui
+  CORRIGE l'entree du 28/08 (17h30): dans le code actuel (reel2.mjs:1646) un
+  beat qui garde `"type":"screenshot"` ET porte un `file` compte toujours comme
+  une surface REELLE, il saute juste la capture. C'est `"type":"file"` qui, lui,
+  ne compte ni comme reel ni comme still. Donc epingle un recu deja pris en
+  gardant son type, et le rebuild ne repaie pas la capture.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -2532,6 +2547,50 @@ ENTRIES:
   Sur une actu de tournage il n'y a donc pas de photo libre utilisable ici:
   prends des recus et des stills, comme le dit deja l'entree "quand rien de
   reel n'existe".
+  Ajout 03/09 (16h30), UNE FAMILLE DE PIEGE PHOTO NEUVE, LE TITRE QUI NOMME LE
+  PRODUIT PARCE QUE LA PHOTO A ETE PRISE AVEC LUI, ET PAS DE LUI. Requete "smart
+  glasses" sur un dossier Ray-Ban Meta: les TROIS premiers candidats s'appellent
+  "Brickell Ray Ban Meta Wayfarer Smart Glasses - 2 May 2026", "... - Colorful
+  facade" et "Corona Beer Display Publix Ray Ban Meta Wayfarer Smart Glasses"
+  (Phillip Pessar, CC BY 4.0), et ce sont un carrefour de Miami, une facade
+  coloree et un rayon de supermarche: le photographe met l'appareil dans le
+  TITRE. Licence, taille, ratio et filtre fond-blanc les laissent passer, le
+  classement les met en tete, et un beat photo non epingle aurait montre des
+  cageots de Corona sous "Meta coupe la camera de ses lunettes". Reflexe: sur un
+  produit photo/video (lunettes, drone, action-cam, telephone), lis la
+  DESCRIPTION Commons avant le titre; ici elle dit "Miami, Florida" et rien
+  d'autre. VALEUR SURE, ET C'EST LE VRAI OBJET: "Ray-Ban Meta Gen 1 smart
+  glasses with charging case" (CCadio, CC BY 4.0, 2026-05-24), thumb 1280x960,
+  `crop=540:960:370:0` puis scale 1080:1920 (x2, mais la source est tres nette),
+  les lunettes noires devant leur etui brun, logo Ray-Ban lisible - une marque
+  QUI EST dans l'histoire, donc pas le piege Augmentin. Excellent beat 0: le
+  spectateur voit l'objet dont parle la carte-titre. Deux autres valeurs sures du
+  meme run, verifiees auteur+licence sur l'API Commons avant epinglage:
+  "John Snow Pub interior upstairs1" (Whispyhistory, CC0, thumb 1280x1707 DEJA
+  EN PORTRAIT, `crop=960:1707:160:0`), un comptoir de pub britannique, bois,
+  tabourets, moquette rouge, AUCUN nom d'etablissement lisible - c'est ce qui le
+  rend publiable; et "London Underground platforms at Whitechapel station,
+  August 2021 01" (TheFrog001, CC0, thumb 1280x960, `crop=540:960:540:0`).
+  L'original et le thumb 1920 ont rendu la page d'erreur de 1 966 octets, le
+  1280 est passe apres 22 s: l'entree du 19/08 se re-confirme, descends a 1280.
+  ET DEUX REFUS DE FRAMES LE MEME SOIR, tous deux invisibles a tout filtre.
+  (1) "nightclub entrance" met en tete "Omnia Nightclub Entrance"
+  (InvadingInvader, CC BY): l'enseigne OMNIA et l'adresse omnianightclub.com
+  remplissent le cadre, sur une histoire ou les clubs qui ont banni les lunettes
+  sont a New York et au Royaume-Uni. Montrer un etablissement NOMME qui n'est pas
+  celui de l'histoire est la faute du mauvais tribunal (16/08), en pire parce
+  qu'ici ca ressemble a une accusation. Cherche le LIEU GENERIQUE sans enseigne.
+  (2) LE CREDIT QUI IMPRIME LE TITRE A LA PLACE DE L'AUTEUR: le moteur a acquis
+  une photo titree "Subway Passengers" et grave "Subway Passengers · CC0", parce
+  que creditLine retombe sur le titre quand `creator` est vide. Verification
+  faite apres coup: Openverse porte DEUX "Subway Passengers" distincts, l'un en
+  by-nc (usage commercial exclu), l'autre en CC BY, et aucun des deux n'est
+  l'image servie. Un credit ou l'auteur EST le titre est donc le signal qu'on ne
+  sait ni qui a pris la photo ni sous quelle licence: ne publie pas ce beat,
+  remplace-le par une image dont tu as lu Artist + LicenseShortName toi-meme sur
+  `commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&iiprop=extmetadata`.
+  Cout de la lecon ce soir: deux beats refuses au controle des frames, un
+  rebuild, 0 $.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
