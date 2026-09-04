@@ -1009,6 +1009,37 @@ ENTRIES:
   une surface REELLE, il saute juste la capture. C'est `"type":"file"` qui, lui,
   ne compte ni comme reel ni comme still. Donc epingle un recu deja pris en
   gardant son type, et le rebuild ne repaie pas la capture.
+  Ajout 04/09 (06h30), UN GATE VERT + UN `ok:true` + UN `landedUrl` JUSTE ET LA
+  CAPTURE EST QUAND MEME UNE PAGE D'ERREUR, famille macrumors 03/08 / cnbc 04/08 /
+  greenairnews 19/08 / fortune 25/08 / cnn 27/08: **techxplore.com** rend 200 au
+  fetch gate (10,4 ko, la depeche AFP entiere, citations VERIFIED du premier
+  coup) et sa capture sort une page "400 / Bad Request / Your request has been
+  blocked by our server's security policies", en 22 s, 1 frame, avec
+  `landedUrl` EXACT. Seul le champ `h1` le disait ("Bad Request"): lis-le
+  toujours, il est imprime pour ca. techxplore reste une SOURCE (c'est la
+  syndication AFP, donc jamais un second domaine de corroboration non plus,
+  famille RNZ 10/08), jamais un recu.
+  DEUX RECUS NEUFS ET EXCELLENTS, mesures le meme matin, a la queue leu leu.
+  (1) **blogs.nvidia.com NOUVEAU**: 200 au fetch gate, capture PROPRE en 82 s /
+  21 frames en mode `top`, h1 juste, zero alt, et les 1686 px visibles (mesure
+  du 22/08) tiennent le masthead NVIDIA, le titre, "September 3, 2026 by Jensen
+  Huang", le visuel NVIDIA + Hugging Face ET la premiere phrase qui porte le
+  montant. Un seul defaut, non recadrable: un bandeau promo VERT ("GTC Berlin
+  takes place October 20-22 ... Register Now") s'intercale ENTRE le masthead et
+  le titre, donc aucun crop rectangulaire ne l'enleve sans perdre l'un des deux.
+  Sur une annonce Nvidia, le blog de la boite est a la fois primaire gatable et
+  meilleur recu, ca re-confirme la regle "site de l'entreprise" (07/08, 22/08).
+  (2) **tomshardware.com NOUVEAU au gate ET en recu**: 200 au fetch gate
+  (15,9 ko), capture PROPRE du premier coup en 203 s / 27 frames, AUCUN
+  recadrage, zero pub, zero banniere: masthead tom's HARDWARE, fil d'Ariane,
+  titre entier qui EST l'histoire avec son chiffre (controle du 10/08),
+  etiquette News, signature, date, chapo ET le visuel de tete. Sur une actu de
+  materiel ou d'industrie des puces, c'est le recu a prendre avant la presse
+  tech generaliste. Meme matin, techcrunch.com se capture propre pour la
+  TROISIEME fois d'affilee (28/08, 31/08, 04/09) et en 204 s seulement, contre
+  880 s le 31/08: son cout varie d'un facteur 4 d'un jour a l'autre, ne le
+  budgete pas sur une seule mesure. Le piege de redirection McAfee du 21/08 ne
+  s'est toujours pas reproduit.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -1823,6 +1854,37 @@ ENTRIES:
   de publication. Verification qui coute 60 s avant d'ecrire les beats:
   `node src/imagery.mjs candidates "<requete>"` PUIS un acquireOne reel, car
   `candidates` liste des images que le filtre refusera ensuite.
+  Ajout 04/09 (06h30), DEUXIEME JOURNEE OPENVERSE HS, ET LE CONTOURNEMENT QUI
+  MARCHE: api.openverse.org a rendu 504 sur TOUTES les requetes du matin (retry
+  interne compris). Consequence a connaitre avant de perdre 5 min:
+  `node src/imagery.mjs candidates "<q>"` THROW sur ce 504 et n'essaie meme pas
+  Commons, donc la commande du manuel est inutilisable ces jours-la. Remede
+  mesure, 0 $: appeler `searchCommons` directement (exporte par imagery.mjs) et
+  se passer entierement d'Openverse, puis telecharger le thumb 1280 ou 1920 avec
+  UA de navigateur complet + referer commons (entree du 20/08), recadrer 9:16 a
+  ffmpeg, REGARDER, et epingler `file`+`credit`. Quatre photos servies sans une
+  seule page d'etranglement ce matin. ET LE PIEGE DU CREDIT, qui coute 5 min et
+  fait croire que l'image n'a pas d'auteur: l'API extmetadata veut le titre AVEC
+  SON EXTENSION (`titles=File:<nom>.jpg`); sans le `.jpg` elle rend bien un objet
+  page mais `extmetadata` VIDE, donc Artist et LicenseShortName ressortent en
+  chaines vides et on est a un pas de publier un credit devine (piege du 03/09).
+  Valeurs sures mesurees, regardees en planche-contact, recadrees et epinglees ce
+  matin: "Paris skyline, summer of 2023" (Dazaikrosan48, CC0, thumb 1920x1921
+  donc CARRE, `crop=1080:1920:420:0` donne le 9:16 en NATIF, toits de Paris +
+  tour Eiffel, zero texte, zero marque); "NVIDIA G80 GPU Core" (Hyins, domaine
+  public, thumb 1920x1140, `crop=641:1140:376:0`, le wordmark nVIDIA lisible sur
+  le boitier, soit une marque QUI EST dans l'histoire, donc pas le piege
+  Augmentin du 08/08); "Code on computer monitor (Unsplash)" (Markus Spiske, CC0,
+  thumb 1920x1280, `crop=720:1280:600:0`, un vrai mur de code colore qui se lit
+  comme de la notation); et "US Navy 020913-N-3986D-001 Growing bacteria in a
+  petri dish" (domaine public, thumb 1280x1792 DEJA EN PORTRAIT,
+  `crop=1008:1792:100:0`), qui re-confirme l'entree du 08/08 et donne un vrai
+  visage de technicien. REQUETES MORTES OU PIEGEES le meme matin: "jensen huang"
+  rend ZERO candidat sur Commons, et "jen-hsun huang" (son nom de fiche) ne sort
+  qu'une poignee de main a DEUX hommes, identite ambigue, famille du 23/08;
+  "station f" ne rend qu'un demo day HEC dont la banniere de marque remplit le
+  cadre; "network patch panel" rend zero; "computer server rack" met en tete un
+  rack Legrand dont la marque est gravee dans le sujet.
 - 2026-07-29 · Une rétention >100% dans watch.mjs n'est pas un bug d'unité:
   ig_reels_avg_watch_time compte les boucles (mesuré 160386 ms de watch moyen
   sur un Reel de 51 s, total exactement 2x la moyenne, portée 0). Sous ~50 de
@@ -4072,6 +4134,20 @@ ENTRIES:
   02/09 plus bas), qui a tenu la journee entiere a 0,00 $. Et le run de veille
   refait ce test de 5 s meme s'il ne publie rien: c'est lui qui previent Hasan
   a temps pour le lendemain, sinon les deux runs du matin repartent en muet.
+  QUATRIEME MESURE, 04/09 06h30: meme longueur 53, meme prefixe AQ.Ab8, meme 401
+  sur /v1beta/models, soit un TROISIEME JOUR complet sans cle. Et le controle qui
+  vaut mieux que le test, parce qu'il est retrospectif: `state/spend.jsonl` dit
+  que le dernier achat reussi est du 01/09 a 16h54 et qu'il n'y a plus une seule
+  ligne depuis, donc les QUATRE Reels publies entre-temps (02/09 x2, 03/09 x2)
+  sont partis SANS VOIX, sur une serie qui s'appelle "L'actu IA en 60 secondes".
+  CONSEQUENCE DE PLANIFICATION POUR UN SCOUT, et c'est la vraie lecon de ce
+  matin: tant que la cle est morte, un spec banque ne doit contenir NI beat
+  `veo` NI beat `image`, parce qu'aucun des deux ne peut etre achete et qu'un
+  run de publication qui herite d'un tel plan doit le reecrire dans sa fenetre.
+  Un plan screenshot + photo + card, lui, se construit A L'IDENTIQUE avec ou
+  sans cle (mode normal comme OOM_SILENT): c'est le seul plan a banquer tant que
+  la situation dure. Les deux specs du 04/09 sont batis comme ca, 7 beats
+  chacun, 3 recus epingles + 2 cartes + 2 photos epinglees, 0 still, 0 veo.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
