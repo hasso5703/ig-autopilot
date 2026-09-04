@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-04T10:47:18.730Z",
-  "n": 75,
+  "at": "2026-09-04T16:51:38.899Z",
+  "n": 76,
   "nSettled": 69,
   "medianViews": 183,
   "medianRetentionPct": 19,
@@ -913,6 +913,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
+      "at": "2026-09-03T17:02:42.594Z",
+      "hourUtc": 17,
+      "views": 186,
+      "reach": 163,
+      "avgWatchS": 12.6,
+      "retentionPct": 21,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
@@ -962,23 +979,6 @@
       "themes": [],
       "sendTest": "Apple accuse ses ex-employés d'avoir filé ses secrets à OpenAI pour leur gadget, et demande à un juge de tout geler.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
-      "at": "2026-09-03T17:02:42.594Z",
-      "hourUtc": 17,
-      "views": 172,
-      "reach": 152,
-      "avgWatchS": 12.9,
-      "retentionPct": 22,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
-      "settled": false
     },
     {
       "slug": "2026-08-22-bague-oura-sommeil",
@@ -1087,6 +1087,25 @@
       "themes": [],
       "sendTest": "Un mec attendait le coucher du soleil, l'IA de Google lui a dit qu'il était déjà passé. Un tribunal a jugé Google responsable de ce que son IA raconte.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-04-nvidia-rachete-hugging-face",
+      "at": "2026-09-04T11:01:26.509Z",
+      "hourUtc": 11,
+      "views": 146,
+      "reach": 132,
+      "avgWatchS": 6.1,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le site où le monde entier range ses IA a été créé par trois Français. Nvidia vient de l'acheter 12.9 milliards de dollars.",
+      "settled": false
     },
     {
       "slug": "2026-08-22-peau-humaine-vivante",
@@ -1504,10 +1523,10 @@
       "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
       "at": "2026-09-03T11:44:37.874Z",
       "hourUtc": 11,
-      "views": 103,
-      "reach": 96,
-      "avgWatchS": 5.1,
-      "retentionPct": 9,
+      "views": 104,
+      "reach": 98,
+      "avgWatchS": 5,
+      "retentionPct": 8,
       "likes": 1,
       "comments": 1,
       "saved": 0,
