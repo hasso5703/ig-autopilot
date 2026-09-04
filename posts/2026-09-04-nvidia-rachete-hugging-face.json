@@ -36,7 +36,10 @@
       "type": "hook",
       "kicker": "Blog de Nvidia · Jensen Huang",
       "headline": "L'entrepôt des IA du monde change de *propriétaire*",
-      "hero": { "value": "12.9", "label": "milliards de dollars, payés par Nvidia" },
+      "hero": {
+        "value": "12.9",
+        "label": "milliards de dollars, payés par Nvidia"
+      },
       "swipe": "Fais défiler."
     },
     {
@@ -45,21 +48,33 @@
       "unit": "milliards de dollars",
       "body": "C'est le **deuxième plus gros achat** de Nvidia, après les 20 milliards payés pour les actifs de Groq.",
       "evidence": "nvidia agreed to buy hugging face, an open-source ai platform, for $12.9 billion. jensen huang, nvidia's ceo, said in a blog post that with the deal, the company \"will expand access to ai for developers and institutions worldwide.\" it's nvidia's second-biggest purchase, after it paid $20 billion for groq assets at the end of last year.",
-      "source": { "name": "CNBC", "url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html", "date": "2026-09-03" }
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html",
+        "date": "2026-09-03"
+      }
     },
     {
       "type": "content",
       "title": "Ce que Nvidia achète vraiment",
       "body": "Hugging Face est le lieu où *toute l'industrie* va chercher ses modèles: 3 millions de modèles partagés, 200,000 entreprises qui s'en servent.",
       "evidence": "more than 18 million developers, researchers and creators use hugging face to share more than 3 million models, 500,000 datasets and 1 million applications. more than 200,000 companies use the platform to discover, evaluate, customize and deploy ai.",
-      "source": { "name": "Nvidia", "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/", "date": "2026-09-03" }
+      "source": {
+        "name": "Nvidia",
+        "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+        "date": "2026-09-03"
+      }
     },
     {
       "type": "content",
       "title": "Une histoire française",
       "body": "Fondée par **trois Français** et passée par un incubateur parisien, même si son siège et ses investisseurs sont américains.",
       "evidence": "hugging face, the artificial intelligence platform u.s. chip giant nvidia is buying for $12.9 billion, is a french success story-founded by three frenchmen and incubated in paris-even if its headquarters and many of its investors are american.",
-      "source": { "name": "TechXplore (AFP)", "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html", "date": "2026-09-03" }
+      "source": {
+        "name": "TechXplore (AFP)",
+        "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html",
+        "date": "2026-09-03"
+      }
     },
     {
       "type": "contrast",
@@ -68,21 +83,44 @@
       "claimLabel": "Le rachat",
       "caveatLabel": "La promesse",
       "evidence": "hugging face will remain an open platform for the entire ai ecosystem. developers will choose the models they want, the frameworks they want, the clouds and inference service providers they want and the computing platforms they want. nvidia compute will not be required to build on or deploy through hugging face.",
-      "source": { "name": "Nvidia", "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/", "date": "2026-09-03" }
+      "source": {
+        "name": "Nvidia",
+        "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+        "date": "2026-09-03"
+      }
     },
     {
       "type": "quote",
       "body": "if we don't have enough capital in europe to bring our champions to the next stage, they're going to go and find the capital elsewhere",
       "attribution": "Roland Lescure, ministre français de l'Économie",
       "evidence": "ahead of the official announcement of the takeover, french economy minister roland lescure voiced concern about american takeovers of startups rooted in france and europe. \"if we don't have enough capital in europe to bring our champions to the next stage, they're going to go and find the capital elsewhere,\" he warned, adding that the deal should serve as \"a wake-up call.\"",
-      "source": { "name": "TechXplore (AFP)", "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html", "date": "2026-09-03" }
+      "source": {
+        "name": "TechXplore (AFP)",
+        "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html",
+        "date": "2026-09-03"
+      }
     },
     {
       "type": "content",
       "title": "Elle avait dit non plusieurs fois",
       "body": "L'entreprise avait *refusé* plusieurs offres de rachat avant de choisir Nvidia pour son engagement sur l'ouvert.",
       "evidence": "fiercely protective of its independence, hugging face long turned down several stake purchases and takeover offers before reaching a deal with nvidia, chosen for its commitment to developing the \"open\" ecosystem.",
-      "source": { "name": "TechXplore (AFP)", "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html", "date": "2026-09-03" }
+      "source": {
+        "name": "TechXplore (AFP)",
+        "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html",
+        "date": "2026-09-03"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le jour de l'annonce",
+      "body": "Jensen Huang a publié le billet **jeudi**. Le patron de Hugging Face raconte le même jour que c'est *sa société* qui est allée voir Nvidia, cet été.",
+      "evidence": "hugging face ceo clément delangue told cnbc on thursday that the company approached huang over the summer about a deal, \"and a few weeks later, here we are.\"",
+      "source": {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html",
+        "date": "2026-09-03"
+      }
     },
     {
       "type": "cta",
@@ -91,10 +129,26 @@
     }
   ],
   "sources": [
-    { "name": "Nvidia", "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/", "accessed": "2026-09-04" },
-    { "name": "CNBC", "url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html", "accessed": "2026-09-04" },
-    { "name": "Tom's Hardware", "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-acquires-hugging-face-for-usd12-93-billion-company-gains-control-of-major-ai-model-distribution-platform", "accessed": "2026-09-04" },
-    { "name": "TechXplore (AFP)", "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html", "accessed": "2026-09-04" }
+    {
+      "name": "Nvidia",
+      "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "accessed": "2026-09-04"
+    },
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html",
+      "accessed": "2026-09-04"
+    },
+    {
+      "name": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-acquires-hugging-face-for-usd12-93-billion-company-gains-control-of-major-ai-model-distribution-platform",
+      "accessed": "2026-09-04"
+    },
+    {
+      "name": "TechXplore (AFP)",
+      "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html",
+      "accessed": "2026-09-04"
+    }
   ],
   "reel2": {
     "mood": "tension",
@@ -103,31 +157,63 @@
     "beats": [
       {
         "script": "Le site où le monde entier va chercher ses intelligences artificielles a été bâti par trois Français. Jeudi, Nvidia a signé pour le racheter. Et à Paris, le ministre de l'Économie parle d'un signal d'alarme.",
-        "visual": { "type": "photo", "query": "paris skyline", "alt": "Les toits de Paris et la tour Eiffel", "file": "media/2026-09-04-nvidia-rachete-hugging-face/photo_0.jpg", "credit": "Dazaikrosan48 · CC0" }
+        "visual": {
+          "type": "photo",
+          "query": "paris skyline",
+          "alt": "Les toits de Paris et la tour Eiffel",
+          "file": "media/2026-09-04-nvidia-rachete-hugging-face/photo_0.jpg",
+          "credit": "Dazaikrosan48 · CC0"
+        }
       },
       {
         "script": "Hugging Face, c'est l'entrepôt des IA. Des modèles gratuits, que n'importe qui peut télécharger et modifier, toi compris. Jensen Huang, le patron de Nvidia, a annoncé le rachat lui-même, sur son blog.",
-        "visual": { "type": "screenshot", "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/", "file": "media/2026-09-04-nvidia-rachete-hugging-face/shot_1.png" }
+        "visual": {
+          "type": "screenshot",
+          "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+          "file": "media/2026-09-04-nvidia-rachete-hugging-face/shot_1.png"
+        }
       },
       {
         "script": "Douze virgule neuf milliards de dollars. C'est le deuxième plus gros achat de toute l'histoire de Nvidia, l'entreprise la plus chère du monde.",
-        "visual": { "type": "card", "value": "12.9", "label": "milliards de dollars, le deuxième plus gros achat de Nvidia" }
+        "visual": {
+          "type": "card",
+          "value": "12.9",
+          "label": "milliards de dollars, le deuxième plus gros achat de Nvidia"
+        }
       },
       {
-        "script": "Parce que ce qu'il achète, ce n'est pas une technologie. C'est le contrôle de l'endroit où toute l'industrie va chercher ses modèles. Trois millions d'IA prêtes à l'emploi.",
-        "visual": { "type": "screenshot", "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-acquires-hugging-face-for-usd12-93-billion-company-gains-control-of-major-ai-model-distribution-platform", "file": "media/2026-09-04-nvidia-rachete-hugging-face/shot_3.png" }
+        "script": "Parce que ce qu'il achète, ce n'est pas une technologie. C'est le contrôle de l'endroit où toute l'industrie va chercher ses modèles. Plus de trois millions d'IA prêtes à l'emploi.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-acquires-hugging-face-for-usd12-93-billion-company-gains-control-of-major-ai-model-distribution-platform",
+          "file": "media/2026-09-04-nvidia-rachete-hugging-face/shot_3.png"
+        }
       },
       {
-        "script": "Dix-huit millions de personnes s'en servent, et deux cent mille entreprises. Hugging Face avait refusé plusieurs offres de rachat avant celle-là. Elle tenait à son indépendance.",
-        "visual": { "type": "card", "value": "18 MILLIONS", "label": "de personnes utilisent Hugging Face, et 200 000 entreprises" }
+        "script": "Plus de dix-huit millions de personnes s'en servent, et plus de deux cent mille entreprises. Hugging Face avait refusé plusieurs offres de rachat avant celle-là. Elle tenait à son indépendance.",
+        "visual": {
+          "type": "card",
+          "value": "18 MILLIONS",
+          "label": "de personnes utilisent Hugging Face, et 200 000 entreprises"
+        }
       },
       {
-        "script": "Sauf que Nvidia vend les puces qui font tourner ces modèles. Alors Huang a dû écrire noir sur blanc que ses puces ne seraient jamais obligatoires.",
-        "visual": { "type": "photo", "query": "nvidia gpu core", "alt": "Un processeur graphique Nvidia sur une carte électronique", "file": "media/2026-09-04-nvidia-rachete-hugging-face/photo_5.jpg", "credit": "Hyins · Domaine public" }
+        "script": "Sauf que Nvidia vend les puces qui font tourner ces modèles. Alors Huang a dû écrire noir sur blanc que ses puces ne seraient pas obligatoires.",
+        "visual": {
+          "type": "photo",
+          "query": "nvidia gpu core",
+          "alt": "Un processeur graphique Nvidia sur une carte électronique",
+          "file": "media/2026-09-04-nvidia-rachete-hugging-face/photo_5.jpg",
+          "credit": "Hyins · Domaine public"
+        }
       },
       {
         "script": "Et côté français, le ministre de l'Économie Roland Lescure prévient: sans capitaux en Europe, nos champions iront les chercher ailleurs. Abonne-toi pour l'actu IA de demain, et laisse un like.",
-        "visual": { "type": "screenshot", "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/", "file": "media/2026-09-04-nvidia-rachete-hugging-face/shot_6.png" }
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+          "file": "media/2026-09-04-nvidia-rachete-hugging-face/shot_6.png"
+        }
       }
     ]
   }

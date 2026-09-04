@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-04T06:39:57.617Z",
+  "at": "2026-09-04T10:47:18.730Z",
   "n": 75,
   "nSettled": 69,
   "medianViews": 183,
@@ -964,6 +964,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
+      "at": "2026-09-03T17:02:42.594Z",
+      "hourUtc": 17,
+      "views": 172,
+      "reach": 152,
+      "avgWatchS": 12.9,
+      "retentionPct": 22,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-22-bague-oura-sommeil",
       "at": "2026-08-22T16:55:58.251Z",
       "hourUtc": 16,
@@ -981,23 +998,6 @@
       ],
       "sendTest": "Ta bague Oura te dit comment tu as dormi. Un procès dit qu'elle ne mesure ni ton cerveau ni tes yeux.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
-      "at": "2026-09-03T17:02:42.594Z",
-      "hourUtc": 17,
-      "views": 162,
-      "reach": 141,
-      "avgWatchS": 13.3,
-      "retentionPct": 22,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-ia-reserve-cours-sport",
@@ -1501,6 +1501,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
+      "at": "2026-09-03T11:44:37.874Z",
+      "hourUtc": 11,
+      "views": 103,
+      "reach": 96,
+      "avgWatchS": 5.1,
+      "retentionPct": 9,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-01-instagram-faux-profils-ia",
       "at": "2026-09-01T16:59:31.288Z",
       "hourUtc": 16,
@@ -1516,23 +1533,6 @@
       "themes": [],
       "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
-      "at": "2026-09-03T11:44:37.874Z",
-      "hourUtc": 11,
-      "views": 94,
-      "reach": 89,
-      "avgWatchS": 5.4,
-      "retentionPct": 9,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 1,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA.",
-      "settled": false
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
