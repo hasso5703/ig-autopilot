@@ -610,7 +610,21 @@ if (process.argv[1] && import.meta.url.endsWith(path.basename(process.argv[1])))
 
   if (cmd === "candidates") {
     const q = rest.join(" ");
-    const found = [...(await searchOpenverse(q)), ...(await searchCommons(q).catch(() => []))];
+    // Both indexes are optional, and for a long time only Commons was. An
+    // Openverse outage (504s all morning, 02/09 and 04/09) therefore threw and
+    // killed the whole command, so a scout could not even see the Commons
+    // candidates that were sitting right there. Neither index may take the
+    // other down: say which one failed and carry on with what answered.
+    const found = [
+      ...(await searchOpenverse(q).catch((err) => {
+        console.error(`openverse unavailable (${describeError(err)}) — showing Commons only`);
+        return [];
+      })),
+      ...(await searchCommons(q).catch((err) => {
+        console.error(`commons unavailable (${describeError(err)}) — showing Openverse only`);
+        return [];
+      })),
+    ];
     found.sort((a, b) => scoreCandidate(b) - scoreCandidate(a));
     for (const c of found.slice(0, 12)) {
       console.log(`${scoreCandidate(c).toFixed(1).padStart(5)}  ${String(c.width)}x${c.height}  ${c.license.padEnd(4)}  ${c.provider.padEnd(20)}  ${c.title.slice(0, 60)}`);

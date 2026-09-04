@@ -1856,10 +1856,13 @@ ENTRIES:
   `candidates` liste des images que le filtre refusera ensuite.
   Ajout 04/09 (06h30), DEUXIEME JOURNEE OPENVERSE HS, ET LE CONTOURNEMENT QUI
   MARCHE: api.openverse.org a rendu 504 sur TOUTES les requetes du matin (retry
-  interne compris). Consequence a connaitre avant de perdre 5 min:
-  `node src/imagery.mjs candidates "<q>"` THROW sur ce 504 et n'essaie meme pas
-  Commons, donc la commande du manuel est inutilisable ces jours-la. Remede
-  mesure, 0 $: appeler `searchCommons` directement (exporte par imagery.mjs) et
+  interne compris). CORRIGE DANS LE CODE ce matin, donc a ne plus re-diagnostiquer:
+  `node src/imagery.mjs candidates "<q>"` THROWAIT sur ce 504 et n'essayait meme
+  pas Commons (l'appel Commons avait un `.catch`, pas l'appel Openverse: une
+  asymetrie, pas une intention). Les deux index sont maintenant tolerants et la
+  commande imprime lequel est tombe. Verifie en direct ce matin: Openverse 504,
+  la commande sort quand meme les candidats Commons. Si tu preferes te passer
+  entierement d'Openverse, le chemin reste: appeler `searchCommons` (exporte) et
   se passer entierement d'Openverse, puis telecharger le thumb 1280 ou 1920 avec
   UA de navigateur complet + referer commons (entree du 20/08), recadrer 9:16 a
   ffmpeg, REGARDER, et epingler `file`+`credit`. Quatre photos servies sans une
