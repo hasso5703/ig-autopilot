@@ -1,0 +1,202 @@
+{
+  "slug": "2026-09-05-google-ia-prix-plus-cher",
+  "centralClaim": "When the same product appeared in both Google AI Mode and traditional search, the price shown in AI Mode averaged 21.6% higher.",
+  "corroboration": [
+    {
+      "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+      "quote": "When the exact same product showed up on both, the price in AI Mode was 21.6% higher on average."
+    },
+    {
+      "url": "https://ppc.land/ai-mode-shows-the-same-products-21-6-more-expensive-productrise-finds/",
+      "quote": "when an identical product surfaced in both Google AI Mode and traditional search on the same day, the price shown in AI Mode averaged 21.6% higher"
+    }
+  ],
+  "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale.",
+  "caption": "Le même produit affiché 21.6 % plus cher quand c'est l'IA de Google qui répond.\n\nUne société qui suit le référencement des produits dans Google, Productrise, a comparé les deux surfaces pendant 23 jours: plus de 2 millions de fiches produit et plus de 100,000 pages de résultats, aux États-Unis et au Royaume-Uni. Quand le même produit apparaît des deux côtés le même jour, le prix affiché dans l'IA est en moyenne 21.6 % plus élevé.\n\nLe détail qui compte: seuls 1.28 % des produits de la recherche classique se retrouvent dans les réponses de l'IA, et le vendeur mis en avant change sur 49.6 % des produits comparés.\n\nGoogle répond que les deux surfaces tirent des mêmes données et qu'un clic sur la fiche permet de comparer les vendeurs. Le chiffre décrit en effet la première offre qu'un acheteur voit, pas la moins chère qui existe pour ce produit. Et l'étude est publiée par l'entreprise qui vend l'outil de suivi.\n\nTu vérifies encore le prix ailleurs avant d'acheter, oui ou non ?\n\nproductrise.app · ppc.land · futurism.com\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Shopping",
+  "captionEvidence": [
+    {
+      "quote": "Over 23 days (August 9 to 31, 2026), we tracked more than 2 million product listings across more than 100,000 SERPs and AI Mode responses.",
+      "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products"
+    },
+    {
+      "quote": "When the exact same product showed up on both, the price in AI Mode was 21.6% higher on average.",
+      "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products"
+    },
+    {
+      "quote": "Just 1.28% of standard search products also reach AI Mode, where the lead seller differs on 49.6% of matches.",
+      "url": "https://ppc.land/ai-mode-shows-the-same-products-21-6-more-expensive-productrise-finds/"
+    },
+    {
+      "quote": "The dataset covers more than 100,000 results pages and AI Mode responses in the United States and the United Kingdom.",
+      "url": "https://ppc.land/ai-mode-shows-the-same-products-21-6-more-expensive-productrise-finds/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Google · le mode IA",
+      "headline": "Chez Google, le même produit coûte plus cher quand l'IA répond.",
+      "hero": {
+        "value": "+21.6 %",
+        "label": "sur le même produit, la même requête, le même jour"
+      },
+      "swipe": "Les chiffres, et la réponse de Google"
+    },
+    {
+      "type": "stat",
+      "figure": "21.6%",
+      "unit": "plus cher en moyenne dans la réponse de l'IA",
+      "body": "Le *même produit*, la même recherche, la même journée. Seul le moteur change.",
+      "evidence": "When the exact same product showed up on both, the price in AI Mode was 21.6% higher on average.",
+      "source": {
+        "name": "Productrise",
+        "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui a été mesuré",
+      "body": "Une comparaison des deux surfaces pendant **23 jours**, sur plus de **2 millions** de fiches produit et plus de **100,000** pages de résultats, aux États-Unis et au Royaume-Uni.",
+      "evidence": "Over 23 days (August 9 to 31, 2026), we tracked more than 2 million product listings across more than 100,000 SERPs and AI Mode responses.",
+      "source": {
+        "name": "Productrise",
+        "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Presque rien en commun",
+      "body": "Seulement **1.28 %** des produits de la recherche classique arrivent dans le mode IA, et le vendeur mis en avant change sur **49.6 %** des produits comparés.",
+      "evidence": "Just 1.28% of standard search products also reach AI Mode, where the lead seller differs on 49.6% of matches.",
+      "source": {
+        "name": "PPC Land",
+        "url": "https://ppc.land/ai-mode-shows-the-same-products-21-6-more-expensive-productrise-finds/",
+        "date": "2026-09-03"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que le classement a changé",
+      "body": "Le prix le plus bas *pèse moins* dans les réponses de l'IA que dans la liste de liens habituelle.",
+      "evidence": "What the data suggests is that the cheapest price is less of a factor in AI Mode.",
+      "source": {
+        "name": "Productrise",
+        "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Le prix affiché en premier est plus élevé dans la réponse de l'IA.",
+      "caveat": "Google répond que les deux surfaces tirent des mêmes données et qu'un clic permet de comparer les vendeurs.",
+      "claimLabel": "Ce que l'étude mesure",
+      "caveatLabel": "Ce que Google répond",
+      "evidence": "Shoppers can easily click into a product listing to compare prices for that product across retailers and choose the best option for them.",
+      "source": {
+        "name": "Futurism",
+        "url": "https://futurism.com/artificial-intelligence/google-ai-mode-higher-prices-study",
+        "date": "2026-09-02"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le clic que personne ne fait",
+      "body": "Le panneau des autres vendeurs existe. Il demande *un geste volontaire*, et la plupart des acheteurs ne le font pas.",
+      "evidence": "but that takes a deliberate click, and most people won't make it",
+      "source": {
+        "name": "Productrise",
+        "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui achète en ligne sans comparer",
+      "sub": "Chaque affirmation est citée depuis sa source."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Productrise",
+      "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+      "accessed": "2026-09-04"
+    },
+    {
+      "name": "PPC Land",
+      "url": "https://ppc.land/ai-mode-shows-the-same-products-21-6-more-expensive-productrise-finds/",
+      "accessed": "2026-09-04"
+    },
+    {
+      "name": "Futurism",
+      "url": "https://futurism.com/artificial-intelligence/google-ai-mode-higher-prices-study",
+      "accessed": "2026-09-04"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Le même produit, 21.6 % plus cher avec l'IA",
+    "beats": [
+      {
+        "script": "Tu cherches un produit sur Google. Son mode IA te répond, et il affiche le même article 21.6 % plus cher que la recherche normale. Même produit, même requête, même journée.",
+        "visual": {
+          "type": "photo",
+          "query": "smartphone in hand screen",
+          "alt": "Une main tient un téléphone ouvert sur une barre de recherche",
+          "file": "media/2026-09-05-google-ia-prix-plus-cher/photo_0.jpg",
+          "credit": "Kristin Hardwick · CC0"
+        }
+      },
+      {
+        "script": "Il n'y a que le moteur qui change. Et ce n'est pas une hausse de prix: c'est que le prix le plus bas compte moins dans les réponses de l'IA.",
+        "visual": {
+          "type": "card",
+          "value": "+21.6 %",
+          "label": "sur le même produit, la même requête, le même jour"
+        }
+      },
+      {
+        "script": "Une société qui suit le référencement produit a comparé les deux côtés pendant 23 jours, sur 2 millions de fiches, aux États-Unis et au Royaume-Uni.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://ppc.land/ai-mode-shows-the-same-products-21-6-more-expensive-productrise-finds/",
+          "file": "media/2026-09-05-google-ia-prix-plus-cher/shot_2.png"
+        }
+      },
+      {
+        "script": "Et ce n'est pas qu'un écart d'étiquette. Sur les produits présents des deux côtés, le vendeur mis en avant change dans 49.6 % des cas. Ce n'est plus la même offre.",
+        "visual": {
+          "type": "photo",
+          "query": "woman sitting in a chair holding a cup looking at a phone",
+          "alt": "Une femme regarde son téléphone",
+          "file": "media/2026-09-05-google-ia-prix-plus-cher/photo_3.jpg",
+          "credit": "Shixart1985 · CC BY 2.0"
+        }
+      },
+      {
+        "script": "L'IA t'en montre aussi beaucoup moins: à peine 1.28 % des produits de la recherche classique se retrouvent dans ses réponses. Tu compares donc beaucoup moins de choses.",
+        "visual": {
+          "type": "card",
+          "value": "1.28 %",
+          "label": "des produits de la recherche classique arrivent dans l'IA"
+        }
+      },
+      {
+        "script": "Google répond que tout vient de la même base de données, et qu'il suffit de cliquer sur une fiche pour comparer les vendeurs et choisir la meilleure option.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://futurism.com/artificial-intelligence/google-ai-mode-higher-prices-study"
+        }
+      },
+      {
+        "script": "Sauf que ce clic demande un geste volontaire, et presque personne ne le fait. Et l'étude vient de l'entreprise qui vend l'outil de suivi. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products"
+        }
+      }
+    ]
+  }
+}
