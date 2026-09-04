@@ -1,0 +1,128 @@
+{
+  "slug": "2026-09-04-ia-sans-securite-en-vente",
+  "centralClaim": "Abliteration sells access to open-weight AI models with their refusal safeguards removed.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+      "quote": "named after a technique that removes a model's tendency to refuse harmful requests, startup abliteration.ai has turned that removal into a service. the platform hosts modified versions of open-weight models with their guardrails removed, including z.ai's recently released GLM-5.3, which users can query from a web browser or access through an api."
+    },
+    {
+      "url": "https://gizmodo.com/while-ai-industry-frets-over-safeguards-one-company-is-building-a-model-that-doesnt-say-no-2000806494",
+      "quote": "abliteration, a startup founded last year and based in palo alto, is loud and proud in its ambition to build what it describes on its website as ai that \"doesn't say no.\" in other words, its models are intentionally trained to handle the sorts of questionable tasks that other ai systems on the market would decline. the company launched its latest model on monday, called-in the awkward, multihyphenated style that's become conventional in the ai industry-abliterated-model-large-v2. it's built upon GLM-5.3, an open-weight model released last month by chinese ai lab z.ai, minus many of the usual safeguards."
+    }
+  ],
+  "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
+  "caption": "Une start-up américaine vend une IA à qui on a retiré tous ses refus. Des journalistes l'ont testée.\n\nAbliteration, installée à Palo Alto, héberge une version modifiée de GLM-5.3, un modèle chinois en accès libre, dont elle a retiré les garde-fous. On ouvre un navigateur, on crée un compte, on demande. TechCrunch a obtenu un programme qui vole les mots de passe enregistrés dans Chrome, puis la marche à suivre pour cultiver chez soi un microbe dangereux pour l'homme.\n\nLa société dit garder deux limites: ses modèles refusent les contenus sur les enfants et l'automutilation. Ses clients, dit son cofondateur, sont des entreprises qui testent la sécurité des banques et d'autres infrastructures critiques.\n\nTout le monde n'y voit pas la même chose. Ahmed Aly, patron d'une société de test, affirme que l'opération retire aussi des connaissances au modèle et qu'il est donc moins efficace pour nuire vraiment. Et aux États-Unis, aucune règle n'oblige personne à poser des garde-fous: le cadre annoncé par l'administration est volontaire, et les modèles ouverts en sont exclus.\n\nOutil de défense, ou danger pour tout le monde ?\n\nSources: techcrunch.com, gizmodo.com, abliteration.ai\n\nVoix et images générées par IA · Script écrit et vérifié par un humain.\n\n#IA #IntelligenceArtificielle #ActuIA #Cybersecurite",
+  "captionEvidence": [
+    {
+      "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+      "quote": "using the service, techcrunch was able to quickly create an account and start querying an abliterated version of GLM-5.3 for free through a web browser. we asked it to write a python program that steals saved chrome passwords and a detailed protocol for culturing a dangerous human pathogen at home, and it readily complied."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+      "quote": "devon says that while still a young company, abliteration.ai's customers include several early-stage red teaming startups based in the u.k. and europe, companies that help banks, airlines, and other enterprises dealing with critical infrastructure beef up their cybersecurity practices."
+    },
+    {
+      "url": "https://gizmodo.com/while-ai-industry-frets-over-safeguards-one-company-is-building-a-model-that-doesnt-say-no-2000806494",
+      "quote": "but the startup isn't completely devoid of ethical red lines: a spokesperson told gizmodo that abliteration's models won't generate text describing child sexual abuse material or self-harm."
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "TechCrunch · Palo Alto",
+      "headline": "Une IA sans garde-fous, *vendue* comme un service",
+      "hero": { "value": "GLM-5.3", "label": "le modèle ouvert dont les refus ont été retirés" },
+      "swipe": "Fais défiler."
+    },
+    {
+      "type": "content",
+      "title": "Le retrait des refus est devenu un produit",
+      "body": "Abliteration héberge des versions modifiées de modèles ouverts, *garde-fous retirés*, interrogeables depuis un navigateur.",
+      "evidence": "named after a technique that removes a model's tendency to refuse harmful requests, startup abliteration.ai has turned that removal into a service. the platform hosts modified versions of open-weight models with their guardrails removed, including z.ai's recently released GLM-5.3, which users can query from a web browser or access through an api.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/", "date": "2026-09-03" }
+    },
+    {
+      "type": "content",
+      "title": "Des journalistes ont demandé, elle a répondu",
+      "body": "Un compte gratuit, un navigateur, et **deux demandes**: un programme qui vole des mots de passe, puis la marche à suivre pour cultiver un microbe dangereux.",
+      "evidence": "using the service, techcrunch was able to quickly create an account and start querying an abliterated version of GLM-5.3 for free through a web browser. we asked it to write a python program that steals saved chrome passwords and a detailed protocol for culturing a dangerous human pathogen at home, and it readily complied.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/", "date": "2026-09-03" }
+    },
+    {
+      "type": "quote",
+      "body": "modify the model so that it becomes a sociopath",
+      "attribution": "Andrew Yoon, responsable de la recherche chez CivAI",
+      "evidence": "andrew yoon, head of research at ai safety nonprofit civai, told techcrunch abliterating models allows you to \"modify the model so that it becomes a sociopath.\" \"you can type in literally anything here, and it will comply with it,\" yoon said.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/", "date": "2026-09-03" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Le modèle accepte ce que les autres refusent",
+      "caveat": "La société dit garder deux limites: enfants et automutilation",
+      "claimLabel": "Ce qui est vendu",
+      "caveatLabel": "Ce qui reste bloqué",
+      "evidence": "but the startup isn't completely devoid of ethical red lines: a spokesperson told gizmodo that abliteration's models won't generate text describing child sexual abuse material or self-harm.",
+      "source": { "name": "Gizmodo", "url": "https://gizmodo.com/while-ai-industry-frets-over-safeguards-one-company-is-building-a-model-that-doesnt-say-no-2000806494", "date": "2026-09-02" }
+    },
+    {
+      "type": "content",
+      "title": "Le doute, dit par le métier lui-même",
+      "body": "Un patron de société de test affirme que l'opération retire aussi des connaissances, et rend le modèle *moins efficace* pour nuire.",
+      "evidence": "if you're actually trying to do real harm with it - cyber harm, bio harm - it will not be as effective,\" aly told techcrunch.",
+      "source": { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/", "date": "2026-09-03" }
+    },
+    {
+      "type": "content",
+      "title": "Et rien ne l'interdit",
+      "body": "Le cadre annoncé par l'administration américaine est *volontaire*, et les modèles ouverts en sont exclus.",
+      "evidence": "all of this is happening within a gaping regulatory void. last month, the trump administration introduced a framework through which the biggest ai developers in the u.s. would voluntarily hand new models over to the federal government for a safety check prior to public release, though the details of what such a check would consist of-if they've been defined at all-haven't been made public. all open source models are exempt.",
+      "source": { "name": "Gizmodo", "url": "https://gizmodo.com/while-ai-industry-frets-over-safeguards-one-company-is-building-a-model-that-doesnt-say-no-2000806494", "date": "2026-09-02" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pense que les IA refusent toujours",
+      "sub": "L'actu IA, sourcée ligne par ligne."
+    }
+  ],
+  "sources": [
+    { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/", "accessed": "2026-09-04" },
+    { "name": "Gizmodo", "url": "https://gizmodo.com/while-ai-industry-frets-over-safeguards-one-company-is-building-a-model-that-doesnt-say-no-2000806494", "accessed": "2026-09-04" },
+    { "name": "Abliteration.ai", "url": "https://abliteration.ai/", "accessed": "2026-09-04" }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Abliteration vend une IA sans sécurité",
+    "beats": [
+      {
+        "script": "Demande à une intelligence artificielle d'écrire un programme qui vole tes mots de passe. Normalement, elle refuse. Là, elle le fait. Et c'est un service, vendu par une start-up qui s'appelle Abliteration.",
+        "visual": { "type": "photo", "query": "code on computer monitor", "alt": "Un écran d'ordinateur rempli de lignes de code", "file": "media/2026-09-04-ia-sans-securite-en-vente/photo_0.jpg", "credit": "Markus Spiske · CC0" }
+      },
+      {
+        "script": "Elle prend GLM-5.3, un modèle chinois que n'importe qui peut télécharger, et elle lui retire les refus. Sa page d'accueil promet une IA qui fait ce que tu autorises.",
+        "visual": { "type": "screenshot", "url": "https://abliteration.ai/", "file": "media/2026-09-04-ia-sans-securite-en-vente/shot_1.png" }
+      },
+      {
+        "script": "Tu ouvres ton navigateur, tu crées un compte, tu demandes. L'essai est gratuit. Et ce qui sort n'est pas un refus poli. Pas une leçon de morale non plus.",
+        "visual": { "type": "card", "value": "GLM-5.3", "label": "le modèle ouvert dont Abliteration a retiré les refus" }
+      },
+      {
+        "script": "Des journalistes de TechCrunch l'ont fait. Ils ont demandé un programme qui vole les mots de passe enregistrés dans Chrome. Le modèle l'a écrit sans discuter.",
+        "visual": { "type": "screenshot", "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/", "file": "media/2026-09-04-ia-sans-securite-en-vente/shot_3.png" }
+      },
+      {
+        "script": "Puis ils ont demandé la marche à suivre pour cultiver chez soi un microbe dangereux pour l'homme. Il l'a écrite aussi, en détail.",
+        "visual": { "type": "photo", "query": "growing bacteria petri dish", "alt": "Un technicien de laboratoire observe une boîte de Petri à la lumière", "file": "media/2026-09-04-ia-sans-securite-en-vente/photo_4.jpg", "credit": "U.S. Navy photo by Jessica Davis · Domaine public" }
+      },
+      {
+        "script": "Andrew Yoon, qui dirige la recherche d'une association de sécurité de l'IA, résume la chose en une phrase: on modifie le modèle pour qu'il devienne un sociopathe.",
+        "visual": { "type": "card", "value": "SOCIOPATHE", "label": "Andrew Yoon, responsable de la recherche chez CivAI" }
+      },
+      {
+        "script": "Un patron du secteur dit quand même que l'opération retire des connaissances au modèle. Mais aux États-Unis, aucune règle n'oblige à mettre des garde-fous. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "screenshot", "url": "https://abliteration.ai/pricing", "file": "media/2026-09-04-ia-sans-securite-en-vente/shot_6.png" }
+      }
+    ]
+  }
+}

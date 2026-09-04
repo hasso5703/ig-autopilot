@@ -25,6 +25,10 @@
     {
       "url": "https://techxplore.com/news/2026-09-french-startup-ai-warehouse.html",
       "quote": "hugging face, the artificial intelligence platform u.s. chip giant nvidia is buying for $12.9 billion, is a french success story-founded by three frenchmen and incubated in paris-even if its headquarters and many of its investors are american."
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html",
+      "quote": "hugging face will \"remain an open platform for the entire ai ecosystem,\" nvidia ceo jensen huang wrote in a blog post thursday."
     }
   ],
   "slides": [
@@ -95,10 +99,10 @@
   "reel2": {
     "mood": "tension",
     "lang": "fr",
-    "title": "Trois Français ont vendu Hugging Face à Nvidia",
+    "title": "Trois Français vendent Hugging Face à Nvidia",
     "beats": [
       {
-        "script": "Le site où le monde entier va chercher ses intelligences artificielles a été bâti par trois Français. Depuis jeudi, il appartient à Nvidia. Et à Paris, le ministre de l'Économie parle d'un signal d'alarme.",
+        "script": "Le site où le monde entier va chercher ses intelligences artificielles a été bâti par trois Français. Jeudi, Nvidia a signé pour le racheter. Et à Paris, le ministre de l'Économie parle d'un signal d'alarme.",
         "visual": { "type": "photo", "query": "paris skyline", "alt": "Les toits de Paris et la tour Eiffel", "file": "media/2026-09-04-nvidia-rachete-hugging-face/photo_0.jpg", "credit": "Dazaikrosan48 · CC0" }
       },
       {
