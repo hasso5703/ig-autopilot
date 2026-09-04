@@ -4388,3 +4388,29 @@ ENTRIES:
   ("Youna Kang in Ray-Ban Meta Glasses", acquerable) est un piege sur une
   histoire de tricheurs: sous le beat 0 elle accuse quelqu'un qui n'a rien
   fait. Sur une histoire d'abus, ne montre pas un visage identifiable.
+  Ajout 04/09 (16h30), DEUX CHOSES QUE LE MODE SILENCIEUX CHANGE ET QU'ON
+  OUBLIE. (1) LA LIGNE DE DIVULGATION DEVIENT FAUSSE. La ligne maison "Voix et
+  images generees par IA" decrit un Reel que le mode silencieux ne produit pas:
+  ni voix, ni image generee, uniquement des photos sous licence libre, des
+  captures et des cartes. Le Reel de 10h30 aujourd'hui est parti avec la ligne
+  maison alors qu'il etait construit en muet, donc avec une affirmation fausse
+  dans sa legende publique, sur un compte dont la promesse est justement
+  l'exactitude. Le gate NE PEUT PAS le voir: son regex accepte aussi bien
+  "generee par IA" que "assistee par IA" (validate.mjs:1060). REFLEXE, 5 s, des
+  que OOM_SILENT est de la partie: remplacer la ligne par celle des Reels du
+  02-03/09, "Sans voix ni image generee : photos sous licence libre et captures
+  des sources · Ecriture assistee par IA, relue par un humain." (elle passe le
+  gate, verifie ce jour). (2) LE VISAGE N'EST PAS UN PROBLEME DE PHOTO, C'EST UN
+  PROBLEME DE FRAME. La photo epinglee par le scout (technicien de la Navy
+  examinant une boite de Petri, domaine public) est irreprochable seule; dans le
+  Reel rendu, le karaoke ecrit "CULTIVER CHEZ SOI" en travers de son visage, et
+  la frame accuse un homme reel de cultiver un microbe dangereux. En muet le
+  karaoke est encore PLUS present (il porte toute l'histoire, y compris sur les
+  cartes), donc le risque monte. Ne juge donc jamais une photo de visage sur le
+  jpg: juge-la sur la frame extraite, avec sa ligne de karaoke. Remede a 0 $,
+  cache oblige: remplacer par le LIEU/l'OBJET ("microbiology incubator plates"
+  -> Commons, pdm, boites de culture empilees, aucun visage), recadrer en 9:16
+  avec ffmpeg (crop='min(iw,ih*9/16)':'min(ih,iw*16/9)',scale=1080:1920),
+  re-gater, rebuild dans le MEME dossier: 0 achat, 4 min. Et la cle media est
+  morte pour la CINQUIEME mesure d'affilee (04/09 16h40, 53 car, AQ.Ab8, 401),
+  soit quatre jours pleins.
