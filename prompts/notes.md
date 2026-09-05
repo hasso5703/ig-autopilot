@@ -1040,6 +1040,19 @@ ENTRIES:
   880 s le 31/08: son cout varie d'un facteur 4 d'un jour a l'autre, ne le
   budgete pas sur une seule mesure. Le piege de redirection McAfee du 21/08 ne
   s'est toujours pas reproduit.
+  Ajout 05/09 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 30 verifications, deux dossiers) collusion.wiki (NOUVEAU),
+  simonwillison.net (NOUVEAU au gate), productrise.app et futurism.com
+  (NOUVEAUX); techcrunch.com et ppc.land re-confirment. Cote flux: The Verge
+  (403), Ars Technica (403) et venturebeat.com (429) restent des blocages
+  permanents. REFLEXE SUR UN INCIDENT DE LABO RAPPORTE PAR DES CHERCHEURS
+  INDEPENDANTS: le site du rapport est a la fois le primaire, le recu le plus
+  leger ET le recu qui porte la preuve, exactement comme metr.org le 27/08.
+  ATTENTION CORROBORATION sur ce genre de dossier, famille du 09/08: la depeche
+  presse LIT le rapport, donc deux domaines verts n'attestent que "les chercheurs
+  ont trouve x". Ce qui fait la vraie double lecture, et qu'il faut dire dans le
+  rapport, c'est le reportage propre du media a cote (ici TechCrunch a obtenu la
+  reponse d'OpenAI et une declaration d'elue), pas le nombre de domaines.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -1888,6 +1901,29 @@ ENTRIES:
   "station f" ne rend qu'un demo day HEC dont la banniere de marque remplit le
   cadre; "network patch panel" rend zero; "computer server rack" met en tete un
   rack Legrand dont la marque est gravee dans le sujet.
+  Ajout 05/09 (06h30), TROISIEME JOURNEE OPENVERSE HS ET UNE SIGNATURE NEUVE:
+  ce matin api.openverse.org ne rend PLUS de 504, il PEND. Un fetch nu ne repond
+  pas en 25 s (AbortError), et `node src/imagery.mjs candidates "<q>"` a ete tue
+  par `timeout 120` sur TROIS requetes d'affilee sans imprimer une ligne, alors
+  que la tolerance posee le 04/09 est bien en place: elle attrape une ERREUR, pas
+  une absence de reponse. Donc ne conclus pas "commande cassee" et ne relance pas
+  trois fois: si `candidates` ne rend rien en ~30 s, passe DIRECTEMENT a
+  `searchCommons` (exporte par imagery.mjs), qui a rendu en 1-2 s toute la
+  matinee. Ce que Commons SEUL sait faire, mesure ce matin: bon sur les ecrans et
+  le materiel ("computer screen code programming" -> "Code on computer monitor
+  (Unsplash)" ET "Colorful code (Unsplash)", Markus Spiske, CC0, thumb 1280x853;
+  "network cables switch" -> "Kabelgewirr (10564703354)", Dirk Vorderstrasse,
+  CC BY 2.0, thumb 1280x853, `crop=480:853:400:0` donne un commutateur avec un
+  cable rouge, zero marque). NUL sur les humains et les lieux de travail:
+  "man using laptop indoors" et "person alone at desk computer" rendent ZERO,
+  "man working at computer night" ne rend qu'un concours photo de l'US Army,
+  "wikipedia editor at computer" ne rend que des peintures generees, et
+  "server rack data centre" met en tete des disques durs detoures. Donc tant
+  qu'Openverse pend, ne banque AUCUN beat photo qui demande un visage: prends
+  l'objet, l'ecran ou le cable. Et attention a la TAILLE annoncee: searchCommons
+  disait 1600x1067 la ou le thumb /1280px- sert du 1280x853, donc calcule ton
+  crop 9:16 sur ffprobe, pas sur le champ annonce (un crop=480:854 sur une image
+  de 853 px de haut meurt sur "Invalid too big or non positive size").
 - 2026-07-29 · Une rétention >100% dans watch.mjs n'est pas un bug d'unité:
   ig_reels_avg_watch_time compte les boucles (mesuré 160386 ms de watch moyen
   sur un Reel de 51 s, total exactement 2x la moyenne, portée 0). Sous ~50 de
@@ -3844,6 +3880,28 @@ ENTRIES:
   hauteur de la photo de tete qui decide, et ca se teste en une capture.
   Cout total des quatre captures: 32 min et 0 $, et les deux Reels du jour
   n'ont plus une seule capture a faire. Proof: scout 06h30 31/08.
+  Ajout 05/09 (06h30), QUATRE RECUS NEUFS MESURES HORS MOTEUR, a la queue leu
+  leu, dont TROIS a 22 SECONDES ET UNE SEULE FRAME. (1) **collusion.wiki
+  NOUVEAU**: 22 s / 1 frame, mode `top`, aucun recadrage, et il entre direct
+  dans la categorie "recu qui porte la preuve" (PubMed 08/08, arxiv 16/08,
+  epoch.ai 17/08, dataconomy 18/08, xusheng 25/08, news.mit.edu 26/08, metr.org
+  27/08): les 1686 px visibles (mesure du 22/08) tiennent le titre entier, les
+  QUATRE auteurs, la date ET la phrase du centralClaim mot pour mot. Zero pub,
+  zero banniere. (2) **simonwillison.net NOUVEAU**: 22 s / 1 frame, aucun
+  recadrage, masthead violet "Simon Willison's Weblog", titre du billet, date, et
+  le paragraphe qui porte le claim. ATTENTION, le champ `h1` rend le nom du SITE
+  et pas le titre du billet: ici c'est sans consequence (la page s'ouvre en haut)
+  mais ne lis pas ce `h1` comme un echec du controle du 10/08, regarde l'image.
+  (3) **productrise.app NOUVEAU**: 22 s / 1 frame, MAIS IL LUI FAUT LE MODE
+  `top` (famille outerbio 22/08): au scroll au h1 le masthead passe hors cadre et
+  le recu ne dit plus de qui il est; en `top` on a logo Productrise + fil
+  d'Ariane + titre entier avec son chiffre en couleur + signature + date.
+  (4) **futurism.com NOUVEAU**: 254 s / 28 frames (famille O(frames) du 06/08,
+  il SURVIT), propre, zero pub, zero banniere, et son CHAPO porte le claim
+  chiffre. Un seul defaut non recadrable: au scroll au h1 le masthead FUTURISM
+  est coupe en deux en haut du cadre; l'identite reste lisible a la signature.
+  Un blog d'entreprise ou de chercheur reste donc le recu le moins cher qui
+  existe, ca re-confirme le 07/08 et le 22/08. Proof: scout 06h30 05/09.
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08, scout 06h30 26/08, scout 06h30 27/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
@@ -4151,6 +4209,18 @@ ENTRIES:
   sans cle (mode normal comme OOM_SILENT): c'est le seul plan a banquer tant que
   la situation dure. Les deux specs du 04/09 sont batis comme ca, 7 beats
   chacun, 3 recus epingles + 2 cartes + 2 photos epinglees, 0 still, 0 veo.
+  SIXIEME MESURE, 05/09 06h40: meme longueur 53, meme prefixe AQ.Ab8, meme 401
+  sur /v1beta/models, soit QUATRE JOURS PLEINS, et `state/spend.jsonl` n'a
+  toujours aucune ligne depuis le 01/09 16h54. ET VOICI CE QUE LE MUET COUTE,
+  mesure pour la premiere fois sur six Reels: retention des SIX Reels sans voix
+  (02/09 au 04/09) 12, 15, 8, 21, 10 et 11%, soit une mediane de ~11% contre 19%
+  de mediane pour les 71 Reels regles du compte (`node src/learn.mjs`). Vues 104
+  a 449, mediane ~144 contre 183. Ce n'est donc pas une degradation cosmetique:
+  a la louche le muet divise la retention par deux. Le calcul, sans achat:
+  avg watch (`ig_reels_avg_watch_time`/1000 dans state/metrics.jsonl) sur
+  `durationS` de posted.jsonl. Consequence: la cle morte est le premier point du
+  rapport de CHAQUE run tant qu'elle l'est, et un run de veille qui ne previent
+  pas Hasan laisse partir deux Reels muets de plus le lendemain.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
