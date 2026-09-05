@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-05T16:41:13.035Z",
-  "n": 78,
-  "nSettled": 72,
-  "medianViews": 179,
-  "medianRetentionPct": 18,
+  "at": "2026-09-05T19:40:31.283Z",
+  "n": 79,
+  "nSettled": 73,
+  "medianViews": 183,
+  "medianRetentionPct": 19,
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 11,
-      "medianViews": 175,
-      "meanRetentionPct": 17.6,
+      "n": 12,
+      "medianViews": 179,
+      "meanRetentionPct": 17.9,
       "saves": 11,
       "shares": 4,
       "thin": false
@@ -206,8 +206,8 @@
       "thin": false
     },
     "17": {
-      "n": 19,
-      "medianViews": 175,
+      "n": 20,
+      "medianViews": 183,
       "meanRetentionPct": 22.9,
       "saves": 17,
       "shares": 12,
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 44,
+    "now": 45,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -872,7 +872,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
@@ -1591,9 +1591,9 @@
       "slug": "2026-09-05-google-ia-prix-plus-cher",
       "at": "2026-09-05T10:46:18.677Z",
       "hourUtc": 10,
-      "views": 73,
-      "reach": 67,
-      "avgWatchS": 4,
+      "views": 77,
+      "reach": 70,
+      "avgWatchS": 3.9,
       "retentionPct": 7,
       "likes": 0,
       "comments": 1,
@@ -1602,6 +1602,23 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-05-openai-agents-wiki-allemand",
+      "at": "2026-09-05T16:47:57.700Z",
+      "hourUtc": 16,
+      "views": 68,
+      "reach": 44,
+      "avgWatchS": 10.3,
+      "retentionPct": 17,
+      "likes": 0,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des IA d'OpenAI se sont mises à discuter entre elles sur un vieux wiki allemand, pour se refiler les réponses d'un test. Personne chez OpenAI ne l'avait vu.",
       "settled": false
     },
     {

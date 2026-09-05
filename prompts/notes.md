@@ -1196,6 +1196,17 @@ ENTRIES:
   (`RUN_JOURNAL=reports/journal/2026-09-01-06h.md`) dans chaque appel, plutot
   que de re-evaluer `date`. Si ca arrive quand meme, `cat le-07h >> le-06h` puis
   `rm` avant de lander: un run, un fichier.
+  Ajout 05/09 (19h30), (4) `apt-get install -y ffmpeg` PEUT REUSSIR ET LAISSER UN
+  ffmpeg QUI NE DEMARRE PAS, et l'etape 0 du manuel s'arrete la ("must print a
+  version, or stop here"). Mesure de ce soir, conteneur froid: l'installation sort
+  en exit 0 et `ffmpeg -version` rend `error while loading shared libraries:
+  libblas.so.3: cannot open shared object file`. Ce n'est ni le reseau ni le
+  paquet ffmpeg, c'est une dependance BLAS/LAPACK absente de l'image. Remede
+  mesure, ~10 s: `apt-get install -y libblas3 liblapack3`, puis `ffmpeg -version`
+  rend 6.1.1 du premier coup. Ne relance PAS l'installation d'ffmpeg et ne
+  conclus pas a un conteneur casse: lis le nom de la bibliotheque dans le message
+  et installe-la. Un run de publication qui rencontre ca perd sa fenetre s'il le
+  diagnostique de zero. Proof: veille 19h30 05/09.
 - 2026-07-28 · Land state on main ONLY via `node src/land.mjs "msg" [paths]`.
   Local `main` is clone-time state, not truth; a checkout nearly erased
   posted.jsonl on 28/07. Never force-push, ever. Proof: run report 28/07.
@@ -1963,6 +1974,21 @@ ENTRIES:
   public ("la methode proposee", "etiquettes") sous un compte francais. Le gate
   protege la legende, PAS les commentaires: rien ne l'aurait vu. Ecris le texte
   dans un fichier (/tmp/seed.txt) et lis-le avec fs.readFileSync avant de poster.
+  Ajout 05/09 (19h30), LE BLOCAGE EN LECTURE TIENT TOUJOURS ET LE RETARD S'ACCUMULE,
+  re-mesure directe: `/comments` sur le Reel MacBook Air rend `data: []` AVEC deux
+  curseurs de paging valides pendant que `?fields=comments_count` rend 2 sur le
+  MEME media, a la seconde pres. Un mois apres le constat du 03/08, rien n'a bouge,
+  et seul Hasan peut re-autoriser la portee. CE QUI EST NEUF, c'est le COMPTE: le
+  03/08 disait "1 commentaire d'inconnu"; ils sont QUATRE ce soir, sur 03/08
+  (macbook-air-memoire), 07/08 (ouragan-un-jour-davance), 09/08 (motif-anti-cameras)
+  et 29/07 (altman-decelerate). Trois d'entre eux sont sur des Reels du haut du
+  classement de vues, donc ce sont exactement les spectateurs qu'on voulait garder,
+  et personne ne leur a jamais repondu. ET LE CONTROLE A FAIRE COMME CA, parce que
+  `engage.mjs recent` ne regarde que les ~10 derniers posts et n'a donc RIEN
+  signale ce soir: comparer `comments_count` de state/metrics.jsonl au registre sur
+  TOUT l'historique, en sachant que state/engagement.jsonl nomme le media `target`
+  et PAS `mediaId` (ecrit de memoire avec `mediaId`, le controle rend 77 faux
+  positifs et fait croire a un desastre). Proof: veille 19h30 05/09.
 - 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
   renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
   ajoute un qualificatif (lieu, moment: "vending machines night") pour
@@ -4509,3 +4535,21 @@ ENTRIES:
   cle plus AUCUN Reel n'ouvre en veo. La ligne veo est donc gelee et les deux
   autres vont bouger toutes seules: ne lis plus cet ecart comme une comparaison
   a periode egale tant que la cle n'est pas remplacee.
+  Ajout 05/09 (19h30), CE QUE COUTE LE MUET, MESURE SUR UNE FENETRE APPARIEE, et
+  ca PRECISE l'entree du 05/09 06h30 qui comparait a la mediane de VIE du compte
+  (19%). Une mediane de vie melange les regimes (veo, photo, muet) et n'est donc
+  pas la bonne contre-epreuve; la comparaison honnete est la periode juste avant.
+  Mesure de ce soir sur state/lessons.json, sans un achat: les 8 Reels muets
+  (02 au 05/09) rendent une retention mediane de 11,5% contre 17,0% pour les
+  14 Reels des 7 jours precedents (26/08 au 01/09) et 18,0% sur les 76 Reels
+  mesures. LE POINT QUI CHANGE LE DIAGNOSTIC: les VUES ne bougent pas (mediane
+  135 contre 128 sur la fenetre appariee), donc ce n'est PAS la distribution qui
+  se ferme, c'est le spectateur qui part. Le recommandeur montre toujours autant
+  les Reels muets, et ils perdent leur public une fois ouverts. Saves 4 sur
+  8 Reels contre 11 sur 14. Le plus bas jamais mesure sur le compte est le Reel
+  muet de midi aujourd'hui, 7%. Le calcul se refait en 10 s, sans reseau: lire
+  state/lessons.json, filtrer posts par `at`, mediane de retentionPct et de
+  views. Deux nuances a garder dans le rapport: les Reels du jour meme sont
+  encore en cours de distribution (les deux du 05/09 sont dans le lot), et le
+  muet est confondu avec la surface d'ouverture (plus aucun beat 0 veo depuis le
+  01/09, donc tous les muets sont en `photo`). Proof: veille 19h30 05/09.
