@@ -4221,6 +4221,18 @@ ENTRIES:
   `durationS` de posted.jsonl. Consequence: la cle morte est le premier point du
   rapport de CHAQUE run tant qu'elle l'est, et un run de veille qui ne previent
   pas Hasan laisse partir deux Reels muets de plus le lendemain.
+  SEPTIEME MESURE, 05/09 10h38: meme longueur 53, meme prefixe AQ.Ab8, meme 401,
+  cinq jours pleins. ET LE CHRONO DU RUN DE PUBLICATION EN MUET, mesure de bout
+  en bout ce midi, parce qu'il change ce qu'un run peut se permettre: demarrage
+  10:37, spec banque re-gate en ligne 10:40, build OOM_SILENT 10:40:41 a 10:42:47
+  (2 min 06 pour 7 beats screenshot+photo+card, 0 achat), land 10:43, dry-run +
+  publish 10:44 a 10:45:56, soit REEL EN LIGNE 9 MINUTES APRES LE DEBUT DU RUN.
+  L'arithmetique du manuel (~35 min entre le cron et l'atterrissage) est celle
+  d'un build paye avec narration + Whisper + achats: en muet, avec un spec deja
+  banque et gate-vert, c'est ~15 min apres le lancement de l'app. Consequence
+  pratique: un run de publication muet a de la MARGE, il n'a pas a expedier le
+  controle des frames ni a renoncer a regarder une histoire plus fraiche sortie
+  depuis le scout. Proof: journal reports/journal/2026-09-05-10h.md.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
