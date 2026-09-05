@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-05T07:02:26.666Z",
-  "n": 77,
+  "at": "2026-09-05T10:48:24.718Z",
+  "n": 78,
   "nSettled": 71,
   "medianViews": 183,
   "medianRetentionPct": 19,
@@ -1365,6 +1365,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-04-ia-sans-securite-en-vente",
+      "at": "2026-09-04T16:50:21.207Z",
+      "hourUtc": 16,
+      "views": 123,
+      "reach": 113,
+      "avgWatchS": 6.9,
+      "retentionPct": 12,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -1486,23 +1503,6 @@
       "settled": true
     },
     {
-      "slug": "2026-09-04-ia-sans-securite-en-vente",
-      "at": "2026-09-04T16:50:21.207Z",
-      "hourUtc": 16,
-      "views": 115,
-      "reach": 109,
-      "avgWatchS": 6.8,
-      "retentionPct": 11,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-24-enfant-apprend-mieux",
       "at": "2026-08-24T17:08:53.955Z",
       "hourUtc": 17,
@@ -1603,6 +1603,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-05-google-ia-prix-plus-cher",
+      "at": "2026-09-05T10:46:18.677Z",
+      "hourUtc": 10,
+      "views": 1,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
