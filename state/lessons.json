@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-05T10:48:24.718Z",
+  "at": "2026-09-05T16:41:13.035Z",
   "n": 78,
-  "nSettled": 71,
-  "medianViews": 183,
-  "medianRetentionPct": 19,
+  "nSettled": 72,
+  "medianViews": 179,
+  "medianRetentionPct": 18,
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -72,20 +72,20 @@
       "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA."
     },
     {
+      "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
+      "views": 104,
+      "retentionPct": 8,
+      "saved": 0,
+      "shares": 1,
+      "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA."
+    },
+    {
       "slug": "2026-08-31-chine-series-ia-acteurs",
       "views": 111,
       "retentionPct": 11,
       "saved": 0,
       "shares": 0,
       "sendTest": "En Chine, 95% des mini-séries sont déjà fabriquées par une IA. Des acteurs doivent donner leur visage à la machine avant d'être virés."
-    },
-    {
-      "slug": "2026-08-24-enfant-apprend-mieux",
-      "views": 114,
-      "retentionPct": 8,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait."
     }
   ],
   "byBeat0": {
@@ -98,11 +98,11 @@
       "thin": false
     },
     "photo": {
-      "n": 10,
-      "medianViews": 179,
-      "meanRetentionPct": 18.6,
+      "n": 11,
+      "medianViews": 175,
+      "meanRetentionPct": 17.6,
       "saves": 11,
-      "shares": 3,
+      "shares": 4,
       "thin": false
     },
     "screenshot": {
@@ -166,11 +166,11 @@
       "thin": false
     },
     "11": {
-      "n": 7,
-      "medianViews": 354,
-      "meanRetentionPct": 16,
+      "n": 8,
+      "medianViews": 275,
+      "meanRetentionPct": 15,
       "saves": 8,
-      "shares": 6,
+      "shares": 7,
       "thin": false
     },
     "12": {
@@ -1246,6 +1246,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-04-ia-sans-securite-en-vente",
+      "at": "2026-09-04T16:50:21.207Z",
+      "hourUtc": 16,
+      "views": 131,
+      "reach": 122,
+      "avgWatchS": 6.6,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-12-montre-tension-google",
       "at": "2026-08-12T17:14:27.717Z",
       "hourUtc": 17,
@@ -1363,23 +1380,6 @@
       "themes": [],
       "sendTest": "Une appli a signalé une gamine de 11 ans pour automutilation parce qu'elle parlait d'un chien d'assistance. Son école a prévenu tout le monde.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-04-ia-sans-securite-en-vente",
-      "at": "2026-09-04T16:50:21.207Z",
-      "hourUtc": 16,
-      "views": 123,
-      "reach": 113,
-      "avgWatchS": 6.9,
-      "retentionPct": 12,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
-      "settled": false
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
@@ -1551,7 +1551,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-01-instagram-faux-profils-ia",
@@ -1588,6 +1588,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-05-google-ia-prix-plus-cher",
+      "at": "2026-09-05T10:46:18.677Z",
+      "hourUtc": 10,
+      "views": 73,
+      "reach": 67,
+      "avgWatchS": 4,
+      "retentionPct": 7,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale.",
+      "settled": false
+    },
+    {
       "slug": "2026-07-28-claude-chats-google",
       "at": "2026-07-28T09:12:53.605Z",
       "hourUtc": 9,
@@ -1603,23 +1620,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-05-google-ia-prix-plus-cher",
-      "at": "2026-09-05T10:46:18.677Z",
-      "hourUtc": 10,
-      "views": 1,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
