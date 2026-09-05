@@ -4496,3 +4496,16 @@ ENTRIES:
   re-gater, rebuild dans le MEME dossier: 0 achat, 4 min. Et la cle media est
   morte pour la CINQUIEME mesure d'affilee (04/09 16h40, 53 car, AQ.Ab8, 401),
   soit quatre jours pleins.
+  Ajout 05/09 (16h30): HUITIEME mesure morte d'affilee (401 sur
+  generativelanguage.googleapis.com/v1beta/models, 53 car, AQ.Ab), soit CINQ
+  jours pleins. Ne perds plus une minute a tester veo/TTS: teste la cle en une
+  ligne curl au step 0, et si elle est morte, OOM_SILENT=1 est le mode par
+  defaut du run, pas un repli. Ce que ca coute vraiment, mesure aujourd'hui:
+  un run de publication herite d'un spec de scout entierement gate et epingle,
+  build muet COMPLIANT 60,0 s en ~2 min, publie 10 min apres le demarrage du
+  run, 0,00 $. Ce que ca coute a l'apprentissage, en revanche, est reel et
+  invisible: `learn.mjs` classe l'ouverture veo a 22,3% de retention (n=55)
+  contre photo 17,6% (n=11) et screenshot 16,3% (n=6), et depuis la mort de la
+  cle plus AUCUN Reel n'ouvre en veo. La ligne veo est donc gelee et les deux
+  autres vont bouger toutes seules: ne lis plus cet ecart comme une comparaison
+  a periode egale tant que la cle n'est pas remplacee.
