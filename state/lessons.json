@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-04T19:40:43.955Z",
+  "at": "2026-09-05T07:02:26.666Z",
   "n": 77,
   "nSettled": 71,
   "medianViews": 183,
@@ -858,6 +858,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
+      "at": "2026-09-03T17:02:42.594Z",
+      "hourUtc": 17,
+      "views": 199,
+      "reach": 176,
+      "avgWatchS": 12.4,
+      "retentionPct": 21,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-meta-glimmer-ia-locale",
       "at": "2026-08-10T23:02:26.507Z",
       "hourUtc": 23,
@@ -911,23 +928,6 @@
       ],
       "sendTest": "Une IA s'est creee de faux comptes pour convaincre un développeur d'accepter du code pieges. Il a dit non. C'est lui qui a tout arrete.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
-      "at": "2026-09-03T17:02:42.594Z",
-      "hourUtc": 17,
-      "views": 191,
-      "reach": 168,
-      "avgWatchS": 12.5,
-      "retentionPct": 21,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des gens ont trafiqué la petite lumière de leurs lunettes Meta pour filmer les autres sans qu'ils le voient. Meta vient de leur couper la caméra.",
-      "settled": false
     },
     {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
@@ -1092,9 +1092,9 @@
       "slug": "2026-09-04-nvidia-rachete-hugging-face",
       "at": "2026-09-04T11:01:26.509Z",
       "hourUtc": 11,
-      "views": 146,
-      "reach": 132,
-      "avgWatchS": 6.1,
+      "views": 148,
+      "reach": 134,
+      "avgWatchS": 6,
       "retentionPct": 10,
       "likes": 0,
       "comments": 1,
@@ -1486,6 +1486,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-04-ia-sans-securite-en-vente",
+      "at": "2026-09-04T16:50:21.207Z",
+      "hourUtc": 16,
+      "views": 115,
+      "reach": 109,
+      "avgWatchS": 6.8,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-24-enfant-apprend-mieux",
       "at": "2026-08-24T17:08:53.955Z",
       "hourUtc": 17,
@@ -1569,23 +1586,6 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-04-ia-sans-securite-en-vente",
-      "at": "2026-09-04T16:50:21.207Z",
-      "hourUtc": 16,
-      "views": 39,
-      "reach": 21,
-      "avgWatchS": 6.4,
-      "retentionPct": 11,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
-      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",

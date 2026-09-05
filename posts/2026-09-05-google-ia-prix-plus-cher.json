@@ -187,14 +187,16 @@
         "script": "Google répond que tout vient de la même base de données, et qu'il suffit de cliquer sur une fiche pour comparer les vendeurs et choisir la meilleure option.",
         "visual": {
           "type": "screenshot",
-          "url": "https://futurism.com/artificial-intelligence/google-ai-mode-higher-prices-study"
+          "url": "https://futurism.com/artificial-intelligence/google-ai-mode-higher-prices-study",
+          "file": "media/2026-09-05-google-ia-prix-plus-cher/shot_5.png"
         }
       },
       {
         "script": "Sauf que ce clic demande un geste volontaire, et presque personne ne le fait. Et l'étude vient de l'entreprise qui vend l'outil de suivi. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "screenshot",
-          "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products"
+          "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+          "file": "media/2026-09-05-google-ia-prix-plus-cher/shot_6.png"
         }
       }
     ]
