@@ -1053,6 +1053,20 @@ ENTRIES:
   ont trouve x". Ce qui fait la vraie double lecture, et qu'il faut dire dans le
   rapport, c'est le reportage propre du media a cote (ici TechCrunch a obtenu la
   reponse d'OpenAI et une declaration d'elue), pas le nombre de domaines.
+  Ajout 06/09 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  abcnews.com (NOUVEAU), kltv.com (NOUVEAU, Gray TV comme actionnews5), fortune.com
+  (NOUVEAU), the-decoder.com (NOUVEAU, et c'est le meilleur relais joignable sur
+  un lancement de modele: il porte les chiffres du briefing presse ET la
+  contradiction entre classements), blog.google (NOUVEAU, primaire Google).
+  Bloquent depuis cet egress, tous du groupe Nexstar sur la MEME depeche:
+  kron4.com, ktla.com, newsnationnow.com (403, 6,5 ko). Sur un fait divers
+  americain repris partout, teste 4 ou 5 reprises: la moitie appartient a un
+  seul groupe qui bloque en bloc. ET LE PIEGE DU JOUR, famille "n'ecris jamais
+  une citation de memoire": TechCrunch et KLTV citent la MEME phrase du sherif
+  et l'ecrivent differemment, "a multiday ordeal" chez TechCrunch, "a multi-day
+  ordeal" chez KLTV. Une citation recopiee du mauvais onglet revient NOT_FOUND
+  alors que la phrase existe bien sur les deux pages. Extrais toujours du texte
+  aplati de L'URL QUE TU VAS CITER, jamais d'une reprise.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -4350,6 +4364,22 @@ ENTRIES:
   (forcepoint 26 s); csoonline 601 s, techcrunch 694 s, npr derive. Un run de
   publication qui laisse deux beats `screenshot` sans `file` paie vingt
   minutes de navigateur: le scout capture et epingle, toujours.
+  Ajout 06/09 (06h30), DEUX DEFAUTS DE RECU QUE SEUL L'OEIL VOIT, ET LEUR
+  REMEDE A 0 $. (1) LE BANDEAU COOKIES DE blog.google SURVIT A LA PASSE DE
+  CONSENTEMENT. Capture en 23 s / 1 frame, `ok: true`, landedUrl et h1 justes,
+  et pourtant le tiers bas de l'image porte "blog.google uses cookies..." plus
+  un gros bouton bleu "OK, got it" - exactement le defaut que le manuel fait
+  racheter, et il tombe pile ou le karaoke des beats `screenshot` s'affiche
+  (MarginV 350). Ni le mode par defaut ni le mode `top` ne s'en debarrassent.
+  Remede mesure, 2 s et aucun achat: recadrer le bas au lieu de recapturer,
+  `ffmpeg -i shot.png -vf "crop=1290:2230:0:0" -y shot.png` (la page fait
+  1290x2796, 2230 coupe le bandeau et garde le titre, la date, le chapo et la
+  photo). (2) abcnews.com N'EST LISIBLE QU'EN MODE `top`. En mode par defaut
+  (scroll vers le h1) le bandeau collant d'ABC recouvre la premiere ligne du
+  titre: on lit "...becoming stranded on Mount Shasta" sans le sujet. Le meme
+  URL en mode `top` sort le titre entier, le chapo et la photo du sherif.
+  Couts du matin, utiles pour planifier: abcnews 264 s / 36 f, kltv 271 s / 47 f,
+  blog.google 23 s / 1 f. Proof: scout 06h30 06/09, specs shasta et astra.
   Ajout 29/08 (10h30), LA PROSE EST LE PIRE SUJET QU'ON PUISSE DEMANDER, EN
   VIDEO COMME EN STILL, et ca a coute un rachat veo a $0.96 sur la frame zero.
   Mesure du jour, histoire du resume de mail pirate. (1) VEO: le spec disait
@@ -4553,3 +4583,16 @@ ENTRIES:
   encore en cours de distribution (les deux du 05/09 sont dans le lot), et le
   muet est confondu avec la surface d'ouverture (plus aucun beat 0 veo depuis le
   01/09, donc tous les muets sont en `photo`). Proof: veille 19h30 05/09.
+  Ajout 06/09 (06h30): DIXIEME mesure morte d'affilee, soit SIX jours pleins
+  (401 sur generativelanguage.googleapis.com/v1beta/models, cle 53 car, AQ.Ab).
+  Le test tient en une ligne au step 0 et coute 1 s:
+  `curl -s -o /dev/null -w "%{http_code}" -H "x-goog-api-key: $GEMINI_API_KEY"
+  https://generativelanguage.googleapis.com/v1beta/models`. Consequence pour un
+  SCOUT, et c'est nouveau: puisque OOM_SILENT est le mode par defaut, un spec
+  banque ne peut contenir NI `veo` NI `image`, donc ses 7 a 8 beats se
+  repartissent entre 3 captures (plafond), 2 cartes (plafond) et le reste en
+  photos. Ca fait au minimum 2 a 3 photos par spec, soit 10 a 15 requetes
+  Openverse: compte 20 min de photos par spec, pas 5. Et la ligne de
+  divulgation muette ("Sans voix ni image generee : photos sous licence libre et
+  captures des sources · Ecriture assistee par IA, relue par un humain.")
+  s'ecrit DES LE SPEC, par le scout, pas au moment de publier.

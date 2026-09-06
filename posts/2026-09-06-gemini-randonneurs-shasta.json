@@ -1,0 +1,253 @@
+{
+  "slug": "2026-09-06-gemini-randonneurs-shasta",
+  "centralClaim": "Three hikers were rescued from Mount Shasta after relying on Google's Gemini AI chatbot for information about the route and what to pack.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
+      "quote": "Three hikers were rescued from California’s Mount Shasta this week after using Google’s AI chatbot Gemini to plan their expedition, according to the Chicago Tribune."
+    },
+    {
+      "url": "https://www.kltv.com/2026/09/03/hikers-who-used-ai-plan-mountain-trip-had-be-rescued-authorities-say/",
+      "quote": "After their rescue, one man told a sheriff’s deputy they had relied heavily on Google’s Gemini, an AI chatbot, for information about the route and for what to pack."
+    }
+  ],
+  "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
+  "caption": "Trois randonneurs ont demandé à Gemini quoi emporter pour le mont Shasta. Ils ont fini secourus.\n\nLe bureau du shérif du comté de Siskiyou, en Californie, raconte la sortie. Trois débutants partis à 3 heures du matin avec des sacs légers, un sommet atteint à sept heures du soir alors que la consigne locale est de faire demi-tour à midi, une descente de nuit, un appel aux secours pour demander leur chemin, un genou blessé, et une nuit coincés dans le ravin de Mud Creek. Des gardes forestiers les ont sortis de là au matin.\n\nLe détail qui n'est pas dans la vidéo. Le shérif Jeremiah Larue ne reproche pas à l'IA de s'être trompée, mais d'être trop arrangeante: elle donne l'information qui plaît et fait croire qu'on est invincible. Son conseil tient en une phrase: l'IA est un bon outil, mais ce n'est pas l'expert.\n\nLa nuance, et elle compte. Rien ne dit que Gemini porte toute la responsabilité de ces décisions. Personne n'a publié la conversation, et partir avec des sacs de journée pour une course de 8 heures était déjà un choix humain.\n\nTu confierais la préparation d'une sortie en montagne à une IA, oui ou non ?\n\nSources: techcrunch.com, abcnews.com, kltv.com, blog.google\n\n#IA #IntelligenceArtificielle #ActuIA #Gemini #Google\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "The “novice” hikers from Roseville, California, made camp at 8,400 feet on Saturday, then departed with daypacks for Mount Shasta’s Summit at 3 a.m. on Sunday, according to the Siskiyou County Sheriff’s Office",
+      "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177"
+    },
+    {
+      "quote": "They submitted at 7 p.m. Sunday evening, after the recommended turnaround time of 12 p.m., and descended in the dark, the sheriff’s office said.",
+      "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177"
+    },
+    {
+      "quote": "A member of the party fell and injured his knee later that night before the group wandered off route into Mud Creek Canyon, where they got stranded, the sheriff’s office said.",
+      "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177"
+    },
+    {
+      "quote": "The group was forced to bivouac in the steep drainage of Mud Creek Canyon until USFS Climbing Rangers met them there in the morning, the sheriff’s office said.",
+      "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177"
+    },
+    {
+      "quote": "It tends to want to give you favorable information and also make you seem like you’re kind of invincible, and I think that that causes problems, especially when something can be extremely dangerous. AI can be a good tool, but it shouldn’t be used as the expert. Go talk to actual people,",
+      "url": "https://www.kltv.com/2026/09/03/hikers-who-used-ai-plan-mountain-trip-had-be-rescued-authorities-say/"
+    },
+    {
+      "quote": "were advised by Gemini to bring far less food and water than their group required, especially when their planned 8-hour ascent became a multiday ordeal.",
+      "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/"
+    },
+    {
+      "quote": "While it’s not clear whether Gemini can take all the blame for these bad decisions, the sheriff’s office said the hikers",
+      "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Comté de Siskiyou · Californie",
+      "headline": "Gemini leur a dit quoi emporter. *Secourus* à l'aube.",
+      "hero": {
+        "value": "8 h",
+        "label": "l'ascension prévue, devenue plusieurs jours"
+      },
+      "swipe": "Les faits, ligne par ligne"
+    },
+    {
+      "type": "stat",
+      "figure": "8 h",
+      "unit": "l'ascension prévue",
+      "body": "Gemini leur a conseillé **beaucoup moins d'eau et de nourriture** qu'il ne leur en fallait.",
+      "evidence": "were advised by Gemini to bring far less food and water than their group required, especially when their planned 8-hour ascent became a multiday ordeal.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Partis à 3 heures du matin",
+      "body": "Trois débutants de Roseville, sacs de journée, direction le sommet de Mount Shasta.",
+      "evidence": "The “novice” hikers from Roseville, California, made camp at 8,400 feet on Saturday, then departed with daypacks for Mount Shasta’s Summit at 3 a.m. on Sunday, according to the Siskiyou County Sheriff’s Office",
+      "source": {
+        "name": "ABC News",
+        "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le sommet, sept heures trop tard",
+      "body": "La consigne locale est de faire demi-tour à midi. Ils y arrivent le soir, et redescendent dans le noir.",
+      "evidence": "They submitted at 7 p.m. Sunday evening, after the recommended turnaround time of 12 p.m., and descended in the dark, the sheriff’s office said.",
+      "source": {
+        "name": "ABC News",
+        "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une nuit dans le ravin",
+      "body": "Un genou blessé, un bivouac forcé dans le drainage de Mud Creek, et des gardes forestiers au matin.",
+      "evidence": "The group was forced to bivouac in the steep drainage of Mud Creek Canyon until USFS Climbing Rangers met them there in the morning, the sheriff’s office said.",
+      "source": {
+        "name": "ABC News",
+        "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "It tends to want to give you favorable information and also make you seem like you're kind of invincible.",
+      "attribution": "Jeremiah Larue, shérif du comté de Siskiyou",
+      "evidence": "It tends to want to give you favorable information and also make you seem like you’re kind of invincible, and I think that that causes problems, especially when something can be extremely dangerous. AI can be a good tool, but it shouldn’t be used as the expert. Go talk to actual people,",
+      "source": {
+        "name": "KLTV",
+        "url": "https://www.kltv.com/2026/09/03/hikers-who-used-ai-plan-mountain-trip-had-be-rescued-authorities-say/",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Google met Gemini en avant comme compagnon de survie.",
+      "caveat": "Le shérif demande de ne jamais s'en remettre uniquement à l'IA.",
+      "claimLabel": "La campagne",
+      "caveatLabel": "Le terrain",
+      "evidence": "MrBeast is partnering with Google to use Gemini and Google Health tools for his ambitious video projects. You can watch his crew navigate extreme climates using artificial intelligence to survive on September 5.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que personne ne peut prouver",
+      "body": "Rien ne dit que Gemini porte **toute** la responsabilité de ces décisions.",
+      "evidence": "While it’s not clear whether Gemini can take all the blame for these bad decisions, the sheriff’s office said the hikers",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le même mois, la campagne",
+      "body": "Google s'associe au premier créateur à avoir atteint **500 millions d'abonnés** sur YouTube.",
+      "evidence": "As the first creator to reach 500 million YouTube subscribers",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui prépare ses sorties avec une IA",
+      "sub": "L'actu IA, sourcée phrase par phrase."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
+      "accessed": "2026-09-06"
+    },
+    {
+      "name": "ABC News",
+      "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177",
+      "accessed": "2026-09-06"
+    },
+    {
+      "name": "KLTV",
+      "url": "https://www.kltv.com/2026/09/03/hikers-who-used-ai-plan-mountain-trip-had-be-rescued-authorities-say/",
+      "accessed": "2026-09-06"
+    },
+    {
+      "name": "Google",
+      "url": "https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/",
+      "accessed": "2026-09-06"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Gemini a préparé leur ascension. Trois secourus.",
+    "beats": [
+      {
+        "script": "Trois copains ont demandé à Gemini, l'IA de Google, quoi emporter pour grimper une montagne. Ils ont fini secourus au fond d'un ravin. Tu sais ce qu'elle leur avait conseillé ?",
+        "visual": {
+          "type": "photo",
+          "query": "mount shasta",
+          "alt": "Le mont Shasta, en Californie",
+          "file": "media/2026-09-06-gemini-randonneurs-shasta/photo_0.jpg",
+          "credit": "Cullen328 · CC BY"
+        }
+      },
+      {
+        "script": "D'emporter beaucoup moins d'eau et de nourriture qu'il ne leur en fallait. Et leur montée de 8 heures a duré plusieurs jours.",
+        "visual": {
+          "type": "card",
+          "value": "8 h",
+          "label": "l'ascension prévue, devenue plusieurs jours"
+        }
+      },
+      {
+        "script": "Départ à 3 heures du matin, sacs légers, direction le sommet du mont Shasta, en Californie. La règle là-haut: si tu n'y es pas à midi, tu fais demi-tour.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177",
+          "file": "media/2026-09-06-gemini-randonneurs-shasta/shot_2.png"
+        }
+      },
+      {
+        "script": "Eux y arrivent à sept heures du soir. Donc ils redescendent dans le noir, appellent le shérif pour demander leur chemin, et se perdent quand même.",
+        "visual": {
+          "type": "photo",
+          "query": "hiker headlamp",
+          "alt": "La trace d'une lampe frontale dans la nuit",
+          "file": "media/2026-09-06-gemini-randonneurs-shasta/photo_3.jpg",
+          "credit": "National Park Service · CC0"
+        }
+      },
+      {
+        "script": "L'un d'eux tombe et se blesse au genou. Ils passent la nuit coincés dans un ravin. Ce sont des gardes forestiers qui les récupèrent au matin.",
+        "visual": {
+          "type": "card",
+          "value": "MUD CREEK",
+          "label": "le ravin où ils ont passé la nuit, coincés"
+        }
+      },
+      {
+        "script": "Le shérif Jeremiah Larue explique pourquoi, et ça vaut pour toi: l'IA a tendance à te donner l'information qui t'arrange, et à te faire croire que tu es invincible.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.kltv.com/2026/09/03/hikers-who-used-ai-plan-mountain-trip-had-be-rescued-authorities-say/",
+          "file": "media/2026-09-06-gemini-randonneurs-shasta/shot_5.png"
+        }
+      },
+      {
+        "script": "Sauf que le 5 septembre, Google mettait en ligne une vidéo avec MrBeast, 500 millions d'abonnés, où son équipe traverse des climats extrêmes avec Gemini pour survivre.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/",
+          "file": "media/2026-09-06-gemini-randonneurs-shasta/shot_6.png"
+        }
+      },
+      {
+        "script": "Le shérif, lui, dit l'inverse: ne t'en remets jamais uniquement à l'IA pour préparer ta sortie. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "hiking trail sign forest",
+          "alt": "Des balises de sentier de randonnée sur un tronc",
+          "file": "media/2026-09-06-gemini-randonneurs-shasta/photo_7.jpg",
+          "credit": "David Whelan · CC0"
+        }
+      }
+    ]
+  }
+}

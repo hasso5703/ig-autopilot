@@ -1,0 +1,234 @@
+{
+  "slug": "2026-09-06-astra-agi-mesures",
+  "centralClaim": "OpenAI has released GPT-6 Astra, its most powerful model, which it says can operate a computer the way a human would.",
+  "corroboration": [
+    {
+      "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/",
+      "quote": "OpenAI’s newest and most powerful model, GPT-6 Astra, is out today, and one of its hallmark features is called “computer use,” in which the model aims to navigate a computer as a human would."
+    },
+    {
+      "url": "https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/",
+      "quote": "OpenAI also positions Astra as a model that can reliably operate a computer the way a human would"
+    }
+  ],
+  "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès.",
+  "caption": "Deux laboratoires ont noté la nouvelle IA d'OpenAI. L'un la met première, l'autre ne voit aucun progrès.\n\nGPT-6 Astra est sortie. OpenAI met en avant une capacité: se servir d'un ordinateur comme le ferait une personne, remplir des formulaires, naviguer de page en page, trier des tableurs. Son président Greg Brockman a dit aux journalistes qu'il n'est pas déraisonnable de penser que nous sommes entrés dans l'ère de l'AGI.\n\nLe détail qui n'est pas dans la vidéo. Les deux organismes qui agrègent les tests arrivent à des conclusions opposées. Epoch AI compile plus de 50 tests et la classe première avec 169 points devant 267 modèles. Artificial Analysis lui donne 61 points, exactement la note de la génération précédente, et la place derrière Claude Fable 5.1 et ses 66 points.\n\nLa nuance, et elle compte. Un score dépend du test choisi, et ces deux classements ne mesurent pas les mêmes choses. Le seul résultat que personne ne conteste vient d'un test où l'IA est lâchée dans un jeu dont on ne lui explique ni les règles ni le but: elle y passe de 7.78 à 62.7 pour cent.\n\nÈre de l'AGI, ou simple modèle de plus, oui ou non ?\n\nSources: fortune.com, the-decoder.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #ChatGPT\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "OpenAI’s newest and most powerful model, GPT-6 Astra, is out today, and one of its hallmark features is called “computer use,” in which the model aims to navigate a computer as a human would.",
+      "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/"
+    },
+    {
+      "quote": "can zip through spreadsheets, fill out forms, and navigate across web pages often at superhuman speed,",
+      "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/"
+    },
+    {
+      "quote": "It’s not unreasonable to feel that we are now in the AGI era, and I think that if you want to say this [model is] the first one, I think it’s reasonable.",
+      "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/"
+    },
+    {
+      "quote": "Epoch AI combines more than 50 benchmarks and puts GPT-6 Astra clearly in first place with 169 points, ahead of 267 models. Artificial Analysis tests knowledge, coding, and text comprehension, and rates GPT-6 Astra at 61 points, exactly level with its predecessor and behind Claude Fable 5.1 at 66 points.",
+      "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/"
+    },
+    {
+      "quote": "The test drops an AI into unfamiliar game worlds whose rules and goals nobody explains to it. The model has to figure out what to do by trial and error.",
+      "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/"
+    },
+    {
+      "quote": "GPT-6 Astra reaches 62.7 percent at a test cost of roughly $26,000. Its predecessor GPT-5.6 Sol managed 7.78 percent, and rival Claude Opus 5 got 30.16 percent.",
+      "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "OpenAI · GPT-6 Astra",
+      "headline": "Deux labos notent la même IA. *Résultats opposés.*",
+      "hero": {
+        "value": "169 vs 61",
+        "label": "les deux notes de GPT-6 Astra, le même mois"
+      },
+      "swipe": "Les deux classements, ligne par ligne"
+    },
+    {
+      "type": "stat",
+      "figure": "62.7 %",
+      "unit": "sur le test aux règles cachées",
+      "body": "La génération précédente y marquait **7.78 pour cent**.",
+      "evidence": "GPT-6 Astra reaches 62.7 percent at a test cost of roughly $26,000. Its predecessor GPT-5.6 Sol managed 7.78 percent, and rival Claude Opus 5 got 30.16 percent.",
+      "source": {
+        "name": "THE DECODER",
+        "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/",
+        "date": "2026-09-04"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Se servir d'un ordinateur",
+      "body": "OpenAI met en avant une IA qui **navigue dans un ordinateur** comme le ferait une personne.",
+      "evidence": "OpenAI’s newest and most powerful model, GPT-6 Astra, is out today, and one of its hallmark features is called “computer use,” in which the model aims to navigate a computer as a human would.",
+      "source": {
+        "name": "Fortune",
+        "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/",
+        "date": "2026-09-03"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "It's not unreasonable to feel that we are now in the AGI era.",
+      "attribution": "Greg Brockman, président d'OpenAI",
+      "evidence": "It’s not unreasonable to feel that we are now in the AGI era, and I think that if you want to say this [model is] the first one, I think it’s reasonable.",
+      "source": {
+        "name": "Fortune",
+        "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/",
+        "date": "2026-09-03"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Epoch AI la classe première, devant 267 modèles.",
+      "caveat": "Artificial Analysis lui donne la note de la génération précédente.",
+      "claimLabel": "Un classement",
+      "caveatLabel": "L'autre",
+      "evidence": "Epoch AI combines more than 50 benchmarks and puts GPT-6 Astra clearly in first place with 169 points, ahead of 267 models. Artificial Analysis tests knowledge, coding, and text comprehension, and rates GPT-6 Astra at 61 points, exactly level with its predecessor and behind Claude Fable 5.1 at 66 points.",
+      "source": {
+        "name": "THE DECODER",
+        "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/",
+        "date": "2026-09-04"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et le prix monte",
+      "body": "Une tâche revient environ **75 pour cent** plus cher qu'avec le modèle précédent.",
+      "evidence": "Astra is clearly more expensive than its own predecessor. OpenAI charges two and a half times as much per unit of processed text, which makes a task cost roughly 75 percent more than it did with Sol.",
+      "source": {
+        "name": "THE DECODER",
+        "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/",
+        "date": "2026-09-04"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pas pour tout le monde",
+      "body": "Les comptes gratuits n'y ont pas accès du tout.",
+      "evidence": "Users on the Free and Go tiers don't have access to the frontier models GPT-5.6 Sol and GPT-6 Astra.",
+      "source": {
+        "name": "THE DECODER",
+        "url": "https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol/",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Deux fois moins de messages",
+      "body": "La version standard donne environ **la moitié** des messages par fenêtre de cinq heures.",
+      "evidence": "The standard version of GPT-6 Astra offers about half as many messages per five-hour window as GPT-5.6 Sol across all plans.",
+      "source": {
+        "name": "THE DECODER",
+        "url": "https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol/",
+        "date": "2026-09-05"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le résultat que personne ne conteste",
+      "body": "Sur ce test, la machine est **plus efficace que l'humain moyen** pour la première fois.",
+      "evidence": "The biggest surprise comes from ARC-AGI-3, where Astra works more efficiently than the average human for the first time.",
+      "source": {
+        "name": "THE DECODER",
+        "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/",
+        "date": "2026-09-04"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui dit que l'IA stagne",
+      "sub": "L'actu IA, sourcée phrase par phrase."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Fortune",
+      "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/",
+      "accessed": "2026-09-06"
+    },
+    {
+      "name": "THE DECODER",
+      "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/",
+      "accessed": "2026-09-06"
+    },
+    {
+      "name": "THE DECODER",
+      "url": "https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol/",
+      "accessed": "2026-09-06"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Deux labos notent la même IA, résultats opposés",
+    "beats": [
+      {
+        "script": "Remplir un formulaire, trier un tableur, cliquer de page en page: OpenAI dit que sa nouvelle IA fait tout ça à ta place, plus vite que toi. Elle s'appelle GPT-6 Astra.",
+        "visual": {
+          "type": "photo",
+          "query": "computer screen text close",
+          "alt": "Un curseur en gros plan sur un écran d'ordinateur",
+          "file": "media/2026-09-06-astra-agi-mesures/photo_0.jpg",
+          "credit": "rawpixel · CC0"
+        }
+      },
+      {
+        "script": "Et son président, Greg Brockman, l'a dit aux journalistes: il n'est pas déraisonnable de penser qu'on est entrés dans l'ère de l'AGI, la machine qui nous dépasse sur presque tout le travail.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/",
+          "file": "media/2026-09-06-astra-agi-mesures/shot_1.png"
+        }
+      },
+      {
+        "script": "Sauf que les gens dont le métier est de noter ces machines ne sont pas d'accord entre eux. Epoch AI la classe première, avec 169 points, devant 267 modèles.",
+        "visual": {
+          "type": "card",
+          "value": "169",
+          "label": "ses points chez Epoch AI, devant 267 modèles"
+        }
+      },
+      {
+        "script": "Artificial Analysis, lui, lui donne 61 points. Exactement la note de la génération précédente, et derrière Claude Fable 5.1, qui en a 66.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/benchmarks-disagree-on-gpt-6-astra-but-its-human-beating-efficiency-on-arc-agi-3-pulls-chollets-agi-forecast-forward/",
+          "file": "media/2026-09-06-astra-agi-mesures/shot_3.png"
+        }
+      },
+      {
+        "script": "Et elle te coûte plus cher: deux fois et demie le prix par texte traité, donc une tâche revient à peu près 75 pour cent plus cher qu'avant.",
+        "visual": {
+          "type": "card",
+          "value": "75 %",
+          "label": "de plus par tâche qu'avec le modèle précédent"
+        }
+      },
+      {
+        "script": "Sauf que ce modèle, tu ne l'as sans doute pas. Les comptes gratuits n'y ont pas droit, et sur les abonnements payants il donne environ deux fois moins de messages.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol/",
+          "file": "media/2026-09-06-astra-agi-mesures/shot_5.png"
+        }
+      },
+      {
+        "script": "Le seul point d'accord tient dans un jeu dont personne ne lui explique les règles: elle passe de 7.78 à 62.7 pour cent, et dépasse l'humain moyen pour la première fois. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "person typing laptop keyboard",
+          "alt": "Des mains qui tapent sur le clavier d'un ordinateur portable",
+          "file": "media/2026-09-06-astra-agi-mesures/photo_6.jpg",
+          "credit": "Kristin Hardwick · CC0"
+        }
+      }
+    ]
+  }
+}
