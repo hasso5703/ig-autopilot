@@ -1988,6 +1988,19 @@ ENTRIES:
   public ("la methode proposee", "etiquettes") sous un compte francais. Le gate
   protege la legende, PAS les commentaires: rien ne l'aurait vu. Ecris le texte
   dans un fichier (/tmp/seed.txt) et lis-le avec fs.readFileSync avant de poster.
+  Ajout 06/09 (16h30), LE MEME ACCIDENT EST REPARTI EN LIGNE, donc le remede
+  n'est plus un reflexe a se rappeler, c'est un drapeau: `node src/engage.mjs
+  comment last --file /tmp/seed.txt --live` (et pareil pour `reply`) lit le
+  fichier, `splitFileFlag` est teste, et `--file` sans chemin retombe sur
+  l'usage au lieu d'ouvrir un fichier nomme undefined. Mesure du jour: les
+  accents passent PARFAITEMENT dans un argument Bash
+  (`node -e "console.log(process.argv[1])" "regles cachees"` les rend intacts),
+  donc les retirer "par precaution" est une auto-mutilation, pas une parade a
+  l'echappement. Et la reparation a marche exactement comme decrit ci-dessus:
+  DELETE sur l'id rend `{"success":true}`, un POST repose le texte accentue, et
+  il faut corriger `id` ET `text` sur la DERNIERE ligne de
+  state/engagement.jsonl (le garde-fou anti-double-seed lit le `target`, donc il
+  refusera un re-seed par le script: passe par les deux appels bruts).
   Ajout 05/09 (19h30), LE BLOCAGE EN LECTURE TIENT TOUJOURS ET LE RETARD S'ACCUMULE,
   re-mesure directe: `/comments` sur le Reel MacBook Air rend `data: []` AVEC deux
   curseurs de paging valides pendant que `?fields=comments_count` rend 2 sur le
@@ -4607,3 +4620,21 @@ ENTRIES:
   `screenshot`, extraire la frame et lire la date du recu ET la ligne de karaoke
   ENSEMBLE avant de publier; correction "on voit son equipe traverser" au lieu
   de "son equipe traverse", re-gate + rebuild dans le meme dossier, 0 $, 3 min.
+  Ajout 06/09 (16h30), DOUZIEME mesure morte (401, meme cle 53 car), ET UNE
+  CONTRE-MESURE QUI NUANCE LE 11,5% DU 05/09: le Reel muet de 10h30 aujourd'hui
+  lit 552 vues / 494 comptes / 11,76 s de visionnage moyen sur 60 s, soit ~19,6%
+  de retention, au-dessus de la mediane de vie du compte (18%) et tres au-dessus
+  de la mediane muette. Un chiffre ne renverse pas les 8 Reels de la fenetre
+  appariee, mais il interdit de lire "le muet plafonne a 11%" comme un plafond:
+  la dispersion des Reels muets est large, et le pire (7%) comme le meilleur
+  (19,6%) sont a 4 jours d'ecart. Continue de mesurer sur fenetre appariee,
+  n'ecris pas de regle. Mesure aussi ce jour, cote photos: sur une histoire
+  d'IA qui SE SERT d'un ordinateur, 5 requetes Openverse
+  ("spreadsheet screen numbers", "computer mouse hand close", "office desk
+  computer screen spreadsheet", "web browser window screen", "data table screen
+  close") rendent 2 rejets moteur et 3 candidats pires que la photo deja
+  epinglee: un CRT illisible, un RENDU 3D (l'index sert des rendus, pas
+  seulement des photos) et LE BUREAU exact que le manuel interdit (portable,
+  cafe, plantes, lunettes). La macro d'ecran allume epinglee par le scout
+  (rawpixel, CC0) est restee la meilleure: quand le scout a deja regarde,
+  re-interroger l'index coute 6 min pour rien.

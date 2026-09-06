@@ -26,6 +26,14 @@
  *   node src/engage.mjs recent                          comments on recent posts
  *   node src/engage.mjs comment <mediaId|last> "text" [--live]
  *   node src/engage.mjs reply <commentId> "text" [--live]
+ *   ... or --file <path> in place of "text", and prefer it in French.
+ *
+ * `--file` exists because the same accident has now reached the live account
+ * twice (14/08 and 06/09): passing French through a shell argument invites a
+ * run to strip the accents "to avoid escaping", and an unaccented comment under
+ * a French account is not something the gate can catch — it guards the caption,
+ * never the comments. Write the text to a file, pass the path, and the bytes
+ * that reach Instagram are the bytes you wrote.
  *
  * Uses the same Instagram Login surface as the publishers. If the token lacks
  * instagram_business_manage_comments, the API answers with an OAuth error:
@@ -197,6 +205,21 @@ async function listRecent() {
   }
 }
 
+/**
+ * Pull `--file <path>` out of the argument list. Returns the remaining
+ * positional arguments and the path, so the caller reads the comment's text
+ * from disk instead of from a shell argument. `--file` with nothing after it
+ * is a typo, not a request to read a file called "undefined": it leaves the
+ * path null and the usage line fires.
+ */
+export function splitFileFlag(argv) {
+  const i = argv.indexOf("--file");
+  if (i === -1) return { rest: argv, file: null };
+  const file = argv[i + 1] ?? null;
+  const rest = argv.slice(0, i).concat(argv.slice(file === null ? i + 1 : i + 2));
+  return { rest, file };
+}
+
 async function resolveMediaId(idOrLast) {
   if (idOrLast !== "last") return idOrLast;
   const file = path.join(ROOT, "state", "posted.jsonl");
@@ -209,14 +232,17 @@ async function resolveMediaId(idOrLast) {
 const invokedDirectly = process.argv[1] && import.meta.url.endsWith(path.basename(process.argv[1]));
 if (invokedDirectly) {
   const live = process.argv.includes("--live");
-  const [cmd, a, b] = process.argv.slice(2).filter((x) => x !== "--live");
+  const argv = process.argv.slice(2).filter((x) => x !== "--live");
+  const { rest, file } = splitFileFlag(argv);
+  const [cmd, a, inlineText] = rest;
   const usage = () => {
-    console.log('usage: node src/engage.mjs recent | comment <mediaId|last> "text" [--live] | reply <commentId> "text" [--live]');
+    console.log('usage: node src/engage.mjs recent | comment <mediaId|last> ("text" | --file <path>) [--live] | reply <commentId> ("text" | --file <path>) [--live]');
     process.exit(1);
   };
   (async () => {
     if (cmd === "recent") return listRecent();
     if (cmd === "comment" || cmd === "reply") {
+      const b = file ? (await readFile(path.resolve(ROOT, file), "utf8")).trim() : inlineText;
       if (!a || !b) usage();
       const issues = commentTextIssues(b);
       if (issues.length) throw new Error(`refused: ${issues.join("; ")}`);

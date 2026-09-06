@@ -1526,6 +1526,27 @@ test("the seed ledger closes the /comments blind spot", async () => {
   assert.ok(!alreadySeeded([], "111"));
 });
 
+test("--file carries a French comment that a shell argument mangles", async () => {
+  const { splitFileFlag } = await import("../src/engage.mjs");
+  // 14/08 and again 06/09: the text went out as "regles cachees" because it was
+  // typed into a shell argument. The flag has to survive being read positionally.
+  assert.deepEqual(
+    splitFileFlag(["comment", "last", "--file", "/tmp/seed.txt"]),
+    { rest: ["comment", "last"], file: "/tmp/seed.txt" },
+    "the path leaves the positional arguments alone",
+  );
+  assert.deepEqual(
+    splitFileFlag(["comment", "last", "du texte"]),
+    { rest: ["comment", "last", "du texte"], file: null },
+    "an inline text still works",
+  );
+  assert.deepEqual(
+    splitFileFlag(["comment", "last", "--file"]),
+    { rest: ["comment", "last"], file: null },
+    "a dangling --file is a typo, never a file named undefined",
+  );
+});
+
 test("an empty comment listing never proves silence", async () => {
   const { unreadableComments } = await import("../src/engage.mjs");
   // 2026-08-03, MacBook Air Reel: comments_count 2, one seed, listing empty.
