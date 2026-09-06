@@ -4638,3 +4638,20 @@ ENTRIES:
   cafe, plantes, lunettes). La macro d'ecran allume epinglee par le scout
   (rawpixel, CC0) est restee la meilleure: quand le scout a deja regarde,
   re-interroger l'index coute 6 min pour rien.
+  Ajout 06/09 (19h30, veille): TREIZIEME mesure morte (401, meme cle 53 car),
+  soit SIX jours pleins. Fenetre appariee recalculee ce soir avec les deux Reels
+  du jour: 10 Reels muets (02 au 06/09) rendent toujours 11,5% de retention
+  mediane, contre 17,0% sur les 14 Reels du 26/08 au 01/09; les VUES montent
+  meme legerement (mediane 144,5 contre 128,5), donc le diagnostic du 05/09
+  tient: le recommandeur distribue autant, c'est le spectateur qui part. La
+  dispersion reste enorme dans la meme journee (21% sur 728 vues a midi, 7% sur
+  30 vues le soir, mais ce dernier n'a que 3 h de distribution: ne compare
+  jamais un Reel du jour meme a un Reel repose). COUT DE LA MAINTENANCE DU
+  DIMANCHE, mesure: `prune-media.mjs --live` a supprime 166 fichiers / 516 Mo
+  sur 14 slugs (media 776 Mo -> 259 Mo, ~30 s) et `insights.mjs compact` a
+  ramene la serie de 4590 a 2441 lignes; les deux tiennent en 2 min, fais-les
+  avant le rapport et non apres. Et pour la conversation: `engage.mjs recent`
+  renvoie 0 commentaire d'inconnu sur les 10 derniers Reels (aucune erreur de
+  permission, l'edge repond). A 45 abonnes c'est l'etat normal du compte, pas
+  une panne: la veille de 19h30 ne doit pas y perdre de temps tant que le
+  compte n'a pas de commentaires a lire.

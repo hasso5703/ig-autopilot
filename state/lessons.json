@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-06T16:40:54.044Z",
-  "n": 80,
-  "nSettled": 74,
-  "medianViews": 179,
+  "at": "2026-09-06T19:42:20.562Z",
+  "n": 81,
+  "nSettled": 75,
+  "medianViews": 175,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 13,
-      "medianViews": 175,
-      "meanRetentionPct": 17.3,
+      "n": 14,
+      "medianViews": 168,
+      "meanRetentionPct": 16.9,
       "saves": 11,
       "shares": 4,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 15,
-      "medianViews": 168,
-      "meanRetentionPct": 18.3,
+      "n": 16,
+      "medianViews": 164,
+      "meanRetentionPct": 17.9,
       "saves": 21,
       "shares": 4,
       "thin": false
@@ -503,6 +503,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-06-gemini-randonneurs-shasta",
+      "at": "2026-09-06T10:48:12.224Z",
+      "hourUtc": 10,
+      "views": 728,
+      "reach": 669,
+      "avgWatchS": 12.6,
+      "retentionPct": 21,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-21-web-ecrit-par-ia",
       "at": "2026-08-21T10:50:01.289Z",
       "hourUtc": 10,
@@ -537,23 +554,6 @@
       "themes": [],
       "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-06-gemini-randonneurs-shasta",
-      "at": "2026-09-06T10:48:12.224Z",
-      "hourUtc": 10,
-      "views": 552,
-      "reach": 494,
-      "avgWatchS": 11.8,
-      "retentionPct": 20,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
-      "settled": false
     },
     {
       "slug": "2026-08-08-facture-ia-salaries",
@@ -1260,7 +1260,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-05-waymo-dallas",
@@ -1637,6 +1637,26 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-06-astra-agi-mesures",
+      "at": "2026-09-06T16:47:44.756Z",
+      "hourUtc": 16,
+      "views": 30,
+      "reach": 24,
+      "avgWatchS": 4,
+      "retentionPct": 7,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "models",
+        "infra"
+      ],
+      "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès.",
+      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",
