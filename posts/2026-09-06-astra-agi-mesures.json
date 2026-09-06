@@ -204,7 +204,7 @@
         }
       },
       {
-        "script": "Et elle te coûte plus cher: deux fois et demie le prix par texte traité, donc une tâche revient à peu près 75 pour cent plus cher qu'avant.",
+        "script": "Et elle te coûte plus cher: deux fois et demie le prix par texte traité, donc une tâche revient à peu près 75 pour cent plus cher qu'avec le modèle d'avant.",
         "visual": {
           "type": "card",
           "value": "75 %",
@@ -212,7 +212,7 @@
         }
       },
       {
-        "script": "Sauf que ce modèle, tu ne l'as sans doute pas. Les comptes gratuits n'y ont pas droit, et sur les abonnements payants il donne environ deux fois moins de messages.",
+        "script": "Sauf que ce modèle, tu ne l'as sans doute pas: les comptes gratuits n'y ont pas droit, et sur les abonnements payants il donne environ deux fois moins de messages qu'avant.",
         "visual": {
           "type": "screenshot",
           "url": "https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol/",
@@ -220,7 +220,7 @@
         }
       },
       {
-        "script": "Le seul point d'accord tient dans un jeu dont personne ne lui explique les règles: elle passe de 7.78 à 62.7 pour cent, et dépasse l'humain moyen pour la première fois. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Le seul point d'accord: dans un jeu dont personne ne lui explique les règles, elle passe de 7.78 à 62.7 pour cent et dépasse l'humain moyen. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
           "query": "person typing laptop keyboard",
