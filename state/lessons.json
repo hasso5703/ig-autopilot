@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-06T10:39:44.462Z",
-  "n": 79,
-  "nSettled": 73,
-  "medianViews": 183,
-  "medianRetentionPct": 19,
+  "at": "2026-09-06T16:40:54.044Z",
+  "n": 80,
+  "nSettled": 74,
+  "medianViews": 179,
+  "medianRetentionPct": 18,
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 12,
-      "medianViews": 179,
-      "meanRetentionPct": 17.9,
+      "n": 13,
+      "medianViews": 175,
+      "meanRetentionPct": 17.3,
       "saves": 11,
       "shares": 4,
       "thin": false
@@ -148,9 +148,9 @@
       "thin": true
     },
     "money": {
-      "n": 1,
-      "medianViews": 115,
-      "meanRetentionPct": 11,
+      "n": 2,
+      "medianViews": 132,
+      "meanRetentionPct": 10.5,
       "saves": 0,
       "shares": 0,
       "thin": true
@@ -166,9 +166,9 @@
       "thin": false
     },
     "11": {
-      "n": 8,
-      "medianViews": 275,
-      "meanRetentionPct": 15,
+      "n": 9,
+      "medianViews": 195,
+      "meanRetentionPct": 14.4,
       "saves": 8,
       "shares": 7,
       "thin": false
@@ -537,6 +537,23 @@
       "themes": [],
       "sendTest": "Anthropic a mis trois IA sur le même projet sans leur dire. Elles se sont coupé les accès et ont écrit des virus les unes contre les autres.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-06-gemini-randonneurs-shasta",
+      "at": "2026-09-06T10:48:12.224Z",
+      "hourUtc": 10,
+      "views": 552,
+      "reach": 494,
+      "avgWatchS": 11.8,
+      "retentionPct": 20,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
+      "settled": false
     },
     {
       "slug": "2026-08-08-facture-ia-salaries",
@@ -1110,7 +1127,7 @@
       "at": "2026-09-04T11:01:26.509Z",
       "hourUtc": 11,
       "views": 149,
-      "reach": 135,
+      "reach": 136,
       "avgWatchS": 6,
       "retentionPct": 10,
       "likes": 0,
@@ -1122,7 +1139,7 @@
         "money"
       ],
       "sendTest": "Le site où le monde entier range ses IA a été créé par trois Français. Nvidia vient de l'acheter 12.9 milliards de dollars.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-22-peau-humaine-vivante",
@@ -1229,6 +1246,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-04-ia-sans-securite-en-vente",
+      "at": "2026-09-04T16:50:21.207Z",
+      "hourUtc": 16,
+      "views": 132,
+      "reach": 122,
+      "avgWatchS": 6.5,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-05-waymo-dallas",
       "at": "2026-08-05T17:17:47.664Z",
       "hourUtc": 17,
@@ -1261,23 +1295,6 @@
       "themes": [],
       "sendTest": "Un salarié sur cinq a déjà confié à une IA une tâche qu'un collègue faisait avant. Et une tâche sur six prend maintenant plus de temps qu'avant.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-04-ia-sans-securite-en-vente",
-      "at": "2026-09-04T16:50:21.207Z",
-      "hourUtc": 16,
-      "views": 131,
-      "reach": 122,
-      "avgWatchS": 6.6,
-      "retentionPct": 11,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
-      "settled": false
     },
     {
       "slug": "2026-08-12-montre-tension-google",
@@ -1557,8 +1574,8 @@
       "slug": "2026-09-05-google-ia-prix-plus-cher",
       "at": "2026-09-05T10:46:18.677Z",
       "hourUtc": 10,
-      "views": 108,
-      "reach": 99,
+      "views": 109,
+      "reach": 100,
       "avgWatchS": 5.3,
       "retentionPct": 9,
       "likes": 0,
