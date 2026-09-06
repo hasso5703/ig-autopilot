@@ -4596,3 +4596,14 @@ ENTRIES:
   divulgation muette ("Sans voix ni image generee : photos sous licence libre et
   captures des sources · Ecriture assistee par IA, relue par un humain.")
   s'ecrit DES LE SPEC, par le scout, pas au moment de publier.
+  Ajout 06/09 (10h30): ONZIEME mesure morte (401, meme cle 53 car), et LE PIEGE
+  DE FRAME DU JOUR, meme famille que le visage du 04/09: le karaoke disait
+  "DEPUIS LE 5 SEPTEMBRE" pendant que le recu blog.google affichait "Sep 02,
+  2026" a 15 cm au-dessus. La source ecrit "You can watch his crew ... on
+  September 5": c'est la DIFFUSION qui commence le 5, pas l'action. En muet le
+  karaoke porte tout le texte, donc chaque date prononcee se lit COLLEE a la
+  date imprimee sur le recu, et une reformulation qui passe le gate (la citation
+  contient bien le chiffre) peut contredire l'image. REFLEXE: sur tout beat
+  `screenshot`, extraire la frame et lire la date du recu ET la ligne de karaoke
+  ENSEMBLE avant de publier; correction "on voit son equipe traverser" au lieu
+  de "son equipe traverse", re-gate + rebuild dans le meme dossier, 0 $, 3 min.
