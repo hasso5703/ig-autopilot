@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-07T16:40:53.362Z",
-  "fresh": 319,
+  "at": "2026-09-07T19:42:45.144Z",
+  "fresh": 320,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 5,
+      "fresh": 7,
       "windowHours": 36
     },
     {
@@ -93,7 +93,7 @@
       "name": "Hacker News (250+ points)",
       "ok": true,
       "fetched": 8,
-      "fresh": 8,
+      "fresh": 7,
       "windowHours": 36
     },
     {

@@ -4740,3 +4740,24 @@ ENTRIES:
   deux premiers, sur les memes deux citations. Un 429 n'est PAS un 403: ne
   reecris ni le spec ni les sources, re-gate 2 min plus tard (vert du premier
   coup ici). Meme famille que venturebeat 429 du 06/08.
+  Ajout 07/09 (19h30, veille): DIX-SEPTIEME mesure morte d'affilee (401, meme
+  cle 53 car AQ.Ab), soit NEUF jours. Fenetre appariee recalculee avec les deux
+  Reels du jour: 12 Reels muets (02 au 07/09) rendent 10,5% de retention
+  mediane et 136 vues medianes, contre 17,0% et 128,5 vues sur les 14 Reels du
+  26/08 au 01/09; sur les seuls Reels reposes (02 au 06/09) c'est toujours
+  11,5% / 145. Le diagnostic tient sans changer depuis le 05/09: les vues ne
+  bougent pas, le spectateur part. COMMENT COMPARER UN REEL DU JOUR SANS SE
+  MENTIR, mesure faite ce soir en 2 min et sans reseau: la serie
+  state/metrics.jsonl porte un echantillon toutes les ~3 h, LES COMPTEURS SONT
+  DANS `r.insights` (views/reach/ig_reels_avg_watch_time), PAS a la racine de la
+  ligne (une extraction qui lit r.views rend "-" partout et fait croire a un
+  trou de collecte). En prenant pour chaque slug l'echantillon le plus proche de
+  t0+3h et de t0+9h on obtient une comparaison a age egal: a ~9 h, 01/09 81 v,
+  04/09 146 v, 05/09 77 v, 06/09 728 v, et le Reel de 10h30 d'aujourd'hui 32 v,
+  soit le plus bas jamais mesure a cet age (n=4, donc un signal, pas une preuve).
+  A ~3 h: 21, 33, 47, 39, 68, 30 v les jours precedents contre 17 v ce soir.
+  Ne compare plus jamais un Reel du jour a une mediane de vie: fais-le a age egal.
+  ENFIN, LA COLLECTE DU SOIR NE SERT PAS A BANQUER: a 19h30, 320 sujets frais
+  dont 302 arXiv, 18 hors-arXiv et aucun publiable (documentaire Holmes, rumeurs
+  Apple, bzip3, DNS). Si une veille veut preparer le lendemain, c'est un travail
+  de 06h30 sur les fils du matin, pas une seconde collecte le soir.

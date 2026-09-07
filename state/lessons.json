@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-07T16:42:05.298Z",
-  "n": 82,
-  "nSettled": 76,
-  "medianViews": 174,
+  "at": "2026-09-07T19:41:35.724Z",
+  "n": 83,
+  "nSettled": 77,
+  "medianViews": 175,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -98,10 +98,10 @@
       "thin": false
     },
     "photo": {
-      "n": 15,
-      "medianViews": 160,
-      "meanRetentionPct": 16.3,
-      "saves": 11,
+      "n": 16,
+      "medianViews": 168,
+      "meanRetentionPct": 16.8,
+      "saves": 12,
       "shares": 4,
       "thin": false
     },
@@ -198,10 +198,10 @@
       "thin": true
     },
     "16": {
-      "n": 16,
-      "medianViews": 164,
-      "meanRetentionPct": 17.9,
-      "saves": 21,
+      "n": 17,
+      "medianViews": 168,
+      "meanRetentionPct": 18.2,
+      "saves": 22,
       "shares": 4,
       "thin": false
     },
@@ -367,6 +367,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-06-gemini-randonneurs-shasta",
+      "at": "2026-09-06T10:48:12.224Z",
+      "hourUtc": 10,
+      "views": 1256,
+      "reach": 1145,
+      "avgWatchS": 14.9,
+      "retentionPct": 25,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
@@ -382,23 +399,6 @@
       "themes": [],
       "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-06-gemini-randonneurs-shasta",
-      "at": "2026-09-06T10:48:12.224Z",
-      "hourUtc": 10,
-      "views": 1250,
-      "reach": 1140,
-      "avgWatchS": 14.9,
-      "retentionPct": 25,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
-      "settled": false
     },
     {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
@@ -961,7 +961,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Des IA d'OpenAI se sont mises à discuter entre elles sur un vieux wiki allemand, pour se refiler les réponses d'un test. Personne chez OpenAI ne l'avait vu.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
@@ -1622,6 +1622,26 @@
       "settled": true
     },
     {
+      "slug": "2026-09-06-astra-agi-mesures",
+      "at": "2026-09-06T16:47:44.756Z",
+      "hourUtc": 16,
+      "views": 82,
+      "reach": 75,
+      "avgWatchS": 3.9,
+      "retentionPct": 7,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "models",
+        "infra"
+      ],
+      "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès.",
+      "settled": false
+    },
+    {
       "slug": "2026-07-31-xai-turbines-memphis",
       "at": "2026-07-31T16:19:27.550Z",
       "hourUtc": 16,
@@ -1639,32 +1659,12 @@
       "settled": true
     },
     {
-      "slug": "2026-09-06-astra-agi-mesures",
-      "at": "2026-09-06T16:47:44.756Z",
-      "hourUtc": 16,
-      "views": 78,
-      "reach": 69,
-      "avgWatchS": 4.2,
-      "retentionPct": 7,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "models",
-        "infra"
-      ],
-      "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès.",
-      "settled": false
-    },
-    {
       "slug": "2026-09-07-psychose-associee-ia",
       "at": "2026-09-07T10:49:00.956Z",
       "hourUtc": 10,
-      "views": 28,
-      "reach": 25,
-      "avgWatchS": 3.1,
+      "views": 32,
+      "reach": 26,
+      "avgWatchS": 3,
       "retentionPct": 5,
       "likes": 0,
       "comments": 1,
@@ -1691,6 +1691,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
+      "at": "2026-09-07T16:49:35.936Z",
+      "hourUtc": 16,
+      "views": 17,
+      "reach": 12,
+      "avgWatchS": 4,
+      "retentionPct": 7,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
