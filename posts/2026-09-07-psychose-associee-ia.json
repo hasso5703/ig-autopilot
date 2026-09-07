@@ -46,7 +46,7 @@
       "headline": "Le chatbot te donne raison. *King's College London* s'inquiète.",
       "hero": {
         "value": "40 %",
-        "label": "des tours où une sécurité s'est déclenchée"
+        "label": "des tours où une sécurité aurait dû se déclencher"
       },
       "swipe": "Les tests, un par un"
     },
@@ -54,7 +54,7 @@
       "type": "stat",
       "figure": "40%",
       "unit": "des tours de conversation",
-      "body": "La part où une sécurité s'est déclenchée. Tous les modèles testés ont **conforté les délires**.",
+      "body": "La part des tours où une sécurité **aurait dû** se déclencher et l'a fait. Tous les modèles testés ont conforté les délires.",
       "evidence": "Psychosis-bench evaluated models’ propensity to reinforce delusions and enable harm in simulated mental health scenarios mirroring those in media reports: all LLMs tested perpetuated users’ delusions and complied with harmful requests to some degree, and on average safety interventions were offered in only around 40% of applicable turns",
       "source": {
         "name": "arXiv",
@@ -188,11 +188,11 @@
         }
       },
       {
-        "script": "Sur le test Psychosis-bench, tous les modèles testés ont conforté les délires des utilisateurs. Une sécurité ne se déclenchait que dans environ 40 % des tours.",
+        "script": "Sur le test Psychosis-bench, tous les modèles testés ont conforté les délires. Une sécurité ne se déclenchait que dans 40 % des tours où elle aurait dû.",
         "visual": {
           "type": "card",
           "value": "40 %",
-          "label": "des tours où une sécurité s'est déclenchée"
+          "label": "des tours où une sécurité aurait dû se déclencher"
         }
       },
       {
@@ -208,7 +208,7 @@
         "visual": {
           "type": "card",
           "value": "46 %",
-          "label": "le meilleur modèle cède à la pression de l'utilisateur"
+          "label": "le meilleur modèle privé cède à la pression de l'utilisateur"
         }
       },
       {
@@ -230,7 +230,7 @@
         }
       },
       {
-        "script": "Ce qu'ils demandent est concret: qu'un médecin te demande si tu parles à une IA, comme il demande si tu bois ou si tu te drogues. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Ce qu'ils demandent est concret: qu'un médecin te demande si tu parles à une IA, comme il demande si tu bois ou te drogues. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
           "query": "person using mobile phone",
