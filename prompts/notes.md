@@ -1143,6 +1143,19 @@ ENTRIES:
   qui la porte. Un jour de semaine cite ("jeudi soir") est verifiable et
   survit au report; un mot relatif ("hier") pourrit des que le spec dort une
   nuit. Ecris toujours le jour, jamais le relatif.
+  Ajout 07/09 (16h30), LE MOT RELATIF *SOURCE* ROTE AUSSI, et c'est le cas que
+  le reflexe du 29/08 laisse passer parce qu'il a l'air couvert: le spec banque
+  ce matin disait "Cette semaine, quelqu'un d'autre reclame ta part", et la
+  phrase EST portee par la source (TechCrunch du 06/09: "said they received
+  surprising emails this week"). Sauf que le 06/09 est un dimanche et la
+  publication un lundi: "this week" chez eux designe la semaine qui s'acheve,
+  "cette semaine" chez nous la semaine qui commence. Une citation ne date pas un
+  mot relatif, elle date la PHRASE DE L'AUTEUR. Donc le grep du 29/08 ne suffit
+  pas: pour chaque touche, verifie que le jour de publication tombe dans la meme
+  fenetre que le jour de la source (meme semaine, meme journee), sinon coupe le
+  mot. Remede a 0 mot pres, utile quand la fenetre est serree: "Cette semaine,"
+  -> "Et la," (meme compte, registre parle que Hasan demande). Proof: spec
+  2026-09-07-editeurs-reclament-indemnite-auteurs, re-gate vert.
 - 2026-08-10 · Refonte nocturne, ce qui change pour un run (proof: commits du
   10/08, rebuild verifie image par image, suite 120/120). NOUVELLES COMMANDES:
   `node src/learn.mjs` a l'etape 2b (le digest des lecons, ne throw jamais);
@@ -4303,6 +4316,18 @@ ENTRIES:
   pratique: un run de publication muet a de la MARGE, il n'a pas a expedier le
   controle des frames ni a renoncer a regarder une histoire plus fraiche sortie
   depuis le scout. Proof: journal reports/journal/2026-09-05-10h.md.
+  Ajout 07/09 (16h30), SEIZIEME mesure morte (401, meme cle 53 car AQ.Ab), soit
+  HUIT jours pleins. ET LE PERMALIEN QU'ON NE PEUT PAS DEVINER: la reponse de
+  `publish-reel.mjs publish` ne contient QUE `{published, id, creationId}`, pas
+  de permalink. Fabriquer `instagram.com/p/<mediaId>/` a partir de l'id est FAUX
+  (le vrai est `instagram.com/reel/<shortcode>/`, ici Dc_k9VpHGqU pour l'id
+  18086398325660782): l'id numerique n'est pas le shortcode. Le ledger part alors
+  avec une URL morte, et `posted.jsonl` etant append-only on ne la corrige
+  proprement QUE tant que la ligne n'a pas ete landee. REFLEXE, 20 s, dans cet
+  ordre: publier, puis `node src/publish.mjs recent` et lire `data[0].permalink`,
+  PUIS recordPosted. Note aussi que `recordPosted` ne retourne rien
+  d'exploitable (undefined): ne teste pas son retour, verifie `tail -1
+  state/posted.jsonl`. Proof: run 16h30 du 07/09.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
