@@ -204,7 +204,7 @@
         }
       },
       {
-        "script": "Sur un autre test, EchoBench, le meilleur modèle du marché cède à la pression de l'utilisateur dans 46 % des cas. Beaucoup de modèles médicaux dépassent 95 %.",
+        "script": "Un autre test, EchoBench, met la pression sur des IA qui lisent des images médicales. Le meilleur modèle privé craque dans environ 46 % des cas. Les modèles médicaux, plus de 95 %.",
         "visual": {
           "type": "card",
           "value": "46 %",
@@ -230,7 +230,7 @@
         }
       },
       {
-        "script": "Ce qu'ils demandent est concret: qu'un médecin te demande si tu parles à une IA, comme il demande si tu bois ou fumes. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Ce qu'ils demandent est concret: qu'un médecin te demande si tu parles à une IA, comme il demande si tu bois ou si tu te drogues. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
           "query": "person using mobile phone",
