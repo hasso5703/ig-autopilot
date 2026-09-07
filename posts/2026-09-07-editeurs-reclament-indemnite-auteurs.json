@@ -1,0 +1,232 @@
+{
+  "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
+  "centralClaim": "Publishers are making claims on authors' payouts from the Anthropic copyright settlement for books whose rights had already reverted to the author.",
+  "corroboration": [
+    {
+      "url": "https://writerbeware.blog/2026/09/04/anthropic-copyright-settlement-publishers-are-making-incorrect-claims-on-authors-payouts/",
+      "quote": "Most of the reports I’m receiving fall into two categories: publishers making 50% or 100% claims on rights-reverted works (where they should receive no share), and publishers making 100% claims on in-print works (where their share should be 50%)."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+      "quote": "Victoria Strauss wrote that she’s been receiving author complaints that fall into two broad categories: one where publishers are seeking payment for works that they no longer have a legitimate claim on (because the rights have reverted), and another where publishers are seeking a full 100% payment when they’re only entitled to 50%."
+    }
+  ],
+  "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place.",
+  "caption": "Une IA a été entraînée sur leurs livres piratés. Des éditeurs réclament maintenant l'indemnité des auteurs.\n\nAnthropic verse 1.5 milliard de dollars après avoir téléchargé des livres piratés pour entraîner ses modèles. L'accord prévoit 3 000 dollars par livre, pour les auteurs de près de 500 000 titres. Si le livre est encore en vente chez un éditeur, la somme est partagée moitié-moitié. Si les droits sont revenus à l'auteur, elle lui revient entièrement.\n\nLe détail qui n'est pas dans la vidéo. Les éditeurs scolaires, eux, sont exemptés de ce partage: des auteurs de Wiley et de Pearson rapportent que leur maison réclame entre 75 % et 90 % de la somme. Writer Beware conseille de contester quand même et de laisser l'administrateur de l'accord trancher.\n\nLa nuance, et elle compte. Victoria Strauss refuse d'y voir de la malveillance et penche pour des dossiers mal tenus. Plusieurs éditeurs contactés par leurs auteurs ont répondu que c'était une erreur, et qu'Anthropic la corrigeait.\n\nErreur de comptabilité, ou coup de force ?\n\nSources: techcrunch.com, writerbeware.blog, authorsguild.org\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Claude\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+      "quote": "Some authors hoping to receive their share of Anthropic’s $1.5 billion copyright settlement said they received surprising emails this week"
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+      "quote": "Under the terms of the settlement, the authors of nearly 500,000 titles will be paid $3,000 for each pirated work. If the book is still in-print with a traditional publisher, the money will be split 50-50 between author and publisher. If the book was self-published, or if the publisher reverted the rights by allowing the book to go out-of-print, then the author should get the entire payment."
+    },
+    {
+      "url": "https://writerbeware.blog/2026/09/04/anthropic-copyright-settlement-publishers-are-making-incorrect-claims-on-authors-payouts/",
+      "quote": "I’ve heard from authors with Wiley and Pearson that the publishers are claiming between 75% and 90% of the allocation. This isn’t necessarily a wrongful claim, but I’ve seen advice to contest it anyway and let the settlement administrator sort it out."
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Anthropic · accord sur le droit d’auteur",
+      "headline": "Son livre a été piraté. *HarperCollins* réclame l'indemnité.",
+      "hero": {
+        "value": "3 000 $",
+        "label": "par livre piraté, versés par Anthropic"
+      },
+      "swipe": "Les réclamations, une par une"
+    },
+    {
+      "type": "stat",
+      "figure": "$3,000",
+      "unit": "par livre piraté",
+      "body": "Pour les auteurs de près de **500 000 titres**.",
+      "evidence": "Under the terms of the settlement, the authors of nearly 500,000 titles will be paid $3,000 for each pirated work. If the book is still in-print with a traditional publisher, the money will be split 50-50 between author and publisher. If the book was self-published, or if the publisher reverted the rights by allowing the book to go out-of-print, then the author should get the entire payment.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+        "date": "2026-09-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'accord",
+      "body": "Anthropic paie **1.5 milliard de dollars** après avoir entraîné ses modèles sur des livres piratés.",
+      "evidence": "Some authors hoping to receive their share of Anthropic’s $1.5 billion copyright settlement said they received surprising emails this week",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+        "date": "2026-09-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La règle du partage",
+      "body": "Livre encore en vente chez l'éditeur: moitié-moitié. Droits rendus à l'auteur: **tout pour l'auteur**.",
+      "evidence": "Under the terms of the settlement, the authors of nearly 500,000 titles will be paid $3,000 for each pirated work. If the book is still in-print with a traditional publisher, the money will be split 50-50 between author and publisher. If the book was self-published, or if the publisher reverted the rights by allowing the book to go out-of-print, then the author should get the entire payment.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+        "date": "2026-09-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Deux plaintes, en boucle",
+      "body": "Des éditeurs réclament sur des livres dont les droits sont revenus. D'autres réclament **100 %** au lieu de **50 %**.",
+      "evidence": "Most of the reports I’m receiving fall into two categories: publishers making 50% or 100% claims on rights-reverted works (where they should receive no share), and publishers making 100% claims on in-print works (where their share should be 50%).",
+      "source": {
+        "name": "Writer Beware",
+        "url": "https://writerbeware.blog/2026/09/04/anthropic-copyright-settlement-publishers-are-making-incorrect-claims-on-authors-payouts/",
+        "date": "2026-09-04"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "They claimed one of my books on the Anthropic Settlement that reverted back at least 17 years ago",
+      "attribution": "April Henry, autrice, citée par TechCrunch",
+      "evidence": "WTF is HarperCollins playing at? They claimed one of my books on the Anthropic Settlement that reverted back at least 17 years ago",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+        "date": "2026-09-06"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et les agents aussi",
+      "body": "Cinq auteurs signalent six agences réclamant entre **15 %** et **25 %** de la somme.",
+      "evidence": "So far this morning, I’ve heard from five authors with six different agencies that have made claims for between 15% and 25% of the allocation on books they repped.",
+      "source": {
+        "name": "Writer Beware",
+        "url": "https://writerbeware.blog/2026/09/04/anthropic-copyright-settlement-publishers-are-making-incorrect-claims-on-authors-payouts/",
+        "date": "2026-09-04"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Des éditeurs disent que c'est une erreur, et qu'Anthropic la corrige.",
+      "caveat": "Les mêmes erreurs reviennent chez trop d'auteurs pour être des ratés isolés.",
+      "claimLabel": "Ce que disent les éditeurs",
+      "caveatLabel": "Ce que voit Writer Beware",
+      "evidence": "Since several Kensington Publishing authors reported such claims, I reached out to Kensington CEO Steve Zacharius for comment; he indicated that it wasn’t Kensington’s intent to claim 100%, and told me that Anthropic was aware of the issue and was correcting it. Three other publishers, when contacted by authors, said essentially the same thing.",
+      "source": {
+        "name": "Writer Beware",
+        "url": "https://writerbeware.blog/2026/09/04/anthropic-copyright-settlement-publishers-are-making-incorrect-claims-on-authors-payouts/",
+        "date": "2026-09-04"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La date qui décide",
+      "body": "Pour réclamer **100 %**, les droits doivent être revenus avant le **10 août 2022**.",
+      "evidence": "In order for an author to make a 100% claim on a book, the rights reversion needs to have happened before August 10, 2022, which is the “download date” in the settlement.)",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+        "date": "2026-09-06"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui écrit des livres",
+      "sub": "L'actu IA, sourcée phrase par phrase."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "Writer Beware",
+      "url": "https://writerbeware.blog/2026/09/04/anthropic-copyright-settlement-publishers-are-making-incorrect-claims-on-authors-payouts/",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "Authors Guild",
+      "url": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
+      "accessed": "2026-09-07"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Anthropic paie, ton éditeur réclame ta part",
+    "beats": [
+      {
+        "script": "Tu as écrit un livre. Une IA l'a piraté pour s'entraîner, et la justice a tranché: 3 000 dollars pour toi. Cette semaine, quelqu'un d'autre réclame ta part.",
+        "visual": {
+          "type": "photo",
+          "query": "stack of books",
+          "alt": "Des piles de livres imprimés",
+          "file": "media/2026-09-07-editeurs-reclament-indemnite-auteurs/photo_0.jpg",
+          "credit": "Evan Bench · CC BY"
+        }
+      },
+      {
+        "script": "Ce quelqu'un, c'est ton éditeur. L'argent vient d'Anthropic, qui paie 1.5 milliard de dollars pour près de 500 000 titres piratés.",
+        "visual": {
+          "type": "card",
+          "value": "1.5 milliard",
+          "label": "de dollars versés par Anthropic, pour 500 000 titres"
+        }
+      },
+      {
+        "script": "La règle tient en deux phrases. Si le livre est encore en vente chez ton éditeur, c'est moitié-moitié. S'il t'a rendu les droits, tu prends tout.",
+        "visual": {
+          "type": "photo",
+          "query": "bookstore shelves interior",
+          "alt": "L'intérieur d'une librairie remplie de livres",
+          "file": "media/2026-09-07-editeurs-reclament-indemnite-auteurs/photo_2.jpg",
+          "credit": "Turismo En Portugal · CC BY"
+        }
+      },
+      {
+        "script": "Sauf que Victoria Strauss, du blog Writer Beware, reçoit les deux mêmes plaintes: des éditeurs qui réclament sur des livres rendus depuis longtemps, et d'autres qui prennent 100 % au lieu de 50 %.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://writerbeware.blog/2026/09/04/anthropic-copyright-settlement-publishers-are-making-incorrect-claims-on-authors-payouts/",
+          "file": "media/2026-09-07-editeurs-reclament-indemnite-auteurs/shot_3.png"
+        }
+      },
+      {
+        "script": "L'autrice April Henry raconte que HarperCollins a réclamé un de ses livres, dont les droits lui étaient revenus depuis au moins 17 ans.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+          "file": "media/2026-09-07-editeurs-reclament-indemnite-auteurs/shot_4.png"
+        }
+      },
+      {
+        "script": "Et les agents s'y mettent. Cinq auteurs signalent six agences qui réclament entre 15 et 25 % de la somme, sans posséder un seul livre.",
+        "visual": {
+          "type": "card",
+          "value": "15 à 25 %",
+          "label": "réclamés par des agences sur la part de l'auteur"
+        }
+      },
+      {
+        "script": "Strauss ne crie pas au vol: des éditeurs lui disent que c'est une erreur qu'Anthropic corrige. Mais les mêmes erreurs reviennent chez trop d'auteurs.",
+        "visual": {
+          "type": "photo",
+          "query": "legal contract signature",
+          "alt": "Un contrat et un stylo posés dessus",
+          "file": "media/2026-09-07-editeurs-reclament-indemnite-auteurs/photo_6.jpg",
+          "credit": "Blogtrepreneur · CC BY"
+        }
+      },
+      {
+        "script": "Et c'est à l'auteur de contester, livre par livre. Pour toucher 100 %, il faut que les droits lui soient revenus avant le 10 août 2022. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
+          "file": "media/2026-09-07-editeurs-reclament-indemnite-auteurs/shot_7.png"
+        }
+      }
+    ]
+  }
+}
