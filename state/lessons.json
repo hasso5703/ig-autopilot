@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-07T10:50:14.880Z",
+  "at": "2026-09-07T16:42:05.298Z",
   "n": 82,
   "nSettled": 76,
   "medianViews": 174,
@@ -384,6 +384,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-06-gemini-randonneurs-shasta",
+      "at": "2026-09-06T10:48:12.224Z",
+      "hourUtc": 10,
+      "views": 1250,
+      "reach": 1140,
+      "avgWatchS": 14.9,
+      "retentionPct": 25,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-08-virus-ecrits-par-une-ia",
       "at": "2026-08-08T16:51:56.558Z",
       "hourUtc": 16,
@@ -416,23 +433,6 @@
       "themes": [],
       "sendTest": "Un texte invisible dans un mail a fait mentir le résumé de l'IA: facture au 3 septembre au lieu du 21 août, et un nom effacé.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-06-gemini-randonneurs-shasta",
-      "at": "2026-09-06T10:48:12.224Z",
-      "hourUtc": 10,
-      "views": 1220,
-      "reach": 1108,
-      "avgWatchS": 14.9,
-      "retentionPct": 25,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
-      "settled": false
     },
     {
       "slug": "2026-08-15-google-retire-filigrane",
@@ -952,7 +952,7 @@
       "hourUtc": 16,
       "views": 186,
       "reach": 164,
-      "avgWatchS": 14.2,
+      "avgWatchS": 14.1,
       "retentionPct": 24,
       "likes": 0,
       "comments": 1,
@@ -1642,10 +1642,10 @@
       "slug": "2026-09-06-astra-agi-mesures",
       "at": "2026-09-06T16:47:44.756Z",
       "hourUtc": 16,
-      "views": 68,
-      "reach": 61,
-      "avgWatchS": 4.6,
-      "retentionPct": 8,
+      "views": 78,
+      "reach": 69,
+      "avgWatchS": 4.2,
+      "retentionPct": 7,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -1656,6 +1656,23 @@
         "infra"
       ],
       "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-07-psychose-associee-ia",
+      "at": "2026-09-07T10:49:00.956Z",
+      "hourUtc": 10,
+      "views": 28,
+      "reach": 25,
+      "avgWatchS": 3.1,
+      "retentionPct": 5,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
       "settled": false
     },
     {
@@ -1674,23 +1691,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-07-psychose-associee-ia",
-      "at": "2026-09-07T10:49:00.956Z",
-      "hourUtc": 10,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

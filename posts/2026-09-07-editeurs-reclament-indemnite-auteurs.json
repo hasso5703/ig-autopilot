@@ -158,7 +158,7 @@
     "title": "Anthropic paie, ton éditeur réclame ta part",
     "beats": [
       {
-        "script": "Tu as écrit un livre. Une IA l'a piraté pour s'entraîner, et la justice a tranché: 3 000 dollars pour toi. Cette semaine, quelqu'un d'autre réclame ta part.",
+        "script": "Une IA s'est entraînée sur près de 500 000 livres piratés. La justice a tranché: 3 000 dollars par livre pour l'auteur. Et là, quelqu'un d'autre réclame l'argent.",
         "visual": {
           "type": "photo",
           "query": "stack of books",
@@ -168,7 +168,7 @@
         }
       },
       {
-        "script": "Ce quelqu'un, c'est ton éditeur. L'argent vient d'Anthropic, qui paie 1.5 milliard de dollars pour près de 500 000 titres piratés.",
+        "script": "Ce quelqu'un, c'est l'éditeur. La somme vient d'Anthropic, qui verse 1.5 milliard de dollars au total.",
         "visual": {
           "type": "card",
           "value": "1.5 milliard",
