@@ -4692,3 +4692,26 @@ ENTRIES:
   MORNING SUMMARY" en gros plan (prose lisible hors sujet, refusee a l'oeil) et
   "library reading room" rend une plaque de verre de 1918 a l'emulsion abimee.
   Le filtre du moteur ne voit ni l'epoque ni le hors-sujet: regarde chaque jpg.
+  Ajout 07/09 (10h30): QUINZIEME mesure morte (401, meme cle 53 car), soit HUIT
+  jours pleins. ET LE PIEGE DU JOUR, QUI SURVIT A UNE CORRECTION: quand tu
+  corriges une traduction dans le `script` d'un beat, LA MEME PHRASE VIT AILLEURS
+  DANS LE SPEC et ne bouge pas. Mesure: j'ai corrige "le meilleur modele du
+  marche" -> "le meilleur modele prive" dans le beat 4 (la source dit
+  "best-performing proprietary model", pas "du marche"), re-gate vert, build, et
+  la FRAME a montre le `label` de la carte affichant encore "le meilleur modele
+  cede a la pression" en gros, sur la surface la plus lisible du Reel. Meme chose
+  pour le `hero.label` et le `body` de la diapo `stat`. Le gate ne peut pas le
+  voir: un label ne porte pas d'evidence propre, seuls ses CHIFFRES sont tenus,
+  et le chiffre etait juste. REFLEXE, 20 s: apres toute correction de sens dans
+  un `script`, grep la phrase corrigee dans tout le spec (labels de cartes,
+  hero.label, bodies de diapos) avant de rebuild. Corollaire mesure le meme
+  jour sur la meme histoire: "40% of applicable turns" rendu par "40 % des
+  tours" SOUS-VEND le resultat (ca se lit comme 40% de tous les tours, ce qui est
+  banal, alors que le vrai constat est que la securite manque 6 fois sur 10 QUAND
+  ELLE AURAIT DU SE DECLENCHER). Un adjectif de perimetre supprime ("applicable",
+  "proprietary", "medical") est un contresens qui passe tous les controles.
+  ET UNE PANNE TRANSITOIRE A NE PAS PRENDRE POUR UN BLOCAGE: medrxiv.org a rendu
+  HTTP 429 au 3e passage du gate dans le meme run apres avoir rendu VERIFIED aux
+  deux premiers, sur les memes deux citations. Un 429 n'est PAS un 403: ne
+  reecris ni le spec ni les sources, re-gate 2 min plus tard (vert du premier
+  coup ici). Meme famille que venturebeat 429 du 06/08.

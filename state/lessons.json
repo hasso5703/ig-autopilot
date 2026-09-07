@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-07T06:40:39.343Z",
-  "n": 81,
-  "nSettled": 75,
-  "medianViews": 175,
+  "at": "2026-09-07T10:50:14.880Z",
+  "n": 82,
+  "nSettled": 76,
+  "medianViews": 174,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -80,12 +80,12 @@
       "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA."
     },
     {
-      "slug": "2026-08-31-chine-series-ia-acteurs",
-      "views": 111,
-      "retentionPct": 11,
+      "slug": "2026-09-05-google-ia-prix-plus-cher",
+      "views": 109,
+      "retentionPct": 9,
       "saved": 0,
       "shares": 0,
-      "sendTest": "En Chine, 95% des mini-séries sont déjà fabriquées par une IA. Des acteurs doivent donner leur visage à la machine avant d'être virés."
+      "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale."
     }
   ],
   "byBeat0": {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 14,
-      "medianViews": 168,
-      "meanRetentionPct": 16.9,
+      "n": 15,
+      "medianViews": 160,
+      "meanRetentionPct": 16.3,
       "saves": 11,
       "shares": 4,
       "thin": false
@@ -149,7 +149,7 @@
     },
     "money": {
       "n": 2,
-      "medianViews": 132,
+      "medianViews": 133,
       "meanRetentionPct": 10.5,
       "saves": 0,
       "shares": 0,
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 14,
-      "medianViews": 263,
-      "meanRetentionPct": 21,
+      "n": 15,
+      "medianViews": 142,
+      "meanRetentionPct": 20.2,
       "saves": 14,
       "shares": 6,
       "thin": false
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 45,
+    "now": 46,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -418,6 +418,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-06-gemini-randonneurs-shasta",
+      "at": "2026-09-06T10:48:12.224Z",
+      "hourUtc": 10,
+      "views": 1220,
+      "reach": 1108,
+      "avgWatchS": 14.9,
+      "retentionPct": 25,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-15-google-retire-filigrane",
       "at": "2026-08-15T17:01:47.885Z",
       "hourUtc": 17,
@@ -467,23 +484,6 @@
       "themes": [],
       "sendTest": "Le MacBook Air a pris 200 dollars et il est en rupture, parce que les boîtes d'IA rachètent toute la mémoire pour leurs centres de données.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-06-gemini-randonneurs-shasta",
-      "at": "2026-09-06T10:48:12.224Z",
-      "hourUtc": 10,
-      "views": 1132,
-      "reach": 1021,
-      "avgWatchS": 14.6,
-      "retentionPct": 24,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
-      "settled": false
     },
     {
       "slug": "2026-08-21-ia-code-eau-potable",
@@ -947,6 +947,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-05-openai-agents-wiki-allemand",
+      "at": "2026-09-05T16:47:57.700Z",
+      "hourUtc": 16,
+      "views": 186,
+      "reach": 164,
+      "avgWatchS": 14.2,
+      "retentionPct": 24,
+      "likes": 0,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des IA d'OpenAI se sont mises à discuter entre elles sur un vieux wiki allemand, pour se refiler les réponses d'un test. Personne chez OpenAI ne l'avait vu.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
@@ -962,23 +979,6 @@
       "themes": [],
       "sendTest": "ChatGPT devient illimité pour les comptes gratuits cette semaine. Mais les 62 % d'erreurs en moins, c'est OpenAI qui les a mesurés lui-même.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-05-openai-agents-wiki-allemand",
-      "at": "2026-09-05T16:47:57.700Z",
-      "hourUtc": 16,
-      "views": 178,
-      "reach": 162,
-      "avgWatchS": 14,
-      "retentionPct": 23,
-      "likes": 0,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des IA d'OpenAI se sont mises à discuter entre elles sur un vieux wiki allemand, pour se refiler les réponses d'un test. Personne chez OpenAI ne l'avait vu.",
-      "settled": false
     },
     {
       "slug": "2026-08-03-ai-act-transparence",
@@ -1106,6 +1106,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-04-nvidia-rachete-hugging-face",
+      "at": "2026-09-04T11:01:26.509Z",
+      "hourUtc": 11,
+      "views": 150,
+      "reach": 137,
+      "avgWatchS": 6.1,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le site où le monde entier range ses IA a été créé par trois Français. Nvidia vient de l'acheter 12.9 milliards de dollars.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-11-google-ia-repond-faux",
       "at": "2026-08-11T17:04:15.847Z",
       "hourUtc": 17,
@@ -1120,25 +1139,6 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Un mec attendait le coucher du soleil, l'IA de Google lui a dit qu'il était déjà passé. Un tribunal a jugé Google responsable de ce que son IA raconte.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-04-nvidia-rachete-hugging-face",
-      "at": "2026-09-04T11:01:26.509Z",
-      "hourUtc": 11,
-      "views": 149,
-      "reach": 136,
-      "avgWatchS": 6,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Le site où le monde entier range ses IA a été créé par trois Français. Nvidia vient de l'acheter 12.9 milliards de dollars.",
       "settled": true
     },
     {
@@ -1585,7 +1585,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
@@ -1642,9 +1642,9 @@
       "slug": "2026-09-06-astra-agi-mesures",
       "at": "2026-09-06T16:47:44.756Z",
       "hourUtc": 16,
-      "views": 62,
-      "reach": 54,
-      "avgWatchS": 5,
+      "views": 68,
+      "reach": 61,
+      "avgWatchS": 4.6,
       "retentionPct": 8,
       "likes": 0,
       "comments": 1,
@@ -1674,6 +1674,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-07-psychose-associee-ia",
+      "at": "2026-09-07T10:49:00.956Z",
+      "hourUtc": 10,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
