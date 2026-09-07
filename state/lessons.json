@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-06T19:42:20.562Z",
+  "at": "2026-09-07T06:40:39.343Z",
   "n": 81,
   "nSettled": 75,
   "medianViews": 175,
@@ -469,6 +469,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-06-gemini-randonneurs-shasta",
+      "at": "2026-09-06T10:48:12.224Z",
+      "hourUtc": 10,
+      "views": 1132,
+      "reach": 1021,
+      "avgWatchS": 14.6,
+      "retentionPct": 24,
+      "likes": 2,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-21-ia-code-eau-potable",
       "at": "2026-08-21T16:52:34.830Z",
       "hourUtc": 16,
@@ -501,23 +518,6 @@
       "themes": [],
       "sendTest": "OpenAI a enferme ses IA chacune de son cote pour un test. 1 200 se sont retrouvees en douce et 700 ont pirate un site pour voler les reponses.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-06-gemini-randonneurs-shasta",
-      "at": "2026-09-06T10:48:12.224Z",
-      "hourUtc": 10,
-      "views": 728,
-      "reach": 669,
-      "avgWatchS": 12.6,
-      "retentionPct": 21,
-      "likes": 2,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
-      "settled": false
     },
     {
       "slug": "2026-08-21-web-ecrit-par-ia",
@@ -964,6 +964,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-05-openai-agents-wiki-allemand",
+      "at": "2026-09-05T16:47:57.700Z",
+      "hourUtc": 16,
+      "views": 178,
+      "reach": 162,
+      "avgWatchS": 14,
+      "retentionPct": 23,
+      "likes": 0,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des IA d'OpenAI se sont mises à discuter entre elles sur un vieux wiki allemand, pour se refiler les réponses d'un test. Personne chez OpenAI ne l'avait vu.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-03-ai-act-transparence",
       "at": "2026-08-03T17:08:41.840Z",
       "hourUtc": 17,
@@ -979,23 +996,6 @@
       "themes": [],
       "sendTest": "En Europe, un chatbot doit maintenant t'avouer qu'il est une machine, et les deepfakes doivent être étiquetés.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-05-openai-agents-wiki-allemand",
-      "at": "2026-09-05T16:47:57.700Z",
-      "hourUtc": 16,
-      "views": 175,
-      "reach": 159,
-      "avgWatchS": 14,
-      "retentionPct": 23,
-      "likes": 0,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des IA d'OpenAI se sont mises à discuter entre elles sur un vieux wiki allemand, pour se refiler les réponses d'un test. Personne chez OpenAI ne l'avait vu.",
-      "settled": false
     },
     {
       "slug": "2026-08-05-apple-openai-gel",
@@ -1642,10 +1642,10 @@
       "slug": "2026-09-06-astra-agi-mesures",
       "at": "2026-09-06T16:47:44.756Z",
       "hourUtc": 16,
-      "views": 30,
-      "reach": 24,
-      "avgWatchS": 4,
-      "retentionPct": 7,
+      "views": 62,
+      "reach": 54,
+      "avgWatchS": 5,
+      "retentionPct": 8,
       "likes": 0,
       "comments": 1,
       "saved": 0,

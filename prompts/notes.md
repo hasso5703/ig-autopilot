@@ -1067,6 +1067,23 @@ ENTRIES:
   ordeal" chez KLTV. Une citation recopiee du mauvais onglet revient NOT_FOUND
   alors que la phrase existe bien sur les deux pages. Extrais toujours du texte
   aplati de L'URL QUE TU VAS CITER, jamais d'une reprise.
+  Ajout 07/09 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 25 verifications, deux dossiers) writerbeware.blog (NOUVEAU, le
+  blog de Victoria Strauss, primaire d'une actu d'edition: c'est lui qui
+  collecte les plaintes que la presse resume), medrxiv.org/content/<doi>v1.full
+  (NOUVEAU, la page /full porte le resume ET le corps, donc les chiffres d'une
+  etude clinique s'y gatent), arxiv.org /abs/ et /html/<id>vN (re-confirmes),
+  techcrunch.com et the-decoder.com (re-confirmes). PIEGE D'EXTRACTION NEUF,
+  famille des espaces parasites: un empan TechCrunch qui ENJAMBE un lien sort
+  du flatten avec une espace avant la virgule ("Writers Beware , Victoria
+  Strauss wrote"), et la citation revient NOT_FOUND alors que la phrase est
+  bien sur la page. Coupe l'empan APRES le lien, jamais a cheval dessus.
+  ET LE PIEGE DE PONCTUATION DECIMALE, mesure au gate ce matin: numbers()
+  (validate.mjs:145) supprime les VIRGULES et garde les POINTS, donc "1,5
+  milliard" ecrit a la francaise se normalise en "15" et ne matchera JAMAIS le
+  "$1.5 billion" de la source. Ecris le point de la source ("1.5 milliard"),
+  ce que le manuel demande deja ("never re-punctuate a decimal"); ca vaut pour
+  toute decimale francaise dans un script, une carte ou une legende.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -4655,3 +4672,23 @@ ENTRIES:
   permission, l'edge repond). A 45 abonnes c'est l'etat normal du compte, pas
   une panne: la veille de 19h30 ne doit pas y perdre de temps tant que le
   compte n'a pas de commentaires a lire.
+  Ajout 07/09 (06h30): QUATORZIEME mesure morte d'affilee, soit SEPT jours
+  pleins (401 sur generativelanguage.googleapis.com/v1beta/models, cle 53 car,
+  AQ.Ab). OOM_SILENT reste le mode par defaut, donc un spec banque ne contient
+  ni `veo` ni `image`. ET LA PANNE DU JOUR, QUI FRAPPE LA SEULE SURFACE QUI
+  RESTE: api.openverse.org a rendu HTTP 500 en boucle pendant tout le run
+  (mesure directe en curl et dans acquireOne). Ce n'est PAS bloquant, et c'est
+  la bonne nouvelle a retenir: acquireOne retente, puis retombe sur Commons
+  (searchCommons est appele des que Openverse rend moins de 3 candidats) et
+  ramene quand meme une photo. Ce que ca coute, mesure: ~4 min par requete
+  photo au lieu de ~30 s, et Commons rend 429 si on l'interroge en parallele a
+  la main. Consequence de planification pour un scout en mode muet, ou 3 a 4
+  beats sur 8 sont des photos: lance la liste de requetes en arriere-plan DES
+  le debut du run (avant meme d'ecrire les scripts), une seule liste a la fois,
+  et compte 30 a 40 min pour 10 requetes. Et Commons repond mieux aux LIEUX et
+  aux OBJETS INSTITUTIONNELS qu'aux scenes de bureau: "bookstore shelves
+  interior" rend la librairie Lello (parfaite), "office documents folders desk"
+  rend le bureau Resolute de la Maison-Blanche avec un dossier "CLASSIFIED
+  MORNING SUMMARY" en gros plan (prose lisible hors sujet, refusee a l'oeil) et
+  "library reading room" rend une plaque de verre de 1918 a l'emulsion abimee.
+  Le filtre du moteur ne voit ni l'epoque ni le hors-sujet: regarde chaque jpg.
