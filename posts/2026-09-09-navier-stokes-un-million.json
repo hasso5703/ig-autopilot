@@ -1,0 +1,192 @@
+{
+  "slug": "2026-09-09-navier-stokes-un-million",
+  "centralClaim": "OpenAI says an internal model produced a full proof of the Navier-Stokes Millennium Prize problem with about 10,000 coordinated AI agents in 88 hours, and the mathematician Tristan Buckmaster says the company only moved onto the problem after information about his own unpublished progress reached it.",
+  "corroboration": [
+    {
+      "url": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/",
+      "quote": "The company says the proof was produced by about 10,000 coordinated AI agents in 88 hours, using an internal model that OpenAI describes as \"significantly more capable than GPT-6 Astra.\""
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+      "quote": "Shortly after the Buckmaster’s statement, OpenAI published a full proof of the Navier–Stokes existence and smoothness problem, which Buckmaster’s findings had taken steps towards. According to OpenAI, the proof was discovered by an unreleased next-generation model, which has tackled a range of different unsolved problems over the past week."
+    }
+  ],
+  "sendTest": "Une IA d'OpenAI dit avoir résolu un problème de maths à un million de dollars. Le mathématicien qui était dessus l'accuse de l'avoir doublé.",
+  "caption": "Une IA dit avoir résolu un des sept grands problèmes de maths. Le mathématicien qui était dessus accuse OpenAI.\n\nOpenAI a publié une preuve du problème de Navier-Stokes, l'un des sept problèmes du Clay Mathematics Institute, chacun doté d'un million de dollars. L'entreprise raconte l'avoir obtenue avec environ 10 000 agents coordonnés en 88 heures, sur un modèle interne encore non publié.\n\nLe détail qui n'est pas dans la vidéo. Tristan Buckmaster et Levent Alpöge travaillaient sur la même voie depuis des mois, avec Claude et avec Codex. Buckmaster dit qu'on lui a demandé de retirer son co-auteur du papier parce que celui-ci travaille chez Anthropic, et que le refus lui a valu cette phrase: pourquoi voudrais-tu ruiner ta carrière ?\n\nLa nuance, et elle vient d'OpenAI. L'entreprise écrit que ni ses chercheurs ni ses agents n'ont vu leur travail avant sa publication, qu'aucune donnée d'utilisateur n'a servi à résoudre le problème, et que les deux preuves diffèrent nettement.\n\nCoup de génie de la machine, ou coup de force de l'entreprise ?\n\ntechcrunch.com · the-decoder.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Maths\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "The company says the proof was produced by about 10,000 coordinated AI agents in 88 hours, using an internal model that OpenAI describes as \"significantly more capable than GPT-6 Astra.\"",
+      "url": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/"
+    },
+    {
+      "quote": "The Navier-Stokes existence and smoothness problem is one of the seven Millennium Prize problems — a set of major unsolved math problems, each carrying a $1 million bounty from Clay Mathematics Institute for the first person or group to provide a solution.",
+      "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "OpenAI · Navier-Stokes",
+      "headline": "Une IA dit avoir résolu un problème de maths à *un million de dollars*",
+      "hero": {
+        "value": "10 000",
+        "label": "agents lancés en parallèle, pendant 88 heures"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "10,000",
+      "unit": "agents IA coordonnés",
+      "body": "Et **88 heures** de calcul pour une seule preuve, sur un modèle qu'OpenAI n'a pas publié.",
+      "evidence": "The company says the proof was produced by about 10,000 coordinated AI agents in 88 hours, using an internal model that OpenAI describes as \"significantly more capable than GPT-6 Astra.\"",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Sept problèmes, *un million de dollars* chacun",
+      "body": "Le Clay Mathematics Institute promet **1 million de dollars** à qui résout l'un des sept. Celui-ci porte sur les équations des fluides, très utilisées et très mal comprises.",
+      "evidence": "The Navier-Stokes existence and smoothness problem is one of the seven Millennium Prize problems — a set of major unsolved math problems, each carrying a $1 million bounty from Clay Mathematics Institute for the first person or group to provide a solution.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Deux mathématiciens étaient déjà dessus",
+      "body": "Tristan Buckmaster et Levent Alpöge ont passé des mois sur le problème, avec *Codex*, l'outil de code d'OpenAI, et avec *Claude*, le modèle d'Anthropic.",
+      "evidence": "The two mathematicians had spent months working with various AI models, including Anthropic's Claude and OpenAI's Codex running GPT-5.6 Sol.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que dit le mathématicien",
+      "claim": "Des informations sur leur avancée sont remontées jusqu'à OpenAI avant toute publication.",
+      "caveatLabel": "Ce que répond OpenAI",
+      "caveat": "Ni ses chercheurs ni ses agents n'ont vu ce travail avant sa publication, et aucune donnée d'utilisateur n'a servi.",
+      "evidence": "“We (the researchers and the agents) did not see any of their work through any means until they released it publicly — in particular, no specific user data was accessed in order to solve this problem,” the post reads.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Why would you ruin your career?",
+      "attribution": "Bubeck, d'OpenAI, tel que rapporté par Tristan Buckmaster",
+      "evidence": "When Buckmaster pushed to make the dispute public, he says that Bubeck replied: “Why would you ruin your career?” Buckmaster says that when he pushed back, Bubeck followed up with: “If you don’t want me to be nice, then I don’t have to be nice.”",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La voie que presque personne ne prenait",
+      "body": "Buckmaster écrit que presque personne d'autre ne travaillait sur cette approche, et qu'on n'y arrive pas *en quelques jours* en donnant l'énoncé à un modèle.",
+      "evidence": "“It is not the direction one arrives at in a few days by giving a model the problem statement.” While Alpöge is employed by Anthropic, he was not conducting this research on the company’s behalf.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pense que l'IA ne fait que recopier",
+      "sub": "L'actu IA, en clair, avec les sources."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+      "accessed": "2026-09-08"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/",
+      "accessed": "2026-09-08"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "10 000 IA, 88 heures, un problème à 1 million",
+    "beats": [
+      {
+        "script": "Il existe sept problèmes de maths que personne n'a jamais résolus. Un million de dollars pour qui en craque un seul. Et OpenAI dit qu'une de ses IA vient d'en craquer un.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.claymath.org/millennium/navier-stokes-equation/"
+        }
+      },
+      {
+        "script": "Celui-là, c'est Navier-Stokes : les équations qui décrivent l'eau et l'air qui bougent. Le modèle qui dit l'avoir résolu, OpenAI ne l'a pas publié : elle le dit juste plus fort que GPT-6 Astra.",
+        "visual": {
+          "type": "photo",
+          "query": "water turbulence",
+          "alt": "De l'eau en mouvement, filmée de près"
+        }
+      },
+      {
+        "script": "Pour y arriver, OpenAI raconte avoir lancé environ 10 000 agents en parallèle, pendant 88 heures. Le calcul seul a coûté des millions de dollars.",
+        "visual": {
+          "type": "card",
+          "value": "10 000",
+          "label": "agents lancés en parallèle, pendant 88 heures"
+        }
+      },
+      {
+        "script": "Sauf que deux mathématiciens étaient déjà dessus. Tristan Buckmaster et Levent Alpöge, depuis des mois, avec Codex, l'outil d'OpenAI, et avec Claude, celui d'Anthropic.",
+        "visual": {
+          "type": "photo",
+          "query": "blackboard mathematics",
+          "alt": "Un tableau noir couvert d'équations"
+        }
+      },
+      {
+        "script": "Et c'est là que ça dérape. Buckmaster dit avoir appris que leur avancée était remontée jusqu'à OpenAI. Il appelle : la preuve est déjà faite.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/"
+        }
+      },
+      {
+        "script": "Ensuite, dit-il, on lui demande de retirer son co-auteur, parce qu'il travaille chez Anthropic. Il refuse. La réponse : pourquoi ruiner ta carrière ?",
+        "visual": {
+          "type": "card",
+          "value": "Ta carrière",
+          "label": "« Pourquoi ruiner ta carrière ? », rapporte Buckmaster"
+        }
+      },
+      {
+        "script": "OpenAI dément : ni ses chercheurs ni ses agents n'ont vu leur travail avant sa publication, et aucune donnée d'utilisateur n'a servi.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/"
+        }
+      },
+      {
+        "script": "Reste la phrase de Buckmaster : presque personne ne prenait cette voie, et on n'y arrive pas en quelques jours. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "ocean wave",
+          "alt": "Une vague qui se creuse"
+        }
+      }
+    ]
+  }
+}

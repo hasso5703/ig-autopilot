@@ -443,7 +443,20 @@ export async function acquireOne(spec, { dir, name, attempt = 0 }) {
   let candidates = [];
   let nearMiss = null;
   for (const q of queryLadder(query)) {
-    let found = await searchOpenverse(q);
+    /*
+     * Neither index may take the other down, and this call is why that rule
+     * needed saying twice. The `candidates` command below was hardened against
+     * an Openverse outage on 02/09; this one, which actually ACQUIRES the
+     * picture, was not, so on 2026-09-08 (19h30) Openverse answered 502/504 in
+     * a loop and every photo beat died outright — `acquireOne` threw before
+     * reaching the Commons fallback three lines down, and Commons was up the
+     * whole time. In silent mode 3 or 4 of 8 beats are photos, so an Openverse
+     * outage was silently taking out half the Reel's surfaces.
+     */
+    let found = await searchOpenverse(q).catch((err) => {
+      console.error(`warn: Openverse search failed (${describeError(err)}) — falling back to Commons`);
+      return [];
+    });
     if (found.length < 3) {
       try {
         found = found.concat(await searchCommons(q));

@@ -4885,3 +4885,42 @@ ENTRIES:
   creditee a l'outlet et fait partie du recu, donc elle ne ment pas sur ce que
   NOUS produisons, mais sur un compte qui promet "sans image generee" en legende,
   regarde la frame et decide en conscience. Proof: run 16h30 08/09.
+  Ajout 08/09 (19h30, veille): VINGT-ET-UNIEME mesure morte d'affilee (401,
+  meme cle 53 car AQ.Ab8). ET LE BUG QUI TUAIT LA SEULE SURFACE QUI RESTE EN
+  MUET, CORRIGE CE SOIR: `acquireOne` appelait `searchOpenverse` SANS catch, et
+  le repli Commons trois lignes plus bas ne couvrait que le cas "moins de 3
+  resultats", jamais une exception. Openverse a rendu 502/504 en boucle toute la
+  soiree, donc CHAQUE beat photo mourait alors que Commons repondait. La commande
+  `candidates` avait ete blindee contre exactement ca le 02/09; la fonction qui
+  ACQUIERT ne l'avait pas ete. Corrige + test de non-regression (127 tests), et
+  verifie en direct: "water turbulence" -> "warn: Openverse search failed (504) -
+  falling back to Commons". Trois consequences a garder:
+  (1) UN .JPG SUR LE DISQUE NE PROUVE PAS UNE ACQUISITION REUSSIE. Sur 6
+  requetes, 3 ont imprime FAIL et laisse quand meme un jpg valide et normalise
+  dans le dossier (le candidat est ecrit puis refuse). Lis la ligne OK/FAIL que
+  renvoie acquireOne, jamais `ls`.
+  (2) L'INDEX A RESERVI UNE IMAGE GENEREE, et le titre suffisait a la voir:
+  "chalk equations" -> "DALL E-Anthropomorphic rhinoceros wearing a business
+  suit, writing complex matrices equations on a blackboard", auteur "Bing Image
+  Creator", pdm, Commons. C'est la deuxieme mesure en un jour (voir 08/09 06h30):
+  le reflexe titre+auteur AVANT le jpg n'est pas une precaution, c'est le filtre.
+  (3) LES SUJETS PHYSIQUES ABSTRAITS SONT LES PLUS MAL SERVIS. 15 requetes ce
+  soir pour une histoire de maths et de fluides, ZERO photo utilisable:
+  "water turbulence" -> un enfant identifiable qui peche; "smoke plume" -> une
+  image satellite Copernicus des feux de Iakoutie avec sa legende anglaise
+  incrustee; "blackboard mathematics" -> un "100%" a la craie (un chiffre
+  lisible qui contredira n'importe quelle ligne de karaoke); "handwritten
+  equations" -> une piece a conviction du FBI; "mathematician portrait" -> des
+  peintures du XVIIe. Echouent aussi: turbulent flow, sea foam, waterfall close,
+  whiteboard equations, ocean wave, river rapids, fluid dynamics water. Et aucun
+  cliche de "tristan buckmaster" n'existe. Quand le sujet est une IDEE (un
+  fluide, une equation, une preuve), prevois que le beat 0 sera un RECU, pas une
+  photo, et garde tes 3 captures pour ca.
+  ENFIN, CORRECTION DE L'ENTREE DU 07/09 19h30 ("la collecte du soir ne sert pas
+  a banquer"): c'etait vrai ce soir-la a cause du deluge arXiv (302 sujets sur
+  320). Ce soir, arXiv a rendu 0 sur 0 et feeds.mjs a rendu 37 sujets frais, 36
+  apres dedup, dont UNE histoire clairement banquable (Navier-Stokes/Buckmaster,
+  spec gate-clean laisse dans posts/). Une veille peut donc banquer: regarde le
+  compte arXiv avant de conclure. Le flux HN a de nouveau imprime "FAIL 0/0 <-
+  HTTP 502 after 13 tries" et a rendu 200 / 8 items a la main 3 min plus tard
+  (la toux connue, entree du 28/07). Proof: veille 19h30 08/09.

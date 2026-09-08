@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-08T16:42:21.977Z",
-  "n": 84,
-  "nSettled": 78,
-  "medianViews": 180,
+  "at": "2026-09-08T19:44:43.454Z",
+  "n": 85,
+  "nSettled": 79,
+  "medianViews": 175,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -64,6 +64,14 @@
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
     },
     {
+      "slug": "2026-09-06-astra-agi-mesures",
+      "views": 82,
+      "retentionPct": 7,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès."
+    },
+    {
       "slug": "2026-09-01-instagram-faux-profils-ia",
       "views": 95,
       "retentionPct": 12,
@@ -78,14 +86,6 @@
       "saved": 0,
       "shares": 1,
       "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA."
-    },
-    {
-      "slug": "2026-09-05-google-ia-prix-plus-cher",
-      "views": 109,
-      "retentionPct": 9,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale."
     }
   ],
   "byBeat0": {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 17,
-      "medianViews": 175,
-      "meanRetentionPct": 17.3,
+      "n": 18,
+      "medianViews": 168,
+      "meanRetentionPct": 16.7,
       "saves": 12,
       "shares": 4,
       "thin": false
@@ -116,9 +116,9 @@
   },
   "byTheme": {
     "infra": {
-      "n": 1,
-      "medianViews": 1388,
-      "meanRetentionPct": 23,
+      "n": 2,
+      "medianViews": 735,
+      "meanRetentionPct": 15,
       "saves": 1,
       "shares": 1,
       "thin": true
@@ -132,9 +132,9 @@
       "thin": false
     },
     "models": {
-      "n": 5,
-      "medianViews": 359,
-      "meanRetentionPct": 32.8,
+      "n": 6,
+      "medianViews": 324,
+      "meanRetentionPct": 28.5,
       "saves": 10,
       "shares": 1,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 17,
-      "medianViews": 168,
-      "meanRetentionPct": 18.2,
+      "n": 18,
+      "medianViews": 164,
+      "meanRetentionPct": 17.6,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 47,
+    "now": 48,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -981,6 +981,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-08-medicament-ia-age-biologique",
+      "at": "2026-09-08T10:50:30.295Z",
+      "hourUtc": 10,
+      "views": 180,
+      "reach": 158,
+      "avgWatchS": 8.6,
+      "retentionPct": 14,
+      "likes": 1,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un médicament dessiné par une IA a été testé sur des malades des poumons. Six programmes ont lu leur sang comme celui de gens plus jeunes.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-03-ai-act-transparence",
       "at": "2026-08-03T17:08:41.840Z",
       "hourUtc": 17,
@@ -1070,23 +1087,6 @@
       ],
       "sendTest": "Les États-Unis viennent d'interdire l'importation des robots humanoïdes étrangers. 85 % du marché est chinois.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-08-medicament-ia-age-biologique",
-      "at": "2026-09-08T10:50:30.295Z",
-      "hourUtc": 10,
-      "views": 157,
-      "reach": 142,
-      "avgWatchS": 7.9,
-      "retentionPct": 13,
-      "likes": 1,
-      "comments": 1,
-      "saved": 2,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Un médicament dessiné par une IA a été testé sur des malades des poumons. Six programmes ont lu leur sang comme celui de gens plus jeunes.",
-      "settled": false
     },
     {
       "slug": "2026-08-07-suno-chansons-marquees",
@@ -1656,7 +1656,7 @@
         "infra"
       ],
       "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-07-31-xai-turbines-memphis",
@@ -1697,7 +1697,7 @@
       "at": "2026-09-07T16:49:35.936Z",
       "hourUtc": 16,
       "views": 30,
-      "reach": 24,
+      "reach": 25,
       "avgWatchS": 4.8,
       "retentionPct": 8,
       "likes": 1,
@@ -1725,6 +1725,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-08-openai-trois-jours-agent",
+      "at": "2026-09-08T16:59:43.362Z",
+      "hourUtc": 16,
+      "views": 23,
+      "reach": 19,
+      "avgWatchS": 4.8,
+      "retentionPct": 8,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

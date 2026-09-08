@@ -15,7 +15,7 @@ import assert from "node:assert/strict";
 import { validatePost, claimOverlap, hookIssues, imageIssues } from "../src/validate.mjs";
 import { tokens, similarity, SIMILARITY_THRESHOLD, publishGap, MIN_GAP_HOURS, CAROUSEL_EVERY_HOURS, recordPosted, themesOf, shortcodeless, alreadyRecorded } from "../src/state.mjs";
 import { shorten, splitFigure, buildTimeline, totalDuration, applyNarrationTiming } from "../src/reel-template.mjs";
-import { queryLadder, scoreCandidate, creditLine, servedSize } from "../src/imagery.mjs";
+import { queryLadder, scoreCandidate, creditLine, servedSize, acquireOne } from "../src/imagery.mjs";
 import { complianceIssues } from "../src/reel.mjs";
 
 // ---------------------------------------------------------------------------
@@ -504,6 +504,56 @@ test("a photo query that finds nothing is retried shorter, longest first", () =>
   assert.equal(ladder[0], "librarian helping a patron at the public library desk");
   assert.ok(ladder.length > 2);
   assert.equal(ladder.at(-1).split(/\s+/).length, 1);
+});
+
+// ---------------------------------------------------------------------------
+// An Openverse outage must not take the photo surface down with it.
+//
+// 2026-09-08 (19h30): api.openverse.org answered 502/504 in a loop and every
+// `acquireOne` call threw its HTTP error, because the Commons fallback three
+// lines below only ran when Openverse RETURNED too few results, never when it
+// threw. The `candidates` command had been hardened against exactly this on
+// 02/09; the function that actually acquires the picture had not. In silent
+// mode 3 or 4 beats out of 8 are photos, so an outage of one index was
+// silently killing half a Reel's surfaces while the other index was up.
+//
+// The stub answers 404 rather than 502 only to keep the suite fast: a 5xx is
+// retryable and would spend six seconds in withRetry's backoff. The catch
+// wraps the whole search, so it covers both.
+// ---------------------------------------------------------------------------
+test("an Openverse failure falls through to Commons instead of killing the acquisition", async (t) => {
+  const asked = [];
+  t.mock.method(globalThis, "fetch", async (url) => {
+    const u = String(url);
+    asked.push(u);
+    if (u.includes("api.openverse.org")) return new Response("nope", { status: 404 });
+    if (u.includes("commons.wikimedia.org"))
+      return new Response(JSON.stringify({ query: { pages: {} } }), {
+        status: 200,
+        headers: { "content-type": "application/json" },
+      });
+    throw new Error(`unexpected fetch: ${u}`);
+  });
+
+  const { mkdtemp } = await import("node:fs/promises");
+  const { tmpdir } = await import("node:os");
+  const nodePath = await import("node:path");
+
+  const err = await acquireOne(
+    { type: "photo", query: "server rack", alt: "" },
+    { dir: await mkdtemp(nodePath.join(tmpdir(), "oom-imagery-")) }
+  ).then(
+    () => null,
+    (e) => e
+  );
+
+  assert.ok(err, "acquireOne must still fail when neither index has a picture");
+  assert.doesNotMatch(err.message, /HTTP 404/, "the Openverse error must not be what reaches the caller");
+  assert.match(err.message, /no openly licensed photograph found/);
+  assert.ok(
+    asked.some((u) => u.includes("commons.wikimedia.org")),
+    "Commons must have been asked even though Openverse failed"
+  );
 });
 
 test("diagrams and logos are ranked below photographs", () => {
