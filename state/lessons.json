@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-08T06:40:49.207Z",
-  "n": 83,
-  "nSettled": 77,
-  "medianViews": 175,
+  "at": "2026-09-08T16:42:21.977Z",
+  "n": 84,
+  "nSettled": 78,
+  "medianViews": 180,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -30,20 +30,20 @@
       "sendTest": "La Californie autorise les camions qui se conduisent seuls sur ses routes. Le syndicat des routiers attaque l'État en justice."
     },
     {
+      "slug": "2026-09-06-gemini-randonneurs-shasta",
+      "views": 1282,
+      "retentionPct": 25,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus."
+    },
+    {
       "slug": "2026-08-24-uber-logiciel-chauffeurs",
       "views": 1265,
       "retentionPct": 28,
       "saved": 1,
       "shares": 1,
       "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende."
-    },
-    {
-      "slug": "2026-08-13-claude-marque-invisible",
-      "views": 1255,
-      "retentionPct": 29,
-      "saved": 4,
-      "shares": 8,
-      "sendTest": "Tout ce que Claude écrit porte maintenant une marque invisible qui reste après le copier-coller. Même sur du texte que tu as écrit toi-même."
     }
   ],
   "bottom": [
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 16,
-      "medianViews": 168,
-      "meanRetentionPct": 16.8,
+      "n": 17,
+      "medianViews": 175,
+      "meanRetentionPct": 17.3,
       "saves": 12,
       "shares": 4,
       "thin": false
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 15,
-      "medianViews": 142,
-      "meanRetentionPct": 20.2,
+      "n": 16,
+      "medianViews": 263,
+      "meanRetentionPct": 20.5,
       "saves": 14,
       "shares": 6,
       "thin": false
@@ -351,8 +351,8 @@
       "slug": "2026-09-06-gemini-randonneurs-shasta",
       "at": "2026-09-06T10:48:12.224Z",
       "hourUtc": 10,
-      "views": 1281,
-      "reach": 1169,
+      "views": 1282,
+      "reach": 1171,
       "avgWatchS": 14.8,
       "retentionPct": 25,
       "likes": 3,
@@ -362,7 +362,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-24-uber-logiciel-chauffeurs",
@@ -967,9 +967,9 @@
       "slug": "2026-08-09-chatgpt-gratuit-illimite",
       "at": "2026-08-09T16:54:55.066Z",
       "hourUtc": 16,
-      "views": 183,
-      "reach": 159,
-      "avgWatchS": 16.6,
+      "views": 185,
+      "reach": 160,
+      "avgWatchS": 16.9,
       "retentionPct": 28,
       "likes": 5,
       "comments": 1,
@@ -1070,6 +1070,23 @@
       ],
       "sendTest": "Les États-Unis viennent d'interdire l'importation des robots humanoïdes étrangers. 85 % du marché est chinois.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-08-medicament-ia-age-biologique",
+      "at": "2026-09-08T10:50:30.295Z",
+      "hourUtc": 10,
+      "views": 157,
+      "reach": 142,
+      "avgWatchS": 7.9,
+      "retentionPct": 13,
+      "likes": 1,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un médicament dessiné par une IA a été testé sur des malades des poumons. Six programmes ont lu leur sang comme celui de gens plus jeunes.",
+      "settled": false
     },
     {
       "slug": "2026-08-07-suno-chansons-marquees",
@@ -1664,7 +1681,7 @@
       "hourUtc": 10,
       "views": 35,
       "reach": 32,
-      "avgWatchS": 2.9,
+      "avgWatchS": 3.2,
       "retentionPct": 5,
       "likes": 0,
       "comments": 1,
@@ -1679,10 +1696,10 @@
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
       "at": "2026-09-07T16:49:35.936Z",
       "hourUtc": 16,
-      "views": 28,
-      "reach": 23,
-      "avgWatchS": 4,
-      "retentionPct": 7,
+      "views": 30,
+      "reach": 24,
+      "avgWatchS": 4.8,
+      "retentionPct": 8,
       "likes": 1,
       "comments": 1,
       "saved": 0,
