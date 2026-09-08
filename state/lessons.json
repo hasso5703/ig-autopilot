@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-07T19:41:35.724Z",
+  "at": "2026-09-08T06:40:49.207Z",
   "n": 83,
   "nSettled": 77,
   "medianViews": 175,
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 46,
+    "now": 47,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -348,6 +348,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-06-gemini-randonneurs-shasta",
+      "at": "2026-09-06T10:48:12.224Z",
+      "hourUtc": 10,
+      "views": 1281,
+      "reach": 1169,
+      "avgWatchS": 14.8,
+      "retentionPct": 25,
+      "likes": 3,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-24-uber-logiciel-chauffeurs",
       "at": "2026-08-24T10:59:24.031Z",
       "hourUtc": 10,
@@ -365,23 +382,6 @@
       ],
       "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-06-gemini-randonneurs-shasta",
-      "at": "2026-09-06T10:48:12.224Z",
-      "hourUtc": 10,
-      "views": 1256,
-      "reach": 1145,
-      "avgWatchS": 14.9,
-      "retentionPct": 25,
-      "likes": 3,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus.",
-      "settled": false
     },
     {
       "slug": "2026-08-13-claude-marque-invisible",
@@ -1662,9 +1662,9 @@
       "slug": "2026-09-07-psychose-associee-ia",
       "at": "2026-09-07T10:49:00.956Z",
       "hourUtc": 10,
-      "views": 32,
-      "reach": 26,
-      "avgWatchS": 3,
+      "views": 35,
+      "reach": 32,
+      "avgWatchS": 2.9,
       "retentionPct": 5,
       "likes": 0,
       "comments": 1,
@@ -1673,6 +1673,23 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
+      "at": "2026-09-07T16:49:35.936Z",
+      "hourUtc": 16,
+      "views": 28,
+      "reach": 23,
+      "avgWatchS": 4,
+      "retentionPct": 7,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place.",
       "settled": false
     },
     {
@@ -1691,23 +1708,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
-      "at": "2026-09-07T16:49:35.936Z",
-      "hourUtc": 16,
-      "views": 17,
-      "reach": 12,
-      "avgWatchS": 4,
-      "retentionPct": 7,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

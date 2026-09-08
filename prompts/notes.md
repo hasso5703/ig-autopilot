@@ -1107,6 +1107,34 @@ ENTRIES:
   echouait a 3 mots distinctifs). La phrase avec COVID reste utilisable en
   `evidence` de diapo: ce controle-la ne lit pas les diapos. Preuve: gate du
   03/09, spec uber-3300-postes.
+  Ajout 08/09 (06h30), LA RECETTE QUI FAIT PASSER LE GATE DU PREMIER COUP, et
+  elle generalise le piege des caracteres invisibles du 03/09: N'EXTRAIS PAS TES
+  CITATIONS AVEC TON PROPRE APLATISSEUR. `flatten` de validate.mjs (src/validate
+  .mjs:290) SUPPRIME les balises INLINE (a, b, em, span, strong, sub, sup, time,
+  q...) SANS mettre d'espace, puis remplace toutes les autres par un espace. Un
+  extracteur maison qui fait `replace(/<[^>]+>/g,' ')` pour TOUT fabrique donc
+  des espaces fantomes partout ou la page a un lien: la phrase Topol sortait
+  chez moi en "invested in longevity , told the New York Times ." alors que le
+  gate lit "invested in longevity, told the New York Times." -> NOT_FOUND
+  garanti sur une citation pourtant presente mot pour mot. Remede mesure ce
+  matin: recopier la liste INLINE_TAGS et la chaine de `.replace` de flatten
+  dans un script de scratchpad, MOINS le `.toLowerCase()` final (la casse doit
+  rester celle de la page: le controle des noms versionnes fait un `includes`
+  sensible a la casse sur l'evidence, cf. 27/08), puis decouper les citations
+  par `indexOf` dans ce texte et ecrire le JSON par script, jamais a la main.
+  Resultat: 2 specs, 22 citations (slides + corroboration + captionEvidence),
+  22 VERIFIED au PREMIER passage, zero aller-retour, sur 4 domaines dont un
+  jamais utilise. Ca vaut 20 minutes par spec. Preuve: scout 06h30 08/09, specs
+  medicament-ia-age-biologique et openai-trois-jours-agent.
+  Ajout 08/09 (06h30), DOMAINES MESURES AU FETCH DU GATE ce matin: repondent 200
+  ET se gatent du premier coup nature.com (l'article scientifique complet, 622 ko,
+  abstract entier dans le texte aplati: c'est un PRIMAIRE joignable, reflexe a
+  avoir sur toute actu de recherche publiee), insilico.com/news (communique
+  d'entreprise), unite.ai, kingy.ai, simonwillison.net (ses pages "Quoting X"
+  portent la citation verbatim d'un texte dont le primaire est bloque: sur une
+  publication openai.com, c'est souvent la SEULE source joignable qui porte la
+  phrase exacte). doi.org redirige vers nature.com et rend le meme 200.
+  openai.com/index/... reste 403 (18e confirmation).
 - 2026-08-17 · LE GATE DE FRAICHEUR, STALE_DAYS=4, et c'est le controle le plus
   cher a decouvrir tard: validate.mjs prend la date la PLUS RECENTE des
   `slides[].source.date` et REFUSE le post au-dela de 4 jours ("that is not
@@ -4680,6 +4708,33 @@ ENTRIES:
   cafe, plantes, lunettes). La macro d'ecran allume epinglee par le scout
   (rawpixel, CC0) est restee la meilleure: quand le scout a deja regarde,
   re-interroger l'index coute 6 min pour rien.
+  Ajout 08/09 (06h30): DIX-HUITIEME mesure morte d'affilee (401, meme cle 53 car
+  AQ.Ab), soit DIX jours pleins. ET LE PIEGE LE PLUS GRAVE MESURE SUR CE COMPTE
+  DEPUIS QUE LE MUET EST LE MODE PAR DEFAUT: **L'INDEX SERT DES IMAGES GENEREES
+  PAR IA, ET AUCUN FILTRE NE LES VOIT.** La requete "data center servers" a
+  ramene, via openverse/wikimedia, licence cc0, filtre near-white passe:
+  `Upstream_collection_real-time_exploitation_by_alien_worker_bots_in_Utah_data_
+  center.png` (auteur "Prototyperspective"), une image GENEREE montrant des
+  robots humanoides extraterrestres alignes devant des baies. Sur un compte dont
+  toute la promesse est que ce qu'il montre est reel, c'est la faute dont on ne
+  se releve pas, et le moteur l'aurait acceptee sans un mot. Le mode muet AGGRAVE
+  le risque: 3 a 4 beats sur 8 sont des photos, donc on multiplie les tirages
+  dans un index ou Commons accepte les rendus. REFLEXE NON NEGOCIABLE: lis le
+  NOM DE FICHIER et l'AUTEUR que acquireOne renvoie avant meme d'ouvrir le jpg
+  (un titre qui raconte une scene impossible, un auteur sans nom propre), puis
+  regarde le jpg. Quatre autres hors-sujet mesures le meme matin, tous cc0 et
+  tous passes par le filtre: "molecular structure model" -> une image
+  d'ASTRONOMIE (nuages moleculaires du Per-Tau Shell), "scientific literature
+  books" -> la COUVERTURE du livre "Theory of Literature", "control room
+  monitors" -> une console de MIXAGE de studio de musique, "clinical laboratory"
+  -> une senatrice en photo de groupe. Le filtre near-white ne protege ni du
+  hors-sujet, ni de l'homonyme, ni du synthetique. Ce qui a marche ce matin, 24
+  requetes pour 6 photos gardees: viser un OBJET dense et non ambigu ("blood
+  sample tubes", "protein model", "computer monitor code", "computer hardware" ->
+  macro infrarouge d'une puce par FritzchensFritz, superbe). Et deux refus a
+  garder en tete: "blood pressure measurement" rend une consultation avec le
+  visage d'une ENFANT identifiable (jamais sous du karaoke qui parle d'un essai
+  de medicament), et rawpixel filigrane encore ("laboratory pipette").
   Ajout 06/09 (19h30, veille): TREIZIEME mesure morte (401, meme cle 53 car),
   soit SIX jours pleins. Fenetre appariee recalculee ce soir avec les deux Reels
   du jour: 10 Reels muets (02 au 06/09) rendent toujours 11,5% de retention

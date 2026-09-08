@@ -1,0 +1,206 @@
+{
+  "slug": "2026-09-08-medicament-ia-age-biologique",
+  "centralClaim": "Insilico Medicine's drug rentosertib, designed with AI, left treated patients with a lower predicted biological age than placebo on all six proteomic aging clocks tested.",
+  "corroboration": [
+    {
+      "url": "https://www.nature.com/articles/s41587-026-03286-y",
+      "quote": "We measure the variance between the clocks and find that all six clocks consistently predicted lower biological age in treated arms."
+    },
+    {
+      "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+      "quote": "All six predicted a lower biological age for treated patients than for those on placebo."
+    }
+  ],
+  "sendTest": "Un médicament dessiné par une IA a été testé sur des malades des poumons. Six programmes ont lu leur sang comme celui de gens plus jeunes.",
+  "caption": "Un médicament dessiné par une IA a fait baisser l'âge biologique lu dans le sang de patients.\n\nInsilico Medicine a conçu rentosertib avec deux systèmes d'IA: l'un cherche la protéine à viser, l'autre dessine la molécule. Le médicament visait une maladie des poumons, la fibrose pulmonaire idiopathique. Sur les prises de sang de l'essai, six horloges de l'âge biologique, bâties par des équipes séparées à Harvard, Oxford et Pékin, ont toutes prédit un âge plus bas chez les patients traités que sous placebo. Le recul le plus fort est de trois à quatre ans à la semaine 4, et jusqu'à six ans pour l'une des horloges.\n\nLe détail qui n'est pas dans la vidéo. Il a fallu environ 18 mois pour passer de la protéine visée au candidat médicament, et rentosertib est aujourd'hui en essai de phase III, la dernière étape avant une éventuelle autorisation.\n\nLa nuance, et il y en a deux. L'essai comptait 42 patients, tous atteints de la maladie des poumons: aucune personne en bonne santé n'a été testée. Et les auteurs écrivent eux-mêmes que ces horloges ne savent pas séparer ce qui vient du vieillissement de ce qui vient de la maladie.\n\nUn vrai coup de jeune, ou juste des poumons qui vont mieux ?\n\nnature.com · the-decoder.com\n\n#IA #IntelligenceArtificielle #ActuIA #Sante #Medicament\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "The strongest effect was a drop of three to four years by week 4, with one clock showing as much as six years.",
+      "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/"
+    },
+    {
+      "quote": "Going from target protein to drug candidate took about 18 months, and rentosertib is now in a Phase III trial for IPF, the final clinical stage before potential approval.",
+      "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/"
+    },
+    {
+      "quote": "A trial last year with 42 patients showed improved lung function, and the researchers collected blood samples for protein analysis along the way.",
+      "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/"
+    },
+    {
+      "quote": "However, proteomic clocks alone cannot deconvolute aging- and disease-specific effects.",
+      "url": "https://www.nature.com/articles/s41587-026-03286-y"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Insilico Medicine · Nature Biotechnology",
+      "headline": "Un médicament dessiné par IA, un sang qui *paraît* plus jeune",
+      "hero": {
+        "value": "Six sur six",
+        "label": "horloges de l'âge biologique, même verdict"
+      },
+      "swipe": "Les receveurs, les chiffres, et la nuance"
+    },
+    {
+      "type": "stat",
+      "figure": "42",
+      "unit": "patients dans l'essai",
+      "body": "Tous **atteints d'une maladie des poumons**. Les chercheurs ont gardé leurs prises de sang.",
+      "evidence": "A trial last year with 42 patients showed improved lung function, and the researchers collected blood samples for protein analysis along the way.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+        "date": "2026-09-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Six horloges, construites séparément",
+      "body": "Ce sont des modèles qui lisent un âge biologique dans les **protéines du sang**. Six équipes différentes les ont bâtis.",
+      "evidence": "Aging clocks are AI models that predict a body's biological age from blood proteins. The researchers ran six of them on the patient data, built by independent teams at Harvard, Oxford, Beijing, and Insilico itself.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+        "date": "2026-09-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les six disent la même chose",
+      "body": "Toutes prédisent un âge biologique **plus bas** chez les patients traités que chez ceux sous placebo.",
+      "evidence": "We measure the variance between the clocks and find that all six clocks consistently predicted lower biological age in treated arms.",
+      "source": {
+        "name": "Nature Biotechnology",
+        "url": "https://www.nature.com/articles/s41587-026-03286-y",
+        "date": "2026-09-07"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Ce qui me convainc, ce n'est pas la taille de l'effet, c'est l'accord entre les modèles, parce qu'ils ne partagent ni leurs données ni leurs réglages.",
+      "attribution": "Michael Levitt, prix Nobel de chimie",
+      "evidence": "What convinces me is not the size of the effect but the agreement, because these models share neither their features nor their training data,\" says Nobel laureate in chemistry Michael Levitt in a company press release.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+        "date": "2026-09-07"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que disent les horloges",
+      "claim": "Un âge biologique plus bas sous traitement",
+      "caveatLabel": "Ce qu'elles ne savent pas faire",
+      "caveat": "Séparer ce qui vient du vieillissement de ce qui vient de la maladie",
+      "evidence": "However, proteomic clocks alone cannot deconvolute aging- and disease-specific effects.",
+      "source": {
+        "name": "Nature Biotechnology",
+        "url": "https://www.nature.com/articles/s41587-026-03286-y",
+        "date": "2026-09-07"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui manque encore",
+      "body": "Aucun essai chez des personnes **en bonne santé**. Le médicament est en phase III, la dernière étape avant une autorisation.",
+      "evidence": "What's missing, he says, is a trial in healthy people, since the results may only apply to patients with the lung disease.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+        "date": "2026-09-07"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui parle tout le temps de longévité",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Nature Biotechnology",
+      "url": "https://www.nature.com/articles/s41587-026-03286-y",
+      "accessed": "2026-09-08"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+      "accessed": "2026-09-08"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Médicament d'une IA, un sang qui paraît plus jeune",
+    "beats": [
+      {
+        "script": "Tu as un âge sur ta carte d'identité, et un autre dans ton sang. Chez des patients, ce deuxième âge a baissé de trois à quatre ans. Tu sais ce qu'ils prenaient ? Un médicament dessiné par une IA.",
+        "visual": {
+          "type": "photo",
+          "query": "blood sample tubes",
+          "alt": "Un tube de prise de sang tenu par une main gantée",
+          "file": "media/2026-09-08-medicament-ia-age-biologique/photo_0.jpg",
+          "credit": "Lab tube · CC0"
+        }
+      },
+      {
+        "script": "Le médicament s'appelle rentosertib. Il vient d'Insilico Medicine, une société qui dessine des molécules avec de l'IA. L'analyse est parue dans Nature Biotechnology.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.nature.com/articles/s41587-026-03286-y"
+        }
+      },
+      {
+        "script": "Six horloges de l'âge biologique ont lu les protéines de leur sang. Six modèles bâtis par des équipes séparées, à Harvard, à Oxford, à Pékin.",
+        "visual": {
+          "type": "card",
+          "value": "Six sur six",
+          "label": "horloges d'âge biologique, bâties par des équipes séparées"
+        }
+      },
+      {
+        "script": "Et les six disent la même chose. Toutes prédisent un âge biologique plus bas chez les patients traités que chez ceux sous placebo.",
+        "visual": {
+          "type": "photo",
+          "query": "protein model",
+          "alt": "Un modèle de protéine en ruban",
+          "file": "media/2026-09-08-medicament-ia-age-biologique/photo_3.jpg",
+          "credit": "Umberto Salvagnin from Italy · CC BY"
+        }
+      },
+      {
+        "script": "Le prix Nobel de chimie Michael Levitt le dit : ce qui le convainc, ce n'est pas la taille de l'effet, c'est leur accord.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://insilico.com/news/rnt0709261-rentosertib-proteomic-aging-clocks"
+        }
+      },
+      {
+        "script": "Sauf que non, personne n'a rajeuni. Et l'essai comptait 42 patients, tous malades des poumons. Aucune personne en bonne santé n'a été testée.",
+        "visual": {
+          "type": "card",
+          "value": "42",
+          "label": "patients dans l'essai, tous malades des poumons"
+        }
+      },
+      {
+        "script": "Ce que les modèles ont vu, ce sont des protéines qui bougent. Le cardiologue Eric Topol résume : c'est encourageant, mais aucun essai n'a encore tranché.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/"
+        }
+      },
+      {
+        "script": "Rentosertib est déjà en phase trois, la dernière étape avant une autorisation. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "photo",
+          "query": "hospital laboratory analysis",
+          "alt": "Une technicienne de laboratoire avec un portoir de tubes de sang",
+          "file": "media/2026-09-08-medicament-ia-age-biologique/photo_7.jpg",
+          "credit": "U.S. Navy photo by Petty Officer… · Public domain"
+        }
+      }
+    ]
+  }
+}
