@@ -1279,6 +1279,17 @@ ENTRIES:
   conclus pas a un conteneur casse: lis le nom de la bibliotheque dans le message
   et installe-la. Un run de publication qui rencontre ca perd sa fenetre s'il le
   diagnostique de zero. Proof: veille 19h30 05/09.
+  Ajout 08/09 (16h30), (5) NE LANCE PAS apt-get EN ARRIERE-PLAN: l'outil Bash a
+  notifie "completed (exit code 0)" alors que le processus apt-get tournait
+  ENCORE (mesure: `pgrep -x apt-get` vivant, log coupe en plein telechargement).
+  Consequence en cascade: `ffmpeg -version` rend "command not found" (on croit
+  l'etape 0 en echec), et la deuxieme tentative d'installation meurt sur
+  `Could not get lock /var/lib/dpkg/lock-frontend. It is held by process <pid>
+  (apt-get)`. Ne conclus donc rien d'un exit 0 en arriere-plan sur apt: soit tu
+  l'installes en avant-plan (~40 s, largement dans la fenetre de l'outil), soit
+  tu attends explicitement (`while pgrep -x apt-get; do sleep 10; done`). Le
+  paquet finit par s'installer tout seul et ffmpeg 6.1.1 repond ensuite du
+  premier coup. Cout ce matin: ~2 min et deux faux diagnostics.
 - 2026-07-28 · Land state on main ONLY via `node src/land.mjs "msg" [paths]`.
   Local `main` is clone-time state, not truth; a checkout nearly erased
   posted.jsonl on 28/07. Never force-push, ever. Proof: run report 28/07.
@@ -1299,6 +1310,17 @@ ENTRIES:
   l'environnement qui tousse (famille de la toux blog.google du 19/08). Relance
   une fois avant de diagnostiquer quoi que ce soit, et ne touche surtout pas a
   git a la main. Mesure: 3 landings ce run, 1 seul 503, sur le premier.
+  Ajout 08/09 (16h30), MEME FAMILLE, LE RESEAU QUI LACHE PENDANT LE `git fetch`
+  DE land.mjs: le premier landing du run (dossier media complet, ~9 Mo) est mort
+  sur `Command failed: git fetch origin / error: RPC failed; curl 56 Recv failure:
+  Connection reset by peer / fatal: early EOF / fetch-pack: invalid index-pack
+  output`, apres 5 min. Ce n'est ni REAL CONFLICT ni la suite rouge, et surtout le
+  COMMIT AVAIT DEJA ETE FAIT (land.mjs commite AVANT de fetcher): `git log
+  --oneline -1` montrait deja le commit du Reel. LA MEME COMMANDE relancee telle
+  quelle a rendu `nothing new to commit; pushing what is already committed here`
+  puis `landed and proven` en 20 s. Donc: relance land.mjs a l'identique, ne
+  refais pas le commit a la main, et ne conclus PAS que le travail est perdu.
+  Mesure: 3 landings ce run, 1 seul echec reseau, sur le premier (le plus gros).
   Ajout 08/08 (06h30), LE HOOK DE FIN DE SESSION MENT, et sa consigne est un
   piege: il imprime "There are N unpushed commit(s) on branch claude/<...>.
   Please push these changes". C'est FAUX apres un land.mjs reussi. Il compare la
@@ -4848,3 +4870,18 @@ ENTRIES:
   avant de publier, fais au minimum `grep -n "publish-reel\|permalink\|OOM_SILENT"
   prompts/notes.md`. Un carnet qu'on ne lit pas coute exactement ce qu'il a ete
   ecrit pour eviter.
+  Ajout 08/09 (16h30): VINGTIEME mesure morte d'affilee (401, meme cle 53 car
+  AQ.Ab8), soit DIX JOURS PLEINS. ET LA MESURE DE VITESSE QUI COMPTE POUR UN RUN
+  DE PUBLICATION EN RETARD: un spec de scout entierement gate, avec ses 3 photos
+  epinglees en `file` et ses 3 recus laisses en `screenshot`, a rendu COMPLIANT
+  60,0 s en ~5 min de build muet, dont ~3 min sur la SEULE capture the-decoder.com
+  (les deux autres, unite.ai et simonwillison.net, sont instantanees et propres du
+  premier coup: masthead, titre entier, auteur, date, et chez Willison la citation
+  Pachocki ENTIERE dans le cadre 9:16 - c'est le meilleur recu de citation mesure
+  jusqu'ici). Donc l'entree du 08/09 10h30 se precise: the-decoder se capture
+  proprement mais PAS vite. Reserve cosmetique sans remede: le recu the-decoder
+  embarque l'illustration maison du site, etiquetee "GPT-Image-2 prompted by THE
+  DECODER". C'est une image generee VISIBLE dans notre Reel; elle est clairement
+  creditee a l'outlet et fait partie du recu, donc elle ne ment pas sur ce que
+  NOUS produisons, mais sur un compte qui promet "sans image generee" en legende,
+  regarde la frame et decide en conscience. Proof: run 16h30 08/09.
