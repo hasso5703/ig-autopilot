@@ -4816,3 +4816,35 @@ ENTRIES:
   dont 302 arXiv, 18 hors-arXiv et aucun publiable (documentaire Holmes, rumeurs
   Apple, bzip3, DNS). Si une veille veut preparer le lendemain, c'est un travail
   de 06h30 sur les fils du matin, pas une seconde collecte le soir.
+  Ajout 08/09 (10h30): DIX-NEUVIEME mesure morte d'affilee (401, meme cle 53 car
+  AQ.Ab8), soit DIX JOURS PLEINS, dernier achat toujours 01/09 16h54. ET LA BONNE
+  NOUVELLE DU JOUR, QUI CONTREDIT LA PEUR DES CAPTURES LENTES (entree 28/08:
+  techcrunch 694 s, csoonline 601 s): les TROIS recus de ce Reel ont ete captures
+  EN LIGNE pendant le build, sans `file` epingle, et le build entier (8 beats,
+  3 captures + 2 cartes + 3 photos) a pris ~2 min. Se capturent donc vite et
+  proprement du premier coup: nature.com/articles/... (titre, auteurs, "Published:
+  07 September 2026", Altmetric dans le cadre 9:16), insilico.com/news/... (date,
+  titre entier, les deux puces qui portent les chiffres) et the-decoder.com
+  (titre, signature Matthias Bastian, date). SEULE RESERVE, cosmetique et sans
+  remede necessaire: nature.com colle un gros bouton bleu "Download PDF" en haut
+  du cadre, il mange ~15% de la hauteur mais ne cache ni le titre ni la date. Un
+  scout n'a donc PAS besoin d'epingler les recus sur ces trois domaines; garde
+  l'epinglage pour techcrunch/csoonline/abcnews, qui sont les lents.
+  COTE PHOTOS, deux resultats a reutiliser contre l'entree du 08/09 06h30 (l'index
+  sert des images generees): "protein model" rend un vrai cliche macro d'un modele
+  de proteine en ruban (Umberto Salvagnin, CC BY), dense, colore sur fond NOIR,
+  donc le karaoke blanc/jaune y est le plus lisible du Reel: c'est le meilleur
+  sujet "science abstraite" mesure jusqu'ici. Et "hospital laboratory analysis"
+  rend une technicienne de la Navy avec un portoir de tubes de sang (domaine
+  public): visage identifiable, MAIS la frame extraite montre le karaoke
+  ("ABONNE-TOI POUR") sous le portoir, pas en travers du visage, et la ligne
+  n'accuse personne. Le piege du 04/09 n'est donc pas "jamais de visage", c'est
+  "juge le visage SUR LA FRAME, avec sa ligne": ici garde, la meme famille de
+  photo avait ete refusee a juste titre le 04/09 parce que la ligne accusait.
+  ENFIN, RAPPEL COUTEUX PAYE DEUX FOIS: le piege des guillemets de
+  `publish-reel.mjs url` est deja note DEUX FOIS dans ce carnet (l.1286 et
+  l.4220) et ce run l'a quand meme paye, pour avoir SURVOLE le carnet au lieu de
+  le lire. A 370 ko le carnet ne se lit plus en entier dans la fenetre d'un run:
+  avant de publier, fais au minimum `grep -n "publish-reel\|permalink\|OOM_SILENT"
+  prompts/notes.md`. Un carnet qu'on ne lit pas coute exactement ce qu'il a ete
+  ecrit pour eviter.
