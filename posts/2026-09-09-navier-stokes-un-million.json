@@ -179,7 +179,7 @@
         }
       },
       {
-        "script": "Pour y arriver, OpenAI raconte avoir lancé environ 10 000 agents pendant 88 heures. Au tarif public, cette semaine de calcul vaudrait 22.5 millions de dollars.",
+        "script": "Pour y arriver, OpenAI raconte avoir lancé environ 10 000 agents pendant 88 heures. Au tarif public, une semaine de calcul vaudrait 22.5 millions de dollars.",
         "visual": {
           "type": "card",
           "value": "22.5 M$",
@@ -194,7 +194,7 @@
         }
       },
       {
-        "script": "Ils apprennent que des informations sur leur avancée sont remontées à OpenAI. En face, une équipe entière et, dit Buckmaster, un calcul dément.",
+        "script": "Ils apprennent que des informations sur leur avancée sont remontées à OpenAI. En face, une équipe entière et, dit Buckmaster, une quantité de calcul folle.",
         "visual": {
           "type": "photo",
           "query": "supercomputer racks",

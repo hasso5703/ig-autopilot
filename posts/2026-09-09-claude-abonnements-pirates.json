@@ -151,7 +151,7 @@
     "title": "Un logiciel espion vide les abonnements Claude",
     "beats": [
       {
-        "script": "Ton abonnement à l'IA se consomme tout seul la nuit. Ça arrive à des clients de Claude, l'IA d'Anthropic, et personne n'a eu besoin de leur mot de passe.",
+        "script": "Ton abonnement à l'IA se consomme tout seul pendant que tu ne t'en sers pas. Ça arrive à des clients de Claude, l'IA d'Anthropic, et personne n'a eu besoin de leur mot de passe.",
         "visual": {
           "type": "photo",
           "query": "computer screen dark room",
