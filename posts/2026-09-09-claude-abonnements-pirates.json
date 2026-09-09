@@ -164,7 +164,8 @@
         "script": "En Angleterre, Grant De Swardt voit sa consommation passer de 45 à 55 % un jour où il ne travaille pas. Il paie 200 dollars par mois.",
         "visual": {
           "type": "screenshot",
-          "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/"
+          "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+          "file": "media/2026-09-09-claude-abonnements-pirates/shot_1.png"
         }
       },
       {
@@ -172,14 +173,15 @@
         "visual": {
           "type": "card",
           "value": "0 à 49 %",
-          "label": "en 12 minutes, sans y toucher"
+          "label": "en 12 minutes, pour quelques questions"
         }
       },
       {
         "script": "Anthropic a fini par écrire à des clients : un logiciel espion installé sur leur ordinateur a copié leur session Claude, puis quelqu'un s'en est servi à leur place.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.malwarebytes.com/blog/news/2026/09/infostealers-are-hijacking-claude-accounts-at-users-expense"
+          "url": "https://www.malwarebytes.com/blog/news/2026/09/infostealers-are-hijacking-claude-accounts-at-users-expense",
+          "file": "media/2026-09-09-claude-abonnements-pirates/shot_3.png"
         }
       },
       {
@@ -204,7 +206,8 @@
         "script": "Et ce logiciel ne visait pas l'IA : il copie aussi tous les mots de passe enregistrés dans ton navigateur. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/"
+          "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/",
+          "file": "media/2026-09-09-claude-abonnements-pirates/shot_6.png"
         }
       }
     ]

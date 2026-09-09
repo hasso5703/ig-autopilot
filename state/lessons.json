@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-09T06:40:45.381Z",
+  "at": "2026-09-09T10:41:03.143Z",
   "n": 85,
   "nSettled": 79,
   "medianViews": 175,
@@ -842,8 +842,8 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 242,
-      "reach": 214,
+      "views": 251,
+      "reach": 221,
       "avgWatchS": 8.7,
       "retentionPct": 15,
       "likes": 1,
@@ -1622,6 +1622,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-08-openai-trois-jours-agent",
+      "at": "2026-09-08T16:59:43.362Z",
+      "hourUtc": 16,
+      "views": 99,
+      "reach": 88,
+      "avgWatchS": 5.9,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-01-instagram-faux-profils-ia",
       "at": "2026-09-01T16:59:31.288Z",
       "hourUtc": 16,
@@ -1637,23 +1654,6 @@
       "themes": [],
       "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-08-openai-trois-jours-agent",
-      "at": "2026-09-08T16:59:43.362Z",
-      "hourUtc": 16,
-      "views": 87,
-      "reach": 75,
-      "avgWatchS": 6.1,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
-      "settled": false
     },
     {
       "slug": "2026-09-06-astra-agi-mesures",
