@@ -5018,3 +5018,49 @@ ENTRIES:
   effet de bord: `node -e "const t=require('./state/token.json');const d=(new
   Date(t.issuedAt).getTime()+t.lifetimeDays*864e5-Date.now())/864e5;console.log(
   Math.floor(d))"`. Proof: run 10h30 09/09.
+  Ajout 09/09 (16h30), VINGT-QUATRIEME mesure morte (401, meme cle 53 car AQ.Ab8),
+  soit ONZE JOURS. ET LE PIEGE DE RECU LE PLUS COUTEUX MESURE JUSQU'ICI, parce
+  qu'il produit un recu SANS TITRE et qu'aucun controle ne le voit: le moteur
+  n'affiche PAS la capture entiere. `segmentFromScreenshot` la met a 880 px de
+  large puis coupe les 1150 premiers pixels (variante 0), et a 1000 px de large
+  puis 1000 pixels (variante 1, le push-in de seconde moitie). Sur une source
+  1290 px, la fenetre visible est donc les ~1686 PREMIERS pixels de l'image,
+  ~1290 dans le push-in. Or techcrunch en contexte mobile intercale son image
+  d'illustration ENTRE le masthead et le titre: le h1 est a y=2100-2550, donc
+  une capture brute epinglee telle quelle rend un recu ou l'on voit le bandeau
+  Disrupt, le logo TC et un tableau noir d'equations, ET PAS UNE LIGNE DU TITRE.
+  Le run l'a vu sur la frame, pas ailleurs. REMEDE a 0 $, 5 s, a reutiliser sur
+  toute page dont le titre tombe hors des 1686 premiers pixels: empiler deux
+  crops au lieu d'en prendre un seul,
+  `ffmpeg -i raw.png -filter_complex "[0]crop=1290:250:0:135[a];[0]crop=1290:1131:0:1665[b];[a][b]vstack=inputs=2" shot.png`
+  (bande 1 = le masthead, bande 2 = titre + signature + date). Verifie sur les
+  deux variantes: la frame de la premiere moitie porte logo + rubrique + titre
+  entier + signature + date, celle du push-in porte logo + titre entier. REFLEXE
+  AVANT D'EPINGLER UN RECU: ouvre le jpg reduit et demande-toi si le titre est
+  dans le PREMIER TIERS de la hauteur; si non, empile.
+  DEUXIEME MESURE, sur the-decoder: la pub Jared Jewelers etait en HAUT de la
+  capture aujourd'hui alors que le run de 10h30 l'a trouvee en BAS de techcrunch.
+  La regie deplace son inventaire, donc ne recopie jamais un crop de ce carnet
+  sans regarder la frame. `crop=1290:1200:0:830` a ete le bon offset ici, et il
+  fait d'une pierre deux coups: il retire la pub du haut ET s'arrete a la
+  signature, donc il supprime l'illustration maison "Nano Banana Pro prompted by
+  THE DECODER" qui suit. Ca REGLE a 0 $ la reserve du 08/09 16h30 (une image
+  generee visible dans un Reel dont la legende promet "sans image generee"):
+  coupe le recu the-decoder juste sous la signature et le probleme disparait.
+  TROISIEME MESURE, LE RECU VERT-SUR-VERT: claymath.org/millennium/... repond 200
+  et se capture PARFAITEMENT en 23 s / 1 frame (logo CMI, fil d'Ariane, la mention
+  "Unsolved", le titre entier, trois lignes de chapo, aucune banniere). MAIS son
+  fond est vert plein, et le moteur floute la meme image en fond de frame: en
+  beat 0 la carte de recu n'a plus de bord, la frame entiere est verte et la
+  hierarchie visuelle disparait. Compare a la photo NASA de soufflerie (bleu et
+  rouge, sombre) qui etait au beat 1, la frame zero etait la PLUS FAIBLE du Reel
+  alors que le recu, lui, est excellent. Permutation des deux visuels (les
+  scripts ne bougent pas), re-gate PASSED, rebuild 0 achat en ~2 min: le recu
+  est meilleur au beat 1 (le karaoke "ON S'EN SERT" tombe pile sous "no proof")
+  et la photo gagne l'audition. REGLE OPERATIONNELLE: un recu dont le fond est
+  d'une seule couleur saturee ne peut pas etre le beat 0, parce que le fond de
+  frame est cette meme image floutee. Regarde la frame, pas le jpg.
+  Couts de capture re-confirmes ce soir, a la seconde: techcrunch 632 s (675 s a
+  10h30, 694 s le 28/08 - c'est stable, compte 11 min), the-decoder 183 s,
+  claymath 23 s. Lance les trois en arriere-plan AVANT de re-gater le spec: les
+  trois etaient pretes avant que le gate ait fini. Proof: run 16h30 09/09.
