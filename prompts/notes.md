@@ -5002,4 +5002,19 @@ ENTRIES:
   herite d'un autre run: lis chaque `value`/`label` de carte A COTE du `script`
   de son beat avant de builder, pas seulement apres une correction. Corrige en
   "pour quelques questions", re-gate PASSED, rebuild dans le meme dossier, 0 $,
-  ~2 min (tout ressort du cache en muet). Proof: run 10h30 09/09.
+  ~2 min (tout ressort du cache en muet).
+  ET UN PIEGE D'OUTILLAGE QUE J'AI PAYE CE MIDI, A NE PAS REFAIRE:
+  `node src/refresh-token.mjs` N'EST PAS UN "status" EN LECTURE SEULE. Il APPELLE
+  graph.instagram.com/refresh_access_token et rend `{"ok":true,"days":60}`, ce
+  qu'on lit spontanement comme "le jeton de l'environnement a 60 jours". C'EST
+  FAUX: mesure directe, la chaine rendue est un AUTRE jeton (env 185 car / hash
+  ea31ed0f55b5, rendu 162 car / hash febb8fe48dc1, `env === new` -> false), et un
+  run ne peut PAS l'installer dans les variables d'environnement du cloud, seul
+  Hasan le peut. La duree de vie qui compte reste donc celle de state/token.json
+  (issuedAt + lifetimeDays), soit 23/09 pour le jeton actuel. Le jeton de
+  l'environnement continue de marcher apres l'appel (publish.mjs quota rend 200
+  juste apres), donc l'appel n'est pas destructeur, il est juste MENSONGER si on
+  le lit comme une jauge. Pour connaitre les jours restants sans reseau et sans
+  effet de bord: `node -e "const t=require('./state/token.json');const d=(new
+  Date(t.issuedAt).getTime()+t.lifetimeDays*864e5-Date.now())/864e5;console.log(
+  Math.floor(d))"`. Proof: run 10h30 09/09.
