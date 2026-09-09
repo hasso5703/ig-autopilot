@@ -4963,3 +4963,43 @@ ENTRIES:
   et la route `ctx.route('**/*', r => r.fulfill({response: await r.fetch()}))`,
   sinon le proxy casse le TLS du navigateur. Le script doit vivre DANS le repo
   (les imports depuis /tmp ne resolvent pas node_modules). Proof: scout 06h30 09/09.
+  Ajout 09/09 (10h30), VINGT-TROISIEME mesure morte (401, meme cle 53 car AQ.Ab8).
+  ET LA RE-MESURE QUI DESAMORCE A MOITIE LE PIEGE LE PLUS EFFRAYANT DU CARNET
+  (entree 21/08, techcrunch mobile qui redirige vers la fausse alerte McAfee
+  loadway.best): capture faite ce midi avec scout-capture.mjs sur
+  techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens..., `landedUrl` ET
+  `h1` JUSTES, article propre, aucune redirection. La regie mobile ne redirige
+  donc pas systematiquement; le reflexe reste de LIRE landedUrl, pas de renoncer
+  a techcrunch en recu. Le vrai cout de techcrunch, lui, se re-confirme a
+  l'identique (entree 28/08: 694 s): 675 s / 554 frames, soit 11 MINUTES sur un
+  seul recu. Un run de publication qui laisse un beat screenshot techcrunch sans
+  `file` paie ces 11 minutes en plein build: capture-le d'abord, en arriere-plan,
+  pendant que tu lis les fils.
+  DEUX DEFAUTS DE RECU MESURES LE MEME MIDI, remede a 0 $ (famille blog.google du
+  06/09): (1) techcrunch garde EN BAS DU CADRE une pub video (ici Jared Jewelers,
+  bouton son, croix de fermeture) qui survit au strip des overlays fixes ->
+  `crop=1290:2300:0:0` la coupe et garde titre, signature, date et le chapo qui
+  porte le claim. (2) malwarebytes.com se capture vite et proprement (102 s /
+  9 frames, h1 et landedUrl justes) mais garde en bas un encart "Add as a
+  preferred source on Google" PLUS la banniere cookies avec son selecteur de
+  langue -> `crop=1290:2000:0:0` garde masthead, rubrique, titre entier,
+  signature, date et le logo Claude. (3) helpnetsecurity.com, EN REVANCHE, sort
+  le recu PARFAIT en 24 s / 1 frame, sans aucun recadrage: masthead, portrait de
+  la redactrice en chef, date, titre entier et les trois paragraphes qui portent
+  l'histoire. Ca CORRIGE la reserve du scout de ce matin ("une banniere pub 73%
+  se place au-dessus du titre"): elle n'apparait pas en contexte mobile
+  Chromium. Sur un dossier securite, prends helpnetsecurity en premier recu, il
+  est le plus rapide ET le plus propre des trois mesures ici.
+  ENFIN, LE PIEGE DU LABEL DE CARTE, VARIANTE NEUVE DE L'ENTREE DU 07/09 10h30,
+  et elle est pire parce qu'elle ne suppose AUCUNE correction prealable: le
+  `label` d'une carte peut n'avoir JAMAIS ete relu contre le `script` de son
+  propre beat. Mesure: label "en 12 minutes, sans y toucher" sur un beat dont le
+  script dit "alors qu'il avait juste posé quelques questions et fait une
+  recherche". Les deux ont ete ecrits par le scout, les deux ont passe le gate
+  (le chiffre 12 est bien dans l'evidence, un label ne porte pas d'evidence
+  propre), et la contradiction s'affiche en gros sur la surface la plus lisible
+  du Reel, sous la ligne de karaoke qui la dement. REFLEXE, 20 s, sur TOUT spec
+  herite d'un autre run: lis chaque `value`/`label` de carte A COTE du `script`
+  de son beat avant de builder, pas seulement apres une correction. Corrige en
+  "pour quelques questions", re-gate PASSED, rebuild dans le meme dossier, 0 $,
+  ~2 min (tout ressort du cache en muet). Proof: run 10h30 09/09.
