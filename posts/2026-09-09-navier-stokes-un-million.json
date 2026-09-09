@@ -168,19 +168,19 @@
       {
         "script": "Sept problèmes de maths que personne n'a jamais résolus. Un million de dollars à qui en craque un. OpenAI dit qu'un modèle jamais sorti, plus fort que GPT-6 Astra, vient de le faire.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.claymath.org/millennium/navier-stokes-equation/",
-          "file": "media/2026-09-09-navier-stokes-un-million/shot_0.png"
-        }
-      },
-      {
-        "script": "Celui-là, c'est Navier-Stokes : les équations de l'eau et de l'air qui bougent. On s'en sert partout sans savoir si elles peuvent dérailler et annoncer un fluide à vitesse infinie.",
-        "visual": {
           "type": "photo",
           "query": "smoke flow visualization",
           "alt": "De l'air en mouvement rendu visible dans une soufflerie",
           "file": "media/2026-09-09-navier-stokes-un-million/photo_1.jpg",
           "credit": "NASA · Domaine public"
+        }
+      },
+      {
+        "script": "Celui-là, c'est Navier-Stokes : les équations de l'eau et de l'air qui bougent. On s'en sert partout sans savoir si elles peuvent dérailler et annoncer un fluide à vitesse infinie.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.claymath.org/millennium/navier-stokes-equation/",
+          "file": "media/2026-09-09-navier-stokes-un-million/shot_0.png"
         }
       },
       {
