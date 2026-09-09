@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-08T19:44:43.454Z",
+  "at": "2026-09-09T06:40:45.381Z",
   "n": 85,
   "nSettled": 79,
   "medianViews": 175,
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 48,
+    "now": 49,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -593,9 +593,9 @@
       "slug": "2026-09-02-astra-failles-inconnues",
       "at": "2026-09-02T17:30:10.156Z",
       "hourUtc": 17,
-      "views": 449,
-      "reach": 408,
-      "avgWatchS": 8.7,
+      "views": 450,
+      "reach": 409,
+      "avgWatchS": 8.8,
       "retentionPct": 15,
       "likes": 2,
       "comments": 1,
@@ -839,6 +839,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-08-medicament-ia-age-biologique",
+      "at": "2026-09-08T10:50:30.295Z",
+      "hourUtc": 10,
+      "views": 242,
+      "reach": 214,
+      "avgWatchS": 8.7,
+      "retentionPct": 15,
+      "likes": 1,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un médicament dessiné par une IA a été testé sur des malades des poumons. Six programmes ont lu leur sang comme celui de gens plus jeunes.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-29-anthropic-liste-noire",
       "at": "2026-08-29T16:57:13.193Z",
       "hourUtc": 16,
@@ -979,23 +996,6 @@
       "themes": [],
       "sendTest": "ChatGPT devient illimité pour les comptes gratuits cette semaine. Mais les 62 % d'erreurs en moins, c'est OpenAI qui les a mesurés lui-même.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-08-medicament-ia-age-biologique",
-      "at": "2026-09-08T10:50:30.295Z",
-      "hourUtc": 10,
-      "views": 180,
-      "reach": 158,
-      "avgWatchS": 8.6,
-      "retentionPct": 14,
-      "likes": 1,
-      "comments": 1,
-      "saved": 2,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Un médicament dessiné par une IA a été testé sur des malades des poumons. Six programmes ont lu leur sang comme celui de gens plus jeunes.",
-      "settled": false
     },
     {
       "slug": "2026-08-03-ai-act-transparence",
@@ -1179,9 +1179,9 @@
       "slug": "2026-09-02-chatgpt-dossier-medical",
       "at": "2026-09-02T17:25:09.248Z",
       "hourUtc": 17,
-      "views": 140,
-      "reach": 126,
-      "avgWatchS": 7.1,
+      "views": 141,
+      "reach": 127,
+      "avgWatchS": 7.2,
       "retentionPct": 12,
       "likes": 0,
       "comments": 1,
@@ -1639,6 +1639,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-08-openai-trois-jours-agent",
+      "at": "2026-09-08T16:59:43.362Z",
+      "hourUtc": 16,
+      "views": 87,
+      "reach": 75,
+      "avgWatchS": 6.1,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-06-astra-agi-mesures",
       "at": "2026-09-06T16:47:44.756Z",
       "hourUtc": 16,
@@ -1725,23 +1742,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-08-openai-trois-jours-agent",
-      "at": "2026-09-08T16:59:43.362Z",
-      "hourUtc": 16,
-      "views": 23,
-      "reach": 19,
-      "avgWatchS": 4.8,
-      "retentionPct": 8,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

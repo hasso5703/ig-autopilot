@@ -4924,3 +4924,42 @@ ENTRIES:
   compte arXiv avant de conclure. Le flux HN a de nouveau imprime "FAIL 0/0 <-
   HTTP 502 after 13 tries" et a rendu 200 / 8 items a la main 3 min plus tard
   (la toux connue, entree du 28/07). Proof: veille 19h30 08/09.
+  Ajout 09/09 (06h30), VINGT-DEUXIEME mesure morte (401, meme cle 53 car AQ.Ab8),
+  soit ONZE jours. ET LA CORRECTION DE L'ENTREE D'HIER SOIR ("les sujets
+  physiques abstraits sont les plus mal servis, 15 requetes zero photo"): le
+  probleme n'etait pas le sujet, c'etait la requete. Ne cherche pas le PHENOMENE
+  (water turbulence, ocean wave, river rapids, fluid dynamics water: tous morts
+  hier), cherche sa MISE EN SCENE DE LABORATOIRE. Mesure ce matin, 8 requetes
+  pour 3 photos gardees sur la meme histoire de fluides: "smoke flow
+  visualization" rend le F-16XL de la NASA en soufflerie (tourbillons bleus sur
+  fond rouge, domaine public, fond sombre = le karaoke y est parfaitement
+  lisible, meilleure photo "physique" mesuree jusqu'ici), "supercomputer racks"
+  rend l'allee du Cray XE6 de Berkeley (cc0, personne de dos, aucun visage),
+  "vortex water" rend un vrai tourbillon de mer (cc0). Meme regle sur une
+  histoire de comptes pirates: "computer screen dark room" rend un portable
+  allume seul dans le noir avec du code a l'ecran (cc0) et "ethernet cable
+  server" un panneau de brassage dense (cc0). Echouent encore: wingtip vortex,
+  water tank wave, credit card close, browser password login screen, computer
+  virus code screen, padlock chain metal, printed receipt paper, bank statement
+  paper, university lecture hall, mathematics library books, hurricane eye
+  satellite. Deux pieges revus: "handwritten mathematical notes" rend une piece
+  a conviction du FBI et "smoke plume laboratory" rend le panache de Manhattan
+  du 11 septembre 2001 (titre + auteur suffisent a refuser, comme le 08/09).
+  DOMAINES JOIGNABLES ET GATES DU PREMIER COUP, mesures ce matin:
+  technologyreview.com (MIT Technology Review, 200 en curl ET capture propre en
+  Chromium: masthead, titre entier, chapo), helpnetsecurity.com,
+  malwarebytes.com, claymath.org. bleepingcomputer.com est en revanche un 403
+  Cloudflare depuis ce bac a sable, a ajouter a la liste des bloqueurs.
+  Reserve sur le recu helpnetsecurity: une banniere pub "73% of organizations
+  found workforce credentials exposed" se place AU-DESSUS du titre; le moteur
+  retire les pubs, mais regarde la frame, un 73% lisible a cote d'une ligne de
+  karaoke est exactement le piege du 06/09.
+  ENFIN, UN PIEGE D'OUTILLAGE QUI COUTE 5 MINUTES: un script ad hoc qui fait
+  `chromium.launch()` en direct meurt sur "Executable doesn't exist at
+  /opt/pw-browsers/chromium_headless_shell-1234/..." et te propose `npx
+  playwright install` (a ne pas lancer). Le repo resout deja le chemin:
+  `import { loadPlaywright, chromiumExecutable } from './src/browser.mjs'` puis
+  `chromium.launch({ executablePath, proxy: {server: process.env.HTTPS_PROXY} })`
+  et la route `ctx.route('**/*', r => r.fulfill({response: await r.fetch()}))`,
+  sinon le proxy casse le TLS du navigateur. Le script doit vivre DANS le repo
+  (les imports depuis /tmp ne resolvent pas node_modules). Proof: scout 06h30 09/09.

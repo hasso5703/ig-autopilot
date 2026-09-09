@@ -1,0 +1,212 @@
+{
+  "slug": "2026-09-09-claude-abonnements-pirates",
+  "centralClaim": "Anthropic has warned Claude subscribers that a bad actor used common infostealer malware to steal their Claude login sessions from their computers and then consume the paid usage on their accounts.",
+  "corroboration": [
+    {
+      "url": "https://www.malwarebytes.com/blog/news/2026/09/infostealers-are-hijacking-claude-accounts-at-users-expense",
+      "quote": "According to a warning email shared publicly by an affected user, the attackers used common infostealer malware to copy Claude login sessions from victims’ computers. They then used those sessions to access the accounts and consume their usage."
+    },
+    {
+      "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/",
+      "quote": "Anthropic has started locking users out of their Claude accounts due to their login sessions having been compromised through infostealer malware."
+    }
+  ],
+  "sendTest": "Un logiciel espion copie ta session ouverte et se sert de ton abonnement IA à ta place. Le mot de passe et le code à deux facteurs n'y changent rien.",
+  "caption": "Son abonnement à l'IA se consommait tout seul les jours où il ne travaillait pas. Quelqu'un d'autre s'en servait.\n\nAnthropic a prévenu des clients de Claude: un logiciel espion installé sur leur ordinateur a copié leur session de connexion, et quelqu'un s'en est servi pour consommer leur abonnement. L'entreprise a déconnecté les comptes touchés, retiré les cartes bancaires enregistrées et remboursé les débits qu'elle a identifiés.\n\nLe détail qui n'est pas dans la vidéo. En Angleterre, le consultant Grant De Swardt a vu sa consommation passer de 45 % à 55 % un jour où il ne travaillait pas, sur un abonnement à 200 dollars par mois. Anthropic lui a suspendu son compte deux semaines et remboursé 44.49 livres. Il n'a jamais obtenu le détail de ce qui avait été consommé, et il a résilié.\n\nÀ retenir: ce logiciel n'a rien à voir avec l'IA. Il arrive par un téléchargement ou une appli piégée, et il copie les mots de passe et les cookies de connexion enregistrés dans le navigateur. Un code à deux facteurs ne le bloque pas: la session volée dit au site que tu es déjà connecté.\n\nTu vérifierais ton ordinateur ce soir, oui ou non ?\n\ntechcrunch.com · helpnetsecurity.com · malwarebytes.com\n\n#IA #IntelligenceArtificielle #ActuIA #Claude #Cybersecurite\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "“In the clearest controlled interval, it increased from 45% to 55% while I performed no work, scheduled Cowork tasks were paused or completed, Dispatch/cloud execution was disabled, and there was no corresponding active local Claude Code task,” De Swardt told TechCrunch.",
+      "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/"
+    },
+    {
+      "quote": "It suspended his paid account, invalidated all of his sessions and server-side Claude Code tokens, and issued him a partial refund of £44.49 for the remaining time on his $200-per-month subscription.",
+      "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/"
+    },
+    {
+      "quote": "“It’s general-purpose malware that typically arrives with an unofficial download or a malicious app, and it quietly copies saved passwords, login cookies in browsers, and credentials for other apps running locally. Your Claude session was likely one of the many things it collected.”",
+      "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/"
+    },
+    {
+      "quote": "Anthropic reacted to the account hijackings by signing users out of their accounts (to invalidate compromised Claude login sessions), by removing the saved payment method, and by refunding unauthorized Claude charges.",
+      "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Anthropic · Claude",
+      "headline": "Un logiciel espion vide les abonnements *Claude*",
+      "hero": {
+        "value": "45 % à 55 %",
+        "label": "de consommation un jour sans travailler"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "200",
+      "unit": "dollars par mois",
+      "body": "Le prix de l'abonnement de Grant De Swardt, suspendu par Anthropic, qui lui a remboursé **44.49 livres** pour le temps restant.",
+      "evidence": "It suspended his paid account, invalidated all of his sessions and server-side Claude Code tokens, and issued him a partial refund of £44.49 for the remaining time on his $200-per-month subscription.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Une consommation qui monte *sans personne devant*",
+      "body": "En août, ce consultant britannique voit sa consommation grimper alors qu'il ne travaille pas. Le jour suivant, il débranche tout. Elle grimpe encore, de **45 % à 55 %**.",
+      "evidence": "“In the clearest controlled interval, it increased from 45% to 55% while I performed no work, scheduled Cowork tasks were paused or completed, Dispatch/cloud execution was disabled, and there was no corresponding active local Claude Code task,” De Swardt told TechCrunch.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Il n'est pas le seul",
+      "body": "Un autre client raconte être passé de **0 à 49 %** en **12 minutes**, alors qu'il n'avait posé que quelques questions et fait une recherche.",
+      "evidence": "Another saw usage go from 0 to 49% in 12 minutes, when all they had used it for was a couple of prompts and a web search.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "We have recently become aware of a bad actor that is using common infostealer malware to steal Claude login sessions from people's computers, then using those login sessions to access Claude accounts and consume their usage.",
+      "attribution": "Le courriel d'Anthropic envoyé aux clients touchés",
+      "evidence": "“We have recently become aware of a bad actor that is using common infostealer malware to steal Claude login sessions from people’s computers, then using those login sessions to access Claude accounts and consume their usage,” the email read.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Le mot de passe ne suffit plus",
+      "claim": "La session volée dit au site que tu es déjà connecté, donc le code à deux facteurs est contourné.",
+      "caveatLabel": "Ce que fait Anthropic",
+      "caveat": "Déconnexion des comptes, retrait des cartes bancaires enregistrées et remboursement des débits identifiés.",
+      "evidence": "Anthropic reacted to the account hijackings by signing users out of their accounts (to invalidate compromised Claude login sessions), by removing the saved payment method, and by refunding unauthorized Claude charges.",
+      "source": {
+        "name": "Help Net Security",
+        "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce logiciel n'a rien à voir avec l'IA",
+      "body": "Il arrive par un téléchargement non officiel ou une appli piégée, et il copie les mots de passe et les cookies de connexion du navigateur.",
+      "evidence": "“It’s general-purpose malware that typically arrives with an unofficial download or a malicious app, and it quietly copies saved passwords, login cookies in browsers, and credentials for other apps running locally. Your Claude session was likely one of the many things it collected.”",
+      "source": {
+        "name": "Help Net Security",
+        "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/",
+        "date": "2026-08-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Aucun détail, aucune défense",
+      "body": "Anthropic ne fournit pas le détail de ce qui a été consommé. De Swardt a résilié et dit ne pas voir comment ces gens peuvent se protéger.",
+      "evidence": "He says Anthropic still lacks tools that allow users to see what’s consuming their tokens. “I don’t think there’s any way that these people can protect themselves.”",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui reste connecté partout",
+      "sub": "L'actu IA, en clair, avec les sources."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+      "accessed": "2026-09-09"
+    },
+    {
+      "name": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/",
+      "accessed": "2026-09-09"
+    },
+    {
+      "name": "Malwarebytes",
+      "url": "https://www.malwarebytes.com/blog/news/2026/09/infostealers-are-hijacking-claude-accounts-at-users-expense",
+      "accessed": "2026-09-09"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Un logiciel espion vide les abonnements Claude",
+    "beats": [
+      {
+        "script": "Ton abonnement à l'IA se consomme tout seul la nuit. Ça arrive à des clients de Claude, l'IA d'Anthropic, et personne n'a eu besoin de leur mot de passe.",
+        "visual": {
+          "type": "photo",
+          "query": "computer screen dark room",
+          "alt": "Un ordinateur portable allumé, seul dans une pièce sombre",
+          "file": "media/2026-09-09-claude-abonnements-pirates/photo_0.jpg",
+          "credit": "SACHINRAJ CP · CC0"
+        }
+      },
+      {
+        "script": "En Angleterre, Grant De Swardt voit sa consommation passer de 45 à 55 % un jour où il ne travaille pas. Il paie 200 dollars par mois.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/"
+        }
+      },
+      {
+        "script": "Il n'est pas seul. Un autre raconte être passé de 0 à 49 % en 12 minutes, alors qu'il avait juste posé quelques questions et fait une recherche.",
+        "visual": {
+          "type": "card",
+          "value": "0 à 49 %",
+          "label": "en 12 minutes, sans y toucher"
+        }
+      },
+      {
+        "script": "Anthropic a fini par écrire à des clients : un logiciel espion installé sur leur ordinateur a copié leur session Claude, puis quelqu'un s'en est servi à leur place.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.malwarebytes.com/blog/news/2026/09/infostealers-are-hijacking-claude-accounts-at-users-expense"
+        }
+      },
+      {
+        "script": "Une session, c'est ce qui te garde connecté sans retaper ton mot de passe. Volée, elle contourne même le code à deux facteurs : pour le site, tu es déjà entré.",
+        "visual": {
+          "type": "photo",
+          "query": "ethernet cable server",
+          "alt": "Un panneau de brassage réseau couvert de câbles",
+          "file": "media/2026-09-09-claude-abonnements-pirates/photo_4.jpg",
+          "credit": "Free server network image · CC0"
+        }
+      },
+      {
+        "script": "Anthropic a déconnecté les comptes, retiré les cartes bancaires enregistrées et remboursé. Mais De Swardt dit qu'on n'a jamais pu lui dire ce qui avait vidé son abonnement.",
+        "visual": {
+          "type": "card",
+          "value": "200 $",
+          "label": "par mois, et aucun détail de la consommation"
+        }
+      },
+      {
+        "script": "Et ce logiciel ne visait pas l'IA : il copie aussi tous les mots de passe enregistrés dans ton navigateur. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/"
+        }
+      }
+    ]
+  }
+}
