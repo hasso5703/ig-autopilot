@@ -12,7 +12,7 @@
     }
   ],
   "sendTest": "Une IA d'OpenAI dit avoir résolu un problème de maths à un million de dollars. Le mathématicien qui était dessus l'accuse de l'avoir doublé.",
-  "caption": "Une IA dit avoir résolu un des sept grands problèmes de maths. Le mathématicien qui était dessus accuse OpenAI.\n\nOpenAI a publié une preuve du problème de Navier-Stokes, l'un des sept problèmes du Clay Mathematics Institute, chacun doté d'un million de dollars. L'entreprise raconte l'avoir obtenue avec environ 10 000 agents coordonnés en 88 heures, sur un modèle interne encore non publié. Au tarif public, la semaine de calcul représenterait 22.5 millions de dollars.\n\nLe détail qui n'est pas dans la vidéo. Tristan Buckmaster et Levent Alpöge ont travaillé presque un an sur le problème, avec les modèles publics d'OpenAI et d'Anthropic. Buckmaster dit qu'on lui a demandé de retirer son co-auteur du papier parce que celui-ci travaille chez Anthropic, et que son refus lui a valu cette phrase: pourquoi voudrais-tu ruiner ta carrière ?\n\nLa nuance, et elle vient d'OpenAI. L'entreprise écrit que ni ses chercheurs ni ses agents n'ont vu ce travail avant sa publication. Sébastien Bubeck, chez OpenAI, dit en revanche que l'équipe s'est lancée sur le problème après avoir entendu une rumeur sur les travaux des deux mathématiciens.\n\nCoup de génie de la machine, ou coup de force de l'entreprise ?\n\ntechnologyreview.com · techcrunch.com · the-decoder.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Maths\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "Une IA dit avoir résolu un des sept grands problèmes de maths. Le mathématicien qui était dessus accuse OpenAI.\n\nOpenAI a publié une preuve du problème de Navier-Stokes, l'un des sept problèmes du Clay Mathematics Institute, chacun doté d'un million de dollars. L'entreprise raconte l'avoir obtenue avec environ 10 000 agents coordonnés en 88 heures, sur un modèle interne encore non publié. Au tarif public, la semaine de calcul représenterait 22.5 millions de dollars.\n\nLe détail qui n'est pas dans la vidéo. Tristan Buckmaster et Levent Alpöge ont travaillé presque un an sur le problème, avec les modèles publics d'OpenAI et d'Anthropic. Buckmaster dit que Sébastien Bubeck, mathématicien chez OpenAI, lui a demandé de retirer le nom de son co-auteur du papier, parce que celui-ci travaille chez Anthropic. Et quand il a voulu rendre l'affaire publique, Bubeck lui a répondu: pourquoi voudrais-tu ruiner ta carrière ?\n\nLa nuance, et elle vient d'OpenAI. L'entreprise écrit que ni ses chercheurs ni ses agents n'ont vu ce travail avant sa publication. Sébastien Bubeck, chez OpenAI, dit en revanche que l'équipe s'est lancée sur le problème après avoir entendu une rumeur sur les travaux des deux mathématiciens.\n\nCoup de génie de la machine, ou coup de force de l'entreprise ?\n\ntechnologyreview.com · techcrunch.com · the-decoder.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Maths\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "quote": "The company says the proof was produced by about 10,000 coordinated AI agents in 88 hours, using an internal model that OpenAI describes as \"significantly more capable than GPT-6 Astra.\"",
@@ -29,6 +29,10 @@
     {
       "quote": "He and Alpöge had worked on the problem for almost a year, using publicly available models from both OpenAI and Anthropic.",
       "url": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/"
+    },
+    {
+      "quote": "Buckmaster alleges that OpenAI mathematician Sébastien Bubeck asked him to remove Alpöge’s credit as part of a proposed compromise. When Buckmaster pushed to make the dispute public, he says that Bubeck replied: “Why would you ruin your career?”",
+      "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/"
     }
   ],
   "slides": [
@@ -115,7 +119,7 @@
       "type": "quote",
       "body": "Why would you ruin your career?",
       "attribution": "Bubeck, d'OpenAI, tel que rapporté par Tristan Buckmaster",
-      "evidence": "When Buckmaster pushed to make the dispute public, he says that Bubeck replied: “Why would you ruin your career?” Buckmaster says that when he pushed back, Bubeck followed up with: “If you don’t want me to be nice, then I don’t have to be nice.”",
+      "evidence": "Buckmaster alleges that OpenAI mathematician Sébastien Bubeck asked him to remove Alpöge’s credit as part of a proposed compromise. When Buckmaster pushed to make the dispute public, he says that Bubeck replied: “Why would you ruin your career?” Buckmaster says that when he pushed back, Bubeck followed up with: “If you don’t want me to be nice, then I don’t have to be nice.”",
       "source": {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
@@ -165,7 +169,8 @@
         "script": "Sept problèmes de maths que personne n'a jamais résolus. Un million de dollars à qui en craque un. OpenAI dit qu'un modèle jamais sorti, plus fort que GPT-6 Astra, vient de le faire.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.claymath.org/millennium/navier-stokes-equation/"
+          "url": "https://www.claymath.org/millennium/navier-stokes-equation/",
+          "file": "media/2026-09-09-navier-stokes-un-million/shot_0.png"
         }
       },
       {
@@ -190,11 +195,12 @@
         "script": "Sauf que deux mathématiciens étaient déjà dessus. Tristan Buckmaster et Levent Alpöge y ont passé presque un an, avec les modèles publics d'OpenAI et d'Anthropic.",
         "visual": {
           "type": "screenshot",
-          "url": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/"
+          "url": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/",
+          "file": "media/2026-09-09-navier-stokes-un-million/shot_3.png"
         }
       },
       {
-        "script": "Ils apprennent que des informations sur leur avancée sont remontées à OpenAI. En face, une équipe entière et, dit Buckmaster, une quantité de calcul folle.",
+        "script": "Ils apprennent que des informations sur leur avancée sont remontées à OpenAI. En face, une équipe entière et, dit Buckmaster, un calcul démesuré.",
         "visual": {
           "type": "photo",
           "query": "supercomputer racks",
@@ -204,7 +210,7 @@
         }
       },
       {
-        "script": "On demande alors à Buckmaster de retirer son co-auteur, parce qu'il travaille chez Anthropic. Il refuse. Réponse : pourquoi ruiner ta carrière ?",
+        "script": "Sébastien Bubeck, d'OpenAI, lui demande de retirer son co-auteur, parce qu'il travaille chez Anthropic. Buckmaster veut rendre l'affaire publique. Réponse : pourquoi ruiner ta carrière ?",
         "visual": {
           "type": "card",
           "value": "Ta carrière",
@@ -215,7 +221,8 @@
         "script": "OpenAI dément que ses chercheurs ou ses agents aient vu ce travail. Mais elle confirme s'être lancée le 1er septembre, après des rumeurs sur deux problèmes résolus.",
         "visual": {
           "type": "screenshot",
-          "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/"
+          "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
+          "file": "media/2026-09-09-navier-stokes-un-million/shot_6.png"
         }
       },
       {

@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-09T10:41:03.143Z",
-  "n": 85,
-  "nSettled": 79,
-  "medianViews": 175,
+  "at": "2026-09-09T16:44:16.795Z",
+  "n": 86,
+  "nSettled": 80,
+  "medianViews": 174,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -56,6 +56,14 @@
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings."
     },
     {
+      "slug": "2026-09-07-psychose-associee-ia",
+      "views": 35,
+      "retentionPct": 5,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait."
+    },
+    {
       "slug": "2026-07-31-xai-turbines-memphis",
       "views": 81,
       "retentionPct": 15,
@@ -78,14 +86,6 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA."
-    },
-    {
-      "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
-      "views": 104,
-      "retentionPct": 8,
-      "saved": 0,
-      "shares": 1,
-      "sendTest": "Uber supprime 3 300 postes, un salarié sur dix, et met 10 milliards dans les voitures sans chauffeur. Le patron dit que ce n'est pas l'IA."
     }
   ],
   "byBeat0": {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 18,
-      "medianViews": 168,
-      "meanRetentionPct": 16.7,
+      "n": 19,
+      "medianViews": 160,
+      "meanRetentionPct": 16.1,
       "saves": 12,
       "shares": 4,
       "thin": false
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 16,
-      "medianViews": 263,
-      "meanRetentionPct": 20.5,
+      "n": 17,
+      "medianViews": 142,
+      "meanRetentionPct": 19.6,
       "saves": 14,
       "shares": 6,
       "thin": false
@@ -842,10 +842,10 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 251,
-      "reach": 221,
-      "avgWatchS": 8.7,
-      "retentionPct": 15,
+      "views": 270,
+      "reach": 238,
+      "avgWatchS": 8.5,
+      "retentionPct": 14,
       "likes": 1,
       "comments": 1,
       "saved": 2,
@@ -1450,6 +1450,42 @@
       "settled": true
     },
     {
+      "slug": "2026-09-08-openai-trois-jours-agent",
+      "at": "2026-09-08T16:59:43.362Z",
+      "hourUtc": 16,
+      "views": 122,
+      "reach": 107,
+      "avgWatchS": 5.7,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-09-claude-abonnements-pirates",
+      "at": "2026-09-09T11:04:58.653Z",
+      "hourUtc": 11,
+      "views": 120,
+      "reach": 110,
+      "avgWatchS": 5.8,
+      "retentionPct": 10,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Un logiciel espion copie ta session ouverte et se sert de ton abonnement IA à ta place. Le mot de passe et le code à deux facteurs n'y changent rien.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-27-instagram-ados-minuit",
       "at": "2026-08-27T16:57:42.083Z",
       "hourUtc": 16,
@@ -1622,23 +1658,6 @@
       "settled": true
     },
     {
-      "slug": "2026-09-08-openai-trois-jours-agent",
-      "at": "2026-09-08T16:59:43.362Z",
-      "hourUtc": 16,
-      "views": 99,
-      "reach": 88,
-      "avgWatchS": 5.9,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
-      "settled": false
-    },
-    {
       "slug": "2026-09-01-instagram-faux-profils-ia",
       "at": "2026-09-01T16:59:31.288Z",
       "hourUtc": 16,
@@ -1707,7 +1726,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
