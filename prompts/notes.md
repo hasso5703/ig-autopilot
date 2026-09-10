@@ -4421,6 +4421,20 @@ ENTRIES:
   PUIS recordPosted. Note aussi que `recordPosted` ne retourne rien
   d'exploitable (undefined): ne teste pas son retour, verifie `tail -1
   state/posted.jsonl`. Proof: run 16h30 du 07/09.
+  (8) Ajout 10/09 (16h30), UN CRENEAU PEUT NE PAS TOURNER DU TOUT, et le run
+  suivant doit le decouvrir SEUL: ce midi il n'existe AUCUN
+  reports/journal/2026-09-10-10h.md, `reelsToday` valait 0 et `owedToday` 2 a
+  16h37. Le creneau de 10h30 n'a donc pas fire (ou est mort avant sa premiere
+  ligne de journal), et rien ne le signale: le guard ne parle que des runs VIVANTS
+  (<20 min) et le tableau du manuel dit "16h30 = publie le DEUXIEME Reel du jour",
+  ce qui est faux ce jour-la. REFLEXE, 10 s, avant de choisir quoi faire: lis
+  `owedToday` et `ls reports/journal/$(date -u +%F)-*.md`, jamais le role nominal
+  du creneau. Consequence: un run de 16h30 qui herite d'un jour a 0 Reel publie le
+  PREMIER, le jour reste a -1, et c'est 19h30 qui doit rattraper le second - donc
+  dis-le explicitement dans le rapport pour que la veille sache qu'elle DOIT
+  publier. Le plafond d'un Reel par RUN ne bouge pas pour autant (manuel, regle
+  mecanique du 27/07): un jour a 0 Reel a 16h30 ne s'achete pas en construisant
+  deux Reels dans le meme run. Proof: run 16h30 10/09.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
@@ -5132,3 +5146,22 @@ ENTRIES:
   Et la cle media est morte pour la VINGT-CINQUIEME mesure d'affilee (401 sur
   generativelanguage.googleapis.com/v1beta/models, meme cle 53 car AQ.Ab8), soit
   DOUZE jours pleins. Proof: scout 06h30 10/09.
+  Ajout 10/09 (16h30): VINGT-SIXIEME mesure morte (401, meme cle 53 car AQ.Ab8),
+  dernier achat toujours 01/09 16h54. ET LES DEUX RECUS DU SCOUT CONFIRMES EN
+  MOTEUR, ce qui valide la mesure hors moteur du matin: le recu apple.com/newsroom
+  epingle en `file` rend dans la frame "PRESS RELEASE", "September 9, 2026", le
+  titre entier ET le chapo qui nomme "Audio Intelligence" - c'est un recu de la
+  categorie "porte la preuve", au meme titre qu'iihs (10/09) et arxiv/abs (16/08).
+  Le recu techcrunch recadre `crop=1290:2650:0:145` rend titre entier, signature
+  "Sarah Perez" et "September 9, 2026": le vert-sur-vert du 10/09 est REEL (le
+  fond de frame est l'aplat vert floute, la carte n'a presque plus de bord) mais
+  au BEAT 5 il ne coute rien, le texte reste parfaitement lisible. La regle du
+  09/09 se precise donc: un recu a fond monochrome sature n'est interdit qu'au
+  BEAT 0, il est parfaitement utilisable ailleurs, ne le jette pas du spec.
+  ET UNE VERIFICATION DE FRAME QUI N'EST PAS UNE CONTRADICTION, a ne pas
+  "corriger" par reflexe (famille du piege de date du 06/09): au beat 5 le
+  karaoke disait "PUIS EFFACE" sous un titre TechCrunch qui dit "technology is
+  always listening". Les deux se contredisent en APPARENCE et c'est exactement le
+  retournement du beat (Apple jure que l'audio est efface, le journal repond que
+  la norme change). Avant de rebuild sur une tension lue dans une frame, demande-
+  toi si c'est une erreur de fait ou le sujet du beat. Proof: run 16h30 10/09.
