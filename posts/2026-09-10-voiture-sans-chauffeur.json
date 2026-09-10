@@ -1,0 +1,247 @@
+{
+  "slug": "2026-09-10-voiture-sans-chauffeur",
+  "centralClaim": "Waymo's driverless vehicles were involved in 68% fewer police-reportable crashes per mile traveled than human drivers in the same cities.",
+  "corroboration": [
+    {
+      "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+      "quote": "Per vehicle mile traveled (VMT), Waymo's driverless vehicles deployed in San Francisco, Phoenix, Los Angeles and Austin were involved in 68% fewer crashes than human drivers, researchers found. The sample was restricted to crashes that a person would typically report to the police."
+    },
+    {
+      "url": "https://spectrum.ieee.org/are-self-driving-cars-safe",
+      "quote": "Waymo taxis were involved in 68 percent fewer crashes overall than human drivers: 76 percent lower in Phoenix, 71 percent in LA, and 35 percent in San Francisco. A 4 percent higher Waymo rate in Austin may reflect an extremely small sample size."
+    }
+  ],
+  "sendTest": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que nous. Sauf qu'un accident humain sur deux n'est jamais déclaré.",
+  "caption": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que les conducteurs humains.\n\nL'IIHS, un institut américain indépendant qui étudie la sécurité routière, a comparé les robots-taxis de Waymo aux conducteurs de San Francisco, Phoenix, Los Angeles et Austin, à distance parcourue égale et sur les seuls accidents qu'une personne déclarerait à la police. Résultat : 68% d'accidents en moins au total, 81% d'accidents avec blessés en moins, 85% d'accidents sans autre véhicule impliqué en moins.\n\nLe détail qui n'est pas dans la vidéo. Waymo a roulé environ 50 millions de miles sans conducteur pendant l'étude, contre 222 milliards de miles parcourus par des humains aux mêmes endroits et sur la même période. Les chercheurs ont dû nettoyer les signalements envoyés à l'agence fédérale par Cruise, Waymo, Zoox et d'autres entre 2021 et 2024.\n\nCe qui fausse la comparaison, et pas dans le sens qu'on croit. Environ la moitié des accidents humains ne sont jamais déclarés, et un tiers de ceux qui font des blessés, souvent pour éviter une hausse de prime. Les entreprises de voitures autonomes, elles, devaient signaler jusqu'aux incidents mineurs, comme un dessous de caisse frotté en entrant sur un parking.\n\nLes réserves, et elles comptent. À Austin, le taux d'accidents de Waymo était 4% plus élevé que celui des humains, sur un échantillon réduit. Ces voitures ne circulent que par beau temps, dans quelques villes américaines. Et il n'existe toujours aucune norme nationale de performance ou de sécurité pour elles.\n\nPour l'échelle : environ 40 000 personnes meurent chaque année sur les routes américaines, dont plus de 7 000 piétons, et 1.16 million dans le monde, première cause de mort chez les 5 à 29 ans.\n\nTu monterais dans une voiture sans chauffeur, oui ou non ?\n\niihs.org · spectrum.ieee.org\n\n#IA #IntelligenceArtificielle #ActuIA #Waymo #VoitureAutonome\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Per vehicle mile traveled (VMT), Waymo's driverless vehicles deployed in San Francisco, Phoenix, Los Angeles and Austin were involved in 68% fewer crashes than human drivers, researchers found. The sample was restricted to crashes that a person would typically report to the police.",
+      "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people"
+    },
+    {
+      "quote": "Waymo vehicles were involved in 85% fewer single-vehicle crashes and 81% fewer injury crashes per VMT than human drivers.",
+      "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people"
+    },
+    {
+      "quote": "Waymo vehicles traveled about 50 million miles in driverless operation over the study period, compared with about 222 billion miles by human drivers over the same period and in the same locations. Overall, Waymo's crash involvement rate was 68% lower than that of human drivers - 76% lower in Phoenix, 35% lower in San Francisco, 71% lower in Los Angeles, and 4% higher in Austin, where the sample size was relatively small.",
+      "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people"
+    },
+    {
+      "quote": "Human drivers are generally only required to report crashes that cause an injury or result in more than $1,000 in property damage to the police, though the damage threshold varies by state. Many drivers also opt not to report crashes that meet the reporting threshold to avoid an increase in their insurance premiums or for other reasons. Around half of all crashes and a third of injury crashes go unreported.",
+      "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people"
+    },
+    {
+      "quote": "In contrast, until an amendment to the SGO that took effect in 2025, self-driving vehicle companies were required to log minor incidents as crashes. For example, a vehicle scraping its undercarriage as it turned into a parking lot would count as a crash.",
+      "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people"
+    },
+    {
+      "quote": "Yet for this fledgling AV industry, there are still no national performance or safety standards.",
+      "url": "https://spectrum.ieee.org/are-self-driving-cars-safe"
+    },
+    {
+      "quote": "A key question is whether Waymo's robotaxis, currently limited to fair-weather operation in a handful of cities in the U.S., are directly comparable to humans driving a wider variety of roads in much more variable conditions.",
+      "url": "https://spectrum.ieee.org/are-self-driving-cars-safe"
+    },
+    {
+      "quote": "Consider that roughly 40,000 people in the U.S., including more than 7,000 pedestrians, are killed each year in roadway accidents. About 1.16 million people die in roadway crashes around the world, making them the leading cause of death for children and young adults between the ages of 5 and 29.",
+      "url": "https://spectrum.ieee.org/are-self-driving-cars-safe"
+    },
+    {
+      "quote": "Waymo taxis were involved in 68 percent fewer crashes overall than human drivers: 76 percent lower in Phoenix, 71 percent in LA, and 35 percent in San Francisco. A 4 percent higher Waymo rate in Austin may reflect an extremely small sample size.",
+      "url": "https://spectrum.ieee.org/are-self-driving-cars-safe"
+    },
+    {
+      "quote": "For a realistic comparison of crash rates, therefore, IIHS researchers had to clean up the data from crash reports submitted to NHTSA by Cruise, Waymo, Zoox and others from 2021 to 2024.",
+      "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "IIHS · Waymo",
+      "headline": "*68%* d'accidents en moins pour les voitures sans chauffeur",
+      "hero": {
+        "value": "81%",
+        "label": "d'accidents avec blessés en moins, à distance égale"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "68%",
+      "unit": "d'accidents en moins",
+      "body": "À **distance parcourue égale**, dans les mêmes villes, et en ne comptant que les accidents qu'une personne déclarerait à la police.",
+      "evidence": "Per vehicle mile traveled (VMT), Waymo's driverless vehicles deployed in San Francisco, Phoenix, Los Angeles and Austin were involved in 68% fewer crashes than human drivers, researchers found. The sample was restricted to crashes that a person would typically report to the police.",
+      "source": {
+        "name": "IIHS",
+        "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+        "date": "2026-07-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et *81%* de blessés en moins",
+      "body": "Les Waymo sont aussi impliquées dans **85% d'accidents sans autre véhicule** en moins que les conducteurs humains.",
+      "evidence": "Waymo vehicles were involved in 85% fewer single-vehicle crashes and 81% fewer injury crashes per VMT than human drivers.",
+      "source": {
+        "name": "IIHS",
+        "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+        "date": "2026-07-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "*50 millions* de miles sans personne",
+      "body": "C'est ce que les Waymo ont parcouru pendant l'étude, contre **222 milliards de miles** conduits par des humains, aux mêmes endroits.",
+      "evidence": "Waymo vehicles traveled about 50 million miles in driverless operation over the study period, compared with about 222 billion miles by human drivers over the same period and in the same locations. Overall, Waymo's crash involvement rate was 68% lower than that of human drivers - 76% lower in Phoenix, 35% lower in San Francisco, 71% lower in Los Angeles, and 4% higher in Austin, where the sample size was relatively small.",
+      "source": {
+        "name": "IIHS",
+        "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+        "date": "2026-07-23"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qu'une Waymo doit déclarer",
+      "claim": "Jusqu'aux incidents mineurs. Un dessous de caisse frotté en entrant sur un parking comptait comme un accident.",
+      "caveatLabel": "Ce qu'un humain déclare",
+      "caveat": "Environ la moitié des accidents ne remontent jamais, et un tiers de ceux qui font des blessés.",
+      "evidence": "Human drivers are generally only required to report crashes that cause an injury or result in more than $1,000 in property damage to the police, though the damage threshold varies by state. Many drivers also opt not to report crashes that meet the reporting threshold to avoid an increase in their insurance premiums or for other reasons. Around half of all crashes and a third of injury crashes go unreported.",
+      "source": {
+        "name": "IIHS",
+        "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+        "date": "2026-07-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La règle qui gonflait *leur* compteur",
+      "body": "Jusqu'à un amendement entré en vigueur en **2025**, les entreprises devaient consigner les incidents mineurs comme des accidents.",
+      "evidence": "In contrast, until an amendment to the SGO that took effect in 2025, self-driving vehicle companies were required to log minor incidents as crashes. For example, a vehicle scraping its undercarriage as it turned into a parking lot would count as a crash.",
+      "source": {
+        "name": "IIHS",
+        "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+        "date": "2026-07-23"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Those are encouraging signs for the future of driverless vehicles.",
+      "attribution": "Eric Teoh, directeur des services statistiques de l'IIHS",
+      "evidence": "\"Those are encouraging signs for the future of driverless vehicles,\" said Eric Teoh, IIHS director of statistical services and lead author of the study.",
+      "source": {
+        "name": "IIHS",
+        "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+        "date": "2026-07-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Sauf à *Austin*",
+      "body": "Là-bas, le taux d'accidents des Waymo était **4% plus élevé** que celui des humains, sur un échantillon réduit.",
+      "evidence": "Waymo taxis were involved in 68 percent fewer crashes overall than human drivers: 76 percent lower in Phoenix, 71 percent in LA, and 35 percent in San Francisco. A 4 percent higher Waymo rate in Austin may reflect an extremely small sample size.",
+      "source": {
+        "name": "IEEE Spectrum",
+        "url": "https://spectrum.ieee.org/are-self-driving-cars-safe",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Aucune *norme nationale*",
+      "body": "Ces voitures ne roulent que par beau temps, dans quelques villes. Et rien n'encadre encore leur sécurité au niveau fédéral.",
+      "evidence": "Yet for this fledgling AV industry, there are still no national performance or safety standards.",
+      "source": {
+        "name": "IEEE Spectrum",
+        "url": "https://spectrum.ieee.org/are-self-driving-cars-safe",
+        "date": "2026-09-08"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui a peur des voitures sans chauffeur",
+      "sub": "L'actu IA, en clair, avec les sources."
+    }
+  ],
+  "sources": [
+    {
+      "name": "IIHS",
+      "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+      "accessed": "2026-09-10"
+    },
+    {
+      "name": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/are-self-driving-cars-safe",
+      "accessed": "2026-09-10"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "68% d'accidents en moins sans personne au volant",
+    "beats": [
+      {
+        "script": "Une voiture sans personne au volant a moins d'accidents que toi. 68% de moins, dans les mêmes villes, à distance parcourue égale. Et ce n'est pas Waymo qui le dit.",
+        "visual": {
+          "type": "photo",
+          "query": "waymo jaguar",
+          "alt": "Un robot-taxi Waymo à l'arrêt dans une rue de San Francisco",
+          "file": "media/2026-09-10-voiture-sans-chauffeur/photo_waymo.jpg",
+          "credit": "4300streetcar · CC BY 4.0"
+        }
+      },
+      {
+        "script": "C'est l'IIHS, un institut américain indépendant qui étudie la sécurité routière. Il a comparé les Waymo aux conducteurs de San Francisco, Phoenix, Los Angeles et Austin.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.iihs.org/news/detail/waymos-driverless-cars-crash-less-often-than-people",
+          "file": "media/2026-09-10-voiture-sans-chauffeur/shot_iihs.png"
+        }
+      },
+      {
+        "script": "Résultat : 81% d'accidents avec blessés en moins, sur 50 millions de miles parcourus sans personne dedans. Face à 222 milliards de miles conduits par des humains.",
+        "visual": {
+          "type": "card",
+          "value": "81 %",
+          "label": "d'accidents avec blessés en moins, à distance égale"
+        }
+      },
+      {
+        "script": "Sauf que la comparaison est bancale, et pas dans le sens que tu crois. Une Waymo doit déclarer à l'agence fédérale la moindre rayure, même un dessous de caisse frotté en entrant sur un parking.",
+        "visual": {
+          "type": "photo",
+          "query": "waymo jaguar side sensor closeup",
+          "alt": "Gros plan sur les capteurs d'aile d'un robot-taxi Waymo",
+          "file": "media/2026-09-10-voiture-sans-chauffeur/photo_sensor.jpg",
+          "credit": "9yz · CC BY 4.0"
+        }
+      },
+      {
+        "script": "Environ la moitié des accidents humains ne sont jamais déclarés, et un tiers de ceux qui font des blessés. Beaucoup se taisent pour éviter que l'assurance augmente.",
+        "visual": {
+          "type": "photo",
+          "query": "city intersection crosswalk",
+          "alt": "Un carrefour urbain vu d'en haut, des piétons sur le passage clouté",
+          "file": "media/2026-09-10-voiture-sans-chauffeur/photo_street.jpg",
+          "credit": "Kaique Rocha · CC0"
+        }
+      },
+      {
+        "script": "À Austin, la Waymo faisait même 4% d'accidents en plus. Et ces voitures ne roulent que par beau temps, dans quelques villes américaines. L'enjeu, lui, est énorme.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://spectrum.ieee.org/are-self-driving-cars-safe",
+          "file": "media/2026-09-10-voiture-sans-chauffeur/shot_ieee.png"
+        }
+      },
+      {
+        "script": "Chaque année, 1.16 million de personnes meurent sur les routes du monde. Et il n'existe toujours aucune norme nationale de sécurité pour ces voitures aux États-Unis. Abonne-toi pour l'actu IA de demain.",
+        "visual": {
+          "type": "card",
+          "value": "Zéro norme",
+          "label": "aucune norme nationale de sécurité pour ces voitures"
+        }
+      }
+    ]
+  }
+}

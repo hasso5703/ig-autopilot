@@ -1,0 +1,247 @@
+{
+  "slug": "2026-09-10-montre-qui-resume",
+  "centralClaim": "Apple's new Siri Recap feature listens to conversations around the user and automatically generates written summaries of those conversations.",
+  "corroboration": [
+    {
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+      "quote": "Siri Recap, which can create high-level summaries of conversations that users can review later to jog their memory. When Siri Recap is turned on, after a conversation, Apple Intelligence automatically generates a title and key points in the new Siri app"
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-feature-listens-to-your-chats-and-recaps-them/",
+      "quote": "The feature, called Siri Recap, uses ambient listening to take high-level notes of your conversations, according to the company."
+    }
+  ],
+  "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
+  "caption": "La nouvelle Apple Watch peut écouter une conversation et t'en écrire le résumé.\n\nApple a présenté mercredi l'Apple Watch Series 12. Deux nouvelles fonctions écoutent ce qui se dit autour du poignet. Live Rewind rejoue les 15 dernières secondes d'une conversation sous forme de texte quand tu appuies deux fois sur la couronne. Siri Recap, lui, produit après coup un titre et les points clés de la conversation, rangés dans la nouvelle application Siri.\n\nLe détail qui n'est pas dans la vidéo. Pour savoir quand se déclencher, la puce S11 fait tourner un petit modèle qui détecte en continu si une conversation a commencé autour de toi. Apple précise que ce modèle ne transcrit rien et n'enregistre rien.\n\nLa réponse d'Apple sur la vie privée, et elle est sérieuse. Aucun enregistrement audio n'est créé ni conservé, l'audio brut reste inaccessible au système, aux applications, à l'utilisateur et à Apple elle-même, puis il est effacé. Live Rewind émet un signal sonore audible et affiche une animation plein écran quand il est utilisé, pour que les gens autour le sachent.\n\nCe qui n'est pas réglé, c'est le consentement de la personne en face. TechCrunch souligne qu'on ignore comment un tribunal traitera ces notes sans audio, plus difficiles à authentifier. Les deux fonctions arrivent en bêta d'ici la fin de l'année. La montre, elle, est en boutique le 18 septembre, à partir de 399 dollars aux États-Unis.\n\nUne montre qui résume tes conversations : utile, ou trop loin ?\n\napple.com · 9to5mac.com · techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #Apple #AppleWatch\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Live Rewind, which can help users recall what was just said in conversation. A double press of the Digital Crown shows the previous 15 seconds of a conversation as a text snippet, so the user can catch something they may have missed or are less familiar with.",
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/"
+    },
+    {
+      "quote": "Siri Recap, which can create high-level summaries of conversations that users can review later to jog their memory. When Siri Recap is turned on, after a conversation, Apple Intelligence automatically generates a title and key points in the new Siri app",
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/"
+    },
+    {
+      "quote": "The S11 chip uses a lightweight AI model to determine whether speech is occurring nearby. This model doesn't transcribe or record anything. It simply detects whether a conversation has started.",
+      "url": "https://9to5mac.com/2026/09/09/apple-details-how-apple-watchs-new-audio-intelligence-features-work-in-privacy-paper/"
+    },
+    {
+      "quote": "These features do not create or store audio recordings, and raw audio used for processing is completely inaccessible to the operating systems, apps, the user, or Apple. This is because the S11 chip on Apple Watch Series 12 includes Secure Exclave, a dedicated hardware-isolated compartment that processes audio in complete isolation from the rest of the system, then immediately deletes it.",
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/"
+    },
+    {
+      "quote": "Live Rewind plays an audible chime when it is being used, even if Apple Watch is on silent, and shows a full-display animation and microphone indicator so people nearby can hear and see that the feature has been activated.",
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/"
+    },
+    {
+      "quote": "Since Apple isn't saving audio, it's unclear how the court system might handle these new, text-only transcripts. It's possible the notes could be introduced as evidence in court, but their lack of audio could make them harder to authenticate or verify.",
+      "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/"
+    },
+    {
+      "quote": "Siri Recap and Live Rewind arrive in beta later this year.",
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/"
+    },
+    {
+      "quote": "Customers in Australia, Canada, France, Germany, India, Japan, the UAE, the UK, the U.S., and more than 50 other countries and regions can pre-order Apple Watch Series 12 today, with availability in stores beginning Friday, September 18. Apple Watch Series 12 starts at $399 (U.S.).",
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Apple · Audio Intelligence",
+      "headline": "L'Apple Watch écrira le résumé de *ce que tu viens de dire*",
+      "hero": {
+        "value": "15",
+        "label": "secondes de conversation rejouées en texte"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "15",
+      "unit": "secondes rejouées en texte",
+      "body": "Deux appuis sur la couronne affichent ce que quelqu'un vient de dire, écrit sur l'écran de la montre.",
+      "evidence": "Live Rewind, which can help users recall what was just said in conversation. A double press of the Digital Crown shows the previous 15 seconds of a conversation as a text snippet, so the user can catch something they may have missed or are less familiar with.",
+      "source": {
+        "name": "Apple Newsroom",
+        "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "*Siri Recap*, le résumé d'après",
+      "body": "Après une conversation, la montre en génère **un titre et les points clés**, rangés dans la nouvelle application Siri.",
+      "evidence": "Siri Recap, which can create high-level summaries of conversations that users can review later to jog their memory. When Siri Recap is turned on, after a conversation, Apple Intelligence automatically generates a title and key points in the new Siri app",
+      "source": {
+        "name": "Apple Newsroom",
+        "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui tourne *en permanence*",
+      "body": "Un petit modèle sur la puce détecte en continu si une conversation a commencé. Apple dit qu'il **ne transcrit rien et n'enregistre rien**.",
+      "evidence": "The S11 chip uses a lightweight AI model to determine whether speech is occurring nearby. This model doesn't transcribe or record anything. It simply detects whether a conversation has started.",
+      "source": {
+        "name": "9to5Mac",
+        "url": "https://9to5mac.com/2026/09/09/apple-details-how-apple-watchs-new-audio-intelligence-features-work-in-privacy-paper/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La même oreille sert *aux sourds*",
+      "body": "Sound Recognition prévient les personnes sourdes ou malentendantes quand une **sirène**, une alarme, une sonnette ou un bébé qui pleure se déclenche à côté.",
+      "evidence": "Sound Recognition, which comes to Apple Watch to alert users who are deaf or hard of hearing of important sounds, even when their iPhone isn't with them. This feature listens for sounds like sirens, alarms, doorbells, or a baby crying, and uses on-device intelligence to notify users when they're detected.",
+      "source": {
+        "name": "Apple Newsroom",
+        "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que dit Apple",
+      "claim": "Aucun enregistrement n'est créé ni conservé. L'audio brut reste inaccessible, même à Apple, et il est effacé aussitôt.",
+      "caveatLabel": "Ce que dit TechCrunch",
+      "caveat": "L'entreprise habitue le public à une idée nouvelle : la technologie qu'on porte sur soi écoute en permanence.",
+      "evidence": "These features do not create or store audio recordings, and raw audio used for processing is completely inaccessible to the operating systems, apps, the user, or Apple. This is because the S11 chip on Apple Watch Series 12 includes Secure Exclave, a dedicated hardware-isolated compartment that processes audio in complete isolation from the rest of the system, then immediately deletes it.",
+      "source": {
+        "name": "Apple Newsroom",
+        "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Your tech is always listening.",
+      "attribution": "Sarah Perez, TechCrunch",
+      "evidence": "Apple is trying to get consumers to accept, and even welcome, a new reality: Your tech is always listening.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et devant un *tribunal* ?",
+      "body": "Sans audio, personne ne sait encore comment la justice traitera ces notes: **plus difficiles à authentifier**, écrit TechCrunch.",
+      "evidence": "Since Apple isn't saving audio, it's unclear how the court system might handle these new, text-only transcripts. It's possible the notes could be introduced as evidence in court, but their lack of audio could make them harder to authenticate or verify.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "En boutique le *18 septembre*",
+      "body": "L'Apple Watch Series 12 démarre à **399 dollars** aux États-Unis. Siri Recap et Live Rewind arrivent en bêta d'ici la fin de l'année.",
+      "evidence": "Customers in Australia, Canada, France, Germany, India, Japan, the UAE, the UK, the U.S., and more than 50 other countries and regions can pre-order Apple Watch Series 12 today, with availability in stores beginning Friday, September 18. Apple Watch Series 12 starts at $399 (U.S.).",
+      "source": {
+        "name": "Apple Newsroom",
+        "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui porte une montre connectée",
+      "sub": "L'actu IA, en clair, avec les sources."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Newsroom",
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+      "accessed": "2026-09-10"
+    },
+    {
+      "name": "9to5Mac",
+      "url": "https://9to5mac.com/2026/09/09/apple-details-how-apple-watchs-new-audio-intelligence-features-work-in-privacy-paper/",
+      "accessed": "2026-09-10"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/",
+      "accessed": "2026-09-10"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-feature-listens-to-your-chats-and-recaps-them/",
+      "accessed": "2026-09-10"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "L'Apple Watch écrit le résumé de tes conversations",
+    "beats": [
+      {
+        "script": "La personne en face de toi porte une montre. Bientôt, cette montre saura résumer par écrit ce que tu viens de lui dire. Apple l'a présentée mercredi.",
+        "visual": {
+          "type": "photo",
+          "query": "apple watch",
+          "alt": "Une Apple Watch allumée au poignet, un doigt sur l'écran",
+          "file": "media/2026-09-10-montre-qui-resume/photo_watch.jpg",
+          "credit": "fancycrave1 · CC0"
+        }
+      },
+      {
+        "script": "Ça s'appelle Siri Recap, sur l'Apple Watch Series 12. Après une conversation, la montre en écrit un titre et les points clés. Et le plus troublant n'est pas là.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+          "file": "media/2026-09-10-montre-qui-resume/shot_apple.png"
+        }
+      },
+      {
+        "script": "Il y a aussi Live Rewind. Tu appuies deux fois sur la couronne, et les 15 dernières secondes de ce qui vient d'être dit s'affichent en texte.",
+        "visual": {
+          "type": "card",
+          "value": "15 secondes",
+          "label": "de conversation rejouées en texte sur ton poignet"
+        }
+      },
+      {
+        "script": "Pour savoir quand résumer, la puce S11 fait tourner en permanence un petit modèle qui écoute autour de toi. Il ne transcrit rien. Il détecte juste qu'une conversation a commencé.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://9to5mac.com/2026/09/09/apple-details-how-apple-watchs-new-audio-intelligence-features-work-in-privacy-paper/",
+          "file": "media/2026-09-10-montre-qui-resume/shot_9to5.png"
+        }
+      },
+      {
+        "script": "La même oreille sert aussi à prévenir les personnes sourdes quand une sirène, une alarme, une sonnette ou un bébé qui pleure se déclenche à côté d'elles.",
+        "visual": {
+          "type": "photo",
+          "query": "ambulance emergency light",
+          "alt": "Un camion de pompiers gyrophares allumés dans une rue la nuit",
+          "file": "media/2026-09-10-montre-qui-resume/photo_siren.jpg",
+          "credit": "Osman Rana · CC0"
+        }
+      },
+      {
+        "script": "Apple jure que rien n'est enregistré. L'audio reste enfermé dans une zone isolée de la puce, puis effacé. Mais personne ne sait ce qu'un tribunal fera de ces notes sans audio.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/",
+          "file": "media/2026-09-10-montre-qui-resume/shot_tc.png"
+        }
+      },
+      {
+        "script": "Elle sort le 18 septembre, France comprise, à partir de 399 dollars aux États-Unis. Les deux fonctions, elles, arrivent en bêta d'ici la fin de l'année. Abonne-toi pour l'actu IA de demain.",
+        "visual": {
+          "type": "card",
+          "value": "399 $",
+          "label": "le prix de départ aux États-Unis, en boutique le 18 septembre"
+        }
+      }
+    ]
+  }
+}

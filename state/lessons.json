@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-09T16:44:16.795Z",
-  "n": 86,
-  "nSettled": 80,
-  "medianViews": 174,
+  "at": "2026-09-10T07:00:45.280Z",
+  "n": 87,
+  "nSettled": 81,
+  "medianViews": 173,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -56,6 +56,14 @@
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings."
     },
     {
+      "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
+      "views": 30,
+      "retentionPct": 8,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place."
+    },
+    {
       "slug": "2026-09-07-psychose-associee-ia",
       "views": 35,
       "retentionPct": 5,
@@ -78,14 +86,6 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès."
-    },
-    {
-      "slug": "2026-09-01-instagram-faux-profils-ia",
-      "views": 95,
-      "retentionPct": 12,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA."
     }
   ],
   "byBeat0": {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 19,
-      "medianViews": 160,
-      "meanRetentionPct": 16.1,
+      "n": 20,
+      "medianViews": 155,
+      "meanRetentionPct": 15.7,
       "saves": 12,
       "shares": 4,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 18,
-      "medianViews": 164,
-      "meanRetentionPct": 17.6,
+      "n": 19,
+      "medianViews": 160,
+      "meanRetentionPct": 17.1,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 49,
+    "now": 50,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -750,6 +750,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-09-navier-stokes-un-million",
+      "at": "2026-09-09T17:02:31.419Z",
+      "hourUtc": 17,
+      "views": 313,
+      "reach": 262,
+      "avgWatchS": 12,
+      "retentionPct": 20,
+      "likes": 3,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA d'OpenAI dit avoir résolu un problème de maths à un million de dollars. Le mathématicien qui était dessus l'accuse de l'avoir doublé.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-30-openai-coupe-cursor-musk",
       "at": "2026-08-30T16:50:41.169Z",
       "hourUtc": 16,
@@ -820,6 +837,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-08-medicament-ia-age-biologique",
+      "at": "2026-09-08T10:50:30.295Z",
+      "hourUtc": 10,
+      "views": 290,
+      "reach": 258,
+      "avgWatchS": 8.5,
+      "retentionPct": 14,
+      "likes": 1,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un médicament dessiné par une IA a été testé sur des malades des poumons. Six programmes ont lu leur sang comme celui de gens plus jeunes.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-19-avions-trainees",
       "at": "2026-08-19T17:07:45.947Z",
       "hourUtc": 17,
@@ -837,23 +871,6 @@
       ],
       "sendTest": "Les traînées blanches des avions pèsent un tiers de l'impact climatique de l'aviation. Cet hiver, on va dévier des vols pour les éviter.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-08-medicament-ia-age-biologique",
-      "at": "2026-09-08T10:50:30.295Z",
-      "hourUtc": 10,
-      "views": 270,
-      "reach": 238,
-      "avgWatchS": 8.5,
-      "retentionPct": 14,
-      "likes": 1,
-      "comments": 1,
-      "saved": 2,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Un médicament dessiné par une IA a été testé sur des malades des poumons. Six programmes ont lu leur sang comme celui de gens plus jeunes.",
-      "settled": false
     },
     {
       "slug": "2026-08-29-anthropic-liste-noire",
@@ -1399,6 +1416,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-09-claude-abonnements-pirates",
+      "at": "2026-09-09T11:04:58.653Z",
+      "hourUtc": 11,
+      "views": 127,
+      "reach": 116,
+      "avgWatchS": 5.7,
+      "retentionPct": 10,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Un logiciel espion copie ta session ouverte et se sert de ton abonnement IA à ta place. Le mot de passe et le code à deux facteurs n'y changent rien.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-25-amazon-prix-materiel",
       "at": "2026-08-25T10:57:53.630Z",
       "hourUtc": 10,
@@ -1433,6 +1469,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-08-openai-trois-jours-agent",
+      "at": "2026-09-08T16:59:43.362Z",
+      "hourUtc": 16,
+      "views": 123,
+      "reach": 109,
+      "avgWatchS": 5.7,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -1448,42 +1501,6 @@
       "themes": [],
       "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-08-openai-trois-jours-agent",
-      "at": "2026-09-08T16:59:43.362Z",
-      "hourUtc": 16,
-      "views": 122,
-      "reach": 107,
-      "avgWatchS": 5.7,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
-      "settled": false
-    },
-    {
-      "slug": "2026-09-09-claude-abonnements-pirates",
-      "at": "2026-09-09T11:04:58.653Z",
-      "hourUtc": 11,
-      "views": 120,
-      "reach": 110,
-      "avgWatchS": 5.8,
-      "retentionPct": 10,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "Un logiciel espion copie ta session ouverte et se sert de ton abonnement IA à ta place. Le mot de passe et le code à deux facteurs n'y changent rien.",
-      "settled": false
     },
     {
       "slug": "2026-08-27-instagram-ados-minuit",
@@ -1743,7 +1760,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-07-28-claude-chats-google",

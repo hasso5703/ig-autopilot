@@ -1084,6 +1084,26 @@ ENTRIES:
   "$1.5 billion" de la source. Ecris le point de la source ("1.5 milliard"),
   ce que le manuel demande deja ("never re-punctuate a decimal"); ca vaut pour
   toute decimale francaise dans un script, une carte ou une legende.
+  Ajout 10/09 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 27 verifications, deux dossiers) apple.com/newsroom/2026/09/<slug>
+  (NOUVEAU, et c'est le primaire d'une actu Apple: le communique porte le texte
+  entier, le prix, les dates de vente pays par pays ET les paragraphes "Privacy
+  by Design" ou se trouve le retournement), www.iihs.org/news/detail/<slug>
+  (NOUVEAU, primaire d'une etude de securite routiere: la page porte TOUS les
+  chiffres de l'etude, pas seulement les deux que la presse reprend),
+  spectrum.ieee.org (NOUVEAU) et 9to5mac.com (NOUVEAU au gate); techcrunch.com
+  re-confirme. openai.com rend 403 (20e confirmation). ET LE 403 DE RACINE QUI NE
+  DIT RIEN DES ARTICLES, famille phoronix du 23/08: appleinsider.com rend 403 sur
+  / et 200 sur /articles/26/09/09/<slug>. Attention quand meme a ce qu'on y
+  prend: l'article joignable ce matin etait un billet marque "Rumor" ANTERIEUR au
+  keynote, qui creditait Bloomberg et Mark Gurman. Joignable n'est pas
+  corroborant: lis le tampon "Rumor Score" et l'heure avant de compter le
+  domaine. REFLEXE SUR UNE ACTU APPLE, il coute 30 s: l'index apple.com/newsroom/
+  est rendu en JS (extraction de liens = 0) et /newsroom/rss/news.rss rend 404,
+  donc va a l'URL du communique par recherche, jamais par l'index. Et sur une
+  annonce materiel, le detail qui fait le retournement est dans la section
+  privacy du communique et dans le "privacy paper" que 9to5mac lit a ta place,
+  jamais dans la depeche.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -2825,6 +2845,29 @@ ENTRIES:
   `commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&iiprop=extmetadata`.
   Cout de la lecon ce soir: deux beats refuses au controle des frames, un
   rebuild, 0 $.
+  Ajout 10/09 (06h30), LE FILTRE FOND-BLANC TUE TOUTES LES PHOTOS DE VOITURE, et
+  le remede du 31/07 marche en 2 minutes. Les cinq cliches Commons de robot-taxi
+  Waymo (dont "Waymo Jaguar I-Pace in San Francisco January 2026") sont refuses a
+  26, 42, 43, 48 et 53% de quasi-blanc: une voiture BLANCHE photographiee dehors,
+  c'est du ciel et de la carrosserie claire, donc acquireOne ne rend RIEN sur
+  "waymo jaguar". Telecharge le thumb 1920 par l'API Commons (UA navigateur
+  complet + referer commons, entree du 20/08), recadre en 9:16 sur le sujet
+  (`crop=720:1280:600:0` sur un 1920x1280 garde la voiture entiere et coupe le
+  ciel), REGARDE, puis epingle `file` + `credit` (extmetadata.Artist +
+  LicenseShortName). Les deux meilleures photos du run sont sorties de la.
+  Requetes qui marchent du premier coup le meme matin: "apple watch" rend une
+  vraie montre allumee au poignet, un doigt sur l'ecran (fancycrave1, CC0),
+  "city intersection crosswalk" un carrefour vu d'en haut avec ses pietons
+  (Kaique Rocha, CC0, stocksnap) et "ambulance emergency light" un camion de
+  pompiers gyrophares allumes la nuit (Osman Rana, CC0): denses, sombres, karaoke
+  parfaitement lisible. Echouent toutes au fond-blanc: "two people talking
+  meeting", "microphone grille close", "smoke detector ceiling", "doorbell button
+  door", "empty classroom desks", "apple watch demo store". ET LE PIEGE DE MARQUE,
+  famille du 01/08 mais sur un mot generique: sur une actu APPLE, "computer
+  hardware" rend la superbe macro infrarouge de FritzchensFritz... d'un GPU
+  NVIDIA, wordmark lisible en plein cadre. Quand il te faut une puce sans marque,
+  "circuit board macro" (rawpixel, CC0) rend un vrai circuit noir, aucune marque.
+  Proof: scout 06h30 10/09.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
