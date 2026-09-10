@@ -1,19 +1,19 @@
 {
-  "at": "2026-09-10T06:40:02.724Z",
-  "fresh": 917,
+  "at": "2026-09-10T19:40:53.165Z",
+  "fresh": 919,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1183,
-      "fresh": 13,
+      "fetched": 1188,
+      "fresh": 16,
       "windowHours": 96
     },
     {
       "name": "Google AI",
       "ok": true,
       "fetched": 20,
-      "fresh": 2,
+      "fresh": 3,
       "windowHours": 96
     },
     {
@@ -26,15 +26,15 @@
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "fetched": 860,
-      "fresh": 2,
+      "fetched": 861,
+      "fresh": 3,
       "windowHours": 96
     },
     {
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 1,
+      "fresh": 5,
       "windowHours": 96
     },
     {
@@ -86,21 +86,22 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 4,
+      "fresh": 9,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
-      "ok": true,
-      "fetched": 10,
-      "fresh": 9,
-      "windowHours": 36
+      "ok": false,
+      "fetched": 0,
+      "fresh": 0,
+      "windowHours": 36,
+      "error": "HTTP 502 after 13 tries"
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 5,
+      "fresh": 2,
       "windowHours": 36
     }
   ]
