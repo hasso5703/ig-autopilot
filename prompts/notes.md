@@ -5165,3 +5165,35 @@ ENTRIES:
   retournement du beat (Apple jure que l'audio est efface, le journal repond que
   la norme change). Avant de rebuild sur une tension lue dans une frame, demande-
   toi si c'est une erreur de fait ou le sujet du beat. Proof: run 16h30 10/09.
+  Ajout 10/09 (19h30, veille): VINGT-SEPTIEME mesure morte (401, meme cle 53 car
+  AQ.Ab8), dernier achat toujours 01/09 16h54, soit DOUZE jours pleins. ET LA
+  DATE QUE LE GATE DE FRAICHEUR NE VOIT PAS PARCE QU'ELLE EST DANS L'IMAGE:
+  validate.mjs prend la date la PLUS RECENTE des `slides[].source.date` (entree
+  17/08), donc un spec dont la seconde source est fraiche passe meme si le
+  PRIMAIRE a sept semaines - et c'est le recu du primaire qui s'affiche en grand
+  dans le Reel. Mesure de ce soir sur voiture-sans-chauffeur: fraicheur verte
+  grace a spectrum.ieee.org du 08/09, mais le recu iihs.org du beat 1 imprime
+  "July 23, 2026" en clair dans la frame. Rien de faux (aucun beat ne date
+  l'etude, et le grep de mots relatifs du 29/08 est vert), mais le spectateur
+  lit une date vieille de 49 jours sur un compte qui promet l'actu du jour.
+  REFLEXE, 10 s, sur tout spec dont la fraicheur repose sur la SECONDE source:
+  extrais la frame du recu du primaire et lis la date qu'il imprime; si elle est
+  vieille, mets le recu frais au beat 1 et descends l'ancien, ou assume-le dans
+  le rapport. Le gate ne peut pas voir une date qui est un pixel.
+  DEUX MESURES DE RECU QUI EVITENT UN RECADRAGE INUTILE: spectrum.ieee.org sort
+  une capture avec une ENORME banniere cookies ("This website utilizes
+  technologies...", bouton orange MANAGE PREFERENCES) qui occupe le tiers bas du
+  png brut - et elle est INVISIBLE dans le Reel, parce que la fenetre affichee
+  par segmentFromScreenshot (~1686 px sur une source 1290, entree 09/09) s'arrete
+  avant. Ne recadre pas par reflexe en voyant une banniere dans le jpg: calcule
+  ou tombe la fenetre, ou extrais la frame. Confirme aussi: iihs.org se capture
+  sans recadrage (masthead, fil d'Ariane, titre entier, chapo qui porte le 68% et
+  la date), et sa page est en gris clair, donc utilisable en beat 0.
+  ENFIN, LA FENETRE APPARIEE DU MUET, RECALCULEE CE SOIR ET L'ECHANTILLON A
+  DOUBLE depuis le 05/09: 16 Reels muets REPOSES (02 au 09/09) rendent 10,5% de
+  retention mediane et 136,5 vues medianes, contre 17,0% et 128,5 vues sur les
+  14 Reels du 26/08 au 01/09. Le diagnostic du 05/09 ne bouge pas d'un pouce sur
+  neuf jours et n=16: les VUES ne baissent pas, donc le recommandeur distribue
+  autant; c'est le spectateur qui part une fois le Reel ouvert. C'est le cout de
+  la cle morte, il est mesure, et il est maintenant assez solide pour etre dit
+  a Hasan sans precaution oratoire. Proof: veille 19h30 10/09.

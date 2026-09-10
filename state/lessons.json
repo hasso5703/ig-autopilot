@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-10T16:55:40.587Z",
-  "n": 88,
-  "nSettled": 82,
-  "medianViews": 174,
+  "at": "2026-09-10T19:49:51.752Z",
+  "n": 89,
+  "nSettled": 83,
+  "medianViews": 173,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 21,
-      "medianViews": 160,
-      "meanRetentionPct": 15.6,
+      "n": 22,
+      "medianViews": 155,
+      "meanRetentionPct": 15.4,
       "saves": 14,
       "shares": 4,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 19,
-      "medianViews": 160,
-      "meanRetentionPct": 17.1,
+      "n": 20,
+      "medianViews": 149,
+      "meanRetentionPct": 16.8,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -542,9 +542,9 @@
       "slug": "2026-08-14-trois-ia-guerre-serveur",
       "at": "2026-08-14T17:05:09.595Z",
       "hourUtc": 17,
-      "views": 687,
+      "views": 688,
       "reach": 605,
-      "avgWatchS": 16,
+      "avgWatchS": 15.9,
       "retentionPct": 27,
       "likes": 10,
       "comments": 1,
@@ -593,9 +593,9 @@
       "slug": "2026-09-09-navier-stokes-un-million",
       "at": "2026-09-09T17:02:31.419Z",
       "hourUtc": 17,
-      "views": 459,
-      "reach": 395,
-      "avgWatchS": 11.6,
+      "views": 471,
+      "reach": 406,
+      "avgWatchS": 11.3,
       "retentionPct": 19,
       "likes": 4,
       "comments": 1,
@@ -1483,7 +1483,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
@@ -1729,6 +1729,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-10-montre-qui-resume",
+      "at": "2026-09-10T16:53:09.719Z",
+      "hourUtc": 16,
+      "views": 55,
+      "reach": 50,
+      "avgWatchS": 3,
+      "retentionPct": 5,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-07-psychose-associee-ia",
       "at": "2026-09-07T10:49:00.956Z",
       "hourUtc": 10,
@@ -1780,20 +1797,20 @@
       "settled": true
     },
     {
-      "slug": "2026-09-10-montre-qui-resume",
-      "at": "2026-09-10T16:53:09.719Z",
-      "hourUtc": 16,
+      "slug": "2026-09-10-voiture-sans-chauffeur",
+      "at": "2026-09-10T19:47:11.997Z",
+      "hourUtc": 19,
       "views": 0,
       "reach": 0,
       "avgWatchS": 0,
       "retentionPct": 0,
       "likes": 0,
-      "comments": 1,
+      "comments": 0,
       "saved": 0,
       "shares": 0,
       "beat0": "photo",
       "themes": [],
-      "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
+      "sendTest": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que nous. Sauf qu'un accident humain sur deux n'est jamais déclaré.",
       "settled": false
     },
     {
