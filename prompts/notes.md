@@ -5107,3 +5107,28 @@ ENTRIES:
   10h30, 694 s le 28/08 - c'est stable, compte 11 min), the-decoder 183 s,
   claymath 23 s. Lance les trois en arriere-plan AVANT de re-gater le spec: les
   trois etaient pretes avant que le gate ait fini. Proof: run 16h30 09/09.
+  Ajout 10/09 (06h30), TROIS RECUS NEUFS ET UN DOMAINE A NE JAMAIS PRENDRE EN
+  RECU. apple.com/newsroom se capture PARFAITEMENT en 25 s / 1 frame, h1 juste,
+  zero banniere, aucun recadrage: les 1686 px visibles portent "PRESS RELEASE",
+  la date, le titre entier et le chapo qui nomme "Audio Intelligence"; pas de
+  masthead Apple, mais le titre EST l'histoire (controle du 10/08).
+  iihs.org/news/detail 38 s / 4 frames: logo IIHS-HLDI, fil d'Ariane, titre
+  entier, chapo QUI PORTE LE CHIFFRE ("68% lower than human drivers") et la date,
+  categorie "recu qui porte la preuve" (epoch.ai 17/08, PubMed 08/08, arxiv/abs
+  16/08). spectrum.ieee.org 110 s / 13 frames: masthead IEEE Spectrum, rubrique,
+  titre, sous-titre, signature et "08 SEP 2026" - mais son sous-titre affiche un
+  chiffre qui n'est PAS dans le script ("580,000 deaths every year"), donc place
+  ce recu sous un beat que ce chiffre ne contredit pas (piege de frame du 06/09).
+  9to5mac.com, LUI, SE GATE TRES BIEN ET NE SE CAPTURE PAS: tue a 7 min, relance,
+  toujours ZERO octet ecrit a 15 min, famille O(frames) du 06/08 sans survie.
+  Source oui, recu jamais, comme macrumors (09/08), gizmodo (21/08) et tech.yahoo
+  (03/09). ET LE CAS TECHCRUNCH EN CONTEXTE MOBILE, qui precise le vert-sur-vert
+  du 09/09: sa page article est un APLAT VERT SATURE plein cadre, titre et
+  signature en blanc dessus, donc jamais en beat 0; en prime les 145 premiers px
+  sont une bande orpheline de l'illustration. `crop=1290:2650:0:145` donne titre
+  + signature + date + la phrase de chapo qui porte le claim, et supprime la
+  bande. Capture mesuree a 204 s, h1 juste, aucune redirection McAfee (4e capture
+  propre d'affilee depuis le 28/08, l'entree du 21/08 ne se reproduit plus).
+  Et la cle media est morte pour la VINGT-CINQUIEME mesure d'affilee (401 sur
+  generativelanguage.googleapis.com/v1beta/models, meme cle 53 car AQ.Ab8), soit
+  DOUZE jours pleins. Proof: scout 06h30 10/09.

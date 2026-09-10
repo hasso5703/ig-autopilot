@@ -211,9 +211,11 @@
       {
         "script": "Pour savoir quand résumer, la puce S11 fait tourner en permanence un petit modèle qui écoute autour de toi. Il ne transcrit rien. Il détecte juste qu'une conversation a commencé.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://9to5mac.com/2026/09/09/apple-details-how-apple-watchs-new-audio-intelligence-features-work-in-privacy-paper/",
-          "file": "media/2026-09-10-montre-qui-resume/shot_9to5.png"
+          "type": "photo",
+          "query": "circuit board macro",
+          "alt": "Gros plan sur les composants d'une carte électronique",
+          "file": "media/2026-09-10-montre-qui-resume/photo_board.jpg",
+          "credit": "rawpixel · CC0"
         }
       },
       {
@@ -231,7 +233,7 @@
         "visual": {
           "type": "screenshot",
           "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/",
-          "file": "media/2026-09-10-montre-qui-resume/shot_tc.png"
+          "file": "media/2026-09-10-montre-qui-resume/shot_tc_crop.png"
         }
       },
       {
