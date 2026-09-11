@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-11T10:50:26.099Z",
-  "n": 89,
-  "nSettled": 83,
-  "medianViews": 173,
+  "at": "2026-09-11T16:53:48.894Z",
+  "n": 91,
+  "nSettled": 84,
+  "medianViews": 171,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 22,
-      "medianViews": 155,
-      "meanRetentionPct": 15.4,
+      "n": 23,
+      "medianViews": 150,
+      "meanRetentionPct": 15.1,
       "saves": 14,
       "shares": 4,
       "thin": false
@@ -140,9 +140,9 @@
       "thin": false
     },
     "security": {
-      "n": 3,
-      "medianViews": 191,
-      "meanRetentionPct": 21.7,
+      "n": 4,
+      "medianViews": 176,
+      "meanRetentionPct": 18.5,
       "saves": 4,
       "shares": 0,
       "thin": true
@@ -166,9 +166,9 @@
       "thin": false
     },
     "11": {
-      "n": 9,
-      "medianViews": 195,
-      "meanRetentionPct": 14.4,
+      "n": 10,
+      "medianViews": 173,
+      "meanRetentionPct": 13.9,
       "saves": 8,
       "shares": 7,
       "thin": false
@@ -1398,7 +1398,7 @@
         "security"
       ],
       "sendTest": "Un logiciel espion copie ta session ouverte et se sert de ton abonnement IA à ta place. Le mot de passe et le code à deux facteurs n'y changent rien.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-26-ia-verifie-infos",
@@ -1624,6 +1624,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-11-captcha-arrete-ia",
+      "at": "2026-09-11T10:56:17.768Z",
+      "hourUtc": 10,
+      "views": 114,
+      "reach": 109,
+      "avgWatchS": 6.9,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-31-chine-series-ia-acteurs",
       "at": "2026-08-31T16:56:59.944Z",
       "hourUtc": 16,
@@ -1658,6 +1675,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-10-voiture-sans-chauffeur",
+      "at": "2026-09-10T19:47:11.997Z",
+      "hourUtc": 19,
+      "views": 108,
+      "reach": 102,
+      "avgWatchS": 3.4,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que nous. Sauf qu'un accident humain sur deux n'est jamais déclaré.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
       "at": "2026-09-03T11:44:37.874Z",
       "hourUtc": 11,
@@ -1675,6 +1709,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-10-montre-qui-resume",
+      "at": "2026-09-10T16:53:09.719Z",
+      "hourUtc": 16,
+      "views": 100,
+      "reach": 99,
+      "avgWatchS": 3.9,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-01-instagram-faux-profils-ia",
       "at": "2026-09-01T16:59:31.288Z",
       "hourUtc": 16,
@@ -1690,40 +1741,6 @@
       "themes": [],
       "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-10-montre-qui-resume",
-      "at": "2026-09-10T16:53:09.719Z",
-      "hourUtc": 16,
-      "views": 95,
-      "reach": 95,
-      "avgWatchS": 3.9,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
-      "settled": false
-    },
-    {
-      "slug": "2026-09-10-voiture-sans-chauffeur",
-      "at": "2026-09-10T19:47:11.997Z",
-      "hourUtc": 19,
-      "views": 93,
-      "reach": 89,
-      "avgWatchS": 3.5,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que nous. Sauf qu'un accident humain sur deux n'est jamais déclaré.",
-      "settled": false
     },
     {
       "slug": "2026-09-06-astra-agi-mesures",
@@ -1812,6 +1829,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-11-services-publics-satures",
+      "at": "2026-09-11T16:51:23.145Z",
+      "hourUtc": 16,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
