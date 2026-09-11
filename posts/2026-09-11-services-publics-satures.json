@@ -159,10 +159,10 @@
         "script": "Tu as déjà laissé tomber un dossier parce que c'était trop compliqué. Une réclamation, une aide, un recours. Aujourd'hui, une IA le remplit pour toi, et les guichets publics prennent l'eau.",
         "visual": {
           "type": "photo",
-          "query": "woman using smartphone indoors",
-          "alt": "Une femme assise à une table de cuisine, son téléphone à la main",
-          "file": "media/2026-09-11-services-publics-satures/photo_0.jpg",
-          "credit": "epSos.de · CC BY"
+          "query": "application form paperwork",
+          "alt": "Une main remplit au stylo un formulaire papier posé sur une table",
+          "file": "media/2026-09-11-services-publics-satures/photo_form.jpg",
+          "credit": "perpetual.fostering · CC BY"
         }
       },
       {
