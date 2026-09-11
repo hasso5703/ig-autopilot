@@ -5287,3 +5287,24 @@ ENTRIES:
   regle du 10/09 sur le vert-sur-vert techcrunch: le recu `crop=1290:2650:0:145`
   au BEAT 1 rend titre entier, signature "Tim Fernholz" et "September 10, 2026"
   parfaitement lisibles sur l'aplat vert, karaoke degage. Proof: run 10h30 11/09.
+  Ajout 11/09 (19h30, veille), TRENTE-ET-UNIEME mesure morte (401
+  UNAUTHENTICATED sur generativelanguage.googleapis.com/v1beta/models, meme cle
+  53 car AQ.Ab8), dernier achat toujours 01/09 16h54: QUINZE jours pleins, et
+  state/spend.jsonl n'a pas bouge depuis. LA FENETRE APPARIEE, RECALCULEE SUR
+  L'ECHANTILLON COMPLET (state/lessons.json, 91 Reels): ere muette 02-11/09,
+  n=20, mediane 10% de retention et 125,5 vues; 14 jours de voix juste avant,
+  19/08-01/09, n=28, mediane 17% et 138 vues. Meme verdict qu'au 05/09 et au
+  10/09, a n plus large: la distribution ne bouge pas, la retention tombe de
+  moitie. Le digest le dit aussi par surface d'ouverture, tous ages confondus:
+  beat 0 `veo` n=55 -> 197 vues / 22,3%, `photo` n=24 -> 155 vues / 15,3%.
+  ET LE DEUXIEME COMPTEUR, celui qui coupe TOUT s'il expire: IG_ACCESS_TOKEN a
+  11 jours (state/token.json, issuedAt 25/07 + 60 j = 23/09); watch.mjs imprime
+  deja "RENOUVELER" en tete de rapport. Seul Hasan peut coller les deux valeurs
+  dans l'environnement cloud, un run ne le peut pas: les rapports sont le seul
+  canal, donc redis-le a chaque veille tant que la ligne TOKEN est en ALERTE.
+  ENFIN, CE QUE COUTE LE DEVOIR DE REPONSE DU 19h30 AUJOURD'HUI: ZERO.
+  `node src/engage.mjs recent` rend "no comments returned by the API" sur les
+  DIX derniers posts (50 abonnes, +6 en 7 jours). L'edge /comments ne renvoie
+  pas nos propres commentaires seedes (entree 29/07), donc "aucun commentaire"
+  ne veut pas dire "le seed a echoue": verifie les seeds dans
+  state/engagement.jsonl, pas via l'API. Proof: veille 19h30 11/09.

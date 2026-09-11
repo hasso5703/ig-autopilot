@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-11T16:53:48.894Z",
+  "at": "2026-09-11T19:42:26.076Z",
   "n": 91,
-  "nSettled": 84,
-  "medianViews": 171,
+  "nSettled": 85,
+  "medianViews": 173,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -98,10 +98,10 @@
       "thin": false
     },
     "photo": {
-      "n": 23,
-      "medianViews": 150,
-      "meanRetentionPct": 15.1,
-      "saves": 14,
+      "n": 24,
+      "medianViews": 155,
+      "meanRetentionPct": 15.3,
+      "saves": 17,
       "shares": 4,
       "thin": false
     },
@@ -206,10 +206,10 @@
       "thin": false
     },
     "17": {
-      "n": 20,
-      "medianViews": 183,
-      "meanRetentionPct": 22.9,
-      "saves": 17,
+      "n": 21,
+      "medianViews": 191,
+      "meanRetentionPct": 22.7,
+      "saves": 20,
       "shares": 12,
       "thin": false
     },
@@ -587,7 +587,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Une IA d'OpenAI dit avoir résolu un problème de maths à un million de dollars. Le mathématicien qui était dessus l'accuse de l'avoir doublé.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-16-livres-ia-amazon",
@@ -1503,6 +1503,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-11-captcha-arrete-ia",
+      "at": "2026-09-11T10:56:17.768Z",
+      "hourUtc": 10,
+      "views": 121,
+      "reach": 112,
+      "avgWatchS": 7,
+      "retentionPct": 12,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-27-instagram-ados-minuit",
       "at": "2026-08-27T16:57:42.083Z",
       "hourUtc": 16,
@@ -1622,23 +1639,6 @@
       "themes": [],
       "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-11-captcha-arrete-ia",
-      "at": "2026-09-11T10:56:17.768Z",
-      "hourUtc": 10,
-      "views": 114,
-      "reach": 109,
-      "avgWatchS": 6.9,
-      "retentionPct": 11,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
-      "settled": false
     },
     {
       "slug": "2026-08-31-chine-series-ia-acteurs",
@@ -1834,10 +1834,10 @@
       "slug": "2026-09-11-services-publics-satures",
       "at": "2026-09-11T16:51:23.145Z",
       "hourUtc": 16,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
+      "views": 15,
+      "reach": 11,
+      "avgWatchS": 2.7,
+      "retentionPct": 5,
       "likes": 0,
       "comments": 1,
       "saved": 0,
