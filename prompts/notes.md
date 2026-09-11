@@ -1104,6 +1104,18 @@ ENTRIES:
   annonce materiel, le detail qui fait le retournement est dans la section
   privacy du communique et dans le "privacy paper" que 9to5mac lit a ta place,
   jamais dans la depeche.
+  Ajout 11/09 (06h30): rendent 200 au fetch gate et se gatent DU PREMIER COUP
+  (0 erreur sur 32 verifications, deux dossiers, zero aller-retour) techcrunch.com,
+  anthropic.com/research/<slug>, arxiv.org/abs, chrisschmitz.ai et **bsky.app
+  (NOUVEAU, et c'est une porte de sortie)**: malgre le boilerplate "JavaScript
+  Required", le HTML statique d'un post bsky.app/profile/<handle>/post/<rkey>
+  porte le TEXTE du post et son horodatage en clair, donc une citation s'y gate.
+  Utile quand le seul lecteur independant d'un document public est un chercheur
+  qui poste la-bas (ici Colin Fraser sur le transcript Anthropic). ATTENTION,
+  c'est une SOURCE et jamais un recu, voir l'entree recus. Et la nuance de
+  corroboration du jour, famille du 09/08: techcrunch et bsky lisent le MEME
+  transcript public de 1 022 pages, donc deux domaines verts attestent "deux
+  personnes ont lu le document", pas deux enquetes independantes.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -2868,6 +2880,38 @@ ENTRIES:
   NVIDIA, wordmark lisible en plein cadre. Quand il te faut une puce sans marque,
   "circuit board macro" (rawpixel, CC0) rend un vrai circuit noir, aucune marque.
   Proof: scout 06h30 10/09.
+  Ajout 11/09 (06h30), LE VOCABULAIRE ADMINISTRATIF EST UNE ZONE MORTE, mesure a
+  26 requetes pour 2 photos gardees sur un dossier de services publics. Echouent
+  toutes, fond-blanc ou hors-sujet: government building facade, paper documents
+  archive shelves, filing cabinet drawers, town hall interior, printed letter
+  envelope, stack of paper documents, public library reading room, courthouse
+  building columns, office desk paperwork, parliament building exterior, call
+  centre office workers, red post box london, printed form paper close,
+  smartphone in hand street, desk with computer monitor office, government
+  service counter window, paper pile office desk, bureaucracy office files, man
+  reading letter paper, hands typing laptop keyboard, computer keyboard close up,
+  et meme "screen time", valeur sure du carnet, revenue VIDE ce matin. Les
+  "reussites" piegees, toutes refusees a la planche-contact: une file d'attente
+  du Berghain en noir et blanc (foule + mauvais lieu), une mairie en bois de 1914
+  du Wisconsin (epoque + mauvaise echelle), une boite aux lettres en laiton ou se
+  lit "U.S. MAIL" en gros (epoque), un guichet de la poste THAILANDAISE
+  (signaletique etrangere lisible, mauvais pays) et un couloir NARA avec un homme
+  NOMME identifiable. VALEURS SURES GARDEES, les deux seules: "woman using
+  smartphone indoors" -> "Woman with Phone" (epSos.de, CC BY, Commons), une femme
+  a une table de cuisine avec son telephone, contemporaine, zero marque, zero
+  date; et "office window blinds city" -> "My post office box looks like it has a
+  window to the world" (Robert Ashworth, CC BY), des rangees de boites postales
+  dont une ouverte, seule image d'administration utilisable du lot. Sur un
+  dossier de bureaucratie, prevois donc des le depart 3 recus + 2 cartes et ne
+  compte que sur 2 photos.
+  Cote dossier TECHNIQUE le meme matin, 4 requetes sur 4 servies et gardees:
+  "computer screen dark room" (SACHINRAJ CP, CC0, pd.w.org, un portable allume
+  seul dans le noir, excellent beat 0), "computer monitor code", "green frog
+  close" et "ethernet cable server" (rawpixel, CC0). RAPPEL DE CREDIT: ces trois
+  rawpixel rendent `creator` VIDE, donc creditLine retomberait sur le TITRE, qui
+  est le signal du 03/09 qu'on ne sait pas qui a pris la photo. Epingle-les avec
+  `credit: "rawpixel · CC0"`, qui nomme la provenance et la licence sans inventer
+  un auteur. Proof: scout 06h30 11/09.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -3410,16 +3454,6 @@ ENTRIES:
   refusee au controle des frames, regarde d'abord si une valeur sure du carnet
   fait l'affaire - c'est gratuit et c'est plus haut dans la hierarchie.
   Proof: run 10h30 01/09, stills 5 et 8 refusees puis remplacees.
-- 2026-07-31 · Tremblement des Reels, trois causes distinctes mesurees puis
-  corrigees. (1) zoompan tronque l'origine de decoupe en pixels entiers: sur un
-  zoom lent le trait partait a l'envers 2 frames sur 3 (+0,16 +0,19 0,00 -0,67).
-  Corrige par un surechantillonnage x4 avant zoompan, ecart-type 0,352 -> 0,086
-  px, +85 s de rendu par Reel. (2) overlay tronque y pareil: la carte du recu
-  restait figee 3-4 frames puis sautait 2 px. Derive supprimee, c'est le
-  recadrage a mi-beat qui l'anime. (3) Veo rend en 24 i/s, la timeline etait a
-  25: une frame dupliquee par seconde. Timeline a 30 i/s et conversion du clip
-  par `framerate` (melange), aussi lisse que minterpolate pour 7 s au lieu de
-  90. Proof: mesures sur mire, jitter/ 31/07.
 - 2026-07-31 · Changer de voix EXIGE de la recalibrer, et une seule lecture ne
   suffit pas. Sadaltager mesuree une fois en A/B: 3,49 mots/s. Mesuree trois
   fois avec `node src/calibrate-voice.mjs posts/<slug>.json 3` (~$0,09, les
@@ -4078,6 +4112,30 @@ ENTRIES:
   est coupe en deux en haut du cadre; l'identite reste lisible a la signature.
   Un blog d'entreprise ou de chercheur reste donc le recu le moins cher qui
   existe, ca re-confirme le 07/08 et le 22/08. Proof: scout 06h30 05/09.
+  Ajout 11/09 (06h30), TROISIEME CONFIRMATION DU PIEGE anthropic.com EN RECU
+  (14/08), ET LE MODE `top` NE LE REPARE PAS: capture demandee sur
+  anthropic.com/research/alignment-assessment-cybersecurity-incidents, rendue en
+  21 s / 6 frames avec `ok: true`, `landedUrl` = anthropic.com/legal/k12-dpa et
+  `h1` = "U.S. K-12 Data Processing Agreement". Le domaine se gate pourtant
+  parfaitement au fetch Node. Sur une actu Anthropic: source oui, recu jamais,
+  quel que soit le mode.
+  ET UN PIEGE DE RECU NEUF, LE FIL DE DISCUSSION: bsky.app se capture vite et
+  proprement (23 s / 2 frames, `landedUrl` EXACT, `ok: true`) mais le cadre
+  affiche le post 1/19 DU FIL, pas celui que l'URL designe. Le recu etait donc
+  propre, sur le bon domaine, a la bonne URL, et portait une AUTRE affirmation
+  (une critique du protocole d'evaluation) que celle que le script cite. `h1`
+  revient VIDE sur bsky, donc aucun des trois controles habituels ne le voit:
+  seul le REGARD sur la frame. Sur un reseau a fils, gate la citation chez eux,
+  prends le recu ailleurs. Recu refuse ce matin, beat bascule en photo.
+  DEUX RECUS EXCELLENTS le meme matin: **chrisschmitz.ai NOUVEAU**, 22 s /
+  1 frame, mode `top`, aucun recadrage, categorie "recu qui porte la preuve"
+  (les 1686 px visibles tiennent le titre entier, les TROIS auteurs, "August
+  2026", "Read the paper" et le compteur "84 of 84 cases"); et arxiv.org/abs se
+  re-confirme (24 s / 1 frame, logo, identifiant, date, titre, les trois auteurs
+  ET l'abstract jusqu'a la phrase chiffree). COUT techcrunch remesure: 752 s /
+  868 frames, le plus cher mesure ici (632 s le 09/09, 694 s le 28/08), toujours
+  AUCUNE redirection McAfee (5e capture propre d'affilee). Son bandeau violet
+  orphelin du haut se coupe avec `crop=1290:2650:0:145` (entree 10/09).
   Proof: journal 15h 31/07, run 08h 01/08, run 14h 01/08, run 19h30 02/08, run 11h 03/08, run 16h30 03/08, run 10h30 06/08, run 16h30 06/08, run 19h30 07/08, run 16h30 09/08, run 19h30 09/08, run 16h30 10/08, scout 06h30 12/08, run 10h30 13/08, run 16h30 13/08, scout 06h30 14/08, run 10h30 15/08, run 16h30 15/08, run 10h30 16/08, run 16h30 16/08, scout 06h30 22/08, scout 06h30 26/08, scout 06h30 27/08.
 - 2026-07-31 · Le gate peut se tromper dans le sens "il refuse du vrai", et
   personne n'audite ce sens-la. Trois cas en deux runs le 31/07: un mot coupe
@@ -5197,3 +5255,10 @@ ENTRIES:
   autant; c'est le spectateur qui part une fois le Reel ouvert. C'est le cout de
   la cle morte, il est mesure, et il est maintenant assez solide pour etre dit
   a Hasan sans precaution oratoire. Proof: veille 19h30 10/09.
+  Ajout 11/09 (06h30): VINGT-HUITIEME mesure morte d'affilee (401 sur
+  generativelanguage.googleapis.com/v1beta/models, meme cle 53 caracteres
+  AQ.A), dernier achat toujours 01/09 16h54, soit TREIZE jours pleins. Le jeton
+  Instagram, lui, expire le 23/09, soit 11 jours: lis state/token.json, jamais
+  refresh-token.mjs (entree 09/09). Les deux specs banques ce matin sont donc
+  sans `veo` ni `image`, 7 beats chacun, et TOUTES leurs surfaces sont deja sur
+  le disque et epinglees: le run de 10h30 n'a ni capture ni acquisition a faire.

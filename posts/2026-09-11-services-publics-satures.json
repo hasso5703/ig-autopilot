@@ -1,0 +1,220 @@
+{
+  "slug": "2026-09-11-services-publics-satures",
+  "centralClaim": "Researchers collected 84 potential cases of flooding of government services across 11 jurisdictions.",
+  "corroboration": [
+    {
+      "url": "https://arxiv.org/abs/2608.16603",
+      "quote": "First, based on a collected dataset of 84 potential cases of flooding across 11 jurisdictions, we posit that flooding is likely occurring widely today, mostly through large language models (LLMs) generating text cheaply."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+      "quote": "In a paper set to be presented next month at the AI Ethics and Society conference, he looks at 84 different cases of potential flooding across 11 jurisdictions, finding broad evidence that AI tools are changing the way people interact with public services."
+    }
+  ],
+  "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant.",
+  "caption": "Les plaintes au médiateur du logement britannique sont passées de 2 600 à plus de 7 000 depuis l'arrivée de ChatGPT.\n\nTrois chercheurs, Chris Schmitz, Lewis Hammond et Alan Chan, ont rassemblé 84 cas possibles de ce qu'ils appellent l'inondation par les agents, dans 11 juridictions. Aux États-Unis, l'agence fédérale qui protège les consommateurs a vu ses plaintes multipliées par 5 sur la même période. Même bond du côté des requêtes judiciaires brésiliennes et des pétitions parlementaires allemandes.\n\nLe détail qui n'est pas dans la vidéo. Pour des raisons de méthode, l'étude ne dit pas que l'IA est directement la cause de cette hausse. Mais la plupart des 84 cas suivent la même courbe : à plat avant 2022, puis une montée de plus en plus rapide.\n\nLe retournement. Ce ne sont pas des faux dossiers. Selon Chris Schmitz, la grande majorité de ces gens réclament une chose à laquelle ils ont droit. S'ils ne la réclamaient pas avant, c'est que la démarche était trop décourageante, ce que les spécialistes appellent le coût administratif.\n\nCe qui coince. Les administrations doivent absorber cinq fois plus de demandeurs avec le même budget. Et la réponse la plus rapide à déployer, des frais d'accès, revient à sacrifier l'égalité d'accès au service public.\n\nFaire payer pour déposer un dossier, oui ou non ?\n\ntechcrunch.com · arxiv.org · chrisschmitz.ai\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #ServicePublic\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "In the United Kingdom, complaints to the housing ombudsman more than doubled since the introduction of ChatGPT, rising from 2,600 in 2022 to just over 7,000 last year.",
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/"
+    },
+    {
+      "quote": "First, based on a collected dataset of 84 potential cases of flooding across 11 jurisdictions, we posit that flooding is likely occurring widely today, mostly through large language models (LLMs) generating text cheaply.",
+      "url": "https://arxiv.org/abs/2608.16603"
+    },
+    {
+      "quote": "The United States' Consumer Financial Protection Bureau (CFPB) saw 5x growth in complaints over the same period. There were similar jumps in Brazilian judicial petitions and German parliamentary petitions.",
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/"
+    },
+    {
+      "quote": "For methodological reasons, Schmitz's paper stops short of saying AI is directly causing the surge of new applicants. But most of the 84 cases follow the same basic arc, where submissions were roughly flat before 2022, then rose at increasing speed as AI technology diffuses.",
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/"
+    },
+    {
+      "quote": "The vast majority of cases we find are people who are entitled to claim for something, claiming for that thing,",
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/"
+    },
+    {
+      "quote": "If those people weren't claiming the benefits before, it may have been because the work of applying was too forbidding - something known in the policy world as administrative burden.",
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/"
+    },
+    {
+      "quote": "It's easy to imagine public services facing a similar problem, as they manage 5x more applicants with the same budget.",
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/"
+    },
+    {
+      "quote": "Precedent suggests these responses will likely be sufficient to stop most cases of flooding, but the fastest to deploy - friction-inducing measures like fees - often trade off equitable access to public services.",
+      "url": "https://arxiv.org/abs/2608.16603"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "TechCrunch · arXiv",
+      "headline": "De *2 600* à 7 000 plaintes depuis ChatGPT",
+      "hero": {
+        "value": "84",
+        "label": "cas possibles repérés dans 11 juridictions"
+      },
+      "swipe": "Les reçus sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "7,000",
+      "unit": "plaintes au médiateur du logement",
+      "body": "Au Royaume-Uni, elles sont passées de **2,600 en 2022** à plus de 7,000 l'an dernier, depuis l'arrivée de ChatGPT.",
+      "evidence": "In the United Kingdom, complaints to the housing ombudsman more than doubled since the introduction of ChatGPT, rising from 2,600 in 2022 to just over 7,000 last year.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et *5 fois* plus aux États-Unis",
+      "body": "L'agence fédérale qui protège les consommateurs a vu ses plaintes **multipliées par 5** sur la même période. Même bond au Brésil et en Allemagne.",
+      "evidence": "The United States' Consumer Financial Protection Bureau (CFPB) saw 5x growth in complaints over the same period. There were similar jumps in Brazilian judicial petitions and German parliamentary petitions.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "*84* cas, 11 juridictions",
+      "body": "Les chercheurs ont rassemblé ces cas et estiment que l'inondation se produit **largement aujourd'hui**, surtout parce que les modèles de langue écrivent du texte pour presque rien.",
+      "evidence": "First, based on a collected dataset of 84 potential cases of flooding across 11 jurisdictions, we posit that flooding is likely occurring widely today, mostly through large language models (LLMs) generating text cheaply.",
+      "source": {
+        "name": "arXiv (Schmitz, Hammond, Chan)",
+        "url": "https://arxiv.org/abs/2608.16603",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qu'on imagine",
+      "claim": "Des dossiers bidons générés en masse, comme les rapports de bugs qui ont noyé les programmes de primes.",
+      "caveatLabel": "Ce que dit le chercheur",
+      "caveat": "La grande majorité de ces gens réclament une chose à laquelle ils ont droit.",
+      "evidence": "The vast majority of cases we find are people who are entitled to claim for something, claiming for that thing,",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'étude ne dit *pas* que l'IA est la cause",
+      "body": "Pour des raisons de méthode, elle s'arrête avant. Mais la plupart des 84 cas sont à plat **avant 2022**, puis montent de plus en plus vite.",
+      "evidence": "For methodological reasons, Schmitz's paper stops short of saying AI is directly causing the surge of new applicants. But most of the 84 cases follow the same basic arc, where submissions were roughly flat before 2022, then rose at increasing speed as AI technology diffuses.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La parade la plus rapide : *des frais*",
+      "body": "Les mesures qui ajoutent de la friction, comme des frais, sont les plus rapides à déployer. Elles **sacrifient l'égalité d'accès** au service public.",
+      "evidence": "Precedent suggests these responses will likely be sufficient to stop most cases of flooding, but the fastest to deploy - friction-inducing measures like fees - often trade off equitable access to public services.",
+      "source": {
+        "name": "arXiv (Schmitz, Hammond, Chan)",
+        "url": "https://arxiv.org/abs/2608.16603",
+        "date": "2026-08-19"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui a renoncé à un dossier",
+      "sub": "L'actu IA, en clair, avec les sources."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+      "accessed": "2026-09-11"
+    },
+    {
+      "name": "arXiv",
+      "url": "https://arxiv.org/abs/2608.16603",
+      "accessed": "2026-09-11"
+    },
+    {
+      "name": "Chris Schmitz",
+      "url": "https://chrisschmitz.ai/flooding",
+      "accessed": "2026-09-11"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Une IA remplit le dossier que tu avais lâché",
+    "beats": [
+      {
+        "script": "Tu as déjà laissé tomber un dossier parce que c'était trop compliqué. Une réclamation, une aide, un recours. Aujourd'hui, une IA le remplit pour toi, et les guichets publics prennent l'eau.",
+        "visual": {
+          "type": "photo",
+          "query": "woman using smartphone indoors",
+          "alt": "Une femme assise à une table de cuisine, son téléphone à la main",
+          "file": "media/2026-09-11-services-publics-satures/photo_0.jpg",
+          "credit": "epSos.de · CC BY"
+        }
+      },
+      {
+        "script": "Au Royaume-Uni, les plaintes au médiateur du logement ont plus que doublé depuis l'arrivée de ChatGPT. 2 600 en 2022, plus de 7 000 l'an dernier.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+          "file": "media/2026-09-11-services-publics-satures/shot_tc_crop.png"
+        }
+      },
+      {
+        "script": "Aux États-Unis, l'agence qui protège les consommateurs a vu ses plaintes multipliées par 5 sur la même période. Même bond au Brésil et en Allemagne.",
+        "visual": {
+          "type": "card",
+          "value": "x 5",
+          "label": "les plaintes à l'agence américaine des consommateurs"
+        }
+      },
+      {
+        "script": "Trois chercheurs ont rassemblé 84 cas possibles, dans 11 juridictions différentes. Ils appellent ça l'inondation par les agents, et ils pensent que ça se produit déjà largement aujourd'hui.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://arxiv.org/abs/2608.16603",
+          "file": "media/2026-09-11-services-publics-satures/shot_arxiv.png"
+        }
+      },
+      {
+        "script": "Et là, ça se complique. L'étude ne dit pas que l'IA est la cause. Mais dans la plupart des cas, la courbe était plate avant 2022, puis elle grimpe de plus en plus vite.",
+        "visual": {
+          "type": "photo",
+          "query": "office window blinds city",
+          "alt": "Des rangées de boîtes postales métalliques, l'une d'elles ouverte",
+          "file": "media/2026-09-11-services-publics-satures/photo_1.jpg",
+          "credit": "Robert Ashworth · CC BY"
+        }
+      },
+      {
+        "script": "Sauf que ce ne sont pas des faux dossiers. Selon le chercheur, la grande majorité de ces gens réclament une chose à laquelle ils ont droit. Ils renonçaient avant, parce que c'était décourageant.",
+        "visual": {
+          "type": "card",
+          "value": "Pas du spam",
+          "label": "la plupart réclament une chose à laquelle ils ont droit"
+        }
+      },
+      {
+        "script": "Et la parade la plus rapide pour les administrations, c'est d'ajouter des frais. Ce qui sacrifie l'égalité d'accès, donc écarte pile ceux qui en ont le plus besoin. Abonne-toi pour l'actu IA de demain.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://chrisschmitz.ai/flooding",
+          "file": "media/2026-09-11-services-publics-satures/shot_chrisschmitz.png"
+        }
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-10T19:49:51.752Z",
+  "at": "2026-09-11T06:47:53.638Z",
   "n": 89,
   "nSettled": 83,
   "medianViews": 173,
@@ -573,6 +573,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-09-navier-stokes-un-million",
+      "at": "2026-09-09T17:02:31.419Z",
+      "hourUtc": 17,
+      "views": 481,
+      "reach": 416,
+      "avgWatchS": 11.1,
+      "retentionPct": 19,
+      "likes": 4,
+      "comments": 1,
+      "saved": 3,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA d'OpenAI dit avoir résolu un problème de maths à un million de dollars. Le mathématicien qui était dessus l'accuse de l'avoir doublé.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-16-livres-ia-amazon",
       "at": "2026-08-16T10:59:40.165Z",
       "hourUtc": 10,
@@ -588,23 +605,6 @@
       "themes": [],
       "sendTest": "Un livre vendu sur Amazon a rapporté 643 000 dollars. Une IA en a écrit une bonne partie, et rien ne te le disait.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-09-navier-stokes-un-million",
-      "at": "2026-09-09T17:02:31.419Z",
-      "hourUtc": 17,
-      "views": 471,
-      "reach": 406,
-      "avgWatchS": 11.3,
-      "retentionPct": 19,
-      "likes": 4,
-      "comments": 1,
-      "saved": 3,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une IA d'OpenAI dit avoir résolu un problème de maths à un million de dollars. Le mathématicien qui était dessus l'accuse de l'avoir doublé.",
-      "settled": false
     },
     {
       "slug": "2026-09-02-astra-failles-inconnues",
@@ -1692,6 +1692,40 @@
       "settled": true
     },
     {
+      "slug": "2026-09-10-montre-qui-resume",
+      "at": "2026-09-10T16:53:09.719Z",
+      "hourUtc": 16,
+      "views": 90,
+      "reach": 90,
+      "avgWatchS": 3.9,
+      "retentionPct": 7,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-10-voiture-sans-chauffeur",
+      "at": "2026-09-10T19:47:11.997Z",
+      "hourUtc": 19,
+      "views": 86,
+      "reach": 81,
+      "avgWatchS": 3.6,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que nous. Sauf qu'un accident humain sur deux n'est jamais déclaré.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-06-astra-agi-mesures",
       "at": "2026-09-06T16:47:44.756Z",
       "hourUtc": 16,
@@ -1727,23 +1761,6 @@
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-10-montre-qui-resume",
-      "at": "2026-09-10T16:53:09.719Z",
-      "hourUtc": 16,
-      "views": 55,
-      "reach": 50,
-      "avgWatchS": 3,
-      "retentionPct": 5,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
-      "settled": false
     },
     {
       "slug": "2026-09-07-psychose-associee-ia",
@@ -1795,23 +1812,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-10-voiture-sans-chauffeur",
-      "at": "2026-09-10T19:47:11.997Z",
-      "hourUtc": 19,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 0,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que nous. Sauf qu'un accident humain sur deux n'est jamais déclaré.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
