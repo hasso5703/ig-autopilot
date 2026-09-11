@@ -2061,6 +2061,20 @@ ENTRIES:
   disait 1600x1067 la ou le thumb /1280px- sert du 1280x853, donc calcule ton
   crop 9:16 sur ffprobe, pas sur le champ annonce (un crop=480:854 sur une image
   de 853 px de haut meurt sur "Invalid too big or non positive size").
+  Ajout 11/09 (16h30), CE QU'UNE PHOTO EPINGLEE CONTOURNE, verifie dans le code
+  (reel2.mjs, branche `type === "photo"`): quand le beat porte `file`, le moteur
+  ne passe PAS par `acquireOne`. Donc pas de filtre de pertinence, pas de filtre
+  fond-blanc, et surtout pas la ligne "LOOK at it before publishing" ni la ligne
+  de journal `photo N acquired`. Le gate, lui, ne regarde jamais un fichier: il
+  lit des mots. Une photo epinglee par un scout n'a donc ete vue par PERSONNE ni
+  par aucun controle entre le moment ou il l'epingle et le moment ou elle passe
+  a l'antenne. Mesure ce soir: le beat 0 banque le matin etait une femme au
+  telephone dans un SHOWROOM IKEA (etiquettes "$69", "POANG", "Contact staff"
+  lisibles dans le cadre), gate vert, zero avertissement. Consequence pour un
+  run de publication: `ls media/<slug>/` puis REGARDER chaque photo epinglee
+  avant le build, pas seulement les frames apres. Remplacee ici en 8 minutes par
+  un vrai formulaire rempli au stylo (Commons "Becoming a Foster Carer",
+  perpetual.fostering, CC BY 2.0), credit relu via extmetadata comme au 04/09.
 - 2026-07-29 · Une rétention >100% dans watch.mjs n'est pas un bug d'unité:
   ig_reels_avg_watch_time compte les boucles (mesuré 160386 ms de watch moyen
   sur un Reel de 51 s, total exactement 2x la moyenne, portée 0). Sous ~50 de
