@@ -5262,3 +5262,14 @@ ENTRIES:
   refresh-token.mjs (entree 09/09). Les deux specs banques ce matin sont donc
   sans `veo` ni `image`, 7 beats chacun, et TOUTES leurs surfaces sont deja sur
   le disque et epinglees: le run de 10h30 n'a ni capture ni acquisition a faire.
+  Ajout 11/09 (10h30): VINGT-NEUVIEME mesure morte (401, meme cle 53 car AQ.A),
+  dernier achat toujours 01/09 16h54, soit QUATORZE jours pleins. ET LE CHIFFRE
+  QUI MESURE CE QUE VAUT UN SCOUT QUI EPINGLE TOUT: demarrage 10h38, Reel
+  PUBLIE a 10h56, soit DIX-HUIT MINUTES bout en bout (npm install + ffmpeg +
+  npm test + guard + orphelins + re-gate en ligne + build muet + 9 frames +
+  2 landings + publication), zero achat. Le build muet lui-meme prend ~2 min
+  sur 7 beats deja epingles. Quand un scout a fait son travail, un creneau de
+  publication n'a aucune excuse pour rater l'heure de pointe. Confirme aussi la
+  regle du 10/09 sur le vert-sur-vert techcrunch: le recu `crop=1290:2650:0:145`
+  au BEAT 1 rend titre entier, signature "Tim Fernholz" et "September 10, 2026"
+  parfaitement lisibles sur l'aplat vert, karaoke degage. Proof: run 10h30 11/09.
