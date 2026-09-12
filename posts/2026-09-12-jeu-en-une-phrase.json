@@ -11,7 +11,7 @@
       "quote": "It debuted Build in alpha this summer, open only to residents of New Zealand. In the months since, thousands of people have used it to 'create' 9,000 games, Roblox said. 71% of those people, it added, had never before used Roblox Studio to develop a game."
     }
   ],
-  "caption": "9 000 jeux vidéo ont été fabriqués sur Roblox en tapant une phrase, et 71% de leurs auteurs n'avaient jamais créé de jeu.\n\nRoblox a présenté à sa conférence annuelle Build, un onglet de son application qui laisse n'importe qui créer un jeu en le décrivant. L'alpha, jusqu'ici réservée à la Nouvelle-Zélande, s'ouvre à la Serbie et à Singapour.\n\nLe détail qui n'est pas dans la vidéo. Les jeux ne resteront pas dans l'application : les créateurs pourront les publier en applications séparées sur mobile, PC et consoles, et d'ici la fin de l'année un simple lien ouvrira une partie dans le navigateur, sans installation. Le trimestre dernier, les joueurs ont passé 29 milliards d'heures sur la plateforme, dans plus de 180 pays.\n\nL'argent. Roblox a versé plus de 5 milliards de dollars à ses créateurs depuis le lancement de DevEx en 2013, dont environ 1.7 milliard sur les douze derniers mois. Un portefeuille qui verse les gains à la journée arrive cette année, pour les créateurs américains indépendants de 18 ans et plus, et une carte Roblox à partir de 2027.\n\nLe point qui dérange. Le classement des jeux est désormais sensible à l'âge : aux plus jeunes, des formats courts qu'ils quittent vite, aux plus âgés, des jeux où l'on revient.\n\nFabriquer un jeu en une phrase, progrès ou inondation ?\n\nabout.roblox.com · tubefilter.com · techcrunch.com · gamesbeat.com\n\n#IA #IntelligenceArtificielle #ActuIA #Roblox #JeuxVideo\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "9 000 jeux vidéo fabriqués sur Roblox en tapant une phrase, et 71% de leurs auteurs n'avaient jamais ouvert son logiciel.\n\nRoblox a présenté à sa conférence annuelle Build, un onglet de son application qui laisse n'importe qui créer un jeu en le décrivant. L'alpha, jusqu'ici réservée à la Nouvelle-Zélande, s'ouvre à la Serbie et à Singapour.\n\nLe détail qui n'est pas dans la vidéo. Les jeux ne resteront pas dans l'application : les créateurs pourront les publier en applications séparées sur mobile, PC et consoles, et d'ici la fin de l'année un simple lien ouvrira une partie dans le navigateur, sans installation. Le trimestre dernier, les joueurs ont passé 29 milliards d'heures sur la plateforme, dans plus de 180 pays.\n\nL'argent. Roblox a versé plus de 5 milliards de dollars à ses créateurs depuis le lancement de DevEx en 2013, dont environ 1.7 milliard sur les douze derniers mois. Un portefeuille qui verse les gains à la journée arrive cette année, pour les créateurs américains indépendants de 18 ans et plus, et une carte Roblox à partir de 2027.\n\nLe point qui dérange. Le classement des jeux est désormais sensible à l'âge : aux plus jeunes, des formats courts qu'ils quittent vite, aux plus âgés, des jeux où l'on revient.\n\nFabriquer un jeu en une phrase, progrès ou inondation ?\n\nabout.roblox.com · tubefilter.com · techcrunch.com · gamesbeat.com\n\n#IA #IntelligenceArtificielle #ActuIA #Roblox #JeuxVideo\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "quote": "Since the alpha launch in New Zealand, creators have used Build to publish approximately 9,000 games",
@@ -57,7 +57,7 @@
       "headline": "*9 000* jeux vidéo fabriqués en tapant une phrase",
       "hero": {
         "value": "71%",
-        "label": "des auteurs n'avaient jamais créé de jeu"
+        "label": "des auteurs n'avaient jamais utilisé Roblox Studio"
       },
       "swipe": "Les chiffres sont dans les sources."
     },
@@ -180,7 +180,7 @@
       "accessed": "2026-09-12"
     }
   ],
-  "sendTest": "9 000 jeux vidéo ont été fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais créé de jeu.",
+  "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
   "reel2": {
     "mood": "tension",
     "lang": "fr",
@@ -195,7 +195,7 @@
         }
       },
       {
-        "script": "Roblox dit que 9 000 jeux sont déjà sortis comme ça. Et que 71% de leurs auteurs n'avaient jamais créé de jeu.",
+        "script": "Roblox dit que 9 000 jeux sont déjà sortis comme ça. Et que 71% de leurs auteurs n'avaient jamais ouvert son logiciel de création.",
         "visual": {
           "type": "card",
           "value": "71%",
