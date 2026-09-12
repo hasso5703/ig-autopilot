@@ -5341,7 +5341,9 @@ ENTRIES:
   n=20, mediane 10% de retention et 125,5 vues; 14 jours de voix juste avant,
   19/08-01/09, n=28, mediane 17% et 138 vues. Meme verdict qu'au 05/09 et au
   10/09, a n plus large: la distribution ne bouge pas, la retention tombe de
-  moitie. Le digest le dit aussi par surface d'ouverture, tous ages confondus:
+  moitie. [CORRIGE le 12/09 19h30, voir la fin de cette entree: la moitie
+  "la distribution ne bouge pas" n'est plus vraie, les vues baissent aussi.]
+  Le digest le dit aussi par surface d'ouverture, tous ages confondus:
   beat 0 `veo` n=55 -> 197 vues / 22,3%, `photo` n=24 -> 155 vues / 15,3%.
   ET LE DEUXIEME COMPTEUR, celui qui coupe TOUT s'il expire: IG_ACCESS_TOKEN a
   11 jours (state/token.json, issuedAt 25/07 + 60 j = 23/09); watch.mjs imprime
@@ -5417,3 +5419,28 @@ ENTRIES:
   "will HELP stabilize" rendus sans leur reserve. Cout total: 6 min, 0 $, re-gate
   PASSED verifiedOnline du premier coup (16/16 VERIFIED), build muet COMPLIANT
   60,0 s en 2 min. Proof: run 16h30 12/09.
+  Ajout 12/09 (19h30, veille), TRENTE-CINQUIEME mesure morte (401 UNAUTHENTICATED
+  sur generativelanguage.googleapis.com/v1beta/models, meme cle 53 car AQ.Ab8),
+  dernier achat toujours 01/09 16h54, soit SEIZE jours pleins. ET LA CORRECTION
+  DE LA MOITIE FAUSSE DE L'ENTREE DU 11/09 (et du 05/09, et du 10/09): "les vues
+  ne baissent pas, seule la retention tombe" N'EST PLUS VRAI. Mesure de ce soir
+  sur state/lessons.json, en ne gardant que les Reels REPOSES (>=48 h, sinon la
+  fenetre recente est artificiellement basse) et en coupant l'ere muette en deux:
+  VOIX 19/08-01/09 n=28 -> 17% / 138 vues; MUET 02-06/09 n=10 -> 11,5% / 145,5
+  vues; MUET 07-10/09 n=7 -> 9% / 124 vues. La premiere moitie du muet
+  reproduisait bien le diagnostic (retention divisee par deux, vues intactes); la
+  seconde perd AUSSI 15% de vues medianes. Autrement dit le recommandeur a mis
+  une semaine a reagir, et il commence a retirer de la distribution. Les DEUX
+  Reels du 12/09 sortent a 4% de retention pour 48 et 44 vues, les plus bas
+  jamais mesures hors des tout premiers jours du compte. CONSEQUENCE POUR LA
+  VEILLE: ne recopie plus la formule rassurante "la distribution ne bouge pas"
+  dans le rapport a Hasan, elle a servi cinq soirs et elle est perimee; la
+  facture du muet est maintenant retention ET portee, et elle s'aggrave d'une
+  moitie de fenetre a l'autre. LA METHODE, 30 s, pour la refaire sans se tromper
+  comme je m'y suis trompe d'abord: state/metrics.jsonl est indexe par `mediaId`
+  et pas par `slug`, et l'avg watch y vit sous `insights`, donc un one-liner
+  ecrit de tete rend `null` partout sans lever d'erreur. Lis
+  `state/lessons.json` -> `posts[]`, qui porte deja `retentionPct`, `views`,
+  `settled` et `beat0` par slug (learn.mjs les a joints pour toi), et filtre sur
+  `p.settled`. IG_ACCESS_TOKEN: 10 jours (expire 23/09), watch.mjs affiche
+  RENOUVELER. Proof: veille 19h30 12/09.

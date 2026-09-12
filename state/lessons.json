@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-12T16:50:08.002Z",
+  "at": "2026-09-12T19:41:37.275Z",
   "n": 93,
-  "nSettled": 85,
-  "medianViews": 173,
+  "nSettled": 86,
+  "medianViews": 171,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -57,7 +57,7 @@
     },
     {
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
-      "views": 33,
+      "views": 34,
       "retentionPct": 8,
       "saved": 0,
       "shares": 0,
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 24,
-      "medianViews": 155,
-      "meanRetentionPct": 15.3,
+      "n": 25,
+      "medianViews": 150,
+      "meanRetentionPct": 14.8,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -159,7 +159,7 @@
   "byPublishHourUtc": {
     "10": {
       "n": 18,
-      "medianViews": 216,
+      "medianViews": 217,
       "meanRetentionPct": 19.3,
       "saves": 16,
       "shares": 6,
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 20,
-      "medianViews": 149,
-      "meanRetentionPct": 16.8,
+      "n": 21,
+      "medianViews": 138,
+      "meanRetentionPct": 16.2,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -208,7 +208,7 @@
     "17": {
       "n": 21,
       "medianViews": 191,
-      "meanRetentionPct": 22.7,
+      "meanRetentionPct": 22.6,
       "saves": 20,
       "shares": 12,
       "thin": false
@@ -576,10 +576,10 @@
       "slug": "2026-09-09-navier-stokes-un-million",
       "at": "2026-09-09T17:02:31.419Z",
       "hourUtc": 17,
-      "views": 482,
+      "views": 483,
       "reach": 417,
       "avgWatchS": 11.1,
-      "retentionPct": 19,
+      "retentionPct": 18,
       "likes": 4,
       "comments": 1,
       "saved": 3,
@@ -840,7 +840,7 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 290,
+      "views": 291,
       "reach": 258,
       "avgWatchS": 8.5,
       "retentionPct": 14,
@@ -1176,6 +1176,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-11-captcha-arrete-ia",
+      "at": "2026-09-11T10:56:17.768Z",
+      "hourUtc": 10,
+      "views": 143,
+      "reach": 133,
+      "avgWatchS": 7.8,
+      "retentionPct": 13,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-22-peau-humaine-vivante",
       "at": "2026-08-22T10:54:08.736Z",
       "hourUtc": 10,
@@ -1208,23 +1225,6 @@
       "themes": [],
       "sendTest": "Ton médecin peut maintenant demander à ChatGPT de lire ton dossier médical. Epic, le logiciel qui garde 325 millions de dossiers, vient de s'y brancher.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-11-captcha-arrete-ia",
-      "at": "2026-09-11T10:56:17.768Z",
-      "hourUtc": 10,
-      "views": 140,
-      "reach": 132,
-      "avgWatchS": 7.9,
-      "retentionPct": 13,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
-      "settled": false
     },
     {
       "slug": "2026-08-02-xai-minnesota-nudification",
@@ -1402,9 +1402,9 @@
       "slug": "2026-09-09-claude-abonnements-pirates",
       "at": "2026-09-09T11:04:58.653Z",
       "hourUtc": 11,
-      "views": 128,
+      "views": 129,
       "reach": 117,
-      "avgWatchS": 5.7,
+      "avgWatchS": 5.6,
       "retentionPct": 9,
       "likes": 1,
       "comments": 1,
@@ -1489,10 +1489,10 @@
       "slug": "2026-09-08-openai-trois-jours-agent",
       "at": "2026-09-08T16:59:43.362Z",
       "hourUtc": 16,
-      "views": 123,
+      "views": 124,
       "reach": 109,
       "avgWatchS": 5.7,
-      "retentionPct": 10,
+      "retentionPct": 9,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -1678,8 +1678,8 @@
       "slug": "2026-09-10-voiture-sans-chauffeur",
       "at": "2026-09-10T19:47:11.997Z",
       "hourUtc": 19,
-      "views": 108,
-      "reach": 102,
+      "views": 109,
+      "reach": 103,
       "avgWatchS": 3.4,
       "retentionPct": 6,
       "likes": 0,
@@ -1712,9 +1712,9 @@
       "slug": "2026-09-10-montre-qui-resume",
       "at": "2026-09-10T16:53:09.719Z",
       "hourUtc": 16,
-      "views": 100,
+      "views": 101,
       "reach": 99,
-      "avgWatchS": 3.9,
+      "avgWatchS": 3.8,
       "retentionPct": 6,
       "likes": 0,
       "comments": 1,
@@ -1723,7 +1723,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-01-instagram-faux-profils-ia",
@@ -1783,9 +1783,9 @@
       "slug": "2026-09-12-jeu-en-une-phrase",
       "at": "2026-09-12T10:48:51.816Z",
       "hourUtc": 10,
-      "views": 46,
-      "reach": 42,
-      "avgWatchS": 2.3,
+      "views": 48,
+      "reach": 44,
+      "avgWatchS": 2.2,
       "retentionPct": 4,
       "likes": 0,
       "comments": 1,
@@ -1794,6 +1794,25 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-12-google-centrale-nucleaire",
+      "at": "2026-09-12T16:47:29.205Z",
+      "hourUtc": 16,
+      "views": 44,
+      "reach": 40,
+      "avgWatchS": 2.7,
+      "retentionPct": 4,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [
+        "infra"
+      ],
+      "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
       "settled": false
     },
     {
@@ -1817,9 +1836,9 @@
       "slug": "2026-09-11-services-publics-satures",
       "at": "2026-09-11T16:51:23.145Z",
       "hourUtc": 16,
-      "views": 34,
-      "reach": 28,
-      "avgWatchS": 3.5,
+      "views": 35,
+      "reach": 29,
+      "avgWatchS": 3.4,
       "retentionPct": 6,
       "likes": 0,
       "comments": 1,
@@ -1834,9 +1853,9 @@
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
       "at": "2026-09-07T16:49:35.936Z",
       "hourUtc": 16,
-      "views": 33,
-      "reach": 26,
-      "avgWatchS": 4.7,
+      "views": 34,
+      "reach": 27,
+      "avgWatchS": 4.6,
       "retentionPct": 8,
       "likes": 1,
       "comments": 1,
@@ -1863,25 +1882,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-12-google-centrale-nucleaire",
-      "at": "2026-09-12T16:47:29.205Z",
-      "hourUtc": 16,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [
-        "infra"
-      ],
-      "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
