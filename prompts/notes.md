@@ -5363,3 +5363,34 @@ ENTRIES:
   matin sont donc sans `veo` ni `image`, 8 beats chacun, 3 recus + 2 cartes +
   3 photos, toutes les surfaces deja sur le disque et epinglees: les runs de 10h30
   et 16h30 n'ont ni capture ni acquisition a faire.
+  Ajout 12/09 (10h30): TRENTE-TROISIEME mesure morte (401, meme cle 53 car AQ.A),
+  dernier achat toujours 01/09 16h54, soit SEIZE jours. ET LE PIEGE DE PERIMETRE
+  DU 07/09 REVENU EN PIRE, parce qu'il etait DANS LE SPEC BANQUE DES LE DEPART et
+  qu'il vivait a QUATRE endroits a la fois. La source Roblox ecrit "71% had never
+  used Roblox Studio before"; le spec disait "71% n'avaient jamais cree de jeu"
+  dans le `script` du beat 1, dans `hero.label`, dans `sendTest` ET dans la
+  PREMIERE LIGNE DE LEGENDE. Ce n'est pas la meme affirmation: n'avoir jamais
+  ouvert Roblox Studio n'est pas n'avoir jamais fait de jeu (Scratch, Unity,
+  Godot existent), et le gate ne peut rien voir puisque le chiffre 71 est bien
+  dans l'evidence. Seul le `label` de la carte du meme beat etait juste, donc la
+  frame aurait affiche la version exacte SOUS une ligne de karaoke qui disait la
+  version fausse. DEUX CONSEQUENCES A GARDER. (1) Le grep du 07/09 ne se fait pas
+  seulement APRES une correction: sur tout spec herite d'un autre run, grep la
+  phrase de chaque chiffre AVANT de builder, et compare-la mot a mot a
+  l'`evidence` de sa diapo. La commande qui a trouve les quatre:
+  `grep -n "<le bout de phrase>" posts/<slug>.json`. (2) LA CORRECTION DE LA
+  LEGENDE EST COUPLEE A UNE LONGUEUR: la 1re ligne est bornee a 40-125 caracteres
+  (validate.mjs), donc une formulation exacte est souvent plus longue que la
+  fausse et fait ECHOUER le gate ("n'avaient jamais ouvert son logiciel de
+  creation" = 129 car). Compte la ligne dans node avant de re-gater, et raccourcis
+  ailleurs ("jeux video fabriques" au lieu de "jeux video ont ete fabriques")
+  plutot que de reprendre le raccourci faux. Cout total: 4 min, 0 $, re-gate vert
+  du premier coup, build muet COMPLIANT 60,0 s en ~2 min.
+  Mesure de vitesse du jour, avec un scout qui avait tout epingle: demarrage
+  10h38, Reel PUBLIE a 10h48, soit DIX MINUTES bout en bout, achats compris (0 $).
+  Confirme aussi deux recus: about.roblox.com/newsroom se capture propre du
+  premier coup (masthead ROBLOX, titre entier, "By David Baszucki, Founder and
+  CEO", "Published Sep 11, 2026") et son fond NOIR en fait un bon beat 0 en muet
+  (le karaoke blanc/jaune y est le plus lisible du Reel, meme famille que le fond
+  noir du 08/09); gamesbeat.com rend titre entier, signature et date sans
+  recadrage. Proof: run 10h30 12/09.
