@@ -1,0 +1,261 @@
+{
+  "slug": "2026-09-12-jeu-en-une-phrase",
+  "centralClaim": "Roblox's new Build tab has been used to publish approximately 9,000 games written as prompts.",
+  "corroboration": [
+    {
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+      "quote": "Since the alpha launch in New Zealand, creators have used Build to publish approximately 9,000 games"
+    },
+    {
+      "url": "https://www.tubefilter.com/2026/09/11/roblox-developers-conference-2026-game-apps-creator-payouts-roblox-wallet-roblox-card/",
+      "quote": "It debuted Build in alpha this summer, open only to residents of New Zealand. In the months since, thousands of people have used it to 'create' 9,000 games, Roblox said. 71% of those people, it added, had never before used Roblox Studio to develop a game."
+    }
+  ],
+  "caption": "9 000 jeux vidéo ont été fabriqués sur Roblox en tapant une phrase, et 71% de leurs auteurs n'avaient jamais créé de jeu.\n\nRoblox a présenté à sa conférence annuelle Build, un onglet de son application qui laisse n'importe qui créer un jeu en le décrivant. L'alpha, jusqu'ici réservée à la Nouvelle-Zélande, s'ouvre à la Serbie et à Singapour.\n\nLe détail qui n'est pas dans la vidéo. Les jeux ne resteront pas dans l'application : les créateurs pourront les publier en applications séparées sur mobile, PC et consoles, et d'ici la fin de l'année un simple lien ouvrira une partie dans le navigateur, sans installation. Le trimestre dernier, les joueurs ont passé 29 milliards d'heures sur la plateforme, dans plus de 180 pays.\n\nL'argent. Roblox a versé plus de 5 milliards de dollars à ses créateurs depuis le lancement de DevEx en 2013, dont environ 1.7 milliard sur les douze derniers mois. Un portefeuille qui verse les gains à la journée arrive cette année, pour les créateurs américains indépendants de 18 ans et plus, et une carte Roblox à partir de 2027.\n\nLe point qui dérange. Le classement des jeux est désormais sensible à l'âge : aux plus jeunes, des formats courts qu'ils quittent vite, aux plus âgés, des jeux où l'on revient.\n\nFabriquer un jeu en une phrase, progrès ou inondation ?\n\nabout.roblox.com · tubefilter.com · techcrunch.com · gamesbeat.com\n\n#IA #IntelligenceArtificielle #ActuIA #Roblox #JeuxVideo\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Since the alpha launch in New Zealand, creators have used Build to publish approximately 9,000 games",
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play"
+    },
+    {
+      "quote": "So far, of the thousands of users who've created a game with Build, 71% had never used Roblox Studio before",
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play"
+    },
+    {
+      "quote": "Build's public alpha is now expanding to Serbia and Singapore",
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play"
+    },
+    {
+      "quote": "The company said creators will soon be able to make their games available as separate apps on mobile, PC, and consoles, with Roblox being the game engine behind that. By year-end, players will be able to join a game in-browser through a link.",
+      "url": "https://techcrunch.com/2026/09/11/roblox-is-making-it-easier-to-build-games-with-ai-and-play-them-outside-roblox/"
+    },
+    {
+      "quote": "Last quarter alone, players spent 29 billion hours on Roblox, across more than 180 countries.",
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play"
+    },
+    {
+      "quote": "Since then, Roblox has paid out over $5 billion to its creator community through DevEx, and roughly $1.7 billion in the past 12 months, according to",
+      "url": "https://gamesbeat.com/roblox-unveils-creator-wallets-and-physical-cards-rdc-2026/"
+    },
+    {
+      "quote": "Since launching DevEx in 2013, creators have earned more than $5 billion on Roblox. In the past 12 months, creators have earned approximately $1.7 billion",
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play"
+    },
+    {
+      "quote": "Wallet rolls out later this year to eligible U.S.-based independent creators 18 and older, with international expansion planned for the year ahead.",
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play"
+    },
+    {
+      "quote": "Roblox Card connects to Roblox Wallet, enabling creators to spend their available balance directly, anywhere it's accepted. We plan to begin rolling out Roblox Card in 2027.",
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Roblox · conférence des créateurs",
+      "headline": "*9 000* jeux vidéo fabriqués en tapant une phrase",
+      "hero": {
+        "value": "71%",
+        "label": "des auteurs n'avaient jamais créé de jeu"
+      },
+      "swipe": "Les chiffres sont dans les sources."
+    },
+    {
+      "type": "stat",
+      "figure": "9 000",
+      "unit": "jeux publiés avec Build",
+      "body": "Depuis le lancement de l'alpha en Nouvelle-Zélande, les créateurs ont publié **environ 9 000 jeux** avec Build.",
+      "evidence": "Since the alpha launch in New Zealand, creators have used Build to publish approximately 9,000 games",
+      "source": {
+        "name": "Roblox",
+        "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+        "date": "2026-09-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Qui les fabrique",
+      "body": "Sur les milliers de personnes qui ont créé un jeu avec Build, 71% n'avaient jamais utilisé Roblox Studio.",
+      "evidence": "So far, of the thousands of users who've created a game with Build, 71% had never used Roblox Studio before",
+      "source": {
+        "name": "Roblox",
+        "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+        "date": "2026-09-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où ça s'ouvre",
+      "body": "L'alpha publique s'étend maintenant à la Serbie et à Singapour.",
+      "evidence": "Build's public alpha is now expanding to Serbia and Singapore",
+      "source": {
+        "name": "Roblox",
+        "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+        "date": "2026-09-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les jeux sortent de Roblox",
+      "body": "Les créateurs pourront publier leurs jeux en applications séparées sur mobile, PC et consoles, et d'ici la fin de l'année on rejoindra une partie depuis un lien, dans le navigateur.",
+      "evidence": "The company said creators will soon be able to make their games available as separate apps on mobile, PC, and consoles, with Roblox being the game engine behind that. By year-end, players will be able to join a game in-browser through a link.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/11/roblox-is-making-it-easier-to-build-games-with-ai-and-play-them-outside-roblox/",
+        "date": "2026-09-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'échelle",
+      "body": "Le trimestre dernier, les joueurs ont passé 29 milliards d'heures sur Roblox, dans plus de 180 pays.",
+      "evidence": "Last quarter alone, players spent 29 billion hours on Roblox, across more than 180 countries.",
+      "source": {
+        "name": "Roblox",
+        "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+        "date": "2026-09-11"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que ça rapporte",
+      "claim": "Les créateurs ont gagné environ 1.7 milliard de dollars sur les douze derniers mois, et plus de 5 milliards depuis 2013.",
+      "caveatLabel": "Ce que le classement fait",
+      "caveat": "Le système de recommandation trie par âge : aux plus jeunes des jeux courts qu'ils quittent vite, aux plus âgés des jeux où l'on revient.",
+      "evidence": "Our discovery ranking system is increasingly age-aware, because Roblox is really many different businesses in one. Younger players tend to engage best with shorter-form games they discover, enjoy, and move on from. Older players are drawn to deeper games they return to over time.",
+      "source": {
+        "name": "Roblox",
+        "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+        "date": "2026-09-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'argent des créateurs",
+      "body": "Depuis le lancement de DevEx en 2013, les créateurs ont gagné plus de 5 milliards de dollars sur Roblox, dont environ 1.7 milliard sur les douze derniers mois.",
+      "evidence": "Since launching DevEx in 2013, creators have earned more than $5 billion on Roblox. In the past 12 months, creators have earned approximately $1.7 billion",
+      "source": {
+        "name": "Roblox",
+        "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+        "date": "2026-09-11"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La suite",
+      "body": "La carte Roblox, reliée au portefeuille des créateurs, doit commencer à être déployée en 2027.",
+      "evidence": "Roblox Card connects to Roblox Wallet, enabling creators to spend their available balance directly, anywhere it's accepted. We plan to begin rolling out Roblox Card in 2027.",
+      "source": {
+        "name": "Roblox",
+        "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+        "date": "2026-09-11"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* dont les enfants jouent à Roblox",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Roblox",
+      "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+      "accessed": "2026-09-12"
+    },
+    {
+      "name": "Tubefilter",
+      "url": "https://www.tubefilter.com/2026/09/11/roblox-developers-conference-2026-game-apps-creator-payouts-roblox-wallet-roblox-card/",
+      "accessed": "2026-09-12"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/11/roblox-is-making-it-easier-to-build-games-with-ai-and-play-them-outside-roblox/",
+      "accessed": "2026-09-12"
+    },
+    {
+      "name": "GamesBeat",
+      "url": "https://gamesbeat.com/roblox-unveils-creator-wallets-and-physical-cards-rdc-2026/",
+      "accessed": "2026-09-12"
+    }
+  ],
+  "sendTest": "9 000 jeux vidéo ont été fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais créé de jeu.",
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "9 000 jeux fabriqués en tapant une phrase",
+    "beats": [
+      {
+        "script": "Fabriquer un jeu vidéo, c'était un métier. Maintenant ça tient dans une phrase. Pas codé, pas dessiné : écrit, comme on écrit un message.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play",
+          "file": "media/2026-09-12-jeu-en-une-phrase/shot_0.png"
+        }
+      },
+      {
+        "script": "Roblox dit que 9 000 jeux sont déjà sortis comme ça. Et que 71% de leurs auteurs n'avaient jamais créé de jeu.",
+        "visual": {
+          "type": "card",
+          "value": "71%",
+          "label": "n'avaient jamais ouvert l'outil de création de Roblox"
+        }
+      },
+      {
+        "script": "Avant, il fallait ouvrir Roblox Studio, le logiciel de création. Maintenant c'est un onglet dans l'appli, il s'appelle Build, et tu décris ton jeu.",
+        "visual": {
+          "type": "photo",
+          "query": "computer screen dark room",
+          "alt": "Un ordinateur portable allumé dans une pièce sombre, du code à l'écran",
+          "file": "media/2026-09-12-jeu-en-une-phrase/photo_2.jpg",
+          "credit": "SACHINRAJ CP · CC0"
+        }
+      },
+      {
+        "script": "Il le fabrique, et tu le publies depuis ton téléphone. L'essai était réservé à la Nouvelle-Zélande, il s'ouvre à la Serbie et à Singapour.",
+        "visual": {
+          "type": "photo",
+          "query": "smartphone in hand night",
+          "alt": "Une main tient un téléphone allumé",
+          "file": "media/2026-09-12-jeu-en-une-phrase/photo_3.jpg",
+          "credit": "Omar Prestwich · CC0"
+        }
+      },
+      {
+        "script": "Et ces jeux ne vont plus rester enfermés dans Roblox. D'ici la fin de l'année, un simple lien ouvrira une partie dans ton navigateur, sans rien installer.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/11/roblox-is-making-it-easier-to-build-games-with-ai-and-play-them-outside-roblox/",
+          "file": "media/2026-09-12-jeu-en-une-phrase/shot_4.png"
+        }
+      },
+      {
+        "script": "Le trimestre dernier, les joueurs ont passé 29 milliards d'heures sur Roblox, dans plus de 180 pays. C'est la plateforme où les gamins passent leurs samedis.",
+        "visual": {
+          "type": "card",
+          "value": "29 milliards",
+          "label": "d'heures de jeu sur Roblox le trimestre dernier"
+        }
+      },
+      {
+        "script": "Et l'argent : 1.7 milliard de dollars versés aux créateurs sur douze mois. Un portefeuille payé à la journée, réservé aux Américains majeurs, puis une carte Roblox en 2027.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://gamesbeat.com/roblox-unveils-creator-wallets-and-physical-cards-rdc-2026/",
+          "file": "media/2026-09-12-jeu-en-une-phrase/shot_6.png"
+        }
+      },
+      {
+        "script": "Et voilà ce qui dérange : le classement trie par âge. Aux plus jeunes, des formats courts qu'on quitte vite. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "roblox building san mateo",
+          "alt": "Le siège de Roblox à San Mateo, en Californie",
+          "file": "media/2026-09-12-jeu-en-une-phrase/photo_7.jpg",
+          "credit": "4300streetcar · CC BY 4.0"
+        }
+      }
+    ]
+  }
+}

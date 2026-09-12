@@ -1116,6 +1116,25 @@ ENTRIES:
   corroboration du jour, famille du 09/08: techcrunch et bsky lisent le MEME
   transcript public de 1 022 pages, donc deux domaines verts attestent "deux
   personnes ont lu le document", pas deux enquetes independantes.
+  Ajout 12/09 (06h30): rendent 200 au fetch du gate et se gatent DU PREMIER COUP
+  (0 erreur sur 30 verifications, deux dossiers) world-nuclear-news.org,
+  fortum.com (communique de bourse), insideai.news, about.roblox.com,
+  tubefilter.com, gamesbeat.com et blog.google (re-confirme). Repondent 200 aussi
+  chromeunboxed.com et support.claude.com (NOUVEAU: la page d'aide Claude se lit
+  tres bien, contrairement a help.openai.com qui reste 403 depuis le 16/08).
+  Bloquent au fetch du gate: bbc.com (403, re-confirme), betanews.com (403),
+  windowsreport.com (403, re-confirme le 16/08), ir.roblox.com (403, donc la salle
+  de presse INVESTISSEURS de Roblox est ingatable alors qu'about.roblox.com passe:
+  famille du 403 de racine du 23/08, teste l'URL que tu vas citer),
+  en.softonic.com (412). REFLEXE SUR UN ACCORD ENTRE DEUX ENTREPRISES (energie,
+  rachat, partenariat): le communique de BOURSE de la partie cotee porte, dans UN
+  seul paragraphe, les chiffres que la presse resume - fortum.com donne "22-year",
+  "up to 50%", "approximately 580 people" et "10% of Finland's electricity" d'un
+  bloc. ATTENTION CORROBORATION, famille du 09/08: le primaire de chaque partie
+  plus la presse specialisee qui les lit fait trois domaines verts et DEUX
+  communicants. Ce qui manque est une lecture exterieure; ici elle existe
+  (l'opposition finlandaise) mais elle n'est portee que par insideai.news, qui
+  credite Reuters (injoignable), donc dis-le dans le rapport.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -2926,6 +2945,33 @@ ENTRIES:
   est le signal du 03/09 qu'on ne sait pas qui a pris la photo. Epingle-les avec
   `credit: "rawpixel · CC0"`, qui nomme la provenance et la licence sans inventer
   un auteur. Proof: scout 06h30 11/09.
+  Ajout 12/09 (06h30), LE SITE INDUSTRIEL MONDIALEMENT CONNU QUI N'A AUCUNE PHOTO
+  UTILISABLE, a verifier AVANT d'ecrire un beat photo: sur la centrale de Loviisa,
+  acquireOne rend FAIL sur "loviisa nuclear power plant" ET sur "nuclear power
+  plant finland" (ou il propose Olkiluoto, qui est une AUTRE centrale: faute du
+  mauvais tribunal du 16/08), et searchCommons dit pourquoi en 5 s: les seuls
+  cliches sont "Loviisa nuclear plant" en 650x488 et trois tirages de 1978. Lis les
+  TAILLES que rend searchCommons avant de planifier le beat, puis prends un recu ou
+  une carte. VALEURS SURES telechargees, recadrees 9:16, regardees et epinglees ce
+  matin (donc 0 acquisition pour les deux Reels): "Transmission tower at
+  Niederneuendorfer Allee Spandauer Forst with snow 2023-12-02 01" (Leonhard Lenz,
+  CC0, 1440x964, crop=542:964:449:0, contre-plongee graphique et sombre, karaoke
+  tres lisible); "Architecture Building" (Ashim D'Silva, CC0, stocksnap 1080x720,
+  crop=405:720:490:0, une rue de nuit sous un lampadaire, une silhouette non
+  identifiable); "Lightbulb Illuminated" (Matt Bango, CC0, stocksnap 1080x720,
+  crop=405:720:337:0, ampoule sur fond noir, excellent dernier beat); "Roblox
+  building in San Mateo CA January 2026" (4300streetcar, CC BY 4.0, thumb 1280x853,
+  crop=480:853:420:0, l'enseigne ROBLOX lisible et les panneaux routiers chiffres
+  hors cadre); "Taking night photo on phone (Unsplash)" (Omar Prestwich, CC0, thumb
+  1280x853, crop=480:853:400:0). RAPPEL DE CREDIT, piege du 07/08: le champ creator
+  de stocksnap sort PERCENT-ENCODE de l'API Openverse ("Ashim%20D%u2019Silva"),
+  donc ecris le credit a la main. REQUETES MORTES OU PIEGEES le meme matin:
+  "high voltage substation", "wind turbines field", "power line winter forest",
+  "screen time" (revenue VIDE, 81% de quasi-blanc), "person playing video game",
+  "smartphone game screen", "pixel art video game", "game controller close up";
+  et trois pieges classiques revus en une heure, "battery energy storage container"
+  -> une ICONE de vehicule-vers-reseau, "nuclear reactor control room" -> une salle
+  de 1961, "electricity meter home" -> une vignette de modele 3D sketchfab.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /
@@ -5308,3 +5354,12 @@ ENTRIES:
   pas nos propres commentaires seedes (entree 29/07), donc "aucun commentaire"
   ne veut pas dire "le seed a echoue": verifie les seeds dans
   state/engagement.jsonl, pas via l'API. Proof: veille 19h30 11/09.
+  Ajout 12/09 (06h30): TRENTE-DEUXIEME mesure morte d'affilee (401 UNAUTHENTICATED
+  sur generativelanguage.googleapis.com/v1beta/models, meme cle 53 caracteres
+  AQ.Ab8), dernier achat toujours 01/09 16h54, soit SEIZE jours pleins.
+  IG_ACCESS_TOKEN a 10 jours (state/token.json, issuedAt 25/07 + 60 j = 23/09):
+  c'est desormais ce compteur-la le plus urgent des deux, parce qu'a son expiration
+  le compte ne publie plus rien du tout, muet ou pas. Les deux specs banques ce
+  matin sont donc sans `veo` ni `image`, 8 beats chacun, 3 recus + 2 cartes +
+  3 photos, toutes les surfaces deja sur le disque et epinglees: les runs de 10h30
+  et 16h30 n'ont ni capture ni acquisition a faire.

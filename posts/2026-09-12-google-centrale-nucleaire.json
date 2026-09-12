@@ -1,0 +1,241 @@
+{
+  "slug": "2026-09-12-google-centrale-nucleaire",
+  "centralClaim": "Google has signed a power purchase agreement covering up to 50% of the Loviisa nuclear power plant's capacity in Finland until 2050.",
+  "corroboration": [
+    {
+      "url": "https://world-nuclear-news.org/articles/google-signs-up-for-electricity-from-finnish-nuclear-power-plant",
+      "quote": "Tech giant Google has signed a long-term power purchase agreement with Finland's Fortum covering up to 50% of the Loviisa nuclear power plant's capacity and providing financial certainty for power uprates and lifetime extensions until 2050."
+    },
+    {
+      "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement",
+      "quote": "A 22-year life extension Power Purchase Agreement (PPA) provides economic certainty for the lifetime extension and power upgrade of the plant through 2050 by contracting for up to 50% of Loviisa nuclear power plant's capacity."
+    }
+  ],
+  "caption": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans.\n\nL'accord signé avec l'électricien Fortum couvre jusqu'à 50% de la capacité de la centrale de Loviisa et sécurise son fonctionnement jusqu'en 2050. Il démarre en 2028 à capacité réduite, puis porte sur 50% de la production de 2030 à 2049.\n\nLe détail qui n'est pas dans la vidéo. Loviisa fournit 10% de l'électricité finlandaise et emploie environ 580 personnes. Fortum écrit que sans son programme de prolongation, la centrale ne pourrait pas continuer au-delà de 2030. Le nucléaire n'est qu'une partie du contrat : Google annonce 13 milliards d'euros en Finlande sur les deux prochaines années, avec des centres de données à Hamina, Muhos, Vaala et Kajaani.\n\nLe retournement. Des élus de l'opposition finlandaise préviennent que le pays n'a aucun système national d'autorisation pour les centres de données, et que ce trou pourrait tendre l'approvisionnement et faire monter les prix pour les ménages et les entreprises. Fortum affirme l'inverse : garder la centrale en service aidera à stabiliser les prix.\n\nLa suite. Google dit vouloir chercher avec Fortum des occasions de développer de nouveaux réacteurs à Loviisa.\n\nUne entreprise qui finance une centrale nucléaire, bonne ou mauvaise nouvelle ?\n\nworld-nuclear-news.org · fortum.com · blog.google · insideai.news\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Nucleaire\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "A 22-year life extension Power Purchase Agreement (PPA) provides economic certainty for the lifetime extension and power upgrade of the plant through 2050 by contracting for up to 50% of Loviisa nuclear power plant's capacity.",
+      "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement"
+    },
+    {
+      "quote": "The agreement will start in 2028 with a reduced capacity and will cover 50% of the Loviisa plant's capacity in the years 2030-2049.",
+      "url": "https://world-nuclear-news.org/articles/google-signs-up-for-electricity-from-finnish-nuclear-power-plant"
+    },
+    {
+      "quote": "Without the lifetime extension investment program, the plant - which currently employs approximately 580 people and provides 10% of Finland's electricity - could not continue operations beyond 2030.",
+      "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement"
+    },
+    {
+      "quote": "Google has announced EUR 13 billion investments in Finland over the next two years (2027-2028), including data center and other supporting infrastructure investments and partnerships in Hamina, Muhos, Vaala, and Kajaani.",
+      "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Finlande · Fortum et Google",
+      "headline": "Google réserve *50%* d'une centrale nucléaire pendant 22 ans",
+      "hero": {
+        "value": "10%",
+        "label": "de l'électricité finlandaise sort de cette centrale"
+      },
+      "swipe": "Les chiffres sont dans les sources."
+    },
+    {
+      "type": "stat",
+      "figure": "50%",
+      "unit": "de la capacité de Loviisa",
+      "body": "Google a signé un accord de **22 ans** avec Fortum. Il couvre jusqu'à 50% de la capacité de la centrale, jusqu'en 2050.",
+      "evidence": "A 22-year life extension Power Purchase Agreement (PPA) provides economic certainty for the lifetime extension and power upgrade of the plant through 2050 by contracting for up to 50% of Loviisa nuclear power plant's capacity.",
+      "source": {
+        "name": "Fortum",
+        "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que pèse cette centrale",
+      "body": "Loviisa fournit 10% de l'électricité finlandaise et emploie environ 580 personnes. Sans le programme de prolongation, elle ne peut pas continuer après 2030.",
+      "evidence": "Without the lifetime extension investment program, the plant - which currently employs approximately 580 people and provides 10% of Finland's electricity - could not continue operations beyond 2030.",
+      "source": {
+        "name": "Fortum",
+        "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le calendrier",
+      "body": "L'accord démarre en 2028 à capacité réduite, puis couvre 50% de la production de la centrale de 2030 à 2049.",
+      "evidence": "The agreement will start in 2028 with a reduced capacity and will cover 50% of the Loviisa plant's capacity in the years 2030-2049.",
+      "source": {
+        "name": "World Nuclear News",
+        "url": "https://world-nuclear-news.org/articles/google-signs-up-for-electricity-from-finnish-nuclear-power-plant",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le reste du contrat",
+      "body": "Google annonce 13 milliards d'euros d'investissements en Finlande sur les deux prochaines années, dont des centres de données à Hamina, Muhos, Vaala et Kajaani.",
+      "evidence": "Google has announced EUR 13 billion investments in Finland over the next two years (2027-2028), including data center and other supporting infrastructure investments and partnerships in Hamina, Muhos, Vaala, and Kajaani.",
+      "source": {
+        "name": "Fortum",
+        "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que Google en dit",
+      "body": "Le groupe présente l'opération comme un investissement dans les infrastructures numériques, l'énergie propre et des partenariats locaux.",
+      "evidence": "we're deepening that commitment with a €13 billion investment in digital infrastructure, clean energy projects and economic partnerships across Finland over the next two years,",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/google-ai-commitment-to-finland/",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Fortum",
+      "claim": "Garder la centrale en service aidera à stabiliser les prix de l'électricité et à renforcer le réseau finlandais.",
+      "caveatLabel": "L'opposition finlandaise",
+      "caveat": "Des élus préviennent que le pays n'a aucun système national d'autorisation pour les centres de données, et que cela pourrait tendre l'approvisionnement et pousser les prix vers le haut.",
+      "evidence": "Opposition leaders now warn that Finland lacks a national permitting system for data centres. They say this gap could strain power supply and push electricity prices higher for households and businesses.",
+      "source": {
+        "name": "Inside AI",
+        "url": "https://insideai.news/news/ai-hardware-infrastructure/finland-google-ai-data-centre-power-supply/10232/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La réponse de l'électricien",
+      "body": "Fortum répond que maintenir cet actif sans énergie fossile en service aidera à stabiliser les prix et la résilience du réseau.",
+      "evidence": "Keeping this fossil-free energy asset online for decades to come will help stabilize electricity prices and support long-term resilience of Finland's grid.",
+      "source": {
+        "name": "Fortum",
+        "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La suite",
+      "body": "Google dit vouloir chercher avec Fortum des occasions de développer de nouveaux réacteurs à Loviisa.",
+      "evidence": "Keeping this clean energy asset online will help to safeguard access to reliable, affordable electricity for Finland's households, businesses, and industrial users alike. We'll also work with Fortum to identify potential opportunities to develop new nuclear reactors at Loviisa.",
+      "source": {
+        "name": "World Nuclear News",
+        "url": "https://world-nuclear-news.org/articles/google-signs-up-for-electricity-from-finnish-nuclear-power-plant",
+        "date": "2026-09-09"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui paie une facture d'électricité",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "World Nuclear News",
+      "url": "https://world-nuclear-news.org/articles/google-signs-up-for-electricity-from-finnish-nuclear-power-plant",
+      "accessed": "2026-09-12"
+    },
+    {
+      "name": "Fortum",
+      "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement",
+      "accessed": "2026-09-12"
+    },
+    {
+      "name": "Google",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/google-ai-commitment-to-finland/",
+      "accessed": "2026-09-12"
+    },
+    {
+      "name": "Inside AI",
+      "url": "https://insideai.news/news/ai-hardware-infrastructure/finland-google-ai-data-centre-power-supply/10232/",
+      "accessed": "2026-09-12"
+    }
+  ],
+  "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Google réserve 50% d'une centrale nucléaire",
+    "beats": [
+      {
+        "script": "Vingt-deux ans. C'est la durée pour laquelle la moitié d'une centrale nucléaire vient d'être réservée. Pas par un pays : par Google.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://world-nuclear-news.org/articles/google-signs-up-for-electricity-from-finnish-nuclear-power-plant",
+          "file": "media/2026-09-12-google-centrale-nucleaire/shot_0.png"
+        }
+      },
+      {
+        "script": "Tu sais ce que cette centrale alimente aujourd'hui ? 10% de l'électricité d'un pays entier, la Finlande.",
+        "visual": {
+          "type": "card",
+          "value": "10%",
+          "label": "de l'électricité finlandaise sort de cette centrale"
+        }
+      },
+      {
+        "script": "Sauf que cette centrale devait fermer. Fortum, l'électricien qui l'exploite, l'écrit noir sur blanc : sans le programme de prolongation, elle ne produit plus rien après 2030.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.fortum.com/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement",
+          "file": "media/2026-09-12-google-centrale-nucleaire/shot_2.png"
+        }
+      },
+      {
+        "script": "Donc Google paie, et Loviisa tient jusqu'en 2050. En échange, il prend la moitié de sa production de 2030 à 2049. Vingt-deux ans de courant réservés d'avance.",
+        "visual": {
+          "type": "photo",
+          "query": "electricity transmission tower snow",
+          "alt": "Un pylône à haute tension vu depuis le sol, en hiver",
+          "file": "media/2026-09-12-google-centrale-nucleaire/photo_3.jpg",
+          "credit": "Leonhard Lenz · CC0"
+        }
+      },
+      {
+        "script": "Et le nucléaire n'est qu'une ligne du contrat. 13 milliards d'euros en Finlande sur deux ans, pour des centres de données et pour le réseau électrique.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/google-ai-commitment-to-finland/",
+          "file": "media/2026-09-12-google-centrale-nucleaire/shot_4.png"
+        }
+      },
+      {
+        "script": "Et tout le monde n'applaudit pas. Des élus finlandais préviennent : le pays n'a aucun système national d'autorisation pour les centres de données, et l'électricité pourrait devenir plus chère pour les ménages.",
+        "visual": {
+          "type": "photo",
+          "query": "window light night house",
+          "alt": "Une rue éclairée la nuit, une personne passe sous un lampadaire",
+          "file": "media/2026-09-12-google-centrale-nucleaire/photo_5.jpg",
+          "credit": "Ashim D'Silva · CC0"
+        }
+      },
+      {
+        "script": "Fortum répond l'inverse : garder la centrale ouverte va stabiliser les prix. Et 580 personnes y travaillent. Les deux peuvent être vrais en même temps.",
+        "visual": {
+          "type": "card",
+          "value": "580",
+          "label": "personnes travaillent dans la centrale de Loviisa"
+        }
+      },
+      {
+        "script": "Le vrai signal est à la fin du communiqué : Google veut maintenant étudier de nouveaux réacteurs à Loviisa. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "light bulb glowing dark",
+          "alt": "Une ampoule allumée sur fond noir",
+          "file": "media/2026-09-12-google-centrale-nucleaire/photo_7.jpg",
+          "credit": "Matt Bango · CC0"
+        }
+      }
+    ]
+  }
+}
