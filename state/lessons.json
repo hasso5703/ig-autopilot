@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-12T10:51:16.522Z",
-  "n": 92,
+  "at": "2026-09-12T16:50:08.002Z",
+  "n": 93,
   "nSettled": 85,
   "medianViews": 173,
   "medianRetentionPct": 18,
@@ -1210,6 +1210,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-11-captcha-arrete-ia",
+      "at": "2026-09-11T10:56:17.768Z",
+      "hourUtc": 10,
+      "views": 140,
+      "reach": 132,
+      "avgWatchS": 7.9,
+      "retentionPct": 13,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-02-xai-minnesota-nudification",
       "at": "2026-08-02T15:57:53.852Z",
       "hourUtc": 15,
@@ -1227,23 +1244,6 @@
       ],
       "sendTest": "Quelqu'un peut prendre tes photos et en faire des images sexuelles. Le Minnesota vient d'interdire ces applis, et Musk a essayé de bloquer la loi.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-11-captcha-arrete-ia",
-      "at": "2026-09-11T10:56:17.768Z",
-      "hourUtc": 10,
-      "views": 139,
-      "reach": 131,
-      "avgWatchS": 7.8,
-      "retentionPct": 13,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
-      "settled": false
     },
     {
       "slug": "2026-08-23-harvard-avatars-profs",
@@ -1780,6 +1780,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-12-jeu-en-une-phrase",
+      "at": "2026-09-12T10:48:51.816Z",
+      "hourUtc": 10,
+      "views": 46,
+      "reach": 42,
+      "avgWatchS": 2.3,
+      "retentionPct": 4,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-07-psychose-associee-ia",
       "at": "2026-09-07T10:49:00.956Z",
       "hourUtc": 10,
@@ -1795,6 +1812,23 @@
       "themes": [],
       "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-11-services-publics-satures",
+      "at": "2026-09-11T16:51:23.145Z",
+      "hourUtc": 16,
+      "views": 34,
+      "reach": 28,
+      "avgWatchS": 3.5,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant.",
+      "settled": false
     },
     {
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
@@ -1814,23 +1848,6 @@
       "settled": true
     },
     {
-      "slug": "2026-09-11-services-publics-satures",
-      "at": "2026-09-11T16:51:23.145Z",
-      "hourUtc": 16,
-      "views": 31,
-      "reach": 25,
-      "avgWatchS": 3.9,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant.",
-      "settled": false
-    },
-    {
       "slug": "2026-07-28-claude-chats-google",
       "at": "2026-07-28T09:12:53.605Z",
       "hourUtc": 9,
@@ -1848,9 +1865,9 @@
       "settled": true
     },
     {
-      "slug": "2026-09-12-jeu-en-une-phrase",
-      "at": "2026-09-12T10:48:51.816Z",
-      "hourUtc": 10,
+      "slug": "2026-09-12-google-centrale-nucleaire",
+      "at": "2026-09-12T16:47:29.205Z",
+      "hourUtc": 16,
       "views": 0,
       "reach": 0,
       "avgWatchS": 0,
@@ -1860,8 +1877,10 @@
       "saved": 0,
       "shares": 0,
       "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
+      "themes": [
+        "infra"
+      ],
+      "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
       "settled": false
     },
     {

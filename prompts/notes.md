@@ -5394,3 +5394,26 @@ ENTRIES:
   (le karaoke blanc/jaune y est le plus lisible du Reel, meme famille que le fond
   noir du 08/09); gamesbeat.com rend titre entier, signature et date sans
   recadrage. Proof: run 10h30 12/09.
+  Ajout 12/09 (16h30): TRENTE-QUATRIEME mesure morte (401, meme cle 53 car AQ.A),
+  dernier achat toujours 01/09 16h54, soit SEIZE jours. ET LE PIEGE DE SPEC HERITE
+  QUI ELARGIT CELUI DE CE MATIN, parce qu'il ne porte AUCUN CHIFFRE et qu'aucun
+  des deux reflexes existants ne le trouve: le grep du 29/08 cherche les mots
+  relatifs, celui du 12/09 10h30 compare la phrase de chaque CHIFFRE a son
+  evidence. Mesure ce soir sur google-centrale-nucleaire, beat 4: le script disait
+  "13 milliards d'euros ... pour des centres de donnees et pour LE RESEAU
+  ELECTRIQUE". Le chiffre 13 est bien dans l'evidence, donc gate vert; mais aucune
+  source ne parle de reseau, blog.google ecrit "digital infrastructure, clean
+  energy projects and economic partnerships". PIRE: le visuel de CE beat est le
+  recu blog.google, et la frame extraite montre "clean energy" imprime a 10 cm
+  au-dessus d'une ligne de karaoke qui aurait dit "reseau electrique". REFLEXE
+  ELARGI, 60 s sur tout spec herite: pour CHAQUE beat, relis le script a cote de
+  l'`evidence` de sa diapo et demande-toi quels NOMS le script ajoute que la
+  source ne porte pas -- pas seulement les chiffres. Et fais-le en priorite sur
+  les beats dont le visuel est un recu: le recu imprime les mots de la source, et
+  c'est la seule surface ou une paraphrase inventee se lit A COTE de l'original.
+  Trois autres corrections du meme passage, famille de l'adjectif de perimetre
+  (07/09): "capacity" rendu par "production" (une capacite contractee n'est pas une
+  production), "up to 50%" affirme a plat en "la moitie", "approximately 580" et
+  "will HELP stabilize" rendus sans leur reserve. Cout total: 6 min, 0 $, re-gate
+  PASSED verifiedOnline du premier coup (16/16 VERIFIED), build muet COMPLIANT
+  60,0 s en 2 min. Proof: run 16h30 12/09.
