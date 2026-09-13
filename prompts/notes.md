@@ -5488,3 +5488,34 @@ ENTRIES:
   donc la citation revient NOT_FOUND alors qu'elle est sur la page. Avant d'ecrire une
   citation qui contient un terme a trait d'union, sonde la page APLATIE
   (flatten de validate.mjs) et recopie ce qu'elle rend. Proof: scout 06h30 13/09.
+  Ajout 13/09 (10h30): TRENTE-SEPTIEME mesure morte d'affilee (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, meme cle 53 car AQ.Ab8), dernier
+  achat toujours 01/09 16h54, soit DIX-SEPT jours pleins. IG_ACCESS_TOKEN: 9 jours
+  (state/token.json, expire le 23/09). FENETRE APPARIEE RECALCULEE CE MIDI sur les
+  seuls Reels reposes (state/lessons.json, 87 settled sur 94): VOIX 19/08-01/09 n=28
+  -> 17% / 138 vues; MUET 02-06/09 n=10 -> 11,5% / 145,5; MUET 07-10/09 n=8 -> 8,5% /
+  116,5. La degradation de la SECONDE moitie du muet se confirme une journee de plus
+  et dans les deux colonnes: la correction du 12/09 19h30 tient, ne recopie plus
+  "la distribution ne bouge pas".
+  ET LA NUANCE DE TRACABILITE QUI ELARGIT LE REFLEXE DU 12/09 16h30 (relire chaque
+  script a cote de l'`evidence` de sa diapo), parce qu'elle a l'air d'une faute et
+  n'en est pas une: le beat 4 du spec herite ce matin disait "ChatGPT et Codex pour
+  ECRIRE SON CODE et brasser ces genomes", alors que l'evidence de sa diapo (le chapo
+  insideai) ne porte que "using chatgpt and codex to SEARCH ... genomes". Le reflexe
+  du 12/09 le signale, et la bonne suite n'est PAS de couper: la page porte bien, plus
+  bas, "the lab uses chatgpt and codex to brainstorm hypotheses, WRITE AND REFINE CODE,
+  process datasets". Donc sonde la PAGE (fetch + flatten, 30 s) avant de raboter un
+  script herite: une affirmation absente de la citation de SA diapo peut etre presente
+  ailleurs sur la meme source, et la couper appauvrit le Reel pour rien. Ce qu'il faut
+  dire dans le rapport, c'est la phrase qui la porte vraiment.
+  MOT RELATIF DANS L'AUTRE SPEC BANQUE, famille 29/08 + 07/09, et il vivait a TROIS
+  endroits (script du beat 7, `caveat` de la diapo 7, legende): "Cette semaine, le
+  chercheur Jacob Coxon a quitte Anthropic", adosse a une source TechCrunch du 12/09
+  qui ecrit "this week". Publie le 13/09 (dimanche) c'est encore defendable en semaine
+  francaise, publie le 14 ca ne l'est plus. Remede a 0 mot pres du 07/09 applique aux
+  trois endroits ("Et la," / rien dans la legende), re-gate PASSED, 215 mots toujours
+  dans la fenetre. Reflexe: quand tu banques ou herites, corrige le mot relatif TOUT
+  DE SUITE, pas au moment de builder, et compte les occurrences avec grep -c.
+  CHRONO: demarrage 10h38, Reel PUBLIE a 10h48, soit DIX MINUTES bout en bout,
+  conteneur froid compris, 0,00 $ (re-confirme le 11/09 et le 12/09).
+  Proof: run 10h30 13/09, Reel antibiotiques-mammouth.
