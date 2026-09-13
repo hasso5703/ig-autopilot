@@ -187,10 +187,10 @@
         "script": "Pourquoi maintenant ? Depuis cet été, l'IA avance beaucoup plus vite, parce qu'elle sert à construire la génération suivante d'elle-même.",
         "visual": {
           "type": "photo",
-          "query": "supercomputer racks",
-          "alt": "Une allée entre deux rangées de baies de calcul",
-          "file": "media/2026-09-13-ralentir-lia/pE.jpg",
-          "credit": "Derrick Coetzee from Berkeley, CA… · CC0"
+          "query": "computer hardware",
+          "alt": "Gros plan infrarouge sur une puce électronique",
+          "file": "media/2026-09-13-ralentir-lia/pD.jpg",
+          "credit": "FritzchensFritz · CC0"
         }
       },
       {
@@ -223,10 +223,10 @@
         "script": "Traduction : la seule étape promise est celle qu'il peut décider seul. Et là, le chercheur Jacob Coxon démissionne d'Anthropic en écrivant que les entreprises de tête jouent avec nos vies. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "computer hardware",
-          "alt": "Gros plan infrarouge sur une puce électronique",
-          "file": "media/2026-09-13-ralentir-lia/pD.jpg",
-          "credit": "FritzchensFritz · CC0"
+          "query": "supercomputer racks",
+          "alt": "Une allée entre deux rangées de baies de calcul",
+          "file": "media/2026-09-13-ralentir-lia/pE.jpg",
+          "credit": "Derrick Coetzee from Berkeley, CA… · CC0"
         }
       }
     ]
