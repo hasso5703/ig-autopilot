@@ -5559,7 +5559,10 @@ ENTRIES:
   se renforce, le recommandeur retire bien de la distribution. Proof: run 16h30 13/09.
   Ajout 13/09 (19h30, veille): TRENTE-NEUVIEME mesure morte d'affilee (401 UNAUTHENTICATED sur
   generativelanguage.googleapis.com/v1beta/models, meme cle 53 car AQ.Ab8), dernier achat toujours
-  01/09 16h54, soit DIX-SEPT jours pleins. IG_ACCESS_TOKEN: 9 jours (state/token.json, expire le
+  01/09 16h54, soit DOUZE jours pleins -- ET C'EST UNE CORRECTION: les entrees des 08 au 13/09
+  annoncent 10, 15, 16 puis 17 jours alors que 01/09 -> 13/09 fait 12, le compteur a derive de +5
+  en se recopiant d'un run a l'autre. Ne recopie plus le chiffre de la veille, calcule-le depuis
+  la derniere ligne de state/spend.jsonl. IG_ACCESS_TOKEN: 9 jours (state/token.json, expire le
   23/09), watch.mjs imprime RENOUVELER en tete. COUT DE LA MAINTENANCE DU DIMANCHE, re-mesure:
   prune-media.mjs --live a supprime 128 fichiers / 254 Mo sur 14 slugs (media 433 Mo -> 179 Mo) et
   insights.mjs compact a ramene la serie de 5894 a 3206 lignes; les deux en ~1 min a eux deux.
