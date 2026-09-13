@@ -5557,3 +5557,46 @@ ENTRIES:
   89,5. La retention se stabilise autour de 9%, mais les VUES MEDIANES BAISSENT A CHAQUE
   FENETRE depuis le 07/09 (145,5 -> 116,5 -> 89,5): la correction du 12/09 19h30 tient et
   se renforce, le recommandeur retire bien de la distribution. Proof: run 16h30 13/09.
+  Ajout 13/09 (19h30, veille): TRENTE-NEUVIEME mesure morte d'affilee (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, meme cle 53 car AQ.Ab8), dernier achat toujours
+  01/09 16h54, soit DIX-SEPT jours pleins. IG_ACCESS_TOKEN: 9 jours (state/token.json, expire le
+  23/09), watch.mjs imprime RENOUVELER en tete. COUT DE LA MAINTENANCE DU DIMANCHE, re-mesure:
+  prune-media.mjs --live a supprime 128 fichiers / 254 Mo sur 14 slugs (media 433 Mo -> 179 Mo) et
+  insights.mjs compact a ramene la serie de 5894 a 3206 lignes; les deux en ~1 min a eux deux.
+  engage.mjs recent rend toujours 0 commentaire d'inconnu sur les 10 derniers Reels (aucune erreur
+  de permission, 50 abonnes): l'edge repond, ne cherche pas la panne.
+  ET LA VEILLE A BANQUE, ce qui re-confirme la correction du 08/09 contre l'entree du 07/09 ("la
+  collecte du soir ne sert pas a banquer"): arXiv a rendu 0/0, feeds.mjs 33 sujets frais et 21
+  apres dedup, et le shelf `revisit` du matin portait la meilleure histoire de la journee. Regarde
+  le compte arXiv AVANT de conclure, et travaille le shelf avant les fils.
+  TROIS RECUS MESURES, et DEUX d'entre eux sont des pieges d'image generee que la legende muette
+  ("sans image generee") contredirait: (1) greynoise.io/blog se capture en 103 s / 8 frames, h1
+  juste, FOND NOIR, titre entier + auteur + date + chapo dans la fenetre visible, banniere cookies
+  au-dela des ~1686 px donc invisible: c'est le meilleur recu de beat 0 en muet mesure depuis
+  about.roblox (12/09), SEULE RESERVE il imprime sa date en clair. (2) helpnetsecurity 25 s / 1
+  frame re-confirme (09/09), MAIS sur cet article son illustration maison stylisee tombe DANS la
+  fenetre visible: `crop=1290:1010:0:0` garde signature, date, titre entier et chapo, et la coupe.
+  (3) thehackernews.com se capture en 23 s / 1 frame et est INUTILISABLE BRUT: une pub WIZ pleine
+  largeur occupe le tiers haut de la fenetre visible ET une illustration visiblement generee (une
+  main de robot dans une imprimante) suit le titre. Remede a 0 $, famille de l'empilage du 09/09:
+  `ffmpeg -i raw.png -filter_complex "[0]crop=1290:270:0:0[a];[0]crop=1290:350:0:1330[b];[0]crop=1290:400:0:2390[c];[a][b][c]vstack=inputs=3"`
+  rend masthead + titre entier + signature + date + chapo, sans pub ni illustration.
+  PHOTOS, 20 requetes pour 2 gardees sur une histoire de serveurs d'impression et d'ecoles (le
+  budget de 15-20 min par photo du 03/09 tient). Passent et sont bons: "server rack cables" (allee
+  de baies NERSC, sombre, aucun visage) et "computer motherboard macro" (socle de processeur en
+  macro, dense, famille visuelle differente de l'allee). Echouent ou sont refuses a l'oeil:
+  "office printer" -> CEDRIC VILLANI dans son bureau (personne reelle identifiable, hors sujet
+  total, famille des pieges d'index du 08/09), "school desks classroom" -> la pomme sur une pile de
+  livres, "server room aisle" -> le cliche bleu sature de data-center que le manuel interdit,
+  "printer control panel" -> une imprimante de MUSEE de 1964 (le filtre ne voit pas l'epoque),
+  "computer keyboard dark" -> le portable seul sur une table que le manuel appelle du mobilier.
+  ET UN PIEGE D'INDEX NEUF QU'AUCUN FILTRE NE VOIT: "laser printer" rend une image STEREOSCOPIQUE
+  (Commons en heberge beaucoup), c'est-a-dire la meme photo dupliquee cote a cote dans un seul
+  fichier. Passe le near-white, passe le moteur, et rend un Reel qui a l'air casse. Le rapport
+  largeur/hauteur inhabituel suffit a la reperer: regarde le jpg, comme toujours.
+  DEUX MECANIQUES DE GATE PAYEES CE SOIR: (1) un `kicker` de diapo hook qui porte une date
+  ("9 septembre 2026") est lu comme un chiffre de titre non source et c'est une ERREUR, pas un
+  warning -- ecris les kickers sans chiffre. (2) une citation de corroboration TRONQUEE au milieu
+  de la phrase fait tomber le recouvrement sous la barre (3 mots distinctifs / 20%, refuse): cite
+  la phrase ENTIERE ou la source enonce le claim, la troncature est ce qui casse la mesure, pas la
+  source. Proof: veille 19h30 13/09.
