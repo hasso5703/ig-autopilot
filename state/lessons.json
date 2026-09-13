@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-12T19:41:37.275Z",
+  "at": "2026-09-13T07:10:49.454Z",
   "n": 93,
-  "nSettled": 86,
-  "medianViews": 171,
+  "nSettled": 87,
+  "medianViews": 168,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 25,
-      "medianViews": 150,
-      "meanRetentionPct": 14.8,
+      "n": 26,
+      "medianViews": 146,
+      "meanRetentionPct": 14.5,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -214,9 +214,9 @@
       "thin": false
     },
     "19": {
-      "n": 1,
-      "medianViews": 304,
-      "meanRetentionPct": 23,
+      "n": 2,
+      "medianViews": 207,
+      "meanRetentionPct": 14.5,
       "saves": 2,
       "shares": 0,
       "thin": true
@@ -1179,9 +1179,9 @@
       "slug": "2026-09-11-captcha-arrete-ia",
       "at": "2026-09-11T10:56:17.768Z",
       "hourUtc": 10,
-      "views": 143,
-      "reach": 133,
-      "avgWatchS": 7.8,
+      "views": 144,
+      "reach": 135,
+      "avgWatchS": 7.7,
       "retentionPct": 13,
       "likes": 1,
       "comments": 1,
@@ -1689,7 +1689,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que nous. Sauf qu'un accident humain sur deux n'est jamais déclaré.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
@@ -1780,30 +1780,13 @@
       "settled": true
     },
     {
-      "slug": "2026-09-12-jeu-en-une-phrase",
-      "at": "2026-09-12T10:48:51.816Z",
-      "hourUtc": 10,
-      "views": 48,
-      "reach": 44,
-      "avgWatchS": 2.2,
-      "retentionPct": 4,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
-      "settled": false
-    },
-    {
       "slug": "2026-09-12-google-centrale-nucleaire",
       "at": "2026-09-12T16:47:29.205Z",
       "hourUtc": 16,
-      "views": 44,
-      "reach": 40,
-      "avgWatchS": 2.7,
-      "retentionPct": 4,
+      "views": 63,
+      "reach": 60,
+      "avgWatchS": 3.7,
+      "retentionPct": 6,
       "likes": 1,
       "comments": 1,
       "saved": 0,
@@ -1813,6 +1796,23 @@
         "infra"
       ],
       "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-12-jeu-en-une-phrase",
+      "at": "2026-09-12T10:48:51.816Z",
+      "hourUtc": 10,
+      "views": 60,
+      "reach": 54,
+      "avgWatchS": 2.7,
+      "retentionPct": 4,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
       "settled": false
     },
     {
