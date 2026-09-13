@@ -5519,3 +5519,41 @@ ENTRIES:
   CHRONO: demarrage 10h38, Reel PUBLIE a 10h48, soit DIX MINUTES bout en bout,
   conteneur froid compris, 0,00 $ (re-confirme le 11/09 et le 12/09).
   Proof: run 10h30 13/09, Reel antibiotiques-mammouth.
+  Ajout 13/09 (16h30): TRENTE-HUITIEME mesure morte d'affilee (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, meme cle 53 car AQ.Ab8), dernier achat
+  toujours 01/09 16h54, soit DIX-SEPT jours pleins. IG_ACCESS_TOKEN: 9 jours (expire 23/09).
+  LE PIEGE DE FRAME DU JOUR, FAMILLE NEUVE: ce n'est ni un visage (04/09) ni une date
+  (06/09), c'est UNE MARQUE LISIBLE. La photo "computer hardware" (FritzchensFritz, CC0,
+  excellente et deja recommandee le 08/09) est une macro d'une puce ou "NVIDIA" se lit en
+  GROS; posee au beat 7, elle affichait "NVIDIA" a 3 cm au-dessus du karaoke
+  "COXON DEMISSIONNE". Un spectateur qui s'arrete sur cette frame lit que le chercheur
+  quitte NVIDIA, entreprise que l'histoire ne mentionne nulle part -- exactement la fausse
+  accusation nommee que le manuel decrit (une seule frame suffit, la phrase entiere ne
+  protege pas). REFLEXE ELARGI: sur tout beat dont le karaoke NOMME UNE PERSONNE OU UNE
+  ENTREPRISE, lis les mots imprimes DANS la photo (logo, serigraphie, plaque), pas
+  seulement la photo. REMEDE A 0 $ ET 2 MIN, a preferer a une nouvelle requete Openverse
+  (15 min, entree 03/09): PERMUTE deux photos DEJA dans le spec. Ici beat 3 <-> beat 7, et
+  les deux beats y ont gagne: la puce tombe sous "L'IA AVANCE BEAUCOUP PLUS" (l'IA qui
+  construit l'IA, la marque n'accuse plus personne) et l'allee de baies de calcul, avec sa
+  silhouette de dos qui s'eloigne, tombe sous "COXON DEMISSIONNE". Re-gate PASSED (le gate
+  verifie les mots du `query`/`alt` contre les sources, pas leur position), rebuild dans le
+  MEME dossier, tout ressort du cache.
+  ET LA TRACABILITE D'UN VERBE, famille 07/09 (adjectif de perimetre) mais sur le TEMPS:
+  TechCrunch ecrit "researcher Jacob Coxon wrote that he's RESIGNING from Anthropic". Le
+  spec herite disait "a QUITTE Anthropic", qui affirme un depart accompli la ou la source
+  decrit une demission annoncee, et il vivait a TROIS endroits (script du beat 7, `caveat`
+  de la diapo, legende). Le gate ne voit rien (aucun chiffre). Corrige en "demissionne
+  d'Anthropic" partout, plus "ces entreprises" -> "les entreprises de tete" ("the leading
+  AI companies"). Reflexe: sur un spec herite, releve aussi les VERBES qui closent une
+  action que la source laisse en cours.
+  ET DEUX SONDAGES DE PAGE QUI ONT EVITE DE RABOTER POUR RIEN (methode du 13/09 10h30):
+  "un essaim PLUS CAPABLE" n'est pas dans la citation de sa diapo mais la page porte bien
+  "a swarm that possessed greater capabilities" juste avant le "such a swarm" du 6-12 mois;
+  et "pour verifier ses engagements" est litteral chez Amodei ("whose role is to verify
+  adherence to safety practices and commitments, report incidents"). Sonde avant de couper.
+  FENETRE APPARIEE, RECALCULEE CE SOIR (state/lessons.json, 89 settled sur 95), et elle
+  s'aggrave d'un cran de plus: VOIX 19/08-01/09 n=28 -> 17% / 138 vues; MUET 02-06/09 n=10
+  -> 11,5% / 145,5; MUET 07-10/09 n=8 -> 8,5% / 116,5; MUET 11-13/09 n=2 (mince) -> 9,5% /
+  89,5. La retention se stabilise autour de 9%, mais les VUES MEDIANES BAISSENT A CHAQUE
+  FENETRE depuis le 07/09 (145,5 -> 116,5 -> 89,5): la correction du 12/09 19h30 tient et
+  se renforce, le recommandeur retire bien de la distribution. Proof: run 16h30 13/09.

@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-13T10:49:24.494Z",
-  "n": 94,
-  "nSettled": 87,
-  "medianViews": 168,
+  "at": "2026-09-13T16:53:56.679Z",
+  "n": 95,
+  "nSettled": 89,
+  "medianViews": 160,
   "medianRetentionPct": 18,
   "top": [
     {
@@ -64,6 +64,14 @@
       "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place."
     },
     {
+      "slug": "2026-09-11-services-publics-satures",
+      "views": 35,
+      "retentionPct": 6,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant."
+    },
+    {
       "slug": "2026-09-07-psychose-associee-ia",
       "views": 35,
       "retentionPct": 5,
@@ -78,14 +86,6 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
-    },
-    {
-      "slug": "2026-09-06-astra-agi-mesures",
-      "views": 82,
-      "retentionPct": 7,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "OpenAI a sorti une IA qui se sert d'un ordinateur à ta place. Deux labos l'ont notée: l'un la met première, l'autre ne voit aucun progrès."
     }
   ],
   "byBeat0": {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 26,
-      "medianViews": 146,
-      "meanRetentionPct": 14.5,
+      "n": 28,
+      "medianViews": 143,
+      "meanRetentionPct": 14.1,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 18,
-      "medianViews": 217,
-      "meanRetentionPct": 19.3,
+      "n": 19,
+      "medianViews": 144,
+      "meanRetentionPct": 18.9,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 21,
-      "medianViews": 138,
-      "meanRetentionPct": 16.2,
+      "n": 22,
+      "medianViews": 135,
+      "meanRetentionPct": 15.7,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -840,9 +840,9 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 291,
-      "reach": 258,
-      "avgWatchS": 8.5,
+      "views": 293,
+      "reach": 259,
+      "avgWatchS": 8.4,
       "retentionPct": 14,
       "likes": 1,
       "comments": 1,
@@ -1190,7 +1190,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-22-peau-humaine-vivante",
@@ -1520,6 +1520,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-13-antibiotiques-mammouth",
+      "at": "2026-09-13T10:48:24.220Z",
+      "hourUtc": 10,
+      "views": 120,
+      "reach": 106,
+      "avgWatchS": 6.4,
+      "retentionPct": 11,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-27-instagram-ados-minuit",
       "at": "2026-08-27T16:57:42.083Z",
       "hourUtc": 16,
@@ -1726,6 +1743,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-12-google-centrale-nucleaire",
+      "at": "2026-09-12T16:47:29.205Z",
+      "hourUtc": 16,
+      "views": 99,
+      "reach": 79,
+      "avgWatchS": 3.6,
+      "retentionPct": 6,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [
+        "infra"
+      ],
+      "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-01-instagram-faux-profils-ia",
       "at": "2026-09-01T16:59:31.288Z",
       "hourUtc": 16,
@@ -1780,25 +1816,6 @@
       "settled": true
     },
     {
-      "slug": "2026-09-12-google-centrale-nucleaire",
-      "at": "2026-09-12T16:47:29.205Z",
-      "hourUtc": 16,
-      "views": 71,
-      "reach": 66,
-      "avgWatchS": 3.5,
-      "retentionPct": 6,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [
-        "infra"
-      ],
-      "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
-      "settled": false
-    },
-    {
       "slug": "2026-09-12-jeu-en-une-phrase",
       "at": "2026-09-12T10:48:51.816Z",
       "hourUtc": 10,
@@ -1847,7 +1864,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
@@ -1884,9 +1901,9 @@
       "settled": true
     },
     {
-      "slug": "2026-09-13-antibiotiques-mammouth",
-      "at": "2026-09-13T10:48:24.220Z",
-      "hourUtc": 10,
+      "slug": "2026-09-13-ralentir-lia",
+      "at": "2026-09-13T16:51:42.996Z",
+      "hourUtc": 16,
       "views": 0,
       "reach": 0,
       "avgWatchS": 0,
@@ -1895,9 +1912,9 @@
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "beat0": "photo",
+      "beat0": "screenshot",
       "themes": [],
-      "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
+      "sendTest": "Le patron d'Anthropic demande de ralentir l'IA. Il redoute qu'un essaim d'IA prenne le contrôle d'internet d'ici un an.",
       "settled": false
     },
     {
