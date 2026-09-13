@@ -1,0 +1,233 @@
+{
+  "slug": "2026-09-13-antibiotiques-mammouth",
+  "centralClaim": "A University of Pennsylvania lab led by César de la Fuente uses AI to search the genomes of extinct and living species for molecules that could kill drug-resistant microbes.",
+  "corroboration": [
+    {
+      "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/",
+      "quote": "A University of Pennsylvania lab is using ChatGPT and Codex to search extinct and living genomes for molecules that could kill drug-resistant microbes. The team, led by bioengineer César de la Fuente, has cut the initial search for antimicrobial candidates from years to hours."
+    },
+    {
+      "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/",
+      "quote": "But de la Fuente is using artificial intelligence to bring about a different future. His team at the University of Pennsylvania is training AI tools to search genomes far and deep for peptides with antibiotic properties. His vision is to assemble those peptides—molecules made of up to 50 amino acids linked together—into various configurations, including some never seen in nature. The results, he hopes, could defend the body against microbes that withstand traditional treatments."
+    }
+  ],
+  "caption": "Aucune nouvelle famille d'antibiotiques depuis 50 ans, alors un labo en cherche dans l'ADN de Néandertal.\n\nCésar de la Fuente dirige le Machine Biology Group, à l'université de Pennsylvanie. Son équipe entraîne des outils d'IA à fouiller les génomes pour y trouver des peptides capables de tuer des microbes que les traitements n'arrêtent plus.\n\nLe détail qui n'est pas dans la vidéo. Le projet qu'il appelle la dé-extinction moléculaire fouille les séquences publiées d'espèces disparues : Néandertal, Denisova, le mammouth laineux, des zèbres et des manchots anciens. Avant ça, l'équipe avait déjà tiré des candidats du venin de serpents, de guêpes et d'araignées.\n\nCe qui est nouveau. D'après Inside AI, le labo se sert maintenant de ChatGPT et de Codex pour écrire son code, brasser d'énormes jeux de données de génomes et travailler dans la langue de chacun. La première recherche de candidats est passée de plusieurs années à quelques heures.\n\nCe que ça ne veut pas dire. Une molécule trouvée n'est pas un médicament. Il faut prouver qu'elle tue le microbe, trouver la dose, mesurer ce qu'elle fait aux cellules humaines, la toxicité, la fabrication, puis passer les autorisations et les essais cliniques. Lui-même le répète : les expériences réelles restent indispensables pour valider ce que l'IA prédit.\n\nL'échelle du problème. Les infections résistantes sont associées à plus de 4 millions de morts par an, et une analyse publiée dans le Lancet prévoit que ce chiffre pourrait dépasser 8 millions en 2050.\n\nChercher des médicaments avec une IA, prometteur ou risqué ?\n\ninsideai.news · technologyreview.com\n\n#IA #IntelligenceArtificielle #ActuIA #Sante #Antibiotiques\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Yet no new class of antibiotics has reached patients in 50 years.",
+      "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/"
+    },
+    {
+      "quote": "Infections caused by bacteria, fungi, and viruses that have evolved ways to evade treatments are now associated with more than 4 million deaths per year, and a recent analysis, published in the Lancet, predicts that number could surge past 8 million by 2050.",
+      "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/"
+    },
+    {
+      "quote": "he and his collaborators have been scanning published genetic sequences of extinct species for potentially functional molecules. Those species include hominids like Neanderthals and Denisovans and charismatic megafauna like woolly mammoths, as well as ancient zebras and penguins.",
+      "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/"
+    },
+    {
+      "quote": "Finding a promising molecule is only the first step. Scientists must confirm it kills the target microbe, determine the effective dose, and test how it affects human cells. Chemists may then optimize it for potency, safety, or stability. Further tests assess toxicity, resistance development, and how the candidate moves through the body. Teams must also find a reliable manufacturing method. Candidates that clear these hurdles still face regulatory review and clinical trials.",
+      "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/"
+    }
+  ],
+  "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "10 septembre 2026 · Université de Pennsylvanie",
+      "headline": "César de la Fuente cherche des antibiotiques dans l'ADN de *Néandertal*",
+      "hero": {
+        "value": "50 ans",
+        "label": "sans nouvelle famille d'antibiotiques chez les patients"
+      },
+      "swipe": "Les chiffres sont dans les sources."
+    },
+    {
+      "type": "stat",
+      "figure": "50",
+      "unit": "ans sans nouvelle famille d'antibiotiques",
+      "body": "Aucune nouvelle famille d'antibiotiques n'a atteint les patients depuis **50 ans**, pendant que les bactéries, elles, continuaient d'évoluer.",
+      "evidence": "Yet no new class of antibiotics has reached patients in 50 years.",
+      "source": {
+        "name": "Inside AI",
+        "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'échelle du problème",
+      "body": "Les infections qui échappent aux traitements sont associées à plus de 4 millions de morts par an. Une analyse du Lancet prévoit plus de 8 millions en 2050.",
+      "evidence": "Infections caused by bacteria, fungi, and viruses that have evolved ways to evade treatments are now associated with more than 4 million deaths per year, and a recent analysis, published in the Lancet, predicts that number could surge past 8 million by 2050.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/",
+        "date": "2026-02-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le labo",
+      "body": "L'équipe de César de la Fuente, à l'université de Pennsylvanie, entraîne des outils d'IA à fouiller les génomes pour y trouver des peptides aux propriétés antibiotiques.",
+      "evidence": "His team at the University of Pennsylvania is training AI tools to search genomes far and deep for peptides with antibiotic properties.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/",
+        "date": "2026-02-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où il va chercher",
+      "body": "Dans les séquences génétiques publiées d'espèces disparues : Néandertal, Denisova, le mammouth laineux, des zèbres et des manchots anciens.",
+      "evidence": "he and his collaborators have been scanning published genetic sequences of extinct species for potentially functional molecules. Those species include hominids like Neanderthals and Denisovans and charismatic megafauna like woolly mammoths, as well as ancient zebras and penguins.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/",
+        "date": "2026-02-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui est nouveau",
+      "body": "Le labo se sert de ChatGPT et de Codex pour écrire son code et brasser ces génomes. La recherche initiale de candidats est passée de plusieurs années à quelques heures.",
+      "evidence": "A University of Pennsylvania lab is using ChatGPT and Codex to search extinct and living genomes for molecules that could kill drug-resistant microbes. The team, led by bioengineer César de la Fuente, has cut the initial search for antimicrobial candidates from years to hours.",
+      "source": {
+        "name": "Inside AI",
+        "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "La promesse",
+      "claim": "La première recherche de candidats tombe de plusieurs années à quelques heures.",
+      "caveatLabel": "Le chemin réel",
+      "caveat": "Il faut ensuite prouver que la molécule tue le microbe, trouver la dose, mesurer ce qu'elle fait aux cellules humaines, la toxicité, la fabrication.",
+      "evidence": "Finding a promising molecule is only the first step. Scientists must confirm it kills the target microbe, determine the effective dose, and test how it affects human cells. Chemists may then optimize it for potency, safety, or stability. Further tests assess toxicity, resistance development, and how the candidate moves through the body. Teams must also find a reliable manufacturing method. Candidates that clear these hurdles still face regulatory review and clinical trials.",
+      "source": {
+        "name": "Inside AI",
+        "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Ground-truth experiments are essential to validate AI predictions",
+      "attribution": "César de la Fuente, cité par Inside AI",
+      "evidence": "\"Ground-truth experiments are essential to validate AI predictions,\" he said.",
+      "source": {
+        "name": "Inside AI",
+        "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le compteur",
+      "body": "Aucune nouvelle famille d'antibiotiques n'a atteint les patients depuis 50 ans.",
+      "evidence": "Yet no new class of antibiotics has reached patients in 50 years.",
+      "source": {
+        "name": "Inside AI",
+        "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/",
+        "date": "2026-09-10"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui a déjà pris un antibiotique",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Inside AI",
+      "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/",
+      "accessed": "2026-09-13"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/",
+      "accessed": "2026-09-13"
+    }
+  ],
+  "reel2": {
+    "mood": "wonder",
+    "lang": "fr",
+    "title": "Des antibiotiques cherchés dans l'ADN de Néandertal",
+    "beats": [
+      {
+        "script": "Aucune nouvelle famille d'antibiotiques n'a atteint les patients depuis 50 ans. Alors un laboratoire américain est allé en chercher dans l'ADN de Néandertal.",
+        "visual": {
+          "type": "photo",
+          "query": "neanderthal skull",
+          "alt": "Reconstitution d'un visage de Néandertal dans un musée",
+          "file": "media/2026-09-13-antibiotiques-mammouth/pD.jpg",
+          "credit": "Gary Todd · CC0"
+        }
+      },
+      {
+        "script": "Parce que les infections qui échappent aux traitements sont déjà associées à plus de 4 millions de morts par an. Et ce chiffre pourrait dépasser 8 millions en 2050.",
+        "visual": {
+          "type": "card",
+          "value": "4 millions",
+          "label": "de morts par an au moins, associées aux infections résistantes"
+        }
+      },
+      {
+        "script": "L'homme derrière ça s'appelle César de la Fuente, à l'université de Pennsylvanie. Il appelle son projet la dé-extinction moléculaire.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/02/16/1132516/cesar-de-la-fuente-using-ai-antibiotics-hunt/",
+          "file": "media/2026-09-13-antibiotiques-mammouth/shot_mitr.png"
+        }
+      },
+      {
+        "script": "Son équipe fouille les séquences génétiques publiées d'espèces disparues : Néandertal, Denisova, le mammouth laineux, des zèbres et des manchots anciens.",
+        "visual": {
+          "type": "photo",
+          "query": "protein model",
+          "alt": "Modèle de protéine en ruban photographié sur fond noir",
+          "file": "media/2026-09-13-antibiotiques-mammouth/pA.jpg",
+          "credit": "Umberto Salvagnin from Italy · CC BY"
+        }
+      },
+      {
+        "script": "Et le labo se sert aussi de ChatGPT et de Codex pour écrire son code et brasser ces génomes. La première recherche de candidats est passée de plusieurs années à quelques heures.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://insideai.news/news/generative-ai/ai-antimicrobial-discovery/10220/",
+          "file": "media/2026-09-13-antibiotiques-mammouth/shot_insideai.png"
+        }
+      },
+      {
+        "script": "Sauf qu'une molécule trouvée n'est pas un médicament. Il faut prouver qu'elle tue le microbe, trouver la dose, mesurer ce qu'elle fait à nos cellules.",
+        "visual": {
+          "type": "photo",
+          "query": "bacteria colonies agar plate",
+          "alt": "Des colonies de bactéries poussées sur une boîte de culture",
+          "file": "media/2026-09-13-antibiotiques-mammouth/pG.jpg",
+          "credit": "LadaSy · CC BY"
+        }
+      },
+      {
+        "script": "Puis la toxicité, la fabrication, les autorisations, les essais cliniques. Et lui-même le répète : les expériences réelles restent indispensables pour valider ce que l'IA prédit.",
+        "visual": {
+          "type": "photo",
+          "query": "microbiology incubator plates",
+          "alt": "L'intérieur d'un incubateur de laboratoire rempli de boîtes de culture",
+          "file": "media/2026-09-13-antibiotiques-mammouth/pH.jpg",
+          "credit": "Shinryuu · Public domain"
+        }
+      },
+      {
+        "script": "Le compteur, lui, tourne toujours : 50 ans sans nouvelle famille d'antibiotiques chez les patients. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "card",
+          "value": "50 ans",
+          "label": "sans nouvelle famille d'antibiotiques chez les patients"
+        }
+      }
+    ]
+  }
+}

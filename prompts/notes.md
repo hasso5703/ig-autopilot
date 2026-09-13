@@ -5444,3 +5444,47 @@ ENTRIES:
   `settled` et `beat0` par slug (learn.mjs les a joints pour toi), et filtre sur
   `p.settled`. IG_ACCESS_TOKEN: 10 jours (expire 23/09), watch.mjs affiche
   RENOUVELER. Proof: veille 19h30 12/09.
+  Ajout 13/09 (06h30): TRENTE-SIXIEME mesure morte d'affilee (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, meme cle 53 car AQ.Ab8), dernier
+  achat toujours 01/09 16h54, soit DIX-SEPT jours pleins. IG_ACCESS_TOKEN: 9 jours
+  (state/token.json, expire le 23/09) -- c'est le compteur qui coupe tout.
+  QUATRE RECUS MESURES CE MATIN, dont deux neufs et excellents: darioamodei.com se
+  capture en ~20 s / 1 frame, titre ENORME dans le premier tiers, date "September 2026",
+  fond creme (donc utilisable en BEAT 0, contrairement au vert-sur-vert techcrunch);
+  officechai.com 125 s / 14 frames rend masthead, titre entier, date, chapo ET UNE VRAIE
+  PHOTO du dirigeant -- a retenir, parce que le portrait de "dario amodei" est
+  INACQUERABLE en photo (les 5 cliches Commons sont rejetes a 30, 35, 38, 62 et 62% de
+  near-white): sur un patron, le visage vient du RECU, pas de l'index. insideai.news
+  26 s / 1 frame (titre, chapo, "Last Updated: September 10, 2026") et sa banniere
+  cookies tombe SOUS la fenetre visible des ~1686 px: ne recadre pas par reflexe
+  (famille spectrum du 10/09). technologyreview.com 225 s / 29 frames rend masthead,
+  titre, chapo, signature, date ET le portrait legende du sujet: c'est le meilleur recu
+  "qui nomme la personne" mesure jusqu'ici, mais il imprime sa date (16/02/2026), donc
+  place-le sous un beat qui ne date rien. techcrunch re-confirme 758 s (12,6 min,
+  stable depuis le 28/08) et le crop=1290:2650:0:145 du 10/09 reste le bon.
+  A EVITER EN RECU: unite.ai se capture pourtant en 23 s, mais sa signature est "Jonas
+  Reeve, AI Research Agent" et son illustration est visiblement generee -- meme reserve
+  que the-decoder (08/09) sur un compte dont la legende promet "sans image generee".
+  NOUVEAU BLOQUEUR: penntoday.upenn.edu rend 403 Cloudflare depuis cet egress.
+  PHOTOS: echouent au near-white "woolly mammoth skeleton", "mammoth tusk museum",
+  "antibiotic susceptibility test plate", "id badge lanyard", "laboratory pipette tubes
+  rack". Passent et sont bons: "neanderthal skull" (reconstitution du Moustier, Gary
+  Todd, CC0, fond noir: un VISAGE qui n'accuse personne de reel, ideal en beat 0 sur une
+  histoire de prehistoire), "united states capitol building" (Anthony Quintano, CC BY,
+  crepuscule), "bacteria colonies agar plate" (E.coli sur fond sombre, LadaSy),
+  "microbiology incubator plates" (Shinryuu, pdm), "protein model" (re-confirme).
+  PIEGE DE REPETITION, neuf: "computer screen dark room" rend EXACTEMENT le jpg deja
+  publie dans le Reel du 12/09 (SACHINRAJ CP, CC0). L'index est assez deterministe pour
+  servir deux fois la meme photo a deux jours d'ecart: avant d'epingler, grep les
+  `credit` des specs des trois derniers jours.
+  TROIS MECANIQUES DE GATE PAYEES CE MATIN: (1) le `figure` d'une diapo `stat` est
+  plafonne a 6 CARACTERES ("4 millions" refuse, "50" passe); (2) un `headline` de cta
+  contenant "tous les jours" est lu comme une promesse de cadence et refuse; (3) une
+  citation de corroboration a 22% de recouvrement est REFUSEE (erreur, pas warning) --
+  le remede juste est de RETRECIR le centralClaim a ce que les DEUX sources portent
+  vraiment, jamais de reecrire la phrase pour faire monter la mesure.
+  ET LA CITATION INTROUVABLE QUI NE SE VOIT PAS A L'OEIL: technologyreview.com ecrit
+  "molecular de-­extinction" avec un TIRET CONDITIONNEL (&shy;) A L'INTERIEUR DU MOT,
+  donc la citation revient NOT_FOUND alors qu'elle est sur la page. Avant d'ecrire une
+  citation qui contient un terme a trait d'union, sonde la page APLATIE
+  (flatten de validate.mjs) et recopie ce qu'elle rend. Proof: scout 06h30 13/09.
