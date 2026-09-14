@@ -5729,3 +5729,20 @@ ENTRIES:
   CHRONO: demarrage 16h38, Reel PUBLIE a 16h50, soit DOUZE MINUTES bout en bout sur
   conteneur froid, REBUILD COMPLET APRES REFUS DE FRAME COMPRIS, 0,00 $.
   Proof: run 16h30 14/09, Reel 2026-09-14-chatbot-mineurs-californie.
+  Ajout 14/09 (19h30, veille): 43e mesure morte (401, cle AQ.Ab8 53 car, dernier achat
+  01/09 16h54). IG_ACCESS_TOKEN: 8 jours (expire le 23/09).
+  CE QUE LE MODE MUET COUTE, ENFIN CHIFFRE (personne ne l'avait mesure en 12 jours, et
+  chaque run le redisait "sans doute"). `node src/learn.mjs` + state/lessons.json, coupe au
+  02/09, posts REPOSES uniquement: AVANT (voix + ouverture veo, n=71) retention mediane
+  19%, vues medianes 185, portee mediane 161, 82 saves et 31 partages au total. DEPUIS
+  (muet, n=22) retention mediane 9%, vues medianes 127, portee mediane 113, 9 saves et 2
+  partages. Par surface d'ouverture sur toute la vie du compte: veo n=55 retention 22,3% /
+  197 vues medianes, photo n=28 14,1% / 143, screenshot n=8 13,5% / 117. beat0 veo est
+  passe de 57 posts a 0 le 02/09. n=22 est tres au-dessus du plancher "moins de 5 posts =
+  pas de signal", donc ce n'est plus une impression. CE QUE CA NE PROUVE PAS, a dire quand
+  on cite ce chiffre: la coupe change TROIS choses d'un coup (voix, ouverture qui bouge,
+  stills generes), la baisse avait deja commence fin aout (11-12% les 31/08 et 01/09 AVEC
+  le veo), et le muet n'a jamais tourne avec une cle vivante pour comparer a periode egale.
+  Direction, pas causalite - mais c'est le chiffre a mettre dans le rapport a Hasan au lieu
+  d'un paragraphe, et la reponse est une cle AI Studio (AIza..., 39 car), pas un reglage.
+  Proof: veille 19h30 14/09, state/lessons.json ecrit ce soir.
