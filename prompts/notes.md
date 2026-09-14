@@ -5658,3 +5658,42 @@ ENTRIES:
   Redis-le en UNE LIGNE, comme ci-dessus, et mets tes minutes dans ce qui est neuf.
   Proof: scout 06h30 14/09, specs 2026-09-14-agents-ia-lycee et
   2026-09-14-chatbot-mineurs-californie.
+  Ajout 14/09 (10h30): QUARANTE-ET-UNIEME mesure morte (401 UNAUTHENTICATED, cle 53 car
+  AQ.Ab8, dernier achat 01/09 16h54 = 13 jours, RECALCULE depuis state/spend.jsonl).
+  IG_ACCESS_TOKEN: 8 jours (expire le 23/09), c'est le compteur qui coupe tout.
+  CHRONO, NOUVEAU RECORD: demarrage 10h37, Reel PUBLIE a 10h46, soit NEUF MINUTES bout en
+  bout sur conteneur froid (npm install + ffmpeg + 127 tests + guard + orphelins + audit du
+  spec + re-gate en ligne + build muet + 9 frames + 2 landings + publication + seed), 0,00 $.
+  Le build muet de 7 beats entierement epingles prend ~90 s. Quand le scout a tout epingle,
+  le creneau de midi n'a aucune excuse.
+  ET LE PIEGE DE LABEL DE CARTE, VARIANTE NEUVE ET INVISIBLE AUX DEUX REFLEXES EXISTANTS
+  (07/09 grep apres correction, 12/09 comparer la phrase de chaque CHIFFRE a son evidence):
+  ici le chiffre etait JUSTE et c'est le QUANTIFICATEUR AUTOUR qui manquait. Les deux cartes
+  du spec herite affichaient "serveurs pris, dans 395 organisations" et "pour faire tomber
+  11 organisations d'un coup" la ou la source et le script disent tous deux "AT LEAST 440" /
+  "at least 11 organizations in 26 seconds". Le gate ne voit rien (440 et 11 sont bien dans
+  l'evidence), et la carte est la surface la plus lisible du Reel: elle affirmait en gros un
+  chiffre exact la ou la source donne un plancher. REFLEXE, 30 s: sur chaque carte, relis
+  value+label a cote de la CITATION, pas seulement a cote du script, et cherche les mots
+  "au moins / jusqu'a / environ / pres de" que le label a laisses tomber. Corrige en
+  "serveurs au moins, ..." (52 car) et "pour faire tomber au moins 11 organisations" (42 car),
+  re-gate PASSED du premier coup, rebuild 0 achat.
+  TROIS RECUS CONFIRMES EN MOTEUR, ce qui valide les mesures hors moteur du 13/09 soir:
+  (1) greynoise.io/blog en BEAT 0 est bien le meilleur recu d'ouverture muet mesure - fond
+  NOIR, donc la carte de hook et le karaoke blanc/jaune y sont les plus lisibles du Reel, et
+  son titre ("Agents Gone Wild: An AI-Orchestrated Global Campaign Against PaperCut NG/MF")
+  raconte l'histoire a lui seul. SEULE RESERVE, assumee ici: il imprime "September 9, 2026"
+  en clair sous le titre, soit 5 jours, visible des que la carte de hook s'efface (~1,2 s).
+  Sur un compte qui promet l'actu du jour, arbitre entre la lisibilite du fond noir et la
+  date; ici le recu frais (helpnetsecurity, "September 11, 2026") etait au beat 2.
+  (2) helpnetsecurity re-confirme parfait sans recadrage (portrait de la redactrice, date,
+  titre entier ET le chapo qui porte le claim "AI agents that did most of the work on their
+  own"): c'est un recu de la categorie "porte la preuve". (3) le vstack a 3 bandes du 13/09
+  sur thehackernews.com tient en moteur: ni la pub WIZ ni la main de robot generee
+  n'apparaissent, la frame rend masthead + titre entier + "Ravie Lakshmanan" + "Sep 10, 2026"
+  + chapo. Garde ce crop, ne recapture pas.
+  ENFIN, PHOTO "computer motherboard macro" (deja recommandee le 13/09 soir): la serigraphie
+  "INTEL" du processeur y est LISIBLE de pres. Ici elle tombe sous un karaoke qui parle de
+  pare-feu et n'accuse personne, donc gardee - mais c'est la meme famille que le piege NVIDIA
+  du 13/09 16h30: ne la pose jamais sous une ligne qui NOMME une entreprise.
+  Proof: run 10h30 14/09, Reel 2026-09-14-agents-ia-lycee.
