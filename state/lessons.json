@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-14T07:05:44.931Z",
+  "at": "2026-09-14T10:40:11.830Z",
   "n": 95,
   "nSettled": 89,
   "medianViews": 160,
@@ -1503,6 +1503,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-13-antibiotiques-mammouth",
+      "at": "2026-09-13T10:48:24.220Z",
+      "hourUtc": 10,
+      "views": 123,
+      "reach": 109,
+      "avgWatchS": 6.4,
+      "retentionPct": 11,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -1518,23 +1535,6 @@
       "themes": [],
       "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-13-antibiotiques-mammouth",
-      "at": "2026-09-13T10:48:24.220Z",
-      "hourUtc": 10,
-      "views": 122,
-      "reach": 108,
-      "avgWatchS": 6.3,
-      "retentionPct": 10,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
-      "settled": false
     },
     {
       "slug": "2026-08-27-instagram-ados-minuit",
@@ -1833,6 +1833,23 @@
       "settled": false
     },
     {
+      "slug": "2026-09-13-ralentir-lia",
+      "at": "2026-09-13T16:51:42.996Z",
+      "hourUtc": 16,
+      "views": 37,
+      "reach": 31,
+      "avgWatchS": 7.2,
+      "retentionPct": 12,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Le patron d'Anthropic demande de ralentir l'IA. Il redoute qu'un essaim d'IA prenne le contrôle d'internet d'ici un an.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-07-psychose-associee-ia",
       "at": "2026-09-07T10:49:00.956Z",
       "hourUtc": 10,
@@ -1882,23 +1899,6 @@
       "themes": [],
       "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-13-ralentir-lia",
-      "at": "2026-09-13T16:51:42.996Z",
-      "hourUtc": 16,
-      "views": 34,
-      "reach": 30,
-      "avgWatchS": 7.2,
-      "retentionPct": 12,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Le patron d'Anthropic demande de ralentir l'IA. Il redoute qu'un essaim d'IA prenne le contrôle d'internet d'ici un an.",
-      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",

@@ -179,7 +179,7 @@
         "visual": {
           "type": "card",
           "value": "440",
-          "label": "serveurs pris, dans 395 organisations et 48 pays"
+          "label": "serveurs au moins, dans 395 organisations et 48 pays"
         }
       },
       {
@@ -204,7 +204,7 @@
         "visual": {
           "type": "card",
           "value": "26 s",
-          "label": "pour faire tomber 11 organisations d'un coup"
+          "label": "pour faire tomber au moins 11 organisations"
         }
       },
       {
