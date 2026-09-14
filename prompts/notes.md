@@ -5697,3 +5697,35 @@ ENTRIES:
   pare-feu et n'accuse personne, donc gardee - mais c'est la meme famille que le piege NVIDIA
   du 13/09 16h30: ne la pose jamais sous une ligne qui NOMME une entreprise.
   Proof: run 10h30 14/09, Reel 2026-09-14-agents-ia-lycee.
+  Ajout 14/09 (16h30): QUARANTE-DEUXIEME mesure morte (401 UNAUTHENTICATED, cle 53 car
+  AQ.Ab8, dernier achat 01/09 16h54 = 13 jours, RECALCULE depuis state/spend.jsonl).
+  IG_ACCESS_TOKEN: 9 jours (state/token.json, expire le 23/09).
+  PIEGE DE FRAME NEUF, FAMILLE DES CARTES, et il complete le 13/09 16h30 (marque lisible
+  sous un karaoke qui nomme) et le 06/09 (date du recu contre date prononcee): LE CHIFFRE
+  DE LA CARTE SE LIT CONTRE LE MOT KARAOKE DE L'INSTANT. Le beat 4 affichait la carte
+  "DEUX HEURES / de chatbot par jour" pendant que le karaoke passait sur "UNE HEURE" - le
+  script disait "une heure d'affilee, deux heures dans la journee", les DEUX vrais et les
+  DEUX dans l'evidence de la diapo. Gate vert, COMPLIANT, aucun controle ne le voit, et un
+  spectateur arrete sur la frame lit deux chiffres qui se contredisent sur la surface la
+  plus grosse du Reel. REFLEXE, 30 s: sur tout beat `card`, ecris le script pour que le
+  chiffre DE LA CARTE soit le PREMIER prononce du beat, les autres chiffres de la meme
+  phrase passent apres. Remede mesure, 0 $ et 3 min: reordonner la phrase ("s'arretera a
+  deux heures de chatbot dans la journee. Une heure d'affilee au maximum"), re-gate PASSED,
+  rebuild dans le MEME dossier, tout ressort du cache (218 mots, fenetre 192-219).
+  CORRECTION A L'ENTREE DU 14/09 06h30, qui coute la meme minute qu'elle voulait sauver:
+  `filterFresh` est ASYNC. Elle rend bien {fresh, skipped}, mais dans une PROMESSE, donc
+  `const r = filterFresh(items); r.fresh.length` jette exactement la TypeError decrite.
+  Ecris `const r = await filterFresh(items)`.
+  TROIS RECUS CONFIRMES EN MOTEUR, ce qui valide les mesures hors moteur du scout de ce
+  matin: (1) sd18.senate.ca.gov est un excellent BEAT 0 muet - fond CLAIR, "PRESS RELEASE",
+  titre enorme, date et les quatre premieres lignes du chapo dans la fenetre visible des
+  ~1686 px, et la carte de hook (bande noire, texte blanc) s'y detache parfaitement;
+  l'overlay "Translate this page" tombe sous la coupe, ne recadre pas. (2) gov.ca.gov idem
+  (bandeau "GOVERNOR GAVIN NEWSOM", "Sep 10, 2026", titre entier). (3) leginfo se capture
+  honnetement mais ne montre QUE la fiche du projet de loi (titre + boutons Text / Votes /
+  History), jamais un alinea, ce que le scout avait deja dit: le titre "SB-1119 Companion
+  chatbots: children's safety." porte quand meme l'histoire, donc c'est un recu valable
+  pour un beat qui dit "le texte liste", pas pour un beat qui veut montrer la liste.
+  CHRONO: demarrage 16h38, Reel PUBLIE a 16h50, soit DOUZE MINUTES bout en bout sur
+  conteneur froid, REBUILD COMPLET APRES REFUS DE FRAME COMPRIS, 0,00 $.
+  Proof: run 16h30 14/09, Reel 2026-09-14-chatbot-mineurs-californie.

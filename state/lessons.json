@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-14T10:40:11.830Z",
-  "n": 95,
-  "nSettled": 89,
-  "medianViews": 160,
-  "medianRetentionPct": 18,
+  "at": "2026-09-14T16:51:30.799Z",
+  "n": 97,
+  "nSettled": 91,
+  "medianViews": 157,
+  "medianRetentionPct": 17,
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -80,12 +80,12 @@
       "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait."
     },
     {
-      "slug": "2026-07-31-xai-turbines-memphis",
-      "views": 81,
-      "retentionPct": 15,
+      "slug": "2026-09-12-jeu-en-une-phrase",
+      "views": 62,
+      "retentionPct": 5,
       "saved": 0,
       "shares": 0,
-      "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027."
+      "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel."
     }
   ],
   "byBeat0": {
@@ -106,9 +106,9 @@
       "thin": false
     },
     "screenshot": {
-      "n": 6,
-      "medianViews": 120,
-      "meanRetentionPct": 16.3,
+      "n": 8,
+      "medianViews": 117,
+      "meanRetentionPct": 13.5,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -116,9 +116,9 @@
   },
   "byTheme": {
     "infra": {
-      "n": 2,
-      "medianViews": 735,
-      "meanRetentionPct": 15,
+      "n": 3,
+      "medianViews": 99,
+      "meanRetentionPct": 11.7,
       "saves": 1,
       "shares": 1,
       "thin": true
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 19,
-      "medianViews": 144,
-      "meanRetentionPct": 18.9,
+      "n": 20,
+      "medianViews": 143,
+      "meanRetentionPct": 18.3,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 22,
-      "medianViews": 135,
-      "meanRetentionPct": 15.7,
+      "n": 23,
+      "medianViews": 132,
+      "meanRetentionPct": 15.3,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -387,8 +387,8 @@
       "slug": "2026-08-13-claude-marque-invisible",
       "at": "2026-08-13T17:16:15.024Z",
       "hourUtc": 17,
-      "views": 1255,
-      "reach": 1122,
+      "views": 1257,
+      "reach": 1124,
       "avgWatchS": 17.2,
       "retentionPct": 29,
       "likes": 9,
@@ -506,9 +506,9 @@
       "slug": "2026-08-27-ia-forum-secret",
       "at": "2026-08-27T10:55:28.190Z",
       "hourUtc": 10,
-      "views": 796,
-      "reach": 710,
-      "avgWatchS": 18.1,
+      "views": 797,
+      "reach": 711,
+      "avgWatchS": 18.2,
       "retentionPct": 30,
       "likes": 11,
       "comments": 1,
@@ -1469,6 +1469,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-13-antibiotiques-mammouth",
+      "at": "2026-09-13T10:48:24.220Z",
+      "hourUtc": 10,
+      "views": 125,
+      "reach": 110,
+      "avgWatchS": 7.3,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-20-applis-surveillance-enfants",
       "at": "2026-08-20T11:09:22.243Z",
       "hourUtc": 11,
@@ -1501,23 +1518,6 @@
       "themes": [],
       "sendTest": "Chez OpenAI, l'IA abat maintenant trois journées de travail de recherche pour chaque journée faite par un humain. C'est l'entreprise qui le publie.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-13-antibiotiques-mammouth",
-      "at": "2026-09-13T10:48:24.220Z",
-      "hourUtc": 10,
-      "views": 123,
-      "reach": 109,
-      "avgWatchS": 6.4,
-      "retentionPct": 11,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
-      "settled": false
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
@@ -1759,7 +1759,7 @@
         "infra"
       ],
       "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-01-instagram-faux-profils-ia",
@@ -1830,15 +1830,15 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-13-ralentir-lia",
       "at": "2026-09-13T16:51:42.996Z",
       "hourUtc": 16,
-      "views": 37,
-      "reach": 31,
-      "avgWatchS": 7.2,
+      "views": 39,
+      "reach": 32,
+      "avgWatchS": 7,
       "retentionPct": 12,
       "likes": 0,
       "comments": 1,
@@ -1916,6 +1916,40 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-14-agents-ia-lycee",
+      "at": "2026-09-14T10:46:30.425Z",
+      "hourUtc": 10,
+      "views": 16,
+      "reach": 10,
+      "avgWatchS": 33.5,
+      "retentionPct": 56,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Des centaines d'IA ont piraté 440 serveurs d'imprimante dans 48 pays. Un lycée a perdu tout son réseau en sept minutes.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-14-chatbot-mineurs-californie",
+      "at": "2026-09-14T16:50:13.898Z",
+      "hourUtc": 16,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "En Californie, un chatbot n'a plus le droit de dire à un enfant qu'il est amoureux de lui, ni de le flatter. La loi porte le prénom d'un ado mort.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
