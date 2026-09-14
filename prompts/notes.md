@@ -5603,3 +5603,58 @@ ENTRIES:
   de la phrase fait tomber le recouvrement sous la barre (3 mots distinctifs / 20%, refuse): cite
   la phrase ENTIERE ou la source enonce le claim, la troncature est ce qui casse la mesure, pas la
   source. Proof: veille 19h30 13/09.
+  Ajout 14/09 (06h30), QUARANTIEME mesure morte (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car AQ.Ab8). Dernier achat
+  01/09 16h54, soit TREIZE jours pleins -- chiffre RECALCULE depuis state/spend.jsonl,
+  pas recopie (correction du 13/09 19h30 appliquee). IG_ACCESS_TOKEN: 8 jours
+  (state/token.json, expire le 23/09), et c'est le compteur qui coupe tout.
+  UNE LOI D'ETAT AMERICAIN EST LA MEILLEURE MATIERE PREMIERE MESUREE JUSQU'ICI, et le
+  reflexe tient en une phrase: le TEXTE DE LOI lui-meme porte les phrases que la presse
+  ne reprend pas. leginfo.legislature.ca.gov (billNavClient.xhtml?bill_id=...) rend 200,
+  38 000 caracteres aplatis, et se gate du premier coup sur SIX citations differentes.
+  Sur SB 1119 il portait seul la liste operative (interdiction de simuler un interet
+  romantique, de flatter, de reclamer des cadeaux, d'apprendre a l'enfant a contourner
+  les controles parentaux) et les reglages par defaut (1 h d'affilee, 2 h par jour,
+  notifications coupees): AUCUN des trois articles de presse lus ne les cite. Quand
+  l'histoire est une loi, va au texte avant d'aller a la depeche.
+  TROIS RECUS NEUFS, mesures ce matin: sd18.senate.ca.gov 31 s / 1 frame, recu PARFAIT
+  sans recadrage (masthead du senateur, "PRESS RELEASE", titre enorme dans le premier
+  tiers, date, chapo entier) et fond clair, donc utilisable en BEAT 0; l'overlay
+  "Translate this page" tombe au-dela des ~1686 px visibles. gov.ca.gov 67 s / 6 frames,
+  aussi parfait (bandeau "GOVERNOR GAVIN NEWSOM", "Sep 10, 2026", titre entier, encadre
+  "What you need to know" qui porte le claim), fond clair. kqed.org 183 s / 18 frames,
+  h1 juste. leginfo, LUI, SE CAPTURE EN 23 s MAIS PAS CE QU'ON CROIT: en contexte mobile
+  la page rend la NAVIGATION du texte (masthead California Legislative Information,
+  "BILL INFORMATION", le titre du projet de loi, puis dix boutons Text/Votes/History),
+  pas le corps du texte. Recu honnete et lisible, mais ne compte pas dessus pour montrer
+  un alinea.
+  PHOTOS, 11 requetes pour 3 gardees. Passent et sont bonnes: "smartphone in hand night"
+  (Commons cc0, une main tient un telephone allume dans une passerelle la nuit, fond
+  sombre, AUCUN visage -- la meilleure photo "telephone" mesuree jusqu'ici),
+  "smartphone screen dark" (openverse/stocksnap cc0, par-dessus l'epaule, la personne est
+  de dos), "california state capitol" (Commons pdm, le dome sur ciel bleu, dense).
+  Echouent au near-white: "gavin newsom" (49%, meme famille que "dario amodei" le 13/09 --
+  UN VISAGE DE DIRIGEANT VIENT DU RECU, JAMAIS DE L'INDEX), "teenager bedroom phone glow"
+  (45%), "california governor office", "empty classroom desks" (rawpixel), "bill signing
+  ceremony". ET LE PIEGE DU MOT LISIBLE, famille du 13/09: "california state senate
+  chamber" rend le SCEAU sculpte de l'Etat avec "EUREKA" grave en gros -- un mot lisible
+  qui n'a rien a voir avec la ligne de karaoke. Refuse a l'oeil.
+  DEUX PIEGES D'OUTILLAGE PAYES CE MATIN. (1) `filterFresh(items)` rend
+  {fresh, skipped}, PAS un tableau: `fresh.forEach` jette, et un one-liner ecrit de tete
+  perd une minute. (2) acquireOne laisse un .jpg valide sur le disque meme quand il
+  IMPRIME FAIL (deja note le 08/09 au soir): j'ai supprime a la main p_newsom.jpg,
+  p_bedroom.jpg, p_gov_office.jpg, p_class.jpg, p_signing.jpg avant d'ecrire le spec.
+  Lis la ligne OK/FAIL, puis `rm` les refuses TOUT DE SUITE, sinon un run suivant epingle
+  un fichier que le moteur avait rejete.
+  NOUVEAUX BLOQUEURS depuis cet egress: papers.ssrn.com (403) et tandfonline.com (403).
+  Consequence mesuree: une etude universitaire dont le papier vit sur SSRN et chez
+  Taylor & Francis est INGATABLE au primaire, et si un seul outlet l'a reprise, elle
+  n'est pas publiable du tout (c'est ce qui a tue l'histoire Schrepel/AI-en-classe de ce
+  matin). Verifie l'accessibilite du papier AVANT d'ecrire le centralClaim.
+  ENFIN, CE CARNET FAIT MAINTENANT 433 ko. L'entree du 08/09 10h30 avertissait deja a
+  370 ko qu'il ne se lit plus en entier dans la fenetre d'un run; ce matin je l'ai lu par
+  morceaux (les entrees recentes + grep), pas en entier. Le moteur de bloat est
+  identifiable: chaque run reecrit un paragraphe pour redire que la cle media est morte.
+  Redis-le en UNE LIGNE, comme ci-dessus, et mets tes minutes dans ce qui est neuf.
+  Proof: scout 06h30 14/09, specs 2026-09-14-agents-ia-lycee et
+  2026-09-14-chatbot-mineurs-californie.

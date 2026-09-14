@@ -175,7 +175,7 @@
         }
       },
       {
-        "script": "Ce lycée n'était même pas visé: il faisait partie du lot. 440 serveurs PaperCut piratés, dans 395 organisations et 48 pays.",
+        "script": "Ce lycée n'était même pas visé: il faisait partie du lot. Au moins 440 serveurs PaperCut piratés, dans 395 organisations et 48 pays.",
         "visual": {
           "type": "card",
           "value": "440",
@@ -191,7 +191,7 @@
         }
       },
       {
-        "script": "L'attaquant, probablement russophone selon la société de sécurité GreyNoise, s'est d'abord entraîné sur une copie du logiciel installée chez lui. Puis il a lâché ses agents, propulsés par Codex d'OpenAI et par un modèle DeepSeek.",
+        "script": "L'attaquant, probablement russophone selon la société de sécurité GreyNoise, s'est d'abord entraîné sur une copie du logiciel chez lui. Puis il a lâché ses agents, propulsés par Codex d'OpenAI et par un modèle DeepSeek.",
         "visual": {
           "type": "photo",
           "query": "server rack cables",
@@ -200,7 +200,7 @@
         }
       },
       {
-        "script": "Une fois lancés, ils ont fait tomber 11 organisations en 26 secondes. Il avait mis moins de quatre heures pour passer d'un espace vide à sa première victime.",
+        "script": "Une fois lancés, ils ont fait tomber au moins 11 organisations en 26 secondes. Il avait mis moins de quatre heures pour passer d'un espace vide à sa première victime.",
         "visual": {
           "type": "card",
           "value": "26 s",
@@ -208,7 +208,7 @@
         }
       },
       {
-        "script": "Et ce lycée n'est pas une exception. L'éducation est le secteur le plus touché, et de loin, avec 204 victimes. Les États-Unis en comptent 98, et juste derrière viennent le Royaume-Uni, puis la France.",
+        "script": "Et ce lycée n'est pas une exception. L'éducation est le secteur le plus touché, et de loin, avec 204 victimes. Les États-Unis en comptent 98, puis le Royaume-Uni et la France.",
         "visual": {
           "type": "screenshot",
           "url": "https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html",
@@ -216,7 +216,7 @@
         }
       },
       {
-        "script": "Sauf que les agents n'ont pas tout eu: 12 organisations seulement ont perdu leur réseau entier, et au moins une fois, un simple pare-feu les a arrêtés. Se protéger marche encore. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Sauf que les agents n'ont pas tout eu: 12 organisations seulement ont perdu leur réseau entier, et au moins une fois, un pare-feu applicatif les a arrêtés. Se protéger marche encore. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
           "query": "computer motherboard macro",
