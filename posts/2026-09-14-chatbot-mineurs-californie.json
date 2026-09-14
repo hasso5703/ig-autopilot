@@ -134,7 +134,7 @@
         "visual": { "type": "photo", "file": "media/2026-09-14-chatbot-mineurs-californie/p_smartphone.jpg", "query": "smartphone screen dark", "alt": "quelqu'un consulte l'écran de son smartphone, vu par-dessus l'épaule" }
       },
       {
-        "script": "Et par défaut, un compte d'enfant s'arrêtera après une heure d'affilée, deux heures dans la journée. Les notifications seront éteintes.",
+        "script": "Et par défaut, un compte d'enfant s'arrêtera à deux heures de chatbot dans la journée. Une heure d'affilée au maximum, et les notifications éteintes.",
         "visual": { "type": "card", "value": "deux heures", "label": "de chatbot par jour pour un enfant, par défaut" }
       },
       {
