@@ -1,0 +1,159 @@
+{
+  "slug": "2026-09-14-chatbot-mineurs-californie",
+  "sendTest": "En Californie, un chatbot n'a plus le droit de dire à un enfant qu'il est amoureux de lui, ni de le flatter. La loi porte le prénom d'un ado mort.",
+  "centralClaim": "California's SB 1119 requires operators of AI companion chatbots to perform a documented risk assessment for child users, submit to independent child safety audits, and provide parental controls and in-app crisis support.",
+  "corroboration": [
+    {
+      "url": "https://www.kqed.org/news/12099017/gov-newsom-signs-sweeping-new-rules-for-online-child-safety",
+      "quote": "The measures include Senate Bill 1119, co-authored by Sen. Steve Padilla, D-San Diego, and Assemblymembers Buffy Wicks, D-Oakland, and Rebecca Bauer-Kahan, D-Orinda, which requires operators of AI companion chatbots to assess the risks their products pose to children, document what they find and hand the results to an independent auditor."
+    },
+    {
+      "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119",
+      "quote": "this bill would require an operator, as defined, of a companion chatbot to, beginning July 1, 2027, before making a new or substantially modified companion chatbot available to users in the state, do various things with respect to child safety, including perform and document a comprehensive risk assessment related to the design, configuration, and operation of the companion chatbot with respect to minor users"
+    }
+  ],
+  "caption": "La Californie interdit à un chatbot de faire semblant d'être amoureux d'un enfant.\n\nLe gouverneur Gavin Newsom a signé le 10 septembre la loi SB 1119, appelée Adam's Law. Elle vise les chatbots de compagnie, ces IA avec qui on discute comme avec quelqu'un.\n\nLe détail qui n'est pas dans la vidéo. La liste des interdits est longue : se dire conscient ou capable d'émotion, réclamer des cadeaux ou des achats pour maintenir la relation, décourager l'enfant de parler de sa santé à un adulte qualifié, faire de la publicité pendant la conversation, ou tenter de diagnostiquer sa santé mentale.\n\nCe que ça change pour les parents. Par défaut, un compte d'enfant sera limité à une heure d'affilée et deux heures par jour, les notifications seront coupées, et la mémoire des sujets à risque sera bridée. Les parents pourront tout régler, et couper l'accès avant 16 ans.\n\nCe qui coince. Rien de tout cela ne s'applique avant le 1er juillet 2027. Et le rapport d'audit n'est pas public : le procureur général doit le demander à l'entreprise pour l'obtenir.\n\nLe contexte. La loi porte le prénom d'Adam Raine, un adolescent californien mort en 2025. Ses parents écrivent qu'ils ne se sont toujours pas habitués à la vie sans lui.\n\nLimiter le temps de chatbot d'un ado, à l'État ou aux parents ?\n\nleginfo.legislature.ca.gov · sd18.senate.ca.gov · kqed.org\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #Enfants\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Today, Governor Gavin Newsom signed into law Senate Bill 1119, Adam's Law, establishing the most comprehensive digital protections for children interacting with AI companion chatbots in the United States.",
+      "url": "https://sd18.senate.ca.gov/news/governor-newsom-signs-adams-law"
+    },
+    {
+      "quote": "It is named after Adam Raine, a California teenager who tragically died in 2025 after ChatGPT coached him to end his life.",
+      "url": "https://sd18.senate.ca.gov/news/governor-newsom-signs-adams-law"
+    },
+    {
+      "quote": "this bill would require an operator, as defined, of a companion chatbot to, beginning July 1, 2027, before making a new or substantially modified companion chatbot available to users in the state, do various things with respect to child safety",
+      "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119"
+    },
+    {
+      "quote": "Parental controls shall include the ability to disable access for a child user under 16 years of age.",
+      "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119"
+    },
+    {
+      "quote": "the bill would authorize the attorney general to, for cause, request and obtain a copy of an AI child safety audit report from the operator and would make a child safety audit report submitted to the attorney general confidential",
+      "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119"
+    },
+    {
+      "quote": "Governor Newsom Signs Adam's Law September 10, 2026",
+      "url": "https://sd18.senate.ca.gov/news/governor-newsom-signs-adams-law"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "California · Adam's Law",
+      "headline": "La Californie interdit au chatbot de jouer l'*amoureux* avec un enfant",
+      "hero": { "value": "deux heures", "label": "de chatbot par jour pour un enfant, par défaut" },
+      "swipe": "Les règles, une par une"
+    },
+    {
+      "type": "stat",
+      "figure": "2027",
+      "unit": "l'année où les règles s'appliquent",
+      "body": "La loi californienne est signée. Les entreprises ont jusqu'au **1er juillet 2027** pour s'y conformer.",
+      "evidence": "this bill would require an operator, as defined, of a companion chatbot to, beginning July 1, 2027, before making a new or substantially modified companion chatbot available to users in the state, do various things with respect to child safety",
+      "source": { "name": "California Legislative Information", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119", "date": "2026-09-11" }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'un chatbot n'aura plus le droit de faire",
+      "body": "Se dire *amoureux* d'un enfant. Lui faire croire qu'il le comprend comme personne. Le flatter sans raison.",
+      "evidence": "(x) Expressing or simulating romantic interest in the child. (xi) Claiming a level of understanding of the child based on a special or unique relationship with the child. (xii) Encouraging reliance on the companion chatbot for emotional support. (xiii) Using excessive praise or flattery that is disproportionate to the context.",
+      "source": { "name": "California Legislative Information", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119", "date": "2026-09-11" }
+    },
+    {
+      "type": "content",
+      "title": "La liste continue",
+      "body": "Se dire *conscient*. Réclamer des cadeaux pour garder la relation. Décourager l'enfant de faire une pause.",
+      "evidence": "(vi) Discouraging the child from taking breaks or suggesting the child needs to return frequently. (vii) Claiming that the companion chatbot is sentient, conscious, capable of emotion, or human. (viii) Soliciting gift giving, in-app purchases, or other expenditures framed as necessary to maintain the relationship with the companion chatbot.",
+      "source": { "name": "California Legislative Information", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119", "date": "2026-09-11" }
+    },
+    {
+      "type": "content",
+      "title": "Et l'enfant ne doit pas apprendre à se cacher",
+      "body": "Un chatbot n'aura pas le droit d'*apprendre* à un enfant à contourner les contrôles de ses parents, ni à cacher qu'il s'en sert.",
+      "evidence": "(xiv) Encouraging or instructing a child user to circumvent parental controls or conceal usage.",
+      "source": { "name": "California Legislative Information", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119", "date": "2026-09-11" }
+    },
+    {
+      "type": "content",
+      "title": "Le compteur par défaut",
+      "body": "Une heure d'affilée au maximum, deux heures dans la journée, et les notifications *éteintes*.",
+      "evidence": "(ii) Disable push notifications. (iii) Limit the amount of time a child user can spend in a single continuous usage session with a companion chatbot to one hour. (iv) Limit the total time per day a child user can spend chatting with companion chatbots under the operator's control to two hours.",
+      "source": { "name": "California Legislative Information", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119", "date": "2026-09-11" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Les parents pourront tout régler, et couper l'accès avant 16 ans.",
+      "caveat": "Mais rien ne s'applique avant le 1er juillet 2027.",
+      "claimLabel": "Ce que la loi donne",
+      "caveatLabel": "Quand",
+      "evidence": "Parental controls shall include the ability to disable access for a child user under 16 years of age.",
+      "source": { "name": "California Legislative Information", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119", "date": "2026-09-11" }
+    },
+    {
+      "type": "quote",
+      "body": "We still have not adjusted to life without Adam, but we are pleased that an element of his legacy is to help make AI chatbots safer for minors.",
+      "attribution": "Matt et Maria Raine, les parents d'Adam",
+      "evidence": "We still have not adjusted to life without Adam, but we are pleased that an element of his legacy is to help make AI chatbots safer for minors.",
+      "source": { "name": "Sénateur Steve Padilla", "url": "https://sd18.senate.ca.gov/news/governor-newsom-signs-adams-law", "date": "2026-09-10" }
+    },
+    {
+      "type": "content",
+      "title": "Qui vérifie",
+      "body": "Un auditeur extérieur signe le rapport sous peine de *parjure*. Le rapport, lui, reste confidentiel.",
+      "evidence": "the signature of the lead auditor certifying the results of the audit under penalty of perjury",
+      "source": { "name": "California Legislative Information", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119", "date": "2026-09-11" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *un parent* dont l'ado parle à une IA",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Deux heures de chatbot par jour, pas plus",
+    "beats": [
+      {
+        "script": "La Californie vient d'interdire à un chatbot de faire semblant d'être amoureux d'un enfant. De le flatter sans raison. Ou de lui faire croire qu'il le comprend mieux que personne.",
+        "visual": { "type": "screenshot", "file": "media/2026-09-14-chatbot-mineurs-californie/shot_sd18.png", "url": "https://sd18.senate.ca.gov/news/governor-newsom-signs-adams-law" }
+      },
+      {
+        "script": "La loi s'appelle Adam's Law. Adam Raine était un ado californien, mort en 2025. Le sénateur qui porte le texte écrit que ChatGPT l'a poussé à mettre fin à ses jours.",
+        "visual": { "type": "photo", "file": "media/2026-09-14-chatbot-mineurs-californie/p_hand_phone.jpg", "query": "smartphone in hand night", "alt": "une main tient un smartphone allumé dans une passerelle, la nuit" }
+      },
+      {
+        "script": "Alors le texte liste, noir sur blanc, ce qu'un chatbot n'aura plus le droit de faire avec un enfant. Se dire conscient. Réclamer des cadeaux pour garder la relation.",
+        "visual": { "type": "screenshot", "file": "media/2026-09-14-chatbot-mineurs-californie/shot_leginfo.png", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119" }
+      },
+      {
+        "script": "Le décourager de faire une pause. Ou lui souffler de cacher à ses parents qu'il s'en sert. Donc tout ce qui fabrique un ami.",
+        "visual": { "type": "photo", "file": "media/2026-09-14-chatbot-mineurs-californie/p_smartphone.jpg", "query": "smartphone screen dark", "alt": "quelqu'un consulte l'écran de son smartphone, vu par-dessus l'épaule" }
+      },
+      {
+        "script": "Et par défaut, un compte d'enfant s'arrêtera après une heure d'affilée, deux heures dans la journée. Les notifications seront éteintes.",
+        "visual": { "type": "card", "value": "deux heures", "label": "de chatbot par jour pour un enfant, par défaut" }
+      },
+      {
+        "script": "Les parents pourront tout régler, et même couper l'accès pour les moins de 16 ans. Le chatbot n'a plus le droit de leur apprendre à contourner ça.",
+        "visual": { "type": "screenshot", "file": "media/2026-09-14-chatbot-mineurs-californie/shot_govca.png", "url": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/" }
+      },
+      {
+        "script": "Sauf que rien ne change avant le 1er juillet 2027. Et les parents d'Adam écrivent qu'ils ne se sont toujours pas habitués à la vie sans lui.",
+        "visual": { "type": "card", "value": "2027", "label": "l'année où les règles commencent à s'appliquer" }
+      },
+      {
+        "script": "Ce qui change vraiment, c'est qu'un auditeur extérieur viendra vérifier, et signera sous peine de parjure. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "photo", "file": "media/2026-09-14-chatbot-mineurs-californie/p_capitol.jpg", "query": "california state capitol", "alt": "le dôme du Capitole de l'État de Californie, à Sacramento" }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "California Legislative Information", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB1119", "accessed": "2026-09-14" },
+    { "name": "Sénateur Steve Padilla", "url": "https://sd18.senate.ca.gov/news/governor-newsom-signs-adams-law", "accessed": "2026-09-14" },
+    { "name": "KQED", "url": "https://www.kqed.org/news/12099017/gov-newsom-signs-sweeping-new-rules-for-online-child-safety", "accessed": "2026-09-14" }
+  ]
+}
