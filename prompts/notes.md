@@ -1224,8 +1224,18 @@ ENTRIES:
   `crop=1290:2000:0:0`, ce qui garde logo Meta + rubrique + titre entier + date +
   premier bullet sur fond CLAIR (tres bon beat 0 muet). techcrunch.com 203 s /
   28 frames, propre sans recadrage (bandeau vert, titre, signature, date, chapo).
-  engadget.com: capture lancee a 20h04, toujours pas rendue la main 30 min plus
-  tard -- ne la mets pas sur le chemin critique d'un run de publication.
+  engadget.com: le GATE le lit sans probleme (VERIFIED du premier coup) mais la
+  CAPTURE est inutilisable: 26 min 02 s puis plantage sec, "Target page, context
+  or browser has been closed". Cite-le, ne le photographie pas. Et le remplacant
+  mesure ce soir: www.meta.com/help/... se capture en 45 s / 10 frames, propre,
+  sans bandeau de consentement, avec titre + "Updated: 4 hours ago" + le chapo
+  qui nomme Instagram, Facebook et WhatsApp -- MAIS il est INCITABLE: la page est
+  rendue en JS, flatten() n'en tire que 39 caracteres (le titre) sur 490 Ko de
+  HTML brut, donc aucune citation ne peut y etre gatee. Famille a connaitre: une
+  page peut etre un excellent RECU et une source impossible, les deux verdicts
+  sont independants. (Verifie avec
+  `node -e "import('./src/validate.mjs').then(async m=>{const r=await fetch(u);console.log(m.flatten(await r.text()).length)})"`
+  avant d'ecrire une citation depuis une page d'aide ou une application web.)
   PHOTOS (5 requetes pour 2 photos, HTTP 500/504 Openverse a nouveau en boucle):
   "crowd filming phones" rend Occupy Wall Street 2011, visages identifiables,
   masque Anonymous et pancarte politique, sur une histoire d'abonnements -- le
