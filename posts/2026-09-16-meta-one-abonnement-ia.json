@@ -1,0 +1,231 @@
+{
+  "slug": "2026-09-16-meta-one-abonnement-ia",
+  "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
+  "centralClaim": "Meta introduced a new subscription service called Meta One, offering expanded AI usage and other premium features across Facebook, Instagram, and WhatsApp.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/",
+      "quote": "Meta on Tuesday introduced a new subscription service called Meta One, offering expanded AI usage and other premium features across Facebook, Instagram, and WhatsApp."
+    },
+    {
+      "url": "https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/",
+      "quote": "The company introduced a new batch of \"Meta One\" plans aimed at creators, businesses and \"AI power users.\" The new subscription tiers combine exclusive features with expanded access to Meta's growing slate of AI tools."
+    }
+  ],
+  "caption": "Meta met un prix sur son IA : sur Instagram, sur WhatsApp et sur Facebook, en utiliser plus devient un abonnement.\n\nL'offre s'appelle Meta One. Elle est disponible dans le monde entier depuis mardi. Les forfaits démarrent à 2.99 dollars par mois pour une seule application, 7.99 dollars pour le pack Core, 19.99 dollars pour le pack Premium.\n\nCe que ça achète. Plus d'images et de vidéos générées avec l'IA de Meta, plus de retouches automatiques sur les stories Instagram, plus d'effets de voix. Meta écrit que ses applications et son IA restent gratuites pour l'usage courant.\n\nLe détail qui n'est pas dans la vidéo. Interrogé par TechCrunch sur les quantités exactes incluses dans les deux packs, Meta a refusé de les communiquer : elles peuvent varier selon le pays, la surface et les conditions du système.\n\nCe qui coince. Tu payes donc pour une quantité que personne ne te chiffre avant l'achat. Meta annonce déjà plus de 50 fonctionnalités lancées et 15 millions d'abonnements et d'essais.\n\nLa ligne la plus chère. À 499 dollars par mois, le forfait Max donne le droit de demander un appel téléphonique avec une vraie personne qui travaille chez Meta.\n\nEt ce n'est pas fini. Meta annonce que les abonnements s'étendront à Edits, son application de montage, et à ses lunettes.\n\nPayer pour plus d'IA dans tes applis, oui ou non ?\n\nabout.fb.com · techcrunch.com · engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #Meta #Instagram\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Meta One plans are now available globally and start at just $2.99 a month for single products, $7.99 a month for individual bundles, and $14.99 a month for creator and business bundles.",
+      "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/"
+    },
+    {
+      "quote": "Premium ($19.99/mo): Everything in Core, with the most room to create content with Meta AI and across our family of apps.",
+      "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/"
+    },
+    {
+      "quote": "Meta One plans are rolling out gradually, with more than 50 features launched and 15 million subscriptions and trials to-date.",
+      "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/"
+    },
+    {
+      "quote": "Finally, the most expensive Meta One \"Max\" plan ($499/month) combines all of the benefits of the plans detailed above, along with the highest-capacity access to Meta's business agents. It also offers a benefit that's proved particularly elusive to Instagram creators: an \"unlimited\" ability to request support from an actual human, as well as the option to request an actual phone call with \"a real person\" who works for the company.",
+      "url": "https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/"
+    },
+    {
+      "quote": "Reached for comment, Meta declined to share the exact usage limits for the two plans, as they could vary by \"country, surface and system conditions.\"",
+      "url": "https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/"
+    },
+    {
+      "quote": "We're launching with more than 50 features on Instagram, Facebook, WhatsApp, and Meta AI, and will expand to Edits, AI glasses, and more over time.",
+      "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Meta Newsroom · Meta One",
+      "headline": "Meta met un *prix* sur son IA",
+      "hero": {
+        "value": "$7.99",
+        "label": "par mois pour en utiliser plus"
+      },
+      "swipe": "Ce que ça achète vraiment"
+    },
+    {
+      "type": "stat",
+      "figure": "$19.99",
+      "unit": "par mois pour le pack Premium",
+      "body": "Le pack **Core** coûte moins cher. Les deux servent à la même chose : utiliser l'IA de Meta plus souvent.",
+      "evidence": "Premium ($19.99/mo): Everything in Core, with the most room to create content with Meta AI and across our family of apps.",
+      "source": {
+        "name": "Meta Newsroom",
+        "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La grille",
+      "body": "Elle démarre à 2.99 dollars par mois pour une seule application, 7.99 dollars pour le pack qui ouvre l'IA, et 14.99 dollars côté créateurs.",
+      "evidence": "Meta One plans are now available globally and start at just $2.99 a month for single products, $7.99 a month for individual bundles, and $14.99 a month for creator and business bundles.",
+      "source": {
+        "name": "Meta Newsroom",
+        "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les applis restent gratuites",
+      "body": "Meta l'écrit noir sur blanc : l'usage courant de ses applications et de son IA ne change pas. Ce qui se paye, c'est *la quantité*.",
+      "evidence": "The core experience across our apps and Meta AI has always been free, and that's not changing.",
+      "source": {
+        "name": "Meta Newsroom",
+        "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que ça débloque",
+      "body": "Retoucher plus de stories Instagram avec Restyle, utiliser les effets de voix plus souvent, générer plus d'images et de vidéos.",
+      "evidence": "Core ($7.99/mo): Restyle more Stories on Instagram, use voice effects and creative tools more often, and generate more images and videos with Meta AI.",
+      "source": {
+        "name": "Meta Newsroom",
+        "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Meta vend plus d'usage de son IA, et le met en avant comme l'argument des deux packs.",
+      "caveat": "Interrogé sur les quantités exactes, Meta a refusé de les communiquer.",
+      "claimLabel": "Ce qui est vendu",
+      "caveatLabel": "Ce qui n'est pas dit",
+      "evidence": "Reached for comment, Meta declined to share the exact usage limits for the two plans, as they could vary by \"country, surface and system conditions.\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ça marche déjà",
+      "body": "Meta revendique **15 millions** d'abonnements et d'essais, et plus de 50 fonctionnalités lancées.",
+      "evidence": "Meta One plans are rolling out gradually, with more than 50 features launched and 15 million subscriptions and trials to-date.",
+      "source": {
+        "name": "Meta Newsroom",
+        "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "499 dollars pour un humain",
+      "body": "Le forfait le plus cher donne le droit de demander un *appel téléphonique* avec une vraie personne qui travaille chez Meta.",
+      "evidence": "Finally, the most expensive Meta One \"Max\" plan ($499/month) combines all of the benefits of the plans detailed above, along with the highest-capacity access to Meta's business agents. It also offers a benefit that's proved particularly elusive to Instagram creators: an \"unlimited\" ability to request support from an actual human, as well as the option to request an actual phone call with \"a real person\" who works for the company.",
+      "source": {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où ça s'applique",
+      "body": "Sur Instagram, sur Facebook, sur WhatsApp et dans Meta AI. Et Meta prévient que ça s'étendra à *Edits*, son application de montage, et à ses lunettes.",
+      "evidence": "We're launching with more than 50 features on Instagram, Facebook, WhatsApp, and Meta AI, and will expand to Edits, AI glasses, and more over time.",
+      "source": {
+        "name": "Meta Newsroom",
+        "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui paye déjà trois abonnements",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Meta te vend plus d'IA sans dire combien",
+    "beats": [
+      {
+        "script": "L'intelligence artificielle que tu utilises sur Instagram, sur WhatsApp et sur Facebook a maintenant un prix. Meta l'a annoncé mardi : un abonnement, qui s'appelle Meta One.",
+        "visual": {
+          "type": "screenshot",
+          "file": "media/2026-09-16-meta-one-abonnement-ia/shot_meta.png",
+          "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/"
+        }
+      },
+      {
+        "script": "Et le plus gênant n'est pas le prix. C'est que Meta ne veut pas te dire ce que tu achètes. Parce que les applis, elles, restent gratuites.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-09-16-meta-one-abonnement-ia/p_apps.jpg",
+          "query": "smartphone social media apps screen",
+          "alt": "les icones des applications sociales sur l'ecran d'un telephone"
+        }
+      },
+      {
+        "script": "Ce que tu payes, c'est d'utiliser l'IA plus souvent : générer plus d'images, plus de vidéos, retoucher plus de stories. Le premier pack coûte 7.99 dollars par mois, le suivant 19.99.",
+        "visual": {
+          "type": "card",
+          "value": "$7.99",
+          "label": "par mois, et 19.99 pour le pack au-dessus"
+        }
+      },
+      {
+        "script": "Sauf que quand TechCrunch a demandé combien d'images tu peux générer avec, Meta a refusé de répondre. Ça dépend du pays, de l'application et des conditions du système.",
+        "visual": {
+          "type": "screenshot",
+          "file": "media/2026-09-16-meta-one-abonnement-ia/shot_tc.png",
+          "url": "https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/"
+        }
+      },
+      {
+        "script": "Donc tu payes pour une quantité que personne ne te chiffre. Et ça marche déjà : Meta revendique 15 millions d'abonnements et d'essais, et plus de 50 fonctionnalités.",
+        "visual": {
+          "type": "card",
+          "value": "15 millions",
+          "label": "d'abonnements et d'essais revendiqués par Meta"
+        }
+      },
+      {
+        "script": "Et tout en haut de la grille, il y a un forfait à 499 dollars par mois. Ce qu'il donne, en plus de l'IA, c'est ce qui échappe d'habitude aux créateurs d'Instagram.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/"
+        }
+      },
+      {
+        "script": "Le droit de demander un appel téléphonique avec une vraie personne qui travaille chez Meta. Et ce n'est pas fini : les abonnements s'étendront aussi à ses lunettes. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-09-16-meta-one-abonnement-ia/p_phone.jpg",
+          "query": "telephone handset desk",
+          "alt": "un telephone a pieces rouge fixe a un mur"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Meta Newsroom",
+      "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+      "accessed": "2026-09-15"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/",
+      "accessed": "2026-09-15"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/",
+      "accessed": "2026-09-15"
+    }
+  ]
+}

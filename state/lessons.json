@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-15T16:40:38.933Z",
-  "n": 98,
-  "nSettled": 92,
-  "medianViews": 155,
+  "at": "2026-09-15T19:41:46.074Z",
+  "n": 99,
+  "nSettled": 93,
+  "medianViews": 153,
   "medianRetentionPct": 17,
   "top": [
     {
@@ -80,12 +80,12 @@
       "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant."
     },
     {
-      "slug": "2026-09-12-jeu-en-une-phrase",
-      "views": 63,
-      "retentionPct": 5,
+      "slug": "2026-09-13-ralentir-lia",
+      "views": 40,
+      "retentionPct": 11,
       "saved": 0,
       "shares": 0,
-      "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel."
+      "sendTest": "Le patron d'Anthropic demande de ralentir l'IA. Il redoute qu'un essaim d'IA prenne le contrôle d'internet d'ici un an."
     }
   ],
   "byBeat0": {
@@ -106,9 +106,9 @@
       "thin": false
     },
     "screenshot": {
-      "n": 8,
+      "n": 9,
       "medianViews": 117,
-      "meanRetentionPct": 13.5,
+      "meanRetentionPct": 13.2,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 23,
-      "medianViews": 132,
-      "meanRetentionPct": 15.3,
+      "n": 24,
+      "medianViews": 130,
+      "meanRetentionPct": 15.1,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -576,7 +576,7 @@
       "slug": "2026-09-09-navier-stokes-un-million",
       "at": "2026-09-09T17:02:31.419Z",
       "hourUtc": 17,
-      "views": 486,
+      "views": 487,
       "reach": 417,
       "avgWatchS": 11,
       "retentionPct": 18,
@@ -1847,7 +1847,7 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Le patron d'Anthropic demande de ralentir l'IA. Il redoute qu'un essaim d'IA prenne le contrôle d'internet d'ici un an.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-11-services-publics-satures",
@@ -1967,6 +1967,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-15-agents-tricheurs-denonciateurs",
+      "at": "2026-09-15T16:49:20.135Z",
+      "hourUtc": 16,
+      "views": 18,
+      "reach": 14,
+      "avgWatchS": 6,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Google a mis 100 IA a faire des maths ensemble. Une a trouve comment tricher, en 27 minutes tout le monde trichait, et 24 autres les ont denoncees.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

@@ -1204,6 +1204,39 @@ ENTRIES:
   audit du spec herite + re-gate en ligne 22/22 + build muet + 9 frames +
   2 landings + publication + seed), 0,00 $. Le build muet de 7 beats entierement
   epingles prend ~75 s. Proof: run 16h30 15/09, Reel agents-tricheurs.
+  Ajout 15/09 (19h30), LE PIEGE DE FLATTEN, un aller-retour de gate paye ce soir.
+  Pour lire une page et en copier une citation, importe `flatten` DEPUIS
+  src/validate.mjs (il est exporte) plutot que d'en ecrire une replique: le gate
+  supprime les balises INLINE (a, b, span, em, strong, sub...) SANS espace et
+  toutes les autres AVEC. Une replique naive qui remplace toute balise par un
+  espace fabrique une phrase que la page ne contient pas des qu'un lien tombe au
+  milieu. Mesure: le chapo TechCrunch se lit "called Meta One, offering" pour le
+  gate (le nom du produit est un lien) et "Meta One , offering" pour la replique;
+  citation copiee depuis la replique = NOT_FOUND, meme page, meme seconde. Le
+  symptome a reconnaitre: UNE SEULE citation NOT_FOUND sur une page qui repond
+  200, avec un espace avant une virgule ou un point dans le texte copie.
+  DOMAINES MESURES CE SOIR, tous 200 et gates du premier coup: about.fb.com/news
+  NOUVEAU (le primaire de Meta bat la presse sur les prix: il porte la grille
+  tarifaire entiere et une section "Takeaways" en haut de page), engadget.com
+  NOUVEAU (porte les details que le communique tait), techcrunch.com re-confirme.
+  RECUS: about.fb.com 27 s / 1 frame MAIS le bandeau cookies survit aux deux
+  passes de consentement et grise toute la moitie basse -> recadrer
+  `crop=1290:2000:0:0`, ce qui garde logo Meta + rubrique + titre entier + date +
+  premier bullet sur fond CLAIR (tres bon beat 0 muet). techcrunch.com 203 s /
+  28 frames, propre sans recadrage (bandeau vert, titre, signature, date, chapo).
+  engadget.com: capture lancee a 20h04, toujours pas rendue la main 30 min plus
+  tard -- ne la mets pas sur le chemin critique d'un run de publication.
+  PHOTOS (5 requetes pour 2 photos, HTTP 500/504 Openverse a nouveau en boucle):
+  "crowd filming phones" rend Occupy Wall Street 2011, visages identifiables,
+  masque Anonymous et pancarte politique, sur une histoire d'abonnements -- le
+  TITRE suffisait a la jeter, le filtre near-white ne voit rien de tout cela.
+  Echouent: "subway passengers phones", "hand holding phone screen apps".
+  MARCHENT: "smartphone social media apps screen" (macro cc0 d'icones d'applis,
+  Facebook lisible) et "telephone handset desk" (telephone a pieces rouge, cc0,
+  deja en 9:16, tres dense). Quand l'histoire parle d'APPLIS, l'ecran d'accueil
+  est acquerable la ou l'appareil ne l'est pas: complement de la lecon iPhone de
+  ce matin. 47e mesure de la cle media ce soir: toujours 401.
+  Proof: veille 19h30 15/09, spec banque 2026-09-16-meta-one-abonnement-ia.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
