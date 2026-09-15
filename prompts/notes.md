@@ -1183,6 +1183,27 @@ ENTRIES:
   contient dall-e, midjourney, gpt-image, ai-generated, AVANT de regarder le jpg.
   Proof: scout 06h30 15/09, specs 2026-09-15-siri-europe-iphone et
   2026-09-15-agents-tricheurs-denonciateurs.
+  Ajout 15/09 (16h30), 46e mesure morte (401, cle 53 car AQ.A; dernier achat
+  01/09 16h54, RECALCULE = 14 jours). IG_ACCESS_TOKEN: 7 jours (expire 23/09).
+  LES DEUX RECUS RECADRES PAR LE SCOUT CE MATIN SONT CONFIRMES EN MOTEUR, et le
+  premier est le MEILLEUR BEAT 0 MUET MESURE JUSQU'ICI. (1) technologyreview.com
+  recadre `crop=1290:2030:0:0` rend, dans la fenetre visible: rubrique
+  "ARTIFICIAL INTELLIGENCE", titre entier, chapo QUI PORTE LE CLAIM, signature et
+  "September 14, 2026". Son fond est un BLEU NUIT profond, donc la carte de hook
+  (bande noire, texte blanc) et le karaoke blanc/jaune y sont plus lisibles que
+  sur n'importe quel recu clair -- meme famille que le fond noir greynoise
+  (13/09) et about.roblox (12/09), et sans leur reserve de date puisque celle-ci
+  est de la veille. Aucun bandeau paywall dans le cadre: le crop du matin suffit,
+  ne recapture pas (la page coute >300 s). (2) the-decoder recadre
+  `crop=1290:780:0:60` rend titre entier + "Matthias Bastian" + "Sep 5, 2026" et
+  supprime l'illustration generee: la reserve du 08/09 16h30 est reglee pour de
+  bon, garde ce crop. Sa date imprimee a 10 jours ne coute rien AU BEAT 4 (regle
+  du 10/09: la date d'un recu ne pese qu'au beat 0).
+  CHRONO: demarrage 16h38, Reel PUBLIE a 16h49, soit ONZE MINUTES bout en bout
+  sur conteneur froid (npm install + ffmpeg + 127 tests + guard + orphelins +
+  audit du spec herite + re-gate en ligne 22/22 + build muet + 9 frames +
+  2 landings + publication + seed), 0,00 $. Le build muet de 7 beats entierement
+  epingles prend ~75 s. Proof: run 16h30 15/09, Reel agents-tricheurs.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
