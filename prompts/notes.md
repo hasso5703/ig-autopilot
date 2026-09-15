@@ -1135,6 +1135,54 @@ ENTRIES:
   communicants. Ce qui manque est une lecture exterieure; ici elle existe
   (l'opposition finlandaise) mais elle n'est portee que par insideai.news, qui
   credite Reuters (injoignable), donc dis-le dans le rapport.
+- 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
+  TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
+  aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
+  mois ou l'annee d'une source citee passe SANS qu'aucune citation ne le porte.
+  Mesure de ce matin: le script disait "24 agents contre les 14 tricheurs", 14
+  n'etait dans AUCUNE citation, le gate a dit PASSED parce qu'une diapo est datee
+  2026-09-14. Famille attendue sur tout chiffre <= 31, sur 2026, et sur 9 ou 09.
+  REFLEXE, 20 s, sur tout spec avant de le banquer: recompte les chiffres contre
+  les CITATIONS SEULES (slides[].evidence + captionEvidence + corroboration), pas
+  contre le pool du gate. Script de scratchpad, 15 lignes: extraire
+  /\d+(?:[.,]\d+)?/g de chaque citation dans un Set, puis verifier chaque script
+  de beat, chaque value/label de carte, le title, la caption et les champs de
+  diapo. Ici le remede etait une diapo de plus portant la vraie phrase ("more
+  whistleblowers than cheaters: 24 compared to 14"). Ne corrige PAS validate.mjs,
+  c'est de la constitution: propose-le dans le rapport.
+  DOMAINES MESURES AU FETCH DU GATE ce matin, tous 200 ET gates du premier coup
+  (22 citations sur 22 sur le spec Apple, 8 sur 8 sur le spec DeepMind):
+  apple.com/newsroom NOUVEAU -- le primaire d'Apple est joignable, page du jour
+  ET pages d'archive /2026/06/, et c'est la section "Availability" en bas de page
+  qui porte ce que le communique ne dit pas (ici l'absence de Siri AI dans l'UE);
+  silicon.co.uk NOUVEAU (porte les citations d'un point presse de Bruxelles);
+  9to5mac.com et cnbc.com re-confirmes; technologyreview.com, the-decoder.com,
+  arxiv.org/abs re-confirmes. BLOQUENT depuis cet egress: macobserver.com (403),
+  phonearena.com (403), theregister.com (404 sur ses URL d'article).
+  QUATRE RECUS MESURES HORS MOTEUR ET EPINGLES, replique de screenshotOnce
+  (recette du 21/08): apple.com/newsroom 25 s / 1 frame, PARFAIT sans recadrage,
+  fond CLAIR, "UPDATE / September 14, 2026" + titre entier + chapo dans le cadre
+  9:16 -- excellent BEAT 0. arxiv.org/abs 22 s / 1 frame, parfait aussi: titre,
+  six auteurs, "[Submitted on 3 Sep 2026]" ET la moitie du resume. silicon.co.uk
+  103 s / 2 frames, propre apres `crop=1290:2760:0:36` (un filet de masthead
+  coupe reste tout en haut). technologyreview.com >300 s (le plus lent mesure,
+  lance-le en arriere-plan) et il FAUT recadrer a `crop=1290:2030:0:0`: la
+  banniere paywall "THIS IS YOUR FIRST COMPLIMENTARY STORY" (fond turquoise)
+  survit aux deux passes de consentement et tombe dans le cadre 9:16.
+  ET LE PIEGE NEUF, the-decoder.com: le recu est propre mais son illustration de
+  une est GENEREE ("GPT-Image-2 prompted by THE DECODER" imprime dessus, plus du
+  faux texte lisible "THIS IS A SHAM"). Sur un compte dont la ligne de
+  divulgation muette promet "ni image generee", ne montre pas cette image:
+  `crop=1290:780:0:60` gardent le titre, l'auteur et la date, rien d'autre.
+  MEME FAMILLE DANS L'INDEX PHOTO, et c'est le piege le plus dangereux du jour:
+  Openverse/Commons servent des images GENEREES sous licence libre. "blackboard
+  mathematical equations" a rendu un fichier Commons pdm titre "DALL-E -
+  Blackboard drawing of anthropomorphic rhinoceros", et "library bookshelves
+  rows" une illustration de fantasy manifestement IA. Le filtre near-white ne
+  voit rien. REFLEXE: lis le `title` que acquireOne renvoie et jette tout ce qui
+  contient dall-e, midjourney, gpt-image, ai-generated, AVANT de regarder le jpg.
+  Proof: scout 06h30 15/09, specs 2026-09-15-siri-europe-iphone et
+  2026-09-15-agents-tricheurs-denonciateurs.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
