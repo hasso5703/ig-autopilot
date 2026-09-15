@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-15T10:41:21.628Z",
-  "n": 97,
-  "nSettled": 91,
-  "medianViews": 157,
+  "at": "2026-09-15T16:40:38.933Z",
+  "n": 98,
+  "nSettled": 92,
+  "medianViews": 155,
   "medianRetentionPct": 17,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 28,
-      "medianViews": 143,
-      "meanRetentionPct": 14.1,
+      "n": 29,
+      "medianViews": 141,
+      "meanRetentionPct": 14,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 20,
-      "medianViews": 144,
-      "meanRetentionPct": 18.3,
+      "n": 21,
+      "medianViews": 142,
+      "meanRetentionPct": 18,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -1483,7 +1483,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-20-applis-surveillance-enfants",
@@ -1921,9 +1921,9 @@
       "slug": "2026-09-14-chatbot-mineurs-californie",
       "at": "2026-09-14T16:50:13.898Z",
       "hourUtc": 16,
-      "views": 28,
-      "reach": 23,
-      "avgWatchS": 5.1,
+      "views": 30,
+      "reach": 24,
+      "avgWatchS": 4.9,
       "retentionPct": 8,
       "likes": 0,
       "comments": 1,
@@ -1932,6 +1932,23 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "En Californie, un chatbot n'a plus le droit de dire à un enfant qu'il est amoureux de lui, ni de le flatter. La loi porte le prénom d'un ado mort.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-15-siri-europe-iphone",
+      "at": "2026-09-15T10:57:35.841Z",
+      "hourUtc": 10,
+      "views": 27,
+      "reach": 23,
+      "avgWatchS": 1.8,
+      "retentionPct": 3,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Apple a sorti son nouveau Siri lundi. En Europe il ne marchera pas sur iPhone. Sur un Mac oui, sur ton telephone non, et sans date.",
       "settled": false
     },
     {
