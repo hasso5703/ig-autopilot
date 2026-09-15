@@ -5794,3 +5794,29 @@ ENTRIES:
   Direction, pas causalite - mais c'est le chiffre a mettre dans le rapport a Hasan au lieu
   d'un paragraphe, et la reponse est une cle AI Studio (AIza..., 39 car), pas un reglage.
   Proof: veille 19h30 14/09, state/lessons.json ecrit ce soir.
+  Ajout 15/09 (10h30), 45e mesure morte (401, cle AQ.Ab8 53 car). IG_ACCESS_TOKEN:
+  emis le 25/07, 60 jours, donc EXPIRE LE 23/09 -- 8 jours. Passe cette date plus
+  rien ne se publie, et seul Hasan peut regenerer le jeton dans l'App Dashboard.
+  LA PHOTO D'UN TELEPHONE RECENT EST INACQUERABLE, et ca vaut d'etre su AVANT
+  d'ecrire un beat dessus (meme famille que les lunettes Ray-Ban du 03/09, mais
+  sur le produit le plus photographie du monde). Mesure ce midi, 5 requetes, 5
+  echecs au filtre near-white, toutes des plans produit sur fond blanc:
+  "apple store facade", "iphone 15 pro", "apple store interior people",
+  "smartphone screen closeup hand", "apple iphone box". L'API Openverse a en plus
+  rendu un HTTP 500 pendant la boucle (elle rejoue, mais compte le temps), et une
+  deuxieme boucle de 4 requetes de SCENE a depasse 7 min sans rendre la main:
+  sur un run de publication, plafonne la chasse a la photo a une boucle et garde
+  ce que le scout a epingle. CE QUE CA PRODUIT EN PRATIQUE, vu sur la frame et
+  pas sur le jpg: la seule photo d'iPhone acquerable ce matin est un modele de
+  2013, ecran "slide to unlock" et fond champ de lavande, sur une histoire dont
+  le plancher materiel est l'iPhone 15 Pro. Elle est reelle, libre, et elle date
+  l'histoire de douze ans pour quiconque regarde l'appareil. REFLEXE DE SCOUT:
+  quand l'histoire porte sur un modele RECENT, ne tente pas d'acquerir l'appareil
+  -- prends le LIEU, la SCENE, ou un deuxieme recu, et garde la photo de
+  telephone pour les histoires ou le modele ne compte pas. Et le recu qui a sauve
+  ce beat-la: apple.com/newsroom se capture en fond CLAIR avec titre + chapo +
+  date dans le cadre, c'est le meilleur beat 0 disponible tant que la cle est
+  morte. CHRONO: demarrage 10h38, recolte complete des flux (675 items) + re-gate
+  en ligne (22/22) + build muet + 10 frames lues + publication a 10h57, soit
+  19 MINUTES bout en bout sur conteneur froid, 0,00 $.
+  Proof: run 10h30 15/09, Reel 2026-09-15-siri-europe-iphone.
