@@ -1,0 +1,173 @@
+{
+  "slug": "2026-09-15-siri-europe-iphone",
+  "sendTest": "Apple a sorti son nouveau Siri lundi. En Europe il ne marchera pas sur iPhone. Sur un Mac oui, sur ton telephone non, et sans date.",
+  "centralClaim": "Apple's new Siri assistant is not available initially in the EU, though it is available worldwide except in two territories.",
+  "corroboration": [
+    {
+      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
+      "quote": "Siri AI will not be available initially in the EU in iOS, iPadOS, and watchOS."
+    },
+    {
+      "url": "https://9to5mac.com/2026/09/14/here-are-the-requirements-to-get-siri-ai-in-ios-27/",
+      "quote": "Siri AI is available worldwide, except in two key territories: the EU and China."
+    }
+  ],
+  "caption": "Apple a sorti son nouveau Siri. Sur les iPhone européens, il n'arrivera pas.\n\nL'assistant s'appelle Siri AI. Il comprend ce que tu lui montres avec l'appareil photo, il va chercher sur le web, et il garde le fil de la conversation dans une application à lui. Apple écrit qu'il ne sera pas disponible au départ dans l'Union européenne sur iPhone, iPad et Apple Watch.\n\nLe détail qui n'est pas dans la vidéo. Ailleurs dans le monde, il ne suffit pas d'avoir mis à jour son téléphone : il faut un iPhone 15 Pro au minimum, régler l'appareil en anglais, avoir plus de 13 ans, et s'inscrire sur une liste d'attente.\n\nLes deux versions. Apple met en cause le règlement européen sur les marchés numériques et dit n'avoir aucune date à donner. La Commission européenne répond qu'Apple lui avait surtout demandé d'être exemptée de ses obligations pendant au moins 18 mois, et que rien dans le texte n'empêchait ce lancement.\n\nCe qui est cocasse. Le même assistant fonctionne, lui, sur un Mac européen. Et en octobre, Siri AI doit se mettre à parler français.\n\nLa faute à Apple ou la faute à Bruxelles ?\n\napple.com · 9to5mac.com · cnbc.com · silicon.co.uk\n\n#IA #IntelligenceArtificielle #ActuIA #Apple #iPhone\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "That means you'll need an iPhone 15 Pro or newer.",
+      "url": "https://9to5mac.com/2026/09/14/here-are-the-requirements-to-get-siri-ai-in-ios-27/"
+    },
+    {
+      "quote": "Apple says that Siri AI is not available for users under 13.",
+      "url": "https://9to5mac.com/2026/09/14/here-are-the-requirements-to-get-siri-ai-in-ios-27/"
+    },
+    {
+      "quote": "\"Instead of trying to find a suitable compliance solution, Apple simply made a request to the European Commission to be exempted from their interoperability obligations under the DMA - and this for at least 18 months,\" Regnier said.",
+      "url": "https://www.silicon.co.uk/ai-2/eu-apple-siri-630206"
+    },
+    {
+      "quote": "Siri AI will not be available initially in the EU in iOS, iPadOS, and watchOS.",
+      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/"
+    },
+    {
+      "quote": "Mac and Apple Vision Pro users in the EU will be able to access Siri AI when set to a supported language.",
+      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/"
+    },
+    {
+      "quote": "Siri AI begins rolling out as a beta in English, with French, Japanese, Korean, Portuguese, and Spanish coming in October.",
+      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/"
+    },
+    {
+      "quote": "The new Siri AI is in beta, Apple said, and users have to opt in through the settings app, though they may have to add their names to the waitlist before getting access.",
+      "url": "https://www.cnbc.com/2026/09/14/apple-releases-ios-27-redesigned-siri-ai.html"
+    },
+    {
+      "quote": "However, their refusal to engage constructively on solutions that preserve privacy and security means we do not currently have a timeline for Siri AI's availability on iOS and iPadOS in the EU.",
+      "url": "https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/"
+    },
+    {
+      "quote": "At launch, Siri AI is only available for devices where the language is set to English.",
+      "url": "https://9to5mac.com/2026/09/14/here-are-the-requirements-to-get-siri-ai-in-ios-27/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "14 septembre 2026 · Apple",
+      "headline": "Ton iPhone européen n'aura pas le *nouveau Siri*",
+      "hero": { "value": "aucune date", "label": "annoncée pour l'Europe, sur iPhone" },
+      "swipe": "Les deux versions de l'histoire"
+    },
+    {
+      "type": "stat",
+      "figure": "15 Pro",
+      "unit": "l'iPhone minimum, ailleurs dans le monde",
+      "body": "Et encore. Il faut aussi régler le téléphone en **anglais** et s'inscrire sur une liste d'attente.",
+      "evidence": "That means you'll need an iPhone 15 Pro or newer.",
+      "source": { "name": "9to5Mac", "url": "https://9to5mac.com/2026/09/14/here-are-the-requirements-to-get-siri-ai-in-ios-27/", "date": "2026-09-14" }
+    },
+    {
+      "type": "content",
+      "title": "C'était lundi",
+      "body": "Apple a publié *lundi* la nouvelle version du logiciel de l'iPhone, avec l'assistant Siri AI dedans.",
+      "evidence": "Apple on Monday released a new version of the iPhone software called iOS 27, which includes the company's redesigned Siri AI personal assistant, before the latest iPhones hit store shelves this week.",
+      "source": { "name": "CNBC", "url": "https://www.cnbc.com/2026/09/14/apple-releases-ios-27-redesigned-siri-ai.html", "date": "2026-09-14" }
+    },
+    {
+      "type": "content",
+      "title": "Ce que le nouvel assistant sait faire",
+      "body": "Il répond à ce que tu lui *montres* avec l'appareil photo, et garde le fil de la conversation dans une application à lui.",
+      "evidence": "Siri is integrated into the Camera app on iPhone with Siri mode, allowing users to get information and take action on what's in front of them, like splitting a bill and paying friends with Apple Cash,1 or adding a custom pass to Wallet.",
+      "source": { "name": "Apple Newsroom", "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/", "date": "2026-09-14" }
+    },
+    {
+      "type": "content",
+      "title": "Sauf chez nous",
+      "body": "Apple l'écrit dans sa page de disponibilité : *pas* d'assistant sur les iPhone, les iPad et les montres de l'Union européenne.",
+      "evidence": "Siri AI will not be available initially in the EU in iOS, iPadOS, and watchOS.",
+      "source": { "name": "Apple Newsroom", "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/", "date": "2026-09-14" }
+    },
+    {
+      "type": "content",
+      "title": "Et pourtant, sur un Mac, oui",
+      "body": "Le même assistant fonctionne sur un *Mac* européen, et sur un casque Vision Pro. Même personne, même compte, autre appareil.",
+      "evidence": "Mac and Apple Vision Pro users in the EU will be able to access Siri AI when set to a supported language.",
+      "source": { "name": "Apple Newsroom", "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/", "date": "2026-09-14" }
+    },
+    {
+      "type": "contrast",
+      "claim": "Apple met en cause le règlement européen sur les marchés numériques.",
+      "caveat": "La Commission répond que rien dans ce texte n'empêchait ce lancement.",
+      "claimLabel": "La version d'Apple",
+      "caveatLabel": "La version de Bruxelles",
+      "evidence": "A Commission spokesman faulted Apple for blaming EU rules for an indefinite delay in introducing the AI product in the bloc, saying the decision was Apple's alone and that there was nothing in the DMA preventing companies from introducing new products.",
+      "source": { "name": "Silicon UK", "url": "https://www.silicon.co.uk/ai-2/eu-apple-siri-630206", "date": "2026-06-10" }
+    },
+    {
+      "type": "quote",
+      "body": "The decision not to roll out Siri AI in the EU is Apple's and Apple's only.",
+      "attribution": "Thomas Regnier, porte-parole de la Commission européenne",
+      "evidence": "\"The decision not to roll out Siri AI in the EU is Apple's and Apple's only,\" Commission spokesman Thomas Regnier told reporters at a briefing in Brussels.",
+      "source": { "name": "Silicon UK", "url": "https://www.silicon.co.uk/ai-2/eu-apple-siri-630206", "date": "2026-06-10" }
+    },
+    {
+      "type": "content",
+      "title": "Combien de temps",
+      "body": "Apple écrit qu'elle n'a *aucune* date à donner pour l'Europe. En octobre, l'assistant doit pourtant se mettre à parler français.",
+      "evidence": "However, their refusal to engage constructively on solutions that preserve privacy and security means we do not currently have a timeline for Siri AI's availability on iOS and iPadOS in the EU.",
+      "source": { "name": "Apple Newsroom", "url": "https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/", "date": "2026-06-08" }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui vient de mettre son iPhone à jour",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Ton iPhone européen n'aura pas le nouveau Siri",
+    "beats": [
+      {
+        "script": "Apple a sorti lundi son nouvel assistant. Tu lui montres quelque chose avec l'appareil photo, et il te répond. Sur ton iPhone, en Europe, tu ne l'auras pas.",
+        "visual": { "type": "screenshot", "file": "media/2026-09-15-siri-europe-iphone/shot_apple.png", "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/" }
+      },
+      {
+        "script": "Pas dans deux semaines. Pas de date du tout. Et pour savoir pourquoi, il faut écouter deux versions qui ne racontent pas la même chose.",
+        "visual": { "type": "photo", "file": "media/2026-09-15-siri-europe-iphone/p_iphone.jpg", "query": "iphone screen hand", "alt": "une main tient un iPhone allumé" }
+      },
+      {
+        "script": "Apple l'écrit noir sur blanc. Le nouveau Siri ne sort pas dans l'Union européenne, ni sur iPhone, ni sur iPad, ni sur la montre. Et la faute, dit Apple, revient à une loi européenne.",
+        "visual": { "type": "screenshot", "file": "media/2026-09-15-siri-europe-iphone/shot_dma.png", "url": "https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/" }
+      },
+      {
+        "script": "Ailleurs dans le monde, il te faut un iPhone 15 Pro au minimum, et il faut s'inscrire sur une liste d'attente. En Europe, même avec le bon téléphone, la case n'existe pas.",
+        "visual": { "type": "card", "value": "15 Pro", "label": "l'iPhone minimum pour y avoir droit, hors d'Europe" }
+      },
+      {
+        "script": "Sauf que Bruxelles raconte l'inverse. Pour la Commission européenne, rien dans cette loi n'empêchait Apple de sortir son assistant chez nous.",
+        "visual": { "type": "photo", "file": "media/2026-09-15-siri-europe-iphone/p_euflag.jpg", "query": "european flag brussels building", "alt": "les drapeaux de l'Union européenne devant le siège de la Commission, à Bruxelles" }
+      },
+      {
+        "script": "Son porte-parole l'a dit en juin, mot pour mot. La décision de ne pas lancer Siri en Europe est celle d'Apple, et d'Apple seule.",
+        "visual": { "type": "screenshot", "file": "media/2026-09-15-siri-europe-iphone/shot_ec.png", "url": "https://www.silicon.co.uk/ai-2/eu-apple-siri-630206" }
+      },
+      {
+        "script": "En octobre, cet assistant doit se mettre à parler français. Pour l'Europe, Apple écrit qu'elle n'a aucune date à donner.",
+        "visual": { "type": "card", "value": "octobre", "label": "le mois où cet assistant parlera français, hors d'Europe" }
+      },
+      {
+        "script": "Et le plus bête, c'est qu'un Mac européen, lui, y a droit. Même personne, même compte, autre appareil. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": { "type": "photo", "file": "media/2026-09-15-siri-europe-iphone/p_both.jpg", "query": "laptop and smartphone table dark", "alt": "deux mains tapent sur un ordinateur portable, un téléphone posé à côté" }
+      }
+    ]
+  },
+  "sources": [
+    { "name": "Apple Newsroom", "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/", "accessed": "2026-09-15" },
+    { "name": "Apple Newsroom", "url": "https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/", "accessed": "2026-09-15" },
+    { "name": "9to5Mac", "url": "https://9to5mac.com/2026/09/14/here-are-the-requirements-to-get-siri-ai-in-ios-27/", "accessed": "2026-09-15" },
+    { "name": "CNBC", "url": "https://www.cnbc.com/2026/09/14/apple-releases-ios-27-redesigned-siri-ai.html", "accessed": "2026-09-15" },
+    { "name": "Silicon UK", "url": "https://www.silicon.co.uk/ai-2/eu-apple-siri-630206", "accessed": "2026-09-15" }
+  ]
+}
