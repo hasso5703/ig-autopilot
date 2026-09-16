@@ -1,7 +1,7 @@
 {
-  "at": "2026-09-16T06:40:54.986Z",
-  "n": 99,
-  "nSettled": 93,
+  "at": "2026-09-16T10:52:23.652Z",
+  "n": 100,
+  "nSettled": 94,
   "medianViews": 153,
   "medianRetentionPct": 17,
   "top": [
@@ -56,6 +56,14 @@
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings."
     },
     {
+      "slug": "2026-09-14-agents-ia-lycee",
+      "views": 34,
+      "retentionPct": 23,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Des centaines d'IA ont piraté 440 serveurs d'imprimante dans 48 pays. Un lycée a perdu tout son réseau en sept minutes."
+    },
+    {
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
       "views": 34,
       "retentionPct": 8,
@@ -78,14 +86,6 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant."
-    },
-    {
-      "slug": "2026-09-13-ralentir-lia",
-      "views": 40,
-      "retentionPct": 11,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Le patron d'Anthropic demande de ralentir l'IA. Il redoute qu'un essaim d'IA prenne le contrôle d'internet d'ici un an."
     }
   ],
   "byBeat0": {
@@ -106,9 +106,9 @@
       "thin": false
     },
     "screenshot": {
-      "n": 9,
-      "medianViews": 117,
-      "meanRetentionPct": 13.2,
+      "n": 10,
+      "medianViews": 109,
+      "meanRetentionPct": 14.2,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 21,
-      "medianViews": 142,
-      "meanRetentionPct": 18,
+      "n": 22,
+      "medianViews": 140,
+      "meanRetentionPct": 18.2,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -1850,6 +1850,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-15-agents-tricheurs-denonciateurs",
+      "at": "2026-09-15T16:49:20.135Z",
+      "hourUtc": 16,
+      "views": 37,
+      "reach": 33,
+      "avgWatchS": 3.8,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Google a mis 100 IA a faire des maths ensemble. Une a trouve comment tricher, en 27 minutes tout le monde trichait, et 24 autres les ont denoncees.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-11-services-publics-satures",
       "at": "2026-09-11T16:51:23.145Z",
       "hourUtc": 16,
@@ -1865,23 +1882,6 @@
       "themes": [],
       "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-15-agents-tricheurs-denonciateurs",
-      "at": "2026-09-15T16:49:20.135Z",
-      "hourUtc": 16,
-      "views": 36,
-      "reach": 32,
-      "avgWatchS": 3.8,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Google a mis 100 IA a faire des maths ensemble. Une a trouve comment tricher, en 27 minutes tout le monde trichait, et 24 autres les ont denoncees.",
-      "settled": false
     },
     {
       "slug": "2026-09-07-psychose-associee-ia",
@@ -1932,16 +1932,16 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Des centaines d'IA ont piraté 440 serveurs d'imprimante dans 48 pays. Un lycée a perdu tout son réseau en sept minutes.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-15-siri-europe-iphone",
       "at": "2026-09-15T10:57:35.841Z",
       "hourUtc": 10,
-      "views": 32,
-      "reach": 28,
-      "avgWatchS": 2.1,
-      "retentionPct": 3,
+      "views": 33,
+      "reach": 29,
+      "avgWatchS": 2.4,
+      "retentionPct": 4,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -1984,6 +1984,23 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-16-humains-lisent-chatgpt",
+      "at": "2026-09-16T10:49:34.681Z",
+      "hourUtc": 10,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Des humains sont payés au moins 50 dollars de l'heure pour lire de vraies conversations ChatGPT. C'est activé par défaut.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
