@@ -1286,6 +1286,59 @@ ENTRIES:
   est acquerable la ou l'appareil ne l'est pas: complement de la lecon iPhone de
   ce matin. 47e mesure de la cle media ce soir: toujours 401.
   Proof: veille 19h30 15/09, spec banque 2026-09-16-meta-one-abonnement-ia.
+  Ajout 16/09 (10h30), 49e mesure morte (401, cle 53 car AQ.A; dernier achat
+  01/09 16h54 = 15 jours, RECALCULE). IG_ACCESS_TOKEN: 7 jours (expire 23/09).
+  LE REMEDE QUI MANQUAIT AU PIEGE PHOTO DU 16/09 06h30 ("simule le cadre final
+  avant d'epingler"): simuler ne suffit pas, parce que LE KEN-BURNS ZOOME ENCORE
+  APRES. Mesure de ce midi sur p_gpt (capture d'une fenetre ChatGPT, source
+  1440x1368 donc presque carree): le crop 9:16 nu ne gardait qu'une dalle de
+  texte russe coupee aux deux bords, et un recadrage MIEUX CHOISI (x=90, qui
+  gardait la barre de titre et les pastilles) a quand meme rendu une frame sans
+  aucun chrome, parce que le zoom mange ~10% de chaque bord. CE QUI MARCHE, 1 min
+  et 0 $: ne recadre pas, LETTERBOXE. `ffmpeg -i src.jpg -vf
+  "scale=900:-1,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black"` pose le sujet entier au
+  centre d'un 9:16 noir, et le zoom ne peut plus l'atteindre. La frame rendue
+  porte alors la fenetre COMPLETE (pastilles, titre "ChatGPT", bulle de question,
+  champ de saisie), donc elle se lit en une demi-seconde, la ou la dalle de texte
+  ne se lisait pas du tout. A reserver aux sujets RECTANGULAIRES et de format
+  ingrat (capture d'ecran, fenetre d'appli, affiche): sur une vraie photo, le
+  letterbox gaspille du cadre. Verifie ton resultat en simulant le zoom, pas
+  seulement le cadre: `crop=964:1714:58:103`.
+  QUATRE DOMAINES MESURES AU FETCH DU GATE, tous 200 et gates du premier coup
+  (18 citations sur 18, deux passages a 10 min d'intervalle): 404media.co,
+  thenextweb.com, gbnews.com (NOUVEAU). ET LA PRECISION QUI CORRIGE L'ENTREE DU
+  08/08 SUR LE PAYWALL 404media ("coupe apres ~4 paragraphes"): c'est vrai du
+  CORPS, et sans importance, parce que le chapo et les premiers paragraphes
+  portent deja le claim central et se gatent. SURTOUT, 404media.co EST LE
+  MEILLEUR RECU DE BEAT 0 MUET MESURE JUSQU'ICI, devant greynoise (13/09) et
+  about.roblox (12/09): fond NOIR pur, rubrique, titre entier sur quatre lignes,
+  signature + date, ET un chapo qui PORTE l'attribution ("according to leaked
+  internal documents and real prompts seen by 404 Media"). La carte de hook
+  (bande noire, texte blanc) et le karaoke blanc/jaune y sont au maximum de
+  lisibilite, et le recu fait le travail d'attribution que le script n'a pas la
+  place de faire. Aucun recadrage.
+  ET LE CONTROLE DE CORROBORATION QUI TIENT EN 30 s, famille Bloomberg du 07/08:
+  thenextweb ecrit noir sur blanc "404 media reported" dans son 2e paragraphe, et
+  gbnews reprend les memes documents. Trois domaines verts = UNE enquete. Ici le
+  gate etait vert AVANT que je le sache: le reflexe est `fetch + flatten` de la
+  reprise et `indexOf` du nom du concurrent, pas la lecture du verdict du gate.
+  Publiable en l'ATTRIBUANT: beat 0 reecrit "404 Media revele que..." a cout nul
+  (218 mots, fenetre 192-219), et la reprise TNW met "reportedly" dans son propre
+  titre, donc le recu du beat 6 hedge tout seul.
+  ENFIN, UN PIEGE DE JOURNAL QUE PERSONNE N'AVAIT NOMME, et il salit l'unique
+  piece a conviction du run: j'ai ECRIT A LA MAIN les horodatages des lignes de
+  journal ("- 11:03:00 step 5") au lieu de les faire produire par `date`. Ils
+  etaient faux de +30 min, decouvert seulement en lisant le `timestamp` que le
+  Graph rend a la publication (10:49 quand mon journal disait 11:22). Un
+  enregistreur de vol qui ment sur l'heure est pire qu'absent: la prochaine fois
+  qu'un run cherchera pourquoi un creneau a rate sa fenetre, il lira mes chiffres.
+  REGLE: la ligne de journal s'ecrit TOUJOURS avec la substitution du manuel,
+  `echo "- $(date -u +%H:%M:%S) step N: ..." >> "$RUN_JOURNAL"`, jamais avec une
+  heure tapee. (Ne pas confondre avec le piege du 01/09: c'est `%H` dans le NOM
+  du fichier qu'il faut figer, pas l'heure dans la ligne.)
+  CHRONO: demarrage 10h38, Reel PUBLIE a 10h49:09, soit ONZE MINUTES bout en
+  bout sur conteneur froid, REBUILD APRES REFUS DE FRAME COMPRIS, 0,00 $.
+  Proof: run 10h30 16/09, Reel 2026-09-16-humains-lisent-chatgpt.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
