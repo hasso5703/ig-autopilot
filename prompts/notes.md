@@ -6051,3 +6051,42 @@ ENTRIES:
   en ligne (22/22) + build muet + 10 frames lues + publication a 10h57, soit
   19 MINUTES bout en bout sur conteneur froid, 0,00 $.
   Proof: run 10h30 15/09, Reel 2026-09-15-siri-europe-iphone.
+  Ajout 16/09 (19h30, veille), 51e mesure morte (401, cle 53 car AQ.A; dernier
+  achat 01/09 16h54 = 15 jours, RECALCULE depuis state/spend.jsonl).
+  IG_ACCESS_TOKEN: 6 JOURS (state/token.json, expire le 23/09) -- c'est le
+  compteur qui coupe tout, et il passe devant la cle media dans le rapport.
+  LA FACTURE DU MUET N'EST PLUS SEULEMENT LA RETENTION, C'EST LA PORTEE, ET
+  ELLE S'ACCELERE. Fenetre appariee sur les Reels REPOSES uniquement
+  (state/lessons.json -> posts[], filtre p.settled): VOIX 19/08-01/09 n=28 ->
+  17% / 138 vues; MUET 02-06/09 n=10 -> 11,5% / 145,5; MUET 07-10/09 n=8 ->
+  8,5% / 117; MUET 11-13/09 n=6 -> 8,5% / 81,5; MUET 14-16/09 n=2 (mince) ->
+  15,5% / 32. La retention s'est stabilisee autour de 9%, mais LES VUES ONT
+  ETE DIVISEES PAR QUATRE en deux semaines. Contre-epreuve A AGE EGAL, qui ne
+  depend d'aucune fenetre (metrics.jsonl, echantillon le plus proche de
+  t0+24h, compteurs sous `r.insights`, jamais a la racine): 14/09 34 et 30 v,
+  15/09 33 et 39 v, contre 10-13/09 100, 108, 139, 99 et 123 v. Ce n'est plus
+  une degradation de l'attention, c'est un retrait de distribution, et c'est
+  la ligne a mettre devant Hasan.
+  ET UN PIEGE D'OUTILLAGE QUI FAIT DIRE "RIEN A SIGNALER" SANS RIEN COMPARER:
+  state/posted.jsonl NE PORTE PAS le champ `reel`, sur AUCUNE de ses 101
+  lignes, alors que la forme recopiee dans ce carnet (22/08, point 3) le
+  contient. Un `posted.filter(p => p.reel)` rend donc un tableau VIDE, et le
+  controle d'orphelins ou de cadence ecrit par-dessus sort "0" en silence. Le
+  code est deja juste et c'est lui qu'il faut importer: `isReel`
+  (state.mjs:659) derive du permalink (/reel/) ou de durationS. Ne lis jamais
+  p.reel.
+  CONVERSATION, et ca evite de repayer ce controle chaque soir: engage.mjs
+  recent rend 0 commentaire sur les 10 derniers Reels, et le controle sur TOUT
+  l'historique (comments_count de metrics.jsonl contre le champ `target` de
+  engagement.jsonl, jamais `mediaId`) rend les MEMES 4 commentaires d'inconnus
+  qu'au 05/09 (29/07, 03/08, 07/08, 09/08), toujours illisibles faute de
+  portee. Rien de neuf a repondre depuis onze jours.
+  COLLECTE DU SOIR, cas du deluge arXiv (entree 07/09, confirmee): 354 frais
+  dont 297 arXiv, 55 non-arXiv apres dedup, et le meilleur du lot tombe sur
+  DEUX vetos du manuel a la fois - "Your AI agents can now control your Google
+  Home devices" est la sortie d'un serveur MCP, donc de l'outillage de
+  developpement sans consequence humaine rapportee (veto 1), et son titre ne
+  se dit pas sans definir MCP (veto 4). Rien banque ce soir, assume dans le
+  rapport plutot qu'a moitie. Domaines mesures au fetch du gate ce soir, les
+  deux 200: techcrunch.com (5,1 ko aplatis) et technologyreview.com (9,8 ko).
+  Proof: veille 19h30 16/09.

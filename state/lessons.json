@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-16T16:47:43.451Z",
+  "at": "2026-09-16T19:44:54.033Z",
   "n": 101,
-  "nSettled": 94,
-  "medianViews": 153,
+  "nSettled": 95,
+  "medianViews": 152,
   "medianRetentionPct": 17,
   "top": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "slug": "2026-09-06-gemini-randonneurs-shasta",
-      "views": 1282,
+      "views": 1283,
       "retentionPct": 25,
       "saved": 0,
       "shares": 0,
@@ -56,6 +56,14 @@
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings."
     },
     {
+      "slug": "2026-09-14-chatbot-mineurs-californie",
+      "views": 30,
+      "retentionPct": 8,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "En Californie, un chatbot n'a plus le droit de dire à un enfant qu'il est amoureux de lui, ni de le flatter. La loi porte le prénom d'un ado mort."
+    },
+    {
       "slug": "2026-09-14-agents-ia-lycee",
       "views": 34,
       "retentionPct": 23,
@@ -78,14 +86,6 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait."
-    },
-    {
-      "slug": "2026-09-11-services-publics-satures",
-      "views": 36,
-      "retentionPct": 6,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Les gens font remplir leurs dossiers d'aide par une IA, et les administrations croulent. La parade envisagee: rendre l'acces payant."
     }
   ],
   "byBeat0": {
@@ -106,9 +106,9 @@
       "thin": false
     },
     "screenshot": {
-      "n": 10,
-      "medianViews": 109,
-      "meanRetentionPct": 14.2,
+      "n": 11,
+      "medianViews": 100,
+      "meanRetentionPct": 13.6,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 24,
-      "medianViews": 130,
-      "meanRetentionPct": 15.1,
+      "n": 25,
+      "medianViews": 127,
+      "meanRetentionPct": 14.8,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -351,7 +351,7 @@
       "slug": "2026-09-06-gemini-randonneurs-shasta",
       "at": "2026-09-06T10:48:12.224Z",
       "hourUtc": 10,
-      "views": 1282,
+      "views": 1283,
       "reach": 1171,
       "avgWatchS": 14.8,
       "retentionPct": 25,
@@ -840,7 +840,7 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 293,
+      "views": 294,
       "reach": 259,
       "avgWatchS": 8.4,
       "retentionPct": 14,
@@ -1966,7 +1966,7 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "En Californie, un chatbot n'a plus le droit de dire à un enfant qu'il est amoureux de lui, ni de le flatter. La loi porte le prénom d'un ado mort.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-07-28-claude-chats-google",
@@ -1989,10 +1989,10 @@
       "slug": "2026-09-16-humains-lisent-chatgpt",
       "at": "2026-09-16T10:49:34.681Z",
       "hourUtc": 10,
-      "views": 6,
-      "reach": 4,
-      "avgWatchS": 18.6,
-      "retentionPct": 31,
+      "views": 8,
+      "reach": 6,
+      "avgWatchS": 13.2,
+      "retentionPct": 22,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -2006,10 +2006,10 @@
       "slug": "2026-09-16-meta-one-abonnement-ia",
       "at": "2026-09-16T16:46:44.880Z",
       "hourUtc": 16,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
+      "views": 1,
+      "reach": 1,
+      "avgWatchS": 1,
+      "retentionPct": 2,
       "likes": 0,
       "comments": 1,
       "saved": 0,
