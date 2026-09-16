@@ -1339,6 +1339,34 @@ ENTRIES:
   CHRONO: demarrage 10h38, Reel PUBLIE a 10h49:09, soit ONZE MINUTES bout en
   bout sur conteneur froid, REBUILD APRES REFUS DE FRAME COMPRIS, 0,00 $.
   Proof: run 10h30 16/09, Reel 2026-09-16-humains-lisent-chatgpt.
+  Ajout 16/09 (16h30), 50e mesure morte de la cle media (401, 53 car AQ.A;
+  dernier achat 01/09 16h54 = 15 jours). IG_ACCESS_TOKEN: SEPT jours (23/09).
+  CE QU'IL FAUT SIMULER AVANT D'EPINGLER UNE PHOTO, et le "simule le cadre
+  final" du 16/09 06h30 ne suffisait pas parce qu'il ne nommait pas les DEUX
+  cadres: segmentFromImage coupe tout beat plus long que REFRAME_S en deux
+  plans, `panFilter` variant 0 (zoom 1 -> 1.07, CENTRE) puis variant 1 (zoom
+  1.26 ANCRE EN BAS, y='ih-ih/zoom'). Une photo PAYSAGE 1080x720 epinglee telle
+  quelle est d'abord mise a l'echelle pour couvrir le 9:16 puis recadree au
+  CENTRE, donc il ne reste que 37% de la largeur source, et le variant 1 ne
+  montre plus que le BAS de l'image. Mesure de ce soir sur le spec meta-one:
+  p_user (homme au telephone, sujet a x=520-830 sur 1080) sortait coupe au bord
+  droit, et p_apps (ecran d'icones) gardait LinkedIn et Pinterest au centre en
+  jetant l'icone Facebook, soit des logos concurrents en plein Reel sur une
+  histoire Meta. Remede 1 min et 0 $: recadrer la source en 9:16 AUTOUR du sujet
+  (`crop=405:720:<x>:0,scale=1080:1920`) puis simuler LES DEUX variantes avant
+  le build:
+  `crop=iw/1.07:ih/1.07:(iw-iw/1.07)/2:(ih-ih/1.07)/2` et
+  `crop=iw/1.26:ih/1.26:(iw-iw/1.26)/2:ih-ih/1.26`, hstack des quatre vignettes,
+  une seule lecture. REGLE: toute photo dont le ratio n'est pas deja 9:16 est a
+  re-cadrer par le run qui publie, pas a epingler telle quelle -- le scout
+  regarde le jpg, le moteur montre une fenetre. (Le letterbox du 16/09 10h30
+  reste pour les sujets RECTANGULAIRES; pour une vraie photo, recadre.)
+  CHRONO: demarrage 16h37, Reel PUBLIE a 16h46:22 (18h46 Paris, dans le pic du
+  soir), soit NEUF MINUTES bout en bout sur conteneur froid, spec de scout
+  entierement epingle, 0 recapture, 0 rebuild, 0,00 $. C'est le run le plus
+  rapide mesure: quand les 5 surfaces sont sur disque, le build muet de 7 beats
+  prend ~70 s et tout le reste est du reseau de publication.
+  Proof: run 16h30 16/09, Reel 2026-09-16-meta-one-abonnement-ia.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
