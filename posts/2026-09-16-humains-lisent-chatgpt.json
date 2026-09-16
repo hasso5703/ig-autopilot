@@ -161,7 +161,7 @@
     "title": "Des humains lisent tes conversations ChatGPT",
     "beats": [
       {
-        "script": "Quand tu écris à ChatGPT, tu crois parler à une machine. Des humains sont payés pour lire de vraies conversations. OpenAI en recrute des centaines, sous un nom de code : Project Lily.",
+        "script": "Tu écris à ChatGPT en croyant parler à une machine. 404 Media révèle que des humains sont payés pour lire de vraies conversations. OpenAI en recrute des centaines : nom de code, Project Lily.",
         "visual": {
           "type": "screenshot",
           "file": "media/2026-09-16-humains-lisent-chatgpt/shot_404.png",
