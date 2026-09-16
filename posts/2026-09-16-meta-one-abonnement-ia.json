@@ -12,7 +12,7 @@
       "quote": "The company introduced a new batch of \"Meta One\" plans aimed at creators, businesses and \"AI power users.\" The new subscription tiers combine exclusive features with expanded access to Meta's growing slate of AI tools."
     }
   ],
-  "caption": "Meta met un prix sur son IA : sur Instagram, sur WhatsApp et sur Facebook, en utiliser plus devient un abonnement.\n\nL'offre s'appelle Meta One. Elle est disponible dans le monde entier depuis mardi. Les forfaits démarrent à 2.99 dollars par mois pour une seule application, 7.99 dollars pour le pack Core, 19.99 dollars pour le pack Premium.\n\nCe que ça achète. Plus d'images et de vidéos générées avec l'IA de Meta, plus de retouches automatiques sur les stories Instagram, plus d'effets de voix. Meta écrit que ses applications et son IA restent gratuites pour l'usage courant.\n\nLe détail qui n'est pas dans la vidéo. Interrogé par TechCrunch sur les quantités exactes incluses dans les deux packs, Meta a refusé de les communiquer : elles peuvent varier selon le pays, la surface et les conditions du système.\n\nCe qui coince. Tu payes donc pour une quantité que personne ne te chiffre avant l'achat. Meta annonce déjà plus de 50 fonctionnalités lancées et 15 millions d'abonnements et d'essais.\n\nLa ligne la plus chère. À 499 dollars par mois, le forfait Max donne le droit de demander un appel téléphonique avec une vraie personne qui travaille chez Meta.\n\nEt ce n'est pas fini. Meta annonce que les abonnements s'étendront à Edits, son application de montage, et à ses lunettes.\n\nPayer pour plus d'IA dans tes applis, oui ou non ?\n\nabout.fb.com · techcrunch.com · engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #Meta #Instagram\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "Meta met un prix sur son IA : sur Instagram, sur WhatsApp et sur Facebook, en utiliser plus devient un abonnement.\n\nL'offre s'appelle Meta One. Elle se déploie progressivement, dans le monde entier. Les forfaits démarrent à 2.99 dollars par mois pour une seule application, 7.99 dollars pour le pack Core, 19.99 dollars pour le pack Premium.\n\nCe que ça achète. Plus d'images et de vidéos générées avec l'IA de Meta, plus de retouches automatiques sur les stories Instagram, plus d'effets de voix. Meta écrit que ses applications et son IA restent gratuites pour l'usage courant.\n\nLe détail qui n'est pas dans la vidéo. Interrogé par TechCrunch sur les quantités exactes incluses dans les deux packs, Meta a refusé de les communiquer : elles peuvent varier selon le pays, la surface et les conditions du système.\n\nCe qui coince. Tu payes donc pour une quantité que personne ne te chiffre avant l'achat. Meta annonce déjà plus de 50 fonctionnalités lancées et 15 millions d'abonnements et d'essais.\n\nLa ligne la plus chère. À 499 dollars par mois, le forfait Max donne le droit de demander un appel téléphonique avec une vraie personne qui travaille chez Meta.\n\nEt ce n'est pas fini. Meta annonce que les abonnements s'étendront à Edits, son application de montage, et à ses lunettes.\n\nPayer pour plus d'IA dans tes applis, oui ou non ?\n\nabout.fb.com · techcrunch.com · engadget.com\n\n#IA #IntelligenceArtificielle #ActuIA #Meta #Instagram\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "quote": "Meta One plans are now available globally and start at just $2.99 a month for single products, $7.99 a month for individual bundles, and $14.99 a month for creator and business bundles.",
@@ -153,7 +153,7 @@
     "title": "Meta te vend plus d'IA sans dire combien",
     "beats": [
       {
-        "script": "L'intelligence artificielle que tu utilises sur Instagram, sur WhatsApp et sur Facebook a maintenant un prix. Meta l'a annoncé mardi : un abonnement, qui s'appelle Meta One.",
+        "script": "L'intelligence artificielle que tu utilises sur Instagram, sur WhatsApp et sur Facebook a maintenant une version payante. Meta l'a annoncé mardi : un abonnement, qui s'appelle Meta One.",
         "visual": {
           "type": "screenshot",
           "file": "media/2026-09-16-meta-one-abonnement-ia/shot_meta.png",
@@ -164,9 +164,10 @@
         "script": "Et le plus gênant n'est pas le prix. C'est que Meta ne veut pas te dire ce que tu achètes. Parce que les applis, elles, restent gratuites.",
         "visual": {
           "type": "photo",
-          "file": "media/2026-09-16-meta-one-abonnement-ia/p_apps.jpg",
-          "query": "smartphone social media apps screen",
-          "alt": "les icones des applications sociales sur l'ecran d'un telephone"
+          "file": "media/2026-09-16-meta-one-abonnement-ia/p_user.jpg",
+          "query": "person talking on mobile phone",
+          "alt": "un homme dehors, ecouteurs aux oreilles, son telephone a la main",
+          "credit": "Burst · CC0"
         }
       },
       {
@@ -178,7 +179,7 @@
         }
       },
       {
-        "script": "Sauf que quand TechCrunch a demandé combien d'images tu peux générer avec, Meta a refusé de répondre. Ça dépend du pays, de l'application et des conditions du système.",
+        "script": "Sauf que quand TechCrunch a demandé les limites exactes incluses dans les deux packs, Meta a refusé de répondre. Ça dépend du pays, de l'application et des conditions du système.",
         "visual": {
           "type": "screenshot",
           "file": "media/2026-09-16-meta-one-abonnement-ia/shot_tc.png",
@@ -205,9 +206,10 @@
         "script": "Le droit de demander un appel téléphonique avec une vraie personne qui travaille chez Meta. Et ce n'est pas fini : les abonnements s'étendront aussi à ses lunettes. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "file": "media/2026-09-16-meta-one-abonnement-ia/p_phone.jpg",
-          "query": "telephone handset desk",
-          "alt": "un telephone a pieces rouge fixe a un mur"
+          "file": "media/2026-09-16-meta-one-abonnement-ia/p_apps.jpg",
+          "query": "smartphone social media apps screen",
+          "alt": "les icones des applications sociales sur l'ecran d'un telephone",
+          "credit": "Social media applications mobile… · CC0"
         }
       }
     ]

@@ -1135,6 +1135,45 @@ ENTRIES:
   communicants. Ce qui manque est une lecture exterieure; ici elle existe
   (l'opposition finlandaise) mais elle n'est portee que par insideai.news, qui
   credite Reuters (injoignable), donc dis-le dans le rapport.
+  Ajout 16/09 (06h30), 48e mesure morte de la cle media (401 UNAUTHENTICATED, cle
+  53 car AQ.A, donc un jeton OAuth et pas une cle AI Studio AIza... de 39 car;
+  dernier achat 01/09 16h54 = 15 jours, RECALCULE depuis state/spend.jsonl).
+  IG_ACCESS_TOKEN: emis le 25/07 + 60 j, EXPIRE LE 23/09, soit SEPT jours; passe
+  cette date le compte ne publie plus rien du tout et seul Hasan peut regenerer.
+  Ajout 16/09 (06h30): rendent 200 au fetch du gate et se gatent DU PREMIER COUP
+  (0 erreur sur 22 verifications, deux specs, zero aller-retour) 404media.co,
+  thenextweb.com et gbnews.com; blogs.nvidia.com/blog re-confirme. Bloquent,
+  re-confirmes: help.openai.com, openai.com (/policies, /consumer-privacy),
+  privacy.openai.com (403 partout). Cote flux: The Verge 403, Ars Technica 403,
+  venturebeat.com 429, tous permanents.
+  LE PAYWALL 404media EST BEAUCOUP PLUS GENEREUX QU'ON NE LE CROYAIT (l'entree du
+  17/08 le mesurait a 2,1 ko): sur l'enquete Project Lily il rend 5,3 ko aplatis
+  et laisse passer le chapo, le lead, la phrase des "more than 900 million users",
+  le passage sur le filtre de confidentialite et la confirmation d'Anthropic avant
+  le "this post is for paid members only". Sur une enquete 404 Media, teste la
+  taille aplatie avant de renoncer: l'essentiel est souvent au-dessus de la coupe.
+  TROIS RECUS MESURES, tous les trois bons, et le deuxieme renverse une contrainte.
+  (1) 404media.co 160 s / 32 frames, h1 juste, FOND NOIR, rubrique "PRIVACY",
+  titre enorme qui raconte l'histoire a lui seul, signature + "SEP 14, 2026" et le
+  chapo qui porte le claim central, le tout dans la fenetre visible des ~1686 px,
+  zero banniere, aucun recadrage: c'est le meilleur beat 0 muet mesure depuis
+  greynoise (13/09), meme famille de fond noir. (2) **help.openai.com SE CAPTURE
+  PARFAITEMENT** en 37 s / 5 frames, h1 juste, fond clair, zero banniere, alors
+  qu'il rend 403 au fetch du gate depuis le 16/08: exactement la famille
+  openai.com du 01/09 (ingatable au primaire, excellent en recu). Une page d'aide
+  OpenAI est donc une SOURCE IMPOSSIBLE et un RECU DE PREMIER ORDRE, et elle
+  imprime "Updated: N hours ago", ce qui date le recu du jour meme. (3)
+  thenextweb.com 23 s / 1 frame, propre sans recadrage, fond clair, masthead TNW +
+  rubrique + titre entier + chapo, et AUCUNE date dans la fenetre visible, ce qui
+  en fait un recu qui ne vieillit pas.
+  ET LE PRIMAIRE QUI SE CONTREDIT LUI-MEME, a verifier sur toute annonce produit:
+  about.fb.com/news ecrit "Meta One plans are now available globally" quand
+  meta.com/help, capture le meme soir, affiche "Meta One is currently in limited
+  testing and isn't available everywhere yet". Les deux sont Meta. Le recu du
+  second etait deja epingle au beat 6 du spec, donc la frame aurait affiche le
+  dementi sous une legende qui disait le contraire. Le remede tient dans la meme
+  page: le communique ecrit AUSSI "rolling out gradually", donc ecris le
+  deploiement progressif, jamais la disponibilite mondiale seche.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
@@ -2206,6 +2245,53 @@ ENTRIES:
   avant le build, pas seulement les frames apres. Remplacee ici en 8 minutes par
   un vrai formulaire rempli au stylo (Commons "Becoming a Foster Carer",
   perpetual.fostering, CC BY 2.0), credit relu via extmetadata comme au 04/09.
+  Ajout 16/09 (06h30), UN BEAT `photo` EPINGLE SANS `credit` NE BRULE AUCUNE
+  LIGNE DE CREDIT, et c'est une regression qui court depuis le 14/09.
+  reel2.mjs:1651 fait `credit = beat.visual.credit || null` et, quand le beat
+  porte `file`, il saute `acquireOne`, donc RIEN ne re-derive le credit: le beat
+  rend une photo sans attribution. Mesure ce matin sur les specs des 14, 15 et
+  16/09: 10 beats photo epingles, `credit` absent sur les 10, alors que tous les
+  specs du 10 au 13/09 le portaient. Cinq Reels deja publies ont donc affiche des
+  photographies non creditees, dont certaines en CC BY (attribution obligatoire).
+  REMEDE, et il est gratuit parce que L'INDEX EST DETERMINISTE: relance
+  `node scout-photos.mjs "/tmp:probe:<la meme requete>"`, il rend le MEME fichier
+  (verifie au `cmp`: byte-identique sur p_apps du 15/09) et imprime la ligne
+  `credit=` a recopier. Regle: quand tu epingles une photo, ecris TOUJOURS le
+  champ `credit` avec la chaine que scout-photos vient d'imprimer. Corrige ce
+  matin sur les deux specs banques; les 5 Reels publies ne sont plus
+  rattrapables. Proof: scout 06h30 16/09.
+  Ajout 16/09 (06h30), CHASSE A LA PHOTO SUR UNE ACTU 100% NUMERIQUE, le cout
+  mesure: 24 requetes pour 2 photos gardees (dossier relecteurs humains de
+  ChatGPT). Echouent au filtre near-white: "computer keyboard typing hands",
+  "face screen glow dark", "text message screen phone", "open plan office",
+  "newsroom journalists computers", "call centre operators", "dollar banknotes
+  money", "customer support help desk", "smartphone in hand street",
+  "instagram whatsapp app icons", "mobile phone apps folder screen",
+  "subscription price list screen". Passent mais REFUSES A L'OEIL, tous des
+  pieges deja nommes dans ce carnet: "office cubicles workers" (cubicle de 2005,
+  ecran cathodique = piege d'epoque), "computer lab room" (le cliche bleu sature),
+  "call center headset" -> une ASTRONAUTE en casque de realite virtuelle,
+  "rome italy palace government" -> JFK en 1962, "office telephone desk phone" ->
+  George Bush dans le Bureau ovale, "headset operator support" -> US Navy,
+  "printed documents stack" -> une piece poussiereuse du XIXe. PASSENT ET SONT
+  BONNES: "chatgpt screen laptop" (Commons cc0, une VRAIE fenetre de conversation
+  ChatGPT en mode sombre: sur un dossier ou l'histoire EST la conversation, c'est
+  la photo la plus litterale qui existe) et "european court of justice building"
+  (la grande salle d'audience de la CJUE, doree, dense, aucun visage). Reflexe:
+  sur une actu de justice ou de reglement europeen, la salle d'audience de la
+  CJUE est acquerable et elle est DANS l'histoire.
+  Ajout 16/09 (06h30), ET LE PIEGE DE PRIX DANS UNE PHOTO REELLE, famille du
+  22/08 (la still qui invente un chiffre) mais sur une photo documentaire: le
+  beat de chute du spec Meta One banque la veille etait un telephone a pieces
+  rouge, et au cadrage 9:16 reel il affiche "LOCAL CALL 10 c" plus les jetons
+  "25 10 5" en gros, sur une histoire dont tout le sujet est une grille
+  tarifaire. Un spectateur lit 10 centimes comme un chiffre de l'histoire. Le
+  titre Commons ne le disait pas, le filtre ne le voit pas, et le recadrage ne
+  sauve rien (les jetons restent). REFLEXE: sur tout beat photo, simule le cadre
+  final avant d'epingler, en une commande,
+  `ffmpeg -i p.jpg -vf "scale=-1:1920,crop=1080:1920,scale=270:-1" v.jpg` et
+  REGARDE: le 9:16 rapproche et agrandit des textes invisibles sur le jpg entier.
+  Remplacee par une photo de personne avec son telephone (Burst, cc0).
 - 2026-07-29 · Une rétention >100% dans watch.mjs n'est pas un bug d'unité:
   ig_reels_avg_watch_time compte les boucles (mesuré 160386 ms de watch moyen
   sur un Reel de 51 s, total exactement 2x la moyenne, portée 0). Sous ~50 de
