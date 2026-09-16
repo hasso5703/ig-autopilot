@@ -1,0 +1,242 @@
+{
+  "slug": "2026-09-16-humains-lisent-chatgpt",
+  "sendTest": "Des humains sont payés au moins 50 dollars de l'heure pour lire de vraies conversations ChatGPT. C'est activé par défaut.",
+  "centralClaim": "OpenAI is paying hundreds of contractors to read real ChatGPT conversations and rate the chatbot's replies under the internal codename Project Lily.",
+  "corroboration": [
+    {
+      "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr",
+      "quote": "OpenAI is paying hundreds of contractors to read real ChatGPT conversations and rate the chatbot's replies under the internal codename Project Lily, and did not answer when asked where it had told users."
+    },
+    {
+      "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+      "quote": "OpenAI is hiring hundreds of contractors who read a massive stream of real users' ChatGPT prompts, with the prompts sometimes including sensitive personal information, 404 Media has learned."
+    }
+  ],
+  "caption": "Des humains sont payés pour lire de vraies conversations ChatGPT. OpenAI appelle ça Project Lily.\n\nCe que rapporte 404 Media, documents internes à l'appui : OpenAI recrute des centaines de sous-traitants qui lisent les échanges des utilisateurs et notent les réponses du robot. Plus de 900 millions de personnes utilisent ChatGPT, et la plupart ne s'en doutent probablement pas.\n\nCe que le relecteur voit. Pas ton nom d'utilisateur, mais la conversation entière, un résumé de ce que tu as déjà demandé, et parfois la région du monde où tu vis. Les guides de formation qui ont fuité montrent une paie d'au moins 50 dollars de l'heure.\n\nLe détail qui n'est pas dans la vidéo. OpenAI dit passer les échanges dans un filtre qui retire les informations personnelles, et reconnaît en même temps que des détails sensibles passent quand même.\n\nCe qui coince. Le réglage qui autorise tout ça s'appelle Improve the model for everyone. Il est allumé par défaut sur les comptes gratuits, Plus et Pro, et éteint sur les offres entreprise. Interrogé sur l'endroit où il a prévenu ses utilisateurs, OpenAI n'a pas répondu.\n\nL'Europe, elle, a déjà tranché : l'Italie a infligé 15 millions d'euros d'amende à l'entreprise.\n\nTu coupes le réglage, oui ou non ?\n\n404media.co · thenextweb.com · gbnews.com\n\n#IA #IntelligenceArtificielle #ActuIA #ChatGPT #OpenAI\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Humans are reading ChatGPT users' prompts to improve OpenAI's models, and those chats can include sensitive, personal information, according to leaked internal documents and real prompts seen by 404 Media.",
+      "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/"
+    },
+    {
+      "quote": "The prompts these people review can include whole conversations between users and the chatbot, conversations that most of ChatGPT's more than 900 million users probably don't realize may be read by actual people.",
+      "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/"
+    },
+    {
+      "quote": "The reviewers do not see usernames. They can see a user memories summary above the prompt, which sometimes shows what the person has used the chatbot for before and where in the world they may live.",
+      "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr"
+    },
+    {
+      "quote": "Leaked training guides show the contractors are paid upwards of $50 (£37) an hour through third-party staffing firms.",
+      "url": "https://www.gbnews.com/tech/how-to-stop-chatgpt-reading-conversations"
+    },
+    {
+      "quote": "The contractors don't see ChatGPT usernames, and OpenAI says it tries to remove personal information before prompts reach the reviewers, but the company acknowledged sensitive details can still get through.",
+      "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/"
+    },
+    {
+      "quote": "Improve the model for everyone is switched on for free, Plus and Pro accounts, and off for Enterprise, Business and Edu, and switching it off applies to new conversations rather than old ones.",
+      "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr"
+    },
+    {
+      "quote": "404 Media asked the company to point to where it tells users that humans may read their chats. OpenAI did not answer, and after publication pointed to a help page.",
+      "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr"
+    },
+    {
+      "quote": "Italy's regulator has already fined the company EUR 15M, nine of it for processing without an adequate legal basis, and ordered six months of public information advertising on Italian television and radio.",
+      "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Project Lily · OpenAI",
+      "headline": "Des humains lisent tes *conversations* ChatGPT",
+      "hero": {
+        "value": "900 millions",
+        "label": "d'utilisateurs de ChatGPT, au minimum"
+      },
+      "swipe": "Ce qu'ils voient exactement"
+    },
+    {
+      "type": "stat",
+      "figure": "50",
+      "unit": "dollars de l'heure, au minimum",
+      "body": "C'est ce que touchent les **sous-traitants** qui lisent les échanges et notent les réponses, d'après les guides de formation qui ont fuité.",
+      "evidence": "Leaked training guides show the contractors are paid upwards of $50 (£37) an hour through third-party staffing firms.",
+      "source": {
+        "name": "GB News",
+        "url": "https://www.gbnews.com/tech/how-to-stop-chatgpt-reading-conversations",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que dit le rapport",
+      "body": "OpenAI recrute des centaines de sous-traitants qui lisent un flux continu de vrais échanges, qui contiennent parfois des *informations personnelles*.",
+      "evidence": "OpenAI is hiring hundreds of contractors who read a massive stream of real users' ChatGPT prompts, with the prompts sometimes including sensitive personal information, 404 Media has learned.",
+      "source": {
+        "name": "404 Media",
+        "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+        "date": "2026-09-14"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'échelle",
+      "body": "Les relecteurs voient la conversation entière. Plus de **900 millions** de personnes utilisent ChatGPT, et la plupart ne s'en doutent probablement pas.",
+      "evidence": "The prompts these people review can include whole conversations between users and the chatbot, conversations that most of ChatGPT's more than 900 million users probably don't realize may be read by actual people.",
+      "source": {
+        "name": "404 Media",
+        "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+        "date": "2026-09-14"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que le relecteur voit",
+      "body": "Pas le nom d'utilisateur. Mais un *résumé* de ce que la personne a déjà demandé au robot, et parfois l'endroit du monde où elle vit.",
+      "evidence": "The reviewers do not see usernames. They can see a user memories summary above the prompt, which sometimes shows what the person has used the chatbot for before and where in the world they may live.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr",
+        "date": "2026-09-14"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "OpenAI dit retirer les informations personnelles avant que les échanges n'arrivent aux relecteurs.",
+      "caveat": "L'entreprise reconnaît que des détails sensibles passent quand même.",
+      "claimLabel": "Ce qui est promis",
+      "caveatLabel": "Ce qui est reconnu",
+      "evidence": "The contractors don't see ChatGPT usernames, and OpenAI says it tries to remove personal information before prompts reach the reviewers, but the company acknowledged sensitive details can still get through.",
+      "source": {
+        "name": "404 Media",
+        "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+        "date": "2026-09-14"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le réglage est allumé par défaut",
+      "body": "Improve the model for everyone est actif sur les comptes gratuits, Plus et Pro, et éteint sur les offres entreprise, professionnelles et écoles.",
+      "evidence": "Improve the model for everyone is switched on for free, Plus and Pro accounts, and off for Enterprise, Business and Edu, and switching it off applies to new conversations rather than old ones.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr",
+        "date": "2026-09-14"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'Europe a déjà tranché",
+      "body": "Prévenir les gens est le travail de *celui qui collecte*. La plus haute juridiction européenne l'a jugé. Interrogée sur l'endroit où elle avait prévenu ses utilisateurs, l'entreprise n'a pas répondu.",
+      "evidence": "OpenAI would not say where it has told users that humans may read their chats, and Europe's highest court held last September that the duty to tell them sits with the company collecting the data",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr",
+        "date": "2026-09-14"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'Italie a déjà sanctionné",
+      "body": "Son autorité a infligé **15 millions** d'euros d'amende et ordonné six mois de campagne d'information à la télévision et à la radio.",
+      "evidence": "Italy's regulator has already fined the company EUR 15M, nine of it for processing without an adequate legal basis, and ordered six months of public information advertising on Italian television and radio.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr",
+        "date": "2026-09-14"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui raconte tout à ChatGPT",
+      "sub": "L'actu IA, avec les sources."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Des humains lisent tes conversations ChatGPT",
+    "beats": [
+      {
+        "script": "Quand tu écris à ChatGPT, tu crois parler à une machine. Des humains sont payés pour lire de vraies conversations. OpenAI en recrute des centaines, sous un nom de code : Project Lily.",
+        "visual": {
+          "type": "screenshot",
+          "file": "media/2026-09-16-humains-lisent-chatgpt/shot_404.png",
+          "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/"
+        }
+      },
+      {
+        "script": "Plus de 900 millions de personnes utilisent ChatGPT, et la plupart ne s'en doutent probablement pas. Le plus gênant n'est pas la lecture. C'est ce qui s'affiche à côté.",
+        "visual": {
+          "type": "card",
+          "value": "900 millions",
+          "label": "d'utilisateurs de ChatGPT, au minimum"
+        }
+      },
+      {
+        "script": "Il ne voit pas ton nom d'utilisateur. Mais il voit la conversation entière, un résumé de ce que tu as déjà demandé, et parfois où tu vis dans le monde.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-09-16-humains-lisent-chatgpt/p_gpt.jpg",
+          "query": "chatgpt screen laptop",
+          "alt": "une fenetre de conversation ChatGPT ouverte sur un ecran sombre",
+          "credit": "Прикли · CC0"
+        }
+      },
+      {
+        "script": "Ce sont des sous-traitants recrutés par des agences. Les guides de formation qui ont fuité disent qu'ils touchent au moins 50 dollars de l'heure pour noter les réponses.",
+        "visual": {
+          "type": "card",
+          "value": "50 $",
+          "label": "de l'heure au minimum, pour noter les réponses"
+        }
+      },
+      {
+        "script": "Et ce choix est déjà fait pour toi. Le réglage s'appelle Improve the model for everyone, et il est allumé par défaut sur les comptes gratuits, Plus et Pro.",
+        "visual": {
+          "type": "screenshot",
+          "file": "media/2026-09-16-humains-lisent-chatgpt/shot_oai.png",
+          "url": "https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance"
+        }
+      },
+      {
+        "script": "Sauf que l'Europe a tranché. Prévenir les gens est le travail de celui qui collecte : sa plus haute juridiction l'a jugé l'an dernier. Et l'Italie a déjà mis 15 millions d'euros d'amende.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-09-16-humains-lisent-chatgpt/p_court.jpg",
+          "query": "european court of justice building",
+          "alt": "la grande salle d'audience de la Cour de justice de l'Union europeenne",
+          "credit": "Cédric Puisney from Brussels, Bel… · CC BY"
+        }
+      },
+      {
+        "script": "Quand on lui a demandé où il avait prévenu ses utilisateurs, OpenAI n'a pas répondu. Il a montré une page d'aide après la publication. Va couper le réglage, et abonne-toi pour l'actu IA de demain.",
+        "visual": {
+          "type": "screenshot",
+          "file": "media/2026-09-16-humains-lisent-chatgpt/shot_tnw.png",
+          "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "404 Media",
+      "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+      "accessed": "2026-09-16"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/chatgpt-human-reviewers-gdpr",
+      "accessed": "2026-09-16"
+    },
+    {
+      "name": "GB News",
+      "url": "https://www.gbnews.com/tech/how-to-stop-chatgpt-reading-conversations",
+      "accessed": "2026-09-16"
+    }
+  ]
+}

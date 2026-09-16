@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-15T19:41:46.074Z",
+  "at": "2026-09-16T06:40:54.986Z",
   "n": 99,
   "nSettled": 93,
   "medianViews": 153,
@@ -1867,6 +1867,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-15-agents-tricheurs-denonciateurs",
+      "at": "2026-09-15T16:49:20.135Z",
+      "hourUtc": 16,
+      "views": 36,
+      "reach": 32,
+      "avgWatchS": 3.8,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Google a mis 100 IA a faire des maths ensemble. Une a trouve comment tricher, en 27 minutes tout le monde trichait, et 24 autres les ont denoncees.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-07-psychose-associee-ia",
       "at": "2026-09-07T10:49:00.956Z",
       "hourUtc": 10,
@@ -1918,6 +1935,23 @@
       "settled": false
     },
     {
+      "slug": "2026-09-15-siri-europe-iphone",
+      "at": "2026-09-15T10:57:35.841Z",
+      "hourUtc": 10,
+      "views": 32,
+      "reach": 28,
+      "avgWatchS": 2.1,
+      "retentionPct": 3,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Apple a sorti son nouveau Siri lundi. En Europe il ne marchera pas sur iPhone. Sur un Mac oui, sur ton telephone non, et sans date.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-14-chatbot-mineurs-californie",
       "at": "2026-09-14T16:50:13.898Z",
       "hourUtc": 16,
@@ -1932,23 +1966,6 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "En Californie, un chatbot n'a plus le droit de dire à un enfant qu'il est amoureux de lui, ni de le flatter. La loi porte le prénom d'un ado mort.",
-      "settled": false
-    },
-    {
-      "slug": "2026-09-15-siri-europe-iphone",
-      "at": "2026-09-15T10:57:35.841Z",
-      "hourUtc": 10,
-      "views": 27,
-      "reach": 23,
-      "avgWatchS": 1.8,
-      "retentionPct": 3,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Apple a sorti son nouveau Siri lundi. En Europe il ne marchera pas sur iPhone. Sur un Mac oui, sur ton telephone non, et sans date.",
       "settled": false
     },
     {
@@ -1967,23 +1984,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-15-agents-tricheurs-denonciateurs",
-      "at": "2026-09-15T16:49:20.135Z",
-      "hourUtc": 16,
-      "views": 18,
-      "reach": 14,
-      "avgWatchS": 6,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Google a mis 100 IA a faire des maths ensemble. Une a trouve comment tricher, en 27 minutes tout le monde trichait, et 24 autres les ont denoncees.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
