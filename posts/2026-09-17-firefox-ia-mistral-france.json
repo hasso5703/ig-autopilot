@@ -1,0 +1,220 @@
+{
+  "slug": "2026-09-17-firefox-ia-mistral-france",
+  "centralClaim": "Mozilla's AI browsing assistant Firefox Smart Window is now powered by Mistral's models.",
+  "corroboration": [
+    {
+      "url": "https://mistral.ai/news/mistral-x-mozilla",
+      "quote": "firefox smart window (beta), mozilla's ai browsing assistant, is now powered by mistral models."
+    },
+    {
+      "url": "https://the-decoder.com/mozillas-new-smart-window-assistant-runs-on-mistrals-models/",
+      "quote": "mozilla's new ai browser assistant firefox smart window (beta) runs on mistral's models."
+    }
+  ],
+  "caption": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi hors Amérique du Nord.\n\nL'assistant s'appelle Smart Window. Mozilla écrit qu'il se déploie maintenant en France, que c'est sa première extension au-delà de l'Amérique du Nord, et que les gens en France peuvent le télécharger et l'essayer en français.\n\nQui le fait tourner. Mistral, société française constituée à Paris selon ses propres conditions juridiques. Ce sont ses modèles qui alimentent l'assistant de Firefox.\n\nCe qu'il fait. Il propose des groupes pour tes onglets liés, repère les doublons et les ferme d'un clic, résume les articles longs et les pages denses, et retrouve une page que tu as vue sans que tu te rappelles son nom.\n\nLe détail qui n'est pas dans la vidéo. Tu choisis le moteur : trois modèles proposés, ou le tien.\n\nCe qui coince. Mozilla écrit qu'elle ne garde pas tes conversations, ne s'en sert pas pour entraîner ses modèles et ne vend pas tes données. La même page ajoute qu'elle traite quand même des informations techniques limitées pour faire tourner le service.\n\nLe Royaume-Uni et l'Allemagne suivent plus tard cette année.\n\nTu laisserais une IA lire tes onglets, oui ou non ?\n\nblog.mozilla.org · mistral.ai · the-decoder.com · firefox.com\n\n#IA #IntelligenceArtificielle #ActuIA #Firefox #Mistral\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "url": "https://www.firefox.com/en-US/smart-window/",
+      "quote": "choose from three models or bring your own."
+    },
+    {
+      "url": "https://www.firefox.com/en-US/smart-window/",
+      "quote": "unlike most ai assistants, mozilla doesn't keep your chat transcripts, use your conversations to train models, or sell your data. to keep smart window running reliably, we process limited technical information. your chat content is only shared when you choose."
+    },
+    {
+      "url": "https://blog.mozilla.org/en/firefox/firefox-smart-window/",
+      "quote": "update on september 16, 2026: smart window is now rolling out in france, marking its first expansion beyond north america. people in france will be able to download and try the smart window beta in french."
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Mozilla et Mistral",
+      "headline": "Firefox lance son IA en France, avec *Mistral*",
+      "hero": {
+        "value": "La France",
+        "label": "premier pays servi hors Amérique du Nord"
+      },
+      "swipe": "Les sources sont sous la vidéo"
+    },
+    {
+      "type": "content",
+      "title": "La France d'abord",
+      "body": "Mozilla écrit que Smart Window **se déploie maintenant en France**, sa première extension au-delà de l'Amérique du Nord, et qu'on peut l'essayer *en français*.",
+      "evidence": "update on september 16, 2026: smart window is now rolling out in france, marking its first expansion beyond north america. people in france will be able to download and try the smart window beta in french.",
+      "source": {
+        "name": "Mozilla",
+        "url": "https://blog.mozilla.org/en/firefox/firefox-smart-window/",
+        "date": "2026-09-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce sont les modèles de Mistral",
+      "body": "L'assistant de navigation de Mozilla **tourne sur les modèles de Mistral**. Les deux entreprises l'annoncent le même jour.",
+      "evidence": "firefox smart window (beta), mozilla's ai browsing assistant, is now powered by mistral models.",
+      "source": {
+        "name": "Mistral AI",
+        "url": "https://mistral.ai/news/mistral-x-mozilla",
+        "date": "2026-09-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Mistral est une société française",
+      "body": "Ses propres conditions juridiques la décrivent comme une **société par actions française immatriculée à Paris**.",
+      "evidence": "mistral ai, a french limited joint-stock corporation, incorporated in paris, under number 952 418 325, having its registered offices at 15 rue des halles, 75001 paris, france.",
+      "source": {
+        "name": "Mistral AI",
+        "url": "https://legal.mistral.ai/terms/data-processing-addendum",
+        "date": "2026-09-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que fait l'assistant",
+      "body": "Il propose des groupes pour les onglets liés, repère les doublons et **les ferme d'un clic**.",
+      "evidence": "smart window can now suggest groups for related tabs, making it easier to organize what you have open and return to it later. it can also spot duplicate tabs and close them with a click.",
+      "source": {
+        "name": "Mozilla",
+        "url": "https://blog.mozilla.org/en/firefox/firefox-smart-window/",
+        "date": "2026-09-16"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que Firefox promet",
+      "claim": "Mozilla ne garde pas tes conversations, ne s'en sert pas pour entraîner ses modèles et ne vend pas tes données.",
+      "caveatLabel": "Ce que la même page ajoute",
+      "caveat": "Elle traite quand même des informations techniques limitées pour faire tourner le service.",
+      "evidence": "unlike most ai assistants, mozilla doesn't keep your chat transcripts, use your conversations to train models, or sell your data. to keep smart window running reliably, we process limited technical information. your chat content is only shared when you choose.",
+      "source": {
+        "name": "Firefox",
+        "url": "https://www.firefox.com/en-US/smart-window/",
+        "date": "2026-09-16"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Un navigateur ne devrait pas être un entonnoir à sens unique.",
+      "attribution": "Anthony Enzor-DeMeo, PDG de Mozilla Corporation",
+      "evidence": "a browser shouldn't be a one-way funnel. it should preserve what made the internet powerful to begin with: the freedom to explore, discover different ideas and tech, and decide for ourselves where to go next.",
+      "source": {
+        "name": "Mistral AI",
+        "url": "https://mistral.ai/news/mistral-x-mozilla",
+        "date": "2026-09-16"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La suite",
+      "body": "Le Royaume-Uni et l'Allemagne **suivent plus tard cette année**, selon les deux entreprises.",
+      "evidence": "it's available first in france and north america, with the uk and germany set to follow later this year.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/mozillas-new-smart-window-assistant-runs-on-mistrals-models/",
+        "date": "2026-09-16"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *celui* qui te dit que l'IA est toujours américaine",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Mozilla",
+      "url": "https://blog.mozilla.org/en/firefox/firefox-smart-window/",
+      "accessed": "2026-09-17"
+    },
+    {
+      "name": "Mistral AI",
+      "url": "https://mistral.ai/news/mistral-x-mozilla",
+      "accessed": "2026-09-17"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/mozillas-new-smart-window-assistant-runs-on-mistrals-models/",
+      "accessed": "2026-09-17"
+    },
+    {
+      "name": "Firefox",
+      "url": "https://www.firefox.com/en-US/smart-window/",
+      "accessed": "2026-09-17"
+    },
+    {
+      "name": "Mistral AI",
+      "url": "https://legal.mistral.ai/terms/data-processing-addendum",
+      "accessed": "2026-09-17"
+    }
+  ],
+  "sendTest": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi. Elle tourne sur une IA française.",
+  "reel2": {
+    "mood": "wonder",
+    "lang": "fr",
+    "title": "Firefox lance son IA en France, avec Mistral",
+    "beats": [
+      {
+        "script": "Pour une fois, la France est servie en premier. Firefox met une intelligence artificielle dans son navigateur, et le premier pays hors Amérique du Nord à l'avoir, c'est le nôtre.",
+        "visual": {
+          "type": "photo",
+          "query": "paris street rooftops",
+          "alt": "les toits de Paris, en France, au crépuscule",
+          "file": "media/2026-09-17-firefox-ia-mistral-france/pa7_paris.jpg",
+          "credit": "Valentin Antonini valentinant · CC0"
+        }
+      },
+      {
+        "script": "L'assistant s'appelle Smart Window. Mozilla écrit qu'il se déploie maintenant en France, et que tu peux le télécharger et l'essayer en français. Tu sais qui le fait tourner ?",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://blog.mozilla.org/en/firefox/firefox-smart-window/",
+          "file": "media/2026-09-17-firefox-ia-mistral-france/shot_mozilla.png"
+        }
+      },
+      {
+        "script": "Mistral, la société française d'intelligence artificielle. Ce sont ses modèles qui font marcher l'assistant de Firefox en France et en Amérique du Nord.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://the-decoder.com/mozillas-new-smart-window-assistant-runs-on-mistrals-models/",
+          "file": "media/2026-09-17-firefox-ia-mistral-france/shot_decoder.png"
+        }
+      },
+      {
+        "script": "Concrètement, il range tes onglets ouverts par groupes, il ferme les doublons d'un clic, il résume les articles longs, et il retrouve une page que tu as vue sans te rappeler son nom.",
+        "visual": {
+          "type": "photo",
+          "query": "laptop keyboard close",
+          "alt": "le clavier d'un ordinateur portable en gros plan, là où on tape une recherche dans le navigateur",
+          "file": "media/2026-09-17-firefox-ia-mistral-france/pa_keyboard.jpg",
+          "credit": "Free laptop keyboard close image · CC0"
+        }
+      },
+      {
+        "script": "Et la promesse, c'est la confidentialité. Mozilla écrit qu'elle ne garde pas tes conversations, qu'elle ne s'en sert pas pour entraîner ses modèles, et qu'elle ne vend pas tes données.",
+        "visual": {
+          "type": "card",
+          "value": "ZÉRO",
+          "label": "conversation gardée sur les serveurs de Mozilla, par défaut"
+        }
+      },
+      {
+        "script": "Sauf que tout ne reste pas chez toi. La même page précise que Mozilla traite quand même des informations techniques limitées pour faire tourner le service.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.firefox.com/en-US/smart-window/",
+          "file": "media/2026-09-17-firefox-ia-mistral-france/shot_ffcom.png"
+        }
+      },
+      {
+        "script": "Tu peux aussi changer de moteur, ou brancher le tien. Le Royaume-Uni et l'Allemagne suivront plus tard cette année. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "card",
+          "value": "TON MOTEUR",
+          "label": "trois modèles proposés, ou celui que tu branches"
+        }
+      }
+    ]
+  }
+}

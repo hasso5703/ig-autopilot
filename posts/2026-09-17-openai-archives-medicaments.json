@@ -1,0 +1,245 @@
+{
+  "slug": "2026-09-17-openai-archives-medicaments",
+  "centralClaim": "CTD Commons, funded by the OpenAI Foundation, will make the regulatory knowledge of failed drug programs openly available.",
+  "corroboration": [
+    {
+      "url": "https://openaifoundation.org/news/public-data-for-health",
+      "quote": "ctd commons will test the possibility of acquiring ctds from failed or shelved drug programs, and make them openly available for research and analysis, for everyone to use."
+    },
+    {
+      "url": "https://www.insideprecisionmedicine.com/topics/informatics/openai-foundation-gives-125m-to-public-data-for-ai-driven-health-program/",
+      "quote": "ctd commons, another initial grantee, will focus on preserving and organizing regulatory and drug-development knowledge, extending the initiative beyond newly generated experimental measurements to information that could otherwise remain fragmented or be lost."
+    }
+  ],
+  "caption": "90 % des médicaments testés sur des patients échouent, et ce qu'on a appris en les testant reste enfermé.\n\nLa fondation d'OpenAI, l'organisme à but non lucratif qui chapeaute l'entreprise, met plus de 125 millions de dollars dans un programme appelé Public Data for Health. Il finance la création et la préservation de jeux de données scientifiques ouverts aux chercheurs.\n\nLe projet le plus inattendu s'appelle CTD Commons. Il veut récupérer les dossiers réglementaires des médicaments abandonnés et les publier, pour que les équipes suivantes apprennent de ce qui a raté.\n\nCe qu'il y a dans un de ces dossiers. La toxicologie sur les animaux, les détails de fabrication, et surtout les échanges avec l'agence américaine du médicament. Presque rien de tout ça n'est publié.\n\nLe détail qui n'est pas dans la vidéo. La méthode envisagée est d'enchérir aux procédures de faillite, pour obtenir des documents considérés d'habitude comme des secrets industriels. La subvention est de 500 000 dollars.\n\nCe qui coince. Les faillites deviennent un terrain de chasse aux données d'entraînement. Google a remporté les enchères sur les données de la compagnie aérienne Spirit Airlines, 100 millions d'e-mails compris, et des personnels navigants se sont inquiétés que des informations privées soient exposées.\n\nLa fondation dit vouloir donner un milliard de dollars d'ici la fin de l'année.\n\nRouvrir les dossiers des médicaments ratés, bonne idée ou pas ?\n\nopenaifoundation.org · technologyreview.com · insideprecisionmedicine.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Sante\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "url": "https://openaifoundation.org/news/public-data-for-health",
+      "quote": "90% of drug candidates fail in clinical trials"
+    },
+    {
+      "url": "https://openaifoundation.org/news/public-data-for-health",
+      "quote": "we are starting by supporting more than $125 million in grants across an initial tranche of nonprofits and universities, spanning many layers of data: from molecules, to epidemiology, to regulatory knowledge."
+    },
+    {
+      "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+      "quote": "teslo's idea for a biotech archive received $500,000 and will be pursued by 1day sooner, an advocacy group representing clinical trial volunteers, which she advises."
+    },
+    {
+      "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+      "quote": "bankruptcies could become what some are calling a \"new land grab\" for ai training. last month, google won a bid to take over the corporate data of the failed carrier spirit airlines, including 100 million emails. that led to objections from flight attendants and others who worried that private or proprietary data could be exposed."
+    },
+    {
+      "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+      "quote": "he says the foundation hopes to give away $1 billion by the end of the year."
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Fondation OpenAI",
+      "headline": "OpenAI paie pour les *médicaments abandonnés*",
+      "hero": {
+        "value": "90%",
+        "label": "des médicaments testés sur des patients échouent"
+      },
+      "swipe": "Les sources sont sous la vidéo"
+    },
+    {
+      "type": "stat",
+      "figure": "90%",
+      "unit": "des candidats échouent en essai clinique",
+      "body": "Le programme dit vouloir **rendre le développement des médicaments plus prévisible** et faire baisser ce taux d'échec.",
+      "evidence": "to make drug development more predictable and reduce the failure rate of new drugs. 90% of drug candidates fail in clinical trials",
+      "source": {
+        "name": "OpenAI Foundation",
+        "url": "https://openaifoundation.org/news/public-data-for-health",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le programme",
+      "body": "La fondation d'OpenAI met **plus de 125 millions de dollars** dans la création et la préservation de jeux de données scientifiques.",
+      "evidence": "we are starting by supporting more than $125 million in grants across an initial tranche of nonprofits and universities, spanning many layers of data: from molecules, to epidemiology, to regulatory knowledge.",
+      "source": {
+        "name": "OpenAI Foundation",
+        "url": "https://openaifoundation.org/news/public-data-for-health",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le projet CTD Commons",
+      "body": "Il veut *récupérer* les dossiers réglementaires des médicaments abandonnés et **les publier**, pour que les équipes suivantes apprennent de ce qui a raté.",
+      "evidence": "preserve and publish regulatory knowledge from failed drug development programs so future teams can learn from precedent that is usually locked away, to help uncover effective treatments for patients faster. a ctd, or common technical document, is a document that compiles the full journey of an investigational drug-everything from animal toxicology, manufacturing details, and, perhaps most usefully, correspondence with the fda. yet only a small fraction of that work appears in published papers. ctd commons will test the possibility of acquiring ctds from failed or shelved drug programs, and make them openly available for research and analysis, for everyone to use.",
+      "source": {
+        "name": "OpenAI Foundation",
+        "url": "https://openaifoundation.org/news/public-data-for-health",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'il y a dans un dossier",
+      "body": "La toxicologie sur les animaux, les détails de fabrication, et surtout **les échanges avec l'agence américaine du médicament**. Presque rien n'est publié.",
+      "evidence": "a ctd, or common technical document, is a document that compiles the full journey of an investigational drug-everything from animal toxicology, manufacturing details, and, perhaps most usefully, correspondence with the fda. yet only a small fraction of that work appears in published papers.",
+      "source": {
+        "name": "OpenAI Foundation",
+        "url": "https://openaifoundation.org/news/public-data-for-health",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La méthode",
+      "body": "Il faudrait **enchérir aux procédures de faillite** pour obtenir des documents considérés d'habitude comme des secrets industriels.",
+      "evidence": "by bidding at their bankruptcy proceedings, she proposed, it might be possible to obtain detailed regulatory filings, manufacturing strategies, and safety data-types of information usually considered trade secrets.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Le montant",
+      "claim": "La subvention à ce projet d'archive est de 500 000 dollars.",
+      "caveatLabel": "Ce que ça ouvre",
+      "caveat": "Google a remporté les enchères sur les données de Spirit Airlines, 100 millions d'e-mails compris, et des personnels navigants s'en sont inquiétés.",
+      "evidence": "bankruptcies could become what some are calling a \"new land grab\" for ai training. last month, google won a bid to take over the corporate data of the failed carrier spirit airlines, including 100 million emails. that led to objections from flight attendants and others who worried that private or proprietary data could be exposed.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La somme promise",
+      "body": "La fondation dit vouloir donner **un milliard de dollars** d'ici la fin de l'année.",
+      "evidence": "he says the foundation hopes to give away $1 billion by the end of the year.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+        "date": "2026-09-15"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Confirmé par la presse",
+      "body": "MIT Technology Review écrit que la fondation d'OpenAI **finance cette idée**, en payant pour créer des jeux de données scientifiques de qualité.",
+      "evidence": "the openai foundation, the nonprofit parent of openai, announced this week that it will fund her idea, paying to create \"high-quality scientific datasets.\"",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/16/1144205/the-download-ai-trillion-dollar-build-openai-biological-data/",
+        "date": "2026-09-16"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui attend un traitement",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "sources": [
+    {
+      "name": "OpenAI Foundation",
+      "url": "https://openaifoundation.org/news/public-data-for-health",
+      "accessed": "2026-09-17"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+      "accessed": "2026-09-17"
+    },
+    {
+      "name": "Inside Precision Medicine",
+      "url": "https://www.insideprecisionmedicine.com/topics/informatics/openai-foundation-gives-125m-to-public-data-for-ai-driven-health-program/",
+      "accessed": "2026-09-17"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/09/16/1144205/the-download-ai-trillion-dollar-build-openai-biological-data/",
+      "accessed": "2026-09-17"
+    }
+  ],
+  "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "OpenAI paie pour les médicaments abandonnés",
+    "beats": [
+      {
+        "script": "90 % des médicaments testés sur des patients échouent. Et tout ce qu'on a appris en les testant reste enfermé, hors de portée des équipes suivantes.",
+        "visual": {
+          "type": "photo",
+          "query": "pills capsules close",
+          "alt": "une main ouverte tenant des gélules de médicament",
+          "file": "media/2026-09-17-openai-archives-medicaments/pb_pills.jpg",
+          "credit": "Cocktails medicine · CC0"
+        }
+      },
+      {
+        "script": "Et là, la fondation d'OpenAI met plus de 125 millions de dollars dans un programme pour créer et préserver des données scientifiques. Un projet s'attaque aux échecs.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://openaifoundation.org/news/public-data-for-health",
+          "file": "media/2026-09-17-openai-archives-medicaments/shot_oaf.png"
+        }
+      },
+      {
+        "script": "Le projet s'appelle CTD Commons. Il veut récupérer les dossiers déposés aux autorités pour les médicaments abandonnés, et les publier, pour que les suivants apprennent de ce qui a raté.",
+        "visual": {
+          "type": "photo",
+          "query": "protein model",
+          "alt": "le modèle en ruban d'une protéine, l'objet d'un médicament",
+          "file": "media/2026-09-17-openai-archives-medicaments/pb5_protein.jpg",
+          "credit": "Umberto Salvagnin from Italy · CC BY"
+        }
+      },
+      {
+        "script": "Et la méthode envisagée est inattendue. Il faudrait enchérir aux procédures de faillite pour obtenir ces documents, considérés d'habitude comme des secrets industriels.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+          "file": "media/2026-09-17-openai-archives-medicaments/shot_mittr.png"
+        }
+      },
+      {
+        "script": "La subvention pour ce projet est de 500 000 dollars. Et un seul de ces dossiers contient parfois tout ce qu'on sait d'un médicament.",
+        "visual": {
+          "type": "card",
+          "value": "500 000 $",
+          "label": "pour aller chercher les dossiers des médicaments abandonnés"
+        }
+      },
+      {
+        "script": "Dedans, il y a la toxicologie animale, les détails de fabrication, et surtout les échanges avec l'agence américaine du médicament. Presque rien n'est publié.",
+        "visual": {
+          "type": "photo",
+          "query": "cancer cells microscope",
+          "alt": "des cellules de cancer vues au microscope",
+          "file": "media/2026-09-17-openai-archives-medicaments/pb7_tumour.jpg",
+          "credit": "Mateus Figueiredo · CC BY"
+        }
+      },
+      {
+        "script": "Et OpenAI n'est pas seul. Google a remporté les enchères sur les données de la compagnie aérienne Spirit Airlines, 100 millions d'e-mails compris. Des personnels navigants s'en sont inquiétés.",
+        "visual": {
+          "type": "card",
+          "value": "100 MILLIONS",
+          "label": "d'e-mails d'une compagnie aérienne en faillite, rachetés"
+        }
+      },
+      {
+        "script": "La fondation dit vouloir donner un milliard de dollars d'ici la fin de l'année. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.insideprecisionmedicine.com/topics/informatics/openai-foundation-gives-125m-to-public-data-for-ai-driven-health-program/",
+          "file": "media/2026-09-17-openai-archives-medicaments/shot_ipm.png"
+        }
+      }
+    ]
+  }
+}

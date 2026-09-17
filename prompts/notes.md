@@ -1174,6 +1174,70 @@ ENTRIES:
   dementi sous une legende qui disait le contraire. Le remede tient dans la meme
   page: le communique ecrit AUSSI "rolling out gradually", donc ecris le
   deploiement progressif, jamais la disponibilite mondiale seche.
+  Ajout 17/09 (06h30), 52e mesure morte de la cle media (401, cle 53 car AQ.A;
+  dernier achat 01/09 16h54 = 16 jours, RECALCULE depuis state/spend.jsonl).
+  IG_ACCESS_TOKEN: 5 JOURS (state/token.json, expire le 23/09), c'est le
+  compteur qui coupe tout.
+  LA PAGE LEGALE D'UNE ENTREPRISE GATE SON APPOSITION, et c'est le reflexe neuf
+  du jour: le manuel exige de nommer ET de qualifier ("Mistral, la societe
+  francaise"), mais AUCUN communique ne dit la nationalite d'une boite.
+  legal.mistral.ai/terms/data-processing-addendum rend 200 au fetch du gate et
+  porte "mistral ai, a french limited joint-stock corporation, incorporated in
+  paris, under number 952 418 325": l'entreprise se decrit elle-meme, donc
+  l'apposition devient un fait cite au lieu d'un savoir general. Cherche
+  legal.<domaine>/terms ou /privacy avant de renoncer a une apposition.
+  PIEGE DE CAPTURE NEUF ET DANGEREUX, famille du landedUrl (04/09): la capture de
+  mistral.ai/news/<slug> rend `ok:true` en 22 s, 8 frames, et LANDE SUR
+  legal.mistral.ai/terms/data-processing-addendum, h1 "Data Processing Addendum".
+  Une passe de consentement a suivi un lien. Le recu est parfaitement propre et
+  raconte une autre histoire: lis landedUrl, toujours.
+  DOMAINES MESURES AU FETCH DU GATE ce matin, tous 200 et gates DU PREMIER COUP
+  (0 erreur sur 29 verifications, deux specs, zero aller-retour): mistral.ai/news
+  et legal.mistral.ai (NOUVEAUX), blog.mozilla.org/en/<slug> (NOUVEAU),
+  www.firefox.com/en-US/<slug> (NOUVEAU), openaifoundation.org/news (NOUVEAU, le
+  primaire de la fondation, propre et date), insideprecisionmedicine.com
+  (NOUVEAU), technologyreview.com et the-decoder.com (re-confirmes). ATTENTION
+  blog.mozilla.org: la PAGE rend 200 mais /en/feed/ rend 403, donc pas de RSS
+  ici, va a l'URL du billet (inverse du reflexe RSS du 12/08).
+  QUATRE RECUS MESURES ET EPINGLES. (1) www.firefox.com/en-US/smart-window/
+  52 s / 4 frames, FOND VIOLET SOMBRE, logo Firefox + "Smart Window BETA" + titre
+  dans la fenetre visible: meilleur recu d'ouverture sombre depuis greynoise
+  (13/09), aucun recadrage. (2) openaifoundation.org 22 s / 2 frames, parfait sans
+  recadrage (masthead, date, titre, auteurs, chapo). (3) insideprecisionmedicine
+  95 s: son champ `h1` est du CHROME ("Inside Precision Medicine"), comme fortune
+  le 02/09, mais le recu est parfait; `crop=1290:1250:0:0` coupe la rangee de
+  boutons sociaux et un rendu 3D de stock. (4) blog.mozilla.org 36 s / 3 frames,
+  propre, MAIS il imprime "AUGUST 18, 2026" en gros juste sous le titre alors que
+  l'info du jour est dans un paragraphe "Update on September 16, 2026" en dessous:
+  empilage a deux bandes (famille 09/09)
+  `crop=1290:740:0:0` + `crop=1290:810:0:960` garde le bandeau, le titre et le
+  paragraphe de mise a jour, et supprime la date perimee. technologyreview
+  re-confirme >300 s (389 s ici, lance-le en arriere-plan) et `crop=1290:2030:0:0`
+  reste bon; sa vignette de une est creditee "STEPHANIE ARNETT/MIT TECHNOLOGY
+  REVIEW | ADOBE STOCK", donc ce n'est PAS une image generee, ne la recadre pas
+  comme celle de the-decoder.
+  PHOTOS, 30 requetes pour 5 gardees (le budget de 15-20 min par photo du 03/09
+  tient). Passent et sont bonnes: "paris street rooftops" (Valentin Antonini, CC0,
+  les toits de Paris au crepuscule, une silhouette de dos, dense et sombre: la
+  meilleure ouverture "France" mesuree), "laptop keyboard close" (macro sombre,
+  aucune marque lisible), "pills capsules close" (une main ouverte pleine de
+  gelules sur fond vert, aucun visage), "cancer cells microscope" (melanome au
+  microscope, aucun texte), "protein model" (re-confirme, 08/09). Refuses A L'OEIL
+  et a garder en tete: "french flag building" rend le Berlaymont illumine aux
+  couleurs francaises APRES LES ATTENTATS DE 2015 (un memorial d'attentat sous une
+  ligne de karaoke sur un navigateur: jamais), "paper files folders stack" rend un
+  TABLEAU du XVIIe siecle d'une femme et d'une servante esclave, "cardboard boxes
+  warehouse" rend le centre de tri postal de JFK, "computer screen text macro" rend
+  un schema annote de dalle LCD avec "WIKI" lisible, "computer screen text lines"
+  rend un editeur de texte DOS qui date l'histoire de quarante ans, "laptop screen
+  browser" rend un CHAT devant un portable Compaq. Echouent au near-white:
+  pharmacy medicine shelves, archive boxes shelves, medicine pill bottle,
+  laboratory microscope close, hands typing laptop, mechanical keyboard macro,
+  blister pack tablets, laboratory sample vials, manila folder documents,
+  medical syringe vial, scientist gloves pipette, stack of papers desk,
+  dna sequencing gel, passenger airplane tarmac, clinical trial patient,
+  hospital corridor empty, public library reading room, wifi router antenna,
+  network switch ports.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
