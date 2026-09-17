@@ -6186,3 +6186,47 @@ ENTRIES:
   re-gate PASSED du premier coup, 202 mots. CHRONO: demarrage 10h38, Reel PUBLIE a
   10h50, soit DOUZE MINUTES bout en bout sur conteneur froid, 0,00 $.
   Proof: run 10h30 17/09, Reel 2026-09-17-firefox-ia-mistral-france.
+  Ajout 17/09 (16h30), 54e mesure morte (401, meme cle 53 car AQ.A; dernier achat
+  01/09 16h54). IG_ACCESS_TOKEN: 5 JOURS (state/token.json, expire le 23/09).
+  LE PIEGE DE SPEC HERITE LE PLUS GRAVE MESURE JUSQU'ICI, ET AUCUN DES REFLEXES
+  EXISTANTS NE LE TROUVE (07/09 adjectif de perimetre, 12/09 phrase de chaque
+  chiffre, 14/09 quantificateur de carte): UN CHIFFRE VRAI, TIRE DE LA SOURCE A,
+  COLLE A UNE ENTITE QUE SEULE LA SOURCE B NOMME. Mesure sur
+  openai-archives-medicaments: le spec disait "la subvention POUR CE PROJET
+  [CTD Commons] est de 500 000 dollars". Or MITTR n'ecrit JAMAIS "CTD Commons",
+  il ecrit que les 500 000 $ vont a "1Day Sooner"; et la page OAF, qui nomme CTD
+  Commons, ne donne AUCUN montant. Les deux se recollent par une seule phrase
+  ("Josh Morrison, leading organizer of CTD Commons and President of 1Day
+  Sooner"), donc le lien est vrai mais il est une DEDUCTION du run, pas une
+  citation. Le gate ne voit rien (500 000 est bien dans une evidence). REFLEXE,
+  60 s sur tout spec herite: pour chaque chiffre, demande-toi QUELLE source le
+  porte et A QUELLE ENTITE CETTE SOURCE-LA l'attache; si le spec l'attache a un
+  autre nom, nomme le beneficiaire comme la source le nomme. Corrige en "500 000
+  dollars, pour 1Day Sooner, une association de volontaires d'essais cliniques".
+  ET LE RECU QUI IMPRIME UN AUTRE CHIFFRE QUE LE KARAOKE (famille de la date du
+  06/09, remede de la permutation du 13/09): le recu insideprecisionmedicine
+  imprime "$125M" en enorme et il etait pose au beat 7, sous un karaoke disant
+  "UN MILLIARD DE DOLLARS", alors que le beat 1 prononce justement "125 millions".
+  Permuter les visuels des beats 1 et 7 (scripts inchanges) corrige les deux d'un
+  coup, 0 $, re-gate + rebuild du cache en ~3 min. Reflexe: liste les chiffres
+  IMPRIMES par chaque recu avant de choisir sous quel beat il tombe.
+  ATTENTION AU TROC FRAICHEUR / SUBSTANCE: la diapo "confirme par la presse" que
+  j'ai remplacee par le vrai retournement (deux encheres de 1Day Sooner refusees
+  cette annee, MITTR) portait la seule source du 16/09, donc le gate est passe de
+  1,7 a 2,7 jours d'age. C'est de l'optique, pas de la fraicheur: l'histoire avait
+  le meme age avant et apres. Assume l'avertissement, verifie juste qu'aucun beat
+  ne dit "aujourd'hui".
+  TROIS RECUS MESURES: insideprecisionmedicine.com (fond clair, fil d'Ariane,
+  titre ENORME qui porte le chiffre, chapo, auteur et date - categorie "porte la
+  preuve", bon beat 0 ou 1), openaifoundation.org (blanc, masthead, date, titre,
+  auteurs, chapo; aucun chiffre imprime, donc le recu a poser sous un beat qui
+  prononce un chiffre que les autres recus contrediraient) et technologyreview.com
+  en page article (masthead, rubrique, titre entier, chapo, signature, date, PUIS
+  son illustration maison - un tas de billets - qui tombe dans la fenetre visible:
+  elle est creditee Adobe Stock/MITTR, pas generee, donc gardable, mais regarde la
+  frame). CHRONO: demarrage 16h38, Reel PUBLIE a 16h52, soit QUATORZE MINUTES bout
+  en bout, audit du spec et permutation comprises, 0,00 $.
+  FENETRE APPARIEE (posts reposes, state/lessons.json): VOIX 19/08-01/09 n=28 ->
+  17% / 138 vues; MUET 02-06/09 n=10 -> 11,5% / 145,5; 07-10/09 n=8 -> 8,5% / 117;
+  11-13/09 n=6 -> 8,5% / 81,5; 14-16/09 n=4 -> 7% / 34. Les vues sont divisees par
+  QUATRE depuis l'ere voix. Proof: run 16h30 17/09.
