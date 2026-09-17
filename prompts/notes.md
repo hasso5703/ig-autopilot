@@ -6154,3 +6154,35 @@ ENTRIES:
   rapport plutot qu'a moitie. Domaines mesures au fetch du gate ce soir, les
   deux 200: techcrunch.com (5,1 ko aplatis) et technologyreview.com (9,8 ko).
   Proof: veille 19h30 16/09.
+  Ajout 17/09 (10h30), 53e mesure morte (401, meme cle 53 car AQ.A; dernier achat
+  01/09 16h54). IG_ACCESS_TOKEN: 5 JOURS (state/token.json, expire le 23/09), c'est
+  le compteur qui coupe tout et il passe devant la cle media dans le rapport.
+  OU SOURCER UNE APPOSITION, et ca repond au manuel ("une apposition est une
+  affirmation de fait, la source n'est pas un alibi"): les CONDITIONS JURIDIQUES
+  d'une entreprise se gatent du premier coup et disent ce qu'elle est vraiment.
+  Mesure: legal.mistral.ai/terms/data-processing-addendum porte "Mistral AI, a
+  french limited joint-stock corporation, incorporated in Paris" -- donc "societe
+  francaise" est cite, pas suppose. Reflexe pour toute apposition d'entreprise:
+  cherche /terms, /legal, /dpa avant de recopier la description d'un outlet.
+  DOMAINES JOIGNABLES ET GATES DU PREMIER COUP ce matin (13/13 VERIFIED):
+  blog.mozilla.org, firefox.com, mistral.ai, legal.mistral.ai, the-decoder.com.
+  RECUS MESURES: blog.mozilla.org est un excellent recu "qui porte la preuve" et un
+  bon BEAT 1 -- fond clair, masthead FIREFOX, titre enorme, et l'encart "Update on
+  September 16, 2026" imprime la phrase du claim EN ENTIER; seule reserve, il laisse
+  voir "Original post from August 2026" en bas, sans consequence puisque la date de
+  l'update domine. firefox.com/smart-window, lui, est un aplat VIOLET SATURE: regle
+  du 09/09 confirmee, jamais en beat 0, parfait ailleurs (il affiche le badge BETA).
+  ET LE PIEGE DE PERIMETRE (famille 07/09 et 12/09) DANS SA VERSION LA PLUS VISIBLE:
+  le spec herite disait "tu peux le telecharger et l'essayer en francais" la ou la
+  source ecrit "People in France WILL BE ABLE TO download and try the Smart Window
+  BETA in French" -- present pour un futur, et l'adjectif "beta" tombe, donc le Reel
+  presentait un produit en test comme livre. Le gate ne voit rien (aucun chiffre).
+  CE QUI REND CE CAS INSTRUCTIF: le visuel de ce beat EST le recu de cette phrase,
+  donc la frame aurait affiche "will be able to ... beta" a 10 cm d'un karaoke
+  disant "tu peux". REFLEXE: sur tout beat dont le visuel est le recu de sa propre
+  citation, relis la citation MOT A MOT contre le script -- c'est le seul endroit ou
+  le spectateur peut comparer. Corrige a 3 endroits (script, body de diapo, legende)
+  + captionEvidence ajoutee pour une affirmation de legende qui n'en avait pas,
+  re-gate PASSED du premier coup, 202 mots. CHRONO: demarrage 10h38, Reel PUBLIE a
+  10h50, soit DOUZE MINUTES bout en bout sur conteneur froid, 0,00 $.
+  Proof: run 10h30 17/09, Reel 2026-09-17-firefox-ia-mistral-france.
