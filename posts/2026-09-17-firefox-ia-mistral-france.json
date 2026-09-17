@@ -11,7 +11,7 @@
       "quote": "mozilla's new ai browser assistant firefox smart window (beta) runs on mistral's models."
     }
   ],
-  "caption": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi hors Amérique du Nord.\n\nL'assistant s'appelle Smart Window. Mozilla écrit qu'il se déploie maintenant en France, que c'est sa première extension au-delà de l'Amérique du Nord, et que les gens en France peuvent le télécharger et l'essayer en français.\n\nQui le fait tourner. Mistral, société française constituée à Paris selon ses propres conditions juridiques. Ce sont ses modèles qui alimentent l'assistant de Firefox.\n\nCe qu'il fait. Il propose des groupes pour tes onglets liés, repère les doublons et les ferme d'un clic, résume les articles longs et les pages denses, et retrouve une page que tu as vue sans que tu te rappelles son nom.\n\nLe détail qui n'est pas dans la vidéo. Tu choisis le moteur : trois modèles proposés, ou le tien.\n\nCe qui coince. Mozilla écrit qu'elle ne garde pas tes conversations, ne s'en sert pas pour entraîner ses modèles et ne vend pas tes données. La même page ajoute qu'elle traite quand même des informations techniques limitées pour faire tourner le service.\n\nLe Royaume-Uni et l'Allemagne suivent plus tard cette année.\n\nTu laisserais une IA lire tes onglets, oui ou non ?\n\nblog.mozilla.org · mistral.ai · the-decoder.com · firefox.com\n\n#IA #IntelligenceArtificielle #ActuIA #Firefox #Mistral\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi hors Amérique du Nord.\n\nL'assistant s'appelle Smart Window. Mozilla écrit qu'il se déploie maintenant en France, que c'est sa première extension au-delà de l'Amérique du Nord, et que les gens en France pourront télécharger la version bêta et l'essayer en français.\n\nQui le fait tourner. Mistral, société française constituée à Paris selon ses propres conditions juridiques. Ce sont ses modèles qui alimentent l'assistant de Firefox.\n\nCe qu'il fait. Il propose des groupes pour tes onglets liés, repère les doublons et les ferme d'un clic, résume les articles longs et les pages denses, et retrouve une page que tu as vue sans que tu te rappelles son nom.\n\nLe détail qui n'est pas dans la vidéo. Tu choisis le moteur : trois modèles proposés, ou le tien.\n\nCe qui coince. Mozilla écrit qu'elle ne garde pas tes conversations, ne s'en sert pas pour entraîner ses modèles et ne vend pas tes données. La même page ajoute qu'elle traite quand même des informations techniques limitées pour faire tourner le service.\n\nLe Royaume-Uni et l'Allemagne suivent plus tard cette année.\n\nTu laisserais une IA lire tes onglets, oui ou non ?\n\nblog.mozilla.org · mistral.ai · the-decoder.com · firefox.com\n\n#IA #IntelligenceArtificielle #ActuIA #Firefox #Mistral\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "url": "https://www.firefox.com/en-US/smart-window/",
@@ -24,6 +24,10 @@
     {
       "url": "https://blog.mozilla.org/en/firefox/firefox-smart-window/",
       "quote": "update on september 16, 2026: smart window is now rolling out in france, marking its first expansion beyond north america. people in france will be able to download and try the smart window beta in french."
+    },
+    {
+      "quote": "Smart Window summarizes long articles, recipes and dense pages, so you get the essentials fast and keep moving.",
+      "url": "https://www.firefox.com/en-US/smart-window/"
     }
   ],
   "slides": [
@@ -40,7 +44,7 @@
     {
       "type": "content",
       "title": "La France d'abord",
-      "body": "Mozilla écrit que Smart Window **se déploie maintenant en France**, sa première extension au-delà de l'Amérique du Nord, et qu'on peut l'essayer *en français*.",
+      "body": "Mozilla écrit que Smart Window **se déploie maintenant en France**, sa première extension au-delà de l'Amérique du Nord, et qu'on pourra essayer la version bêta *en français*.",
       "evidence": "update on september 16, 2026: smart window is now rolling out in france, marking its first expansion beyond north america. people in france will be able to download and try the smart window beta in french.",
       "source": {
         "name": "Mozilla",
@@ -153,7 +157,7 @@
   "reel2": {
     "mood": "wonder",
     "lang": "fr",
-    "title": "Firefox lance son IA en France, avec Mistral",
+    "title": "Firefox lance son IA en France",
     "beats": [
       {
         "script": "Pour une fois, la France est servie en premier. Firefox met une intelligence artificielle dans son navigateur, et le premier pays hors Amérique du Nord à l'avoir, c'est le nôtre.",
@@ -166,7 +170,7 @@
         }
       },
       {
-        "script": "L'assistant s'appelle Smart Window. Mozilla écrit qu'il se déploie maintenant en France, et que tu peux le télécharger et l'essayer en français. Tu sais qui le fait tourner ?",
+        "script": "L'assistant s'appelle Smart Window. Mozilla écrit qu'il se déploie maintenant en France, et que tu pourras télécharger la version bêta et l'essayer en français. Tu sais qui le fait tourner ?",
         "visual": {
           "type": "screenshot",
           "url": "https://blog.mozilla.org/en/firefox/firefox-smart-window/",
