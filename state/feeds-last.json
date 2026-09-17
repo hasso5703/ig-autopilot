@@ -1,11 +1,11 @@
 {
-  "at": "2026-09-17T10:53:49.249Z",
-  "fresh": 359,
+  "at": "2026-09-17T16:56:30.703Z",
+  "fresh": 361,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1198,
+      "fetched": 1206,
       "fresh": 7,
       "windowHours": 96
     },
@@ -34,7 +34,7 @@
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 8,
+      "fresh": 9,
       "windowHours": 96
     },
     {
@@ -86,7 +86,7 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 4,
+      "fresh": 5,
       "windowHours": 36
     },
     {
