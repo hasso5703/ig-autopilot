@@ -2504,6 +2504,27 @@ ENTRIES:
   TOUT l'historique, en sachant que state/engagement.jsonl nomme le media `target`
   et PAS `mediaId` (ecrit de memoire avec `mediaId`, le controle rend 77 faux
   positifs et fait croire a un desastre). Proof: veille 19h30 05/09.
+  Ajout 17/09 (19h30), LE CONTROLE CI-DESSUS RENVOIE ZERO SI ON LE LIT AU MAUVAIS
+  ENDROIT, et le piege est fabrique par une AUTRE entree de ce carnet. Le 12/09
+  19h30 avertit, a juste titre pour les vues, que "LES COMPTEURS SONT DANS
+  `r.insights`, PAS a la racine de la ligne". C'est FAUX de comments_count:
+  mesure de ce soir, `r.insights.comments_count` est absent des 5492 lignes de
+  state/metrics.jsonl (l'objet insights porte `comments`, qui est une metrique
+  d'insights et n'est PAS collectee sur les vieux medias), et le compteur qui
+  existe vraiment est `r.media.comments_count` (MEDIA_FIELDS, insights.mjs:82),
+  present sur 102 des 103 posts. Lu dans insights, le controle rend "0
+  commentaire d'inconnu sur tout l'historique" et un run conclut tranquillement
+  qu'il n'a personne a qui repondre; lu dans media, il rend les MEMES QUATRE
+  inconnus qu'au 05/09 (29/07 altman-decelerate, 03/08 macbook-air-memoire,
+  07/08 ouragan-un-jour-davance, 09/08 motif-anti-cameras), inchanges depuis six
+  semaines. Un controle qui echoue en silence vers "rien a faire" est pire que
+  pas de controle: lis `m.media?.comments_count`, jamais `m.insights`.
+  RE-MESURE DIRECTE DU BLOCAGE EN LECTURE (03/08, re-confirme 05/09, 11/09,
+  16/09), toujours vrai a 45 jours: sur macbook-air-memoire,
+  `?fields=comments_count` rend 2 et `/comments` rend `data: []` AVEC deux
+  curseurs de paging valides a la meme seconde - donc les lignes existent et
+  sont filtrees a la sortie. Seul Hasan peut re-autoriser la portee commentaires.
+  Proof: veille 19h30 17/09.
 - 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
   renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
   ajoute un qualificatif (lieu, moment: "vending machines night") pour
@@ -6230,3 +6251,21 @@ ENTRIES:
   17% / 138 vues; MUET 02-06/09 n=10 -> 11,5% / 145,5; 07-10/09 n=8 -> 8,5% / 117;
   11-13/09 n=6 -> 8,5% / 81,5; 14-16/09 n=4 -> 7% / 34. Les vues sont divisees par
   QUATRE depuis l'ere voix. Proof: run 16h30 17/09.
+  Ajout 17/09 (19h30, veille), 55e mesure morte (401, cle 53 car AQ.A; dernier achat
+  01/09 16h54 = 16 jours, RECALCULE depuis state/spend.jsonl). IG_ACCESS_TOKEN:
+  5 JOURS (state/token.json, expire le 23/09), watch.mjs imprime ALERTE en tete.
+  ET LA CONTRE-EPREUVE QUI INTERDIT DE LIRE LE 16/09 COMME UN NOUVEAU PLANCHER: la
+  fenetre appariee ne bouge pas ce soir (les Reels du 17/09 ne sont pas reposes,
+  14-16/09 reste n=4 -> 7% / 34 vues), donc c'est la mesure A AGE EGAL qui tranche,
+  et elle remonte. Reels du MATIN a ~9h d'age: 11/09 121 v, 12/09 48, 13/09 121,
+  14/09 23, 15/09 27, 16/09 8, 17/09 64. Reels du SOIR a ~3h d'age: 12/09 44 v,
+  13/09 7, 14/09 18, 15/09 18, 16/09 1, 17/09 18. Le 16/09 (8 v et 1 v) est donc un
+  CREUX et pas une marche d'escalier: aujourd'hui fait x8 et x18 sur lui et revient
+  dans la bande des 14-15/09. La tendance de fond (vues divisees par quatre depuis
+  l'ere voix) n'est pas contredite pour autant - ne l'annonce ni comme une reprise
+  ni comme un effondrement qui continue, donne les deux chiffres. METHODE, 30 s et
+  zero reseau: state/metrics.jsonl est indexe par mediaId, les vues sont sous
+  `r.insights.views`, et on prend pour chaque slug l'echantillon le plus proche de
+  t0+Nh. ATTENTION, le creneau de 10h30 n'a PAS d'echantillon a 3 h (la collecte
+  suivante est celle du run de 16h30, donc ~6 h): compare les Reels du matin a 9 h
+  et ceux du soir a 3 h, jamais les deux sur la meme borne. Proof: veille 19h30 17/09.

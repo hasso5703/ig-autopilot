@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-17T16:55:03.931Z",
+  "at": "2026-09-17T19:43:28.347Z",
   "n": 103,
   "nSettled": 97,
   "medianViews": 150,
@@ -100,7 +100,7 @@
     "photo": {
       "n": 29,
       "medianViews": 141,
-      "meanRetentionPct": 14.1,
+      "meanRetentionPct": 14,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -984,10 +984,10 @@
       "slug": "2026-09-05-openai-agents-wiki-allemand",
       "at": "2026-09-05T16:47:57.700Z",
       "hourUtc": 16,
-      "views": 186,
+      "views": 187,
       "reach": 164,
       "avgWatchS": 14.1,
-      "retentionPct": 24,
+      "retentionPct": 23,
       "likes": 0,
       "comments": 1,
       "saved": 1,
@@ -1816,6 +1816,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-17-firefox-ia-mistral-france",
+      "at": "2026-09-17T10:50:51.590Z",
+      "hourUtc": 10,
+      "views": 64,
+      "reach": 62,
+      "avgWatchS": 2.4,
+      "retentionPct": 4,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi. Elle tourne sur une IA française.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-12-jeu-en-une-phrase",
       "at": "2026-09-12T10:48:51.816Z",
       "hourUtc": 10,
@@ -1831,23 +1848,6 @@
       "themes": [],
       "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-17-firefox-ia-mistral-france",
-      "at": "2026-09-17T10:50:51.590Z",
-      "hourUtc": 10,
-      "views": 61,
-      "reach": 59,
-      "avgWatchS": 1.7,
-      "retentionPct": 3,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi. Elle tourne sur une IA française.",
-      "settled": false
     },
     {
       "slug": "2026-09-13-ralentir-lia",
@@ -2003,6 +2003,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-17-openai-archives-medicaments",
+      "at": "2026-09-17T16:53:45.908Z",
+      "hourUtc": 16,
+      "views": 18,
+      "reach": 12,
+      "avgWatchS": 3.8,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-16-humains-lisent-chatgpt",
       "at": "2026-09-16T10:49:34.681Z",
       "hourUtc": 10,
@@ -2034,23 +2051,6 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
-      "settled": false
-    },
-    {
-      "slug": "2026-09-17-openai-archives-medicaments",
-      "at": "2026-09-17T16:53:45.908Z",
-      "hourUtc": 16,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
       "settled": false
     },
     {
