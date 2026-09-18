@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-18T06:41:03.829Z",
+  "at": "2026-09-18T10:41:14.528Z",
   "n": 103,
   "nSettled": 97,
   "medianViews": 150,
@@ -1779,6 +1779,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-17-firefox-ia-mistral-france",
+      "at": "2026-09-17T10:50:51.590Z",
+      "hourUtc": 10,
+      "views": 89,
+      "reach": 85,
+      "avgWatchS": 2.8,
+      "retentionPct": 5,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi. Elle tourne sur une IA française.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-06-astra-agi-mesures",
       "at": "2026-09-06T16:47:44.756Z",
       "hourUtc": 16,
@@ -1816,29 +1833,12 @@
       "settled": true
     },
     {
-      "slug": "2026-09-17-firefox-ia-mistral-france",
-      "at": "2026-09-17T10:50:51.590Z",
-      "hourUtc": 10,
-      "views": 78,
-      "reach": 75,
-      "avgWatchS": 2.8,
-      "retentionPct": 5,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi. Elle tourne sur une IA française.",
-      "settled": false
-    },
-    {
       "slug": "2026-09-17-openai-archives-medicaments",
       "at": "2026-09-17T16:53:45.908Z",
       "hourUtc": 16,
-      "views": 64,
-      "reach": 56,
-      "avgWatchS": 2.6,
+      "views": 79,
+      "reach": 66,
+      "avgWatchS": 2.7,
       "retentionPct": 4,
       "likes": 0,
       "comments": 1,

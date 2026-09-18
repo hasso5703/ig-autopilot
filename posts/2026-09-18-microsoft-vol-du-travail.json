@@ -12,7 +12,7 @@
     }
   ],
   "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
-  "caption": "Un cadre de Microsoft a écrit, en interne, que l'entraînement des IA était le plus grand vol de travail de l'histoire.\n\nSes mots viennent d'apparaître dans le procès que le New York Times a intenté à OpenAI et Microsoft. Brent Hecht, directeur de la science appliquée chez Microsoft, parle en janvier 2023 d'un vol stupéfiant, d'une ampleur sans précédent.\n\nL'échelle. Les avocats disent avoir compté plus de 91 692 copies d'articles du Times, du Daily News et du Center for Investigative Reporting dans les jeux de données d'OpenAI. La dépêche de l'AFP écrit que plus de 10 millions d'articles ont été aspirés, dont près d'un tiers du seul New York Times.\n\nLe détail qui n'est pas dans la vidéo. En janvier 2024, une présentation interne du même cadre appelle la chute des clics une boucle infernale, qui abîme nos modèles et tout le web en même temps.\n\nCe qui coince. Ces citations viennent du mémoire des plaignants, pas des pièces elles-mêmes, qui restent sous scellés. Microsoft répond que c'est le point de vue personnel d'un seul employé.\n\nLe juge doit encore décider si l'affaire ira au procès, sans doute pas avant 2027.\n\nEntraîner une IA sur la presse sans payer, c'est du vol ou pas ?\n\ntechcrunch.com · rte.ie · futurism.com\n\n#IA #IntelligenceArtificielle #ActuIA #Microsoft #OpenAI\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "Un cadre de Microsoft a écrit, en interne, que l'entraînement des IA était le plus grand vol de travail de l'histoire.\n\nSes mots viennent d'apparaître dans le procès que le New York Times a intenté à OpenAI et Microsoft. Brent Hecht, directeur de la science appliquée chez Microsoft, parle en janvier 2023 d'un vol stupéfiant, d'une ampleur sans précédent.\n\nL'échelle. Les avocats disent avoir compté plus de 91 692 copies d'articles du Times, du Daily News et du Center for Investigative Reporting dans les jeux de données d'OpenAI. La dépêche de l'AFP écrit que plus de 10 millions d'articles ont été aspirés, dont près d'un tiers du seul New York Times.\n\nLe détail qui n'est pas dans la vidéo. En janvier 2024, une présentation interne du même cadre appelle la chute des clics une boucle infernale, qui abîme nos modèles et tout le web en même temps.\n\nCe qui coince. Ces citations viennent du mémoire des plaignants, pas des pièces elles-mêmes, qui restent sous scellés. Microsoft répond que c'est le point de vue personnel d'un seul employé.\n\nLe juge doit encore décider si l'affaire ira jusqu'au procès, et c'est attendu quelque part en 2027.\n\nEntraîner une IA sur la presse sans payer, c'est du vol ou pas ?\n\ntechcrunch.com · rte.ie · futurism.com\n\n#IA #IntelligenceArtificielle #ActuIA #Microsoft #OpenAI\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "quote": "The San Francisco-based artificial intelligence lab scraped content from more than 10 million articles, nearly a third of which came from the New York Times alone.",
@@ -110,7 +110,7 @@
     {
       "type": "content",
       "title": "La suite",
-      "body": "Le juge doit encore décider si l'affaire ira au procès, sans doute pas avant **2027**.",
+      "body": "Le juge doit encore décider si l'affaire ira jusqu'au procès. C'est attendu quelque part en **2027**.",
       "evidence": "the battle is far from over, as the presiding judge is expected to decide whether to allow the case to proceed to trial by sometime in 2027.",
       "source": {
         "name": "Futurism",
@@ -165,7 +165,7 @@
         }
       },
       {
-        "script": "Ces phrases étaient masquées dans le procès que le New York Times a intenté à OpenAI et Microsoft il y a trois ans. La version non caviardée vient d'être rendue publique.",
+        "script": "Ces phrases étaient masquées dans le procès que le New York Times a intenté à OpenAI et Microsoft il y a trois ans. Elles viennent d'être rendues publiques.",
         "visual": {
           "type": "screenshot",
           "url": "https://futurism.com/future-society/microsoft-admitted-ai-theft-labor-human-history-court-lawsuit",
@@ -173,15 +173,15 @@
         }
       },
       {
-        "script": "Dans les jeux de données d'entraînement d'OpenAI, les avocats ont compté plus de 91 692 copies d'articles du Times, du Daily News et du Center for Investigative Reporting.",
+        "script": "Dans les données d'entraînement d'OpenAI, les avocats ont compté plus de 91 692 copies d'articles du New York Times et de deux autres rédactions.",
         "visual": {
           "type": "card",
           "value": "91 692",
-          "label": "copies d'articles de presse comptées par les avocats"
+          "label": "copies d'articles de presse au moins, d'après les avocats"
         }
       },
       {
-        "script": "Mais le chiffre qui pique le plus vient de Microsoft elle-même : son moteur de réponses Copilot a fait chuter les clics vers le site du Times jusqu'à 93 %.",
+        "script": "Mais le chiffre qui pique vient de Microsoft elle-même : face à une recherche Bing classique, son moteur de réponses Copilot a fait chuter les clics vers le site du Times jusqu'à 93 %.",
         "visual": {
           "type": "card",
           "value": "93 %",
@@ -207,7 +207,7 @@
         }
       },
       {
-        "script": "Le juge doit encore décider si l'affaire ira au procès, sans doute pas avant 2027. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "script": "Le juge doit encore dire si l'affaire ira au procès, et c'est attendu courant 2027. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
         "visual": {
           "type": "photo",
           "query": "linotype machine metal type",
