@@ -1,0 +1,221 @@
+{
+  "slug": "2026-09-18-microsoft-vol-du-travail",
+  "centralClaim": "Brent Hecht, a Microsoft director, called AI scraping an astonishing theft of unprecedented proportions and the largest theft of labor in human history, in an internal memo written in 2023.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+      "quote": "In a January 2023 internal memo, Hecht called it \"an astonishing theft of unprecedented proportions\" and \"the largest theft of labor in human history.\""
+    },
+    {
+      "url": "https://www.rte.ie/news/world/2026/0918/1592011-nyt-openai/",
+      "quote": "The document claims Microsoft's Director of Applied Science Brent Hect called it \"an astonishing theft of unprecedented proportions\" and possibly the \"largest theft of labour in human history\"."
+    }
+  ],
+  "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
+  "caption": "Un cadre de Microsoft a écrit, en interne, que l'entraînement des IA était le plus grand vol de travail de l'histoire.\n\nSes mots viennent d'apparaître dans le procès que le New York Times a intenté à OpenAI et Microsoft. Brent Hecht, directeur de la science appliquée chez Microsoft, parle en janvier 2023 d'un vol stupéfiant, d'une ampleur sans précédent.\n\nL'échelle. Les avocats disent avoir compté plus de 91 692 copies d'articles du Times, du Daily News et du Center for Investigative Reporting dans les jeux de données d'OpenAI. La dépêche de l'AFP écrit que plus de 10 millions d'articles ont été aspirés, dont près d'un tiers du seul New York Times.\n\nLe détail qui n'est pas dans la vidéo. En janvier 2024, une présentation interne du même cadre appelle la chute des clics une boucle infernale, qui abîme nos modèles et tout le web en même temps.\n\nCe qui coince. Ces citations viennent du mémoire des plaignants, pas des pièces elles-mêmes, qui restent sous scellés. Microsoft répond que c'est le point de vue personnel d'un seul employé.\n\nLe juge doit encore décider si l'affaire ira au procès, sans doute pas avant 2027.\n\nEntraîner une IA sur la presse sans payer, c'est du vol ou pas ?\n\ntechcrunch.com · rte.ie · futurism.com\n\n#IA #IntelligenceArtificielle #ActuIA #Microsoft #OpenAI\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "The San Francisco-based artificial intelligence lab scraped content from more than 10 million articles, nearly a third of which came from the New York Times alone.",
+      "url": "https://www.rte.ie/news/world/2026/0918/1592011-nyt-openai/"
+    },
+    {
+      "quote": "An internal Microsoft presentation written by Microsoft's director of Applied Science, Brent Hecht, in January 2024 describes the decline as a \"doom loop\" that would \"hurt the performance of our models and the entire web at the same time.\"",
+      "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/"
+    },
+    {
+      "quote": "the battle is far from over, as the presiding judge is expected to decide whether to allow the case to proceed to trial by sometime in 2027.",
+      "url": "https://futurism.com/future-society/microsoft-admitted-ai-theft-labor-human-history-court-lawsuit"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "17 septembre 2026 · New York Times contre OpenAI et Microsoft",
+      "headline": "Microsoft appelait ça *un vol* en interne",
+      "hero": {
+        "value": "93%",
+        "label": "la chute maximale des clics vers le site du Times"
+      },
+      "swipe": "Les sources sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "93%",
+      "unit": "de clics en moins",
+      "body": "Les données de Microsoft montrent que son moteur de réponses Copilot a fait tomber les clics vers le domaine du New York Times jusqu'à **93%** par rapport à une recherche Bing classique.",
+      "evidence": "Microsoft's own data shows its Copilot \"answer engine\" caused click-through rates for The New York Times' domain to drop as much as 93% compared to traditional Bing search.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La phrase qui était masquée",
+      "body": "Dans une note interne de janvier **2023**, Brent Hecht parle d'un *vol stupéfiant, d'une ampleur sans précédent*, et du plus grand vol de travail de l'histoire de l'humanité.",
+      "evidence": "In a January 2023 internal memo, Hecht called it \"an astonishing theft of unprecedented proportions\" and \"the largest theft of labor in human history.\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'en dit une deuxième rédaction",
+      "body": "Futurism, qui a lu la même requête, cite le même cadre de Microsoft parlant du plus grand vol de travail de l'histoire de l'humanité.",
+      "evidence": "Hecht, for his part, is quoted calling the AI buildout the \"largest theft of labor in human history.\"",
+      "source": {
+        "name": "Futurism",
+        "url": "https://futurism.com/future-society/microsoft-admitted-ai-theft-labor-human-history-court-lawsuit",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'échelle du recopiage",
+      "body": "Les documents montrent pour la première fois plus de **91 692** copies d'articles du Times, du Daily News et du Center for Investigative Reporting dans les données d'OpenAI.",
+      "evidence": "The documents reveal for the first time that OpenAI's mid-training datasets alone contain more than 91,692 copies of works published by the NYT, Daily News, and Center for Investigative Reporting.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La réponse de Microsoft",
+      "body": "L'entreprise dit que ces propos sont *le point de vue personnel d'un seul employé* et qu'ils ne représentent pas la position de la société.",
+      "evidence": "Microsoft considers Mr Hect's statements the opinions of \"one employee's individual perspective\" and they \"do not represent the company's views,\" a spokesperson for Microsoft said in a statement.",
+      "source": {
+        "name": "RTÉ (AFP)",
+        "url": "https://www.rte.ie/news/world/2026/0918/1592011-nyt-openai/",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qu'on voit",
+      "caveatLabel": "Ce qu'on ne voit pas",
+      "claim": "Des citations de dirigeants de Microsoft et d'OpenAI, enfin lisibles.",
+      "caveat": "Elles viennent du mémoire des plaignants. Les pièces elles-mêmes restent sous scellés.",
+      "evidence": "much of the new information comes from The Times' own brief, not the underlying exhibits, which remain sealed. The quotes below are presented without their original context.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La suite",
+      "body": "Le juge doit encore décider si l'affaire ira au procès, sans doute pas avant **2027**.",
+      "evidence": "the battle is far from over, as the presiding judge is expected to decide whether to allow the case to proceed to trial by sometime in 2027.",
+      "source": {
+        "name": "Futurism",
+        "url": "https://futurism.com/future-society/microsoft-admitted-ai-theft-labor-human-history-court-lawsuit",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui écrit ou publie en ligne",
+      "sub": "De l'actu IA, expliquée simplement."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+      "accessed": "2026-09-18"
+    },
+    {
+      "name": "RTÉ (AFP)",
+      "url": "https://www.rte.ie/news/world/2026/0918/1592011-nyt-openai/",
+      "accessed": "2026-09-18"
+    },
+    {
+      "name": "Futurism",
+      "url": "https://futurism.com/future-society/microsoft-admitted-ai-theft-labor-human-history-court-lawsuit",
+      "accessed": "2026-09-18"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Microsoft appelait ça un vol, en interne",
+    "beats": [
+      {
+        "script": "Les articles que tu lis en ligne ont servi à entraîner les IA. Un cadre de Microsoft a écrit, en interne, que c'était le plus grand vol de travail de l'histoire de l'humanité.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+          "file": "media/2026-09-18-microsoft-vol-du-travail/shot_tc_crop.jpg"
+        }
+      },
+      {
+        "script": "Il s'appelle Brent Hecht, il est directeur de la science appliquée chez Microsoft, et il a écrit ça en janvier 2023.",
+        "visual": {
+          "type": "photo",
+          "query": "typewriter keys close",
+          "alt": "Touches d'une machine à écrire en gros plan",
+          "file": "media/2026-09-18-microsoft-vol-du-travail/p_type_9x16.jpg",
+          "credit": "Free typewriter keys close · CC0"
+        }
+      },
+      {
+        "script": "Ces phrases étaient masquées dans le procès que le New York Times a intenté à OpenAI et Microsoft il y a trois ans. La version non caviardée vient d'être rendue publique.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://futurism.com/future-society/microsoft-admitted-ai-theft-labor-human-history-court-lawsuit",
+          "file": "media/2026-09-18-microsoft-vol-du-travail/shot_fut_crop.jpg"
+        }
+      },
+      {
+        "script": "Dans les jeux de données d'entraînement d'OpenAI, les avocats ont compté plus de 91 692 copies d'articles du Times, du Daily News et du Center for Investigative Reporting.",
+        "visual": {
+          "type": "card",
+          "value": "91 692",
+          "label": "copies d'articles de presse comptées par les avocats"
+        }
+      },
+      {
+        "script": "Mais le chiffre qui pique le plus vient de Microsoft elle-même : son moteur de réponses Copilot a fait chuter les clics vers le site du Times jusqu'à 93 %.",
+        "visual": {
+          "type": "card",
+          "value": "93 %",
+          "label": "la chute maximale des clics vers le site du Times"
+        }
+      },
+      {
+        "script": "Microsoft répond que c'est le point de vue personnel d'un seul employé, et que ça ne représente pas la position de l'entreprise.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.rte.ie/news/world/2026/0918/1592011-nyt-openai/",
+          "file": "media/2026-09-18-microsoft-vol-du-travail/shot_rte.jpg"
+        }
+      },
+      {
+        "script": "Et il faut le dire : ces citations viennent du mémoire des plaignants, pas des pièces elles-mêmes, qui restent sous scellés.",
+        "visual": {
+          "type": "photo",
+          "query": "printing press newspaper",
+          "alt": "Atelier de composition d'un journal",
+          "file": "media/2026-09-18-microsoft-vol-du-travail/p_press_9x16.jpg",
+          "credit": "Florida Keys--Public Libraries fr… · CC BY"
+        }
+      },
+      {
+        "script": "Le juge doit encore décider si l'affaire ira au procès, sans doute pas avant 2027. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "photo",
+          "query": "linotype machine metal type",
+          "alt": "Un opérateur de linotype compose un journal",
+          "file": "media/2026-09-18-microsoft-vol-du-travail/p_lino_9x16.jpg",
+          "credit": "Queensland State Archives · CC0"
+        }
+      }
+    ]
+  }
+}

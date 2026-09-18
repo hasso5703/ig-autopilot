@@ -1431,6 +1431,72 @@ ENTRIES:
   rapide mesure: quand les 5 surfaces sont sur disque, le build muet de 7 beats
   prend ~70 s et tout le reste est du reseau de publication.
   Proof: run 16h30 16/09, Reel 2026-09-16-meta-one-abonnement-ia.
+  Ajout 18/09 (06h30), 56e mesure morte de la cle media (401, cle 53 car AQ.A;
+  dernier achat 01/09 16h54 = 17 jours). IG_ACCESS_TOKEN: CINQ JOURS (expire le
+  23/09) -- c'est le compteur qui coupe tout.
+  DEUX REFLEXES DU CARNET SONT MAINTENANT DES COMMANDES (code avant note):
+  `node scout-flatten.mjs <url>...` ecrit dans /tmp/pagesC le texte aplati EXACTEMENT
+  comme validate.mjs mais SANS le .toLowerCase() final, donc les citations se
+  decoupent a l'indexOf et se collent telles quelles (recette du 08/09, payee deux
+  fois); `node scout-digits.mjs posts/<slug>.json` recompte chaque chiffre contre les
+  CITATIONS SEULES et non contre le pool du gate (trou du 15/09). Resultat ce matin:
+  2 specs, 37 citations, 37 VERIFIED au PREMIER passage, zero aller-retour.
+  LA GEOMETRIE D'UN BEAT `screenshot`, ET ELLE N'EST PAS CELLE D'UNE PHOTO -- ca m'a
+  coute un recadrage entier. segmentFromScreenshot (reel2.mjs:1202) ne fait JAMAIS de
+  cover-crop: il pose la page en CARTE, `scale=880:-1` puis `crop=880:min(ih,1150):0:0`
+  au variant 0, `scale=1000:-1` puis `crop=1000:min(ih,1000)` au variant 1, sur un fond
+  qui est la meme page floutee. Consequence: d'une capture 1290 de large, seuls les
+  1686 PREMIERS PIXELS (v0) et les 1290 premiers (v1) sont visibles, le bas n'existe
+  pas, et le LETTERBOX du 16/09 10h30 (qui marche pour une photo) est ici contre-
+  productif -- le variant 1 mange les bords de la boite posee au centre. Pour auditer
+  un recu avant de l'epingler, simule la carte, pas le cadre:
+  ffmpeg -i shot.jpg -filter_complex "[0]split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=28,eq=brightness=-0.25[bgb];[fg]scale=880:-1,crop=880:'min(ih,1150)':0:0[card];[bgb][card]overlay=x=100:y=230[v]" -map "[v]" -frames:v 1 out.jpg
+  RECUS MESURES CE MATIN: simonwillison.net 22 s / 1 frame, PARFAIT sans recadrage et
+  c'est le meilleur recu de PREUVE du carnet (bandeau violet, "17TH SEPTEMBER 2026",
+  titre, ET le bloc cite verbatim du rapport OpenAI dans le cadre) -- re-confirme le
+  08/09. rte.ie 52 s / 5 frames, PARFAIT sans recadrage (masthead RTE, titre, "Updated /
+  Friday, 18 Sep 2026 07:21", photo reelle du siege du NYT). techcrunch.com 534 s et
+  614 s, re-confirme les ~10 min du 09/09, et il faut `crop=1290:2690:0:106`: un filet
+  de l'image de une survit tout en haut du cadre. futurism.com 253 s, propre APRES
+  `crop=1290:1150:0:0` (sinon une photo mise en scene d'un cambrioleur en cagoule
+  tombe sous le karaoke; le crop garde masthead, titre entier, chapo, signature, date).
+  the-decoder.com 197 s et, CORRECTION DE L'ENTREE DU 15/09: aucune illustration
+  generee ce matin, juste un aplat vert au logo OpenAI, donc le `crop=1290:780:0:60`
+  n'est PAS systematique -- regarde la frame avant de recadrer.
+  ET LE RECU A REFUSER, thehackernews.com: il se capture en 22 s mais porte une PUB
+  WIZ pleine largeur au-dessus du titre ET, sous le titre, une illustration
+  MANIFESTEMENT GENEREE (robot mignon au logo OpenAI, dossier GitHub, boite "API KEY").
+  Sur un compte qui promet "sans image generee" en legende, il est incitable en recu;
+  cite-le, ne le photographie pas. Meme famille que engadget (15/09).
+  DOMAINES MESURES AU FETCH DU GATE, tous 200 et gates du premier coup: thehackernews.com
+  NOUVEAU, futurism.com NOUVEAU, rte.ie NOUVEAU (reprise AFP, et c'est elle qui porte la
+  REPONSE de l'entreprise que TechCrunch n'a pas obtenue), malaymail.com NOUVEAU (meme
+  depeche AFP), thewrap.com NOUVEAU, techcrunch/the-decoder/simonwillison re-confirmes.
+  BLOQUE: washingtonpost.com (503). Et rte.ie se capture 10 fois plus vite que
+  malaymail.com, qui n'avait toujours rien rendu apres 25 min: sur une depeche d'agence,
+  choisis la reprise par le diffuseur public, pas par le quotidien lointain.
+  LE PIEGE D'ATTRIBUTION DU 17/09 16h30 DANS UNE FORME NEUVE, et aucun gate ne le voit:
+  QUAND UN SEUL ARTICLE RACONTE DEUX INCIDENTS, UN CHIFFRE SE COLLE AU MAUVAIS.
+  TechCrunch raconte d'abord GPT-5.6 Sol, puis le modele Astra, PUIS ecrit "finding 27
+  summaries" -- et les 27 appartiennent a l'incident ASTRA (the-decoder, qui ne traite
+  que celui-la, ecrit "It found 27 affected summaries"). Mon premier jet mettait 27 sur
+  la carte ET sur le hook card dans une sequence qui venait de nommer Sol: un chiffre
+  vrai, une entite fausse, gate vert. REFLEXE: des qu'un article porte plusieurs
+  incidents, ecris a cote de chaque chiffre l'incident dont il vient AVANT de choisir
+  le beat et le titre de carte.
+  PHOTOS (12 requetes pour 6 gardees): "computer hardware" rend une macro infrarouge
+  superbe (FritzchensFritz) MAIS le logo NVIDIA y est lisible en gros -- inutilisable
+  sur une histoire OpenAI ou Microsoft, le filtre ne voit pas les marques. "journalist
+  desk notes" rend NIXON dans le bureau ovale. Echouent au near-white: "notepad pen
+  paper", "newspaper stack", "folded newspaper table", "rotary printing press rolls".
+  MARCHENT: "supercomputer racks" (allee Cray, sombre, deja presque 9:16, personne de
+  dos), "computer monitor code", "computer screen dark room", "typewriter keys close",
+  "printing press newspaper" (atelier de composition 1960), "linotype machine metal
+  type" (operateur 1975, visage de profil coupe par le recadrage). Quand l'histoire
+  parle de PRESSE, l'index sert surtout des ateliers d'epoque: c'est reel et ca montre
+  le travail dont parle l'histoire, mais ne mets jamais une photo de PERSONNE sous un
+  beat qui NOMME quelqu'un d'autre -- le spectateur lira que c'est lui.
+  Proof: scout 06h30 18/09, specs ia-cache-ses-erreurs et microsoft-vol-du-travail.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
