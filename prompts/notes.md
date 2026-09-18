@@ -1780,6 +1780,20 @@ ENTRIES:
   QUATRE passent le controle du 10/08 (le titre affiche EST l'histoire). Cout
   total: 4 min et 0 $, et les quatre sont epingles avec `file`, donc le run de
   publication ne capture plus rien (mecanique du 17/08).
+  Ajout 18/09 (19h30), CORRECTION D'UNE NOTE FAUSSE DE CE CARNET, et elle a
+  coute 20 min de requetes contraintes pour rien: l'entree du 13/09 16h30 ecrit
+  "le gate verifie les mots du `query`/`alt` contre les sources". C'EST FAUX.
+  Mesure directe dans validate.mjs:1343, `specNouns` est construit sur
+  `visual.spec.subject`, `visual.spec.action`, `visual.spec.setting` et
+  `visual.prompt` UNIQUEMENT, et le controle est saute quand `specNouns.size`
+  vaut 0. Un beat `photo` n'a ni `spec` ni `prompt`, donc SA REQUETE N'EST
+  JAMAIS COMPAREE AU VOCABULAIRE. Le filtre storyVocab ne concerne que les
+  surfaces GENEREES (`image`, `veo`). Consequence pratique, et elle est grosse
+  en mode muet ou 2 a 4 beats sur 7 sont des photos: choisis une requete pour ce
+  que l'INDEX va rendre, pas pour faire matcher un mot de 5 lettres. Ce qui
+  tient toujours: c'est TON oeil qui refuse le hors-sujet, le gate ne t'aidera
+  pas sur une photo. Proof: veille 19h30 18/09, lecture du code + 33 requetes.
+
 - 2026-08-01 · Le filtre "l'image montre quelque chose de l'histoire" compare
   des mots RACINISES (state.mjs tokens/stem), et la racine casse au pluriel:
   "spheres" donne "spher", "sphere" donne "sphere", donc un spec au pluriel ne
@@ -4983,6 +4997,18 @@ ENTRIES:
   publier. Le plafond d'un Reel par RUN ne bouge pas pour autant (manuel, regle
   mecanique du 27/07): un jour a 0 Reel a 16h30 ne s'achete pas en construisant
   deux Reels dans le meme run. Proof: run 16h30 10/09.
+
+  Ajout 18/09 (19h30), `recordPosted` REFUSE UN ENREGISTREMENT SANS `title`, et
+  c'est un aller-retour juste apres la publication, au pire moment (le Reel est
+  EN LIGNE et n'est pas encore enregistre). Un appel {slug, mediaId, permalink,
+  durationS} jette `recordPosted: \`title\` is required` (state.mjs:309): le
+  fingerprint et les tokens de filterFresh en derivent, donc sans lui l'histoire
+  est invisible au dedup et peut etre republiee comme neuve. Le jeu minimal qui
+  passe, recopie de la derniere ligne de posted.jsonl: {slug, mediaId,
+  permalink, url, title, source, durationS} -- `title` est le titre ANGLAIS de
+  l'article source, `source` le nom du media, `url` l'URL du primaire. Lis
+  `tail -1 state/posted.jsonl` AVANT d'ecrire l'appel, la forme y est.
+  Proof: veille 19h30 18/09.
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
