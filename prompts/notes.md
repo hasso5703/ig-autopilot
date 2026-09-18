@@ -6335,3 +6335,43 @@ ENTRIES:
   t0+Nh. ATTENTION, le creneau de 10h30 n'a PAS d'echantillon a 3 h (la collecte
   suivante est celle du run de 16h30, donc ~6 h): compare les Reels du matin a 9 h
   et ceux du soir a 3 h, jamais les deux sur la meme borne. Proof: veille 19h30 17/09.
+  Ajout 18/09 (10h30), 57e mesure morte (401, cle 53 car AQ.A; dernier achat 01/09
+  16h54 = 17 jours, RECALCULE depuis state/spend.jsonl). IG_ACCESS_TOKEN: 5 JOURS
+  (state/token.json, expire le 23/09), c'est le compteur qui coupe tout.
+  LE PIEGE DE SPEC BANQUE QUE NI LE GATE NI AUCUN REFLEXE EXISTANT NE VOIT: LES
+  PHOTOS SONT DEJA PUBLIEES. Mesure de ce midi sur le spec A du scout
+  (ia-cache-ses-erreurs): p_dark.jpg est BYTE-IDENTIQUE (md5) a la photo du Reel
+  du 11/09, et son credit "SACHINRAJ CP" vit dans trois specs anterieurs (09, 11
+  et 12/09); la photo de baies "Derrick Coetzee" vit dans QUATRE (09/08, 02/09,
+  09/09, 13/09) et tenait le beat 1. Le gate ne voit rien (le credit n'est pas un
+  chiffre), le moteur non plus (il re-Ken-Burns le meme jpg sans se plaindre), et
+  la frame a l'air parfaite. L'entree du 13/09 disait deja "avant d'epingler, grep
+  les credit des trois derniers jours": trois jours est trop court et c'etait une
+  consigne de SCOUT. REFLEXE ELARGI, 60 s, et il est aussi celui du run qui
+  PUBLIE: `grep -h '"credit"' posts/2026-09-*.json | sort | uniq -c | sort -rn`
+  sur une dizaine de jours, puis `md5sum` de la photo du spec contre les
+  media/<slug>/ encore sur disque. Cout 0 $; ce matin il a fait basculer le
+  creneau de midi du spec A vers le spec B (microsoft-vol-du-travail), dont les
+  trois photos etaient inedites ET formaient une famille coherente (touches de
+  machine a ecrire, atelier de composition, linotypiste). Le spec A repart au
+  16h30 avec ses trois photos A REMPLACER.
+  DEUX RECUS NEUFS ET EXCELLENTS, mesures en moteur le meme midi. (1) **rte.ie
+  NOUVEAU au gate ET en recu**: se gate du premier coup, et sa capture rend
+  masthead RTE, barre de rubriques, titre entier ("NYT says Microsoft, OpenAI
+  knew using content was theft"), "Updated / Friday, 18 Sep 2026 07:21" -- donc
+  LA DATE DU JOUR imprimee -- et la photo du siege du New York Times avec sa
+  legende, le tout dans la fenetre visible des ~1686 px, zero banniere, aucun
+  recadrage. Sur une depeche AFP, RTE est le recu joignable qui date l'histoire
+  d'aujourd'hui. (2) futurism.com en recu: fond creme, titre ENORME qui raconte
+  l'histoire, chapo, signature + "Sep 17, 2026", zero pub, aucun recadrage.
+  techcrunch.com re-confirme en recu pour la QUATRIEME fois d'affilee (28/08,
+  31/08, 04/09, 18/09), crop=106 px de haut, aucune redirection McAfee.
+  ET UNE FAIBLESSE DE PLAN QUE LE GATE AUTORISE: DEUX BEATS `card` COLLES. Le cap
+  de deux cartes par Reel etait respecte, mais les beats 4 et 5 se suivaient, soit
+  15 SECONDES du meme aplat noir a jaune au milieu du Reel -- la definition meme du
+  "diaporama avec une voix par-dessus" que le manuel veut eviter, et le cap seul ne
+  l'attrape pas. Regle a appliquer a l'ecriture du plan: deux cartes, jamais
+  adjacentes, toujours separees par une photo ou un recu.
+  CHRONO: demarrage 10h38, Reel PUBLIE a 10h53, soit QUINZE MINUTES bout en bout
+  sur conteneur froid, BASCULE DE SPEC ET AUDIT COMPRIS, 0,00 $.
+  Proof: run 10h30 18/09, Reel 2026-09-18-microsoft-vol-du-travail.
