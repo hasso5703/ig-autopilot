@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-17T19:43:28.347Z",
+  "at": "2026-09-18T06:41:03.829Z",
   "n": 103,
   "nSettled": 97,
   "medianViews": 150,
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 50,
+    "now": 49,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -821,7 +821,7 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 295,
+      "views": 296,
       "reach": 259,
       "avgWatchS": 8.3,
       "retentionPct": 14,
@@ -1819,10 +1819,10 @@
       "slug": "2026-09-17-firefox-ia-mistral-france",
       "at": "2026-09-17T10:50:51.590Z",
       "hourUtc": 10,
-      "views": 64,
-      "reach": 62,
-      "avgWatchS": 2.4,
-      "retentionPct": 4,
+      "views": 78,
+      "reach": 75,
+      "avgWatchS": 2.8,
+      "retentionPct": 5,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -1830,6 +1830,23 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi. Elle tourne sur une IA française.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-17-openai-archives-medicaments",
+      "at": "2026-09-17T16:53:45.908Z",
+      "hourUtc": 16,
+      "views": 64,
+      "reach": 56,
+      "avgWatchS": 2.6,
+      "retentionPct": 4,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
       "settled": false
     },
     {
@@ -2003,30 +2020,13 @@
       "settled": true
     },
     {
-      "slug": "2026-09-17-openai-archives-medicaments",
-      "at": "2026-09-17T16:53:45.908Z",
-      "hourUtc": 16,
-      "views": 18,
-      "reach": 12,
-      "avgWatchS": 3.8,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
-      "settled": false
-    },
-    {
       "slug": "2026-09-16-humains-lisent-chatgpt",
       "at": "2026-09-16T10:49:34.681Z",
       "hourUtc": 10,
       "views": 14,
       "reach": 11,
-      "avgWatchS": 8.2,
-      "retentionPct": 14,
+      "avgWatchS": 7.7,
+      "retentionPct": 13,
       "likes": 0,
       "comments": 1,
       "saved": 0,
