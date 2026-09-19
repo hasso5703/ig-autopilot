@@ -6460,3 +6460,31 @@ ENTRIES:
   CHRONO: demarrage 10h38, Reel PUBLIE a 10h53, soit QUINZE MINUTES bout en bout
   sur conteneur froid, BASCULE DE SPEC ET AUDIT COMPRIS, 0,00 $.
   Proof: run 10h30 18/09, Reel 2026-09-18-microsoft-vol-du-travail.
+  Ajout 19/09 (10h30), 59e mesure morte de la cle media (401, cle 53 car AQ.A;
+  dernier achat 01/09 16h54 = 18 jours). IG_ACCESS_TOKEN: QUATRE JOURS (expire le
+  23/09), c'est le compteur qui coupe tout.
+  LA `value` D'UNE CARTE DEBORDE DU CADRE A 12 CARACTERES, et le gate l'autorise:
+  le plafond ecrit dans le manuel est 12, mais le style CARDBIG (reel2.mjs:752)
+  est de la display wide a 150 px avec des marges de 70 px et surtout `\q2`, donc
+  AUCUN retour a la ligne: la ligne trop longue est coupee aux deux bords au lieu
+  de passer a la ligne. Mesure de ce midi, frame a 43 s: "AUCUNE NORME" (12 car)
+  sort avec le A et le E manges par les bords, alors que "UNE GUERRE" (10 car) sur
+  la meme carte du meme Reel tient avec de la marge. REGLE OPERATIONNELLE en
+  attendant que le plafond du gate bouge (constitution, propose, n'applique pas):
+  ecris une `value` de 10 CARACTERES AU PLUS, espaces compris, et si tu en veux
+  plus, verifie-la sur la frame avant de publier. Remede ici: "ZÉRO NORME",
+  re-gate PASSED, rebuild dans le meme dossier, 0 achat, ~90 s en muet.
+  Et ca re-confirme le controle du 07/09 et du 18/09: en muet la carte est la
+  surface la plus lisible du Reel, donc c'est elle qu'on relit en frame, toujours.
+  RECUS EPINGLES PAR LE SCOUT ET CONFIRMES EN MOTEUR SANS UNE RECAPTURE:
+  futurism.com brut 1290x2796 (le titre entier, le chapo "The intel was entirely
+  false." la signature et "Sep 18, 2026" tiennent dans les 1686 px visibles, aucun
+  recadrage necessaire, ca re-confirme le 18/09) et gizmodo.com deja recadre a
+  1290x1150 par le scout (titre enorme + chapo qui fait l'attribution "One source
+  told CNN", ca re-confirme le 19/09 06h30). cnn.com reste l'inverse exact: il
+  gate tout et ne se capture pas.
+  CHRONO: demarrage 10h48 (creneau 10h30), Reel PUBLIE a 10h58:45, soit DIX
+  MINUTES bout en bout sur conteneur froid, LECTURE DU MANUEL ENTIER, REFUS DE
+  FRAME ET REBUILD COMPRIS, 0,00 $. Le build muet de 7 beats entierement epingles
+  retombe bien sur les ~75 s du 15/09.
+  Proof: run 10h30 19/09, Reel 2026-09-19-chatbot-renseignement-militaire.
