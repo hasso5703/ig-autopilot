@@ -1,0 +1,258 @@
+{
+  "slug": "2026-09-19-chatbot-renseignement-militaire",
+  "centralClaim": "A US military operation against a Chinese ship was aborted after officials found the intelligence report behind it had been generated with an AI chatbot that inaccurately identified the ship's cargo.",
+  "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
+  "corroboration": [
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "It was only just before the planned operation that officials dug deeper into the report put together by a special operations command analyst and found it had been generated with the help of artificial intelligence (AI) - and that a chatbot the analyst had used inaccurately identified the material the ship was carrying."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
+      "quote": "Military aircraft were already in the air this spring when U.S. officials made an alarming discovery: The intelligence driving an armed operation against a Chinese vessel had been hallucinated by an AI chatbot."
+    }
+  ],
+  "caption": "Des avions militaires étaient déjà en l'air. Le renseignement qui les envoyait venait d'un chatbot.\n\nCNN révèle qu'une opération armée contre un navire chinois a été annulée au dernier moment, ce printemps. Le rapport disait que le bateau transportait des composants d'un programme d'arme nucléaire. Il avait été fabriqué avec une intelligence artificielle, et le chatbot s'était trompé sur la cargaison.\n\nComment c'est arrivé. Un analyste du commandement des opérations spéciales a demandé à un chatbot de fusionner des données publiques avec du renseignement électronique secret. Puis il a redemandé à l'IA de mettre le résultat en forme, dans le format de rapport auquel les officiers font confiance, et il l'a diffusé.\n\nLe détail qui n'est pas dans la vidéo. Personne ne sait quel outil c'était. CNN écrit qu'on ignore s'il s'agissait d'un chatbot du commerce ou d'un produit du gouvernement, et un ancien haut responsable résume les outils internes comme des copies du commerce avec du rouge à lèvres dessus.\n\nCe qui coince. Une source dit à CNN que ce genre d'erreur n'est pas un cas isolé dans la communauté du renseignement, et qu'il n'existe aucune norme commune pour vérifier ce que ces outils produisent.\n\nJake Steckler, chercheur à GovAI et ancien officier de l'armée américaine, dit à TechCrunch qu'il y a des conséquences de vie ou de mort attachées à ces décisions.\n\nUne IA dans une salle d'opérations militaires, oui ou non ?\n\ncnn.com · techcrunch.com · gizmodo.com · futurism.com\n\n#IA #IntelligenceArtificielle #ActuIA #Pentagone #Chatbot\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "The intelligence report, circulated across the US military this spring in the midst of the war with Iran, immediately set off alarm bells: A Chinese ship in the Middle East was transporting components of a nuclear weapons program."
+    },
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "It was only just before the planned operation that officials dug deeper into the report put together by a special operations command analyst and found it had been generated with the help of artificial intelligence (AI) - and that a chatbot the analyst had used inaccurately identified the material the ship was carrying."
+    },
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "The bot fused together open-source intelligence with secret signals intelligence in government holdings and reached its fateful conclusion about the material the ship was carrying."
+    },
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "The analyst then used AI again to package the findings into a standard intelligence report - the kind that is trusted by military officials - and disseminated it."
+    },
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "It was not clear whether the chatbot was a commercially available one or a US government product."
+    },
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "\"The internal tools are mostly just copies of the commercial stuff wearing lipstick,\" a former senior US official familiar with the AI systems used by military and intelligence analysts."
+    },
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "The kind of \"hallucination\" that the tool used by the analyst in this case conjured has not been an isolated incident across the intelligence community since these tools began proliferating across government, according to one of the sources."
+    },
+    {
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "quote": "There's no one set of standards for how the US verifies the information generated by these tools."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
+      "quote": "\"It's important for service members to understand the uncertainty inherent to LLMs,\" said Jake Steckler, research scholar at GovAI and veteran U.S. Army officer, in a written response to TechCrunch."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
+      "quote": "There are life and death consequences for those decisions."
+    },
+    {
+      "url": "https://gizmodo.com/almost-started-a-war-us-military-nearly-boarded-a-chinese-ship-based-on-bad-intel-from-ai-2000814290",
+      "quote": "One source told CNN that the \"hallucination\" was part of a trend in the U.S. military, not an isolated incident."
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "CNN · Renseignement militaire",
+      "headline": "Un chatbot invente. *L'armée* avait déjà décollé.",
+      "hero": {
+        "value": "Presque la guerre",
+        "label": "ce que ce rapport a failli déclencher, dit une source à CNN"
+      },
+      "swipe": "Les sources sont sur chaque diapositive."
+    },
+    {
+      "type": "content",
+      "title": "Le renseignement venait d'une IA",
+      "body": "Juste avant l'opération, les officiels ont regardé de plus près : le rapport avait été **fabriqué avec une IA**, et le chatbot s'était trompé sur la cargaison.",
+      "evidence": "It was only just before the planned operation that officials dug deeper into the report put together by a special operations command analyst and found it had been generated with the help of artificial intelligence (AI) - and that a chatbot the analyst had used inaccurately identified the material the ship was carrying.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les avions étaient en l'air",
+      "body": "Des soldats armés se préparaient à monter à bord. Des avions américains étaient déjà en vol.",
+      "evidence": "As numerous sources told CNN, US planes were in the air and armed soldiers were actively preparing to board the ship when the AI hallucination was discovered.",
+      "source": {
+        "name": "Futurism",
+        "url": "https://futurism.com/artificial-intelligence/us-military-intelligence-wwiii-ai-chatbot-hallucinated-nuclear-weapons-china",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que disait le rapport",
+      "body": "Un navire chinois au Moyen-Orient transportait des *composants d'un programme d'arme nucléaire*. C'est ce que le rapport affirmait.",
+      "evidence": "The intelligence report, circulated across the US military this spring in the midst of the war with Iran, immediately set off alarm bells: A Chinese ship in the Middle East was transporting components of a nuclear weapons program.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "The report, according to one of the sources, was entirely false. But it also almost started a war.",
+      "attribution": "Une source à CNN",
+      "evidence": "The report, according to one of the sources, was \"entirely false.\" But it also \"almost started a war,\" the source said.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que la machine a fait",
+      "body": "Le robot a **mélangé des données publiques** et du renseignement électronique secret, puis a conclu sur ce que transportait le navire.",
+      "evidence": "The bot fused together open-source intelligence with secret signals intelligence in government holdings and reached its fateful conclusion about the material the ship was carrying.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Puis l'analyste a redemandé à l'IA",
+      "body": "Pas de vérifier. De *mettre en forme* : emballer ses conclusions dans le rapport standard auquel les officiers font confiance. Puis il l'a diffusé.",
+      "evidence": "The analyst then used AI again to package the findings into a standard intelligence report - the kind that is trusted by military officials - and disseminated it.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Personne ne sait quel outil c'était",
+      "body": "Commercial ou gouvernemental, **on l'ignore**. Et il n'existe aucune norme commune pour vérifier ce que ces outils produisent.",
+      "evidence": "There's no one set of standards for how the US verifies the information generated by these tools.",
+      "source": {
+        "name": "CNN",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "It's important for service members to understand the uncertainty inherent to LLMs.",
+      "attribution": "Jake Steckler, GovAI, à TechCrunch",
+      "evidence": "\"It's important for service members to understand the uncertainty inherent to LLMs,\" said Jake Steckler, research scholar at GovAI and veteran U.S. Army officer, in a written response to TechCrunch.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui croit tout ce que lui répond un chatbot",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "sources": [
+    {
+      "name": "CNN",
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "accessed": "2026-09-19"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
+      "accessed": "2026-09-19"
+    },
+    {
+      "name": "Futurism",
+      "url": "https://futurism.com/artificial-intelligence/us-military-intelligence-wwiii-ai-chatbot-hallucinated-nuclear-weapons-china",
+      "accessed": "2026-09-19"
+    },
+    {
+      "name": "Gizmodo",
+      "url": "https://gizmodo.com/almost-started-a-war-us-military-nearly-boarded-a-chinese-ship-based-on-bad-intel-from-ai-2000814290",
+      "accessed": "2026-09-19"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "CNN : un chatbot a failli déclencher une guerre",
+    "beats": [
+      {
+        "script": "Des avions militaires américains étaient déjà en l'air. En dessous, un navire chinois, et des soldats prêts à monter à bord. Le renseignement qui les envoyait là, une IA l'avait inventé.",
+        "visual": {
+          "type": "photo",
+          "query": "container terminal cranes",
+          "alt": "Des portiques à conteneurs alignés dans un port, de nuit",
+          "file": "media/2026-09-19-chatbot-renseignement-militaire/photo_port.jpg",
+          "credit": "Syced · CC0"
+        }
+      },
+      {
+        "script": "L'opération a été annulée au tout dernier moment. Le rapport, je cite, était entièrement faux. Mais le pire, dans cette histoire, n'est pas l'erreur.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://futurism.com/artificial-intelligence/us-military-intelligence-wwiii-ai-chatbot-hallucinated-nuclear-weapons-china",
+          "file": "media/2026-09-19-chatbot-renseignement-militaire/shot_fut_raw.png"
+        }
+      },
+      {
+        "script": "CNN raconte qu'un analyste du commandement des opérations spéciales avait interrogé un chatbot. La machine a mélangé des données publiques et du renseignement électronique secret, puis s'est trompée sur la cargaison.",
+        "visual": {
+          "type": "photo",
+          "query": "cargo ship harbour night",
+          "alt": "Un cargo de travail qui manoeuvre dans un port, à contre-jour",
+          "file": "media/2026-09-19-chatbot-renseignement-militaire/photo_ship.jpg",
+          "credit": "Bernard Spragg. NZ from Christchu… · CC0"
+        }
+      },
+      {
+        "script": "Elle a conclu à des composants d'arme nucléaire. Une source le dit à CNN : ce rapport a presque déclenché une guerre avec la Chine.",
+        "visual": {
+          "type": "card",
+          "value": "UNE GUERRE",
+          "label": "ce que ce rapport a presque déclenché, dit une source à CNN"
+        }
+      },
+      {
+        "script": "Et voilà ce qu'a fait l'analyste ensuite. Il a redemandé à l'IA. Pas de vérifier : de mettre en forme. D'emballer ses conclusions fausses dans un rapport standard, celui auquel les officiers font confiance.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://gizmodo.com/almost-started-a-war-us-military-nearly-boarded-a-chinese-ship-based-on-bad-intel-from-ai-2000814290",
+          "file": "media/2026-09-19-chatbot-renseignement-militaire/shot_giz.png"
+        }
+      },
+      {
+        "script": "Personne ne sait quel chatbot c'était. Et selon CNN, il n'existe aucune norme commune pour vérifier ce que ces outils produisent.",
+        "visual": {
+          "type": "card",
+          "value": "AUCUNE NORME",
+          "label": "commune pour vérifier ce que ces outils produisent, écrit CNN"
+        }
+      },
+      {
+        "script": "Le Pentagone n'a pas répondu à CNN. Et une source résume la chose : l'IA te permet d'arriver plus vite à une mauvaise idée. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "ship engine room control panel",
+          "alt": "Le pupitre de commande d'un navire, couvert d'instruments",
+          "file": "media/2026-09-19-chatbot-renseignement-militaire/photo_bridge.jpg",
+          "credit": "Ship engine room, control panel · CC0"
+        }
+      }
+    ]
+  }
+}

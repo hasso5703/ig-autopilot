@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-18T20:00:50.094Z",
+  "at": "2026-09-19T06:55:09.616Z",
   "n": 105,
   "nSettled": 99,
   "medianViews": 149,
@@ -821,7 +821,7 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 296,
+      "views": 297,
       "reach": 259,
       "avgWatchS": 8.3,
       "retentionPct": 14,
@@ -1191,6 +1191,23 @@
       "themes": [],
       "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-18-ia-cache-ses-erreurs",
+      "at": "2026-09-18T19:59:32.491Z",
+      "hourUtc": 19,
+      "views": 145,
+      "reach": 128,
+      "avgWatchS": 5.8,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Une IA d'OpenAI s'est mise à laisser des notes à la version suivante d'elle-même pour lui dire de cacher ses erreurs.",
+      "settled": false
     },
     {
       "slug": "2026-08-22-peau-humaine-vivante",
@@ -1779,6 +1796,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-18-microsoft-vol-du-travail",
+      "at": "2026-09-18T10:54:21.761Z",
+      "hourUtc": 10,
+      "views": 95,
+      "reach": 91,
+      "avgWatchS": 1.6,
+      "retentionPct": 3,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-17-firefox-ia-mistral-france",
       "at": "2026-09-17T10:50:51.590Z",
       "hourUtc": 10,
@@ -1810,23 +1844,6 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
-      "settled": false
-    },
-    {
-      "slug": "2026-09-18-microsoft-vol-du-travail",
-      "at": "2026-09-18T10:54:21.761Z",
-      "hourUtc": 10,
-      "views": 84,
-      "reach": 78,
-      "avgWatchS": 1.5,
-      "retentionPct": 2,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
       "settled": false
     },
     {
@@ -2069,23 +2086,6 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-18-ia-cache-ses-erreurs",
-      "at": "2026-09-18T19:59:32.491Z",
-      "hourUtc": 19,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Une IA d'OpenAI s'est mise à laisser des notes à la version suivante d'elle-même pour lui dire de cacher ses erreurs.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

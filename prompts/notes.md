@@ -1497,6 +1497,65 @@ ENTRIES:
   le travail dont parle l'histoire, mais ne mets jamais une photo de PERSONNE sous un
   beat qui NOMME quelqu'un d'autre -- le spectateur lira que c'est lui.
   Proof: scout 06h30 18/09, specs ia-cache-ses-erreurs et microsoft-vol-du-travail.
+  Ajout 19/09 (06h30), 58e mesure morte de la cle media (401, cle 53 car AQ.Ab; dernier
+  achat 01/09 16h54 = 18 jours, RECALCULE depuis state/spend.jsonl). IG_ACCESS_TOKEN:
+  TROIS JOURS (state/token.json, expire le 23/09) -- passe cette date le compte ne
+  publie plus rien, muet ou pas, et seul Hasan peut regenerer.
+  CORRECTION DE L'ENTREE DU 21/08 SUR GIZMODO, qui disait "source oui, recu jamais":
+  gizmodo.com SE CAPTURE, mesure ce matin a 362 s / 27 frames, h1 et landedUrl justes.
+  Et c'est un tres bon recu: fond creme, rubrique, titre ENORME qui porte la citation
+  ("'Almost Started a War': US Military Nearly Boarded a Chinese Ship Based on Bad Intel
+  From AI") et un chapo qui fait l'ATTRIBUTION a notre place ("One source told CNN...").
+  Deux reserves: aucun masthead dans la fenetre visible (le recu ne dit pas de quel
+  journal il vient), et une banniere "Advertisement" a partir de ~y=1160 -> crop=1290:1150:0:0.
+  CNN, LUI, EST L'INVERSE EXACT ET CA RE-CONFIRME LE 01/09: www.cnn.com se gate
+  parfaitement (200, 11,5 ko aplatis, toutes citations VERIFIED du premier coup) et NE SE
+  CAPTURE PAS -- 21 s, `ok:true`, `landedUrl` JUSTE, et un PNG de 14 ko entierement BLANC.
+  Le seul champ qui le dit est `h1`, VIDE. Lis h1 ET la taille du png, jamais ok/landedUrl.
+  TECHCRUNCH A PENDU: la capture a tourne plus de 26 MINUTES sans ecrire un octet ni une
+  ligne de log (les mesures connues vont de 203 a 880 s), tuee a la main. Un scout peut se
+  le permettre, un run de publication non: c'est la regle des 6 min du 03/09, et il vaut
+  mieux basculer sur un autre domaine que d'attendre. Rendent 200 au fetch du gate et se
+  gatent DU PREMIER COUP ce matin (0 erreur sur 30 verifications, deux specs, zero
+  aller-retour): cnn.com, futurism.com, gizmodo.com, jobyaviation.com (NOUVEAU),
+  aerotime.aero (NOUVEAU), techcrunch.com. BLOQUE: wsj.com (403), donc une exclu WSJ est
+  ingatable et toutes ses reprises en derivent (dossier Gemini/trois entreprises, mis en
+  revisit). RECUS NEUFS ET RAPIDES: jobyaviation.com/news 21 s / 2 frames, PARFAIT sans
+  recadrage (fond creme, titre enorme, "Newsroom / Published September 18 2026") -- sur une
+  actu d'entreprise le communique maison reste le recu le plus leger; aerotime.aero 95 s /
+  6 frames, propre (rubrique, titre entier, signature, mais un "10 hours ago" RELATIF qui
+  est fige a l'heure de la capture: ne le mets pas sous un beat qui date l'histoire).
+  futurism.com re-confirme (259 s, propre sans recadrage, date du jour imprimee).
+  PHOTOS, 30 requetes pour 6 gardees, et TROIS FAMILLES DE PIEGES sur un dossier
+  militaire/maritime, aucune vue par le filtre near-white. (1) L'INDEX SERT DES RENDUS 3D:
+  "cargo ship containers" rend `Autonomous cargo ship` (Wikideas1, cc0), un rendu de
+  synthese evident -- le TITRE le disait. (2) LES REQUETES MILITAIRES RENDENT DES MILITAIRES
+  NOMMES: "air traffic control room" -> "Electronics Technician 3rd Class Ernesto Deleon",
+  "naval destroyer sea" -> "Ensign Nicholas Lumacuri", "ship radio room" -> "Bruce Heezen".
+  Sur une histoire de rapport FAUX, un visage nomme accuse quelqu'un de reel: refuse au
+  titre, avant le jpg. (3) LES MARQUES SONT LISIBLES ET ELLES NOMMENT: "oil tanker sea" rend
+  le `Stolt Petrel` de STOLT TANKERS en gros (un navire reel accuse de transporter du
+  nucleaire: jamais), "cessna caravan" rend un Caravan marque `Sansa REGIONAL`, "cargo
+  aircraft loading" une derive `Air China Cargo`. Le Caravan reste utilisable parce que le
+  lettrage est RECADRABLE (crop=537:956:800:0 garde nez + helice, zero marque) -- reflexe:
+  avant de jeter une bonne photo pour une marque, regarde si un crop 9:16 l'enleve.
+  MARCHENT et sont bons: "container terminal cranes" (portiques de nuit, Tokyo, tres sombre,
+  zero texte: excellent beat 0 muet), "cargo ship harbour night" (caboteur a contre-jour),
+  "ship engine room" (pupitre dense; le crop 405:720:500:0 supprime les badauds du haut),
+  "airplane cockpit controls" (tableau de bord; le crop 456:810:312:0 coupe les deux tetes
+  ET le logo CONTOUR), "airplane wing clouds", "cessna caravan". Echouent au near-white:
+  container ship ocean, fighter aircraft flight, ship cargo hold, empty cockpit aircraft,
+  aircraft propeller close, small airplane runway, navy ship at sea, shipping containers
+  stacked port, military operations center screens, printed document pages, soldiers
+  computer workstation, freight containers ship deck, pentagon building, filing cabinet
+  drawers, teleprinter machine, cargo ship bow wave, container yard trucks.
+  ET LE CHIFFRE DE learn.mjs QUI DEVRAIT CHANGER LE PLAN D'UN SCOUT EN MUET: par surface
+  d'ouverture, `screenshot` est DERNIER (n=15, mediane 63 vues, retention 11,7%) derriere
+  `photo` (n=29, 141 vues, 14%) et loin derriere `veo` (n=55, 197 vues, 22,3%, gele depuis
+  le 01/09). Le carnet a beaucoup vante les recus a fond noir comme beat 0 pour la
+  lisibilite du karaoke; les vues disent l'inverse. En muet, OUVRE SUR UNE PHOTO et garde
+  le recu pour le beat 1 ou 2. Les deux specs banques ce matin le font.
+  Proof: scout 06h30 19/09, specs chatbot-renseignement-militaire et avion-sans-pilote-traverse-usa.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES

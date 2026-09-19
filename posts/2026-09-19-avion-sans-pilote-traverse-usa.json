@@ -1,0 +1,252 @@
+{
+  "slug": "2026-09-19-avion-sans-pilote-traverse-usa",
+  "centralClaim": "An aircraft equipped with Joby Aviation's autonomy technology flew across the United States with zero control inputs from its onboard safety pilot.",
+  "sendTest": "Un avion a traversé les États-Unis sans que personne touche les commandes. 3 199 miles, décollages et atterrissages compris.",
+  "corroboration": [
+    {
+      "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "quote": "The aircraft flew 3,199 miles with zero control inputs from its onboard safety pilot, concluding the eastbound leg of its month-long tour in North Carolina's Outer Banks, near the site of the Wright brothers' first powered flight."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/18/joby-aviations-3100-mile-autonomous-flight-signals-its-push-beyond-electric-air-taxis/",
+      "quote": "An aircraft equipped with Joby Aviation's autonomy technology flew more than 3,100 miles across the United States without a human pilot taking control at any point, the company said Friday."
+    }
+  ],
+  "caption": "Un avion a traversé les États-Unis sans que personne à bord ne touche les commandes.\n\nJoby Aviation annonce que son appareil a volé 3 199 miles avec zéro intervention du pilote de sécurité assis à bord. Roulage, décollages, navigation et atterrissages : tout a été fait par la machine, sous supervision à distance depuis la Californie et une base aérienne de Caroline du Sud, jusqu'à 2 323 miles de là.\n\nL'appareil. Un Cessna 208B Caravan modifié, équipé de la technologie de vol autonome de Joby.\n\nLe détail qui n'est pas dans la vidéo. Le pilote à distance, lui, était vraiment le commandant de bord : c'est lui qui gérait les changements de plan de vol et qui parlait aux contrôleurs aériens par la radio de l'avion. Celui assis dans le cockpit pouvait reprendre la main et ne l'a pas fait.\n\nCe qui coince. C'est l'entreprise qui rapporte le résultat, et un pilote était bien à bord pour la conformité. Avant ce vol, le système comptait plus de 400 vols et 800 heures de vol automatisé.\n\nEt ce n'est pas pour tes vacances : Joby cite le fret commercial, le transport médical, les secours en cas de catastrophe et la logistique de défense.\n\nEt ce n'est pas fini. L'appareil repart maintenant vers l'ouest, avec des escales à Louisville, Salt Lake City et Portland.\n\nUn avion de ligne sans pilote, tu monterais dedans, oui ou non ?\n\njobyaviation.com · aerotime.aero · techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #Aviation #Joby\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "quote": "The aircraft flew 3,199 miles with zero control inputs from its onboard safety pilot, concluding the eastbound leg of its month-long tour in North Carolina's Outer Banks, near the site of the Wright brothers' first powered flight."
+    },
+    {
+      "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "quote": "The aircraft, a converted Cessna Caravan, performed autonomous taxiing, takeoffs, route navigation, and landings under remote supervision from Joby's Autonomy Headquarters in California and Shaw Air Force Base in South Carolina, up to 2,323 miles away."
+    },
+    {
+      "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "quote": "The journey demonstrated the operational capabilities of Joby's autonomy technology across a range of environments, supporting applications in commercial freight, medical transport, disaster response, and defense logistics."
+    },
+    {
+      "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "quote": "Joby's autonomous technology is grounded in more than 400 flights and 800 automated flight hours in controlled and uncontrolled airspace, building on the mature autonomy stack acquired from Xwing in 2024."
+    },
+    {
+      "url": "https://www.aerotime.aero/articles/joby-autonomous-cessna-caravan-cross-country-flight",
+      "quote": "The aircraft flew autonomously under the supervision of a remote pilot, who served as pilot in command, managed flight-plan updates and handled air traffic control communications through the aircraft's radios."
+    },
+    {
+      "url": "https://www.aerotime.aero/articles/joby-autonomous-cessna-caravan-cross-country-flight",
+      "quote": "An onboard safety pilot remained available to take control but made no control inputs during the journey, according to Joby."
+    },
+    {
+      "url": "https://www.aerotime.aero/articles/joby-autonomous-cessna-caravan-cross-country-flight",
+      "quote": "Known as the J208, the aircraft is a Cessna 208B Caravan fitted with Joby's autonomous flight technology."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/18/joby-aviations-3100-mile-autonomous-flight-signals-its-push-beyond-electric-air-taxis/",
+      "quote": "A pilot was on board for compliance, but Joby said the aircraft performed the entire operation autonomously."
+    },
+    {
+      "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "quote": "The aircraft will now begin its return westbound journey, including stops in Raleigh (KRDU), Fredericksburg/Washington, D.C. (KRMN), Louisville (KSDF), Wichita (KICT), Oklahoma City (KOKC), Salt Lake City (KSLC), and Portland (KPDX)."
+    },
+    {
+      "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "quote": "Following its transcontinental arrival, the J208 flew a historic low pass near the First Flight Monument at Kitty Hawk, honoring the site where Orville and Wilbur Wright ushered in the age of powered flight in 1903."
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Joby Aviation · Vol autonome",
+      "headline": "Joby traverse l'Amérique. *Personne* ne pilote.",
+      "hero": {
+        "value": "3 199",
+        "label": "miles avec zéro intervention du pilote assis à bord"
+      },
+      "swipe": "Les sources sont sur chaque diapositive."
+    },
+    {
+      "type": "stat",
+      "figure": "3 199",
+      "unit": "miles à travers les États-Unis",
+      "body": "Avec **zéro intervention** du pilote de sécurité assis à bord, jusqu'aux Outer Banks de Caroline du Nord.",
+      "evidence": "The aircraft flew 3,199 miles with zero control inputs from its onboard safety pilot, concluding the eastbound leg of its month-long tour in North Carolina's Outer Banks, near the site of the Wright brothers' first powered flight.",
+      "source": {
+        "name": "Joby Aviation",
+        "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Tout, pas seulement la croisière",
+      "body": "Roulage, décollages, navigation et atterrissages : *l'appareil a tout fait seul*. La supervision venait de Californie et d'une base aérienne de Caroline du Sud, jusqu'à **2 323 miles** de là.",
+      "evidence": "The aircraft, a converted Cessna Caravan, performed autonomous taxiing, takeoffs, route navigation, and landings under remote supervision from Joby's Autonomy Headquarters in California and Shaw Air Force Base in South Carolina, up to 2,323 miles away.",
+      "source": {
+        "name": "Joby Aviation",
+        "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Qui commandait vraiment",
+      "body": "Un pilote à distance était le *commandant de bord* : plans de vol et échanges avec les contrôleurs aériens passaient par lui.",
+      "evidence": "The aircraft flew autonomously under the supervision of a remote pilot, who served as pilot in command, managed flight-plan updates and handled air traffic control communications through the aircraft's radios.",
+      "source": {
+        "name": "AeroTime",
+        "url": "https://www.aerotime.aero/articles/joby-autonomous-cessna-caravan-cross-country-flight",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que dit l'entreprise",
+      "claim": "L'appareil a fait toute l'opération de façon autonome.",
+      "caveatLabel": "Ce qu'il y avait quand même",
+      "caveat": "Un pilote était à bord pour la conformité.",
+      "evidence": "A pilot was on board for compliance, but Joby said the aircraft performed the entire operation autonomously.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/18/joby-aviations-3100-mile-autonomous-flight-signals-its-push-beyond-electric-air-taxis/",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Il a évité les orages tout seul",
+      "body": "Sur un aéroport qu'il ne connaissait pas, l'avion a **contourné de gros orages en temps réel**.",
+      "evidence": "During the cross-country journey, the aircraft proved its ability to seamlessly integrate into high-density environments like Phoenix Deer Valley, one of the nation's busiest general aviation airports, while rerouting around severe weather and thunderstorms in real time without prior airport familiarity.",
+      "source": {
+        "name": "Joby Aviation",
+        "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'il y avait avant",
+      "body": "Plus de **400 vols** et **800 heures** de vol automatisé, sur une technologie rachetée à Xwing.",
+      "evidence": "Joby's autonomous technology is grounded in more than 400 flights and 800 automated flight hours in controlled and uncontrolled airspace, building on the mature autonomy stack acquired from Xwing in 2024.",
+      "source": {
+        "name": "Joby Aviation",
+        "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et à quoi ça doit servir",
+      "body": "Fret commercial, transport médical, secours en cas de catastrophe et *logistique de défense*.",
+      "evidence": "The journey demonstrated the operational capabilities of Joby's autonomy technology across a range of environments, supporting applications in commercial freight, medical transport, disaster response, and defense logistics.",
+      "source": {
+        "name": "Joby Aviation",
+        "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Il a fini au-dessus de Kitty Hawk",
+      "body": "Un passage bas devant le monument du premier vol, là où les frères Wright ont décollé en **1903**.",
+      "evidence": "Following its transcontinental arrival, the J208 flew a historic low pass near the First Flight Monument at Kitty Hawk, honoring the site where Orville and Wilbur Wright ushered in the age of powered flight in 1903.",
+      "source": {
+        "name": "Joby Aviation",
+        "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+        "date": "2026-09-18"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui a peur en avion",
+      "sub": "L'actu IA, vérifiée phrase par phrase."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Joby Aviation",
+      "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "accessed": "2026-09-19"
+    },
+    {
+      "name": "AeroTime",
+      "url": "https://www.aerotime.aero/articles/joby-autonomous-cessna-caravan-cross-country-flight",
+      "accessed": "2026-09-19"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/18/joby-aviations-3100-mile-autonomous-flight-signals-its-push-beyond-electric-air-taxis/",
+      "accessed": "2026-09-19"
+    }
+  ],
+  "reel2": {
+    "mood": "wonder",
+    "lang": "fr",
+    "title": "Joby : 3 199 miles sans personne aux commandes",
+    "beats": [
+      {
+        "script": "Un avion a traversé les États-Unis d'un océan à l'autre. Décollage, navigation, atterrissage : personne n'a touché les commandes. Et il y avait quelqu'un dans le cockpit.",
+        "visual": {
+          "type": "photo",
+          "query": "airplane wing clouds",
+          "alt": "L'aile et le réacteur d'un avion au lever du soleil, au-dessus des terres",
+          "file": "media/2026-09-19-avion-sans-pilote-traverse-usa/photo_wing.jpg",
+          "credit": "Stefan Stefancik · CC0"
+        }
+      },
+      {
+        "script": "C'est Joby Aviation qui l'annonce, une entreprise d'aviation basée en Californie. Un pilote de sécurité était bien assis à bord, et il n'a pas touché les commandes.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+          "file": "media/2026-09-19-avion-sans-pilote-traverse-usa/shot_joby_raw.png"
+        }
+      },
+      {
+        "script": "L'appareil est un Cessna Caravan modifié, un avion à hélice. Il a roulé, décollé, suivi sa route et atterri tout seul. Il a même contourné de gros orages en temps réel.",
+        "visual": {
+          "type": "photo",
+          "query": "cessna caravan",
+          "alt": "Le nez et l'hélice d'un Cessna Caravan posé sur une aire de stationnement",
+          "file": "media/2026-09-19-avion-sans-pilote-traverse-usa/photo_caravan.jpg",
+          "credit": "kansasphoto · CC BY"
+        }
+      },
+      {
+        "script": "3 199 miles au total, sans une seule intervention du pilote assis à bord. Et ce n'est pas pour tes vacances : Joby vise le fret, le transport médical et la logistique de défense.",
+        "visual": {
+          "type": "card",
+          "value": "3 199 MILES",
+          "label": "parcourus avec zéro intervention du pilote assis à bord"
+        }
+      },
+      {
+        "script": "Au sol, un pilote à distance commandait vraiment le vol : il gérait les changements de plan et parlait aux contrôleurs aériens par la radio de l'avion. Celui du cockpit pouvait reprendre la main.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.aerotime.aero/articles/joby-autonomous-cessna-caravan-cross-country-flight",
+          "file": "media/2026-09-19-avion-sans-pilote-traverse-usa/shot_aero_raw.png"
+        }
+      },
+      {
+        "script": "2 323 miles séparaient l'avion de ceux qui le surveillaient. Avant ce vol, le système avait déjà 400 vols et 800 heures automatisées derrière lui.",
+        "visual": {
+          "type": "card",
+          "value": "2 323 MILES",
+          "label": "entre l'avion et ceux qui le supervisaient au sol"
+        }
+      },
+      {
+        "script": "L'avion a fini par un passage bas au-dessus de Kitty Hawk, là où les frères Wright ont volé en 1903. Et il repart déjà vers l'ouest. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "airplane cockpit controls",
+          "alt": "Le tableau de bord allumé d'un petit avion de ligne, vu depuis l'arrière du cockpit",
+          "file": "media/2026-09-19-avion-sans-pilote-traverse-usa/photo_cockpit.jpg",
+          "credit": "World Travel Adventures · CC0"
+        }
+      }
+    ]
+  }
+}
