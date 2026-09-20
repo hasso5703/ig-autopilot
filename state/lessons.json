@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-19T11:00:02.198Z",
+  "at": "2026-09-20T07:06:49.778Z",
   "n": 106,
-  "nSettled": 100,
-  "medianViews": 147,
+  "nSettled": 101,
+  "medianViews": 145,
   "medianRetentionPct": 17,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 30,
-      "medianViews": 137,
-      "meanRetentionPct": 13.7,
+      "n": 31,
+      "medianViews": 132,
+      "meanRetentionPct": 13.5,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 27,
-      "medianViews": 124,
-      "meanRetentionPct": 14,
+      "n": 28,
+      "medianViews": 122,
+      "meanRetentionPct": 13.7,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -610,7 +610,7 @@
       "slug": "2026-09-02-astra-failles-inconnues",
       "at": "2026-09-02T17:30:10.156Z",
       "hourUtc": 17,
-      "views": 450,
+      "views": 452,
       "reach": 409,
       "avgWatchS": 8.8,
       "retentionPct": 15,
@@ -1179,9 +1179,9 @@
       "slug": "2026-09-18-ia-cache-ses-erreurs",
       "at": "2026-09-18T19:59:32.491Z",
       "hourUtc": 19,
-      "views": 147,
-      "reach": 129,
-      "avgWatchS": 5.8,
+      "views": 149,
+      "reach": 131,
+      "avgWatchS": 6,
       "retentionPct": 10,
       "likes": 0,
       "comments": 1,
@@ -1208,6 +1208,23 @@
       "themes": [],
       "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-19-chatbot-renseignement-militaire",
+      "at": "2026-09-19T10:59:01.798Z",
+      "hourUtc": 10,
+      "views": 144,
+      "reach": 127,
+      "avgWatchS": 7.5,
+      "retentionPct": 13,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
+      "settled": false
     },
     {
       "slug": "2026-08-22-peau-humaine-vivante",
@@ -1692,6 +1709,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-18-microsoft-vol-du-travail",
+      "at": "2026-09-18T10:54:21.761Z",
+      "hourUtc": 10,
+      "views": 111,
+      "reach": 107,
+      "avgWatchS": 1.5,
+      "retentionPct": 2,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-10-voiture-sans-chauffeur",
       "at": "2026-09-10T19:47:11.997Z",
       "hourUtc": 19,
@@ -1707,23 +1741,6 @@
       "themes": [],
       "sendTest": "Les voitures sans chauffeur de Waymo ont 68% d'accidents en moins que nous. Sauf qu'un accident humain sur deux n'est jamais déclaré.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-18-microsoft-vol-du-travail",
-      "at": "2026-09-18T10:54:21.761Z",
-      "hourUtc": 10,
-      "views": 110,
-      "reach": 106,
-      "avgWatchS": 1.5,
-      "retentionPct": 2,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
-      "settled": false
     },
     {
       "slug": "2026-09-05-google-ia-prix-plus-cher",
@@ -1844,7 +1861,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-06-astra-agi-mesures",
@@ -2086,23 +2103,6 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-19-chatbot-renseignement-militaire",
-      "at": "2026-09-19T10:59:01.798Z",
-      "hourUtc": 10,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

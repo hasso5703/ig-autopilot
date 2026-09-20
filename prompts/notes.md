@@ -1238,6 +1238,61 @@ ENTRIES:
   dna sequencing gel, passenger airplane tarmac, clinical trial patient,
   hospital corridor empty, public library reading room, wifi router antenna,
   network switch ports.
+  Ajout 20/09 (06h30), 60e mesure morte de la cle media (401, cle 53 car AQ.A; dernier
+  achat 01/09 16h54 = 19 jours). IG_ACCESS_TOKEN: TROIS JOURS (expire le 23/09), et
+  personne n'a publie depuis le 19/09 10h59: les creneaux 16h30 et 19h30 du 19/09 n'ont
+  pas tourne (aucun journal), donc le 19/09 est une journee a moitie tenue.
+  RENDENT 200 AU FETCH DU GATE ET SE GATENT DU PREMIER COUP (0 erreur sur 24
+  verifications, deux specs, zero aller-retour): pewresearch.org (re-confirme le 19/08),
+  gizmodo.com, nbcnews.com, techcrunch.com et euronews.com (NOUVEAU au gate, stable sur
+  trois fetchs, alors que l'entree du 13/08 le disait instable en DNS).
+  BLOQUENT ce matin: thehill.com (403, CORRECTION de l'entree du 19/08 qui le disait
+  gatable), forbes.com (403, re-confirme son alternance du 19/08), truthsocial.com (403,
+  donc le primaire de TOUT post Trump est ingatable, prends NBC ou TechCrunch),
+  newsbytesapp.com (403).
+  LE PIEGE NEUF ET IL EST VERT AU GATE, en.sedaily.com (Seoul Economic Daily, edition
+  anglaise): rend 200 et 8,5 ko de texte propre, MAIS il imprime lui-meme
+  "AI-translated from Korean. Quotes from foreign sources are based on Korean-language
+  reports and may not reflect exact original wording" et credite Forbes. Une citation
+  recopiee la-bas est donc une RETRADUCTION d'une traduction, et le domaine n'est pas une
+  seconde redaction. Famille RNZ du 10/08, en pire: ici meme la citation est fausse.
+  Cherche la ligne "AI-translated" avant de compter un domaine etranger.
+  TROIS RECUS MESURES, deux neufs et tous les trois bons. (1) **pewresearch.org en mode
+  `top`** 37 s / 4 frames, PARFAIT sans recadrage: masthead Pew Research Center, fil
+  d'Ariane "Artificial Intelligence", "REPORT | SEPTEMBER 17, 2026", titre entier, chapo
+  et signature dans la fenetre visible. En mode par defaut (scroll vers le h1) le masthead
+  disparait et le recu ne dit plus de quel institut il vient: sur un rapport d'institut,
+  prends TOUJOURS `top`. (2) **nbcnews.com NOUVEAU en recu**, 213 s / 28 frames, parfait
+  sans recadrage, FOND BLEU NUIT (donc karaoke blanc/jaune au maximum de lisibilite, meme
+  famille que technologyreview recadre du 15/09), masthead NBC NEWS, rubrique "ARTIFICIAL
+  INTELLIGENCE", titre entier qui EST l'histoire et chapo qui porte la citation. (3)
+  gizmodo.com 89 s / 9 frames, re-confirme le 19/09: fond creme, titre enorme, chapo qui
+  porte le claim central AVEC ses chiffres, et `crop=1290:890:0:0` coupe la banniere
+  "Advertisement" qui commence vers y=900.
+  TECHCRUNCH A PENDU UNE DEUXIEME FOIS D'AFFILEE: >20 min sans ecrire un octet ni une
+  ligne, apres les 26 min du 19/09. Les mesures anciennes (203 a 880 s) ne valent plus:
+  traite techcrunch comme INCAPTURABLE tant qu'un run n'a pas remesure, cite-le et
+  photographie autre chose.
+  LE REFLEXE DE FRAICHEUR A PAYE AVANT D'ECRIRE UNE LIGNE (entree du 17/08): la meilleure
+  histoire de proximite du matin (demos CivAI au Congres, dossiers IA sur n'importe quel
+  Americain) avait ses deux seules sources joignables datees du 01/09 et du 04/09, donc
+  morte au gate STALE_DAYS=4. Lis la date DANS l'article avant de l'ouvrir, pas apres.
+  PHOTOS, 16 requetes pour 6 gardees. MARCHENT et sont bonnes: "office workers open plan"
+  (une seule personne a son bureau dans un immense plateau vide, sombre, aucun texte: la
+  meilleure photo "l'emploi qui disparait" mesuree jusqu'ici), "welder factory sparks"
+  (mains gantees + gerbe d'etincelles sur fond sombre), "chef kitchen restaurant"
+  (cuisiniers de dos, dense, chaud), "emergency stop button" (un vrai bouton d'arret
+  rouge avec "EMERGENCY ST" lisible: le sujet exact de toute histoire de kill switch),
+  "california state capitol", "donald trump" (portrait officiel 2025, pdm, deja presque
+  9:16, aucune retouche). REFUSES A L'OEIL, et aucun n'est vu par le filtre near-white:
+  "factory assembly line workers" et "warehouse workers forklift" (filigrane rawpixel en
+  diagonale + marques lisibles "Yale", "DRIED PITTED PLUMS"), "commuters train station
+  crowd" (panneau DUNEDIN en gros, qui date et delocalise l'histoire),
+  "call center headset operator" (interieur d'avion militaire avec un aviateur NOMME sur
+  sa plaque, famille du 19/09). Echouent au near-white: supermarket checkout cashier, job
+  interview office desk, industrial robot arm, white house exterior, capitol building
+  washington.
+  Proof: scout 06h30 20/09, specs sondage-mondial-ia-emploi et trump-ai-force.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le

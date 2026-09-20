@@ -1,0 +1,244 @@
+{
+  "slug": "2026-09-20-trump-ai-force",
+  "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
+  "centralClaim": "The president announced he is forming an AI Force and will be announcing an AI czar.",
+  "corroboration": [
+    {
+      "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
+      "quote": "President Donald Trump announced Saturday that he will appoint a czar to take point on artificial intelligence and will also create an AI task force."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+      "quote": "but he's also forming an AI Force, similar to the Space Force that he established in his first term. \"To that end, I will be announcing, in the near future, the AI 'Czar' - Only High I.Q. individuals need apply!\" he added. The president did not say what the AI Force and AI czar's duties will entail."
+    }
+  ],
+  "caption": "La Californie veut étudier un bouton d'arrêt pour l'intelligence artificielle. Le président américain, lui, parle de canular.\n\nVendredi, le gouverneur Gavin Newsom a signé un décret qui demande à un groupe de travail d'examiner l'obligation de créer un kill switch, un bouton d'arrêt. Le lendemain, Donald Trump a annoncé qu'il nommerait un tsar de l'IA et formerait une AI Force, sur le modèle de la Space Force de son premier mandat.\n\nSes mots. Il écrit qu'il ne va en aucune façon freiner ou étouffer la croissance de cette industrie, et qu'il va au contraire la chérir, l'aider et veiller sur elle pendant qu'elle grandit. Pour le poste de tsar, il précise que seules les personnes à très haut quotient intellectuel doivent postuler.\n\nCe que disent les autres. Un chercheur vient de quitter Anthropic en accusant les grandes entreprises du secteur de croire sincèrement que l'IA pourrait tous nous tuer d'ici la fin de la décennie. Et lors d'une réunion à huis clos, le prix Nobel Geoffrey Hinton a dit aux élus américains qu'il leur restait peut-être un an pour légiférer.\n\nLe détail qui n'est pas dans la vidéo. Trump a aussi mis en ligne un sondage pour rebaptiser la technologie, avec trois propositions : Superior Intelligence, Extreme Intelligence ou Supreme Intelligence.\n\nCe qui coince. La Maison-Blanche n'a pas précisé ce que feront cette AI Force et ce tsar, et aucun nom n'a été donné pour le poste.\n\nUn bouton d'arrêt pour l'IA, ça a du sens, oui ou non ?\n\nnbcnews.com · gizmodo.com · techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #Trump #Regulation\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "California Gov. Gavin Newsom signed an executive order on Friday seeking to increase oversight of the industry and urged a task force to consider requiring the creation of a kill switch.",
+      "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688"
+    },
+    {
+      "quote": "President Donald Trump announced Saturday that he will appoint a czar to take point on artificial intelligence and will also create an AI task force.",
+      "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688"
+    },
+    {
+      "quote": "We will not in any way hinder or stifle the Growth of this incredible Industry. Rather, we will cherish it, help it, and watch over it, as it grows!",
+      "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688"
+    },
+    {
+      "quote": "Trump added that \"only High I.Q. individuals need apply\" to the new AI czar role, to which he did not name an appointee in the post.",
+      "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688"
+    },
+    {
+      "quote": "The AI safety debate recently intensified after an AI researcher said he was quitting Anthropic over concerns that the leading AI companies \"earnestly believe it could kill us all by the end of the decade\" and are \"gambling with our lives.\"",
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/"
+    },
+    {
+      "quote": "Nobel laureate Geoffrey Hinton, known as the \"godfather of AI,\" warned lawmakers that time was running out to regulate the industry, telling them Congress has \"maybe a year\" to get the job done.",
+      "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688"
+    },
+    {
+      "quote": "So he posted a poll where followers could vote on a new name for the technology - Superior Intelligence, Extreme Intelligence, or Supreme Intelligence.",
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/"
+    },
+    {
+      "quote": "The president did not say what the AI Force and AI czar's duties will entail.",
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/"
+    },
+    {
+      "quote": "but he's also forming an AI Force, similar to the Space Force that he established in his first term.",
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "19 septembre 2026 · Washington",
+      "headline": "Trump appelle la peur de l'IA un *canular*",
+      "hero": {
+        "value": "AI Force",
+        "label": "la force qu'il annonce, sur le modèle de la Space Force"
+      },
+      "swipe": "Ce qu'il a écrit, mot pour mot"
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'il annonce",
+      "body": "Donald Trump annonce qu'il nommera un **tsar de l'IA** et créera un groupe de travail sur l'IA. Aucun nom n'a été donné.",
+      "evidence": "President Donald Trump announced Saturday that he will appoint a czar to take point on artificial intelligence and will also create an AI task force.",
+      "source": {
+        "name": "NBC News",
+        "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "We will not in any way hinder or stifle the Growth of this incredible Industry. Rather, we will cherish it, help it, and watch over it, as it grows!",
+      "attribution": "Donald Trump, sur Truth Social, rapporté par NBC News",
+      "evidence": "We will not in any way hinder or stifle the Growth of this incredible Industry. Rather, we will cherish it, help it, and watch over it, as it grows!",
+      "source": {
+        "name": "NBC News",
+        "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le poste, et sa condition",
+      "body": "Pour le tsar de l'IA, il écrit que seules les personnes à *très haut quotient intellectuel* doivent postuler.",
+      "evidence": "Trump added that \"only High I.Q. individuals need apply\" to the new AI czar role, to which he did not name an appointee in the post.",
+      "source": {
+        "name": "NBC News",
+        "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "La peur de l'IA serait un canular",
+      "caveat": "Un chercheur quitte Anthropic en disant que les grandes entreprises du secteur croient sincèrement que l'IA pourrait *tous nous tuer* d'ici la fin de la décennie.",
+      "claimLabel": "Le président",
+      "caveatLabel": "Ceux qui la construisent",
+      "evidence": "The AI safety debate recently intensified after an AI researcher said he was quitting Anthropic over concerns that the leading AI companies \"earnestly believe it could kill us all by the end of the decade\" and are \"gambling with our lives.\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'un prix Nobel a dit aux élus",
+      "body": "À huis clos, Geoffrey Hinton a prévenu le Congrès qu'il lui restait **peut-être un an** pour légiférer.",
+      "evidence": "Nobel laureate Geoffrey Hinton, known as the \"godfather of AI,\" warned lawmakers that time was running out to regulate the industry, telling them Congress has \"maybe a year\" to get the job done.",
+      "source": {
+        "name": "NBC News",
+        "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La Californie n'attend pas",
+      "body": "Vendredi, le gouverneur Gavin Newsom a signé un décret qui demande d'examiner l'obligation de créer un *bouton d'arrêt*.",
+      "evidence": "California Gov. Gavin Newsom signed an executive order on Friday seeking to increase oversight of the industry and urged a task force to consider requiring the creation of a kill switch.",
+      "source": {
+        "name": "NBC News",
+        "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et le nouveau nom",
+      "body": "Trump a lancé un sondage pour rebaptiser la technologie : *Superior Intelligence*, Extreme Intelligence ou Supreme Intelligence.",
+      "evidence": "Trump has posted on X that he thinks a more \"elegant and accurate description of this new phenomena [sic] would be Superior Intelligence (SI) or, Extreme Intelligence (EI) or, Supreme Intelligence (SI).\"",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/youll-never-guess-what-trump-wants-to-rename-now-2000814488",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui n'est pas dit",
+      "body": "Ni la Maison-Blanche ni le président n'ont précisé ce que feront cette AI Force et ce tsar.",
+      "evidence": "The president did not say what the AI Force and AI czar's duties will entail.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui suit la politique américaine",
+      "sub": "L'actu IA, vérifiée, sources à l'appui."
+    }
+  ],
+  "sources": [
+    {
+      "name": "NBC News",
+      "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
+      "accessed": "2026-09-20"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+      "accessed": "2026-09-20"
+    },
+    {
+      "name": "Gizmodo",
+      "url": "https://gizmodo.com/youll-never-guess-what-trump-wants-to-rename-now-2000814488",
+      "accessed": "2026-09-20"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Trump crée une AI Force et parle de canular",
+    "beats": [
+      {
+        "script": "Un bouton pour éteindre l'intelligence artificielle. Un vrai interrupteur d'arrêt, au cas où. C'est ce qu'un décret signé vendredi en Californie demande d'examiner.",
+        "visual": {
+          "type": "photo",
+          "query": "emergency stop button",
+          "alt": "Un bouton d'arrêt d'urgence rouge sur le pupitre d'une machine industrielle",
+          "file": "media/2026-09-20-trump-ai-force/photo_stop.jpg"
+        }
+      },
+      {
+        "script": "Le lendemain, Donald Trump dit l'inverse. Pour lui, l'inquiétude autour de l'IA est un canular. Il annonce qu'il crée une AI Force, sur le modèle de la Space Force.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
+          "file": "media/2026-09-20-trump-ai-force/shot_nbc.png"
+        }
+      },
+      {
+        "script": "Il écrit qu'il ne va en aucune façon freiner cette industrie. Qu'il va la chérir, l'aider, et veiller sur elle pendant qu'elle grandit.",
+        "visual": {
+          "type": "card",
+          "value": "AI FORCE",
+          "label": "annoncée sur le modèle de la Space Force"
+        }
+      },
+      {
+        "script": "Il veut aussi lui changer de nom. Il a lancé un sondage auprès de ses abonnés, avec trois propositions : Superior Intelligence, Extreme Intelligence ou Supreme Intelligence.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://gizmodo.com/youll-never-guess-what-trump-wants-to-rename-now-2000814488",
+          "file": "media/2026-09-20-trump-ai-force/shot_giz.png"
+        }
+      },
+      {
+        "script": "Il nommera aussi un tsar de l'IA. Pour le poste, il précise que seules les personnes à très haut quotient intellectuel doivent postuler. Aucun nom n'a été donné.",
+        "visual": {
+          "type": "photo",
+          "query": "donald trump",
+          "alt": "Le portrait officiel du président américain devant le drapeau",
+          "file": "media/2026-09-20-trump-ai-force/photo_trump.jpg"
+        }
+      },
+      {
+        "script": "Sauf que ceux qui travaillent sur ces machines ne rigolent pas. Devant les élus américains, à huis clos, le prix Nobel Geoffrey Hinton a prévenu qu'il leur restait peut-être un an pour légiférer.",
+        "visual": {
+          "type": "card",
+          "value": "UN AN",
+          "label": "ce qu'il reste au Congrès pour légiférer, selon Hinton"
+        }
+      },
+      {
+        "script": "Et un chercheur vient de quitter Anthropic en accusant les grandes entreprises du secteur de croire que l'IA pourrait tous nous tuer. La Californie, elle, n'a pas attendu. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "california state capitol",
+          "alt": "Le dôme du Capitole de Californie et ses drapeaux, vus d'en bas",
+          "file": "media/2026-09-20-trump-ai-force/photo_capitol.jpg"
+        }
+      }
+    ]
+  }
+}
