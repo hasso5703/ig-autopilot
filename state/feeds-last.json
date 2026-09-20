@@ -1,12 +1,12 @@
 {
-  "at": "2026-09-20T06:50:13.697Z",
-  "fresh": 41,
+  "at": "2026-09-20T16:50:51.445Z",
+  "fresh": 22,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1210,
-      "fresh": 9,
+      "fresh": 4,
       "windowHours": 96
     },
     {
@@ -34,7 +34,7 @@
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 3,
+      "fresh": 1,
       "windowHours": 96
     },
     {
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 17,
+      "fresh": 12,
       "windowHours": 36
     },
     {
@@ -91,16 +91,17 @@
     },
     {
       "name": "Hacker News (250+ points)",
-      "ok": true,
-      "fetched": 4,
-      "fresh": 4,
-      "windowHours": 36
+      "ok": false,
+      "fetched": 0,
+      "fresh": 0,
+      "windowHours": 36,
+      "error": "HTTP 502 after 13 tries"
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 5,
+      "fresh": 2,
       "windowHours": 36
     }
   ]

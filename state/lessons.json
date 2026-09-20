@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-20T10:53:24.380Z",
-  "n": 106,
-  "nSettled": 101,
-  "medianViews": 145,
-  "medianRetentionPct": 17,
+  "at": "2026-09-20T16:51:31.561Z",
+  "n": 107,
+  "nSettled": 102,
+  "medianViews": 144,
+  "medianRetentionPct": 16,
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -106,9 +106,9 @@
       "thin": false
     },
     "screenshot": {
-      "n": 15,
-      "medianViews": 63,
-      "meanRetentionPct": 11.7,
+      "n": 16,
+      "medianViews": 72,
+      "meanRetentionPct": 11.1,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 25,
-      "medianViews": 132,
-      "meanRetentionPct": 16.9,
+      "n": 26,
+      "medianViews": 130,
+      "meanRetentionPct": 16.3,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -981,6 +981,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-19-chatbot-renseignement-militaire",
+      "at": "2026-09-19T10:59:01.798Z",
+      "hourUtc": 10,
+      "views": 191,
+      "reach": 170,
+      "avgWatchS": 9.9,
+      "retentionPct": 16,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-05-openai-agents-wiki-allemand",
       "at": "2026-09-05T16:47:57.700Z",
       "hourUtc": 16,
@@ -1104,23 +1121,6 @@
       ],
       "sendTest": "Les États-Unis viennent d'interdire l'importation des robots humanoïdes étrangers. 85 % du marché est chinois.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-19-chatbot-renseignement-militaire",
-      "at": "2026-09-19T10:59:01.798Z",
-      "hourUtc": 10,
-      "views": 157,
-      "reach": 138,
-      "avgWatchS": 9.3,
-      "retentionPct": 16,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
-      "settled": false
     },
     {
       "slug": "2026-08-07-suno-chansons-marquees",
@@ -1723,7 +1723,7 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-10-voiture-sans-chauffeur",
@@ -1984,6 +1984,23 @@
       "themes": [],
       "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-20-sondage-mondial-ia-emploi",
+      "at": "2026-09-20T11:02:05.042Z",
+      "hourUtc": 11,
+      "views": 35,
+      "reach": 29,
+      "avgWatchS": 3.9,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Dans 34 pays sur 37, les gens pensent que l'IA va supprimer plus d'emplois qu'elle n'en crée. 46 % contre 9 %.",
+      "settled": false
     },
     {
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
