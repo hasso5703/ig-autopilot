@@ -1611,6 +1611,21 @@ ENTRIES:
   lisibilite du karaoke; les vues disent l'inverse. En muet, OUVRE SUR UNE PHOTO et garde
   le recu pour le beat 1 ou 2. Les deux specs banques ce matin le font.
   Proof: scout 06h30 19/09, specs chatbot-renseignement-militaire et avion-sans-pilote-traverse-usa.
+  Ajout 20/09 (16h30), LA FAUSSE ALERTE ATTENDUE DE `scout-digits.mjs`, et savoir
+  qu'elle arrive evite de rouvrir un spec deja bon. Sur tout spec dont la diapo 1
+  porte un kicker date ("19 septembre 2026 · Washington"), l'outil signale
+  `UNSUPPORTED slide 1 kicker -> 19, 2026`: c'est exact au sens strict (aucune
+  citation ne porte ces chiffres) et sans consequence, parce que LES DIAPOS NE
+  SONT NI RENDUES NI PUBLIEES depuis le 28/07. Avant de chasser une ligne de
+  scout-digits, regarde DANS QUEL CHAMP elle tombe: title, script de beat,
+  value/label de carte et caption sont publics et se corrigent; un kicker ou un
+  champ de diapo ne l'est pas. Ce qui compte reste le trou du 15/09 dans l'autre
+  sens (un chiffre PUBLIC que seule la date d'une source finance).
+  CHRONO: demarrage 16h49, Reel PUBLIE a 16h58:12 (18h58 Paris, pic du soir),
+  NEUF MINUTES bout en bout sur conteneur froid, spec de scout entierement
+  epingle, 0 recapture, 0 rebuild, 0,00 $ -- egale le record du 16/09 16h30.
+  Le build muet de 7 beats entierement epingles prend ~85 s.
+  Proof: run 16h30 20/09, Reel 2026-09-20-trump-ai-force.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -5123,6 +5138,22 @@ ENTRIES:
   l'article source, `source` le nom du media, `url` l'URL du primaire. Lis
   `tail -1 state/posted.jsonl` AVANT d'ecrire l'appel, la forme y est.
   Proof: veille 19h30 18/09.
+
+  Ajout 20/09 (16h30), ET LE CHAMP SUIVANT DE LA MEME FAMILLE: `recordPosted`
+  NE DERIVE PAS `permalink`. La reponse de `publish-reel.mjs publish` ne rend
+  que {published, id, creationId, containerId} -- pas de permalink -- donc un
+  run qui enregistre aussitot (et il le DOIT, le manuel veut le record dans la
+  minute) ecrit un placeholder puis doit rapiecer une ligne d'un ledger
+  append-only au sed, ce qui est exactement la manipulation qu'on ne veut pas
+  faire a chaud sur state/posted.jsonl. Le permalink existe pourtant deja: il
+  est dans `node src/publish.mjs recent`, filtre sur le mediaId rendu par la
+  publication, un aller-retour de ~2 s. REFLEXE: entre `publish` et
+  `recordPosted`, lis le permalink depuis recent, PUIS enregistre une fois,
+  juste. (Bonus gratuit: la meme reponse porte le `timestamp` reel de la
+  publication, qui est la seule heure honnete a mettre au journal -- piege des
+  horodatages tapes a la main du 16/09.)
+  `node src/publish.mjs recent` + `.data.find(x=>x.id===mediaId).permalink`.
+  Proof: run 16h30 20/09, Reel trump-ai-force (place a PENDING puis rapiece).
 
 - 2026-08-23 · (10h30) LE CACHE DU MOTEUR COUVRE AUSSI LES STILLS, ET C'EST CE
   QUI REND UN REFUS DE FRAME GRATUIT A 13 CENTIMES: l'entree du 10/08 ne
