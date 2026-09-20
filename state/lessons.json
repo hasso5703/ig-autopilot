@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-20T07:06:49.778Z",
+  "at": "2026-09-20T10:53:24.380Z",
   "n": 106,
   "nSettled": 101,
   "medianViews": 145,
@@ -1106,6 +1106,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-19-chatbot-renseignement-militaire",
+      "at": "2026-09-19T10:59:01.798Z",
+      "hourUtc": 10,
+      "views": 157,
+      "reach": 138,
+      "avgWatchS": 9.3,
+      "retentionPct": 16,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-07-suno-chansons-marquees",
       "at": "2026-08-07T20:27:30.310Z",
       "hourUtc": 20,
@@ -1208,23 +1225,6 @@
       "themes": [],
       "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-19-chatbot-renseignement-militaire",
-      "at": "2026-09-19T10:59:01.798Z",
-      "hourUtc": 10,
-      "views": 144,
-      "reach": 127,
-      "avgWatchS": 7.5,
-      "retentionPct": 13,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
-      "settled": false
     },
     {
       "slug": "2026-08-22-peau-humaine-vivante",
