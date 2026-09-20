@@ -6543,3 +6543,32 @@ ENTRIES:
   FRAME ET REBUILD COMPRIS, 0,00 $. Le build muet de 7 beats entierement epingles
   retombe bien sur les ~75 s du 15/09.
   Proof: run 10h30 19/09, Reel 2026-09-19-chatbot-renseignement-militaire.
+  Ajout 20/09 (10h30), UNE PHOTO PEUT ETRE COUCHEE ET RIEN NE LE VOIT. La photo
+  epinglee par le scout pour "welder factory sparks" (Openverse/rawpixel "Person
+  welding metal", candidat le MIEUX classe) est stockee TOURNEE DE 90 DEGRES a
+  la source: le soudeur est allonge sur le cote. Elle passe le filtre near-white,
+  le filtre de pertinence, le gate, et sort en 1080x1920 impeccable. Verifie
+  ce jour: le fichier d'origine ne porte AUCUN tag d'orientation, donc rien
+  d'automatique ne pouvait le rattraper, et rawpixel sert du WebP derriere une
+  URL en .jpg (ffmpeg: "invalid TIFF header in Exif data"). REMEDE a 0 $, 2 min:
+  `ffmpeg -i p.jpg -vf "transpose=1,crop='min(iw,ih*9/16)':'min(ih,iw*16/9)',
+  scale=1080:1920:flags=lanczos" -q:v 2 p.jpg -y` (transpose=1 = horaire,
+  transpose=2 = antihoraire; genere les deux en 480px, regarde, choisis), puis
+  rebuild dans le MEME dossier. Donc: REGARDE CHAQUE PHOTO EPINGLEE AVANT DE
+  CONSTRUIRE, pas seulement les frames apres. Corrige aussi dans le code le trou
+  VOISIN que l'enquete a ouvert (ce n'etait PAS la cause du jour): normalise()
+  de imagery.mjs ignorait le tag EXIF Orientation, donc une photo correctement
+  taguee "rotate 90" etait couchee PAR NOUS; exifOrientation()/orientationFilter()
+  lisent le tag et posent le transpose avant le scale, identite pour tout ce qui
+  n'est pas un JPEG tague (test de non-regression, suite 128).
+  Ajout 20/09 (10h30), CE QUE COUTE LE MUET, TROISIEME MESURE, ET CA A CHANGE DE
+  NATURE. Fenetres appariees sur state/lessons.json, sans reseau: 26/08-01/09
+  (avec voix, n=14) retention mediane 17,0% / vues medianes 128,5; 02-05/09
+  (n=8) 11,5% / 145,5; 06-12/09 (n=14) 7,5% / 106,5; 13-19/09 (n=13) 8,0% /
+  40,0. Le 05/09 concluait "les vues ne bougent pas, c'est le spectateur qui
+  part": ce n'est plus vrai. Les vues medianes ont ete divisees par trois sur
+  la derniere fenetre, donc la distribution se ferme A SON TOUR, avec 0 partage
+  et 0 save sur les 27 Reels des deux dernieres semaines et 49 abonnes (-1 en
+  7 jours). Ce n'est pas une regle editoriale, c'est le prix mesure de 18 jours
+  sans voix: la cle media est morte depuis le 02/09 (401, meme jeton AQ.Ab8).
+  Proof: run 10h30 20/09, Reel 2026-09-20-sondage-mondial-ia-emploi.

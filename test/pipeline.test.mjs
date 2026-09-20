@@ -2563,3 +2563,40 @@ test("reel2 karaoke: a decimal survives the caption, sentence punctuation does n
   assert.ok(/ÉVALUATIONS(?!,)/.test(ass), "a trailing comma is still dropped");
   assert.ok(/SÛRES(?!\.)/.test(ass), "a trailing full stop is still dropped");
 });
+
+test("imagery: a photograph tagged sideways is put back on its feet before it is scaled", async () => {
+  const { exifOrientation, orientationFilter } = await import("../src/imagery.mjs");
+
+  // ffmpeg's image demuxer ignores EXIF Orientation, so a portrait photograph
+  // tagged "rotate 90" used to be normalised into a perfect 1080x1920 of a
+  // subject lying on its side: past the near-white filter, past the relevance
+  // filter, past the gate, visible only to a human reading the frames.
+  const jpegTaggedWith = (orientation) => {
+    const ifd = Buffer.alloc(14);
+    ifd.writeUInt16BE(1, 0);            // one entry
+    ifd.writeUInt16BE(0x0112, 2);       // Orientation
+    ifd.writeUInt16BE(3, 4);            // SHORT
+    ifd.writeUInt32BE(1, 6);            // one value
+    ifd.writeUInt16BE(orientation, 10); // the value, big-endian
+    const tiff = Buffer.concat([Buffer.from("MM\0\x2a", "latin1"), Buffer.from([0, 0, 0, 8]), ifd]);
+    const app1 = Buffer.concat([Buffer.from("Exif\0\0", "latin1"), tiff]);
+    const header = Buffer.alloc(4);
+    header.writeUInt16BE(0xffe1, 0);
+    header.writeUInt16BE(app1.length + 2, 2);
+    return Buffer.concat([Buffer.from([0xff, 0xd8]), header, app1, Buffer.from([0xff, 0xda])]);
+  };
+
+  assert.equal(exifOrientation(jpegTaggedWith(6)), 6, "the tag is read where the camera writes it");
+  assert.equal(orientationFilter(6), "transpose=1", "a 90-degree tag turns into the matching transpose");
+  assert.equal(orientationFilter(8), "transpose=2");
+  assert.equal(orientationFilter(3), "transpose=1,transpose=1");
+
+  // A picture we cannot measure is a picture we must not rotate: the rawpixel
+  // originals Openverse serves are WebP behind a .jpg URL, and an upright
+  // photograph carries no tag at all. Both must come back as the identity.
+  assert.equal(exifOrientation(jpegTaggedWith(1)), 1);
+  assert.equal(orientationFilter(1), null, "an untagged picture is left exactly as it arrived");
+  assert.equal(exifOrientation(Buffer.from("RIFF....WEBPVP8 ", "latin1")), 1, "a WebP is not a JPEG");
+  assert.equal(exifOrientation(Buffer.alloc(0)), 1, "an empty buffer is not a reason to throw");
+  assert.equal(orientationFilter(exifOrientation(Buffer.from([0xff, 0xd8, 0xff, 0xda]))), null, "no EXIF, no rotation");
+});

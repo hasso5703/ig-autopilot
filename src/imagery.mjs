@@ -306,8 +306,91 @@ export function queryLadder(query) {
  * The unsharp pass matters for generated pictures specifically: the free tier
  * returns 686x858 and everything downstream shows it at 1080 wide.
  */
+/**
+ * ffmpeg's image demuxer ignores a JPEG's EXIF Orientation tag, so a photograph
+ * shot in portrait and tagged "rotate 90" arrives lying on its side and nothing
+ * downstream can see it: it passes the near-white filter, the relevance filter
+ * and the gate, and only a human eye catches it in the frame check. Read the
+ * tag ourselves and hand ffmpeg the matching transpose.
+ *
+ * Found while investigating the welder pinned on 2026-09-20, which shipped
+ * sideways. That one was NOT this bug -- its Openverse original (rawpixel, the
+ * top-ranked candidate for "welder factory sparks") is stored rotated, with no
+ * orientation tag to read, and nothing but the eye can see that. This closes
+ * the neighbouring hole the investigation opened: a correctly tagged picture
+ * that we were silently laying on its side ourselves.
+ *
+ * Returns 1 (the identity) for anything that is not a JPEG carrying a readable
+ * orientation: a picture we cannot measure is a picture we must not rotate.
+ */
+export function exifOrientation(buf) {
+  if (!buf || buf.length < 4 || buf[0] !== 0xff || buf[1] !== 0xd8) return 1;
+  let off = 2;
+  while (off + 4 <= buf.length) {
+    if (buf[off] !== 0xff) return 1;
+    const marker = buf[off + 1];
+    if (marker === 0x01 || (marker >= 0xd0 && marker <= 0xd9)) {
+      off += 2;
+      continue;
+    }
+    if (marker === 0xda) return 1; // start of scan: the pixels begin, no EXIF
+    const size = buf.readUInt16BE(off + 2);
+    if (size < 2) return 1;
+    if (
+      marker === 0xe1 &&
+      off + 10 <= buf.length &&
+      buf.toString("latin1", off + 4, off + 10) === "Exif\0\0"
+    ) {
+      return orientationFromTiff(buf, off + 10);
+    }
+    off += 2 + size;
+  }
+  return 1;
+}
+
+function orientationFromTiff(buf, base) {
+  if (base + 8 > buf.length) return 1;
+  const le = buf.toString("latin1", base, base + 2) === "II";
+  const u16 = (o) => (le ? buf.readUInt16LE(o) : buf.readUInt16BE(o));
+  const u32 = (o) => (le ? buf.readUInt32LE(o) : buf.readUInt32BE(o));
+  if (u16(base + 2) !== 42) return 1;
+  const ifd = base + u32(base + 4);
+  if (ifd + 2 > buf.length) return 1;
+  const entries = u16(ifd);
+  for (let i = 0; i < entries; i++) {
+    const entry = ifd + 2 + i * 12;
+    if (entry + 12 > buf.length) return 1;
+    if (u16(entry) === 0x0112) {
+      const value = u16(entry + 8);
+      return value >= 1 && value <= 8 ? value : 1;
+    }
+  }
+  return 1;
+}
+
+/**
+ * The ffmpeg filter that puts an EXIF-tagged picture back on its feet. It runs
+ * BEFORE the scale, because scaling reads the aspect ratio and a sideways
+ * photograph has the wrong one.
+ */
+export function orientationFilter(orientation) {
+  return (
+    {
+      2: "hflip",
+      3: "transpose=1,transpose=1",
+      4: "vflip",
+      5: "transpose=0",
+      6: "transpose=1",
+      7: "transpose=3",
+      8: "transpose=2",
+    }[orientation] || null
+  );
+}
+
 async function normalise(inputPath, outputPath) {
+  const upright = orientationFilter(exifOrientation(await readFile(inputPath)));
   const filters = [
+    ...(upright ? [upright] : []),
     "scale='if(gt(a,1),min(1440,max(iw,1080)),-2)':'if(gt(a,1),-2,min(1800,max(ih,1350)))':flags=lanczos",
     "unsharp=5:5:0.35:3:3:0.2",
   ].join(",");
