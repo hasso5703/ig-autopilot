@@ -1,0 +1,249 @@
+{
+  "slug": "2026-09-20-sondage-mondial-ia-emploi",
+  "sendTest": "Dans 34 pays sur 37, les gens pensent que l'IA va supprimer plus d'emplois qu'elle n'en crée. 46 % contre 9 %.",
+  "centralClaim": "In 34 of 37 countries Pew Research Center surveyed, people tend to believe AI will lead to fewer jobs rather than more jobs.",
+  "corroboration": [
+    {
+      "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/",
+      "quote": "In 34 of 37 countries Pew Research Center surveyed earlier this year, people tend to believe AI will lead to fewer jobs rather than more jobs."
+    },
+    {
+      "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685",
+      "quote": "A global Pew Research Center poll released on Thursday found that in 34 out of 37 countries, the most common answer was \"fewer jobs.\""
+    },
+    {
+      "url": "https://www.euronews.com/next/2026/09/19/fear-of-ai-job-losses-now-outweighs-hope-of-new-jobs-study-finds",
+      "quote": "more people expect AI to lead to fewer jobs than to job creation, according to the study."
+    }
+  ],
+  "caption": "Dans 34 pays sur 37, la réponse la plus fréquente est la même : l'IA va supprimer des emplois.\n\nLe centre de recherche américain Pew a interrogé des adultes dans 36 pays, du 8 février au 13 mai 2026. Sur l'ensemble des pays, 46 % répondent qu'il y aura moins d'emplois, 13 % que ça ne changera pas grand-chose, et 9 % qu'il y en aura plus.\n\nOù la peur est la plus forte. Dans les pays riches. En Australie, en Corée du Sud et aux États-Unis, sept adultes sur dix ou plus s'attendent à des pertes d'emplois dans les vingt ans. Aux États-Unis, ils sont 71 %, contre 64 % deux ans plus tôt.\n\nLe détail qui n'est pas dans la vidéo. Un seul pays penche dans l'autre sens, le Nigeria, et de très peu : 27 % contre 26 %. En Thaïlande et aux Philippines, la réponse qui arrive en tête est \"je ne sais pas\".\n\nEn France. Les 18 à 34 ans s'inquiètent plus que les 50 ans et plus, et les femmes sont 10 points devant les hommes.\n\nCe qui coince. L'enquête a été faite plus tôt cette année, pas cette semaine, et une opinion n'est pas une prévision : ce que les gens redoutent n'est pas ce qui va arriver.\n\nEt la présidente de la Commission européenne, Ursula Von der Leyen, a soutenu l'idée de ralentir le développement de l'IA, dans son discours sur l'état de l'Union.\n\nL'IA va détruire plus d'emplois qu'elle n'en crée, oui ou non ?\n\npewresearch.org · gizmodo.com · euronews.com\n\n#IA #IntelligenceArtificielle #ActuIA #Emploi #Travail\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "We surveyed 42,151 people across 36 countries from Feb. 8 to May 13, 2026",
+      "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/"
+    },
+    {
+      "quote": "Across a 37-country median, 46% of respondents predicted fewer jobs, 13% said it wouldn't make much difference, and just 9% anticipated more jobs.",
+      "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685"
+    },
+    {
+      "quote": "For example, in some wealthy nations like Australia, South Korea and the United States, around seven-in-ten adults or more say AI will result in job loss over the next 20 years.",
+      "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/"
+    },
+    {
+      "quote": "In the U.S., 71% of respondents predicted fewer jobs, up from 64% just two years ago.",
+      "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685"
+    },
+    {
+      "quote": "The only country where more people thought AI would create more jobs than it eliminates was Nigeria (27% vs 26%), though \"not sure\" beat out \"fewer jobs\" by considerable margins in Thailand (49% vs 32%) and the Philippines (54% vs 26%).",
+      "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685"
+    },
+    {
+      "quote": "young adults aged 18 to 34 are more concerned about AI-related job loss than older generations. And this is the case for countries like Canada, France, Singapore, Sweden, Indonesia, India and Malaysia, according to the survey.",
+      "url": "https://www.euronews.com/next/2026/09/19/fear-of-ai-job-losses-now-outweighs-hope-of-new-jobs-study-finds"
+    },
+    {
+      "quote": "For example, in France, women are 10 percentage points more likely than men to hold this view.",
+      "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/"
+    },
+    {
+      "quote": "President of the European Commission, Ursula Von der Leyen, also backed the deceleration effort in her landmark State of the Union address to the European Parliament earlier this week.",
+      "url": "https://www.euronews.com/next/2026/09/19/fear-of-ai-job-losses-now-outweighs-hope-of-new-jobs-study-finds"
+    },
+    {
+      "quote": "In a number of countries, concern about AI-related job loss is more common among young adults (those ages 18 to 34) than older adults (those ages 50 and older).",
+      "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "17 septembre 2026 · Pew Research Center",
+      "headline": "Dans *34 pays sur 37*, on attend moins d'emplois",
+      "hero": {
+        "value": "34 sur 37",
+        "label": "pays où la réponse la plus donnée est : moins d'emplois"
+      },
+      "swipe": "Les chiffres, pays par pays"
+    },
+    {
+      "type": "stat",
+      "figure": "46%",
+      "unit": "attendent moins d'emplois",
+      "body": "Contre **9 %** qui en attendent plus, et 13 % qui pensent que ça ne changera pas grand-chose.",
+      "evidence": "Across a 37-country median, 46% of respondents predicted fewer jobs, 13% said it wouldn't make much difference, and just 9% anticipated more jobs.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'enquête",
+      "body": "Pew a interrogé des adultes dans 36 pays, du 8 février au 13 mai 2026.",
+      "evidence": "We surveyed 42,151 people across 36 countries from Feb. 8 to May 13, 2026",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Plus le pays est riche, plus la peur est forte",
+      "body": "En Australie, en Corée du Sud et aux États-Unis, *sept adultes sur dix* ou plus s'attendent à des pertes d'emplois dans les vingt ans qui viennent.",
+      "evidence": "For example, in some wealthy nations like Australia, South Korea and the United States, around seven-in-ten adults or more say AI will result in job loss over the next 20 years.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et la peur monte",
+      "body": "Aux États-Unis, **71 %** le pensent, contre 64 % deux ans plus tôt.",
+      "evidence": "In the U.S., 71% of respondents predicted fewer jobs, up from 64% just two years ago.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Un seul pays penche dans l'autre sens",
+      "caveat": "Le Nigeria, et de *très peu* : 27 % contre 26 %.",
+      "claimLabel": "Partout ailleurs",
+      "caveatLabel": "L'exception",
+      "evidence": "The only country where more people thought AI would create more jobs than it eliminates was Nigeria (27% vs 26%), though \"not sure\" beat out \"fewer jobs\" by considerable margins in Thailand (49% vs 32%) and the Philippines (54% vs 26%).",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "En France, ce sont les jeunes",
+      "body": "Les **18 à 34 ans** s'inquiètent plus du travail que leurs aînés, comme au Canada, à Singapour et en Suède.",
+      "evidence": "young adults aged 18 to 34 are more concerned about AI-related job loss than older generations. And this is the case for countries like Canada, France, Singapore, Sweden, Indonesia, India and Malaysia, according to the survey.",
+      "source": {
+        "name": "Euronews Next",
+        "url": "https://www.euronews.com/next/2026/09/19/fear-of-ai-job-losses-now-outweighs-hope-of-new-jobs-study-finds",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et les femmes, plus que les hommes",
+      "body": "En France, elles sont **10 points** de plus à penser que l'IA fera reculer l'emploi.",
+      "evidence": "For example, in France, women are 10 percentage points more likely than men to hold this view.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le résultat le moins attendu",
+      "body": "Dans la moitié des pays, ce sont les gens qui connaissent *le mieux* l'IA qui pensent le plus qu'elle fera perdre des emplois.",
+      "evidence": "In around half of the countries surveyed, people with high AI awareness - that is, those who have heard or read a lot about it - are more likely than people with less awareness to say the technology will result in job loss.",
+      "source": {
+        "name": "Pew Research Center",
+        "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/",
+        "date": "2026-09-17"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui dit que l'IA va créer des emplois",
+      "sub": "L'actu IA, vérifiée, sources à l'appui."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Pew Research Center",
+      "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/",
+      "accessed": "2026-09-20"
+    },
+    {
+      "name": "Gizmodo",
+      "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685",
+      "accessed": "2026-09-20"
+    },
+    {
+      "name": "Euronews Next",
+      "url": "https://www.euronews.com/next/2026/09/19/fear-of-ai-job-losses-now-outweighs-hope-of-new-jobs-study-finds",
+      "accessed": "2026-09-20"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Dans 34 pays sur 37 : moins d'emplois",
+    "beats": [
+      {
+        "script": "Dans presque tous les pays du monde, les gens attendent la même chose de l'intelligence artificielle : moins d'emplois. Pas une poignée de pays. 34 sur 37.",
+        "visual": {
+          "type": "photo",
+          "query": "office workers open plan",
+          "alt": "Une seule personne à son bureau dans un grand plateau de bureaux vide",
+          "file": "media/2026-09-20-sondage-mondial-ia-emploi/photo_office.jpg"
+        }
+      },
+      {
+        "script": "C'est Pew Research Center qui a posé la question, un institut de sondage américain, dans 36 pays. Et le plus intéressant n'est pas ce chiffre. C'est qui a le plus peur.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.pewresearch.org/global/2026/09/17/globally-more-people-expect-ai-to-cause-job-loss-than-growth/",
+          "file": "media/2026-09-20-sondage-mondial-ia-emploi/shot_pew_top.png"
+        }
+      },
+      {
+        "script": "46 % des gens répondent qu'il y aura moins d'emplois. 13 % que ça ne changera pas grand-chose. Et 9 % qu'il y en aura plus.",
+        "visual": {
+          "type": "card",
+          "value": "46 %",
+          "label": "attendent moins d'emplois. 9 % en attendent plus."
+        }
+      },
+      {
+        "script": "Et plus le pays est riche, plus la peur est forte. En Australie, en Corée du Sud et aux États-Unis, sept adultes sur dix ou plus voient des emplois disparaître d'ici vingt ans.",
+        "visual": {
+          "type": "photo",
+          "query": "welder factory sparks",
+          "alt": "Les mains gantées d'un soudeur et une gerbe d'étincelles sur une tôle",
+          "file": "media/2026-09-20-sondage-mondial-ia-emploi/photo_welder.jpg"
+        }
+      },
+      {
+        "script": "Aux États-Unis, ils sont 71 % à le penser, contre 64 % deux ans plus tôt. Et un seul pays sur 37 penche dans l'autre sens : le Nigeria.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://gizmodo.com/pessimism-reigns-over-ai-and-jobs-pew-poll-finds-2000813685",
+          "file": "media/2026-09-20-sondage-mondial-ia-emploi/shot_giz.png"
+        }
+      },
+      {
+        "script": "En France, ce sont les jeunes qui s'inquiètent le plus, plus que les cinquante ans et plus. Et les femmes sont 10 points devant les hommes.",
+        "visual": {
+          "type": "card",
+          "value": "10 POINTS",
+          "label": "l'écart entre les femmes et les hommes, en France"
+        }
+      },
+      {
+        "script": "Dernier détail : dans la moitié des pays, ceux qui connaissent le mieux l'IA sont ceux qui pensent le plus qu'elle coûtera des emplois. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "chef kitchen restaurant",
+          "alt": "Des cuisiniers de dos au passe d'un restaurant, sous les lampes chaudes",
+          "file": "media/2026-09-20-sondage-mondial-ia-emploi/photo_kitchen.jpg"
+        }
+      }
+    ]
+  }
+}
