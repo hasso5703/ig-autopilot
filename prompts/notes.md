@@ -1653,6 +1653,24 @@ ENTRIES:
   epingle, 0 recapture, 0 rebuild, 0,00 $ -- egale le record du 16/09 16h30.
   Le build muet de 7 beats entierement epingles prend ~85 s.
   Proof: run 16h30 20/09, Reel 2026-09-20-trump-ai-force.
+  Ajout 21/09 (19h30), LE MEME TROU DANS L'AUTRE SENS, ET IL EST PIRE: UNE PHRASE
+  SANS CHIFFRE N'EST TENUE PAR RIEN. Le gate controle les CHIFFRES et les NOMS DE
+  PRODUIT VERSIONNES d'un `script` de beat; une affirmation en PROSE, sans chiffre
+  ni nom versionne, ne touche AUCUN controle. Mesure de ce soir sur un spec de
+  scout gate-PASSED DEUX fois (07h19 puis 19h56, 22/22 VERIFIED, verifiedOnline):
+  le beat 5 disait "Au moment des faits, Google aurait pourtant juge utile de
+  prevenir les autorites americaines". Cette phrase n'est dans AUCUNE des quatre
+  sources -- verifie en direct, 0 occurrence de authorit / government / federal /
+  regulator / law enforcement dans le texte aplati des quatre pages. Soit une
+  accusation publique et nommee, fabriquee, que deux gates verts n'ont pas vue, sur
+  le compte dont toute la promesse est la tracabilite. REFLEXE, 3 min, sur TOUT
+  spec herite d'un autre run: relis chaque phrase de chaque `script` et demande
+  "quelle citation porte celle-ci"; pour toute phrase qui n'est pas visiblement la
+  traduction d'une citation DU SPEC, grep ses noms porteurs dans le texte aplati
+  des sources AVANT de builder. Le remede ici, 0 $ et 4 min: phrase remplacee par
+  "Google a travaille avec Irregular pour changer sa facon de tester" (CNBC
+  verbatim, ajoutee en captionEvidence), legende alignee, re-gate 22/22.
+  Proof: veille 19h30 21/09, spec 2026-09-21-gemini-pirate-trois-entreprises.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
@@ -6720,3 +6738,26 @@ ENTRIES:
   106,5; 13-19/09 n=13 -> 8% / 40; 14-20/09 n=11 -> 6% / 39, ZERO save et ZERO partage.
   La fermeture de distribution constatee le 20/09 continue, elle ne rebondit pas.
   Proof: run 10h30 21/09, Reel 2026-09-21-draftkings-ia-joueurs-perdants.
+  Ajout 21/09 (19h30), 63e mesure morte de la cle media (401, cle 53 car AQ.A;
+  dernier achat 01/09 16h54 = 20 jours). IG_ACCESS_TOKEN: UN JOUR (watch.mjs,
+  expire le 23/09), apres quoi le compte ne publie plus rien du tout.
+  CINQUIEME MESURE DU MUET, ET LE DIAGNOSTIC A CHANGE DE NATURE. Sur les 35 Reels
+  muets REPOSES (02/09 -> ce soir): retention mediane 9%, vues medianes 109,
+  contre 17% / 128,5 sur les 14 Reels A VOIX du 26/08-01/09; sur les 7 derniers
+  jours, 6% / 81 vues (n=13). Les entrees des 05, 06 et 07/09 disaient "les vues
+  ne bougent pas, c'est le spectateur qui part": CE N'EST PLUS VRAI. Les vues
+  baissent aussi, donc le recommandeur a commence a retirer la distribution, et
+  le compte PERD des abonnes (49, -1 sur 7 jours). Le muet n'est plus un cout de
+  retention, c'est une spirale, et c'est le premier point du rapport a chaque run
+  tant que la cle est morte. Calcul en 10 s, sans reseau, sur state/lessons.json:
+  filtrer posts par `at`, mediane de retentionPct et de views, en excluant les
+  Reels de moins de 48 h. Proof: veille 19h30 21/09.
+  CRENEAU MORT, DEUXIEME OCCURRENCE APRES LE 10/09: il n'existe AUCUN
+  reports/journal/2026-09-21-16h.md, donc le creneau de 16h30 n'a pas tourne et la
+  journee est arrivee a 19h30 avec owedToday=1. La veille a donc PUBLIE (manuel:
+  owedToday != 0 -> ce run publie), Reel en ligne a 19:57:16Z soit 21h57 Paris.
+  Le reflexe du 10/09 se re-confirme et il est le bon: lis `owedToday` et
+  `ls reports/journal/$(date -u +%F)-*.md`, jamais le role nominal du creneau.
+  CHRONO de cette veille: demarrage 19h48, Reel publie 19h57:16, soit NEUF MINUTES
+  bout en bout sur conteneur froid, spec de scout entierement epingle, 1 correction
+  d'exactitude, re-gate, build muet ~50 s, 9 frames lues, 2 landings, 0,00 $.

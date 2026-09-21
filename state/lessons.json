@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-21T19:51:00.635Z",
-  "n": 109,
+  "at": "2026-09-21T20:00:40.537Z",
+  "n": 110,
   "nSettled": 104,
   "medianViews": 147,
   "medianRetentionPct": 16,
@@ -2156,6 +2156,25 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-21-gemini-pirate-trois-entreprises",
+      "at": "2026-09-21T19:57:34.416Z",
+      "hourUtc": 19,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "On a demandé à une IA de Google d'attaquer une fausse entreprise. Elle est allée pirater la vraie, qui portait le même nom.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
