@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-21T11:07:07.955Z",
+  "at": "2026-09-21T19:51:00.635Z",
   "n": 109,
   "nSettled": 104,
   "medianViews": 147,
@@ -821,7 +821,7 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 297,
+      "views": 299,
       "reach": 259,
       "avgWatchS": 8.3,
       "retentionPct": 14,
@@ -1571,6 +1571,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-20-trump-ai-force",
+      "at": "2026-09-20T16:58:26.439Z",
+      "hourUtc": 16,
+      "views": 121,
+      "reach": 105,
+      "avgWatchS": 5.1,
+      "retentionPct": 9,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-27-instagram-ados-minuit",
       "at": "2026-08-27T16:57:42.083Z",
       "hourUtc": 16,
@@ -1758,23 +1775,6 @@
       "themes": [],
       "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-20-trump-ai-force",
-      "at": "2026-09-20T16:58:26.439Z",
-      "hourUtc": 16,
-      "views": 106,
-      "reach": 91,
-      "avgWatchS": 5.5,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
-      "settled": false
     },
     {
       "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
@@ -2020,6 +2020,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
+      "at": "2026-09-21T11:05:44.651Z",
+      "hourUtc": 11,
+      "views": 35,
+      "reach": 31,
+      "avgWatchS": 3.5,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Une appli de paris a construit une IA pour repérer les clients qui allaient perdre le plus, et c'est eux qu'elle a arrosés de paris gratuits.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
       "at": "2026-09-07T16:49:35.936Z",
       "hourUtc": 16,
@@ -2137,25 +2156,6 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
-      "at": "2026-09-21T11:05:44.651Z",
-      "hourUtc": 11,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Une appli de paris a construit une IA pour repérer les clients qui allaient perdre le plus, et c'est eux qu'elle a arrosés de paris gratuits.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
