@@ -1306,6 +1306,13 @@ ENTRIES:
   freinent l'IA, FT du 20/09) n'avait aucun primaire joignable, ET le sondage Wolters
   Kluwer qui la porte date du 02/06, donc morte au gate de fraicheur de toute facon.
   Lis la date du SONDAGE, pas celle de la depeche qui le ressort, avant de scorer.
+  TROIS MESURES DE CAPTURE DU MEME MATIN, et deux sont des pieges deja nommes:
+  aljazeera.com NE SE CAPTURE PLUS (tue par timeout a 700 s sans un octet, ce qui
+  CORRIGE l'entree du 06/08 qui le donnait capturable avec un bandeau publicitaire),
+  et operationsports.com rend le piege du 04/09 dans sa forme exacte: capture en 36 s,
+  `ok: true`, `landedUrl` JUSTE, et un png qui est la page Cloudflare "Sorry, you have
+  been blocked" -- SEUL le champ `h1` le dit. Sur les deux dossiers du jour, quatre
+  captures pour deux recus utilisables: budgete large, et lis `h1` avant tout.
   RECUS: techtimes.com est NOUVEAU et excellent, capture propre en ~3 min sans aucun
   recadrage (masthead TECH TIMES, fil d'Ariane, titre entier, chapo, signature,
   "Published: Sep 20 2026"); sa photo de une est le PDG de l'entreprise du dossier,
@@ -1841,6 +1848,24 @@ ENTRIES:
   conclus pas a un conteneur casse: lis le nom de la bibliotheque dans le message
   et installe-la. Un run de publication qui rencontre ca perd sa fenetre s'il le
   diagnostique de zero. Proof: veille 19h30 05/09.
+  Ajout 21/09 (06h30), (6) UN GARDE `until ! pgrep -f "<motif>"` NE REND JAMAIS LA
+  MAIN, PARCE QU'IL SE VOIT LUI-MEME. C'est la famille du pkill du 23/08, mais en
+  pire: la boucle d'attente porte le motif dans sa PROPRE ligne de commande, donc
+  `pgrep` la trouve, la condition reste vraie et la commande qui devait suivre n'est
+  JAMAIS lancee. Mesure de ce matin: trois attentes armees sur "scout-capture" se sont
+  vues les unes les autres pendant 20 MINUTES et la capture qu'elles gardaient en file
+  n'a pas demarre une seule seconde; rien dans la sortie ne le dit, ca ressemble
+  exactement a une capture lente. REMEDE: mets une classe de caracteres dans le motif
+  (`pgrep -f "scout-[c]apture.mjs"`), ou attends le PID precis, ou ne chaine pas du
+  tout et lance la capture suivante a la main. ET LE SYMPTOME A RECONNAITRE en 5 s:
+  `pgrep -fa <motif>` rend des lignes qui commencent par `/bin/bash -c ... until !
+  pgrep ...` au lieu d'un `node scout-capture.mjs`.
+  Ajout 21/09 (06h30), (7) LE GATE NE VERIFIE PAS QU'UN `file` EPINGLE EXISTE.
+  validate.mjs lit des mots, jamais le disque: un spec dont un beat pointe un
+  `media/<slug>/shot_X.png` absent rend PASSED, 0 erreur, verifiedOnline true, et
+  meurt au build. Mesure ce matin sur deux specs, chacun avec un recu epingle que la
+  capture n'avait pas ecrit. REFLEXE, 5 s, avant de banquer ET sur tout spec herite:
+  `node -e "const p=require('./posts/<slug>.json');p.reel2.beats.forEach((b,i)=>{if(b.visual.file)console.log(i,b.visual.file,require('fs').existsSync(b.visual.file))})"`.
   Ajout 08/09 (16h30), (5) NE LANCE PAS apt-get EN ARRIERE-PLAN: l'outil Bash a
   notifie "completed (exit code 0)" alors que le processus apt-get tournait
   ENCORE (mesure: `pgrep -x apt-get` vivant, log coupe en plein telechargement).

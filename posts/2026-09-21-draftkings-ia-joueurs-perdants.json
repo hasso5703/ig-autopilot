@@ -12,7 +12,7 @@
     }
   ],
   "sendTest": "Une appli de paris a construit une IA pour repérer les clients qui allaient perdre le plus, et c'est eux qu'elle a arrosés de paris gratuits.",
-  "caption": "Une intelligence artificielle a trié les parieurs selon l'argent qu'ils allaient perdre.\n\nLe New York Times a enquêté sur DraftKings à partir de notes internes, de présentations, de relevés de paris et d'entretiens avec plus de 40 anciens salariés. L'entreprise a construit en 2023 un modèle qui classe les joueurs de casino en ligne selon ce qu'ils vont perdre après avoir reçu un pari gratuit ou un bonus.\n\nComment ça marche. Le modèle pèse la fréquence de jeu, l'état du compte au fil des jours et le rapport entre les pertes et les mises. En interne, le chiffre obtenu s'appelle l'élasticité, et plus il est élevé, plus le client vaut la peine d'être relancé avec des avantages.\n\nLe détail qui n'est pas dans la vidéo. Bryan Biehl, qui dit avoir perdu près de 70 000 dollars en ligne, raconte ce qu'il recevait une fois en thérapie : « I would get flooded with bonuses and deposits », et « If you are in addiction, you are not going to say no ».\n\nCe qui coince. Un modèle capable de repérer les joueurs en difficulté a été commencé avec les mêmes données, puis abandonné. La dirigeante du jeu responsable parle d'une décision collective contre les outils de prédiction, et dit préférer une autre méthode.\n\nLa réponse de l'entreprise. DraftKings rejette toute idée que ses pratiques marketing soient injustes ou ciblent ses clients de façon inappropriée.\n\nUne appli de paris a-t-elle le droit de viser ceux qui perdent le plus, oui ou non ?\n\ntechtimes.com · operationsports.com · dailycaller.com\n\n#IA #IntelligenceArtificielle #ActuIA #Paris #Addiction\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "Une intelligence artificielle a trié les parieurs selon l'argent qu'ils allaient perdre.\n\nLe New York Times a enquêté sur DraftKings à partir de notes internes, de présentations, de relevés de paris et d'entretiens avec plus de 40 anciens salariés. L'entreprise a construit en 2023 un modèle qui classe les joueurs de casino en ligne selon ce qu'ils vont perdre après avoir reçu un pari gratuit ou un bonus.\n\nComment ça marche. Le modèle pèse la fréquence de jeu, l'état du compte au fil des jours et le rapport entre les pertes et les mises. En interne, le chiffre obtenu s'appelle l'élasticité, et plus il est élevé, plus le client vaut la peine d'être relancé avec des avantages.\n\nLe détail qui n'est pas dans la vidéo. Bryan Biehl, qui dit avoir perdu près de 70 000 dollars en ligne, raconte ce qu'il recevait une fois en thérapie : « I would get flooded with bonuses and deposits », et « If you are in addiction, you are not going to say no ».\n\nCe qui coince. Un modèle capable de repérer les joueurs en difficulté a été commencé avec les mêmes données, puis abandonné. La dirigeante du jeu responsable parle d'une décision collective contre les outils de prédiction, et dit préférer une autre méthode.\n\nLa réponse de l'entreprise. DraftKings rejette toute idée que ses pratiques marketing soient injustes ou ciblent ses clients de façon inappropriée.\n\nUne appli de paris a-t-elle le droit de viser ceux qui perdent le plus, oui ou non ?\n\ntechtimes.com · operationsports.com · dailycaller.com\n\n#IA #IntelligenceArtificielle #ActuIA #ParisSportifs #Addiction\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "quote": "DraftKings created a machine learning system in 2023 that ranked online casino players by how much they were expected to lose after collecting a free bet or bonus, according to a New York Times investigation published Friday.",
@@ -199,9 +199,11 @@
       {
         "script": "DraftKings a construit une IA qui note chaque client selon ce qu'il va perdre après un pari gratuit : ta fréquence de jeu, l'état de ton compte, l'écart entre mises et pertes.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/",
-          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/shot_dc.png"
+          "type": "photo",
+          "query": "casino gaming floor",
+          "alt": "Un joueur seul devant une machine a sous dans un casino",
+          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/c_floor.jpg",
+          "credit": "Marek Ślusarczyk (Tupungato) Phot… · CC BY"
         }
       },
       {
@@ -234,10 +236,10 @@
         "script": "DraftKings rejette toute idée que ses pratiques soient injustes. Sa dirigeante du jeu responsable dit n'avoir vu aucune preuve que ces outils aident. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "casino gaming floor",
-          "alt": "Un joueur seul devant une machine à sous dans un casino",
-          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/c_floor.jpg",
-          "credit": "Marek Ślusarczyk (Tupungato) Phot… · CC BY"
+          "query": "las vegas casino floor",
+          "alt": "Une salle de casino avec ses tables et ses machines à sous",
+          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/c_vegas.jpg",
+          "credit": "Andrew Milligan sumo · CC BY"
         }
       }
     ]

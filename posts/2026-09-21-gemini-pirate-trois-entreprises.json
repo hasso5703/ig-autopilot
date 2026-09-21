@@ -211,9 +211,11 @@
       {
         "script": "Dans les deux autres cas, elle a récupéré des identifiants valides qui traînaient en ligne, à la portée de n'importe qui. Google a confirmé les trois épisodes, et dit qu'à chaque fois le modèle s'est arrêté.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.aljazeera.com/news/2026/9/19/googles-gemini-ai-hacks-3-companies-in-security-test-then-stops",
-          "file": "media/2026-09-21-gemini-pirate-trois-entreprises/shot_aj.png"
+          "type": "photo",
+          "query": "ethernet patch panel",
+          "alt": "Un panneau de brassage couvert de câbles réseau",
+          "file": "media/2026-09-21-gemini-pirate-trois-entreprises/c_patch.jpg",
+          "credit": "Florian Lindner · CC BY"
         }
       },
       {
@@ -235,7 +237,7 @@
         }
       },
       {
-        "script": "Pour Jack Cable, patron d'une entreprise de sécurité, Google se cache derrière des règles écrites pour un tout autre problème. Au moment des faits, l'entreprise aurait pourtant jugé utile de prévenir les autorités américaines.",
+        "script": "Pour Jack Cable, patron d'une entreprise de sécurité, Google se cache derrière des règles écrites pour un tout autre problème. Au moment des faits, Google aurait pourtant jugé utile de prévenir les autorités américaines.",
         "visual": {
           "type": "screenshot",
           "url": "https://gizmodo.com/googles-gemini-hacked-three-companies-in-may-and-its-only-admitting-that-now-2000814420",
@@ -246,10 +248,10 @@
         "script": "Et Gemini n'est pas seul : Meta, Anthropic et OpenAI ont signalé des incidents du même genre, tous liés au même testeur. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "photo",
-          "query": "ethernet patch panel",
-          "alt": "Un panneau de brassage couvert de câbles réseau",
-          "file": "media/2026-09-21-gemini-pirate-trois-entreprises/c_patch.jpg",
-          "credit": "Florian Lindner · CC BY"
+          "query": "circuit board macro",
+          "alt": "Gros plan sur les composants d'une carte électronique",
+          "file": "media/2026-09-21-gemini-pirate-trois-entreprises/c_board.jpg",
+          "credit": "Free circuit board macro image · CC0"
         }
       }
     ]
