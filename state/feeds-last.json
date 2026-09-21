@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-21T06:52:44.949Z",
-  "fresh": 242,
+  "at": "2026-09-21T11:10:26.360Z",
+  "fresh": 240,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -34,7 +34,7 @@
       "name": "NVIDIA Blog",
       "ok": true,
       "fetched": 18,
-      "fresh": 1,
+      "fresh": 2,
       "windowHours": 96
     },
     {
@@ -55,7 +55,7 @@
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 11,
+      "fresh": 9,
       "windowHours": 36
     },
     {
@@ -100,7 +100,7 @@
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 4,
+      "fresh": 3,
       "windowHours": 36
     }
   ]
