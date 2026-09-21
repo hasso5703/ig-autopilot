@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-20T16:51:31.561Z",
-  "n": 107,
-  "nSettled": 102,
-  "medianViews": 144,
+  "at": "2026-09-21T06:52:30.401Z",
+  "n": 108,
+  "nSettled": 103,
+  "medianViews": 145,
   "medianRetentionPct": 16,
   "top": [
     {
@@ -106,9 +106,9 @@
       "thin": false
     },
     "screenshot": {
-      "n": 16,
-      "medianViews": 72,
-      "meanRetentionPct": 11.1,
+      "n": 17,
+      "medianViews": 81,
+      "meanRetentionPct": 11,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -214,9 +214,9 @@
       "thin": false
     },
     "19": {
-      "n": 2,
-      "medianViews": 207,
-      "meanRetentionPct": 14.5,
+      "n": 3,
+      "medianViews": 149,
+      "meanRetentionPct": 13,
       "saves": 2,
       "shares": 0,
       "thin": true
@@ -873,6 +873,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-19-chatbot-renseignement-militaire",
+      "at": "2026-09-19T10:59:01.798Z",
+      "hourUtc": 10,
+      "views": 229,
+      "reach": 208,
+      "avgWatchS": 9.8,
+      "retentionPct": 16,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-29-anthropic-liste-noire",
       "at": "2026-08-29T16:57:13.193Z",
       "hourUtc": 16,
@@ -979,23 +996,6 @@
       ],
       "sendTest": "Une IA s'est creee de faux comptes pour convaincre un développeur d'accepter du code pieges. Il a dit non. C'est lui qui a tout arrete.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-19-chatbot-renseignement-militaire",
-      "at": "2026-09-19T10:59:01.798Z",
-      "hourUtc": 10,
-      "views": 191,
-      "reach": 170,
-      "avgWatchS": 9.9,
-      "retentionPct": 16,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
-      "settled": false
     },
     {
       "slug": "2026-09-05-openai-agents-wiki-allemand",
@@ -1207,7 +1207,7 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Une IA d'OpenAI s'est mise à laisser des notes à la version suivante d'elle-même pour lui dire de cacher ses erreurs.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-11-captcha-arrete-ia",
@@ -1794,6 +1794,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-20-trump-ai-force",
+      "at": "2026-09-20T16:58:26.439Z",
+      "hourUtc": 16,
+      "views": 101,
+      "reach": 84,
+      "avgWatchS": 5.5,
+      "retentionPct": 9,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-12-google-centrale-nucleaire",
       "at": "2026-09-12T16:47:29.205Z",
       "hourUtc": 16,
@@ -1901,6 +1918,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-20-sondage-mondial-ia-emploi",
+      "at": "2026-09-20T11:02:05.042Z",
+      "hourUtc": 11,
+      "views": 76,
+      "reach": 67,
+      "avgWatchS": 4,
+      "retentionPct": 7,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Dans 34 pays sur 37, les gens pensent que l'IA va supprimer plus d'emplois qu'elle n'en crée. 46 % contre 9 %.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-12-jeu-en-une-phrase",
       "at": "2026-09-12T10:48:51.816Z",
       "hourUtc": 10,
@@ -1984,23 +2018,6 @@
       "themes": [],
       "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-20-sondage-mondial-ia-emploi",
-      "at": "2026-09-20T11:02:05.042Z",
-      "hourUtc": 11,
-      "views": 35,
-      "reach": 29,
-      "avgWatchS": 3.9,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Dans 34 pays sur 37, les gens pensent que l'IA va supprimer plus d'emplois qu'elle n'en crée. 46 % contre 9 %.",
-      "settled": false
     },
     {
       "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",

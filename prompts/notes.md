@@ -1293,6 +1293,26 @@ ENTRIES:
   interview office desk, industrial robot arm, white house exterior, capitol building
   washington.
   Proof: scout 06h30 20/09, specs sondage-mondial-ia-emploi et trump-ai-force.
+  Ajout 21/09 (06h30), 61e mesure morte de la cle media (401, cle 53 car AQ.A; dernier
+  achat 01/09 16h54 = 20 jours, RECALCULE depuis state/spend.jsonl). IG_ACCESS_TOKEN:
+  UN JOUR (state/token.json, expire le 23/09), apres quoi le compte ne publie plus rien.
+  RENDENT 200 AU FETCH DU GATE ET SE GATENT DU PREMIER COUP (0 erreur sur 40
+  verifications, deux specs, zero aller-retour): operationsports.com et dailycaller.com
+  (NOUVEAUX), techtimes.com, aljazeera.com, gizmodo.com, cnbc.com et cnn.com
+  (re-confirmes). BLOQUENT, trois NEUFS et tous les trois porteurs du primaire d'une
+  histoire: wolterskluwer.com (403), healthcaredive.com (403), hrdive.com (403);
+  ft.com re-confirme 403. CONSEQUENCE MESUREE, et c'est le reflexe a garder sur tout
+  dossier de SONDAGE: la meilleure histoire de proximite du matin (les soignants qui
+  freinent l'IA, FT du 20/09) n'avait aucun primaire joignable, ET le sondage Wolters
+  Kluwer qui la porte date du 02/06, donc morte au gate de fraicheur de toute facon.
+  Lis la date du SONDAGE, pas celle de la depeche qui le ressort, avant de scorer.
+  RECUS: techtimes.com est NOUVEAU et excellent, capture propre en ~3 min sans aucun
+  recadrage (masthead TECH TIMES, fil d'Ariane, titre entier, chapo, signature,
+  "Published: Sep 20 2026"); sa photo de une est le PDG de l'entreprise du dossier,
+  donc pose-le sous un beat qui parle de l'entreprise, pas sous une accusation
+  nominative. dailycaller.com, LUI, NE SE CAPTURE PAS: tue par timeout a 700 s sans
+  ecrire un octet ni une ligne de log, alors qu'il se gate parfaitement. Famille
+  cnn / 9to5mac / tech.yahoo: source oui, recu jamais.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
@@ -3545,6 +3565,41 @@ ENTRIES:
   et trois pieges classiques revus en une heure, "battery energy storage container"
   -> une ICONE de vehicule-vers-reseau, "nuclear reactor control room" -> une salle
   de 1961, "electricity meter home" -> une vignette de modele 3D sketchfab.
+  Ajout 21/09 (06h30), TROIS PIEGES D'INDEX QUE SEUL LE TITRE VOIT, mesures sur un
+  dossier casino et un dossier cybersecurite (30 requetes pour 6 photos gardees).
+  (1) UNE REQUETE QUI CONTIENT UN NOM D'ENTREPRISE RAMENE LE FONDS "ART PROJECT" DE
+  COMMONS: "google office building" rend `Edgar Degas - Interior - Google Art Project`,
+  une TOILE du XIXe, parce que le nom de la boite est dans le titre du fichier. Meme
+  famille le meme matin: "sportsbook odds board" rend un LOGO ("Sportsbook Review
+  logo") et "playing cards table green" une nature morte du XVIIe. (2) LA REQUETE LA
+  PLUS ANODINE PEUT RAMENER DU PORNO: "login form screen" rend `Screen of YouPorn
+  login page` (domaine public), qui passe le filtre near-white sans broncher. Le
+  reflexe titre+auteur AVANT le jpg (08/09) n'est pas une precaution, c'est le seul
+  filtre qui existe. (3) LA PHOTO COUCHEE SE RE-CONFIRME (20/09): "casino slot
+  machines" rend un cliche tourne de 90 degres, sans tag d'orientation.
+  ET LE CREDIT PERCENT-ENCODE EST CORRIGE DANS LE CODE, donc la consigne "ecris le
+  credit a la main" de l'entree stocksnap ne sert plus: stocksnap a rendu `creator` =
+  "Luk%E1%u0161%20Rychvalsk%FD", soit la sortie de l'ancien escape() de JavaScript, et
+  creditLine le gravait tel quel sur la frame. decodeURIComponent jette sur la moitie
+  %uXXXX, donc creditLine decode desormais les deux formes lui-meme et laisse un "%"
+  litteral tranquille (test de non-regression, suite 129).
+  MARCHENT et sont bonnes: "casino gaming floor" (un joueur de DOS devant une machine
+  a sous, rouge et sombre, aucun visage: la meilleure photo "jeu d'argent" mesuree),
+  "roulette wheel casino" (macro doree tres dense), "sports betting phone screen" (un
+  mur d'ecrans de paris et des sieges vides, aucun visage), "server aisle datacenter"
+  (arriere de baies, LED vertes, sombre), "ethernet patch panel", "laptop screen code
+  dark room". REFUSES A L'OEIL, aucun vu par le filtre: "sports bar television screens"
+  (visages identifiables sous un karaoke qui accuse), "network cables bundle" (un
+  militaire americain IDENTIFIABLE, famille du 19/09), "betting shop interior"
+  (enseigne OPAP en gros et un chiffre lisible, marque absente de l'histoire), "man
+  alone dark room phone" (silhouette au crepuscule, soit la metaphore que le manuel
+  interdit), "security camera wall" (l'idee de la securite, pas l'objet de l'histoire),
+  "casino interior night" (le lustre du Galaxy Macau, du decor). Echouent au
+  near-white: poker chips stack, banknotes cash hand, slot machine close up,
+  combination padlock dial, keypad door lock, data centre corridor, googleplex
+  mountain view, computer keyboard backlit macro, casino chips stack table.
+  Proof: scout 06h30 21/09, specs draftkings-ia-joueurs-perdants et
+  gemini-pirate-trois-entreprises.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /

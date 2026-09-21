@@ -449,10 +449,26 @@ async function whiteFraction(file) {
  * entry: the author and the licence discharge it, and the full record with the
  * title and the URL lives in `imagery.json` where it can be audited.
  */
+/**
+ * Some indexes hand back a creator name that has been through JavaScript's old
+ * `escape()`: StockSnap served "Luk%E1%u0161%20Rychvalsk%FD" for Lukáš
+ * Rychvalský on 2026-09-21. Burned onto a frame that is mojibake where an
+ * attribution should be, and CC BY asks for a name, not for its encoding.
+ * `decodeURIComponent` is the wrong tool (it throws on the %uXXXX form), so
+ * decode both forms by hand, and only when the string really carries them: a
+ * bare "%" in a title must survive untouched.
+ */
+function decodeEscaped(s) {
+  if (!/%(?:u[0-9a-f]{4}|[0-9a-f]{2})/i.test(s)) return s;
+  return s.replace(/%u([0-9a-f]{4})|%([0-9a-f]{2})/gi, (m, u, h) =>
+    String.fromCharCode(parseInt(u || h, 16))
+  );
+}
+
 export function creditLine(entry) {
   if (entry.generated) return "Illustration · AI-generated";
   const lic = { cc0: "CC0", pdm: "Public domain", by: "CC BY" }[entry.license] || entry.license;
-  const who = (entry.creator || entry.title || "").replace(/\s+/g, " ").trim();
+  const who = decodeEscaped((entry.creator || entry.title || "")).replace(/\s+/g, " ").trim();
   const short = who.length > 34 ? who.slice(0, 33).trimEnd() + "…" : who;
   return [short, lic].filter(Boolean).join(" · ");
 }

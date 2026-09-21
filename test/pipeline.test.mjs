@@ -581,6 +581,25 @@ test("the credit line is one short line, not a catalogue entry", () => {
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-21: StockSnap served the creator of a CC0 photograph as
+// "Luk%E1%u0161%20Rychvalsk%FD", the output of JavaScript's old escape(). Burned
+// onto the frame that is mojibake standing in for an attribution, and nothing
+// upstream decodes it. decodeURIComponent throws on the %uXXXX half, so the
+// credit line decodes both forms itself, and leaves a bare % alone.
+// ---------------------------------------------------------------------------
+test("a percent-escaped creator name is decoded before it is burned on the frame", () => {
+  assert.equal(
+    creditLine({ generated: false, license: "cc0", creator: "Luk%E1%u0161%20Rychvalsk%FD" }),
+    "Lukáš Rychvalský · CC0"
+  );
+  // A real "%" in a name is not an escape sequence and must survive untouched.
+  assert.equal(
+    creditLine({ generated: false, license: "by", creator: "100% Studio" }),
+    "100% Studio · CC BY"
+  );
+});
+
+// ---------------------------------------------------------------------------
 // 2026-07-26: beats were capped at 7.5s while a narration line took 8.0s to
 // say. The pad went negative, ffmpeg refused the filtergraph, and the run fell
 // back to a silent Reel. A whole feature lost to a clamp.

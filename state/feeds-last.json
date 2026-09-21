@@ -1,12 +1,12 @@
 {
-  "at": "2026-09-20T16:50:51.445Z",
-  "fresh": 22,
+  "at": "2026-09-21T06:52:44.949Z",
+  "fresh": 242,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1210,
-      "fresh": 4,
+      "fresh": 2,
       "windowHours": 96
     },
     {
@@ -47,15 +47,15 @@
     {
       "name": "arXiv cs.AI",
       "ok": true,
-      "fetched": 0,
-      "fresh": 0,
+      "fetched": 214,
+      "fresh": 214,
       "windowHours": 96
     },
     {
       "name": "TechCrunch",
       "ok": true,
       "fetched": 20,
-      "fresh": 12,
+      "fresh": 11,
       "windowHours": 36
     },
     {
@@ -91,17 +91,16 @@
     },
     {
       "name": "Hacker News (250+ points)",
-      "ok": false,
-      "fetched": 0,
-      "fresh": 0,
-      "windowHours": 36,
-      "error": "HTTP 502 after 13 tries"
+      "ok": true,
+      "fetched": 7,
+      "fresh": 7,
+      "windowHours": 36
     },
     {
       "name": "Simon Willison",
       "ok": true,
       "fetched": 30,
-      "fresh": 2,
+      "fresh": 4,
       "windowHours": 36
     }
   ]

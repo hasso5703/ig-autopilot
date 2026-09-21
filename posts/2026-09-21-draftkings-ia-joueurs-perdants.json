@@ -1,0 +1,245 @@
+{
+  "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
+  "centralClaim": "DraftKings built a machine learning system that ranked customers by how much money they were likely to lose after getting promotions.",
+  "corroboration": [
+    {
+      "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them",
+      "quote": "Jayden Butts, a former DraftKings data analyst, said his 2023 assignment was to test a model that ranked customers by how much money they were likely to lose after getting promotions."
+    },
+    {
+      "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/",
+      "quote": "DraftKings created a machine learning system in 2023 that ranked online casino players by how much they were expected to lose after collecting a free bet or bonus, according to a New York Times investigation published Friday."
+    }
+  ],
+  "sendTest": "Une appli de paris a construit une IA pour repérer les clients qui allaient perdre le plus, et c'est eux qu'elle a arrosés de paris gratuits.",
+  "caption": "Une intelligence artificielle a trié les parieurs selon l'argent qu'ils allaient perdre.\n\nLe New York Times a enquêté sur DraftKings à partir de notes internes, de présentations, de relevés de paris et d'entretiens avec plus de 40 anciens salariés. L'entreprise a construit en 2023 un modèle qui classe les joueurs de casino en ligne selon ce qu'ils vont perdre après avoir reçu un pari gratuit ou un bonus.\n\nComment ça marche. Le modèle pèse la fréquence de jeu, l'état du compte au fil des jours et le rapport entre les pertes et les mises. En interne, le chiffre obtenu s'appelle l'élasticité, et plus il est élevé, plus le client vaut la peine d'être relancé avec des avantages.\n\nLe détail qui n'est pas dans la vidéo. Bryan Biehl, qui dit avoir perdu près de 70 000 dollars en ligne, raconte ce qu'il recevait une fois en thérapie : « I would get flooded with bonuses and deposits », et « If you are in addiction, you are not going to say no ».\n\nCe qui coince. Un modèle capable de repérer les joueurs en difficulté a été commencé avec les mêmes données, puis abandonné. La dirigeante du jeu responsable parle d'une décision collective contre les outils de prédiction, et dit préférer une autre méthode.\n\nLa réponse de l'entreprise. DraftKings rejette toute idée que ses pratiques marketing soient injustes ou ciblent ses clients de façon inappropriée.\n\nUne appli de paris a-t-elle le droit de viser ceux qui perdent le plus, oui ou non ?\n\ntechtimes.com · operationsports.com · dailycaller.com\n\n#IA #IntelligenceArtificielle #ActuIA #Paris #Addiction\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "DraftKings created a machine learning system in 2023 that ranked online casino players by how much they were expected to lose after collecting a free bet or bonus, according to a New York Times investigation published Friday.",
+      "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/"
+    },
+    {
+      "quote": "The Times reviewed internal memos, presentations and betting records, and spoke with more than 40 former staffers.",
+      "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/"
+    },
+    {
+      "quote": "Workers referred to the resulting figure as an \"elasticity\" score, and a higher number meant a customer was worth chasing with more perks.",
+      "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/"
+    },
+    {
+      "quote": "He said the ranking used details such as how often a person bet, daily balances, and the gap between amounts wagered and amounts lost.",
+      "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them"
+    },
+    {
+      "quote": "Bryan Biehl told The Times he lost nearly $70,000 gambling online, with more than half of that at DraftKings. He said that after he began therapy in late 2024, bonus emails kept arriving.",
+      "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them"
+    },
+    {
+      "quote": "\"I would get flooded with bonuses and deposits,\" he said. \"If you are in addiction, you are not going to say no.\"",
+      "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them"
+    },
+    {
+      "quote": "She said the company watches for \"potentially risky behaviors\" but has not adopted tools that predict addiction risk, saying she did not see evidence those tools help.",
+      "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them"
+    },
+    {
+      "quote": "DraftKings said in a statement that it \"rejects any implication that its marketing practices are unfair or improperly targets customers.\"",
+      "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Enquête du New York Times · DraftKings",
+      "headline": "L'IA notait les joueurs *qui allaient perdre* le plus",
+      "hero": {
+        "value": "70 000 $",
+        "label": "perdus en ligne par un seul joueur"
+      },
+      "swipe": "Les sources sont plus bas"
+    },
+    {
+      "type": "stat",
+      "figure": "70 000",
+      "unit": "dollars perdus en ligne",
+      "body": "Bryan Biehl dit avoir perdu **plus de la moitié** de cette somme chez DraftKings. Après le début de sa thérapie, fin 2024, les offres ont continué.",
+      "evidence": "Bryan Biehl told The Times he lost nearly $70,000 gambling online, with more than half of that at DraftKings. He said that after he began therapy in late 2024, bonus emails kept arriving.",
+      "source": {
+        "name": "Operation Sports",
+        "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un modèle qui classe par pertes attendues",
+      "body": "DraftKings a bâti en 2023 un système qui range les joueurs de casino en ligne selon *ce qu'ils vont perdre* après un pari gratuit.",
+      "evidence": "DraftKings created a machine learning system in 2023 that ranked online casino players by how much they were expected to lose after collecting a free bet or bonus, according to a New York Times investigation published Friday.",
+      "source": {
+        "name": "The Daily Caller",
+        "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que le modèle regarde",
+      "body": "La fréquence de jeu, l'état du compte au fil des jours, et l'écart entre les sommes misées et les sommes perdues.",
+      "evidence": "He said the ranking used details such as how often a person bet, daily balances, and the gap between amounts wagered and amounts lost.",
+      "source": {
+        "name": "Operation Sports",
+        "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le nom interne du chiffre",
+      "body": "Les salariés appelaient ce résultat l'**élasticité**. Plus il est haut, plus le client vaut la peine d'être relancé.",
+      "evidence": "Workers referred to the resulting figure as an \"elasticity\" score, and a higher number meant a customer was worth chasing with more perks.",
+      "source": {
+        "name": "The Daily Caller",
+        "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/",
+        "date": "2026-09-19"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "We are looking for traits and features that we can target that indicate a good investment. The best investment would be a problem gambler.",
+      "attribution": "Jayden Butts, ancien analyste de DraftKings, au New York Times",
+      "evidence": "\"We are looking for traits and features that we can target that indicate a good investment,\" said Jayden Butts, a former DraftKings data analyst who tested the system on thousands of casino players. \"The best investment would be a problem gambler.\"",
+      "source": {
+        "name": "Tech Times",
+        "url": "https://www.techtimes.com/articles/327776/20260920/draftkings-promotional-ai-scored-bettors-addiction-markers-nyt-investigation-finds.htm",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "13%",
+      "unit": "de marge en plus sur les paris promus",
+      "body": "Environ **400 millions de dollars** de promotions ont été distribués par cette IA en 2025, d'après des chiffres présentés aux investisseurs.",
+      "evidence": "DraftKings used this infrastructure to distribute approximately $400 million in AI-automated promotions in 2025 alone, a figure disclosed at its Investor Day in March 2026. Company executives credited AI targeting with improving promotion-driven sportsbook margins by 13% in 2025.",
+      "source": {
+        "name": "Tech Times",
+        "url": "https://www.techtimes.com/articles/327776/20260920/draftkings-promotional-ai-scored-bettors-addiction-markers-nyt-investigation-finds.htm",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qui a été construit",
+      "claim": "Un modèle qui trie les clients par pertes attendues, et oriente les offres vers eux.",
+      "caveatLabel": "Ce qui a été arrêté",
+      "caveat": "Un modèle bâti sur les mêmes données pour repérer les joueurs en difficulté avant la crise.",
+      "evidence": "Nestor Hernandez, a data scientist who left in November 2024, said he started work in mid-2024 on a model that would give customers \"risk scores\" using the same betting files already used for promotions. He said the goal was to spot trouble days or weeks early so the company could step in. Two former colleagues later told him that work was stopped.",
+      "source": {
+        "name": "Operation Sports",
+        "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La réponse de DraftKings",
+      "body": "L'entreprise rejette toute idée que ses pratiques marketing soient *injustes* ou ciblent ses clients de façon inappropriée.",
+      "evidence": "DraftKings said in a statement that it \"rejects any implication that its marketing practices are unfair or improperly targets customers.\"",
+      "source": {
+        "name": "Operation Sports",
+        "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui parie en ligne",
+      "sub": "Des faits vérifiés, sourcés, en français."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Tech Times",
+      "url": "https://www.techtimes.com/articles/327776/20260920/draftkings-promotional-ai-scored-bettors-addiction-markers-nyt-investigation-finds.htm",
+      "accessed": "2026-09-21"
+    },
+    {
+      "name": "Operation Sports",
+      "url": "https://www.operationsports.com/it-is-as-predatory-as-it-sounds-former-draftkings-analyst-says-the-company-built-an-ai-model-to-find-who-would-lose-the-most-and-target-them",
+      "accessed": "2026-09-21"
+    },
+    {
+      "name": "The Daily Caller",
+      "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/",
+      "accessed": "2026-09-21"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "DraftKings a noté qui allait perdre le plus",
+    "beats": [
+      {
+        "script": "Plus tu perds, plus DraftKings t'envoie des paris gratuits. C'est un ancien analyste qui le dit au New York Times, qui a interrogé plus de 40 anciens salariés.",
+        "visual": {
+          "type": "photo",
+          "query": "sports betting phone screen",
+          "alt": "Un mur d'écrans de paris sportifs dans une salle de jeux",
+          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/c_phone.jpg",
+          "credit": "Chad Davis · CC BY"
+        }
+      },
+      {
+        "script": "Bryan Biehl a perdu près de 70 000 dollars en pariant en ligne. Il a commencé une thérapie fin 2024, et les offres ont continué. Tu sais pourquoi lui ?",
+        "visual": {
+          "type": "card",
+          "value": "70 000 $",
+          "label": "perdus en ligne, les offres ont continué"
+        }
+      },
+      {
+        "script": "DraftKings a construit une IA qui note chaque client selon ce qu'il va perdre après un pari gratuit : ta fréquence de jeu, l'état de ton compte, l'écart entre mises et pertes.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://dailycaller.com/2026/09/19/draftkings-ai-targets-gamblers-likely-to-lose/",
+          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/shot_dc.png"
+        }
+      },
+      {
+        "script": "En interne, cette note s'appelle l'élasticité. Jayden Butts, l'analyste qui l'a testée, le dit sans détour : le meilleur investissement, ce serait un joueur pathologique.",
+        "visual": {
+          "type": "photo",
+          "query": "roulette wheel casino",
+          "alt": "Gros plan sur une roulette de casino",
+          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/c_roulette.jpg",
+          "credit": "Casino roulette wheel close up · CC0"
+        }
+      },
+      {
+        "script": "En 2025, environ 400 millions de dollars de promotions ont été distribués par cette IA, et les dirigeants ont chiffré le gain de marge à 13 %.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.techtimes.com/articles/327776/20260920/draftkings-promotional-ai-scored-bettors-addiction-markers-nyt-investigation-finds.htm",
+          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/shot_tt.png"
+        }
+      },
+      {
+        "script": "Sauf que la même machine pouvait servir à l'inverse. Nestor Hernandez, sur les mêmes données, a lancé un modèle pour repérer les clients qui basculent. Le travail a été arrêté.",
+        "visual": {
+          "type": "card",
+          "value": "ARRÊTÉ",
+          "label": "le modèle qui repérait les joueurs en danger"
+        }
+      },
+      {
+        "script": "DraftKings rejette toute idée que ses pratiques soient injustes. Sa dirigeante du jeu responsable dit n'avoir vu aucune preuve que ces outils aident. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "casino gaming floor",
+          "alt": "Un joueur seul devant une machine à sous dans un casino",
+          "file": "media/2026-09-21-draftkings-ia-joueurs-perdants/c_floor.jpg",
+          "credit": "Marek Ślusarczyk (Tupungato) Phot… · CC BY"
+        }
+      }
+    ]
+  }
+}
