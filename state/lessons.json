@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-21T06:52:30.401Z",
-  "n": 108,
-  "nSettled": 103,
-  "medianViews": 145,
+  "at": "2026-09-21T11:07:07.955Z",
+  "n": 109,
+  "nSettled": 104,
+  "medianViews": 147,
   "medianRetentionPct": 16,
   "top": [
     {
@@ -98,8 +98,8 @@
       "thin": false
     },
     "photo": {
-      "n": 31,
-      "medianViews": 132,
+      "n": 32,
+      "medianViews": 137,
       "meanRetentionPct": 13.5,
       "saves": 17,
       "shares": 4,
@@ -158,8 +158,8 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 26,
-      "medianViews": 130,
+      "n": 27,
+      "medianViews": 132,
       "meanRetentionPct": 16.3,
       "saves": 16,
       "shares": 6,
@@ -887,7 +887,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Des avions militaires américains étaient déjà en vol pour arraisonner un navire chinois. Le renseignement venait d'un chatbot, et il était faux.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-29-anthropic-liste-noire",
@@ -1760,6 +1760,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-20-trump-ai-force",
+      "at": "2026-09-20T16:58:26.439Z",
+      "hourUtc": 16,
+      "views": 106,
+      "reach": 91,
+      "avgWatchS": 5.5,
+      "retentionPct": 9,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-03-uber-3300-postes-voitures-autonomes-silencieux",
       "at": "2026-09-03T11:44:37.874Z",
       "hourUtc": 11,
@@ -1792,23 +1809,6 @@
       "themes": [],
       "sendTest": "La nouvelle Apple Watch écoute la conversation que tu viens d'avoir et t'en écrit le résumé. Même si c'est la personne en face qui la porte.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-20-trump-ai-force",
-      "at": "2026-09-20T16:58:26.439Z",
-      "hourUtc": 16,
-      "views": 101,
-      "reach": 84,
-      "avgWatchS": 5.5,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
-      "settled": false
     },
     {
       "slug": "2026-09-12-google-centrale-nucleaire",
@@ -1921,10 +1921,10 @@
       "slug": "2026-09-20-sondage-mondial-ia-emploi",
       "at": "2026-09-20T11:02:05.042Z",
       "hourUtc": 11,
-      "views": 76,
-      "reach": 67,
-      "avgWatchS": 4,
-      "retentionPct": 7,
+      "views": 81,
+      "reach": 72,
+      "avgWatchS": 3.9,
+      "retentionPct": 6,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -2137,6 +2137,25 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
+      "at": "2026-09-21T11:05:44.651Z",
+      "hourUtc": 11,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Une appli de paris a construit une IA pour repérer les clients qui allaient perdre le plus, et c'est eux qu'elle a arrosés de paris gratuits.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

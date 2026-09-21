@@ -6683,3 +6683,40 @@ ENTRIES:
   7 jours). Ce n'est pas une regle editoriale, c'est le prix mesure de 18 jours
   sans voix: la cle media est morte depuis le 02/09 (401, meme jeton AQ.Ab8).
   Proof: run 10h30 20/09, Reel 2026-09-20-sondage-mondial-ia-emploi.
+  Ajout 21/09 (10h30), 62e mesure morte de la cle media (401, cle 53 car AQ.A; dernier
+  achat 01/09 16h54 = 20 jours). IG_ACCESS_TOKEN: DEUX JOURS (expire le 23/09), c'est le
+  compteur qui coupe tout et il passe devant tout le reste dans le rapport.
+  LE TROU DE LEGENDE QUE LE GATE LAISSE GRAND OUVERT, et il est la jumelle du piege
+  d'adjectif de perimetre: UNE PHRASE DE LEGENDE SANS CHIFFRE N'EST VERIFIEE PAR RIEN.
+  Le gate tient les chiffres de la legende par `captionEvidence` et la prose "est
+  gratuite" (manuel, step 5b), donc une phrase qui ATTRIBUE une declaration a quelqu'un
+  passe sans citation. Mesure sur le spec herite de ce matin: la legende disait "La
+  dirigeante du jeu responsable parle d'une decision collective contre les outils de
+  prediction" -- aucune des 8 captionEvidence ne porte "decision collective", et la
+  citation verifiee dit seulement qu'elle n'a pas vu de preuve que ces outils aident.
+  Gate PASSED, 0 erreur, 0 avertissement, avant ET apres correction. REFLEXE, 60 s sur
+  tout spec herite: pour CHAQUE phrase de legende qui attribue des mots ou une intention
+  a une personne nommee, trouve la captionEvidence qui la porte; s'il n'y en a pas,
+  reecris la phrase SUR la citation verifiee plutot que de la garder.
+  CINQ AUTRES CORRECTIONS SUR LE MEME SPEC, toutes de la famille perimetre/attribution
+  (07/09, 14/09, 17/09), aucune vue par le gate: "chaque client" pour "online casino
+  players", "joueur pathologique" pour "problem gambler", "le gain de marge a 13 %" pour
+  "promotion-driven sportsbook margins", "le travail a ete arrete" pour "two former
+  colleagues told him that work was stopped", "ses pratiques" pour "its marketing
+  practices". Un spec de scout gate-clean coute donc ~10 min d'audit a un run de
+  publication: budgete-les, ils ne sont pas optionnels.
+  COUT DU PREMIER `land.mjs` SUR CONTENEUR FROID, mesure: 6 MINUTES, dont ~5 de
+  `git fetch origin` (7916 objets, le clone est peu profond); les deux landings suivants
+  du meme run ont pris moins d'une minute. Consequence de planning: lance le PREMIER
+  landing tot et EN ARRIERE-PLAN (le build muet tourne pendant), sinon il tombe entre le
+  build et la publication et coute la fenetre.
+  RECU: techtimes.com re-confirme en moteur, capture brute 1290x2796 utilisee SANS
+  recadrage, le titre entier + le chapo + "Published: Sep 20 2026" tiennent dans la carte
+  et sa photo de une (le PDG) tombe SOUS la carte, floutee et illisible -- donc
+  l'avertissement du 21/09 06h30 ne bloque pas le beat, mais pose-le quand meme sous un
+  beat qui parle de l'entreprise.
+  CE QUE COUTE LE MUET, QUATRIEME MESURE (lessons.json, posts reposes): VOIX 26/08-01/09
+  n=14 -> 17% / 128,5 vues; MUET 02-05/09 n=8 -> 11,5% / 145,5; 06-12/09 n=14 -> 7,5% /
+  106,5; 13-19/09 n=13 -> 8% / 40; 14-20/09 n=11 -> 6% / 39, ZERO save et ZERO partage.
+  La fermeture de distribution constatee le 20/09 continue, elle ne rebondit pas.
+  Proof: run 10h30 21/09, Reel 2026-09-21-draftkings-ia-joueurs-perdants.
