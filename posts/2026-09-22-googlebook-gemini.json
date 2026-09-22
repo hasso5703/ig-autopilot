@@ -1,0 +1,243 @@
+{
+  "slug": "2026-09-22-googlebook-gemini",
+  "centralClaim": "Google opened pre-orders for the Googlebook, a laptop built around its Gemini AI, starting at $899.",
+  "corroboration": [
+    {
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
+      "quote": "Starting at $899, every Googlebook includes 12 months of Google AI Pro providing 5TB of cloud storage and our Gemini Advanced tools, plus 3 months of YouTube Premium, Adobe Photoshop, and more."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/",
+      "quote": "After first unveiling its new AI-powered laptop, dubbed Googlebook, in May, Google on Monday said the new device is now available for preorder for $899."
+    }
+  ],
+  "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
+  "caption": "Google vend un ordinateur portable à partir de 899 dollars, et le pari tient dans son intelligence artificielle.\n\nLe Googlebook est en précommande depuis lundi. Il tourne sur la base d'Android avec des fondations de bureau venues de ChromeOS, et il est conçu pour Gemini. Les appareils arrivent en rayon le 4 octobre aux États-Unis, et le 5 octobre au Canada, au Royaume-Uni, en Irlande, en France, en Allemagne et en Australie.\n\nCe qu'il fait. Tu remues le curseur et Gemini regarde ce qu'il y a à l'écran : Google appelle ça Magic Pointer. Un second outil, Rambler, transforme des notes dites à voix haute en texte mis en forme, avec des titres et des listes.\n\nLe détail qui n'est pas dans la vidéo. Les 899 dollars incluent 12 mois de Google AI Pro, 5 To de stockage en ligne et 3 mois de YouTube Premium, et Google promet des mises à jour pendant 10 ans. Les machines sont fabriquées par Acer, ASUS, Dell, HP et Lenovo.\n\nCe qui coince. TechCrunch juge que l'outil de dictée ne suffit pas à justifier l'achat d'un appareil neuf, et que d'autres fonctions, elles, ne réclament aucun matériel neuf.\n\nLa vraie cible. Il y a environ 50 millions de Chromebooks dans les écoles. Pour TechCrunch, le Googlebook s'inscrit dans un plan plus long : prendre une grande part du marché scolaire qui tourne sur Chromebook et l'amener vers Gemini.\n\nGoogle précise de son côté que Gemini n'agit que si on le lui demande, et qu'on peut le désactiver.\n\nTu paierais un ordinateur neuf juste pour son IA, oui ou non ?\n\nblog.google · techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Gemini\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "After first unveiling its new AI-powered laptop, dubbed Googlebook, in May, Google on Monday said the new device is now available for preorder for $899.",
+      "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/"
+    },
+    {
+      "quote": "Built on the Android technology stack and paired with desktop foundations from ChromeOS, Googlebook is designed for Gemini Intelligence and engineered to work with your Android phone right out of the box.",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    },
+    {
+      "quote": "Devices arrive on shelves starting October 4 in the U.S., and October 5 in Canada, the U.K., Ireland, France, Germany, and Australia.",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    },
+    {
+      "quote": "Magic Pointer: Wiggle your cursor to bring Gemini directly to whatever's on your screen.",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    },
+    {
+      "quote": "Rambler: Located right next to the Quick Insert key, Rambler turns spoken thoughts into organized, ready-to-share writing.",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    },
+    {
+      "quote": "Starting at $899, every Googlebook includes 12 months of Google AI Pro providing 5TB of cloud storage and our Gemini Advanced tools, plus 3 months of YouTube Premium, Adobe Photoshop, and more.",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    },
+    {
+      "quote": "Googlebook OS also comes with regular feature drops and updates for up to 10 years.",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    },
+    {
+      "quote": "Our initial selection of flagship devices are built by Acer, ASUS, Dell, HP, and Lenovo, offering you choices that fit your style.",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    },
+    {
+      "quote": "However, this, too, isn't enough reason to buy a new device, as it feels more like a feature that's nice to have than a necessity.",
+      "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/"
+    },
+    {
+      "quote": "Other Googlebook features, like Gemini Spark and Gemini Live, also don't require special, new hardware.",
+      "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/"
+    },
+    {
+      "quote": "There are somewhere around 50 million Chromebooks in schools, used by students and educators, Google has said.",
+      "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/"
+    },
+    {
+      "quote": "What's more interesting about the Googlebook is how it's seemingly part of Google's longer-term plan to capture a large part of the K-12 market that currently relies on Chromebooks and push them toward the company's Gemini AI.",
+      "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/"
+    },
+    {
+      "quote": "Gemini only acts when you ask it to, and you can switch it off whenever you want.",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Précommandes · Google",
+      "headline": "Un portable à *899 dollars*, vendu pour son IA",
+      "hero": {
+        "value": "5 oct.",
+        "label": "en rayon en France, le lendemain des États-Unis"
+      },
+      "swipe": "Les sources sont plus bas"
+    },
+    {
+      "type": "stat",
+      "figure": "899",
+      "unit": "dollars, le modèle de départ",
+      "body": "Le **Googlebook** arrive avec *12 mois* de Google AI Pro, **5 To** de stockage en ligne et *3 mois* de YouTube Premium.",
+      "evidence": "Starting at $899, every Googlebook includes 12 months of Google AI Pro providing 5TB of cloud storage and our Gemini Advanced tools, plus 3 months of YouTube Premium, Adobe Photoshop, and more.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Quand le Googlebook arrive",
+      "body": "En rayon le **4 octobre** aux États-Unis, et le *5 octobre* au Canada, au Royaume-Uni, en Irlande, en France, en Allemagne et en Australie.",
+      "evidence": "Devices arrive on shelves starting October 4 in the U.S., and October 5 in Canada, the U.K., Ireland, France, Germany, and Australia.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que fait le curseur",
+      "body": "Google appelle ça *Magic Pointer* : tu remues le curseur, et Gemini vient sur ce qu'il y a à l'écran.",
+      "evidence": "Magic Pointer: Wiggle your cursor to bring Gemini directly to whatever's on your screen.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La dictée mise en forme",
+      "body": "Rambler, posé à côté d'une touche dédiée, transforme des **pensées dites à voix haute** en texte organisé, prêt à partager.",
+      "evidence": "Rambler: Located right next to the Quick Insert key, Rambler turns spoken thoughts into organized, ready-to-share writing.",
+      "source": {
+        "name": "Google",
+        "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Le pari de Google",
+      "claim": "Son IA suffirait à faire acheter un ordinateur neuf plutôt que d'y accéder par le navigateur.",
+      "caveatLabel": "Ce qu'en dit TechCrunch",
+      "caveat": "La dictée ne suffit pas à justifier un appareil neuf, et d'autres fonctions ne réclament aucun matériel neuf.",
+      "evidence": "However, this, too, isn't enough reason to buy a new device, as it feels more like a feature that's nice to have than a necessity.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où sont les vrais clients",
+      "body": "Il y a environ **50 millions** de Chromebooks dans les écoles, utilisés par des élèves et des enseignants.",
+      "evidence": "There are somewhere around 50 million Chromebooks in schools, used by students and educators, Google has said.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le plan long",
+      "body": "Pour TechCrunch, l'appareil s'inscrit dans un plan plus long : *prendre une grande part du marché scolaire* qui tourne sur Chromebook, et l'amener vers Gemini.",
+      "evidence": "What's more interesting about the Googlebook is how it's seemingly part of Google's longer-term plan to capture a large part of the K-12 market that currently relies on Chromebooks and push them toward the company's Gemini AI.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui doit changer d'ordinateur",
+      "sub": "Des faits vérifiés, sourcés, en français."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Google",
+      "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Google vend un portable 899 dollars pour son IA",
+    "beats": [
+      {
+        "script": "Google vend un ordinateur portable à partir de 899 dollars, en rayon en France le 5 octobre. Et le pari, c'est que son intelligence artificielle suffise à te faire acheter une machine neuve.",
+        "visual": {
+          "type": "photo",
+          "query": "laptop keyboard backlit",
+          "alt": "Un clavier d'ordinateur rétroéclairé dans la pénombre",
+          "file": "media/2026-09-22-googlebook-gemini/p_backlit.jpg",
+          "credit": "purple backlit mechanical keyboar… · CC0"
+        }
+      },
+      {
+        "script": "Il s'appelle Googlebook. Tu remues le curseur, et Gemini vient regarder ce qu'il y a à l'écran. Un autre outil transforme ce que tu dis à voix haute en texte mis en forme. Tu vois l'idée ?",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+        }
+      },
+      {
+        "script": "899 dollars pour le modèle de départ, avec 12 mois de Google AI Pro, 5 To de stockage en ligne et 3 mois de YouTube Premium.",
+        "visual": {
+          "type": "card",
+          "value": "899 $",
+          "label": "le prix de départ, 12 mois de Google AI Pro inclus"
+        }
+      },
+      {
+        "script": "Sauf que TechCrunch n'est pas convaincu. Pour le site, cet outil de dictée ne suffit pas à justifier l'achat d'un appareil neuf. Et d'autres fonctions ne réclament aucun matériel neuf.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/"
+        }
+      },
+      {
+        "script": "Et pour le site, la vraie cible n'est pas toi. Il y a environ 50 millions de Chromebooks dans les écoles.",
+        "visual": {
+          "type": "card",
+          "value": "50",
+          "label": "millions de Chromebooks dans les écoles, environ"
+        }
+      },
+      {
+        "script": "L'appareil s'inscrirait dans un plan plus long : prendre une grande part de ce marché scolaire qui tourne aujourd'hui sur Chromebook, et l'amener vers Gemini.",
+        "visual": {
+          "type": "photo",
+          "query": "empty classroom chairs",
+          "alt": "Une salle de classe vide vue depuis la porte",
+          "file": "media/2026-09-22-googlebook-gemini/p_class.jpg",
+          "credit": "An Empty Classroom · CC0"
+        }
+      },
+      {
+        "script": "Google précise de son côté que Gemini n'agit que si tu le lui demandes, et que tu peux le désactiver quand tu veux. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.androidauthority.com/google-googlebook-laptops-launch-features-models-price-specs-availability-3713215/"
+        }
+      }
+    ]
+  }
+}

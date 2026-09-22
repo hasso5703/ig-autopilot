@@ -1,0 +1,247 @@
+{
+  "slug": "2026-09-22-tours-surveillance-frontiere",
+  "centralClaim": "MIT Technology Review found more than 1,050 people who died within range of US border surveillance towers between 2015 and early 2026.",
+  "corroboration": [
+    {
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+      "quote": "We found more than 1,050 people who died within range of border surveillance towers between 2015 and early 2026."
+    },
+    {
+      "url": "https://timesofsandiego.com/immigration/2026/09/21/mit-technology-review-border-towers-surveillance-investigation/",
+      "quote": "We found more than 1,050 people who died within range of border surveillance towers between 2015 and early 2026."
+    }
+  ],
+  "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
+  "caption": "Plus de 1 050 personnes sont mortes à portée des caméras de la frontière américaine.\n\nMIT Technology Review a croisé près de 4 000 lieux où des restes humains ont été retrouvés avec près de 600 tours de surveillance recensées par l'Electronic Frontier Foundation. Résultat : plus de 1 050 morts à portée de ces tours entre 2015 et début 2026.\n\nUn cas. José Morales Bernal a traversé la frontière le 8 avril 2024, la veille de ses 32 ans. Il est mort à 360 pieds de la tour la plus proche. Deux autres tours surveillaient à l'est et à l'ouest.\n\nLe détail qui n'est pas dans la vidéo. Ce ne sont pas seulement de vieux équipements : l'enquête estime que plus de 110 personnes sont mortes à portée des tours autonomes modernes d'Anduril, parmi les plus avancées déployées par l'agence, depuis 2021.\n\nCe qui coince. En janvier 2026, 30 % des tours de première génération étaient encore en panne. Plusieurs agents estiment que les tours rataient au départ 10 à 15 % de ce qu'elles auraient dû repérer.\n\nLa réponse de l'agence. Les tours autonomes utilisent l'intelligence artificielle pour détecter et classer les personnes, les véhicules et les animaux, et pour alerter les agents. L'agence prévoit 1 milliard de dollars pour 1 497 tours de plus d'ici 2034.\n\nÀ noter : l'enquête est signée MIT Technology Review, et Times of San Diego la publie dans le cadre de la même collaboration. Les deux textes sont le même reportage.\n\nUne caméra qui repère quelqu'un en danger devrait-elle déclencher un secours, oui ou non ?\n\ntechnologyreview.com · timesofsandiego.com\n\n#IA #IntelligenceArtificielle #ActuIA #Surveillance #Frontiere\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "We found more than 1,050 people who died within range of border surveillance towers between 2015 and early 2026.",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "We cross-referenced nearly 4,000 locations where human remains were found-drawn from records collected by nonprofit groups like No More Deaths and Humane Borders, as well as hundreds of records we obtained in Texas-with information on nearly 600 towers identified by the Electronic Frontier Foundation.",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "When José Morales Bernal crossed the border into the United States on April 8, 2024, the day before his 32nd birthday, it should have triggered a chain of technological alerts and human responses.",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "Morales had died just 360 feet from the closest surveillance tower. Two more towers stood watch to the east and the west.",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "These deaths are not the result of legacy systems, as our estimate found more than 110 people have died within range of modern autonomous towers from Anduril, among the most advanced systems CBP has deployed, since 2021.",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "In January 2026, 30% remained broken, one congressional staffer told MIT Technology Review.",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "Several agents estimate that the towers initially missed 10% to 15% of what they should in theory have caught.",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "Autonomous surveillance towers use artificial intelligence to detect and classify people, vehicles, and animals and alert Border Patrol agents to activity in monitored areas",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "CBP plans to spend $1 billion for 1,497 more towers by 2034.",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+    },
+    {
+      "quote": "This report is a collaboration between Times of San Diego and MIT Technology Review.",
+      "url": "https://timesofsandiego.com/immigration/2026/09/21/mit-technology-review-border-towers-surveillance-investigation/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Enquête · MIT Technology Review",
+      "headline": "Des caméras *intelligentes*, et 1 050 morts juste devant",
+      "hero": {
+        "value": "360",
+        "label": "pieds entre José Morales Bernal et la tour la plus proche"
+      },
+      "swipe": "Les sources sont plus bas"
+    },
+    {
+      "type": "stat",
+      "figure": "1 050",
+      "unit": "morts au moins, à portée des tours",
+      "body": "Entre 2015 et début 2026, à portée des caméras installées le long de la frontière américaine.",
+      "evidence": "We found more than 1,050 people who died within range of border surveillance towers between 2015 and early 2026.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que l'agence dit de ses tours",
+      "body": "Les tours autonomes utilisent l'intelligence artificielle pour *détecter et classer* les personnes, les véhicules et les animaux, et pour alerter les agents.",
+      "evidence": "Autonomous surveillance towers use artificial intelligence to detect and classify people, vehicles, and animals and alert Border Patrol agents to activity in monitored areas",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un homme",
+      "body": "José Morales Bernal a traversé la frontière le **8 avril 2024**, la veille de ses **32 ans**.",
+      "evidence": "When José Morales Bernal crossed the border into the United States on April 8, 2024, the day before his 32nd birthday, it should have triggered a chain of technological alerts and human responses.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Trois tours autour de lui",
+      "body": "Il est mort à *360 pieds* de la tour la plus proche. Deux autres surveillaient à l'est et à l'ouest.",
+      "evidence": "Morales had died just 360 feet from the closest surveillance tower. Two more towers stood watch to the east and the west.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Comment le compte a été fait",
+      "body": "Près de *4 000* lieux où des restes humains ont été retrouvés, croisés avec près de **600 tours** recensées par l'Electronic Frontier Foundation.",
+      "evidence": "We cross-referenced nearly 4,000 locations where human remains were found-drawn from records collected by nonprofit groups like No More Deaths and Humane Borders, as well as hundreds of records we obtained in Texas-with information on nearly 600 towers identified by the Electronic Frontier Foundation.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que l'agence met en avant",
+      "claim": "Border Patrol a publiquement mis ces caméras au crédit de vies sauvées.",
+      "caveatLabel": "Ce que l'enquête trouve",
+      "caveat": "En janvier 2026, 30 % des tours de première génération étaient encore en panne.",
+      "evidence": "In January 2026, 30% remained broken, one congressional staffer told MIT Technology Review. The RVSS program was estimated in 2020 to have a total cost of $3.7 billion. Border Patrol has nonetheless publicly credited these cameras with helping to save lives.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que les agents disent",
+      "body": "Plusieurs agents estiment que les tours rataient au départ *10 à 15 %* de ce qu'elles auraient dû repérer.",
+      "evidence": "Several agents estimate that the towers initially missed 10% to 15% of what they should in theory have caught.",
+      "source": {
+        "name": "Times of San Diego",
+        "url": "https://timesofsandiego.com/immigration/2026/09/21/mit-technology-review-border-towers-surveillance-investigation/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Et ça continue",
+      "body": "L'agence prévoit **1 milliard de dollars** pour *1 497 tours* de plus d'ici 2034, sans avoir mesuré combien de personnes sont mortes là où elle regarde.",
+      "evidence": "CBP plans to spend $1 billion for 1,497 more towers by 2034. But our reporting shows that CBP has done little to assess how its towers are working or how many people have died where they keep watch.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+        "date": "2026-09-21"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui pense qu'une caméra suffit",
+      "sub": "Des faits vérifiés, sourcés, en français."
+    }
+  ],
+  "sources": [
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "name": "Times of San Diego",
+      "url": "https://timesofsandiego.com/immigration/2026/09/21/mit-technology-review-border-towers-surveillance-investigation/",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "1 050 morts à portée des caméras américaines",
+    "beats": [
+      {
+        "script": "Des caméras à intelligence artificielle surveillent la frontière des États-Unis. Plus de 1 050 personnes sont mortes à portée de ces caméras, entre 2015 et début 2026.",
+        "visual": {
+          "type": "photo",
+          "query": "sonoran desert cactus",
+          "alt": "Un cactus dressé dans le désert au coucher du soleil",
+          "file": "media/2026-09-22-tours-surveillance-frontiere/p_desert.jpg",
+          "credit": "NOIRLab/NSF/AURA/P. Horálek · CC BY"
+        }
+      },
+      {
+        "script": "L'agence américaine des frontières met ces caméras au crédit de vies sauvées. Sauf que MIT Technology Review a compté les morts. Tu vas voir ce que ça donne.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+          "file": "media/2026-09-22-tours-surveillance-frontiere/shot_mittr.png"
+        }
+      },
+      {
+        "script": "Plus de 1 050 morts à portée de ces tours. L'enquête a croisé près de 4 000 lieux où des restes humains ont été retrouvés avec près de 600 tours.",
+        "visual": {
+          "type": "card",
+          "value": "1 050",
+          "label": "morts au moins, à portée des tours, depuis 2015"
+        }
+      },
+      {
+        "script": "José Morales Bernal a traversé le 8 avril 2024, la veille de ses 32 ans. Il est mort à 360 pieds de la tour la plus proche. Deux autres surveillaient à l'est et à l'ouest.",
+        "visual": {
+          "type": "photo",
+          "query": "desert cactus night",
+          "alt": "Le désert la nuit sous un ciel couvert d'étoiles",
+          "file": "media/2026-09-22-tours-surveillance-frontiere/p_night.jpg",
+          "credit": "CC0"
+        }
+      },
+      {
+        "script": "Et ce ne sont pas seulement de vieux équipements. En janvier 2026, 30 % des tours de première génération étaient encore en panne. Des agents estiment qu'elles rataient au départ 10 à 15 % de ce qu'elles auraient dû voir.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://timesofsandiego.com/immigration/2026/09/21/mit-technology-review-border-towers-surveillance-investigation/",
+          "file": "media/2026-09-22-tours-surveillance-frontiere/shot_tsd.png"
+        }
+      },
+      {
+        "script": "L'agence répond que ses tours détectent et classent les personnes et les véhicules. Elle n'a pourtant jamais mesuré combien de personnes sont mortes là où ces tours regardent.",
+        "visual": {
+          "type": "photo",
+          "query": "border patrol vehicle",
+          "alt": "Un agent de la police des frontières patrouille en quad",
+          "file": "media/2026-09-22-tours-surveillance-frontiere/p_patrol.jpg",
+          "credit": "Border Patrol Agent Patrols South · CC0"
+        }
+      },
+      {
+        "script": "Et elle prévoit 1 milliard de dollars pour 1 497 tours de plus d'ici 2034. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "card",
+          "value": "1 MILLIARD",
+          "label": "de dollars pour 1 497 tours de plus d'ici 2034"
+        }
+      }
+    ]
+  }
+}
