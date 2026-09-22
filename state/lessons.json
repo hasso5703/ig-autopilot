@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-22T07:13:24.968Z",
-  "n": 110,
+  "at": "2026-09-22T11:01:45.289Z",
+  "n": 111,
   "nSettled": 104,
   "medianViews": 147,
   "medianRetentionPct": 16,
@@ -1974,10 +1974,10 @@
       "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
       "at": "2026-09-21T11:05:44.651Z",
       "hourUtc": 11,
-      "views": 53,
-      "reach": 45,
-      "avgWatchS": 3.1,
-      "retentionPct": 5,
+      "views": 62,
+      "reach": 55,
+      "avgWatchS": 3.4,
+      "retentionPct": 6,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -2175,6 +2175,25 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-22-tours-surveillance-frontiere",
+      "at": "2026-09-22T10:58:15.879Z",
+      "hourUtc": 10,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
