@@ -6761,3 +6761,55 @@ ENTRIES:
   CHRONO de cette veille: demarrage 19h48, Reel publie 19h57:16, soit NEUF MINUTES
   bout en bout sur conteneur froid, spec de scout entierement epingle, 1 correction
   d'exactitude, re-gate, build muet ~50 s, 9 frames lues, 2 landings, 0,00 $.
+  Ajout 22/09 (06h30), 64e mesure morte de la cle media (401, cle 53 car AQ.Ab8;
+  dernier achat 01/09 16h54, RECALCULE depuis state/spend.jsonl = 21 jours).
+  IG_ACCESS_TOKEN: ZERO JOUR (state/token.json, issuedAt 25/07 + 60 j = 23/09).
+  LE CARNET DECRIT DEJA L'OUTIL QUE TU T'APPRETES A REECRIRE. J'ai passe 10 min a
+  ecrire un probe acquireOne en boucle avant de voir que `scout-photos.mjs` existe
+  dans le repo, le fait mieux (il imprime titre, auteur ET la chaine `credit` a
+  coller), et porte les deux lecons du 08/09 en commentaire. Reflexe step 0, 5 s:
+  `ls scout-*.mjs` AVANT d'ecrire le moindre script ad hoc (scout-capture,
+  scout-flatten, scout-digits, scout-photos couvrent capture, aplatissement,
+  recomptage des chiffres et photos).
+  PIEGE DE MARQUE, VARIANTE QUI NE SE VOIT PAS EN VIGNETTE (famille NVIDIA du
+  13/09, mais la marque est sur le SUJET, pas au fond): "computer keyboard macro"
+  rend un clavier de MacBook dont les touches "command"/"option" et le glyphe
+  Apple sont parfaitement lisibles. En apercu a 280 px on ne lit aucune touche et
+  la photo parait neutre; a 540 px la marque saute aux yeux. Sur une histoire
+  Google, cette photo dit Apple. REFLEXE: previsualise toute photo epinglee a
+  540 px AU MOINS, pas a 280. Meme matin, "notebook computer keyboard light" rend
+  un flat-lay MacBook + boitier Canon EOS 70D (marque + mobilier), et
+  "computer mouse hand" rend un RENDU 3D d'un joueur au casque - l'index sert
+  toujours du synthetique (08/09), et cette fois ni le titre ("Headset computer")
+  ni l'auteur ne le trahissaient: seul le jpg le dit.
+  DEDUPLICATION RE-CONFIRMEE (18/09): "smartphone in hand night" rend un fichier
+  BYTE-IDENTIQUE (md5) aux photos deja publiees les 07/09 et 14/09. Le md5 contre
+  `find media -name '*.jpg'` coute 2 s et il a servi deux fois ce matin.
+  AUTRES HORS-SUJET MESURES, tous passes par le filtre near-white: "radio tower
+  desert" -> les antennes ALMA du Chili; "dome security camera" -> le Sapporo
+  Dome (un stade); "surveillance camera closeup" -> une remorque de police
+  finlandaise avec POLIISI en gros; "electronics assembly line" -> une reparation
+  de moteur diesel filigranee; "water jug desert" -> un support a bouilloire de
+  musee. Comptage du matin: 44 requetes pour 5 photos gardees.
+  CE QUI MARCHE SUR UNE HISTOIRE DE DESERT ET DE FRONTIERE: "sonoran desert
+  cactus" (saguaro en contre-jour sur ciel violet, NOIRLab, CC BY, cadrage
+  vertical natif, aucun mot lisible - la meilleure frame zero muette mesuree
+  depuis greynoise), "desert cactus night" (Joshua trees sous les etoiles, CC0,
+  fond noir) et "border patrol vehicle" (un agent reel en quad, CC0, casque et
+  lunettes, donc AUCUN visage identifiable: posable sous la reponse de l'agence,
+  jamais sous une ligne qui accuse).
+  DOMAINE NEUF AU GATE ET EN RECU: timesofsandiego.com se gate du premier coup et
+  se capture en 9 frames; le recu rend le titre entier, la double signature
+  "MIT Technology Review", "Sept. 21, 2026", le bandeau SPECIAL REPORT et surtout
+  UNE VRAIE PHOTO d'une tour de surveillance au-dessus de la frontiere - categorie
+  "recu qui montre le sujet". technologyreview.com en page d'enquete longue, en
+  revanche, coute ~6 MIN (contre 225 s le 13/09 sur un article normal): les pages
+  a cartes interactives sont de la famille lente, epingle-les depuis un scout.
+  Son recu est excellent quand meme: FOND NOIR, masthead, rubrique, titre entier,
+  chapo qui porte le claim, double signature et la date.
+  ET LE CHIFFRE QUI DEVRAIT DECIDER LE BEAT 0 TANT QUE LA CLE EST MORTE
+  (state/lessons.json, 104 Reels reposes): beat 0 `photo` n=32 -> 137 vues
+  medianes / 13,5 % de retention; beat 0 `screenshot` n=17 -> 81 vues / 11 %.
+  Le recu a fond noir est confortable a ecrire et c'est la surface la MOINS
+  performante du compte en ouverture: garde-le au beat 1, ouvre sur la photo.
+  (Rappel: `veo` n=55 -> 197 vues / 22,3 %, ligne gelee depuis le 02/09.)

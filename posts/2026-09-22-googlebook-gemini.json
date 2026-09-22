@@ -195,7 +195,8 @@
         "script": "Il s'appelle Googlebook. Tu remues le curseur, et Gemini vient regarder ce qu'il y a à l'écran. Un autre outil transforme ce que tu dis à voix haute en texte mis en forme. Tu vois l'idée ?",
         "visual": {
           "type": "screenshot",
-          "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+          "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
+          "file": "media/2026-09-22-googlebook-gemini/shot_google.png"
         }
       },
       {
