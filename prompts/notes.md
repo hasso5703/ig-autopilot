@@ -6898,3 +6898,52 @@ ENTRIES:
   spec herite, 3 corrections + attaque reecrite, re-gate 22/22, build muet,
   9 frames lues, 3 landings, seed. Proof: run 16h30 22/09, Reel
   2026-09-22-googlebook-gemini.
+  Ajout 22/09 (19h30, veille), 67e mesure morte de la cle media (401, cle 53 car
+  AQ.Ab8; dernier achat 01/09 16h54 = 21 jours). LE JETON IG EXPIRE CETTE NUIT
+  (state/token.json, 23/09 00h00 UTC) ET `watch.mjs` LE DIT DEJA MORT AUJOURD'HUI:
+  la ligne "TOKEN MORT depuis le 2026-09-23" s'affichait ce soir alors que les deux
+  Reels du jour etaient partis a 10h58 et 17h05 et que `publish.mjs recent` repondait
+  encore. C'est voulu (le compteur est pessimiste, warnAtDays=14), mais ne conclus
+  jamais d'une ligne MORT que l'API est fermee: teste avec `node src/publish.mjs
+  recent`, c'est le seul verdict qui compte. Orphelins ce soir: 0 (10 medias IG vs
+  112 enregistrements).
+  LE COUT DU MUET, QUATRIEME MESURE, ET IL A CHANGE DE NATURE: fenetres
+  hebdomadaires appariees sur state/lessons.json (posts filtres par `at`, mediane de
+  retentionPct et de views, 10 s sans reseau): 26/08-01/09 (dernier regime avec voix
+  et veo) n=14, 17% / 128,5 vues; 02/09-08/09 n=14, 10,5% / 136,5; 09/09-15/09 n=14,
+  7,5% / 81,5; 16/09-22/09 n=13, 5% / 91. Le diagnostic du 05/09 ("les vues ne
+  bougent pas, c'est le spectateur qui part") NE TIENT PLUS: les vues ont baisse
+  d'un tiers en deux semaines, 0 partage et 0 save sur les 3 dernieres semaines, et
+  le compte perd un abonne sur 7 jours (49). C'est un fait a rapporter a Hasan, pas
+  une regle qu'un run invente.
+  CAPTURES: techcrunch.com a PENDU une 2e fois (>35 min sans un octet, tue a la
+  main) - la regle des 6 min du 03/09 se re-confirme, bascule de domaine plutot que
+  d'attendre. ET LE RECU NEUF QUI VAUT LE DETOUR, openai.com: INGATABLE (403 au
+  fetch du gate, entree du 28/07) mais il SE CAPTURE en 39 s / 4 frames et rend un
+  excellent recu MUET - fond NOIR pur, masthead "OpenAI", titre entier, chapo et les
+  deux premiers paragraphes, aucune banniere, aucune illustration generee (juste un
+  champ d'etoiles). Famille du 15/09 (meta.com): recu excellent ET source impossible
+  sont deux verdicts independants. Sur une annonce de labo, l'annonce elle-meme est
+  donc montrable meme quand elle n'est pas citable, a condition de gater les
+  citations ailleurs (ici techcrunch + thenextweb, 15/15 VERIFIED du premier coup).
+  thenextweb.com re-confirme en recu: 24 s / 1 frame, rubrique, titre, chapo qui
+  porte prix ET les 90 minutes, date du jour, aucun recadrage (son key art OpenAI
+  tombe sous les 1686 px visibles de la carte, il n'entre pas dans le cadre).
+  PHOTOS, 21 requetes pour 3 gardees, ET LE PIEGE DU SOIR EST LA REPETITION: 3 des
+  4 premieres acquisitions etaient des DOUBLONS md5 de photos deja publiees
+  ("computer monitor code" = 08/09 et 11/09, "computer screen dark room" = 09/09 et
+  11/09, "supercomputer racks" = 09/09 et 13/09). Sur les sujets "tech generique"
+  l'index est epuise apres trois semaines de muet: le md5 contre
+  `find media -name '*.jpg'` coute 2 s et doit se faire AVANT de recadrer. Marchent
+  et sont neuves: "electronics circuit lights" (Shixart1985, CC BY, carte mere en
+  lumiere rouge, 1202x1800 donc presque 9:16 natif, zero texte: bonne frame zero
+  muette), "server room cables" (rawpixel CC0, baies vertes sur fond noir) et
+  "fiber optic cables close" (rawpixel CC0, faisceau rouge sur noir). Echouent au
+  near-white ou au hors-sujet: office worker documents desk, laptop screen text
+  editor, smartphone chat messages screen, computer chip wafer, keyboard hands
+  typing, network switch ports, computer screen numbers data, robotaxi street,
+  teenagers smartphone street, car roof lidar sensor. "data center corridor" rend
+  un CORRIDOR D'IRRIGATION du Kansas, "laptop night desk work" une photo de stock
+  mise en scene ("Depressed middle-aged businesswoman"), et "waymo self-driving car"
+  un MINISTRE BRITANNIQUE identifiable en visite: le titre suffit a jeter les trois.
+  Proof: veille 19h30 22/09, spec banque 2026-09-23-gpt6-moins-derreurs.

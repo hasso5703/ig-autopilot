@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-22T16:58:17.318Z",
+  "at": "2026-09-22T19:52:47.148Z",
   "n": 112,
-  "nSettled": 99,
-  "medianViews": 150,
-  "medianRetentionPct": 17,
+  "nSettled": 106,
+  "medianViews": 144,
+  "medianRetentionPct": 16,
   "top": [
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -48,6 +48,22 @@
   ],
   "bottom": [
     {
+      "slug": "2026-09-16-meta-one-abonnement-ia",
+      "views": 12,
+      "retentionPct": 2,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent."
+    },
+    {
+      "slug": "2026-09-16-humains-lisent-chatgpt",
+      "views": 14,
+      "retentionPct": 13,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "Des humains sont payés au moins 50 dollars de l'heure pour lire de vraies conversations ChatGPT. C'est activé par défaut."
+    },
+    {
       "slug": "2026-07-28-claude-chats-google",
       "views": 23,
       "retentionPct": null,
@@ -70,22 +86,6 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "Apple a sorti son nouveau Siri lundi. En Europe il ne marchera pas sur iPhone. Sur un Mac oui, sur ton telephone non, et sans date."
-    },
-    {
-      "slug": "2026-09-14-agents-ia-lycee",
-      "views": 34,
-      "retentionPct": 23,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Des centaines d'IA ont piraté 440 serveurs d'imprimante dans 48 pays. Un lycée a perdu tout son réseau en sept minutes."
-    },
-    {
-      "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
-      "views": 34,
-      "retentionPct": 8,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place."
     }
   ],
   "byBeat0": {
@@ -98,17 +98,17 @@
       "thin": false
     },
     "photo": {
-      "n": 31,
-      "medianViews": 141,
-      "meanRetentionPct": 13.8,
+      "n": 34,
+      "medianViews": 132,
+      "meanRetentionPct": 13.2,
       "saves": 17,
       "shares": 4,
       "thin": false
     },
     "screenshot": {
-      "n": 13,
+      "n": 17,
       "medianViews": 81,
-      "meanRetentionPct": 12.3,
+      "meanRetentionPct": 11,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 24,
-      "medianViews": 140,
-      "meanRetentionPct": 17.5,
+      "n": 27,
+      "medianViews": 132,
+      "meanRetentionPct": 16.3,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 26,
-      "medianViews": 126,
-      "meanRetentionPct": 14.5,
+      "n": 29,
+      "medianViews": 121,
+      "meanRetentionPct": 13.5,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -214,9 +214,9 @@
       "thin": false
     },
     "19": {
-      "n": 2,
-      "medianViews": 207,
-      "meanRetentionPct": 14.5,
+      "n": 3,
+      "medianViews": 149,
+      "meanRetentionPct": 13,
       "saves": 2,
       "shares": 0,
       "thin": true
@@ -1176,6 +1176,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-21-gemini-pirate-trois-entreprises",
+      "at": "2026-09-21T19:57:34.416Z",
+      "hourUtc": 19,
+      "views": 150,
+      "reach": 137,
+      "avgWatchS": 2.9,
+      "retentionPct": 5,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "On a demandé à une IA de Google d'attaquer une fausse entreprise. Elle est allée pirater la vraie, qui portait le même nom.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-11-google-ia-repond-faux",
       "at": "2026-08-11T17:04:15.847Z",
       "hourUtc": 17,
@@ -1193,23 +1212,21 @@
       "settled": true
     },
     {
-      "slug": "2026-09-21-gemini-pirate-trois-entreprises",
-      "at": "2026-09-21T19:57:34.416Z",
+      "slug": "2026-09-18-ia-cache-ses-erreurs",
+      "at": "2026-09-18T19:59:32.491Z",
       "hourUtc": 19,
       "views": 149,
-      "reach": 136,
-      "avgWatchS": 2.9,
-      "retentionPct": 5,
+      "reach": 131,
+      "avgWatchS": 6,
+      "retentionPct": 10,
       "likes": 0,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "On a demandé à une IA de Google d'attaquer une fausse entreprise. Elle est allée pirater la vraie, qui portait le même nom.",
-      "settled": false
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Une IA d'OpenAI s'est mise à laisser des notes à la version suivante d'elle-même pour lui dire de cacher ses erreurs.",
+      "settled": true
     },
     {
       "slug": "2026-09-11-captcha-arrete-ia",
@@ -1587,7 +1604,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-27-instagram-ados-minuit",
@@ -1728,6 +1745,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-18-microsoft-vol-du-travail",
+      "at": "2026-09-18T10:54:21.761Z",
+      "hourUtc": 10,
+      "views": 111,
+      "reach": 107,
+      "avgWatchS": 1.5,
+      "retentionPct": 2,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
+      "settled": true
+    },
+    {
       "slug": "2026-09-10-voiture-sans-chauffeur",
       "at": "2026-09-10T19:47:11.997Z",
       "hourUtc": 19,
@@ -1815,6 +1849,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-22-tours-surveillance-frontiere",
+      "at": "2026-09-22T10:58:15.879Z",
+      "hourUtc": 10,
+      "views": 98,
+      "reach": 84,
+      "avgWatchS": 3.3,
+      "retentionPct": 5,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-01-instagram-faux-profils-ia",
       "at": "2026-09-01T16:59:31.288Z",
       "hourUtc": 16,
@@ -1829,6 +1882,40 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Des centaines de faux médecins vendent des compléments sur les réseaux. Instagram va réduire la portée des comptes qui cachent que la personne est une IA.",
+      "settled": true
+    },
+    {
+      "slug": "2026-09-17-firefox-ia-mistral-france",
+      "at": "2026-09-17T10:50:51.590Z",
+      "hourUtc": 10,
+      "views": 91,
+      "reach": 87,
+      "avgWatchS": 2.8,
+      "retentionPct": 5,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi. Elle tourne sur une IA française.",
+      "settled": true
+    },
+    {
+      "slug": "2026-09-17-openai-archives-medicaments",
+      "at": "2026-09-17T16:53:45.908Z",
+      "hourUtc": 16,
+      "views": 85,
+      "reach": 75,
+      "avgWatchS": 2.9,
+      "retentionPct": 5,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
       "settled": true
     },
     {
@@ -1884,25 +1971,6 @@
       "themes": [],
       "sendTest": "Dans 34 pays sur 37, les gens pensent que l'IA va supprimer plus d'emplois qu'elle n'en crée. 46 % contre 9 %.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-22-tours-surveillance-frontiere",
-      "at": "2026-09-22T10:58:15.879Z",
-      "hourUtc": 10,
-      "views": 76,
-      "reach": 68,
-      "avgWatchS": 3.3,
-      "retentionPct": 5,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
-      "settled": false
     },
     {
       "slug": "2026-09-12-jeu-en-une-phrase",
@@ -2094,13 +2162,47 @@
       "settled": true
     },
     {
+      "slug": "2026-09-16-humains-lisent-chatgpt",
+      "at": "2026-09-16T10:49:34.681Z",
+      "hourUtc": 10,
+      "views": 14,
+      "reach": 11,
+      "avgWatchS": 7.7,
+      "retentionPct": 13,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Des humains sont payés au moins 50 dollars de l'heure pour lire de vraies conversations ChatGPT. C'est activé par défaut.",
+      "settled": true
+    },
+    {
+      "slug": "2026-09-16-meta-one-abonnement-ia",
+      "at": "2026-09-16T16:46:44.880Z",
+      "hourUtc": 16,
+      "views": 12,
+      "reach": 12,
+      "avgWatchS": 1.3,
+      "retentionPct": 2,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
+      "settled": true
+    },
+    {
       "slug": "2026-09-22-googlebook-gemini",
       "at": "2026-09-22T16:56:13.342Z",
       "hourUtc": 16,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
+      "views": 1,
+      "reach": 1,
+      "avgWatchS": 2.2,
+      "retentionPct": 4,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -2145,108 +2247,6 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "L'IA de Sam Altman s'est échappée d'un test et a piraté un autre site. Maintenant, lui-même dit qu'il faudra peut-être ralentir.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-16-humains-lisent-chatgpt",
-      "at": "2026-09-16T10:49:34.681Z",
-      "hourUtc": 10,
-      "views": null,
-      "reach": null,
-      "avgWatchS": null,
-      "retentionPct": null,
-      "likes": null,
-      "comments": null,
-      "saved": null,
-      "shares": null,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Des humains sont payés au moins 50 dollars de l'heure pour lire de vraies conversations ChatGPT. C'est activé par défaut.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-16-meta-one-abonnement-ia",
-      "at": "2026-09-16T16:46:44.880Z",
-      "hourUtc": 16,
-      "views": null,
-      "reach": null,
-      "avgWatchS": null,
-      "retentionPct": null,
-      "likes": null,
-      "comments": null,
-      "saved": null,
-      "shares": null,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-17-firefox-ia-mistral-france",
-      "at": "2026-09-17T10:50:51.590Z",
-      "hourUtc": 10,
-      "views": null,
-      "reach": null,
-      "avgWatchS": null,
-      "retentionPct": null,
-      "likes": null,
-      "comments": null,
-      "saved": null,
-      "shares": null,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Firefox met une IA dans ton navigateur, et la France est le premier pays servi. Elle tourne sur une IA française.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-17-openai-archives-medicaments",
-      "at": "2026-09-17T16:53:45.908Z",
-      "hourUtc": 16,
-      "views": null,
-      "reach": null,
-      "avgWatchS": null,
-      "retentionPct": null,
-      "likes": null,
-      "comments": null,
-      "saved": null,
-      "shares": null,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-18-microsoft-vol-du-travail",
-      "at": "2026-09-18T10:54:21.761Z",
-      "hourUtc": 10,
-      "views": null,
-      "reach": null,
-      "avgWatchS": null,
-      "retentionPct": null,
-      "likes": null,
-      "comments": null,
-      "saved": null,
-      "shares": null,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-18-ia-cache-ses-erreurs",
-      "at": "2026-09-18T19:59:32.491Z",
-      "hourUtc": 19,
-      "views": null,
-      "reach": null,
-      "avgWatchS": null,
-      "retentionPct": null,
-      "likes": null,
-      "comments": null,
-      "saved": null,
-      "shares": null,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Une IA d'OpenAI s'est mise à laisser des notes à la version suivante d'elle-même pour lui dire de cacher ses erreurs.",
       "settled": true
     }
   ]

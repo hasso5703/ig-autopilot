@@ -1,0 +1,206 @@
+{
+  "slug": "2026-09-23-gpt6-moins-derreurs",
+  "centralClaim": "OpenAI says GPT-6 Sol, released on 22 September 2026, makes about half as many mistakes as its predecessor, measured on OpenAI's own internal factuality evaluation.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+      "quote": "On our internal factuality evaluation, which is based on de-identified real-world conversations where users flagged mistakes by our models, GPT-6 Sol makes about half as many mistakes as its predecessor, reaching Astra-level reliability at much lower cost"
+    },
+    {
+      "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut",
+      "quote": "Its internal factuality test uses de-identified ChatGPT conversations where users flagged an error from an earlier model. On that set, Sol makes about half as many mistakes as GPT-5.6 Sol."
+    }
+  ],
+  "sendTest": "OpenAI dit que son nouveau modèle se trompe deux fois moins que l'ancien. Le test qui le prouve, c'est le sien.",
+  "caption": "OpenAI dit que son nouveau modèle se trompe deux fois moins. Le test qui le prouve est le sien.\n\nGPT-6 Sol et GPT-6 Luna sont sortis mardi. Sol est prévu pour les travaux complexes, dont le code. Luna vise les tâches répétitives : résumer des documents, en extraire des informations, répondre à des questions courtes.\n\nLe prix. Le tarif facturé aux développeurs est divisé par deux : Sol passe de 4 à 2 dollars en entrée et de 20 à 10 dollars en sortie, par million d'unités de texte. OpenAI attribue cette baisse à sa façon de garder en mémoire et de traiter les demandes.\n\nLe détail qui n'est pas dans la vidéo. GitHub a dit à OpenAI que ces changements réduisent de plus de moitié la part de texte à retraiter à chaque demande, et que c'est ce qui fait répondre Copilot plus vite.\n\nCe qui coince. Le chiffre des erreurs vient d'un test interne : OpenAI reprend de vraies conversations où des utilisateurs avaient signalé une erreur d'un modèle précédent, et compte dessus. Et dans les comparaisons avec Anthropic, les scores du concurrent ne viennent pas de ses propres essais, mais de rapports déjà publiés. OpenAI l'écrit dans son annonce.\n\nLe contexte. Anthropic a sorti un Opus 5.5 moins cher 90 minutes avant l'annonce d'OpenAI, le même jour.\n\nTu ferais confiance à un test noté par celui qui le passe, oui ou non ?\n\ntechcrunch.com · thenextweb.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #ChatGPT\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "In its announcement, OpenAI put GPT-6 Sol at $2 per million input tokens and $10 per million output. That is down from $4 and $20.",
+      "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut"
+    },
+    {
+      "quote": "GitHub told OpenAI that these changes cut the share of prompt tokens needing fresh processing by more than half.",
+      "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut"
+    },
+    {
+      "quote": "Notably, Anthropic released a new version of Opus 5.5 just 90 minutes before OpenAI's release, reflecting the intense competition between the two companies.",
+      "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/"
+    },
+    {
+      "quote": "Sol is designed for complex tasks like coding, while OpenAI says Luna is more appropriate for clerical work - \"high-volume tasks with a clear goal, like summarizing documents, extracting information, or answering quick questions.",
+      "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/"
+    },
+    {
+      "quote": "Competitor scores came from published reports rather than in-house runs.",
+      "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut"
+    },
+    {
+      "quote": "Most of the comparisons in the announcement are cost per task rather than cost per token. Most of them also name Anthropic.",
+      "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut"
+    },
+    {
+      "quote": "OpenAI attaches its own caveats. Competitor scores came from published reports rather than in-house runs.",
+      "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut"
+    },
+    {
+      "quote": "Both are in ChatGPT Work and Codex from Tuesday.",
+      "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "22 septembre 2026 · OpenAI",
+      "headline": "GPT-6 se trompe *deux fois moins*, dit OpenAI",
+      "hero": {
+        "value": "moitié",
+        "label": "moins d'erreurs, sur le test maison d'OpenAI"
+      },
+      "swipe": "Les chiffres et qui les a mesurés"
+    },
+    {
+      "type": "stat",
+      "figure": "90",
+      "unit": "minutes d'écart",
+      "body": "Anthropic a sorti un **Opus 5.5** moins cher juste avant l'annonce d'OpenAI.",
+      "evidence": "Notably, Anthropic released a new version of Opus 5.5 just 90 minutes before OpenAI's release, reflecting the intense competition between the two companies.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+        "date": "2026-09-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le prix est divisé par deux",
+      "body": "La série 6 est facturée **moitié moins** que la série 5.6, une baisse qu'OpenAI attribue à sa façon de garder en mémoire et de traiter les demandes.",
+      "evidence": "The 6 series models will be available at half the cost of the 5.6 series of Sol and Luna, a price drop that OpenAI attributes to improvements in caching and inference.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+        "date": "2026-09-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le test est maison",
+      "body": "OpenAI dit que GPT-6 Sol fait environ **deux fois moins** d'erreurs que le modèle qu'il remplace, sur une évaluation interne bâtie à partir de conversations réelles.",
+      "evidence": "On our internal factuality evaluation, which is based on de-identified real-world conversations where users flagged mistakes by our models, GPT-6 Sol makes about half as many mistakes as its predecessor, reaching Astra-level reliability at much lower cost",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+        "date": "2026-09-22"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "OpenAI compare ses résultats à ceux d'Anthropic dans presque toute son annonce.",
+      "caveat": "Les scores du concurrent ne viennent pas de ses propres essais, mais de rapports déjà publiés.",
+      "claimLabel": "L'annonce",
+      "caveatLabel": "La réserve, écrite par OpenAI",
+      "evidence": "Competitor scores came from published reports rather than in-house runs.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut",
+        "date": "2026-09-22"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où il arrive",
+      "body": "Les deux modèles sont dans ChatGPT Work et Codex pour les comptes payants, et OpenAI dit les déployer progressivement dans ChatGPT.",
+      "evidence": "OpenAI expects to roll out the models to ChatGPT (the app and website) gradually throughout the day.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+        "date": "2026-09-22"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui croit les chiffres des labos sur parole",
+      "sub": "Les sources sont sur chaque diapositive."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "GPT-6 se trompe deux fois moins, dit OpenAI",
+    "beats": [
+      {
+        "script": "L'IA qui te répond dans ChatGPT va se tromper deux fois moins souvent. C'est OpenAI qui l'annonce pour son nouveau modèle, GPT-6 Sol, sorti mardi et déployé petit à petit.",
+        "visual": {
+          "type": "photo",
+          "query": "electronics circuit lights",
+          "alt": "Une carte électronique éclairée en rouge, vue de très près",
+          "file": "media/2026-09-23-gpt6-moins-derreurs/p0.jpg",
+          "credit": "Shixart1985 · CC BY"
+        }
+      },
+      {
+        "script": "Et pour ceux qui l'utilisent dans leurs applications, il coûte moitié moins cher que le modèle d'avant. Bonne nouvelle. Sauf que. Tu sais qui a compté ces erreurs ?",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+          "file": "media/2026-09-23-gpt6-moins-derreurs/shot_oai.png"
+        }
+      },
+      {
+        "script": "OpenAI elle-même. Le test est maison : l'entreprise a repris de vraies conversations où des utilisateurs avaient signalé une erreur de l'ancien modèle, puis elle a recompté dessus.",
+        "visual": {
+          "type": "card",
+          "value": "moitié moins",
+          "label": "d'erreurs, sur le test interne d'OpenAI"
+        }
+      },
+      {
+        "script": "Sur ce test-là, le nouveau modèle se trompe environ deux fois moins que le précédent. C'est leur phrase, leur test, et leur mesure. OpenAI le dit noir sur blanc dans son annonce.",
+        "visual": {
+          "type": "photo",
+          "query": "server room cables",
+          "alt": "Des baies de serveurs allumées dans une salle sombre",
+          "file": "media/2026-09-23-gpt6-moins-derreurs/p1.jpg",
+          "credit": "Free power zone image · CC0"
+        }
+      },
+      {
+        "script": "Et la course se joue à la minute. Anthropic a sorti son Opus 5.5, moins cher lui aussi, 90 minutes avant l'annonce d'OpenAI. Le même jour.",
+        "visual": {
+          "type": "card",
+          "value": "90 minutes",
+          "label": "entre l'annonce d'Anthropic et celle d'OpenAI"
+        }
+      },
+      {
+        "script": "Dans son annonce, OpenAI se compare beaucoup à Anthropic. Sauf que les scores du concurrent, elle ne les a pas mesurés elle-même : elle les a repris de rapports déjà publiés. Elle le reconnaît.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut",
+          "file": "media/2026-09-23-gpt6-moins-derreurs/shot_tnw.png"
+        }
+      },
+      {
+        "script": "Donc le prix baisse pour de bon, et la fiabilité, elle, reste une promesse de vendeur. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "photo",
+          "query": "fiber optic cables close",
+          "alt": "Un faisceau de fibres optiques allumées sur fond noir",
+          "file": "media/2026-09-23-gpt6-moins-derreurs/p2.jpg",
+          "credit": "Fiber Optics Close-Up · CC0"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/openai-gpt-6-sol-luna-api-price-cut",
+      "accessed": "2026-09-22"
+    }
+  ]
+}
