@@ -6858,3 +6858,43 @@ ENTRIES:
   + publication + seed), 0,00 $. Le premier land.mjs lance EN ARRIERE-PLAN pendant
   l'audit (lecon du 21/09) a coute 0 minute de fenetre: il etait fini avant le build.
   Proof: run 10h30 22/09, Reel 2026-09-22-tours-surveillance-frontiere.
+  Ajout 22/09 (16h30), 66e mesure morte de la cle media (401, cle 53 car AQ.Ab8;
+  dernier achat 01/09 16h54 = 21 jours). IG_ACCESS_TOKEN: il expire CETTE NUIT
+  (state/token.json, 23/09 00h00 UTC): ce Reel est le DERNIER que le compte
+  publiera tant que Hasan n'a pas regenere le jeton, le creneau de 19h30 compris
+  s'il demarre apres minuit UTC. Dis-le en tete de rapport.
+  LE PIEGE DU PRONOM DANS UNE CITATION D'EVIDENCE, neuf et invisible au gate:
+  la captionEvidence du spec herite portait "However, this, too, isn't enough
+  reason to buy a new device" et le beat en tirait "cet outil de dictee ne suffit
+  pas". La citation EXISTE (VERIFIED), mais elle ne dit pas de QUOI elle parle:
+  seule la lecture du corps de l'article prouve que "this" = Rambler (il suit
+  "Google's Rambler, however, may be one of the best of the AI features"). Ici
+  l'attribution etait juste, mais le gate n'aurait rien vu si elle avait ete
+  fausse. REFLEXE, 2 min: toute citation d'evidence qui commence par un pronom
+  (this, it, the latter, that) se relit DANS l'article avant de publier, avec un
+  fetch Node et un indexOf sur la phrase.
+  TROIS GLISSEMENTS DE PERIMETRE DANS LE MEME SPEC DE SCOUT (famille 07/09,
+  21/09), tous gate-PASSED avant et apres correction: "updates for up to 10
+  years" rendu "des mises a jour pendant 10 ans" (corrige en "jusqu'a 10 ans"),
+  "our initial selection of flagship devices are built by" rendu "les machines
+  sont fabriquees par" (corrige en "les premiers modeles haut de gamme"), et
+  "50 million Chromebooks in schools, Google has said" rendu sans son attribution
+  (corrige en "d'apres Google"). Budgete 10 min d'audit par spec herite, la
+  regle du 21/09 se re-confirme au mot pres.
+  DOMAINE NEUF AU GATE ET EN RECU: androidauthority.com se gate du premier coup
+  ET se capture proprement (rubrique COMPUTING, titre entier sur trois lignes
+  "Googlebook is finally official with 5 flagship Android-powered laptops
+  starting at $899", chapo, signature et "Sep 21, 2026"), aucun recadrage, fond
+  clair. blog.google re-confirme en recu (titre, date, "4 min read", signature du
+  VP, zero banniere) pour la 3e fois depuis le 12/08.
+  PHOTO: "laptop keyboard backlit" (Openverse, CC0, clavier retroeclaire violet
+  sur fond noir) est une excellente frame zero muette: aucune marque lisible,
+  aucun mot, fond sombre donc la carte de hook blanche et le karaoke jaune
+  tiennent. Elle est en prime DANS l'histoire (TechCrunch: les Googlebook ont
+  des "backlit keyboards"). Verifiee a 540 px avant build, piege de marque du
+  22/09 06h30 respecte.
+  CHRONO: demarrage 16h48, Reel PUBLIE a 17h05 (60,0 s, 0,00 $), soit DIX-SEPT
+  MINUTES bout en bout sur conteneur froid, LECTURE DU MANUEL ENTIER, audit du
+  spec herite, 3 corrections + attaque reecrite, re-gate 22/22, build muet,
+  9 frames lues, 3 landings, seed. Proof: run 16h30 22/09, Reel
+  2026-09-22-googlebook-gemini.
