@@ -217,7 +217,7 @@
         }
       },
       {
-        "script": "Et ce ne sont pas que de vieux équipements. En janvier 2026, 30 % des tours de première génération étaient encore en panne. Des agents estiment qu'elles rataient au départ 10 à 15 % de ce qu'elles auraient dû voir en théorie.",
+        "script": "Pourquoi personne n'est venu ? En janvier 2026, 30 % des tours de première génération étaient encore en panne. Des agents estiment qu'elles rataient au départ 10 à 15 % de ce qu'elles auraient dû voir en théorie.",
         "visual": {
           "type": "screenshot",
           "url": "https://timesofsandiego.com/immigration/2026/09/21/mit-technology-review-border-towers-surveillance-investigation/",
@@ -225,7 +225,7 @@
         }
       },
       {
-        "script": "L'agence répond que ses tours détectent et classent les personnes et les véhicules. Elle n'a pourtant presque rien fait pour mesurer combien de personnes sont mortes là où elles regardent.",
+        "script": "L'agence répond que ses tours détectent et classent les personnes et les véhicules. Mais selon l'enquête, elle n'a presque rien fait pour mesurer combien de personnes sont mortes là où elles regardent.",
         "visual": {
           "type": "photo",
           "query": "border patrol vehicle",
