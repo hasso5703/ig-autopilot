@@ -6813,3 +6813,48 @@ ENTRIES:
   Le recu a fond noir est confortable a ecrire et c'est la surface la MOINS
   performante du compte en ouverture: garde-le au beat 1, ouvre sur la photo.
   (Rappel: `veo` n=55 -> 197 vues / 22,3 %, ligne gelee depuis le 02/09.)
+  Ajout 22/09 (10h30), 65e mesure morte de la cle media (401, cle 53 car AQ.Ab8;
+  dernier achat 01/09 16h54 = 21 jours). IG_ACCESS_TOKEN: ZERO JOUR, il expire
+  cette nuit (state/token.json, issuedAt 25/07 + 60 j = 23/09 00h00 UTC). Les
+  creneaux de 16h30 et 19h30 d'aujourd'hui sont les DERNIERS qui publieront
+  quoi que ce soit tant que Hasan n'a pas regenere le jeton: dis-le en tete de
+  rapport et ne planifie rien qui suppose demain.
+  LE KARAOKE COUPAIT LES MILLIERS EN DEUX, corrige dans le code (pas une note a
+  retenir, une regression fermee): en francais le separateur de milliers est une
+  ESPACE, donc "1 050" arrive au chunker comme DEUX tokens et rien ne lui
+  interdisait de casser entre les deux. Mesure sur le Reel de ce midi: "Plus de
+  1" remplissait un chunk de 3 mots (KARAOKE_MAX_WORDS=3) et la ligne suivante
+  s'ouvrait sur "050 PERSONNES SONT"; meme chose sur "PRES DE 4" / "000 lieux".
+  Famille du 02/09 ("99.1%" grave "991%") d'un cran au-dessus: celui-la abimait
+  un token, celui-ci coupe un nombre en deux lignes. Ca mord surtout en MUET, ou
+  le karaoke est le seul canal. Corrige dans reel2.mjs (predicat `glued`: un
+  groupe de 3 chiffres ne quitte jamais le token qui le precede, ni par la coupe
+  de largeur ni par la coupe de 3 mots) + test de non-regression verifie rouge
+  sans le correctif (suite 130).
+  RECUS MESURES EN MOTEUR: technologyreview.com (article normal) re-confirme et
+  reste excellent -- bande noire, masthead, rubrique, titre entier, chapo qui
+  porte le claim, double signature, date -- karaoke blanc/jaune tres lisible
+  dessus. timesofsandiego.com se capture proprement ET montre le sujet (une
+  vraie photo de tour de surveillance au-dessus de la frontiere, legendee), mais
+  ATTENTION: sa carte embarque une RANGEE DE BOUTONS DE PARTAGE (X, Facebook,
+  Reddit, Pinterest, mail, imprimante) + "Share this:" entre la signature et la
+  photo. Ce n'est ni un mur de consentement ni une pub, ca ne cache rien, et la
+  photo vaut plus que le defaut -- mais on ne peut pas recadrer l'un sans perdre
+  l'autre (les boutons sont AU MILIEU de la carte). A savoir avant d'epingler:
+  si tu veux une carte nette, prends MIT TR; si tu veux le sujet, prends TSD et
+  assume les icones.
+  PHOTO: "sonoran desert cactus" (NOIRLab, CC BY, saguaro en contre-jour, 9:16
+  natif 1200x1800) re-confirme la note du 22/09 06h30 et tient la meilleure
+  frame zero muette du compte: aucun mot lisible, sujet unique centre, la carte
+  de hook noire se detache. "desert cactus night" (CC0, 1080x720 PAYSAGE) et
+  "border patrol vehicle" (CC0, 1080x720 PAYSAGE) survivent tous deux au recadrage
+  centre + zoom Ken-Burns, simules avant build (crop 9:16 puis crop=964:1714:58:103):
+  sujet dense au centre dans les deux cas. L'agent de la border patrol porte casque,
+  masque et lunettes, donc AUCUN visage identifiable: posable sous la reponse de
+  l'agence sans accuser personne (regle du 09/09 respectee).
+  CHRONO: demarrage 10h48, Reel PUBLIE a 10h58, soit DIX MINUTES bout en bout sur
+  conteneur froid (npm install + ffmpeg + 130 tests + guard + orphelins + audit du
+  spec herite + 2 corrections + re-gate 22/22 + build muet + 9 frames + 3 landings
+  + publication + seed), 0,00 $. Le premier land.mjs lance EN ARRIERE-PLAN pendant
+  l'audit (lecon du 21/09) a coute 0 minute de fenetre: il etait fini avant le build.
+  Proof: run 10h30 22/09, Reel 2026-09-22-tours-surveillance-frontiere.

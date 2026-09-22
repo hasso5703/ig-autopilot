@@ -2619,3 +2619,27 @@ test("imagery: a photograph tagged sideways is put back on its feet before it is
   assert.equal(exifOrientation(Buffer.alloc(0)), 1, "an empty buffer is not a reason to throw");
   assert.equal(orientationFilter(exifOrientation(Buffer.from([0xff, 0xd8, 0xff, 0xda]))), null, "no EXIF, no rotation");
 });
+
+test("karaoke never breaks a French thousands separator across two lines", async () => {
+  const { buildAss } = await import("../src/reel2.mjs");
+  // 2026-09-22, border-towers Reel: "Plus de 1" filled a 3-word chunk and the
+  // next line opened "050 PERSONNES SONT". A figure on screen is a claim, and
+  // this one showed the account's hardest number as 050.
+  const words = [
+    { w: "Plus", s: 0.0, e: 0.3 }, { w: "de", s: 0.3, e: 0.5 }, { w: "1", s: 0.5, e: 0.7 },
+    { w: "050", s: 0.7, e: 1.1 }, { w: "personnes", s: 1.1, e: 1.6 }, { w: "sont", s: 1.6, e: 1.9 },
+    { w: "mortes", s: 1.9, e: 2.3 }, { w: "près", s: 2.3, e: 2.6 }, { w: "de", s: 2.6, e: 2.8 },
+    { w: "4", s: 2.8, e: 3.0 }, { w: "000", s: 3.0, e: 3.4 }, { w: "lieux.", s: 3.4, e: 3.9 },
+  ];
+  const beats = [{ script: "Plus de 1 050 personnes sont mortes près de 4 000 lieux.", visual: { type: "image" } }];
+  const ranges = [{ start: 0, end: 11 }];
+  const karaoke = buildAss(words, beats, ranges, "FF8A3D")
+    .split("\n").filter((l) => l.startsWith("Dialogue: 0,"))
+    .map((l) => l.replace(/^.*,,/, "").replace(/\{\\k\d+\}/g, ""));
+  for (const pair of [["1", "050"], ["4", "000"]]) {
+    const line = karaoke.find((l) => l.includes(pair.join(" ")));
+    assert.ok(line, `"${pair.join(" ")}" must stay on one karaoke line, got: ${JSON.stringify(karaoke)}`);
+  }
+  assert.ok(!karaoke.some((l) => /^0\d\d\b/.test(l.trim()) || /^000\b/.test(l.trim())),
+    `no karaoke line may open on an orphaned digit group: ${JSON.stringify(karaoke)}`);
+});

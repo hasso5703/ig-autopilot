@@ -819,13 +819,31 @@ export function buildAss(words, beats, ranges, accentHex, opts = {}) {
   // holds about 24 characters, so the chunker caps characters as well as words.
   const chunkChars = (ch) => ch.map((x) => x.word.w).join(" ").length;
   const capFor = (i) => (lowBeats.has(i) ? KARAOKE_MAX_CHARS_LOW : KARAOKE_MAX_CHARS);
+  /* A thousands separator is a SPACE in French, so "1 050" arrives as two
+   * word tokens and the chunker was free to break between them. Measured
+   * 2026-09-22 on the border-towers Reel: "Plus de 1" filled a 3-word chunk
+   * and the next line opened "050 PERSONNES SONT" — the account's hardest
+   * figure burned onto the frame as 050. Same family as the "99.1%" -> "991%"
+   * of 2026-09-02 (a figure on screen is a claim), one level up: that one
+   * mangled a token, this one splits a number across two lines. It bites
+   * hardest in silent mode, where the karaoke is the only channel the story
+   * has. So a digit group never leaves the token it belongs to. */
+  const glued = (a, b) => /\d$/.test(a || "") && /^\d{3}(?!\d)/.test(b || "");
   const chunks = [];
   let chunk = [];
   words.forEach((word, i) => {
     if (cardWords.has(i)) { if (chunk.length) { chunks.push(chunk); chunk = []; } return; }
-    if (chunk.length && chunkChars(chunk) + 1 + word.w.length > capFor(chunk[0].i)) { chunks.push(chunk); chunk = []; }
+    if (chunk.length && chunkChars(chunk) + 1 + word.w.length > capFor(chunk[0].i)) {
+      /* Breaking for width is legitimate; breaking BETWEEN "1" and "050" is
+       * not. Carry the orphaned group's head into the new line instead. */
+      const carry = chunk.length > 1 && glued(chunk.at(-1).word.w, word.w) ? chunk.pop() : null;
+      chunks.push(chunk);
+      chunk = carry ? [carry] : [];
+    }
     chunk.push({ word, i });
-    if (chunk.length >= KARAOKE_MAX_WORDS || /[,.]$/.test(word.w)) { chunks.push(chunk); chunk = []; }
+    const next = words[i + 1];
+    const holdsNumber = next && !cardWords.has(i + 1) && glued(word.w, next.w);
+    if (!holdsNumber && (chunk.length >= KARAOKE_MAX_WORDS || /[,.]$/.test(word.w))) { chunks.push(chunk); chunk = []; }
   });
   if (chunk.length) chunks.push(chunk);
   // A lone word makes a caption that flickers; give it back to its sentence —
