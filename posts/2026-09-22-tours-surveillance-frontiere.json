@@ -12,7 +12,7 @@
     }
   ],
   "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
-  "caption": "Plus de 1 050 personnes sont mortes à portée des caméras de la frontière américaine.\n\nMIT Technology Review a croisé près de 4 000 lieux où des restes humains ont été retrouvés avec près de 600 tours de surveillance recensées par l'Electronic Frontier Foundation. Résultat : plus de 1 050 morts à portée de ces tours entre 2015 et début 2026.\n\nUn cas. José Morales Bernal a traversé la frontière le 8 avril 2024, la veille de ses 32 ans. Il est mort à 360 pieds de la tour la plus proche. Deux autres tours surveillaient à l'est et à l'ouest.\n\nLe détail qui n'est pas dans la vidéo. Ce ne sont pas seulement de vieux équipements : l'enquête estime que plus de 110 personnes sont mortes à portée des tours autonomes modernes d'Anduril, parmi les plus avancées déployées par l'agence, depuis 2021.\n\nCe qui coince. En janvier 2026, 30 % des tours de première génération étaient encore en panne. Plusieurs agents estiment que les tours rataient au départ 10 à 15 % de ce qu'elles auraient dû repérer.\n\nLa réponse de l'agence. Les tours autonomes utilisent l'intelligence artificielle pour détecter et classer les personnes, les véhicules et les animaux, et pour alerter les agents. L'agence prévoit 1 milliard de dollars pour 1 497 tours de plus d'ici 2034.\n\nÀ noter : l'enquête est signée MIT Technology Review, et Times of San Diego la publie dans le cadre de la même collaboration. Les deux textes sont le même reportage.\n\nUne caméra qui repère quelqu'un en danger devrait-elle déclencher un secours, oui ou non ?\n\ntechnologyreview.com · timesofsandiego.com\n\n#IA #IntelligenceArtificielle #ActuIA #Surveillance #Frontiere\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "Plus de 1 050 personnes sont mortes à portée des caméras de la frontière américaine.\n\nMIT Technology Review a croisé près de 4 000 lieux où des restes humains ont été retrouvés avec près de 600 tours de surveillance recensées par l'Electronic Frontier Foundation. Résultat : plus de 1 050 morts à portée de ces tours entre 2015 et début 2026.\n\nUn cas. José Morales Bernal a traversé la frontière le 8 avril 2024, la veille de ses 32 ans. Il est mort à 360 pieds de la tour la plus proche. Deux autres tours surveillaient à l'est et à l'ouest.\n\nLe détail qui n'est pas dans la vidéo. Ce ne sont pas seulement de vieux équipements : l'enquête estime que plus de 110 personnes sont mortes à portée des tours autonomes modernes d'Anduril, parmi les plus avancées déployées par l'agence, depuis 2021.\n\nCe qui coince. En janvier 2026, 30 % des tours de première génération étaient encore en panne. Plusieurs agents estiment que les tours rataient au départ 10 à 15 % de ce qu'elles auraient dû repérer en théorie.\n\nLa réponse de l'agence. Les tours autonomes utilisent l'intelligence artificielle pour détecter et classer les personnes, les véhicules et les animaux, et pour alerter les agents. L'agence prévoit 1 milliard de dollars pour 1 497 tours de plus d'ici 2034.\n\nÀ noter : l'enquête est signée MIT Technology Review, et Times of San Diego la publie dans le cadre de la même collaboration. Les deux textes sont le même reportage.\n\nUne caméra qui repère quelqu'un en danger devrait-elle déclencher un secours, oui ou non ?\n\ntechnologyreview.com · timesofsandiego.com\n\n#IA #IntelligenceArtificielle #ActuIA #Surveillance #Frontiere\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "quote": "We found more than 1,050 people who died within range of border surveillance towers between 2015 and early 2026.",
@@ -138,7 +138,7 @@
     {
       "type": "content",
       "title": "Ce que les agents disent",
-      "body": "Plusieurs agents estiment que les tours rataient au départ *10 à 15 %* de ce qu'elles auraient dû repérer.",
+      "body": "Plusieurs agents estiment que les tours rataient au départ *10 à 15 %* de ce qu'elles auraient dû repérer en théorie.",
       "evidence": "Several agents estimate that the towers initially missed 10% to 15% of what they should in theory have caught.",
       "source": {
         "name": "Times of San Diego",
@@ -149,7 +149,7 @@
     {
       "type": "content",
       "title": "Et ça continue",
-      "body": "L'agence prévoit **1 milliard de dollars** pour *1 497 tours* de plus d'ici 2034, sans avoir mesuré combien de personnes sont mortes là où elle regarde.",
+      "body": "L'agence prévoit **1 milliard de dollars** pour *1 497 tours* de plus d'ici 2034, et n'a presque rien fait pour mesurer combien de personnes sont mortes là où elle regarde.",
       "evidence": "CBP plans to spend $1 billion for 1,497 more towers by 2034. But our reporting shows that CBP has done little to assess how its towers are working or how many people have died where they keep watch.",
       "source": {
         "name": "MIT Technology Review",
@@ -217,7 +217,7 @@
         }
       },
       {
-        "script": "Et ce ne sont pas seulement de vieux équipements. En janvier 2026, 30 % des tours de première génération étaient encore en panne. Des agents estiment qu'elles rataient au départ 10 à 15 % de ce qu'elles auraient dû voir.",
+        "script": "Et ce ne sont pas que de vieux équipements. En janvier 2026, 30 % des tours de première génération étaient encore en panne. Des agents estiment qu'elles rataient au départ 10 à 15 % de ce qu'elles auraient dû voir en théorie.",
         "visual": {
           "type": "screenshot",
           "url": "https://timesofsandiego.com/immigration/2026/09/21/mit-technology-review-border-towers-surveillance-investigation/",
@@ -225,7 +225,7 @@
         }
       },
       {
-        "script": "L'agence répond que ses tours détectent et classent les personnes et les véhicules. Elle n'a pourtant jamais mesuré combien de personnes sont mortes là où ces tours regardent.",
+        "script": "L'agence répond que ses tours détectent et classent les personnes et les véhicules. Elle n'a pourtant presque rien fait pour mesurer combien de personnes sont mortes là où elles regardent.",
         "visual": {
           "type": "photo",
           "query": "border patrol vehicle",
