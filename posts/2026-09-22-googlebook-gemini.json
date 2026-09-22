@@ -12,7 +12,7 @@
     }
   ],
   "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
-  "caption": "Google vend un ordinateur portable à partir de 899 dollars, et le pari tient dans son intelligence artificielle.\n\nLe Googlebook est ouvert à la précommande. Il tourne sur la base d'Android avec des fondations de bureau venues de ChromeOS, et il est conçu pour Gemini. Les appareils arrivent en rayon le 4 octobre aux États-Unis, et le 5 octobre au Canada, au Royaume-Uni, en Irlande, en France, en Allemagne et en Australie.\n\nCe qu'il fait. Tu remues le curseur et Gemini regarde ce qu'il y a à l'écran : Google appelle ça Magic Pointer. Un second outil, Rambler, transforme des notes dites à voix haute en texte mis en forme, avec des titres et des listes.\n\nLe détail qui n'est pas dans la vidéo. Les 899 dollars incluent 12 mois de Google AI Pro, 5 To de stockage en ligne et 3 mois de YouTube Premium, et Google promet des mises à jour pendant 10 ans. Les machines sont fabriquées par Acer, ASUS, Dell, HP et Lenovo.\n\nCe qui coince. TechCrunch juge que l'outil de dictée ne suffit pas à justifier l'achat d'un appareil neuf, et que d'autres fonctions, elles, ne réclament aucun matériel neuf.\n\nLa vraie cible. Il y a environ 50 millions de Chromebooks dans les écoles. Pour TechCrunch, le Googlebook s'inscrit dans un plan plus long : prendre une grande part du marché scolaire qui tourne sur Chromebook et l'amener vers Gemini.\n\nGoogle précise de son côté que Gemini n'agit que si on le lui demande, et qu'on peut le désactiver.\n\nTu paierais un ordinateur neuf juste pour son IA, oui ou non ?\n\nblog.google · techcrunch.com · androidauthority.com\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Gemini\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "Google vend un ordinateur portable à partir de 899 dollars, et le pari tient dans son intelligence artificielle.\n\nLe Googlebook est ouvert à la précommande. Il tourne sur la base d'Android avec des fondations de bureau venues de ChromeOS, et il est conçu pour Gemini. Les appareils arrivent en rayon le 4 octobre aux États-Unis, et le 5 octobre au Canada, au Royaume-Uni, en Irlande, en France, en Allemagne et en Australie.\n\nCe qu'il fait. Tu remues le curseur et Gemini regarde ce qu'il y a à l'écran : Google appelle ça Magic Pointer. Un second outil, Rambler, transforme des notes dites à voix haute en texte mis en forme, avec des titres et des listes.\n\nLe détail qui n'est pas dans la vidéo. Les 899 dollars incluent 12 mois de Google AI Pro, 5 To de stockage en ligne et 3 mois de YouTube Premium, et Google promet des mises à jour jusqu'à 10 ans. Les premiers modèles haut de gamme sont fabriqués par Acer, ASUS, Dell, HP et Lenovo.\n\nCe qui coince. TechCrunch juge que l'outil de dictée ne suffit pas à justifier l'achat d'un appareil neuf, et que d'autres fonctions, elles, ne réclament aucun matériel neuf.\n\nLa vraie cible. Il y a environ 50 millions de Chromebooks dans les écoles, d'après Google. Pour TechCrunch, le Googlebook s'inscrit dans un plan plus long : prendre une grande part du marché scolaire qui tourne sur Chromebook et l'amener vers Gemini.\n\nGoogle précise de son côté que Gemini n'agit que si on le lui demande, et qu'on peut le désactiver.\n\nTu paierais un ordinateur neuf juste pour son IA, oui ou non ?\n\nblog.google · techcrunch.com · androidauthority.com\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Gemini\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "quote": "After first unveiling its new AI-powered laptop, dubbed Googlebook, in May, Google on Monday said the new device is now available for preorder for $899.",
@@ -143,7 +143,7 @@
     {
       "type": "content",
       "title": "Où sont les vrais clients",
-      "body": "Il y a environ **50 millions** de Chromebooks dans les écoles, utilisés par des élèves et des enseignants.",
+      "body": "Il y a environ **50 millions** de Chromebooks dans les écoles, utilisés par des élèves et des enseignants, *d'après Google*.",
       "evidence": "There are somewhere around 50 million Chromebooks in schools, used by students and educators, Google has said.",
       "source": {
         "name": "TechCrunch",
@@ -191,7 +191,7 @@
     "title": "Google vend un portable 899 dollars pour son IA",
     "beats": [
       {
-        "script": "Google vend un ordinateur portable à partir de 899 dollars, en rayon en France le 5 octobre. Et le pari, c'est que son intelligence artificielle suffise à te faire acheter une machine neuve.",
+        "script": "899 dollars pour un ordinateur portable, et ce que Google te vend dedans, c'est son intelligence artificielle. Il arrive en France le 5 octobre. Tu paierais ça, toi, pour une IA ?",
         "visual": {
           "type": "photo",
           "query": "laptop keyboard backlit",
@@ -201,7 +201,7 @@
         }
       },
       {
-        "script": "Il s'appelle Googlebook. Tu remues le curseur, et Gemini vient regarder ce qu'il y a à l'écran. Un autre outil transforme ce que tu dis à voix haute en texte mis en forme. Tu vois l'idée ?",
+        "script": "Il s'appelle Googlebook. Tu remues le curseur, et Gemini vient regarder ce qu'il y a à l'écran. Un autre outil transforme ce que tu dis à voix haute en texte mis en forme, prêt à envoyer.",
         "visual": {
           "type": "screenshot",
           "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
@@ -225,7 +225,7 @@
         }
       },
       {
-        "script": "Et pour le site, la vraie cible n'est pas toi. Il y a environ 50 millions de Chromebooks dans les écoles.",
+        "script": "Et pour le site, la vraie cible n'est pas toi. Il y a environ 50 millions de Chromebooks dans les écoles, d'après Google.",
         "visual": {
           "type": "card",
           "value": "50",
