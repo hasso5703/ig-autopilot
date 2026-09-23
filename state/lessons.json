@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-23T11:00:13.158Z",
+  "at": "2026-09-23T17:04:33.185Z",
   "n": 113,
-  "nSettled": 106,
-  "medianViews": 144,
+  "nSettled": 107,
+  "medianViews": 142,
   "medianRetentionPct": 16,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 34,
+      "n": 35,
       "medianViews": 132,
-      "meanRetentionPct": 13.2,
+      "meanRetentionPct": 13,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -148,9 +148,9 @@
       "thin": true
     },
     "money": {
-      "n": 2,
-      "medianViews": 133,
-      "meanRetentionPct": 10.5,
+      "n": 3,
+      "medianViews": 115,
+      "meanRetentionPct": 9,
       "saves": 0,
       "shares": 0,
       "thin": true
@@ -166,9 +166,9 @@
       "thin": false
     },
     "11": {
-      "n": 11,
-      "medianViews": 150,
-      "meanRetentionPct": 13.2,
+      "n": 12,
+      "medianViews": 141,
+      "meanRetentionPct": 12.6,
       "saves": 8,
       "shares": 7,
       "thin": false
@@ -2006,7 +2006,7 @@
         "money"
       ],
       "sendTest": "Une appli de paris a construit une IA pour repérer les clients qui allaient perdre le plus, et c'est eux qu'elle a arrosés de paris gratuits.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-13-ralentir-lia",
