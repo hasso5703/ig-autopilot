@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-23T06:53:35.272Z",
-  "n": 112,
+  "at": "2026-09-23T11:00:13.158Z",
+  "n": 113,
   "nSettled": 106,
   "medianViews": 144,
   "medianRetentionPct": 16,
@@ -2145,6 +2145,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-22-googlebook-gemini",
+      "at": "2026-09-22T16:56:13.342Z",
+      "hourUtc": 16,
+      "views": 28,
+      "reach": 25,
+      "avgWatchS": 3.7,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
+      "settled": false
+    },
+    {
       "slug": "2026-07-28-claude-chats-google",
       "at": "2026-07-28T09:12:53.605Z",
       "hourUtc": 9,
@@ -2160,23 +2177,6 @@
       "themes": [],
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-22-googlebook-gemini",
-      "at": "2026-09-22T16:56:13.342Z",
-      "hourUtc": 16,
-      "views": 18,
-      "reach": 16,
-      "avgWatchS": 2.7,
-      "retentionPct": 4,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
-      "settled": false
     },
     {
       "slug": "2026-09-16-humains-lisent-chatgpt",
@@ -2211,6 +2211,25 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-23-ia-militaire-ecole-minab",
+      "at": "2026-09-23T10:58:43.093Z",
+      "hourUtc": 10,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

@@ -1671,6 +1671,29 @@ ENTRIES:
   "Google a travaille avec Irregular pour changer sa facon de tester" (CNBC
   verbatim, ajoutee en captionEvidence), legende alignee, re-gate 22/22.
   Proof: veille 19h30 21/09, spec 2026-09-21-gemini-pirate-trois-entreprises.
+  Ajout 23/09 (10h30), LE JETON IG A DEPASSE SA DATE NOMINALE ET PUBLIE ENCORE, et
+  c'est la nuance qui evite a la fois une panique et une fausse securite:
+  state/token.json compte depuis issuedAt 25/07 00h00Z + 60 j, donc il annonce
+  l'expiration au 23/09 00h00Z et rend un compteur NEGATIF ce matin (-0,46 j); a
+  10h58Z le media_publish est pourtant passe sans un mot (Reel
+  ia-militaire-ecole-minab, id 18011897018959154, permalink DdoJfHWgEoX). Le
+  compteur est PESSIMISTE par construction (la note du fichier le dit: la date est
+  arrondie au debut de journee), la vraie limite est l'heure d'emission reelle.
+  Donc ne conclus pas "le compte ne publie plus" d'un compteur negatif, TESTE
+  (`node src/publish.mjs recent`, 2 s); et ne lis pas non plus un succes comme un
+  sursis, il peut mourir entre deux creneaux. 69e mesure morte de la cle media
+  (401, cle 53 car AQ.A; dernier achat 01/09 16h54 = 22 jours), OOM_SILENT reste
+  le mode par defaut.
+  DOMAINE NEUF AU GATE ET EN RECU, ibtimes.co.uk: rend 200 au fetch du gate et se
+  gate du premier coup (22 verifications sur 22 avec gizmodo, 0 aller-retour), et
+  sa capture epinglee par le scout est PARFAITE sans recadrage, fond clair, avec
+  dans la fenetre visible des ~1686 px le masthead "INTERNATIONAL BUSINESS TIMES
+  UK", la rubrique WORLD, le titre entier qui EST l'histoire avec son chiffre, le
+  chapo, la signature et "Published 20 September 2026". gizmodo.com se re-confirme
+  au gate mais son recu reste un PARAGRAPHE DE CORPS sans masthead (reserve du
+  19/09 re-confirmee): lisible et sur le sujet, mais il ne dit pas de quel journal
+  il vient. Quand les deux sont dans le meme dossier, mets ibtimes au beat le plus
+  tot. Proof: run 10h30 23/09.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
