@@ -1694,6 +1694,22 @@ ENTRIES:
   19/09 re-confirmee): lisible et sur le sujet, mais il ne dit pas de quel journal
   il vient. Quand les deux sont dans le meme dossier, mets ibtimes au beat le plus
   tot. Proof: run 10h30 23/09.
+  Ajout 23/09 (16h30), CORRECTION DE LA MESURE techcrunch.com DU 15/09: la
+  capture d'une page article techcrunch a pris 25 MINUTES ce soir (lancee a
+  16:54:21, beat acquis a 17:19:56), pas les "203 s / 28 frames" notes le 15/09.
+  Meme domaine, meme moteur, meme egress: le temps de capture d'un domaine n'est
+  donc PAS une constante, il varie d'un facteur 7. La capture a fini par reussir
+  et le recu est PARFAIT sans recadrage (bandeau vert, rubrique AI, titre entier
+  "OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes",
+  signature Lucas Ropek, "September 22, 2026"), donc ne tue pas une capture lente
+  trop vite: elle n'etait pas plantee, elle etait lente. REFLEXE: ne planifie
+  jamais une capture NEUVE dans un run de publication sans marge, ou lance-la en
+  arriere-plan pendant que tu fais autre chose. Un spec de scout dont TOUS les
+  recus sont deja epingles se construit en ~75 s (mesure du 15/09); le meme spec
+  avec un seul recu a prendre en direct a coute 27 min de build et a fait
+  atterrir le Reel a 19h25 Paris au lieu de 19h05. Corollaire pour les scouts:
+  epingle CHAQUE recu, un `url` sans `file` est une bombe a retardement dans le
+  creneau de publication. Proof: run 16h30 23/09, spec gpt6-moins-derreurs.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES
