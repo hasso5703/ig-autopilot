@@ -130,8 +130,8 @@
     {
       "type": "content",
       "title": "Les équipes qui devaient voir passaient à la trappe",
-      "body": "Les effectifs chargés d'éviter les morts civiles avaient baissé d'environ **90 %**. Chez Centcom, l'équipe est passée de 10 personnes à une seule.",
-      "evidence": "Staffing on civilian harm mitigation teams across the U.S. Department of Defense had also fallen by roughly 90% over recent years, shrinking to fewer than 20 people overall. Centcom's group shrank from 10 people to one.",
+      "body": "Les effectifs chargés d'éviter les morts civiles avaient baissé d'environ **90 %**. Chez Centcom, l'équipe est passée de 10 personnes à une seule, et aucun de leurs membres n'a examiné le site avant le tir.",
+      "evidence": "Staffing on civilian harm mitigation teams across the U.S. Department of Defense had also fallen by roughly 90% over recent years, shrinking to fewer than 20 people overall. Centcom's group shrank from 10 people to one. No member of those teams reviewed the Minab site before the missiles were up in the air.",
       "source": {
         "name": "Gizmodo",
         "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
@@ -227,7 +227,7 @@
         }
       },
       {
-        "script": "Les équipes chargées d'éviter les morts civiles avaient fondu de 90 %. Chez Centcom, il n'en restait qu'une personne. Personne n'a examiné le site avant le tir.",
+        "script": "Les équipes chargées d'éviter les morts civiles avaient fondu de 90 %. Chez Centcom, il n'en restait qu'une personne. Aucune d'elles n'a examiné le site avant le tir.",
         "visual": {
           "type": "card",
           "value": "90 %",
