@@ -130,19 +130,19 @@
       {
         "script": "L'IA qui te répond dans ChatGPT va se tromper deux fois moins souvent. C'est OpenAI qui l'annonce pour son nouveau modèle, GPT-6 Sol, sorti mardi et déployé petit à petit.",
         "visual": {
-          "type": "photo",
-          "query": "electronics circuit lights",
-          "alt": "Une carte électronique éclairée en rouge, vue de très près",
-          "file": "media/2026-09-23-gpt6-moins-derreurs/p0.jpg",
-          "credit": "Shixart1985 · CC BY"
+          "type": "screenshot",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+          "file": "media/2026-09-23-gpt6-moins-derreurs/shot_oai.png"
         }
       },
       {
         "script": "Et pour ceux qui l'utilisent dans leurs applications, il coûte moitié moins cher que le modèle d'avant. Bonne nouvelle. Sauf que. Tu sais qui a compté ces erreurs ?",
         "visual": {
-          "type": "screenshot",
-          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-          "file": "media/2026-09-23-gpt6-moins-derreurs/shot_oai.png"
+          "type": "photo",
+          "query": "server room cables",
+          "alt": "Des baies de serveurs allumées dans une salle sombre",
+          "file": "media/2026-09-23-gpt6-moins-derreurs/p1.jpg",
+          "credit": "Free power zone image · CC0"
         }
       },
       {
@@ -156,11 +156,8 @@
       {
         "script": "Sur ce test-là, le nouveau modèle se trompe environ deux fois moins que le précédent. C'est leur phrase, leur test, et leur mesure. OpenAI le dit noir sur blanc dans son annonce.",
         "visual": {
-          "type": "photo",
-          "query": "server room cables",
-          "alt": "Des baies de serveurs allumées dans une salle sombre",
-          "file": "media/2026-09-23-gpt6-moins-derreurs/p1.jpg",
-          "credit": "Free power zone image · CC0"
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/"
         }
       },
       {
