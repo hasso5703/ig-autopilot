@@ -1,0 +1,249 @@
+{
+  "slug": "2026-09-23-ia-militaire-ecole-minab",
+  "centralClaim": "An unreleased internal Pentagon review concluded that a cascade of preventable failures, including an overreliance on an AI tool built by Palantir, contributed to the US strike on an elementary school in Minab, Iran, that killed more than 150 people, including at least 123 children.",
+  "corroboration": [
+    {
+      "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+      "quote": "Those officials said some Pentagon personnel knew within hours that the United States had hit the school, and they described a cascade of preventable failures that included an overreliance on an AI tool built by Palantir."
+    },
+    {
+      "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787",
+      "quote": "An unreleased internal Pentagon review has concluded that Pentagon personnel knew within hours that the United States was responsible for the strike on the school, describing a cascade of preventable failures that included an overreliance on an AI tool built by Palantir."
+    }
+  ],
+  "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+  "caption": "L'enquête interne du Pentagone sur la frappe qui a tué 123 enfants en Iran met en cause un excès de confiance dans l'IA.\n\nLe 28 février 2026, deux missiles Tomahawk ont frappé l'école primaire Shajarah Tayyebeh, dans la ville de Minab, au sud de l'Iran, le premier jour de la guerre. Plus de 150 personnes sont mortes, dont au moins 123 enfants.\n\nCe que dit l'enquête. Une revue interne du Pentagone, toujours pas publiée et révélée par Bloomberg, décrit une série d'échecs évitables, dont une confiance excessive dans un outil d'intelligence artificielle fabriqué par Palantir. Le site avait été fiché comme installation des Gardiens de la révolution à partir de données périmées, puis il est ressorti du logiciel Maven comme cible recommandée pour le premier jour.\n\nLe détail qui n'est pas dans la vidéo. Plus de 120 élus démocrates de la Chambre ont écrit au ministre de la Défense pour demander quel rôle Maven et les autres outils d'IA avaient joué dans l'identification du site. Le Pentagone n'a pas répondu publiquement.\n\nCe qui coince. Un analyste du renseignement avait signalé des changements sur le site dès 2019, mais l'information avait été saisie dans un système qui n'était pas relié à la base de données officielle des cibles. Les effectifs chargés d'éviter les morts civiles avaient baissé d'environ 90 %.\n\nLa réponse de l'entreprise. Palantir dit ne pas être responsable des données qui lui sont fournies ni de l'identification des lacunes du renseignement, et ajoute que l'IA traite vite le renseignement mais ne peut pas corriger une information fausse qu'on lui donne.\n\nÀ noter : Gizmodo et IBTimes UK rapportent tous les deux la même enquête de Bloomberg. Les deux textes reposent sur le même reportage.\n\nUne IA devrait-elle avoir le droit de proposer des cibles militaires, oui ou non ?\n\ngizmodo.com · ibtimes.co.uk\n\n#IA #IntelligenceArtificielle #ActuIA #Palantir #Pentagone\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "The blasts killed more than 150 people, including at least 123 children.",
+      "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477"
+    },
+    {
+      "quote": "On 28 February 2026, two Tomahawk missiles hit Shajarah Tayyebeh Elementary School in the southern Iranian town of Minab on the opening day of the Iran war.",
+      "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787"
+    },
+    {
+      "quote": "The Minab site, which was cataloged as an Islamic Revolutionary Guard Corps facility due to outdated data, was fed into Maven with other candidates and came out as a recommended day-one target.",
+      "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477"
+    },
+    {
+      "quote": "More than 120 House Democrats wrote to Defense Secretary Pete Hegseth in March asking what role Maven and other AI tools played in identifying the site. The Pentagon has not answered publicly, citing the ongoing investigation.",
+      "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477"
+    },
+    {
+      "quote": "An intelligence analyst had flagged changes to the site as early as 2019, but the information was entered into a system that was not connected to the authoritative targeting database, meaning the warning never reached those assembling the strike package.",
+      "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787"
+    },
+    {
+      "quote": "Staffing across a number of Pentagon civilian harm mitigation teams had also fallen by roughly 90 per cent in the years before the war began.",
+      "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787"
+    },
+    {
+      "quote": "The company has said it was not responsible for the underlying data or for identifying intelligence deficiencies, noting that AI can process intelligence rapidly but cannot correct inaccurate information fed into the system.",
+      "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787"
+    },
+    {
+      "quote": "An unreleased internal Pentagon review has concluded that Pentagon personnel knew within hours that the United States was responsible for the strike on the school, describing a cascade of preventable failures that included an overreliance on an AI tool built by Palantir.",
+      "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "20 septembre 2026 · Pentagone",
+      "headline": "L'*IA* a recommandé la cible. C'était une école.",
+      "hero": {
+        "value": "123",
+        "label": "enfants tués dans la frappe sur l'école"
+      },
+      "swipe": "Les sources sont plus bas"
+    },
+    {
+      "type": "stat",
+      "figure": "123",
+      "unit": "enfants tués dans la frappe",
+      "body": "Plus de **150 personnes** sont mortes quand deux missiles ont frappé l'école primaire de Minab.",
+      "evidence": "The blasts killed more than 150 people, including at least 123 children.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le logiciel au centre de l'enquête",
+      "body": "Maven est une plateforme de *ciblage* bâtie par Palantir. Elle assemble images satellite, vidéos de drones et renseignement pour sortir des recommandations de frappe.",
+      "evidence": "At the centre of the inquiry is the Maven Smart System, a targeting and intelligence platform built by Palantir Technologies under a Pentagon contract worth up to $1.3bn, designed to fuse satellite imagery, drone feeds and signals intelligence into strike recommendations at speed.",
+      "source": {
+        "name": "IBTimes UK",
+        "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Comment l'école est devenue une cible",
+      "body": "Le site de Minab était fiché comme installation des Gardiens de la révolution sur des *données périmées*. Il est entré dans Maven avec d'autres candidats et en est ressorti comme cible recommandée pour le premier jour.",
+      "evidence": "The Minab site, which was cataloged as an Islamic Revolutionary Guard Corps facility due to outdated data, was fed into Maven with other candidates and came out as a recommended day-one target.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "La cadence du premier jour",
+      "body": "Plus de **1 000 cibles** iraniennes ont été frappées dans les premières *24 heures*. Cette cadence a réduit le temps disponible pour vérifier.",
+      "evidence": "More than 1,000 Iranian targets were hit in the first 24 hours, and according to Bloomberg's sources, that pace compressed the time available for additional confirmations.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que des utilisateurs attendaient",
+      "claim": "Que Maven signale les fiches périmées et les contradictions du renseignement réuni sur une cible.",
+      "caveatLabel": "Ce que dit l'enquête",
+      "caveat": "Rien n'explique pourquoi ils pensaient que le système faisait ça.",
+      "evidence": "Officials said some users expected Maven to flag stale records or contradictions in the intelligence assembled for potential targets, though it is not clear why they thought the system would do that.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'alerte qui n'est jamais arrivée",
+      "body": "Un analyste avait signalé les changements du site dès **2019**, dans un système qui n'était pas relié à la base officielle des cibles. L'avertissement n'a jamais atteint ceux qui préparaient la frappe.",
+      "evidence": "An intelligence analyst had flagged changes to the site as early as 2019, but the information was entered into a system that was not connected to the authoritative targeting database, meaning the warning never reached those assembling the strike package.",
+      "source": {
+        "name": "IBTimes UK",
+        "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Les équipes qui devaient voir passaient à la trappe",
+      "body": "Les effectifs chargés d'éviter les morts civiles avaient baissé d'environ **90 %**. Chez Centcom, l'équipe est passée de 10 personnes à une seule.",
+      "evidence": "Staffing on civilian harm mitigation teams across the U.S. Department of Defense had also fallen by roughly 90% over recent years, shrinking to fewer than 20 people overall. Centcom's group shrank from 10 people to one.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "is not responsible for the underlying data nor identifying intelligence deficiencies",
+      "attribution": "Un porte-parole de Palantir, à Bloomberg",
+      "evidence": "A Palantir spokesperson told Bloomberg the company \"is not responsible for the underlying data nor identifying intelligence deficiencies\" and that there is no evidence its software was at fault.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+        "date": "2026-09-20"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui croit que l'IA ne décide rien",
+      "sub": "Des faits vérifiés, sourcés, en français."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Gizmodo",
+      "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+      "accessed": "2026-09-23"
+    },
+    {
+      "name": "IBTimes UK",
+      "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787",
+      "accessed": "2026-09-23"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "L'IA a recommandé la cible. C'était une école.",
+    "beats": [
+      {
+        "script": "Deux missiles américains sur une école primaire en Iran. Plus de 150 morts, dont au moins 123 enfants. Et le Pentagone met en cause un excès de confiance dans un logiciel d'IA.",
+        "visual": {
+          "type": "photo",
+          "query": "tomahawk missile launch",
+          "alt": "Un missile Tomahawk quitte le pont d'un navire de guerre",
+          "file": "media/2026-09-23-ia-militaire-ecole-minab/p_tomahawk.jpg",
+          "credit": "DVIDSHUB · CC BY"
+        }
+      },
+      {
+        "script": "Son enquête interne n'est pas publique, c'est Bloomberg qui l'a révélée. Le plus dérangeant n'est pas ce qu'a fait la machine, mais ce qu'on attendait d'elle.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.ibtimes.co.uk/pentagon-review-ai-failures-iran-school-strike-1820787",
+          "file": "media/2026-09-23-ia-militaire-ecole-minab/shot_ibtimes.png"
+        }
+      },
+      {
+        "script": "Tu n'en as jamais entendu parler. Le logiciel s'appelle Maven, fabriqué par Palantir. Il est conçu pour transformer images satellite, vidéos de drones et renseignement en propositions de cibles.",
+        "visual": {
+          "type": "photo",
+          "query": "satellite reconnaissance imagery",
+          "alt": "Un militaire devant un écran qui affiche des images aériennes",
+          "file": "media/2026-09-23-ia-militaire-ecole-minab/p_sat.jpg",
+          "credit": "The National Guard · Public domain"
+        }
+      },
+      {
+        "script": "Le site de Minab y est entré fiché comme base militaire, sur des données périmées. Il en est ressorti comme cible recommandée du premier jour.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+          "file": "media/2026-09-23-ia-militaire-ecole-minab/shot_gizmodo.png"
+        }
+      },
+      {
+        "script": "Un travail qui prenait des heures s'est fait en minutes. Il fallait aller vite : plus de 1 000 cibles iraniennes frappées en 24 heures.",
+        "visual": {
+          "type": "card",
+          "value": "1 000",
+          "label": "cibles iraniennes frappées en 24 heures"
+        }
+      },
+      {
+        "script": "Sauf qu'un analyste avait vu les changements dès 2019. Il les a notés dans un système non relié à la base des cibles. L'alerte n'est jamais arrivée.",
+        "visual": {
+          "type": "photo",
+          "query": "command center monitors dark",
+          "alt": "Un militaire remplit un document sous une lumière rouge, la nuit",
+          "file": "media/2026-09-23-ia-militaire-ecole-minab/p_screens.jpg",
+          "credit": "Georgia National Guard · CC BY"
+        }
+      },
+      {
+        "script": "Les équipes chargées d'éviter les morts civiles avaient fondu de 90 %. Chez Centcom, il n'en restait qu'une personne. Personne n'a examiné le site avant le tir.",
+        "visual": {
+          "type": "card",
+          "value": "90 %",
+          "label": "la baisse des effectifs chargés d'éviter les morts civiles"
+        }
+      },
+      {
+        "script": "Palantir répond qu'elle n'est pas responsable des données qu'on lui donne. Six mois après, le rapport n'est toujours pas public. Abonne-toi pour l'actu IA de demain.",
+        "visual": {
+          "type": "photo",
+          "query": "missile launch night sea",
+          "alt": "Un missile Tomahawk part d'un navire dans la nuit",
+          "file": "media/2026-09-23-ia-militaire-ecole-minab/p_launch.jpg",
+          "credit": "U.S. Navy · Public domain"
+        }
+      }
+    ]
+  }
+}

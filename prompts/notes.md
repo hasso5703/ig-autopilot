@@ -6947,3 +6947,54 @@ ENTRIES:
   mise en scene ("Depressed middle-aged businesswoman"), et "waymo self-driving car"
   un MINISTRE BRITANNIQUE identifiable en visite: le titre suffit a jeter les trois.
   Proof: veille 19h30 22/09, spec banque 2026-09-23-gpt6-moins-derreurs.
+  Ajout 23/09 (06h30), 68e mesure morte de la cle media (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car; dernier achat 01/09
+  16h54 = 22 jours). ET LE JETON IG A SURVECU A SON EXPIRATION NOMINALE, ce qui
+  corrige la prediction des runs des 21 et 22/09 ("le Reel de 16h30 est le dernier
+  que le compte publiera"). state/token.json donne issuedAt 25/07 + 60 j = 23/09
+  00h00 UTC et watch.mjs l'affiche MORT depuis hier; ce matin a 06h52 UTC, soit
+  SEPT HEURES apres cette heure, `node src/publish.mjs recent` a repondu 200 avec
+  les 10 medias et les 4 derniers enregistrements concordaient (0 orphelin). Le
+  compteur est volontairement pessimiste (issuedAt arrondi au debut de journee) et
+  Meta ne coupe pas a la minute: ne conclus JAMAIS d'une date ou d'une ligne MORT
+  que le compte ne peut plus publier, teste avec publish.mjs recent, c'est le seul
+  verdict. La journee d'aujourd'hui peut donc publier ses deux Reels.
+  BLOQUEUR NEUF, A AJOUTER A LA LISTE DU 28/07: bloomberg.com (pages /graphics/)
+  repond 403 au fetch avec UA Safari comme avec le notre. Donc un scoop Bloomberg
+  n'est jamais citable ici; il reste publiable via ses reprises, a condition de
+  l'ecrire ("c'est Bloomberg qui l'a revelee") et de dire au rapport que deux
+  domaines qui creditent le meme reportage ne font pas une corroboration.
+  DOMAINES NEUFS AU GATE ET EN RECU: gizmodo.com (deja source du compte) et
+  ibtimes.co.uk se gatent du premier coup, 15/15 VERIFIED. Le recu ibtimes est
+  excellent en muet (masthead INTERNATIONAL BUSINESS TIMES, rubrique WORLD, titre
+  entier sur trois lignes, chapo, signature, "Published 20 September 2026" ET une
+  vraie photo du batiment detruit, legendee) malgre une rangee d'icones de partage
+  au milieu, famille timesofsandiego du 22/09. gizmodo en capture NORMALE ne rend
+  PAS le titre: le scroll-to-h1 tombe sur la section "Too Much Trust in AI" (utile
+  comme recu de milieu de Reel, il porte le paragraphe Maven); en mode `top` il
+  rend rubrique + titre entier + chapo + signature + date, mais avec un pave
+  "Advertisement" VIDE qui mange le tiers du milieu. Choisis selon le beat.
+  PHOTOS, 26 REQUETES POUR 4 GARDEES, sujet militaire. Marchent et sont neuves:
+  "tomahawk missile launch" (Commons/DVIDSHUB, CC BY, missile en vol au-dessus du
+  pont d'un destroyer, 1440x1044, le recadrage 9:16 centre garde missile ET navire,
+  aucun mot lisible, aucun visage), "missile launch night sea" (US Navy, domaine
+  public, 1436x1800 donc presque 9:16 natif, fond noir, tres bonne derniere frame),
+  "satellite reconnaissance imagery" (The National Guard, un ecran d'imagerie
+  aerienne avec une main sur la souris, aucun visage) et "command center monitors
+  dark" (Georgia National Guard, lumiere rouge, visage dans l'ombre). SIX PIEGES DE
+  TITRE mesures le meme matin, tous passes par le filtre near-white: "military
+  command center screens" rend un capitaine qui JOUE AVEC UN ENFANT sur un
+  navire-hopital, "air operations center" un Marine IDENTIFIABLE qui epaule un
+  lance-missiles (inposable sous une ligne sur des morts civiles), "school
+  playground markings" une STATUE a Kolkata, "satellite imaging spacecraft" un
+  Soyouz, "tomahawk cruise missile" un missile de MUSEE sous une charpente
+  (famille epoque/decor), et "intelligence analyst workstation" une image PIXABAY
+  titree "Artificial-Intelligence", donc synthetique (re-confirme le 08/09: seuls
+  le titre et l'auteur le disent). Echouent au near-white: "empty classroom desks",
+  "classroom blackboard chalk", "navy destroyer at sea", "military planning map
+  table", "warship vertical launch missile", "schoolyard fence building",
+  "pentagon building aerial", "united nations geneva palace", "capitol building
+  washington", "military reconnaissance drone". DOUBLON md5 re-confirme pour la
+  troisieme fois: "school classroom chairs" rend le fichier deja publie le 15/09
+  (p_exam.jpg) - le md5 contre `find media -name '*.jpg'` coute 2 s.
+  Proof: scout 06h30 23/09, spec banque 2026-09-23-ia-militaire-ecole-minab.

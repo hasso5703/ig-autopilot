@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-22T19:52:47.148Z",
+  "at": "2026-09-23T06:53:35.272Z",
   "n": 112,
   "nSettled": 106,
   "medianViews": 144,
@@ -821,9 +821,9 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 299,
+      "views": 300,
       "reach": 259,
-      "avgWatchS": 8.3,
+      "avgWatchS": 8.2,
       "retentionPct": 14,
       "likes": 1,
       "comments": 1,
@@ -1711,6 +1711,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-22-tours-surveillance-frontiere",
+      "at": "2026-09-22T10:58:15.879Z",
+      "hourUtc": 10,
+      "views": 115,
+      "reach": 103,
+      "avgWatchS": 3.5,
+      "retentionPct": 6,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-24-enfant-apprend-mieux",
       "at": "2026-08-24T17:08:53.955Z",
       "hourUtc": 17,
@@ -1847,25 +1866,6 @@
       ],
       "sendTest": "Google vient de réserver la moitié d'une centrale nucléaire finlandaise pour 22 ans. Sans lui, elle fermait en 2030.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-22-tours-surveillance-frontiere",
-      "at": "2026-09-22T10:58:15.879Z",
-      "hourUtc": 10,
-      "views": 98,
-      "reach": 84,
-      "avgWatchS": 3.3,
-      "retentionPct": 5,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
-      "settled": false
     },
     {
       "slug": "2026-09-01-instagram-faux-profils-ia",
@@ -2162,6 +2162,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-22-googlebook-gemini",
+      "at": "2026-09-22T16:56:13.342Z",
+      "hourUtc": 16,
+      "views": 18,
+      "reach": 16,
+      "avgWatchS": 2.7,
+      "retentionPct": 4,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-16-humains-lisent-chatgpt",
       "at": "2026-09-16T10:49:34.681Z",
       "hourUtc": 10,
@@ -2194,23 +2211,6 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-22-googlebook-gemini",
-      "at": "2026-09-22T16:56:13.342Z",
-      "hourUtc": 16,
-      "views": 1,
-      "reach": 1,
-      "avgWatchS": 2.2,
-      "retentionPct": 4,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",
