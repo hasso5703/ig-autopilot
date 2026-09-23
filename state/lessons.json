@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-23T17:04:33.185Z",
-  "n": 113,
+  "at": "2026-09-23T19:54:57.428Z",
+  "n": 114,
   "nSettled": 107,
   "medianViews": 142,
   "medianRetentionPct": 16,
@@ -1181,7 +1181,7 @@
       "hourUtc": 19,
       "views": 150,
       "reach": 137,
-      "avgWatchS": 2.9,
+      "avgWatchS": 3,
       "retentionPct": 5,
       "likes": 0,
       "comments": 1,
@@ -1781,6 +1781,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-23-ia-militaire-ecole-minab",
+      "at": "2026-09-23T10:58:43.093Z",
+      "hourUtc": 10,
+      "views": 111,
+      "reach": 101,
+      "avgWatchS": 4.6,
+      "retentionPct": 8,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-10-voiture-sans-chauffeur",
       "at": "2026-09-10T19:47:11.997Z",
       "hourUtc": 19,
@@ -2009,6 +2028,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-22-googlebook-gemini",
+      "at": "2026-09-22T16:56:13.342Z",
+      "hourUtc": 16,
+      "views": 43,
+      "reach": 40,
+      "avgWatchS": 3.3,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-13-ralentir-lia",
       "at": "2026-09-13T16:51:42.996Z",
       "hourUtc": 16,
@@ -2145,23 +2181,6 @@
       "settled": true
     },
     {
-      "slug": "2026-09-22-googlebook-gemini",
-      "at": "2026-09-22T16:56:13.342Z",
-      "hourUtc": 16,
-      "views": 28,
-      "reach": 25,
-      "avgWatchS": 3.7,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
-      "settled": false
-    },
-    {
       "slug": "2026-07-28-claude-chats-google",
       "at": "2026-07-28T09:12:53.605Z",
       "hourUtc": 9,
@@ -2213,22 +2232,22 @@
       "settled": true
     },
     {
-      "slug": "2026-09-23-ia-militaire-ecole-minab",
-      "at": "2026-09-23T10:58:43.093Z",
-      "hourUtc": 10,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
+      "slug": "2026-09-23-gpt6-moins-derreurs",
+      "at": "2026-09-23T17:23:44.262Z",
+      "hourUtc": 17,
+      "views": 7,
+      "reach": 5,
+      "avgWatchS": 1.5,
+      "retentionPct": 3,
       "likes": 0,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "beat0": "photo",
+      "beat0": "screenshot",
       "themes": [
-        "money"
+        "models"
       ],
-      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+      "sendTest": "OpenAI dit que son nouveau modèle se trompe deux fois moins que l'ancien. Le test qui le prouve, c'est le sien.",
       "settled": false
     },
     {

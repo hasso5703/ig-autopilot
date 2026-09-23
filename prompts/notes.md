@@ -1843,6 +1843,24 @@ ENTRIES:
   que ce soit d'une ligne BY PUBLISH HOUR, reapparie a la journee. Controle sans
   achat: lire state/lessons.json, grouper posts par at.slice(0,10), garder les
   jours a deux entrees settled, comparer 1er contre 2e.
+  Ajout 23/09 (19h30, veille), LA MAINTENANCE DU DIMANCHE NE SE FAIT PAS TOUTE
+  SEULE, ET RIEN NE SIGNALE QU'ELLE A SAUTE. Le creneau de 19h30 du dimanche
+  20/09 n'a pas tourne (aucun reports/journal/2026-09-20-19h.md, famille du
+  creneau mort du 10/09 et du 21/09), donc prune-media et insights compact
+  n'avaient pas tourne depuis le 13/09: media/ a atteint 388 Mo et
+  state/metrics.jsonl 8 765 lignes. Rattrapage fait ce soir, un MERCREDI, et il
+  est sans risque parce que prune-media ne touche que les Reels publies il y a
+  plus de 7 jours (Meta sert sa copie, l'historique git garde la notre): 158
+  fichiers / 231 Mo sur 20 slugs (07 au 16/09), media 388 -> 157 Mo, metrics
+  8 765 -> 4 783 lignes, ~1 min a eux deux. REFLEXE DE VEILLE, 5 s, tous les
+  soirs et pas seulement le dimanche: `ls reports/journal/<dernier dimanche>-19h.md`;
+  s'il manque, la maintenance est due, fais-la le jour ou tu le vois.
+  ET L'EFFET DE BORD A CONNAITRE, parce qu'il desarme un reflexe existant: le
+  controle de doublon de photo par md5 contre `find media -name '*.jpg'`
+  (entrees 18/09 et 22/09) ne couvre plus que les ~7 derniers jours apres une
+  purge. Le repli qui survit a la purge est le grep des credits, qui vit dans
+  les specs et pas sur le disque:
+  `grep -h '"credit"' posts/2026-*.json | sort | uniq -c | sort -rn`.
 - 2026-07-28 · Cold container costs: npm install ~40s, ffmpeg install ~40s,
   Whisper venv bootstrap ~2min + 140MB model, first Kokoro-free run. Budget
   them before the story work, not during. Proof: journals 27-28/07.
@@ -7037,3 +7055,32 @@ ENTRIES:
   troisieme fois: "school classroom chairs" rend le fichier deja publie le 15/09
   (p_exam.jpg) - le md5 contre `find media -name '*.jpg'` coute 2 s.
   Proof: scout 06h30 23/09, spec banque 2026-09-23-ia-militaire-ecole-minab.
+  Ajout 23/09 (19h30, veille), 69e mesure morte de la cle media (401
+  UNAUTHENTICATED sur generativelanguage.googleapis.com/v1beta/models, cle 53
+  car AQ.A; dernier achat 01/09 16h54 = 22 jours, RECALCULE depuis
+  state/spend.jsonl). LE JETON IG A SURVECU A SON EXPIRATION NOMINALE POUR LA
+  DEUXIEME JOURNEE: a 19h52 UTC, soit ~20 h apres le 23/09 00h00 de
+  state/token.json, `graph.instagram.com/me` rend 200 avec l'id et le username
+  du compte, et les deux Reels du jour sont partis a 10h58 et 17h23. La
+  correction du 23/09 06h30 tient et se precise: le test le moins cher n'est pas
+  publish.mjs recent (10 medias) mais
+  `fetch('https://graph.instagram.com/me?fields=id,username&access_token='+t)`,
+  une ligne, un aller-retour. Ne conclus JAMAIS d'une ligne TOKEN MORT que le
+  compte est ferme, et ne conclus pas non plus qu'il tiendra demain: c'est la
+  seule chose que Hasan doit regenerer a la main.
+  CE QUE COUTE LE MUET, MESURE SUR L'ECHANTILLON ENTIER ET NON PLUS PAR FENETRE
+  (state/lessons.json, posts avec retentionPct, coupe au 02/09): AVANT n=68 ->
+  retention mediane 19%, vues medianes 188, watch moyen median 11,6 s, 31
+  partages et 80 saves au TOTAL; DEPUIS n=43 -> 8%, 109 vues, 4,9 s, 2 partages
+  et 9 saves. Les surfaces d'ouverture ont bascule d'un bloc: avant, 54 veo / 8
+  photo / 6 screenshot; depuis, 0 veo / 31 photo / 12 screenshot. Le digest
+  classe les trois surfaces dans cet ordre sur toute la vie du compte (veo n=55
+  197 vues / 22,3%, photo n=35 132 / 13%, screenshot n=17 81 / 11%), donc le
+  compte publie depuis trois semaines dans sa pire ouverture disponible. 49
+  abonnes, -1 sur 7 jours. Ce chiffre-la est la reponse a "pourquoi ca baisse",
+  et la reponse est une cle AI Studio (AIza..., 39 car), pas un reglage.
+  CONVERSATION: `engage.mjs recent` rend 0 commentaire d'inconnu sur les 10
+  derniers Reels (l'edge repond, aucune erreur de permission), et les deux seeds
+  du jour sont bien dans state/engagement.jsonl. Rien a repondre depuis le
+  16/09, c'est l'etat normal a 49 abonnes (entree 06/09), n'y passe pas de temps.
+  Proof: veille 19h30 23/09.
