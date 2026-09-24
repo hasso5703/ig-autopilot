@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-24T06:52:21.921Z",
-  "n": 114,
-  "nSettled": 108,
-  "medianViews": 144,
+  "at": "2026-09-24T11:00:54.417Z",
+  "n": 115,
+  "nSettled": 109,
+  "medianViews": 142,
   "medianRetentionPct": 15,
   "top": [
     {
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 36,
+      "n": 37,
       "medianViews": 132,
-      "meanRetentionPct": 12.8,
+      "meanRetentionPct": 12.6,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -148,9 +148,9 @@
       "thin": false
     },
     "money": {
-      "n": 3,
+      "n": 4,
       "medianViews": 115,
-      "meanRetentionPct": 9,
+      "meanRetentionPct": 8.3,
       "saves": 0,
       "shares": 0,
       "thin": true
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 27,
-      "medianViews": 132,
-      "meanRetentionPct": 16.3,
+      "n": 28,
+      "medianViews": 130,
+      "meanRetentionPct": 15.9,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -1692,6 +1692,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-23-ia-militaire-ecole-minab",
+      "at": "2026-09-23T10:58:43.093Z",
+      "hourUtc": 10,
+      "views": 117,
+      "reach": 111,
+      "avgWatchS": 4.8,
+      "retentionPct": 8,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-01-chatgpt-pub-milliard",
       "at": "2026-09-01T10:56:19.693Z",
       "hourUtc": 10,
@@ -1727,7 +1746,7 @@
         "money"
       ],
       "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-24-enfant-apprend-mieux",
@@ -1745,25 +1764,6 @@
       "themes": [],
       "sendTest": "Un gamin de deux ans apprend a parler avec bien moins de mots que ChatGPT, et personne ne sait comment il fait.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-23-ia-militaire-ecole-minab",
-      "at": "2026-09-23T10:58:43.093Z",
-      "hourUtc": 10,
-      "views": 114,
-      "reach": 109,
-      "avgWatchS": 4.8,
-      "retentionPct": 8,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
-      "settled": false
     },
     {
       "slug": "2026-08-31-chine-series-ia-acteurs",
@@ -2201,10 +2201,10 @@
       "slug": "2026-09-23-gpt6-moins-derreurs",
       "at": "2026-09-23T17:23:44.262Z",
       "hourUtc": 17,
-      "views": 18,
-      "reach": 15,
-      "avgWatchS": 2,
-      "retentionPct": 3,
+      "views": 19,
+      "reach": 16,
+      "avgWatchS": 2.2,
+      "retentionPct": 4,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -2249,6 +2249,25 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-24-meta-lunettes-sans-camera",
+      "at": "2026-09-24T10:58:52.338Z",
+      "hourUtc": 10,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

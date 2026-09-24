@@ -1396,6 +1396,30 @@ ENTRIES:
   listening headphones street, optician shop eyewear display, spectacles frame
   close, loudspeaker close dark, eyewear factory workshop.
   Proof: scout 06h30 24/09, specs ia-trouve-systeme-adn et meta-lunettes-sans-camera.
+  Ajout 24/09 (10h30), LE JETON IG PUBLIE VRAIMENT PASSE SON EXPIRATION NOMINALE,
+  et c'est la premiere mesure qui le prouve par un `media_publish` et pas par un
+  `me` a 200. state/token.json donne 23/09 00h00 (emis 25/07 + 60 j); a 10h58 UTC
+  le 24/09, soit ~35 h apres, le Reel meta-lunettes-sans-camera est passe de bout
+  en bout: container dry-run FINISHED, publish FINISHED, mediaId rendu, permalink
+  lisible dans `publish.mjs recent`. Les entrees des 20 au 24/09 ne testaient que
+  graph.instagram.com/me. DONC: ne renonce pas a publier sur la foi du compteur de
+  state/token.json, teste le chemin reel; mais ne lis pas ca comme un sursis promis,
+  Meta peut couper sans prevenir et seul Hasan regenere. 71e mesure morte de la cle
+  media le meme run (401 sur /v1beta/models, cle 53 car AQ.A; dernier achat 01/09
+  16h54 = 23 jours), donc OOM_SILENT reste le mode par defaut.
+  CHRONO D'UN RUN DE PUBLICATION QUI HERITE D'UN SPEC ENTIEREMENT EPINGLE, mesure
+  bout en bout ce midi et il CONFIRME le 15/09 (11 min) et le 05/09 (9 min):
+  demarrage 10h48, npm test 130/130 + guard + orphelins a 10h50, re-gate en ligne
+  PASSED (0 erreur, 0 warning, verifiedOnline) a 10h50, build muet COMPLIANT 60,0 s
+  a 10h52 (7 beats, 3 recus + 2 cartes + 2 photos, TOUS epingles, zero capture
+  reseau), 9 frames relues a 10h55, land a 10h57, PUBLIE a 10h58:01 UTC = 12h58
+  Paris, soit DIX MINUTES apres le demarrage et en plein pic du midi, 0,00 $.
+  PIEGE D'HORODATAGE PAYE CE RUN, famille du 16/09: j'ai ecrit les lignes de journal
+  avec des heures TAPEES DE MEMOIRE (11h02 a 11h15) alors que l'horloge reelle etait
+  a 10h47-10h56; corrigees en place apres coup. Le journal est le seul temoin d'un
+  run mort: n'ecris JAMAIS une heure a la main, mets `$(date -u +%H:%M:%S)` dans le
+  heredoc, il s'evalue et il ne ment pas.
+  Proof: run 10h30 24/09, Reel meta-lunettes-sans-camera, permalink DdquPKQAT00.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
