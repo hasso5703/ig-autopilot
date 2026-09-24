@@ -1,0 +1,263 @@
+{
+  "slug": "2026-09-24-ia-trouve-systeme-adn",
+  "caption": "Une IA a lu de l'ADN pendant 21 heures et repéré un système que personne n'avait décrit.\n\nAnthropic a annoncé mercredi que son modèle Claude avait repéré, dans l'ADN de virus qui infectent des bactéries, un système d'enzymes encore jamais décrit. L'entreprise l'appelle ART.\n\nComment. Claude a fouillé une base de séquences pendant 21 heures, avec environ 950 agents et 210 millions d'unités de texte. Il a remonté plus de 200 000 enzymes, retenu environ 3 500 pistes et rendu 20 rapports. Pour un chercheur, ce travail prend des semaines, voire des mois.\n\nCe qu'il a vu. À côté du gène, une suite de répétitions d'ADN dont la disposition rappelle celle de CRISPR, la technique qui sert aujourd'hui de base aux médicaments qui modifient les gènes.\n\nLe détail qui n'est pas dans la vidéo. Anthropic a relancé exactement la même campagne dix fois. Aucune des dix relances n'a lu l'ADN situé avant l'enzyme, et les dix sont passées à côté des répétitions.\n\nCe qui coince. Le préprint n'a pas été relu par des pairs, personne ne sait encore à quoi ce système sert, et l'enzyme elle-même n'était pas nouvelle : ce qui est neuf, c'est le motif autour. En test, avec ses outils, le modèle ne décrit le motif que dans 32 % des cas.\n\nCe qui n'a pas changé. Toutes les manipulations de laboratoire sont faites par des humains.\n\nÀ noter : les trois sources citées décrivent la même annonce d'Anthropic. Le Next Web est le seul à avoir lu le préprint en détail.\n\nUne découverte qu'une IA ne sait pas refaire, ça compte, oui ou non ?\n\nanthropic.com · thenextweb.com · interestingengineering.com\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Claude\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "After 21 hours spent searching this data by roughly 950 agents using 210 million tokens, one of the agents spotted something remarkable: a repeating pattern of DNA sequences that occurs next to the gene for an odd-looking RT.",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    },
+    {
+      "quote": "Claude agents gathered over 200,000 RTs, picked out 3,500 new candidate systems, and narrowed those to the 20 most-compelling candidates that they analyzed to produce human-readable reports.",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    },
+    {
+      "quote": "For an expert scientist, this type of analysis can take weeks to months of work.",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    },
+    {
+      "quote": "Anthropic ran the same campaign ten more times. No rerun read the DNA upstream of the enzyme, and all ten missed the array.",
+      "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats"
+    },
+    {
+      "quote": "In fixed tests, Anthropic's four most capable models described the array in at least 90% of attempts when given the DNA directly. With files and tools, the rate fell as low as 32%.",
+      "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats"
+    },
+    {
+      "quote": "The enzyme itself was not new. Earlier studies had identified it, Anthropic says, and Claude appears to have been the first to spot the array and the partner protein.",
+      "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats"
+    },
+    {
+      "quote": "Anthropic announced the result on Wednesday in a blog post and a preprint that has not been peer reviewed.",
+      "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats"
+    },
+    {
+      "quote": "All of the lab work is performed by human scientists.",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    },
+    {
+      "quote": "CRISPR was first noticed as an unusual repeat sequence in the DNA of certain bacteria, and is now the foundation of gene editing-based medicines.",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    },
+    {
+      "quote": "The company does not yet know what the system does.",
+      "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats"
+    },
+    {
+      "quote": "Although we don't yet know its function, the system that Claude discovered has a set of characteristics that have only ever been found together in a handful of other systems, all of which are programmable and perform operations like cutting, copying, and pasting DNA.",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    }
+  ],
+  "centralClaim": "Claude discovered a previously uncharacterized enzyme system in bacteriophages.",
+  "corroboration": [
+    {
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "quote": "we recognized that this pattern marked a previously uncharacterized enzyme system found in bacteriophages (the viruses that infect bacteria) that we call array-associated reverse transcriptases (ART)."
+    },
+    {
+      "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats",
+      "quote": "Anthropic says Claude has found a previously undescribed enzyme system in the DNA of bacteriophages, the viruses that infect bacteria."
+    },
+    {
+      "url": "https://interestingengineering.com/ai-robotics/claude-discovers-crispr-like-enzyme-system",
+      "quote": "Anthropic's Claude has identified a previously uncharacterized enzyme system in bacteriophages after searching more than 200,000 reverse transcriptases, showing how AI agents could help scientists uncover biological systems hidden in massive DNA datasets."
+    }
+  ],
+  "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "23 septembre 2026 · Anthropic",
+      "headline": "Une IA a vu dans l'ADN un motif que *personne* n'avait vu",
+      "hero": {
+        "value": "21 h",
+        "label": "de recherche, environ 950 agents"
+      },
+      "swipe": "Les reçus, diapositive par diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "21",
+      "unit": "heures de recherche",
+      "body": "Environ **950 agents** et 210 millions d'unités de texte. Pour un chercheur, la même analyse prend des semaines.",
+      "evidence": "After 21 hours spent searching this data by roughly 950 agents using 210 million tokens, one of the agents spotted something remarkable: a repeating pattern of DNA sequences that occurs next to the gene for an odd-looking RT.",
+      "source": {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "date": "2026-09-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que Claude a trouvé",
+      "body": "Un système d'enzymes **jamais décrit**, dans l'ADN de virus qui infectent des bactéries.",
+      "evidence": "Anthropic says Claude has found a previously undescribed enzyme system in the DNA of bacteriophages, the viruses that infect bacteria.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats",
+        "date": "2026-09-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi la forme compte",
+      "body": "La disposition des répétitions **rappelle celle de CRISPR**, ce qui rend ces systèmes programmables.",
+      "evidence": "The repeat layout resembles a CRISPR array, which holds a bank of different RNA sequences that make CRISPR-Cas systems programmable biotechnological tools.",
+      "source": {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "date": "2026-09-23"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qui est annoncé",
+      "caveatLabel": "Ce qui coince",
+      "claim": "Claude a repéré le motif tout seul, après un seul énoncé de recherche.",
+      "caveat": "La même campagne relancée dix fois : les dix relances sont passées à côté.",
+      "evidence": "Anthropic ran the same campaign ten more times. No rerun read the DNA upstream of the enzyme, and all ten missed the array.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats",
+        "date": "2026-09-23"
+      }
+    },
+    {
+      "type": "stat",
+      "figure": "32%",
+      "unit": "des cas, avec ses outils",
+      "body": "ADN servi directement, le motif est décrit dans **au moins 90 %** des essais. Avec fichiers et outils, 32 %.",
+      "evidence": "In fixed tests, Anthropic's four most capable models described the array in at least 90% of attempts when given the DNA directly. With files and tools, the rate fell as low as 32%.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats",
+        "date": "2026-09-23"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "The identification of RNA-repeat arrays associated with reverse transcriptases is genuinely intriguing and merits further investigation.",
+      "attribution": "Feng Zhang, pionnier de CRISPR, MIT et Broad Institute",
+      "evidence": "After reviewing the pre-print, Feng Zhang, one of the pioneers of CRISPR genome editing and a professor at MIT and the Broad Institute said: This is an exciting example of how AI agents can contribute to biological discovery. The identification of RNA-repeat arrays associated with reverse transcriptases is genuinely intriguing and merits further investigation.",
+      "source": {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "date": "2026-09-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que l'IA n'a pas fait",
+      "body": "Toutes les manipulations de laboratoire sont faites par des **humains**, et la fonction du système reste inconnue.",
+      "evidence": "All of the lab work is performed by human scientists.",
+      "source": {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "date": "2026-09-23"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que CRISPR a changé",
+      "body": "Repéré dans l'ADN de bactéries, *CRISPR* sert aujourd'hui de base aux médicaments qui modifient les gènes.",
+      "evidence": "CRISPR was first noticed as an unusual repeat sequence in the DNA of certain bacteria, and is now the foundation of gene editing-based medicines.",
+      "source": {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "date": "2026-09-23"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui suit les promesses de l'IA sur la santé",
+      "sub": "L'actu IA, sourcée, en soixante secondes."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Claude trouve en 21 heures un système inconnu",
+    "beats": [
+      {
+        "script": "Il existe des médicaments qui corrigent un gène. Ils reposent sur CRISPR, une bizarrerie repérée dans l'ADN de bactéries. Mercredi, une IA appelée Claude en a repéré une autre.",
+        "visual": {
+          "type": "photo",
+          "query": "bacteriophage virus particles",
+          "alt": "Bactériophages au microscope électronique",
+          "file": "media/2026-09-24-ia-trouve-systeme-adn/c_a19.jpg",
+          "credit": "Eugenijus Šimoliūnas et al. · CC BY"
+        }
+      },
+      {
+        "script": "Claude, c'est l'IA d'Anthropic. Et le plus troublant, ce n'est pas ce qu'elle a trouvé. C'est ce qui s'est passé quand on a relancé la recherche.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats",
+          "file": "media/2026-09-24-ia-trouve-systeme-adn/shot_tnw.png"
+        }
+      },
+      {
+        "script": "Anthropic l'a lâchée sur une base géante de séquences d'ADN. 21 heures, environ 950 agents. Un chercheur humain, lui, y passerait des semaines.",
+        "visual": {
+          "type": "card",
+          "value": "21 heures",
+          "label": "environ 950 agents lâchés sur une base de séquences d'ADN"
+        }
+      },
+      {
+        "script": "Ce qu'elle a vu, c'est un motif qui se répète dans l'ADN de virus qui attaquent des bactéries. La même forme qui avait mis les chercheurs sur la piste de CRISPR.",
+        "visual": {
+          "type": "photo",
+          "query": "genome data screen",
+          "alt": "Image de microscopie de cellules marquées",
+          "file": "media/2026-09-24-ia-trouve-systeme-adn/c_a6.jpg",
+          "credit": "Olszewski et al · CC BY"
+        }
+      },
+      {
+        "script": "Sauf que personne n'a réussi à refaire le coup. Anthropic a relancé exactement la même recherche dix fois. Les dix fois, l'IA a lu à côté et n'a rien vu.",
+        "visual": {
+          "type": "photo",
+          "query": "gel electrophoresis dna bands",
+          "alt": "Gel d'agarose dans son support de laboratoire",
+          "file": "media/2026-09-24-ia-trouve-systeme-adn/c_a10.jpg",
+          "credit": "Joseph Elsbernd · CC BY"
+        }
+      },
+      {
+        "script": "Feng Zhang, un pionnier de CRISPR, a relu le préprint : ça mérite d'être creusé. Mais quand le modèle doit aller chercher l'ADN lui-même, il ne décrit le motif que dans 32 % des essais.",
+        "visual": {
+          "type": "card",
+          "value": "32 %",
+          "label": "des essais, quand le modèle va chercher l'ADN lui-même"
+        }
+      },
+      {
+        "script": "Personne ne sait encore à quoi ce système sert, et toutes les manipulations de laboratoire sont faites par des humains. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "dna sequence printout",
+          "alt": "Une scientifique devant un séquenceur d'ADN",
+          "file": "media/2026-09-24-ia-trouve-systeme-adn/c_a22.jpg",
+          "credit": "Centers for Disease Control and P… · CC0"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "accessed": "2026-09-24"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats",
+      "accessed": "2026-09-24"
+    },
+    {
+      "name": "Interesting Engineering",
+      "url": "https://interestingengineering.com/ai-robotics/claude-discovers-crispr-like-enzyme-system",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

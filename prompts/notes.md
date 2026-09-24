@@ -1320,6 +1320,82 @@ ENTRIES:
   nominative. dailycaller.com, LUI, NE SE CAPTURE PAS: tue par timeout a 700 s sans
   ecrire un octet ni une ligne de log, alors qu'il se gate parfaitement. Famille
   cnn / 9to5mac / tech.yahoo: source oui, recu jamais.
+  Ajout 24/09 (06h30), 70e mesure morte de la cle media (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car; dernier achat 01/09
+  16h54 = 23 jours). LE JETON IG A SURVECU A SON EXPIRATION NOMINALE POUR LA
+  TROISIEME JOURNEE: a 06h52 UTC, soit ~31 h apres le 23/09 00h00 de
+  state/token.json, `graph.instagram.com/me` rend 200 avec l'id et le username.
+  La recette du 23/09 19h30 tient, c'est le test le moins cher.
+  RENDENT 200 AU FETCH DU GATE ET SE GATENT DU PREMIER COUP (45 verifications sur
+  45, deux specs, zero aller-retour apres correction): anthropic.com/news
+  (re-confirme), thenextweb.com, interestingengineering.com (NOUVEAU),
+  about.fb.com/news, engadget.com, techcrunch.com, mobilesyrup.com (NOUVEAU,
+  redaction canadienne qui couvre les annonces Meta/Google avec son propre
+  reporter). Cote flux: The Verge 403, Ars Technica 403, venturebeat.com 429,
+  Hacker News 502, tous permanents.
+  LE PIEGE DE RECU LE PLUS SOURNOIS MESURE JUSQU'ICI, interestingengineering.com,
+  ET IL BAT LE CONTROLE `h1` DU 04/09: la capture rend `ok:true`, `landedUrl`
+  EXACT **et `h1` EXACT** ("Claude scans 200,000 enzymes to uncover new CRISPR-like
+  system hidden in phages") en 463 s / 148 frames, et le png montre un panneau de
+  recirculation "Keep on reading" pose par-dessus l'article, avec la vignette et le
+  titre d'un papier SANS AUCUN RAPPORT ("The U.S. Navy's Newest Stealth Destroyer
+  Has Broken Down"). Les trois controles habituels (ok, landedUrl, h1) sont verts
+  ensemble: SEUL LE REGARD sur la frame le dit. Le domaine reste une excellente
+  SOURCE, jamais un recu.
+  RECUS MESURES ET EPINGLES. (1) thenextweb.com 94 s / 12 frames, PARFAIT sans
+  recadrage (masthead TNW, rubrique ANTHROPIC, titre entier sur six lignes, chapo
+  qui porte le claim), `h1` revient VIDE chez lui sans que ce soit un defaut:
+  re-confirme le 16/09 et sa reserve "aucune date dans le cadre" aussi, donc recu
+  qui ne vieillit pas. (2) about.fb.com/news en mode `top` 29 s / 1 frame, PARFAIT
+  **SANS AUCUN RECADRAGE**, ce qui PRECISE l'entree du 15/09 qui imposait
+  `crop=1290:2000:0:0` contre un bandeau cookies: c'est le mode par defaut
+  (scroll-to-h1) qui le faisait tomber dans le cadre, `top` ne le voit pas. Le
+  cadre tient logo Meta, rubrique, titre entier, la date en clair et le collage
+  produit. (3) mobilesyrup.com NOUVEAU, 412 s / 40 frames, titre entier, chapo,
+  signature et "SEP 23, 2026" propres, MAIS une photo du reporter PORTANT le
+  produit (visage lisible, autres personnes identifiables au fond) commence a
+  y=1170: `crop=1290:1150:0:0` la coupe et garde tout le reste. Sans masthead
+  apres recadrage, donc a poser en milieu de Reel, pas au beat 0. (4)
+  www.meta.com/ai-glasses/<produit> NOUVEAU, 25 s / 11 frames, h1 juste: c'est le
+  hero PUBLICITAIRE de la boutique (mannequin en gros plan portant les lunettes,
+  logo Ray-Ban + Meta, titre de campagne). Utilisable comme recu PRODUIT sous un
+  beat descriptif, jamais sous une ligne qui accuse. (5) engadget.com retue la
+  capture pour la deuxieme fois ("Target page, context or browser has been closed",
+  et 11 connexions de regie publicitaire refusees par le proxy pendant l'essai):
+  l'entree du 15/09 tient, cite-le, ne le photographie pas.
+  PHOTOS, 44 REQUETES POUR 6 GARDEES, deux dossiers. MARCHENT et sont bonnes, et la
+  premiere est la lecon du jour: **"bacteriophage virus particles"** rend une vraie
+  micrographie electronique de phages T4 (Commons, CC BY, 994x1350) -- sur une actu
+  de biologie, demande l'OBJET SCIENTIFIQUE par son nom, pas le decor de labo.
+  Marchent aussi "genome data screen" (une image de microscopie en fluorescence,
+  fond NOIR, bleu et vert, 1800x1800, zero texte: excellente frame zero muette),
+  "gel electrophoresis dna bands" (gel d'agarose dans son support sur fond noir),
+  "dna sequence printout" (une scientifique CDC devant un sequenceur, lumiere verte
+  et violette, dense) et, sur le dossier lunettes, "person walking alone street
+  night" (wordpress.org/photos, NOUVELLE source dans l'index, une personne de dos
+  dans une rue vide la nuit: aucun visage, exactement le sujet d'une histoire de
+  filmage non consenti) et "city street night neon".
+  HORS-SUJET MESURES, aucun vu par le filtre near-white: "laboratory microscope
+  dark" rend un INSECTE (planthopper USGS), "electron microscope virus" rend le
+  SARS-CoV-2 (mauvais virus sur une histoire de phages, et le titre suffit a le
+  dire), "bacteria under microscope" rend un RENDU 3D du CDC, "red indicator led
+  close" rend la GALAXIE DU TRIANGLE, "laboratory glassware dark" rend de la
+  verrerie d'epoque, "sunglasses on table" et "eyeglasses macro lens" rendent des
+  flat-lays MacBook (le bureau a la place de l'histoire), "people walking city
+  night" rend Shibuya avec des visages identifiables au premier plan et une
+  vingtaine d'enseignes lisibles, "night street silhouette umbrella" rend la
+  REVOLUTION DES PARAPLUIES de Hong Kong (manifestation politique sous une histoire
+  de lunettes). Echouent au near-white: dna double helix, petri dish bacteria
+  colonies, bacteriophage electron micrograph, molecular biology laboratory bench,
+  dna sequencing machine, scientist laboratory night, fluorescence microscopy
+  cells, laboratory centrifuge, cell culture flask, agar plate colonies,
+  laboratory freezer vials, laboratory incubator shelves, sunglasses close up,
+  city sidewalk people walking, eyeglasses frames shop, street photographer camera,
+  man wearing sunglasses portrait, cafe terrace evening, security camera street
+  pole, camera lens macro, earbuds charging case, sunglasses dark background, man
+  listening headphones street, optician shop eyewear display, spectacles frame
+  close, loudspeaker close dark, eyewear factory workshop.
+  Proof: scout 06h30 24/09, specs ia-trouve-systeme-adn et meta-lunettes-sans-camera.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
