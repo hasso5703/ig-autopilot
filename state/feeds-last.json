@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-24T17:04:05.468Z",
-  "fresh": 371,
+  "at": "2026-09-24T19:56:21.319Z",
+  "fresh": 368,
   "feeds": [
     {
       "name": "OpenAI News",
@@ -92,8 +92,8 @@
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 6,
-      "fresh": 6,
+      "fetched": 3,
+      "fresh": 3,
       "windowHours": 36
     },
     {

@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-24T17:02:37.391Z",
+  "at": "2026-09-24T19:54:55.972Z",
   "n": 116,
   "nSettled": 110,
   "medianViews": 142,
@@ -1085,6 +1085,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-24-ia-trouve-systeme-adn",
+      "at": "2026-09-24T17:01:14.327Z",
+      "hourUtc": 17,
+      "views": 165,
+      "reach": 157,
+      "avgWatchS": 9.3,
+      "retentionPct": 16,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-10-ia-reserve-cours-sport",
       "at": "2026-08-10T16:58:57.530Z",
       "hourUtc": 16,
@@ -1624,6 +1641,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-23-ia-militaire-ecole-minab",
+      "at": "2026-09-23T10:58:43.093Z",
+      "hourUtc": 10,
+      "views": 118,
+      "reach": 112,
+      "avgWatchS": 4.8,
+      "retentionPct": 8,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-penurie-memoire-samsung",
       "at": "2026-08-01T09:17:47.305Z",
       "hourUtc": 9,
@@ -1690,25 +1726,6 @@
       "themes": [],
       "sendTest": "Sony et Warner attaquent Anthropic: ils disent que Claude a avalé Eye of the Tiger et All I Want for Christmas. 150 000 dollars reclames par chanson.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-23-ia-militaire-ecole-minab",
-      "at": "2026-09-23T10:58:43.093Z",
-      "hourUtc": 10,
-      "views": 117,
-      "reach": 111,
-      "avgWatchS": 4.8,
-      "retentionPct": 8,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
-      "settled": false
     },
     {
       "slug": "2026-09-01-chatgpt-pub-milliard",
@@ -1921,6 +1938,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-24-meta-lunettes-sans-camera",
+      "at": "2026-09-24T10:58:52.338Z",
+      "hourUtc": 10,
+      "views": 87,
+      "reach": 77,
+      "avgWatchS": 4.6,
+      "retentionPct": 8,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-17-openai-archives-medicaments",
       "at": "2026-09-17T16:53:45.908Z",
       "hourUtc": 16,
@@ -1990,25 +2026,6 @@
       "themes": [],
       "sendTest": "Dans 34 pays sur 37, les gens pensent que l'IA va supprimer plus d'emplois qu'elle n'en crée. 46 % contre 9 %.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-24-meta-lunettes-sans-camera",
-      "at": "2026-09-24T10:58:52.338Z",
-      "hourUtc": 10,
-      "views": 77,
-      "reach": 68,
-      "avgWatchS": 3.7,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
-      "settled": false
     },
     {
       "slug": "2026-09-12-jeu-en-une-phrase",
@@ -2268,23 +2285,6 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-24-ia-trouve-systeme-adn",
-      "at": "2026-09-24T17:01:14.327Z",
-      "hourUtc": 17,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

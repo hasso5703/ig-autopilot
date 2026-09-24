@@ -7229,3 +7229,46 @@ ENTRIES:
   du jour sont bien dans state/engagement.jsonl. Rien a repondre depuis le
   16/09, c'est l'etat normal a 49 abonnes (entree 06/09), n'y passe pas de temps.
   Proof: veille 19h30 23/09.
+  Ajout 24/09 (19h30, veille), 73e mesure morte de la cle media (401 sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car AQ.Ab; dernier
+  achat 01/09 16h54, RECALCULE depuis state/spend.jsonl = 23 jours). LE JETON IG
+  A SURVECU A SON EXPIRATION NOMINALE POUR LA TROISIEME JOURNEE: a 19h52 UTC,
+  soit ~44 h apres le 23/09 00h00 de state/token.json, `graph.instagram.com/me`
+  rend 200 avec id et username, et les deux Reels du jour sont partis a 10h58 et
+  17h00. La regle du 23/09 tient: teste, ne deduis jamais d'une ligne TOKEN MORT.
+  LE PIEGE DE NOM DE CHAMP QUI M'A COUTE UNE MESURE FAUSSE, famille du 12/09
+  (`r.insights` de metrics.jsonl): dans state/lessons.json les saves vivent sous
+  `saved`, PAS `saves`. Un one-liner ecrit de tete avec `p.saves||0` rend 0
+  PARTOUT sans lever d'erreur, et j'ai failli rapporter "zero save depuis aout"
+  alors que les fenetres d'aout en portent 21 et 11. Les partages, eux, sont bien
+  sous `shares`: les deux champs ne suivent pas la meme convention dans le meme
+  objet. Lis `JSON.stringify(L.posts.at(-1))` avant d'ecrire une agregation, ca
+  coute 5 s. Signe qui doit alerter: un total qui tombe a 0 sur TOUTES les
+  fenetres, y compris celles dont le carnet dit qu'elles sont non nulles.
+  FENETRES HEBDO APPARIEES, RECALCULEES CE SOIR (lessons.json, Reels reposes
+  seulement), et LA COLONNE SAVES VIENT DE TOUCHER ZERO: 19-25/08 voix+veo n=14
+  -> 15,5% / 155 v / 6 partages / 21 saves; 26/08-01/09 voix+veo n=14 -> 17% /
+  128,5 / 1 / 11; 02-08/09 MUET n=14 -> 10,5% / 136,5 / 2 / 6; 09-15/09 n=14 ->
+  7,5% / 81,5 / 0 / 3; 16-22/09 n=13 -> 6% / 91 / 0 / 0. Sur l'echantillon
+  entier coupe au 02/09: AVANT n=68 -> 19% / 188 v / 31 partages / 80 saves;
+  DEPUIS n=41 -> 8% / 109 v / 2 partages / 9 saves. Les saves ne baissent pas,
+  elles s'eteignent (21 -> 11 -> 6 -> 3 -> 0), et save+partage sont les deux
+  signaux que le manuel classe au-dessus du like. Beat 0 sur les reposes:
+  veo n=54 -> 202 v / 19,5%, photo n=38 -> 131 / 10,5%, screenshot n=17 -> 81 /
+  11%. Rien de tout ca n'est une regle editoriale a inventer: c'est le prix
+  mesure de 23 jours sans voix, et la seule action est une cle AI Studio
+  (AIza..., 39 car) que seul Hasan peut coller dans l'environnement cloud.
+  UNE VEILLE QUI NE PUBLIE PAS DOIT QUAND MEME COLLECTER, et ce soir le prouve
+  contre l'entree du 07/09 ("la collecte du soir ne sert pas a banquer"):
+  owedToday=0, journee TENUE 2/2, roomToday=0 -- donc rien a publier -- et
+  feeds.mjs a quand meme rendu la PLUS GROSSE histoire de la journee, arrivee
+  apres les deux publications (TechCrunch 24/09 05h54 PDT, un modele OpenAI
+  entre dans Services Australia et en sort des donnees de sante en masse, le
+  premier ministre Albanese le confirme, breche le 18/06 et notification le
+  10/09). Verifiee en direct avant de la banquer: techcrunch rend 200 et 7419
+  car aplatis qui portent le claim. Banquee en `revisit` (TTL 6 h, donc visible
+  au scout de 06h30) avec deux autres, et PAS en `considered` (36 h = ca
+  l'aurait CACHEE au scout: sur une histoire qu'on veut revoir, l'outcome n'est
+  jamais `considered`). arXiv a rendu 295 sur 368, donc le deluge du 07/09
+  n'empeche pas de banquer: ce sont les 68 items hors arXiv qu'on lit.
+  Proof: veille 19h30 24/09.
