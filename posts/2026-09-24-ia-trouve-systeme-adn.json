@@ -1,13 +1,13 @@
 {
   "slug": "2026-09-24-ia-trouve-systeme-adn",
-  "caption": "Une IA a lu de l'ADN pendant 21 heures et repéré un système que personne n'avait décrit.\n\nAnthropic a annoncé mercredi que son modèle Claude avait repéré, dans l'ADN de virus qui infectent des bactéries, un système d'enzymes encore jamais décrit. L'entreprise l'appelle ART.\n\nComment. Claude a fouillé une base de séquences pendant 21 heures, avec environ 950 agents et 210 millions d'unités de texte. Il a remonté plus de 200 000 enzymes, retenu environ 3 500 pistes et rendu 20 rapports. Pour un chercheur, ce travail prend des semaines, voire des mois.\n\nCe qu'il a vu. À côté du gène, une suite de répétitions d'ADN dont la disposition rappelle celle de CRISPR, la technique qui sert aujourd'hui de base aux médicaments qui modifient les gènes.\n\nLe détail qui n'est pas dans la vidéo. Anthropic a relancé exactement la même campagne dix fois. Aucune des dix relances n'a lu l'ADN situé avant l'enzyme, et les dix sont passées à côté des répétitions.\n\nCe qui coince. Le préprint n'a pas été relu par des pairs, personne ne sait encore à quoi ce système sert, et l'enzyme elle-même n'était pas nouvelle : ce qui est neuf, c'est le motif autour. En test, avec ses outils, le modèle ne décrit le motif que dans 32 % des cas.\n\nCe qui n'a pas changé. Toutes les manipulations de laboratoire sont faites par des humains.\n\nÀ noter : les trois sources citées décrivent la même annonce d'Anthropic. Le Next Web est le seul à avoir lu le préprint en détail.\n\nUne découverte qu'une IA ne sait pas refaire, ça compte, oui ou non ?\n\nanthropic.com · thenextweb.com · interestingengineering.com\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Claude\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "caption": "Une IA a lu de l'ADN pendant 21 heures et repéré un système que personne n'avait décrit.\n\nAnthropic a annoncé mercredi que son modèle Claude avait repéré, dans l'ADN de virus qui infectent des bactéries, un système d'enzymes encore jamais décrit. L'entreprise l'appelle ART.\n\nComment. Claude a fouillé une base de séquences pendant 21 heures, avec environ 950 agents et 210 millions d'unités de texte. Il a remonté plus de 200 000 enzymes, retenu environ 3 500 pistes et rendu 20 rapports. Pour un chercheur, ce travail prend des semaines, voire des mois.\n\nCe qu'il a vu. À côté du gène, une suite de répétitions d'ADN dont la disposition rappelle celle de CRISPR, la technique qui sert aujourd'hui de base aux médicaments qui modifient les gènes.\n\nLe détail qui n'est pas dans la vidéo. Anthropic a relancé exactement la même campagne dix fois. Aucune des dix relances n'a lu l'ADN situé avant l'enzyme, et les dix sont passées à côté des répétitions.\n\nCe qui coince. Le préprint n'a pas été relu par des pairs, personne ne sait encore à quoi ce système sert, et l'enzyme elle-même n'était pas nouvelle : ce qui est neuf, c'est le motif autour. En test, quand il va chercher l'ADN lui-même, le taux descend jusqu'à 32 %.\n\nCe qui n'a pas changé. Toutes les manipulations de laboratoire sont faites par des humains.\n\nÀ noter : les trois sources citées décrivent la même annonce d'Anthropic. Le Next Web est le seul à avoir lu le préprint en détail.\n\nUne découverte qu'une IA ne sait pas refaire, ça compte, oui ou non ?\n\nanthropic.com · thenextweb.com · interestingengineering.com\n\n#IA #IntelligenceArtificielle #ActuIA #Anthropic #Claude\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
   "captionEvidence": [
     {
       "quote": "After 21 hours spent searching this data by roughly 950 agents using 210 million tokens, one of the agents spotted something remarkable: a repeating pattern of DNA sequences that occurs next to the gene for an odd-looking RT.",
       "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
     },
     {
-      "quote": "Claude agents gathered over 200,000 RTs, picked out 3,500 new candidate systems, and narrowed those to the 20 most-compelling candidates that they analyzed to produce human-readable reports.",
+      "quote": "Claude agents gathered over 200,000 RTs, picked out 3,500 new candidate systems, and narrowed those to the 20 most compelling candidates that they analyzed to produce human-readable reports.",
       "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
     },
     {
@@ -124,8 +124,8 @@
     {
       "type": "stat",
       "figure": "32%",
-      "unit": "des cas, avec ses outils",
-      "body": "ADN servi directement, le motif est décrit dans **au moins 90 %** des essais. Avec fichiers et outils, 32 %.",
+      "unit": "des essais au plus bas, avec ses outils",
+      "body": "ADN servi directement, le motif est décrit dans **au moins 90 %** des essais. Avec fichiers et outils, le taux descend jusqu'à 32 %.",
       "evidence": "In fixed tests, Anthropic's four most capable models described the array in at least 90% of attempts when given the DNA directly. With files and tools, the rate fell as low as 32%.",
       "source": {
         "name": "The Next Web",
@@ -137,7 +137,7 @@
       "type": "quote",
       "body": "The identification of RNA-repeat arrays associated with reverse transcriptases is genuinely intriguing and merits further investigation.",
       "attribution": "Feng Zhang, pionnier de CRISPR, MIT et Broad Institute",
-      "evidence": "After reviewing the pre-print, Feng Zhang, one of the pioneers of CRISPR genome editing and a professor at MIT and the Broad Institute said: This is an exciting example of how AI agents can contribute to biological discovery. The identification of RNA-repeat arrays associated with reverse transcriptases is genuinely intriguing and merits further investigation.",
+      "evidence": "After reviewing the pre-print, Feng Zhang, one of the pioneers of CRISPR genome editing and a professor at MIT and the Broad Institute, said: This is an exciting example of how AI agents can contribute to biological discovery. The identification of RNA-repeat arrays associated with reverse transcriptases is genuinely intriguing and merits further investigation.",
       "source": {
         "name": "Anthropic",
         "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
@@ -224,11 +224,11 @@
         }
       },
       {
-        "script": "Feng Zhang, un pionnier de CRISPR, a relu le préprint : ça mérite d'être creusé. Mais quand le modèle doit aller chercher l'ADN lui-même, il ne décrit le motif que dans 32 % des essais.",
+        "script": "Feng Zhang, un pionnier de CRISPR, a relu le préprint : ça mérite d'être creusé. Mais quand le modèle doit aller chercher l'ADN lui-même, le taux descend jusqu'à 32 % des essais.",
         "visual": {
           "type": "card",
           "value": "32 %",
-          "label": "des essais, quand le modèle va chercher l'ADN lui-même"
+          "label": "au plus bas, quand le modèle va chercher l'ADN lui-même"
         }
       },
       {
