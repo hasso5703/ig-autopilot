@@ -1,7 +1,7 @@
 {
-  "at": "2026-09-24T11:00:54.417Z",
-  "n": 115,
-  "nSettled": 109,
+  "at": "2026-09-24T17:02:37.391Z",
+  "n": 116,
+  "nSettled": 110,
   "medianViews": 142,
   "medianRetentionPct": 15,
   "top": [
@@ -98,9 +98,9 @@
       "thin": false
     },
     "photo": {
-      "n": 37,
-      "medianViews": 132,
-      "meanRetentionPct": 12.6,
+      "n": 38,
+      "medianViews": 131,
+      "meanRetentionPct": 12.4,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -198,9 +198,9 @@
       "thin": true
     },
     "16": {
-      "n": 29,
-      "medianViews": 121,
-      "meanRetentionPct": 13.5,
+      "n": 30,
+      "medianViews": 120,
+      "meanRetentionPct": 13.3,
       "saves": 22,
       "shares": 4,
       "thin": false
@@ -1992,6 +1992,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-24-meta-lunettes-sans-camera",
+      "at": "2026-09-24T10:58:52.338Z",
+      "hourUtc": 10,
+      "views": 77,
+      "reach": 68,
+      "avgWatchS": 3.7,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-12-jeu-en-une-phrase",
       "at": "2026-09-12T10:48:51.816Z",
       "hourUtc": 10,
@@ -2042,7 +2061,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Google sort un ordinateur portable à 899 dollars dont l'argument principal est son IA. Il arrive en France le 5 octobre.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-13-ralentir-lia",
@@ -2201,9 +2220,9 @@
       "slug": "2026-09-23-gpt6-moins-derreurs",
       "at": "2026-09-23T17:23:44.262Z",
       "hourUtc": 17,
-      "views": 19,
-      "reach": 16,
-      "avgWatchS": 2.2,
+      "views": 20,
+      "reach": 17,
+      "avgWatchS": 2.1,
       "retentionPct": 4,
       "likes": 0,
       "comments": 1,
@@ -2251,9 +2270,9 @@
       "settled": true
     },
     {
-      "slug": "2026-09-24-meta-lunettes-sans-camera",
-      "at": "2026-09-24T10:58:52.338Z",
-      "hourUtc": 10,
+      "slug": "2026-09-24-ia-trouve-systeme-adn",
+      "at": "2026-09-24T17:01:14.327Z",
+      "hourUtc": 17,
       "views": 0,
       "reach": 0,
       "avgWatchS": 0,
@@ -2263,10 +2282,8 @@
       "saved": 0,
       "shares": 0,
       "beat0": "photo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
+      "themes": [],
+      "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
       "settled": false
     },
     {

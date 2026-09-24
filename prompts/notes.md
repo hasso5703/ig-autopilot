@@ -1420,6 +1420,51 @@ ENTRIES:
   run mort: n'ecris JAMAIS une heure a la main, mets `$(date -u +%H:%M:%S)` dans le
   heredoc, il s'evalue et il ne ment pas.
   Proof: run 10h30 24/09, Reel meta-lunettes-sans-camera, permalink DdquPKQAT00.
+  Ajout 24/09 (16h30), 72e mesure morte de la cle media (401 sur /v1beta/models, cle
+  53 car; dernier achat 01/09 16h54 = 23 jours), donc OOM_SILENT par defaut et Reel a
+  0,00 $. LE JETON IG A PUBLIE UNE SECONDE FOIS LE MEME JOUR PASSE SA DATE NOMINALE:
+  17h00:54 UTC, soit ~41 h apres le 23/09 00h00 de state/token.json (permalink
+  DdrXxONCcCE). Deux media_publish reussis dans la meme journee apres l'expiration
+  annoncee: le compteur est pessimiste, teste le chemin reel, et ne lis toujours pas
+  ca comme un sursis promis.
+  LE PIEGE DU JOUR, ET IL FRAPPE LA SOURCE QUE CE CARNET TIENT POUR LA PLUS SURE:
+  **anthropic.com/news A ETE REECRIT ENTRE LE GATE DU SCOUT ET CELUI DE LA
+  PUBLICATION.** Le spec ia-trouve-systeme-adn passait 45/45 VERIFIED a 06h30; a
+  16h55, sans qu'une ligne du spec ait bouge, DEUX citations de la MEME page
+  reviennent NOT_FOUND (diapo 7 et captionEvidence[1]) pendant que les six autres
+  citations de cette page passent. Les deux ecarts sont purement typographiques:
+  "and a professor at MIT and the Broad Institute said:" est devenu "... Broad
+  Institute, said:" (virgule ajoutee) et "the 20 most-compelling candidates" est
+  devenu "the 20 most compelling candidates" (trait d'union retire). Famille du 28/07
+  (les redactions editent apres publication), mais mesuree pour la PREMIERE FOIS sur
+  un primaire de labo, que le carnet traite comme la surface la plus fiable du gate.
+  TROIS CONSEQUENCES: (1) le re-gate en ligne d'un spec herite n'est pas une
+  formalite, c'est exactement le controle qui rattrape ca, ne le saute jamais pour
+  tenir un creneau; (2) ne RETAPE jamais la citation corrigee, re-slice-la du flatten
+  (`node scout-flatten.mjs <url>` puis indexOf/slice et ecriture du JSON par script),
+  remede mesure a 4 min pour deux citations; (3) le symptome a reconnaitre en 5 s:
+  une ou deux citations NOT_FOUND sur une page qui repond 200 alors que le reste de
+  la MEME page passe -- c'est une reecriture, pas un blocage ni une faute de copie.
+  RE-CONFIRMATION DU PIEGE D'ADJECTIF DE PERIMETRE (07/09), et elle est chere parce
+  qu'elle a survecu a DEUX gates verts: TNW ecrit "the rate fell as low as 32%", le
+  script herite disait "il ne decrit le motif que dans 32 % des essais", soit un
+  PLANCHER transforme en taux plat -- et la meme phrase vivait a l'identique sur le
+  `label` de la carte du beat 5 (la surface la plus lisible du Reel), dans la caption
+  et dans le body d'une diapo (famille du 07/09 10h30: une correction de sens doit
+  etre grepee dans TOUT le spec). Le gate ne peut rien y voir, le chiffre est juste.
+  Corrige en "le taux descend jusqu'a 32 % des essais" + label "au plus bas, quand le
+  modele va chercher l'ADN lui-meme". REFLEXE, 30 s, sur tout chiffre d'un spec
+  herite: relis la phrase SOURCE et cherche `as low as`, `up to`, `at least`,
+  `as much as`, `nearly`, `more than` avant de builder; un qualificatif de borne
+  supprime est un contresens qui passe tous les controles.
+  thenextweb.com RE-CONFIRME EN RECU (16/09, 24/09 06h30): la capture epinglee par le
+  scout tient, sans aucun recadrage, le masthead TNW, la rubrique ANTHROPIC, le titre
+  entier sur six lignes et le chapo qui porte le claim, dans la fenetre visible des
+  ~1686 px. Et le controle du 10/08 passe: le titre affiche EST l'histoire.
+  CHRONO: demarrage 16h48, PUBLIE a 17h00:54 UTC = 19h00 Paris (pic du soir), soit
+  DOUZE MINUTES bout en bout sur conteneur froid, UN ALLER-RETOUR DE GATE IMPREVU
+  COMPRIS, 0,00 $. Le build muet de 7 beats entierement epingles a pris ~80 s.
+  Proof: run 16h30 24/09, Reel 2026-09-24-ia-trouve-systeme-adn, permalink DdrXxONCcCE.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
