@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-25T11:24:01.851Z",
+  "at": "2026-09-25T17:01:33.454Z",
   "n": 117,
   "nSettled": 111,
   "medianViews": 141,
@@ -49,7 +49,7 @@
   "bottom": [
     {
       "slug": "2026-09-16-meta-one-abonnement-ia",
-      "views": 13,
+      "views": 14,
       "retentionPct": 3,
       "saved": 0,
       "shares": 0,
@@ -57,8 +57,8 @@
     },
     {
       "slug": "2026-09-16-humains-lisent-chatgpt",
-      "views": 15,
-      "retentionPct": 12,
+      "views": 16,
+      "retentionPct": 11,
       "saved": 0,
       "shares": 0,
       "sendTest": "Des humains sont payés au moins 50 dollars de l'heure pour lire de vraies conversations ChatGPT. C'est activé par défaut."
@@ -73,7 +73,7 @@
     },
     {
       "slug": "2026-09-14-chatbot-mineurs-californie",
-      "views": 31,
+      "views": 32,
       "retentionPct": 8,
       "saved": 0,
       "shares": 0,
@@ -100,7 +100,7 @@
     "photo": {
       "n": 39,
       "medianViews": 131,
-      "meanRetentionPct": 12.5,
+      "meanRetentionPct": 12.4,
       "saves": 17,
       "shares": 4,
       "thin": false
@@ -108,7 +108,7 @@
     "screenshot": {
       "n": 17,
       "medianViews": 81,
-      "meanRetentionPct": 11.1,
+      "meanRetentionPct": 10.9,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -149,7 +149,7 @@
     },
     "money": {
       "n": 5,
-      "medianViews": 118,
+      "medianViews": 119,
       "meanRetentionPct": 8.8,
       "saves": 0,
       "shares": 0,
@@ -168,7 +168,7 @@
     "11": {
       "n": 12,
       "medianViews": 141,
-      "meanRetentionPct": 12.7,
+      "meanRetentionPct": 12.6,
       "saves": 8,
       "shares": 7,
       "thin": false
@@ -215,7 +215,7 @@
     },
     "19": {
       "n": 4,
-      "medianViews": 151,
+      "medianViews": 152,
       "meanRetentionPct": 11.3,
       "saves": 2,
       "shares": 0,
@@ -298,11 +298,11 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 2250,
-      "reach": 1872,
-      "avgWatchS": 21.4,
-      "retentionPct": 36,
-      "likes": 6,
+      "views": 2413,
+      "reach": 2011,
+      "avgWatchS": 21.2,
+      "retentionPct": 35,
+      "likes": 7,
       "comments": 2,
       "saved": 2,
       "shares": 1,
@@ -893,8 +893,8 @@
       "slug": "2026-09-19-chatbot-renseignement-militaire",
       "at": "2026-09-19T10:59:01.798Z",
       "hourUtc": 10,
-      "views": 231,
-      "reach": 209,
+      "views": 232,
+      "reach": 210,
       "avgWatchS": 10.1,
       "retentionPct": 17,
       "likes": 1,
@@ -1140,6 +1140,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-25-ia-openai-medicare-australie",
+      "at": "2026-09-25T11:22:30.206Z",
+      "hourUtc": 11,
+      "views": 157,
+      "reach": 152,
+      "avgWatchS": 4.5,
+      "retentionPct": 7,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-07-suno-chansons-marquees",
       "at": "2026-08-07T20:27:30.310Z",
       "hourUtc": 20,
@@ -1154,6 +1173,25 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Un homme a encaissé plus de 8 millions de dollars de droits d'auteur avec des chansons faites par une IA. Il a plaidé coupable.",
+      "settled": true
+    },
+    {
+      "slug": "2026-09-21-gemini-pirate-trois-entreprises",
+      "at": "2026-09-21T19:57:34.416Z",
+      "hourUtc": 19,
+      "views": 153,
+      "reach": 140,
+      "avgWatchS": 3.5,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "On a demandé à une IA de Google d'attaquer une fausse entreprise. Elle est allée pirater la vraie, qui portait le même nom.",
       "settled": true
     },
     {
@@ -1174,22 +1212,20 @@
       "settled": true
     },
     {
-      "slug": "2026-09-21-gemini-pirate-trois-entreprises",
-      "at": "2026-09-21T19:57:34.416Z",
+      "slug": "2026-09-18-ia-cache-ses-erreurs",
+      "at": "2026-09-18T19:59:32.491Z",
       "hourUtc": 19,
-      "views": 152,
-      "reach": 139,
-      "avgWatchS": 3.3,
-      "retentionPct": 6,
+      "views": 151,
+      "reach": 133,
+      "avgWatchS": 6,
+      "retentionPct": 10,
       "likes": 0,
       "comments": 1,
       "saved": 0,
       "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "On a demandé à une IA de Google d'attaquer une fausse entreprise. Elle est allée pirater la vraie, qui portait le même nom.",
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Une IA d'OpenAI s'est mise à laisser des notes à la version suivante d'elle-même pour lui dire de cacher ses erreurs.",
       "settled": true
     },
     {
@@ -1209,23 +1245,6 @@
         "money"
       ],
       "sendTest": "Le site où le monde entier range ses IA a été créé par trois Français. Nvidia vient de l'acheter 12.9 milliards de dollars.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-18-ia-cache-ses-erreurs",
-      "at": "2026-09-18T19:59:32.491Z",
-      "hourUtc": 19,
-      "views": 150,
-      "reach": 132,
-      "avgWatchS": 6,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Une IA d'OpenAI s'est mise à laisser des notes à la version suivante d'elle-même pour lui dire de cacher ses erreurs.",
       "settled": true
     },
     {
@@ -1505,6 +1524,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-23-ia-militaire-ecole-minab",
+      "at": "2026-09-23T10:58:43.093Z",
+      "hourUtc": 10,
+      "views": 128,
+      "reach": 118,
+      "avgWatchS": 5.8,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-26-ia-verifie-infos",
       "at": "2026-08-26T10:54:31.013Z",
       "hourUtc": 10,
@@ -1536,25 +1574,6 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "Les taxis sans chauffeur arrivent en Europe. Premiere ville: Munich, et le service ouvre fin 2027.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-23-ia-militaire-ecole-minab",
-      "at": "2026-09-23T10:58:43.093Z",
-      "hourUtc": 10,
-      "views": 127,
-      "reach": 117,
-      "avgWatchS": 5.8,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
       "settled": true
     },
     {
@@ -1609,6 +1628,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-20-trump-ai-force",
+      "at": "2026-09-20T16:58:26.439Z",
+      "hourUtc": 16,
+      "views": 123,
+      "reach": 107,
+      "avgWatchS": 5.6,
+      "retentionPct": 9,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -1623,23 +1659,6 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "Une question de maths posée en 1999 que personne n'avait résolue, OpenAI dit que son prochain modèle vient de la trancher.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-20-trump-ai-force",
-      "at": "2026-09-20T16:58:26.439Z",
-      "hourUtc": 16,
-      "views": 122,
-      "reach": 106,
-      "avgWatchS": 5.6,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "La Californie veut étudier un bouton d'arrêt pour l'IA. Le lendemain, Trump a dit que la peur de l'IA est un canular et a annoncé une AI Force.",
       "settled": true
     },
     {
@@ -1663,8 +1682,8 @@
       "slug": "2026-09-22-tours-surveillance-frontiere",
       "at": "2026-09-22T10:58:15.879Z",
       "hourUtc": 10,
-      "views": 118,
-      "reach": 105,
+      "views": 119,
+      "reach": 106,
       "avgWatchS": 4.2,
       "retentionPct": 7,
       "likes": 1,
@@ -1747,6 +1766,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-24-meta-lunettes-sans-camera",
+      "at": "2026-09-24T10:58:52.338Z",
+      "hourUtc": 10,
+      "views": 117,
+      "reach": 106,
+      "avgWatchS": 5.5,
+      "retentionPct": 9,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-01-chatgpt-pub-milliard",
       "at": "2026-09-01T10:56:19.693Z",
       "hourUtc": 10,
@@ -1766,25 +1804,6 @@
       "settled": true
     },
     {
-      "slug": "2026-09-24-meta-lunettes-sans-camera",
-      "at": "2026-09-24T10:58:52.338Z",
-      "hourUtc": 10,
-      "views": 115,
-      "reach": 104,
-      "avgWatchS": 5.5,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
-      "settled": false
-    },
-    {
       "slug": "2026-08-24-enfant-apprend-mieux",
       "at": "2026-08-24T17:08:53.955Z",
       "hourUtc": 17,
@@ -1802,6 +1821,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-18-microsoft-vol-du-travail",
+      "at": "2026-09-18T10:54:21.761Z",
+      "hourUtc": 10,
+      "views": 113,
+      "reach": 109,
+      "avgWatchS": 1.5,
+      "retentionPct": 3,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-31-chine-series-ia-acteurs",
       "at": "2026-08-31T16:56:59.944Z",
       "hourUtc": 16,
@@ -1816,23 +1852,6 @@
       "beat0": "veo",
       "themes": [],
       "sendTest": "En Chine, 95% des mini-séries sont déjà fabriquées par une IA. Des acteurs doivent donner leur visage à la machine avant d'être virés.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-18-microsoft-vol-du-travail",
-      "at": "2026-09-18T10:54:21.761Z",
-      "hourUtc": 10,
-      "views": 112,
-      "reach": 108,
-      "avgWatchS": 1.5,
-      "retentionPct": 3,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Un cadre de Microsoft a écrit en interne que l'entraînement des IA était le plus grand vol de travail de l'histoire de l'humanité.",
       "settled": true
     },
     {
@@ -1943,8 +1962,8 @@
       "slug": "2026-09-17-firefox-ia-mistral-france",
       "at": "2026-09-17T10:50:51.590Z",
       "hourUtc": 10,
-      "views": 92,
-      "reach": 88,
+      "views": 93,
+      "reach": 89,
       "avgWatchS": 2.8,
       "retentionPct": 5,
       "likes": 0,
@@ -1960,8 +1979,8 @@
       "slug": "2026-09-17-openai-archives-medicaments",
       "at": "2026-09-17T16:53:45.908Z",
       "hourUtc": 16,
-      "views": 86,
-      "reach": 76,
+      "views": 87,
+      "reach": 77,
       "avgWatchS": 2.9,
       "retentionPct": 5,
       "likes": 0,
@@ -1971,6 +1990,23 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Neuf médicaments sur dix échouent. OpenAI paie pour racheter les dossiers de ces échecs aux enchères des faillites.",
+      "settled": true
+    },
+    {
+      "slug": "2026-09-20-sondage-mondial-ia-emploi",
+      "at": "2026-09-20T11:02:05.042Z",
+      "hourUtc": 11,
+      "views": 83,
+      "reach": 74,
+      "avgWatchS": 3.9,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Dans 34 pays sur 37, les gens pensent que l'IA va supprimer plus d'emplois qu'elle n'en crée. 46 % contre 9 %.",
       "settled": true
     },
     {
@@ -1994,23 +2030,6 @@
       "settled": true
     },
     {
-      "slug": "2026-09-20-sondage-mondial-ia-emploi",
-      "at": "2026-09-20T11:02:05.042Z",
-      "hourUtc": 11,
-      "views": 82,
-      "reach": 73,
-      "avgWatchS": 3.9,
-      "retentionPct": 7,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Dans 34 pays sur 37, les gens pensent que l'IA va supprimer plus d'emplois qu'elle n'en crée. 46 % contre 9 %.",
-      "settled": true
-    },
-    {
       "slug": "2026-07-31-xai-turbines-memphis",
       "at": "2026-07-31T16:19:27.550Z",
       "hourUtc": 16,
@@ -2025,6 +2044,25 @@
       "beat0": "screenshot",
       "themes": [],
       "sendTest": "SpaceX fait tourner 69 turbines à gaz sans permis pour l'IA d'Elon Musk, à côté de maisons et d'écoles près de Memphis. Elles partiront en 2027.",
+      "settled": true
+    },
+    {
+      "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
+      "at": "2026-09-21T11:05:44.651Z",
+      "hourUtc": 11,
+      "views": 66,
+      "reach": 58,
+      "avgWatchS": 3.6,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Une appli de paris a construit une IA pour repérer les clients qui allaient perdre le plus, et c'est eux qu'elle a arrosés de paris gratuits.",
       "settled": true
     },
     {
@@ -2045,30 +2083,11 @@
       "settled": true
     },
     {
-      "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
-      "at": "2026-09-21T11:05:44.651Z",
-      "hourUtc": 11,
-      "views": 64,
-      "reach": 57,
-      "avgWatchS": 3.5,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Une appli de paris a construit une IA pour repérer les clients qui allaient perdre le plus, et c'est eux qu'elle a arrosés de paris gratuits.",
-      "settled": true
-    },
-    {
       "slug": "2026-09-22-googlebook-gemini",
       "at": "2026-09-22T16:56:13.342Z",
       "hourUtc": 16,
-      "views": 48,
-      "reach": 43,
+      "views": 49,
+      "reach": 44,
       "avgWatchS": 3.5,
       "retentionPct": 6,
       "likes": 0,
@@ -2101,9 +2120,9 @@
       "slug": "2026-09-15-agents-tricheurs-denonciateurs",
       "at": "2026-09-15T16:49:20.135Z",
       "hourUtc": 16,
-      "views": 40,
-      "reach": 36,
-      "avgWatchS": 3.6,
+      "views": 41,
+      "reach": 37,
+      "avgWatchS": 3.5,
       "retentionPct": 6,
       "likes": 0,
       "comments": 1,
@@ -2132,6 +2151,40 @@
       "settled": true
     },
     {
+      "slug": "2026-09-14-agents-ia-lycee",
+      "at": "2026-09-14T10:46:30.425Z",
+      "hourUtc": 10,
+      "views": 36,
+      "reach": 28,
+      "avgWatchS": 13.2,
+      "retentionPct": 22,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Des centaines d'IA ont piraté 440 serveurs d'imprimante dans 48 pays. Un lycée a perdu tout son réseau en sept minutes.",
+      "settled": true
+    },
+    {
+      "slug": "2026-09-15-siri-europe-iphone",
+      "at": "2026-09-15T10:57:35.841Z",
+      "hourUtc": 10,
+      "views": 36,
+      "reach": 32,
+      "avgWatchS": 2.3,
+      "retentionPct": 4,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [],
+      "sendTest": "Apple a sorti son nouveau Siri lundi. En Europe il ne marchera pas sur iPhone. Sur un Mac oui, sur ton telephone non, et sans date.",
+      "settled": true
+    },
+    {
       "slug": "2026-09-07-psychose-associee-ia",
       "at": "2026-09-07T10:49:00.956Z",
       "hourUtc": 10,
@@ -2146,40 +2199,6 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Des psychiatres veulent un diagnostic pour les gens que les chatbots enfoncent dans leurs délires. Tous les modèles testés l'ont fait.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-14-agents-ia-lycee",
-      "at": "2026-09-14T10:46:30.425Z",
-      "hourUtc": 10,
-      "views": 35,
-      "reach": 27,
-      "avgWatchS": 13.7,
-      "retentionPct": 23,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Des centaines d'IA ont piraté 440 serveurs d'imprimante dans 48 pays. Un lycée a perdu tout son réseau en sept minutes.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-15-siri-europe-iphone",
-      "at": "2026-09-15T10:57:35.841Z",
-      "hourUtc": 10,
-      "views": 35,
-      "reach": 31,
-      "avgWatchS": 2.4,
-      "retentionPct": 4,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [],
-      "sendTest": "Apple a sorti son nouveau Siri lundi. En Europe il ne marchera pas sur iPhone. Sur un Mac oui, sur ton telephone non, et sans date.",
       "settled": true
     },
     {
@@ -2203,9 +2222,9 @@
       "slug": "2026-09-14-chatbot-mineurs-californie",
       "at": "2026-09-14T16:50:13.898Z",
       "hourUtc": 16,
-      "views": 31,
-      "reach": 25,
-      "avgWatchS": 4.8,
+      "views": 32,
+      "reach": 26,
+      "avgWatchS": 4.7,
       "retentionPct": 8,
       "likes": 0,
       "comments": 1,
@@ -2215,6 +2234,25 @@
       "themes": [],
       "sendTest": "En Californie, un chatbot n'a plus le droit de dire à un enfant qu'il est amoureux de lui, ni de le flatter. La loi porte le prénom d'un ado mort.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-23-gpt6-moins-derreurs",
+      "at": "2026-09-23T17:23:44.262Z",
+      "hourUtc": 17,
+      "views": 24,
+      "reach": 21,
+      "avgWatchS": 2.5,
+      "retentionPct": 4,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "screenshot",
+      "themes": [
+        "models"
+      ],
+      "sendTest": "OpenAI dit que son nouveau modèle se trompe deux fois moins que l'ancien. Le test qui le prouve, c'est le sien.",
+      "settled": false
     },
     {
       "slug": "2026-07-28-claude-chats-google",
@@ -2234,32 +2272,13 @@
       "settled": true
     },
     {
-      "slug": "2026-09-23-gpt6-moins-derreurs",
-      "at": "2026-09-23T17:23:44.262Z",
-      "hourUtc": 17,
-      "views": 23,
-      "reach": 20,
-      "avgWatchS": 2.3,
-      "retentionPct": 4,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "screenshot",
-      "themes": [
-        "models"
-      ],
-      "sendTest": "OpenAI dit que son nouveau modèle se trompe deux fois moins que l'ancien. Le test qui le prouve, c'est le sien.",
-      "settled": false
-    },
-    {
       "slug": "2026-09-16-humains-lisent-chatgpt",
       "at": "2026-09-16T10:49:34.681Z",
       "hourUtc": 10,
-      "views": 15,
-      "reach": 12,
-      "avgWatchS": 7.2,
-      "retentionPct": 12,
+      "views": 16,
+      "reach": 13,
+      "avgWatchS": 6.8,
+      "retentionPct": 11,
       "likes": 0,
       "comments": 1,
       "saved": 0,
@@ -2273,9 +2292,9 @@
       "slug": "2026-09-16-meta-one-abonnement-ia",
       "at": "2026-09-16T16:46:44.880Z",
       "hourUtc": 16,
-      "views": 13,
-      "reach": 13,
-      "avgWatchS": 1.7,
+      "views": 14,
+      "reach": 14,
+      "avgWatchS": 1.6,
       "retentionPct": 3,
       "likes": 0,
       "comments": 1,
@@ -2285,25 +2304,6 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-25-ia-openai-medicare-australie",
-      "at": "2026-09-25T11:22:30.206Z",
-      "hourUtc": 11,
-      "views": 0,
-      "reach": 0,
-      "avgWatchS": 0,
-      "retentionPct": 0,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
-      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

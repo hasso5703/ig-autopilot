@@ -48,6 +48,17 @@
     },
     {
       "type": "content",
+      "title": "L'exemple de Google",
+      "body": "Gemini appelle la pizzeria et **se présente** : une assistante IA qui appelle pour Kristine M., avec une mise à jour de sa commande.",
+      "evidence": "Hi, I'm Gemini, an AI assistant calling on behalf of Kristine M. with an update to her order.",
+      "source": {
+        "name": "Droid Life",
+        "url": "https://www.droid-life.com/2026/09/24/pixel-11-gets-call-for-me-feature-gemini/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
       "title": "Ce que Google lance",
       "body": "Une **expérience à ses débuts** : Gemini prend en charge des appels de routine, rendez-vous, mises de côté, réservations.",
       "evidence": "Reminiscent of Google Duplex, this Gemini Intelligence feature is officially an \"early experiment\" to let Google handle \"routine phone calls\" to book appointments, place items on hold, and reschedule reservations.",
@@ -116,17 +127,6 @@
     },
     {
       "type": "content",
-      "title": "Pourquoi ça démarre petit",
-      "body": "Google dit lancer à petite échelle parce que les vraies conversations sont pleines de nuances.",
-      "evidence": "Google said it's starting this experiment at a small scale because \"real-world conversations are nuanced,\" and it needs time to get the feature right before rolling it out more broadly.",
-      "source": {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
-        "date": "2026-09-24"
-      }
-    },
-    {
-      "type": "content",
       "title": "Où, et pour qui",
       "body": "Aux États-Unis, sur les Pixel 11, pour les abonnés Gemini inscrits à la version d'essai de l'application Téléphone.",
       "evidence": "As of today, an early preview is rolling out to Gemini subscribers using the enrolled in the Phone by Google beta on the Pixel 11, 11 Pro, 11 Pro XL, and 11 Pro Fold in the US.",
@@ -148,23 +148,23 @@
     "title": "Gemini appellera la pizzeria à ta place",
     "beats": [
       {
-        "script": "Le téléphone sonne dans une pizzeria. Au bout du fil : bonjour, je suis Gemini, une assistante IA qui appelle pour Kristine M. C'est l'exemple de Google.",
-        "visual": {
-          "type": "photo",
-          "query": "restaurant dining room night",
-          "alt": "Une table de restaurant dressée sous une lampe",
-          "file": "media/2026-09-25-gemini-appelle-a-ta-place/p_diner.jpg",
-          "credit": "CC0"
-        }
-      },
-      {
-        "script": "Et ce n'est pas une démo lointaine : la fonction est déjà en test. Le plus intéressant, d'ailleurs, ce n'est pas l'IA. C'est la personne qui décroche.",
+        "script": "Ton téléphone appelle la pizzeria, et c'est une IA qui parle. Bonjour, je suis Gemini, une assistante IA qui appelle pour Kristine M. Ça, c'est l'exemple que donne Google.",
         "visual": {
           "type": "photo",
           "query": "telephone keypad close",
           "alt": "Macro d'une touche de clavier téléphonique",
           "file": "media/2026-09-25-gemini-appelle-a-ta-place/p_keypad.jpg",
           "credit": "cmiper · CC BY"
+        }
+      },
+      {
+        "script": "Et ce n'est pas une démo lointaine : la fonction est déjà en test. Le plus intéressant, d'ailleurs, ce n'est pas l'IA. C'est la personne qui décroche.",
+        "visual": {
+          "type": "photo",
+          "query": "waitress restaurant counter",
+          "alt": "Une serveuse derrière le comptoir d'un diner",
+          "file": "media/2026-09-25-gemini-appelle-a-ta-place/p_wait916.jpg",
+          "credit": "Pike Place Market, 1981 · CC BY"
         }
       },
       {
