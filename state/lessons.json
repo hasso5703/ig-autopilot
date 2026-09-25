@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-25T17:01:33.454Z",
-  "n": 117,
-  "nSettled": 111,
-  "medianViews": 141,
+  "at": "2026-09-25T19:57:09.671Z",
+  "n": 118,
+  "nSettled": 112,
+  "medianViews": 140,
   "medianRetentionPct": 15,
   "top": [
     {
@@ -72,20 +72,20 @@
       "sendTest": "If you ever hit Share on a Claude chat, it may have ended up on Google. People found health records and kids' phone numbers. Check your settings."
     },
     {
+      "slug": "2026-09-23-gpt6-moins-derreurs",
+      "views": 24,
+      "retentionPct": 4,
+      "saved": 0,
+      "shares": 0,
+      "sendTest": "OpenAI dit que son nouveau modèle se trompe deux fois moins que l'ancien. Le test qui le prouve, c'est le sien."
+    },
+    {
       "slug": "2026-09-14-chatbot-mineurs-californie",
       "views": 32,
       "retentionPct": 8,
       "saved": 0,
       "shares": 0,
       "sendTest": "En Californie, un chatbot n'a plus le droit de dire à un enfant qu'il est amoureux de lui, ni de le flatter. La loi porte le prénom d'un ado mort."
-    },
-    {
-      "slug": "2026-09-07-editeurs-reclament-indemnite-auteurs",
-      "views": 34,
-      "retentionPct": 8,
-      "saved": 0,
-      "shares": 0,
-      "sendTest": "Une IA a piraté 500 000 livres, la justice donne 3 000 dollars par livre à l'auteur. Et son éditeur vient de réclamer l'argent à sa place."
     }
   ],
   "byBeat0": {
@@ -106,9 +106,9 @@
       "thin": false
     },
     "screenshot": {
-      "n": 17,
-      "medianViews": 81,
-      "meanRetentionPct": 10.9,
+      "n": 18,
+      "medianViews": 73,
+      "meanRetentionPct": 10.6,
       "saves": 3,
       "shares": 2,
       "thin": false
@@ -132,9 +132,9 @@
       "thin": false
     },
     "models": {
-      "n": 6,
-      "medianViews": 324,
-      "meanRetentionPct": 28.5,
+      "n": 7,
+      "medianViews": 289,
+      "meanRetentionPct": 25,
       "saves": 10,
       "shares": 1,
       "thin": false
@@ -206,9 +206,9 @@
       "thin": false
     },
     "17": {
-      "n": 21,
-      "medianViews": 191,
-      "meanRetentionPct": 22.6,
+      "n": 22,
+      "medianViews": 183,
+      "meanRetentionPct": 21.8,
       "saves": 20,
       "shares": 12,
       "thin": false
@@ -298,11 +298,11 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 2413,
-      "reach": 2011,
-      "avgWatchS": 21.2,
-      "retentionPct": 35,
-      "likes": 7,
+      "views": 2529,
+      "reach": 2099,
+      "avgWatchS": 21.5,
+      "retentionPct": 36,
+      "likes": 8,
       "comments": 2,
       "saved": 2,
       "shares": 1,
@@ -1083,6 +1083,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-25-ia-openai-medicare-australie",
+      "at": "2026-09-25T11:22:30.206Z",
+      "hourUtc": 11,
+      "views": 172,
+      "reach": 162,
+      "avgWatchS": 4.8,
+      "retentionPct": 8,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-22-bague-oura-sommeil",
       "at": "2026-08-22T16:55:58.251Z",
       "hourUtc": 16,
@@ -1138,25 +1157,6 @@
       ],
       "sendTest": "Les États-Unis viennent d'interdire l'importation des robots humanoïdes étrangers. 85 % du marché est chinois.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-25-ia-openai-medicare-australie",
-      "at": "2026-09-25T11:22:30.206Z",
-      "hourUtc": 11,
-      "views": 157,
-      "reach": 152,
-      "avgWatchS": 4.5,
-      "retentionPct": 7,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
-      "settled": false
     },
     {
       "slug": "2026-08-07-suno-chansons-marquees",
@@ -1698,6 +1698,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-24-meta-lunettes-sans-camera",
+      "at": "2026-09-24T10:58:52.338Z",
+      "hourUtc": 10,
+      "views": 118,
+      "reach": 106,
+      "avgWatchS": 5.5,
+      "retentionPct": 9,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-penurie-memoire-samsung",
       "at": "2026-08-01T09:17:47.305Z",
       "hourUtc": 9,
@@ -1764,25 +1783,6 @@
       "themes": [],
       "sendTest": "Sony et Warner attaquent Anthropic: ils disent que Claude a avalé Eye of the Tiger et All I Want for Christmas. 150 000 dollars reclames par chanson.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-24-meta-lunettes-sans-camera",
-      "at": "2026-09-24T10:58:52.338Z",
-      "hourUtc": 10,
-      "views": 117,
-      "reach": 106,
-      "avgWatchS": 5.5,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
-      "settled": false
     },
     {
       "slug": "2026-09-01-chatgpt-pub-milliard",
@@ -2083,6 +2083,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-25-gemini-appelle-a-ta-place",
+      "at": "2026-09-25T17:16:14.802Z",
+      "hourUtc": 17,
+      "views": 53,
+      "reach": 41,
+      "avgWatchS": 6.1,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Google teste une IA qui appelle les commerces à ta place, depuis ton propre numéro. Elle se présente, patiente, et tient la conversation.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-22-googlebook-gemini",
       "at": "2026-09-22T16:56:13.342Z",
       "hourUtc": 16,
@@ -2252,7 +2269,7 @@
         "models"
       ],
       "sendTest": "OpenAI dit que son nouveau modèle se trompe deux fois moins que l'ancien. Le test qui le prouve, c'est le sien.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-07-28-claude-chats-google",

@@ -3060,6 +3060,21 @@ ENTRIES:
   curseurs de paging valides a la meme seconde - donc les lignes existent et
   sont filtrees a la sortie. Seul Hasan peut re-autoriser la portee commentaires.
   Proof: veille 19h30 17/09.
+  Ajout 25/09 (19h30), UN CINQUIEME INCONNU EST ARRIVE, ET IL INVALIDE LA CONSIGNE
+  "n'y passe pas de temps" (06/09, 23/09). L'audit sur TOUT l'historique
+  (`m.media?.comments_count` de state/metrics.jsonl contre le champ `target` de
+  state/engagement.jsonl) rend CINQ commentaires d'inconnus au lieu des quatre
+  figes depuis le 09/08: le neuf est sur 2026-09-24-ia-trouve-systeme-adn,
+  c'est-a-dire le Reel le MIEUX distribue de l'histoire du compte (2529 vues), et
+  il est tombe dans les 24 h. `engage.mjs recent` l'a vu tout seul et a imprime la
+  bonne ligne ("1 comment(s) the API did not return, comments_count 2, 1 seeded by
+  us"), donc le controle automatique marche; c'est la CONCLUSION des veilles
+  precedentes qui etait perimee. Regle: la veille refait l'audit d'historique
+  chaque soir (10 s, zero reseau) et, quand un inconnu apparait, ca monte en tete
+  de rapport -- un commentaire sur le meilleur Reel du compte est exactement le
+  spectateur qu'on voulait garder, et personne ici ne peut le lire ni y repondre.
+  Seul Hasan peut re-autoriser la portee commentaires, ou repondre dans l'appli.
+  Proof: veille 19h30 25/09.
 - 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
   renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
   ajoute un qualificatif (lieu, moment: "vending machines night") pour
@@ -7406,3 +7421,41 @@ ENTRIES:
   passer un spec de scout a 11 et le gate REFUSE. Retire une diapo qu'aucun beat
   ne prononce (celle-ci vivait deja dans la legende avec sa propre
   captionEvidence) plutot que de renoncer a l'evidence. Proof: run 16h30 25/09.
+  Ajout 25/09 (19h30, veille), 77e mesure morte de la cle media (401 sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car AQ.Ab; dernier achat
+  01/09 16h54 = 24 jours, RECALCULE depuis state/spend.jsonl), SIXIEME journee de
+  survie du jeton IG (graph.instagram.com/me rend 200 a 19h52, ~44 h apres le
+  23/09 00h00 de state/token.json, alors que watch.mjs imprime TOKEN MORT).
+  ET LE CHIFFRE QUI INTERDIT DE RECOPIER LA FORMULE "LE MUET EST UNE SPIRALE",
+  servie par les veilles des 20, 21, 22, 23 et 24/09: un Reel MUET vient de faire
+  le MEILLEUR SCORE DE L'HISTOIRE DU COMPTE. 2026-09-24-ia-trouve-systeme-adn
+  (creneau 16h30, build muet, 0,00 $) lit ce soir 2529 vues / 2099 de portee /
+  36% de retention (21,5 s de watch moyen) / 1 partage / 2 saves, contre un record
+  precedent de 1808 vues (23/08, a voix et en veo). A AGE EGAL, la mesure qui ne
+  depend d'aucune fenetre: 2413 vues a t0+24h contre 20, 42, 150, 121, 191 et 147
+  pour les six Reels du soir precedents, et 165 vues a t0+3h contre 1 a 7. Le
+  partage et les deux saves sont AUSSI les premiers du compte depuis le 09/09
+  (les fenetres hebdo etaient a 0 et 0). Les abonnes repassent a +2 sur 7 jours
+  (51), apres -1 pendant deux semaines.
+  CE QUE CA NE DIT PAS, et il faut le dire avec: les fenetres hebdo appariees sur
+  les Reels REPOSES ne bougent pas encore (02-08/09 n=14 -> 10,5% / 136,5 vues;
+  09-15/09 n=14 -> 7,5% / 83; 16-22/09 n=13 -> 6% / 93; 23-25/09 n=2 -> 7% / 76),
+  precisement parce que le Reel record n'est PAS repose (publie 24/09 17h01, il
+  passe `settled` demain soir) et sort donc de tous les calculs. Donc: un outlier
+  n'annule pas trois semaines de medianes, la cle AI Studio (AIza..., 39 car)
+  reste la seule action qui rende la voix et l'ouverture veo -- mais la phrase
+  "le recommandeur retire la distribution" est desormais FAUSSE comme loi: la
+  distribution est revenue une fois, en muet, sur une histoire, donc ce qui varie
+  d'un facteur 20 dans le muet est l'HISTOIRE, pas le regime.
+  CE QU'IL Y AVAIT DANS CE REEL, a relire avant de scorer demain: beat 0 = `photo`
+  (micrographie de phages, fond noir, aucun mot lisible), 7 beats, 3 photos
+  scientifiques + 1 recu + 2 cartes, theme sciences/modeles (le digest donne
+  models n=7 -> 289 vues / 25% et safety n=7 -> 228 / 26,3%, les deux meilleurs
+  du compte), sendTest "Une IA a lu de l'ADN pendant 21 heures et a repere un truc
+  que personne n'avait jamais vu. Et elle n'arrive pas a le refaire." -- un
+  resultat + un retournement dans la meme phrase.
+  MAINTENANCE FAITE UN VENDREDI (reflexe du 23/09: le journal du dernier dimanche,
+  2026-09-20-19h.md, n'existe pas): prune-media.mjs --live a supprime 23 fichiers
+  / 35 Mo sur 3 slugs (media 221 -> 187 Mo) et insights.mjs compact a ramene la
+  serie de 6180 a 4723 lignes, ~40 s a eux deux.
+  Proof: veille 19h30 25/09.
