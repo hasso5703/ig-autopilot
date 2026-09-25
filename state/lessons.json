@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-25T06:52:12.293Z",
-  "n": 116,
-  "nSettled": 110,
-  "medianViews": 142,
+  "at": "2026-09-25T11:24:01.851Z",
+  "n": 117,
+  "nSettled": 111,
+  "medianViews": 141,
   "medianRetentionPct": 15,
   "top": [
     {
@@ -98,8 +98,8 @@
       "thin": false
     },
     "photo": {
-      "n": 38,
-      "medianViews": 132,
+      "n": 39,
+      "medianViews": 131,
       "meanRetentionPct": 12.5,
       "saves": 17,
       "shares": 4,
@@ -148,19 +148,19 @@
       "thin": false
     },
     "money": {
-      "n": 4,
-      "medianViews": 117,
-      "meanRetentionPct": 8.5,
+      "n": 5,
+      "medianViews": 118,
+      "meanRetentionPct": 8.8,
       "saves": 0,
       "shares": 0,
-      "thin": true
+      "thin": false
     }
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 28,
-      "medianViews": 130,
-      "meanRetentionPct": 16,
+      "n": 29,
+      "medianViews": 128,
+      "meanRetentionPct": 15.8,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 50,
+    "now": 51,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -295,6 +295,23 @@
   },
   "posts": [
     {
+      "slug": "2026-09-24-ia-trouve-systeme-adn",
+      "at": "2026-09-24T17:01:14.327Z",
+      "hourUtc": 17,
+      "views": 2250,
+      "reach": 1872,
+      "avgWatchS": 21.4,
+      "retentionPct": 36,
+      "likes": 6,
+      "comments": 2,
+      "saved": 2,
+      "shares": 1,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "at": "2026-08-23T10:55:51.192Z",
       "hourUtc": 10,
@@ -310,23 +327,6 @@
       "themes": [],
       "sendTest": "L'IA a dit au créateur de Linux que son bug était impossible à résoudre. Il a insisté, et elle a fini par le trouver.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-24-ia-trouve-systeme-adn",
-      "at": "2026-09-24T17:01:14.327Z",
-      "hourUtc": 17,
-      "views": 1457,
-      "reach": 1180,
-      "avgWatchS": 20.6,
-      "retentionPct": 34,
-      "likes": 4,
-      "comments": 1,
-      "saved": 2,
-      "shares": 1,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
-      "settled": false
     },
     {
       "slug": "2026-08-10-amazon-centrale-gaz-texas",
@@ -1539,6 +1539,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-23-ia-militaire-ecole-minab",
+      "at": "2026-09-23T10:58:43.093Z",
+      "hourUtc": 10,
+      "views": 127,
+      "reach": 117,
+      "avgWatchS": 5.8,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-25-amazon-prix-materiel",
       "at": "2026-08-25T10:57:53.630Z",
       "hourUtc": 10,
@@ -1554,25 +1573,6 @@
       "themes": [],
       "sendTest": "Amazon a augmenté ses enceintes et ses liseuses de 60% en une nuit, parce que l'IA a vidé le stock mondial de mémoire.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-23-ia-militaire-ecole-minab",
-      "at": "2026-09-23T10:58:43.093Z",
-      "hourUtc": 10,
-      "views": 126,
-      "reach": 116,
-      "avgWatchS": 5.7,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
-      "settled": false
     },
     {
       "slug": "2026-08-20-applis-surveillance-enfants",
@@ -2285,6 +2285,25 @@
       "themes": [],
       "sendTest": "Meta vend de l'IA en plus sur Instagram et WhatsApp, et refuse de dire combien tu en as pour ton argent.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-25-ia-openai-medicare-australie",
+      "at": "2026-09-25T11:22:30.206Z",
+      "hourUtc": 11,
+      "views": 0,
+      "reach": 0,
+      "avgWatchS": 0,
+      "retentionPct": 0,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
+      "settled": false
     },
     {
       "slug": "2026-07-27-microsoft-cyber-model",

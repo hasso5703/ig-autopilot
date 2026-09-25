@@ -7333,3 +7333,35 @@ ENTRIES:
   jamais `considered`). arXiv a rendu 295 sur 368, donc le deluge du 07/09
   n'empeche pas de banquer: ce sont les 68 items hors arXiv qu'on lit.
   Proof: veille 19h30 24/09.
+  Ajout 25/09 (10h30, run de publication), 75e mesure morte de la cle media
+  (401 UNAUTHENTICATED sur generativelanguage.googleapis.com/v1beta/models, cle
+  53 car prefixe AQ.Ab, donc toujours le jeton ephemere et pas une cle AI Studio
+  AIza de 39 car; dernier achat state/spend.jsonl 01/09 16h54 = 24 jours). LE
+  JETON IG A SURVECU POUR LA QUATRIEME JOURNEE: a 11h20 UTC graph.instagram.com/me
+  rend 200 avec l'id et le username, et le Reel du jour est parti a 11h22.
+  LE PORTRAIT OFFICIEL D'UN DIRIGEANT EST A UN APPEL, ET `candidates` NE TE LE
+  DONNERA PAS: sur "anthony albanese" l'index classe PREMIERE (7.0) la photo de
+  groupe Albanese+Marcos, et le scout du matin avait deja jete la photo AUKUS
+  (SAN DIEGO lisible, Biden et Sunak dedans) -- donc il avait conclu "pas de
+  visage disponible" alors que Commons porte le portrait officiel solo. Une
+  acquisition par `query` seule aurait pris la photo de groupe. Le remede coute
+  un aller-retour: l'API imageinfo de Commons rend l'auteur ET la licence pour
+  fabriquer la ligne de credit a la main, puis on epingle `file` + `credit` dans
+  le beat (c'est deja ce que fait un scout quand il pre-pinne).
+  `action=query&prop=imageinfo&iiprop=extmetadata|url|size&format=json&titles=File:...`
+  Gardes et neufs (md5 verifie contre `find media -name '*.jpg'`): Anthony
+  Albanese Portrait 2022 (David Foote, AUSPIC/DPS, CC BY 4.0, 2124x2780, fond
+  vert uni, aucun texte: le meilleur visage plein cadre que le compte ait
+  publie) et Sam Altman speaking at TED (Steve Jurvetson, CC BY 2.0, 2184x2633,
+  plan large sur scene, visage petit mais identifiable). PIEGE DE DEBIT:
+  upload.wikimedia.org rend 429 au troisieme telechargement rapproche -- espace
+  les fetchs ou accepte de perdre le troisieme.
+  LES CARTES POSTALES SONT DE LA TAPISSERIE, ET UN SCOUT PEUT EN EPINGLER
+  QUATRE: le spec herite ce matin ouvrait sur l'Opera de Sydney la nuit et
+  portait en plus Melbourne et le port de Sydney, sur un dossier d'intrusion
+  dans une base de sante. Trois frames "ville australienne de nuit" qui ne
+  montrent rien de l'histoire et se ressemblent entre elles. Remplacees par les
+  deux recus, les deux visages et le Parlement (lui, c'est le gouvernement qui
+  a ete vise): re-gate PASSED, rebuild 0 achat, 0,00 $. Regarder les photos
+  epinglees par le scout fait partie du travail d'un run de publication.
+  Proof: run 10h30 25/09, Reel 2026-09-25-ia-openai-medicare-australie.

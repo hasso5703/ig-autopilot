@@ -2249,6 +2249,21 @@ test("recordSeen refuses a non-array instead of silently writing nothing", async
   await recordSeen([]);
 });
 
+// 2026-09-25: the half-right shape. A publish run banked its runner-up with
+// `recordSeen([entry], "revisit")`; the array guard above was satisfied, the
+// second argument was dropped, and the entry was written `considered` — the
+// 36-hour TTL that hides a story from the next run instead of the 6-hour one
+// that hands it over. The outcome is a field on the entry, and a caller that
+// thinks otherwise has to be told rather than quietly obeyed.
+test("recordSeen refuses a second argument instead of dropping the outcome", async () => {
+  const { recordSeen } = await import("../src/state.mjs");
+  await assert.rejects(
+    () => recordSeen([{ title: "T", url: "https://a.com/x" }], "revisit"),
+    /takes ONE argument/,
+    "an outcome passed positionally must throw, not land as `considered`"
+  );
+});
+
 // ---------------------------------------------------------------------------
 // The online path, testable at last.
 //

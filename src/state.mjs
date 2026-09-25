@@ -258,6 +258,22 @@ export async function recordSeen(entries) {
     throw new TypeError(
       "recordSeen: expects an ARRAY of entries — recordSeen([{ ...item, outcome, reason }]), not (item, outcome, reason). Each entry carries its own `outcome` and `reason` as fields."
     );
+  /*
+   * And refuse the HALF-right shape, which the array guard above lets through.
+   *
+   * On 2026-09-25 a publish run wrote `recordSeen([entry], "revisit")` to move
+   * its runner-up onto the six-hour shelf. The array guard passed, the second
+   * argument was silently dropped, and the entry landed as `considered` — a
+   * 36-hour TTL, which HIDES the story from the very run it was banked for.
+   * Nothing threw and the echo looked right; it was caught only by reading the
+   * ledger back. Same family as the 2026-08-02 failure and the same cost: the
+   * outcome is what the next run's `filterFresh` obeys, so a dropped outcome
+   * is the account's memory quietly saying the wrong thing.
+   */
+  if (arguments.length > 1)
+    throw new TypeError(
+      `recordSeen: takes ONE argument. It was called with ${arguments.length}, and the extra ones are silently ignored — the outcome is a FIELD on each entry, not a second argument: recordSeen([{ ...item, outcome: "revisit", reason: "why" }]).`
+    );
   if (!entries.length) return;
   await mkdir(DIR, { recursive: true });
   const at = new Date().toISOString();
