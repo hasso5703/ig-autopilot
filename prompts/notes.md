@@ -7365,3 +7365,44 @@ ENTRIES:
   a ete vise): re-gate PASSED, rebuild 0 achat, 0,00 $. Regarder les photos
   epinglees par le scout fait partie du travail d'un run de publication.
   Proof: run 10h30 25/09, Reel 2026-09-25-ia-openai-medicare-australie.
+  Ajout 25/09 (16h30), 76e mesure morte de la cle media (401 sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car AQ.Ab; dernier
+  achat 01/09 16h54 = 24 jours) et CINQUIEME journee de survie du jeton IG
+  (graph.instagram.com/me rend 200 a 16h50, le Reel du soir est parti a 17h15).
+  TROIS MESURES DE CAPTURE ET D'IMAGE, toutes payees ce soir:
+  (1) 9to5google.com EST UNE CAPTURE LENTE, famille techcrunch (675 s, entree
+  09/09): scout-capture.mjs tue a 400 s sans avoir ecrit un seul fichier. Sur un
+  dossier Google/Pixel, les recus rapides restent droid-life (propre du premier
+  coup, masthead + auteur + date + visuel produit dans le cadre 9:16); ne laisse
+  jamais un beat screenshot 9to5google sans `file` epingle dans un run de
+  publication.
+  (2) UN TELECHARGEMENT A LA MAIN DEPUIS upload.wikimedia.org RENVOIE UNE PAGE
+  D'ERREUR HTML DE 2 KO, pas un jpg, meme avec un UA propre et meme sur l'URL
+  thumb (mesure ce soir, deux essais, dont un espace de 3 s). ffmpeg dit alors
+  "No JPEG data found in image" et on croit a un fichier corrompu. Le chemin qui
+  marche est celui du moteur: `acquireOne({type:'photo',query,alt},{dir,name})`
+  importe de imagery.mjs (il a l'UA, les hotes thumb et le repli Commons). Si tu
+  veux UNE image precise de Commons, passe par acquireOne sur une requete qui la
+  ramene, puis recadre le jpg DEJA sur le disque; et verifie toujours `file
+  x.jpg` avant de t'en servir.
+  (3) LE SCOUT EPINGLE ENCORE DE LA TAPISSERIE, et c'est la meme lecon qu'a
+  10h30 (cartes postales australiennes): le beat 0 du spec banque ce matin etait
+  une table de restaurant dressee (carafe, verre a vin, tasse) sur une histoire
+  d'IA qui telephone. C'est exactement la famille interdite par le manuel (le
+  smartphone a cote du verre d'eau). Remede a 0 $ et en 6 min: prendre la macro
+  de clavier telephonique deja epinglee pour le beat 0 (dense, sombre, le
+  karaoke y est lisible), puis acquerir une vraie photo documentaire pour le
+  beat libere. 3 requetes pour 1 photo gardee: "waitress restaurant counter"
+  rend une serveuse derriere un comptoir de diner (Pike Place Market, 1981, CC
+  BY, n&b) -- elle montre LA PERSONNE QUI DECROCHE, qui est le sujet de la
+  phrase; "pizzeria kitchen oven" echoue au filtre near-white (39% et 27%) et
+  "small shop owner counter" rend du rawpixel filigrane plus des masques covid.
+  Sur une photo d'epoque, mets l'annee DANS le credit ("Pike Place Market, 1981
+  · CC BY"): la ligne gravee sur la frame dit au spectateur que ce n'est pas la
+  scene rapportee.
+  ENFIN, PIEGE DE GATE QUAND ON AJOUTE UNE EVIDENCE: le plafond de diapos est 10,
+  donc ajouter une diapo pour tracer une phrase parlee (ici l'exemple Kristine M.
+  de Google, cite verbatim par droid-life et VERIFIED du premier coup) fait
+  passer un spec de scout a 11 et le gate REFUSE. Retire une diapo qu'aucun beat
+  ne prononce (celle-ci vivait deja dans la legende avec sa propre
+  captionEvidence) plutot que de renoncer a l'evidence. Proof: run 16h30 25/09.
