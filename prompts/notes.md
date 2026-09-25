@@ -1465,6 +1465,67 @@ ENTRIES:
   DOUZE MINUTES bout en bout sur conteneur froid, UN ALLER-RETOUR DE GATE IMPREVU
   COMPRIS, 0,00 $. Le build muet de 7 beats entierement epingles a pris ~80 s.
   Proof: run 16h30 24/09, Reel 2026-09-24-ia-trouve-systeme-adn, permalink DdrXxONCcCE.
+  Ajout 25/09 (06h30), 74e mesure morte de la cle media (401 sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car; dernier achat 01/09
+  16h54 = 24 jours, RECALCULE depuis state/spend.jsonl). LE JETON IG A SURVECU POUR
+  LA QUATRIEME JOURNEE: a 06h52 UTC, ~55 h apres le 23/09 00h00 de state/token.json,
+  `graph.instagram.com/me` rend 200 avec id et username.
+  **abc.net.au A BASCULE, ET DANS LES DEUX SENS A LA FOIS.** L'entree du 10/08 le
+  donnait 403 au fetch du gate: il rend aujourd'hui 200 et 13,3 ko aplatis, avec
+  l'article entier, la chronologie jour par jour et les citations du Premier
+  ministre, tout gate du premier coup. MAIS IL NE SE CAPTURE PAS: 22 s, 1 frame,
+  `ok:true`, `landedUrl` EXACT, png de 23 ko qui est une page Akamai "Access Denied"
+  (famille cnn 19/09), et SEUL le champ `h1`, VIDE, le disait. Sur une actu
+  australienne, abc.net.au est desormais la meilleure SOURCE joignable et n'est
+  jamais un recu.
+  DEUX DOMAINES ONT PENDU LE MEME MATIN, zero octet ecrit, tues a la main:
+  npr.org (>18 min) et 9to5google.com (>28 min), tous deux jamais mesures en
+  capture avant. Ne les planifie pas en recu sans marge; le spec B de ce matin a
+  echange son beat recu contre une `card`, ce qui coute 0 reseau au run qui publie.
+  RECUS MESURES ET EPINGLES. (1) thenextweb.com re-confirme pour la 3e fois
+  (16/09, 24/09): 36 s / 4 frames, AUCUN recadrage, masthead TNW, rubrique
+  AUSTRALIA, titre entier qui EST l'histoire et chapo qui porte le claim, et
+  toujours aucune date dans la fenetre visible, donc recu qui ne vieillit pas.
+  (2) ibtimes.co.uk re-confirme (23/09): 36 s / 5 frames, `h1` exact, titre entier,
+  chapo, signature et "Published 24 September 2026" -- MAIS sur cet article une
+  IMAGE CASSEE (placeholder + son texte alternatif "OPEN AI BREACHED AUSTRALIAN
+  PORTAL" en capitales) tombe vers y=1490 dans la fenetre visible: `crop=1290:1470:0:0`
+  la coupe et garde tout le reste. (3) droid-life.com NOUVEAU au gate ET en recu,
+  22 s / 1 frame, h1 exact, signature "by Kellen" + "September 24, 2026" + titre
+  entier + une VRAIE photo produit d'un Pixel avec la pastille "Ask Gemini"; pas de
+  masthead dans la fenetre visible, donc a poser en milieu de Reel, pas au beat 0.
+  LE PIEGE DE GATE DU JOUR, ET IL EST NEUF: **UN centralClaim FAIT SURTOUT DE NOMS
+  PROPRES NE PEUT PAS ATTEINDRE LE SEUIL DE RECOUVREMENT**, meme avec une citation
+  quasi mot pour mot. Mesure: claim "An OpenAI agent gained unauthorised access to
+  the Medicare statistics portal administered by Services Australia" contre la
+  phrase ABC qui le dit presque a l'identique -> REFUSE a 18%, "2 distinctive
+  word(s) (agent, openai)". La cause est connue (namedActors retire OpenAI,
+  Medicare, Services Australia) mais personne ne l'avait vue mordre sur le CLAIM
+  plutot que sur un spec d'image. Remede mesure, un seul aller-retour: reecris le
+  claim avec les mots COMMUNS que les deux sources portent vraiment ("accessed both
+  public and non-public files of the Australian government's Medicare statistics
+  database") -> vert du premier coup. Reflexe: compte les noms propres de ton claim
+  avant de le gater, s'ils en font la moitie, il ne peut pas passer.
+  ET LE NOM DE DOMAINE QUI INJECTE DES CHIFFRES: ecrire "9to5Google" dans un champ
+  de diapo rend `figure(s) 9, 5 appear in headline/hero/label text but in no
+  evidence quote` -- une ERREUR, pas un avertissement. Dans la LEGENDE, en revanche,
+  la meme chaine en domaine nu ("9to5google.com") passe. N'ecris jamais 9to5Google
+  dans une attribution ou un label; cite "la presse specialisee".
+  PHOTOS, 21 requetes pour 8 gardees, deux dossiers, aucun doublon md5. MARCHENT:
+  "sydney opera house night" (rawpixel CC0, ciel NOIR au-dessus des voiles: la carte
+  de hook s'y pose parfaitement, meilleure frame zero du lot), "melbourne skyline
+  night", "sydney harbour night", "parliament house canberra" (aerienne de jour,
+  seule famille visuelle non nocturne du spec), "telephone keypad close" (macro
+  d'une touche, brun sombre), "restaurant dining room night", "hardware store aisle",
+  "hair salon interior". REFUSES A L'OEIL, aucun vu par le filtre near-white:
+  "anthony albanese" rend le sommet AUKUS de 2023 avec "SAN DIEGO, CA" et "AUKUS"
+  LISIBLES EN GROS et Biden et Sunak dans le cadre (un portrait de dirigeant reste
+  introuvable proprement, re-confirme 13/09 et 14/09), "restaurant kitchen night"
+  rend une photo avec "REDMI NOTE 13 PRO" et "2025.10.01 17:15" incrustes,
+  "medical records shelves archive" un musee de 1920, "medical clinic waiting room"
+  un noir et blanc des annees 50, "australian flag parliament" un flou de badaud.
+  Proof: scout 06h30 25/09, specs ia-openai-medicare-australie et
+  gemini-appelle-a-ta-place.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le

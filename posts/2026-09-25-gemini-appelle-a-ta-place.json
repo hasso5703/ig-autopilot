@@ -1,0 +1,233 @@
+{
+  "slug": "2026-09-25-gemini-appelle-a-ta-place",
+  "caption": "Google laisse son IA passer des coups de fil à ta place, et l'appel part de ton propre numéro.\n\nLa fonction s'appelle Call for Me. Google la présente comme une expérience à ses débuts : Gemini appelle un commerce, se présente, navigue dans les menus automatiques, patiente, puis tient la conversation avec la personne au bout du fil.\n\nCe qu'elle sait faire. Demander si un article est en stock, réserver une table, décaler un rendez-vous, faire mettre un article de côté.\n\nLe détail qui n'est pas dans la vidéo. L'appel est composé depuis ton téléphone et utilise ton numéro personnel. Tu vois la conversation s'écrire en direct et tu peux reprendre la main quand tu veux.\n\nCe qui coince. Google dit lancer petit parce que les vraies conversations sont pleines de nuances. Et Droid Life rappelle que beaucoup de commerces de quartier ont peu de personnel et peu de patience pour une conversation menée par une IA.\n\nOù. Aux États-Unis seulement pour l'instant, sur les Pixel 11, pour les abonnés Gemini inscrits à la version d'essai de l'application Téléphone.\n\nÀ noter : les sources citées décrivent toutes la même annonce de Google. Droid Life y ajoute sa propre lecture.\n\nUne IA qui appelle un commerçant à ta place, tu trouves ça pratique ou gênant ?\n\ntechcrunch.com · 9to5google.com · droid-life.com\n\n#IA #IntelligenceArtificielle #ActuIA #Google #Gemini\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "\"Call for Me\" will also use your own personal phone number to make calls, which will be dialed directly from your phone.",
+      "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/"
+    },
+    {
+      "quote": "As of today, an early preview is rolling out to Gemini subscribers using the enrolled in the Phone by Google beta on the Pixel 11, 11 Pro, 11 Pro XL, and 11 Pro Fold in the US.",
+      "url": "https://9to5google.com/2026/09/24/pixel-11-call-for-me/"
+    },
+    {
+      "quote": "Google says the AI can handle complex tasks, like calling a store to ask if a product is in stock, making a restaurant reservation, moving a scheduled appointment to a different date, or placing items on hold.",
+      "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/"
+    },
+    {
+      "quote": "Google said it's starting this experiment at a small scale because \"real-world conversations are nuanced,\" and it needs time to get the feature right before rolling it out more broadly.",
+      "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/"
+    },
+    {
+      "quote": "Many local businesses run with small staffs and aren't going to have the patience to deal with quirky AI-run conversations.",
+      "url": "https://www.droid-life.com/2026/09/24/pixel-11-gets-call-for-me-feature-gemini/"
+    }
+  ],
+  "centralClaim": "Google is introducing an early experiment that lets Gemini handle routine phone calls to businesses for Pixel 11 owners.",
+  "corroboration": [
+    {
+      "url": "https://9to5google.com/2026/09/24/pixel-11-call-for-me/",
+      "quote": "Reminiscent of Google Duplex, this Gemini Intelligence feature is officially an \"early experiment\" to let Google handle \"routine phone calls\" to book appointments, place items on hold, and reschedule reservations."
+    },
+    {
+      "url": "https://www.droid-life.com/2026/09/24/pixel-11-gets-call-for-me-feature-gemini/",
+      "quote": "Google announced today that it is introducing an early experiment called Call for Me."
+    }
+  ],
+  "sendTest": "Google teste une IA qui appelle les commerces à ta place, depuis ton propre numéro. Elle se présente, patiente, et tient la conversation.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Google · Gemini",
+      "headline": "Ton téléphone va appeler la pizzeria *sans toi*",
+      "hero": {
+        "value": "Call for Me",
+        "label": "l'IA compose, se présente et tient la conversation"
+      },
+      "swipe": "Les sources, diapo par diapo"
+    },
+    {
+      "type": "content",
+      "title": "Ce que Google lance",
+      "body": "Une **expérience à ses débuts** : Gemini prend en charge des appels de routine, rendez-vous, mises de côté, réservations.",
+      "evidence": "Reminiscent of Google Duplex, this Gemini Intelligence feature is officially an \"early experiment\" to let Google handle \"routine phone calls\" to book appointments, place items on hold, and reschedule reservations.",
+      "source": {
+        "name": "9to5Google",
+        "url": "https://9to5google.com/2026/09/24/pixel-11-call-for-me/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'elle sait faire",
+      "body": "Demander si un article est en stock, réserver une table, décaler un rendez-vous, faire mettre un article de côté.",
+      "evidence": "Google says the AI can handle complex tasks, like calling a store to ask if a product is in stock, making a restaurant reservation, moving a scheduled appointment to a different date, or placing items on hold.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Elle se présente",
+      "body": "L'IA appelle le commerce, **se présente**, passe les menus automatiques, patiente, puis tient la conversation.",
+      "evidence": "The AI can call a business and introduce itself, navigate automated phone menus, wait on hold, and then handle the conversation on the other end.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Depuis ton numéro",
+      "body": "L'appel utilise **ton propre numéro** et part directement de ton téléphone.",
+      "evidence": "\"Call for Me\" will also use your own personal phone number to make calls, which will be dialed directly from your phone.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Asking AI to speak on your behalf is a big step that requires genuine trust.",
+      "attribution": "Google, cité par la presse spécialisée",
+      "evidence": "Asking AI to speak on your behalf is a big step that requires genuine trust.",
+      "source": {
+        "name": "9to5Google",
+        "url": "https://9to5google.com/2026/09/24/pixel-11-call-for-me/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce que Google promet",
+      "claim": "Respecter le temps des boutiques de quartier et des gens qui répondent au téléphone.",
+      "caveatLabel": "Ce que Droid Life répond",
+      "caveat": "Beaucoup de petits commerces ont peu de personnel et peu de patience pour une conversation menée par une IA.",
+      "evidence": "Google says it will \"respect the time of the neighborhood shops and front-desk staff answering the phone,\" and that \"calls made by Gemini on behalf of the user represent real customers conducting real transactions.",
+      "source": {
+        "name": "9to5Google",
+        "url": "https://9to5google.com/2026/09/24/pixel-11-call-for-me/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pourquoi ça démarre petit",
+      "body": "Google dit lancer à petite échelle parce que les vraies conversations sont pleines de nuances.",
+      "evidence": "Google said it's starting this experiment at a small scale because \"real-world conversations are nuanced,\" and it needs time to get the feature right before rolling it out more broadly.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Où, et pour qui",
+      "body": "Aux États-Unis, sur les Pixel 11, pour les abonnés Gemini inscrits à la version d'essai de l'application Téléphone.",
+      "evidence": "As of today, an early preview is rolling out to Gemini subscribers using the enrolled in the Phone by Google beta on the Pixel 11, 11 Pro, 11 Pro XL, and 11 Pro Fold in the US.",
+      "source": {
+        "name": "9to5Google",
+        "url": "https://9to5google.com/2026/09/24/pixel-11-call-for-me/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui tient un commerce et répond au téléphone",
+      "sub": "Chaque affirmation de cette vidéo est citée d'une source."
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Gemini appellera la pizzeria à ta place",
+    "beats": [
+      {
+        "script": "Le téléphone sonne dans une pizzeria. Au bout du fil : bonjour, je suis Gemini, une assistante IA qui appelle pour Kristine M. C'est l'exemple de Google.",
+        "visual": {
+          "type": "photo",
+          "query": "restaurant dining room night",
+          "alt": "Une table de restaurant dressée sous une lampe",
+          "file": "media/2026-09-25-gemini-appelle-a-ta-place/p_diner.jpg",
+          "credit": "CC0"
+        }
+      },
+      {
+        "script": "Et ce n'est pas une démo lointaine : la fonction est déjà en test. Le plus intéressant, d'ailleurs, ce n'est pas l'IA. C'est la personne qui décroche.",
+        "visual": {
+          "type": "photo",
+          "query": "telephone keypad close",
+          "alt": "Macro d'une touche de clavier téléphonique",
+          "file": "media/2026-09-25-gemini-appelle-a-ta-place/p_keypad.jpg",
+          "credit": "cmiper · CC BY"
+        }
+      },
+      {
+        "script": "La fonction s'appelle Call for Me. Elle démarre aux États-Unis, sur les Pixel 11, pour les abonnés Gemini inscrits à une version d'essai.",
+        "visual": {
+          "type": "card",
+          "value": "PIXEL 11",
+          "label": "aux États-Unis, pour les abonnés Gemini, en version d'essai"
+        }
+      },
+      {
+        "script": "Tu demandes, elle compose. Google dit qu'elle peut réserver une table, faire mettre un article de côté, ou décaler ton rendez-vous chez le coiffeur. Elle sait patienter et passer les menus automatiques.",
+        "visual": {
+          "type": "photo",
+          "query": "hardware store aisle",
+          "alt": "Une allée de quincaillerie remplie de rayonnages",
+          "file": "media/2026-09-25-gemini-appelle-a-ta-place/p_hw.jpg",
+          "credit": "Alanthebox · Domaine public"
+        }
+      },
+      {
+        "script": "Et l'appel part de ton propre numéro, composé directement depuis ton téléphone. Toi, tu lis la conversation en direct, et tu peux reprendre la main à tout moment.",
+        "visual": {
+          "type": "card",
+          "value": "TON NUMÉRO",
+          "label": "l'appel part de ta ligne, pas de celle de Google"
+        }
+      },
+      {
+        "script": "Google dit avoir pensé aux commerçants. L'entreprise promet de respecter le temps des boutiques de quartier et des gens qui répondent au téléphone. Faire parler une IA à ta place, écrit-elle, demande une vraie confiance.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.droid-life.com/2026/09/24/pixel-11-gets-call-for-me-feature-gemini/",
+          "file": "media/2026-09-25-gemini-appelle-a-ta-place/shot_dl.png"
+        }
+      },
+      {
+        "script": "Sauf que la confiance, on la demande des deux côtés. Droid Life le note : beaucoup de petits commerces ont peu de personnel, et peu de patience pour une conversation d'IA. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "hair salon interior",
+          "alt": "Un salon de coiffure vide, tabourets et miroirs",
+          "file": "media/2026-09-25-gemini-appelle-a-ta-place/p_salon.jpg",
+          "credit": "CC0"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+      "accessed": "2026-09-25"
+    },
+    {
+      "name": "9to5Google",
+      "url": "https://9to5google.com/2026/09/24/pixel-11-call-for-me/",
+      "accessed": "2026-09-25"
+    },
+    {
+      "name": "Droid Life",
+      "url": "https://www.droid-life.com/2026/09/24/pixel-11-gets-call-for-me-feature-gemini/",
+      "accessed": "2026-09-25"
+    }
+  ]
+}

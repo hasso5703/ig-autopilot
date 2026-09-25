@@ -1,12 +1,12 @@
 {
-  "at": "2026-09-24T19:56:21.319Z",
-  "fresh": 368,
+  "at": "2026-09-25T06:51:08.329Z",
+  "fresh": 427,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
       "fetched": 1229,
-      "fresh": 19,
+      "fresh": 18,
       "windowHours": 96
     },
     {
@@ -27,7 +27,7 @@
       "name": "Hugging Face Blog",
       "ok": true,
       "fetched": 868,
-      "fresh": 7,
+      "fresh": 6,
       "windowHours": 96
     },
     {
@@ -47,8 +47,8 @@
     {
       "name": "arXiv cs.AI",
       "ok": true,
-      "fetched": 295,
-      "fresh": 295,
+      "fetched": 357,
+      "fresh": 357,
       "windowHours": 96
     },
     {
@@ -86,14 +86,14 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 6,
+      "fresh": 2,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 3,
-      "fresh": 3,
+      "fetched": 8,
+      "fresh": 6,
       "windowHours": 36
     },
     {
