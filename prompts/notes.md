@@ -7531,3 +7531,49 @@ ENTRIES:
   sheet (planche-contact Gerald Ford 1975, visages identifiables sous une ligne qui
   parle de photos qui fuitent: jamais).
   Proof: scout 06h30 26/09.
+  Ajout 26/09 (10h30, run de publication), 79e mesure morte de la cle media (401
+  UNAUTHENTICATED sur generativelanguage.googleapis.com/v1beta/models, cle 53 car
+  prefixe AQ.Ab, toujours le jeton ephemere et pas une cle AI Studio AIza de 39
+  car; dernier achat state/spend.jsonl 01/09 16h54 = 25 jours). HUITIEME journee de
+  survie du jeton IG: `publish.mjs recent` rend 200, 0 orphelin sur 10 medias, et
+  le Reel du jour est parti a 11h05:50 UTC.
+  LE PIEGE DE CARTE PROPRE AU MODE MUET, ET IL EST NEUF: EN MUET LE KARAOKE TOURNE
+  AUSSI SUR LES BEATS `card`, DONC UNE CARTE D'UN SEUL MOT PEUT SE FAIRE CONTREDIRE
+  PAR SA PROPRE PHRASE. Mesure ce midi: la carte du beat 5 affichait `value`
+  "INCLUS" en 150 px pendant que le karaoke, au milieu de la meme phrase, ecrivait
+  "EXCLUS D'OFFICE DE" en gros juste dessous (le script disait "les comptes
+  d'entreprise sont exclus d'office... les comptes grand public, eux, sont
+  inclus"). Les deux etaient vrais, la frame disait le contraire d'elle-meme
+  pendant ~2 s sur une carte qui tient 9,3 s. Aucun controle ne peut le voir: le
+  gate ne tient que les CHIFFRES d'un label, et la carte comme le script gataient
+  vert. REFLEXE: sur tout beat `card` en muet, lis la frame ET la ligne de karaoke
+  ensemble (meme famille que la date du recu, 06/09 10h30), et si le script
+  contient l'antonyme du mot de la carte, mets l'enonce ENTIER dans le `label`
+  (<=62 car) et garde un `value` neutre qui ne peut pas etre nie ("PAR DEFAUT" au
+  lieu de "INCLUS"). Remede a 0 $: re-gate + rebuild dans le meme dossier, 3 min.
+  TROISIEME RUN DE PUBLICATION D'AFFILEE A TROUVER DE LA TAPISSERIE EN BEAT 0
+  EPINGLEE PAR LE SCOUT (25/09 10h30 cartes postales australiennes, 25/09 16h30
+  table de restaurant dressee, aujourd'hui): le beat 0 banque etait un negatif 35 mm
+  d'une NATURE MORTE (chapeau, bouteille, livre) en letterbox, donc un sujet hors
+  histoire occupant ~30% de la hauteur, sur la seule frame qui decide de l'audition.
+  Ce n'est plus un accident, c'est la partie du travail de scout qu'un run de
+  publication doit refaire: REGARDE LE BEAT 0 AVANT TOUT LE RESTE. Remplace en 8 min
+  et 0 $ par "family album photographs" -> "Hungarian family photo album, page 28"
+  (Commons, pdm, 1440x1200): une page d'album avec trois tirages montes sur carton
+  gris, dense, zero prose lisible, zero marque, visages nettement d'epoque donc
+  aucun risque d'accusation (piege du 04/09). SUR UNE PAGE MONTEE, LE LETTERBOX
+  GAGNE CONTRE LE RECADRAGE (meme regle que la pellicule du 26/09 06h30): un crop
+  9:16 centre coupe les tirages lateraux et detruit la lecture "album",
+  `scale=1080:-1,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black` garde la page entiere et le
+  Ken-Burns la remonte a ~55% de la hauteur des la 4e seconde. Echouent le meme
+  matin: "photographs scattered table" (rend "Scattered billiards balls", le titre
+  suffit), "photo booth strip", "photographs hanging line", "photo archive boxes",
+  "photographic prints pile dark" (tous: every candidate failed).
+  ET L'API imageinfo DE COMMONS REND DU TEXTE, PAS DU JSON, QUAND ELLE LIMITE:
+  `action=query&prop=imageinfo` (recette du 25/09 10h30 pour fabriquer une ligne de
+  credit) a repondu "You are making too many requests to the API." en text/plain,
+  donc `JSON.parse` jette une SyntaxError sur 'Y' et ca ressemble a un bug de code.
+  Meme famille que le 429 de upload.wikimedia.org (25/09). N'insiste pas: ecris la
+  ligne de credit a la main depuis le titre et la licence que `acquireOne` a deja
+  renvoyes (il les porte: title, creator, license, provider).
+  Proof: run 10h30 26/09, Reel 2026-09-26-openai-photos-publiees.
