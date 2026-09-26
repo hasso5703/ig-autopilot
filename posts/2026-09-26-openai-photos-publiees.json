@@ -221,8 +221,8 @@
         "script": "Et le réglage par défaut n'est pas celui que tu crois. Les comptes d'entreprise sont exclus d'office de l'entraînement. Les comptes grand public, eux, sont inclus, sauf si tu vas toi-même dire non dans les réglages.",
         "visual": {
           "type": "card",
-          "value": "INCLUS",
-          "label": "les comptes grand public le sont par défaut"
+          "value": "PAR DÉFAUT",
+          "label": "ton compte grand public est inclus dans l’entraînement"
         }
       },
       {
