@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-25T19:57:09.671Z",
+  "at": "2026-09-26T06:53:38.835Z",
   "n": 118,
   "nSettled": 112,
   "medianViews": 140,
@@ -298,14 +298,14 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 2529,
-      "reach": 2099,
-      "avgWatchS": 21.5,
-      "retentionPct": 36,
-      "likes": 8,
-      "comments": 2,
-      "saved": 2,
-      "shares": 1,
+      "views": 3137,
+      "reach": 2619,
+      "avgWatchS": 23.3,
+      "retentionPct": 39,
+      "likes": 13,
+      "comments": 3,
+      "saved": 6,
+      "shares": 2,
       "beat0": "photo",
       "themes": [],
       "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
@@ -943,6 +943,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-25-ia-openai-medicare-australie",
+      "at": "2026-09-25T11:22:30.206Z",
+      "hourUtc": 11,
+      "views": 200,
+      "reach": 186,
+      "avgWatchS": 5.1,
+      "retentionPct": 8,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-03-meta-lunettes-camera-coupee-silencieux",
       "at": "2026-09-03T17:02:42.594Z",
       "hourUtc": 17,
@@ -1081,25 +1100,6 @@
       "themes": [],
       "sendTest": "Apple accuse ses ex-employés d'avoir filé ses secrets à OpenAI pour leur gadget, et demande à un juge de tout geler.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-25-ia-openai-medicare-australie",
-      "at": "2026-09-25T11:22:30.206Z",
-      "hourUtc": 11,
-      "views": 172,
-      "reach": 162,
-      "avgWatchS": 4.8,
-      "retentionPct": 8,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
-      "settled": false
     },
     {
       "slug": "2026-08-22-bague-oura-sommeil",
@@ -1297,6 +1297,23 @@
       "themes": [],
       "sendTest": "Ils gardent de la peau humaine vivante un mois dans un labo, et une IA choisit quoi mettre dessus.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-25-gemini-appelle-a-ta-place",
+      "at": "2026-09-25T17:16:14.802Z",
+      "hourUtc": 17,
+      "views": 142,
+      "reach": 129,
+      "avgWatchS": 5.2,
+      "retentionPct": 9,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Google teste une IA qui appelle les commerces à ta place, depuis ton propre numéro. Elle se présente, patiente, et tient la conversation.",
+      "settled": false
     },
     {
       "slug": "2026-09-02-chatgpt-dossier-medical",
@@ -2081,23 +2098,6 @@
       "themes": [],
       "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-25-gemini-appelle-a-ta-place",
-      "at": "2026-09-25T17:16:14.802Z",
-      "hourUtc": 17,
-      "views": 53,
-      "reach": 41,
-      "avgWatchS": 6.1,
-      "retentionPct": 10,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Google teste une IA qui appelle les commerces à ta place, depuis ton propre numéro. Elle se présente, patiente, et tient la conversation.",
-      "settled": false
     },
     {
       "slug": "2026-09-22-googlebook-gemini",
