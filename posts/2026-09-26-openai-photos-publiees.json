@@ -177,10 +177,10 @@
         "script": "Si tu as déjà envoyé une photo à ChatGPT, elle a pu servir à entraîner l'IA. Et 53 de ces photos ont fini publiées sur des sites d'hébergement d'images. OpenAI vient de le reconnaître.",
         "visual": {
           "type": "photo",
-          "query": "film negative strip",
-          "alt": "une photographie sur pellicule",
-          "file": "media/2026-09-26-openai-photos-publiees/p_negatif.jpg",
-          "credit": "rawpixel · CC0"
+          "query": "family album photographs",
+          "alt": "une page d’album photo familial, trois photographies montées sur carton",
+          "file": "media/2026-09-26-openai-photos-publiees/p_album_page.jpg",
+          "credit": "Album photo familial hongrois · Wikimedia Commons · Domaine public"
         }
       },
       {
