@@ -1,0 +1,246 @@
+{
+  "slug": "2026-09-26-ia-casse-code-enigma",
+  "centralClaim": "An AI model recovered the plaintext of an Enigma message that had resisted solution since 2005.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/",
+      "quote": "The model was able to do just that, after doing its own archival research, finding context clues, building a simulator of the Enigma machine, and ultimately recovering the plaintext of a message that had baffled researchers since 2005."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "quote": "OpenAI GPT-6 Astra breaking an Enigma message that has resisted solution since 2005"
+    }
+  ],
+  "caption": "Un message allemand de 1941 résistait depuis 2005. Une IA vient de le casser toute seule.\n\nLe message s'appelle MVUEH. Il a été envoyé le 10 juillet 1941 et reçu par la station radio d'une division allemande. Depuis 2005, tous ceux qui ont essayé de le lire ont échoué.\n\nComment. Un développeur, Carter Leffen, a simplement demandé à GPT-6 Astra d'aller voir les messages non résolus publiés sur un site de recherche et d'en casser un. Le modèle a choisi sa cible, écrit en Python et en C++ un simulateur de la machine Enigma et l'outil qui sert à la casser, puis mené l'attaque jusqu'à la clé et au texte en clair.\n\nLe détail qui n'est pas dans la vidéo. Six jours plus tard, un second message tombait, cassé cette fois avec Claude Opus 5 et beaucoup plus d'aide humaine. La recherche finale de la clé a pris 13 minutes et 28 secondes.\n\nCe qui coince. Dans ses journaux, le modèle cite des cotes d'archives allemandes qui ne sont pas publiées sur le site. Le cryptologue qui a validé le travail écrit qu'il ne sait pas si le modèle a réussi à atteindre les collections numérisées de ces archives, ou s'il a trouvé ces fichiers ailleurs.\n\nLa suite. Il reste sept messages Enigma que personne n'a jamais lus.\n\nÀ noter : le site de recherche est à la fois la source et la personne qui a validé les deux cassages. La presse le lit, elle ne l'a pas vérifié de son côté.\n\nUne machine qui trouve toute seule, tu appelles ça une découverte ou un outil ?\n\ncryptocellar.org · techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #OpenAI #Anthropic\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "quote": "On 15 September 2026, Carter Leffen contacted me to request validation of a break of the German Army Enigma message MVUEH of 10 July 1941."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "quote": "Since 2005, the message has resisted all attempts to break it."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "quote": "Carter Leffen only directed GPT-6 Astra to see if it could break any of the unbroken Enigma messages published on the Crypto Cellar Research web page."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "quote": "After developing the necessary Python and C++ software for an Enigma simulator and an Enigma Bombe, GPT-6 Astra started a thorough break with the ROSENOW crib, which in the end resulted in the correct key and plaintext for the MVUEH message being found."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
+      "quote": "The news of yet another AI Enigma break, only six days after the MVUEH break, was a great surprise."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
+      "quote": "While the MVUEH break used OpenAI's GPT-6 Astra, FMNGI used Anthropic's Claude Opus 5."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
+      "quote": "The key search took 13 minutes and 28 seconds on an Apple M2 host."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "quote": "GPT-6 Astra mentions a private collection, but it is not clear what this is, whether it has succeeded in accessing the Bundesarchiv's digitised collections or whether it has found these files elsewhere."
+    },
+    {
+      "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
+      "quote": "Of the close to 1000 Enigma and Truppenschlüssel messages in the German Army collection, only seven Enigma messages remain unbroken,"
+    }
+  ],
+  "sendTest": "Un message allemand de 1941 que personne n'arrivait à lire depuis 2005 vient d'être cassé. Par une IA, toute seule, en deux jours.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "24 septembre 2026 · Crypto Cellar Research",
+      "headline": "Un code de *1941* vient enfin de tomber",
+      "hero": {
+        "value": "2005",
+        "label": "année depuis laquelle le message résistait"
+      },
+      "swipe": "Les reçus, diapositive par diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "2005",
+      "unit": "année du dernier échec en date",
+      "body": "Depuis cette année-là, **toutes les tentatives** de lecture du message ont échoué.",
+      "evidence": "Since 2005, the message has resisted all attempts to break it.",
+      "source": {
+        "name": "Crypto Cellar Research",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le message",
+      "body": "Un message *Enigma* de l’armée allemande, envoyé le **10 juillet 1941**.",
+      "evidence": "On 15 September 2026, Carter Leffen contacted me to request validation of a break of the German Army Enigma message MVUEH of 10 July 1941.",
+      "source": {
+        "name": "Crypto Cellar Research",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu’on lui a demandé",
+      "body": "Aller voir les messages non résolus publiés sur le site, et *en casser un*. Rien de plus.",
+      "evidence": "Carter Leffen only directed GPT-6 Astra to see if it could break any of the unbroken Enigma messages published on the Crypto Cellar Research web page.",
+      "source": {
+        "name": "Crypto Cellar Research",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu’il a construit",
+      "body": "Un **simulateur** de la machine et une **bombe**, écrits en Python et en C++, puis l’attaque jusqu’au texte en clair.",
+      "evidence": "After developing the necessary Python and C++ software for an Enigma simulator and an Enigma Bombe, GPT-6 Astra started a thorough break with the ROSENOW crib, which in the end resulted in the correct key and plaintext for the MVUEH message being found.",
+      "source": {
+        "name": "Crypto Cellar Research",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le second message",
+      "body": "Six jours plus tard, un autre message tombe, cassé cette fois avec *Claude Opus 5*, le modèle d'Anthropic.",
+      "evidence": "While the MVUEH break used OpenAI's GPT-6 Astra, FMNGI used Anthropic's Claude Opus 5.",
+      "source": {
+        "name": "Crypto Cellar Research",
+        "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Last week, Weierud validated Leffen's solution, which he said left him in \"awe.\"",
+      "attribution": "TechCrunch, sur le cryptologue qui a validé le cassage",
+      "evidence": "Last week, Weierud validated Leffen's solution, which he said left him in \"awe.\"",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "Ce qui est établi",
+      "claim": "Le modèle a trouvé la clé et le texte en clair, validés par un cryptologue.",
+      "caveatLabel": "Ce qui ne l’est pas",
+      "caveat": "D’où venaient certaines *archives* qu’il cite, personne ne le sait.",
+      "evidence": "GPT-6 Astra mentions a private collection, but it is not clear what this is, whether it has succeeded in accessing the Bundesarchiv's digitised collections or whether it has found these files elsewhere.",
+      "source": {
+        "name": "Crypto Cellar Research",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui reste",
+      "body": "**Sept** messages Enigma que personne n’a jamais lus.",
+      "evidence": "Of the close to 1000 Enigma and Truppenschlüssel messages in the German Army collection, only seven Enigma messages remain unbroken,",
+      "source": {
+        "name": "Crypto Cellar Research",
+        "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu’un* qui aime les histoires de guerre",
+      "sub": "L’actu IA, vérifiée ligne à ligne."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Crypto Cellar Research (MVUEH)",
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "accessed": "2026-09-26"
+    },
+    {
+      "name": "Crypto Cellar Research (FMNGI)",
+      "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
+      "accessed": "2026-09-26"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/",
+      "accessed": "2026-09-26"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Un message nazi bloqué depuis 2005 est tombé",
+    "beats": [
+      {
+        "script": "Tu as déjà entendu parler d'Enigma, la machine qui chiffrait les messages de l'Allemagne nazie. Il reste une poignée de messages que personne n'a jamais réussi à lire. L'un d'eux résistait depuis 2005.",
+        "visual": {
+          "type": "photo",
+          "query": "enigma machine rotors",
+          "alt": "les fenêtres de rotors d’une machine Enigma",
+          "file": "media/2026-09-26-ia-casse-code-enigma/p_rotors.jpg",
+          "credit": "en:User:Matt Crypto · Public domain"
+        }
+      },
+      {
+        "script": "Il vient de tomber. Et ce n'est pas un historien qui l'a cassé: c'est GPT-6 Astra, le dernier modèle d'OpenAI. Tout seul.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+          "file": "media/2026-09-26-ia-casse-code-enigma/shot_cc_mvueh.png"
+        }
+      },
+      {
+        "script": "Le message a été envoyé le 10 juillet 1941, par radio, à une division allemande. Depuis 2005, tous ceux qui ont essayé de le lire ont échoué.",
+        "visual": {
+          "type": "card",
+          "value": "2005",
+          "label": "le message a résisté à tous les essais depuis cette année-là"
+        }
+      },
+      {
+        "script": "Un développeur lui a juste demandé d'aller voir les messages non résolus et d'en casser un. Astra a choisi sa cible, puis écrit ses propres programmes: un simulateur de la machine, et l'outil qui sert à la casser.",
+        "visual": {
+          "type": "photo",
+          "query": "enigma machine wooden case",
+          "alt": "une machine Enigma ouverte dans son coffret",
+          "file": "media/2026-09-26-ia-casse-code-enigma/p_enigma.jpg",
+          "credit": "Enigma Machine at NSA · Public domain"
+        }
+      },
+      {
+        "script": "Six jours plus tard, ça recommence. Un autre message tombe, cassé cette fois avec Claude Opus 5, le modèle d'Anthropic. La recherche de la clé a pris 13 minutes et 28 secondes.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
+          "file": "media/2026-09-26-ia-casse-code-enigma/shot_cc_fmngi.png"
+        }
+      },
+      {
+        "script": "Sauf que le cryptologue qui a validé le travail pose une question gênante. Astra cite dans ses journaux des archives allemandes absentes du site. Personne ne sait comment il y a eu accès.",
+        "visual": {
+          "type": "card",
+          "value": "ARCHIVES",
+          "label": "d'où viennent celles qu'il cite, personne ne le sait"
+        }
+      },
+      {
+        "script": "Il reste sept messages Enigma que personne n'a jamais lus. Le cryptologue demande déjà qui sera le prochain à en casser un. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/",
+          "file": "media/2026-09-26-ia-casse-code-enigma/shot_tc_enigma_crop.png"
+        }
+      }
+    ]
+  }
+}

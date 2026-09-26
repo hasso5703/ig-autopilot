@@ -7459,3 +7459,75 @@ ENTRIES:
   / 35 Mo sur 3 slugs (media 221 -> 187 Mo) et insights.mjs compact a ramene la
   serie de 6180 a 4723 lignes, ~40 s a eux deux.
   Proof: veille 19h30 25/09.
+  Ajout 26/09 (06h30), 78e mesure morte de la cle media (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car prefixe AQ.Ab, donc
+  toujours le jeton ephemere et pas une cle AI Studio AIza de 39 car; dernier achat
+  state/spend.jsonl 01/09 16h54 = 25 jours). LE JETON IG A SURVECU POUR LA SEPTIEME
+  JOURNEE: a 06h55 UTC, soit ~79 h apres le 23/09 00h00 de state/token.json,
+  `publish.mjs recent` rend 200 avec les 10 medias et 0 orphelin sur 118
+  enregistrements.
+  DEUX DOMAINES NEUFS, ET LES DEUX SE GATENT ET SE CAPTURENT. (1)
+  **cryptocellar.org NOUVEAU** (le site de Frode Weierud, primaire de toute actu
+  Enigma): 200 au fetch du gate, gate du PREMIER coup, et ses pages /bgac/<slug>.html
+  se capturent en 22 s / 1 frame, zero banniere, zero pub, AUCUN recadrage - et la
+  fenetre visible des ~1686 px porte le sous-titre ET le paragraphe entier qui porte
+  le claim, donc categorie "recu qui porte la preuve" (comme arxiv/abs et PubMed).
+  ATTENTION, son champ `h1` revient VIDE sans que ce soit un defaut (famille
+  thenextweb du 24/09): juge sur la frame, pas sur h1. (2) **newsweek.com NOUVEAU**:
+  200 au fetch du gate, gate du premier coup, capture en 166 s, PARFAITE sans
+  recadrage - masthead, fil de rubriques, titre entier qui EST l'histoire avec son
+  chiffre, PUBLISHED et UPDATED dates en clair.
+  openai.com SE RE-CONFIRME EN RECU ET RESTE INGATABLE (famille du 01/09 et du
+  22/09): 403 au fetch du gate, mais capture en 40 s / 4 frames en mode `top`, h1
+  EXACT, fond clair, zero banniere, masthead + titre entier + chapo dans le cadre.
+  L'URL du billet d'incidents du jour n'a PAS de /index/:
+  openai.com/hugging-face-incident-and-misalignment/.
+  COTE CAPTURES LENTES, deux mesures qui se contredisent le meme matin et disent la
+  meme chose: fortune.com a ete TUE a 420 s sans avoir ecrit un octet (l'entree du
+  02/09 le mesurait a 1095 s, il est bien de la famille lente, ne le planifie pas
+  dans un run qui publie), tandis que techcrunch.com a rendu un article en 225 s /
+  62 frames, h1 exact, apres avoir PENDU >20 min les 19 et 20/09 et >35 min le
+  22/09. Donc techcrunch n'est PAS incapturable en permanence, il varie d'un facteur
+  10: lance-le en arriere-plan tot, ne l'attends jamais dans la fenetre de
+  publication. Son bandeau vert garde une bande orpheline de l'illustration en haut;
+  `crop=1290:2630:0:166` l'enleve et garde rubrique, titre entier, signature et date.
+  Proof: scout 06h30 26/09, specs openai-photos-publiees et ia-casse-code-enigma.
+  Ajout 26/09 (06h30), PHOTOS: 52 REQUETES POUR 4 GARDEES, et DEUX FAMILLES DE
+  PIEGES NEUVES sur un sujet de MUSEE. (1) LE FILTRE NEAR-WHITE (25%, imagery.mjs)
+  TUE SYSTEMATIQUEMENT L'OBJET DE MUSEE, parce que les musees photographient sur
+  fond blanc: "enigma machine" rend 33, 58 et 63% de near-white, "bletchley park
+  bombe" 27 et 38%, "morse code key" 45%, "telegraph key brass" 40 a 76%. Aucun
+  n'arrive. LE REMEDE, mesure et generalisable: NE DEMANDE PAS L'OBJET, DEMANDE SON
+  DETAIL. "enigma machine close" et "enigma rotor wheels" rendent tous deux la MEME
+  macro des fenetres de rotors (Matt Crypto, pdm, 1440x1068, lettres R D K P
+  lisibles sur fond noir granuleux): dense, sombre, zero prose, zero marque, zero
+  visage - la meilleure frame zero muette mesuree depuis le cactus du 22/09. Sur un
+  objet de collection, ajoute close / rotors / keys / detail a la requete.
+  (2) LE PIEGE DE LA MAUVAISE MACHINE, et il passe TOUS les filtres: Commons
+  etiquette large. "enigma machine rotors" a rendu un Siemens T-52 titre "Siemens
+  ten-rotor Enigma code machine T-52" (ce n'est PAS une Enigma), "cipher machine
+  museum dark" un Lorenz SZ40 (TUNNY), "cipher machine keyboard" un Type-97 JADE
+  japonais. Trois vraies machines a chiffrer, trois hors-sujet sur un dossier
+  Enigma, et le titre porte le mot "Enigma" dans le premier cas. Famille du
+  hors-sujet du 08/09, mais plus vicieuse: ici il faut lire le NOM DE MODELE dans
+  le titre, pas seulement la categorie. Sur une histoire qui nomme une machine, un
+  produit ou une version, verifie le modele avant le jpg.
+  CE QUI MARCHE AUSSI, sur un dossier PHOTOGRAPHIE (fuite d'images): "film negatives
+  strip" rend une vraie vue de pellicule 35 mm avec ses perforations (rawpixel CC0,
+  1080x684 PAYSAGE) - et c'est le cas ou le LETTERBOX du 16/09 10h30 gagne contre le
+  recadrage, parce que le sujet est RECTANGULAIRE: `scale=1000:-1,pad=1080:1920:
+  (ow-iw)/2:(oh-ih)/2:black` garde la pellicule entiere sur fond noir et le karaoke
+  y est au maximum de lisibilite. "old photographs box dark" rend un portrait sepia
+  d'une INCONNUE (Francis Watts Lee, LoC, pdm): sur une histoire de photos privees
+  qui fuitent, un portrait visiblement ancien et anonyme illustre l'objet sans
+  jamais avoir l'air d'etre une victime - c'est la sortie du piege de visage du
+  04/09 quand l'histoire parle de gens. ECHOUENT au near-white ou au hors-sujet:
+  photographic film roll close (rend Ice-T a Tribeca), photo print stack close (des
+  journaux), picture frames dark wall, photo lab printing machine, smartphone dark
+  room screen (un deballage d'iPhone: marque + le bureau a la place de l'histoire),
+  server rack lights dark (filigrane rawpixel ET le cliche bleu que le manuel
+  interdit), data centre aisle dark (un immeuble de bureaux en plein soleil),
+  polaroid photographs pile (flat-lay a marques lisibles), photographic contact
+  sheet (planche-contact Gerald Ford 1975, visages identifiables sous une ligne qui
+  parle de photos qui fuitent: jamais).
+  Proof: scout 06h30 26/09.
