@@ -1,13 +1,13 @@
 {
-  "at": "2026-09-27T16:54:41.663Z",
-  "n": 120,
-  "nSettled": 115,
-  "medianViews": 141,
+  "at": "2026-09-27T19:54:57.041Z",
+  "n": 121,
+  "nSettled": 116,
+  "medianViews": 142,
   "medianRetentionPct": 15,
   "top": [
     {
       "slug": "2026-09-24-ia-trouve-systeme-adn",
-      "views": 3540,
+      "views": 3572,
       "retentionPct": 40,
       "saved": 11,
       "shares": 2,
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "photo": {
-      "n": 42,
+      "n": 43,
       "medianViews": 132,
-      "meanRetentionPct": 13.1,
+      "meanRetentionPct": 13,
       "saves": 28,
       "shares": 6,
       "thin": false
@@ -206,9 +206,9 @@
       "thin": false
     },
     "17": {
-      "n": 23,
-      "medianViews": 191,
-      "meanRetentionPct": 22.6,
+      "n": 24,
+      "medianViews": 183,
+      "meanRetentionPct": 22,
       "saves": 31,
       "shares": 14,
       "thin": false
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 55,
+    "now": 57,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -264,6 +264,20 @@
         ]
       },
       {
+        "date": "2026-09-27",
+        "delta": 6,
+        "published": [
+          {
+            "slug": "2026-09-26-ia-casse-code-enigma",
+            "views": 2480
+          },
+          {
+            "slug": "2026-09-27-ia-facture-hopital",
+            "views": 109
+          }
+        ]
+      },
+      {
         "date": "2026-08-08",
         "delta": 5,
         "published": [
@@ -276,20 +290,6 @@
             "views": 540
           }
         ]
-      },
-      {
-        "date": "2026-08-22",
-        "delta": 5,
-        "published": [
-          {
-            "slug": "2026-08-22-bague-oura-sommeil",
-            "views": 168
-          },
-          {
-            "slug": "2026-08-22-peau-humaine-vivante",
-            "views": 142
-          }
-        ]
       }
     ]
   },
@@ -298,8 +298,8 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 3540,
-      "reach": 2946,
+      "views": 3572,
+      "reach": 2971,
       "avgWatchS": 24.2,
       "retentionPct": 40,
       "likes": 14,
@@ -315,13 +315,13 @@
       "slug": "2026-09-26-ia-casse-code-enigma",
       "at": "2026-09-27T11:02:49.598Z",
       "hourUtc": 11,
-      "views": 2038,
-      "reach": 1693,
-      "avgWatchS": 19.3,
-      "retentionPct": 32,
+      "views": 2480,
+      "reach": 2141,
+      "avgWatchS": 18.9,
+      "retentionPct": 31,
       "likes": 4,
       "comments": 1,
-      "saved": 2,
+      "saved": 3,
       "shares": 0,
       "beat0": "photo",
       "themes": [],
@@ -1296,7 +1296,7 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Google teste une IA qui appelle les commerces à ta place, depuis ton propre numéro. Elle se présente, patiente, et tient la conversation.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-09-11-captcha-arrete-ia",
@@ -1938,6 +1938,23 @@
       "themes": [],
       "sendTest": "Sur Google, le même produit s'affiche 21.6 % plus cher quand c'est l'IA qui répond que dans la liste de liens normale.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-27-ia-facture-hopital",
+      "at": "2026-09-27T17:02:57.935Z",
+      "hourUtc": 17,
+      "views": 109,
+      "reach": 103,
+      "avgWatchS": 3.5,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Même opération, mêmes soins, et l'hôpital a facturé 942 millions de dollars de plus. C'est un logiciel qui a relu les dossiers.",
+      "settled": false
     },
     {
       "slug": "2026-09-10-montre-qui-resume",
