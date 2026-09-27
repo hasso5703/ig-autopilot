@@ -1526,6 +1526,32 @@ ENTRIES:
   un noir et blanc des annees 50, "australian flag parliament" un flou de badaud.
   Proof: scout 06h30 25/09, specs ia-openai-medicare-australie et
   gemini-appelle-a-ta-place.
+  Ajout 27/09 (06h30), DOSSIER SANTE AMERICAINE: LA PRESSE SPECIALISEE SANTE EST
+  UN MUR, ET LE PRIMAIRE AUSSI. Mesure de ce matin au fetch du gate sur l'analyse
+  BCBSA du codage hospitalier: bcbs.com rend 503 (trois essais, racine ET pages
+  d'article, corps de 121 octets, c'est un blocage d'egress et pas une toux),
+  fiercehealthcare.com 403, technology.org 403, ajmc.com 403,
+  healthleadersmedia.com 403, chiefhealthcareexecutive.com 403, medcitynews.com
+  403, beckershospitalreview.com et beckerspayer.com 403, healthcarefinancenews.com
+  403, modernhealthcare.com 403, axios.com 403, usatoday.com 403,
+  washingtonpost.com 503. Donc sur une actu d'assurance-sante americaine, la
+  filiere trade est INJOIGNABLE en bloc et le communique de l'assureur aussi: ne
+  compte pas dessus pour la corroboration, cherche ailleurs AVANT d'ecrire.
+  REPONDENT 200 ET SE GATENT DU PREMIER COUP ce matin: **aha.org NOUVEAU** (le
+  primaire de la refutation: ses fact-sheets /fact-sheets/<date>-<slug> portent
+  les phrases verbatim de la federation des hopitaux, et la page se capture en
+  22 s / 1 frame, zero banniere, zero pub, aucun recadrage, bandeau bleu + logo
+  American Hospital Association + titre entier dans le cadre),
+  **businessmodelanalyst.com NOUVEAU** (200, gate du premier coup, capture en
+  37 s / 3 frames), statnews.com 200, hcinnovationgroup.com 200, newsweek.com,
+  cnbc.com, nbcnews.com, cbsnews.com, forbes.com 200. REFLEXE QUI A SAUVE LE
+  DOSSIER: quand les deux camps d'une histoire ont chacun une federation, le site
+  de la PARTIE ADVERSE est souvent le seul primaire joignable, et il porte le
+  retournement que la depeche resume en une ligne. techcrunch.com se
+  re-confirme et RE-CONFIRME SA VARIANCE: 229 s / 642 frames ce matin, propre,
+  h1 exact, la phrase chiffree ET les trois citations dans le cadre apres
+  `crop=1290:2336:0:460` (la bande d'illustration en haut vaut 460 px sur une
+  breve "In Brief"). Proof: scout 06h30 27/09, spec ia-facture-hopital.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
@@ -7577,3 +7603,40 @@ ENTRIES:
   ligne de credit a la main depuis le titre et la licence que `acquireOne` a deja
   renvoyes (il les porte: title, creator, license, provider).
   Proof: run 10h30 26/09, Reel 2026-09-26-openai-photos-publiees.
+  Ajout 27/09 (06h30), UN RECU PEUT CONTENIR UNE IMAGE GENEREE PAR IA, ET EN MODE
+  MUET CA CONTREDIT LA LEGENDE. Mesure ce matin sur businessmodelanalyst.com: la
+  capture est propre, le titre porte le chiffre, et l'illustration sous la
+  signature est une scene GENEREE (son `alt` la decrit: "Hospital coder reviewing
+  an inpatient claim and an insurer review dashboard on two monitor"). Or la
+  ligne de divulgation du mode muet promet "sans voix ni image generee": laisser
+  cette illustration a l'ecran rend la legende fausse, exactement comme la ligne
+  maison du 04/09, et aucun controle ne le voit (le gate lit des mots, le
+  filmstrip ne concerne que le veo). REFLEXE, 5 s, sur TOUTE capture: lis
+  `altsInFrame` que scout-capture imprime, et si l'alt decrit une scene plutot
+  qu'une photo, recadre le recu sur le bloc titre. Remede a 0 $ ici:
+  `crop=1290:700:0:255` garde titre entier, filet, date et signature, et vire a la
+  fois l'illustration generee ET le bandeau promo "SUBSCRIBE FREE" du haut. Un
+  recu recadre au titre reste une preuve; une illustration d'IA dans un Reel qui
+  jure ne pas en montrer, non.
+  Ajout 27/09 (06h30), PHOTOS D'HOPITAL: 18 REQUETES POUR 2 GARDEES, et la cause
+  est structurelle. LE FILTRE NEAR-WHITE (25%) TUE L'INTERIEUR D'HOPITAL PAR
+  CONSTRUCTION, parce qu'un hopital est blanc: "intensive care unit" rend 32, 38
+  et 42%, "hospital ward beds" 30 a 55%, "blood transfusion bag" 38 a 89%,
+  "patient monitor screen" 61 et 72%, "hospital bed empty night" 96%. Echouent
+  aussi sans candidat: hospital emergency entrance night, infusion pump close,
+  medical chart clipboard, x ray light box, invoice paper stack, medical coding
+  book, printed ledger columns. CE QUI PASSE, et c'est la meme regle que l'objet
+  de musee du 26/09 (demande le detail, pas le lieu): "operating theatre surgery"
+  rend une vraie macro CC0 rawpixel, mains gantees + bistouri au-dessus d'une
+  incision eclairee, dense, sombre, zero visage, zero marque lisible, et c'est
+  litteralement "les memes soins" que l'histoire dit inchanges; "hospital corridor
+  dark" rend un couloir de service CC0 avec son afficheur LED rouge, vrai et sans
+  visage, bon pour un beat de lieu mais pas pour un beat 0.
+  DEUX PIEGES A LIRE AVANT LE JPG. (1) "hospital building night" rend un HOPITAL
+  UKRAINIEN BOMBARDE (National Police of Ukraine, 2022): mis sous une ligne sur la
+  facturation americaine, c'est une fausse accusation de contexte, la famille la
+  plus chere du carnet. (2) "hospital pharmacy shelves" et "surgeon gloves hands"
+  rendent de l'imagerie MILITAIRE americaine (US Air Force, US Navy) avec
+  uniformes et visages: hors-ton sur une histoire d'hopital civil, et piege de
+  visage du 04/09. Sur un sujet de sante, lis le TITRE et l'AUTEUR avant d'ouvrir
+  le fichier. Proof: scout 06h30 27/09, spec ia-facture-hopital.
