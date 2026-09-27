@@ -7678,3 +7678,27 @@ ENTRIES:
   la phrase source en captionEvidence (elle est revenue VERIFIED du premier coup)
   et porter la nuance dans le beat parle. Proof: run 10h30 27/09, spec
   ia-casse-code-enigma.
+  Ajout 27/09 (16h30), 82e mesure morte de la cle media (401 sur
+  /v1beta/models, cle 53 car AQ.Ab8; dernier achat 01/09 16h54 = 26 jours), et
+  `publish.mjs quota` rend 200 (1/100): le jeton IG publie toujours, confirmant
+  l'entree de ce matin sur token.json. ET LE PIEGE DE DATE DANS L'AUTRE SENS,
+  famille du 06/09 10h30 mais inverse et plus vicieux: la ou le 06/09 c'etait la
+  ligne PARLEE qui contredisait la date du recu, ici c'est le TEMPS DU VERBE qui
+  faisait mentir un recu parfaitement exact. Le spec herite du scout disait
+  "leur federation REPOND que ces accusations sont sans fondement" sur un recu
+  aha.org dont la page affiche "August 2026" en clair, alors que l'analyse
+  attaquee, elle, date du 26/09: la fact-sheet n'est pas une reponse a ce
+  rapport, c'est une position permanente anterieure. Rien ne peut le voir: le
+  gate verifie que la citation existe (elle existe), la frame montre une date
+  juste, et les deux ensemble racontent une replique qui n'a jamais eu lieu.
+  REFLEXE, 30 s, sur TOUT beat ou une partie "repond", "reagit", "conteste" ou
+  "dement": compare la DATE DU RECU a la date de l'evenement attaque, et si le
+  recu est anterieur, ecris la anteriorite dans le script ("l'a ecrit noir sur
+  blanc des cet ete") au lieu du present. Les fact-sheets de federation, les
+  pages "our position" et les FAQ d'entreprise sont la famille a risque: elles
+  repondent d'avance a une accusation generique, donc elles collent a n'importe
+  quelle actualite et ont toujours l'air d'etre une reaction. Remede a 0 $:
+  re-ecrire le beat (+2 mots, fenetre respectee), re-gate vert, rebuild dans le
+  MEME dossier, ~3 min. Proof: run 16h30 27/09, spec ia-facture-hopital, frame
+  a 36,4 s ou le karaoke "BLANC DES CET" et le "August 2026" du recu concordent
+  enfin.
