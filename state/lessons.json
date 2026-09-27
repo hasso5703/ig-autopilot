@@ -1,10 +1,18 @@
 {
-  "at": "2026-09-26T10:53:02.669Z",
-  "n": 118,
-  "nSettled": 112,
+  "at": "2026-09-27T07:13:01.514Z",
+  "n": 119,
+  "nSettled": 114,
   "medianViews": 140,
   "medianRetentionPct": 15,
   "top": [
+    {
+      "slug": "2026-09-24-ia-trouve-systeme-adn",
+      "views": 3466,
+      "retentionPct": 40,
+      "saved": 11,
+      "shares": 2,
+      "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire."
+    },
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
       "views": 1808,
@@ -36,14 +44,6 @@
       "saved": 0,
       "shares": 0,
       "sendTest": "Trois randonneurs ont demandé à l'IA de Google quoi emporter pour grimper le mont Shasta. Elle leur a dit trop peu d'eau. Ils ont fini secourus."
-    },
-    {
-      "slug": "2026-08-24-uber-logiciel-chauffeurs",
-      "views": 1265,
-      "retentionPct": 28,
-      "saved": 1,
-      "shares": 1,
-      "sendTest": "Un logiciel coupait le compte des chauffeurs Uber sans qu'aucun humain regarde. 825 millions d'euros d'amende."
     }
   ],
   "bottom": [
@@ -89,20 +89,20 @@
     }
   ],
   "byBeat0": {
+    "photo": {
+      "n": 41,
+      "medianViews": 132,
+      "meanRetentionPct": 13.2,
+      "saves": 28,
+      "shares": 6,
+      "thin": false
+    },
     "veo": {
       "n": 55,
       "medianViews": 197,
       "meanRetentionPct": 22.3,
       "saves": 71,
       "shares": 27,
-      "thin": false
-    },
-    "photo": {
-      "n": 39,
-      "medianViews": 132,
-      "meanRetentionPct": 12.5,
-      "saves": 17,
-      "shares": 4,
       "thin": false
     },
     "screenshot": {
@@ -124,9 +124,9 @@
       "thin": true
     },
     "safety": {
-      "n": 7,
-      "medianViews": 228,
-      "meanRetentionPct": 26.3,
+      "n": 8,
+      "medianViews": 198,
+      "meanRetentionPct": 24.3,
       "saves": 4,
       "shares": 2,
       "thin": false
@@ -158,9 +158,9 @@
   },
   "byPublishHourUtc": {
     "10": {
-      "n": 29,
-      "medianViews": 132,
-      "meanRetentionPct": 15.8,
+      "n": 30,
+      "medianViews": 130,
+      "meanRetentionPct": 15.6,
       "saves": 16,
       "shares": 6,
       "thin": false
@@ -200,17 +200,17 @@
     "16": {
       "n": 30,
       "medianViews": 122,
-      "meanRetentionPct": 13.3,
+      "meanRetentionPct": 13.4,
       "saves": 22,
       "shares": 4,
       "thin": false
     },
     "17": {
-      "n": 22,
-      "medianViews": 183,
-      "meanRetentionPct": 21.8,
-      "saves": 20,
-      "shares": 12,
+      "n": 23,
+      "medianViews": 191,
+      "meanRetentionPct": 22.6,
+      "saves": 31,
+      "shares": 14,
       "thin": false
     },
     "19": {
@@ -298,18 +298,18 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 3226,
-      "reach": 2678,
-      "avgWatchS": 23.7,
+      "views": 3466,
+      "reach": 2871,
+      "avgWatchS": 24.2,
       "retentionPct": 40,
       "likes": 14,
       "comments": 3,
-      "saved": 7,
+      "saved": 11,
       "shares": 2,
       "beat0": "photo",
       "themes": [],
       "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -784,6 +784,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-25-ia-openai-medicare-australie",
+      "at": "2026-09-25T11:22:30.206Z",
+      "hourUtc": 11,
+      "views": 330,
+      "reach": 309,
+      "avgWatchS": 7.3,
+      "retentionPct": 12,
+      "likes": 1,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "security"
+      ],
+      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-30-openai-coupe-cursor-musk",
       "at": "2026-08-30T16:50:41.169Z",
       "hourUtc": 16,
@@ -821,7 +840,7 @@
       "slug": "2026-09-08-medicament-ia-age-biologique",
       "at": "2026-09-08T10:50:30.295Z",
       "hourUtc": 10,
-      "views": 301,
+      "views": 302,
       "reach": 259,
       "avgWatchS": 8.2,
       "retentionPct": 14,
@@ -893,8 +912,8 @@
       "slug": "2026-09-19-chatbot-renseignement-militaire",
       "at": "2026-09-19T10:59:01.798Z",
       "hourUtc": 10,
-      "views": 234,
-      "reach": 210,
+      "views": 235,
+      "reach": 211,
       "avgWatchS": 10.1,
       "retentionPct": 17,
       "likes": 1,
@@ -924,25 +943,6 @@
       ],
       "sendTest": "Anthropic a refusé que son IA serve à surveiller les Américains et à armer des drones. L'État l'a bannie. Un juge vient de dire que c'était illégal.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-25-ia-openai-medicare-australie",
-      "at": "2026-09-25T11:22:30.206Z",
-      "hourUtc": 11,
-      "views": 220,
-      "reach": 204,
-      "avgWatchS": 5.9,
-      "retentionPct": 10,
-      "likes": 1,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "security"
-      ],
-      "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
-      "settled": false
     },
     {
       "slug": "2026-08-28-flock-plaques-voiture",
@@ -1038,9 +1038,9 @@
       "at": "2026-09-05T16:47:57.700Z",
       "hourUtc": 16,
       "views": 188,
-      "reach": 164,
-      "avgWatchS": 14.1,
-      "retentionPct": 23,
+      "reach": 165,
+      "avgWatchS": 14.2,
+      "retentionPct": 24,
       "likes": 0,
       "comments": 1,
       "saved": 1,
@@ -1265,6 +1265,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-25-gemini-appelle-a-ta-place",
+      "at": "2026-09-25T17:16:14.802Z",
+      "hourUtc": 17,
+      "views": 147,
+      "reach": 134,
+      "avgWatchS": 5.1,
+      "retentionPct": 8,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Google teste une IA qui appelle les commerces à ta place, depuis ton propre numéro. Elle se présente, patiente, et tient la conversation.",
+      "settled": false
+    },
+    {
       "slug": "2026-09-11-captcha-arrete-ia",
       "at": "2026-09-11T10:56:17.768Z",
       "hourUtc": 10,
@@ -1280,23 +1297,6 @@
       "themes": [],
       "sendTest": "Une IA a reussi a pirater un vrai systeme. Puis elle a passe 150 pages a essayer de cliquer sur je ne suis pas un robot.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-25-gemini-appelle-a-ta-place",
-      "at": "2026-09-25T17:16:14.802Z",
-      "hourUtc": 17,
-      "views": 146,
-      "reach": 131,
-      "avgWatchS": 5.2,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Google teste une IA qui appelle les commerces à ta place, depuis ton propre numéro. Elle se présente, patiente, et tient la conversation.",
-      "settled": false
     },
     {
       "slug": "2026-08-22-peau-humaine-vivante",
@@ -1424,8 +1424,8 @@
       "at": "2026-09-23T10:58:43.093Z",
       "hourUtc": 10,
       "views": 132,
-      "reach": 120,
-      "avgWatchS": 6.8,
+      "reach": 121,
+      "avgWatchS": 6.7,
       "retentionPct": 11,
       "likes": 0,
       "comments": 1,
@@ -1560,6 +1560,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-26-openai-photos-publiees",
+      "at": "2026-09-26T11:06:16.343Z",
+      "hourUtc": 11,
+      "views": 128,
+      "reach": 114,
+      "avgWatchS": 9.5,
+      "retentionPct": 16,
+      "likes": 0,
+      "comments": 1,
+      "saved": 1,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des photos envoyées à ChatGPT se sont retrouvées publiées sur des sites d'images. OpenAI dit ne pas pouvoir savoir à qui elles appartiennent.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-26-ia-verifie-infos",
       "at": "2026-08-26T10:54:31.013Z",
       "hourUtc": 10,
@@ -1662,6 +1679,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-24-meta-lunettes-sans-camera",
+      "at": "2026-09-24T10:58:52.338Z",
+      "hourUtc": 10,
+      "views": 123,
+      "reach": 111,
+      "avgWatchS": 5.9,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "safety"
+      ],
+      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -1696,25 +1732,6 @@
       ],
       "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-24-meta-lunettes-sans-camera",
-      "at": "2026-09-24T10:58:52.338Z",
-      "hourUtc": 10,
-      "views": 122,
-      "reach": 108,
-      "avgWatchS": 5.7,
-      "retentionPct": 9,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "safety"
-      ],
-      "sendTest": "Meta sort des lunettes connectées sans caméra. Elles étaient surnommées les lunettes de pervers parce que des gens filmaient les autres avec.",
-      "settled": false
     },
     {
       "slug": "2026-08-27-instagram-ados-minuit",
@@ -1997,7 +2014,7 @@
       "at": "2026-09-17T16:53:45.908Z",
       "hourUtc": 16,
       "views": 89,
-      "reach": 78,
+      "reach": 79,
       "avgWatchS": 3.2,
       "retentionPct": 5,
       "likes": 0,
@@ -2067,8 +2084,8 @@
       "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
       "at": "2026-09-21T11:05:44.651Z",
       "hourUtc": 11,
-      "views": 68,
-      "reach": 60,
+      "views": 69,
+      "reach": 61,
       "avgWatchS": 3.6,
       "retentionPct": 6,
       "likes": 0,
@@ -2257,7 +2274,7 @@
       "at": "2026-09-23T17:23:44.262Z",
       "hourUtc": 17,
       "views": 28,
-      "reach": 23,
+      "reach": 25,
       "avgWatchS": 2.7,
       "retentionPct": 5,
       "likes": 0,
