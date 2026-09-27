@@ -7702,3 +7702,18 @@ ENTRIES:
   MEME dossier, ~3 min. Proof: run 16h30 27/09, spec ia-facture-hopital, frame
   a 36,4 s ou le karaoke "BLANC DES CET" et le "August 2026" du recu concordent
   enfin.
+  Ajout 27/09 (19h30, veille), LE MENSONGE DE token.json EST MAINTENANT CORRIGE
+  DANS LE CODE, donc arrete de le re-mesurer a la main. `watch.mjs` est la
+  PREMIERE commande d'une veille et il titrait "TOKEN MORT depuis le 2026-09-23.
+  Plus rien ne peut etre publie" tous les soirs depuis huit jours, sur un compte
+  qui publiait deux fois par jour: l'entree de ce matin corrigeait token.json
+  comme jauge mais pas l'alarme qui la lit. `tokenStatus()` reconcilie desormais
+  le compte a rebours avec le registre (state/posted.jsonl): une publication
+  POSTERIEURE a l'expiration calculee prouve que Hasan a remplace le jeton sans
+  bouger `issuedAt`, donc le fichier est perime et le compte est vivant. La ligne
+  devient "TOKEN compteur perime : ... Controle vivant : node src/publish.mjs
+  quota", `dead` et `urgent` sont supprimes dans ce cas, et un vrai jeton mort
+  (registre qui s'arrete avant l'expiration) crie toujours MORT. Test de
+  non-regression ajoute (132 tests), les deux sens couverts. Ce qui reste a un
+  humain et a lui seul: mettre `issuedAt` a jour quand il remplace le jeton.
+  Proof: veille 19h30 27/09, src/watch.mjs, test/pipeline.test.mjs.

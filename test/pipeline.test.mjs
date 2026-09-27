@@ -2658,3 +2658,46 @@ test("karaoke never breaks a French thousands separator across two lines", async
   assert.ok(!karaoke.some((l) => /^0\d\d\b/.test(l.trim()) || /^000\b/.test(l.trim())),
     `no karaoke line may open on an orphaned digit group: ${JSON.stringify(karaoke)}`);
 });
+
+// ---------------------------------------------------------------------------
+// Incident, 2026-09-19 to 2026-09-27: state/token.json is a note a human keeps
+// by hand, and Hasan replaced the token in the environment without moving
+// `issuedAt`. The countdown ran past zero and the vigil's report led with
+// "TOKEN MORT ... Plus rien ne peut etre publie" on eight consecutive evenings
+// while the account published twice a day throughout. Runs then titled their
+// reports on a death that had not happened.
+//
+// The ledger of what actually went out cannot be wishful: a publication dated
+// after the computed expiry is proof that the token was replaced. The file is
+// stale, the account is not dead, and the report has to say which.
+// ---------------------------------------------------------------------------
+test("a publication after the token's paper expiry marks the counter stale, not the account dead", async () => {
+  const { tokenStatus, format } = await import("../src/watch.mjs");
+  const { readFile } = await import("node:fs/promises");
+
+  const t = JSON.parse(await readFile(new URL("../state/token.json", import.meta.url), "utf8"));
+  const expiresAt = Date.parse(t.issuedAt) + (t.lifetimeDays ?? 60) * 86400000;
+  const DAY = 86400000;
+
+  const after = await tokenStatus({ lastPublishedAt: new Date(expiresAt + DAY).toISOString() });
+  assert.equal(after.stale, true, "publishing past the paper expiry proves the token was replaced");
+  assert.equal(after.dead, false, "an account that published yesterday is not offline");
+  assert.equal(after.urgent, false, "a meaningless countdown must not raise a renewal alarm either");
+
+  const before = await tokenStatus({ lastPublishedAt: new Date(expiresAt - DAY).toISOString() });
+  assert.equal(before.stale, false, "a ledger that stops before the expiry proves nothing about the token");
+
+  // And the report must say which of the two it is, in words Hasan can act on.
+  const base = {
+    health: { ever: true, ok: true, ageHours: 2, total: 121 },
+    gather: { known: true, ok: true, ageHours: 1, fresh: 24, feeds: 14, dead: [] },
+    posts: [],
+  };
+  const staleLine = format({ ...base, token: { ...after, known: true, expiresOn: "2026-09-23", publishedAfterExpiry: "2026-09-27" } });
+  assert.match(staleLine, /TOKEN\s+compteur périmé/, "the stale counter is named as a stale counter");
+  assert.ok(!/MORT/.test(staleLine), "the report must never announce a death the ledger contradicts");
+  assert.match(staleLine, /publish\.mjs quota/, "and it must point at the live check that settles it");
+
+  const deadLine = format({ ...base, token: { known: true, daysLeft: -3, expiresOn: "2026-09-23", stale: false, urgent: true, dead: true, howToRenew: "x" } });
+  assert.match(deadLine, /TOKEN\s+MORT/, "a genuinely dead token is still shouted about");
+});

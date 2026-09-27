@@ -32,7 +32,23 @@ const SILENCE_ALARM_HOURS = 26;
 const DAY = 86400000;
 const plural = (n, s, p) => `${n} ${n === 1 ? s : p}`;
 
-export async function tokenStatus() {
+/**
+ * How long the publishing token has left, according to state/token.json.
+ *
+ * That file is a note to self, not a gauge: only a human can replace the token
+ * in the environment, and only a human can then move `issuedAt`. When Hasan
+ * replaces one without editing the file, the countdown keeps running down past
+ * zero and this report starts announcing that the account is offline while it
+ * is publishing twice a day. That happened for eight days from 2026-09-19, and
+ * six runs in a row led their report with a death that had not occurred.
+ *
+ * So the countdown is now reconciled against the one thing in this repo that
+ * cannot be wishful: the ledger of what actually went out. A publication dated
+ * after the computed expiry is proof that the token was replaced, which makes
+ * the file stale rather than the account dead. Pass `lastPublishedAt` to
+ * override the ledger lookup.
+ */
+export async function tokenStatus({ lastPublishedAt } = {}) {
   if (!existsSync(TOKEN_FILE)) {
     return { known: false, note: "state/token.json is missing, expiry cannot be tracked" };
   }
@@ -41,16 +57,27 @@ export async function tokenStatus() {
   if (Number.isNaN(issued)) return { known: false, note: "issuedAt is not a valid date" };
 
   const lifetime = (t.lifetimeDays ?? 60) * DAY;
-  const daysLeft = Math.floor((issued + lifetime - Date.now()) / DAY);
+  const expiresAt = issued + lifetime;
+  const daysLeft = Math.floor((expiresAt - Date.now()) / DAY);
   const warnAt = t.warnAtDays ?? 14;
+
+  let lastAt = lastPublishedAt ?? null;
+  if (lastAt === null) {
+    const { posted } = await loadState();
+    lastAt = latestBy(posted)?.at ?? null;
+  }
+  const lastMs = lastAt ? Date.parse(lastAt) : NaN;
+  const stale = Number.isFinite(lastMs) && lastMs > expiresAt;
 
   return {
     known: true,
     daysLeft,
     warnAt,
-    expiresOn: new Date(issued + lifetime).toISOString().slice(0, 10),
-    urgent: daysLeft <= warnAt,
-    dead: daysLeft <= 0,
+    expiresOn: new Date(expiresAt).toISOString().slice(0, 10),
+    stale,
+    publishedAfterExpiry: stale ? new Date(lastMs).toISOString().slice(0, 10) : null,
+    urgent: !stale && daysLeft <= warnAt,
+    dead: !stale && daysLeft <= 0,
     howToRenew: t.howToRenew ?? null,
   };
 }
@@ -185,6 +212,7 @@ export function format(report) {
   }
 
   if (!token.known) L.push(`TOKEN         inconnu : ${token.note}`);
+  else if (token.stale) L.push(`TOKEN         compteur périmé : state/token.json donne le ${token.expiresOn}, or le compte a publié le ${token.publishedAfterExpiry}. Le jeton a été remplacé sans que la date le soit. Contrôle vivant : node src/publish.mjs quota.`);
   else if (token.dead) L.push(`TOKEN         MORT depuis le ${token.expiresOn}. Plus rien ne peut être publié.`);
   else if (token.urgent) L.push(`TOKEN         ALERTE : ${plural(token.daysLeft, "jour restant", "jours restants")} (expire le ${token.expiresOn}). À renouveler maintenant.`);
   else L.push(`TOKEN         ${plural(token.daysLeft, "jour restant", "jours restants")} (expire le ${token.expiresOn})`);
@@ -235,6 +263,7 @@ export async function buildReport({ collect = true } = {}) {
   const alerts = [];
   if (!health.ok) alerts.push("publication");
   if (token.dead || token.urgent) alerts.push("token");
+  if (token.stale) alerts.push("token-stale");
   if (gather.known && !gather.ok) alerts.push("collecte");
   return { at: new Date().toISOString(), health, token, account, gather, posts, alerts };
 }
