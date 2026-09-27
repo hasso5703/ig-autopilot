@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-27T07:13:01.514Z",
+  "at": "2026-09-27T10:54:41.813Z",
   "n": 119,
   "nSettled": 114,
   "medianViews": 140,
@@ -7,7 +7,7 @@
   "top": [
     {
       "slug": "2026-09-24-ia-trouve-systeme-adn",
-      "views": 3466,
+      "views": 3492,
       "retentionPct": 40,
       "saved": 11,
       "shares": 2,
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 51,
+    "now": 53,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -298,8 +298,8 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 3466,
-      "reach": 2871,
+      "views": 3492,
+      "reach": 2908,
       "avgWatchS": 24.2,
       "retentionPct": 40,
       "likes": 14,
@@ -1299,6 +1299,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-26-openai-photos-publiees",
+      "at": "2026-09-26T11:06:16.343Z",
+      "hourUtc": 11,
+      "views": 143,
+      "reach": 128,
+      "avgWatchS": 9.5,
+      "retentionPct": 16,
+      "likes": 0,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Des photos envoyées à ChatGPT se sont retrouvées publiées sur des sites d'images. OpenAI dit ne pas pouvoir savoir à qui elles appartiennent.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-22-peau-humaine-vivante",
       "at": "2026-08-22T10:54:08.736Z",
       "hourUtc": 10,
@@ -1386,6 +1403,25 @@
       "settled": true
     },
     {
+      "slug": "2026-09-23-ia-militaire-ecole-minab",
+      "at": "2026-09-23T10:58:43.093Z",
+      "hourUtc": 10,
+      "views": 136,
+      "reach": 122,
+      "avgWatchS": 6.7,
+      "retentionPct": 11,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "money"
+      ],
+      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
+      "settled": true
+    },
+    {
       "slug": "2026-08-19-pub-dans-chatgpt",
       "at": "2026-08-19T10:54:09.002Z",
       "hourUtc": 10,
@@ -1417,25 +1453,6 @@
       "beat0": "photo",
       "themes": [],
       "sendTest": "Une start-up américaine vend une IA sans aucune sécurité. Des journalistes lui ont demandé comment cultiver un microbe dangereux chez soi. Elle a répondu.",
-      "settled": true
-    },
-    {
-      "slug": "2026-09-23-ia-militaire-ecole-minab",
-      "at": "2026-09-23T10:58:43.093Z",
-      "hourUtc": 10,
-      "views": 132,
-      "reach": 121,
-      "avgWatchS": 6.7,
-      "retentionPct": 11,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "money"
-      ],
-      "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
       "settled": true
     },
     {
@@ -1558,23 +1575,6 @@
       "themes": [],
       "sendTest": "Un labo cherche de nouveaux antibiotiques dans l'ADN de Néandertal et du mammouth, avec ChatGPT. Des années de recherche passées à des heures.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-26-openai-photos-publiees",
-      "at": "2026-09-26T11:06:16.343Z",
-      "hourUtc": 11,
-      "views": 128,
-      "reach": 114,
-      "avgWatchS": 9.5,
-      "retentionPct": 16,
-      "likes": 0,
-      "comments": 1,
-      "saved": 1,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Des photos envoyées à ChatGPT se sont retrouvées publiées sur des sites d'images. OpenAI dit ne pas pouvoir savoir à qui elles appartiennent.",
-      "settled": false
     },
     {
       "slug": "2026-08-26-ia-verifie-infos",

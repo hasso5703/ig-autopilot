@@ -48,6 +48,10 @@
     {
       "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
       "quote": "Of the close to 1000 Enigma and Truppenschlüssel messages in the German Army collection, only seven Enigma messages remain unbroken,"
+    },
+    {
+      "quote": "while the FMNGI attack was more directed and relied on strong human guidance.",
+      "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html"
     }
   ],
   "sendTest": "Un message allemand de 1941 que personne n'arrivait à lire depuis 2005 vient d'être cassé. Par une IA, toute seule, en deux jours.",
@@ -182,7 +186,7 @@
     "title": "Un message nazi bloqué depuis 2005 est tombé",
     "beats": [
       {
-        "script": "Tu as déjà entendu parler d'Enigma, la machine qui chiffrait les messages de l'Allemagne nazie. Il reste une poignée de messages que personne n'a jamais réussi à lire. L'un d'eux résistait depuis 2005.",
+        "script": "Tu connais Enigma, la machine qui chiffrait les messages de l'Allemagne nazie. Il reste une poignée de messages que personne n'a jamais réussi à lire. L'un d'eux résistait depuis 2005.",
         "visual": {
           "type": "photo",
           "query": "enigma machine rotors",
@@ -218,7 +222,7 @@
         }
       },
       {
-        "script": "Six jours plus tard, ça recommence. Un autre message tombe, cassé cette fois avec Claude Opus 5, le modèle d'Anthropic. La recherche de la clé a pris 13 minutes et 28 secondes.",
+        "script": "Six jours plus tard, ça recommence. Un autre message tombe, avec Claude Opus 5 cette fois, le modèle d'Anthropic. Mais là, un humain a beaucoup guidé. La recherche de la clé a pris 13 minutes et 28 secondes.",
         "visual": {
           "type": "screenshot",
           "url": "https://www.cryptocellar.org/bgac/the-fmngi-break.html",
@@ -234,7 +238,7 @@
         }
       },
       {
-        "script": "Il reste sept messages Enigma que personne n'a jamais lus. Le cryptologue demande déjà qui sera le prochain à en casser un. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "script": "Il reste sept messages Enigma que personne n'a jamais lus. Le cryptologue demande déjà qui cassera le prochain. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "screenshot",
           "url": "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/",
