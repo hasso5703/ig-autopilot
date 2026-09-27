@@ -1,13 +1,13 @@
 {
-  "at": "2026-09-27T10:54:41.813Z",
-  "n": 119,
-  "nSettled": 114,
-  "medianViews": 140,
+  "at": "2026-09-27T16:54:41.663Z",
+  "n": 120,
+  "nSettled": 115,
+  "medianViews": 141,
   "medianRetentionPct": 15,
   "top": [
     {
       "slug": "2026-09-24-ia-trouve-systeme-adn",
-      "views": 3492,
+      "views": 3540,
       "retentionPct": 40,
       "saved": 11,
       "shares": 2,
@@ -90,9 +90,9 @@
   ],
   "byBeat0": {
     "photo": {
-      "n": 41,
+      "n": 42,
       "medianViews": 132,
-      "meanRetentionPct": 13.2,
+      "meanRetentionPct": 13.1,
       "saves": 28,
       "shares": 6,
       "thin": false
@@ -140,9 +140,9 @@
       "thin": false
     },
     "security": {
-      "n": 5,
-      "medianViews": 160,
-      "meanRetentionPct": 16,
+      "n": 6,
+      "medianViews": 176,
+      "meanRetentionPct": 15.3,
       "saves": 4,
       "shares": 0,
       "thin": false
@@ -166,9 +166,9 @@
       "thin": false
     },
     "11": {
-      "n": 12,
-      "medianViews": 141,
-      "meanRetentionPct": 12.7,
+      "n": 13,
+      "medianViews": 150,
+      "meanRetentionPct": 12.6,
       "saves": 8,
       "shares": 7,
       "thin": false
@@ -247,7 +247,7 @@
     }
   },
   "followers": {
-    "now": 53,
+    "now": 55,
     "bestDays": [
       {
         "date": "2026-08-23",
@@ -298,8 +298,8 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 3492,
-      "reach": 2908,
+      "views": 3540,
+      "reach": 2946,
       "avgWatchS": 24.2,
       "retentionPct": 40,
       "likes": 14,
@@ -310,6 +310,23 @@
       "themes": [],
       "sendTest": "Une IA a lu de l'ADN pendant 21 heures et a repéré un truc que personne n'avait jamais vu. Et elle n'arrive pas à le refaire.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-26-ia-casse-code-enigma",
+      "at": "2026-09-27T11:02:49.598Z",
+      "hourUtc": 11,
+      "views": 2038,
+      "reach": 1693,
+      "avgWatchS": 19.3,
+      "retentionPct": 32,
+      "likes": 4,
+      "comments": 1,
+      "saved": 2,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Un message allemand de 1941 que personne n'arrivait à lire depuis 2005 vient d'être cassé. Par une IA, toute seule, en deux jours.",
+      "settled": false
     },
     {
       "slug": "2026-08-23-ia-a-voulu-abandonner",
@@ -800,7 +817,7 @@
         "security"
       ],
       "sendTest": "Une IA d'OpenAI est entrée dans la base de santé de l'Australie le 18 juin. L'entreprise a prévenu le gouvernement 84 jours plus tard, par mail.",
-      "settled": false
+      "settled": true
     },
     {
       "slug": "2026-08-30-openai-coupe-cursor-musk",
@@ -1302,9 +1319,9 @@
       "slug": "2026-09-26-openai-photos-publiees",
       "at": "2026-09-26T11:06:16.343Z",
       "hourUtc": 11,
-      "views": 143,
-      "reach": 128,
-      "avgWatchS": 9.5,
+      "views": 146,
+      "reach": 131,
+      "avgWatchS": 9.7,
       "retentionPct": 16,
       "likes": 0,
       "comments": 1,
@@ -2084,8 +2101,8 @@
       "slug": "2026-09-21-draftkings-ia-joueurs-perdants",
       "at": "2026-09-21T11:05:44.651Z",
       "hourUtc": 11,
-      "views": 69,
-      "reach": 61,
+      "views": 70,
+      "reach": 62,
       "avgWatchS": 3.6,
       "retentionPct": 6,
       "likes": 0,
