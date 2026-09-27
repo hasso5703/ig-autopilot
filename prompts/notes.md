@@ -7640,3 +7640,41 @@ ENTRIES:
   uniformes et visages: hors-ton sur une histoire d'hopital civil, et piege de
   visage du 04/09. Sur un sujet de sante, lis le TITRE et l'AUTEUR avant d'ouvrir
   le fichier. Proof: scout 06h30 27/09, spec ia-facture-hopital.
+  Ajout 27/09 (10h30), 81e mesure morte de la cle media (401, cle 53 car AQ.Ab8;
+  dernier achat 01/09 16h54 = 26 jours, RECALCULE depuis state/spend.jsonl). ET LA
+  NOTE QU'IL FAUT ARRETER DE RECOPIER, parce qu'elle est FAUSSE depuis huit jours:
+  state/token.json fait dire aux runs "IG_ACCESS_TOKEN expire le 23/09", et les
+  entrees des 21, 22, 23, 24, 25 et 26/09 ont ecrit tour a tour "UN JOUR",
+  "ZERO JOUR", "il expire CETTE NUIT" et "ce Reel est le DERNIER que le compte
+  publiera". Le compte a publie le 24, le 25, le 26 et aujourd'hui le 27/09. Le
+  calcul rend -5 JOURS ce matin et le jeton marche: `publish.mjs quota` rend 200
+  (1/100) et la publication de 11h02 est passee du premier coup. La cause est
+  banale et elle est ecrite dans le fichier lui-meme ("Update issuedAt whenever the
+  token in the environment is replaced"): Hasan a remplace le jeton dans les
+  variables d'environnement sans que personne ne puisse mettre `issuedAt` a jour,
+  et AUCUN run ne peut le savoir, puisqu'un run ne lit pas la variable d'env de
+  Hasan. DONC: state/token.json n'est PAS une jauge, c'est un pense-bete que seul
+  un humain met a jour, exactement comme refresh-token.mjs n'est pas un status
+  (entree 09/09). La seule mesure qui vaut est vivante et coute 2 s:
+  `node src/publish.mjs quota` (200 = le jeton publie). Ne titre plus un rapport
+  sur une mort annoncee par un fichier statique, et ne renonce JAMAIS a publier
+  sur la foi de token.json; dis a Hasan que le compteur est perime, c'est lui qui
+  a la date reelle.
+  ET LE TROU DE VERIFICATION QUE LE GATE NE PEUT PAS VOIR, mesure sur un spec
+  herite: LA PROSE DE LA LEGENDE N'EST TENUE PAR RIEN. Le manuel le dit en une
+  ligne ("Prose in the caption is free. Digits are not") et on le lit comme une
+  permission de style; c'est en fait un trou. Mesure du jour: la legende affirmait
+  que la seconde casse Enigma s'etait faite "avec beaucoup plus d'aide humaine" --
+  c'est VRAI (cryptocellar ecrit "the FMNGI attack was more directed and relied on
+  strong human guidance") mais cette phrase n'etait dans AUCUN captionEvidence ni
+  dans aucune diapo, donc rien ne l'avait jamais verifiee et le gate passait vert.
+  Pire, le beat 4 PARLE, lui, ne portait pas la nuance du tout: il disait "un autre
+  message tombe, casse cette fois avec Claude Opus 5" apres un beat 1 qui dit
+  d'Astra "tout seul", soit exactement la fusion de deux acteurs que le manuel
+  interdit (famille Opus 4.7 du 31/07), assemblee avec des phrases vraies.
+  REFLEXE, 2 min, sur TOUT spec herite: relis la legende phrase par phrase et
+  demande-toi laquelle n'a ni chiffre ni citation derriere elle; chacune de
+  celles-la est une affirmation que personne n'a verifiee. Remede gratuit: ajouter
+  la phrase source en captionEvidence (elle est revenue VERIFIED du premier coup)
+  et porter la nuance dans le beat parle. Proof: run 10h30 27/09, spec
+  ia-casse-code-enigma.
