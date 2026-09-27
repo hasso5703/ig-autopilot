@@ -1,0 +1,227 @@
+{
+  "slug": "2026-09-27-ia-facture-hopital",
+  "centralClaim": "Hospitals using AI coding tools billed Blue Cross Blue Shield plans an extra $942 million over two years for care that did not change.",
+  "corroboration": [
+    {
+      "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+      "quote": "Hospitals’ use of artificial intelligence tools as they submit insurance claims led to an additional $942 million in healthcare spending over a two-year period, according to an analysis by the Blue Cross Blue Shield Association"
+    },
+    {
+      "url": "https://businessmodelanalyst.com/hospital-ai-coding-drg-tiers-blue-cross/",
+      "quote": "The Blue Cross Blue Shield Association says hospitals using AI coding tools billed its member plans an extra $942 million over two years for care that, on its reading of the claims, did not change."
+    }
+  ],
+  "caption": "Mêmes soins, même hôpital, et 942 millions de dollars de plus en deux ans. Un logiciel est passé par là.\n\nBlue Cross Blue Shield a passé au crible les factures d'hospitalisation de ses assurés américains. Son constat: les hôpitaux qui font préparer leurs demandes de remboursement par des outils d'IA ont facturé 942 millions de dollars de plus sur deux ans, pour des soins que l'assureur dit inchangés.\n\n653 millions viennent de diagnostics secondaires, sur plus de 55 000 séjours basculés dans une catégorie mieux payée. Près de 11 900 dollars à chaque fois.\n\nLe détail qui pique: chez le quart des hôpitaux qui déclarent le plus de cas complexes, les taux de réanimation, de transfusion et de réintervention sont semblables ou plus bas qu'ailleurs.\n\nLa fédération américaine des hôpitaux conteste. Elle parle d'accusations sans fondement, rappelle que les patients sont plus âgés et plus malades, et renvoie la balle: ces mêmes assureurs présentent leurs assurés comme plus malades quand il s'agit de calculer ce qu'on leur verse.\n\nUn logiciel qui relit ton dossier pour y trouver un diagnostic de plus: outil utile, ou machine à facturer ?\n\nSources: techcrunch.com · businessmodelanalyst.com · aha.org\n\n#IA #IntelligenceArtificielle #ActuIA #Sante\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Hospitals’ use of artificial intelligence tools as they submit insurance claims led to an additional $942 million in healthcare spending over a two-year period, according to an analysis by the Blue Cross Blue Shield Association",
+      "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/"
+    },
+    {
+      "quote": "Blue Cross says hospital AI billed its plans nearly $1 billion more for the same care.",
+      "url": "https://businessmodelanalyst.com/hospital-ai-coding-drg-tiers-blue-cross/"
+    },
+    {
+      "quote": "About $653 million of that came from secondary diagnoses that pushed more than 55,000 hospital stays into higher-paying diagnosis-related groups, just under $11,900 a case.",
+      "url": "https://businessmodelanalyst.com/hospital-ai-coding-drg-tiers-blue-cross/"
+    },
+    {
+      "quote": "The quarter of hospitals coding the most complexity showed similar or lower rates of ICU use, transfusion, reoperation and length of stay than their peers.",
+      "url": "https://businessmodelanalyst.com/hospital-ai-coding-drg-tiers-blue-cross/"
+    },
+    {
+      "quote": "Recently, unsubstantiated claims have suggested that the use of these tools has increased coding intensity, leading to higher health care costs.",
+      "url": "https://www.aha.org/fact-sheets/2026-07-31-fact-sheet-artificial-intelligence-and-coding-intensity"
+    },
+    {
+      "quote": "However, these accusations are unsubstantiated and ignore the multiple factors contributing to growth in coding intensity, including a sicker, higher-acuity hospital patient population",
+      "url": "https://www.aha.org/fact-sheets/2026-07-31-fact-sheet-artificial-intelligence-and-coding-intensity"
+    },
+    {
+      "quote": "At the same time, many of the same insurers that have instituted such downcoding programs have themselves argued that their enrollee populations are sicker and in need of more services for purposes of their own payments",
+      "url": "https://www.aha.org/fact-sheets/2026-07-31-fact-sheet-artificial-intelligence-and-coding-intensity"
+    }
+  ],
+  "sendTest": "Même opération, mêmes soins, et l'hôpital a facturé 942 millions de dollars de plus. C'est un logiciel qui a relu les dossiers.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "26 septembre 2026 · Blue Cross Blue Shield",
+      "headline": "Mêmes soins, *942 millions* de dollars en plus",
+      "hero": {
+        "value": "942 M$",
+        "label": "payés en plus en deux ans, pour des soins inchangés"
+      },
+      "swipe": "Les reçus, diapositive par diapositive"
+    },
+    {
+      "type": "stat",
+      "figure": "942 M$",
+      "unit": "de dépenses de santé en plus sur deux ans",
+      "body": "Des hôpitaux font préparer leurs demandes de remboursement par des outils d'IA. **Le coût a suivi. Les soins, non.**",
+      "evidence": "Hospitals’ use of artificial intelligence tools as they submit insurance claims led to an additional $942 million in healthcare spending over a two-year period, according to an analysis by the Blue Cross Blue Shield Association",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+        "date": "2026-09-26"
+      }
+    },
+    {
+      "type": "content",
+      "title": "D'où sort l'argent",
+      "body": "**653 millions** viennent de diagnostics secondaires, sur plus de **55 000** séjours passés dans une catégorie mieux payée. Près de 11 900 dollars à chaque fois.",
+      "evidence": "About $653 million of that came from secondary diagnoses that pushed more than 55,000 hospital stays into higher-paying diagnosis-related groups, just under $11,900 a case.",
+      "source": {
+        "name": "Business Model Analyst",
+        "url": "https://businessmodelanalyst.com/hospital-ai-coding-drg-tiers-blue-cross/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le dossier change, le soin non",
+      "body": "Chez le quart des hôpitaux qui déclarent le plus de cas complexes, *réanimation, transfusion et réintervention* ne sont pas plus fréquentes qu'ailleurs.",
+      "evidence": "The quarter of hospitals coding the most complexity showed similar or lower rates of ICU use, transfusion, reoperation and length of stay than their peers.",
+      "source": {
+        "name": "Business Model Analyst",
+        "url": "https://businessmodelanalyst.com/hospital-ai-coding-drg-tiers-blue-cross/",
+        "date": "2026-09-24"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que l'assureur dit avoir vu",
+      "body": "L'analyse décrit une hausse nette des patients **présentés comme complexes**, sans trace d'un changement dans les soins délivrés.",
+      "evidence": "The BCBSA analysis found “a sharp increase in patients being documented as having complex conditions,” but argued there is a “clear disconnect between [medical] coding and treatment,” as there’s “no evidence of corresponding change in care delivered.”",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+        "date": "2026-09-26"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "L'IA de facturation gonfle le coût des soins.",
+      "caveat": "Accusation sans fondement, répondent les hôpitaux.",
+      "claimLabel": "Blue Cross Blue Shield",
+      "caveatLabel": "American Hospital Association",
+      "evidence": "Recently, unsubstantiated claims have suggested that the use of these tools has increased coding intensity, leading to higher health care costs.",
+      "source": {
+        "name": "American Hospital Association",
+        "url": "https://www.aha.org/fact-sheets/2026-07-31-fact-sheet-artificial-intelligence-and-coding-intensity",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le renvoi de balle",
+      "body": "La fédération des hôpitaux rappelle que ces mêmes assureurs **décrivent leurs assurés comme plus malades** quand il s'agit de calculer ce qu'on leur verse.",
+      "evidence": "At the same time, many of the same insurers that have instituted such downcoding programs have themselves argued that their enrollee populations are sicker and in need of more services for purposes of their own payments",
+      "source": {
+        "name": "American Hospital Association",
+        "url": "https://www.aha.org/fact-sheets/2026-07-31-fact-sheet-artificial-intelligence-and-coding-intensity",
+        "date": "2026-07-31"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Des robots contre des robots",
+      "body": "Le fondateur d'Abridge reconnaît que tout cela peut mener à *un futur dystopique dont personne ne veut*, avec des agents qui se battent contre des agents.",
+      "evidence": "Shiv Rao, founder of AI startup Abridge, acknowledged that the use of AI could lead to “a horrible dystopic future nobody wants to live in,” with “bots fighting bots, agents fighting agents.”",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+        "date": "2026-09-26"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui paie une mutuelle",
+      "sub": "L'actu IA, vérifiée ligne à ligne."
+    }
+  ],
+  "sources": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+      "accessed": "2026-09-27"
+    },
+    {
+      "name": "Business Model Analyst",
+      "url": "https://businessmodelanalyst.com/hospital-ai-coding-drg-tiers-blue-cross/",
+      "accessed": "2026-09-27"
+    },
+    {
+      "name": "American Hospital Association",
+      "url": "https://www.aha.org/fact-sheets/2026-07-31-fact-sheet-artificial-intelligence-and-coding-intensity",
+      "accessed": "2026-09-27"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Mêmes soins, 942 millions de plus",
+    "beats": [
+      {
+        "script": "Tu te fais opérer. On te soigne exactement comme avant. Et pourtant, aux États-Unis, l'assureur Blue Cross Blue Shield dit avoir payé près d'un milliard de dollars de plus en deux ans.",
+        "visual": {
+          "type": "photo",
+          "query": "operating theatre surgery",
+          "alt": "des mains gantées et un bistouri au-dessus d'une incision éclairée",
+          "file": "media/2026-09-27-ia-facture-hopital/p_theatre_916.jpg",
+          "credit": "Medical surgery, healthcare photo · CC0"
+        }
+      },
+      {
+        "script": "Et ce qui a changé, ce n'est pas ton état de santé. C'est un logiciel qui relit ton dossier, ligne par ligne, pour y trouver un diagnostic de plus.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+          "file": "media/2026-09-27-ia-facture-hopital/shot_tc_crop.png"
+        }
+      },
+      {
+        "script": "Sur ces 942 millions, 653 viennent de diagnostics secondaires. Plus de 55 000 séjours sont passés dans une catégorie mieux payée. Près de 11 900 dollars de plus, à chaque fois.",
+        "visual": {
+          "type": "card",
+          "value": "11 900 $",
+          "label": "de plus par séjour passé en catégorie complexe"
+        }
+      },
+      {
+        "script": "Et l'assureur dit avoir vérifié. Dans les hôpitaux qui déclarent le plus de cas compliqués, transfusions et réanimations ne sont pas plus nombreuses. Le dossier change, le soin ne change pas.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://businessmodelanalyst.com/hospital-ai-coding-drg-tiers-blue-cross/",
+          "file": "media/2026-09-27-ia-facture-hopital/shot_bma_crop.png"
+        }
+      },
+      {
+        "script": "Sauf que les hôpitaux ne sont pas d'accord. Leur fédération répond que ces accusations sont sans fondement, et que les patients sont simplement plus âgés et plus malades.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.aha.org/fact-sheets/2026-07-31-fact-sheet-artificial-intelligence-and-coding-intensity",
+          "file": "media/2026-09-27-ia-facture-hopital/shot_aha.png"
+        }
+      },
+      {
+        "script": "Et elle retourne l'argument. Ces mêmes assureurs, dit-elle, présentent leurs assurés comme plus malades quand il s'agit de calculer ce qu'on leur verse à eux.",
+        "visual": {
+          "type": "photo",
+          "query": "hospital corridor dark",
+          "alt": "un couloir d'hôpital vide",
+          "file": "media/2026-09-27-ia-facture-hopital/p_corr.jpg",
+          "credit": "CC0"
+        }
+      },
+      {
+        "script": "Résultat, chacun sort son IA: une pour facturer, une pour contester. Le patron d'Abridge parle déjà d'un futur dystopique dont personne ne veut. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "card",
+          "value": "DEUX IA",
+          "label": "une qui facture, une qui conteste"
+        }
+      }
+    ]
+  }
+}
