@@ -86,7 +86,7 @@
       "caveat": "Le Conseil national de la recherche jugeait les preuves faibles au mieux, et un test de ce niveau ferait beaucoup d'erreurs.",
       "claimLabel": "La profession",
       "caveatLabel": "Les chercheurs",
-      "evidence": "The American Polygraph Association claims the polygraph is between 80% and 94% accurate. But the 2003 NRC report pointed out that a screening test with this level of accuracy could still lead to a lot of mistakes.",
+      "evidence": "The American Polygraph Association claims the polygraph is between 80% and 94% accurate. But the 2003 NRC report pointed out that a screening test with this level of accuracy could still lead to a lot of mistakes. The DOD employs 2.8 million people; an imperfect system applied at that scale could end up falsely accusing tens of thousands.",
       "source": {
         "name": "MIT Technology Review",
         "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
@@ -147,10 +147,10 @@
   "reel2": {
     "mood": "tension",
     "lang": "fr",
-    "title": "Détecteur de mensonges à IA: 30 millions",
+    "title": "Détecteur de mensonges par IA: 30 millions",
     "beats": [
       {
-        "script": "Une machine qui lit ton corps à distance pour décider si tu mens. Aucun fil, rien de collé sur toi. Le Pentagone y met 30 millions de dollars. Et tu sais ce qu'en disent les chercheurs ?",
+        "script": "Une machine qui lit ton corps à distance pour décider si tu mens. Aucun fil, rien de collé sur toi. Le Pentagone en demande 30 millions de dollars. Et tu sais ce qu'en disent les chercheurs ?",
         "visual": {
           "type": "photo",
           "query": "human eye macro",
@@ -186,7 +186,7 @@
         }
       },
       {
-        "script": "Mais en 2003, le Conseil national de la recherche américain jugeait déjà les preuves faibles au mieux. Et le ministère emploie des millions de personnes: un test pareil pourrait en accuser à tort des dizaines de milliers.",
+        "script": "Mais en 2003, le Conseil national de la recherche américain jugeait déjà les preuves faibles au mieux. Et le Pentagone emploie des millions de personnes: un test pareil pourrait en accuser à tort des dizaines de milliers.",
         "visual": {
           "type": "screenshot",
           "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next",
