@@ -1,13 +1,13 @@
 {
-  "at": "2026-09-28T16:54:31.474Z",
-  "n": 122,
+  "at": "2026-09-28T19:55:05.223Z",
+  "n": 123,
   "nSettled": 117,
   "medianViews": 142,
   "medianRetentionPct": 15,
   "top": [
     {
       "slug": "2026-09-24-ia-trouve-systeme-adn",
-      "views": 3665,
+      "views": 3684,
       "retentionPct": 40,
       "saved": 11,
       "shares": 2,
@@ -269,7 +269,7 @@
         "published": [
           {
             "slug": "2026-09-26-ia-casse-code-enigma",
-            "views": 3186
+            "views": 3224
           },
           {
             "slug": "2026-09-27-ia-facture-hopital",
@@ -298,9 +298,9 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 3665,
-      "reach": 3054,
-      "avgWatchS": 24.1,
+      "views": 3684,
+      "reach": 3067,
+      "avgWatchS": 24.2,
       "retentionPct": 40,
       "likes": 14,
       "comments": 3,
@@ -315,8 +315,8 @@
       "slug": "2026-09-26-ia-casse-code-enigma",
       "at": "2026-09-27T11:02:49.598Z",
       "hourUtc": 11,
-      "views": 3186,
-      "reach": 2768,
+      "views": 3224,
+      "reach": 2800,
       "avgWatchS": 19.3,
       "retentionPct": 32,
       "likes": 4,
@@ -1751,6 +1751,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-28-applis-ia-fuite-donnees",
+      "at": "2026-09-28T11:16:43.456Z",
+      "hourUtc": 11,
+      "views": 123,
+      "reach": 118,
+      "avgWatchS": 3.3,
+      "retentionPct": 5,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une société de sécurité a trouvé 16 326 bases de données lisibles par n'importe qui sur le web. Noms, adresses, téléphones, mots de passe.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-01-astra-dix-problemes",
       "at": "2026-08-01T15:47:25.907Z",
       "hourUtc": 15,
@@ -1783,23 +1800,6 @@
       "themes": [],
       "sendTest": "Instagram va se couper tout seul a minuit pour les ados, et se limiter a deux heures par jour. Reste a savoir qui est un ado.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-28-applis-ia-fuite-donnees",
-      "at": "2026-09-28T11:16:43.456Z",
-      "hourUtc": 11,
-      "views": 119,
-      "reach": 116,
-      "avgWatchS": 3.3,
-      "retentionPct": 6,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une société de sécurité a trouvé 16 326 bases de données lisibles par n'importe qui sur le web. Noms, adresses, téléphones, mots de passe.",
-      "settled": false
     },
     {
       "slug": "2026-08-01-penurie-memoire-samsung",
@@ -2166,6 +2166,25 @@
       "themes": [],
       "sendTest": "9 000 jeux vidéo fabriqués juste en tapant une phrase. 71% de ceux qui les ont faits n'avaient jamais ouvert le logiciel.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-28-pentagone-detecteur-mensonges",
+      "at": "2026-09-28T17:02:11.698Z",
+      "hourUtc": 17,
+      "views": 58,
+      "reach": 52,
+      "avgWatchS": 4.7,
+      "retentionPct": 8,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "infra"
+      ],
+      "sendTest": "Le Pentagone veut un détecteur de mensonges qui lit ton corps à distance. Les chercheurs disent que le test de base ne marche déjà pas.",
+      "settled": false
     },
     {
       "slug": "2026-09-22-googlebook-gemini",

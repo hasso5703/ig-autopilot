@@ -1587,6 +1587,14 @@ ENTRIES:
   en bout sur conteneur froid, build muet de 7 beats entierement epingles en ~60 s,
   0,00 $. Proof: run 16h30 28/09, Reel pentagone-detecteur-mensonges, permalink
   Dd1rDf-jbKb.
+  Ajout 28/09 (19h30, veille): rendent 200 au fetch du gate ce soir, mesures a la
+  main avec le flatten de validate.mjs, sur les histoires arrivees APRES les deux
+  publications du jour: **anthropic.com/claude-<produit> NOUVEAU** (la page produit
+  Sonnet 5.5, 19 ko aplatis, ce n'est PAS /news: sur un lancement de modele le
+  primaire vit sous /claude-<slug>, l'index /news ne le porte pas, famille du 13/08),
+  technologyreview.com (15 ko, re-confirme le 28/09 16h30) et techcrunch.com sur deux
+  articles (7 et 6 ko aplatis seulement, donc breves: de quoi gater un claim, pas d'y
+  chercher un retournement). Proof: veille 19h30 28/09, 4 fetchs, 4 x 200.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
@@ -3154,6 +3162,25 @@ ENTRIES:
   spectateur qu'on voulait garder, et personne ici ne peut le lire ni y repondre.
   Seul Hasan peut re-autoriser la portee commentaires, ou repondre dans l'appli.
   Proof: veille 19h30 25/09.
+  Ajout 28/09 (19h30, veille), UN RUN DE PUBLICATION PEUT OUBLIER SON SEED ET RIEN
+  NE CRIE. L'etape 10b est la derniere du run, apres la publication et le record,
+  donc c'est elle qui saute quand la fenetre se ferme: le Reel de 10h30 aujourd'hui
+  (applis-ia-fuite-donnees) est parti sans premier commentaire, son journal ne
+  mentionne aucun seed, et state/engagement.jsonl n'a aucune ligne pour son mediaId.
+  Rien dans le guard, le watch ou learn.mjs ne le signale; la SEULE trace est la
+  ligne de engage.mjs recent qui dit "0 seeded by us", et on ne la lit que si un
+  inconnu a commente. REFLEXE DE VEILLE, 10 s et zero reseau, a faire avant l'audit
+  d'historique: pour chaque slug publie aujourd'hui dans state/posted.jsonl, chercher
+  son mediaId dans le champ `target` de state/engagement.jsonl; s'il manque, poser le
+  seed ce soir (le garde-fou anti-double-seed lit `target`, donc il n'y a aucun risque
+  de doublon). Fait ce soir: seed 18164981698482708 pose 8 h apres la publication, sur
+  le detail du consulat (25 000 personnes) qui ne tenait ni dans la minute ni dans la
+  legende. ET LE COMPTE D'INCONNUS EST PASSE DE CINQ (25/09) A SEPT sur SIX medias:
+  les quatre figes depuis le 09/08, DEUX sur 2026-09-24-ia-trouve-systeme-adn (le
+  mieux distribue du compte, 3683 vues) et un sur le Reel de ce matin, tombe dans les
+  8 h. Le token ecrit toujours et ne lit toujours pas (re-confirme, 56 jours apres le
+  03/08): seul Hasan peut repondre dans l'appli ou re-autoriser la portee.
+  Proof: veille 19h30 28/09.
 - 2026-07-30 · Une requete photo au pluriel nu ("vending machines") peut ne
   renvoyer que des decoupes sur fond blanc et echouer sur tous les candidats;
   ajoute un qualificatif (lieu, moment: "vending machines night") pour
@@ -7799,3 +7826,38 @@ ENTRIES:
   non-regression ajoute (132 tests), les deux sens couverts. Ce qui reste a un
   humain et a lui seul: mettre `issuedAt` a jour quand il remplace le jeton.
   Proof: veille 19h30 27/09, src/watch.mjs, test/pipeline.test.mjs.
+  Ajout 28/09 (19h30, veille), 86e mesure morte de la cle media (401 UNAUTHENTICATED
+  sur generativelanguage.googleapis.com/v1beta/models, cle 53 car prefixe AQ.A, donc
+  toujours le jeton ephemere et pas une cle AI Studio AIza de 39 car; dernier achat
+  state/spend.jsonl 01/09 16h54 = 27 JOURS). Jeton IG vivant, `publish.mjs quota`
+  rend 200 (2/100), et watch.mjs imprime desormais "TOKEN compteur perime" au lieu
+  de "MORT" (correctif du 27/09 19h30 verifie en direct ce soir: la ligne est juste).
+  LA COURBE DU MUET S'EST RETOURNEE CETTE SEMAINE, et c'est la premiere fois depuis
+  le 02/09. Fenetres hebdo appariees (lessons.json, Reels reposes seulement, 10 s
+  sans reseau): 19-25/08 voix+veo n=14 -> 15,5% / 155 v / 6 partages / 21 saves;
+  26/08-01/09 voix+veo n=14 -> 17% / 128,5 / 1 / 11; 02-08/09 MUET n=14 -> 10,5% /
+  136,5 / 2 / 6; 09-15/09 n=14 -> 7,5% / 83 / 0 / 3; 16-22/09 n=13 -> 7% / 95 / 0 /
+  0; **23-29/09 n=7 -> 11% / 149 / 2 partages / 13 saves**. Les saves etaient a ZERO
+  la semaine derniere, elles reviennent a 13, et le compte gagne +8 abonnes sur 7
+  jours (57) apres en avoir perdu un. La chute de quatre semaines n'etait donc pas
+  une spirale mecanique du muet: la semaine la plus faible et la semaine du
+  retournement sont construites exactement de la meme facon, a 0,00 $.
+  CE QUI A FAIT LA SEMAINE, ET C'EST UN FAIT DE CHOIX D'HISTOIRE, PAS DE REGIME:
+  deux Reels muets sur onze ont passe les 3 000 vues (24/09 ia-trouve-systeme-adn
+  3684 v / 40%, et 26/09 ia-casse-code-enigma 3224 v / 32%, encore non repose donc
+  hors des medianes ci-dessus) et ils portent A EUX DEUX tous les partages et 19 des
+  21 saves des trois dernieres semaines. Les neuf autres tiennent entre 29 et 331
+  vues. Facteur 25 entre le meilleur et le pire de la MEME semaine, meme mode, meme
+  budget. Les deux racontent la meme chose: une machine a trouve ce que personne
+  n'avait trouve (l'ADN, Enigma), theme sciences/modeles, beat 0 `photo` dense et
+  sombre sans un mot lisible. Les stories de proximite pure de la meme semaine
+  (ta facture d'hopital 152 v, tes donnees qui fuient 123 v, ton telephone 149 v)
+  sont restees au plancher. Ce n'est PAS une regle a appliquer -- n=2, et le manuel
+  a mis `proximite` a 0,20 sur des mesures d'aout qui restent valides -- mais c'est
+  le fait a poser devant Hasan avant que quiconque retouche une ponderation.
+  L'ecart AVANT/DEPUIS sur tout l'echantillon reste entier et reste le vrai cout:
+  n=71 avant le 02/09 -> 19% / 185 v / 31 partages / 82 saves; n=48 depuis -> 9% /
+  119 v / 4 partages / 22 saves. La seule action qui rende la voix et l'ouverture
+  veo (n=55, 197 vues medianes, 22,3% de retention, ligne gelee depuis le 01/09)
+  reste une cle AI Studio AIza de 39 caracteres, que seul Hasan peut coller dans
+  l'environnement. Proof: veille 19h30 28/09.
