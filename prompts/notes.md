@@ -1552,6 +1552,21 @@ ENTRIES:
   h1 exact, la phrase chiffree ET les trois citations dans le cadre apres
   `crop=1290:2336:0:460` (la bande d'illustration en haut vaut 460 px sur une
   breve "In Brief"). Proof: scout 06h30 27/09, spec ia-facture-hopital.
+  Ajout 28/09 (06h30), UN DOMAINE NEUF ET SON PIEGE DE GABARIT.
+  **upguard.com/blog NOUVEAU** (le primaire de toute etude UpGuard): 200 au fetch
+  du gate (21 ko aplatis), gate du PREMIER coup sur 4 citations sur 4, et se
+  capture en 47 s / 5 frames, h1 exact, `altsInFrame` VIDE (donc pas
+  d'illustration generee, famille du 27/09). MAIS son gabarit de blog colle DEUX
+  GROS BOUTONS COMMERCIAUX ("Get a demo", "Free trial") juste sous le titre,
+  donc DANS le cadre que le moteur recadre (shotAt prend le HAUT de la capture:
+  880 px de large sur 1150 de haut, soit ~60% de la hauteur d'une capture
+  1290x2796). Sur une histoire ou la source est AUSSI le vendeur du risque
+  qu'elle mesure, ces deux boutons se lisent comme une publicite dans notre Reel.
+  Remede a 0 $, verifie a l'oeil ce matin: `crop=1290:700:0:0` garde "Publish
+  date", la date en clair, "10 minute read" et le titre ENTIER sur trois lignes,
+  et coupe les boutons. Generalise: sur un blog d'editeur de logiciel, regarde ce
+  qui vit entre le titre et le premier paragraphe avant de pinner le recu.
+  Proof: scout 06h30 28/09, spec applis-ia-fuite-donnees.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
@@ -3947,6 +3962,35 @@ ENTRIES:
   mountain view, computer keyboard backlit macro, casino chips stack table.
   Proof: scout 06h30 21/09, specs draftkings-ia-joueurs-perdants et
   gemini-pirate-trois-entreprises.
+  Ajout 28/09 (06h30), TROIS MESURES SUR UN SUJET "INSTITUTION CELEBRE", et la
+  premiere coute un run entier si on ne la connait pas. (1) LE FILTRE NEAR-WHITE
+  TUE TOUT BATIMENT PHOTOGRAPHIE DE L'EXTERIEUR, parce que le ciel: "pentagon
+  building aerial" rend 60, 40, 35, 31 et 63% de near-white, zero candidat garde;
+  "pentagon building night" pareil. Quand l'histoire a pour decor un batiment
+  connu, ne compte PAS sur son exterieur, cherche l'OBJET de l'histoire.
+  (2) ET LE PIEGE DE CONTEXTE EST PIRE QUE L'ECHEC: sur Commons, "pentagon
+  building night" et "pentagon corridor" rendent presque exclusivement de
+  l'imagerie DU 11 SEPTEMBRE (fumee, flammes, "Destruction at the Pentagon",
+  "rescue operations post-September 11"). Mis sous une ligne de karaoke sur un
+  budget de detecteur de mensonges, c'est la fausse accusation de contexte du
+  27/09 (hopital ukrainien bombarde) en plus gros. Lis le TITRE, toujours.
+  (3) UN TITRE EXACT PEUT CACHER UNE IMAGE VIDE, et seul le jpg le voit:
+  "polygraph chart" rend "Herndon 1-12 Charts from the polygraph examination of
+  Jack Ruby ... (page 52)" (pdm, Commons, 1600x1245, near-white passe), et le
+  fichier est une POCHETTE D'ARCHIVE NOIRE VIDE, pas un trace. Le reflexe
+  titre+auteur du 08/09 ne suffit donc pas a lui seul sur les fonds d'archive
+  numerises page par page: une "page N" d'un document scanne peut etre un dos,
+  une pochette ou un verso blanc. CE QUI A MARCHE, 17 requetes pour 5 photos
+  gardees: "human eye macro" rend une macro d'iris rawpixel CC0 (1080x717,
+  dense, sombre, zero prose, zero marque, AUCUN visage identifiable puisque le
+  cadre s'arrete a la paupiere). C'est la meilleure frame zero muette mesuree
+  pour toute histoire de biometrie, de capteur ou de corps lu par une machine;
+  "lie detector test" et "polygraph machine" rendent l'objet lui-meme (examen
+  d'archives indonesien, polygraphe Keeler du FBI sur fond bleu studio).
+  RE-CONFIRMATION du 08/09 19h30, 4 fois sur 7 ce matin: acquireOne ECRIT un jpg
+  valide meme quand il REFUSE le candidat. Lis la ligne OK/FAIL, et SUPPRIME les
+  refuses avant de lander, sinon un spec herite peut en pinner un.
+  Proof: scout 06h30 28/09, spec pentagone-detecteur-mensonges.
 - 2026-08-02 · La fenetre de mots BOUGE PENDANT le run: un script ecrit au
   PLAFOND peut devenir invalide entre deux builds. Le registre disait 3,704
   mots/s (12 lectures), les 3 lectures du jour sont revenues a 3,54 / 3,52 /

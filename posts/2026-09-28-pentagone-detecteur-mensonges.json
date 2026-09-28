@@ -178,25 +178,27 @@
         }
       },
       {
-        "script": "En 2003, le Conseil national de la recherche américain jugeait les preuves de son efficacité faibles au mieux. Les polygraphistes, eux, le disent fiable entre 80 et 94 pour cent.",
+        "script": "L'association américaine des polygraphistes, elle, dit son test fiable entre 80 et 94 pour cent. C'est le chiffre que tout le monde cite.",
         "visual": {
-          "type": "screenshot",
-          "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
+          "type": "card",
+          "value": "80 À 94 %",
+          "label": "la fiabilité que revendique la profession"
         }
       },
       {
-        "script": "Et le même rapport prévenait qu'un test de ce niveau ferait beaucoup d'erreurs. Le ministère emploie des millions de personnes: il pourrait en accuser à tort des dizaines de milliers.",
+        "script": "Sauf qu'en 2003, le Conseil national de la recherche américain jugeait déjà les preuves faibles au mieux. Et le ministère emploie des millions de personnes: un test pareil pourrait en accuser à tort des dizaines de milliers.",
         "visual": {
           "type": "screenshot",
-          "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next"
+          "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next",
+          "file": "media/2026-09-28-pentagone-detecteur-mensonges/shot_tnw.png"
         }
       },
       {
         "script": "Alors greffer de l'IA là-dessus ? Le juriste Kyri Kotsoglou répond: le pire des deux mondes. De l'incertitude posée sur un test déjà sans validité.",
         "visual": {
-          "type": "card",
-          "value": "LE PIRE",
-          "label": "des deux mondes, dit le juriste Kyri Kotsoglou"
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+          "file": "media/2026-09-28-pentagone-detecteur-mensonges/shot_mittr.png"
         }
       },
       {

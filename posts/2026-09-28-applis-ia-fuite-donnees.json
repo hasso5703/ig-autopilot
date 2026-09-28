@@ -174,7 +174,8 @@
         "script": "Quand tu crées la table toi-même, dans l'interface, la protection est mise d'office. Quand c'est l'agent qui la crée, non.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+          "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+          "file": "media/2026-09-28-applis-ia-fuite-donnees/shot_upguard.png"
         }
       },
       {
@@ -209,7 +210,8 @@
         "script": "UpGuard dit avoir prévenu les propriétaires des applis concernées, et résume le reste en une phrase: caché à la vue de tous, jusqu'à ce que quelqu'un regarde. Abonne-toi pour l'actu IA de demain, et laisse un like.",
         "visual": {
           "type": "screenshot",
-          "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+          "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+          "file": "media/2026-09-28-applis-ia-fuite-donnees/shot_upguard.png"
         }
       }
     ]
