@@ -1567,6 +1567,26 @@ ENTRIES:
   et coupe les boutons. Generalise: sur un blog d'editeur de logiciel, regarde ce
   qui vit entre le titre et le premier paragraphe avant de pinner le recu.
   Proof: scout 06h30 28/09, spec applis-ia-fuite-donnees.
+  Ajout 28/09 (16h30), CORRECTION DE L'ENTREE DU 15/09 SUR technologyreview.com:
+  elle imposait `crop=1290:2030:0:0` contre une banniere paywall "THIS IS YOUR FIRST
+  COMPLIMENTARY STORY" qui survivait aux passes de consentement. Le recu epingle par
+  le scout ce matin (362 s / 56 frames, AUCUN recadrage) rend, dans la fenetre visible
+  des ~1686 px et verifie sur la frame du Reel publie: masthead "MIT Technology
+  Review", rubrique ARTIFICIAL INTELLIGENCE, titre entier, le SOUS-TITRE qui porte la
+  citation porteuse ("the worst of both worlds"), la signature "By Amit Katwala" ET
+  "September 25, 2026". Zero banniere paywall. Le crop du 15/09 n'est donc PAS
+  systematique: regarde la frame avant de recadrer (meme conclusion que pour
+  the-decoder le 18/09). Sa vignette de une reste un montage photo CREDITE
+  ("Stephanie Arnett/MIT Technology Review | Adobe Stock, Rawpixel"), donc pas une
+  image generee: ne la coupe pas par reflexe. thenextweb.com re-confirme en recu pour
+  la 5e fois (16/09, 24/09 x2, 25/09): propre sans recadrage, masthead TNW, rubrique,
+  titre entier, chapo qui porte le claim, et toujours aucune date dans le cadre.
+  Les DEUX se re-gatent DU PREMIER COUP en re-gate de publication 10 h apres le gate
+  du scout (14 verifications sur 14, 0 erreur, verifiedOnline). CHRONO: demarrage
+  16h49, PUBLIE a 17h01:51 UTC = 19h01 Paris (pic du soir), soit TREIZE MINUTES bout
+  en bout sur conteneur froid, build muet de 7 beats entierement epingles en ~60 s,
+  0,00 $. Proof: run 16h30 28/09, Reel pentagone-detecteur-mensonges, permalink
+  Dd1rDf-jbKb.
 - 2026-09-15 · (06h30) LA DATE DE SOURCE FINANCE LES CHIFFRES PARLES, et c'est un
   TROU DU GATE, pas un piege de redaction. `allEvidence` (validate.mjs:1129) pool
   aussi `numbers(s.source.date)`: un chiffre prononce qui tombe sur le jour, le
@@ -1582,6 +1602,24 @@ ENTRIES:
   diapo. Ici le remede etait une diapo de plus portant la vraie phrase ("more
   whistleblowers than cheaters: 24 compared to 14"). Ne corrige PAS validate.mjs,
   c'est de la constitution: propose-le dans le rapport.
+  Ajout 28/09 (16h30), LE MEME TROU DANS L'AUTRE SENS ET LE GATE LE VOIT, MAIS
+  SEULEMENT EN AVERTISSEMENT: une MAGNITUDE ECRITE EN TOUTES LETTRES ("des millions
+  de personnes", "des dizaines de milliers") ne porte aucun chiffre, donc le controle
+  des chiffres ne la tient pas -- validate.mjs imprime alors "the narration spells out
+  bare magnitude(s) with no adjacent digit: millions, milliers" et laisse PASSER.
+  C'est un avertissement a traiter comme une erreur sur un spec herite: mesure de ce
+  soir, le beat 4 disait "le ministere emploie des millions de personnes: un test
+  pareil pourrait en accuser a tort des dizaines de milliers", vrai (MITTR: "The DOD
+  employs 2.8 million people; an imperfect system applied at that scale could end up
+  falsely accusing tens of thousands") mais porte par AUCUNE citation du spec.
+  REMEDE mesure a 4 min et 0 aller-retour, et il est meilleur qu'une diapo de plus:
+  ETENDRE la citation d'evidence de la diapo voisine jusqu'a la phrase qui porte la
+  magnitude, en la tranchant du flatten (`node scout-flatten.mjs <url>` puis indexOf
+  /slice et ecriture du JSON par script, recette du 08/09) -- un empan contigu reste
+  verbatim, le gate le revalide du premier coup, et la phrase parlee redevient
+  tracable. Corollaire de relecture sur tout spec herite: une magnitude en lettres se
+  verifie comme un chiffre, et "des millions" ne doit jamais traduire un chiffre que
+  la source ecrit autrement. Proof: run 16h30 28/09, spec pentagone-detecteur-mensonges.
   DOMAINES MESURES AU FETCH DU GATE ce matin, tous 200 ET gates du premier coup
   (22 citations sur 22 sur le spec Apple, 8 sur 8 sur le spec DeepMind):
   apple.com/newsroom NOUVEAU -- le primaire d'Apple est joignable, page du jour
