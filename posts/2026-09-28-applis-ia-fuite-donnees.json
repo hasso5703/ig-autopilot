@@ -1,0 +1,217 @@
+{
+  "slug": "2026-09-28-applis-ia-fuite-donnees",
+  "centralClaim": "Security firm UpGuard found 16,326 databases hosted by Supabase exposing readable tables to the public web, with over half showing indicators of personal data such as names, addresses and phone numbers.",
+  "corroboration": [
+    {
+      "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+      "quote": "Across the candidate set we identified 16,326 databases exposing readable tables. Given such a large set, we used the table schemas to assess the types of data potentially exposed in each rather than trying to read every row of every table. Over half of the databases had indicators of some PII."
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/",
+      "quote": "UpGuard told TechCrunch that it found around 16,000 databases on which some degree of personal data was exposed while they were hosted by Supabase, which allows web and app developers to store and run their databases."
+    }
+  ],
+  "caption": "Des applis écrites par une IA ont laissé 16 326 bases de données lisibles par n'importe qui.\n\nLa société de sécurité UpGuard a passé au crible les sites qui rangent leurs données chez Supabase, la plateforme devenue le réflexe des applis fabriquées à l'IA. Elle a compté 16 326 bases dont les tables étaient lisibles depuis le web ouvert. Plus de la moitié portaient des indices de données personnelles.\n\nCe qu'on y trouve. Des noms, des adresses, des numéros de téléphone et des mots de passe, selon TechCrunch.\n\nLe détail qui n'est pas dans la vidéo. Chez un service de voiturier américain, plus de 100 000 clients étaient exposés avec leur numéro de téléphone, environ 43 000 avec leur adresse e-mail et leur nom complet, et environ 78 000 avec leur plaque d'immatriculation.\n\nCe qui coince. Une table créée depuis l'interface arrive avec sa protection activée. Une table créée par programme, c'est-à-dire la façon dont un agent de code travaille, arrive sans.\n\nLa réponse. Le directeur de la sécurité de Supabase, Bil Harmer, dit à TechCrunch que les projets sont sécurisés par défaut et que la sécurité est une responsabilité partagée avec le client.\n\nÀ noter : UpGuard est à la fois l'auteur de l'étude et la société qui vend de la surveillance de ce risque. TechCrunch a recueilli la réponse de Supabase de son côté.\n\nUne appli montée en une soirée par une IA, tu lui confies tes données ou pas ?\n\nupguard.com · techcrunch.com\n\n#IA #IntelligenceArtificielle #ActuIA #Cybersecurite\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "Over 100,000 customers were exposed this time, each with a phone number, about 43,000 of them with email addresses and full names, and about 78,000 with license plate numbers.",
+      "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+    },
+    {
+      "quote": "Since then, Supabase has made product changes to implement RLS by default for tables created in the Table Editor UI. Tables created programmatically through the API, which is how coding agents interact with Supabase, do not enable RLS by default.",
+      "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+    },
+    {
+      "quote": "When reached for comment, Supabase's Chief Information Security Officer Bil Harmer said that while the company has not seen the research, its projects are \"secure by default.\" He described security as a shared responsibility between the company and its customers.",
+      "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/"
+    },
+    {
+      "quote": "Over half of the databases had indicators of some PII.",
+      "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+    }
+  ],
+  "sendTest": "Une société de sécurité a trouvé 16 326 bases de données en accès libre sur le web. Noms, adresses, téléphones. Le code venait d'une IA.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "25 septembre 2026 · UpGuard",
+      "headline": "16 326 bases ouvertes, *mots de passe* compris",
+      "hero": {
+        "value": "25 000",
+        "label": "personnes et leurs adresses dans la base d'un seul consulat"
+      },
+      "swipe": "Les reçus, diapo par diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "16 326",
+      "unit": "bases de données aux tables lisibles",
+      "body": "UpGuard a cherché les sites qui rangent leurs données chez Supabase. **Plus de la moitié portaient des indices de données personnelles.**",
+      "evidence": "Across the candidate set we identified 16,326 databases exposing readable tables. Given such a large set, we used the table schemas to assess the types of data potentially exposed in each rather than trying to read every row of every table. Over half of the databases had indicators of some PII.",
+      "source": {
+        "name": "UpGuard",
+        "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui était lisible",
+      "body": "Des noms, des adresses, des numéros de téléphone et des mots de passe, **en accès public**, sans que personne ait eu à forcer quoi que ce soit.",
+      "evidence": "UpGuard says it sought to understand the scale of exposed data across the platform, and found publicly accessible names, addresses, phone numbers, and user passwords.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "D'où vient la vague",
+      "body": "Les outils d'IA fabriquent une appli en quelques heures. **Le code qui en sort peut contenir des failles de sécurité**, ou réclamer une configuration que le développeur ignore.",
+      "evidence": "The findings highlight how vibe-coded apps and websites can spill or expose sensitive data through basic misconfigurations and improper security. While AI tools can be used to easily build websites and apps, the generated code can often contain security flaws, or apps might require specific configuration that the developer may be ignorant of.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "Une table créée depuis l'interface arrive protégée d'office.",
+      "caveat": "Une table créée par programme, la façon dont travaille un agent de code, arrive sans.",
+      "claimLabel": "À la main",
+      "caveatLabel": "Par l'agent",
+      "evidence": "Since then, Supabase has made product changes to implement RLS by default for tables created in the Table Editor UI. Tables created programmatically through the API, which is how coding agents interact with Supabase, do not enable RLS by default.",
+      "source": {
+        "name": "UpGuard",
+        "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un service de voiturier",
+      "body": "Plus de 100 000 clients exposés avec leur numéro de téléphone, environ 43 000 avec leur nom complet, **environ 78 000 avec leur plaque d'immatriculation**.",
+      "evidence": "Over 100,000 customers were exposed this time, each with a phone number, about 43,000 of them with email addresses and full names, and about 78,000 with license plate numbers.",
+      "source": {
+        "name": "UpGuard",
+        "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Un consulat, en France",
+      "body": "Une autre base portait 25 000 personnes avec leurs adresses, pour le consulat d'un État africain. **UpGuard écrit que ces 25 000 là sont une population vulnérable.**",
+      "evidence": "This misconfigured Supabase db contains 25,000 users with PII and physical addresses for a consulate operated by an African national government. The nature of the operation means the 25,000 people exposed here belong to a vulnerable population.",
+      "source": {
+        "name": "UpGuard",
+        "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "Security at Supabase is never finished. We care deeply about getting it right, and we'll keep making it easier for every developer to ship securely.",
+      "attribution": "Bil Harmer, directeur de la sécurité de Supabase, à TechCrunch",
+      "evidence": "\"Security at Supabase is never finished. We care deeply about getting it right, and we'll keep making it easier for every developer to ship securely,\" said Harmer.",
+      "source": {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui installe des applis sans regarder",
+      "sub": "L'actu IA, et ce qu'elle change pour toi."
+    }
+  ],
+  "sources": [
+    {
+      "name": "UpGuard",
+      "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+      "accessed": "2026-09-28"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/",
+      "accessed": "2026-09-28"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "16 326 bases ouvertes, mots de passe compris",
+    "beats": [
+      {
+        "script": "Des noms, des adresses, des numéros de téléphone, des mots de passe. Tout ça était lisible par n'importe qui sur le web ouvert. UpGuard en a compté 16 326 bases de données. Et tu sais qui avait écrit le code ?",
+        "visual": {
+          "type": "photo",
+          "query": "computer monitor code",
+          "alt": "du code affiché sur un écran dans le noir",
+          "file": "media/2026-09-28-applis-ia-fuite-donnees/p_code.jpg",
+          "credit": "PHP Code · rawpixel · CC0"
+        }
+      },
+      {
+        "script": "Une IA. Ces applis sortent en quelques heures d'un assistant de code, et le code qui en sort peut contenir des failles de sécurité.",
+        "visual": {
+          "type": "card",
+          "value": "16 326",
+          "label": "bases de données aux tables lisibles depuis le web"
+        }
+      },
+      {
+        "script": "Mais le trou n'est pas vraiment dans l'appli. Il est en dessous, chez Supabase, la plateforme où ces applis rangent leurs données.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/"
+        }
+      },
+      {
+        "script": "Quand tu crées la table toi-même, dans l'interface, la protection est mise d'office. Quand c'est l'agent qui la crée, non.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+        }
+      },
+      {
+        "script": "Résultat, chez un service de voiturier américain: plus de 100 000 clients avec leur téléphone, et environ 78 000 avec leur plaque d'immatriculation.",
+        "visual": {
+          "type": "photo",
+          "query": "parking garage cars night",
+          "alt": "un parking couvert désert la nuit",
+          "file": "media/2026-09-28-applis-ia-fuite-donnees/p_parking.jpg",
+          "credit": "Car parking · rawpixel · CC0"
+        }
+      },
+      {
+        "script": "Et dans une autre base, 25 000 personnes avec leurs adresses, pour le consulat d'un État africain. UpGuard écrit que ces 25 000 là sont une population vulnérable.",
+        "visual": {
+          "type": "card",
+          "value": "25 000",
+          "label": "personnes et leurs adresses, dans la base d'un consulat"
+        }
+      },
+      {
+        "script": "Supabase répond que ses projets sont sécurisés par défaut, et que la sécurité est une responsabilité partagée avec le client.",
+        "visual": {
+          "type": "photo",
+          "query": "server rack cables",
+          "alt": "une allée de baies de serveurs",
+          "file": "media/2026-09-28-applis-ia-fuite-donnees/p_servers.jpg",
+          "credit": "Front of server racks at NERSC · Derrick Coetzee · CC0"
+        }
+      },
+      {
+        "script": "UpGuard dit avoir prévenu les propriétaires des applis concernées, et résume le reste en une phrase: caché à la vue de tous, jusqu'à ce que quelqu'un regarde. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+        }
+      }
+    ]
+  }
+}

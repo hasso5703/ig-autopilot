@@ -1,0 +1,214 @@
+{
+  "slug": "2026-09-28-pentagone-detecteur-mensonges",
+  "centralClaim": "A Pentagon budget request asks for $30.3 million over five years for Polygraph+, a lie detector scored with artificial intelligence that uses standoff sensing to take physiological readings without attaching a device to the subject.",
+  "corroboration": [
+    {
+      "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+      "quote": "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request. The program, called Polygraph+ or Polygraph Next, will focus on scoring algorithms that use artificial intelligence and machine learning and on a technique called \"standoff sensing,\" which refers to the ability to take physiological readings without attaching a device to a subject's person."
+    },
+    {
+      "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next",
+      "quote": "The Pentagon wants $30.3m over five years to build an AI lie detector that reads the body without touching it. The programme, called Polygraph+ or Polygraph Next, appears in the Defense Counterintelligence and Security Agency's 2027 budget request."
+    }
+  ],
+  "caption": "Le Pentagone veut 30 millions de dollars pour un détecteur de mensonges qui lit le corps à distance.\n\nLe programme s'appelle Polygraph+, ou Polygraph Next. Il apparaît dans la demande budgétaire de l'agence américaine qui mène les enquêtes d'habilitation, et il repose sur deux choses: des algorithmes de notation à base d'IA, et la lecture des signaux du corps à distance. Le budget demandé est de 30.3 millions de dollars sur cinq ans, et le Congrès ne l'a pas encore approuvé.\n\nÀ quoi ça doit servir. À passer au crible les candidats à l'embauche et à repérer les menaces venues de l'intérieur.\n\nCe qui coince. Un polygraphe ne détecte pas les mensonges. Il enregistre le souffle, le pouls, la tension et la sueur, et c'est un examinateur qui interprète les variations. En 2003, le Conseil national de la recherche américain jugeait les preuves de son efficacité faibles au mieux.\n\nLe détail qui n'est pas dans la vidéo. Le Pentagone a déjà fait tester ce genre d'outils. En 2023, son unité d'innovation avait retenu deux entreprises pour des prototypes: l'une dit mesurer le rythme cardiaque et la respiration avec des caméras ordinaires, l'autre suit les mouvements de tête, la température de la peau du visage et l'activité des pores.\n\nÀ noter : l'enquête et les experts viennent de MIT Technology Review. The Next Web a lu le document budgétaire de son côté et en tire les montants annuels, mais cite la même enquête pour le reste.\n\nUne machine qui note ta sincérité à l'embauche, tu accepterais de passer devant, oui ou non ?\n\ntechnologyreview.com · thenextweb.com\n\n#IA #IntelligenceArtificielle #ActuIA #Pentagone\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "The Pentagon wants $30 million to build an AI-powered lie detector",
+      "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
+    },
+    {
+      "quote": "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request.",
+      "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
+    },
+    {
+      "quote": "According to the budget document, which has not yet been approved by Congress, the new technology will be used for vetting of prospective employees and \"insider threat detection.\"",
+      "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
+    },
+    {
+      "quote": "A polygraph does not detect lies. It records breathing, pulse, blood pressure and sweat, and an examiner reads the changes. In 2003, the US National Research Council called the evidence for its accuracy \"weak at best\".",
+      "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next"
+    },
+    {
+      "quote": "The Pentagon has tested this kind of technology before. In 2023, its Defense Innovation Unit picked two companies to build prototypes. Presage Technologies says it can measure heart and breathing rates with ordinary cameras. Altec Research's prototype tracks head movement, facial skin temperature and pore activity.",
+      "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next"
+    }
+  ],
+  "sendTest": "Le Pentagone veut un détecteur de mensonges qui lit ton corps à distance. Les chercheurs disent que le test de base ne marche déjà pas.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "25 septembre 2026 · MIT Technology Review",
+      "headline": "Le Pentagone veut lire ton corps *à distance*",
+      "hero": {
+        "value": "80 %",
+        "label": "à 94 %, la fiabilité que revendiquent les polygraphistes"
+      },
+      "swipe": "Les reçus, diapo par diapo"
+    },
+    {
+      "type": "stat",
+      "figure": "30 M$",
+      "unit": "demandés sur cinq ans",
+      "body": "Le programme s'appelle Polygraph+, ou Polygraph Next. **Il note avec de l'IA, et lit les signaux du corps sans rien y attacher.**",
+      "evidence": "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request. The program, called Polygraph+ or Polygraph Next, will focus on scoring algorithms that use artificial intelligence and machine learning and on a technique called \"standoff sensing,\" which refers to the ability to take physiological readings without attaching a device to a subject's person.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "À quoi ça sert",
+      "body": "À passer au crible les candidats à l'embauche et à repérer les menaces internes. **Le Congrès n'a pas encore approuvé la demande.**",
+      "evidence": "According to the budget document, which has not yet been approved by Congress, the new technology will be used for vetting of prospective employees and \"insider threat detection.\"",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qu'un polygraphe fait vraiment",
+      "body": "Il ne détecte pas les mensonges. **Il enregistre le souffle, le pouls, la tension et la sueur**, et c'est un examinateur qui lit les variations.",
+      "evidence": "A polygraph does not detect lies. It records breathing, pulse, blood pressure and sweat, and an examiner reads the changes. In 2003, the US National Research Council called the evidence for its accuracy \"weak at best\".",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "contrast",
+      "claim": "L'association des polygraphistes revendique 80 % à 94 % de fiabilité.",
+      "caveat": "Le Conseil national de la recherche jugeait les preuves faibles au mieux, et un test de ce niveau ferait beaucoup d'erreurs.",
+      "claimLabel": "La profession",
+      "caveatLabel": "Les chercheurs",
+      "evidence": "The American Polygraph Association claims the polygraph is between 80% and 94% accurate. But the 2003 NRC report pointed out that a screening test with this level of accuracy could still lead to a lot of mistakes.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "It's a misguided effort to reduce the complex to something that is tangible.",
+      "attribution": "Kyri Kotsoglou, juriste à l'université de Northumbria",
+      "evidence": "\"It's a misguided effort to reduce the complex to something that is tangible,\" says Kyri Kotsoglou, a legal scholar at Northumbria University in the UK who studies the use of polygraphs in the justice system.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "L'IA par-dessus",
+      "body": "Kotsoglou appelle l'ajout de l'IA au polygraphe **le pire des deux mondes**: de l'incertitude posée sur un test déjà sans validité.",
+      "evidence": "Kyri Kotsoglou, a legal scholar at Northumbria University in the UK, calls adding AI to the polygraph \"the worst of both worlds\". It adds uncertainty on top of invalidity, Kotsoglou told MIT Technology Review.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui marche vraiment",
+      "body": "La dissuasion. Les sujets avouent souvent avant même que la machine démarre. **Mais ça ne marche que si on croit qu'elle marche.**",
+      "evidence": "She says the machine's biggest effect is deterrence-often, subjects confess before it even begins. \"But that only works if people think a polygraph works,\" she points out.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui passe bientôt un entretien",
+      "sub": "L'actu IA, et ce qu'elle change pour toi."
+    }
+  ],
+  "sources": [
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+      "accessed": "2026-09-28"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next",
+      "accessed": "2026-09-28"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Détecteur de mensonges à IA: 30 millions",
+    "beats": [
+      {
+        "script": "Une machine qui lit ton corps à distance pour décider si tu mens. Aucun fil, rien de collé sur toi. Le Pentagone y met 30 millions de dollars. Et tu sais ce qu'en disent les chercheurs ?",
+        "visual": {
+          "type": "photo",
+          "query": "human eye macro",
+          "alt": "un oeil humain en très gros plan",
+          "file": "media/2026-09-28-pentagone-detecteur-mensonges/p_eye.jpg",
+          "credit": "Green eye · rawpixel · CC0"
+        }
+      },
+      {
+        "script": "Le programme s'appelle Polygraph Next. Il doit servir à filtrer les candidats à l'embauche et à repérer les menaces venues de l'intérieur.",
+        "visual": {
+          "type": "card",
+          "value": "30 M$",
+          "label": "demandés sur cinq ans, pas encore approuvés"
+        }
+      },
+      {
+        "script": "Sauf qu'un polygraphe ne détecte pas les mensonges. Il enregistre le souffle, le pouls, la tension et la sueur, et c'est un examinateur qui interprète les variations.",
+        "visual": {
+          "type": "photo",
+          "query": "lie detector test",
+          "alt": "un examen au polygraphe, photo d'archives",
+          "file": "media/2026-09-28-pentagone-detecteur-mensonges/p_test.jpg",
+          "credit": "Lie detector test · Kepolisian Republik Indonesia · domaine public"
+        }
+      },
+      {
+        "script": "En 2003, le Conseil national de la recherche américain jugeait les preuves de son efficacité faibles au mieux. Les polygraphistes, eux, le disent fiable entre 80 et 94 pour cent.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
+        }
+      },
+      {
+        "script": "Et le même rapport prévenait qu'un test de ce niveau ferait beaucoup d'erreurs. Le ministère emploie des millions de personnes: il pourrait en accuser à tort des dizaines de milliers.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://thenextweb.com/news/pentagon-ai-lie-detector-polygraph-next"
+        }
+      },
+      {
+        "script": "Alors greffer de l'IA là-dessus ? Le juriste Kyri Kotsoglou répond: le pire des deux mondes. De l'incertitude posée sur un test déjà sans validité.",
+        "visual": {
+          "type": "card",
+          "value": "LE PIRE",
+          "label": "des deux mondes, dit le juriste Kyri Kotsoglou"
+        }
+      },
+      {
+        "script": "Et ce qui marche vraiment, dit la chercheuse Sophie van der Zee, ce n'est pas la mesure: c'est la peur. Les gens avouent avant que la machine démarre. Mais seulement s'ils croient qu'elle marche. Abonne-toi pour l'actu IA de demain, et laisse un like.",
+        "visual": {
+          "type": "photo",
+          "query": "polygraph machine",
+          "alt": "un polygraphe Keeler avec son brassard",
+          "file": "media/2026-09-28-pentagone-detecteur-mensonges/p_poly.jpg",
+          "credit": "Polygraph Machine · FBI · domaine public"
+        }
+      }
+    ]
+  }
+}
