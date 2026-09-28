@@ -28,6 +28,14 @@
     {
       "quote": "Over half of the databases had indicators of some PII.",
       "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+    },
+    {
+      "quote": "Through smart technical design choices, clever distribution stategies, and good timing, Supabase is an ideal product for this market and the database product most recommended by Claude Code.",
+      "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+    },
+    {
+      "quote": "UpGuard says it sought to understand the scale of exposed data across the platform, and found publicly accessible names, addresses, phone numbers, and user passwords.",
+      "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/"
     }
   ],
   "sendTest": "Une société de sécurité a trouvé 16 326 bases de données en accès libre sur le web. Noms, adresses, téléphones. Le code venait d'une IA.",
@@ -167,7 +175,8 @@
         "script": "Mais le trou n'est pas vraiment dans l'appli. Il est en dessous, chez Supabase, la plateforme où ces applis rangent leurs données.",
         "visual": {
           "type": "screenshot",
-          "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/"
+          "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/",
+          "file": "media/2026-09-28-applis-ia-fuite-donnees/shot_techcrunch.png"
         }
       },
       {
