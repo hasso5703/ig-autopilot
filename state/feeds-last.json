@@ -1,12 +1,12 @@
 {
-  "at": "2026-09-28T19:57:41.148Z",
-  "fresh": 369,
+  "at": "2026-09-29T06:53:05.679Z",
+  "fresh": 375,
   "feeds": [
     {
       "name": "OpenAI News",
       "ok": true,
-      "fetched": 1231,
-      "fresh": 2,
+      "fetched": 1234,
+      "fresh": 5,
       "windowHours": 96
     },
     {
@@ -41,7 +41,7 @@
       "name": "Microsoft Research",
       "ok": true,
       "fetched": 10,
-      "fresh": 0,
+      "fresh": 1,
       "windowHours": 96
     },
     {
@@ -86,14 +86,14 @@
       "name": "MIT Technology Review",
       "ok": true,
       "fetched": 10,
-      "fresh": 3,
+      "fresh": 4,
       "windowHours": 36
     },
     {
       "name": "Hacker News (250+ points)",
       "ok": true,
-      "fetched": 6,
-      "fresh": 6,
+      "fetched": 7,
+      "fresh": 7,
       "windowHours": 36
     },
     {

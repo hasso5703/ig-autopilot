@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-28T19:55:05.223Z",
+  "at": "2026-09-29T06:54:46.054Z",
   "n": 123,
   "nSettled": 117,
   "medianViews": 142,
@@ -7,7 +7,7 @@
   "top": [
     {
       "slug": "2026-09-24-ia-trouve-systeme-adn",
-      "views": 3684,
+      "views": 3712,
       "retentionPct": 40,
       "saved": 11,
       "shares": 2,
@@ -269,11 +269,11 @@
         "published": [
           {
             "slug": "2026-09-26-ia-casse-code-enigma",
-            "views": 3224
+            "views": 3302
           },
           {
             "slug": "2026-09-27-ia-facture-hopital",
-            "views": 152
+            "views": 155
           }
         ]
       },
@@ -298,8 +298,8 @@
       "slug": "2026-09-24-ia-trouve-systeme-adn",
       "at": "2026-09-24T17:01:14.327Z",
       "hourUtc": 17,
-      "views": 3684,
-      "reach": 3067,
+      "views": 3712,
+      "reach": 3085,
       "avgWatchS": 24.2,
       "retentionPct": 40,
       "likes": 14,
@@ -315,8 +315,8 @@
       "slug": "2026-09-26-ia-casse-code-enigma",
       "at": "2026-09-27T11:02:49.598Z",
       "hourUtc": 11,
-      "views": 3224,
-      "reach": 2800,
+      "views": 3302,
+      "reach": 2859,
       "avgWatchS": 19.3,
       "retentionPct": 32,
       "likes": 4,
@@ -1195,6 +1195,23 @@
       "settled": true
     },
     {
+      "slug": "2026-09-27-ia-facture-hopital",
+      "at": "2026-09-27T17:02:57.935Z",
+      "hourUtc": 17,
+      "views": 155,
+      "reach": 145,
+      "avgWatchS": 4.3,
+      "retentionPct": 7,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Même opération, mêmes soins, et l'hôpital a facturé 942 millions de dollars de plus. C'est un logiciel qui a relu les dossiers.",
+      "settled": false
+    },
+    {
       "slug": "2026-08-07-suno-chansons-marquees",
       "at": "2026-08-07T20:27:30.310Z",
       "hourUtc": 20,
@@ -1244,23 +1261,6 @@
       "themes": [],
       "sendTest": "Des IA ont géré des distributeurs automatiques en concurrence. Claude a proposé des cartels, menacé ses rivales et trahi 11 accords.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-27-ia-facture-hopital",
-      "at": "2026-09-27T17:02:57.935Z",
-      "hourUtc": 17,
-      "views": 152,
-      "reach": 143,
-      "avgWatchS": 4.2,
-      "retentionPct": 7,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Même opération, mêmes soins, et l'hôpital a facturé 942 millions de dollars de plus. C'est un logiciel qui a relu les dossiers.",
-      "settled": false
     },
     {
       "slug": "2026-09-04-nvidia-rachete-hugging-face",
@@ -1440,9 +1440,9 @@
       "slug": "2026-09-23-ia-militaire-ecole-minab",
       "at": "2026-09-23T10:58:43.093Z",
       "hourUtc": 10,
-      "views": 137,
-      "reach": 123,
-      "avgWatchS": 6.7,
+      "views": 138,
+      "reach": 124,
+      "avgWatchS": 6.8,
       "retentionPct": 11,
       "likes": 0,
       "comments": 1,
@@ -1454,6 +1454,42 @@
       ],
       "sendTest": "Le Pentagone a enquete sur lui-meme: un logiciel militaire a fait remonter une ecole comme cible. 123 enfants sont morts.",
       "settled": true
+    },
+    {
+      "slug": "2026-09-28-applis-ia-fuite-donnees",
+      "at": "2026-09-28T11:16:43.456Z",
+      "hourUtc": 11,
+      "views": 136,
+      "reach": 131,
+      "avgWatchS": 3.7,
+      "retentionPct": 6,
+      "likes": 0,
+      "comments": 2,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [],
+      "sendTest": "Une société de sécurité a trouvé 16 326 bases de données lisibles par n'importe qui sur le web. Noms, adresses, téléphones, mots de passe.",
+      "settled": false
+    },
+    {
+      "slug": "2026-09-28-pentagone-detecteur-mensonges",
+      "at": "2026-09-28T17:02:11.698Z",
+      "hourUtc": 17,
+      "views": 133,
+      "reach": 121,
+      "avgWatchS": 6.1,
+      "retentionPct": 10,
+      "likes": 0,
+      "comments": 1,
+      "saved": 0,
+      "shares": 0,
+      "beat0": "photo",
+      "themes": [
+        "infra"
+      ],
+      "sendTest": "Le Pentagone veut un détecteur de mensonges qui lit ton corps à distance. Les chercheurs disent que le test de base ne marche déjà pas.",
+      "settled": false
     },
     {
       "slug": "2026-08-19-pub-dans-chatgpt",
@@ -1749,23 +1785,6 @@
       ],
       "sendTest": "Les États-Unis ont installé des caméras intelligentes le long de leur frontière. Plus de 1 050 personnes sont mortes juste à portée de ces caméras.",
       "settled": true
-    },
-    {
-      "slug": "2026-09-28-applis-ia-fuite-donnees",
-      "at": "2026-09-28T11:16:43.456Z",
-      "hourUtc": 11,
-      "views": 123,
-      "reach": 118,
-      "avgWatchS": 3.3,
-      "retentionPct": 5,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [],
-      "sendTest": "Une société de sécurité a trouvé 16 326 bases de données lisibles par n'importe qui sur le web. Noms, adresses, téléphones, mots de passe.",
-      "settled": false
     },
     {
       "slug": "2026-08-01-astra-dix-problemes",
@@ -2168,30 +2187,11 @@
       "settled": true
     },
     {
-      "slug": "2026-09-28-pentagone-detecteur-mensonges",
-      "at": "2026-09-28T17:02:11.698Z",
-      "hourUtc": 17,
-      "views": 58,
-      "reach": 52,
-      "avgWatchS": 4.7,
-      "retentionPct": 8,
-      "likes": 0,
-      "comments": 1,
-      "saved": 0,
-      "shares": 0,
-      "beat0": "photo",
-      "themes": [
-        "infra"
-      ],
-      "sendTest": "Le Pentagone veut un détecteur de mensonges qui lit ton corps à distance. Les chercheurs disent que le test de base ne marche déjà pas.",
-      "settled": false
-    },
-    {
       "slug": "2026-09-22-googlebook-gemini",
       "at": "2026-09-22T16:56:13.342Z",
       "hourUtc": 16,
-      "views": 52,
-      "reach": 47,
+      "views": 53,
+      "reach": 48,
       "avgWatchS": 4.2,
       "retentionPct": 7,
       "likes": 0,

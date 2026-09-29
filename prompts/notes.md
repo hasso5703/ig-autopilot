@@ -2003,6 +2003,89 @@ ENTRIES:
   atterrir le Reel a 19h25 Paris au lieu de 19h05. Corollaire pour les scouts:
   epingle CHAQUE recu, un `url` sans `file` est une bombe a retardement dans le
   creneau de publication. Proof: run 16h30 23/09, spec gpt6-moins-derreurs.
+  Ajout 29/09 (06h30), 87e mesure morte de la cle media (401 UNAUTHENTICATED sur
+  generativelanguage.googleapis.com/v1beta/models, cle 53 car prefixe AQ.Ab, donc
+  toujours le jeton ephemere et pas une cle AI Studio AIza de 39 car; dernier achat
+  state/spend.jsonl 01/09 16h54 = 28 JOURS). Jeton IG vivant, publish.mjs quota rend
+  200 (2/100), 0 orphelin sur 10 medias / 123 enregistrements.
+  COMMENT GATER UNE EXCLU REUTERS, ET C'EST NEUF: reuters.com bloque depuis toujours
+  (401/403, entrees du 03/08 au 07/08), mais la COPIE SYNDIQUEE se gate ET se capture.
+  rappler.com NOUVEAU: 200 au fetch du gate (10,6 ko aplatis), porte l'article Reuters
+  ENTIER mot pour mot, et sa capture est un excellent recu -- logo R, rubrique
+  TECHNOLOGY, titre entier, date du jour ET la signature "REUTERS" dans le cadre 9:16,
+  donc le recu fait l'attribution a notre place, sans aucun recadrage. PIEGE PROPRE A
+  RAPPLER, a connaitre avant de copier une citation: la page ouvre sur un encadre
+  "AT A GLANCE" suivi de "This is AI-generated" -- ce resume n'est PAS de Reuters, ne
+  gate jamais une phrase prise la-dedans, descends au corps (il commence a "MANILA,
+  Philippines -"). Autres reprises Reuters joignables mesurees le meme matin (200 au
+  fetch du gate): business-standard.com, tbsnews.net, cp24.com, businesstoday.in.
+  Rappel qui vaut plus que le vert du gate: ces domaines portent UN seul reportage.
+  AUTRES DOMAINES MESURES: se gatent du premier coup nature.com (re-confirme 08/09,
+  et son "Update:" en tete d'article porte le rebondissement que le corps n'a pas),
+  technologyreview.com, trendingtopics.eu (re-confirme 19/08), authorsguild.org,
+  torrentfreak.com (NOUVEAU, il lit les memoires judiciaires lui-meme). BLOQUENT:
+  benzinga.com (403), neowin.net (403, re-confirme 09/08), fbi.gov (403),
+  sec.gov/cgi-bin/browse-edgar (403, donc pas de recherche EDGAR d'ici).
+  ET LE 200 QUI NE PORTE AUCUN ARTICLE, famille meta.com du 15/09:
+  publishersweekly.com rend 200 (6 a 10 ko) mais flatten n'en tire que le formulaire
+  de connexion et la grille tarifaire, sur DEUX articles differents. Un 200 de taille
+  normale ne prouve rien, lis le texte aplati avant de compter le domaine.
+  ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf rend 200 et 1,7 Mo: c'est un PDF,
+  donc INGATABLE (regle du 01/08), et le chiffre FBI des escroqueries a l'IA n'est
+  porte que par techcrunch -- dossier remis en revisit pour ca.
+  DEUX RECUS RECADRES POUR CAUSE D'ILLUSTRATION, famille du 27/09: trendingtopics.eu
+  colle sous sa signature un MONTAGE (photo WEF de Dario Amodei incrustee sur un fond
+  graphique de circuits, plus la mention "co-produced by AI" a cote de l'auteur) ->
+  crop=1290:940:0:0 garde masthead, rubrique IPO, titre entier, signature et date;
+  technologyreview.com met un collage Adobe Stock sous le chapo -> crop=1290:1130:0:0.
+  A L'INVERSE, NE RECADRE PAS NATURE: son illustration d'ADN (creditee "artist's
+  illustration", donc a ne pas montrer) tombe SOUS les ~1686 px visibles de la carte,
+  et le cadre porte deja NEWS + la date + le titre entier + le chapo QUI PORTE LE
+  CLAIM (950 agents, plus de 21 heures). Categorie "recu qui porte la preuve", 41 s,
+  3 frames, zero recadrage -- avec arxiv/abs et PubMed, c'est le meilleur du carnet.
+  LE MEME KICKER PASSE OU ECHOUE SELON LA DATE DES SOURCES, instance neuve du trou du
+  15/09 et elle se mesure en une minute: deux specs ecrits le meme matin portaient le
+  meme kicker "29 septembre 2026 · X". Le premier PASSE (une source datee 2026-09-29
+  finance le 29 via numbers(source.date)), le second est REFUSE "figure(s) 29 appear in
+  headline/hero/label text but in no evidence quote" parce que ses sources sont datees
+  25 et 28/09. Donc un kicker date n'est sur QUE si une source porte le meme jour:
+  le remede a cout nul est de dater le kicker autrement (ici "Anthropic · universite de
+  Copenhague"). Ne conclus pas d'un kicker accepte que le chiffre est source.
+  PHOTOS, 30 REQUETES POUR 7 GARDEES, ET TROIS PIEGES DE TITRE. (1) LE MOT QUI PART
+  AILLEURS: "bound legal documents shelf" rend "Shoes for bound feet" (des chaussures
+  chinoises pour pieds bandes) -- le titre suffisait, le filtre near-white ne voit rien.
+  (2) LE RENDU QUI SE DECLARE: "electron microscope laboratory" rend un fichier CDC
+  titre "A 3D graphical representation of a number..." donc une image de SYNTHESE, et
+  c'est le titre qui le dit (re-confirme 08/09). (3) LE VRAI SUJET HORS TON: "agar plate
+  bacterial colonies" rend de l'AGAR ART, un ours dessine en bacteries sur fond noir --
+  vrai, dense, libre, et ridicule sous une ligne sur une controverse scientifique.
+  ECHOUENT au near-white (le musee/labo blanc du 26-27/09 se re-confirme): new york
+  stock exchange building (37 et 55%), stock ticker display screen, industrial emergency
+  stop button, bacteriophage electron micrograph (43 et 45%), petri dish bacterial
+  colonies, dna sequencing machine, test tube rack laboratory dark, laboratory centrifuge
+  rotor, microscope stage slide close, dna helix sculpture, cryogenic storage vials.
+  ET "dario amodei" NE REND RIEN (contrairement a "anthony albanese" le 25/09): sur ce
+  dossier le visage du PDG n'etait acquerable QUE dans un recu, et le recu en question
+  etait justement le montage a recadrer -- donc Reel sans visage, assume.
+  MARCHENT ET SONT NEUVES (md5 verifie contre find media -name '*.jpg'): "stock exchange
+  trading floor" et "stock exchange floor traders" (Library of Congress, parquets du NYSE
+  des annees 60-80, tres denses, zero mot lisible: excellente frame zero muette pour un
+  dossier Bourse), "united nations security council chamber" (LoC, CC0, et le Conseil de
+  securite EST dans l'histoire), "protein model" (re-confirme 08/09 et c'est un AUTRE
+  fichier: modele physique GFP sur fond NOIR pur, 1200x1800 donc presque 9:16 natif --
+  la meilleure frame zero muette du matin), "microscope laboratory dark", "laboratory
+  bench pipette rack", "university copenhagen building". DOUBLON md5 attrape pour la
+  quatrieme fois: "dna gel electrophoresis" rend le fichier deja publie le 24/09
+  (p_a10.jpg). Les 2 s du md5 continuent de payer.
+  ENFIN, LE GATE DE FRAICHEUR A TUE LA MEILLEURE HISTOIRE DU MATIN et la lecon du
+  17/08 se re-confirme au mot pres: les memoires descelles Authors Guild c. OpenAI
+  (citations internes accablantes, GPT qui doit "autocompleter" George R.R. Martin,
+  LibGen renomme "Books1"/"Books2") datent du 21/09 chez le plaignant et du 07/09 chez
+  torrentfreak, et les deux reprises Publishers Weekly sont derriere un mur. Huit jours,
+  donc mort, apres lecture complete. VERIFIE LA DATE DANS L'ARTICLE AVANT DE LE LIRE,
+  surtout quand l'item vient d'une etagere revisit: la veille l'avait banque le 27/09
+  sur la foi d'un relais, pas de la date de publication (famille Willison du 08/08).
+  Proof: scout 06h30 29/09, specs anthropic-bourse-extinction et biologiste-quitte-claude.
 - 2026-09-03 · (06h30) DEUX PIEGES DE GATE MESURES SUR UN SEUL DOSSIER, chacun un
   aller-retour, et le second est un FAUX POSITIF qu'on ne peut pas corriger dans
   le code (validate.mjs est constitution). (1) LE FIL D'AGENCE CACHE DES

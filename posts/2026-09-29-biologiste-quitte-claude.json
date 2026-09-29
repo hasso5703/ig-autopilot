@@ -1,0 +1,218 @@
+{
+  "slug": "2026-09-29-biologiste-quitte-claude",
+  "centralClaim": "Biologists say the repeated pattern found by Anthropic's AI agents is not a scientific discovery.",
+  "corroboration": [
+    {
+      "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+      "quote": "these claims have angered some biologists. a viral post from one, subsequently endorsed by the chair and ceo of the drugmaker eli lilly, said that \"finding a weird cluster of genes and repeats is often the easy part. the hard part, and where the real discoveries come from, is figuring out what the system actually does.\" the agents helped with some laboratory grunt work, in other words. but a discovery it is not."
+    },
+    {
+      "url": "https://www.nature.com/articles/d41586-026-03039-6",
+      "quote": "however, there is scant evidence that the repeats found by anthropic's team of ai agents have similar functions, and there is no known dna-slicing enzyme partnered with them."
+    }
+  ],
+  "sendTest": "Une IA a annoncé une découverte en biologie. Un chercheur dit que son équipe l'avait trouvée avant lui, et il a arrêté d'utiliser Claude.",
+  "caption": "Une IA annonce une découverte. Un biologiste répond qu'il l'avait déjà trouvée, et il arrête d'utiliser Claude.\n\nAnthropic a lancé un laboratoire de biologie où des agents travaillent avec des chercheurs humains. Environ 950 agents ont passé plus de 21 heures à fouiller des bases d'ADN, et ont repéré un motif répété dans le génome de virus géants, proche de ce qu'on voit dans les systèmes CRISPR de certains microbes.\n\nLa contestation. D'après le New York Times, Mario Rodríguez Mestre, chercheur à l'université de Copenhague, dit que son équipe et lui étudiaient déjà ce système depuis des années. Il dit aussi avoir déposé des informations sur ce système dans les modèles de l'entreprise, et se demande si elle a appris de ses conversations. Anthropic le dément et affirme que le modèle concerné n'a été entraîné sur aucune transcription d'utilisateur. Mestre a quand même arrêté d'utiliser Claude.\n\nLe détail qui n'est pas dans la vidéo. Les chercheurs d'Anthropic n'ont pas encore déterminé ce que font ces séquences virales, et l'article n'a pas encore été relu par d'autres scientifiques.\n\nÀ noter : c'est le New York Times qui a recueilli la réponse de Mestre. Nature et MIT Technology Review le citent tous les deux, donc deux titres racontent ici un seul reportage.\n\nTrouver le motif ou comprendre ce qu'il fait: c'est lequel, la découverte ?\n\nnature.com · technologyreview.com\n\n#IA #IntelligenceArtificielle #ActuIA #Biologie\n\nSans voix ni image générée : photos sous licence libre et captures des sources · Écriture assistée par IA, relue par un humain.",
+  "captionEvidence": [
+    {
+      "quote": "the detection effort enlisted roughly 950 ai agents, which spent more than 21 hours combing through dna sequence databases.",
+      "url": "https://www.nature.com/articles/d41586-026-03039-6"
+    },
+    {
+      "quote": "according to a report published in the new york times after this story was posted, mario rodríguez mestre, a scientist at the university of copenhagen, said that he and his colleagues have been studying for years the microbial system that anthropic announced it had discovered. mestre also said that he had uploaded information about the system to anthropic's ai models. anthropic said that the ai model responsible for the discovery was \"not trained on any user transcripts\", the times reported.",
+      "url": "https://www.nature.com/articles/d41586-026-03039-6"
+    },
+    {
+      "quote": "but researchers at anthropic, which is headquartered in san francisco, california, have not yet determined what the newfound viral sequences do, and so don't yet know whether their function is similar to that of the parallel sequences in microbial crispr systems.",
+      "url": "https://www.nature.com/articles/d41586-026-03039-6"
+    },
+    {
+      "quote": "the company announced the launch of the lab and released the preprint on 23 september. the preprint has not yet been peer reviewed.",
+      "url": "https://www.nature.com/articles/d41586-026-03039-6"
+    },
+    {
+      "quote": "muddying the issue further, mario rodríguez mestre, a biologist at the university of copenhagen, said over the weekend that his team had already discovered this particular pattern, the new york times reported. mestre, who regularly chatted with claude in his work, wondered whether anthropic's team had learned from his conversations. anthropic denies this, but mestre says he's stopping all use of claude anyway.",
+      "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/"
+    },
+    {
+      "quote": "last wednesday, anthropic announced that earlier this year it had launched a molecular biology lab, where claude agents read and conjecture about hard biology problems and human scientists run experiments on what they report. and this ai-powered lab, the company said, had made its first discovery.",
+      "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/"
+    }
+  ],
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Anthropic · université de Copenhague",
+      "headline": "Un biologiste dit qu'il avait *trouvé avant* Claude",
+      "hero": {
+        "value": "21 h",
+        "label": "de fouille par les agents, pour un motif déjà connu de lui"
+      },
+      "swipe": "Les sources sont citées"
+    },
+    {
+      "type": "stat",
+      "figure": "950",
+      "unit": "agents, plus de 21 heures",
+      "body": "C'est ce qu'Anthropic dit avoir lancé sur des bases d'ADN avant d'annoncer sa trouvaille.",
+      "evidence": "the detection effort enlisted roughly 950 ai agents, which spent more than 21 hours combing through dna sequence databases.",
+      "source": {
+        "name": "Nature",
+        "url": "https://www.nature.com/articles/d41586-026-03039-6",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que les agents ont réellement repéré",
+      "body": "Pas une séquence d'ADN inédite: un **motif répété** autour d'une enzyme déjà connue, qu'Anthropic dit non répertorié jusque-là.",
+      "evidence": "what anthropic says its system of 950 agents found after 21 hours was not a brand-new sequence. the agents instead flagged a repeating pattern surrounding a known enzyme, a particular pattern anthropic said hadn't been catalogued before.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+        "date": "2026-09-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Le chercheur qui dit l'avoir trouvé avant",
+      "body": "Mario Rodríguez Mestre, à l'université de Copenhague, dit que son équipe étudie ce système *depuis des années*. Il dit aussi y avoir versé des informations dans les modèles de l'entreprise, ce qu'Anthropic dément.",
+      "evidence": "according to a report published in the new york times after this story was posted, mario rodríguez mestre, a scientist at the university of copenhagen, said that he and his colleagues have been studying for years the microbial system that anthropic announced it had discovered. mestre also said that he had uploaded information about the system to anthropic's ai models. anthropic said that the ai model responsible for the discovery was \"not trained on any user transcripts\", the times reported.",
+      "source": {
+        "name": "Nature",
+        "url": "https://www.nature.com/articles/d41586-026-03039-6",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "quote",
+      "body": "finding a weird cluster of genes and repeats is often the easy part. The hard part, and where the real discoveries come from, is figuring out what the system actually does",
+      "attribution": "un des biologistes cités par MIT Technology Review, repris par le PDG d'Eli Lilly",
+      "evidence": "these claims have angered some biologists. a viral post from one, subsequently endorsed by the chair and ceo of the drugmaker eli lilly, said that \"finding a weird cluster of genes and repeats is often the easy part. the hard part, and where the real discoveries come from, is figuring out what the system actually does.\" the agents helped with some laboratory grunt work, in other words. but a discovery it is not.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+        "date": "2026-09-28"
+      }
+    },
+    {
+      "type": "contrast",
+      "claimLabel": "L'annonce",
+      "claim": "Un motif proche de ceux des systèmes CRISPR, présenté comme une première découverte.",
+      "caveatLabel": "Les preuves",
+      "caveat": "Presque aucune preuve que ces répétitions aient la même fonction, et aucune enzyme connue qui travaille avec elles.",
+      "evidence": "however, there is scant evidence that the repeats found by anthropic's team of ai agents have similar functions, and there is no known dna-slicing enzyme partnered with them.",
+      "source": {
+        "name": "Nature",
+        "url": "https://www.nature.com/articles/d41586-026-03039-6",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce que la machine a quand même fait",
+      "body": "Ramener 200 000 candidats d'ADN à quelques-uns qui valaient l'exploration. Pour les biologistes cités, c'est du **vrai travail scientifique**, mais pas une découverte.",
+      "evidence": "whittling 200,000 candidates down to a few worth exploring is no small feat; it is legitimate scientific work.",
+      "source": {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+        "date": "2026-09-28"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Ce qui manque encore",
+      "body": "Les chercheurs n'ont pas déterminé ce que font ces séquences, et l'article n'a pas été relu par d'autres scientifiques.",
+      "evidence": "the company announced the launch of the lab and released the preprint on 23 september. the preprint has not yet been peer reviewed.",
+      "source": {
+        "name": "Nature",
+        "url": "https://www.nature.com/articles/d41586-026-03039-6",
+        "date": "2026-09-25"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Envoie ça à *quelqu'un* qui croit que l'IA fait déjà de la science",
+      "sub": "L'actu IA expliquée en français."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Nature",
+      "url": "https://www.nature.com/articles/d41586-026-03039-6",
+      "accessed": "2026-09-29"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+      "accessed": "2026-09-29"
+    }
+  ],
+  "reel2": {
+    "mood": "tension",
+    "lang": "fr",
+    "title": "Un biologiste dit qu'il avait trouvé avant Claude",
+    "beats": [
+      {
+        "script": "Anthropic a annoncé que ses machines avaient fait une découverte en biologie. 950 agents, plus de 21 heures à fouiller des bases d'ADN, et un motif repéré dans le génome de virus géants.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-09-29-biologiste-quitte-claude/p_prot.jpg",
+          "credit": "Umberto Salvagnin · CC BY",
+          "alt": "modèle physique d'une protéine, photographié sur fond noir"
+        }
+      },
+      {
+        "script": "Sauf qu'un chercheur de Copenhague raconte autre chose. D'après le New York Times, Mario Rodríguez Mestre dit que son équipe et lui étudiaient déjà ce système depuis des années.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.nature.com/articles/d41586-026-03039-6",
+          "file": "media/2026-09-29-biologiste-quitte-claude/shot_nat.png"
+        }
+      },
+      {
+        "script": "Et il ajoute une chose gênante. Il avait lui-même versé des informations sur ce système dans les modèles de l'entreprise, et se demande si elle a appris de ses conversations. Anthropic le dément.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-09-29-biologiste-quitte-claude/p_copen.jpg",
+          "credit": "Karen Rustad · CC BY",
+          "alt": "vestibule de l'université de Copenhague"
+        }
+      },
+      {
+        "script": "Les biologistes visent le fond. Trouver un amas bizarre de gènes et de répétitions, c'est souvent la partie facile. Le plus dur, et c'est de là que viennent les vraies découvertes, c'est de comprendre ce qu'il fait.",
+        "visual": {
+          "type": "screenshot",
+          "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+          "file": "media/2026-09-29-biologiste-quitte-claude/shot_mit.png"
+        }
+      },
+      {
+        "script": "Et ça, personne ne le sait encore. Il n'y a presque aucune preuve que ces répétitions aient la même fonction, et aucune enzyme connue avec elles.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-09-29-biologiste-quitte-claude/p_micro.jpg",
+          "credit": "Openverse · CC0",
+          "alt": "image prise au microscope d'un organisme, sur fond noir"
+        }
+      },
+      {
+        "script": "Ce que la machine a fait n'est pourtant pas rien: ramener 200 000 candidats à quelques-uns qui valaient le coup. Du vrai travail scientifique.",
+        "visual": {
+          "type": "card",
+          "value": "200 000",
+          "label": "candidats ramenés à quelques pistes par les agents"
+        }
+      },
+      {
+        "script": "L'article n'a pas encore été relu par d'autres chercheurs. Et Mestre, lui, a arrêté d'utiliser Claude. Abonne-toi pour l'actu IA de demain, et laisse un like si tu as appris quelque chose.",
+        "visual": {
+          "type": "photo",
+          "file": "media/2026-09-29-biologiste-quitte-claude/p_lab.jpg",
+          "credit": "Openverse · CC BY",
+          "alt": "paillasse de laboratoire avec verrerie"
+        }
+      }
+    ]
+  }
+}
